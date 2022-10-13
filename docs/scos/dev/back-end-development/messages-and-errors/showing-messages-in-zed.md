@@ -49,7 +49,8 @@ class IndexController extends AbstractController
 ```
 
 ## Show message from Zed's Business Layer
-To show a message from a model, declare this dependency in the module's dependency provider:
+To show a message from a model, follow these steps:
+1. Declare this dependency in the module's dependency provider:
 
 ```php
 class MyBundleDependencyProvider extends AbstractBundleDependencyProvider
@@ -75,7 +76,7 @@ class MyBundleDependencyProvider extends AbstractBundleDependencyProvider
 }
 ```
 
-Now, you can access it from the business factory and inject it into your model:
+2. You can access it from the business factory and inject it into your model:
 
 ```php
 <?php
@@ -95,7 +96,7 @@ class MyBundleBusinessFactory extends AbstractBusinessFactory
 }
 ```
 
-And finally, use it in your model:
+3. Use it in your model:
 
 ```php
 <?php

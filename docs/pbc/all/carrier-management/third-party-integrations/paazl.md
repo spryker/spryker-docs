@@ -32,7 +32,7 @@ YOUR ADVANTAGES:
 * Connectivity: Seamless integration with warehouse and customer service
 * Delivery Experience
 * Real-time Calculation: Show best delivery option based on order details
-* Arrival times: ETA’s based on carrier and custom business rules
+* Arrival times: ETAs based on carrier and custom business rules
 * Integration: Easy and fully customizable with REST API
 
 ---

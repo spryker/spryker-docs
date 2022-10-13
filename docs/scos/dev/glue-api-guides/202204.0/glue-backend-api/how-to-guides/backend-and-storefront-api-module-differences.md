@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-backend-vs-storefront-api-endpoint.html
 ---
 
-This document describes how exactly the code in the backend and storefront API modules are different. It focuses on the differences.
+This document describes differences between the backend and storefront code in API modules.
 
 New Glue infrastructure has introduced the possibility to build not only the storefront but also backend APIs in the same project. Storefront APIs inherit the possibilities of old Glue in terms of what they can do and what they have access to (Storage and ElasticSearch or make RPC Zed calls via Clients). Backend APIs have direct access to Facades that enables the creation of performant backend APIs projects often need.
 

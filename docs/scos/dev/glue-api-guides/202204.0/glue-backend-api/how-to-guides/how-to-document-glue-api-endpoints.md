@@ -136,7 +136,7 @@ The following table lists descriptions of the properties you can use in the anno
 | `path` | Resource is available on the path. This property can be used if the *type+id* is not the path the resource uses. |
 | `summary` | Path's summary that briefly describes what the endpoint does. |
 | `parameters` | List of parameters the endpoint accepts. |
-| `isEmptyResponse` | Fag used to mark endpoint that return empty responses. |
+| `isEmptyResponse` | Flag used to mark endpoint that return empty responses. |
 | `responses` | List possible responses of endpoint. The object must contain key-value pairs with HTTP codes as key, and description as value. |
 
 ### Extending the behavior

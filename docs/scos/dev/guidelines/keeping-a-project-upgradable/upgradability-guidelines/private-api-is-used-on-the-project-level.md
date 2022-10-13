@@ -345,7 +345,7 @@ To resolve the error provided in the example, try the following in the provided 
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
 4. Not recommended: Copy the functionality from the core to the project level:
     1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by cloning functionality to the project level](#example-of-resolving-the-error-by-cloning-functionality-to-the-project-level).
     3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
        While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
@@ -414,7 +414,7 @@ To resolve the error provided in the example, try the following in the provided 
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
 4. Not recommended: Copy the functionality from the core to the project level:
     1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    2. Copy private API core entities to the project level and give them unique names.
     3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
        While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
@@ -460,7 +460,7 @@ To resolve the error provided in the example, try the following in the provided 
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
 4. Not recommended: Copy the functionality from the core to the project level:
     1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    2. Copy private API core entities to the project level and give them unique names.
     3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
        While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
@@ -506,7 +506,7 @@ To resolve the error provided in the example, try the following in the provided 
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
 4. Not recommended: Copy the functionality from the core to the project level:
     1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    2. Copy private API core entities to the project level and give them unique names.
     3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
        While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 

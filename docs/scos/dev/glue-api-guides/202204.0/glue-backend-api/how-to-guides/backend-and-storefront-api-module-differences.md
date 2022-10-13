@@ -7,11 +7,13 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-backend-vs-storefront-api-endpoint.html
 ---
 
-This document describes how exactly the code in the backend and storefront API modules are different. It focuses on the differences.
+This document describes differences between the backend and storefront code in API modules.
 
-New Glue infrastructure has introduced the possibility to build not only the storefront but also backend APIs in the same project. Storefront APIs inherit the possibilities of old Glue in terms of what they can do and what they have access to (Storage and ElasticSearch or make RPC Zed calls via Clients). Backend APIs have direct access to Facades that enables the creation of performant backend APIs projects often need.
+The Glue infrastructure can build not only the storefront but also backend APIs in the same project. *Storefront APIs* inherit the possibilities of the old Spryker Glue implementation in terms of what they can do and what they have access to. For example, storefront APIs can access Storage and Elasticsearch and make RPC Zed calls using Clients. *Backend APIs* have direct access to Facades, which lets you create performant backend APIs that you might often need for your projects.
 
-The main difference between storefront and backend APIs is in the base classes each type of module uses. Because Storefront APIs continue providing lightweight APIs the same as old Glue did, they use the same base classes. Backend APIs are getting the new abstract classes that have access to Facades from other modules.
+The main difference between storefront and backend APIs is in the base classes that each type of module uses. Since storefront APIs continue providing lightweight APIs like Spryker Glue of the previous implementation did, they use the same base classes. Backend APIs are getting abstract classes that have access to Facades from other modules.
+
+The following table shows classes to use for the backend and storefront:
 
 | CLASS | STOREFRONT | BACKEND |
 | --- | --- | --- |
@@ -24,7 +26,7 @@ Storefront and backend classes are not to be mixed in the same module.
 
 Let's go through the creation of backend module infrastructure classes:
 
-**\Pyz\Glue\CustomBackendApi\CustomBackendApiDependencyProvider**
+1. **\Pyz\Glue\CustomBackendApi\CustomBackendApiDependencyProvider**:
 
 ```php
 <?php
@@ -71,11 +73,11 @@ class CustomBackendApiDependencyProvider extends AbstractBundleDependencyProvide
 
 In the backend dependency provider, the backend container can resolve facades. 
 
-Also, the function to provide backend dependencies is `provideBackendDependencies`.
+The function to provide backend dependencies is `provideBackendDependencies`.
 
 {% endinfo_block %}
 
-**Factory:**
+2. Factory:
 
 **\Pyz\Glue\CustomBackendApi\CustomApiApplicationFactory**
 
@@ -99,7 +101,7 @@ class CustomApiApplicationFactory extends AbstractFactory
 }
 ```
 
-Backend `AbstractFactory` has access to the backend container.
+Backend `AbstractFactory` has access to backend `Container`.
 
 Let's see what `AbstractPlugin` allows you to access:
 

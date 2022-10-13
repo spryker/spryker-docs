@@ -72,15 +72,15 @@ public function getAction(RestRequestInterface $restRequest): RestResponseInterf
 
 ```
 
-Glue annotation must contain valid JSON.
+Glue annotation must be in a valid JSON format.
 
-Glue annotation can be defined on each action in the controller, two can be defined on the get action (for having separate descriptions for getting collections and getting resources by ID actions). Possible top-level keys are: `getResourceById`, `getCollection`, `post`, `patch`, and `delete`.
+You can define a Glue annotation on each action in the controller. You can define two annotations on the `get` action so they have separate descriptions for getting collections and for getting resources by ID actions. Possible top-level keys are: `getResourceById`, `getCollection`, `post`, `patch`, and `delete`.
 
 `isIdNullable` is false by default but can be defined as true for the cases like `/catalog-search` or `/url-resolver`.
 
-Always describe all the possible error statuses your resource can return in `responses`. If the status is used for several errors, you can use the most generic description for all of them (`"422": "Unprocessable entity."`).
+Always describe all the possible error statuses that your resource can return in `responses`. If the status is used for several errors, you can use the most generic description for all of them—for example, `"422": "Unprocessable entity."`.
 
-For describing request body structure in the schema, you can use additional transfer properties attributes:
+To describe request body structure in the schema, you can use additional transfer properties attributes:
 
 **resources_rest_api.transfer.xml**
 
@@ -100,7 +100,7 @@ For describing request body structure in the schema, you can use additional tran
 
 {% info_block infoBox %}
 
-In the preceding example, `sku` and `quantity` are added to the request schema as required, `productOptions` added as optional, and `createdAt` skipped. There needs to be at least one attribute on the transfer with not empty `restRequestParameter` for the request schema to be even generated, so always pay attention to this.
+In the preceding example, `sku` and `quantity` are added to the request schema as required, `productOptions` are added as optional, and `createdAt` skipped. For the request schema to be generated, there must be at least one attribute on the transfer with not empty `restRequestParameter`.
 
 {% endinfo_block %}
 
@@ -137,12 +137,12 @@ The following table lists descriptions of the properties you can use in the anno
 | `summary` | Path's summary that briefly describes what the endpoint does. |
 | `parameters` | List of parameters the endpoint accepts. |
 | `isEmptyResponse` | Fag used to mark endpoint that return empty responses. |
-| `responses` | List responses the endpoint can respond with. The object must contain key-value pairs with HTTP codes as key, and desciption as value. |
+| `responses` | List possible responses of endpoint. The object must contain key-value pairs with HTTP codes as key, and description as value. |
 
 ### Extending the behavior
 
 The following interfaces can be used to add more data to the generated documentation.
 
-* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\PluginApiApplicationProviderPluginInterface` interface: Adds a new application to which the documentation will get generated.
+* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\PluginApiApplicationProviderPluginInterface` interface: Adds a new application for which documentation will get generated.
 * The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\ContextExpanderPluginInterface` interface: Adds information to the documentation generation context.
 * The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\SchemaFormatterPluginInterface` interface: Formats the part of the documentation and must return an array of data ready for getting converted to YAML.

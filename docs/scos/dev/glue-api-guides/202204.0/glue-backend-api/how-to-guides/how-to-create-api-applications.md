@@ -1,6 +1,6 @@
 ---
 title: How to create API applications
-description: This document shows how to create a new API application
+description: This document describes how to create a new API application
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
@@ -9,9 +9,8 @@ redirect_from:
 
 New Glue projects can create API applications. This is what you need to do in order to create one.
 
-### Docker configuration
 
-First of all, the backend and storefront API have different settings in Docker (they have different sets of services configured for them). Make sure your `deploy.yml` contains the correct setting for `application`. Available options are as follows:
+Because the backend and storefront APIs have different sets of configured services, they also have different settings in Docker. Therefore, first of all, ensure your `deploy.yml` file contains the correct setting for `application`. The available options are listed in the following table:
 
 | OPTION | MEANING |
 | --- | --- |
@@ -134,7 +133,7 @@ class CustomApiGlueApplicationBootstrapPlugin extends AbstractPlugin implements 
 
 *Line 19* creates an instance of `ApplicationInterface`, which can take an array of `ApplicationPluginInterface`. You can add features like DB access using these plugins.
 
-In the factory, its constructor looks like this: 
+In the factory, the constructor looks like this: 
 
 <details>
 <summary markdown='span'>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationFactory.php</summary>
@@ -182,7 +181,7 @@ class CustomApiApplicationFactory extends AbstractFactory
 ```
 </details>
 
-Here is the dependency provider: 
+The dependency provider looks like this: 
 
 <details><summary markdown='span'>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationDependencyProvider.php</summary>
 
@@ -300,9 +299,9 @@ class GlueStorefrontApiApplication extends RequestFlowAwareApiApplication
 ```
 </details>
 
-Each method in `CustomApiApplication` represents a step in the API application request flow. It can be used as an extension point into each of the steps.
+Each method in `CustomApiApplication` represents a step in the API application request flow. It can be used as an extension point in each of the steps.
 
-This application extends `RequestFlowAwareApiApplication`, which means that this API application follows the default Glue workflow. This is beneficial because it lets you make the most use of the conventions and features in Spryker that wire into the request flow.
+This application extends `RequestFlowAwareApiApplication`, which means that this API application follows the default Glue workflow. This is beneficial because it lets you make the most of the Spryker conventions and features that wire into the request flow.
 
 If your API uses its own workflow, you can opt for extending `RequestFlowAgnosticApiApplication`. This kind of application has everything (a separate set of application plugins, boot, and run methods) but not the request flow actions. One of these is the old Glue application. Here is an example of the application: 
 

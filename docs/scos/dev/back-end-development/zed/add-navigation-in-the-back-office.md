@@ -77,7 +77,7 @@ class ZedNavigationConfig extends SprykerZedNavigationConfig
 
 ## Add navigation using the global navigation configuration
 
-After you've [defined a navigation merge strategy](#defining-a-navigation-merge-strategy), do the following to add a controller action to the navigation bar:
+After you've [defined a navigation merge strategy](#define-a-navigation-merge-strategy), do the following to add a controller action to the navigation bar:
 
 1. Add the following XML block within the configuration tag scope of `config/Zed/navigation.xml`:
 

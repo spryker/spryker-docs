@@ -3444,7 +3444,7 @@ entries:
           - title: Implement a query container
             url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implement-a-query-container.html
       - title: Add navigation in the Back Office
-        url: //docs/scos/dev/back-end-development/zed/add-navigation-in-the-back-office.html
+        url: /docs/scos/dev/back-end-development/zed/add-navigation-in-the-back-office.html
     - title: Cronjobs
       url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
       nested:

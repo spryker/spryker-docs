@@ -9,32 +9,32 @@ redirect_from:
 
 This guide shows how to create an API endpoint using a resource for the Storefront API application.
 
-Let's say you have a module named `ModuleApi`, where you want to have a new endpoint `/foo` with `GET` and `POST` methods. To create the endpoint, follow these steps:
+Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module` with `GET` and `POST` methods. To create the endpoint, follow these steps:
 
-1. Create `FooApiConfig` and add the resource name:
+1. Create `ModuleRestApiConfig` and add the resource name:
 
-**\Pyz\Glue\FooApi\FooApiConfig`**
+**\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig`**
 
  ```php
 <?php
 
-namespace Pyz\Glue\FooApi;
+namespace Pyz\Glue\ModuleRestApi;
 
 use Spryker\Glue\Kernel\AbstractBundleConfig;
 
-class FooApiConfig extends AbstractBundleConfig
+class ModuleRestApiConfig extends AbstractBundleConfig
 {
-    public const RESOURCE_FOO = 'foo';
+    public const RESOURCE_MODULE = 'module';
 }
 ``` 
 
-2. Create `foo_api.transfer.xml`:
+2. Create `module_api.transfer.xml`:
 
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
 
-  <transfer name="FooRestAttributes">
+  <transfer name="ModuleRestAttributes">
     //add transfer fields
   </transfer>
   
@@ -53,23 +53,23 @@ class FooApiConfig extends AbstractBundleConfig
 </transfers>
 ```
 
-3. Create `FooController`: 
+3. Create `ModuleController`: 
 
-**\Pyz\Glue\FooApi\Controller\FooController`**
+**\Pyz\Glue\ModuleRestApi\Controller\ModuleController`**
 
 ```php
 <?php
 
-namespace Pyz\Glue\FooApi\Controller;
+namespace Pyz\Glue\ModuleRestApi\Controller;
 
-use Generated\Shared\Transfer\FooRestAttributesTransfer;
+use Generated\Shared\Transfer\ModuleRestAttributesTransfer;
 use Generated\Shared\Transfer\GlueRequestTransfer;
 use Generated\Shared\Transfer\GlueResourceTransfer;
 use Generated\Shared\Transfer\GlueResponseTransfer;
-use Pyz\Glue\FooApi\FooApiConfig;
+use Pyz\Glue\ModuleRestApi\ModuleRestApiConfig;
 use Spryker\Glue\Kernel\Controller\AbstractStorefrontApiController;
 
-class FooResourceController extends AbstractStorefrontApiController
+class ModuleResourceController extends AbstractStorefrontApiController
 {
     public function getAction(
       string $id, 
@@ -78,18 +78,18 @@ class FooResourceController extends AbstractStorefrontApiController
         return (new GlueResponseTransfer())
           ->addResource((new GlueResourceTransfer())
             ->setId($id)
-            ->setType(FooApiConfig::RESOURCE_FOO)
-            ->setAttributes((new FooRestAttributesTransfer());
+            ->setType(ModuleRestApiConfig::RESOURCE_MODULE)
+            ->setAttributes((new ModuleRestAttributesTransfer());
     }
     
     public function postAction(
-      FooRestAttributesTransfer $fooRestAttributesTransfer,
+      ModuleRestAttributesTransfer $moduleRestAttributesTransfer,
       GlueRequestTransfer $glueRequestTransfer
     ): GlueResponseTransfer {
         return (new GlueResponseTransfer())
           ->addResource((new GlueResourceTransfer())
-            ->setType(FooApiConfig::RESOURCE_FOO)
-            ->setAttributes((new FooRestAttributesTransfer());
+            ->setType(ModuleRestApiConfig::RESOURCE_MODULE)
+            ->setAttributes((new ModuleRestAttributesTransfer());
     }
 }
 ```
@@ -100,35 +100,35 @@ class FooResourceController extends AbstractStorefrontApiController
 
 {% endinfo_block %}
 
-4. Create `FooResource`:
+4. Create `ModuleResource`:
 
 To follow the JSON API convention, the resource must implement `JsonApiResourceInterface`.
 
-**\Pyz\Glue\FooApi\Plugin\FooResource**
+**\Pyz\Glue\ModuleRestApi\Plugin\ModuleResource**
 
 ```PHP
 <?php
 
-namespace Pyz\Glue\FooApi\Plugin;
+namespace Pyz\Glue\ModuleRestApi\Plugin;
 
 use Generated\Shared\Transfer\GlueResourceMethodCollectionTransfer;
 use Generated\Shared\Transfer\GlueResourceMethodConfigurationTransfer;
-use Generated\Shared\Transfer\FooRestAttributesTransfer;
-use Pyz\Glue\FooApi\Controller\FooResourceController;
-use Spryker\Glue\FooApi\FooApiConfig;
+use Generated\Shared\Transfer\ModuleRestAttributesTransfer;
+use Pyz\Glue\ModuleRestApi\Controller\ModuleResourceController;
+use Spryker\Glue\ModuleRestApi\ModuleRestApiConfig;
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface;
 
-class FooResource extends AbstractResourcePlugin implements ResourceInterface
+class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
 {
     public function getType(): string
     {
-        return FooApiConfig::RESOURCE_FOO;
+        return ModuleRestApiConfig::RESOURCE_MODULE;
     }
     
     public function getController(): string
     {
-        return FooResourceController::class;
+        return ModuleResourceController::class;
     }
 
     public function getDeclaredMethods(): GlueResourceMethodCollectionTransfer
@@ -137,7 +137,7 @@ class FooResource extends AbstractResourcePlugin implements ResourceInterface
             ->setGet(new GlueResourceMethodConfigurationTransfer())
             ->setPost(
                 (new GlueResourceMethodConfigurationTransfer())
-                    ->setAction('postAction')->setAttributes(FooRestAttributesTransfer::class),
+                    ->setAction('postAction')->setAttributes(ModuleRestAttributesTransfer::class),
             );
     }
 }
@@ -152,7 +152,7 @@ class FooResource extends AbstractResourcePlugin implements ResourceInterface
 
 namespace Pyz\Glue\GlueStorefrontApiApplication;
 
-use Pyz\Glue\FooApi\Plugin\FooResource;
+use Pyz\Glue\ModuleRestApi\Plugin\ModuleResource;
 use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
 
 class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
@@ -160,10 +160,10 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     protected function getResourcePlugins(): array
     {
         return [
-            new FooResource(),
+            new ModuleResource(),
         ];
     }
 }
 ```
 
-If everything is set up correctly, you can access `https://glue-storefront.mysprykershop.com/foo`.
+If everything is set up correctly, you can access `https://glue-storefront.mysprykershop.com/module`.

@@ -13,22 +13,22 @@ Glue lets you create plain routes directly to a controller. This might be useful
 
 Custom routes are based on Symfony routing.
 
-Let's say you have a Storefront module named `FooApi`, where you want to have a new backend API endpoint `/foo/bar` with GET and POST methods. To create the new backend API endpoint, follow these steps:
+Let's say you have a Storefront module named `ModuleRestApi`, where you want to have a new backend API endpoint `/module/bar` with GET and POST methods. To create the new backend API endpoint, follow these steps:
 
-1. Create a `FooBarController` with the action:
+1. Create a `ModuleBarController` with the action:
 
-**\Pyz\Glue\FooApi\Controller\FooBarController**
+**\Pyz\Glue\ModuleRestApi\Controller\ModuleBarController**
 
 ```php
 <?php
 
-namespace Pyz\Glue\FooApi\Controller;
+namespace Pyz\Glue\ModuleRestApi\Controller;
 
 use Generated\Shared\Transfer\GlueRequestTransfer;
 use Generated\Shared\Transfer\GlueResponseTransfer;
 use Spryker\Glue\Kernel\Backend\Controller\AbstractController;
 
-class FooBarController extends AbstractController
+class ModuleBarController extends AbstractController
 {
     /**
      * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
@@ -37,7 +37,7 @@ class FooBarController extends AbstractController
      */
     public function getCollectionAction(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
     {
-        // return $this->getFactory()->createFooBarReader()->readFooBar();
+        // return $this->getFactory()->createModuleBarReader()->readModuleBar();
         return new GlueResponseTransfer();
     }
 }
@@ -52,34 +52,34 @@ Pay attention to `AbstractController` you use, Storefront and Backend variation 
 
 {% endinfo_block %}
 
-2. Create `FooBarRouteProviderPlugin`
+2. Create `ModuleBarRouteProviderPlugin`
 
-**\Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin**
+**\Pyz\Glue\ModuleRestApi\Plugin\ModuleBarRouteProviderPlugin**
 
 ```php
 <?php
 
-namespace Pyz\Glue\FooApi\Plugin;
+namespace Pyz\Glue\ModuleRestApi\Plugin;
 
-use Pyz\Glue\FooApi\Controller\FooBarController;
+use Pyz\Glue\ModuleRestApi\Controller\ModuleBarController;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface;
 use Spryker\Glue\Kernel\Backend\AbstractPlugin;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
-class FooBarRouteProviderPlugin extends AbstractPlugin implements RouteProviderPluginInterface
+class ModuleBarRouteProviderPlugin extends AbstractPlugin implements RouteProviderPluginInterface
 {
     public function addRoutes(RouteCollection $routeCollection): RouteCollection
     {
-        $getRoute = (new Route('/foo/bar'))
+        $getRoute = (new Route('/module/bar'))
             ->setDefaults([
-                '_controller' => [FooBarController::class, 'getCollectionAction'],
-                '_resourceName' => 'fooBar',
+                '_controller' => [ModuleBarController::class, 'getCollectionAction'],
+                '_resourceName' => 'moduleBar',
             ])
             ->setMethods(Request::METHOD_GET);
 
-        $routeCollection->add('fooBarGetCollection', $getRoute);
+        $routeCollection->add('moduleBarGetCollection', $getRoute);
         
         return $routeCollection;
     }
@@ -94,19 +94,19 @@ Ensure you use `AbstractPlugin` specific to the storefront or backend needs.
 
 3. Create a controller to serve your request:
 
-**Pyz\Glue\FooApi\Controller\FooBarController**
+**Pyz\Glue\ModuleRestApi\Controller\ModuleBarController**
 
 ```php
 <?php
 
-namespace Pyz\Glue\FooApi\Controller;
+namespace Pyz\Glue\ModuleRestApi\Controller;
 
 use Generated\Shared\Transfer\GlueRequestTransfer;
 use Generated\Shared\Transfer\GlueResponseTransfer;
 use Spryker\Glue\Kernel\Backend\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class FooBarController extends AbstractController
+class ModuleBarController extends AbstractController
 {
     public function getCollectionAction(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
     {
@@ -116,7 +116,7 @@ class FooBarController extends AbstractController
 }
 ```
 
-4. Inject `FooBarRouteProviderPlugin` into `GlueBackendApiApplicationDependencyProvider`: 
+4. Inject `ModuleBarRouteProviderPlugin` into `GlueBackendApiApplicationDependencyProvider`: 
 
 **\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider**
 
@@ -129,7 +129,7 @@ class FooBarController extends AbstractController
     {
         return [
             ...
-            new FooBarRouteProviderPlugin(),
+            new ModuleBarRouteProviderPlugin(),
         ];
     }
 ...
@@ -141,18 +141,18 @@ class FooBarController extends AbstractController
 docker/sdk cli glue api:router:cache:warm-up
 ```
 
-At this point, you can test the GET endpoint at `GET https://glue-backend.mysprykershop.com/foo/bar`.
+At this point, you can test the GET endpoint at `GET https://glue-backend.mysprykershop.com/module/bar`.
 
 The following is an example of a sucessfully tested cURL command:
 
 ```bash
-curl --location --request GET 'https://glue-backend.mysprykershop.com/foo/bar' \
+curl --location --request GET 'https://glue-backend.mysprykershop.com/module/bar' \
 --header 'Accept: application/json'
 ```
 
 6. Add a `POST` method to the same route:
 
-   1. Add a method to a controller: `\Pyz\Glue\FooApi\Controller\FooBarController`
+   1. Add a method to a controller: `\Pyz\Glue\ModuleRestApi\Controller\ModuleBarController`
 
    ```php
    ...
@@ -168,27 +168,27 @@ curl --location --request GET 'https://glue-backend.mysprykershop.com/foo/bar' \
 
    ```
 
-   2. Add a new route to the same route provider plugin: `\Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin`
+   2. Add a new route to the same route provider plugin: `\Pyz\Glue\ModuleRestApi\Plugin\ModuleBarRouteProviderPlugin`
 
    ```php
    ...
-           $postRoute = (new Route('/foo/bar'))
+           $postRoute = (new Route('/module/bar'))
                ->setDefaults([
-                   '_controller' => [FooBarController::class, 'postAction'],
+                   '_controller' => [ModuleBarController::class, 'postAction'],
                ])
                ->setMethods(Request::METHOD_POST);
-           $routeCollection->add('fooBarPost', $postRoute);
+           $routeCollection->add('moduleBarPost', $postRoute);
    ...
    ```
 
    3. Reset the router cache again and test your `POST` request:
 
    ```
-   curl --location --request POST 'https://glue-backend.mysprykershop.com/foo/bar' \
+   curl --location --request POST 'https://glue-backend.mysprykershop.com/module/bar' \
    --header 'Accept: application/json' \
    --header 'Content-Type: application/json' \
    --data-raw '{
-       "id": "foo",
+       "id": "module",
        "name": "bar"
    }'
    ```

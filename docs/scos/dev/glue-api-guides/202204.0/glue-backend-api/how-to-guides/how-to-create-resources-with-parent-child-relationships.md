@@ -13,21 +13,21 @@ Such a plugin routes requests from the parent resources to the correct child res
 
 The interface provides only one method: `getParentResourceType`. The method must return the type of the immediate parent resource within the context in which the child resource is implemented.
 
-Let's say you have a module named `FooApi`, where you want to have a new endpoint `/foo/1/bar` with `GET` and `POST` methods. To create the new endpoint, follow these steps:
+Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module/1/bar` with `GET` and `POST` methods. To create the new endpoint, follow these steps:
 
 1. Create a resource following the [how to create a resource](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/how-to-create-a-resource.html) guide.
 2. Add a child resource name:
 
-**src\Pyz\Glue\FooApi\FooApiConfig.php**
+**src\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig.php**
 
 ```php
 <?php
 
-namespace Pyz\Glue\FooApi;
+namespace Pyz\Glue\ModuleRestApi;
 
 use Spryker\Glue\Kernel\AbstractBundleConfig;
 
-class FooApiConfig extends AbstractBundleConfig
+class ModuleRestApiConfig extends AbstractBundleConfig
 {
     public const RESOURCE_BAR = 'bar';
 }
@@ -35,32 +35,32 @@ class FooApiConfig extends AbstractBundleConfig
 
 3. Create `BarResource` that implements `ResourceWithParentPluginInterface`:
 
-<details><summary markdown='span'>src\Pyz\Glue\FooApi\Plugin\BarResource.php</summary>
+<details><summary markdown='span'>src\Pyz\Glue\ModuleRestApi\Plugin\BarResource.php</summary>
 
 ```php
 <?php
 
-namespace Pyz\Glue\FooApi\Plugin;
+namespace Pyz\Glue\ModuleRestApi\Plugin;
 
 use Generated\Shared\Transfer\GlueResourceMethodCollectionTransfer;
 use Generated\Shared\Transfer\GlueResourceMethodConfigurationTransfer;
-use Generated\Shared\Transfer\FooRestAttributesTransfer;
-use Spryker\Glue\FooApi\Controller\FooResourceController;
-use Spryker\Glue\FooApi\FooApiConfig;
+use Generated\Shared\Transfer\ModuleRestAttributesTransfer;
+use Spryker\Glue\ModuleRestApi\Controller\ModuleResourceController;
+use Spryker\Glue\ModuleRestApi\ModuleRestApiConfig;
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceWithParentPluginInterface;
 
-class FooRestResource extends AbstractResourcePlugin implements ResourceInterface, ResourceWithParentPluginInterface 
+class ModuleRestResource extends AbstractResourcePlugin implements ResourceInterface, ResourceWithParentPluginInterface 
 {
     public function getType(): string
     {
-        return FooApiConfig::RESOURCE_BAR;
+        return ModuleRestApiConfig::RESOURCE_BAR;
     }
     
     public function getController(): string
     {
-        return FooResourceController::class;
+        return ModuleResourceController::class;
     }
 
     public function getDeclaredMethods(): GlueResourceMethodCollectionTransfer
@@ -69,13 +69,13 @@ class FooRestResource extends AbstractResourcePlugin implements ResourceInterfac
             ->setGet(new GlueResourceMethodConfigurationTransfer())
             ->setPost(
                 (new GlueResourceMethodConfigurationTransfer())
-                    ->setAction('postAction')->setAttributes(FooRestAttributesTransfer::class),
+                    ->setAction('postAction')->setAttributes(ModuleRestAttributesTransfer::class),
             );
     }
     
     public function getParentResourceType(): string
     {
-        return FooApiConfig::RESOURCE_FOO;
+        return ModuleRestApiConfig::RESOURCE_MODULE;
     }
 }
 ```
@@ -90,7 +90,7 @@ class FooRestResource extends AbstractResourcePlugin implements ResourceInterfac
 
 namespace Pyz\Glue\GlueStorefrontApiApplication;
 
-use Pyz\Glue\FooApi\Plugin\BarResource;
+use Pyz\Glue\ModuleRestApi\Plugin\BarResource;
 use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
 
 class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
@@ -104,4 +104,4 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
-Now, you can access `https://glue-storefront.mysprykershop.com/foo/1/bar`.
+Now, you can access `https://glue-storefront.mysprykershop.com/module/1/bar`.

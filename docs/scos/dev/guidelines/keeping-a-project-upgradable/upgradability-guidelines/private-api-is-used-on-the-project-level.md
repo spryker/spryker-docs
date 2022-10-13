@@ -18,7 +18,7 @@ For more information about module APIs, see [Definition of Module API](/docs/sco
 
 ## PrivateApi:Facade
 
-It is allowed to use repository, factory, or entity manager classes inside of facade class on a project level, but only the methods from these classes, that were declared on project level.
+It is allowed to use only the methods declared on the project level from a repository, factory, or entity manager inside the facade class of a project level.
 
 ### Example of code that causes an upgradability error
 
@@ -233,7 +233,7 @@ Please avoid extension of the PrivateApi Spryker\Zed\PriceProduct\Dependency\Fac
 Remove the Bridge.
 
 
-## PrivateApi:MethodIsOverwritten
+## PrivateApi:MethodIsOverridden
 
 The extended class `CheckoutPageDependencyProvider` overrides the private API core method `SprykerCheckoutPageDependencyProvider::getCustomerStepHandler`.
 
@@ -324,7 +324,7 @@ Please avoid usage of Spryker\...\CustomerAccessEntityManager::createCustomerAcc
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 ### Example of resolving the error by cloning functionality to the project level
 
@@ -384,7 +384,7 @@ Please avoid usage of Spryker/Zed/ProductPageSearch/ProductPageSearchDependencyP
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 
 ## PrivateApi:DependencyInBusinessModel
@@ -421,7 +421,7 @@ PrivateApi:DependencyInBusinessModel "Please avoid usage of Spryker\Zed\Customer
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 
 ## PrivateApi:ObjectInitialization
@@ -458,7 +458,7 @@ Please avoid usage of Spryker\Zed\CustomerAccess\Business\CustomerAccess\Custome
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 
 ## PrivateApi:PersistenceInBusinessModel
@@ -501,7 +501,7 @@ Please avoid usage of PrivateApi customerAccessEntityManager->setContentTypesToI
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 
 
@@ -542,4 +542,4 @@ Please avoid usage of PrivateApi method SprykerCustomerAccessEntityManager::getC
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)

@@ -254,6 +254,8 @@ PrivateApi:MethodIsOverwritten Please avoid overriding of core method Spryker\Yv
 ------------------------------ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
+### Example of code that causes an upgradability error
+
 The extended class `CheckoutPageDependencyProvider` overrides the private API core method `SprykerCheckoutPageDependencyProvider::getCustomerStepHandler`.
 
 ```php
@@ -272,6 +274,8 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
     }
 }
 ```
+
+### Example of resolving the error
 
 Make the name of the Private API entity unique by adding `Pyz`.
 
@@ -294,7 +298,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 
 To make the names of extended Private API entities unique, you can use any other strategy. For example, you can prefix them with your project name.
 
-After renaming the entity, re-evaluate the code. The same error shouldn't be returned.
+After renaming the entity, please re-evaluate the code. The same error shouldn't be returned.
 
 ---
 

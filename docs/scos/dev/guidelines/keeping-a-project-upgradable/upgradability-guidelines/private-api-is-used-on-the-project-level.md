@@ -61,7 +61,7 @@ To resolve the error provided in the example, try the following in the provided 
 2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
 4. Not recommended: Copy the functionality from the core to the project level:
-    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
     2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
     3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
         While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
@@ -339,7 +339,15 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+To resolve the error provided in the example, try the following in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy the functionality from the core to the project level:
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
+       While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ### Example of resolving the error by cloning functionality to the project level
 
@@ -400,7 +408,15 @@ class CustomerAccessBusinessFactory implements SprykerCustomerAccessBusinessFact
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+To resolve the error provided in the example, try the following in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy the functionality from the core to the project level:
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
+       While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
 
@@ -438,7 +454,15 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+To resolve the error provided in the example, try the following in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy the functionality from the core to the project level:
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
+       While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
 
@@ -476,7 +500,15 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+To resolve the error provided in the example, try the following in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy the functionality from the core to the project level:
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
+       While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
 
@@ -522,7 +554,41 @@ class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+To resolve the error provided in the example, try the following in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy the functionality from the core to the project level:
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
+       While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
+
+### Example of resolving the error by copying and renaming Private API entities
+
+```php
+namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
+
+use Generated\Shared\Transfer\CustomerAccessTransfer;
+
+class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
+{
+   ...
+   /**
+     * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
+     *
+     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
+     */
+    public function updateUnauthenticatedCustomerAccess(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer
+    {
+        return $this->getTransactionHandler()->handleTransaction(function () use ($customerAccessTransfer) {
+            ...
+            return $this->pyzCustomerAccessEntityManager->setContentTypesToInaccessible($customerAccessTransfer);
+        });
+    }
+   ...
+}
+```
 
 ---
 
@@ -563,4 +629,60 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 
 ### Resolving the error
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+To resolve the error provided in the example, try the following in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy the functionality from the core to the project level:
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming Private API entities](#example-of-resolving-the-error-by-copying-and-renaming-private-api-entities).
+    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
+       While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
+
+### Example of resolving the error by copying and renaming Private API entities
+
+```php
+namespace Pyz\Zed\Customer\Business;
+
+use Orm\Zed\CustomerAccess\Persistence\SpyUnauthenticatedCustomerAccessQuery;
+use Pyz\Zed\Customer\Business\Customer\CustomerReader;
+use Spryker\Zed\Customer\Business\CustomerBusinessFactory as SprykerCustomerBusinessFactory;
+
+class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
+{
+    /**
+     * @return \Orm\Zed\CustomerAccess\Persistence\SpyUnauthenticatedCustomerAccessQuery
+     */
+    public function createPyzCustomerAccessQuery(): SpyUnauthenticatedCustomerAccessQuery
+    {
+        return SpyUnauthenticatedCustomerAccessQuery::create();
+    }
+}
+```
+
+```php
+namespace Pyz\Zed\CustomerAccess\Persistence;
+
+use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as SprykerCustomerAccessEntityManager;
+
+class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager implements CustomerAccessEntityManagerInterface
+{
+    ...
+    protected function getPyzCustomerAccessEntityByContentType(ContentTypeAccessTransfer $contentTypeAccessTransfer): ?SpyUnauthenticatedCustomerAccess
+    {
+        return $this->getFactory()
+            ->createPyzCustomerAccessQuery()
+            ->filterByContentType($contentTypeAccessTransfer->getContentType())
+            ->findOne();
+    }
+    
+    public function setContentTypesToAccessible(CustomerAccessTransfer $customerAccessTransfer): void
+    {
+        foreach ($customerAccessTransfer->getContentTypeAccess() as $contentTypeAccess) {
+            $customerAccessEntity = $this->getPyzCustomerAccessEntityByContentType($contentTypeAccess);
+            ...
+        }
+    }
+    ...
+}
+```

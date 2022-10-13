@@ -32,9 +32,7 @@ When solving any of the following cases, apply the following strategies in the p
 
 ## PrivateApi:Facade
 
-On the project level, you can use repository, factory, and entity manager classes inside of a facade class. They must be declared on the project level.
-
-It is allowed to use  on a project level, but only the methods from these classes, that were declared on project level.
+On the project level, you can use repository, factory, and entity manager classes inside of a facade class. The methods must be declared on the project level.
 
 ### Example of code that causes an upgradability error
 
@@ -245,7 +243,7 @@ Please avoid extension of the PrivateApi Spryker\Zed\PriceProduct\Dependency\Fac
 To resolve the error, remove the bridge.
 
 
-## PrivateApi:MethodIsOverwritten
+## PrivateApi:MethodIsOverridden
 
 
 Example of code that causes an upgradability error:
@@ -333,7 +331,8 @@ Please avoid usage of Spryker\...\CustomerAccessEntityManager::createCustomerAcc
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-Example of resolving the error by copying the method to the factory on the project level:
+
+Example of resolving the error by cloning the functionality to the project level:
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -389,7 +388,7 @@ Please avoid usage of Spryker/Zed/ProductPageSearch/ProductPageSearchDependencyP
 
 Example of resolving the error by ?
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 
 ## PrivateApi:DependencyInBusinessModel
@@ -426,12 +425,12 @@ PrivateApi:DependencyInBusinessModel "Please avoid usage of Spryker\Zed\Customer
 
 Example of resolving the error by ?
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 
 ## PrivateApi:ObjectInitialization
 
-Business models on the project level should avoid creating private API from the Core level.
+Business models on the project level should avoid initializing private API from the Core level.
 
 Example of code that causes an upgradability error:
 
@@ -463,12 +462,12 @@ Please avoid usage of Spryker\Zed\CustomerAccess\Business\CustomerAccess\Custome
 
 Example of resolving the error by ?
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 
 ## PrivateApi:PersistenceInBusinessModel
 
-Business models on the project level can use repository and entity manager, but only the methods that are declared on the project level.
+On the project level, you can use repository and entity manager inside the business model class. The methods must be declared on the project level.
 
 Example of code that causes an upgradability error:
 
@@ -506,7 +505,7 @@ Please avoid usage of PrivateApi customerAccessEntityManager->setContentTypesToI
 
 Example of resolving the error by ?
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)
 
 
 
@@ -547,4 +546,4 @@ Please avoid usage of PrivateApi method SprykerCustomerAccessEntityManager::getC
 
 Example of resolving the error by
 
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi-facade)

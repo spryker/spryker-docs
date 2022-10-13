@@ -1,6 +1,6 @@
 ---
 title: How to create a route
-description: 
+description: This document describes how to create a route
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
@@ -9,7 +9,7 @@ redirect_from:
 
 This guide shows how you can create an API endpoint using a custom route.
 
-New Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
+Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
 Custom routes are based on Symfony routing.
 

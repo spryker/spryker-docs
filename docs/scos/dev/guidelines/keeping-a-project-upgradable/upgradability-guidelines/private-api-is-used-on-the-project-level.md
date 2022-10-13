@@ -18,7 +18,7 @@ For more information about module APIs, see [Definition of Module API](/docs/sco
 
 ## PrivateApi:Facade
 
-It is allowed to use repository, factory, or entity manager classes inside of facade class on a project level, but only the methods from these classes, that were declared on project level. Usage of this rule will guaranty that all methods that you use will not be changed in the future.
+When you use a repository, factory, or entity manager inside of facade class on a project level, please use only methods that are also declared on the project level. Usage of this rule will guaranty that all methods that you use will not be changed in the future.
 
 ### Example of error in the Evaluator output
 
@@ -242,7 +242,7 @@ Remove the Bridge.
 
 ---
 
-## PrivateApi:MethodIsOverwritten
+## PrivateApi:MethodIsOverridden
 
 It is not allowed to override the protected core methods from the core level on the project level. Protected methods can be changed at any time.
 
@@ -514,7 +514,7 @@ To resolve the error provided in the example, try the following in the provided 
 
 ## PrivateApi:PersistenceInBusinessModel
 
-Business models on project level can use repository and entity manager but only methods that were declared on project level.
+When you use a repository or entity manager inside the business model classes on a project level, please use only methods that are also declared on the project level.
 
 ### Example of error in the Evaluator output
 

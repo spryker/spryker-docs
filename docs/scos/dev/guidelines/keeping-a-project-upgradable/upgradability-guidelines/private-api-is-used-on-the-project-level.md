@@ -426,7 +426,7 @@ The solution for the error is the same as in `Resolving the error`[PrivateApi:Fa
 
 ## PrivateApi:ObjectInitialization
 
-Business models on the project level should avoid creating private API from the Core level.
+Business models on the project level should avoid initializing private API from the Core level.
 
 ### Example of code that causes an upgradability error
 

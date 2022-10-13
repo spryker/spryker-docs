@@ -259,10 +259,26 @@ entries:
                 url: /tutorial-content-and-search-personalized-catalog-pages.html
           - title: Third-party integrations
             nested:
-              - 
-
-
-
+              - title: Censhare
+                url: /docs/pbc/all/content-management-system/third-party-integrations/censhare.html
+              - title: Coremedia
+                url: /docs/pbc/all/content-management-system/third-party-integrations/coremedia.html
+              - title: E-Spirit
+                url: /docs/pbc/all/content-management-system/third-party-integrations/e-spirit.html
+              - title: Magnolia
+                url: /docs/pbc/all/content-management-system/third-party-integrations/magnolia.html
+              - title: Styla
+                url: /docs/pbc/all/content-management-system/third-party-integrations/styla.html
+          - title: Extend and customize
+            nested:
+              - title: "CMS extension points: reference information"
+                url: /docs/pbc/all/content-management-system/extend-and-customize/cms-extension-points-reference-information.html
+              - title: "Navigation module: reference information"
+                url: /docs/pbc/all/content-management-system/extend-and-customize/navigation-module-reference-information.html
+          - title: Domain model and relationships
+            nested:
+              - title: "Content item types: module relations"
+                url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

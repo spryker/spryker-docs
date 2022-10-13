@@ -1,17 +1,17 @@
 ---
 title: How to use authorization framework
-description: This document shows how to create a new authorization strategy.
+description: This document describes how to create a new authorization strategy.
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/using-authorization-framework.html
 ---
 
-This document shows how to create a new authorization strategy.
+This document describes how to create a new authorization strategy.
 
-Integrate authorization following this guide [https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html).
+Integrate authorization following the [Integrating Authorization Enabler](/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html) guide.
 
-The first step is creating a strategy that is a plugin responsible for performing the authorization itself:
+The first step is creating a strategy that is a plugin responsible for performing the authorization:
 
 <details><summary markdown='span'>AuthorizationStrategyPluginInterface</summary>
 
@@ -65,7 +65,7 @@ class CustomAuthorizationStrategyPlugin extends AbstractPlugin implements Author
 
 This plugin is run by `AuthorizationClient::authorize()`.
 
-There is a way to connect the resources and custom routes with the just-created strategy. They need to implement `AuthorizationStrategyAwareResourceRoutePluginInterface` pointing to the strategy:
+There is a way to connect the resources and custom routes with this strategy. They need to implement `AuthorizationStrategyAwareResourceRoutePluginInterface` pointing to the strategy:
 
 **AuthorizationStrategyAwareResourceRoutePluginInterface**
 
@@ -99,7 +99,7 @@ class DummyStoresResource extends AbstractResourcePlugin implements JsonApiResou
 }
 ```
 
-| FIELD IN ROUTE AUTHORIZATION CONFIG TRANSFER | MEANING |
+| FIELD IN ROUTE AUTHORIZATION CONFIG TRANSFER | DESCRIPTION |
 | --- | --- |
 | `strategies` | The array of strategies name to be used to evaluate the request. |
 | `apiCode` | API code returned if authorization fails. |

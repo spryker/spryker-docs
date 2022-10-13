@@ -9,9 +9,9 @@ redirect_from:
 
 This guide describes how to add resources through relationships. The following concept is allowed only for applications that implemented the Glue JSON API convention.
 
-Let's say you have a module named `FooApi`, where you want to add the `bar` resource related to the `foo` resource. To do this, follow these steps:
+Let's say you have a module named `ModuleApi`, where you want to add the `bar` resource related to the `module` resource. To do this, follow these steps:
 
-1. Create `FooBarResourceRelationshipPlugin`:
+1. Create `ModuleBarResourceRelationshipPlugin`:
 
 **src\Pyz\Glue\FooApi\Plugin\FooBarResourceRelationshipPlugin.php**
 
@@ -50,7 +50,7 @@ class FooBarResourceRelationshipPlugin extends AbstractPlugin implements Resourc
 
 ```
 
-2. Now declare the relationship resource:
+2. Declare the relationship resource:
 
 **src\Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
 

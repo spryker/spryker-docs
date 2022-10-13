@@ -9,9 +9,9 @@ redirect_from:
 
 This guide shows how to create an API endpoint using a resource for the Storefront API application.
 
-Let's say you have a module named `FooApi`, where you want to have a new endpoint `/foo` with `GET` and `POST` methods. To create an endpoint, follow these steps:
+Let's say you have a module named `ModuleApi`, where you want to have a new endpoint `/foo` with `GET` and `POST` methods. To create the endpoint, follow these steps:
 
-1. Create `FooApiConfig` and add resource name:
+1. Create `FooApiConfig` and add the resource name:
 
 **\Pyz\Glue\FooApi\FooApiConfig`**
 
@@ -96,7 +96,7 @@ class FooResourceController extends AbstractStorefrontApiController
 
 {% info_block infoBox "Backend-specific class" %}
 
-The `AbstractStorefrontApiController` can be used only for Storefront API. For Backend API, use the appropriate backend-specific class `AbstractBackendApiController`.
+`AbstractStorefrontApiController` can be used only for Storefront API. For Backend API, use the appropriate backend-specific class `AbstractBackendApiController`.
 
 {% endinfo_block %}
 

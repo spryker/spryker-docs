@@ -7,13 +7,13 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-a-route.html
 ---
 
-This guide shows the process of the API endpoint creation using a custom route.
+This guide shows how you can create an API endpoint using a custom route.
 
 New Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
 Custom routes are based on Symfony routing.
 
-Let's say you have a Storefront module named `FooApi`, where you want to have a new backend API endpoint `/foo/bar` with GET and POST methods. For this, follow these steps:
+Let's say you have a Storefront module named `FooApi`, where you want to have a new backend API endpoint `/foo/bar` with GET and POST methods. To create the new backend API endpoint, follow these steps:
 
 1. Create a `FooBarController` with the action:
 
@@ -44,11 +44,11 @@ class FooBarController extends AbstractController
 
 ```
 
-An empty response is returned for now, but module's Factory is available and can be used to access Processor models or external dependencies the same way it is done everywhere in Spryker.
+Even though an empty response is returned, the module's Factory is available and can be used to access Processor models or external dependencies the same way it is done everywhere in Spryker.
 
 {% info_block infoBox %}
 
-Pay attention to the `AbstractController` you use, Storefront and Backend variation exists in Glue layer.
+Pay attention to `AbstractController` you use, Storefront and Backend variation exists in the `Glue` layer.
 
 {% endinfo_block %}
 
@@ -88,7 +88,7 @@ class FooBarRouteProviderPlugin extends AbstractPlugin implements RouteProviderP
 
 {% info_block infoBox %}
 
-Note that `AbstractPlugin` specific to the storefront or backend needs to be used.
+Ensure you use `AbstractPlugin` specific to the storefront or backend needs.
 
 {% endinfo_block %}
 

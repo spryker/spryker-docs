@@ -102,7 +102,7 @@ class FooResourceController extends AbstractStorefrontApiController
 
 4. Create `FooResource`:
 
-For accepting the JSON API convention, the resource must implement `JsonApiResourceInterface`.
+To follow the JSON API convention, the resource must implement `JsonApiResourceInterface`.
 
 **\Pyz\Glue\FooApi\Plugin\FooResource**
 

@@ -15,8 +15,8 @@ Because the backend and storefront APIs have different sets of configured servic
 | OPTION | MEANING |
 | --- | --- |
 | `glue` | Old application value. For the new APIs, choose one of the following options. |
-| `glue-storefront` | Application that has access to key\_value\_store and search.   |
-| `glue-backend` | Application that has access to the following: <ul><li>database</li><li>broker</li><li>key\_value\_store</li><li>session</li><li>search</li></ul> |
+| `glue-storefront` | Application that has access to key, value, store and search.   |
+| `glue-backend` | Application that has access to the following: <ul><li>database</li><li>broker</li><li>key, value, store</li><li>session</li><li>search</li></ul> |
 
 **deploy.yml**
 

@@ -574,6 +574,45 @@ To resolve the error provided in the example, try the following in the provided 
 
 ### Example of resolving the error by copying and renaming Private API entities
 
+1. Create a new entity manager on the project level with the needed methods from the entity manager on the core level.
+
+```php
+<?php
+
+namespace Pyz\Zed\CustomerAccess\Persistence;
+
+use ArrayObject;
+use Generated\Shared\Transfer\ContentTypeAccessTransfer;
+use Generated\Shared\Transfer\CustomerAccessTransfer;
+use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
+
+/**
+ * @method \Spryker\Zed\CustomerAccess\Persistence\CustomerAccessPersistenceFactory getFactory()
+ */
+class PyzCustomerAccessEntityManager extends AbstractEntityManager implements CustomerAccessEntityManagerInterface
+{
+    ...
+    /**
+     * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
+     *
+     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
+     */
+    public function setPyzContentTypesToInaccessible(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer
+    {
+        $updatedContentTypeAccessCollection = new ArrayObject();
+        foreach ($customerAccessTransfer->getContentTypeAccess() as $contentTypeAccess) {
+            ...
+        }
+        $customerAccessTransfer->setContentTypeAccess($updatedContentTypeAccessCollection);
+
+        return $customerAccessTransfer;
+    }
+    ...
+}
+```
+
+2. Use a new entity manager from the project level with its methods.
+
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
 
@@ -591,7 +630,7 @@ class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
     {
         return $this->getTransactionHandler()->handleTransaction(function () use ($customerAccessTransfer) {
             ...
-            return $this->pyzCustomerAccessEntityManager->setContentTypesToInaccessible($customerAccessTransfer);
+            return $this->pyzCustomerAccessEntityManager->setPyzContentTypesToInaccessible($customerAccessTransfer);
         });
     }
    ...
@@ -649,6 +688,8 @@ To resolve the error provided in the example, try the following in the provided 
 
 ### Example of resolving the error by copying and renaming Private API entities
 
+1. Create a new method for a factory on the project level.
+
 ```php
 namespace Pyz\Zed\Customer\Business;
 
@@ -667,6 +708,8 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
     }
 }
 ```
+
+2. Use the new project-level method instead of the core-level method.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Persistence;

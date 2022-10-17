@@ -59,7 +59,7 @@ For this, you need two things:
 * Your RDS instance URL.
 * Your DB credentials.
 
-You can easily obtain all these things by logging in to the AWS console and searching for "Parameter Store". Please make sure that you ahve selected the right AWS region before you search. Now, you can enter "DB" in the search to list all the Parameter Store entries for the DB. You are looking for the following parameters:
+You can obtain all these things by logging in to the AWS console and searching for "Parameter Store". Ensure that you have selected the right AWS region before you search.  To list all the Parameter Store entries for the DB, you can enter "DB" in the search. You are looking for the following parameters:
 - /codebuild/base_task_definition/SPRYKER_DB_HOST
 - /codebuild/base_task_definition/SPRYKER_DB_ROOT_USERNAME
 - /codebuild/base_task_definition/SPRYKER_DB_ROOT_PASSWORD

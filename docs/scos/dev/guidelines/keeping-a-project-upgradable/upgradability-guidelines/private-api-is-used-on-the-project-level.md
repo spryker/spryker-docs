@@ -334,7 +334,7 @@ use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as Spryke
  */
 class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager implements CustomCustomerAccessEntityManager
 {
-   /**
+    /**
      *
      */
     public function setContentTypesToAccessible(CustomerAccessTransfer $customerAccessTransfer): void
@@ -359,7 +359,7 @@ To resolve the error provided in the example, try the following in the provided 
 
 ### Example of resolving the error by cloning functionality to the project level
 
-Copy the method to the factory on the project level.
+1. Copy the method to the factory on the project level.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -379,6 +379,28 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
     }
 }
 ```
+
+2. Use the project-level factory method instead of core-level factory method. 
+
+```php
+use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as SprykerCustomerAccessEntityManager;
+
+/**
+ * @method \Pyz\Zed\Customer\Business\CustomerBusinessFactory getFactory()
+ */
+class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager implements CustomCustomerAccessEntityManager
+{
+    /**
+     *
+     */
+    public function setContentTypesToAccessible(CustomerAccessTransfer $customerAccessTransfer): void
+    {
+        $this->getFactory()->createPyzCustomerAccessMapper();
+       ....
+    }
+}
+```
+
 ---
 
 ## PrivateApi:Dependency

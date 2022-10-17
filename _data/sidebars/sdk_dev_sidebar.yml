@@ -11,9 +11,7 @@ entries:
       - title: Developing the SDK
         url: /docs/sdk/dev/developing-the-sdk.html
       - title: Task lifecycle management
-        url: /docs/sdk/dev/task-lifecycle-management.html               
-      - title: Conventions
-        url: /docs/sdk/dev/sdk-conventions.html
+        url: /docs/sdk/dev/task-lifecycle-management.html
       - title: Integrating SDK commands to PhpStorm command line tools
         url: /docs/sdk/dev/integrating-sdk-commands-to-php-storm-command-line-tools.html
       - title: Spryks

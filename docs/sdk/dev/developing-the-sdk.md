@@ -4,7 +4,7 @@ description: For the Spryker SDK development, you build it as a Docker container
 template: howto-guide-template
 ---
 
-To make changes to the existing Spryker SDK, you build it as a Docker container and then run it in the development or debug mode. 
+To make changes to the existing Spryker SDK, you build it as a Docker container and then run it in the development or debug mode.
 
 ## Building the dev container
 
@@ -18,16 +18,25 @@ spryker-sdk --mode=dev
 ```
 
 ## Running SDK in the development mode
-
 To run SDK in the development mode, do the following:
 
-1. Make sure you have [Mutagen](https://mutagen.io/documentation/introduction/installation) installed.
-2. Run `spryker-sdk --mode=dev`.
+1. Make sure you have [Mutagen](https://mutagen.io/documentation/introduction/installation)installed.
 
-## Running SDK in the debug mode
-To start an Xdebug session with the serverName `spryker-sdk` that you configured in PHPStorm, run the command: `spryker-sdk --mode=debug <task>`
+2. Run the command:
+
+```bash
+spryker-sdk --mode=dev
+```
+
+### Running SDK in the debug mode
+To start an Xdebug session with the serverName `spryker-sdk` that you configured in PHPStorm, run the command:
+
+```bash
+spryker-sdk --mode=debug <task>
+```
 
 ## Handy commands
+
 The following table lists some helpful commands to use during your development:
 
 <div class="width-100">
@@ -38,6 +47,12 @@ The following table lists some helpful commands to use during your development:
 | `cd <project> && rm -f .ssdk && rm -f .ssdk.log && spryker-sdk sdk:init:project` | Resets project  | 
 
 </div>
+
+## Environments
+There are three environments in SDK. You can configure the following environment variables in files:
+ - .env - for dev
+ - .env.prod - for prod
+ - .env.test - for test
 
 ## Troubleshooting
 

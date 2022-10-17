@@ -5,7 +5,7 @@ last_updated: Jul 27, 2022
 template: howto-guide-template
 ---
 
-You are about to roll out an important feature to your staging or production environment and want to be extra sure that everything will work out right? This document provides tips that can help you avoid surprises and help you prepare your project optimally for being deployed.
+You are about to roll out an important feature to your staging or production environment and want to be extra sure that everything will work out right? Or you are encountering behaviour in your application when it is deployed that does not seem rigth and you are wondering how to best debug it? This document provides tips that can help you avoid surprises and help you prepare your project optimally for being deployed, as well as build a local development setup with which you should be ablle to debug more effectively.
 
 ## Prerequisites
 
@@ -44,3 +44,30 @@ docker/sdk boot (THE YML file of your choice) && docker/sdk up
 ```
 
 It starts up your application, which is reachable through its staging and production URLs and behaves just like it would in your PaaS environments. This setup shows whether your application builds correctly with the deploy files used in the PaaS pipelines and lets you check out the look and feel of your application more authentically.
+
+### Ingest staging or production data
+
+{% info_block warningBox "Mind the database load" %}
+
+Creating a database dump can create significant load on your database. If you are creating a database dump from a produciton environment, please make sure you are doing so by using a read replica (if available). You can check whether you have a read replica for your production database, by searching for RDS in the AWS console and you will be able to find your read replica listed next to your produciton RDS database. You will also obtain the host address there.
+
+{% endinfo_block %}
+ 
+By ingesting the data in your staging or production database you can go even one step further and bring your local environment even closer to its staging or production form. 
+You can easily create a dump of your staging or produciton database by connecting to the RDS instance while having your VPN connected to the respective environment.
+For this, you need two things:
+1. Your RDS instance URL
+2. Your DB credentials
+
+You can easily obtain all these things by logging in to the AWS console and searching for "Parameter Store". Please make sure that you ahve selected the right AWS region before you search. Now, you can enter "DB" in the search to list all the Parameter Store entries for the DB. You are looking for the following parameters:
+- /codebuild/base_task_definition/SPRYKER_DB_HOST
+- /codebuild/base_task_definition/SPRYKER_DB_ROOT_USERNAME
+- /codebuild/base_task_definition/SPRYKER_DB_ROOT_PASSWORD
+With this information you can connect to the database from any SQL client and create a database dump which you can then import locally. After you have imported the data, dont forget to publish events so that all the data gets imported to Redis and Elastic Search, as well. You can use the following command to achieve that.
+
+```
+command publish:trigger-events
+```
+
+
+

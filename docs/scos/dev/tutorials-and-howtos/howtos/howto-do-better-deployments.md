@@ -5,7 +5,7 @@ last_updated: Jul 27, 2022
 template: howto-guide-template
 ---
 
-You are about to roll out an important feature to your staging or production environment and want to be extra sure that everything will work out right? Or you are encountering behaviour in your application when it is deployed that does not seem rigth and you are wondering how to best debug it? This document provides tips that can help you avoid surprises and help you prepare your project optimally for being deployed, as well as build a local development setup with which you should be ablle to debug more effectively.
+You are about to roll out an important feature to your staging or production environment and want to be extra sure that everything will work out right? Or you are encountering behavior in your application when it is deployed that does not seem right and you are wondering how to best debug it? This document provides tips that can help you avoid surprises and help you prepare your project optimally for being deployed, as well as build a local development setup with which you should be able to debug more effectively.
 
 ## Prerequisites
 

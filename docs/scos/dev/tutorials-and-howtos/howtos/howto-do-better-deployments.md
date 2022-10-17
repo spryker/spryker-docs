@@ -49,7 +49,7 @@ It starts up your application, which is reachable through its staging and produc
 
 {% info_block warningBox "Mind the database load" %}
 
-Creating a database dump can create significant load on your database. If you are creating a database dump from a produciton environment, please make sure you are doing so by using a read replica (if available). You can check whether you have a read replica for your production database, by searching for RDS in the AWS console and you will be able to find your read replica listed next to your produciton RDS database. You will also obtain the host address there.
+Creating a database dump can cause significant load on your database. If you are creating a database dump from a production environment, ensure you are doing so by using a read replica (if available). You can check whether you have a read replica for your production database by searching for RDS in the AWS console. This lets find your read replica listed next to your production RDS database. You can obtain the host address there.
 
 {% endinfo_block %}
  

@@ -48,7 +48,7 @@ class IndexController extends AbstractController
 }
 ```
 
-## Show message from Zed's Business Layer
+## Show message from Zed's Business layer
 To show a message from a model, follow these steps:
 1. Declare this dependency in the module's dependency provider:
 

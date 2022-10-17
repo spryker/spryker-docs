@@ -147,7 +147,7 @@ class HelloWorldBusinessFactory extends AbstractBusinessFactory
 }
 ```
 
-3. Create `HelloWorldFacade` and call this functionality from it:
+3. Create the `HelloWorldFacade` and the corresponding interface and call this functionality from it:
 
 ```php
 <?php
@@ -170,7 +170,26 @@ class HelloWorldFacade extends AbstractFacade implements HelloWorldFacadeInterfa
 }
 ```
 
-4. Modify the controller so that it calls the method added to your facade:
+```php
+<?php
+
+namespace Pyz\Zed\HelloWorld\Business;
+
+interface HelloWorldFacadeInterface
+{
+    /**
+     * Specification:
+     * - Returns a salutation text
+     *
+     * @api
+     *
+     * @return string
+     */
+    public function getSalutationMessage();
+}
+```
+
+4. Modify the controller so that it calls the just added method to your facade:
 
 ```php
 <?php

@@ -56,7 +56,7 @@ Creating a database dump can cause significant load on your database. If you are
 By ingesting the data in your staging or production database you can go even one step further and bring your local environment even closer to its staging or production form. 
 You can easily create a dump of your staging or produciton database by connecting to the RDS instance while having your VPN connected to the respective environment.
 For this, you need two things:
-1. Your RDS instance URL
+* Your RDS instance URL.
 2. Your DB credentials
 
 You can easily obtain all these things by logging in to the AWS console and searching for "Parameter Store". Please make sure that you ahve selected the right AWS region before you search. Now, you can enter "DB" in the search to list all the Parameter Store entries for the DB. You are looking for the following parameters:

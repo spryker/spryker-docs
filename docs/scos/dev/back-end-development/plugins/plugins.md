@@ -35,7 +35,7 @@ According to our conventions, plugins are the only classes that can be directly 
 
 ## Example: Calculator plugins
 
-The `Calculation` module ships with a `CalculatorPluginInterface` which is implemented in several bundles. For example, you can find the `ItemTaxCalculatorPlugin` inside the Tax module.
+The `Calculation` module ships with a `CalculatorPluginInterface`, which is implemented in several bundles. For example, you can find the `ItemTaxCalculatorPlugin` inside the Tax module.
 
 According to the interface, this plugin retrieves a quote transfer object, performs tax-related calculations, and adds them to the quote.
 
@@ -214,7 +214,7 @@ class CalculationDependencyProvider extends AbstractBundleDependencyProvider
             //SubTotal
             new SubtotalTotalsCalculatorPlugin(),
 
-            //Expenses —for example, shipping
+            //Expenses—for example, shipping
             new ExpensesGrossSumAmountCalculatorPlugin(),
             new ExpenseTotalsCalculatorPlugin(),
 

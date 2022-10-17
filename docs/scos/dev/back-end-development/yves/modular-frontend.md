@@ -47,7 +47,7 @@ Pages are the main concept of modular frontend (Yves) which splits a code into m
 
 {% info_block infoBox %}
 
-As an example, we consider Product Detail Page as one Page module which is responsible for displaying products and their basic information.
+As an example, let's consider the product detail page as a one-page module that is responsible for displaying products and their basic information.
 
 {% endinfo_block %}
 
@@ -67,7 +67,7 @@ Meanwhile, Page modules implement only feature basics, while Widgets provide opt
 
 {% info_block infoBox %}
 
-*Product Detail Page* shows basic product information, like the name, description and attributes of the product. But there are lots of optional features that can appear on the same page. The most commonly used examples are product image, price, availability, options, groups, rating, relations, an much more.
+The *product details* page shows basic product information, like the name, description, and attributes of the product. But there are lots of optional features that can appear on the same page. The most commonly used examples are product image, price, availability, options, groups, rating, relations, and much more.
 
 {% endinfo_block %}
 

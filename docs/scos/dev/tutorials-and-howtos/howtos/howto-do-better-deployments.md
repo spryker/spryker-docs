@@ -57,7 +57,7 @@ By ingesting the data in your staging or production database you can go even one
 You can easily create a dump of your staging or produciton database by connecting to the RDS instance while having your VPN connected to the respective environment.
 For this, you need two things:
 * Your RDS instance URL.
-2. Your DB credentials
+* Your DB credentials.
 
 You can easily obtain all these things by logging in to the AWS console and searching for "Parameter Store". Please make sure that you ahve selected the right AWS region before you search. Now, you can enter "DB" in the search to list all the Parameter Store entries for the DB. You are looking for the following parameters:
 - /codebuild/base_task_definition/SPRYKER_DB_HOST

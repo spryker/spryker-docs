@@ -6,19 +6,26 @@ template: howto-guide-template
 
 Maintenance mode is used many cases, such as deploying a new application version or fixing an unexpected error. To automate the process, we created dedicated pipelines for enabling and disabling maintenance mode. The following sections describe how to run maintenance mode pipelines.
 
-
-{Briefly describe how the maintenance pipelines work under the hood}
-
-
 ## Prerequisites
 
-When you enable maintenance mode, the landing pages of the Back Office and Storefront are replaced with maintenance pages in `public/{{APPLICATION}}/maintenance/index.html`. Adjust the pages your needs.
+When you enable maintenance mode, the landing pages of the Back Office and Storefront are replaced with maintenance pages in `public/{{APPLICATION}}/maintenance/index.html`. Adjust the pages to match the design of your application and fulfill business requirements.
 
 ## Enable maintenance mode
 
-{How do I enable maintenance mode? How to run the pipeline? Is there anything else to do?}
+1. In the AWS Management Console, go to **Services** > **[CodePipeline](https://eu-central-1.console.aws.amazon.com/codesuite/codepipeline/pipelines)**.
+2. On the **Pipelines** pane, click **Maintenance_Enable_{{ENVIRONMENT_NAME}}**.
+3. On the pipeline's page, click **Release change**.
 
+    The deployment time depends on the application's complexity. Once the deployment is finished, Storefront and Back Office visitors will see the maintenance page.
+
+![Maintenance mode enable pipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/enable-and-disable-maintenance-mode.md/maintenance-enable-pipeline.png)
 
 ## Disable maintenance mode
 
-{How do I disable maintenance mode? How to run the pipeline? Is there anything else to do?}
+1. In the AWS Management Console, go to **Services** > **[CodePipeline](https://eu-central-1.console.aws.amazon.com/codesuite/codepipeline/pipelines)**.
+2. On the **Pipelines** pane, click **Maintenance_Disable_{{ENVIRONMENT_NAME}}**.
+3. On the pipeline's page, click **Release change**.
+
+    The deployment time depends on the application's complexity. Once the deployment is finished, Storefront and Back Office visitors will be able to access the application.
+
+![Maintenance mode disable pipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/enable-and-disable-maintenance-mode.md/maintenance-disable-pipeline.png)

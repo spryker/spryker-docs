@@ -8,7 +8,7 @@ Maintenance mode is used many cases, such as deploying a new application version
 
 ## Prerequisites
 
-When you enable maintenance mode, the landing pages of the Back Office and Storefront are replaced with maintenance pages in `public/{{APPLICATION}}/maintenance/index.html`. Adjust the pages to match the design of your application and fulfill business requirements.
+When you enable maintenance mode, the landing pages of your applications, like the Back Office or Storefront, are replaced with maintenance pages in `public/{{APPLICATION}}/maintenance/index.html`. Adjust the pages to match the design of your application and fulfill business requirements.
 
 ## Enable maintenance mode
 

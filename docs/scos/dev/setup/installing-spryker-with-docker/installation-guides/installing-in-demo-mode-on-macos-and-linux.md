@@ -118,7 +118,7 @@ To get the list of the instructions, you can run `docker/sdk install` after `boo
 
 {% info_block warningBox %}
 
-Depending on the hardware performance, the first project launch can take up to **20 minutes**.
+Depending on the hardware performance, the first project launch can take up to *20 minutes*.
 
 {% endinfo_block %}
 

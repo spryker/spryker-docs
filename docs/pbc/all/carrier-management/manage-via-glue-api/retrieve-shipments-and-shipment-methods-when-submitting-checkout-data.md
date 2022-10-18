@@ -9,7 +9,7 @@ This document describes how to retrieve shipments and shipment methods when subm
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and any related installation instructions, see:
+For detailed information about the modules that provide the API functionality and any related installation instructions, see the following guides:
 * [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)
 * [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html)
 

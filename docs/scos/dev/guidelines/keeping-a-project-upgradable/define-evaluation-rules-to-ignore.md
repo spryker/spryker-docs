@@ -26,4 +26,4 @@ evaluator:
       - NotUnique:Constant
 ```
 
-If code does not comply with the `NotUnique:Constant` rule, only warnings are returned.
+If code does not comply with the `NotUnique:Constant` rule, now only warnings are returned.

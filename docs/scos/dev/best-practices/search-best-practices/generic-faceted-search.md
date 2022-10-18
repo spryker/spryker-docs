@@ -45,12 +45,12 @@ related:
     link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
-Faceted search (sometimes also called faceted navigation) allows users to navigate through a web site by applying filters for categories, attributes, price ranges and so on. It’s probably the most basic feature of a search and users expect this to work. Unfortunately, we observed that this is also one of the features that developers struggle with the most.
+Faceted search (sometimes also called faceted navigation) allows users to navigate through a web site by applying filters for categories, attributes, price ranges and so on. It's probably the most basic feature of a search and users expect this to work. Unfortunately, we observed that this is also one of the features that developers struggle with the most.
 
-The main idea behind faceted search is to present the attributes of the documents of the previous search result as filters, which can be used by the user to narrow down search results. In the example below, a user clicked through the category tree to the “Hammer” category and then further filtered the results for documents with a hammer weight of 2000 grams and in a price range of 10€ to 50€. 19 documents were found, and the filter bar on the left lists those attributes that are contained in the search result along with a count of how many documents have the attribute (facet counts):
+The main idea behind faceted search is to present the attributes of the documents of the previous search result as filters, which can be used by the user to narrow down search results. In the following example, a user clicked through the category tree to the "Hammer" category and then further filtered the results for documents with a hammer weight of 2000 grams and in a price range of 10€ to 50€. 19 documents were found, and the filter bar on the left lists those attributes that are contained in the search result along with a count of how many documents have the attribute (facet counts):
 ![Faceted search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Generic+Faceted+Search/faceted-search.png) 
 
-To support faceted search, Elasticsearch offers the simple but powerful concept of aggregations. One of the nice features of aggregations is that they can be nested – in other words, it’s possible to define top-level aggregations that create “buckets” of documents and other aggregations that are executed inside those buckets on a subset of documents. The concept of aggregations is in general similar to the SQL GROUP_BY command (but much more powerful). Nested aggregations are analogous to SQL grouping but with multiple column names in the GROUP BY part of the query.
+To support faceted search, Elasticsearch offers the simple but powerful concept of aggregations. One of the nice features of aggregations is that they can be nested – in other words, it's possible to define top-level aggregations that create "buckets" of documents and other aggregations that are executed inside those buckets on a subset of documents. The concept of aggregations is in general similar to the SQL GROUP_BY command (but much more powerful). Nested aggregations are analogous to SQL grouping but with multiple column names in the GROUP BY part of the query.
 
 ### Indexing facet values
 
@@ -119,7 +119,7 @@ This requires a special treatment in the mapping, because otherwise Elasticsearc
  }
  ```
 
- Aggregations would in this case provide incorrect results because the relation between the specific attribute name and it’s values is lost. Therefore, facet fields need to be marked as “`type`”: “`nested`” in the Elasticsearch mapping:
+ Aggregations would in this case provide incorrect results because the relation between the specific attribute name and it's values is lost. Therefore, facet fields need to be marked as "`type`": "`nested`" in the Elasticsearch mapping:
 
  ```js
  "string_facets": {
@@ -227,7 +227,7 @@ The most important numeric facet on any e-commerce website is probably the price
 }
 ```
 
-The aggregation of numeric facets uses the keyword "`stats`" instead of "`terms`" in queries. Unlike the "`terms`" aggregation that returns only the number of the term’s occurrences, "`stats`" returns statistical values like minimum, maximum and average:
+The aggregation of numeric facets uses the keyword "`stats`" instead of "`terms`" in queries. Unlike the "`terms`" aggregation that returns only the number of the term's occurrences, "`stats`" returns statistical values like minimum, maximum and average:
 
 ```js
 "agg_number_facet": {
@@ -251,6 +251,6 @@ The aggregation of numeric facets uses the keyword "`stats`" instead of "`terms`
 }
 ```
 
-Sometimes e-commerce websites support specific facet behavior that let users select multiple values of the same facet on the front-end (e.g using checkbox). Check [stackoverflow discussion](http://stackoverflow.com/questions/41369749) to see how to implement query that supports this feature while using described facet document structure.
+Sometimes e-commerce websites support specific facet behavior that let users select multiple values of the same facet on the frontend—for example, using checkbox. Check [stackoverflow discussion](http://stackoverflow.com/questions/41369749) to see how to implement query that supports this feature while using described facet document structure.
 
-With this approach to faceted navigation, it is possible to render search result pages with a single Elasticsearch query and without having to know the list of available facets at query time. The additional effort in document preparation and query building immediately pays off because the solution automatically scales to thousands of facets.
+With this approach to faceted navigation, you can to render search result pages with a single Elasticsearch query and without having to know the list of available facets at query time. The additional effort in document preparation and query building immediately pays off because the solution automatically scales to thousands of facets.

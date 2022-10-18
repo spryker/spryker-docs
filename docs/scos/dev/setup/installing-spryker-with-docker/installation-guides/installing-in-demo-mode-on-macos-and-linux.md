@@ -112,7 +112,7 @@ Follow the installation instructions in the white box from the `docker/sdk boots
 
 {% info_block infoBox %}
 
- You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
+To get the list of the instructions, you can run `docker/sdk install` after `bootstrap`.
 
 {% endinfo_block %}
 

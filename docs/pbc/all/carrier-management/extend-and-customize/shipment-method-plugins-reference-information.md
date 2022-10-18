@@ -65,7 +65,7 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodAvailabil
 
 ## Price Calculation plugin
 
-For each price calculation plugin linked to a shipment method, a class with the same name must exist on the project's side in the Shipment module  (`Pyz/Zed/Shipment/Communication/Plugin/PriceCalculation`). The class must implement `ShipmentMethodPricePluginInterface` and must extend the `AbstractPlugin` class, as in the example below:
+For each price calculation plugin linked to a shipment method, a class with the same name must exist on the project's side in the Shipment module (`Pyz/Zed/Shipment/Communication/Plugin/PriceCalculation`). The class must implement `ShipmentMethodPricePluginInterface` and must extend the `AbstractPlugin` class, as in the following example:
 
 ```php
 <?php

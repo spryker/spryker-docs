@@ -24,7 +24,7 @@ To add a carrier company in the Back Office, follow these steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
 2. On the **Delivery Methods** page, click **Create new carrier company**.
-3. On the **Create new Carrier Company** page, enter a **NAME**.
+3. On the **ADD CARRIER COMPANY** page, enter a **NAME**.
 4. Select the **ACTIVATE** checkbox.
 5. Click **Add**.
     This opens the **Delivery Methods** page with a success message displayed.

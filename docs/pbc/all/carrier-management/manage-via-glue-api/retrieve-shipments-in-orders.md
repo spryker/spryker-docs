@@ -16,7 +16,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ## Retrieve an order
 
-To retrieve detailed information on an order, send the following request:
+To retrieve detailed information about an order, send the following request:
 
 ---
 `GET` **/orders/*{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}***

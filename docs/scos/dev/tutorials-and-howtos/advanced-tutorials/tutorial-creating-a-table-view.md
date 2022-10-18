@@ -44,25 +44,25 @@ Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/
 namespace Pyz\Zed\HelloWorld\Communication\Table;
 
 use Orm\Zed\Product\Persistence\Map\SpyProductTableMap;
-use Orm\Zed\Product\Persistence\SpyProductQuery;
+use Orm\Zed\Product\Persistence\SpyProductQueryContainerInterface;
 use Spryker\Zed\Gui\Communication\Table\AbstractTable;
 use Spryker\Zed\Gui\Communication\Table\TableConfiguration;
 
 class ProductTable extends AbstractTable
 {
     /**
-     * @var \Orm\Zed\Product\Persistence\SpyProductQuery
+     * @var \Orm\Zed\Product\Persistence\SpyProductQueryContainerInterface
      */
-    protected $spyProductPropelQuery;
+    protected $spyProductQueryContainer;
 
     /**
      * ProductTable constructor.
      *
-     * @param \Orm\Zed\Product\Persistence\SpyProductQuery $spyProductPropelQuery
+     * @param \Orm\Zed\Product\Persistence\SpyProductQueryContainerInterface $spyProductQueryContainer
      */
-    public function __construct(SpyProductQuery $spyProductPropelQuery)
+    public function __construct(SpyProductQueryContainerInterface $spyProductQueryContainer)
     {
-        $this->spyProductPropelQuery = $spyProductPropelQuery;
+        $this->spyProductQueryContainer = $spyProductQueryContainer;
     }
 
     /**
@@ -87,7 +87,7 @@ class ProductTable extends AbstractTable
      */
     protected function prepareData(TableConfiguration $config): array
     {
-        $queryResult = $this->runQuery($this->spyProductPropelQuery, $config);
+        $queryResult = $this->runQuery($this->spyProductQueryContainer->querySpyProduct(), $config);
 
         $results = [];
         foreach ($queryResult as $resultItem) {

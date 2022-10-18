@@ -14,7 +14,11 @@ redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
 related:
   - title: Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html 
+  - title: Deploy file inheritance—common use cases
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
+  - title: Deploy file
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file.html
 ---
 
 
@@ -205,7 +209,7 @@ Affects the included deploy file that it follows in an array of included deploy 
 
 Defines the configuration of the import:
 
-* `{import_name}: template:` — defines the deploy file to be included into a build  as part of this import.
+* `{import_name}: template:`—defines the deploy file to be included into a build  as part of this import.
 * `{import_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml
@@ -651,7 +655,7 @@ docker:
 
 ### docker: newrelic:
 
-Defines the [New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#new-relic) configuration.
+Defines the [New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html#new-relic) configuration.
 
 * `docker: newrelic: license:` - defines a New Relic license. Aquire it from [New Relic](https://www.newrelic.com/).
 * `docker: newrelic: appname:` - defines a New Relic application name. This variable is optional and does not have a default value.

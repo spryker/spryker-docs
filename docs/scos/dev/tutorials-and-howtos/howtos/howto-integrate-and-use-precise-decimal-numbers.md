@@ -16,6 +16,9 @@ redirect_from:
   - /v5/docs/en/ht-integrate-and-use-precise-decimal-numbers
   - /v4/docs/ht-integrate-and-use-precise-decimal-numbers
   - /v4/docs/en/ht-integrate-and-use-precise-decimal-numbers
+related:
+  - title: Decimal Stock migration concept
+    link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
 ---
 
 The document shows how to install and work with precise decimal objects.
@@ -46,7 +49,7 @@ You can specify Decimal as a type of your Data Transfer Object’s property. To 
 </transfer>
 ```
 
-For more information about working with Data Transfer Objects, see [Creating, using, and extending the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
+For more information about working with Data Transfer Objects, see [Create, use, and extend the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html).
 
 ## Create a decimal value object
 

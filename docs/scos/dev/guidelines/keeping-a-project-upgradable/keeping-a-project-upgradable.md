@@ -2,6 +2,17 @@
 title: Keeping a project upgradable
 description: Tools and guidelines for keeping a project upgradable
 template: concept-topic-template
+related:
+  - title: Upgradability guidelines
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+  - title: Upgrader tool overview
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
+  - title: Run the evaluator tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
+  - title: Running the upgrader tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
+  - title: Define custom prefixes for core entity names
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---
 
 Keeping software up to date is a known concern, especially when it comes to transactional business models with sophisticated requirements.
@@ -71,7 +82,7 @@ analyze:php:code-compliance
 analyze:php:code-compliance-report
 ```
 
-For detailed instructions, see [Running the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html).
+For detailed instructions, see [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 
 ## 4. Resolve the evaluation issues
 

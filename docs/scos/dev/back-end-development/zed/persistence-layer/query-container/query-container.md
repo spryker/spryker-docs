@@ -1,5 +1,5 @@
 ---
-title: About the Query Container
+title: About the query container
 description: A query container holds all the database queries of the current module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/query-container
   - /v1/docs/query-container
   - /v1/docs/en/query-container
+related: 
+  - title: Implementing a query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
+  - title: Using a query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
 ---
 
 {% info_block infoBox "When to use query containers" %}
@@ -35,11 +40,11 @@ A query container holds all the database queries of the current module.
 
 Each module has exactly one query container, which also acts as an entry point to the persistence layer. Internally, it uses [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) and returns unterminated queries.
 
-As you can see in the example below, the query container consists of `query-methods` which gets [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) from the [factory](/docs/scos/dev/back-end-development/factory/factory.html), adds some filters or joins and returns the unterminated query object.
+As you can see in the following example, the query container consists of `query-methods` which gets [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) from the [factory](/docs/scos/dev/back-end-development/factory/factory.html), adds some filters or joins and returns the unterminated query object.
 
 Unterminated queries should be avoided in the Application Layers above Persistence. Consider using the [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) patterns to decouple persistence and ORM implementation details.
 
-Unterminated means you don’t execute the query with `find()`, `findOne()` or `count()`.
+Unterminated means you don't execute the query with `find()`, `findOne()` or `count()`.
 
 ```php
 use Spryker\Zed\Kernel\Persistence\AbstractQueryContainer;

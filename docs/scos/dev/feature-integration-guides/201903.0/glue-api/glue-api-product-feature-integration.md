@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/product-api-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

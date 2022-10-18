@@ -24,6 +24,7 @@ Review the reference information before you start, or look up the necessary info
 ## Editing a CMS redirect
 
 To edit a CMS redirect:
+
 1. On the *CMS Redirect* page in the _Actions_ column, click **Edit** next to the URL you want to update.
 2. On the *Edit a CMS redirect* page, you can update the following information:
     * Url
@@ -38,7 +39,9 @@ If you modify the *existing* URL from which a redirect is configured, a new URL 
 {% endinfo_block %}
 
 **Tips and tricks**
+
 <br>On the *Edit a CMS redirect* page, you can do the following:
+
 * Create a new CMS redirect by clicking **+Add CMS Redirect** in the top right corner of the page.
 * Return to the list of redirects by clicking **Back to CMS** in the top right corner of the page.
 
@@ -53,6 +56,7 @@ If you modify the *existing* URL from which a redirect is configured, a new URL 
 | Actions | Set of actions that is performed on a redirect. |
 
 On the *CMS Redirects* page, you can also:
+
 * Switch to the page where you can create a new redirect.
 * Sort content items by *ID* and *From Url*.
 * Filter content items by *ID*, *From Url*, *To Url*, and *Status*.
@@ -60,6 +64,7 @@ On the *CMS Redirects* page, you can also:
 ## Deleting a CMS Redirect
 
 To delete a CMS redirect:
+
 1. Navigate to **Content&nbsp;<span aria-label="and then">></span> Redirects**.
 2. On the *CMS Redirect* page in the _Actions_ column, click **Delete** next to the URL you want to delete.
 3. This will successfully delete the redirect and remove it from the list of redirects.

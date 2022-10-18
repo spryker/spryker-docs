@@ -3,6 +3,13 @@ title: Scalable application infrastructure for publish and sync workers
 description: Learn how to use scalable application infrastructure.
 last_updated: May 16, 2022
 template: concept-topic-template
+related:
+  - title: New Relic transactions grouping by queue names
+    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
+  - title: RAM-aware batch processing
+    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
+  - title: Storage caching for primary-replica database setups
+    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
 ---
 
 Performing compute-intensive operations with significant amount of data without proper resource management inevitably leads to inefficient computation resource utilization and increases processing time.
@@ -42,11 +49,11 @@ Queue weight is calculated by the formula:
 
 Symbols:
 
-* `w` — weight of queue.
+* `w`—weight of queue.
 
-* `l` — length of queue.
+* `l`—length of queue.
 
-* `p` — configured queue priority value.
+* `p`—configured queue priority value.
 
 Total weight of all queues is calculated by the formula:
 
@@ -54,9 +61,9 @@ Total weight of all queues is calculated by the formula:
 
 Symbols:
 
-* `W` — evaluated total weight of all queues with respect of QUEUE_PRIORITY value.
+* `W`—evaluated total weight of all queues with respect of QUEUE_PRIORITY value.
 
-* `w` — weight of queue.
+* `w`—weight of queue.
 
 The number of workers per queue is calculated by the formula:
 
@@ -64,11 +71,11 @@ The number of workers per queue is calculated by the formula:
 
 Symbols:
 
-* `n` — number of workers for particular queue.
+* `n`—number of workers for particular queue.
 
-* `N` — thread pool size.
+* `N`—thread pool size.
 
-* `w` — weight of queue.
+* `w`—weight of queue.
 
 ## RAM distribution
 
@@ -80,11 +87,11 @@ The amount of RAM available for workers is calculated based on `memory_get_usage
 
 Symbols:
 
-* `r` — amount of RAM per worker.
+* `r`—amount of RAM per worker.
 
-* `R` — total RAM available for worker pool.
+* `R`—total RAM available for worker pool.
 
-* `N` — thread pool size.
+* `N`—thread pool size.
 
 
 ## Integrate scalable application infrastructure for publish and sync workers

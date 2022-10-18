@@ -1,5 +1,5 @@
 ---
-title: Yves Bootstrapping
+title: Yves bootstrapping
 description: Yves and Zed are both built upon the Silex micro-framework. So most concepts about modern web frameworks apply here as well.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,12 +22,27 @@ redirect_from:
   - /v2/docs/en/t-yves-bootstrap
   - /v1/docs/t-yves-bootstrap
   - /v1/docs/en/t-yves-bootstrap
+related:
+  - title: Yves overview
+    link: docs/scos/dev/back-end-development/yves/yves.html
+  - title: Adding translations for Yves
+    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: CLI entry point for Yves
+    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+  - title: Controllers and actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - title: Implementing URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Modular Frontend
+    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+  - title: Yves routes
+    link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/yves/yves-bootstrapping/-->
 Yves and Zed are both built upon the [Symfony components](https://symfony.com/components). So most concepts about modern web frameworks are applied here as well.
 
-In `static/public/Yves/index.php`, you will find the entry for the front-end application.
+In `static/public/Yves/index.php`, you will find the entry for the frontend application.
 
 ```php
 <?php
@@ -46,6 +61,7 @@ The `boot()` method returns an application which has the `run()` method that pro
 
 
 ## Application plugins
+
 The application is using application plugins that are used to add the required base functionality of your project.
 
 ```php
@@ -71,4 +87,3 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
  
 // ...
 ```
-

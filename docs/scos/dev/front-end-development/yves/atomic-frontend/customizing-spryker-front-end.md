@@ -1,6 +1,7 @@
 ---
-title: Customizing Spryker front end
-last_updated: Jun 16, 2021
+title: Customizing Spryker Frontend
+description: This guide reviews customizing Spryker UI on each of these levels.
+last_updated: Aug 31, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customizing-spryker-front-end
 originalArticleId: 55fa7cff-928c-4fb4-ad8e-3acb63774bc3
@@ -15,33 +16,36 @@ redirect_from:
   - /v4/docs/en/customizing-spryker-front-end
   - /docs/t-customize-spryker-frontend
   - /docs/en/t-customize-spryker-frontend
+related:
+  - title: Atomic Frontend - general overview
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
+  - title: Integrating JQuery into Atomic Frontend
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
+  - title: Integrating React into Atomic Frontend
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
 ---
 
-Spryker frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles and behavior of existing components, as well as create components on your own.
+Spryker Frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles, and behavior of existing components, as well as create components on your own.
 
-There are 3 aspects of Spryker user interface that can be extended:
+There are three aspects of the Spryker user interface that can be extended:
+* Views, templates, and layout of components comprising the frontend (_Twig_)
+* Styles (_SASS_)
+* Component behavior (_Typescript_ or _Javascript_)
 
-* views, templates and layout of components comprising the frontend (_Twig_)
-* styles (_SASS_)
-* component behavior (_Typescript_ or _Javascript_)
-
-In the following guide, we will review customizing Spryker UI on each of these levels.
+This guide reviews customizing Spryker UI on each of these levels.
 
 ## Twig
 
-The visual layout of each component, be that a molecule or a whole organism, is defined using Symphony Twig. Twig is a template language for defining the HTML code of pages rendered dynamically. It is a common technology used for building web components, like the ones that comprise Spryker atomic frontend.
+The visual layout of each component, whether it is a molecule or a whole organism, is defined using Symphony Twig. Twig is a template language for defining the HTML code of pages rendered dynamically. It is a common technology used for building web components, like the ones that comprise Spryker Atomic Frontend.
 
-{% info_block infoBox %}
+For more information about Twig basics, see [Twig Homepage](https://twig.symfony.com/).
 
-For more information on Twig basics, see [Twig Homepage](https://twig.symfony.com/).
 
-{% endinfo_block %}
+After integrating the Spryker Shop application into your project, all UI components shipped with Spryker are located in `vendor/spryker-shop`. The layout of any of them can be overridden on the project level. For this, create a Twig file with your own layout in the `src/Pyz/Yves` folder. To override the structure of any component, the Twig file name must be the same as the name of the Twig template you want to override, and also the folder structure must replicate the structure of the component you are overriding.
 
-After you integrate Spryker Shop application in your project, all UI components shipped with Spryker will be located in `vendor/spryker-shop`. The layout of any of them can be overridden on the project level. For this purpose, you need to create a Twig file with your own layout in folder `src/Pyz/Yves`. To override the structure of any component, the Twig file name must be the same as the name of the Twig template you want to override, and also the folder structure must replicate the structure of the component you are overriding.
+To extend an existing component template, you need to copy the whole Twig you are extending to the project level, and then add your own code to the project-level file. For instance, if you need to add a new component to the main layout of the whole Shop Suite, copy the layout to your project level, and then make changes to the project-level file. To do this, copy file `page-layout-main.twig` to your project level to `src/Pyz/Yves/ShovarpUi/Theme/default/templates/page-layout-main/page-layout-main.twig`. Then, make changes as follows:
 
-To extend an existing component template, first, you need to copy the whole Twig you are extending to the project level, and then add your own code to the project-level file. For instance, if you need to add a new component to the main layout of the whole Shop Suite, you need to copy the layout to your project level, and then make changes to the project-level file. To do this, copy file `page-layout-main.twig` to your project level to `src/Pyz/Yves/ShovarpUi/Theme/default/templates/page-layout-main/page-layout-main.twig`. Then, make changes as follows:
-
-**page-layout-main.twig**
+<details><summary markdown='span'>page-layout-main.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends template('page-blank') {% raw %}%}{% endraw %}
@@ -121,10 +125,12 @@ To extend an existing component template, first, you need to copy the whole Twig
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-Let us also review how to extend the Twig template of a molecule. By default, the front page of Spryker Shop displays a list of available products. Each product in the list is displayed by component called `product-card`. We will add product images to those cards.
+</details>
 
-1. The default implementation of the component is located in the following file: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/molecules/product-card/product-card.twig`. To override it, we need to create the following file in the following folder: `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-card/product-card.twig`. Now, our Twig on the project level will override the global-level Twig. This means that whenever the `product-card` component is used, the file we created will be used instead of the default one. Also, copy the content of the default `product-card.twig` file to the project-level Twig to copy the template of the source component.
-2. Now, we need to add the product image to the component. The Twig block enclosed in the `{% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}` tags contains the main content of the component. Let us place product images before it. The block with images looks as follows:
+Let's see how to extend the Twig template of a molecule. By default, the front page of Spryker Shop displays a list of available products. Each product in the list is displayed by the `product-card` component. Let's add product images to those cards.
+
+1. The default implementation of the component is located in the following file: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/molecules/product-card/product-card.twig`. To override it, create the following file in the following folder: `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-card/product-card.twig`. The Twig on the project level overrides the global-level Twig. This means that whenever the `product-card` component is used, the created file is used instead of the default one. Also, copy the content of the default `product-card.twig` file to the project-level Twig to copy the template of the source component.
+2. Add the product image to the component. The Twig block enclosed in the `{% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}` tags contains the main content of the component. Let's place product images before it. The block with images looks as follows:
 
 ```twig
 {% raw %}{%{% endraw %} block image {% raw %}%}{% endraw %}
@@ -141,7 +147,7 @@ Let us also review how to extend the Twig template of a molecule. By default, th
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-**Resulting Twig File**
+<details><summary markdown='span'>Resulting Twig file</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends molecule('card') {% raw %}%}{% endraw %}
@@ -208,33 +214,35 @@ Let us also review how to extend the Twig template of a molecule. By default, th
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-3. Now, let us open the start page of Spryker Shop. It will look like this:
+</details>
 
-In addition to extending templates of existing components, you can as well create components on your own. When creating a component, you can also define how it looks like, and this is also done in Twig. For detailed information, see the _Create Component Template_ section in [Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+3. Open the start page of Spryker Shop. It looks as follows:
+
+In addition to extending templates of existing components, you can create components on your own. When creating a component, you can define what it looks like in Twig. For detailed information, see the *2. Define a template* section in [Tutorial: Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html#define-a-template).
 
 ## Styles
 
-Another important aspect you can override are styles. The global styles are defined in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles`. The same as Twig, you can extend the global styles on your local project level or even replace them. For this purpose, you need to create your own style files in the following folder `src/Pyz/Yves/ShopUi/Theme/default/styles`. You can use the following files for your project styles:
+Another important aspect you can override is styles. The global styles are defined in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles`. The same as Twig, you can extend the global styles on your local project level or even replace them. For this purpose, you need to create your own style files in the following folder `src/Pyz/Yves/ShopUi/Theme/default/styles`. You can use the following files for your project styles:
 
-* `shared.scss` - can be used for global SASS variables, functions and mixins. This file can be used to override the topmost styles and settings of your project, like background color and foreground colors, fonts, spacings, grid settings, visual effects, splitters etc.
-* `basic.scss` - can be used for global styles like reset or typography.
-* `util.scss` - can be used for utility stYles, like reset, align or is-hidden implementations.
+* `shared.scss`. You can use it for global SASS variables, functions, and mixins and for overriding the topmost styles and settings of your project, like background color and foreground colors, fonts, spacings, grid settings, visual effects, and splitters.
+* `basic.scss`. You can use it for global styles like reset or typography.
+* `util.scss`. You can use it for utility stYles, like reset, align, or is-hidden implementations.
 
 {% info_block infoBox %}
 
-For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend general overview](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer).
+For detailed information about global styles, see the _SASS Layer_ section in [Atomic Frontend general overview](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer).
 
 {% endinfo_block %}
 
 Typical implementations on the project level look as follows:
 
-* **shared.scss**
+* **`shared.scss`**
 
 ```SCSS
 @import '~ShopUi/styles/shared';
 ```
 
-* **basic.scss**
+* **`basic.scss`**
 
 ```SCSS
 @import '~ShopUi/styles/basic';
@@ -245,7 +253,7 @@ Typical implementations on the project level look as follows:
 @include basic-animation;
 ```
 
-* **util.scss**
+* **`util.scss`**
 
 ```SCSS
 @import '~ShopUi/styles/util';
@@ -256,7 +264,9 @@ Typical implementations on the project level look as follows:
 @include util-visibility
 ```
 
-In addition to global styles, each component can have it own styles. For information on how to define styles for a component, see [Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html) and [Tutorial - Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html).
+In addition to global styles, each component can have its own styles. For information about defining styles for a component, see the following tutorials:
+* [Tutorial: Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html)
+* [Tutorial: Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
 
 ## Behavior
 
@@ -271,47 +281,13 @@ The behavior of different components is defined by Javascript. For stricter typi
 }
 ```
 
-All component assets are compiled using a bundler called Webpack. Spryker Shop Application (Shop UI) can have 3 entry points for Webpack on the project level. They should be located in the root folder of the Shop UI (`src/Pyz/Yves/ShopUi/Theme/default`). The entry points are as follows (in processing order):
+All component assets are compiled using a bundler called Webpack. Spryker Shop Application (Shop UI) can have three entry points for Webpack on the project level. They are located in the root folder of the Shop UI (`src/Pyz/Yves/ShopUi/Theme/default`). The entry points are as follows (in processing order):
 
-* `es6-polyfill.ts`
+* `vendor.ts`. It contains external dependencies for the system. We recommend using this file for dependencies as Webpack loads the dependency code only once, and then references are provided per request.
 
-Contains polyfills required to make ES6 features (promises, sets, maps, arrays etc) available in older browsers, like IE11. You can add and remove as many polyfills as you may need for your project.
+You can add your own dependencies depending on the project needs—for example, _jquery_, _react_, _vue_).
 
-**Recommended Polyfills**
-
-```JavaScript
-// ES6 polyfill
-import 'core-js/fn/promise';
-import 'core-js/fn/array';
-import 'core-js/fn/set';
-import 'core-js/fn/map';
-
-// Check if the browser natively supports web components nd ES6
-const hasNativeCustomElements = !!window.customElements;
-
-// Load a shim for ES5 transpilers (typescript or babel)
-// https://github.com/webcomponents/webcomponentsjs#custom-elements-es5-adapterjs
-if (hasNativeCustomElements) {
-    import(/* webpackMode: "eager" */'@webcomponents/webcomponentsjs/custom-elements-es5-adapter');
-}
-```
-
-* `vendor.ts`
-
-Contains external dependencies for the system. It is recommended to use this file for dependencies as Webpack will load the dependency code only once, and then references will be provided per request.
-
-Out of the box, the _Web Components_ dependency is provided. You can add your own dependencies depending on the project needs (e.g. _jquery_, _recat_, _vue_ etc).
-
-**Default Dependencies**
-
-```Javascript
-// Add webcomponents polyfill
-import '@webcomponents/webcomponentsjs/webcomponents-bundle';
-```
-
-* `app.ts`
-
-This file contains the bootstrap code. Basically, this code simply loads the components. You can change the logic of how the application starts here. For example, this file can be used to add `document.ready` for _jquery_, main `conatiner/fragment` rendering for _react_ and so on.
+* `app.ts`. This file contains the bootstrap code, which simply loads the components. You can change the logic of how the application starts here. For example, this file can be used to add `document.ready` for _jquery_, main `conatiner/fragment` rendering for _react_ and so on.
 
 **Default Bootstrap**
 
@@ -320,15 +296,17 @@ import { bootstrap } from 'ShopUi/app';
 bootstrap();
 ```
 
-Additional information on bootstrap implementation can be found in the application folder here: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/app`.
+You can find additional information about bootstrap implementation in the application folder `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/app`.
 
-Apart from Webpack bootstrap, each component can have its own logic defined in the dedicated component Javascript or Typescript. For information on how to define component behavior, see [Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html), [Tutorial - Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html) and [Tutorial - Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html).
+Apart from Webpack bootstrap, each component can have its own logic defined in the dedicated component Javascript or Typescript. For information about defining component behavior, see the folloing tutorials:
+* [Tutorial: Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html)
+* [Tutorial: Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html)
+* [Tutorial: Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
 
 ## Installing dependencies
 
-Spryker Shop Application comes with a set of dependencies required to run the application. The dependency list can be found in the `package.json` file. You can add dependencies on your own. For example, you can add _recat_, _foundation_, _jquery_ or customize Webpack with _file-loader_ etc. For this purpose, create an SSH session to your virtual machine with `vagrant ssh` and execute the following commands:
+Spryker Shop Application comes with a set of dependencies required to run the application. The dependency list can be found in the `package.json` file. You can add dependencies on your own. For example, you can add _react_, _foundation_, _jquery_, or customize Webpack with _file-loader_. For this purpose, create an SSH session to your virtual machine with `vagrant ssh` and execute the following commands:
+* `npm install --save dependency-name`—for application dependencies.
+* `npm install --save-dev dev-dependency-name`—or Webpack and tooling dependencies.
 
-* `npm install --save dependency-name` - for application dependencies;
-* `npm install --save-dev dev-dependency-name` - for Webpack and tooling dependencies.
-
-The dependencies will be installed and written to `package.json` and `package-lock.json` files.
+The dependencies are installed and written to `package.json` and `package-lock.json` files.

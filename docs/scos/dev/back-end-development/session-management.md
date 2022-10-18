@@ -1,5 +1,5 @@
 ---
-title: Session Management
+title: Session management
 last_updated: Oct 4, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/session-management-201903
@@ -21,16 +21,21 @@ redirect_from:
   - /v2/docs/en/session-management-201903
   - /v1/docs/session-management-201903
   - /v1/docs/en/session-management-201903
+related:
+  - title: Session handlers
+    link: docs/scos/dev/back-end-development/session-handlers.html
 ---
 
 In Spryker Commerce OS, session behavior is supported by User, Customer and CustomerPage modules.
 
-The following article provides an overview on how sessions are handled in Zed and Yves, as well as describes possible use cases for both of them.
+The following document provides an overview on how sessions are handled in Zed and Yves, as well as describes possible use cases for both of them.
 
 ## Zed
+
 In Zed (back-end), sessions are managed by the following javascript:
 
 `vendor/spryker/spryker/Bundles/Gui/assets/Zed/js/modules/update-session.js`
+
 The script handles sessions as follows:
 
 1. Gets Session lifetime (`SessionConstants::ZED_SESSION_TIME_TO_LIVE`) from the [configuration file](#configuration-file).
@@ -47,7 +52,15 @@ For example:
 
 {% info_block infoBox %}
 
-current time: 10:00 (1543399200)<br>session lifetime: 30m (18000)<br>session started at: 9:35 (1543397700)<br>session refresh before end: 5m (300)<br>((1543399200 - 1543397700) - (1800-300))*-1 = 0
+current time: 10:00 (1543399200)
+
+session lifetime: 30m (18000)
+
+session started at: 9:35 (1543397700)
+
+session refresh before end: 5m (300)
+
+((1543399200 - 1543397700) - (1800-300))*-1 = 0
 
 {% endinfo_block %}
 
@@ -55,7 +68,8 @@ current time: 10:00 (1543399200)<br>session lifetime: 30m (18000)<br>session sta
 5. Refreshes data in browser storage after Ajax request is complete.
 
 ## Yves
-In Yves (front-end), sessions are managed by the following widget:
+
+In Yves (frontend), sessions are managed by the following widget:
 `vendor/spryker/spryker-shop/Bundles/UpdateSessionTtlWidget/src/SprykerShop/Yves/UpdateSessionTtlWidget/Widget/UpdateSessionTtlWidget.php`
 
 The widget handles sessions as follows:
@@ -65,12 +79,12 @@ The widget handles sessions as follows:
 2. When a page is loaded, checks whether session update is necessary. Check calculation is based on:
 
 {% info_block warningBox %}
+
 timeout = ((current_timestamp - session_started_at) - (session_lifetime - refresh_before_session_end)) * -1.
+
 {% endinfo_block %}
 
 3. If time is out, refreshes the session.
-
-
 
 <a name="configuration-file"></a> All the constants for session behavior are taken from the following configuration file:
 
@@ -79,10 +93,13 @@ timeout = ((current_timestamp - session_started_at) - (session_lifetime - refres
 However, depending on your environment, the values can be taken from the corresponding config files in config/Shared, if mentioned there.
 
 {% info_block infoBox %}
+
 By default, session lifetime value is 30 minutes while session check is set to be performed 5 minutes prior to the session timeout.
+
 {% endinfo_block %}
 
 ## Use cases
+
 Based on the introduced formula and configuration values, the following scenarios can be assumed for both Yves and Zed:
 
 ### Scenario #1
@@ -92,6 +109,7 @@ Based on the introduced formula and configuration values, the following scenario
 3. If the interval between user's actions does not exceed 25 minutes, the user is not logged out.
 
 ### Scenario #2
+
 1. User logs into Yves or Zed
 2. User performs certain actions
 3. User does not perform any actions for more than 25 minutes.

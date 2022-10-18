@@ -4,7 +4,7 @@ description: Product Approval Process feature adds approval mechanism for produc
 template: feature-walkthrough-template
 ---
 
-The *Product Approval Process* feature adds approval mechanism for products by providing
+The *Product Approval Process* feature adds the approval mechanism for products by providing
 an optional `spy_product_abstract.approval_status` DB column to store product approval statuses. Thus,
 a shop owner can follow the review process and manage which products will be placed in the store by setting the
 corresponding approval statuses. The feature also provides the Back Office UI for managing the approval statuses and
@@ -30,6 +30,6 @@ The following schema illustrates the *Product Approval Process* domain model:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | DATA IMPORT |
+|INSTALLATION GUIDES  | DATA IMPORT |
 |---------|---------|
 | [Product Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-approval-process-feature-integration.html) | [File details: product_abstract_approval_status.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-approval-status.csv.html)  |

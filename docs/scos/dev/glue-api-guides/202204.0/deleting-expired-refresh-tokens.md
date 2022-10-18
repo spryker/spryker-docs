@@ -11,7 +11,7 @@ redirect_from:
   - /docs/deleting-expired-refresh-tokens
   - /docs/en/deleting-expired-refresh-tokens
 related:
-  - title: Authentication and Authorization
+  - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
   - title: Glue API - Customer Account Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
@@ -21,7 +21,7 @@ After an authentication refresh token is [revoked](/docs/scos/dev/glue-api-guide
 
 For security reasons and to reduce the database storage space, we recommend deleting the tokens by setting their lifetime. Once they have a lifetime, you can configure a cron job to delete them automatically or do it manually.
 
-To configure the lifetime of refresh tokens, [extend](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html) the `Spryker\Shared\Oauth\OauthConfig` class on a project level.
+To configure the lifetime of refresh tokens, [extend](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html) the `Spryker\Shared\Oauth\OauthConfig` class on a project level.
 
 To configure the [cron job](/docs/scos/dev/sdk/cronjob-scheduling.html) to delete the tokens with expired lifetime, configure the time interval for the job via the `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` method.
 

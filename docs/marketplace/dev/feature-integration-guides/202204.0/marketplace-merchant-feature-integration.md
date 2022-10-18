@@ -513,7 +513,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 |---|---|---|---|
 | MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
 
-**src/Pyz/Zed/MerchantStorage/MerchantStorageConfig.php**
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
 ```php
 <?php
@@ -1343,7 +1343,7 @@ Make sure that the imported data has been added to the `spy_merchant_profile`, `
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Marketplace Merchant feature front end.
 

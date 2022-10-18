@@ -15,9 +15,11 @@ redirect_from:
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
 related:
-  - title: CMS Page
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
+  - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
-  - title: CMS Block
+  - title: CMS Blocks overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
@@ -88,7 +90,7 @@ A content manager can apply this template when [creating a CMS page](/docs/scos/
 Create a template with slots:
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template).
 2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
-3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of Templates & Slots feature overview.
+3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
 
 Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) or [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
 

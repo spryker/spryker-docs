@@ -130,7 +130,7 @@ To retrieve detailed information on an order, send the request:
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample:
-`GET https://glue.mysprykershop.com/orders/DE--7` — retrieve the order with the `DE--7` order reference. 
+`GET https://glue.mysprykershop.com/orders/DE--7`—retrieve the order with the `DE--7` order reference. 
 
 ### Response
 

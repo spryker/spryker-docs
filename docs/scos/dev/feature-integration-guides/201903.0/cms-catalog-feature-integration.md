@@ -198,7 +198,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly).
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

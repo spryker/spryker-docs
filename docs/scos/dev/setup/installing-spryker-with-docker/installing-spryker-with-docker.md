@@ -20,6 +20,15 @@ redirect_from:
   - /2021080/docs/en/getting-started-with-docker
   - /docs/getting-started-with-docker
   - /docs/en/getting-started-with-docker
+related:
+  - title: Installing Docker prerequisites on Linux
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html
+  - title: Installing Docker prerequisites on MacOS
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
+  - title: Installing Docker prerequisites on Windows with WSL1
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
+  - title: Installing Docker prerequisites on Windows with WSL2
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
 This section is a comprehensive introduction to running Spryker in Docker containers.
@@ -36,7 +45,7 @@ Before you install Spryker with Docker, review the installation prerequisites fo
 * [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 * [Installing Docker prerequisites on Windows with WSL1](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html).
 * [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
-  
+
 ## Installation
 
 There are several ways to configure a Docker-based instance of Spryker. See [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to learn about them in detail.
@@ -56,6 +65,6 @@ If you've already selected an installation mode, follow one of the guides below:
 After installation, the instance can be customized further to meet your project requirements.
 The following documents detail these customizations:
 
-* [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
+* [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Adjusting Jenkins for a Docker environment](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html)

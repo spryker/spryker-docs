@@ -42,7 +42,9 @@ commonOptions = {
     /blackfire.io\/[\.\w\-\/\?]+/,
     /www.nekom.com\/[\.\w\-\/\?]+/,
     /www.phpunit.de\/[\.\w\-\/\?]+/,
-    /rpm.newrelic.com\/[\.\w\-\/\?]+/
+    /rpm.newrelic.com\/[\.\w\-\/\?]+/,
+    /martin-loetzsch.de\/[\.\w\-\/\?]+/,
+    /atom.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -71,9 +73,9 @@ task :check_acp_user do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/acp\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
+    /docs\/pbc\/.+/,
     /docs\/sdk\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -104,7 +106,8 @@ task :check_mp_dev do
     /docs\/marketplace\/user\/.+/,
     /docs\/pbc\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/sdk\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202212\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -141,7 +144,8 @@ task :check_scos_dev do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202212\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -163,21 +167,8 @@ task :check_scos_user do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_fes do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/acp\/.+/,
-    /docs\/paas-plus\/.+/,
-    /docs\/pbc\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202212\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -201,11 +192,12 @@ task :check_pbc do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
+    /docs\/sdk\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/acp\/.+/,
     /docs\/fes\/.+/,
-    /docs\/paas-plus\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/acp\/.+/,
+    /docs\/paas-plus\/.+/
+
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

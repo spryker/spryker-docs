@@ -16,14 +16,32 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customer-addresses.html
 related:
   - title: Managing Wishlists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html
   - title: Login & Registration Forms
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-login-overview.html
   - title: Password Management
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
-  - title: Retrieving orders
+  - title: Authentication and authorization
+    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Confirming customer registration
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+  - title: Authenticating as a customer
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Managing customer authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens.html
+  - title: Managing customer authentication tokens via OAuth 2.0
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - title: Managing customers
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
+  - title: Managing customer passwords
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+  - title: Retrieve customer carts
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieve-customer-carts.html
+  - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
@@ -412,10 +430,10 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Manage carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
-* [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
-* [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
-* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
+* [Manage carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
+* [Manage cart items](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
+* [Manage gift cards](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html)
 * [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
 * [Manage customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html)
 * [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)

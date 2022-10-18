@@ -109,7 +109,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 Make sure that the following plugins were registered:<table><thead><tr><th>Plugin</th><th>Description</th><th>Prerequisites</th><th>Namespace</th></tr></thead><tbody><tr ><td>`UserAgentFormExpanderPlugin`</td><td>Adds "is an agent" checkbox to the Zed User form.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr><tr><td>`UserAgentTableConfigExpanderPlugin`</td><td>Adds "is an agent" column to the Zed Users table.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr><tr><td>`UserAgentTableDataExpanderPlugin`</td><td>Fills "is an agent" column in the Zed Users table.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr></tbody></table>
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

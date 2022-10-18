@@ -1,5 +1,5 @@
 ---
-title: Seven Senders — Mappers
+title: Seven Senders—Mappers
 template: concept-topic-template
 ---
 

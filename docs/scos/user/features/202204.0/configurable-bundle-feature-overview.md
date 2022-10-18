@@ -10,13 +10,14 @@ redirect_from:
   - /2021080/docs/en/configurable-bundle-feature-overview
   - /docs/configurable-bundle-feature-overview
   - /docs/en/configurable-bundle-feature-overview
+  - /docs/configurable-bundle
 ---
 
 A *configurable bundle* is a [product bundle](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
-Every configurable bundle is created per a template. A *configurable bundle template* is a model with configuration details for a bundle, like a number of [slots](#configurable-bundle-slot) or product lists assigned to a slot. There can be multiple templates in a shop, like a sport suit, a car, or a kitchen set.
+Every configurable bundle is created per a template. A *configurable bundle template* is a model with configuration details for a bundle, like a number of [slots](#configurable-bundle-slot) or product lists assigned to a slot. There can be multiple templates in a shop, like a sports suit, a car, or a kitchen set.
 
 A Back Office User creates the templates in the Back Office. See [Сreate configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html) to learn how they do it.
 
@@ -106,7 +107,7 @@ A Storefront User can add a note to a configurable bundle. The note is displayed
 
 ## Configurable bundle quantity, stock, and price
 
-The feature supports 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a bigger quantity for the products in the slots.
+The feature supports a 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a larger quantity for the products in the slots.
 
 On the **Cart** page, a Storefront User can change the quantity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
 
@@ -148,10 +149,10 @@ Total price is 300 EUR
 
 The price of a Configurable Bundle is the sum of all the items selected for its slots. The price is calculated dynamically. If you re-select a product in a slot, the price is updated accordingly.
 
-Configurabe bundle price is calculated by the following formula:
-Σ Configurable bundle = Σ product in slot 1 + Σ product in slot 2 + Σ product in slot n
+Configurable bundle price is calculated by the following formula:
+*Σ Configurable bundle = Σ product in slot 1 + Σ product in slot 2 + Σ product in slot n*
 
-Configurable bundle stock is updated in the same way as stock for the concrete products.
+Configurable bundle stock is updated in the same way as stock for concrete products.
 
 Product availability is taken into account when calculating the total.
 
@@ -194,13 +195,13 @@ The order looks as follows:
     * Product B x1
 
 
-If a configurable bundle contains non-splittable products, and it its quantity is above 1, it is not split.
+If a configurable bundle contains non-splittable products and its quantity is above 1, it is not split.
 
 For example, a Storefront User places the order with the following item:
 
 * Configured bundle B x2:
-    * Product A x 3 - non-splittable
-    * Product B x 2 - splittable
+    * Product A x 3: non-splittable
+    * Product B x 2: splittable
 
 The order looks as follows:
 
@@ -228,15 +229,13 @@ The Configurable Bundle feature looks as follows on the Storefront:
 
 ### Current constraints
 
-The feature has the following functional constraints which are going to be resolved in the future.
-
-
-* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html).
+The feature has the following functional constraints which are going to be resolved in the future:
+* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html).
 * A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html)
     - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html)
-    - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
+    - [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
     * [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html)

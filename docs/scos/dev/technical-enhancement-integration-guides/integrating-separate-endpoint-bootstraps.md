@@ -1,6 +1,6 @@
 ---
 title: Integrating separate endpoint bootstraps
-last_updated: Fab 8, 2022
+last_updated: Feb 8, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/separating-different-endpoint-bootstraps
 originalArticleId: 9f42f274-0278-4632-8a9f-0279c3ed4675
@@ -238,7 +238,13 @@ $bootstrap
 ```
 </details>
 
-1. Configure a maintenance page:
+3. Configure a maintenance page:
+
+{% info_block warningBox %}
+
+The maintenance page is not yet compatible with Spryker Cloud.
+
+{% endinfo_block %}
 
     1. Add the maintenance page:
 

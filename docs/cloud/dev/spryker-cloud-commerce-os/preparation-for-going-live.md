@@ -20,11 +20,13 @@ You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you
 
 - Upgrade your project's code to match the latest demoshop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
 - Migrate the project's database to MariaDB if you are not already using it.
-- Split up your project's Zed endpoints as outlined in this [integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
+- Split up your project's Zed endpoints as outlined in the [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) guide.
 - Verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.spryker-b2c-staging.yml).
 - Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
 - Integrate [FlySystem](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
+- Use the option to [test your deployments locally](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
+- Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
 
 ## Until five weeks before go-live
 
@@ -42,7 +44,7 @@ We highly recommend you to follow our [Security guidelines](https://docs.spryker
 
 ## Four weeks before go-live
 
-- *Performance Tips implemented and verified*. Double-check that you implemented all the provided performance tips.
+- *Performance Tips implemented and verified*. Double-check that you implemented all the provided [performance tips](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 - *Conduct Load Tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 - *The DNS Names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
 - *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker PaaS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.

@@ -1,5 +1,5 @@
 ---
-title: Mac OSX- iterm2 (locale error)
+title: Mac OSX - iterm2 (locale error)
 description: Learn how to fix the issue with Mac OSX- iterm2 (locale error)
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
@@ -12,6 +12,11 @@ redirect_from:
   - /docs/en/mac-osx-iterm2-locale-error
   - /v6/docs/mac-osx-iterm2-locale-error
   - /v6/docs/en/mac-osx-iterm2-locale-error
+related:
+  - title: Mac OSX - Installation fails or project folder can not be mounted due to SIP
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html
+  - title: Mac OSX - Wrong curl version error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-wrong-curl-version-error.html
 ---
 
 ## Description

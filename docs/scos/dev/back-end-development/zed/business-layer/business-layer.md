@@ -1,6 +1,6 @@
 ---
-title: About the Business Layer
-description: Zed’s business layer is responsible for the entire business logic.
+title: About the Business layer
+description: Zed's business layer is responsible for the entire business logic.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-layer
@@ -22,9 +22,20 @@ redirect_from:
   - /v2/docs/en/business-layer
   - /v1/docs/business-layer
   - /v1/docs/en/business-layer
+related:
+  - title: About facade
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
+  - title: Business models
+    link: docs/scos/dev/back-end-development/zed/business-layer/business-models.html
+  - title: Custom exceptions
+    link: docs/scos/dev/back-end-development/zed/business-layer/custom-exceptions.html
+  - title: About Communication layer
+    link: docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
+  - title: About the Persistence layer
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
 ---
 
-Zed’s business layer is responsible for the entire business logic.
+Zed's business layer is responsible for the entire business logic.
 
 Most classes exist in this layer and this is the primary area for development.
 
@@ -32,7 +43,7 @@ The business layer is used by the communication layer and by other bundles. Here
 
 ## Business layer internal structure
 
-| Concept         | Short description                                    |
+| CONCEPT         | SHORT DESCRIPTION                                    |
 | --------------- | ---------------------------------------------------- |
 | Facade          | The facade acts like a public API for the module     |
 | Factory         | The factory creates and returns all internal classes |
@@ -43,6 +54,6 @@ The business layer is used by the communication layer and by other bundles. Here
 
 ## Interaction with other layers
 
-The business layer is in the middle, between communication and persistence layer. It is used by controllers and plugins from the communication layer and uses the entities and the query container from the persistence layer.
+The business layer is in the middle, between the communication and persistence layers. It is used by controllers and plugins from the communication layer and uses the entities and the query container from the persistence layer.
 ![Interaction with the business layer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Zed/Business+Layer/business-layer-interaction.png) 
 

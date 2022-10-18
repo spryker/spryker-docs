@@ -18,7 +18,7 @@ The following example represents a real-world scenario: `CustomerRegistration`.
 
 A customer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer receives a confirmation email.
 
-## 1. Handling mail usage
+## 1. Handle mail usage
 
 In the model which handles the registration, you can override the `sendRegistrationToken` function:
 
@@ -104,7 +104,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 
 All `MailTransfers` need to know which mail type (nothing more than a string) must be used for further internal processing.
 
-A minimalistic example could look like this:
+A simple example is as follows:
 
 ```php
 protected function sendRegistrationToken()
@@ -327,9 +327,11 @@ protected function setSubject(MailBuilderInterface $mailBuilder)
 }
 ```
 
-## Setting templates
+## Set templates
 
-Usually, you have a `.twig` file which contains the template you want to use for mail. Set the template which must be used in your `MailType` plugin:
+Usually, you have a `.twig` file which contains the template you want to use for mail. 
+
+Set the template which must be used in your `MailType` plugin:
 
 ```php
 <?php
@@ -342,7 +344,7 @@ protected function setTextTemplate(MailBuilderInterface $mailBuilder)
 }
 ```
 
-The provider determines the template final look. It can contain a plain text, or HTML. For example, you can even have a template which generates JSON:
+The provider determines the template's final look. It can contain plain text or HTML. For example, you can even have a template that generates JSON:
 
 ```twig
 {
@@ -352,17 +354,17 @@ The provider determines the template final look. It can contain a plain text, or
 }
 ```
 
-In this example, you have a plain text template with:
+In the following example, you have a plain text template with:
 
 ```twig
 {% raw %}{{{% endraw %} 'mail.customer.registration.text' | trans {% raw %}}}{% endraw %}
 ```
 
-The templates must be placed within the module's Presentation layer. In our example `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`, you can use the same trans filter as used with Yves and Zed templates.
+The templates must be placed within the module's `Presentation` layer—fpr example, `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`. You can use the same trans filter as used with Yves and Zed templates.
 
-`TwigRenderer` is the default renderer, but you can add your own renderer by implementing the `RendererInterface`.
+`TwigRenderer` is the default renderer, but you can add your own renderer by implementing `RendererInterface`.
 
-We also provide a basic layout file where you can inject concrete content files to. If you want to build your own layout, you need to have the following in your template:
+We also provide a basic layout file, where you can inject concrete content files into. If you want to build your own layout, you need the following in your template:
 
 ```twig
 {% raw %}{%{% endraw %} for template in mail.templates {% raw %}%}{% endraw %}
@@ -372,9 +374,9 @@ We also provide a basic layout file where you can inject concrete content files 
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-This one is used for plain text messages, and templates can also be used to generate JSON or a query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`—it’s up to your provider to decide what you need to render.
+The preceeding template is used for plain text messages, and templates can also be used to generate JSON or query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`. It’s up to your provider to decide what to render.
 
-For HTML messages you need to have this in your layout file:
+For HTML messages, you need to have this in your layout file:
 
 ```twig
 {% raw %}{%{% endraw %} for template in mail.templates {% raw %}%}{% endraw %}

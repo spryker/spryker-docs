@@ -21,9 +21,11 @@ In Spryker, we welcome contributions in all forms, be it detailed Issues or Pull
 
 
 ## Licenses
+
 Spryker uses different licenses: our proprietary licenses and common open-source licenses. In general, you can contribute to our public repositories—[spryker](https://github.com/spryker), [spryker-shop](https://github.com/spryker-shop), [spryker-feature](https://github.com/spryker-feature). Read `CONTRIBUTING.md` of a module before opening a PR.
 
 ## Opening pull requests
+
 To contribute to a Spryker repository, follow these steps:
 1. Fork the repository and create a branch with your changes. Ensure that the commit messages explain the aim of the applied changes or fixes.
 2. Open a PR in the repository. Ensure that the title and description clearly describe the context of your work.

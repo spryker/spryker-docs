@@ -46,7 +46,7 @@ related:
   
 ---
 
-When a query returns hundreds or thousands of results, the most relevant to the user products must be at the top of the search result page. Getting this right leads to a higher conversion probability and increases customer happiness. Implementing proper data-driven ranking, however, is usually very tricky, because there might be large numbers of heuristics, which define what a good search result for a certain query is.
+When a query returns hundreds or thousands of results, the most relevant to the user products must be at the top of the search result page. Getting this right leads to a higher conversion probability and increases customer happiness. Implementing proper data-driven ranking, however, is usually very tricky because there might be large numbers of heuristics, which define what a good search result for a certain query is.
 
 A common solution is to manually assign ranks to products (sometimes even within categories). However, this approach is not practical for large catalogs and might result in a bad search experience—for example, when products that are out of stock are listed at the top due to their manually assigned rank.
 
@@ -75,8 +75,8 @@ Each of these scores embodies a specific heuristic taken into account to define 
 | sale_impressions_rate | The conversion rate of the product in the last three months.  |
 | data_quality          | The quality of the product data—for example, descriptions or images. |
 | delivery_speed        | How fast you expect the product to be delivered.               |
-| random                | A random number, included in rankings to avoid over-optimization |
-| stock                 | `1` if on stock, `0.001` if not, used to push out-of-stock products towards the end of the search results |
+| random                | A random number included in rankings to avoid over-optimization. |
+| stock                 | `1` if on stock, `0.001` if not, used to push out-of-stock products towards the end of the search results. |
 
 Many of these scores obviously only make sense for the business model of Contortion (the interesting ones are left out). Finding meaningful scores is one of the bigger challenges with respect to good ranking.
 
@@ -135,7 +135,7 @@ In queries, search results are sorted using an algebraic expression that combine
 2. Requires the product to be in stock (by multiplying everything else with the `scores.stock` score).
 3. Computes a weighted sum of the rest of the scores.
 
-Very different kinds of scoring functions are conceivable and the advantages of combining scores at query time are twofold: Your stakeholders (category and product managers) can help you in finding good formulas by testing the effect of different expressions on the sorting of actual queries at run-time. Second, you can use different ranking strategies on different parts of the website.
+Very different kinds of scoring functions are conceivable, and the advantages of combining scores at query time are twofold: Your stakeholders (category and product managers) can help you in finding good formulas by testing the effect of different expressions on the sorting of actual queries at run-time. Second, you can use different ranking strategies on different parts of the website.
 
 ### Computing normalized scores
 
@@ -157,7 +157,7 @@ The last example is the expected delivery time in hours:
 
 Here our stakeholders made a conscious decision to define 48 hours as the neutral case (a score of 0.5) and everything after 60 hours as "bad": *0.5 - atan((x - 48) / 12) / π*.
 
-Finally, a word on data processing: We compute these scores as part of the ETL / data integration processes of the data warehouse. Given the table `search_tmp.product_search_score_kpi` which contains a list of performance measures per product, computing normalized scores can be as easy as this (most computations are left out due to their sensitive nature):
+Finally, a word on data processing: We compute these scores as part of the ETL / data integration processes of the data warehouse. Given the table `search_tmp.product_search_score_kpi`, which contains a list of performance measures per product, computing normalized scores can be as easy as this (most computations are left out due to their sensitive nature):
 
 ```sql
 CREATE TABLE search_next.product_search_score AS

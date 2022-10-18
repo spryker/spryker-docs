@@ -118,7 +118,7 @@ This is an excerpt of the actual input we got from various stakeholders at Conto
 | akkuschrauber      | I would expect more search word suggestions, not just Akkuschrauber-Set | PM: In specification                                         |
 | schleifscheibe     | No top sellers on top                                        | Add all categories, add popularity score to category ranking |
 | latt hammer        | Decompounder (I believe) not working correctly–must return Latthammers first | Decompunder works perfect, but we might need to recalibrate the search a little bit |
-| blindnietwerkzeug  | Only returns products called "Blindnietwerkzeug" but no Blindnietzange or Blindnietmutter-Handgerät and so on | Add tokens to list                                    |
+| blindnietwerkzeug  | Only returns products called "Blindnietwerkzeug" but no Blindnietzange or Blindnietmutter-Handgerät | Add tokens to list                                    |
 | bohrmaschine bosch | Top categories must be the ones that actually have "Bohrmaschine" as their name, not Bohrständer and stuff like that | Fixed      |      |            |                |
 | tiefenmesschieber  | Customers missing an "s" don't get any results for TiefenmesSschieber | Very hard to fix                                             |
 | bügelmessschraube  | Doesn't find the right products because products are abbreviated as "Bügelmessschr." | Product data issue                                           |

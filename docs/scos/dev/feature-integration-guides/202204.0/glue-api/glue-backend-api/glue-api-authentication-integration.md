@@ -1,9 +1,12 @@
 ---
-title: Glue API - Glue Authentication integration
-description: 
+title: Glue API - Authentication integration
+description: Create an authentication token for the Storefront and Backend API applications in a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-authentication-integration.html
 ---
+
 This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
 
 ## Install feature core
@@ -14,17 +17,16 @@ Follow the steps below to install the Authentication core.
 
 To start feature integration, overview and install the necessary features:
 
-|     |     |
-| --- | --- |
-| NAME | INTEGRATION GUIDE |
-| Glue Backend API Application | [\[UPDATED\] Glue Storefront and Backend API applications integration](https://spryker.atlassian.net/wiki/spaces/CORE/pages/3289645630) |
-| Glue Storefront API Application | [\[UPDATED\] Glue Storefront and Backend API applications integration](https://spryker.atlassian.net/wiki/spaces/CORE/pages/3289645630) |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
+| Glue Storefront API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
-```
+```bash
 composer require spryker/oauth-api:"^1.0.0" \
 spryker/oauth-backend-api:"^1.0.0" \
 spryker/authentication-oauth:"^1.0.0" \
@@ -33,11 +35,12 @@ spryker/oauth-user-connector:"^1.0.0" \
 --update-with-dependencies
 ```
 
+{% info_block warningBox "Verification" %}
+
 Make sure that the following modules have been installed:
 
-|     |     |
-| --- | --- |
 | MODULE | EXPECTED DIRECTORY |
+| --- | --- |
 | Authentication | vendor/spryker/authentication |
 | AuthenticationExtension | vendor/spryker/authentication-extension |
 | AuthenticationOauth | vendor/spryker/authentication-oauth |
@@ -47,30 +50,32 @@ Make sure that the following modules have been installed:
 | OauthCustomerConnector | vendor/spryker/oauth-customer-connector |
 | OauthUserConnector | vendor/spryker/oauth-user-connector |
 
+{% endinfo_block %}
+
 ### 2) Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
 
-```
+```bash
 console transfer:generate
 console propel:install
 console transfer:generate
 ```
 
+{% info_block warningBox "Verification" %}
+
 Ensure that the following changes have occurred in the database:
 
-|     |     |     |
-| --- | --- | --- |
 | DATABASE ENTITY | TYPE | EVENT |
+| --- | --- | --- |
 | spy\_oauth\_access\_token | table | created |
 | spy\_oauth\_client | table | created |
 | spy\_oauth\_scope | table | created |
 
 Ensure that the following changes have occurred in transfer objects:
 
-|     |     |     |     |
-| --- | --- | --- | --- |
 | TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
 | ApiTokenAttributes | class | created | src/Generated/Shared/Transfer/ApiTokenAttributesTransfer.php |
 | ApiTokenResponseAttributes | class | created | src/Generated/Shared/Transfer/ApiTokenResponseAttributesTransfer.php |
 | GlueAuthenticationRequest | class | created | src/Generated/Shared/Transfer/GlueAuthenticationRequestTransfer.php |
@@ -85,16 +90,20 @@ Ensure that the following changes have occurred in transfer objects:
 | OauthRequest | class | created | src/Generated/Shared/Transfer/OauthRequestTransfer.php |
 | OauthResponse | class | created | src/Generated/Shared/Transfer/OauthResponseTransfer.php |
 
+{% endinfo_block %}
+
 ### 3) Set up behavior
 
-1.  Activate the following plugins:
-    
+1. Activate the following plugins:
 
-|     |     |     |
-| --- | --- | --- |
 | PLUGIN | SPECIFICATION | NAMESPACE |
+| --- | --- | --- |
 | OauthClientInstallerPlugin | Populates database with Oauth client data. | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Installer |
-| STOREFRONT API |     |     |
+
+**Storefront API plugins:**
+
+| PLUGIN | SPECIFICATION | NAMESPACE |
+| --- | --- | --- |
 | AccessTokenValidatorPlugin | Validates access token passed via authorisation header. | Spryker\\Glue\\OauthApi\\Plugin |
 | CustomerRequestBuilderPlugin | Sets `GlueRequestTransfer.requestCustomer` if the customer credentials are valid. | Spryker\\Glue\\OauthApi\\Plugin |
 | OauthAuthenticationServerPlugin | Makes request to process access token and builds `GlueAuthenticationResponseTransfer.oauthResponse`. | Spryker\\Client\\AuthenticationOauth\\Plugin |
@@ -103,7 +112,11 @@ Ensure that the following changes have occurred in transfer objects:
 | CustomerOauthUserProviderPlugin | Gets the customer based on authorisation client. | Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin |
 | CustomerOauthScopeProviderPlugin | Gets a list of customer scopes. | Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin |
 | CustomerPasswordOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from configuration of Password GrantType data. | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth |
-| BACKEND API |     |     |
+
+**Backend API plugins:**
+
+| PLUGIN | SPECIFICATION | NAMESPACE |
+| --- | --- | --- |
 | AccessTokenValidatorPlugin | Validates access token passed via authorisation header. | Spryker\\Glue\\OauthBackendApi\\Plugin |
 | CustomerRequestBuilderPlugin | Sets `GlueRequestTransfer.requestCustomer` if the customer credentials are valid. | Spryker\\Glue\\OauthBackendApi\\Plugin |
 | OauthAuthenticationServerPlugin | Makes request to process access token and builds `GlueAuthenticationResponseTransfer.oauthResponse`. | Spryker\\Zed\\AuthenticationOauth\\Communication\\Plugin |
@@ -116,7 +129,7 @@ Ensure that the following changes have occurred in transfer objects:
 
 **src/Pyz/Client/Authentication/AuthenticationDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Client\Authentication;
@@ -138,9 +151,10 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
 }
 ```
 
-**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.****php**
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.****php</summary>
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueBackendApiApplication;
@@ -185,10 +199,12 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }
 }
 ```
+</details>
 
-**src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueStorefrontApiApplication;
@@ -231,10 +247,11 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     }
 }
 ```
+</details>
 
-**src/Pyz/Zed/Installer/InstallerDependencyProvider.****php**
+__src/Pyz/Zed/Installer/InstallerDependencyProvider.****php__
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Installer;
@@ -262,7 +279,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 
 **src/Pyz/Zed/Authentication/AuthenticationDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Authentication;
@@ -284,9 +301,10 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
 }
 ```
 
-**src/Pyz/Zed/Oauth/OauthDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Oauth;
@@ -344,53 +362,53 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
+</details>
 
-Set up the Oauth client:
+2. Set up the Oauth client:
 
-```
+```bash
 console setup:init-db
 ```
 
-Ensure that the Oauth client has been added to the `spy_oauth_client` table:
+{% info_block warningBox "Verification" %}
 
-1.  Run the SQL query:
-    
-    ```
+* Ensure that the Oauth client has been added to the `spy_oauth_client` table:
+
+  1. Run the SQL query:
+    ```sql
     SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
     ```
-    
-2.  Check that the output contains one record.
+      
+  2. Check that the output contains one record.
     
 
-Ensure that you are able to authenticate as a customer:
-
-1.  Send the request:
-    
+* Ensure that you can authenticate as a customer:
+  1. Send the request:
     ```
     POST /token/ HTTP/1.1
     Host: glue-storefront.mysprykershop.com
     Content-Type: application/x-www-form-urlencoded
     Accept: application/json
     Content-Length: 66
-    
+
     grantType=password&username={customer_username}&password={customer_password}
     ```
     
-2.  Check that the output contains the 201 response with a valid token.
-    
+  2. Check that the output contains the 201 response with a valid token.
 
-Ensure that you are able to authenticate as a user:
+* Ensure that you can authenticate as a user:
 
-1.  Send the request:
-    
+  1. Send the request:
     ```
     POST /token/ HTTP/1.1
     Host: glue-backend.mysprykershop.com
     Content-Type: application/x-www-form-urlencoded
     Accept: application/json
     Content-Length: 66
-    
+
     grantType=password&username={user_username}&password={user_password}
     ```
-    
-2.  Check that the output contains the 201 response with a valid token.
+
+  2. Check that the output contains the 201 response with a valid token.
+
+{% endinfo_block %}

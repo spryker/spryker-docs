@@ -104,9 +104,9 @@ Bonus points for providing a user interface for this purpose. It would allow cat
 
 ## Product management for search
 
-Everybody has an opinion on how search should work, and being a product owner / product manager for search is definitely not the easiest task.
+Everybody has an opinion on how search should work, and being a product owner or product manager for search is definitely not the easiest task.
 
-What is good product management for search? Certainly it is not of technical nature ("*please use technique X*", these suggestions usually suck).
+What is good product management for search? Certainly, it is not of technical nature ("*please use technique X*", these suggestions usually suck).
 
 Rather helpful are concrete examples of expected and actual behavior from a user perspective ("*If I search for a hammer, I want to find a hammer*").
 
@@ -117,13 +117,13 @@ This is an excerpt of the actual input we got from various stakeholders at Conto
 | makita             | I would expect standard power tools on top (for example, drilling machines), not a jacket and a laser | Enhance WHF                                                  |
 | akkuschrauber      | I would expect more search word suggestions, not just Akkuschrauber-Set | PM: In specification                                         |
 | schleifscheibe     | No top sellers on top                                        | Add all categories, add popularity score to category ranking |
-| latt hammer        | Decompounder (I believe) not working correctly–should return Latthammers first | Decompunder works perfect, but we might need to recalibrate the search a little bit |
+| latt hammer        | Decompounder (I believe) not working correctly–must return Latthammers first | Decompunder works perfect, but we might need to recalibrate the search a little bit |
 | blindnietwerkzeug  | Only returns products called "Blindnietwerkzeug" but no Blindnietzange or Blindnietmutter-Handgerät and so on | Add tokens to list                                    |
-| bohrmaschine bosch | Top categories should be the ones that actually have "Bohrmaschine" as their name, not Bohrständer and stuff like that | Fixed      |      |            |                |
+| bohrmaschine bosch | Top categories must be the ones that actually have "Bohrmaschine" as their name, not Bohrständer and stuff like that | Fixed      |      |            |                |
 | tiefenmesschieber  | Customers missing an "s" don't get any results for TiefenmesSschieber | Very hard to fix                                             |
 | bügelmessschraube  | Doesn't find the right products because products are abbreviated as "Bügelmessschr." | Product data issue                                           |
 | klopapier          | Synonym for "Toilettenpapier"                                | Set up synonyms yourself                              |
-| duebel             | Doesn't find products when "ä" is "ae"–that should work for all Umlaute | Fixed                                                        |
+| duebel             | Doesn't find products when "ä" is "ae"–that must work for all Umlaute | Fixed                                                        |
 | Fein               | Fein electronics, since they are an A brand                  | There is a ticket for manufacturer boost in the backlog      |
 | Handwaschpaste     | Doesn't find category                                        | bug                                                          |
 

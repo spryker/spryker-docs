@@ -12,7 +12,7 @@ When you enable maintenance mode, the landing pages of the Back Office and Store
 
 ## Enable maintenance mode
 
-1. In the AWS Management Console, go to **Services** > **[CodePipeline](https://eu-central-1.console.aws.amazon.com/codesuite/codepipeline/pipelines)**.
+1. In the AWS Management Console, go to **Services** > **CodePipeline**.
 2. On the **Pipelines** pane, click **Maintenance_Enable_{{ENVIRONMENT_NAME}}**.
 3. On the pipeline's page, click **Release change**.
 
@@ -22,7 +22,7 @@ When you enable maintenance mode, the landing pages of the Back Office and Store
 
 ## Disable maintenance mode
 
-1. In the AWS Management Console, go to **Services** > **[CodePipeline](https://eu-central-1.console.aws.amazon.com/codesuite/codepipeline/pipelines)**.
+1. In the AWS Management Console, go to **Services** > **CodePipeline**.
 2. On the **Pipelines** pane, click **Maintenance_Disable_{{ENVIRONMENT_NAME}}**.
 3. On the pipeline's page, click **Release change**.
 

@@ -1179,31 +1179,59 @@ entries:
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
     - title: Glue Backend API
+      include_versions:
+      - "202204.0"
       nested:
+      - title: HowTo guides
+        include_versions:
+        - "202204.0"
+        nested:
         - title: How to create a resource
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-a-resource.html
-        - title: How to create a resource with a parent
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-a-resource-with-parent.html
-        - title: How to create a route
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-a-route.html
-        - title: Creating a Backend vs a Storefront API endpoint
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-backend-vs-storefront-api-endpoint.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-resource.html
+          include_versions:
+          - "202204.0"
+        - title: How to create resources with parent-child relationships
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
+          include_versions:
+          - "202204.0"
+        - title: How to create a route 
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-route.html
+          include_versions:
+          - "202204.0"
+        - title: Backend and Storefront API module differences
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/backend-and-storefront-api-module-differences.html
+          include_versions:
+          - "202204.0"
         - title: How to use OOTB Glue parameters
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/glue-parameters-usage.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-ootb-glue-parameters.html
+          include_versions:
+          - "202204.0"
         - title: How to create a JSON:API relationship
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-a-relationship.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-json-api-relationship.html
+          include_versions:
+          - "202204.0"
         - title: How to document Glue API endpoints
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/documenting-glue-api-endpoints.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-document-glue-api-endpoints.html
+          include_versions:
+          - "202204.0"
         - title: How to use authorization framework
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/using-authorization-framework.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-authorization-framework.html
         - title: How to use the Glue authorization scopes
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/authorization-scopes.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-glue-api-authorization-scopes.html
+          include_versions:
+          - "202204.0"
         - title: How to create protected endpoints
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-protected-endpoints.html
-        - title: How to create a new API application
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-api-application.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-protected-endpoints.html
+          include_versions:
+          - "202204.0"
+        - title: How to create API applications
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-api-applications.html
+          include_versions:
+          - "202204.0"
         - title: How to create or change a convention
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create_change-convention.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
+          include_versions:
+          - "202204.0"
     - title: Glue API Developer Guides
       url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
       include_versions:
@@ -1521,21 +1549,23 @@ entries:
       - title: Glue API - Wishlist
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
       - title: Glue Backend API
+        include_versions:
+        - "202204.0"
         nested:
-          - title: Glue Backend API infrastructure
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html
+          - title: Glue API - Glue Storefront and Backend API applications
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-glue-storefront-and-backend-api-applications-integration.html
             include_versions:
             - "202204.0"
-          - title: Glue Authentication
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-authentication-integration.html
+          - title: Glue API - Authentication
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authentication-integration.html
             include_versions:
             - "202204.0"
-          - title: Glue JSON:API Convention
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-json-api-convention-integration.html
+          - title: Glue API - JSON:API Convention
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-json-api-convention-integration.html
             include_versions:
             - "202204.0"
-          - title: Glue Authorization Scopes
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/authorization-scopes-integration.html
+          - title: Glue API - Authorization scopes
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-scopes-integration.html
             include_versions:
             - "202204.0"
     - title: Agent Assist
@@ -3349,12 +3379,12 @@ entries:
         url: /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
       - title: CLI entry point for Yves
         url: /docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
-      - title: Adding translations for Yves
-        url: /docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+      - title: Add translations for Yves
+        url: /docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
       - title: URL
         url: /docs/scos/dev/back-end-development/yves/url.html
-      - title: Implementing URL routing in Yves
-        url: /docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+      - title: Implement URL routing in Yves
+        url: /docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
       - title: Yves bootstrapping
         url: /docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
       - title: Yves routes
@@ -3368,12 +3398,12 @@ entries:
         - title: Facade
           url: /docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
           nested:
-          - title: Using a facade
-            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
+          - title: Facade use cases
+            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
           - title: Design by Contract (DBC) - Facade
             url: /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
-          - title: Implementing a facade
-            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
+          - title: A facade implementation
+            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
         - title: Business models
           url: /docs/scos/dev/back-end-development/zed/business-layer/business-models.html
         - title: Custom exceptions
@@ -3381,8 +3411,8 @@ entries:
       - title: Communication layer
         url: /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
         nested:
-        - title: Adding indexes to foreign key columns - index generator
-          url: /docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
+        - title: Add indexes to foreign key columns - index generator
+          url: /docs/scos/dev/back-end-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
       - title: Persistence layer
         url: /docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
         nested:
@@ -3403,10 +3433,10 @@ entries:
           nested:
           - title: Using a query container
             url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
-          - title: Implementing a query container
-            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
-      - title: Adding navigation in the Back Office
-        url: /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
+          - title: Implement a query container
+            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implement-a-query-container.html
+      - title: Add navigation in the Back Office
+        url: /docs/scos/dev/back-end-development/zed/add-navigation-in-the-back-office.html
     - title: Cronjobs
       url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
       nested:
@@ -3608,10 +3638,10 @@ entries:
             url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
-      - title: Creating and configuring Zed tables
-        url: /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
-      - title: Adding buttons to Zed tables
-        url: /docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
+      - title: Create and configure Zed tables
+        url: /docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
+      - title: Add buttons to Zed tables
+        url: /docs/scos/dev/back-end-development/zed-ui-tables/add-buttons-to-zed-tables.html
     - title: Messages and errors
       nested:
       - title: Showing messages in Zed
@@ -4040,20 +4070,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html
       - title: "Tutorial: Integrating any search engine into a project"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-integrating-any-search-engine-into-a-project.html
-      - title: Glue API
-        nested:
-        - title: Extending a REST API Resource
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
-        - title: Versioning REST API Resources
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/versioning-rest-api-resources.html
-        - title: Glue API Tutorials
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/glue-api-tutorials.html
-        - title: Validating REST request format
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html
-        - title: Implementing a REST API Resource
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
-        - title: Documenting GLUE API Resources
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html
       - title: "Tutorial: different stores, different logic - landing pages - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages-spryker-commerce-os.html
       - title: "Tutorial: Content and search - attribute-cart-based catalog personalization Spryker Commerce OS"
@@ -4090,15 +4106,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html
       - title: "Tutorial: Replacing a default data importer with the queue data importer"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html
-      - title: Glue API
-        nested:
-        - title: B2C API React Example
-          url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html
-          nested:
-          - title: B2C API React Example Installation
-            url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html
-        - title: "Tutorial: Interacting with third party payment providers via Glue API"
-          url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
       - title: "Tutorial: Product challenge solution"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-product-challenge-solution.html
       - title: "Tutorial: Twig extensions"

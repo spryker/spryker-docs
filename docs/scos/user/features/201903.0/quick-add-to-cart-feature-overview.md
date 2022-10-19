@@ -75,7 +75,7 @@ The *Quantity* field in the Quick Order adheres to these quantities. Therefore, 
 ## Product prices for Quick Order
 To see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts/merchant-b2b-contracts.html) dimensions, respectively. If the item has any [volume prices](//docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts/merchant-b2b-contracts.html) dimensions, respectively. If the item has any [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File upload form for concrete products
 To save your buyers' time and help them order the products in bulk quickly, enable your customers to use the *File Upload* form. The *File Upload* form allows users to add multiple products to the *Quick Order* page by uploading data using a .csv file.

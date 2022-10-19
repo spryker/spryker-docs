@@ -38,7 +38,7 @@ You can even download a CSV file with all the used plugins.
 
 Print all used plugins by running the command without any argument or option.
 
-This searches for all `DependencyProvider` in the project code and all used plugins in there. The header of the table is `DepenencyProvider` in which the plugins are found.
+This searches for all `DependencyProvider` plugins in the project code and all used plugins in there. The header of the table is `DepenencyProvider` in which the plugins are found.
 
 ```
 $ vendor/bin/console dev:plugin-usage:dump

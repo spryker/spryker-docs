@@ -31,13 +31,13 @@ related:
 
 *Business models* are classes where you program the *business logic* of your system. Business logic includes all kinds of algorithms (for example, cart calculation), storage procedures (for example, checkout save workflow), and interactions with external providers (for example, payment).
 
-Business models are not visible from other layers and bundles. Although their methods are public they must not be used directly from the outside. In Java, the package-private access modifier is used, so that methods can only be called from within the same package or module. In PHP this modifier is missing, so instead of an explicit declaration, there's only a convention.
+Business models are not visible from other layers and bundles. Although their methods are public, they must not be used directly from the outside. In Java, the package-private access modifier is used so that methods can only be called from within the same package or module. In PHP, this modifier is missing, so instead of an explicit declaration, there's only a convention.
 
 ## Dependency injection
 
-Business models must not directly depend on each other. The dependency container injects dependencies to the constructor and we use interfaces not to depend on concrete classes. This is very important for testability and decoupling. It also allows you to use country-specific extensions of models.
+Business models must not directly depend on each other. The dependency container injects dependencies to the constructor, and we use interfaces not to depend on concrete classes. This is very important for testability and decoupling. It also lets you use country-specific extensions of models.
 
-A typical constructor and the related properties of a business model is as follows:
+A typical constructor and the related properties of a business model are as follows:
 
 ```php
 <?php
@@ -74,11 +74,11 @@ The `KeyManager` class implements `KeyManagerInterface`, which is used by other 
 
 {% endinfo_block %}
 
-Every business model ships with an interface, which exposes all public methods.
+Every business model is shipped with an interface that exposes all public methods.
 
 ## Avoid hybrids
 
-If you need data objects, you can use transfer objects and entities, or you can create your own DTOs for internal use. In any case, do not mix them up with business models. Each class is either a stateless model with functional methods or a data object with getters and setters.
+If you need data objects, you can use transfer objects and entities or your own DTOs for internal use. In any case, do not mix them up with business models. Each class is either a stateless model with functional methods or a data object with getters and setters.
 
 [Avoid hybrids](https://books.google.de/books?id=_i6bDeoCQzsC&lpg=PT172&ots=eo5Pxl9g22&dq=Avoid%20hybrids%20clean%20code&hl=de&pg=PT172#v=onepage&q=Avoid%20hybrids%20clean%20code&f=false) is a rule from the Clean Code book.
 
@@ -97,11 +97,11 @@ public function __construct(ModelInterface $myModel, array $data)
 
 ## Related Spryks
 
-You might use the following definitions to generate related code:
+To generate related code, you might use the following definitions:
 
 * `vendor/bin/console spryk:run AddZedBusinessModel`: Add Zed Business model.
 * `vendor/bin/console spryk:run AddZedBusinessModelInterface`: Add Zed business model interface.
-* `vendor/bin/console spryk:run AddZedBusinessModelInterfaceMethod`: Add Zed  business model interface method.
+* `vendor/bin/console spryk:run AddZedBusinessModelInterfaceMethod`: Add Zed business model interface method.
 * `vendor/bin/console spryk:run AddZedBusinessModelMethod`: Add Zed business model method.
 
-For details, see the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation.
+For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).

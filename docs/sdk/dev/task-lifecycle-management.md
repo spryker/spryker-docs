@@ -40,7 +40,7 @@ lifecycle:
       - '%vendor_dir%/bin/composer require --dev "spryker/code-sniffer: dev-master"'
     files:
       - path: path # e.g.: '%project_dir%/.cs_config' # does not really exist, only for the example
-        content: string # e.g.: "serverity: 3"
+        content: string # e.g.: "severity: 3"
     placeholders:
       - name: string # e.g.: '%project_dir%'
         valueResolver: string #e.g.: PROJECT_DIR mapping to a ValueResolver

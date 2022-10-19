@@ -10,24 +10,22 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
 ---
 
-All entities in your project should have unique names. Not unique entity names on the project level can produce naming conflicts during the semi-automatic update process. The easiest way to ensure that is to use a prefix in entities' names. Unique entity names are required for the successful delivery of Spryker module updates to your project.
-
-When extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If a Spryker update introduces a core entity with a name matching a project-level entity name, its behavior might change or cause issues. To make your code unique, you can use prefixes like `Pyz` or your project name.
+To avoid naming conflicts when taking semi-automatic updates, all entities in a project should have unique names. When extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If an update introduces a core entity with a name matching a project-level entity name, its behavior might change or cause issues. To make entity names unique, you can use prefixes like `Pyz` or your project name.
 
 The names of the following entities must be unique on the project level:
 
-* Transfers
-* Transfer properties
-* Database tables
-* Database columns
-* Methods
-* Constants
-* Modules
+* Transfer
+* Transfer property
+* Database table
+* Database column
+* Method
+* Constant
+* Module
 
 
 ## Transfer name is not unique
 
-Transfer names must be unique for the new transfers on the project level. Below you can find the code examples that show how to solve the described problem.
+Transfer names must be unique on the project level. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of code that causes an upgradability error: Transfer name is not unique
 
@@ -60,7 +58,7 @@ NotUnique:TransferName Transfer object name "CustomProductData" has to have proj
 
 ## Transfer property name is not unique
 
-Transfer property names must be unique, when you extend transfer that exists on the core level. Below you can find the code examples that show how to solve the described problem.
+Transfers property names that extend core-level transfers must be unique. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of code that causes an upgradability error: Transfer property name is not unique
 
@@ -93,7 +91,7 @@ NotUnique:TransferProperty Transfer property "customProperty" for "LocaleCmsPage
 
 ## Database table name is not unique
 
-On the project level all new tables in database must have unique names. Below you can find the code examples that show how to solve the described problem.
+On the project level, database table names must be unique. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of code that causes an upgradability error: Database table name is not unique
 
@@ -126,7 +124,7 @@ NotUnique:DatabaseTable Database table "custom_table" has to have project prefix
 
 ## Name of database table column is not unique
 
-Names of database table columns must be unique when you extend table that exists on the core level. Below you can find the code examples that show how to solve the described problem.
+Names of database table columns that extend core-level database tables must be unique. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of code that causes an upgradability error: Name of database table column is not unique
 
@@ -159,7 +157,7 @@ NotUnique:DatabaseColumn Database column "custom_column" has to have project pre
 
 ## Method name is not unique
 
-Method names must be unique. Below you can find the code examples that show how to solve the described problem.
+Method names must be unique. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of code that causes an upgradability error: Method name is not unique
 
@@ -212,7 +210,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ## Constant name is not unique
 
-Constant names must be unique. Below you can find the code examples that show how to solve the described problem.
+Constant names must be unique. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of code that causes an upgradability error: Constant name is not unique
 
@@ -252,7 +250,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ## Module name is not unique
 
-Module names must be unique. Below you can find the code examples that show how to solve the described problem.
+Module names must be unique. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of source structure that causes an upgradability error: Module name is not unique
 

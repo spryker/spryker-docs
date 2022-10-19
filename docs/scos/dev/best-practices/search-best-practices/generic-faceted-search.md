@@ -67,8 +67,8 @@ Before building aggregations, document attributes that can serve as facets need 
 
 While this approach might be okay for filtering, it doesn't work well for faceting because queries need to explicitly list all the field names for which you want to create aggregations. It can be done in two ways:
 
-* Always send all possible field names as part of your faceted query. This is not very practical when having 1000s of different facets. The query becomes huge (and possibly slow) while the list of all possible field names need to be maintained outside of Elasticsearch.
-* Run a first query that fetches the most common field names and attributes for a specific search request and then use those results to build a second query that does the faceting (and fetching of document). In that case, the second query looks like this:
+* Always send all possible field names as part of your faceted query. This is not very practical when having 1000s of different facets. The query becomes huge (and possibly slow) while the list of all possible field names needs to be maintained outside of Elasticsearch.
+* Run a first query that fetches the most common field names and attributes for a specific search request and then use those results to build a second query that does the faceting (and fetching of the document). In that case, the second query looks like this:
 
 ```js
 "aggregations": {
@@ -90,7 +90,7 @@ While this approach might be okay for filtering, it doesn't work well for faceti
 }
 ```
 
-This is obviously not be very efficient in terms of speed (two queries) and adds additional complexity in query building and handling.
+This is obviously not very efficient in terms of speed (two queries) and adds additional complexity in query building and handling.
 
 We instead suggest separating the names and values of facets in documents sent to Elasticsearch like this:
 
@@ -111,7 +111,7 @@ We instead suggest separating the names and values of facets in documents sent t
 ]
 ```
 
-This requires a special treatment in the mapping, because otherwise Elasticsearch internally flattens and saves them as follows:
+This requires special treatment in the mapping because otherwise, Elasticsearch internally flattens and saves them as follows:
 
 ```js
 "string_facets": {
@@ -196,7 +196,7 @@ Filtering and aggregating a structure like this requires nested filters and nest
 }
 ```
 
-Numeric attributes need to be handled differently in aggregations, and they have to be stored and analyzed separately. This is because numeric facets sometimes have huge numbers of distinct values. Instead of listing all possible values, it is sufficient to just get the minimum and maximum values and show them as a range selector or slider in the frontend. This is possible only if values are stored as numbers.
+Numeric attributes need to be handled differently in aggregations and must be stored and analyzed separately. This is because numeric facets sometimes have huge numbers of distinct values. Instead of listing all possible values, it is sufficient just to get the minimum and maximum values and show them as a range selector or slider in the frontend. This is possible only if values are stored as numbers.
 
 The most important numeric facet on any e-commerce website is probably the price facet.
 
@@ -252,6 +252,6 @@ The aggregation of numeric facets uses the keyword "`stats`" instead of "`terms`
 }
 ```
 
-Sometimes e-commerce websites support specific facet behavior that let users select multiple values of the same facet on the frontend—for example, using checkbox. To see how to implement query that supports this feature while using described facet document structure, see [stackoverflow discussion](http://stackoverflow.com/questions/41369749). 
+Sometimes e-commerce websites support specific facet behavior that let users select multiple values of the same facet on the frontend—for example, using a checkbox. To see how to implement a query that supports this feature while using described facet document structure, see [Elasticsearch - generic facets structure - calculating aggregations combined with filters](http://stackoverflow.com/questions/41369749) on Stack Overflow. 
 
-With this approach to faceted navigation, you can to render search result pages with a single Elasticsearch query and without having to know the list of available facets at query time. The additional effort in document preparation and query building immediately pays off because the solution automatically scales to thousands of facets.
+With this approach to faceted navigation, you can render search result pages with a single Elasticsearch query, and you don't need to know the list of available facets at query time. The additional effort in document preparation and query building immediately pays off because the solution automatically scales to thousands of facets.

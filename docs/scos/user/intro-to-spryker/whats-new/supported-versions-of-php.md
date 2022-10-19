@@ -34,6 +34,14 @@ Since October 2021, Spryker has been compatible with PHP 8.0.
 PHP 8.1 support has been finished July 2022.
 We recommend using PHP 8.1 now.
 
+
+[New Features](https://www.php.net/manual/en/migration80.new-features.php)
+[Backward Incompatible Changes](https://www.php.net/manual/en/migration80.incompatible.php)
+[Deprecated Features](https://www.php.net/manual/en/migration80.deprecated.php)
+[Other Changes](https://www.php.net/manual/en/migration80.other-changes.php)
+
+This new major version brings with it a number of new features and some incompatibilities that should be tested for before switching PHP versions in production environments.
+
 Note: PHP 8.0+ is a hard requirement from 19.10.2022 due to the modules being now PHP 8.0+.
 
 ## PHP supported version at Spryker

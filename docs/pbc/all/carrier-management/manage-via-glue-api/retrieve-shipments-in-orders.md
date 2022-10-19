@@ -16,7 +16,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ## Retrieve an order
 
-To retrieve detailed information on an order, send the request:
+To retrieve detailed information about an order, send the following request:
 
 ---
 `GET` **/orders/*{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}***
@@ -25,13 +25,13 @@ To retrieve detailed information on an order, send the request:
 
 | PATH PARAMETER     | DESCRIPTON                                                   |
 | ------------------ | -------------------- |
-| ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | Unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html#retrieve-all-orders) to get it. |
+| ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | The unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html#retrieve-all-orders) to get it. |
 
 ### Request
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | ✓        | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | STRING PARAMETER | DESCRIPTION  | POSSIBLE VALUES    |
 | ---------------- | ---------------- | --------------- |
@@ -39,7 +39,7 @@ To retrieve detailed information on an order, send the request:
 
 | REQUEST  | USAGE  |
 | ------------------ | --------------------- |
-| GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieve information about the order with the id `DE--6` with order shipments included. |
+| GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieves information about the order with the id `DE--6`, with order shipments included. |
 
 ### Response
 
@@ -73,7 +73,7 @@ To retrieve detailed information on an order, send the request:
                 "firstName": "Spencor",
                 "middleName": null,
                 "lastName": "Hopkin",
-                "address1": "Julie-Wolfthorn-Straße",
+                "address1": "Julie-Wolfthorn-Strasse",
                 "address2": "1",
                 "address3": "new address",
                 "company": "spryker",
@@ -278,7 +278,7 @@ To retrieve detailed information on an order, send the request:
                     "firstName": "Sonia",
                     "middleName": null,
                     "lastName": "Wagner",
-                    "address1": "Julie-Wolfthorn-Straße",
+                    "address1": "Julie-Wolfthorn-Strasse",
                     "address2": "25",
                     "address3": "new one",
                     "company": "spryker",
@@ -313,7 +313,7 @@ To retrieve detailed information on an order, send the request:
                     "firstName": "Spencor",
                     "middleName": null,
                     "lastName": "Hopkin",
-                    "address1": "Julie-Wolfthorn-Straße",
+                    "address1": "Julie-Wolfthorn-Strasse",
                     "address2": "1",
                     "address3": "new one",
                     "company": "spryker",

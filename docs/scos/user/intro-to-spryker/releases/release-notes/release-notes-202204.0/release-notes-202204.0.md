@@ -137,7 +137,7 @@ The developers, in their turn, can enable a business user to export a table view
 
 #### Documentation
 
-[Creating and configuring Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html)
+[Create and configure Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html)
 
 ## PHP compatibility window
 

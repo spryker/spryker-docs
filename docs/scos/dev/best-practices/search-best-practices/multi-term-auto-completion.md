@@ -48,7 +48,7 @@ related:
 *Term completion* is a feature where a user gets suggestions for search terms and matching search results as they type the query. We call a completion multi-term when it can combine terms from different attributes in an open-ended fashion. In the following example, a user entered "fortis" (a brand) and started typing "hammer" (a category):
 ![Auto-completion](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Multi-Term+Auto+Completion/completion.png) 
 
-After completing "hammer", the search suggests that more terms are found in documents containing both "fortis" and "hammer".
+After completing "hammer", the search suggests that more terms are found in documents containing both "fortis" and "hammer."
 
 The Elasticsearch API offers the [completion suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-completion.html), which works great in many cases but has one major drawback. It can only suggest fixed terms that are saved to Elasticsearch during index time. So in the preceding example, the terms "fortis" and "hammer" as well as both compound variations—for example, "fortis hammer" and "hammer fortis"—must be indexed.
 

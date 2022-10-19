@@ -45,7 +45,7 @@ related:
     link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
 ---
 
-Both the schema and the query generator should not need to know that there is such a thing as as the weight of a hammer. We will argue for a document structure and schema design that is not built around the original data but around the usage of attributes in search operations.
+Both the schema and the query generator should not need to know that there is such a thing as the weight of a hammer. We will argue for a document structure and schema design that is not built around the original data but around the usage of attributes in search operations.
 
 At Contorion, this is how we send the same product as in the preceding example to Elasticsearch (don't worry, we will explain the details later):
 

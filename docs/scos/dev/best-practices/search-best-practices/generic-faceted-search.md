@@ -198,7 +198,7 @@ Filtering and aggregating a structure like this requires nested filters and nest
 
 Numeric attributes need to be handled differently in aggregations and must be stored and analyzed separately. This is because numeric facets sometimes have huge numbers of distinct values. Instead of listing all possible values, it is sufficient just to get the minimum and maximum values and show them as a range selector or slider in the frontend. This is possible only if values are stored as numbers.
 
-The most important numeric facet on any e-commerce website is probably the price facet.
+The most important numeric facet on any ecommerce website is probably the price facet.
 
 **Document:**
 
@@ -252,6 +252,6 @@ The aggregation of numeric facets uses the keyword "`stats`" instead of "`terms`
 }
 ```
 
-Sometimes e-commerce websites support specific facet behavior that let users select multiple values of the same facet on the frontend—for example, using a checkbox. To see how to implement a query that supports this feature while using described facet document structure, see [Elasticsearch - generic facets structure - calculating aggregations combined with filters](http://stackoverflow.com/questions/41369749) on Stack Overflow. 
+Sometimes ecommerce websites support specific facet behavior that let users select multiple values of the same facet on the frontend—for example, using a checkbox. To see how to implement a query that supports this feature while using described facet document structure, see [Elasticsearch - generic facets structure - calculating aggregations combined with filters](http://stackoverflow.com/questions/41369749) on Stack Overflow. 
 
 With this approach to faceted navigation, you can render search result pages with a single Elasticsearch query, and you don't need to know the list of available facets at query time. The additional effort in document preparation and query building immediately pays off because the solution automatically scales to thousands of facets.

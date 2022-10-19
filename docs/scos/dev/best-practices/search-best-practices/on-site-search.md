@@ -1,6 +1,6 @@
 ---
 title: On-site search
-description: Providing users with a proper on-site search user experience is often one of the major technical challenges in building e-commerce websites.
+description: Providing users with a proper on-site search user experience is often one of the major technical challenges in building ecommerce websites.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-design-patterns
@@ -51,7 +51,7 @@ related:
 
 By [Dr. Martin Loetzsch](http://martin-loetzsch.de/) ([Project A](https://www.project-a.com/)) and Krešimir Slugan ([Contorion](https://contorion.de/))
 
-Providing users with a proper on-site search user experience is often one of the major technical challenges in building e-commerce websites. Although Elasticsearch is a fantastic search engine for the job, a lot of work needs to be done to adapt it to the specific business. In this article, we will introduce a few Elasticsearch design patterns around our notion of usage-driven schemas that will help you to build a search so that:
+Providing users with a proper on-site search user experience is often one of the major technical challenges in building ecommerce websites. Although Elasticsearch is a fantastic search engine for the job, a lot of work needs to be done to adapt it to the specific business. In this article, we will introduce a few Elasticsearch design patterns around our notion of usage-driven schemas that will help you to build a search so that:
 
 * a customer can easily find what he wants by clicking through the category tree and applying filters (faceted navigation) relevant products can be found through
 * a full-text search (with more optional filters applied to narrow down the results)

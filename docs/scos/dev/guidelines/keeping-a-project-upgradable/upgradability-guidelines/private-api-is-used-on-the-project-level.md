@@ -127,7 +127,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: form class
 
-It is not allowed to extend Private API code on the project level. Private API updates can break backward compatibility.
+It is not allowed to extend the Spryker core Form classes on the project level, because they can be changed at any point in time.
 
 ### Related error in the Evaluator output
 
@@ -156,7 +156,6 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
-
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
 2. Give the form a unique name and copy it to the project level. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
@@ -178,9 +177,9 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: Business model
 
+It is not allowed to extend the Spryker core business model classes on the project level, because they can be changed at any point in time.
 
 ### Example of code that causes an upgradability error
-
 
 `CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter` from the private API.
 

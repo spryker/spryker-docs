@@ -45,7 +45,7 @@ related:
     link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
-Term completion is a feature where a user gets suggestions for search terms and matching search results as he types the query. We call a completion multi-term when it is able to combine terms from different attributes in an open-ended fashion. In the following example, a user entered "fortis" (a brand) and started typing "hammer" (a category):
+*Term completion* is a feature where a user gets suggestions for search terms and matching search results as he types the query. We call a completion multi-term when it can combine terms from different attributes in an open-ended fashion. In the following example, a user entered "fortis" (a brand) and started typing "hammer" (a category):
 ![Auto-completion](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Multi-Term+Auto+Completion/completion.png) 
 
 After completing "hammer", the search would suggest more terms found in documents containing both "fortis" and "hammer".

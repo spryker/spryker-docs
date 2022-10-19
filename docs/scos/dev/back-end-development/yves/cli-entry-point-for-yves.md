@@ -15,12 +15,12 @@ redirect_from:
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
-  - title: Adding translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: Add translations for Yves
+    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - title: Controllers and actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
-  - title: Implementing URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
   - title: Modular Frontend
     link: docs/scos/dev/back-end-development/yves/modular-frontend.html
   - title: Yves bootstrapping
@@ -29,7 +29,7 @@ related:
     link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-Spryker provides CLI entry points to run console commands for certain use cases. We use [Symfony's Console component](https://symfony.com/doc/current/components/console.html) to provide this feature.
+Spryker provides CLI entry points to run console commands for certain use cases. To provide this feature, we use [Symfony's Console component](https://symfony.com/doc/current/components/console.html) 
 
 Starting from [version 4.4.0](https://symfony.com/doc/4.4/components/console.html), we have added a new entry point for Yves, which significantly improves the separation of concerns and enables the execution of Yves-specific console commands.
 
@@ -45,7 +45,7 @@ This gives you a list of all available console commands for Yves.
 
 ### Create a console command
 
-To create a console command for Yves, you need to create a class inside the `Plugin/Console` directory and extend the `\Spryker\Yves\Kernel\Console\Console` which already brings some handy methods. 
+To create a console command for Yves, you need to create a class inside the `Plugin/Console` directory and extend `\Spryker\Yves\Kernel\Console\Console`, which already brings some handy methods. 
 
 A new console command looks as follows:
 

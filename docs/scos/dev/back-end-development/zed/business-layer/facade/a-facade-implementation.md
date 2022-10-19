@@ -1,6 +1,6 @@
 ---
-title: Implementing a facade
-description: This document describes how to implement a facade.
+title: A facade implementation
+description: This document describes a facade implementation.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-facade
@@ -20,22 +20,23 @@ redirect_from:
   - /v3/docs/en/implementing-facade
   - /v2/docs/implementing-facade
   - /v2/docs/en/implementing-facade
+  - /docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
 related:
-  - title: About facade
+  - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
-  - title: Using a facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
+  - title: Facade use cases
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
   - title: Design by Contract (DBC) - Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
 
 ## AbstractFacade
 
-Every facade extends `Spryker\Zed\Kernel\Business\AbstractFacade` which provides an important method:
+Every facade extends `Spryker\Zed\Kernel\Business\AbstractFacade`, which provides an important method:
 
 | METHOD  | PURPOSE  |
-| ------------------- | ------------- |
-| $this->getFactory() | Returns the factory which is needed to access the underlying models. |
+| --- | --- |
+| $this->getFactory() | Returns the factory needed to access the underlying models. |
 
 ## Methods
 
@@ -56,22 +57,19 @@ class GlossaryFacade extends AbstractFacade
     {% raw %}}}{% endraw %}
 ```
 
+When you look at the `deleteKey()` method, observe the following:
 
-
-When you look at the `deleteKey()` method, please observe the following:
-
-* The name of the method expresses exactly what happens. It uses the terms of the related terminology, but it is easy to grasp what happens ("A key will be deleted").
-* The method does not contain any control logic, like if or foreach statements; it just delegates to the business model and calls the right method.
-* The business model KeyManager is created using the factory so it does not need to know how the class is created.
+* The method's name expresses exactly what happens. It uses the terms of the related terminology, but it is easy to grasp what happens ("A key is deleted").
+* The method does not contain any control logic, like `if` or `foreach` statements; it just delegates to the business model and calls the right method.
+* The business model KeyManager is created using the factory, so it does not need to know how the class is created.
 
 ## Parameters and return values
 
-The main idea of the facade is to hide the implementation details. Typical return values of facade methods are:
+The main idea of the facade is to hide the implementation details. Typical return values of facade methods are the following:
+* Native types (bool, int, float, string, array)
+* Transfer objects
 
-* native types (bool, int, float, string, array)
-* transfer objects
-
-To hide and protect the underlying models and data structure, we never return business models or any propel entities/queries.
+To hide and protect the underlying models and data structure, business models, or any propel entities and queries are never returned.
 
 ## Transfer objects
 
@@ -95,20 +93,20 @@ class GlossaryFacade extends AbstractFacade
 
 ## Encapsulation
 
-The idea of the business layer is to present a facade to all clients and to hide the internal details. This is the main requirement for future updates and it keeps the bundles decoupled. So when you look at a module from another module you will only see the facade.
+The idea of the `Business` layer is to present a facade to all clients and hide the internal details. This is the main requirement for future updates, and it keeps the bundles decoupled. So when you look at a module from another module, you only see the facade.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Implement+a+Facade/facade-as-internal-api.png) 
 
 ## Related Spryks
 
 You might use the following definitions to generate related code:
 
-* Add Zed Business Facade
-* Add Zed Business Facade Interface
-* Add Zed Business Facade Interface Method
-* Add Zed Business Facade Method
-* Add Zed Business Facade Method Test
-* Add Zed Business Facade Test
-* Add Zed Business Factory
-* Add Zed Business Factory Method
+* Add Zed Business facade.
+* Add Zed Business facade interface.
+* Add Zed Business facade interface method.
+* Add Zed Business facade method.
+* Add Zed Business facade method test.
+* Add Zed Business facade test.
+* Add Zed Business factory.
+* Add Zed Business factory method.
 
-See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.
+For details, see the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation.

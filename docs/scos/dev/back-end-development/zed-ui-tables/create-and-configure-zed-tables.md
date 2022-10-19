@@ -1,6 +1,6 @@
 ---
-title: Creating and configuring Zed tables
-description: This document helps you to get started on working with tables.
+title: Create and configure Zed tables
+description: This document helps you get started on working with tables.
 last_updated: Oct 13, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
@@ -24,16 +24,17 @@ redirect_from:
   - /v1/docs/en/t-working-tables
   - /docs/t-working-tables
   - /docs/en/t-working-tables
+  - /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
 related:
-  - title: Adding buttons to Zed tables
-    link: docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
+  - title: Add buttons to Zed tables
+    link: docs/scos/dev/back-end-development/zed-ui-tables/add-buttons-to-zed-tables.html
 ---
 
 Spryker has a dedicated component to help you build tables for the Zed UI.
 
 This document helps you start working with tables.
 
-## 1. Creating a new table
+## 1. Create a new table
 
 To start defining a new table, under the `/Communication/Table/` folder that extends the `AbstractTable` class, create a new class in your module.
 
@@ -57,15 +58,14 @@ The query used for fetching the data must be injected into the constructor.
 
 The table class must implement the following methods:
 
-* `function configure (TableConfiguration $configuration)`: here, set up the captions for the tables header, the searchable and sortable fields, and specify the raw fields.
-
-* `function prepareData (TableConfiguration $configuration)`: here, prepare the data retrieved by the query in the way you want it to be shown in the table.
+* `function configure (TableConfiguration $configuration)`: Set up the captions for the tables header, the searchable and sortable fields, and specify the raw fields.
+* `function prepareData (TableConfiguration $configuration)`: Prepare the data retrieved by the query in the way you want it to be shown in the table.
 
 {% endinfo_block %}
 
-## 2. Configuring the table
+## 2. Configure the table
 
-Set up the captions for the tables header, the searchable and sortable fields and specify the raw fields:
+Set up the captions for the tables header, the searchable and sortable fields, and specify the raw fields:
 
 ```php
 <?php
@@ -74,7 +74,6 @@ function configure(TableConfiguration $configuration)
 ```
 
 The configuration of the table must be done with the following methods:
-
 * Set up captions for the table headers (`setHeader()`)
 * Set up searchable fields (`setSearchable()`)
 * Set up sortable fields (`setSortable()`)
@@ -111,7 +110,7 @@ protected function configure(TableConfiguration $config)
 }
 ```
 
-### Configuring the default field for sorting
+### Configure the default field for sorting
 
 To configure the field on which the table is sorted by default when it's initially rendered or when no sorting is applied by the user from the UI, specify the index of the field when configuring the table:
 
@@ -121,7 +120,7 @@ To configure the field on which the table is sorted by default when it's initial
 $config->setDefaultSortColumnIndex(5);
 ```
 
-You can also configure the default sort direction (for the initial rendering of the table or for the case it's not set yet), for example:
+You can also configure the default sort direction (for the initial rendering of the table or for the case it's not set yet)—for example:
 
 ```php
 <?php
@@ -130,7 +129,7 @@ $config->setDefaultSortDirection(
     \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
 ```
 
-## 3. Preparing the data
+## 3. Prepare the data
 
 Prepare the data retrieved by the query in the way you want it to be shown in the table:
 
@@ -140,7 +139,7 @@ Prepare the data retrieved by the query in the way you want it to be shown in th
 function prepareData(TableConfiguration $configuration)
 ```
 
-The query results should be mapped to the table columns, and data transformations such as price formatting should be done here:
+The query results must be mapped to the table columns, and data transformations such as price formatting must be done here:
 
 ```php
 <?php
@@ -163,7 +162,7 @@ protected function prepareData(TableConfiguration $config)
 }
 ```
 
-## 4. Rendering the table
+## 4. Render the table
 
 To display the query results in the table, in the controller's action, retrieve an instance of the table configuration class and call the `render()` operation:
 
@@ -179,14 +178,14 @@ public function indexAction(Request $request)
 }
 ```
 
-## 5. Downloading the table
+## 5. Download the table
 
-To download the data:
+To download the data, follow these steps:
 1. Add the `DownloadController` class.
 2. Add a link to the `DownloadController` action into the table view.
 3. Prepare the download of the data.
 
-### Adding DownloadController
+### Add `DownloadController`
 
 `DownloadController` calls the module factory to create the table for downloading and start the download stream.
 
@@ -217,11 +216,11 @@ class DownloadController extends AbstractController
 
 ```
 
-### Adding a link to the DownloadController action into the table view
+### Add a link to the `DownloadController` action into the table view
 
 To start the download, add a link to the `DownloadController` action on the table view:
-```twig
 
+```twig
 ...
 
 {% raw %}{%{% endraw %} block action {% raw %}%}{% endraw %}
@@ -231,7 +230,7 @@ To start the download, add a link to the `DownloadController` action on the tabl
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-### Preparing the download of the data
+### Prepare the download of the data
 
 To prepare the CSV file, implement the following methods in the `Table` class:
 
@@ -239,11 +238,11 @@ To prepare the CSV file, implement the following methods in the `Table` class:
 * `GetDownloadQuery()`
 * `FormatCsvRow()`
 
-#### Implementing GetCsvHeaders
+#### Implement `GetCsvHeaders()`
 
-This method defines the order and displayed header of the columns.
+The `GetCsvHeaders()` method defines the order and the displayed header of the columns.
 
-Return an array that has the column name of the table as the key and the displayed header as value. The values are translated.
+Return an array that has the column name of the table as the key and the displayed header as the value. The values are translated.
 
 ```php
 <?php
@@ -263,9 +262,9 @@ protected function getCsvHeaders(): array
 }
 ```
 
-#### Implementing getDownloadQuery
+#### Implement `getDownloadQuery()`
 
-This method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
+The `getDownloadQuery()` method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
 
 ```php
 <?php
@@ -284,9 +283,9 @@ protected function getDownloadQuery(): ModelCriteria
 }
 ```
 
-#### Implementing formatCsvRow
+#### Implement `formatCsvRow()`
 
-This method receives each `\Propel\Runtime\ActiveRecord\ActiveRecordInterface` and is responsible for returning a formatted array of the required data.
+The `formatCsvRow()` method receives each `\Propel\Runtime\ActiveRecord\ActiveRecordInterface` and is responsible for returning a formatted array of the required data.
 
 ```php
 <?php

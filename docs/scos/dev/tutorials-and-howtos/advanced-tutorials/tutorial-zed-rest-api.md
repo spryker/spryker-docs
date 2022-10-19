@@ -22,7 +22,7 @@ redirect_from:
   - /v1/docs/t-zed-rest-api
   - /v1/docs/en/t-zed-rest-api
 related:
-  - title: About Facade
+  - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
   - title: Create, use, and extend the transfer objects
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html

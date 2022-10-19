@@ -1,5 +1,5 @@
 ---
-title: Versioning REST API resources
+title: Implement versioning for REST API resources
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/versioning-rest-api-resources
@@ -29,7 +29,7 @@ In the course of the development of your REST APIs, you may need to change the d
 {% info_block infoBox %}
 
 Resources that are provided by Spryker out of the box do not have a version. When developing resources, only new resources or attributes are added without removing anything, which ensures backward compatibility for all clients. 
-If necessary, you can implement versioning for built-in resources as well as [extend](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html) the corresponding resource module on your project level.
+If necessary, you can implement versioning for built-in resources as well as [extend](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/extend-a-rest-api-resource.html) the corresponding resource module on your project level.
 
 {% endinfo_block %}
 
@@ -41,7 +41,7 @@ To add versioning to a resource, the route plugin of the `resource` module needs
 
 {% info_block warningBox %}
 
-For more information on route plugins, see the [Resource routing](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-routing) section in *Glue Infrastructure*.
+For more information on route plugins, see the [Resource routing](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing) section in *Glue Infrastructure*.
 
 {% endinfo_block %}
 
@@ -162,7 +162,7 @@ If a version is not specified, the latest available version is returned.
 
 ## 3. Add more versions
 
-To implement a new version, you can create a new route plugin in your module. For example, to support version 3.0, you can use the following code in your plugin:
+To implement a new version, you can create a new route plugin in your module—for example, to support version 3.0, you can use the following code in your plugin:
 
 **Code sample:**
 
@@ -179,7 +179,7 @@ class CustomerRestorePasswordResourceRouteVersion3Plugin extends AbstractPlugin 
 }
 ```
 
-In the new plugin, you can configure routing differently. You can use a different controller class or use a different transfer for the resource attributes—for example:
+In the new plugin, you can configure routing differently. You can use a different controller class or use a different transfer for the resource attributes. See the following example:
 
 **Code sample:**
 

@@ -45,7 +45,7 @@ related:
     link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
-Faceted search—sometimes also called faceted navigation—lets users navigate through a website by applying filters for categories, attributes, and price ranges. It's probably the most basic feature of a search and users expect this to work. Unfortunately, we observed that this is also one of the features that developers struggle with the most.
+Faceted search—sometimes also called faceted navigation—lets users navigate through a website by applying filters for categories, attributes, and price ranges. Probably, it's the most basic feature of a search, and users expect this to work. Unfortunately, we observed that this is also one of the features that developers struggle with the most.
 
 The main idea behind faceted search is to present the attributes of the documents of the previous search result as filters, which can be used by the user to narrow down search results. In the following example, a user clicked through the category tree to the "Hammer" category and then further filtered the results for documents with a hammer weight of 2000 grams and in a price range of 10€ to 50€. 19 documents were found, and the filter bar on the left lists those attributes that are contained in the search result along with a count of how many documents have the attribute (facet counts):
 

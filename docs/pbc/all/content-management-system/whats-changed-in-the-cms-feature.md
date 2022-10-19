@@ -44,57 +44,60 @@ This release contains the following modules:
   * Increased Gui dependency version.
 
 
-* [CmsBlockGui 2.9.0](https://github.com/spryker/cms-block-gui/releases/tag/2.9.0)
-
-Improvements
+* [CmsBlockGui 2.9.0](https://github.com/spryker/cms-block-gui/releases/tag/2.9.0) improvements:
   * Adjusted `ListBlockController::tableAction()` to display formatted CMS block IDs based on locale.
   * Increased Gui dependency version.
 
+* [NavigationGui 2.8.0](https://github.com/spryker/navigation-gui/releases/tag/2.8.0) improvements:  
 
-[Public release details](https://api.release.spryker.com/release-group/2084)
+  * Adjusted IndexController::tableAction() to display formatted navigation IDs based on locale.
+  * Increased Gui dependency version.
+
+
+[Public release details](https://api.release.spryker.com/release-group/3883)
 
 
 ## July 6th, 2022
 
-* [Cms 7.11.1](https://github.com/spryker/cms/releases/tag/7.11.1)
+[Cms 7.11.1](https://github.com/spryker/cms/releases/tag/7.11.1): adjusted `CmsFacade::findPageGlossaryAttributes()` return type so now it is compatible with the implemented interface's signature.
 
-Fixes
-  * Adjusted `CmsFacade::findPageGlossaryAttributes()` return type so now it is compatible with the implemented interface's signature.
+[Public release details](https://api.release.spryker.com/release-group/4252)
 
 
 ## June 8th, 2022
 
-* [CmsSlotBlockDataImport 0.2.2](https://github.com/spryker/cms-slot-block-data-import/releases/tag/0.2.2)
+[CmsSlotBlockDataImport 0.2.2](https://github.com/spryker/cms-slot-block-data-import/releases/tag/0.2.2) module fixes:
 
-Fixes
-  * Adjusted `CmsPageKeysToIdsConditionsStep::KEY_CMS_PAGE_IDS` constant value to fix importing of CMS block conditions.
-  * Adjusted `CmsPageKeysToIdsConditionResolver::KEY_CMS_PAGE_IDS` constant value to fix importing of CMS block conditions.
+* Adjusted `CmsPageKeysToIdsConditionsStep::KEY_CMS_PAGE_IDS` constant value to fix importing of CMS block conditions.
+* Adjusted `CmsPageKeysToIdsConditionResolver::KEY_CMS_PAGE_IDS` constant value to fix importing of CMS block conditions.
+
+[Public release details](https://api.release.spryker.com/release-group/4042)
 
 
 ## April 18th, 2022
 
-[CmsStorage 2.6.0](https://github.com/spryker/cms-storage/releases/tag/2.6.0)
+* [CmsStorage 2.6.0](https://github.com/spryker/cms-storage/releases/tag/2.6.0): Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`.
 
-  * Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`
+* [CmsPageSearch 2.5.0](https://github.com/spryker/cms-page-search/releases/tag/2.5.0): Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`.
 
-* [CmsPageSearch 2.5.0](https://github.com/spryker/cms-page-search/releases/tag/2.5.0)
+* [CmsBlockProductStorage 1.6.0](https://github.com/spryker/cms-block-product-storage/releases/tag/1.6.0): Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`.
 
-  * Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`
+* [CmsBlockCategoryStorage 1.7.0](https://github.com/spryker/cms-block-category-storage/releases/tag/1.7.0): Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`.
 
-* [CmsBlockProductStorage 1.6.0](https://github.com/spryker/cms-block-product-storage/releases/tag/1.6.0)
-
-
-  * Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`
-
-* [CmsBlockCategoryStorage 1.7.0](https://github.com/spryker/cms-block-category-storage/releases/tag/1.7.0): Removed deprecated usage of DatabaseTransactionHandlerTrait::preventTransaction()
+* [NavigationStorage 1.9.0](https://github.com/spryker/navigation-storage/releases/tag/1.9.0): Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`.
 
 
+[Public release details](https://api.release.spryker.com/release-group/2084)
 
-## April 7th, 2022
+## April 8th, 2022
 
 [ContentGui 2.4.8](https://github.com/spryker/content-gui/releases/tag/2.4.8): Adjusted the `content-item-editor` so that it can use `codemirror` as code view editor.
+
+[Public release details](https://api.release.spryker.com/release-group/3829)
 
 
 ## March 31th, 2022
 
 [CmsContentWidget 1.9.1](https://github.com/spryker/cms-content-widget/releases/tag/1.9.1): Introduced `LocaleCmsPageData` transfer object.
+
+[Public release details](https://api.release.spryker.com/release-group/4037)

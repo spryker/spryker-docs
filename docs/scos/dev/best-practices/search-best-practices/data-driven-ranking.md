@@ -52,7 +52,7 @@ A common solution is to manually assign ranks to products (sometimes even within
 
 ### Sorting by formulas based on scores
 
-We recommend an approach where a list of normalized scores per product at import time is precomputed and included in the documents that are sent to Elasticsearch. These are the scores from our hammer example above (the interesting scores are left out because of the sensitivity of this information):
+We recommend an approach where a list of normalized scores per product at import time is precomputed and included in the documents that are sent to Elasticsearch. These are the scores from our previous hammer example (the interesting scores are left out because of the sensitivity of this information):
 
 ```js
 "scores": {

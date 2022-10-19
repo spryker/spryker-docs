@@ -1,5 +1,5 @@
 ---
-title: Naive product centric approach
+title: Naive product-centric approach
 description: Finding products on e-commerce website can be tricky, even when you know exactly what you are looking for.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -48,7 +48,7 @@ related:
 Finding products on e-commerce website can be tricky, even when you know exactly what you are looking for. This document assumes a customer wants to buy a hammer that weighs 2kg. A product that would meet his needs might be this "Fäustel" by Fortis:
 ![Product-centric approach](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Naive+Product+Centric+Approach/product-detail.png) 
 
-This is (most of) the search-relevant information that is known in the backend of Contorion about the product above:
+This is (most of) the search-relevant information that is known in the backend of Contorion about the preceding product:
 
 ```php
 {

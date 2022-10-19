@@ -36,7 +36,7 @@ The file should have the following parameters:
 This file has the following dependencies:
 
 * [shipment.csv](/docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html)
-* *stores.php* configuration file of demo shop PHP project
+* *stores.php* The configuration file of the Spryker Demo Shop PHP project
 
 ## Import template file and content example
 

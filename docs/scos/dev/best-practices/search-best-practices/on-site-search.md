@@ -61,14 +61,14 @@ Providing users with a proper on-site search user experience is often one of the
 Furthermore, we will introduce a technique for sorting search results which ranks products higher that:
 
 * are most relevant for the search
-* exhibit better past performance (revenue, clicks, click trough rate, etc.)
+* exhibit better past performance (revenue, clicks, click through rate)
 * exhibit better expected customer experience (delivery speed, product quality)
 
 And finally, we will illustrate how to personalize search experience using the example of dynamic pricing and discuss some other best practices. The examples will come from Contorion, an online industrial and trade supply store that considers on-site search a major driver for its business.
 
 {% info_block warningBox %}
 
-All examples are from early 2015 and have proven to work in Elasticsearch 1.x. Some queries will look different in Elasticsearch 5.x but the main concepts still hold true.
+All examples are from early 2015 and have proven to work in Elasticsearch 1.*x*. Some queries will look different in Elasticsearch 5.*x* but the main concepts still hold true.
 
 {% endinfo_block %}
 

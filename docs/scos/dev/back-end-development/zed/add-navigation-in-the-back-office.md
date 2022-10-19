@@ -1,5 +1,5 @@
 ---
-title: Adding navigation in the Back Office
+title: Add navigation in the Back Office
 description: This document describes how to make your new controller action accessible in the navigation bar.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/adding-navigation-in-zed
   - /v1/docs/en/adding-navigation-in-zed
   - /docs/scos/dev/back-end-development/extending-spryker/adding-navigation-in-the-back-office.html
+  - /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
 related: 
   - title: Zed overview
     link: docs/scos/dev/back-end-development/zed/zed.html
@@ -32,15 +33,16 @@ This document describes how to make a controller action accessible in the naviga
 
 There are two places to define the navigation configuration:
 
-* In the global configuration file - `config/Zed/navigation.xml`
-* In a module configuration file - `src/Pyz/Zed/{moduleName}/Communication/navigation.xml`
+* In the global configuration file: `config/Zed/navigation.xml`.
+* In a module configuration file: `src/Pyz/Zed/{moduleName}/Communication/navigation.xml`.
+
 {% info_block infoBox "Replace a placeholder" %}
 
 Replace `{moduleName}` with the actual module name.
 
 {% endinfo_block %}
 
-## Defining a navigation merge strategy
+## Define a navigation merge strategy
 
 When you add navigation on a project level, you need to merge it with the core navigation. There are two strategies to do that: `BREADCRUMB_MERGE_STRATEGY` and `FULL_MERGE_STRATEGY`.
 
@@ -48,8 +50,8 @@ Using `BREADCRUMB_MERGE_STRATEGY`, the first two levels of project-level navigat
 
 Using `FULL_MERGE_STRATEGY`, all the project-level navigation elements are appended to the core-level navigation elements.
 
-To define a merging strategy:
-1. Add the following to `src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php`.
+To define a merging strategy, follow these steps:
+1. Add the following code to `src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php`.
 
 ```php
 <?php
@@ -73,9 +75,9 @@ class ZedNavigationConfig extends SprykerZedNavigationConfig
 
 2. Replace `{merging_strategy}`with the desired merging strategy type.
 
-## Adding navigation using the global navigation configuration
+## Add navigation using the global navigation configuration
 
-After you've [defined a navigation merge strategy](#defining-a-navigation-merge-strategy), do the following to add a controller action to the navigation bar:
+After you've [defined a navigation merge strategy](#define-a-navigation-merge-strategy), do the following to add a controller action to the navigation bar:
 
 1. Add the following XML block within the configuration tag scope of `config/Zed/navigation.xml`:
 
@@ -102,20 +104,20 @@ After you've [defined a navigation merge strategy](#defining-a-navigation-merge-
 </config>
 ```
 
-2. Build navigation cache to apply the changes:
+2. Build a navigation cache to apply the changes:
 
-```php
+```bash
 vendor/bin/console application:build-navigation-cache
 ```
 
 
-## Adding navigation using the module navigation configuration
+## Add navigation using the module navigation configuration
 
-After you've [defined a navigation merge strategy](#defining-a-navigation-merge-strategy), do the following to add a controller action to the navigation bar:
+After you've [defined a navigation merge strategy](#define-a-navigation-merge-strategy), do the following to add a controller action to the navigation bar:
 
 1. Define the new menu point in the navigation configuration of the module:
 
-```bash
+```php
 touch src/Pyz/Zed/HelloWorld/Communication/navigation.xml
 ```
 
@@ -142,7 +144,7 @@ touch src/Pyz/Zed/HelloWorld/Communication/navigation.xml
 </config>
 ```
 
-3. Build navigation cache to apply the changes:
+3. Build the navigation cache to apply the changes:
 
 ```php
 vendor/bin/console application:build-navigation-cache
@@ -150,11 +152,11 @@ vendor/bin/console application:build-navigation-cache
 
 {% info_block warningBox "Verification" %}
 
-Reload the Back Office page. You should see the *Greeter* navigation element under the *Hello World* navigation element.
+Reload the Back Office page. You can see the **Greeter** navigation element under the **Hello World** navigation element.
 
 {% endinfo_block %}
 
-## Hiding root navigation elements
+## Hide root navigation elements
 
 When navigation XML files are merged, you can hide a root element by adding a `visible` keyword.
 Add the following to `config/Zed/navigation.xml`:

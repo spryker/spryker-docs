@@ -256,7 +256,7 @@ To resolve the error, remove the bridge.
 
 ## PrivateApi:MethodIsOverridden
 
-It is not allowed to override protected core methods from the core level on the project level. Protected methods can be changed at any time.
+It is not allowed to override protected core methods from the core level on the project level.  Protected methods on the Spryker core level can be removed or changed at any time and break your overridden functionality on project level.
 
 ### Example of error in the Evaluator output
 

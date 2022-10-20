@@ -290,6 +290,13 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 
 ### Example of resolving the error by copying the method to the project level and renaming it
 
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+
+
+Not recommended:
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+2. Give the method a unique name and copy it to the project level. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
+
 ```php
 namespace Pyz\Yves\CheckoutPage;
 
@@ -306,8 +313,6 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
     }
 }
 ```
-
-To make the names of extended Private API entities unique, you can use any other strategy. For example, you can prefix them with your project name.
 
 After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
@@ -350,7 +355,12 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 
 ### Example of resolving the error by cloning functionality to the project level
 
-1. Copy the method to the factory on the project level.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+
+
+Not recommended:
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+2. Give the method a unique name and copy it to the factory on the project level. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -470,7 +480,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 
 ## PrivateApi:ObjectInitialization
 
-Business models on the project level should avoid initializing private API from the Core level.
+Business models on the project level should avoid initializing private API from the core level.
 
 ### Example of error in the Evaluator output
 
@@ -544,7 +554,12 @@ class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
 
 ### Example of resolving the error by copying and renaming Private API entities
 
-1. Create a new entity manager on the project level with the needed methods from the entity manager on the core level.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+
+
+Not recommended:
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+2. On the project level, create an entity manager with the methods from the core level.
 
 ```php
 <?php
@@ -581,7 +596,7 @@ class PyzCustomerAccessEntityManager extends AbstractEntityManager implements Cu
 }
 ```
 
-2. Use a new entity manager from the project level with its methods.
+3. Replace the core entity manager with the one you've created.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -647,21 +662,14 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 }
 ```
 
-### Resolving the error
-
-To resolve the error provided in the example, try the following in the provided order:
-1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
-2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
-3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
-4. Not recommended: Copy the functionality from the core to the project level:
-    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming Private API entities](#example-of-resolving-the-error-by-copying-and-renaming-private-api-entities).
-    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
-       While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
-
 ### Example of resolving the error by copying and renaming Private API entities
 
-1. Create a new method for a factory on the project level.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+
+
+Not recommended:
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+2. Copy the method to the project level and give it a unique name.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -682,7 +690,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 }
 ```
 
-2. Use the new project-level method instead of the core-level method.
+2. Replace the core method with the one you've copied.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Persistence;
@@ -710,3 +718,6 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
     ...
 }
 ```
+
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.

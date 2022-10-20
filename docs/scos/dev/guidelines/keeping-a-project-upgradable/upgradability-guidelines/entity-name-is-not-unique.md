@@ -25,7 +25,7 @@ The names of the following entities must be unique on the project level:
 
 ## NotUnique:TransferName
 
-Transfer names must be unique on the project level. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your transfers won't conflict with the transfers that appear in Spryker core in the future. 
+Transfer names must be unique on the project level. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your transfers won't conflict with the transfers that appear in Spryker core in the future.
 
 ### Example of error in the Evaluator output: Transfer name is not unique
 
@@ -91,7 +91,7 @@ NotUnique:TransferProperty Transfer property "customProperty" for "LocaleCmsPage
 ...
 ```
 
-In the example, we add `Pyz` to transfer property name, but you can use any other prefix, for example your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
+In the example, we add `Pyz` to transfer property name, but you can use any other prefix, for example, your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
 
 ---
 
@@ -290,4 +290,3 @@ src/Pyz/Yves/PyzExampleStateMachine
 ```
 
 In the example, we add `Pyz` as a prefix, but you can use any other prefix, for example your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
-

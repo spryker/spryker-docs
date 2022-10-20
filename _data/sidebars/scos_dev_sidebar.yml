@@ -1232,6 +1232,44 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
           include_versions:
           - "202204.0"
+    - title: Glue API tutorials
+      url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
+      include_versions:
+      - "202204.0"
+      nested:
+      - title: B2C API React example
+        url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
+        include_versions:
+        - "202204.0"
+        nested:
+        - title: Install B2C API React example
+          url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
+          include_versions:
+          - "202204.0"
+      - title: Document Glue API resources
+        url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/document-glue-api-resources.html
+        include_versions:
+        - "202204.0"
+      - title: Extend a REST API resource
+        url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/extend-a-rest-api-resource.html
+        include_versions:
+        - "202204.0"
+      - title: Implement a REST API resource
+        url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/implement-a-rest-api-resource.html
+        include_versions:
+        - "202204.0"
+      - title: Implement versioning for REST API resources
+        url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
+        include_versions:
+        - "202204.0"
+      - title: Interact with third party payment providers using Glue API
+        url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
+        include_versions:
+        - "202204.0"
+      - title: Validate REST request format
+        url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/validate-rest-request-format.html
+        include_versions:
+        - "202204.0"
     - title: Glue API Developer Guides
       url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
       include_versions:

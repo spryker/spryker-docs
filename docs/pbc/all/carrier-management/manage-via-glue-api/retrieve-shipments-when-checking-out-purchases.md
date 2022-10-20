@@ -5,10 +5,10 @@ last_updated: July 28, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve order shipments when checking out. For full information on the endpoint, see [Check out purchases](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html)
+This document describes how to retrieve order shipments when checking out through the Glue API. For full information about the endpoint, see [Check out purchases](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html)
 
 
-This endpoint allows finalizing the checkout process by placing an order. After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Thus, use the endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html).  
+This endpoint allows finalizing the checkout process by placing an order. After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Use this endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html).  
 
 ## Installation
 
@@ -70,7 +70,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
                 "salutation": "Mr",
                 "firstName": "Spencor",
                 "lastName": "Hopkin",
-                "address1": "Julie-Wolfthorn-Straße",
+                "address1": "Julie-Wolfthorn-Strasse",
                 "address2": "1",
                 "address3": "new address",
                 "zipCode": "10115",
@@ -97,7 +97,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
                         "salutation": "Mrs",
                         "firstName": "Sonia",
                         "lastName": "Wagner",
-                        "address1": "Julie-Wolfthorn-Straße",
+                        "address1": "Julie-Wolfthorn-Strasse",
                         "address2": "1",
                         "address3": "new one",
                         "zipCode": "10115",
@@ -166,7 +166,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
                     "firstName": "Sonia",
                     "middleName": null,
                     "lastName": "Wagner",
-                    "address1": "Julie-Wolfthorn-Straße",
+                    "address1": "Julie-Wolfthorn-Strasse",
                     "address2": "1",
                     "address3": "new one",
                     "company": "spryker",
@@ -211,7 +211,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
                     "firstName": "Sonia",
                     "middleName": null,
                     "lastName": "Wagner",
-                    "address1": "Julie-Wolfthorn-Straße",
+                    "address1": "Julie-Wolfthorn-Strasse",
                     "address2": "1",
                     "address3": "new address",
                     "company": "spryker",
@@ -344,9 +344,9 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| orderReference | String | Unique identifier of the order. |
+| orderReference | String | The unique identifier of the order. |
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
-| isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
+| isExternalRedirect | Boolean | If true, the customer is redirected to an external URL. |
 
 {% include pbc/all/glue-api-guides/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/check-out-puchases-response-attributes-of-included-resources.md -->
 

@@ -227,7 +227,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: Bridge
 
-Bridge classes on the project level must not extend bridge classes from the core level. Bridge classes on the core level can change in future, and it may cause unexpected issues.
+Bridge classes on the project level must not extend bridge classes from the core level. This ensures that bridge classes will not cause unexpected issues when they are changed in the core.
 
 ### Related error in the Evaluator output
 
@@ -250,7 +250,8 @@ class PriceProductToProductFacadeBridge extends SprykerPriceProductToProductFaca
 }
 ```
 
-#### Example of resolving the error
+### Example of resolving the error
+
 To resolve the error, remove the bridge.
 
 ---
@@ -320,7 +321,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Persistence
 
-It is allowed to use factory classes inside of repositories and entity manager classes on a project level, but only the methods from these classes, that were declared on the project level.
+It is allowed to use factory classes inside of repositories and entity manager classes on a project level. The methods from these classes must be declared on the project level.
 
 ### Example of error in the Evaluator output
 
@@ -511,7 +512,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:DependencyInBusinessModel
 
-On the project level, business models must not use private API from the core level.
+On the project level, business models must not use private API from the core level. This ensures that business models will not cause unexpected issues when they are changed in the core.
 
 ### Example of error in the Evaluator output
 
@@ -671,7 +672,7 @@ PrivateApi:PersistenceInBusinessModel Please avoid usage of PrivateApi customerA
 
 ### Example of code that causes an upgradability error
 
-`CustomerAccessUpdater` calls the `setContentTypesToInaccessible` method of the entity manager that was declared on the core level.
+`CustomerAccessUpdater` calls the `setContentTypesToInaccessible` method of the entity manager which is  declared on the core level.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -786,7 +787,7 @@ PrivateApi:CorePersistenceUsage Please avoid usage of PrivateApi method SprykerC
 
 ### Example of code that causes an upgradability error
 
-`CustomerAccessEntityManager` calls the `getCustomerAccessEntityByContentType` method of `SprykerCustomerAccessEntityManager` that was declared on the core level.
+`CustomerAccessEntityManager` calls the `getCustomerAccessEntityByContentType` method of `SprykerCustomerAccessEntityManager` that is declared on the core level.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Persistence;

@@ -249,7 +249,6 @@ algolia:
   application_id: 'IBBSSFT6M1'
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
   max_record_size: 20000
-  nodes_to_index: 'p,code,li,div.paragraph'
   indices:
     - name: 'scos_user'
       title: 'SCOS User'

@@ -59,8 +59,8 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
 
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-2. Give the method a unique name and copy it to the factory to fetch the business models. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+2. Give the method a unique name and copy it to the factory to fetch the business models. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -127,7 +127,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: form class
 
-It is not allowed to extend the Spryker core Form classes on the project level, because they can be changed at any point in time.
+Form classes on the project level must not extend forms from the core level. Forms on the core level can change in future, and it may cause unexpected issues.
 
 ### Related error in the Evaluator output
 
@@ -157,8 +157,8 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-2. Give the form a unique name and copy it to the project level. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+2. Copy the form to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 ```php
 <?php
@@ -177,7 +177,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: Business model
 
-It is not allowed to extend the Spryker core business model classes on the project level, because they can be changed at any point in time.
+Business model classes on the project level must not extend business models from the core level. Business models on the core level can change in future, and it may cause unexpected issues.
 
 ### Example of code that causes an upgradability error
 
@@ -208,8 +208,8 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
 
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-2. Give the business model a unique name and copy it to the project level. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+2. Copy the form to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 
 ```php
@@ -256,7 +256,7 @@ To resolve the error, remove the bridge.
 
 ## PrivateApi:MethodIsOverridden
 
-It is not allowed to override protected core methods from the core level on the project level.  Protected methods on the Spryker core level can be removed or changed at any time and break your overridden functionality on project level.
+On the project level, core methods must not be overridden. Protected methods can be removed or changed in future and break overridden functionality on project level.
 
 ### Example of error in the Evaluator output
 
@@ -293,8 +293,8 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
 
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-2. Give the method a unique name and copy it to the project level. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+2. Copy the method to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -358,8 +358,8 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
 
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
-2. Give the method a unique name and copy it to the factory on the project level. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+2. Give the method a unique name and copy it to the factory on the project level. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -572,7 +572,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 
 ## PrivateApi:ObjectInitialization
 
-Business models on the project level should avoid initializing private API from the core level.
+On the project level, business models must not initialize private API from the core level.
 
 ### Example of error in the Evaluator output
 
@@ -584,7 +584,7 @@ PrivateApi:ObjectInitialization Please avoid usage of Spryker\Zed\CustomerAccess
 
 ### Example of code that causes an upgradability error
 
-`CustomerAccessFilter` contains creating `CustomerAccessReader` in the `constructor` method.
+The `constructor` method in `CustomerAccessFilter` creates `CustomerAccessReader`.
 
 ```php
 ...
@@ -608,6 +608,14 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 ```
 
 ### Example of resolving the error
+
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+
+
+Not recommended:
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+2. On the project level, create an entity manager with the methods from the core level.
+
 
 ```php
 ...
@@ -677,7 +685,7 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
 
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 2. On the project level, create an entity manager with the methods from the core level.
 
 ```php
@@ -758,7 +766,7 @@ PrivateApi:CorePersistenceUsage Please avoid usage of PrivateApi method SprykerC
 ------------------------------- ------------------------------------------------------------------------------------------------------------------
 ```
 
-Example of code that causes an upgradability error:
+### Example of code that causes an upgradability error
 
 `CustomerAccessEntityManager` calls the `getCustomerAccessEntityByContentType` method of `SprykerCustomerAccessEntityManager` that was declared on the core level.
 
@@ -787,7 +795,7 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
 
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 2. Copy the method to the project level and give it a unique name.
 
 ```php

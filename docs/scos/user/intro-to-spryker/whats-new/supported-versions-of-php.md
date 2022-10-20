@@ -1,6 +1,6 @@
 ---
 title: Supported versions of PHP
-description: This article provides information about the PHP versions Spryker supports.
+description: This document provides information about the PHP versions Spryker supports.
 last_updated: May 12, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/supported-versions-of-php
@@ -34,13 +34,12 @@ Since October 2021, Spryker has been compatible with PHP 8.0.
 PHP 8.1 support has been finished July 2022.
 We recommend using PHP 8.1 now.
 
+Before switching PHP versions in production environments, ensure to check this new major version's new features and test it for incompatibilities. For more information, see the following documents:
 
-[New Features](https://www.php.net/manual/en/migration80.new-features.php)
-[Backward Incompatible Changes](https://www.php.net/manual/en/migration80.incompatible.php)
-[Deprecated Features](https://www.php.net/manual/en/migration80.deprecated.php)
-[Other Changes](https://www.php.net/manual/en/migration80.other-changes.php)
-
-This new major version brings with it a number of new features and some incompatibilities that should be tested for before switching PHP versions in production environments.
+* [New Features](https://www.php.net/manual/en/migration80.new-features.php)
+* [Backward Incompatible Changes](https://www.php.net/manual/en/migration80.incompatible.php)
+* [Deprecated Features](https://www.php.net/manual/en/migration80.deprecated.php)
+* [Other Changes](https://www.php.net/manual/en/migration80.other-changes.php)
 
 Note: PHP 8.0+ is a hard requirement from 19.10.2022 due to the modules being now PHP 8.0+.
 

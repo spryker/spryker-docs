@@ -14,10 +14,6 @@ redirect_from:
 related:
   - title: Shipment feature integration
     link: docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
-  - title: Shipment feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
-  - title: Cart feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-shipment-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-shipment-cart-feature.md -->

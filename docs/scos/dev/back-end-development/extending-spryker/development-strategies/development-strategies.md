@@ -37,7 +37,7 @@ To adjust Spryker behavior to the project needs, you can extend `\Spryker\Zed\Pr
 
 {% info_block infoBox "Example" %}
 
-In your project, you don’t calculate a refundable amount inside Spryker OS, so you need to extend `\Spryker\Zed\Calculation\CalculationDependencyProvider` by
+In your project, you don't calculate a refundable amount inside Spryker OS, so you need to extend `\Spryker\Zed\Calculation\CalculationDependencyProvider` by
 `\Pyz\Zed\Calculation\CalculationDependencyProvider` and remove `RefundableAmountCalculatorPlugin` from the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` plugin stack.
 
 {% endinfo_block %}
@@ -52,7 +52,7 @@ The existing Spryker modules remain untouched.
 
 {% info_block infoBox "Example" %}
 
-In your project, you don’t store prices in Spryker OS, but in an external system. You need to create a new module `SuperPrice` with a new plugin `\Pyz\Zed\SuperPrice\Communication\Plugin\Calculator\PriceCalculatorPlugin`, which performs a call to my Super ERP and gathers prices. Once it’s done, you replace default `\Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceCalculatorPlugin` with my Project `PriceCalculatorPlugin`.
+In your project, you don't store prices in Spryker OS, but in an external system. You need to create a new module `SuperPrice` with a new plugin `\Pyz\Zed\SuperPrice\Communication\Plugin\Calculator\PriceCalculatorPlugin`, which performs a call to my Super ERP and gathers prices. Once it's done, you replace default `\Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceCalculatorPlugin` with my Project `PriceCalculatorPlugin`.
 
 {% endinfo_block %}
 
@@ -74,7 +74,7 @@ Spryker OS support: High, you can safely take minor and patch releases.
 
 ### Spryker OS module customization
 
-When specific OOTB Spryker behavior doesn’t fit Project requirements, you can enable the full power of available for your codebase by extending existing business modules.
+When specific OOTB Spryker behavior doesn't fit Project requirements, you can enable the full power of available for your codebase by extending existing business modules.
 
 {% info_block infoBox "Let us know which extension point is missing, so we can add it in the core" %}
 
@@ -82,7 +82,7 @@ Register missing extension points in [Aha ideas](https://spryker.ideas.aha.io/).
  
 {% endinfo_block %}
 
-As it’s quite a substantial change, we need to go deeper and not only extend OOTB Spryker behaviors but also change them, some of the non-API changes become dangerous. That’s why a module constraint to a specific minor version is required (using *~* instead of *^*).
+As it's quite a substantial change, we need to go deeper and not only extend OOTB Spryker behaviors but also change them, some of the non-API changes become dangerous. That's why a module constraint to a specific minor version is required (using *~* instead of *^*).
 
 Consider using the composition design pattern instead of the direct class extensions: it could increase development costs, but also increases vendor support and simplifies minor updates.
 
@@ -96,7 +96,7 @@ Spryker OS support: Reduced, manual check is needed for every update.
 
 ### Spryker OS module replacement
 
-When an existing Spryker module provides functionality that doesn’t fit the Project conceptually, there is a possibility to replace a Spryker module completely using the “composer replace” feature.
+When an existing Spryker module provides functionality that doesn't fit the Project conceptually, there is a possibility to replace a Spryker module completely using the "composer replace" feature.
 
 This option is not available for every module, as sometimes conceptual changes could lead to high development efforts.
 

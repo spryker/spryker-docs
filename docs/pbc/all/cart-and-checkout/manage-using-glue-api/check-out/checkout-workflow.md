@@ -12,12 +12,12 @@ redirect_from:
   - /docs/en/checkout-workflow
   - /docs/scos/dev/glue-api-guides/202204.0/checking-out/checkout-workflow.html
 related:
-  - title: Checking out purchases
+  - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
-  - title: Submitting checkout data
+  - title: Submit checkout data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html
-  - title: Updating payment data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
+  - title: Update payment data
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html
 ---
 
 The Checkout API provides endpoints for placing, updating and retrieving checkout information.
@@ -28,4 +28,4 @@ A typical API Client workflow is as follows:
 
 ## Next steps
 
-* [Submitting checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)

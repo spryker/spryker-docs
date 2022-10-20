@@ -8,11 +8,6 @@ originalArticleId: 0b3107fb-825e-481e-bb6d-27e13f4a7d0f
 redirect_from:
   - /v3/docs/multiple-carts-api-feature-integration-201907
   - /v3/docs/en/multiple-carts-api-feature-integration-201907
-related:
-  - title: Manage guest carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
-  - title: Manage carts of registered users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-multiple-carts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multiple-carts-glue-api.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-the-multiple-carts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-multiple-carts-glue-api.md -->

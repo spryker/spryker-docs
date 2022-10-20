@@ -5,7 +5,7 @@ template: concept-topic-template
 redirect_from: 
   - /docs/marketplace/dev/setup/infrastructure-requirements.html
 related:
-  - title: DevVM system requirements
+  - title: System requirements
     link: docs/marketplace/dev/setup/page.version/system-requirements.html
 ---
 

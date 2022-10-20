@@ -15,9 +15,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
 related:
   - title: Retrieving cart permission groups
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html
   - title: Managing shared company user carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html
 ---
 
 Company users can share their carts with other company users, so multiple representatives of a company can work on the same order. When sharing carts, users can choose what type of access they want to grant to different each other.
@@ -26,7 +26,7 @@ This endpoint allows sharing carts with company users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html).
 
 
 ## Share a cart
@@ -45,7 +45,7 @@ To share a cart, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts`
 

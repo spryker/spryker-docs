@@ -1,5 +1,5 @@
 ---
-title: What's changed in Ratings & Reviews
+title: What's changed in Ratings and Reviews
 last_updated: Jul 28, 2022
 description: This document lists all the Ratings & Reviews releases
 template: concept-topic-template

@@ -26,7 +26,7 @@ redirect_from:
 related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
-  - title: Step engine workflow overview
+  - title: "Step engine: Workflow overview"
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 
@@ -53,7 +53,7 @@ This tutorial shows how to add a voucher step to the existing out-of-the-box Spr
 
 1. Before adding the step, define the route for the step.
 
-   1. Add `CheckoutPageRouteProviderPlugin` that extends the core `AbstractRouteProviderPlugin` in `src/Pyz/Yves/CheckoutPage/Plugin/Provider`.
+   1. Add `CheckoutPageRouteProviderPlugin` that extends the core `AbstractRouteProviderPlugin` in `src/Pyz/Yves/CheckoutPage/Plugin/Router`.
    2. Add the route for the step.
 
 	```php

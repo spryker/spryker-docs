@@ -119,9 +119,9 @@ On the storefront, company users can perform the following actions using the Mul
 
 * To share a cart with external and internal users by a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html).
 * To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
-* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html).
-* To add comments to a cart, see [Comments feature overview](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html#comments-on-the-storefront).
-* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html).
+* To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html).
+* To add comments to a cart, see [Comments feature overview](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html#comments-on-the-storefront).
+* To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html).
 
 
 This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html).
@@ -134,6 +134,6 @@ This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/do
 |INSTALLATION GUIDES  |
 |---------|
 | [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
-| [Install Multiple Carts + Quick Order feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-quick-order-feature-integration.html)  |
+| [Install Multiple Carts + Quick Order feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-quick-order-feature.html)  |
 | [Install Multiple Carts + Quotation Process feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-quotation-process-feature.html)  |
-| [Install the Multiple Carts + Reorder feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html)   |
+| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html)   |

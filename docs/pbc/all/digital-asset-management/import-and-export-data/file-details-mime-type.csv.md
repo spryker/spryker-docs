@@ -9,13 +9,14 @@ redirect_from:
   - /2021080/docs/en/file-details-mime-typecsv
   - /docs/file-details-mime-typecsv
   - /docs/en/file-details-mime-typecsv
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/miscellaneous/file-details-mime-type.csv.html  
 ---
 
 This document describes the `mime_type.csv` file to configure Mime Type information in your Spryker Demo Shop.
 
 ## Prerequisites
 
-This file does not exist by default on the project level. To override the default `mime_type.csv` file of the `file-manager-data-import` module, create the file in the  `data/import` folder.
+This file does not exist by default on the project level. To override the default `mime_type.csv` file of the `file-manager-data-import` module, create the file in the `data/import` folder.
 
 ## Import file parameters
 

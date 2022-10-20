@@ -61,7 +61,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Multiple carts](/docs/scos/user/features/{{site.version}}/multiple-carts-feature-overview.html)
 - [Quick add to cart](/docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html)
-- [Shared carts](/docs/scos/user/features/{{site.version}}/shared-carts-feature-overview.html)
+- [Shared carts](/docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html)
 - [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 - [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
@@ -90,7 +90,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 - [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
-- [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html)
+- [File Manager](/docs/pbc/all/digital-asset-management/digital-asset-management.html)
 
 <br>
 </details>

@@ -25,7 +25,7 @@ This role is automatically added to all merchant users, letting them operate wit
 When a `MerchantUser` entity is added to the system, a merchant user-specific role is automatically created.
 This role is needed to manage the merchant user-specific data, that is, the profile.
 
-The following roles are automatically added to the newly created MerchantUser:
+The following roles are automatically added to a newly created merchant user:
 - Merchant-specific role.
 - MerchantUser-specific role.
 - Product viewer for offer creation (this role is needed to create new product offers).
@@ -33,7 +33,7 @@ The following roles are automatically added to the newly created MerchantUser:
 ## Persistence ACL configuration overview
 ![Configuration overview](https://confluence-connect.gliffy.net/embed/image/97d83074-7b22-4ef0-9d6f-92fdb1ac1b01.png?utm_medium=live&utm_source=custom)
 
-The diagram above is simplified and does not represent the entire configuration. It only reflects basic concepts.
+The preceding diagram is simplified and does not represent the entire configuration. It only reflects basic concepts.
 As the diagram shows, the configuration is represented by three main composite objects:
 - `ProductOffer`
 - `MerchantProduct`
@@ -46,7 +46,7 @@ You can also check some entities that are configured as publicly readable:
 - `\Orm\Zed\Country\Persistence\SpyCountry`
 - `\Orm\Zed\Currency\Persistence\SpyCurrency`
 
-See the complete configuration of the PersistenceAcl module at [AclEntityMetadataConfigExpander](https://github.com/spryker/acl-merchant-portal/blob/master/src/Spryker/Zed/AclMerchantPortal/Business/Expander/AclEntity/AclEntityMetadataConfigExpander.php)
+See the complete configuration of the `PersistenceAcl` module at [AclEntityMetadataConfigExpander](https://github.com/spryker/acl-merchant-portal/blob/master/src/Spryker/Zed/AclMerchantPortal/Business/Expander/AclEntity/AclEntityMetadataConfigExpander.php)
 
 ## How to extend the initial Persistence ACL configuration
 Even though the Merchant Portal comes with the Persistence ACL configuration, which is fully ready for the full-fledged merchant operation and provides data protection, you can extend or override this configuration. To do this, implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
@@ -57,7 +57,7 @@ To override the rules that are created automatically when creating a merchant an
 ### Configuration example of a new system object
 Let's consider an exemplary configuration of a new system entity `\Foo\Bar\MerchantSubscriber`.
 
-![Configuration for new entity](https://confluence-connect.gliffy.net/embed/image/dd5b7b6e-2f65-47d8-a641-c52824b0f209.png?utm_medium=live&utm_source=custom)
+![Configuration for a new entity](https://confluence-connect.gliffy.net/embed/image/dd5b7b6e-2f65-47d8-a641-c52824b0f209.png?utm_medium=live&utm_source=custom)
 
 It is logical to inherit this entity from the merchant and give the merchant users the right to manage data.
 This lets you restrict access to data so that only the merchant user will have access to them.
@@ -126,6 +126,6 @@ class AclMerchantPortalConfig extends SprykerAclMerchantPortalConfig
 
 {% info_block warningBox "Module updates" %}
 
-Do not lock [spryker/acl-merchant-portal](https://github.com/spryker/acl-merchant-portal) module version and keep it up-to-date in order to receive security patches for ACL in Merchant Portal.
+Do not lock [spryker/acl-merchant-portal](https://github.com/spryker/acl-merchant-portal) module version and keep it up-to-date to receive security patches for ACL in Merchant Portal.
 
 {% endinfo_block %}

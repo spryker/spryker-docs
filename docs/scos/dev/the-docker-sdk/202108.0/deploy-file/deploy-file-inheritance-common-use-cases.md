@@ -1,5 +1,5 @@
 ---
-title: Deploy file inheritance — common use cases
+title: Deploy file inheritance—common use cases
 description: Examples of using deploy file inheritance
 template: concept-topic-template
 ---

@@ -11,15 +11,6 @@ redirect_from:
   - /docs/glue-api-product-bundles-feature-integration
   - /docs/en/glue-api-product-bundles-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-bundles-feature-integration.html
-related:
-  - title: Product Bundles feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-bundles-feature-integration.html
-  - title: Glue API: Product Bundle + Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-bundle-cart-feature-integration.html
-  - title: Product Bundles feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
-  - title: Retrieving bundled products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-bundled-products.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-product-bundles-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-bundles-glue-api.md -->

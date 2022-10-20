@@ -227,6 +227,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: Bridge
 
+Bridge classes on the project level must not extend bridge classes from the core level. Bridge classes on the core level can change in future, and it may cause unexpected issues.
 
 ### Related error in the Evaluator output
 

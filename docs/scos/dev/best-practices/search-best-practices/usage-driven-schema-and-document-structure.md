@@ -47,7 +47,7 @@ related:
 
 Both the schema and the query generator should not need to know that there is such a thing as as the weight of a hammer. We will argue for a document structure and schema design that is not built around the original data but around the usage of attributes in search operations.
 
-At Contorion, this is how we send the same product as in the above example to Elasticsearch (don’t worry, we will explain the details later):
+At Contorion, this is how we send the same product as in the above example to Elasticsearch (don't worry, we will explain the details later):
 
 ```js
 {
@@ -195,7 +195,7 @@ At Contorion, this is how we send the same product as in the above example to El
 }
 ```
 
-That’s a lot of redundant information! For example the manufacturer, hammer_weight and name attributes are repeated in five top-level fields. But these attributes are used very differently in various search operations which require different analyzers and query strategies:
+That's a lot of redundant information! For example the manufacturer, hammer_weight and name attributes are repeated in five top-level fields. But these attributes are used very differently in various search operations which require different analyzers and query strategies:
 
 * Search result rendering: The field search_result_data contains all the information that is returned as a result of a query for rendering a search result page or completion popup
 * Full-text search: The fields search_data/full_text and search_data/full_text_boosted contain all text content for which the product should be found in a full-text search

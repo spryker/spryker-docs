@@ -127,7 +127,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: form class
 
-It is not allowed to extend Private API code on the project level. Private API updates can break backward compatibility.
+It is not allowed to extend the Spryker core Form classes on the project level, because they can be changed at any point in time.
 
 ### Related error in the Evaluator output
 
@@ -156,7 +156,6 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
-
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in the future.
 2. Give the form a unique name and copy it to the project level. In the example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
@@ -178,9 +177,9 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: Business model
 
+It is not allowed to extend the Spryker core business model classes on the project level, because they can be changed at any point in time.
 
 ### Example of code that causes an upgradability error
-
 
 `CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter` from the private API.
 
@@ -257,7 +256,7 @@ To resolve the error, remove the bridge.
 
 ## PrivateApi:MethodIsOverridden
 
-It is not allowed to override protected core methods from the core level on the project level. Protected methods can be changed at any time.
+It is not allowed to override protected core methods from the core level on the project level.  Protected methods on the Spryker core level can be removed or changed at any time and break your overridden functionality on project level.
 
 ### Example of error in the Evaluator output
 
@@ -425,9 +424,10 @@ PrivateApi:Dependency Please avoid usage of Spryker/Zed/ProductPageSearch/Produc
 
 ```php
 ...
+use Spryker\Zed\CustomerAccess\Business\CustomerAccessBusinessFactory as SprykerCustomerAccessBusinessFactory;
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider;
 ...
-class CustomerAccessBusinessFactory implements SprykerCustomerAccessBusinessFactory
+class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
 {
     /**
     * @return \Pyz\Zed\CustomerAccess\Business\PropelFacadeInterface
@@ -441,6 +441,63 @@ class CustomerAccessBusinessFactory implements SprykerCustomerAccessBusinessFact
 ```
 
 
+### Example of resolving the error by cloning functionality on the project level
+
+1. Extend the used dependency provider with the new constant.
+
+```php
+...
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\ProductPageSearch\Dependency\QueryContainer\ProductPageSearchToCategoryQueryContainerBridge;
+use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
+...
+
+class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
+{
+    /**
+     * @var string
+     */
+    public const PYZ_QUERY_CONTAINER_CATEGORY = 'PYZ_QUERY_CONTAINER_CATEGORY';
+
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    public function provideCommunicationLayerDependencies(Container $container)
+    {
+        $container = parent::provideCommunicationLayerDependencies($container);
+
+        $container->set(static::PYZ_QUERY_CONTAINER_CATEGORY, function (Container $container) {
+            return new ProductPageSearchToCategoryQueryContainerBridge($container->getLocator()->category()->queryContainer());
+        });
+
+        return $container;
+    }
+    ...
+}
+```
+
+2. Use the new constant in `CustomerAccessBusinessFactory`.
+
+```php
+...
+use Spryker\Zed\CustomerAccess\Business\CustomerAccessBusinessFactory as SprykerCustomerAccessBusinessFactory;
+use Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider;
+...
+
+class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
+{
+    /**
+     * @return \Pyz\Zed\CustomerAccess\Business\PropelFacadeInterface
+     * @throws \Spryker\Zed\Kernel\Exception\Container\ContainerKeyNotFoundException
+     */
+    public function getPyzPropelFacade(): PropelFacadeInterface
+    {
+        return $this->getProvidedDependency(ProductPageSearchDependencyProvider::PYZ_QUERY_CONTAINER_CATEGORY);
+    }
+}
+```
 ---
 
 ## PrivateApi:DependencyInBusinessModel
@@ -461,6 +518,9 @@ PrivateApi:DependencyInBusinessModel Please avoid usage of Spryker\Zed\CustomerA
 
 ```php
 ...
+use Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessReaderInterface;
+...
+
 class CustomerAccessFilter implements CustomCustomerAccessFilter
 {
     /**
@@ -476,6 +536,38 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 ```
 
 
+### Example of resolving the error by cloning functionality on the project level
+
+1. Create new interface on project side
+
+```php
+...
+use Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessReaderInterface as SprykerCustomerAccessReaderInterface;
+...
+
+interface CustomerAccessReaderInterface extends SprykerCustomerAccessReaderInterface
+{
+}
+```
+
+2. Use new project-level interface instead of core-level interface
+
+```php
+use Pyz\Zed\CustomerAccess\CustomerAccessReaderInterface;
+
+class CustomerAccessFilter implements CustomCustomerAccessFilter
+{
+    /**
+     * @param \Pyz\Zed\CustomerAccess\CustomerAccessConfig $customerAccessConfig
+     * @param \Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessReaderInterface $customerAccessReader
+     */
+    public function __construct(CustomerAccessConfig $customerAccessConfig, CustomerAccessReaderInterface $customerAccessReader)
+    {
+        $this->customerAccessReader = $customerAccessReader;
+        $this->customerAccessConfig = $customerAccessConfig;
+    }
+}
+```
 ---
 
 ## PrivateApi:ObjectInitialization
@@ -496,20 +588,47 @@ PrivateApi:ObjectInitialization Please avoid usage of Spryker\Zed\CustomerAccess
 
 ```php
 ...
+use Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessReaderInterface;
+use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManagerInterface;
+...
+
 class CustomerAccessFilter implements CustomCustomerAccessFilter
 {
+    ...
     public function __construct(
         CustomerAccessEntityManagerInterface $customerAccessEntityManager,
-        CustomerAccessReaderInterface $customerAccessReader,
         CustomerAccessFilterInterface $customerAccessFilter
     ) {
         parent::__construct($customerAccessEntityManager);
         $this->customerAccessReader = new CustomerAccessReader();
         $this->customerAccessFilter = $customerAccessFilter;
     }
+    ...
 }
 ```
 
+### Example of resolving the error
+
+```php
+...
+use Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessReaderInterface;
+use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManagerInterface;
+...
+
+class CustomerAccessFilter implements CustomCustomerAccessFilter
+{
+    ...
+    public function __construct(
+        CustomerAccessEntityManagerInterface $customerAccessEntityManager,
+        CustomerAccessReaderInterface $customerAccessReader,
+        CustomerAccessFilterInterface $customerAccessFilter
+    ) {
+        parent::__construct($customerAccessEntityManager);
+        $this->customerAccessReader = $customerAccessReader;
+        $this->customerAccessFilter = $customerAccessFilter;
+    }
+}
+```
 ---
 
 ## PrivateApi:PersistenceInBusinessModel

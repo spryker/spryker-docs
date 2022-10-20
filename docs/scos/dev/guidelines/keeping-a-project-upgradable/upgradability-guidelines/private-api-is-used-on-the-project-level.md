@@ -16,7 +16,7 @@ For more information about module APIs, see [Definition of Module API](/docs/sco
 
 ## PrivateApi:Facade
 
-On the project level, you can use repository, factory, and entity manager classes inside of a facade class. The methods must be declared on the project level. Usage of this rule will guaranty that all methods that you use will not be changed in the future on core level.
+On the project level, you can use repository, factory, and entity manager classes inside of a facade class. The methods must be declared on the project level. This ensures that the used methods will not cause unexpected issues when they are changed in the core.
 
 ### Example of error in the Evaluator output
 
@@ -53,7 +53,7 @@ class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInte
 ```
 
 
-### Example of resolving the error by renaming private API entities
+### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
@@ -127,7 +127,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: form class
 
-Form classes on the project level must not extend forms from the core level. Forms on the core level can change in future, and it may cause unexpected issues.
+Form classes on the project level must not extend forms from the core level. This ensures that forms will not cause unexpected issues when they are changed in the core.
 
 ### Related error in the Evaluator output
 
@@ -152,7 +152,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 }
 ```
 
-### Example of resolving the error by copying the form class to the project level
+### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
@@ -177,7 +177,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Extension: Business model
 
-Business model classes on the project level must not extend business models from the core level. Business models on the core level can change in future, and it may cause unexpected issues.
+Business model classes on the project level must not extend business models from the core level. This ensures that business models will not cause unexpected issues when they are changed in the core.
 
 ### Example of code that causes an upgradability error
 
@@ -202,7 +202,7 @@ PrivateApi:Extension Please avoid extension of the PrivateApi Spryker\Zed\Custom
 -------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error by copying the business model to the project level
+### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
@@ -268,7 +268,7 @@ PrivateApi:MethodIsOverridden Please avoid overriding of core method Spryker\Yve
 
 ### Example of code that causes an upgradability error
 
-The extended class `CheckoutPageDependencyProvider` overrides the private API core method `SprykerCheckoutPageDependencyProvider::getCustomerStepHandler`.
+The extended class `CheckoutPageDependencyProvider` overrides the  `SprykerCheckoutPageDependencyProvider::getCustomerStepHandler` core method.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -287,7 +287,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 }
 ```
 
-### Example of resolving the error by copying the method to the project level and renaming it
+### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
@@ -352,7 +352,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 }
 ```
 
-### Example of resolving the error by cloning functionality to the project level
+### Example of resolving the error  
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
@@ -408,7 +408,7 @@ While it's not refactored, auto-upgrades are not supported, and the effort to up
 
 ## PrivateApi:Dependency
 
-Business factory should use dependency by a key that is defined at the project level.
+Business factories must use dependencies by keys that are defined on the project level.
 
 ### Example of error in the Evaluator output
 
@@ -441,9 +441,13 @@ class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
 ```
 
 
-### Example of resolving the error by cloning functionality on the project level
+### Example of resolving the error
 
-1. Extend the used dependency provider with the new constant.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+
+Not recommended:
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+2. Extend the used dependency provider with the new constant.
 
 ```php
 ...
@@ -478,7 +482,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
-2. Use the new constant in `CustomerAccessBusinessFactory`.
+2. In `CustomerAccessBusinessFactory`, replace the core constant with the one you've created.
 
 ```php
 ...
@@ -498,11 +502,15 @@ class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
     }
 }
 ```
+
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
+
 ---
 
 ## PrivateApi:DependencyInBusinessModel
 
-Business models on the project level should avoid the usage of private API from the Core level.
+On the project level, business models must not use private API from the core level.
 
 ### Example of error in the Evaluator output
 
@@ -536,9 +544,14 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 ```
 
 
-### Example of resolving the error by cloning functionality on the project level
+### Example of resolving the error
 
-1. Create new interface on project side
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+
+
+Not recommended:
+1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+2. Copy the interface to the project level and give it a unique name.
 
 ```php
 ...
@@ -550,7 +563,7 @@ interface CustomerAccessReaderInterface extends SprykerCustomerAccessReaderInter
 }
 ```
 
-2. Use new project-level interface instead of core-level interface
+2. Replace the core interface with the one you've created.
 
 ```php
 use Pyz\Zed\CustomerAccess\CustomerAccessReaderInterface;
@@ -568,6 +581,10 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
     }
 }
 ```
+
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
+
 ---
 
 ## PrivateApi:ObjectInitialization
@@ -641,7 +658,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 
 ## PrivateApi:PersistenceInBusinessModel
 
-On the project level, you can use repository and entity manager inside the business model class. The methods must be declared on the project level.
+On the project level, you can use repository and entity manager inside the business model class. Their methods must be declared on the project level.
 
 ### Example of error in the Evaluator output
 
@@ -653,7 +670,7 @@ PrivateApi:PersistenceInBusinessModel Please avoid usage of PrivateApi customerA
 
 ### Example of code that causes an upgradability error
 
-`CustomerAccessUpdater` calls the `setContentTypesToInaccessible` method of the entity manager that was declared on the Spryker core level.
+`CustomerAccessUpdater` calls the `setContentTypesToInaccessible` method of the entity manager that was declared on the core level.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -679,7 +696,7 @@ class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
 }
 ```
 
-### Example of resolving the error by copying and renaming Private API entities
+### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 
@@ -789,7 +806,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 }
 ```
 
-### Example of resolving the error by copying and renaming Private API entities
+### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
 

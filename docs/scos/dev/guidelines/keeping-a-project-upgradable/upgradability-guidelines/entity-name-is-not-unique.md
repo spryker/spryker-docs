@@ -25,7 +25,7 @@ The names of the following entities must be unique on the project level:
 
 ## NotUnique:TransferName
 
-Transfer names must be unique on the project level. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your transfers won't conflict with the transfers that appear in Spryker core in the future.
+Transfer names must be unique on the project level. This ensures that there are no conflicts with core transfers that may be introduced in future. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of error in the Evaluator output: Transfer name is not unique
 
@@ -55,13 +55,13 @@ NotUnique:TransferName Transfer object name "CustomProductData" has to have proj
 ...
 ```
 
-In the example, we add `Pyz` to transfers name, but you can use any other prefix, for example your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
+In the example, we add `Pyz` to transfers name, but you can use any other prefix, for example, your project name. After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
 
 ---
 
 ## NotUnique:TransferProperty
 
-Transfers property names that extend core-level transfers must be unique. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your transfer properties won't conflict with the transfer properties that appear in Spryker core in the future.
+Transfers property names that extend core-level transfers must be unique. This ensures that there are no conflicts with core transfer properties that may be introduced in future. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of error in the Evaluator output: Transfer property name is not unique
 
@@ -91,13 +91,13 @@ NotUnique:TransferProperty Transfer property "customProperty" for "LocaleCmsPage
 ...
 ```
 
-In the example, we add `Pyz` to transfer property name, but you can use any other prefix, for example, your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
+In the example, we add `Pyz` to transfer property name, but you can use any other prefix, for example, your project name. After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
 
 ---
 
 ## NotUnique:DatabaseTable
 
-On the project level, database table names must be unique. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your custom database tables won't conflict with the database tables that appear in Spryker core in the future.
+On the project level, database table names must be unique. This ensures that there are no conflicts with core database tables that may be introduced in future. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of error in the Evaluator output: Database table name is not unique
 
@@ -127,13 +127,13 @@ NotUnique:DatabaseTable Database table "custom_table" has to have project prefix
 ...
 ```
 
-In the example, we add `pyz` to table name, but you can use any other prefix, for example your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
+In the example, we add `pyz` to table name, but you can use any other prefix, for example, your project name. After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
 
 ---
 
 ## NotUnique:DatabaseColumn
 
-Names of database table columns that extend core-level database tables must be unique. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your custom database table columns won't conflict with the database table columns that appear in Spryker core in the future.
+Names of database table columns that extend core-level database tables must be unique. This ensures that there are no conflicts with the core database tables that may be introduced in future. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of error in the Evaluator output: Name of database table column is not unique
 
@@ -163,13 +163,13 @@ NotUnique:DatabaseColumn Database column "custom_column" has to have project pre
 ...
 ```
 
-In the example, we add `pyz` to table column name, but you can use any other prefix, for example your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
+In the example, we add `pyz` to the table column name, but you can use any other prefix, for example,  your project name. After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
 
 ---
 
 ## NotUnique:Method
 
-Method names must be unique. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your modules won't conflict with the modules that appear in Spryker core in the future.
+Method names must be unique. This ensures that there are no conflicts with the core methods that may be introduced in future. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of error in the Evaluator output: Method name is not unique
 
@@ -217,13 +217,13 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-In the example, we use `Pyz` prefix, but you can use any other prefix, for example your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
+In the example, we use `Pyz` prefix, but you can use any other prefix, for example, your project name. After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
 
 ---
 
 ## NotUnique:Constant
 
-Constant names must be unique. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your constants won't conflict with the constants that appear in Spryker core in the future.
+Constant names must be unique. This ensures that there are no conflicts with the core constants that may be introduced in future. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of error in the Evaluator output: Constant name is not unique
 
@@ -259,13 +259,13 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-In the example, we add `PYZ` as a constant prefix, but you can use any other prefix, for example your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
+In the example, we add `PYZ` as a constant prefix, but you can use any other prefix, for example, your project name. After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
 
 ---
 
 ## NotUnique:ModuleName
 
-Module names must be unique. For an example of the issue and how to solve it, see the following sections. Usage of this rule will guaranty that your modules won't conflict with the modules that appear in Spryker core in the future.
+Module names must be unique. This ensures that your modules will not conflict with core modules that may be introduced in future. For an example of the issue and how to solve it, see the following sections.
 
 ### Example of error in the Evaluator output: Module name is not unique
 
@@ -289,4 +289,4 @@ src/Pyz/Zed/PyzSomeModuleName
 src/Pyz/Yves/PyzExampleStateMachine
 ```
 
-In the example, we add `Pyz` as a prefix, but you can use any other prefix, for example your project name. After the fix please re-evaluate the code. The same error shouldn’t be returned.
+In the example, we add `Pyz` as a prefix, but you can use any other prefix, for example, your project name. After applying the solution, re-evaluate the code. The same error shouldn’t be returned.

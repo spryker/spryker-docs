@@ -40,7 +40,7 @@ related:
     link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
-To get all the things working, you need to prepare a proper organization for your tests. For this, you, first of all, have the root `codeception.yml` file . Its main responsibility is to include other `codecpetion.yml` files that contain the suite configuration. See [Configuration](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html#configuration) for details.
+To get all the things working, you need to prepare a proper organization for your tests. For this, you, first of all, have the root `codeception.yml` file . Its main responsibility is to include other `codeception.yml` files that contain the suite configuration. See [Configuration](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html#configuration) for details.
 
 ### Directory structure
 

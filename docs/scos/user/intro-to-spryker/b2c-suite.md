@@ -30,7 +30,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
-- [Persistent Cart Sharing](/docs/scos/user/features/{{site.version}}/persistent-cart-sharing-feature-overview.html)
+- [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html)
 - [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
@@ -39,7 +39,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Refunds](/docs/scos/user/features/{{site.version}}/refunds-feature-overview.html)
 - [Reclamations](/docs/scos/user/features/{{site.version}}/reclamations-feature-overview.html)
 - [State Machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
-- [Inventory Management](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
+- [Inventory Management](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html)
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
@@ -74,7 +74,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 - [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
-- [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html)
+- [File Manager](/docs/pbc/all/digital-asset-management/digital-asset-management.html)
 
 <br>
 </details>

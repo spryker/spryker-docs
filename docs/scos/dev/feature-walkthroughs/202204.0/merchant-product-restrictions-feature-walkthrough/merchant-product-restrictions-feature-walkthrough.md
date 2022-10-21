@@ -1,11 +1,11 @@
 ---
 title: Merchant Product Restrictions feature walkthrough
 last_updated: Aug 13, 2021
-description: The Merchant Product Restrictions feature allows merchants to define what products are available to each of their B2B customers
+description: The Merchant Product Restrictions feature lets merchants define what products are available to each of their B2B customers
 template: concept-topic-template
 ---
 
-The _Merchant Product Restrictions_ feature allows merchants to define what products are available to each of their B2B customers.
+The _Merchant Product Restrictions_ feature lets merchants define what products are available to each of their B2B customers.
 
 
 To learn more about the feature and to find out how end users use it, see [Merchant Product Restrictions feature overview](/docs/scos/user/features/{{page.version}}/merchant-product-restrictions-feature-overview.html) for business users.
@@ -24,7 +24,7 @@ The following schema illustrates product restrictions relations within the Merch
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES |
+| INSTALLATION GUIDES |
 |---------|
 | [Merchant B2B Contracts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-b2b-contracts-feature-integration.html) |
 | [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) |

@@ -123,8 +123,8 @@ entries:
       url: /docs/scos/user/intro-to-spryker/spryker-release-process.html
     - title: MVP project structuring
       url: /docs/scos/user/intro-to-spryker/mvp-project-structuring.html
-    - title: Spryker videos
-      url: /docs/scos/user/intro-to-spryker/spryker-videos.html
+    - title: Spryker Academy
+      url: /docs/scos/user/intro-to-spryker/spryker-academy.html
     - title: Contribute to documentation
       url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/contribute-to-documentation.html
       nested:
@@ -179,7 +179,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Cart
       url: /docs/scos/user/features/cart-feature-overview/cart-feature-overview.html
       nested:
@@ -199,6 +198,13 @@ entries:
       url: /docs/scos/user/features/catalog-feature-overview.html
     - title: Checkout
       url: /docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Multi-step checkout
         url: /docs/scos/user/features/checkout-feature-overview/multi-step-checkout-overview.html
@@ -209,7 +215,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Order thresholds
         url: /docs/scos/user/features/checkout-feature-overview/order-thresholds-overview.html
         include_versions:
@@ -219,7 +224,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Define Payment and Shipment Methods
         url: /docs/scos/user/features/checkout-feature-overview/define-payment-and-shipment-methods.html
         include_versions:
@@ -371,6 +375,8 @@ entries:
       - "202108.0"
       - "202204.0"
     - title: File Manager
+      include_versions:
+      - "202108.0"
       nested:
       - title: Media Management
         url: /docs/scos/user/features/file-manager-feature-overview/file-manager-feature-overview.html
@@ -381,9 +387,11 @@ entries:
     - title: Gift Cards
       url: /docs/scos/user/features/gift-cards-feature-overview.html
       include_versions:
-      - "202108.0" 
+      - "202108.0"
     - title: Inventory Management
       url: /docs/scos/user/features/inventory-management-feature-overview.html
+      include_versions:
+      - "202108.0"
     - title: Mailing and Notifications
       url: /docs/scos/user/features/mailing-and-notifications-feature-overview.html
     - title: Measurement Units
@@ -415,6 +423,8 @@ entries:
       - "202204.0"
     - title: Multiple Carts
       url: /docs/scos/user/features/multiple-carts-feature-overview.html
+      include_versions:
+      - "202108.0"
     - title: Navigation
       url: /docs/scos/user/features/navigation-feature-overview.html
     - title: Non-splittable products
@@ -473,7 +483,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Prices
       url: /docs/scos/user/features/prices-feature-overview/prices-feature-overview.html
       include_versions:
@@ -533,8 +542,6 @@ entries:
       url: /docs/scos/user/features/product-lists-feature-overview.html
     - title: Product Options
       url: /docs/scos/user/features/product-options-feature-overview.html
-    - title: Product Rating and Reviews
-      url: /docs/scos/user/features/product-rating-and-reviews-feature-overview.html
     - title: Product Relations
       url: /docs/scos/user/features/product-relations-feature-overview.html
     - title: Product Sets
@@ -557,7 +564,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Reclamations
       url: /docs/scos/user/features/reclamations-feature-overview.html
       include_versions:
@@ -667,6 +673,8 @@ entries:
         - "201903.0"
     - title: Shared Cart
       url: /docs/scos/user/features/shared-carts-feature-overview.html
+      include_versions:
+      - "202108.0"
     - title: Shipment
       url: /docs/scos/user/features/shipment-feature-overview.html
       include_versions:
@@ -739,11 +747,6 @@ entries:
         include_versions:
         - "202001.0"
         - "202005.0"
-      - title: Filter and Sort by Average Rating - Product Reviews
-        url: /docs/scos/user/features/product-information-management/filter-andamp-sort-by-average-rating-product-reviews.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
       - title: New Products
         url: /docs/scos/user/features/product-information-management/new-products.html
         include_versions:
@@ -757,11 +760,6 @@ entries:
           url: /docs/scos/user/features/product-information-management/product-quantity-restrictions/product-quantity-restrictions-overview.html
           include_versions:
           - "202005.0"
-      - title: Feature Configuration - Product Reviews
-        url: /docs/scos/user/features/product-information-management/feature-configuration-product-reviews.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
     - title: Technology Partner Integrations
       include_versions:
       - "201907.0"
@@ -835,6 +833,13 @@ entries:
         - "202005.0"
   - title: Back Office User guides
     url: /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
+    include_versions:
+    - "201907.0"
+    - "202001.0"
+    - "202005.0"
+    - "202009.0"
+    - "202108.0"
+    - "202204.0"
     nested:
     - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
@@ -1500,14 +1505,6 @@ entries:
             - "202009.0"
       - title: Availability
         nested:
-        - title: Check availability of products
-          url: /docs/scos/user/back-office-user-guides/catalog/availability/check-availability-of-products.html
-          include_versions:
-          - "202204.0"
-        - title: Edit stock of products and product bundles
-          url: /docs/scos/user/back-office-user-guides/catalog/availability/edit-stock-of-products-and-product-bundles.html
-          include_versions:
-          - "202204.0"
         - title: Managing products availability
           url: /docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html
           include_versions:
@@ -1536,22 +1533,6 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
-      - title: Product reviews
-        url: /docs/scos/user/back-office-user-guides/catalog/manage-product-reviews.html
-        include_versions:
-        - "202204.0"
-      - title: Product reviews
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Managing product reviews
-          url: /docs/scos/user/back-office-user-guides/catalog/product-reviews/managing-product-reviews.html
       - title: Product options
         nested:
         - title: Create
@@ -2001,6 +1982,9 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: File manager
+        include_versions:
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing file tree
           url: /docs/scos/user/back-office-user-guides/content/file-manager/managing-file-tree.html
@@ -2016,7 +2000,7 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202009.0"
-        - "202108.0"              
+        - "202108.0"
         nested:
         - title: "Best practices: Promote products with discounts"
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/best-practices-promote-products-with-discounts.html
@@ -2584,16 +2568,7 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
-        - title: Create warehouses
-          url: /docs/scos/user/back-office-user-guides/administration/warehouses/create-warehouses.html
-          include_versions:
-          - "202204.0"
-        - title: Edit warehouses
-          url: /docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
-          include_versions:
-          - "202204.0"
         - title: Creating warehouses
           url: /docs/scos/user/back-office-user-guides/administration/warehouses/creating-warehouses.html
           include_versions:
@@ -2774,14 +2749,6 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-      - title: Define global thresholds
-        url: /docs/scos/user/back-office-user-guides/administration/define-global-thresholds.html
-        include_versions:
-        - "202204.0"
-      - title: Manage threshold settings
-        url: /docs/scos/user/back-office-user-guides/administration/manage-threshold-settings.html
-        include_versions:
-        - "202204.0"
       - title: Define merchant order thresholds
         url: /docs/scos/user/back-office-user-guides/administration/define-merchant-order-thresholds.html
         include_versions:
@@ -2847,10 +2814,6 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
-      - title: MIME Type settings
-        url: /docs/scos/user/back-office-user-guides/administration/add-and-edit-mime-types.html
-        include_versions:
-        - "202204.0"
       - title: MIME Type settings
         include_versions:
         - "201903.0"
@@ -3182,7 +3145,6 @@ entries:
     - title: Taxes
       include_versions:
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Avalara
         url: /docs/scos/user/technology-partners/taxes/avalara.html

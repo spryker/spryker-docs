@@ -1,13 +1,13 @@
 ---
 title: "PriceProduct module details: reference information"
 last_updated: Aug 18, 2021
-description: This article provides the technical details of the PriceProduct module and price dimensions
+description: This document provides the technical details of the PriceProduct module and price dimensions
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
 ---
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html#upgrading-from-version-1-to-version-2) of the module.
+This document describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html#upgrading-from-version-1-to-version-2) of the module.
 
 ## Price dimension
 
@@ -19,12 +19,12 @@ Starting from version 2.0.0 of the `PriceProduct` module, we have added the Serv
 
 The prices list can come from Yves (Storage) and Zed (DB).
 
-* In case with Yves,  the `PriceProductFilterTransfer` object should be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
-* In case with Zed,the `PriceProductCriteriaTransfer` object should be created for filtering, which contains IDs as values (store ID, currency ID, price type id, etc.).
+* In case with Yves, the `PriceProductFilterTransfer` object must be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
+* In case with Zed, the `PriceProductCriteriaTransfer` object must be created for filtering, which contains IDs as values (store ID, currency ID, and price type ID).
 
-If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated, etc.). This ensures that `PriceProductFilterTransfer` can always be converted to `PriceProductCriteriaTransfer`.
+If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
 
-`PriceProductService` has plugins with `/Spryker/Service/PriceProductExtension/Dependency/Plugin/PriceProductFilterPluginInterface` which allows filtering price for price dimension.
+`PriceProductService` has plugins with `/Spryker/Service/PriceProductExtension/Dependency/Plugin/PriceProductFilterPluginInterface` which enables filtering price for price dimension.
 
 This filter can be really simple and filter price only by price dimension name, but it can also bear some logic, such as finding the minimum price from a price dimension.
 
@@ -34,7 +34,7 @@ Then `/Spryker/Service/PriceProduct/FilterStrategy/SinglePriceProductFilterStrat
 
 There is Quote in a `filter/criteria` without items since this is additional information about the environment from where prices are requested.
 
-That `filter/criteria` is a flat object, so we filter only by its properties; however, plugins can use additional information (e.g., Quote) for filtering.
+That `filter/criteria` is a flat object, so we filter only by its properties; however, plugins can use additional information (for example, Quote) for filtering.
 
 ## Using the price dimensions
 
@@ -46,8 +46,10 @@ The `PriceProduct` module has a set of plugins necessary for work with the price
 - `PriceDimensionConcreteSaverPluginInterface` — saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
 - `PriceDimensionQueryCriteriaPluginInterface` — is used for expanding `PriceProductStoreQuery` using the new transfer object `QueryCriteriaTransfer`.
 
-Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins—all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
+Based on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins—all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
 ![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png)
+
+### "Orphaned records"
 
 {% info_block errorBox "Important" %}
 
@@ -85,13 +87,12 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-`AclEntityOrphanPriceProductStoreRemovalVoterPlugin` enables removal of "orphaned" records in
-`spy_price_product_store` table, except for the case when prices are edited in the Merchant Portal UI.
+`AclEntityOrphanPriceProductStoreRemovalVoterPlugin` enables the removal of "orphaned" records in the `spy_price_product_store` table, except for the case when prices are edited in the Merchant Portal UI.
 In the latter case, removal is only possible by running `price-product-store:optimize` command (see below).
 
 {% info_block warningBox "Warning" %}
 
-Note, that this plugin can't be used together with config constant `IS_DELETE_ORPHAN_STORE_PRICES_ON_SAVE_ENABLED` described above, either of the two should be used only, with the plugin being preferred, since the config constant is deprecated and will be removed in the next major release of the `PriceProduct` module.
+Note, that this plugin can't be used together with config constant `IS_DELETE_ORPHAN_STORE_PRICES_ON_SAVE_ENABLED` described above, either of the two must be used only, with the plugin being preferred, since the config constant is deprecated and will be removed in the next major release of the `PriceProduct` module.
 
 {% endinfo_block %}
 

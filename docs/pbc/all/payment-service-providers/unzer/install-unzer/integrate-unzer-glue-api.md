@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME               | INTEGRATION GUIDE                                                                                                                                 |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unzer              | [Unzer feature integration](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)                                     |
-| Glue API: Checkout | [Glue API - Checkout feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-checkout-feature-integration.html) |
 | Glue API: Payments | [Glue API - Payments feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
@@ -47,12 +47,12 @@ Put all the payment methods available in the shop to `PaymentsRestApiConfig`:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\PaymentsRestApi;
 
 use Spryker\Glue\PaymentsRestApi\PaymentsRestApiConfig as SprykerPaymentsRestApiConfig;
 use SprykerEco\Shared\Unzer\UnzerConfig;
- 
+
 class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
 {
     /**
@@ -63,7 +63,7 @@ class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
         UnzerConfig::PAYMENT_METHOD_KEY_SOFORT => 2,
         UnzerConfig::PAYMENT_METHOD_KEY_BANK_TRANSFER => 3,
     ];
- 
+
      /**
      * @var array<string, array<string, array<string>>>
      */
@@ -125,6 +125,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | SPECIFICATION  | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | UnzerCheckoutDataResponseMapperPlugin | Maps `RestCheckoutDataTransfer.unzerCredentials.unzerKeypair.publicKey` to `RestCheckoutDataResponseAttributesTransfer.unzerPublicKey` while `RestCheckoutDataTransfer.unzerCredentials` is specified. | None  | SprykerEco\Glue\UnzerRestApi\Plugin\CheckoutRestApi |
+| UnzerCheckoutDataExpanderPlugin | Expands the `RestCheckoutDataTransfer.quote` transfer property with `UnzerCredentialsTransfer` according to added items. | None  | SprykerEco\Zed\UnzerRestApi\Communication\Plugin\CheckoutRestApi |
 | UnzerNotificationResource | Adds Unzer notification resource.  | None | SprykerEco\Glue\UnzerRestApi\Plugin\GlueJsonApiConventionExtension |
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -144,6 +145,28 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
     {
         return [
             new UnzerCheckoutDataResponseMapperPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+
+```php
+namespace Pyz\Zed\CheckoutRestApi;
+
+use Spryker\Zed\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use SprykerEco\Zed\UnzerRestApi\Communication\Plugin\CheckoutRestApi\UnzerCheckoutDataExpanderPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataExpanderPluginInterface>
+     */
+    protected function getCheckoutDataExpanderPlugins(): array
+    {
+        return [
+            new UnzerCheckoutDataExpanderPlugin(),
         ];
     }
 }
@@ -201,13 +224,13 @@ Ensure that the following API requests work:
 {% info_block warningBox "Verification" %}
 
 Ensure that the request body differs for each Unzer payment method:
-- Property `paymentMethodName` of `payments` must be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`. 
+- Property `paymentMethodName` of `payments` must be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`.
 - Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, and `Unzer Bank Transfer`.
 
 {% endinfo_block %}
 
 <details><summary markdown='span'>Response example:</summary>
- 
+
 ```json
 {
   "data": {

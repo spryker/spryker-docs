@@ -32,7 +32,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
-- [Persistent Cart Sharing](/docs/scos/user/features/{{site.version}}/persistent-cart-sharing-feature-overview.html)
+- [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html)
 - [Resource Sharing](/docs/scos/user/features/{{site.version}}/resource-sharing-feature-overview.html)
 - [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
 - [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
@@ -45,7 +45,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Refunds](/docs/scos/user/features/{{site.version}}/refunds-feature-overview.html)
 - [Reclamations](/docs/scos/user/features/{{site.version}}/reclamations-feature-overview.html)
 - [State Machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
-- [Inventory Management](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
+- [Inventory Management](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html)
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
@@ -60,8 +60,8 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Multiple carts](/docs/scos/user/features/{{site.version}}/multiple-carts-feature-overview.html)
-- [Quick add to cart](/docs/scos/user/features/{{site.version}}/quick-add-to-cart-feature-overview.html)
-- [Shared carts](/docs/scos/user/features/{{site.version}}/shared-carts-feature-overview.html)
+- [Quick add to cart](/docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html)
+- [Shared carts](/docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html)
 - [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 - [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
@@ -90,7 +90,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 - [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
-- [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html)
+- [File Manager](/docs/pbc/all/digital-asset-management/digital-asset-management.html)
 
 <br>
 </details>

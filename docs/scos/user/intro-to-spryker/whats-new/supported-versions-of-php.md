@@ -26,12 +26,15 @@ redirect_from:
 
 ## PHP 7
 
-Since April 2022, Spryker requires PHP 7.4 as the minimum version. We will keep supporting PHP 7.4 until June 2022.
+PHP 7.4 is officially EOL for Spryker software since July 2022. Please upgrade to 8.0+ immediately to avoid issues with security or critical updates.
 
 ## PHP 8
 
-Since October 2021, Spryker has been compatible with PHP 8.0. We recommend using PHP 8.0, if possible. 
-We plan to introduce PHP 8.1 support by the end of June 2022. However, using this version remains optional for now.
+Since October 2021, Spryker has been compatible with PHP 8.0.
+PHP 8.1 support has been finished July 2022.
+We recommend using PHP 8.1 now.
+
+Note: PHP 8.0+ is a hard requirement from 19.10.2022 due to the modules being now PHP 8.0+.
 
 ## PHP supported version at Spryker
 

@@ -1,6 +1,6 @@
 ---
 title: State machine console commands
-description: This article provides the console commands for state machine.
+description: This document provides the console commands for state machine.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cronjob
@@ -29,8 +29,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
   - title: Common pitfalls in OMS design
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
-  - title: Creating an Order Management System - Spryker Commerce OS
-    link: docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
+  - title: Create an Order Management System - Spryker Commerce OS
+    link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---
 
 There are three console commands dedicated for the state machine:

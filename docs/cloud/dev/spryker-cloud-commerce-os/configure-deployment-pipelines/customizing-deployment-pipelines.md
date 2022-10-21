@@ -7,11 +7,15 @@ originalArticleId: 84961c76-f48a-42db-95e4-789434c891e0
 redirect_from:
   - /docs/customizing-deployment-pipelines
   - /docs/en/customizing-deployment-pipelines
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html
 ---
 
 This document describes how to customize deployment pipelines.
 
 {% info_block warningBox %}
+
+* To prevent timeouts and issues, avoid adding long operations like data import to deployment pipelines. Export long operations to Jenkins jobs that run separately from deployment. To learn how long operations affect pipelines, see [Deploymment in states](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.html).
+
 
 * In this document, we use the `pre-deploy` stage and its environment variable `SPRYKER_HOOK_BEFORE_DEPLOY` as an example. When customizing a different stage of a pipeline, use the respective variable. You can learn about environment variables for each deployment stage in [Deployment stages](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html#deployment-stages).
 

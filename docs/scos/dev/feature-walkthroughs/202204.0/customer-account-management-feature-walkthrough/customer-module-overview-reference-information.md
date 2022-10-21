@@ -1,21 +1,21 @@
 ---
 title: "Customer module overview: reference information"
 last_updated: Aug 13, 2021
-description: This article describes how new customers can be created and managed and how to enable specific features related to customers.
+description: This document describes how new customers can be created and managed and how to enable specific features related to customers.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
 ---
 
-The Customer entity wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This article describes how new customers can be created and managed and how to enable specific features related to customers.
+The Customer entity wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This document describes how new customers can be created and managed and how to enable specific features related to customers.
 
 ## Customer registration
 
 Customer registration requires two steps:
 
-1. Creating a new customer: This step can be done from both the back-end and front-end applications. Customers are created in the database if the entered details are valid. A registration key is generated for each customer and used as a token for customer registration confirmation. The key is embedded in the confirmation link sent by email.
-2. Confirming customer registration: Only a customer can confirm registration through the front-end application. The customer accesses the link received in the email sent after the customer creation. When opening the link, an update is triggered that sets the customer as registered.
+1. Creating a new customer: This step can be done from both the backend and frontend applications. Customers are created in the database if the entered details are valid. A registration key is generated for each customer and used as a token for customer registration confirmation. The key is embedded in the confirmation link sent by email.
+2. Confirming customer registration: Only a customer can confirm registration through the frontend application. The customer accesses the link received in the email sent after the customer creation. When opening the link, an update is triggered that sets the customer as registered.
 
 After these two steps are performed, the customer can use the account.
 
@@ -36,11 +36,11 @@ Customers are assigned a default billing and a default shipping address. Custome
 
 Similar to the customer registration flow, password restore makes use of a token that acts as a temporary password for the customer. An email is sent to the user to reset the password. The mail contains a link where the password recovery token is embedded. This token is generated specifically for this request. After the customer accesses the URL and enters necessary confirmation data, the customer's password is updated.
 
-Out of the box, Spryker provides the plugin `CustomerRestorePasswordMailTypePlugin` (Customer module) to handle a restore password email template. To enable it, register this plugin in your `MailDependencyProvider` (e.g., `Pyz/Zed/Mail/MailDependencyProvider`).
+Out of the box, Spryker provides the plugin `CustomerRestorePasswordMailTypePlugin` (Customer module) to handle a restore password email template. To enable it, register this plugin in your `MailDependencyProvider`—for example, `Pyz/Zed/Mail/MailDependencyProvider`).
 
 {% info_block infoBox "Token link generation" %}
 
-By default, the **Customer** module will lead to `'‹YVES HOST›/password/restore?token='`. If it's different in your project, you should configure the generation of restore links in `Spryker/Zed/Customer/CustomerConfig::getCustomerPasswordRestoreTokenUrl()`
+By default, the `Customer` module leads to `'‹YVES HOST›/password/restore?token='`. If it's different in your project, configure the generation of restore links in `Spryker/Zed/Customer/CustomerConfig::getCustomerPasswordRestoreTokenUrl()`
 
 {% endinfo_block %}
 
@@ -62,7 +62,7 @@ To prevent missing any customer-related information, do the following:
 
 1. Process removal for related customer objects. Here you could take care of information stored in dependent bundles or custom relations. To do so, implement the `CustomerAnonymizerPluginInterface`. As an example, take a look at the Newsletter module plugin for unsubscribing a customer from newsletters before removal `Spryker/Zed/Newsletter/Business/Anonymizer/SubscriptionAnonymizer`.
 2. Anonymize customer address information.
-3. Anonymize private customer information. Information directly related to customer fields (first name, last name, date of birth, etc.).
+3. Anonymize private customer information. Information directly related to customer fields—for example, first name, last name, and date of birth.
 
 {% info_block errorBox "Information privacy law " %}
 
@@ -72,7 +72,7 @@ When creating a custom implementation, check and follow the applicable legislati
 
 ## Customer experience
 
-Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of the impact of the **Customer Delete** functionality on customer experience. Read more about session sensitive actions in [Migration Guide - Customer](/docs/scos/dev/module-migration-guides/migration-guide-customer.html).
+Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of the impact of the **Customer Delete** functionality on customer experience. Read more about session-sensitive actions in [Migration Guide - Customer](/docs/scos/dev/module-migration-guides/migration-guide-customer.html).
 
 ### Case insensitive queries for email
 
@@ -88,4 +88,4 @@ Finally, run `vendor/bin/console propel:diff` and `vendor/bin/console propel:mod
 
 From Customer module 7.6.0 (along with Sales module version 8.7.0), we support the display of customer orders in the **Customers** section of the Back Office. The **Customers View** page now has the Orders table listing all the orders of a respective customer.
 
-To enable the feature to see extra blocks on the **Customer View** page in the Back Office, go to the `CustomerConfig` class in the `Customer` module and add the `getCustomerDetailExternalBlocksUrls` function. This function should return an array where the key is the block name and the value is the URL where this block exists. As for the orders, they are in `/sales/customer/customer-orders`, which in our routing architecture points to Sales `module` -> `CustomerController` -> `CustomerOrdersAction`. If this behavior needs to be extended further, all that’s needed is more key-value pairs for more controller actions that provide the data.
+To enable the feature to see extra blocks on the **Customer View** page in the Back Office, go to the `CustomerConfig` class in the `Customer` module and add the `getCustomerDetailExternalBlocksUrls` function. This function should return an array where the key is the block name and the value is the URL where this block exists. As for the orders, they are in `/sales/customer/customer-orders`, which in our routing architecture points to Sales `module` -> `CustomerController` -> `CustomerOrdersAction`. If this behavior needs to be extended further, all that's needed is more key-value pairs for more controller actions that provide the data.

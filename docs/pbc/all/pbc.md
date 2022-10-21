@@ -2,16 +2,20 @@
 title: Packaged Business Capabilities
 description: Welcome to the Packaged Business Capabilities (PBC) documentation section
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/pbc-landing.html
 ---
 
-Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision- makers throughout multiple business entities.
+Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision makers throughout multiple business entities.
+
+This section is in beta because not all the PBCs are covered. You are welcome to use the docs that are already here, and we will keep adding the docs for the rest of the PBCs.
 
 ## Spryker PBCs
 
 | NAME | DESCRIPTION | BENEFITS |
 | --- | --- | --- |
 | Carrier Management | The Spryker Cloud Commerce OS integrates with several shipping carriers and methods and lets you define their availability, price, and tax set. During the checkout process, customers have the option to select their preferred shipment method and relevant carrier. | Ensures quick and cost-effective delivery. |
-| Cart and Checkout | The online shopping cart and checkout process act as a gateway for customer and order management. It lets your customers organize and manage their purchases, apply vouchers and coupon codes. Based on their roles and permissions, your B2B customers can add or remove products, share the cart, and manage their purchases. | Increases conversion rates and reduces drop-off rates. Offers additional B2B specific, permission-related functionalities. |
+| [Cart and Checkout](/docs/pbc/all/cart-and-checkout/cart-and-checkout.html) | The online shopping cart and checkout process act as a gateway for customer and order management. It lets your customers organize and manage their purchases, apply vouchers and coupon codes. Based on their roles and permissions, your B2B customers can add or remove products, share the cart, and manage their purchases. | Increases conversion rates and reduces drop-off rates. Offers additional B2B specific, permission-related functionalities. |
 | CMS (Content Management System) | The CMS features let you customize your store, enrich it with information, stories, or other content, and make it easily findable in search engines. Several SEO features enable you to add customized meta information to all your content and create search engine-friendly URLs. | Provides compelling content and stories where your customers need it. |
 | CRM (Customer Relationship Management) | The customer management tool lets B2B and B2C businesses manage customer accounts and efficiently monitor shopping habits. It provides your B2B Customers with a way to map their business hierarchies, permissions, and role management. With the creation of distinctive Business Units, the internal hierarchy can easily be mapped out, and each Unit can operate independently. The Roles and Permissions System lets your customer’s buyers define the purchase and approval process. | Increases conversion rates and average order values with a compact Customer Relationship Management tool. |
 | DAM (Digital Asset Management) | The DAM system provides impactful visuals while simultaneously maintaining fast response times, thus helping you reduce your bounce rate effectively and create an enhanced shopping experience. With the DAM, you can add images and videos to any of your pages. | Offers an exceptional brand experience with impactful visuals, banners, and media assets. |
@@ -28,7 +32,7 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 | Product Relationship Management | Helps you enhance your shop with cross- and up-selling capabilities to increase sales. | Increases average order values with product relations. |
 | [PSP (Payment Service Provider)](/docs/pbc/all/payment-service-providers/psp.html) | Provides integration of payment methods. You can integrate multiple payment gateways, define their availability, and customize how they appear on your site. | Lets you provide an excellent shopping experience and integrate your customers’ preferred payment methods. |
 | Punchout |The Punchout integration eases the purchasing process for your B2B customers. Buyers can select a shop within their procurement system and visit the supplier website via a Punchout Setup Request, thereby allowing them to follow internal procurement guidelines. | Lets you increase customer satisfaction by offering a direct Punchout integration. |
-| Ratings and Reviews | Lets you incorporate user reviews and ratings. You can receive and moderate feedback in the Back Office. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings. | Inspires trust among customers with ratings and reviews. |
+| [Ratings and Reviews](/docs/pbc/all/ratings-reviews/ratings-and-reviews.html) | Lets you incorporate user reviews and ratings. You can receive and moderate feedback in the Back Office. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings. | Inspires trust among customers with ratings and reviews. |
 | Return Management | Lets you establish a return policy and execute returns. | Increase customer satisfaction and loyalty. |
 | RFQ (Request for Quote) | Your customers can request a quote for products and services that you sell. The Request for Quote feature supports all functionalities of the price engine and product capabilities, such as Volume Prices, Customer Specific Prices, Measuring and Packaging units, Shipping costs, Product Options, etc. | Enhances customer loyalty and increase conversion rates. |
 | Search | The out-of-the-box Elasticsearch technology lets you include full-text search, auto-suggestions, and auto-completion. You can set individual search preferences for multiple stores and categorize your products by adding dynamic filters and facets to help your customers further refine the search results. You can also add more advanced filters that use the product’s metadata or promote a brand’s top-sellers or highly rated products. | Helps you increase conversion rates by providing an excellent Search and Filter experience. |
@@ -50,8 +54,8 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 
 | NAME | CATEGORY |
 | --- | --- |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice.html) | Ratings and Reviews |
+| [Bazaarvoice](/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html) | Ratings and Reviews |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html) | PSP (Payment Service Provider) |
-| [Usercentrics](/docs/pbc/all/usercentrics.html) | (CMP) Consent Management Platform |
+| [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |
 
 </div>

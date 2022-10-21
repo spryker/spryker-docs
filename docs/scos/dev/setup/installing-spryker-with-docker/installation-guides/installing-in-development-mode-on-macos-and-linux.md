@@ -117,7 +117,7 @@ docker/sdk up
 
 {% info_block warningBox %}
 
-Depending on the hardware performance, the first project launch can take up to 20 minutes.
+Depending on the hardware performance, the first project launch can take up to **20 minutes**.
 
 {% endinfo_block %}
 
@@ -125,11 +125,13 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
-{% info_block infoBox "RabbitMQ UI credentials" %}
+### Back-Office
 
-To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`.
+The default credentials to access the back-office are located inside this file `/src/Pyz/Zed/User/UserConfig.php`
 
-{% endinfo_block %}
+### RabbitMQ
+
+To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 ## Getting the list of useful commands
 

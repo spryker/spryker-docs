@@ -45,6 +45,8 @@ console oms:check-timeout -p 1,2,3
 
 If you have a large database, for performance reasons, it is not recommended to specify several comma-separated processor identifiers.
 
+You need to use store name by "-s" option or limit by "-l" option to have applied "-p" option.
+
 {% endinfo_block %}
 
 ## Enable OMS multi-thread
@@ -80,7 +82,7 @@ This value serves as the upper boundary for a generated processor identifier. Fo
 ```php
 /* STATE MACHINE */
 $jobs[] = [
-    'name'     => 'check-statemachine-conditions',
+    'name'     => 'check-statemachine-conditions-1',
     'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 1',
     'schedule' => '*/10 * * * *',
     'enable'   => true,
@@ -89,7 +91,7 @@ $jobs[] = [
 ];
 
 $jobs[] = [
-    'name'     => 'check-statemachine-conditions',
+    'name'     => 'check-statemachine-conditions-2',
     'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 2',
     'schedule' => '*/10 * * * *',
     'enable'   => true,
@@ -100,7 +102,7 @@ $jobs[] = [
 ...
 
 $jobs[] = [
-    'name'     => 'check-statemachine-conditions',
+    'name'     => 'check-statemachine-conditions-10',
     'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 10',
     'schedule' => '*/10 * * * *',
     'enable'   => true,

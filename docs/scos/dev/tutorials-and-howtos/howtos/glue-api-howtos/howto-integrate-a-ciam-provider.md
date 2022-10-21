@@ -6,11 +6,9 @@ template: howto-guide-template
 
 # How-To integrate a CIAM provider
 
-{Overview}
 
 This page describes how to integrate a third party CIAM provider into a Spryker project.
 
-{Purpose of the HowTo}
 
 The following steps will help you Integrate between Spryker project and CIAM leveraging standard APIs that the CIAM provider exposes. which can be used in the context of a customer whose data is to be read or updated.
 

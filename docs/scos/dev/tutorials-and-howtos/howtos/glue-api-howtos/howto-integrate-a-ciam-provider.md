@@ -315,7 +315,7 @@ The following example extends `AccessTokenValidator` to validate the authorizati
 To finalize your CIAM provider implementation and include it in the existing GLUE authorization process, you need to implement `RestUserFinderPluginInterface` and `RestRequestValidatorPluginInterface`. 
 Their implementations must persist in the `CiamProviderRestApi` module following the implementation example.
 
-The logic within the `RestUserFinderPluginInterface` implementation uses the previously adjusted or created functionalities in our steps so far.
+The logic within the `RestUserFinderPluginInterface` implementation uses the adjusted or created functionalities from the previous steps.
 It triggers the Ciam token parser, the CIAM token decoder, and the Customer creator.
 
 The folder structure is similar to the following: 

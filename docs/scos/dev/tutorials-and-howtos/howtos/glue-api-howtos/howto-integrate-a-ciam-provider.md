@@ -5,7 +5,7 @@ last_updated: Oct 21, 2022
 template: howto-guide-template
 ---
 
-This document describes how to integrate a third party CIAM provider into a Spryker project.
+This document describes how to integrate a third-party _customer identity and access management (CIAM)_ provider into a Spryker project.
 
 The following steps help you integrate between a Spryker project and CIAM leveraging standard APIs that the CIAM provider exposes, which can be used in the context of a customer whose data is to be read or updated.
 
@@ -13,7 +13,7 @@ Depending on your requirements, the integration can either extend the existing a
 
 ## Prerequisites
 
-We recommend using JWT based tokens to transfer required customer data between CIAM and Spryker for more details on JWT see <https://auth0.com/docs/secure/tokens/json-web-tokens>. 
+We recommend using JWT-based tokens to transfer required customer data between CIAM and Spryker for more details about JWT, see [JSON Web Tokens](https://auth0.com/docs/secure/tokens/json-web-tokens). 
 
 There is a ready PHP-based library which provides JWT decoding such as [firebase/php-jwt](https://packagist.org/packages/firebase/php-jwt).
 
@@ -57,7 +57,7 @@ Create a separate CIAM provider Client layer with the following structure:
 ```
 
 <details open>
-<summary markdown='span'>The following code example shows how the Ciam token decoding logic looks like:</summary>
+<summary markdown='span'>The following code example shows what the Ciam token decoding logic looks like:</summary>
 
 ```php
 class CiamTokenDecoder implements CiamTokenDecoderInterface
@@ -220,16 +220,16 @@ class CiamTokenParser implements CiamtokenParserInterface
 
 ## 2. Extend the `Customer` module with a customer creation functionality
 
-Depending on the attributes that you are planing to use from the CIAM provider in the customer creation, you need to extend the customer module accordingly.
+Depending on the attributes that you plan to use from the CIAM provider in the customer creation, you need to extend the customer module accordingly.
 
-The following is the Customer Zed layer's touch-points required to be extended or created. In a standard integration, more changes might be required depending on the implementation:
+The following are the Customer Zed layer's touchpoints required to be extended or created. In a standard integration, more changes might be required depending on the implementation:
 
 ```
 + Zed/
   + Customer/
     + Business/
         + Customer
-          + CustomerCreator.php // [Created Class] Validates the required attributes, Checks if a customer exists or not and triggers the customer creation from the entity manager accordingly 
+          + CustomerCreator.php // [Created Class] Validates the required attributes, checks whether a customer exists or not, and triggers the customer creation from the entity manager accordingly 
           + CustomerCreatorInterface.php [Created Interface]
         + CustomerBusinessFactory.php // [Extended Class]
         + CustomerFacade.php  // [Extended Class]
@@ -238,8 +238,8 @@ The following is the Customer Zed layer's touch-points required to be extended o
         + Controller
           + GatewayController.php // [Extended Class]
     + Persistence/
-        + CustomerEntityManager.php // [Extended Class] Add the custom create customer functionality that will create the customer depending on the attributes provided from the token.
-        + CustomerEntityManagerInterface.php  // [Extended Interface]
+        + CustomerEntityManager.php // [Extended Class] Add the custom create customer functionality that creates the customer depending on the attributes provided from the token.
+        + CustomerEntityManagerInterface.php // [Extended Interface]
   ...
 ```
 
@@ -272,7 +272,7 @@ Keep in mind that after extending the Customer Zed layer, you need to extend the
 
 ## 3. Adjust Glue modules to include the new authorization functionality
 
-The adjustment of Glue modules to include the new authorization functionality is not a single step. Thus, this step consists of several substeps, which are described in the following sections.
+The adjustment of Glue modules to include the new authorization functionality is not a single step. This step consists of several substeps, which are described in the following sections.
 
 ### 1. Extend the `AuthRestApi` module
 
@@ -325,7 +325,7 @@ The folder structure is similar to the following:
           + CiamProviderRestUserFinderPluginInterface.php // Triggers CiamTokenUserFinder
     + Processor/
         + Finder/
-          + CiamTokenUserFinder.php // Parses and decodes the token then it mappers the token attributes to the customer transfer and trigger the create customer functionality 
+          + CiamTokenUserFinder.php // Parses and decodes the token; then it mappers the token attributes to the customer transfer and triggers the create customer functionality 
           + CiamTokenUserFinderInterface.php
         + Mapper/
           + CustomerMapper.php // Maps customer attributes from CiamProviderToken Transfer to Customer Transfer to be used in the customer creator
@@ -336,7 +336,7 @@ The folder structure is similar to the following:
   ...
 ```
 
-The following code is an example of `CiamTokenUserFinder` using all the previously added implementation in our walkthrough:
+The following code is an example of `CiamTokenUserFinder` using the previously added implementation in our walkthrough:
 
 ```php
  public function findUser(RestRequestInterface $restRequest): ?RestUserTransfer
@@ -374,7 +374,7 @@ The following code is an example of `CiamTokenUserFinder` using all the previous
     }
 ```
 
-Your plugin implementations are ready, inject them into `Glue/GlueApplication/GlueApplicationDependencyProvider.php`. This requires you to extend it.
+Your plugin implementations are ready. Inject them into `Glue/GlueApplication/GlueApplicationDependencyProvider.php`. This requires you to extend it.
 
 Example:
 

@@ -34,16 +34,18 @@ Out of the box, both of these commands process their respective entities sequent
 Each order is assigned a randomly generated positive number called *processor identifier*. This number is saved in `spy_sales_order` table. During the order management processing, both of the commands mentioned above are triggered with the new command option `processor-identifier` (`p`). The value of this option must match a processor identifier from `spy_sales_table`. Then the commands process only those timeouts and conditions that are related to the orders with the matching processor identifier. This way, one can, for example, trigger the `oms:check-timeout` command several times simultaneously, each time providing different processor identifiers, thus creating several PHP processes for managing a large number of orders in parallel. With the new option in place, a command looks like this:
 
 ```bash
-console oms:check-timeout -p 5
+console oms:check-timeout -p 5 -l 10000
 ```
 Instead of providing a single value as the `processor-identifier` option value, one can provide several values separated by a comma.
 
 ```bash
-console oms:check-timeout -p 1,2,3
+console oms:check-timeout -p 1,2,3 -l 10000
 ```
 {% info_block warningBox %}
 
 If you have a large database, for performance reasons, it is not recommended to specify several comma-separated processor identifiers.
+
+You need to use store name by "-s" option or limit by "-l" option to have applied "-p" option.
 
 {% endinfo_block %}
 
@@ -80,8 +82,8 @@ This value serves as the upper boundary for a generated processor identifier. Fo
 ```php
 /* STATE MACHINE */
 $jobs[] = [
-    'name'     => 'check-statemachine-conditions',
-    'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 1',
+    'name'     => 'check-statemachine-conditions-1',
+    'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 1 -l 10000',
     'schedule' => '*/10 * * * *',
     'enable'   => true,
     'run_on_non_production' => true,
@@ -89,8 +91,8 @@ $jobs[] = [
 ];
 
 $jobs[] = [
-    'name'     => 'check-statemachine-conditions',
-    'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 2',
+    'name'     => 'check-statemachine-conditions-2',
+    'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 2 -l 10000',
     'schedule' => '*/10 * * * *',
     'enable'   => true,
     'run_on_non_production' => true,
@@ -100,8 +102,8 @@ $jobs[] = [
 ...
 
 $jobs[] = [
-    'name'     => 'check-statemachine-conditions',
-    'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 10',
+    'name'     => 'check-statemachine-conditions-10',
+    'command'  => '$PHP_BIN vendor/bin/console oms:check-condition -p 10 -l 10000',
     'schedule' => '*/10 * * * *',
     'enable'   => true,
     'run_on_non_production' => true,

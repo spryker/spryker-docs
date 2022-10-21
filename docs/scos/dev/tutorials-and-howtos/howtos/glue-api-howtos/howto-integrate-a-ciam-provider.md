@@ -42,7 +42,7 @@ Create a separate CIAM provider Client layer with the following structure:
 + Client/
   + CiamProvider/
     + Decoder/
-      + CiamTokenDecoder.php // Decodes JWT token using php-jwt library and the key from the CIAM provider returns a transfer with the required mapped attributes
+      + CiamTokenDecoder.php // Decodes JWT token using php-jwt library, and the key from the CIAM provider returns a transfer with the required mapped attributes
       + CiamTokenDecoderInterface.php
     + Mapper/
       + CiamTokenMapper.php // Maps decoded token attributes

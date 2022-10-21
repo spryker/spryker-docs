@@ -40,7 +40,7 @@ PHP 8.0+ is a hard requirement from 19.10.2022 due to the modules being now PHP 
 {% endinfo_block %}
 
 
-## PHP supported version at Spryker
+## PHP versions supported at Spryker
 
 The following graph shows the timelines of support of different PHP versions.
 

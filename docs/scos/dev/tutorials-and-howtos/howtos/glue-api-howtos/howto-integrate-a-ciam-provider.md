@@ -1,5 +1,5 @@
 ---
-title: How-To integrate a CIAM provider
+title: "HowTo: Integrate a CIAM provider"
 description: Learn how to integrate CIAM into a Spryker project
 last_updated: Oct 21, 2022
 template: howto-guide-template

@@ -1,6 +1,6 @@
 ---
 title: "State machine cookbook: build a state machine"
-description: This chapter will help you model a state machine using Spryker to manage your sale orders.
+description: This tutorial helps you model a state machine using Spryker to manage your sale orders.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cookbook-2
@@ -26,35 +26,39 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
-This chapter will help you model a state machine using Spryker to manage your sale orders.
+
+This tutorial helps you model a state machine using Spryker to manage your sale orders.
+
 {% endinfo_block %}
 
 First of all, it's important to know which tasks must be executed after an order is submitted and in which order. Keep in mind that you can define more than one state machine in your system to cover the use case scenarios you want to enable in your shop.
 
 Before starting the development and configuration for a new state machine, it's important to draw on paper the sequence of the processes that must take place after an order is placed and to think about any scenario that could take place—the order is over or underpaid, or the order could not be delivered at the given address. Of course, the state machine can be improved or fixed if you observe that not every possible use case scenario is covered or if the order is not managed as expected.
 
-To illustrate how to create and implement a state machine, we'll create one that manages prepaid orders. Keep in mind that this tutorial is not intended to be a complete use case for a production environment.
+To illustrate how to create and implement a state machine, let's create one that manages prepaid orders. Keep in mind that this tutorial is not intended to be a complete use case for a production environment.
 
 This use case scenario must implement the following behaviors:
 
-* the payment must be done before packing the order.
-* after the order is paid, it can be packed and shipped to the customer.
-* the customer can return order items within 100 days since the order was placed.
-* if the customer returns order items, the refund process must be initiated.
-* after 100 days have passed, the order is considered completed.
-* after a return, the order is considered completed.
+* The payment must be done before packing the order.
+* After the order is paid, it can be packed and shipped to the customer.
+* The customer can return order items within 100 days since the order was placed.
+* If the customer returns order items, the refund process must be initiated.
+* After 100 days have passed, the order is considered completed.
+* After a return, the order is considered completed.
 
 To model the prepaid state machine, follow these steps:
 
-* Create the XML file
-* Identify the states
-* Identify the events
-* Define the transitions
-* Development
-* Integrate the State Machine
+1. Create the XML file.
+2. Identify the states.
+3. Identify the events.
+4. Define the transitions.
+5. Development.
+6. Integrate the State Machine.
+
+Each step is described in details in the following sections.
 
 ### Create the XML file
-To start defining your new state machine, create a new XML file under `config/Zed/oms/` called `Prepayment.xml`. For the moment the file will contain only the name of the process that we are currently building (Prepayment).
+To start defining your new state machine, create a new XML file under `config/Zed/oms/` called `Prepayment.xml`. For the moment the file contains only the name of the process that is currently being built (Prepayment).
 
 ```xml
 <?xml version="1.0"?>
@@ -72,7 +76,9 @@ To start defining your new state machine, create a new XML file under `config/Ze
 We added the `main="true"` attribute to the process because this process manages an entire workflow. Given that there are many parts that are similar between the state machines that a system needs, you can reuse parts of them as subprocesses. Subprocesses are described in the XML file similar to the oms processes, the only difference is the value of this attribute (`main="false"`).
 
 {% info_block infoBox %}
+
 To see a graphical representation of the current state of your state machine in Zed, register the state machine in the OmsConfig.
+
 {% endinfo_block %}
 
 

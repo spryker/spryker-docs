@@ -329,7 +329,7 @@ The folder structure is similar to the following:
           + CiamProviderRestUserFinderPluginInterface.php // Triggers CiamTokenUserFinder
     + Processor/
         + Finder/
-          + CiamTokenUserFinder.php // Parses and decodes the token; then it mappers the token attributes to the customer transfer and triggers the create customer functionality 
+          + CiamTokenUserFinder.php // Parses and decodes the token; then, it maps the token's attributes to the customer transfer and triggers the create customer functionality 
           + CiamTokenUserFinderInterface.php
         + Mapper/
           + CustomerMapper.php // Maps customer attributes from CiamProviderToken Transfer to Customer Transfer to be used in the customer creator

@@ -268,7 +268,11 @@ The following is an example of the create customer functionality in `CustomerCre
     }
 ```
 
-Keep in mind that after extending the Customer Zed layer, you need to extend the Customer Client layer as well to access the Zed layer accordingly.
+{% info_block infoBox %}
+
+After extending the Customer Zed layer, you need to extend the Customer Client layer as well to access the Zed layer accordingly.
+
+{% endinfo_block %}
 
 ## 3. Adjust Glue modules to include the new authorization functionality
 

@@ -340,7 +340,7 @@ The folder structure is similar to the following:
   ...
 ```
 
-The following code is an example of `CiamTokenUserFinder` using the previously added implementation in our walkthrough:
+The following code is an example of `CiamTokenUserFinder` using the previously added implementation:
 
 ```php
  public function findUser(RestRequestInterface $restRequest): ?RestUserTransfer

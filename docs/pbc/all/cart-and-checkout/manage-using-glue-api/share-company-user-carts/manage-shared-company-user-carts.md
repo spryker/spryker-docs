@@ -16,7 +16,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
   - title: Retrieving cart permission groups
     link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html
-  - title: Authenticating as a company user
+  - title: "Glue API: Authenticating as a company user"
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
   - title: Shared Cart feature overview
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html

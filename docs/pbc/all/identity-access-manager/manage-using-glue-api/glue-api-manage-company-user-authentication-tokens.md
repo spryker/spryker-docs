@@ -1,5 +1,5 @@
 ---
-title: Managing company user authentication tokens
+title: "Glue API: Manage company user authentication tokens"
 description: Learn how to manage company user authentication tokens via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -21,7 +21,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Retrieving company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
-  - title: Authenticating as a company user
+  - title: "Glue API: Authenticating as a company user"
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html

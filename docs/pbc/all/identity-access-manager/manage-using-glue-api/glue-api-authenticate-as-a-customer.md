@@ -1,5 +1,5 @@
 ---
-title: Authenticating as a customer
+title: "Glue API: Authenticate as a customer"
 description: Retrieve customer authentication tokens to send requests to protected resources.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
@@ -77,8 +77,8 @@ Request sample: authenticate as a customer
 
 | ATTRIBUTE | TYPE | REQUIRED  |DESCRIPTION |
 | --- | --- | --- | --- |
-| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
-| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
+| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 {% info_block infoBox "Username" %}
 

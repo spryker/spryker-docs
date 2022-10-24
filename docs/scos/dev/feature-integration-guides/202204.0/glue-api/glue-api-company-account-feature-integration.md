@@ -16,7 +16,7 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/company-account-feature-integration.html
   - title: Company Account feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/company-account-feature-walkthrough/company-account-feature-walkthrough.html
-  - title: Authenticating as a company user
+  - title: "Glue API: Authenticating as a company user"
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
   - title: Managing company user authentication tokens
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/managing-company-user-authentication-tokens.html

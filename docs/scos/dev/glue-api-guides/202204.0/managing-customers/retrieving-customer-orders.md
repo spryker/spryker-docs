@@ -58,7 +58,7 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Request
 

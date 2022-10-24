@@ -64,7 +64,18 @@ Each of the identity managers is an ECO module that must be developed separately
 
 ## Related Developer articles
 
-|INSTALLATION GUIDES  | REFERENCES|
-|---------|---------|
-| [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)  | |
-| [Microsoft Azure Active Directory](/docs/scos/dev/feature-integration-guides/{{page.version}}/microsoft-azure-active-directory.html)   | [Users and rights overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html)  |
+|INSTALLATION GUIDES  | GLUE API GUIDES | REFERENCES|
+|---------|---------| - |
+| [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)  | [Glue API security and authentication](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-security-and-authentication.html) |
+| [Microsoft Azure Active Directory](/docs/scos/dev/feature-integration-guides/{{page.version}}/microsoft-azure-active-directory.html)   | [Create customers](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html) | [Users and rights overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html)  |
+| | [Authenticate as a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/authenticating-as-a-customer.html) |
+| | [] | 
+| | [] |
+| | [] |
+| | [] |
+| | [] |
+| | [] |
+| | [] |
+| | [] |
+| | [] |
+| | [] |

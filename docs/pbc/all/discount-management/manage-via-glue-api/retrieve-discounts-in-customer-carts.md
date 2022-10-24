@@ -29,7 +29,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve carts of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve carts of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Request
 

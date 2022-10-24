@@ -49,95 +49,6 @@ In your development, these resources can help you:
 
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
 
-## Create a customer
-
-To create a customer, send the request:
-
----
-`POST` **/customers**
-
----
-
-### Request
-
-Request sample: create a customer
-
-`POST http://glue.mysprykershop.com/customers`
-
-```json
-{
-  "data": {
-    "type": "customers",
-    "attributes": {
-        "salutation": "Mrs",
-        "firstName":"Sonia",
-        "lastName":"Wagner",
-        "email":"sonia@spryker.com",
-	"gender": "Female",
-        "password":"change123",
-        "confirmPassword":"change123",
-        "acceptedTerms":true
-    }
-  }
-}
-```
-
-
-| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| acceptedTerms | Boolean | &check; | Specifies whether the customer has accepted the terms of service. For a new customer to be created, this parameter needs to be set to true. |
-| confirmPassword | String | &check;  | Specifies a password confirmation for the account of the new customer. |
-| email | String | &check;  | Specifies customer's last email address. The address must be unique in the system. |
-| gender | String | &check; | Specifies gender of the customer. |
-| firstName | String | &check; | Specifies customer's first name. |
-| lastName | String | &check;  | Specifies customer's last name. |
-| password | String | &check;  | Specifies a password (7 characters or more) for the account of the new customer. This password will be used by the customer to access their account. |
-| salutation | String | &check; | Specifies a salutation for a new customer. |
-
-
-
-### Response
-
-<details><summary markdown='span'>Response sample: create a customer</summary>
-
-```json
-{
-	"data": {
-		"type": "customers",
-		"id": "DE--25",
-		"attributes": {
-			"firstName": "Sonia",
-			"lastName": "Wagner",
-			"gender": null,
-			"dateOfBirth": null,
-			"salutation": "Mr",
-			"createdAt": "2018-11-06 08:15:02.694668",
-			"updatedAt": "2018-11-06 08:15:02.694668"
-		},
-		"links": {
-			"self": "http://glue.mysprykershop.com/customers/DE--25"
-		}
-	}
-}
-```
-
-</details>
-
-<a name="create-a-customer-response-attributes"></a>
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| firstName | String | Customer's first name. |
-| lastName | String | Customer's last name. |
-| gender | String | Gender of the customer. |
-| dateOfBirth | String | Customer's date of birth. |
-| salutation | String | Salutation to use when addressing the customer. |
-| createdAt | String | Account creation date. |
-| updatedAt | String | Date of the last update. |
-
-
-
-After creating a customer, users receive a verification email. The email contains a link with the token that confirms and finalizes the customer registration process. Customers click the verification link from the email and finish the registration. Alternatively, you can confirm the customer registration via API (see [Confirming customer registration](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/confirming-customer-registration.html)). After confirmation, you can authenticate as a customer to perform requests to the protected resources.
 
 ## Retrieve customers
 
@@ -189,7 +100,7 @@ Request sample: retrieve customers
 ```
 </details>
 
-See [Create a customer](#create-a-customer-response-attributes) to learn about the response attributes.
+See [Create a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer-response-attributes) to learn about the response attributes.
 
 ## Retrieve a customer
 
@@ -202,7 +113,7 @@ To retrieve information about a customer, send the request:
 
 | PATH PARAMETER| DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to get information for. This parameter is returned as the `id` attribute when [creating a customer](#create-a-customer).  |
+| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to get information for. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer).  |
 
 
 ### Request
@@ -264,7 +175,7 @@ To edit a customer account, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit. This parameter is returned as the `id` attribute when [creating a customer](#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
+| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
 
 ### Request
 
@@ -335,7 +246,7 @@ To anonymize a customer, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to anonimyze. This parameter is returned as the `id` attribute when [creating a customer](#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
+| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to anonimyze. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
 
 ### Request
 
@@ -353,11 +264,7 @@ If the customer is anonymized successfully, the endpoint returns the `204 No Con
 
 ## Retrieve subscriptions to availability notifications
 
-To retrieve subscriptions to availability notifications, send the following:
-
-{% info_block warningBox %}
-This request is available for registered customers only.
-{% endinfo_block %}
+To retrieve subscriptions to availability notifications, send the request:
 
 ---
 `GET` **/customers/*{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*/availability-notifications**
@@ -370,7 +277,7 @@ This request is available for registered customers only.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer] |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 ### Request
 

@@ -1,5 +1,5 @@
 ---
-title: Security and Authentication
+title: Glue API security and authentication
 description: This article describes the authorization mechanism used in Spryker, the modules that provide it, as well as user scopes, database tables, and extension points.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

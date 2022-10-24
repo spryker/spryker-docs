@@ -109,7 +109,6 @@ $jobs[] = [
     'stores'   => $allStores,
 ];
 ```
-</details>
 
 ## General performance recommendations
 

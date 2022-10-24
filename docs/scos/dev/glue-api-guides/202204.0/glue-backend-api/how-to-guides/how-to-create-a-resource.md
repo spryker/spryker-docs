@@ -1,13 +1,13 @@
 ---
 title: How to create a resource
-description: This guide shows how to create an API endpoint using a resource for the Storefront API application.
+description: This guide shows how to create an API endpoint using a resource for the storefront API application.
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-a-resource.html
 ---
 
-This guide shows how to create an API endpoint using a resource for the Storefront API application.
+This guide shows how to create an API endpoint using a resource for the storefront API application.
 
 Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module` with `GET` and `POST` methods. To create the endpoint, follow these steps:
 
@@ -96,13 +96,11 @@ class ModuleResourceController extends AbstractStorefrontApiController
 
 {% info_block infoBox "Backend-specific class" %}
 
-`AbstractStorefrontApiController` can be used only for Storefront API. For Backend API, use the appropriate backend-specific class `AbstractBackendApiController`.
+`AbstractStorefrontApiController` can be used only for storefront API. For backend API, use the appropriate backend-specific class `AbstractBackendApiController`.
 
 {% endinfo_block %}
 
-4. Create `ModuleResource`:
-
-To follow the JSON API convention, the resource must implement `JsonApiResourceInterface`.
+4. Create `ModuleResource`. To follow the JSON API convention, the resource must implement `JsonApiResourceInterface`.
 
 **\Pyz\Glue\ModuleRestApi\Plugin\ModuleResource**
 

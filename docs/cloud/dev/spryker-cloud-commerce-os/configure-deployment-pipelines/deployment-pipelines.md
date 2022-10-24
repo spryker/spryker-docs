@@ -33,6 +33,8 @@ _Normal deploy_ is a pipeline that includes all the stages of a complete CI/CD f
 
 _Destructive deploy_ is a pipeline that includes all the stages of a complete CI/CD flow. You can set it to run automatically on version control system updates. The `install` stage of this pipeline resets all the data in applications. Use it for initial or non-production deployments.
 
+{Deploy name and description} 
+
 ## Deployment stages
 
 

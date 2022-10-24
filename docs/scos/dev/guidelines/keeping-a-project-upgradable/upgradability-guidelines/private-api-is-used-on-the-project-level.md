@@ -56,11 +56,9 @@ class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInte
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
-
-Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. Give the method a unique name and copy it to the factory to fetch the business models. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
+Not recommended: Give the method a unique name and copy it to the factory to fetch the business models. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -155,6 +153,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
@@ -205,7 +204,7 @@ PrivateApi:Extension Please avoid extension of the PrivateApi Spryker\Zed\Custom
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
-
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
@@ -292,7 +291,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
-
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
@@ -358,7 +357,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager
 ### Example of resolving the error  
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
-
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
@@ -445,6 +444,7 @@ class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
@@ -548,7 +548,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
-
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
@@ -628,7 +628,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
-
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
@@ -700,7 +700,7 @@ class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
-
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
@@ -810,7 +810,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 ### Example of resolving the error
 
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
-
+    If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
 1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.

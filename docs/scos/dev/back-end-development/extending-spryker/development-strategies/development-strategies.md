@@ -26,7 +26,7 @@ The following table briefly describes all the available strategies and how they 
 ## Configuration development strategy
 
 Spryker provides an extensive configuration capability using `DependencyProviders` and Configuration.
- 
+
 Existing Spryker modules remain untouched.
 
 {% info_block infoBox "Example" %}
@@ -55,6 +55,8 @@ The existing Spryker modules remain untouched.
 In your project, you don't store prices in Spryker OS, but in an external system. You need to create a new module `SuperPrice` with a new plugin `\Pyz\Zed\SuperPrice\Communication\Plugin\Calculator\PriceCalculatorPlugin`, which performs a call to my Super ERP and gathers prices. Once it's done, you replace default `\Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceCalculatorPlugin` with my Project `PriceCalculatorPlugin`.
 
 {% endinfo_block %}
+
+If an extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Spryker OS support: High, you can safely take minor and patch releases.
 

@@ -86,7 +86,7 @@ class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInte
 ```php
 namespace Pyz\Zed\Customer\Business;
 
-use Pyz\Zed\Customer\Business\Customer\CustomerReader;
+use Pyz\Zed\Customer\Business\Customer\PyzCustomerReader;
 use Spryker\Zed\Customer\Business\CustomerBusinessFactory as SprykerCustomerBusinessFactory;
 
 class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
@@ -96,19 +96,19 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
      */
     public function createPyzCustomerReader(): CustomerReaderInterface
     {
-        return new CustomerReader(...);
+        return new PyzCustomerReader(...);
     }
 }
 ```
 
-3. Copy the method to the business model.
+3. Copy the method to the business model on the core level.
 
 ```php
 namespace Pyz\Zed\Customer\Business\Customer;
 
 use Spryker\Zed\Customer\Business\Customer\CustomerReader as SprykerCustomerReader;
 
-class CustomerReader extends SprykerCustomerReader implements CustomerReaderInterface
+class PyzCustomerReader extends SprykerCustomerReader implements CustomerReaderInterface
 {
     /**
      * ...
@@ -317,6 +317,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 
 After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
+
 ---
 
 ## PrivateApi:Persistence
@@ -341,7 +342,7 @@ use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as Spryke
 /**
  * @method \Pyz\Zed\Customer\Business\CustomerBusinessFactory getFactory()
  */
-class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager implements CustomCustomerAccessEntityManager
+class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager
 {
     /**
      *
@@ -366,7 +367,7 @@ Not recommended:
 ```php
 namespace Pyz\Zed\Customer\Business;
 
-use Pyz\Zed\Customer\Business\Customer\CustomerPyzReader;
+use Pyz\Zed\Customer\Business\Customer\PyzCustomerAccessMapper;
 use Pyz\Zed\Customer\Business\Customer\CustomerReaderInterface;
 use Spryker\Zed\Customer\Business\CustomerBusinessFactory as SprykerCustomerBusinessFactory;
 
@@ -377,7 +378,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
      */
     public function createPyzCustomerAccessMapper(): CustomerReaderInterface
     {
-        return new CustomerPyzReader(...);
+        return new PyzCustomerAccessMapper(...);
     }
 }
 ```
@@ -385,12 +386,10 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 2. Use the project-level factory method instead of core-level factory method.
 
 ```php
-use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as SprykerCustomerAccessEntityManager;
-
 /**
  * @method \Pyz\Zed\Customer\Business\CustomerBusinessFactory getFactory()
  */
-class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager implements CustomCustomerAccessEntityManager
+class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager
 {
     /**
      *
@@ -427,7 +426,7 @@ PrivateApi:Dependency Please avoid usage of Spryker/Zed/ProductPageSearch/Produc
 ```php
 ...
 use Spryker\Zed\CustomerAccess\Business\CustomerAccessBusinessFactory as SprykerCustomerAccessBusinessFactory;
-use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider;
+use Spryker\Zed\PriceProductSchedule\PriceProductScheduleDependencyProvider;
 ...
 class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
 {
@@ -437,7 +436,7 @@ class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
     */
     public function getPropelFacade(): PropelFacadeInterface
     {
-        return $this->getProvidedDependency(ProductPageSearchDependencyProvider::QUERY_CONTAINER_CATEGORY);
+        return $this->getProvidedDependency(PriceProductScheduleDependencyProvider::FACADE_PROPEL);
     }
 }
 ```
@@ -455,15 +454,15 @@ Not recommended:
 ...
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\ProductPageSearch\Dependency\QueryContainer\ProductPageSearchToCategoryQueryContainerBridge;
-use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
+use Spryker\Zed\PriceProductSchedule\PriceProductScheduleDependencyProvider as SprykerPriceProductScheduleDependencyProvider;
 ...
 
-class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
+class PriceProductScheduleDependencyProvider extends SprykerPriceProductScheduleDependencyProvider
 {
     /**
      * @var string
      */
-    public const PYZ_QUERY_CONTAINER_CATEGORY = 'PYZ_QUERY_CONTAINER_CATEGORY';
+    public const PYZ_FACADE_PROPEL = 'PYZ_FACADE_PROPEL';
 
     /**
      * @param \Spryker\Zed\Kernel\Container $container
@@ -474,8 +473,8 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     {
         $container = parent::provideCommunicationLayerDependencies($container);
 
-        $container->set(static::PYZ_QUERY_CONTAINER_CATEGORY, function (Container $container) {
-            return new ProductPageSearchToCategoryQueryContainerBridge($container->getLocator()->category()->queryContainer());
+        $container->set(static::PYZ_FACADE_PROPEL, function (Container $container) {
+            return $container->getLocator()->propel()->facade();
         });
 
         return $container;
@@ -489,7 +488,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 ```php
 ...
 use Spryker\Zed\CustomerAccess\Business\CustomerAccessBusinessFactory as SprykerCustomerAccessBusinessFactory;
-use Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider;
+use Pyz\Zed\PriceProductSchedule\PriceProductScheduleDependencyProvider;
 ...
 
 class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
@@ -500,7 +499,7 @@ class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
      */
     public function getPyzPropelFacade(): PropelFacadeInterface
     {
-        return $this->getProvidedDependency(ProductPageSearchDependencyProvider::PYZ_QUERY_CONTAINER_CATEGORY);
+        return $this->getProvidedDependency(PriceProductScheduleDependencyProvider::PYZ_FACADE_PROPEL);
     }
 }
 ```

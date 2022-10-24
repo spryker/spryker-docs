@@ -54,3 +54,9 @@ Response sample with an error:
     ]
 }
 ```
+
+## See also
+
+* [How to create grant type parameters](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/create-grant-type-parameters.html)
+* [How to use authentication server](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/using-authentication-server.html)
+

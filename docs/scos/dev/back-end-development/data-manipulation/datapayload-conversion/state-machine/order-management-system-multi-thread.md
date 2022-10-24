@@ -45,7 +45,7 @@ console oms:check-timeout -p 1,2,3 -l 10000
 
 If you have a large database, for performance reasons, it is not recommended to specify several comma-separated processor identifiers.
 
-You need to use store name by "-s" option or limit by "-l" option to have applied "-p" option.
+To have the `-p` option applied, you need to use store the name by the `-s` option or limit by `-l`.
 
 {% endinfo_block %}
 

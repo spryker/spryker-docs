@@ -1232,6 +1232,14 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
           include_versions:
           - "202204.0"
+        - title: How to create grant type parameters
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-grant-type-parameters.html
+          include_versions:
+          - "202204.0"
+        - title: How to use authentication server
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-authentication-server.html
+          include_versions:
+          - "202204.0"
     - title: Glue API tutorials
       url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
       include_versions:

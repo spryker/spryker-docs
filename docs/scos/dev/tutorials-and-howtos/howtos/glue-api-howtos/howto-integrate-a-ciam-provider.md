@@ -31,7 +31,7 @@ The following library is a suggestion, not a requirement.
 composer require "firebase/php-jwt": "^5.4" --update-with-dependencies
 ```
 
-For detailed information about the modules related to OAuth and customer account management that provide the API functionality and related installation instructions, see [Glue API - Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
+For detailed information about the modules related to OAuth and customer account management that provide the API functionality and related installation instructions, see [Glue API - Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## 1. Create the CIAM provider Module
 

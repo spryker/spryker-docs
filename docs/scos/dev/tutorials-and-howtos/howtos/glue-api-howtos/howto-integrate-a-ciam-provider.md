@@ -24,15 +24,14 @@ Install the required modules:
 {% info_block infoBox %}
 
 The following library is a suggestion, not a requirement.
-
+ 
 {% endinfo_block %}
 
 ```bash
 composer require "firebase/php-jwt": "^5.4" --update-with-dependencies
 ```
 
-For detailed information about the modules related to OAuth and customer account management that provide the API functionality and related installation instructions, see [Glue API - Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/p.html).
-
+For detailed information about the modules related to OAuth and customer account management that provide the API functionality and related installation instructions, see [Glue API - Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## 1. Create the CIAM provider Module
 

@@ -1,5 +1,5 @@
 ---
-title: Adding translations for Yves
+title: Add translations for Yves
 description: Textual translations are handled by the Glossary-module. You can use the GlossaryFacade in Zed to add entries to Glossary (or you can use the Zed UI).
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/frontend-translations
   - /v1/docs/frontend-translations
   - /v1/docs/en/frontend-translations
+  - /docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
 related:
   - title: How translations are managed
     link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-feature-walkthrough/how-translations-are-managed.html
@@ -31,8 +32,8 @@ related:
     link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
-  - title: Implementing URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
   - title: Modular Frontend
     link: docs/scos/dev/back-end-development/yves/modular-frontend.html
   - title: Yves bootstrapping
@@ -41,7 +42,7 @@ related:
     link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-Textual translations are handled by the Glossary module. You can use the `GlossaryFacade` in Zed to add entries to Glossary (or you can use the Zed UI).
+Textual translations are handled by the `Glossary` module. You can use the `GlossaryFacade` in Zed to add entries to `Glossary` (or you can use the Zed UI).
 
 ```php
 <?php
@@ -53,7 +54,7 @@ class GlossaryFacade extends AbstractFacade
 }
 ```
 
-An entry in the glossary has a key and translations per locale, like this:
+In the glossary, an entry has a key and translations per locale, like this:
 
 ```php
 <?php
@@ -69,7 +70,7 @@ Before it can be used in Yves, this data must be exported to the KV storage. You
 
 ## Usage in Twig templates
 
-The translation function is provided by [Symfony translation component](http://symfony.com/doc/current/book/translation.html).
+The translation function is provided by the [Symfony translation component](http://symfony.com/doc/current/book/translation.html).
 
 ### Simple translation
 
@@ -89,7 +90,7 @@ Sometimes you need to list all keys which are used in a template. Currently, the
 
 When you have a dynamic part in the translation, you can use placeholders.
 
-**Entry in glossary**:
+**Entry in the glossary**:
 
 | KEY       | VALUE               |
 | --------- | ------------------- |
@@ -105,7 +106,7 @@ This shows "My name is Fabian".
 
 ## Translation with AJAX requests
 
-To use an AJAX request, you need to send translated content directly from the controller. In Yves you can locate the translator and use it directly:
+To use an AJAX request, you need to send translated content directly from the controller. In Yves, you can locate the translator and use it directly:
 
 ```php
 <?php

@@ -1232,6 +1232,21 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
           include_versions:
           - "202204.0"
+        - title: How to create grant type parameters
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-grant-type-parameters.html
+          include_versions:
+          - "202204.0"
+        - title: How to use authentication server
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-authentication-server.html
+          include_versions:
+        - title: Authentication and authorization
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/authentication-and-authorization.html
+          include_versions:
+          - "202204.0"
+        - title: Security and Authentication
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/security-and-authentication.html
+          include_versions:
+          - "202204.0"
     - title: Glue API tutorials
       url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
       include_versions:
@@ -1606,6 +1621,10 @@ entries:
             url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-scopes-integration.html
             include_versions:
             - "202204.0"
+          - title: Glue API - Authorization Protected endpoints integration
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-protected-endpoints-integration.html
+            include_versions:
+              - "202204.0"
     - title: Agent Assist
       url: /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
     - title: Agent Assist + Cart

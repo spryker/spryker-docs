@@ -141,7 +141,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     Accept: application/json
     Content-Length: 66
 
-    response_type=code&username={user_username}&password={user_password}
+    response_type=code&client_id={user_client_id}
     ```  
 
     2. Send the request to access token:
@@ -152,7 +152,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     Accept: application/json
     Content-Length: 66
 
-    grant-type=authorization_code&code={user_authorization_code}&username={user_username}&password={user_password}
+    grant_type=authorization_code&code={user_authorization_code}&client_id={user_client_id}
     ```
 
     2. Check that the output contains the 201 response with a valid token.

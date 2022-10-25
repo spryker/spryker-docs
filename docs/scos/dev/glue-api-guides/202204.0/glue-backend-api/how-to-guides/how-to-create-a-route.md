@@ -7,13 +7,13 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-a-route.html
 ---
 
-This guide shows how you can create an API endpoint using a custom route.
+This guide describes how to create an API endpoint using a custom route.
 
 Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
 Custom routes are based on Symfony routing.
 
-Let's say you have a Storefront module named `ModuleRestApi`, where you want to have a new backend API endpoint `/module/bar` with GET and POST methods. To create the new backend API endpoint, follow these steps:
+Let's say you have a Storefront module named `ModuleRestApi`, where you want to have a new backend API endpoint `/module/bar` with `GET` and `POST` methods. To create the new backend API endpoint, follow these steps:
 
 1. Create a `ModuleBarController` with the action:
 
@@ -44,7 +44,7 @@ class ModuleBarController extends AbstractController
 
 ```
 
-Even though an empty response is returned, the module's Factory is available and can be used to access Processor models or external dependencies the same way it is done everywhere in Spryker.
+Even though an empty response is returned, the module's `Factory` is available and can be used to access Processor models or external dependencies the same way it is done everywhere in Spryker.
 
 {% info_block infoBox %}
 
@@ -143,7 +143,7 @@ docker/sdk cli glue api:router:cache:warm-up
 
 At this point, you can test the GET endpoint at `GET https://glue-backend.mysprykershop.com/module/bar`.
 
-The following is an example of a sucessfully tested cURL command:
+The following is an example of a successfully tested cURL command:
 
 ```bash
 curl --location --request GET 'https://glue-backend.mysprykershop.com/module/bar' \
@@ -183,7 +183,7 @@ curl --location --request GET 'https://glue-backend.mysprykershop.com/module/bar
 
    3. Reset the router cache again and test your `POST` request:
 
-   ```
+   ```yaml
    curl --location --request POST 'https://glue-backend.mysprykershop.com/module/bar' \
    --header 'Accept: application/json' \
    --header 'Content-Type: application/json' \

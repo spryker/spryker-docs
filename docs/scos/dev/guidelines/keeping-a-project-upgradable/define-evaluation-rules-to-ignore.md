@@ -12,7 +12,7 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
 ---
 
-When a rule is not irrelevant for your project, you can configure it to be ignored. An ignored rule is still used to evaluate the code, related messages are returned in CLI output and reports. However, failing to comply with the rule does not result in exit code 1 from the `analyze:php:code-compliance` command.
+When a rule is irrelevant for your project, you can configure it to be ignored. An ignored rule is still used to evaluate the code, related messages are returned in CLI output and reports. However, failing to comply with the rule does not result in exit code 1 from the `analyze:php:code-compliance` command.
 
 To ignore one or more rules, follow the steps:
 

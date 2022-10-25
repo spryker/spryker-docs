@@ -7,11 +7,11 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-grant-type-parameters.html
 ---
 
-This document explains how to create the grant type parameter and use it.
+This document explains how to create the [grant type](https://oauth.net/2/grant-types/) parameter and use it.
 
 Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/technical-enhancement-integration-guides/glue-authentication-integration.html) guide.
 
-Glue provides grant types `password` for a customer, and a user out of the box:
+Glue provides [grant types](https://www.rfc-editor.org/rfc/rfc6749#appendix-A.10) `password` for a customer and a user out of the box:
 
 | SPECIFICATION           | PLUGIN           |
 | -------------- | ----------------- |
@@ -19,9 +19,24 @@ Glue provides grant types `password` for a customer, and a user out of the box:
 | User grant type | Spryker\Zed\Oauth\Communication\Plugin\Oauth\UserPasswordOauthRequestGrantTypeConfigurationProviderPlugin |
 
 
-Let's say you have a `Foo` user, and you want to have a new grant type `password` for it. To create the grant type, follow these steps:
+Let's say you have a user and you want to have a new grant type [authorization_code](https://oauth.net/2/grant-types/authorization-code/) for it. To create the grant type, follow these steps:
 
-1. Create `FooUserPasswordGrantTypeBuilder`.
+1. Create `GRANT_TYPE_AUTHORIZATION_CODE` constant.
+
+```php
+<?php
+
+namespace Pyz\Zed\Oauth;
+
+use Spryker\Zed\OauthConfig as SprykerOauthConfig;
+
+class OauthConfig extends SprykerOauthConfig
+{
+    public const GRANT_TYPE_AUTHORIZATION_CODE = 'authorization_code';
+}
+```
+
+2. Create `UserAuthCodeGrantTypeBuilder`.
    
 ```php
 <?php
@@ -29,28 +44,28 @@ Let's say you have a `Foo` user, and you want to have a new grant type `password
 namespace Pyz\Zed\Oauth\Business\Grant;
 
 use DateInterval;
+use Spryker\Zed\Oauth\Business\Model\League\Grant\AuthCodeGrant;
 use Spryker\Zed\Oauth\Business\Model\League\Grant\GrantTypeBuilderInterface;
 use Spryker\Zed\Oauth\Business\Model\League\Grant\GrantTypeInterface;
-use Spryker\Zed\Oauth\Business\Model\League\Grant\PasswordGrantType;
 use Spryker\Zed\Oauth\Business\Model\League\RepositoryBuilderInterface;
 
-class FooPasswordGrantTypeBuilder implements GrantTypeBuilderInterface
+class UserAuthCodeGrantTypeBuilder implements GrantTypeBuilderInterface
 {
     public function buildGrant(
         RepositoryBuilderInterface $repositoryBuilder,
         DateInterval $refreshTokenTTL
     ): GrantTypeInterface {
-        $fooUserPasswordGrantType = new PasswordGrantType();
-        $fooUserPasswordGrantType->setUserRepository($repositoryBuilder->createOauthFooUserRepository());
-        $fooUserPasswordGrantType->setRefreshTokenRepository($repositoryBuilder->createRefreshTokenRepository());
-        $fooUserPasswordGrantType->setRefreshTokenTTL($refreshTokenTTL);
+        $userAuthCodeGrantType = new AuthCodeGrant();
+        $userAuthCodeGrantType->setUserRepository($repositoryBuilder->createOauthUserRepository());
+        $userAuthCodeGrantType->setRefreshTokenRepository($repositoryBuilder->createRefreshTokenRepository());
+        $userAuthCodeGrantType->setRefreshTokenTTL($refreshTokenTTL);
 
-        return $fooUserPasswordGrantType;
+        return $userAuthCodeGrantType;
     }
 }
 ```
 
-2. Create `FooPasswordOauthRequestGrantTypeConfigurationProviderPlugin`.
+3. Create `UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin`.
 
 ```php
 <?php
@@ -60,12 +75,12 @@ namespace Pyz\Zed\Oauth\Communication\Plugin\Oauth;
 use Generated\Shared\Transfer\GlueAuthenticationRequestContextTransfer;
 use Generated\Shared\Transfer\OauthGrantTypeConfigurationTransfer;
 use Generated\Shared\Transfer\OauthRequestTransfer;
-use Pyz\Zed\Oauth\Business\Grant\FooPasswordGrantTypeBuilder;
+use Pyz\Zed\Oauth\Business\Grant\UserAuthorizationCodeGrantTypeBuilder;
+use Pyz\Zed\Oauth\OauthConfig;
 use Spryker\Glue\Kernel\AbstractPlugin;
-use Spryker\Zed\Oauth\OauthConfig;
 use Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRequestGrantTypeConfigurationProviderPluginInterface;
 
-class FooPasswordOauthRequestGrantTypeConfigurationProviderPlugin extends AbstractPlugin implements OauthRequestGrantTypeConfigurationProviderPluginInterface
+class UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin extends AbstractPlugin implements OauthRequestGrantTypeConfigurationProviderPluginInterface
 {
     protected const GLUE_BACKEND_API_APPLICATION = 'GLUE_BACKEND_API_APPLICATION';
 
@@ -74,7 +89,7 @@ class FooPasswordOauthRequestGrantTypeConfigurationProviderPlugin extends Abstra
         GlueAuthenticationRequestContextTransfer $glueAuthenticationRequestContextTransfer
     ): bool {
         return (
-            $oauthRequestTransfer->getGrantType() === OauthConfig::GRANT_TYPE_PASSWORD &&
+            $oauthRequestTransfer->getGrantType() === OauthConfig::GRANT_TYPE_AUTHORIZATION_CODE &&
             $glueAuthenticationRequestContextTransfer->getRequestApplication() === static::GLUE_BACKEND_API_APPLICATION
         );
     }
@@ -82,14 +97,13 @@ class FooPasswordOauthRequestGrantTypeConfigurationProviderPlugin extends Abstra
     public function getGrantTypeConfiguration(): OauthGrantTypeConfigurationTransfer
     {
         return (new OauthGrantTypeConfigurationTransfer())
-            ->setIdentifier(OauthConfig::GRANT_TYPE_PASSWORD)
-            ->setBuilderFullyQualifiedClassName(FooPasswordGrantTypeBuilder::class);
+            ->setIdentifier(OauthConfig::GRANT_TYPE_AUTHORIZATION_CODE)
+            ->setBuilderFullyQualifiedClassName(UserAuthorizationCodeGrantTypeBuilder::class);
     }
 }
-
 ```
 
-3. Declare the grant type provider plugin.
+4. Declare the grant type provider plugin.
 
 **\Pyz\Zed\Oauth\OauthDependencyProvider**
 
@@ -109,16 +123,17 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
         return [
             new UserPasswordOauthRequestGrantTypeConfigurationProviderPlugin(),
             new CustomerPasswordOauthRequestGrantTypeConfigurationProviderPlugin(),
-            new FooPasswordOauthRequestGrantTypeConfigurationProviderPlugin(),
+            new UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin(),
         ];
     }
 }
-
 ```
 
-* Ensure that you can authenticate as a foo user:
+{% info_block warningBox “Verification” %}
 
-    1. Send the request:
+* Ensure that you can authenticate as a user:
+
+    1. Send the request to get the authorization code:
     ```
     POST /token/ HTTP/1.1
     Host: glue-backend.mysprykershop.com
@@ -126,7 +141,18 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     Accept: application/json
     Content-Length: 66
 
-    grantType=password&username={foo_user_username}&password={foo_user_password}
+    response_type=code&username={user_username}&password={user_password}
+    ```  
+
+    2. Send the request to access token:
+    ```
+    POST /token/ HTTP/1.1
+    Host: glue-backend.mysprykershop.com
+    Content-Type: application/x-www-form-urlencoded
+    Accept: application/json
+    Content-Length: 66
+
+    grant-type=authorization_code&code={user_authorization_code}&username={user_username}&password={user_password}
     ```
 
     2. Check that the output contains the 201 response with a valid token.

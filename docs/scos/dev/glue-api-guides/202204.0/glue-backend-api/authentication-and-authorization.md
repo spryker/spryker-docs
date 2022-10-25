@@ -55,6 +55,8 @@ Response sample with an error:
 }
 ```
 
+For more details see [How to create protected endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/how-to-create-protected-endpoints.html)
+
 ## See also
 
 * [How to create grant type parameters](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/create-grant-type-parameters.html)

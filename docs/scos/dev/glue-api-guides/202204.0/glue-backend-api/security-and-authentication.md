@@ -1,6 +1,6 @@
 ---
 title: Security and Authentication
-description: This article describes the authorization mechanism used in Spryker, as well as user scopes, database tables, and extension points.
+description: This article describes the authorization mechanism used in Spryker and information about authorization scopes.
 last_updated: Oct 24, 2022
 template: glue-api-storefront-guide-template
 ---

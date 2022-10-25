@@ -9,7 +9,7 @@ This document describes how to use a Protected endpoints authorization strategy 
 
 ## Install feature core
 
-Follow the steps below to install the Authorization core.
+Follow the steps below to install the Authorization feature API.
 
 ### Prerequisites
 
@@ -96,6 +96,7 @@ Activate the following plugins:
 
 namespace Pyz\Client\Authorization;
 
+use Spryker\Client\Authorization\AuthorizationDependencyProvider as SprykerAuthorizationDependencyProvider;
 use Spryker\Client\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\Authorization\ProtectedPathAuthorizationStrategyPlugin;
 
 class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProvider
@@ -119,6 +120,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 
 namespace Pyz\Zed\Authorization;
 
+use Spryker\Zed\Authorization\AuthorizationDependencyProvider as SprykerAuthorizationDependencyProvider;
 use Spryker\Zed\GlueBackendApiApplicationAuthorizationConnector\Communication\Plugin\Authorization\ProtectedPathAuthorizationStrategyPlugin;
 
 class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProvider
@@ -142,6 +144,8 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 
 namespace Pyz\Glue\DocumentationGeneratorApi;
 
+use Spryker\Glue\DocumentationGeneratorApi\DocumentationGeneratorApiDependencyProvider as SprykerDocumentationGeneratorApiDependencyProvider;
+use Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface;
 use Spryker\Glue\GlueBackendApiApplicationAuthorizationConnector\Plugin\DocumentationGeneratorApi\AuthorizationContextExpanderPlugin as BackendAuthorizationContextExpanderPlugin;
 use Spryker\Glue\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\DocumentationGeneratorApi\AuthorizationContextExpanderPlugin as StorefrontAuthorizationContextExpanderPlugin;
 
@@ -183,6 +187,7 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 
 namespace Pyz\Glue\GlueApplication;
 
+use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueBackendApiApplicationAuthorizationConnector\Plugin\GlueApplication\IsProtectedTableColumnExpanderPlugin as BackendIsProtectedTableColumnExpanderPlugin;
 use Spryker\Glue\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\GlueApplication\IsProtectedTableColumnExpanderPlugin as StorefrontIsProtectedTableColumnExpanderPlugin;
 

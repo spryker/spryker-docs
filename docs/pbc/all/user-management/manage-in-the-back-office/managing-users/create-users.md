@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-users
   - /docs/managing-users
   - /docs/en/managing-users
+  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-users/activating-and-deactivating-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
@@ -27,24 +28,23 @@ This document describes how to create users in the Back Office.
 
 ## Prerequisites
 
-1. If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
-2. Create at least one user group. For instructions, see [Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
-3. To start working with users, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
-
-Review the [reference information](#reference-information-creating-users) before you start, or look up the necessary information as you go through the process.
+* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
+* Create at least one user group. For instructions, see [Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
+* Review the [reference information](#reference-information-creating-users) before you start, or look up the necessary information as you go through the process.
 
 ## Creating users
 
-1. On the **Users** page, click **Add New User**.
-2. On the **Create new User** page, enter an **E-MAIL**.
-3. Enter a **PASSWORD**.
-4. For **REPEAT PASSWORD**, enter the same password once again.
-5. Enter a **FIRST NAME**.
-6. Enter a **LAST NAME**.
-7. For **ASSIGNED GROUPS**, select one or more user groups you want to assign this user to.
-8. If you want this user to be an agent, select **THIS USER IS AN AGENT**.
-9. Select an **INTERFACE LANGUAGE**.
-10. Click **Create**.
+1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
+2. On the **Users** page, click **Add New User**.
+3. On the **Create new User** page, enter an **E-MAIL**.
+4. Enter a **PASSWORD**.
+5. For **REPEAT PASSWORD**, enter the same password once again.
+6. Enter a **FIRST NAME**.
+7. Enter a **LAST NAME**.
+8. For **ASSIGNED GROUPS**, select one or more user groups you want to assign this user to.
+9. Optional: To make this user an agent, select **THIS USER IS AN AGENT**.
+10. Select an **INTERFACE LANGUAGE**.
+11. Click **Create**.
 
 This opens the **Users** page with the success message displayed. The created user is displayed in the list.
 

@@ -20,23 +20,23 @@ This document describes how to create user roles in the Back Office.
 
 ## Prerequisites
 
-1. If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
-2. To start working with roles, go to **Users&nbsp;<span aria-label="and then">></span> User Roles**.
+* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
 
-Review the [reference information](#reference-information-creating-user-roles) before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#reference-information-creating-user-roles) before you start, or look up the necessary information as you go through the process.
 
 ## Creating roles
 
-1. On the **User Roles** page, click **Add new Role**.
-2. On the **Create new Role** page, enter a **NAME** and click **Create**.
+1. Go to **Users&nbsp;<span aria-label="and then">></span> User Roles**.
+2. On the **User Roles** page, click **Add new Role**.
+3. On the **Create new Role** page, enter a **NAME** and click **Create**.
     This opens the **Edit Role** page with the success message displayed.
-3. In the **Rule** pane, enter a **BUNDLE**.
-4. Enter a **CONTROLLER**.
-5. Enter an **ACTION**.
-6. Select a **PERMISSION**
-7. Click **Add Rule**.
+4. In the **Rule** pane, enter a **BUNDLE**.
+5. Enter a **CONTROLLER**.
+6. Enter an **ACTION**.
+7. Select a **PERMISSION**
+8. Click **Add Rule**.
       The page refreshes with the success message displayed and the rule displayed in the **Assigned Rules** section.
-8. Repeat steps 3-7 until you add all the needed rules.
+9. Repeat steps 3-7 until you add all the needed rules.
 
 
 ### Reference information: Creating user roles
@@ -47,7 +47,7 @@ The following table describes the attributes you enter and select when creating 
 | --- | --- |
 | NAME | Unique identifier of the role. You use this name to assign roles when managing users. |
 | BUNDLE | Depending on the **PERMISSION**, allows or denies access to a section of the Back Office. You can check this value by going to the needed section and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `product-attribute-gui` is a bundle. |
-| CONTROLLER | Depending on the **PERMISSION**, allows or denies access to a  subsection of the Back Office. You can check this value by going to the needed subsection and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `attribute` is a controller. |
+| CONTROLLER | Depending on the **PERMISSION**, allows or denies access to a subsection of the Back Office. You can check this value by going to the needed subsection and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `attribute` is a controller. |
 | ACTION | Depending on the **PERMISSION**, allows or denies access to making actions. You can check this value by going to the needed action and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `create` is an action.
 | PERMISSION | Denies or allows access to the **BUNDLE**, **CONTROLLER**, and **ACTION**. |
 

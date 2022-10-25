@@ -21,18 +21,17 @@ This document describes how to create user groups.
 
 ## Prerequisites
 
-1. If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
-2. Create at least one user role. For instructions, see [Creating user roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-roles/creating-user-roles.html).
-3. To start working with user groups, go to **Users&nbsp;<span aria-label="and then">></span> User Groups**.
-
-Review the [reference information](#reference-information-creating-user-groups) before you start, or look up the necessary information as you go through the process.
+* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
+* Create at least one user role. For instructions, see [Creating user roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-roles/creating-user-roles.html).
+* Review the [reference information](#reference-information-creating-user-groups) before you start, or look up the necessary information as you go through the process.
 
 ## Creating groups
 
-1. Click **Create Group**.
-2. On the **Create new Group**, page enter a **TITLE**.
-3. Select one or more **ASSIGNED ROLES**.
-4. Click **Save**.
+1. Go to **Users&nbsp;<span aria-label="and then">></span> User Groups**.
+2. Click **Create Group**.
+3. On the **Create new Group**, page enter a **TITLE**.
+4. Select one or more **ASSIGNED ROLES**.
+5. Click **Save**.
     This opens the **Edit Group** page with the success message displayed.
 
 
@@ -40,12 +39,8 @@ Review the [reference information](#reference-information-creating-user-groups) 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| TITLE | Unique identifier of the user group. You will use it to identify the group when creating users. |
+| TITLE | Unique identifier of the user group. You will use it to identify the group when assigning  users to it. |
 | ASSIGNED ROLES | The user roles to be assigned to the group. For role creating instructions, see [Creating user roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-roles/creating-user-roles.html). |
-
-**Tips and tricks**
-
-The **USERS** pane is empty. After you create a user and assign it to this group, the user will be displayed in the pane.
 
 ## Next steps
 

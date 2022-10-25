@@ -1,6 +1,6 @@
 ---
 title: Table Filter extension
-last_updated: Jun 07, 2021
+last_updated: Oct 21, 2022
 description: This document provides details about the Table Filter extension in the Сomponents Library.
 template: concept-topic-template
 related:
@@ -16,9 +16,9 @@ This document explains the Table Filter extension in the Components Library.
 
 ## Overview
 
-The Table Filters feature provides filtering functionality to the Core Table Component. The filters, however, are not included in the feature itself; instead, they are registered separately.
+The Table Filters feature provides filtering functionality to the Core Table Component. The filters, however, are not included in the feature itself — instead, they are registered separately.
 
-A Table Filter is an Angular Component that implements a specific interface (`TableFilterComponent`) and is registered to the Table Filters feature module through `TableFiltersFeatureModule.withFilterComponents()`.
+A Table Filter is an Angular Component that implements a specific interface (`TableFilterComponent`) and is registered to the Table Filters feature module via `TableFiltersFeatureModule.withFilterComponents()`.
 
 Furthermore, you need to create your own filter module and add it to the `RootModule`.
 
@@ -80,6 +80,8 @@ You can configure any filter in the table config.
                     },
                 },
             ],
+            // Makes feature always visible regardless of data (`true` by default).
+            forceAlwaysVisible: false,
         },
     }"
 >
@@ -103,6 +105,7 @@ import { TableFeatureConfig } from '@spryker/table';
 
 export interface TableFiltersConfig extends TableFeatureConfig {
     items: TableFilterBase[];
+    forceAlwaysVisible?: boolean;
 }
 
 export interface TableFilterBase<V = unknown> {

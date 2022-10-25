@@ -11,7 +11,7 @@ This document describes how to use scopes in Authorization for Storefront API ap
 
 ## Install feature core
 
-Follow the steps below to install the Authorization core.
+Follow the steps below to install the Authorization feature API.
 
 ### Prerequisites
 

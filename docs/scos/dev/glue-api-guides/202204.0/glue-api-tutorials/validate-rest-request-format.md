@@ -1,5 +1,5 @@
 ---
-title: Validating REST request format
+title: Validate REST request format
 description: Learn about REST request validation format and how to validate requests in Glue API.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -20,6 +20,7 @@ redirect_from:
   - /v2/docs/en/validating-rest-request-format
   - /v1/docs/validating-rest-request-format
   - /v1/docs/en/validating-rest-request-format
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html
 related:
   - title: Glue API installation and configuration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
@@ -31,7 +32,7 @@ Glue API lets you validate requests sent to REST endpoints. It lets you check wh
 
 ## Install the `RestRequestValidation` module
 
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-rest-schema-validation-feature-integration.html).
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-rest-schema-validation-feature-integration.html).
 
 ## Use default validation schema
 
@@ -50,7 +51,7 @@ To apply validation rules to an API, follow these steps:
   For `StoresRestAPI`, the name is `STORES.validation.yaml`.
 
 3. Specify validation for the endpoints provided by the API.
-  Follow the format described in [Validation rule format](#validation-rule-format).
+  Follow the format described in the [validation rule format](#validation-rule-format).
 
 4. Generate validation cache:
 
@@ -58,10 +59,10 @@ To apply validation rules to an API, follow these steps:
 vendor/bin/console rest-api:build-request-validation-cache
 ```
 
-{% info_block warningBox %}
+{% info_block infoBox %}
 
 By default, a validation cache is generated for the current store. To generate it for a specific store, use the `APPLICATION_STORE` variable.
-Example:
+See the following example:
 ```bash
 APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
 ```
@@ -158,13 +159,13 @@ vendor/bin/console rest-api:build-request-validation-cache
 
 {% info_block infoBox %}
 
-By default, a validation cache is generated for the current store. To generate it for a specific store,  use the `APPLICATION_STORE` variable.
-Example:
+By default, a validation cache is generated for the current store. To generate it for a specific store, use the `APPLICATION_STORE` variable.
+See the following example:
 ```bash
 APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
 ```
 
-For validation, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+For validation, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources

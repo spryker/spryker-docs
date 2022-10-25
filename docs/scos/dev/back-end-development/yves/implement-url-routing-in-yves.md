@@ -1,6 +1,6 @@
 ---
-title: Implementing URL routing in Yves
-description: The URL routing is a mechanism used to map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO friendly.
+title: Implement URL routing in Yves
+description: URL routing lets you map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO friendly.
 last_updated: Sep 2, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/yves-url-routing
@@ -25,8 +25,8 @@ redirect_from:
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
-  - title: Adding translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: Add translations for Yves
+    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - title: CLI entry point for Yves
     link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
@@ -43,9 +43,9 @@ The words contained in an URL play a major factor for a search engine to determi
 
 To implement URL Routing in Yves, follow these steps per scenario:
 
-**Scenario 1**: You need to route requests made on `URL /hello` to the action `helloAction(Request $request)` implemented in the `DemoController`.
+**Scenario 1:** You need to route requests made on `URL /hello` to the action `helloAction(Request $request)` implemented in the `DemoController`.
 
-To route this request, follow these steps:
+To route the preceding request, follow these steps:
 
 1. Create a plugin that extends `AbstractRouteProviderPlugin` in the module where the controller is defined, under the `Plugin/Router` folder. `AbstractRouteProviderPlugin` enables setting up the HTTP method used (GET or POST) when setting up the new route. 
 
@@ -97,9 +97,10 @@ protected function getRouteProvider(): array
 
 4. To make a request using the newly configured route in your browser, open `http://mysprykershop.com/hello` 
 
-**Scenario 2**: You need to route requests made on `URL /hello/{name}` to the action `helloAction(Request $request)` implemented in `DemoController`, which generates different content based on the value of the `name` parameter.
+**Scenario 2:** You need to route requests made on `URL /hello/{name}` to the action `helloAction(Request $request)` implemented in `DemoController`, which generates different content based on the value of the `name` parameter.
 
-1. To add a route with parameters, you can use curly braces syntax:
+To add a route with parameters, follow these steps:
+1. You can use curly braces syntax:
 
 ```php
 <?php

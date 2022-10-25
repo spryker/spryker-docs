@@ -11,7 +11,7 @@ The authorization mechanism provided by the Glue is flexible and allows you to d
 
 ## How authentication works
 
-To authenticate a user, the client must send an authentication request, containing the username and password. If the provided credentials match a valid Spryker user, the API responds with a 201 response code and a message containing an access token, also known as a bearer token. The token can then be used to access protected API resources. Schematically, the authentication and authorization scheme of Spryker REST API can be represented as follows:
+To authenticate a user, the client must send an authentication request, containing required (and optional) fields based on specified grant type. If the provided credentials match a valid Spryker user, the API responds with a 201 response code and a message containing an access token, also known as a bearer token. The token can then be used to access protected API resources. Schematically, the authentication and authorization scheme of Spryker REST API can be represented as follows:
 
 ![auth-scheme.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Security+and+Authentication/auth-scheme.png)
 

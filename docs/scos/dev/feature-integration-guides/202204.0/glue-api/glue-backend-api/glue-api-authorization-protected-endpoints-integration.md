@@ -77,17 +77,15 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION                                                                        | NAMESPACE                                                                                            |
 | --- |--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| IsProtectedTableColumnExpanderPlugin | Provides capability to extends route description table.                              | Spryker\\Glue\\GlueStorefrontApiApplicationAuthorizationConnector\\Plugin\\GlueApplication           |
-| AuthorizationContextExpanderPlugin | Adds the information about protected paths to the documentation generation context.  | Spryker\\Glue\\GlueStorefrontApiApplicationAuthorizationConnector\\Plugin\\DocumentationGeneratorApi |
-| ProtectedPathAuthorizationStrategyPlugin | Authorization rule for the route that uses the current strategy.                     | Spryker\\Client\\GlueStorefrontApiApplicationAuthorizationConnector\\Plugin\\Authorization                                         |
+| IsProtectedTableColumnExpanderPlugin | Extends route description table with protected path-specific data.                              | Spryker\\Glue\\GlueStorefrontApiApplicationAuthorizationConnector\\Plugin\\GlueApplication           |
+| ProtectedPathAuthorizationStrategyPlugin | Authorization rule for the route using `ProtectedPath` strategy.                     | Spryker\\Client\\GlueStorefrontApiApplicationAuthorizationConnector\\Plugin\\Authorization                                         |
 
 **Backend API plugins**
 
 | PLUGIN | SPECIFICATION | NAMESPACE                                                                                         |
 | --- | --- |---------------------------------------------------------------------------------------------------|
-| IsProtectedTableColumnExpanderPlugin | Provides capability to extends route description table. | Spryker\\Glue\\GlueBackendApiApplicationAuthorizationConnector\\Plugin\\GlueApplication           |
-| AuthorizationContextExpanderPlugin | Adds the information about protected paths to the documentation generation context. | Spryker\\Glue\\GlueBackendApiApplicationAuthorizationConnector\\Plugin\\DocumentationGeneratorApi |
-| ProtectedPathAuthorizationStrategyPlugin | Authorization rule for the route that uses the current strategy. | Spryker\\Zed\\GlueBackendApiApplicationAuthorizationConnector\\Communication\\Plugin\\Authorization                                            |
+| IsProtectedTableColumnExpanderPlugin | Extends route description table with protected path-specific data. | Spryker\\Glue\\GlueBackendApiApplicationAuthorizationConnector\\Plugin\\GlueApplication           |
+| ProtectedPathAuthorizationStrategyPlugin | Authorization rule for the route using `ProtectedPath` strategy.  | Spryker\\Zed\\GlueBackendApiApplicationAuthorizationConnector\\Communication\\Plugin\\Authorization                                            |
 
 **src/Pyz/Client/Authorization/****AuthorizationDependencyProvider****.php**
 
@@ -133,49 +131,6 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
         return [
             new ProtectedPathAuthorizationStrategyPlugin(),
         ];
-    }
-}
-```
-
-**src/Pyz/Glue/DocumentationGeneratorApi/****DocumentationGeneratorApiDependencyProvider****.php**
-
-```php
-<?php
-
-namespace Pyz\Glue\DocumentationGeneratorApi;
-
-use Spryker\Glue\DocumentationGeneratorApi\DocumentationGeneratorApiDependencyProvider as SprykerDocumentationGeneratorApiDependencyProvider;
-use Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface;
-use Spryker\Glue\GlueBackendApiApplicationAuthorizationConnector\Plugin\DocumentationGeneratorApi\AuthorizationContextExpanderPlugin as BackendAuthorizationContextExpanderPlugin;
-use Spryker\Glue\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\DocumentationGeneratorApi\AuthorizationContextExpanderPlugin as StorefrontAuthorizationContextExpanderPlugin;
-
-class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGeneratorApiDependencyProvider
-{
-    /**
-     * @var string
-     */
-    protected const GLUE_BACKEND_API_APPLICATION_NAME = 'backend';
-
-    /**
-     * @var string
-     */
-    protected const GLUE_STOREFRONT_API_APPLICATION_NAME = 'storefront';
-    
-    /**
-     * @param \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface $contextExpanderCollection
-     *
-     * @return \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface
-     */
-    protected function getContextExpanderPlugins(ContextExpanderCollectionInterface $contextExpanderCollection): ContextExpanderCollectionInterface
-    {
-        $apiApplications = [];
-        foreach ($this->getApiApplicationProviderPlugins() as $apiApplicationProviderPlugin) {
-            $apiApplications[] = $apiApplicationProviderPlugin->getName();
-        }
-        $contextExpanderCollection->addApplications($apiApplications);
-        
-        $contextExpanderCollection->addExpander(new StorefrontAuthorizationContextExpanderPlugin(), [static::GLUE_STOREFRONT_API_APPLICATION_NAME]);
-        $contextExpanderCollection->addExpander(new BackendAuthorizationContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
     }
 }
 ```

@@ -155,9 +155,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
-Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. Copy the form to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
+Not recommended: Copy the form to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 ```php
 <?php
@@ -206,9 +204,7 @@ PrivateApi:Extension Please avoid extension of the PrivateApi Spryker\Zed\Custom
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
-Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. Copy the form to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
+Not recommended: Copy the form to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 
 ```php
@@ -293,9 +289,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
-Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. Copy the method to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
+Not recommended: Copy the method to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -360,8 +354,7 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. Give the method a unique name and copy it to the factory on the project level. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
+1. Give the method a unique name and copy it to the factory on the project level. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -447,8 +440,7 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. Extend the used dependency provider with the new constant.
+1. Extend the used dependency provider with the new constant.
 
 ```php
 ...
@@ -551,8 +543,7 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. Copy the interface to the project level and give it a unique name.
+1. Copy the interface to the project level and give it a unique name.
 
 ```php
 ...
@@ -630,9 +621,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
-Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. On the project level, create an entity manager with the methods from the core level.
+Not recommended: On the project level, create an entity manager with the methods from the core level.
 
 
 ```php
@@ -703,8 +692,7 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. On the project level, create an entity manager with the methods from the core level.
+1. On the project level, create an entity manager with the methods from the core level.
 
 ```php
 <?php
@@ -741,7 +729,7 @@ class PyzCustomerAccessEntityManager extends AbstractEntityManager implements Cu
 }
 ```
 
-3. Replace the core entity manager with the one you've created.
+2. Replace the core entity manager with the one you've created.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -813,8 +801,7 @@ Recommended: Apply the [development strategies](/docs/scos/dev/back-end-developm
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
-1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-2. Copy the method to the project level and give it a unique name.
+1. Copy the method to the project level and give it a unique name.
 
 ```php
 namespace Pyz\Zed\Customer\Business;

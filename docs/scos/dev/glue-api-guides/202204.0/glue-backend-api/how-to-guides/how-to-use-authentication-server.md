@@ -26,7 +26,7 @@ That conception allows wiring plugins implemented an authentication server and e
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\AuthenticationOauth\Communication\Plugin;
+namespace Spryker\Zed\AuthenticationOauth\Communication\Plugin\Authentication;
 
 use Generated\Shared\Transfer\GlueAuthenticationRequestTransfer;
 use Generated\Shared\Transfer\GlueAuthenticationResponseTransfer;
@@ -83,7 +83,7 @@ class OauthAuthenticationServerPlugin extends AbstractPlugin implements Authenti
 
 This plugin is run by `AuthenticationFacade::authenticate()`. 
 
-For the Glue Storefront API application `Spryker\Client\AuthenticationOauth\Communication\Plugin\OauthAuthenticationServerPlugin` is used and run by `AuthenticationClient::authenticate()`.
+For the Glue Storefront API application `Spryker\Client\AuthenticationOauth\Communication\Plugin\Authentication\OauthAuthenticationServerPlugin` is used and run by `AuthenticationClient::authenticate()`.
 
 Connect it the following way in order to enable provided authentication server for the Glue Backend API application:
 

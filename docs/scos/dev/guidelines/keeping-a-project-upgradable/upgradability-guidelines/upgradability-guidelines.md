@@ -9,13 +9,11 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
 ---
 
-Spryker has more than one thousand modules, a bunch of them is used in each Spryker-based project. At the same time about 50 Spryker module updates are available for the customers every month. In this case, keeping your project up to date and receiving all necessary module updates, can take a lot of time for the project team in case of manual updates.
+Spryker has more than a thousand modules with some of them being used in each Spryker project. At the same time, about 50 module updates are available every month. In this case, manually keeping project up to date and receiving all the necessary module updates can take a lot of time.
 
-To improve the developer experience and decrease the amount of time, that is required to keep your project up to date, you can use Upgrader and Integrator tools. These tools can semi-automatically integrate the module updates into your project.
+To improve developer experience and decrease the amount of time required to keep your project up to date, you can use Upgrader and Integrator tools. These tools can semi-automatically update your project's modules.
 
-If you want to reduce the amount of manual work that is required for update process, your project must follow the specified Spryker extendability rules. You can check that your project code is compliant with the rules by the Evaluator tool.
-
-The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with Spryker's and industry coding standards.
+To be able to take semi-automatic updates provided by the Upgrader, a project must follow Spryker's upgradability rules. To check if your project is compliant, [run the Evaluator](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html). If the Evaluator returns upgradability errors, use the following reference to resolve them.
 
 When you get an evaluation error, check the name of the triggered check in the Evaluation output logs. The name is at the beginning of each error log.
 

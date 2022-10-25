@@ -1,6 +1,6 @@
 ---
-title: Logging in to the Back Office
-description: Learn how a Back Office user can log in to the Back Office either with a regular account or through a third-party service
+title: Log into the Back Office
+description: Learn how a Back Office user can log into the Back Office either with a regular account or through a third-party service
 last_updated: Jun 17, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/logging-in-to-the-back-office

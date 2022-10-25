@@ -57,25 +57,25 @@ Each of the identity managers is an ECO module that must be developed separately
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
 | [Log in to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/logging-in-to-the-back-office.html) |
 
 
 
 ## Related Developer articles
 
-|INSTALLATION GUIDES  | GLUE API GUIDES | REFERENCES|
-|---------|---------| - |
-| [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)  | [Glue API security and authentication](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-security-and-authentication.html) |
-| [Microsoft Azure Active Directory](/docs/scos/dev/feature-integration-guides/{{page.version}}/microsoft-azure-active-directory.html)   | [Create customers](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html) | [Users and rights overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html)  |
-| | [Authenticate as a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/authenticating-as-a-customer.html) |
-| | [] | 
-| | [] |
-| | [] |
-| | [] |
-| | [] |
-| | [] |
-| | [] |
-| | [] |
-| | [] |
-| | [] |
+|INSTALLATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+|---------|---------| - | - |
+| [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)  | [Security and authentication](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-security-and-authentication.html) |
+| [Install Microsoft Azure Active Directory](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-microsoft-azure-active-directory.html)   | [Authentication and authorization](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-authentication-and-authorization.html) |
+| [Install the Customer Access Glue API](/docs/pbc/all/identity-access-manager/install-and-upgrade/install-the-customer-access-glue-api.html) |  [Create customers](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html) |
+| | [Confirm customer registration](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
+| | [Authenticate as a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/authenticate-as-a-customer.html) |
+
+
+| | [Authenticating as a company user](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) |
+
+| | [Delete expired refresh tokens](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html) |
+| | [Manage company user authentication tokens](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html) |
+| | [Manage customer authentication tokens via OAuth 2.0](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html) |
+| | [Manage customer authentication tokens](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html) |
+| | [Manage customer passwords](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-customer-passwords.html) |

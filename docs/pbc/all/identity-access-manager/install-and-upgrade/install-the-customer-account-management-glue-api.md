@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Customer Account Management feature integration"
+title: Install the Customer Account Management Glue API
 last_updated: Jul 13, 2021
 template: feature-integration-guide-template
 related:

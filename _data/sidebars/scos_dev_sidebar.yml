@@ -4802,16 +4802,14 @@ entries:
           nested:
             - title: Entity name is not unique
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html
-            - title: Private API is extended
-              url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html
             - title: Private API is used on the project level
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
-            - title: Private API method is overridden on the project level
-              url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
-        - title: Running the Evalutor tool
+        - title: Run the Evalutor tool
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
         - title: Define custom prefixes for core entity names
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
+        - title: Define evaluation rules to ignore
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-evaluation-rules-to-ignore.html          
     - title: Performance guidelines
       nested:
       - title: Elastic computing

@@ -9,7 +9,7 @@ redirect_from:
 
 This document explains how to create and use a [grant type](https://oauth.net/2/grant-types/) parameter.
 
-Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/technical-enhancement-integration-guides/glue-authentication-integration.html) guide.
+Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api/glue-api-authentication-integration.html) guide.
 
 Glue provides [grant types](https://www.rfc-editor.org/rfc/rfc6749#appendix-A.10) `password` for a customer and a user out of the box:
 

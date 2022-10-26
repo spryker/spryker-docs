@@ -14,7 +14,7 @@ related:
   - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
   - title: Glue API - Customer Account Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
+    link: docs/pbc/all/identity-access-manager/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
 ---
 
 After an authentication refresh token is [revoked](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) or expires, it remains in the database.

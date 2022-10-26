@@ -1,5 +1,5 @@
 ---
-title: Creating user roles
+title: Create user roles
 description: Learn how to create roles in the Back Office.
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-roles
   - /docs/en/managing-roles
   - /docs/scos/user/back-office-user-guides/202204.0/users/roles-groups-and-users/managing-roles.html
+  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-user-roles/creating-user-roles.html
 related:
   - title: Editing user roles
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-user-roles/editing-user-roles.html
@@ -22,9 +23,9 @@ This document describes how to create user roles in the Back Office.
 
 * If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
 
-* Review the [reference information](#reference-information-creating-user-roles) before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#reference-information-creat-user-roles) before you start, or look up the necessary information as you go through the process.
 
-## Creating roles
+## Create user roles
 
 1. Go to **Users&nbsp;<span aria-label="and then">></span> User Roles**.
 2. On the **User Roles** page, click **Add new Role**.
@@ -39,7 +40,7 @@ This document describes how to create user roles in the Back Office.
 9. Repeat steps 3-7 until you add all the needed rules.
 
 
-### Reference information: Creating user roles
+### Reference information: Create user roles
 
 The following table describes the attributes you enter and select when creating roles:
 
@@ -102,4 +103,4 @@ See the example of the `navigation.xml` file of the AvailabilityGui module:
 
 ## Next steps
 
-[Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html)
+[Create user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html)

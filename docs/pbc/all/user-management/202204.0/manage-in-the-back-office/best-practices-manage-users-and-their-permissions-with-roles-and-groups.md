@@ -1,7 +1,9 @@
 ---
-title: "Best practices: Managing users and their permissions with roles and groups"
+title: "Best practices: Manage users and their permissions with roles and groups"
 description: Learn how to manage users and their permissions with roles and groups
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202204.0/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html
 related:
   - title: Customer Groups overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-groups-overview.html

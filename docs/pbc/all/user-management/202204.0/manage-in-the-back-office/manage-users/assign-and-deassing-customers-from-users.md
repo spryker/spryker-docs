@@ -1,12 +1,14 @@
 ---
-title: Assigning and deassigning customers from users
+title: Assign and deassign customers from users
 description: Learn how to assign customers to Back Office users
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-users/assigning-customers-to-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
-  - title: Creating users
+  - title: Create users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/creating-users.html
   - title: Editing users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/editing-users.html
@@ -46,7 +48,7 @@ When assigning many customers at a time, it might be useful to click the **Custo
 1. Next to the user you want to deassign customers from, click **Assign Customers**.
 2. In the **Assigned customers** tab, clear the checkboxes next to the customers you want to deassign.
 3. Click **Save**.
-    This refreshes the page with the success message displayed. The deassigned customer are displayed in the **Assigned customers** tab.  
+    This refreshes the page with the success message displayed. The deassigned customers are displayed in the **Assigned customers** tab.  
 
 
 **Tips and tricks**

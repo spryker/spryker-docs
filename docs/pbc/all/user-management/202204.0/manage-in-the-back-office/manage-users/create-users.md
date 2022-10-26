@@ -1,5 +1,5 @@
 ---
-title: Creating users
+title: Create users
 description: Learn how to create users in the Back Office
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-users
   - /docs/en/managing-users
   - /docs/scos/user/back-office-user-guides/202204.0/users/managing-users/activating-and-deactivating-users.html
+  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-users/creating-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
@@ -29,10 +30,10 @@ This document describes how to create users in the Back Office.
 ## Prerequisites
 
 * If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
-* Create at least one user group. For instructions, see [Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
+* Create at least one user group. For instructions, see [Create user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
 * Review the [reference information](#reference-information-creating-users) before you start, or look up the necessary information as you go through the process.
 
-## Creating users
+## Create a user
 
 1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 2. On the **Users** page, click **Add New User**.
@@ -48,9 +49,7 @@ This document describes how to create users in the Back Office.
 
 This opens the **Users** page with the success message displayed. The created user is displayed in the list.
 
-## Reference information: Creating users
-
-The following table describes the attributes you enter and select when creating roles:
+## Reference information: Create users
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -59,6 +58,6 @@ The following table describes the attributes you enter and select when creating 
 | REPEAT PASSWORD | Password confirmation. |
 | FIRST NAME | User's first name. |
 | LAST NAME | User's last name. |
-| ASSIGNED GROUPS | User groups to assign this user to. User groups define what areas and actions the user will have access to. To learn how to create user groups, see [Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html). |
+| ASSIGNED GROUPS | User groups to assign this user to. User groups define what areas and actions the user will have access to. To learn how to create user groups, see [Create user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |

@@ -2,12 +2,14 @@
 title: Editing users
 description: Learn how to edit users in the Back Office
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-users/editing-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
   - title: Assigning and deassigning customers from users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/assigning-customers-to-users.html
-  - title: Creating users
+  - title: Create users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/creating-users.html
   - title: Deleting users
     link: docs/scos/user/back-office-user-guides/202204.0/users/managing-users/deleting-users.html
@@ -51,7 +53,7 @@ The following table describes the attributes you enter and select when editing u
 | REPEAT PASSWORD | Enter the same new password to confirm it. |
 | FIRST NAME | User's first name. |
 | LAST NAME | User's last name. |
-| ASSIGNED GROUPS | The user groups this user is assigned to. User groups define what areas and actions the user has access to. To learn how to create user groups, see [Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html). |
+| ASSIGNED GROUPS | The user groups this user is assigned to. User groups define what areas and actions the user has access to. To learn how to create user groups, see [Create user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
-| STATUS | 
+| STATUS |

@@ -16,7 +16,7 @@ To start the feature integration, overview and install the necessary features:
 | ----------------- | ---------- | --------------------- |
 | Glue API: Spryker Core                | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Company Account                       | {{site.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/company-account-feature-integration.html) |
-| Glue API: Customer Account Management | {{site.version}} | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Glue API: Customer Account Management | {{site.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-manager/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Glue API: Glue Application            | {{site.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | UUID Generation Console               | {{site.version}}  |  |
 | Glue API: Shipment                    | {{site.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) |

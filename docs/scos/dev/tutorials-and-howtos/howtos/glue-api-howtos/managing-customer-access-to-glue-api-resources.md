@@ -19,7 +19,7 @@ related:
   - title: Authentication and Authorization
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
   - title: Install the Customer Access Glue API
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-access-feature-integration.html
+    link: docs/pbc/all/identity-access-manager/page.version/install-and-upgrade/install-the-customer-access-glue-api.html
 ---
 
 The [Customer Access API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-protected-resources.html) allows storefront owners to prevent unauthorized (guest) users from accessing certain REST API resources. This capability is tied up to the [Customer Access](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customer-customer-access-customer-groups/managing-customer-access.html) feature that allows you to restrict access to certain content items in *Spryker Back Office*.

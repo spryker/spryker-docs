@@ -49,7 +49,7 @@ This endpoints allows retrieving and edit customer addresses.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-manager/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 ## Add an address
 

@@ -1,5 +1,5 @@
 ---
-title: How to use authentication server
+title: How to use an authentication server
 description: This document describes how to use an authentication server.
 last_updated: October 24, 2022
 template: howto-guide-template

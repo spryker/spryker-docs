@@ -17,7 +17,7 @@ To authenticate a user, the client must send an authentication request containin
 
 Access tokens issued by the API have a limited lifetime. When a token is issued, the response message contains not only the access token but also the duration of its validity, in seconds, and a refresh token. Once the access token expires, the corresponding refresh token can be exchanged for a new pair of access and refresh tokens.
 
-If an invalid or expired token is passed when accessing a protected resource, or no token is passed at all, the API responds with the `401 Unauthorized response` code. This response code also is issued if a user is not authorized to access that particular resource. The response body contains a detailed error message. It is, therefore, the client's responsibility to handle the `401` response code and error messages correctly.
+If an invalid or expired token is passed when accessing a protected resource, or no token is passed at all, the API responds with the `401 Unauthorized` response code. This response code also is issued if a user is not authorized to access that particular resource. The response body contains a detailed error message. It is, therefore, the client's responsibility to handle the `401` response code and error messages correctly.
 
 Authentication workflow:
 ![authentication-workflow.PNG](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Security+and+Authentication/authentication-workflow.png)

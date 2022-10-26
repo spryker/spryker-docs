@@ -144,7 +144,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     response_type=code&client_id={user_client_id}
     ```  
 
-    2. Send the request to access token:
+    2. Send the following request to the access token:
     ```
     POST /token/ HTTP/1.1
     Host: glue-backend.mysprykershop.com

@@ -87,7 +87,7 @@ Activate the following plugins:
 | IsProtectedTableColumnExpanderPlugin | Extends route description table with protected path-specific data. | Spryker\\Glue\\GlueBackendApiApplicationAuthorizationConnector\\Plugin\\GlueApplication           |
 | ProtectedPathAuthorizationStrategyPlugin | Authorization rule for the route using `ProtectedPath` strategy.  | Spryker\\Zed\\GlueBackendApiApplicationAuthorizationConnector\\Communication\\Plugin\\Authorization                                            |
 
-**src/Pyz/Client/Authorization/****AuthorizationDependencyProvider****.php**
+**src/Pyz/Client/Authorization/AuthorizationDependencyProvider.php**
 
 ```php
 <?php
@@ -111,7 +111,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 }
 ```
 
-**src/Pyz/Zed/Authorization/****AuthorizationDependencyProvider****.php**
+**src/Pyz/Zed/Authorization/AuthorizationDependencyProvider.php**
 
 ```php
 <?php
@@ -135,7 +135,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 }
 ```
 
-**src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php**
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php

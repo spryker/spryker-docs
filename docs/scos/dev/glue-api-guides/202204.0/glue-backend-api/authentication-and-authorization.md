@@ -28,9 +28,9 @@ Expired tokens are stored in the database, and you can configure them to be dele
 
 ## Authentication in the storefront and backend applications
 
-Below, you can find information about [backend and storefront API module differences](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/backend-and-storefront-api-module-differences.html) and [Authentication integration.](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api/glue-api-authentication-integration.html)
+Below, you can find information about [differences between backend and storefront API modules](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/backend-and-storefront-api-module-differences.html) and [Authentication integration.](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api/glue-api-authentication-integration.html).
 
-Authentication in the Storefront is used to authenticate as a *customer* and backend is used to authenticate as a *user*
+In the Storefront, authentication is used to authenticate as a *customer*, and the Backend is used to authenticate as a *user*.
 
 ## Accessing protected resources
 

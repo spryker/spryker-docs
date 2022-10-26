@@ -11,7 +11,7 @@ This document describes how to create an authentication token for the Storefront
 
 ## Install feature core
 
-Follow the steps below to install the Authorization feature API.
+Follow the steps below to install the Authentication feature API.
 
 ### Prerequisites
 

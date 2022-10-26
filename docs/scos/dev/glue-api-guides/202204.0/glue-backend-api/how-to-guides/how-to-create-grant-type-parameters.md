@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-grant-type-parameters.html
 ---
 
-This document explains how to create the [grant type](https://oauth.net/2/grant-types/) parameter and use it.
+This document explains how to create and use a [grant type](https://oauth.net/2/grant-types/) parameter.
 
 Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/technical-enhancement-integration-guides/glue-authentication-integration.html) guide.
 
@@ -21,7 +21,7 @@ Glue provides [grant types](https://www.rfc-editor.org/rfc/rfc6749#appendix-A.10
 
 Let's say you have a user and you want to have a new grant type [authorization_code](https://oauth.net/2/grant-types/authorization-code/) for it. To create the grant type, follow these steps:
 
-1. Create `GRANT_TYPE_AUTHORIZATION_CODE` constant.
+1. Create `GRANT_TYPE_AUTHORIZATION_CODE` constant:
 
 ```php
 <?php
@@ -36,7 +36,7 @@ class OauthConfig extends SprykerOauthConfig
 }
 ```
 
-2. Create `UserAuthCodeGrantTypeBuilder`.
+2. Create `UserAuthCodeGrantTypeBuilder`:
    
 ```php
 <?php
@@ -65,7 +65,7 @@ class UserAuthCodeGrantTypeBuilder implements GrantTypeBuilderInterface
 }
 ```
 
-3. Create `UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin`.
+3. Create `UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin`:
 
 ```php
 <?php
@@ -103,7 +103,7 @@ class UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin extends Abstr
 }
 ```
 
-4. Declare the grant type provider plugin.
+4. Declare the grant type provider plugin:
 
 **\Pyz\Zed\Oauth\OauthDependencyProvider**
 
@@ -155,6 +155,6 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     grant_type=authorization_code&code={user_authorization_code}&client_id={user_client_id}
     ```
 
-    2. Check that the output contains the 201 response with a valid token.
+    2. Check that the output contains the `201` response with a valid token.
 
 {% endinfo_block %}

@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/users/managing-user-groups/editing-user-groups.html
 related:
   - title: Creating user groups
-    link: docs/scos/user/back-office-user-guides/page.version/users/managing-user-groups/creating-user-groups.html
+    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-groups/create-user-groups.html
   - title: Customer Groups overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-groups-overview.html
 ---
@@ -35,4 +35,4 @@ To de-assign a user from the group, in the **Users** section, click **Delete** n
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | TITLE | Unique identifier of the user group. It's used for identifying the group when creating users. |
-| ASSIGNED ROLES | The user roles that are assigned to the group. For role creating instructions, see [Create user roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-roles/creating-user-roles.html). |
+| ASSIGNED ROLES | The user roles that are assigned to the group. For role creating instructions, see [Create user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |

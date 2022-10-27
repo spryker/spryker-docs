@@ -21,7 +21,7 @@ Every agent user is a Back Office user. When creating or editing a Back Office u
 
 A Back Office user can create an agent user in **Users&nbsp;<span aria-label="and then">></span> Users**.
 
-To learn more about managing agent users in Back Office, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html).
+To learn more about managing agent users in Back Office, see [Managing users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
 
 ![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png)
 
@@ -50,13 +50,13 @@ Check out this video tutorial on setting up an Agent user in a B2B company accou
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create an agent user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html#creating-users) |
+| [Create an agent user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#creating-users) |
 
 ## Related Developer articles
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
-| [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html)  | [Authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html)  |
+| [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html)  | [Authenticate as an agent assist](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/authenticate-as-an-agent-assist.html)  |
 | [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html) | [Searching by customers as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/searching-by-customers-as-an-agent-assist.html) |
 | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) | [Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html) |
-|  [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) | [Managing agent assist authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html)|
+|  [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) | [Managing agent assist authentication tokens](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/manage-agent-assist-authentication-tokens.html)|

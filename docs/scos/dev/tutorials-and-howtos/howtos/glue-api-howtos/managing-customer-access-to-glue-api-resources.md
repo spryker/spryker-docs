@@ -17,7 +17,7 @@ redirect_from:
   - /v4/docs/en/managing-customer-access-to-api-resources
 related:
   - title: Authentication and Authorization
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Install the Customer Access Glue API
     link: docs/pbc/all/identity-access-manager/page.version/install-and-upgrade/install-the-customer-access-glue-api.html
 ---

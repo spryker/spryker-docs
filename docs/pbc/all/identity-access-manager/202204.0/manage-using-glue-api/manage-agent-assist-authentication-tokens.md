@@ -13,7 +13,7 @@ redirect_from:
 related:
   - title: Agent Assist feature overview
     link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
-  - title: Authenticating as an agent assist
+  - title: Authenticate as an agent assist
     link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/authenticating-as-an-agent-assist.html
   - title: Impersonating customers as an agent assist
     link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
@@ -58,7 +58,7 @@ Request sample: refresh an agent assist authentication token
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) . |
+| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [Authenticate as an agent assist](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) . |
 
 ### Response
 
@@ -107,7 +107,7 @@ To revoke an agent assist refresh token, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 | REQUEST | USAGE |

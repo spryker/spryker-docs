@@ -12,7 +12,7 @@ A Back Office user with permissions can create Back Office accounts. For instruc
 
 Permissions are managed with the help of *user roles* and *user groups*.
 
-A user role allows or denies access to the following:
+Each Back Office user has a role that defines their permissions to perform actions. For example, a content manager does not process orders, but you may want them to be able to view orders. 
 
 * Sections
 * Subsections

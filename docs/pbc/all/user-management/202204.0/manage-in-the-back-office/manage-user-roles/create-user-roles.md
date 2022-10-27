@@ -14,14 +14,14 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/users/managing-user-roles/creating-user-roles.html
 related:
   - title: Editing user roles
-    link: docs/scos/user/back-office-user-guides/page.version/users/managing-user-roles/editing-user-roles.html
+    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
 ---
 
 This document describes how to create user roles in the Back Office.
 
 ## Prerequisites
 
-* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
+* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
 
 * Review the [reference information](#reference-information-creat-user-roles) before you start, or look up the necessary information as you go through the process.
 
@@ -103,4 +103,4 @@ See the example of the `navigation.xml` file of the AvailabilityGui module:
 
 ## Next steps
 
-[Create user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html)
+[Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html)

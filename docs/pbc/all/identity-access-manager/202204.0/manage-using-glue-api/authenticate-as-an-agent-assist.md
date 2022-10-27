@@ -1,5 +1,5 @@
 ---
-title: Authenticating as an agent assist
+title: Authenticate as an agent assist
 description: Authenticate as an agent assist on the Storefront.
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
@@ -16,7 +16,7 @@ related:
   - title: Impersonating customers as an agent assist
     link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
-    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/managing-agent-assist-authentication-tokens.html
+    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/manage-agent-assist-authentication-tokens.html
   - title: Searching by customers as an agent assist
     link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 ---

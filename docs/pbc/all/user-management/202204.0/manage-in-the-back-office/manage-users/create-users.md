@@ -16,21 +16,21 @@ related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
   - title: Assigning and deassigning customers from users
-    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/assigning-customers-to-users.html
+    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/assign-and-deassing-customers-from-users.html
   - title: Editing users
-    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/editing-users.html
+    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/edit-users.html
   - title: Deleting users
-    link: docs/scos/user/back-office-user-guides/202204.0/users/managing-users/deleting-users.html
+    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/delete-users.html
   - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
+    link: docs/pbc/all/user-management/page.version/extend-and-customize/user-and-rights-overview.html
 ---
 
 This document describes how to create users in the Back Office.
 
 ## Prerequisites
 
-* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
-* Create at least one user group. For instructions, see [Create user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
+* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
+* Create at least one user group. For instructions, see [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html).
 * Review the [reference information](#reference-information-creating-users) before you start, or look up the necessary information as you go through the process.
 
 ## Create a user
@@ -58,6 +58,6 @@ This opens the **Users** page with the success message displayed. The created us
 | REPEAT PASSWORD | Password confirmation. |
 | FIRST NAME | User's first name. |
 | LAST NAME | User's last name. |
-| ASSIGNED GROUPS | User groups to assign this user to. User groups define what areas and actions the user will have access to. To learn how to create user groups, see [Create user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html). |
+| ASSIGNED GROUPS | User groups to assign this user to. User groups define what areas and actions the user will have access to. To learn how to create user groups, see [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |

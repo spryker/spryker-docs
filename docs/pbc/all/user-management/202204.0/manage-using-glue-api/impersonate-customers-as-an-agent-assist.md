@@ -13,10 +13,10 @@ redirect_from:
 related:
   - title: Agent Assist feature overview
     link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
-  - title: Authenticating as an agent assist
+  - title: Authenticate as an agent assist
     link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/authenticating-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
-    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/managing-agent-assist-authentication-tokens.html
+    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/manage-agent-assist-authentication-tokens.html
   - title: Searching by customers as an agent assist
     link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 ---
@@ -47,7 +47,7 @@ To impersonate a customer, authenticate as a customer by sending the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | &check; | String containing digits, letters, symbols that authorized the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | &check; | String containing digits, letters, symbols that authorized the agent assist. [Authenticate as an agent assist](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 Request sample: impersonate a customer
@@ -97,10 +97,10 @@ Request sample: impersonate a customer
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| tokenType | String | Type of the [authentication token](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html). Set this type when sending a request with the token. |
+| tokenType | String | Type of the [authentication token](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-authentication-and-authorization.html). Set this type when sending a request with the token. |
 | expiresIn | Integer | The time in seconds in which the token expires. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the impersonated customer. |
-| refreshToken | String | Token used to [refresh](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html#refresh-an-authentication-token) the `accessToken`. |
+| refreshToken | String | Token used to [refresh](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html#refresh-an-authentication-token) the `accessToken`. |
 
 ## Possible errors
 
@@ -121,4 +121,4 @@ After you’ve authenticated as a customer, you can impersonate them:
 * [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html)
 * [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)  
 
-Also, you can [refresh the agent assist authentication token](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#refresh-an-agent-assist-authentication-token) or [revoke the agent assist refresh token](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#revoke-an-agent-assist-refresh-token).
+Also, you can [refresh the agent assist authentication token](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/manage-agent-assist-authentication-tokens.html#refresh-an-agent-assist-authentication-token) or [revoke the agent assist refresh token](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/manage-agent-assist-authentication-tokens.html#revoke-an-agent-assist-refresh-token).

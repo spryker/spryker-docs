@@ -1,5 +1,5 @@
 ---
-title: Deleting users
+title: Delete users
 description: Learn how to delete users in the Back Office
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
@@ -9,11 +9,11 @@ related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
   - title: Assigning and deassigning customers from users
-    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/assigning-customers-to-users.html
+    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/assign-and-deassing-customers-from-users.html
   - title: Create users
-    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/creating-users.html
+    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/create-users.html
   - title: Editing users
-    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/editing-users.html
+    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/edit-users.html
 ---
 
 

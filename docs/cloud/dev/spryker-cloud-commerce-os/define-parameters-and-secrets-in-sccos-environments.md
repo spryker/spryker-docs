@@ -1,7 +1,7 @@
 ---
-title: Define parameters and secretes in SCCOS environments
-description: Learn how to define parameters in the Parameter Store.
-last_updated: July 28, 2022
+title: Define parameter and secret values
+description: Learn how to define parameter values in the Parameter Store.
+last_updated: Nov 2, 2022
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/managing-parameters-in-the-parameter-store
 originalArticleId: 2047c84c-bd7b-4bce-9203-08945367ad46
@@ -13,14 +13,21 @@ redirect_from:
 
 Parameters are used for multiple purposes, like storing mail server details or providing Composer authentication details to the build and deploy process securely.
 
-To define parameters and their values, do the following:
+To define parameters and their values, do the following.
 
-1. To define parameters locally, follow [Define parameters and secrets locally](/docs/scos/dev/the-docker-sdk/{{site.version}}/define-parameters-and-secrets-locally.html).
-2. Push the updates to the SCCCOS environment.
+## Prerequisites
+
+1. [Define parameters and secrets](/docs/scos/dev/the-docker-sdk/{{site.version}}/define-parameters-and-secrets.html).
+2. Push the updates to the SCCOS environment.
 3. Deploy the application with the updated configuration by following one of the following docs:
     * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
     * [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
-        This should update the parameters in the [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters).
-4. To define parameter values, fill out the [parameter change form](https://spryker.force.com/support/s/hosting-change-requests/change-request-change-parameter).
+        This should update the parameters in the Parameter Store.
+
+## Define parameter and secret values         
+
+
+
+
 
     After adding parameters and their values, you can use them for your application.

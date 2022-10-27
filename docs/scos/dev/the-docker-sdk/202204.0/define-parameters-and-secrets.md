@@ -1,5 +1,5 @@
 ---
-title: Define parameters and secrets locally
+title: Define parameters and secrets
 description: Learn how to declare parameters and define their values.
 last_updated: July 28, 2022
 template: howto-guide-template

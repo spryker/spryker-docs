@@ -3,14 +3,14 @@ title: Build flavored Spryker SDKs
 description: Find out how you can build flavored Spryker SDKs
 template: howto-guide-template
 redirect_from:
-    - /docs/scos/dev/sdk/building-flavored-spryker-sdks.html
+    - /docs/sdk/dev/building-flavored-spryker-sdks.html
 ---
 Sometimes, a [simple extendibility](/docs/sdk/dev/extending-the-sdk.html) and core SDK capabilities are not enough. This is especially the case when an extension to the SDK requires additional dependencies or a deep integration of the SDK.
 You can extend the SDK by adding more Symfony bundles to the SDK and building your own flavored Spryker SDK image. To do this, follow these instructions.
 
 ## Adding more dependencies
 
-Besides extending the Spryker SDK through [Yaml definitions](/docs/sdk/dev/extending-the-sdk.html#implementation-via-yaml-definition), more complex extensions can be provided via [PHP implementations](/docs/sdk/dev/extending-the-sdk.html#implementation-via-a-php-class).
+Besides extending the Spryker SDK through [Yaml definitions](/docs/sdk/dev/extend-the-sdk.html#implementation-via-yaml-definition), more complex extensions can be provided via [PHP implementations](/docs/sdk/dev/extend-the-sdk.html#implementation-via-a-php-class).
 You must add these extensions through a PHP implementation as a composer dependency and register them as Symfony bundles. To achieve this, follow the steps below.
 
 ### 1. Download the SDK source code

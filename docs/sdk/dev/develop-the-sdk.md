@@ -6,7 +6,7 @@ related:
   - title: Profiler
     link: docs/sdk/dev/profiler.html
 redirect_from:
-  - /docs/scos/dev/sdk/developing-the-sdk.html
+  - /docs/sdk/dev/developing-the-sdk.html
 ---
 
 To install the Spryker SDK for your development needs, clone the project and export `SPRYKER_SDK_ENV` with the `dev` environment and create an alias:

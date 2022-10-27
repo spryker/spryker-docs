@@ -3,7 +3,7 @@ title: Extend the SDK
 description: Find out how you can extend the Spryker SDK
 template: howto-guide-template
 redirect_from:
-    - /docs/scos/dev/sdk/extending-the-sdk.html
+    - /docs/sdk/dev/extending-the-sdk.html
 ---
 
 The SDK offers different extension points to enable third parties to contribute to the SDK without modifying it.

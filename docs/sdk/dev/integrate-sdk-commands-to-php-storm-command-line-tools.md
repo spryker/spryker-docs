@@ -1,7 +1,9 @@
 ---
-title: Integrating SDK commands to PhpStorm command line tools
+title: Integrate SDK commands to PhpStorm command line tools
 description: You can make the Spryker SDK available for the PhpStorm.
 template: task-topic-template
+redirect_from:
+    - /docs/scos/dev/sdk/integrating-sdk-commands-to-php-storm-command-line-tools.html
 ---
 
 To make all the Spryker SDK commands available to PhpStorm, do the following:

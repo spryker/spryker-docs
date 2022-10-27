@@ -4,7 +4,7 @@ description: Each task can subscribe to lifecycle events so that whenever the SD
 template: concept-topic-template
 ---
 
-An SDK task can change over time. It may need to update the tool it wraps or get replaced by a successor task.
+An SDK [task](/docs/sdk/dev/task.html) can change over time. It may need to update the tool it wraps or get replaced by a successor task.
 Each task can subscribe to certain lifecycle events to react, so that whenever the SDK is updated, the task is initialized or removed.
 
 To be able to emit those lifecycle events to a specific task, the task needs to subscribe to the event and it needs to be versioned.

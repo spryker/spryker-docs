@@ -1,7 +1,9 @@
 ---
-title: Building flavored Spryker SDKs
+title: Build flavored Spryker SDKs
 description: Find out how you can build flavored Spryker SDKs
 template: howto-guide-template
+redirect_from:
+    - /docs/scos/dev/sdk/building-flavored-spryker-sdks.html
 ---
 Sometimes, a [simple extendibility](/docs/sdk/dev/extending-the-sdk.html) and core SDK capabilities are not enough. This is especially the case when an extension to the SDK requires additional dependencies or a deep integration of the SDK.
 You can extend the SDK by adding more Symfony bundles to the SDK and building your own flavored Spryker SDK image. To do this, follow these instructions.

@@ -3848,8 +3848,6 @@ entries:
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Split delivery migration concept
       url: /docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
-    - title: CRUD Scheduled Prices migration concept
-      url: /docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
     - title: Silex Replacement
       nested:
       - title: Application
@@ -4184,8 +4182,6 @@ entries:
     nested:
     - title: Introduction Tutorials
       nested:
-      - title: "Tutorial: Checkout and step engine - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-checkout-and-step-engine-spryker-commerce-os.html
       - title: "Tutorial: Sending an email"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
       - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
@@ -4257,16 +4253,12 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
           - title: "HowTo: Import packaging units"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html
-          - title: "HowTo: Manage business unit specific prices via data import"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
         - title: "HowTo: Generate a token for login"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
         - title: "HowTo: Use blocks"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
         - title: "HowTo: Display custom names for order item states on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
-        - title: "HowTo: Configure the product reviews"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html
         - title: "HowTo: Manage a big number of categories"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html
         - title: "HowTo: Display product groups by color on the Storefront"
@@ -4275,8 +4267,8 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
         - title: "HowTo: Make a product searchable and shown on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
-        - title: "HowTo: Schedule cron job for scheduled prices"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html
+        - title: "HowTo: Add support of number formatting in the Back Office"
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
         - title: CMS
           nested:
           - title: "HowTo: Create CMS templates"
@@ -4285,8 +4277,6 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html
           - title: "HowTo: Create a custom content item"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
-        - title: "HowTo: Define if a cart should be deleted after placing an order"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
         - title: "HowTo: Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
         - title: "HowTo: Disable split delivery in Yves interface"
@@ -4310,8 +4300,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: "HowTo: Change the default behavior of event triggering in the AvailabilityStorage module"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html
       - title: "HowTo: Define positions of category CMS blocks"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
       - title: "HowTo: Build your own product relation type"
@@ -4322,8 +4310,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
       - title: "HowTo: Create and register a MailTypePlugin"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
-      - title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
       - title: "HowTo: Debug payment integrations locally"
@@ -4350,16 +4336,12 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
       - title: "HowTo: Install Spryker in AWS environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-install-spryker-in-aws-environment.html
-      - title: "HowTo: Enable guest checkout in B2B demo shop"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
       - title: "HowTo: Set up custom response headers on project level"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-custom-response-headers-on-project-level.html
       - title: "HowTo: Set up database connections"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
       - title: "HowTo: Replace Spryker module dependencies"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-spryker-module-dependencies.html
-      - title: "HowTo: Add additional countries to Spryker checkout"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-additional-countries-to-spryker-checkout.html
       - title: "HowTo: Product data from import to frontend view"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
       - title: "HowTo: enable SFTP for Flysystem"
@@ -4466,8 +4448,6 @@ entries:
       nested:
         - title: New Relic
           nested:
-            - title: Setting up New Relic for Monitoring
-              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/setting-up-new-relic-for-monitoring.html
             - title: Installing and configuring New Relic
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
             - title: Configuring logging
@@ -4940,8 +4920,8 @@ entries:
       url: /docs/scos/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
       url: /docs/scos/dev/guidelines/module-configuration-convention.html
-    - title: Making your Spryker shop secure
-      url: /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+    - title: Security guidelines
+      url: /docs/scos/dev/guidelines/security-guidelines.html
   - title: Best practices
     nested:
     - title: Basic SEO techniques to use in your project
@@ -4974,6 +4954,10 @@ entries:
         url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
     - title: State machine cookbook
       nested:
+      - title: State machine fundamentals
+        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
+      - title: Build a state machine
+        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
       - title: State machine cookbook - part 2 - building a state machine
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
       - title: State machine cookbook - part I - state machine fundamentals

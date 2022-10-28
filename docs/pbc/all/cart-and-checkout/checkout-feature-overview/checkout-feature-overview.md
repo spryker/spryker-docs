@@ -22,7 +22,7 @@ The *Checkout* feature lets customers select single or multiple products and add
 
 Control the values of the orders that your customers place by defining order thresholds.
 
-Fulfilling small orders is not always worthwhile for the business because operating costs, time, and effort spent on processing them often overweight the profit gained. In such cases, implementing a minimum threshold might be the solution. The *[Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)* feature provides you with multiple options for defining thresholds. You can define a minimum threshold and disallow placing orders with smaller values or request customers to pay a fee.
+Fulfilling small orders is not always worthwhile for the business because operating costs, time, and effort spent on processing them often overweight the profit gained. In such cases, implementing a minimum threshold might be the solution to prevent orders that are too small from being made. The *[Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)* feature provides you with multiple options for defining thresholds. You can define a minimum threshold and disallow placing orders with smaller values or request customers to pay a fee.
 
 Per your business requirements, you can also set up a maximum threshold to disallow placing orders above a defined threshold.
 
@@ -30,10 +30,10 @@ In a B2B scenario, you can define any type of threshold for each [merchant relat
 
 With order thresholds, you can do the following:
 
-* Get buyers to place bigger orders, which can increase your sales.
-* Prevent waste of resources on small orders.
+* Ensure buyers place bigger orders, which can increase your sales.
+* Prevent the waste of resources on small orders.
 * Ensure that the cost of items sold is not too high for each transaction, which, in the long run, can make your business more profitable.
-* Support promotional campaigns—for example, by offering free shipping for orders above a threshold.
+* Support promotional campaigns — for example, by offering free shipping for orders above a threshold.
 
 ## Related Business User articles
 

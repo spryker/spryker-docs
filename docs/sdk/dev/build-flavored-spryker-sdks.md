@@ -19,7 +19,7 @@ To be able to build your own flavored Spryker SDK, first, download the source:
 
 `git clone --depth 1 --branch <tag_name> git@github.com:spryker-sdk/sdk.git`
 
-For testing and development purposes, you can run the Spryker SDK in [development mode](/docs/sdk/dev/developing-the-sdk.html#running-sdk-in-the-development-mode).
+For testing and development purposes, you can run the Spryker SDK in [development mode](/docs/sdk/dev/develop-the-sdk.html).
 
 ### 2. Add dependencies via Composer
 

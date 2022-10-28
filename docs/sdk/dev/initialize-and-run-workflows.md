@@ -67,7 +67,7 @@ In the SDK directory, the workflows are defined in the workflow YAML files eithe
 See the basic workflow documentation in the [Symfony docs](https://symfony.com/doc/current/workflow.html).
 
 Additionally, you can configure and extend the workflow behavior by providing some specific metadata options:
-- `transitionResolver`: `sdk:workflow:run`. The `service` should implement `\SprykerSdk\SdkContracts\Workflow\TransitionResolverInterface` as shown in the [example workflow definition](example-workflow-definition).
+- `transitionResolver`: `sdk:workflow:run`. The `service` should implement `\SprykerSdk\SdkContracts\Workflow\TransitionResolverInterface` as shown in the [example workflow definition](#example-workflow-definition).
 - `allowToFail: true`: `sdk:workflow:run`. Sets the next place if task failed.
 - `re-run: true`: `sdk:workflow:run`. Runs the workflow multiple times when the current one has finished.
 - `run: single`: `sdk:workflow:run`. Runs only a single transition and exits. If this setting is omitted, the task runs available transitions one by one, asking which one to run if multiple possible variants exist.
@@ -79,6 +79,7 @@ Additionally, you can configure and extend the workflow behavior by providing so
 - `workflowAfter: workflow_name`. The workflow `workflow_name` runs inside the transition after the task is executed and should end before finishing the transition.
 
 <a name="example-workflow-definition"></a>
+
 <details>
 <summary>Example workflow definition in `workflow.yaml`</summary>
 

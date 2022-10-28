@@ -1,5 +1,6 @@
 ---
 title: Table Feature Search
+last_updated: Oct 21, 2022
 description: This document provides details about the Table Feature Search component in the Components Library.
 template: concept-topic-template
 related:
@@ -25,18 +26,19 @@ related:
     link: docs/marketplace/dev/front-end/page.version/table-design/table-features/table-feature-total.html
 ---
 
-This document explains the Table Feature Search component in the Components Library.
+This document explains the *Table Feature Search* component in the Components Library.
 
 ## Overview
 
-Table Feature Search is a feature of the Table Component that allows searching within the data set.
+Table Feature Search is a feature of the Table Component that lets you search within the data set.
 
 Check out an example usage of the Table Feature Search in the `@spryker/table` config.
 
 Component configuration:
 
-- `enabled`—enables the feature via config.  
+- `enabled`—enables the feature via config.
 - `placeholder`—the search placeholder text.
+- `forceAlwaysVisible`—makes the feature always visible regardless of data (`true` by default).
 
 ```html
 <spy-table
@@ -46,6 +48,7 @@ Component configuration:
         search: {
             enabled: true,
             placeholder: 'Search',
+            forceAlwaysVisible: false,
         },                                                                                       
     }"
 >
@@ -99,5 +102,6 @@ The following example represents interfaces for the Table Feature Search:
 ```ts
 export interface TableSearchConfig extends TableFeatureConfig {
     placeholder?: string;
+    forceAlwaysVisible?: boolean;
 }
 ```

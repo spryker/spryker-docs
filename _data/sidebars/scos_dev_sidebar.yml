@@ -1232,6 +1232,22 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
           include_versions:
           - "202204.0"
+        - title: How to create grant type parameters
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-grant-type-parameters.html
+          include_versions:
+          - "202204.0"
+        - title: How to use an authentication server
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-an-authentication-server.html
+          include_versions:
+          - "202204.0"
+        - title: Authentication and authorization
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/authentication-and-authorization.html
+          include_versions:
+          - "202204.0"
+        - title: Security and authentication
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/security-and-authentication.html
+          include_versions:
+          - "202204.0"
     - title: Glue API tutorials
       url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
       include_versions:
@@ -1606,6 +1622,10 @@ entries:
             url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-scopes-integration.html
             include_versions:
             - "202204.0"
+          - title: Glue API - Authorization protected endpoints integration
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-protected-endpoints-integration.html
+            include_versions:
+              - "202204.0"
     - title: Agent Assist
       url: /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
     - title: Agent Assist + Cart
@@ -4216,6 +4236,8 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
         - title: Managing customer access to Glue API resources
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
+        - title: "HowTo: Integrate a CIAM provider"
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/howto-integrate-a-ciam-provider.html
       - title: "HowTo: Replace key-value storage with database"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
@@ -4781,16 +4803,14 @@ entries:
           nested:
             - title: Entity name is not unique
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html
-            - title: Private API is extended
-              url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html
             - title: Private API is used on the project level
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
-            - title: Private API method is overridden on the project level
-              url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
-        - title: Running the Evalutor tool
+        - title: Run the Evalutor tool
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
         - title: Define custom prefixes for core entity names
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
+        - title: Define evaluation rules to ignore
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-evaluation-rules-to-ignore.html          
     - title: Performance guidelines
       nested:
       - title: Elastic computing

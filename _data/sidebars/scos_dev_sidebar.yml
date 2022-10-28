@@ -1248,6 +1248,22 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
           include_versions:
           - "202204.0"
+        - title: How to create grant type parameters
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-grant-type-parameters.html
+          include_versions:
+          - "202204.0"
+        - title: How to use an authentication server
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-an-authentication-server.html
+          include_versions:
+          - "202204.0"
+        - title: Authentication and authorization
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/authentication-and-authorization.html
+          include_versions:
+          - "202204.0"
+        - title: Security and authentication
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/security-and-authentication.html
+          include_versions:
+          - "202204.0"
     - title: Glue API tutorials
       url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
       include_versions:
@@ -1604,6 +1620,30 @@ entries:
         - "201907.0"
       - title: Glue API - Wishlist
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
+      - title: Glue Backend API
+        include_versions:
+        - "202204.0"
+        nested:
+          - title: Glue API - Glue Storefront and Backend API applications
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-glue-storefront-and-backend-api-applications-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue API - Authentication
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authentication-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue API - JSON:API Convention
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-json-api-convention-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue API - Authorization scopes
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-scopes-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue API - Authorization protected endpoints
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-protected-endpoints-integration.html
+            include_versions:
+              - "202204.0"
     - title: Agent Assist
       url: /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
     - title: Agent Assist + Cart

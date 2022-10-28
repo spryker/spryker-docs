@@ -51,7 +51,8 @@ These requests are automatically forwarded to our DevOps team. Therefore, make s
 
 Allow 3-5 days of processing time for change requests.
 If you need changes done at a certain date, include that information in the change request description.
-Please note that only customers (via the support portal) can request new environments or access to environment monitoring. For contractual reasons it is not possible to request these items by partners.
+
+Also, only customers (through the support portal) can request new environments or access to environment monitoring. For contractual reasons, partners can't request these items.
 
 {% endinfo_block %}
 

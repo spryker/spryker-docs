@@ -1,0 +1,22 @@
+---
+title: Messages moved to error queues
+description: This article describes how to approach diagnosing why messages are moved to error queues in RabbitMQ
+template: troubleshooting-guide-template
+---
+
+## Title
+
+Messages are not getting consumed, but are moved to an error queue.
+
+## Description
+Some or all messages are not processed and consumed from the queue as normal, but they are moved to their respective error queues where they stay unprocessed.
+
+## Cause
+1. You are exceeding the request entity size restriction of ElasticSearch. In this case you will find the error message Request entity too large in the RabbitMQ error queues. (See "Solution" how to check that).
+2. Data issues, like unmet dependencies (you try to publish a product that references a category that is not in elastic search, or you try to publish information that does not meet the data schema in Redis are frequent causes)
+
+## Solution
+The solution here depends on the error the consumer encounters. You can check what is the reason, but getting a message from the error queue you find the messages in via RabbitMQ UI. Here is how this can be done:
+![Access RabbitMQ Error Queues](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbit_mq_troubleshooting_access-rabbitmq-error-queues.gif "Access RabbitMQ Error Queues")
+1. Either the request size needs to be reduced, or your ElasticSearch instance needs to be upscaled. Please get in touch with our support so we can make a determination what the best course of action is in your particular case.
+2. You will need to mitigate the error in order to make the messages consumable. This is best done in your local development environment as your options to debug the publish and sync process and the consumption process of the listeners are much better. For this, you can import your staging/production database (that contains the data that you cannot publish correctly) locally, as described [here](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#ingest-staging-or-production-data)

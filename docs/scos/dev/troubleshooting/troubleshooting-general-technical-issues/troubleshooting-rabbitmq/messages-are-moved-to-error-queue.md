@@ -5,8 +5,6 @@ last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 ---
 
-
-
 ## Description
 
 Some or all messages are not processed and consumed from the queue as normal, but they are moved to their respective error queues, where they stay unprocessed.

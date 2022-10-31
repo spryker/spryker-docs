@@ -3713,7 +3713,7 @@ entries:
           - title: Implement Prepayment in frontend
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
           - title: Test the prepayment implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testi-the-prepayment-implementation.html
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
         - title: Invoice
           url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
           nested:

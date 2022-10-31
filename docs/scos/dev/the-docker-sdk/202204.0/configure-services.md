@@ -468,9 +468,49 @@ It is not obligatory to pass all the details as environment variables or define 
 
 The solution consists of a client and a server. The client is used to collect the data about applications in an environment and send it to the server for further analysis and presentation. The server is used to aggregate, analyse and present the data.
 
-### Configure New Relic
+### Prerequisites
 
-Follow the steps to enable New Relic:
+* Access to New Relic with an APM account.
+* A New Relic license key.
+* The New Relic module.
+
+Spryker provides is own New Relic licenses for use with its PaaS environments. A New Relic license key is only required if you wish to set up your own local monitoring.
+
+#### Installing the New Relic module
+
+While most environments may come with New Relic already available, you may need to include the module for your project. Available from Spryker, you can find the [Spryker new-relic module](https://github.com/spryker-eco/new-relic) within our module repositories. To include this repository into your project, it will need to be added to your `composer.json` file with the following command:
+
+```bash
+composer require spryker-eco/new-relic
+```
+
+### Configure New Relic (PaaS)
+
+Follow the steps to enable New Relic for your PaaS environment:
+
+1. Adjust `deploy.*.yml` in the `image:` section:
+
+```yaml
+image:
+    tag: spryker/php:7.4 # the image tag that has been previously used in `image:`
+    php:
+        ...
+        enabled-extensions:
+            ...
+            - newrelic
+```
+
+Once New Relic has been enabled in your deploy file, please [contact Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html) to have it integrated into your environment. This can be done by submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html).
+
+Once these changes have been enabled and integrated, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name set up in the configuration files. If you update the name of your application, please reach out to Spryker Support to have these changes reflected in your APM.
+
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRPsydm6Ds2eRmKS_lMRNjBnqhBLsvtN_ul_R1EMO7Z4pj74Mbpw3kMdAnjH6gIwLt9cvOqLcI=w1920-h919)
+
+### Configure New Relic (local)
+
+To enable New Relic on your local environment, a license key is required. For help with creating an API key with New Relic, please refer to the following documentation: [New Relic API keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
+
+Follow the steps to enable New Relic for your local environment:
 
 1. Adjust `deploy.*.yml` in the `docker:` section:
 
@@ -490,11 +530,13 @@ image:
         enabled-extensions:
             ...
             - newrelic
+
+
 ```
 
-#### Alternative configuration
+#### Additional local configuration
 
-Use this configuration if you are going to change New Relic license often or don’t want to define it in the deploy file.
+Use this configuration if you are going to change New Relic license often or don’t want to define it in the deploy file. Please note that in order to enable New Relic locally without specifying the license in the deploy file, you will need to pass it as an environmental variable when starting the environment.
 
 Follow the steps to enable New Relic:
 
@@ -525,6 +567,51 @@ NEWRELIC_LICENSE={new_relic_license} docker/sdk up
 {% info_block warningBox "Note" %}
 
 You can pass the New Relic license only with the `docker/sdk up` command.
+
+{% endinfo_block %}
+
+### Showing YVES, ZED, and GLUE as their own APM
+
+By default, the APM will display in the form of `company-staging-newrelic-app` within the New Relic dashboard. This behavior can be updated so that each of the available applications shows as their own APM (i.e. `YVES-DE (docker.dev)`) for improved visibility.
+
+To do so, additional changes will need to be made to the Monitoring service. Within `src/Pyz/Service/Monitoring/`, we can edit the `MonitoringDependencyProvider.php` to enable this functionality.
+
+```php
+<?php declare(strict_types = 1);
+
+/**
+ * This file is part of the Spryker Commerce OS.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Service\Monitoring;
+
+use Spryker\Service\Monitoring\MonitoringDependencyProvider as SprykerMonitoringDependencyProvider;
+use SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin;
+
+class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
+{
+    /**
+     * @return \Spryker\Service\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface[]
+     */
+    protected function getMonitoringExtensions(): array
+    {
+        return [
+            new NewRelicMonitoringExtensionPlugin(),
+        ];
+    }
+}
+```
+
+With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned within the `getMonitoringExtensions()` function, this tells the Monitoring class to include New Relic. Without these changes, New Relic will only report the base (i.e. `index.php`) without showing the appropriate  endpoint or class being called with each transaction.
+
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTnab3UR-VObOo2cPS2IzeFY5uYPy6WmdBgvn9FLBn7WV3b-kouvW0rUUw1MjKppzpck4InEtc=w1920-h878)
+
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
+
+{% info_block warningBox "Note" %}
+
+Different builds may have the Monitoring service built into the Yves application. If you are unable to locate `MonitoringDependencyProvider.php` within `src/Pyz/Service/Monitoring/`, you may find it integrated at `src/Pyz/Yves/Monitoring/`
 
 {% endinfo_block %}
 

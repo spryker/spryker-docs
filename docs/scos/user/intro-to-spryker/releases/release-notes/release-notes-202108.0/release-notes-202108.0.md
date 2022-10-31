@@ -183,7 +183,7 @@ With the **Agent Assist APIs**, you can create representations that enable a use
 #### Documentation
 
 * [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html)
-* [Searching by customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html)
+* [Search by customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html)
 * [Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html)
 * [Managing agent assist authentication tokens](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/managing-agent-assist-authentication-tokens.html)
 

@@ -15,9 +15,9 @@ related:
     link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
     link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/authenticating-as-an-agent-assist.html
-  - title: Impersonating customers as an agent assist
-    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
-  - title: Searching by customers as an agent assist
+  - title: Impersonate customers as an agent assist
+    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html
+  - title: Search by customers as an agent assist
     link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 ---
 

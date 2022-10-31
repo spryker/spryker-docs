@@ -2956,7 +2956,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - currency.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-currency.csv.html
           include_versions:
@@ -3507,7 +3506,7 @@ entries:
     - title: Yves
       url: /docs/scos/dev/back-end-development/yves/yves.html
       nested:
-      - title: Modular Frontend
+      - title: Modular frontend
         url: /docs/scos/dev/back-end-development/yves/modular-frontend.html
       - title: Controllers and actions
         url: /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
@@ -3735,21 +3734,21 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
           - title: Flysystem
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
-          - title: Extending the database schema
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
-          - title: Creating, using, and extending the transfer objects
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
+          - title: Extend the database schema
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
+          - title: Create, use, and extende the transfer objects
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
         - title: Spryker Middleware
           url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html
       - title: Event
         url: /docs/scos/dev/back-end-development/data-manipulation/event/event.html
         nested:
-        - title: Configuring an events queue
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
-        - title: Listening to events
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
-        - title: Adding events
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
+        - title: Configure an events queue
+          url: /docs/scos/dev/back-end-development/data-manipulation/event/configure-an-events-queue.html
+        - title: Listen to events
+          url: /docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
+        - title: Add events
+          url: /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
     - title: Extending Spryker
       nested:
       - title: Development strategies
@@ -3757,8 +3756,8 @@ entries:
         nested:
         - title: Project modules
           nested:
-          - title: Adding a new module
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+          - title: Add a new module
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
         - title: Spryker OS module customization
           nested:
           - title: Extending a core module that is used by another
@@ -3786,8 +3785,8 @@ entries:
     - title: Factory
       url: /docs/scos/dev/back-end-development/factory/factory.html
       nested:
-      - title: Injecting dependencies within factories- container globals
-        url: /docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
+      - title: Inject dependencies within factories - container globals
+        url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
     nested:
     - title: Zed

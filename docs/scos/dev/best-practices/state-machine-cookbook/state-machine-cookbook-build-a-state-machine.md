@@ -42,7 +42,7 @@ This use case scenario must implement the following behaviors:
 * The payment must be done before packing the order.
 * After the order is paid, it can be packed and shipped to the customer.
 * The customer can return order items within 100 days since the order was placed.
-* If the customer returns order items, the refund process must be initiated.
+* If the customer returns the order items, the refund process must be initiated.
 * After 100 days have passed, the order is considered completed.
 * After a return, the order is considered completed.
 
@@ -55,9 +55,10 @@ To model the prepaid state machine, follow these steps:
 5. Development.
 6. Integrate the State Machine.
 
-Each step is described in details in the following sections.
+Each step is described in detail in the following sections.
 
-### Create the XML file
+### Create an XML file
+
 To start defining your new state machine, create a new XML file under `config/Zed/oms/` called `Prepayment.xml`. For the moment the file contains only the name of the process that is currently being built (Prepayment).
 
 ```xml
@@ -73,7 +74,7 @@ To start defining your new state machine, create a new XML file under `config/Ze
 </statemachine>
 ```
 
-We added the `main="true"` attribute to the process because this process manages an entire workflow. Given that there are many parts that are similar between the state machines that a system needs, you can reuse parts of them as subprocesses. Subprocesses are described in the XML file similar to the oms processes, the only difference is the value of this attribute (`main="false"`).
+The process has the `main="true"` attribute because this process manages an entire workflow. Given that there are many parts that are similar between the state machines that a system needs, you can reuse parts of them as subprocesses. Subprocesses are described in the XML file similar to the oms processes, the only difference is the value of this attribute (`main="false"`).
 
 {% info_block infoBox %}
 
@@ -115,8 +116,9 @@ const ORDER_PROCESS_PREPAYMENT = 'Prepayment';
 }
 ```
 
-### Identify the States
-Now, let's identify the states in which the order can be at a moment. Which are the steps in which a order must pass to complete a prepaid order?
+### Identify states
+
+Now, let's identify the states in which the order can be at a moment. What are the steps an order must pass to complete a prepaid order?
 
 1. New
 2. Invoice generated
@@ -163,10 +165,11 @@ Add these states in the XML file you previously created, as in the following exa
 
 You can check the current state of your state machine in Zed: [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14). You'll see the states defined before, without any links between them. To pass from one state to another, a transition must be defined between two states. To be able to tell when a transition can be fired, an event attached to that transition must take place.
 
-### Identify the Events
+### Identify events
+
 Next, let's identify the events that can tell if a transition can be fired.
 
-|  #   |        Event         |   Event Trigger   |                           Comments                           |
+|  #   |        EVENT         |   EVEVT TRIGGER   |                           Comments                           |
 | :--: | :------------------: | :---------------: | :----------------------------------------------------------: |
 |      |    Create invoice    |  onEnter="true"   |                  Event fired automatically                   |
 |      |     Send invoice     |  onEnter="true"   |                                                              |
@@ -200,16 +203,18 @@ Now that we identified the events, we can add them in the XML file that defines 
 ```
 
 {% info_block infoBox "Timeout Events " %}
-If the state machine's current state is the source state for a transition that has a timeout event attached, it will be checked periodically by a cronjob to see if that amount of time has already passed.
+
+If the state machine's current state is the source state for a transition that has a timeout event attached, it is checked periodically by a cronjob to see whether that amount of time has already passed.
+
 {% endinfo_block %}
 
-Define the Transitions
+## Define transitions
 
 Transitions draw the links from one state to another. They are bound to an event, which defines when the transition can be fired (when the state machine can move from the current state to another state).
 
-A transition can have a condition attach which is check when the state machine is currently in the source state by a cronjob that runs periodically. Basically, the condition is linked to a PHP class that contains logic that checks if the transition can take place.
+A transition can have a condition attached, which is checked when the state machine is currently in the source state by a cronjob that runs periodically. Basically, the condition is linked to a PHP class that contains logic that checks if the transition can take place.
 
-Now, let's draw the possible transitions between the previously defined states and setup the corresponding event for each of them.
+Now, let's draw the possible transitions between the previously defined states and set up the corresponding event for each of them.
 
 ```xml
 <transitions>
@@ -302,7 +307,7 @@ Now, let's draw the possible transitions between the previously defined states a
 
 You can check the current state of your state machine in Zed: [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14).
 
-We can highlight the best case scenario by adding the happy="true" attribute to the transitions, where is the case, as in the following example:
+We can highlight the best-case scenario by adding the `happy="true"` attribute to the transitions, where is the case, as in the following example:
 
 ```xml
 <transition happy="true">

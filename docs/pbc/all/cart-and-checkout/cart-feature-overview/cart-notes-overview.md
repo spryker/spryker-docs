@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/cart-feature-overview/cart-notes-overview.html
 ---
 
-*Cart Notes* let Shop administrators include the **Notes** field on the **Cart** page. Customers can add notes to a particular item or the whole cart. for example, they can add special instructions about preparing and delivering an order.
+*Cart Notes* let Shop administrators include the **Notes** field on the **Cart** page. Customers can add notes to a particular item or the whole cart. For example, they can add special instructions about preparing and delivering an order.
 
 ![Cart notes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes.png)
 

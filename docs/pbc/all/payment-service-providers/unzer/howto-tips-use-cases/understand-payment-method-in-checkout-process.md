@@ -9,11 +9,11 @@ Depending on your Unzer credentials type defined in the Back Office, the display
 
 ## Standard type credentials
 
-Whenever a customer goes through the checkout process, Unzer is called to know all the payment methods that are currently enabled in your account. This list is compared against the active payment methods for this store. All payment methods that are at the intersection of the Unzer data and the Spryker data are displayed.
+Whenever a customer goes through the checkout process, Unzer is called to know all the payment methods currently enabled in your account. This list is compared against the active payment methods for this store. All payment methods at the intersection of the Unzer data and the Spryker data are displayed.
 
 ## Marketplace type credentials
 
-Whenever a customer goes through the checkout process, Unzer is called to know all the payment methods that are currently enabled in your account. This list is compared against the active payment methods for this store and all the payment methods enabled for all the merchants inside the cart (defined in Unzer).
+Whenever a customer goes through the checkout process, Unzer is called to know all the payment methods currently enabled in your account. The list is compared against the active payment methods of the store, and all the payment are methods enabled for the merchants (in Unzer) inside the cart.
 
 ### Single merchant inside the cart
 
@@ -32,7 +32,7 @@ In your Unzer account, the following payment methods are enabled for the marketp
 * Credit Card
 * Sofort
 
-For the merchant A, the following payment methods are enabled:
+For merchant A, the following payment methods are enabled:
 
 * Credit Card
 * PayPal
@@ -44,6 +44,14 @@ The customers in the checkout process see the following payment methods in the c
 * Sofort
 * PayPal
 * Apple Pay
+
+{% info_block infoBox %}
+
+ For all the marketplace compatible payment methods, Spryker uses the marketplace Unzer credentials. For all the other payment methods, Spryker uses merchant-specific Unzer credentials.
+
+Based on the preceding example, Spryker uses the marketplace Unzer credentials for the Credit Card and Sofort payment methods. For PayPal and Apple Pay, Spryker uses the merchant-specific Unzer credentials. 
+
+{% endinfo_block %}
 
 ### Multiple merchants in the cart
 
@@ -55,18 +63,18 @@ All payment methods enabled for a marketplace business model in Unzer are displa
 
 #### Example
 
-In your Unzer account, the following payment methods are enabled for the marketplace business model
+In your Unzer account, the following payment methods are enabled for the marketplace business model.
 
 * Credit Card
 * Unzer Bank Transfer
 
-For the merchant A, the following payment methods are enabled:
+For merchant A, the following payment methods are enabled:
 
 * Credit Card
 * PayPal
 * Apple Pay
 
-For the merchant B, the following payment methods are enabled:
+For merchant B, the following payment methods are enabled:
 
 * Credit Card
 * Google Pay
@@ -75,3 +83,11 @@ The customers in the checkout process see the following payment methods in the c
 
 * Credit Card
 * Unzer Bank Transfer
+
+{% info_block infoBox %}
+
+For all the marketplace compatible payment methods, Spryker uses the marketplace Unzer credentials . For all the other payment methods, Spryker uses merchant-specific Unzer credentials.
+
+Based on the example above, Spryker will use the marketplace Unzer credentials for the Credit Card and Unzer Bank Transfer payment methods.
+
+{% endinfo_block %}

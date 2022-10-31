@@ -1,15 +1,12 @@
 ---
 title: Messages stuck in unacked state
 description: This article suggests solution strategies for when messages get stuck in unacked status
+last_updated: Oct 31, 2022
 template: troubleshooting-guide-template
 ---
 
-## Title
-
-Messages get stuck in unacked state
-
 ## Description
-Messages are getting stuck/do not get consumed from RabbitMQ queues. They are not getting moved to the error queue and there is no visible error in CloudWatch log groups. Instead, the messages are stuck in the “Ready” queue and are getting moved to unacked state and not consumed and moved back, or are stuck in unacked state.
+Messages are getting stuck or do not get consumed from RabbitMQ queues. They are not getting moved to the error queue and there is no visible error in CloudWatch log groups. Instead, the messages are stuck in the “Ready” queue and are getting moved to unacked state and not consumed and moved back, or are stuck in unacked state.
 
 ## Cause
 This is most often caused by the consumption process not being able to successfully finish to do OOM error

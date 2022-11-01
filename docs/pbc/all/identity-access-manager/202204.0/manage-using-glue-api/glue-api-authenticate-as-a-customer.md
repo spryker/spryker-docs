@@ -77,8 +77,8 @@ Request sample: authenticate as a customer
 
 | ATTRIBUTE | TYPE | REQUIRED  |DESCRIPTION |
 | --- | --- | --- | --- |
-| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
-| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 {% info_block infoBox "Username" %}
 

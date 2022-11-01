@@ -71,8 +71,8 @@ To authenticate as a customer, send the request:
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
 | grant_type | password | &check; | Method through which the application can gain Access Tokens and by which you grant limited access to the resources to another entity without exposing credentials. |
-| username | String | &check; | Customer's username. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
-| password | String | &check; | Customer's password. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| username | String | &check; | Customer's username. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| password | String | &check; | Customer's password. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Response
 

@@ -100,7 +100,7 @@ Request sample: retrieve customers
 ```
 </details>
 
-See [Create a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer-response-attributes) to learn about the response attributes.
+See [Create a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer-response-attributes) to learn about the response attributes.
 
 ## Retrieve a customer
 
@@ -113,7 +113,7 @@ To retrieve information about a customer, send the request:
 
 | PATH PARAMETER| DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to get information for. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer).  |
+| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to get information for. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer).  |
 
 
 ### Request
@@ -175,7 +175,7 @@ To edit a customer account, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
+| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to edit. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
 
 ### Request
 
@@ -246,7 +246,7 @@ To anonymize a customer, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to anonimyze. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
+| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to anonimyze. This parameter is returned as the `id` attribute when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
 
 ### Request
 

@@ -14,7 +14,7 @@ related:
   - title: Agent Assist feature overview
     link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
-    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/authenticating-as-an-agent-assist.html
+    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
     link: docs/pbc/all/user-management/page.version/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
@@ -22,7 +22,7 @@ related:
 ---
 
 
-Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html#impersonate-a-customer).
+Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html#impersonate-a-customer).
 
 ## Installation
 

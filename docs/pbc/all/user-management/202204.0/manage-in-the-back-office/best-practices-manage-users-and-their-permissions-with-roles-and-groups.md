@@ -97,7 +97,7 @@ To create the user group, do the following:
 6. Enter a **LAST NAME**.
 7. For **ASSIGNED GROUPS**, select the group you've created in [2. Creating a user group](#creating-a-user-group).
 8. If you want this user to be an agent, select **THIS USER IS AN AGENT**.
-    Agent users can perform actions on customers' behalf. For more information about agent users, see [Agent Assist feature overview](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html)
+    Agent users can perform actions on customers' behalf. For more information about agent users, see [Agent Assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html)
 9. Select an **INTERFACE LANGUAGE**.
     The Back Office interface will be in this language for the user.
 10. Click **Create**.

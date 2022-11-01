@@ -46,7 +46,7 @@ Spryker OS support: High, you can safely take minor and patch releases.
 
 ## Plug and play development strategy
 
-When existing OOTB functionality is not enough, we need to consider building our Plugins for existing plugin stacks in separate Project modules.
+When existing OOTB (out-of-the-box) functionality is not enough, we need to consider building our Plugins for existing plugin stacks in separate Project modules.
 
 The existing Spryker modules remain untouched.
 

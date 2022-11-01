@@ -86,10 +86,10 @@ docker/sdk bootstrap
 
 {% info_block infoBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after the following takes place:
 
-* Docker SDK version update
-* Deploy file update
+* Docker SDK version update.
+* Deploy file update.
 
 {% endinfo_block %}
 
@@ -117,7 +117,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
     {% endinfo_block %}
 
-    9. Select **File** > **Save**.
+    9. Select **File > Save**.
     10. Close the file.
 
 10. Once the job finishes, build and start the instance:

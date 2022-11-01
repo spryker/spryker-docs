@@ -108,7 +108,7 @@ docker/sdk bootstrap deploy.dev.yml
 
 {% info_block infoBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after the following takes place:
 
 * Docker SDK version update
 * Deploy file update
@@ -128,13 +128,13 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
     {% info_block warningBox "Warning" %}
 
-    **It is not recommended to exceed 10 hostnames per line** on Windows machines. Split a long line into multiple lines if necessary.
+    *It is not recommended to exceed 10 hostnames per line* on Windows machines. Split a long line into multiple lines if necessary.
 
     {% endinfo_block %}
 
     {% info_block infoBox %}
 
-    You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
+To get the list of instructions, you can run `docker/sdk install` after `bootstrap`.
 
     {% endinfo_block %}
 

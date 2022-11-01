@@ -1,20 +1,20 @@
 ---
 title: GUI modules concept
-description: Short overview of GUI modules in Merchant portal.
+description: Short overview of GUI modules in Merchant Portal.
 template: concept-topic-template
 related:
   - title: How to create a new GUI module
     link: docs/marketplace/dev/howtos/how-to-create-gui-module.html
 ---
 
-This articles provides a short overview of the GUI (graphical user interface) modules in the Merchant Portal.
+This document provides a short overview of the GUI (graphical user interface) modules in the Merchant Portal.
 
 ## GUI modules structure
 
 GUI modules have the main purpose of providing logic for the functioning of the Merchant Portal pages and components for merchant management. The Core GUI modules can be identified by the suffix `MerchantPortalGui` (`DashboardMerchantPortalGui`, `ProductOfferMerchantPortalGui`).
 
-Typical GUI modules include:
-- Controllers for displaying Merchant Portal pages and corresponding logic (forms, data mappers).
+Typical GUI modules include the following:
+- Controllers for displaying Merchant Portal pages and corresponding logic (forms and data mappers).
 - GUI tables and corresponding logic for configuration, and data provisioning.
 - Twig templates.
 - Frontend components.

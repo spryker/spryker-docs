@@ -2,6 +2,9 @@
 title: "Best practices: Managing users and their permissions with roles and groups"
 description: Learn how to manage users and their permissions with roles and groups
 template: back-office-user-guide-template
+related:
+  - title: Customer Groups overview
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to create a user with restricted access to the  Back Office.
@@ -17,6 +20,7 @@ Even if you don't want to restrict access of a user, to create a user, you still
 ### Checking the bundle, controller, and action values
 
 To restrict or allow access to an area or action of the Back Office, you need the following values:
+
 * Bundle
 * Controller
 * Action
@@ -38,7 +42,6 @@ In this example, the values are as follows:
 | create | action |
 
 
-
 ### Creating the role with limited access
 
 1. Go to **Users&nbsp;<span aria-label="and then">></span> User Roles**.
@@ -47,12 +50,12 @@ In this example, the values are as follows:
   Later, you will be using this name when assigning this role to user groups.
 4. Click **Create**.
     This creates the roles and opens the **Edit Role** page.
-5. Create the rule that gives full access:    
+5. Create the rule that gives full access:
     1. For **BUNDLE**, **CONTROLLER**, and **ACTION** enter `*`.
         `*` means that the rule applies to all the existing bundles, controllers, and actions.
     2. For **PERMISSION**, select **allow**.
         This type of permission gives access to the **BUNDLE**, **CONTROLLER**, and **ACTION** you've entered.
-    3. Click **Add rule**.   
+    3. Click **Add rule**.
         The page refreshes with the success message displayed and the rule displayed in the **Assigned Rules** section.
 6. Using the details you've checked in [Checking the bundle, controller, and action values](#checking-the-bundle-controller-and-action-values), set up the rule that restricts creating product attributes:
     1. For **BUNDLE**, enter `product-attribute-gui`.
@@ -61,7 +64,7 @@ In this example, the values are as follows:
     4. For **PERMISSION**, select **deny**.
         This type of permission denies access to the **BUNDLE**, **CONTROLLER**, and **ACTION** you've entered.
     5. Click **Add rule**.
-        The page refreshes with the success message displayed and the rule displayed in the **Assigned Rules** section.      
+        The page refreshes with the success message displayed and the rule displayed in the **Assigned Rules** section.
 
 ## 2. Creating a user group
 
@@ -86,7 +89,7 @@ To create the user group, do the following:
 2. On the **Create new User** page, enter an **E-MAIL**.
     The user will be using this email address to log into the Back Office.
 3. Enter a **PASSWORD**.
-    The user will be using this password to log into the Back Office.   
+    The user will be using this password to log into the Back Office.
 4. For **REPEAT PASSWORD**, enter the same password once again.
 5. Enter a **FIRST NAME**.
 6. Enter a **LAST NAME**.
@@ -97,6 +100,6 @@ To create the user group, do the following:
     The Back Office interface will be in this language for the user.
 10. Click **Create**.
 
-This opens the **Users** page with the success message displayed. The created user is displayed in the list.    
+This opens the **Users** page with the success message displayed. The created user is displayed in the list.
 
 That's it! You can test the new user by logging into their account. They should have full access except for creating product attributes. When they clicks **Create a Product Attribute**, they get the **Access denied** message.

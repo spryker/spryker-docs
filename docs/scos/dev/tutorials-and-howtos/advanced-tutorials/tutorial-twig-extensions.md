@@ -21,6 +21,9 @@ redirect_from:
   - /v2/docs/en/t-twig-extensions
   - /v1/docs/t-twig-extensions
   - /v1/docs/en/t-twig-extensions
+related:
+  - title: "Tutorial: How the define Twig tag is working"
+    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
 ---
 
 This document shows how to implement a Twig extension. As an example, let's build a filter which can be used for displaying prices.
@@ -156,7 +159,7 @@ class ExampleTwigExtensionPlugin extends AbstractTwigExtensionPlugin
 
 ## 3. Register the Twig extension you created
 
-To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) for information on the dependency providers.
+To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html) for information on the dependency providers.
 
 First, add a reference to the Twig extension in `TwigDependencyProvider.php`:
 

@@ -17,9 +17,9 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
 ---
 
-By default, the CMS module doesn't specify the content field size. For MySQL and MariaDB, it is transferred to TEXT (65535 bytes), and for PostgreSQL, it is transferred to TEXT (unlimited length).
+By default, the CMS module doesn't specify the content field's size. For MySQL and MariaDB, it is transferred to TEXT (65535 bytes), and for PostgreSQL, it is transferred to TEXT (unlimited length).
 
-In case your project requires more, you can redefine the field size in the `spy_cms_version` table.
+If your project requires more, you can redefine the field's size in the `spy_cms_version` table.
 
 {% info_block infoBox %}
 

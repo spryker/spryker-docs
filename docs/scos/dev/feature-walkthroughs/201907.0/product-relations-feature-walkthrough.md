@@ -23,7 +23,7 @@ The following schema illustrates relations within the Product Relations feature:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES |
+| INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
 |[Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | ProductRelation migration guide |
 | [Glue API: Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | ProductRelationStorage migration guide |

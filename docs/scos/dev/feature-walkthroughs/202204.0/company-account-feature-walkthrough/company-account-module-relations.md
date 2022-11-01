@@ -1,5 +1,5 @@
 ---
-title: Company account- module relations
+title: "Company account: module relations"
 description: Explore the module relations of the Company Account features
 last_updated: Jun 16, 2021
 template: feature-walkthrough-template
@@ -11,12 +11,12 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/company-account-module-relations.html
 ---
 
-The schema below illustrates relations between company, business unit, company unit address and company user (customer).
+The schema below illustrates relations between company, business unit, company unit address, and company user (customer).
 
 ![schema_1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account:+Module+Relations/schema_1.png) 
 
 
-The schema below illustrates relations between modules in of the business on behalf functionality:
+The schema below illustrates relations between modules of the business on behalf functionality:
 
 ![business-on-behalf-module-relations.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-module-relations.png) 
 

@@ -20,26 +20,26 @@ In the Spryker Commerce OS user and rights management is implemented in the foll
 
 * ACL—ACL stands for Access Control List. This is where you can manage your roles, groups, privileges and resources.
 * Auth—manages the authorization of a specific user by returning true or false if the credentials are allowed to access the system or not. It is used for login, logout, and used by the login controller to verify if a given user token is authenticated. Login is authenticated with a form or a header (via token). Auth is also used to validate that Zed has authorization to process incoming requests from Yves or 3rd parties such as payment providers.
-* User—allows to create users and assign them to groups. Each group contains a set of roles.
+* User—lets you create users and assign them to groups. Each group contains a set of roles.
 
 ## Users and customers
 
-It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will allow them to perform actions such as editing the CMS, activating and deactivating products and managing discounts. A customer on the other hand is the final consumer of the online store for example, the person who places orders. Customers are also managed in Zed but in a different section.
+It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will let them perform actions such as editing the CMS, activating and deactivating products, and managing discounts. A customer on the other hand is the final consumer of the online store—for example, the person who places orders. Customers are also managed in Zed but in a different section.
 
-Users are assigned to groups. Groups are a collection of Roles e.g. customer-care, root, 3rd party etc. Roles have Resources (rules) assigned to them. Resources (rules) are used to assign specific privileges to a Role for example, a Sales Representative Role or a System Administrator Role. Resources are always /module/controller/action and you can use * as placeholder.
+Users are assigned to groups. Groups are a collection of Roles—for example, customer-care, root, or 3rd party. Roles have Resources (rules) assigned to them. Resources (rules) are used to assign specific privileges to a Role for example, a Sales Representative Role or a System Administrator Role. Resources are always /module/controller/action and you can use * as placeholder.
 
 * `/customer/*/*` would mean everything in /customer.
-* `/customer/view/*` would mean a user can only see customers but can’t edit them.
+* `/customer/view/*` would mean a user can only see customers but can't edit them.
 
 ## Managing users
 
-The Auth, ACL and User bundles are configured and managed through the Zed user interface. Bundles correspond with the tabs in Zed. You can find which name you should place here from the file `/project/config/Zed/navigation.xml`
+The Auth, ACL, and User bundles are configured and managed through the Zed user interface. Bundles correspond with the tabs in Zed. You can find which name to place here from the file `/project/config/Zed/navigation.xml`
 
 Also, you can find bundle names as well as controllers and actions in the file `communication/navigation.xml`. For example:
 
 ![bundles_navigation.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.md/bundles_navigation.png)
 
-See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn how to create and manage users, groups, and roles.
 
 <a name="add-acl"></a>
 

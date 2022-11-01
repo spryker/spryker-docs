@@ -10,21 +10,21 @@ redirect_from:
   - /2021080/docs/en/cms
   - /docs/cms
   - /docs/en/cms
-  - //docs/scos/user/features/202200.0/cms-feature-overview/cms-feature-overview.html
+  - /docs/scos/user/features/202200.0/cms-feature-overview/cms-feature-overview.html
+
 ---
 
 The *CMS* feature is a content management system that lets you create and manage the content of custom pages that are not part of the product catalog.
 
-The main functionalities of the feature are:
+The main functionalities of the feature are the following:
 * Templates and slots
 * CMS page
 * CMS block
 * WYSIWYG editor
 
-WYSIWYG editor is a powerful tool used to create content for content items, CMS pages and blocks. Templates and slots, CMS pages and blocks are used to manage content.
+The WYSIWYG editor is a powerful tool that is used to create content for content items, and CMS pages and blocks. Templates and slots and CMS pages and blocks are used to manage content.
 
 All the CMS elements are based on templates. They simplify the creation of similar content. CMS block templates in particular define what a block is used for.
-
 
 ### CMS glossary
 
@@ -48,8 +48,8 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Templates and Slots](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)  |
-| [Get a general idea of CMS Pages](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |
+| [Get a general idea of Templates and Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)  |
+| [Get a general idea of CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)  |
 | [Get a general idea of CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)  |
 | [Get a general idea of CMS pages in search results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html)  |
 | [Get a general idea of email as a CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)  |

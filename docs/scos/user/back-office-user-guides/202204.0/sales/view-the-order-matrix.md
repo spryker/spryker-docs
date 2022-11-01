@@ -13,6 +13,11 @@ redirect_from:
   - /docs/order-matrix-reference-information
   - /docs/scos/user/back-office-user-guides/202200.0/sales/order-matrix/viewing-the-order-matrix.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/order-matrix/viewing-the-order-matrix.html
+related:
+  - title: Order Management feature overview
+    link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
+  - title: OMS (Order management system) matrix
+    link: docs/scos/user/features/page.version/order-management-feature-overview/oms-order-management-system-matrix.html
 ---
 
 The **Overview of Order Matrix** page displays the information about ordered items.
@@ -24,6 +29,7 @@ To view the order matrix, navigate to **Sales&nbsp;<span aria-label="and then">>
 ## Viewing Order Matrix
 
 On the **Overview of Order Matrix** page, you see the following information:
+
 * The statuses of the ordered items.
 * The number of items with a specific status.
 ![Order Matrix](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Order+Matrix/order+matrix.png)

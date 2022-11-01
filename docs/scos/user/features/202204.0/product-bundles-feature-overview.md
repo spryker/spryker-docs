@@ -11,6 +11,7 @@ redirect_from:
   - /docs/product-bundles-feature-overview
   - /docs/en/product-bundles-feature-overview
   - /docs/scos/user/features/202200.0/product-bundles-feature-overview.html
+  - /docs/product-bundles
 ---
 
 With the _Product Bundles_ feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
@@ -22,7 +23,7 @@ Example:
 
 {% info_block infoBox %}
 
-Bundles are handled in different ways:<br>For example, a marketing bundle of two items that gives a 20% discount is purchased as a single item and then split for processing into its two constituent items. Another scenario is when products are put together from separate purchase items, for example when tires and rims are sold as separate items and then delivered assembled as wheels.
+Bundles are handled in different ways:<br>For example, a marketing bundle of two items that gives a 20% discount is purchased as a single item and then split for processing into its two constituent items. Another scenario is when products are put together from separate purchase items—for example when tires and rims are sold as separate items and then delivered assembled as wheels.
 
 {% endinfo_block %}
 
@@ -98,7 +99,7 @@ BundleProduct have price this price, it is distributed to whole bundled items. O
 
 ## Persisting when placing an order, end of checkout
 
-Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return).
+Bundle product information is stored to `spy_sales_order_item_bundle`. When an order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item—for example, ship, refund, return.
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 
@@ -106,7 +107,7 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)  |
+| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

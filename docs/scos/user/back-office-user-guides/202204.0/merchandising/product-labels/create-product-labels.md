@@ -12,6 +12,10 @@ redirect_from:
   - /docs/en/creating-product-labels
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-labels/creating-product-labels.html
 related:
+  - title: Edit product labels
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/edit-product-labels.html
+  - title: View product labels
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/view-product-labels.html
   - title: Product Labels feature overview
     link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---

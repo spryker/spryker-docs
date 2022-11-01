@@ -13,6 +13,12 @@ redirect_from:
 related:
   - title: Agent Assist feature overview
     link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
+  - title: Impersonating customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - title: Managing agent assist authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/managing-agent-assist-authentication-tokens.html
+  - title: Searching by customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 ---
 
 Log into the Storefront as an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you’ve logged in, you can search by customers and impersonate them to perform any action available to them.

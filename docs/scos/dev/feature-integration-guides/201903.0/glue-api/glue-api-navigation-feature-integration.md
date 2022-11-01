@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/navigation-api-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, review and install the necessary features:
 |Name|Version|

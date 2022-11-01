@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/performance-release-notes-2021020
   - /docs/performance-release-notes-2021020
   - /docs/en/performance-release-notes-2021020
+related:
+  - title: "Security release notes: 202102.0 SEC"
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
 ---
 
 This document describes the performance improvements we implemented in release `202102`. To install an improvement, migrate the provided modules to the specified versions.

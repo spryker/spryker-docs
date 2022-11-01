@@ -23,31 +23,33 @@ redirect_from:
   - /v1/docs/t-cms
   - /v1/docs/en/t-cms
 related:
-  - title: Implementing URL Routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
-  - title: Cronjob Scheduling
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+  - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 
 <!--used to be: http://spryker.github.io/challenge/cms/-->
 
 ## Challenge description
 
-Create a static _Contact Us_ page and integrate it into Yves. Then, create your own template and use it.
+Create a static **Contact Us** page and integrate it into Yves. Then, create your own template and use it.
 
-## Static page
+## Create a static page
 
-For creating a static page, follow the steps:
+1. Go to Zed UI and open the CMS Pages `https://zed.mysprykershop.com/cms-gui/list-page` backend. 
+2. Add a CMS page that uses the URL `/de/contact`.
+3. Add the text you want to show on the static page.
+4. Activate the page.
+   You can see the page [here](https://mysprykershop.com/de/contact).
 
-1. Go to Zed UI and open the CMS Pages `https://zed.mysprykershop.com/cms-gui/list-page` backend. Add a CMS page that uses the URL `/de/contact`.
-2. Add the text you would like to show on the static page.
-3. Activate the page.
-The page is there! You can see the page [here](https://mysprykershop.com/de/contact).
+## Use your own template
 
-## Templates
-
-1. To use your own templates, create a template under `src/Pyz/Yves/Cms/Theme/default/template` and call it `contact`.
+1. Under `src/Pyz/Yves/Cms/Theme/default/template`, create a template and call it `contact`.
 2. Add a placeholder and call it `MyPlaceholder`. You can open some other templates to see how it’s done.
-3. Go back to the CMS Pages(`https://zed.mysprykershop.com/cms-gui/list-page`) backend and edit your page, then change the template to use `contact`.
-4. Add a new text to the placeholder `MyPlaceholder`.
-Go back to the [page](https://mysprykershop.com/de/contact) and have a look at the changes.
+3. Go back to the CMS Pages(`https://zed.mysprykershop.com/cms-gui/list-page`) backend and edit your page
+4. Change the template to use `contact`.
+5. Add new text to the placeholder `MyPlaceholder`.
+6. Go back to the [page](https://mysprykershop.com/de/contact) and have a look at the changes.

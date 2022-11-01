@@ -15,6 +15,11 @@ redirect_from:
   - /v4/docs/en/release-notes-2020010
   - /v6/docs/release-notes-2020010
   - /v6/docs/en/release-notes-2020010
+related:
+  - title: Security Release Notes 202001.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-release-notes-202001.0.html
+  - title: Known Issues 202001.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/known-issues-202001.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in January of 2020.
@@ -213,7 +218,7 @@ With this release Publish & Synchronize enables direct access to denormalized da
 To get most of this feature, we recommend to set up master-slave replication and point the Storage to the slave instance, avoiding additional load on the master instance.
 
 #### Documentation
-[HowTo - Disable Key-value Storage and use the Database Instead](/docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html)
+[HowTo: Disable Key-value Storage and use the Database Instead](/docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html)
 
 ### Spryker Application
 In the previous release, our infrastructure provided **Spryker Application** Instead of deprecated Silex. Spryker Application is served with Application Plugins, which should be used instead of Silex Service Providers. This release completes the migration by providing last missing Application Plugins: security, router, validation, messenger, propel, event dispatcher.
@@ -234,7 +239,7 @@ The **Queue manager** functionality is extended with the command that makes queu
 
 #### Documentation:
 
-[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
+[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html#queue)
 
 ### Search Initialization Improvement
 To improve usability, the `vendor/bin/console setup:search` command which has been generating two processes, was split into two commands:

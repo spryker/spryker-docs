@@ -1,5 +1,5 @@
 ---
-title: Legacy Demoshop — Handling orders with Amazon Pay API
+title: Legacy Demoshop—Handling orders with Amazon Pay API
 description: This article provides details on the API structure of the Amazon Pay module in Spryker Legacy Demoshop.
 last_updated: Apr 3, 2020
 template: concept-topic-template

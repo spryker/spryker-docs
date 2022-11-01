@@ -10,11 +10,16 @@ entries:
             url: /docs/acp/user/intro-to-acp/acp-overview.html
           - title: ACP security assessment
             url: /docs/acp/user/intro-to-acp/aop-security-assessment.html
-      - title: Apps
-        nested:
-          - title: Bazaarvoice
-            url: /docs/acp/user/apps/bazaarvoice.html
-          - title: Payone
-            url: /docs/acp/user/apps/payone.html
-          - title: Usercentrics
-            url: /docs/acp/user/apps/usercentrics.html
+      - title: Developing an app
+        url: /docs/acp/user/developing-an-app.html
+      - title: App manifest
+        url: /docs/acp/user/app-manifest.html
+      - title: App configuration
+        url: /docs/acp/user/app-configuration.html
+      - title: App configuration translation
+        url: /docs/acp/user/app-configuration-translation.html
+      - title: Sync API
+        url: /docs/acp/user/sync-api.html
+      - title: Async API
+        url: /docs/acp/user/async-api.html
+

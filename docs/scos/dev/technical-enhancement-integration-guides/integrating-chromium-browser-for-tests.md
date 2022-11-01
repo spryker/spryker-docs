@@ -19,9 +19,15 @@ redirect_from:
 
 ## Integration into Docker-based projects
 
-For Docker-based integration instructions, see [ChromeDriver](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html#chromedriver).
+For Docker-based integration instructions, see [ChromeDriver](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html#chromedriver).
 
 ## Integration into DevVM-based projects
+
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 To integrate Chromium into a DevVM-based project:
 

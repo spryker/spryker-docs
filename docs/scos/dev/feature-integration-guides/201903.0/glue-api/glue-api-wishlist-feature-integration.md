@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-wishlists/h/docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-wishlist-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

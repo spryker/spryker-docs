@@ -19,6 +19,14 @@ redirect_from:
 related:
   - title: Web Profiler Widget for Yves
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+  - title: Integrating Formatter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+  - title: Integrating SCSS linter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
+  - title: Integrating TS linter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+  - title: Integrating Web Profiler Widget for Yves
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
 ---
 
 {% info_block errorBox %}

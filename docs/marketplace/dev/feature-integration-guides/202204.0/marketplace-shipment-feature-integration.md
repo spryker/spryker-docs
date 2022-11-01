@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Merchant | {{page.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Shipment | {{page.version}} | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
+| Shipment | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -64,7 +64,7 @@ use Spryker\Service\Shipment\ShipmentConfig as SprykerShipmentConfig;
 class ShipmentConfig extends SprykerShipmentConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getShipmentHashFields(): array
     {
@@ -75,7 +75,7 @@ class ShipmentConfig extends SprykerShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
+Place an order and check that items are grouped by merchant shipment in backoffice.
 
 {% endinfo_block %}
 
@@ -132,7 +132,7 @@ use Spryker\Zed\ShipmentGui\ShipmentGuiDependencyProvider as SprykerShipmentGuiD
 class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ShipmentGuiExtension\Dependency\Plugin\ShipmentOrderItemTemplatePluginInterface[]
+     * @return array<\Spryker\Zed\ShipmentGuiExtension\Dependency\Plugin\ShipmentOrderItemTemplatePluginInterface>
      */
     protected function getShipmentOrderItemTemplatePlugins(): array
     {

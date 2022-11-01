@@ -15,6 +15,10 @@ redirect_from:
 related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+  - title: Deploy file inheritance—common use cases
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
+  - title: Deploy file
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file.html
 ---
 
 
@@ -205,7 +209,7 @@ Affects the included deploy file that it follows in an array of included deploy 
 
 Defines the configuration of the import:
 
-* `{import_name}: template:` — defines the deploy file to be included into a build  as part of this import.
+* `{import_name}: template:`—defines the deploy file to be included into a build  as part of this import.
 * `{import_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml
@@ -292,9 +296,27 @@ image:
 ```
 ***
 
+### image: node:
+
+Defines Node.js settings.
+
+* `image: node: version:`—defines a Node.js version. Supports only major versions that are greater than the default one. The default version is `12`.
+* `image: node: npm`—defines an NPM version. Supports only major versions that are greater than the default one. The default version is `6`.
+* `image: node: distro:`—defines a Linux distribution for the Node Docker image. Should be equal to your base PHP image. Possible values are `alpine` and `debian`. This variable is optional with the default value of `alpine`.
+
+```yaml
+image:
+    ...
+    node:
+        version: 18
+        distro: alpine
+        npm: 8
+```
+***
+
 ### image: php:
 
-Defines PHP settings for Spryker applications.
+Defines PHP settings.
 
 * `image: php: ini:` - defines `php.ini` configuration.
 * `image: php: enabled-extensions` - defines enabled PHP extensions. The following extensions are allowed:
@@ -633,7 +655,7 @@ docker:
 
 ### docker: newrelic:
 
-Defines the [New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#new-relic) configuration.
+Defines the [New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html#new-relic) configuration.
 
 * `docker: newrelic: license:` - defines a New Relic license. Aquire it from [New Relic](https://www.newrelic.com/).
 * `docker: newrelic: appname:` - defines a New Relic application name. This variable is optional and does not have a default value.
@@ -694,6 +716,19 @@ docker:
 ```
 
 * `docker: debug: xdebug: enabled:` - defines if Xdebug is enabled.
+
+***
+
+### docker: maintenance: enabled:
+
+Defines if applications work in maintenance mode. The default value is `false`.
+
+```yaml
+version: 1.0
+docker:
+    maintenance:
+        enabled: {true | false}
+ ```
 
 ***
 
@@ -821,12 +856,18 @@ A real-time log monitoring *Service*.
 
   - `dashboard: engine:` - possible value is `dashboard`.
   - `dashboard: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
-  -
+
 ***
 
 ### database:
 
 An SQL database management system *Service*.
+
+{% info_block warningBox "SCCOS" %}
+
+In Spryker Cloud Commerse OS, `database: root: username:` and `database: root: password:` are generated automatically for security reasons. You *do not* need to define them for cloud environments.  
+
+{% endinfo_block %}
 
 * Project-wide
 

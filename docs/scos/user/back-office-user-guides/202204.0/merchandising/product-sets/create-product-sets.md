@@ -12,6 +12,14 @@ redirect_from:
   - /docs/en/creating-product-sets
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-sets/creating-product-sets.html
 related:
+  - title: Edit product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/edit-product-sets.html
+  - title: Reorder product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/reorder-product-sets.html
+  - title: View product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/view-product-sets.html
+  - title: Delete product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/delete-product-sets.html
   - title: Product Sets feature overview
     link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
@@ -55,17 +63,7 @@ On the **Product Sets** page, click **Create Product Set** and follow the instru
 
 ### 4. Add images for the product set
 
-1. In the **Images** tab, do the following for the needed locales:
-    1. click **Add image set**.
-    2. Enter an **IMAGE SET NAME**.
-    3. Enter a **SMALL IMAGE URL**.
-    4. Enter a **LARGE IMAGE URL**.
-    5. Optional: Enter a **SORT ORDER**.
-    6. Optional: To add one more image, click **Add image**.
-    7. Repeat steps 9-13 until you add all the needed images.
-    8. Optional: To add one more image set, click **Add image set**.
-    9. Repeat steps 9-15 until you add all the needed image sets.
-2. Click **Save**.   
+{% include scos/user/back-office-user-guides/add-images.md %} <!-- To edit, see /_includes/scos/user/back-office-user-guides/add-images.md --> 
 
     This opens the **View Product Set** page with a success message displayed.
 

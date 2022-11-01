@@ -10,14 +10,17 @@ redirect_from:
   - /docs/product-attributes-overview
   - /docs/en/product-attributes-overview
   - /docs/scos/user/features/202200.0/product-feature-overview/product-attributes-overview.html
+  - /docs/product-abstraction
+  - /docs/product-attributes
 ---
 
 A *product attribute* is a characteristic of a product that consists of a name and value. For example, in the attribute `color = white`, `color` is the attribute name, and `white` is the attribute value.
 
 You can create characteristic attributes for products, like brand or special features. You can define specific values to help you and your customers distinguish between products. You can assign multiple attributes to products to simplify the filter and category functions.
 
+![Descriptive attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/descriptive-attributes.png)
 
-A Back Office user can [create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
+A Back Office user can [create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
 
 A developer can import [product attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html).
 
@@ -28,7 +31,8 @@ A Back Office user can add product attributes to abstract and concrete products.
 
 
 ## Declared attributes
-A declared attribute is an attribute that was [created](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
+
+A declared attribute is an attribute that was [created](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
 
 After declaring an attribute, Back Office users can add it to products, and developers can import products with it.
 
@@ -39,11 +43,12 @@ If a developer imports products with undeclared attributes, Back Office users ca
 {% endinfo_block %}
 
 ## Super attributes
-The Spryker Commerce OS product data model allows creating multiple variants of a product. For a shop to distinguish different product variants, some of their characteristics should be differerent. A product attribute that distinguishes one product variant from another is a *super attribute*.
 
-For a product variant to be selectable on the Storefront, a value of one of its product attributes should be unique compared to the product attribute values of other variants of the same abstract product.
+The Spryker Commerce OS product data model allows the creation of multiple product variants. For a shop to distinguish different product variants, some of the variant characteristics must be different. A product attribute that distinguishes one product variant from another is a *super attribute*.
 
-When creating a product attribute, a Back Office user selectes if it is a super attribute.
+For a product variant to be selectable on the Storefront, a value of one of its product attributes must be unique compared to the product attribute values of other variants of the same abstract product.
+
+When creating a product attribute, a Back Office user selects if it is a super attribute.
 
 Product variants of the same abstract product can differ by different super attributes. Check the following super attribute examples:
 
@@ -58,7 +63,7 @@ Product variants of the same abstract product can differ by different super attr
 ## Predefined product attribute values
 A *predefined product attribute value* is a product attribute value that a Back Office user defines when managing product attributes.
 
-A Back Office user can configure configure a product attribute to accept only predefined values. In this case, when [assigning product attributes to products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html), they choose from the predefined values. Otherwise, they can enter any value for the attribute.
+A Back Office user can configure a product attribute to accept only predefined values. In this case, when [assigning product attributes to products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html), they choose from the predefined values. Otherwise, they can enter any value for the attribute.
 
 ## Product attribute translations
 A Back Office user can localize product attributes. They can add translations for attribute names and values. For example, in the attribute `Color = White`, both `Color` and `White` can be localized.
@@ -169,8 +174,8 @@ We recommend defining all the atributes you want to use.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) |
-| [Manage product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) |
+| [Create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) |
+| [Edit product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html) |
 
 {% info_block warningBox "Developer guides" %}
 

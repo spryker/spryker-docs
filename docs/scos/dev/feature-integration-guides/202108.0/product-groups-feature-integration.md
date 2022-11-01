@@ -266,7 +266,7 @@ Make sure that the configured data has been added to the `spy_product_group` and
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install Product group feature front end.
 

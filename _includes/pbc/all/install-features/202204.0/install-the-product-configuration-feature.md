@@ -61,7 +61,7 @@ Add the following configuration:
 |ProductConfigurationConstants::SPRYKER_PRODUCT_CONFIGURATOR_HEX_INITIALIZATION_VECTOR| Provides a hex initialization vector for checksum validation. It is used as a hex initialization vector for the checksum generation of product configurator data. |Spryker\Shared\ProductConfiguration\ProductConfigurationConstants|
 |KernelConstants::DOMAIN_WHITELIST| Defines a set of whitelist domains that every external URL is checked against before redirecting. |Spryker\Shared\Kernel\KernelConstants|
 
-<details open><summary markdown='span'>config/Shared/config_default.php</summary>
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -74,7 +74,6 @@ $config[ProductConfigurationConstants::SPRYKER_PRODUCT_CONFIGURATOR_ENCRYPTION_K
 $config[ProductConfigurationConstants::SPRYKER_PRODUCT_CONFIGURATOR_HEX_INITIALIZATION_VECTOR] = getenv('SPRYKER_PRODUCT_CONFIGURATOR_HEX_INITIALIZATION_VECTOR') ?: '0c1ffefeebdab4a3d839d0e52590c9a2';
 $config[KernelConstants::DOMAIN_WHITELIST][] = getenv('SPRYKER_PRODUCT_CONFIGURATOR_HOST');
 ```
-</details>
 
 
 {% info_block warningBox "Verification" %}
@@ -89,7 +88,7 @@ Set up database schema and transfer objects as follows:
 
 1. For entity changes to trigger events, adjust the schema definition:
 
-<details open><summary markdown='span'>src/Pyz/Zed/ProductConfiguration/Persistence/Propel/Schema/spy\_product\_configuration.schema.xml</summary>
+**src/Pyz/Zed/ProductConfiguration/Persistence/Propel/Schema/spy_product_configuration.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -104,14 +103,13 @@ Set up database schema and transfer objects as follows:
     </table>
 </database>
 ```
-</details>
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
 | spy_product_configuration | Entity.spy_product_configuration.create  <br> Entity.spy_product_configuration.update  <br> Entity.spy_product_configuration.delete |
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/ProductConfigurationStorage/Persistence/Propel/Schema/spy_product_configuration_storage.schema.xml</summary>
+**src/Pyz/Zed/ProductConfigurationStorage/Persistence/Propel/Schema/spy_product_configuration_storage.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -130,7 +128,6 @@ Set up database schema and transfer objects as follows:
 
 </database>
 ```
-</details>
 
 1. Apply database changes and generate entity and transfer changes:
 
@@ -226,7 +223,7 @@ Set up the following behaviors:
 | SynchronizationStorageQueueMessageProcessorPlugin |Reads messages from the synchronization queue and saves them to the storage.|None|\Spryker\Zed\Synchronization\Communication\Plugin\Queue|
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
 <?php
@@ -261,10 +258,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
 ```php
 <?php
@@ -291,10 +286,8 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 ```php
 <?php
@@ -324,7 +317,6 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -672,7 +664,7 @@ Make sure that checkout plugins work correctly:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductConfigurationTableDataExpanderPlugin | Expands product items with a configurable product type if they have a configuration. | None | Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement |
+| ProductConfigurationProductTableDataBulkExpanderPlugin | Expands product items with a configurable product type if they have a configuration. | None | Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement |
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
@@ -681,18 +673,18 @@ Make sure that checkout plugins work correctly:
 
 namespace Pyz\Zed\ProductManagement;
 
-use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationTableDataExpanderPlugin;
+use Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationProductTableDataBulkExpanderPlugin
 use Spryker\Zed\ProductManagement\ProductManagementDependencyProvider as SprykerProductManagementDependencyProvider;
 
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductTableDataExpanderPluginInterface[]
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductTableDataBulkExpanderPluginInterface[]
      */
-    protected function getProductTableDataExpanderPlugins(): array
+    protected function getProductTableDataBulkExpanderPlugins(): array
     {
         return [
-            new ProductConfigurationTableDataExpanderPlugin(),
+            new ProductConfigurationProductTableDataBulkExpanderPlugin(),
         ];
     }
 }
@@ -1634,8 +1626,7 @@ Make sure that the reorder expander plugin works:
 | ShoppingListPageProductConfiguratorResponseStrategyPlugin                 | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the shopping list item.                                                                  | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 | ShoppingListPageProductConfiguratorRequestDataFormExpanderStrategyPlugin  | Extends the product configurator request form with the `shoppingListItemUuid` and `quantity` fields to support configuration for a shopping list item on the Shopping List page.                          | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 
-<details>
-<summary markdown='span'>src/Pyz/Yves/ProductConfiguratorGatewayPage/ProductConfiguratorGatewayPageDependencyProvider.php</summary>
+**src/Pyz/Yves/ProductConfiguratorGatewayPage/ProductConfiguratorGatewayPageDependencyProvider.php**
 
 ```php
 <?php
@@ -1698,7 +1689,6 @@ class ProductConfiguratorGatewayPageDependencyProvider extends SprykerProductCon
     }
 }
 ```
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -1712,63 +1702,64 @@ Make sure that the plugins are set up correctly:
 1. Set up widgets as follows:
     1. Register the following plugins to enable widgets:   
 
-    | PLUGIN                                            | SPECIFICATION                                                                                  | PREREQUISITES | NAMESPACE |
----------------------------------------------------|------------------------------------------------------------------------------------------------| --- | --- | --- |
-    | ProductConfigurationCartItemDisplayWidget         | Displays the product configuration of cart items.                                              | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
-    | ProductConfigurationCartPageButtonWidget          | Displays the product configuration button for configurable cart items.                         | None | SprykerShop\Yves\ProductConfigurationCartWidget\Widget |
-    | ProductConfigurationProductDetailPageButtonWidget | Displays the product configuration button for configurable products.                           | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
-    | ProductConfigurationProductViewDisplayWidget      | Displays the product configuration of configurable products.                                   | None | SprykerShop\Yves\ProductConfigurationCartWidget\Widget |
-    | ProductConfigurationQuoteValidatorWidget          | Displays if the configuration of configurable cart items is valid.                             | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
-    | ProductConfigurationOrderItemDisplayWidget        | Displays the product configuration of order items.                                             | None | SprykerShop\Yves\SalesProductConfigurationWidget\Widget |
-    | ProductConfigurationWishlistFormWidget            | Adds `has_product_configuration_attached` form hidden field to enable wishlist item expansion. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
-    | ProductConfigurationWishlistItemDisplayWidget     | Displays the product configuration of wishlist items.                                          | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
-    | ProductConfigurationWishlistPageButtonWidget      | Displays the product configuration button for configurable wishlist items.                     | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
-    | ProductConfigurationShoppingListItemDisplayWidget | Displays the product configuration of shopping list items.                                     | None | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget |
-    | ProductConfigurationShoppingListPageButtonWidget  | Displays the product configuration button for configurable shopping list items.                | None | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget |
+| PLUGIN                                            | SPECIFICATION                                                                                  | PREREQUISITES | NAMESPACE                                                       |
+|---------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| ProductConfigurationCartItemDisplayWidget         | Displays the product configuration of cart items.                                              | None          | SprykerShop\Yves\ProductConfigurationWidget\Widget              |
+| ProductConfigurationCartPageButtonWidget          | Displays the product configuration button for configurable cart items.                         | None          | SprykerShop\Yves\ProductConfigurationCartWidget\Widget          |
+| ProductConfigurationProductDetailPageButtonWidget | Displays the product configuration button for configurable products.                           | None          | SprykerShop\Yves\ProductConfigurationWidget\Widget              |
+| ProductConfigurationProductViewDisplayWidget      | Displays the product configuration of configurable products.                                   | None          | SprykerShop\Yves\ProductConfigurationCartWidget\Widget          |
+| ProductConfigurationQuoteValidatorWidget          | Displays if the configuration of configurable cart items is valid.                             | None          | SprykerShop\Yves\ProductConfigurationWidget\Widget              |
+| ProductConfigurationOrderItemDisplayWidget        | Displays the product configuration of order items.                                             | None          | SprykerShop\Yves\SalesProductConfigurationWidget\Widget         |
+| ProductConfigurationWishlistFormWidget            | Adds `has_product_configuration_attached` form hidden field to enable wishlist item expansion. | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget      |
+| ProductConfigurationWishlistItemDisplayWidget     | Displays the product configuration of wishlist items.                                          | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget      |
+| ProductConfigurationWishlistPageButtonWidget      | Displays the product configuration button for configurable wishlist items.                     | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget      |
+| ProductConfigurationShoppingListItemDisplayWidget | Displays the product configuration of shopping list items.                                     | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget  |
+| ProductConfigurationShoppingListPageButtonWidget  | Displays the product configuration button for configurable shopping list items.                | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget  |
 
-    **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
-    ```php
-    <?php
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
-    namespace Pyz\Yves\ShopApplication;
+```php
+<?php
 
-    use SprykerShop\Yves\ProductConfigurationCartWidget\Widget\ProductConfigurationCartItemDisplayWidget;
-    use SprykerShop\Yves\ProductConfigurationCartWidget\Widget\ProductConfigurationCartPageButtonWidget;
-    use SprykerShop\Yves\ProductConfigurationCartWidget\Widget\ProductConfigurationQuoteValidatorWidget;
-    use SprykerShop\Yves\ProductConfigurationWidget\Widget\ProductConfigurationProductDetailPageButtonWidget;
-    use SprykerShop\Yves\ProductConfigurationWidget\Widget\ProductConfigurationProductViewDisplayWidget;
-    use SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget\ProductConfigurationWishlistFormWidget;
-    use SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget\ProductConfigurationWishlistItemDisplayWidget;
-    use SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget\ProductConfigurationWishlistPageButtonWidget;
-    use SprykerShop\Yves\SalesProductConfigurationWidget\Widget\ProductConfigurationOrderItemDisplayWidget;
-    use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget\ProductConfigurationShoppingListItemDisplayWidget;
-    use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget\ProductConfigurationShoppingListPageButtonWidget;
-    use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+namespace Pyz\Yves\ShopApplication;
 
-    class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+use SprykerShop\Yves\ProductConfigurationCartWidget\Widget\ProductConfigurationCartItemDisplayWidget;
+use SprykerShop\Yves\ProductConfigurationCartWidget\Widget\ProductConfigurationCartPageButtonWidget;
+use SprykerShop\Yves\ProductConfigurationCartWidget\Widget\ProductConfigurationQuoteValidatorWidget;
+use SprykerShop\Yves\ProductConfigurationWidget\Widget\ProductConfigurationProductDetailPageButtonWidget;
+use SprykerShop\Yves\ProductConfigurationWidget\Widget\ProductConfigurationProductViewDisplayWidget;
+use SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget\ProductConfigurationWishlistFormWidget;
+use SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget\ProductConfigurationWishlistItemDisplayWidget;
+use SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget\ProductConfigurationWishlistPageButtonWidget;
+use SprykerShop\Yves\SalesProductConfigurationWidget\Widget\ProductConfigurationOrderItemDisplayWidget;
+use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget\ProductConfigurationShoppingListItemDisplayWidget;
+use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget\ProductConfigurationShoppingListPageButtonWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return string[]
+     */
+    protected function getGlobalWidgets(): array
     {
-        /**
-         * @return string[]
-         */
-        protected function getGlobalWidgets(): array
-        {
-            return [
-                ProductConfigurationCartPageButtonWidget::class,
-                ProductConfigurationCartItemDisplayWidget::class,
-                ProductConfigurationProductDetailPageButtonWidget::class,
-                ProductConfigurationProductViewDisplayWidget::class,
-                ProductConfigurationOrderItemDisplayWidget::class,
-                ProductConfigurationQuoteValidatorWidget::class,
-                ProductConfigurationWishlistFormWidget::class,
-                ProductConfigurationWishlistItemDisplayWidget::class,
-                ProductConfigurationWishlistPageButtonWidget::class,
-                ProductConfigurationShoppingListItemDisplayWidget::class,
-                ProductConfigurationShoppingListPageButtonWidget::class,
-            ];
-        }
+        return [
+            ProductConfigurationCartPageButtonWidget::class,
+            ProductConfigurationCartItemDisplayWidget::class,
+            ProductConfigurationProductDetailPageButtonWidget::class,
+            ProductConfigurationProductViewDisplayWidget::class,
+            ProductConfigurationOrderItemDisplayWidget::class,
+            ProductConfigurationQuoteValidatorWidget::class,
+            ProductConfigurationWishlistFormWidget::class,
+            ProductConfigurationWishlistItemDisplayWidget::class,
+            ProductConfigurationWishlistPageButtonWidget::class,
+            ProductConfigurationShoppingListItemDisplayWidget::class,
+            ProductConfigurationShoppingListPageButtonWidget::class,
+        ];
     }
-    ```
+}
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -1988,30 +1979,6 @@ class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvid
 }
 ```
 
-**src/Pyz/Zed/Availability/AvailabilityDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Availability;
-
-use Spryker\Zed\Availability\AvailabilityDependencyProvider as SprykerAvailabilityDependencyProvider;
-use SprykerShop\Zed\DateTimeConfiguratorPageExample\Communication\Plugin\Availability\ExampleDateTimeConfiguratorAvailabilityStrategyPlugin;
-
-class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\AvailabilityExtension\Dependency\Plugin\AvailabilityStrategyPluginInterface[]
-     */
-    protected function getAvailabilityStrategyPlugins(): array
-    {
-        return [
-            new ExampleDateTimeConfiguratorAvailabilityStrategyPlugin(),
-        ];
-    }
-}
-```
-
 **src/Pyz/Zed/SalesProductConfigurationGui/SalesProductConfigurationGuiDependencyProvider.php**
 
 ```php
@@ -2133,46 +2100,10 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that the Twig configuration method `getZedDirectoryPathPatterns` has been expanded with additional paths for `ExampleDateTimeProductConfigurationRenderStrategyPlugin`.
-
-{% endinfo_block %}
-
-**src/Pyz/Zed/Twig/TwigConfig.php**
-
-```php
-<?php
-
-<?php
-
-namespace Pyz\Zed\Twig;
-
-use Spryker\Zed\Twig\TwigConfig as SprykerTwigConfig;
-
-class TwigConfig extends SprykerTwigConfig
-{
-  public function getZedDirectoryPathPatterns(): array
-  {
-      $directories = array_merge(
-          glob('vendor/spryker/spryker/Bundles/*/src/*/Zed/*/Presentation', GLOB_NOSORT | GLOB_ONLYDIR),
-          glob('vendor/spryker/spryker-shop/Bundles/*/src/*/Zed/*/Presentation', GLOB_NOSORT | GLOB_ONLYDIR)
-      );
-
-      $directories = array_merge(
-          $directories,
-          parent::getZedDirectoryPathPatterns()
-      );
-      sort($directories);
-      return $directories;
-  }
-}
-```
-
 **src/Pyz/Zed/SalesProductConfigurationGui/SalesProductConfigurationGuiDependencyProvider.php**
 
 ```php
-<<?php
+<?php
 
 namespace Pyz\Zed\SalesProductConfigurationGui;
 

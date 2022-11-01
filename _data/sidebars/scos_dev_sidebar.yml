@@ -415,14 +415,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Product Relations
       url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough.html
       include_versions:
@@ -467,7 +459,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: "Quotation Process: module relations"
         url: /docs/scos/dev/feature-walkthroughs/quotation-process-feature-walkthrough/quotation-process-module-relations.html
@@ -1554,14 +1545,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Glue API - Product Rating and Reviews
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
         include_versions:
@@ -1569,7 +1552,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Product Relations
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
       - title: Glue API - Product Tax Sets
@@ -1585,8 +1567,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        include_versions:
-        - "202204.0"
       - title: Glue API - REST Schema Validation
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-rest-schema-validation-feature-integration.html
       - title: Glue API - Return Management
@@ -1764,7 +1744,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Catalog + Category Management
       url: /docs/scos/dev/feature-integration-guides/catalog-category-management-feature-integration.html
       include_versions:
@@ -1809,17 +1788,8 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Checkout Workflow
       url: /docs/scos/dev/feature-integration-guides/checkout-workflow-integration-guide.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
       include_versions:
       - "201811.0"
       - "201903.0"
@@ -2154,6 +2124,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Product Approval Process
       url: /docs/scos/dev/feature-integration-guides/product-approval-process-feature-integration.html
       include_versions:
@@ -2437,7 +2408,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Search Widget for Concrete Products
       url: /docs/scos/dev/feature-integration-guides/search-widget-for-concrete-products-feature-integration.html
       include_versions:
@@ -2457,6 +2427,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+      - "202212.0"
     - title: Shipment + Approval Process
       url: /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
       include_versions:
@@ -2483,13 +2454,13 @@ entries:
     - title: Spryker Core
       url: /docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html
       include_versions:
+      - "201903.0"
       - "201907.0"
       - "202001.0"
       - "202005.0"
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "201907.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html
       include_versions:
@@ -2835,9 +2806,8 @@ entries:
       include_versions:
       - "202001.0"
   - title: Data import
+    url: /docs/scos/dev/data-import/data-import.html
     include_versions:
-    - "202005.0"
-    - "202009.0"
     - "202108.0"
     - "202204.0"
     nested:
@@ -2906,19 +2876,16 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - warehouse_address.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: File details - warehouse_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - tax.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-tax.csv.html
           include_versions:
@@ -2962,7 +2929,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - order-status.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-order-status.csv.html
           include_versions:
@@ -3036,7 +3002,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
           nested:
           - title: File details - product_stock.csv
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
@@ -3044,7 +3009,6 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
         - title: Categories
           url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/categories.html
           include_versions:

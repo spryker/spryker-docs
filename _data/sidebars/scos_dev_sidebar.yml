@@ -600,7 +600,6 @@ entries:
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html
         include_versions:
         - "202108.0"
-        - "202204.0"
         - "202009.0"
       - title: Managing customer addresses
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html
@@ -1161,6 +1160,9 @@ entries:
       url: /docs/scos/dev/glue-api-guides/glue-spryks.html
     - title: Security and authentication
       url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"    
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
     - title: Glue Backend API

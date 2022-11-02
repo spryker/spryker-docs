@@ -600,7 +600,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Managing customer passwords
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html
         include_versions:
@@ -618,12 +617,10 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Managing customer authentication tokens via OAuth 2.0
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
         include_versions:
         - "202108.0"
-        - "202204.0"
       - title: Retrieving customer orders
         url: /docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html
         include_versions:
@@ -649,7 +646,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Searching by customers as an agent assist
         url: /docs/scos/dev/glue-api-guides/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
         include_versions:
@@ -667,7 +663,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Authentication and authorization
       url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
       include_versions:
@@ -676,7 +671,6 @@ entries:
       - "201907.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Managing B2B account
       include_versions:
       - "201907.0"
@@ -700,7 +694,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving company users
         url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html
         include_versions:
@@ -748,7 +741,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: B2B account management
         url: /docs/scos/dev/glue-api-guides/managing-b2b-account/b2b-account-management.html
         include_versions:
@@ -1194,7 +1186,7 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
           include_versions:
           - "202204.0"
-        - title: How to create a route 
+        - title: How to create a route
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-route.html
           include_versions:
           - "202204.0"
@@ -1386,7 +1378,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Customer Account Management
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html
         include_versions:
@@ -1396,7 +1387,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Development Tools
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-development-tools-feature-integration.html
         include_versions:
@@ -1988,7 +1978,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/microsoft-azure-active-directory.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Minimum Order Value
       url: /docs/scos/dev/feature-integration-guides/minimum-order-value-feature-integration.html
       include_versions:
@@ -4214,8 +4203,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
         - title: Configuring Visibility of the Included Section
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
-        - title: Managing customer access to Glue API resources
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
       - title: "HowTo: Replace key-value storage with database"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
@@ -4234,8 +4221,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
       - title: "HowTo: Debug payment integrations locally"
         url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
-      - title: "HowTo: Configure basic htaccess authentication"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-basic-htaccess-authentication.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
       - title: "HowTo: Define the maximum size of content fields"

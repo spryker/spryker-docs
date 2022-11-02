@@ -50,7 +50,7 @@ Check out this video tutorial on setting up an Agent user in a B2B company accou
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create an agent user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#creating-users) |
+| [Create an agent user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#creating-a-user) |
 
 ## Related Developer articles
 

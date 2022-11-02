@@ -33,7 +33,7 @@ Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/man
 
 {% info_block warningBox "Prerequisites" %}
 
-To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#creating-users) or [programmatically by a developer](/docs/pbc/all/user-management/{{page.version}}/extend-and-customize/user-and-rights-overview.html).
+To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#creating-a-user) or [programmatically by a developer](/docs/pbc/all/user-management/{{page.version}}/extend-and-customize/user-and-rights-overview.html).
 
 {% endinfo_block %}
 
@@ -68,7 +68,7 @@ You are taken to the Back Office home page as a logged-in user. User with the em
 
 {% info_block warningBox %}
 
-Depending on the [third-party login strategy](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html#back-office-authentication) configured in your project, you might not be allowed to log in with a third-party account unless a user with an email that matches the existing third-party user email has not been [preliminary created](#prerequisites) and [activated](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/activating-and-deactivating-users.html).
+Depending on the [third-party login strategy](/docs/pbc/all/identity-access-manager/{{page.version}}/identity-access-manager.html#back-office-authentication) configured in your project, you might not be allowed to log in with a third-party account unless a user with an email that matches the existing third-party user email has not been [preliminary created](#prerequisites) and [activated](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/activating-and-deactivating-users.html).
 
 {% endinfo_block %}
 

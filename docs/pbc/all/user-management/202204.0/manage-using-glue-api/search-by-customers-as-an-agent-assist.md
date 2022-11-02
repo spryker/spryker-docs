@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/searching-by-customers-as-an-agent-assist
 related:
   - title: Agent Assist feature overview
-    link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
     link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist

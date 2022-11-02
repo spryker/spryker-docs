@@ -33,7 +33,7 @@ Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/man
 
 {% info_block warningBox "Prerequisites" %}
 
-To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#creating-a-user) or [programmatically by a developer](/docs/pbc/all/user-management/{{page.version}}/extend-and-customize/user-and-rights-overview.html).
+To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#create-a-user) or [programmatically by a developer](/docs/pbc/all/user-management/{{page.version}}/extend-and-customize/user-and-rights-overview.html).
 
 {% endinfo_block %}
 

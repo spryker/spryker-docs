@@ -551,9 +551,6 @@ entries:
         - "201903.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
-      nested:
-      - title: Users and rights overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       include_versions:
@@ -592,7 +589,6 @@ entries:
         url: /docs/scos/dev/glue-api-guides/managing-customers/confirming-customer-registration.html
         include_versions:
         - "202108.0"
-        - "202204.0"
       - title: Authenticating as a customer
         url: /docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html
         include_versions:
@@ -651,13 +647,11 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Impersonating customers as an agent assist
         url: /docs/scos/dev/glue-api-guides/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Managing agent assist authentication tokens
         url: /docs/scos/dev/glue-api-guides/managing-agent-assists/managing-agent-assist-authentication-tokens.html
         include_versions:
@@ -988,7 +982,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Retrieving content items
       include_versions:
       - "202001.0"
@@ -2427,7 +2420,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       - "202212.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html

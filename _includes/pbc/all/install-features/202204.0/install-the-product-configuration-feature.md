@@ -145,7 +145,7 @@ Ebsure that the following changes have been applied by checking your database:
 | spy_wishlist_item.product_configuration_instance_data      |column| added|
 | spy_shopping_list_item.product_configuration_instance_data |column| added|
 
-Ensure that the following changes have been triggered in transfer objects:
+Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER                                             | TYPE | EVENT | PATH |
 |------------------------------------------------------| --- | --- | --- |
@@ -311,7 +311,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, after creating a product configuration, you can find the corresponding record in the `spy_product_configuration_storage` table.
+Make sure that, after creating a product configuration, you can find the corresponding record in the `spy_product_configuration_storage` table.
 
 {% endinfo_block %}
 
@@ -395,16 +395,16 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the product configuration trigger plugin works correctly:
+Make sure that the product configuration trigger plugin works correctly:
 1.  Fill the `spy_product_configuration` table with some data.
 2.  Run the `console publish:trigger-events -r product_configuration` command.
-3.  Ensure that the `spy_product_configuration_storage` table has been filled with respective data.
-4.  In your system, ensure that storage entries are displayed with the `kv:product_configuration:sku` mask.
+3.  Make sure that the `spy_product_configuration_storage` table has been filled with respective data.
+4.  In your system, make sure that storage entries are displayed with the `kv:product_configuration:sku` mask.
 
-Ensure that the product configuration synchronization plugin works correctly:
+Make sure that the product configuration synchronization plugin works correctly:
 1.  Fill the `spy_product_configuration_storage` table with some data.
 2.  Run the `console sync:data product_configuration` command.
-3.  In your system, ensure that the storage entries are displayed with the `kv:product_configuration:sku` mask.
+3.  In your system, make sure that the storage entries are displayed with the `kv:product_configuration:sku` mask.
 
 {% endinfo_block %}
 
@@ -490,10 +490,10 @@ class PriceCartConnectorDependencyProvider extends SprykerPriceCartConnectorDepe
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the product configuration item quantity counter plugins work correctly:
+Make sure that the product configuration item quantity counter plugins work correctly:
 1.  Configure a configurable product.
 2.  Add the product to the cart.
-3.  Ensure that the product has been successfully added to the cart.
+3.  Make sure that the product has been successfully added to the cart.
 
 {% endinfo_block %}
 
@@ -581,10 +581,10 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the cart plugins work correctly:
+Make sure that the cart plugins work correctly:
 1. Configure a configurable product.
-2. Add the configured product to cart.
-3. Ensure that the product has been successfully added to cart.
+2. Add the configured product to the cart.
+3. Make sure that the product has been successfully added to the cart.
 
 {% endinfo_block %}
 
@@ -622,10 +622,10 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that checkout plugins work correctly:
-1.  Add a configurable product to cart without completing its configuration.
+Make sure that checkout plugins work correctly:
+1.  Add a configurable product to the cart without completing its configuration.
 2.  Try to place an order with the product.
-3.  Ensure that the order is not placed and you get an error message about incomplete configuration.
+3.  Make sure that the order is not placed and you get an error message about incomplete configuration.
 
 {% endinfo_block %}
 
@@ -715,7 +715,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that sales plugins work correctly:
+Make sure that sales plugins work correctly:
 1. Configure a configurable product.
 2. Place an order with the product.
 3. Check that the `spy_sales_order_item_configuration` database table contains a record with the configurable order item.
@@ -845,10 +845,10 @@ class ProductConfigurationDependencyProvider extends SprykerProductConfiguration
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the product configuration price overrides the default product price:
-1. Configure a configurable product with a regular price and a volume price.
+Make sure that the product configuration price overrides the default product price:
+1. Configure a configurable product with a regular price and volume price.
 2. Add the product to the cart with the amount required for the volume prices to apply.
-3. Ensure that the volume price applies.
+3. Make sure that the volume price applies.
 
 {% endinfo_block %}
 
@@ -856,7 +856,7 @@ Ensure that the product configuration price overrides the default product price:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductConfigurationAvailabilityStorageStrategyPlugin | Checks if a product configuration provides an availability for a product. | None | Spryker\Client\ProductConfigurationStorage\Plugin\AvailabilityStorage |
+| ProductConfigurationAvailabilityStorageStrategyPlugin | Checks whether a product configuration provides an availability for a product. | None | Spryker\Client\ProductConfigurationStorage\Plugin\AvailabilityStorage |
 
 **src/Pyz/Client/AvailabilityStorage/AvailabilityStorageDependencyProvider.php**
 
@@ -884,9 +884,9 @@ class AvailabilityStorageDependencyProvider extends SprykerAvailabilityStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Ensure that availability plugins work correctly:
+Make sure that availability plugins work correctly:
 1. Configure a configurable product that has regular availability.
-2. Ensure that you cannot add to the cart more items than are available for the configuration.
+2. Make sure that you cannot add to the cart more items than are available for the configuration.
 
 
 {% endinfo_block %}
@@ -923,7 +923,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, on the **Product Details** page of a configurable product, you can see product configuration information.
+On the **Product Details** page of a configurable product, make sure that you can see product configuration information.
 
 {% endinfo_block %}
 
@@ -933,7 +933,7 @@ Make sure that, on the **Product Details** page of a configurable product, you c
 | --- | --- | --- | --- |
 | ProductConfigurationQuoteRequestQuoteCheckPlugin | Validates product configuration before the quote request creation. | None |Spryker\Client\ProductConfigurationCart\Plugin\QuoteRequest |
 
-<details open><summary markdown='span'>Pyz\Client\QuoteRequest\QuoteRequestDependencyProvider</summary>
+**Pyz\Client\QuoteRequest\QuoteRequestDependencyProvider**
 
 ```php
 <?php
@@ -957,7 +957,6 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
     }
 }
 ```
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -969,7 +968,6 @@ Make sure the plugins work correctly:
 
 
 12. Set up product configuration validation plugins for the quote request module:
-
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -1016,7 +1014,7 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 Make sure the plugins work correctly:
 
 1. Log in as an agent assist.
-2. Add a configurable product with incomplete configuration to the cart.
+2. Add a configurable product with an incomplete configuration to the cart.
 3. Select **Save** or **Save and Back to Edit**.
 4. Make sure that the validation error message appears.
 
@@ -1026,16 +1024,16 @@ Make sure the plugins work correctly:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|ProductConfigurationItemExpanderPlugin | Expands `WishlistItem` transfer object with product configuration data. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
-|ProductConfigurationWishlistAddItemPreCheckPlugin | Checks if product configuration exists by provided `WishlistItem.sku` transfer property. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
-|ProductConfigurationWishlistReloadItemsPlugin | Expands `WishlistItem` transfers collection in `Wishlist` transfer object with product configuration data. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
+|ProductConfigurationItemExpanderPlugin | Expands the `WishlistItem` transfer object with product configuration data. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
+|ProductConfigurationWishlistAddItemPreCheckPlugin | Checks whether product configuration exists by provided `WishlistItem.sku` transfer property. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
+|ProductConfigurationWishlistReloadItemsPlugin | Expands the `WishlistItem` transfers collection in `Wishlist` transfer object with product configuration data. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
 |ProductConfigurationWishlistPreAddItemPlugin | Prepares product configuration attached to a wishlist item to be saved. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
-|ProductConfigurationWishlistItemExpanderPlugin | Expands `WishlistItem` transfer object with product configuration data. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
+|ProductConfigurationWishlistItemExpanderPlugin | Expands the `WishlistItem` transfer object with product configuration data. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
 |ProductConfigurationWishlistPreUpdateItemPlugin | Prepares product configuration attached to a wishlist item to be saved. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
-|ProductConfigurationWishlistUpdateItemPreCheckPlugin | Checks if product configuration exists by provided `WishlistItem.sku` transfer property. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
+|ProductConfigurationWishlistUpdateItemPreCheckPlugin | Checks whether product configuration exists by the provided `WishlistItem.sku` transfer property. | None | Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist |
 |ProductConfigurationWishlistCollectionToRemoveExpanderPlugin | Expands `WishlistItemCollectionTransfer` with successfully added wishlist items to a cart. | None | Spryker\Client\ProductConfigurationWishlist\Plugin\Wishlist |
 |ProductConfigurationWishlistPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollectionTransfer` with not valid product configuration items. | None | Spryker\Client\ProductConfigurationWishlist\Plugin\Wishlist |
-|ProductConfigurationWishlistItemPriceProductExpanderPlugin | Expands collection of product price transfers with product configuration prices taken from `ProductViewTransfer`. | None | Spryker\Client\ProductConfigurationWishlist\Plugin\PriceProductStorage |
+|ProductConfigurationWishlistItemPriceProductExpanderPlugin | Expands the collection of product price transfers with product configuration prices taken from `ProductViewTransfer`. | None | Spryker\Client\ProductConfigurationWishlist\Plugin\PriceProductStorage |
 
 **src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php**
 
@@ -1202,15 +1200,15 @@ Make sure that the wishlist plugins work correctly:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|ProductConfigurationShoppingListItemMapperPlugin | Adds product configuration to shopping list item if product configuration found. | None | Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList |
-|ProductConfigurationShoppingListItemToItemMapperPlugin | Copies product configuration from shopping list item to cart item. | None | Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList |
+|ProductConfigurationShoppingListItemMapperPlugin | Adds product configuration to a shopping list item if product configuration found. | None | Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList |
+|ProductConfigurationShoppingListItemToItemMapperPlugin | Copies product configuration from the shopping list item to a cart item. | None | Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList |
 |ProductConfigurationShoppingListExpanderPlugin | Expands shopping list items with product configuration. | None | Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList |
-|ProductConfigurationShoppingListAddItemPreCheckPlugin | Checks if product configuration exists by provided `ShoppingListItem.sku` transfer property. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
-|ProductConfigurationShoppingListItemBulkPostSavePlugin | Removes configuration if product configuration instance is not set at shopping list item. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
+|ProductConfigurationShoppingListAddItemPreCheckPlugin | Checks whether product configuration exists by the provided `ShoppingListItem.sku` transfer property. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
+|ProductConfigurationShoppingListItemBulkPostSavePlugin | Removes configuration if a product configuration instance is not set at a shopping list item. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
 |ProductConfigurationShoppingListItemCollectionExpanderPlugin | Expands `ShoppingListItemTransfer` transfer object with product configuration data. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
-|ItemProductConfigurationItemToShoppingListItemMapperPlugin | Copies product configuration from cart item to shopping list item. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
+|ItemProductConfigurationItemToShoppingListItemMapperPlugin | Copies product configuration from a cart item to a shopping list item. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
 
-**src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1257,7 +1255,9 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 ```
 
-**src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php**
+<details>
+
+<details><summary markdown='span'>src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1337,7 +1337,6 @@ The following imported entities are used as product configurations in Spryker. F
 concrete_sku,configurator_key,is_complete,default_configuration,default_display_data
 093_24495843,DATE_TIME_CONFIGURATOR,0,"{""time_of_day"": ""2""}","{""Preferred time of the day"": ""Afternoon"", ""Date"": ""9.09.2020""}"
 ```
-
 
 | COLUMN | Required | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
@@ -1425,7 +1424,6 @@ Make sure that the following modules have been installed:
 | SalesProductConfigurationWidget        | vendor/spryker-shop/sales-product-configuration-widget         |
 
 {% endinfo_block %}
-
 
 ### 2) Add translations
 
@@ -1685,7 +1683,7 @@ Make sure that the plugins are set up correctly:
 | ProductConfigurationShoppingListPageButtonWidget  | Displays the product configuration button for configurable shopping list items.                | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget  |
 
 
-**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1728,13 +1726,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
-
-{% endinfo_block %}
-
 
 | WIDGET | VERIFICATION |
 | --- | --- |
@@ -1750,6 +1746,8 @@ Make sure that the following widgets have been registered by adding the respecti
 | ProductConfigurationShoppingListItemDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationShoppingListItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
 | ProductConfigurationShoppingListPageButtonWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationShoppingListPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
 
+{% endinfo_block %}
+
 2. Enable Javascript and CSS changes:
 
 ```bash
@@ -1758,7 +1756,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that product configuration data is displayed on the **Product Details**, **Cart**, **Wishlist** and **Shopping list** pages.
+Make sure that product configuration data is displayed on the *Product Details*, *Cart*, *Wishlist*, and *Shopping list* pages.
 
 {% endinfo_block %}
 
@@ -1777,7 +1775,6 @@ Overview and install the necessary features before beginning the integration ste
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
 ```bash
 composer require "spryker-shop/date-time-configurator-page-example:"dev-master" --update-with-dependencies
 ```
@@ -1792,9 +1789,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-
 ### 2) Configure an endpoint
-Configure an endpoint:
 
 1. Define a new front controller for the date-time configurator:
 
@@ -1822,7 +1817,7 @@ if ($response instanceof Response) {
 echo $response;
 ```
 
-2. Adjust a Deploy file to enable the new endpoint:
+1. To enable the new endpoint, adjust a Deploy file:
 
 **deploy.*.yml**
 
@@ -1877,8 +1872,6 @@ Make sure that the `http://date-time-configurator-example.spryker.local/` endpoi
 
 ### 3) Add translations
 
-Add translations as follows:
-
 1.  Append glossary according to your configuration:
 
 ```yaml
@@ -1905,8 +1898,6 @@ Make sure that the configured data has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 4) Set up behavior
-
-Set up behavior as follows:
 
 1.  Set up the following plugins:
 
@@ -2163,7 +2154,7 @@ class ProductConfigurationCartWidgetDependencyProvider extends SprykerProductCon
 }
 ```
 
-2. Set up the `DateTimeProductConfiguratorBuildFrontendConsole` console command in `ConsoleDependencyProvider` to be able to build the frontend assets for the configurator application.
+2. To build the frontend assets for the configurator application, set up the `DateTimeProductConfiguratorBuildFrontendConsole` console command in `ConsoleDependencyProvider`.
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -2191,7 +2182,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-3. Build the front-end application of the date-time configurator:
+3. Build the frontend application of the date-time configurator:
 
 ```bash
 console frontend:date-time-product-configurator:build
@@ -2199,7 +2190,7 @@ console frontend:date-time-product-configurator:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the front-end part has been built:
+Make sure that the frontend part has been built:
 1. Check that the folder `public/Configurator/dist` exists, and it’s not empty.
 2. Check that you can access the configurator at `https://date-time-configurator-example.mysprykershop.com/`.
 

@@ -79,19 +79,13 @@ Make sure that you are in the correct folder by running the `pwd` command.
 
 {% endinfo_block %}
 
-6. In `deploy.dev.yml`, define `image:` with the PHP image compatible with the current release of the Demo Shop:
-
-```yaml
-image: spryker/php:7.3-alpine3.12
-```
-
-7. Clone the Docker SDK repository:
+6. Clone the Docker SDK repository:
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-8. In `{shop_name}/docker/context/php/debug/etc/php/debug.conf.d/69-xdebug.ini`, set `xdebug.remote_host` and `xdebug.client_host` to `host.docker.internal`:
+7. In `{shop_name}/docker/context/php/debug/etc/php/debug.conf.d/69-xdebug.ini`, set `xdebug.remote_host` and `xdebug.client_host` to `host.docker.internal`:
 
 ```text
 ...
@@ -100,25 +94,28 @@ xdebug.remote_host=host.docker.internal
 xdebug.client_host=host.docker.internal
 ```
 
-9. Add your user to the `docker` group:
+8. Add your user to the `docker` group:
 
 ```bash
 sudo usermod -aG docker $USER
 ```
 
-10. Bootstrap local docker setup:
+9. Bootstrap local docker setup:
 
 ```bash
 docker/sdk bootstrap deploy.dev.yml
 ```
 
-{% info_block warningBox "Bootstrap" %}
+{% info_block infoBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after you update the Docker SDK or the deploy file.
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after the following takes place:
+
+* Docker SDK version update.
+* Deploy file update.
 
 {% endinfo_block %}
 
-11. Update the `hosts` file:
+10. Update the `hosts` file:
     1. Open the Start menu.
     2. In the search field, enter `Notepad`.
     3. Right-click *Notepad* and select **Run as administrator**.
@@ -129,28 +126,28 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
     The hosts file opens in the drop-down.
     8. Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
-    {% info_block infoBox %}
-
-    You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
-
-    {% endinfo_block %}
-
     {% info_block warningBox "Warning" %}
 
-    Some versions of Windows have a limitation of the number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
+    *It is not recommended to exceed 10 hostnames per line* on Windows machines. Split a long line into multiple lines if necessary.
 
     {% endinfo_block %}
 
-    9. Select **File** > **Save**.
+    {% info_block infoBox %}
+
+    To get the list of instructions, you can run `docker/sdk install` after `bootstrap`.
+
+    {% endinfo_block %}
+
+    9. Select **File > Save**.
     10. Close the file.
 
-12. Once the job finishes, build and start the instance:
+11. Once the job finishes, build and start the instance:
 
 ```bash
 docker/sdk up
 ```
 
-{% info_block warningBox %}
+{% info_block infoBox %}
 
 Depending on the hardware performance, the first project launch can take up to 20 minutes.
 

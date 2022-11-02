@@ -301,9 +301,9 @@ class GlueStorefrontApiApplication extends RequestFlowAwareApiApplication
 
 Each method in `CustomApiApplication` represents a step in the API application request flow. It can be used as an extension point in each of the steps.
 
-This application extends `RequestFlowAwareApiApplication`, which means that this API application follows the default Glue workflow. This is beneficial because it lets you make the most of the Spryker conventions and features that wire into the request flow.
+This application extends `RequestFlowAwareApiApplication`, which means that this API application follows the default Glue workflow. This is beneficial because it lets you make use the most of the Spryker conventions and features that wire into the request flow.
 
-If your API uses its own workflow, you can opt for extending `RequestFlowAgnosticApiApplication`. This kind of application has everything (a separate set of application plugins, boot, and run methods) but not the request flow actions. One of these is the old Glue application. Here is an example of the application: 
+If your API uses its own workflow, you can opt for extending `RequestFlowAgnosticApiApplication`. This kind of application has everything—a separate set of application plugins, boot, and run methods—but not the request flow actions. The application that follows the `RequestFlowAgnosticApiApplication` extension is the old Glue storefront API application; it is request-agnostic and creates and follows its own request flow. Here is an example of the application: 
 
 **src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php**
 

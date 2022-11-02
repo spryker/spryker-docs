@@ -9,7 +9,7 @@ redirect_from:
 
 This document shows how to document Glue API endpoints.
 
-You can enhance the way your resource is described in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/). 
+You can enhance your resource's description in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/). 
 
 To generate the documentation, use the following command:
 ```bash

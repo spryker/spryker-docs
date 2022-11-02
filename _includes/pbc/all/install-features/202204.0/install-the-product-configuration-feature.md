@@ -33,7 +33,6 @@ composer require spryker-feature/configurable-product:"{{site.version}}" --updat
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following modules have been installed:
 
 | MODULE                             | EXPECTED DIRECTORY                                   |
@@ -58,7 +57,7 @@ Add the following configuration:
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
 |ProductConfigurationConstants::SPRYKER_PRODUCT_CONFIGURATOR_ENCRYPTION_KEY| Provides an encryption key for checksum validation. It is used for the checksum generation of the product configurator data based on the provided key. |Spryker\Shared\ProductConfiguration\ProductConfigurationConstants |
-|ProductConfigurationConstants::SPRYKER_PRODUCT_CONFIGURATOR_HEX_INITIALIZATION_VECTOR| Provides a hex initialization vector for checksum validation. It is used as a hex initialization vector for the checksum generation of product configurator data. |Spryker\Shared\ProductConfiguration\ProductConfigurationConstants|
+|ProductConfigurationConstants::SPRYKER_PRODUCT_CONFIGURATOR_HEX_INITIALIZATION_VECTOR| Provides a hex initialization vector for the checksum validation. It is used as a hex initialization vector for the checksum generation of product configurator data. |Spryker\Shared\ProductConfiguration\ProductConfigurationConstants|
 |KernelConstants::DOMAIN_WHITELIST| Defines a set of whitelist domains that every external URL is checked against before redirecting. |Spryker\Shared\Kernel\KernelConstants|
 
 **config/Shared/config_default.php**
@@ -75,7 +74,6 @@ $config[ProductConfigurationConstants::SPRYKER_PRODUCT_CONFIGURATOR_HEX_INITIALI
 $config[KernelConstants::DOMAIN_WHITELIST][] = getenv('SPRYKER_PRODUCT_CONFIGURATOR_HOST');
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 To make sure that the changes have been applied, check that the exemplary product configurator opens at `http://date-time-configurator-example.mysprykershop.com`.
@@ -83,8 +81,6 @@ To make sure that the changes have been applied, check that the exemplary produc
 {% endinfo_block %}
 
 ### 3) Set up database schema and transfer objects
-
-Set up database schema and transfer objects as follows:
 
 1. For entity changes to trigger events, adjust the schema definition:
 
@@ -108,7 +104,6 @@ Set up database schema and transfer objects as follows:
 | --- | --- |
 | spy_product_configuration | Entity.spy_product_configuration.create  <br> Entity.spy_product_configuration.update  <br> Entity.spy_product_configuration.delete |
 
-
 **src/Pyz/Zed/ProductConfigurationStorage/Persistence/Propel/Schema/spy_product_configuration_storage.schema.xml**
 
 ```xml
@@ -129,7 +124,7 @@ Set up database schema and transfer objects as follows:
 </database>
 ```
 
-1. Apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -140,7 +135,7 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 
-Make sure that the following changes have been applied by checking your database:
+Ebsure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY                                            | TYPE | EVENT |
 |------------------------------------------------------------| --- | --- |
@@ -150,11 +145,7 @@ Make sure that the following changes have been applied by checking your database
 | spy_wishlist_item.product_configuration_instance_data      |column| added|
 | spy_shopping_list_item.product_configuration_instance_data |column| added|
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been triggered in transfer objects:
+Ensure that the following changes have been triggered in transfer objects:
 
 | TRANSFER                                             | TYPE | EVENT | PATH |
 |------------------------------------------------------| --- | --- | --- |
@@ -219,8 +210,8 @@ Set up the following behaviors:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductConfigurationWritePublisherPlugin | Updates product configuration when triggered by provided product configuration events. | None | Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\ProductConfiguration |
-| ProductConfigurationDeletePublisherPlugin|Removes all data from the product configuration storage when triggered by provided product configuration events.|None|Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\ProductConfiguration|
-| SynchronizationStorageQueueMessageProcessorPlugin |Reads messages from the synchronization queue and saves them to the storage.|None|\Spryker\Zed\Synchronization\Communication\Plugin\Queue|
+| ProductConfigurationDeletePublisherPlugin| Removes all data from the product configuration storage when triggered by provided product configuration events.|None|Spryker\Zed\ProductConfigurationStorage\Communication\Plugin\Publisher\ProductConfiguration|
+| SynchronizationStorageQueueMessageProcessorPlugin | Reads messages from the synchronization queue and saves them to the storage.|None|\Spryker\Zed\Synchronization\Communication\Plugin\Queue|
 
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
@@ -300,7 +291,7 @@ use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
       /**
-     *  QueueNameFoo, // Queue => QueueNameFoo, (Queue and error queue will be created: QueueNameFoo and QueueNameFoo.error)
+     *  QueueNameFoo, // Queue => QueueNameFoo, (Queue and error queue are created: QueueNameFoo and QueueNameFoo.error)
      *  QueueNameBar => [
      *       RoutingKeyFoo => QueueNameBaz, // (Additional queues can be defined by several routing keys)
      *   ],
@@ -320,12 +311,11 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, after creating a product configuration, you can find the corresponding record in the `spy_product_configuration_storage` table.
+Ensure that, after creating a product configuration, you can find the corresponding record in the `spy_product_configuration_storage` table.
 
 {% endinfo_block %}
 
 1. Setup re-generate and re-sync features by setting up the following plugins:
-
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -405,32 +395,20 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product configuration trigger plugin works correctly:
-
+Ensure that the product configuration trigger plugin works correctly:
 1.  Fill the `spy_product_configuration` table with some data.
-
 2.  Run the `console publish:trigger-events -r product_configuration` command.
+3.  Ensure that the `spy_product_configuration_storage` table has been filled with respective data.
+4.  In your system, ensure that storage entries are displayed with the `kv:product_configuration:sku` mask.
 
-3.  Make sure that the `spy_product_configuration_storage` table has been filled with respective data.
-
-4.  Make sure that, in your system, storage entries are displayed with the `kv:product_configuration:sku` mask.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the product configuration synchronization plugin works correctly:
-
+Ensure that the product configuration synchronization plugin works correctly:
 1.  Fill the `spy_product_configuration_storage` table with some data.
-
 2.  Run the `console sync:data product_configuration` command.
-
-3.  Make sure that, in your system, the storage entries are displayed with the `kv:product_configuration:sku` mask.
+3.  In your system, ensure that the storage entries are displayed with the `kv:product_configuration:sku` mask.
 
 {% endinfo_block %}
 
 3. Set up quantity counter plugins:
-
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -512,13 +490,10 @@ class PriceCartConnectorDependencyProvider extends SprykerPriceCartConnectorDepe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product configuration item quantity counter plugins work correctly:
-
+Ensure that the product configuration item quantity counter plugins work correctly:
 1.  Configure a configurable product.
-
 2.  Add the product to the cart.
-
-3.  Make sure that the product has been successfully added to the cart.
+3.  Ensure that the product has been successfully added to the cart.
 
 {% endinfo_block %}
 
@@ -606,13 +581,10 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the cart plugins work correctly:
-
-1.  Configure a configurable product.
-
-2.  Add the configured product to cart.
-
-3.  Make sure that the product has been successfully added to cart.
+Ensure that the cart plugins work correctly:
+1. Configure a configurable product.
+2. Add the configured product to cart.
+3. Ensure that the product has been successfully added to cart.
 
 {% endinfo_block %}
 
@@ -650,13 +622,10 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that checkout plugins work correctly:
-
+Ensure that checkout plugins work correctly:
 1.  Add a configurable product to cart without completing its configuration.
-
 2.  Try to place an order with the product.
-
-3.  Make sure that the order is not placed and you get an error message about incomplete configuration.
+3.  Ensure that the order is not placed and you get an error message about incomplete configuration.
 
 {% endinfo_block %}
 
@@ -693,8 +662,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 {% info_block warningBox "Verification" %}
 
 Check that product management plugins work correctly:
-
-1. Add the configuration to the product via data import.
+1. Add the configuration to the product using data import.
 2. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 3. Find a product with a configuration that you created before.
 4. Check that product is marked as configurable.
@@ -747,7 +715,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that sales plugins work correctly:
+Ensure that sales plugins work correctly:
 1. Configure a configurable product.
 2. Place an order with the product.
 3. Check that the `spy_sales_order_item_configuration` database table contains a record with the configurable order item.
@@ -877,10 +845,10 @@ class ProductConfigurationDependencyProvider extends SprykerProductConfiguration
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product configuration price overrides the default product price:
+Ensure that the product configuration price overrides the default product price:
 1. Configure a configurable product with a regular price and a volume price.
 2. Add the product to the cart with the amount required for the volume prices to apply.
-3. Make sure that the volume price applies.
+3. Ensure that the volume price applies.
 
 {% endinfo_block %}
 
@@ -916,9 +884,9 @@ class AvailabilityStorageDependencyProvider extends SprykerAvailabilityStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that availability plugins work correctly:
+Ensure that availability plugins work correctly:
 1. Configure a configurable product that has regular availability.
-2. Make sure that you cannot add to the cart more items than are available for the configuration.
+2. Ensure that you cannot add to the cart more items than are available for the configuration.
 
 
 {% endinfo_block %}

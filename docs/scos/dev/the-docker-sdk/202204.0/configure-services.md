@@ -500,7 +500,7 @@ image:
             - newrelic
 ```
 
-Once New Relic has been enabled in your deploy file, please [contact Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html) to have it integrated into your environment. This can be done by submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html).
+Once New Relic has been enabled in your deploy file, please [contact Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html) to have it integrated into your environment. This can be done by submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html). The Support team will confirm that a New Relic APM account is available for you and will ensure that the correct application naming convention is set up to cascade to the appropriate APM.
 
 Once these changes have been enabled and integrated, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name set up in the configuration files. If you update the name of your application, please reach out to Spryker Support to have these changes reflected in your APM.
 
@@ -518,6 +518,8 @@ Follow the steps to enable New Relic for your local environment:
 docker:
     newrelic:
         license: {new_relic_license}
+		distributed tracing:
+            enabled: true
 ```
 
 2. Adjust `deploy.*.yml` in the `image:` section:
@@ -530,45 +532,7 @@ image:
         enabled-extensions:
             ...
             - newrelic
-
-
 ```
-
-#### Additional local configuration
-
-Use this configuration if you are going to change New Relic license often or don’t want to define it in the deploy file. Please note that in order to enable New Relic locally without specifying the license in the deploy file, you will need to pass it as an environmental variable when starting the environment.
-
-Follow the steps to enable New Relic:
-
-1. Adjust `deploy.*.yml` in the `docker:` section:
-
-```yaml
-docker:
-    newrelic:
-```
-
-2. Adjust `deploy.*.yml` in the `image:` section:
-
-```yaml
-image:
-    tag: spryker/php:7.4 # the image tag was previously used in `image:`
-    php:
-        ...
-        enabled-extensions:
-            - newrelic
-```
-
-3. Pass the New Relic license:
-
-```bash
-NEWRELIC_LICENSE={new_relic_license} docker/sdk up
-```
-
-{% info_block warningBox "Note" %}
-
-You can pass the New Relic license only with the `docker/sdk up` command.
-
-{% endinfo_block %}
 
 ### Showing YVES, ZED, and GLUE as their own APM
 

@@ -3667,14 +3667,14 @@ entries:
         - title: Prepayment
           url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
           nested:
+          - title: Implement prepayment in frontend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
+          - title: Integrate Prepayment into checkout
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
           - title: Implement prepayment in backend
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
-          - title: Integrate prepayment into checkout
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
-          - title: Implement Prepayment in Shared layer
+          - title: Implement prepayment in Shared layer
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
-          - title: Implement Prepayment in frontend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
           - title: Test the prepayment implementation
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
         - title: Invoice
@@ -3691,8 +3691,10 @@ entries:
           - title: Test the invoice payment implementation
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
       - title: Data ingestion
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
         - title: Structural preparations
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
           nested:
           - title: File System
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
@@ -3700,15 +3702,15 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
           - title: Extend the database schema
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
-          - title: Create, use, and extende the transfer objects
+          - title: Create, use, and extend the transfer objects
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
         - title: Spryker Middleware
           url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html
       - title: Event
         url: /docs/scos/dev/back-end-development/data-manipulation/event/event.html
         nested:
-        - title: Configure an events queue
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/configure-an-events-queue.html
+        - title: Configure event queues
+          url: /docs/scos/dev/back-end-development/data-manipulation/event/configure-event-queues.html
         - title: Listen to events
           url: /docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
         - title: Add events
@@ -3724,12 +3726,12 @@ entries:
             url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
         - title: Spryker OS module customization
           nested:
-          - title: Extending a core module that is used by another
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
-          - title: Extending the Core
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
-          - title: Extending the Spryker Core functionality
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
+          - title: Extend a core module that is used by another
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+          - title: Extend the core
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
+          - title: Extend the Spryker Core functionality
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
       - title: Create and configure Zed tables
@@ -3749,7 +3751,7 @@ entries:
     - title: Factory
       url: /docs/scos/dev/back-end-development/factory/factory.html
       nested:
-      - title: Inject dependencies within factories - container globals
+      - title: "Inject dependencies within factories: Container globals"
         url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
     nested:
@@ -4253,6 +4255,8 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html
           - title: "HowTo: Create a custom content item"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
+          - title: "HowTo: Define if a cart should be deleted after placing an order"
+            url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
         - title: "HowTo: Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
         - title: "HowTo: Disable split delivery in Yves interface"
@@ -4292,8 +4296,6 @@ entries:
         url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
       - title: "HowTo: Configure basic htaccess authentication"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-basic-htaccess-authentication.html
-      - title: "HowTo: Create personalized prices"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
       - title: "HowTo: Define the maximum size of content fields"
@@ -4934,10 +4936,6 @@ entries:
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
       - title: Build a state machine
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
-      - title: State machine cookbook - part 2 - building a state machine
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
-      - title: State machine cookbook - part I - state machine fundamentals
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
   - title: Troubleshooting
     url: /docs/scos/dev/troubleshooting/troubleshooting.html
     nested:

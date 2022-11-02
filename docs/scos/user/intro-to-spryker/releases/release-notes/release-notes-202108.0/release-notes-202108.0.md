@@ -182,8 +182,8 @@ With the **Agent Assist APIs**, you can create representations that enable a use
 
 #### Documentation
 
-* [Authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html)
-* [Searching by customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html)
+* [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html)
+* [Search by customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html)
 * [Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html)
 * [Managing agent assist authentication tokens](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/managing-agent-assist-authentication-tokens.html)
 
@@ -232,8 +232,8 @@ With this release, the existing checkout-data, checkout, and orders endpoints su
 
 #### Documentation
 
-* [Submitting checkout data](/docs/scos/dev/glue-api-guides/202108.0/checking-out/submitting-checkout-data.html)
-* [Checking out purchases](/docs/scos/dev/glue-api-guides/202108.0/checking-out/checking-out-purchases.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Check out purchases](/docs/scos/dev/glue-api-guides/202108.0/checking-out/checking-out-purchases.html)
 * [Retrieving orders](/docs/scos/dev/glue-api-guides/202108.0/retrieving-orders.html)
 
 ### Customer saved addresses can be retrieved as a related resource for the checkout process (checkout-data GLUE API improvement)
@@ -242,7 +242,7 @@ You can now use the customers’ saved account addresses and retrieve them toget
 
 #### Documentation
 
-[Submitting checkout data](/docs/scos/dev/glue-api-guides/202108.0/checking-out/submitting-checkout-data.html)
+[Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
 
 ### Double opt-in API
 
@@ -322,7 +322,7 @@ We have introduced the **strict mode** and type hints for transfer objects in fu
 
 #### Documentation
 
-[Transfer strict types](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)
+[Transfer strict types](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html#transfer-strict-types)
 
 
 ### Front-end (Profiling + Microdata)

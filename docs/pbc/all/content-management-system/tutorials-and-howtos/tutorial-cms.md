@@ -24,8 +24,8 @@ redirect_from:
   - /v1/docs/en/t-cms
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-cms.html
 related:
-  - title: Implementing URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---

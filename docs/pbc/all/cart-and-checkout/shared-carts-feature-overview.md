@@ -136,7 +136,7 @@ If the shared cart has been dismissed individually by the user, this user can't 
 
 ## Current constraints
 
-With the current functionality, the shopping cart cannot be shared outside of a [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) where the owner belongs.
+With the current functionality, the shopping cart cannot be shared outside of a [business unit](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/business-units-overview.html) where the owner belongs.
 
 ## Shared Cart on the Storefront
 <a id=shared-cart-on-the-storefront></a>
@@ -150,6 +150,6 @@ On the storefront, company users can share a cart with other users within the sa
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html) | [Share company user carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html)  |
+|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html) | [Share company user carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html)  |
 | [Install the Shared Carts Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html) | [Retrieve cart permission groups](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html) |
 | | [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html) |

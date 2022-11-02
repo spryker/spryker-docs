@@ -1,6 +1,6 @@
 ---
 title: Modular Frontend
-description: This article provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
+description: This document provides information on Pages and Widgets, the Pages module and how the Pages module can be extended. Real-life examples included into the document will help you to understand the concept better.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/modular-frontend
@@ -25,31 +25,29 @@ redirect_from:
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
-  - title: Adding translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: Add translations for Yves
+    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - title: CLI entry point for Yves
     link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
-  - title: Implementing URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
   - title: Yves bootstrapping
     link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
   - title: Yves routes
     link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-This article provides information on [Pages](/docs/scos/dev/back-end-development/yves/modular-frontend.html#pages) and [Widgets](/docs/scos/dev/back-end-development/yves/modular-frontend.html#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the article will help you to understand the concept better.
+This document provides information on [Pages](/docs/scos/dev/back-end-development/yves/modular-frontend.html#pages) and [Widgets](/docs/scos/dev/back-end-development/yves/modular-frontend.html#widgets), the Pages module and how the Pages module can be extended. Real-life examples included into the document will help you to understand the concept better.
 
-## General information
+## Pages
 
-### Pages
-
-Pages are the main concept of modular front-end (Yves) which splits a code into modules. A *Page* module represents a set of pages displayed under some or similar URLs that logically belong together.
+Pages are the main concept of modular frontend (Yves) which splits a code into modules. A *Page* module represents a set of pages displayed under some or similar URLs that logically belong together.
 
 {% info_block infoBox %}
 
-As an example, we consider Product Detail Page as one Page module which is responsible for displaying products and their basic information.
+As an example, let's consider the product detail page as a one-page module that is responsible for displaying products and their basic information.
 
 {% endinfo_block %}
 
@@ -57,30 +55,30 @@ As an example, we consider Product Detail Page as one Page module which is respo
 
 {% info_block infoBox %}
 
-Another *Page* module example would be any customer related pages, like Login, Register, Profile, Addresses. These are several different pages. Each page is responsible for something specific from the customer domain, so it's natural to group them under the same module.
+Another *Page* module example is any customer-related pages, like Login, Register, Profile, Addresses. These are several different pages. Each page is responsible for something specific from the customer domain, so it's natural to group them under the same module.
 
 {% endinfo_block %}
 
 We group pages under a Page module when they are related to the same domain.
 
-### Widgets
+## Widgets
 
 Meanwhile, Page modules implement only feature basics, while Widgets provide optional extensions for them.
 
 {% info_block infoBox %}
 
-**Product Detail Page** shows basic product information, like the name, description and attributes of the product. But there are lots of optional features that can appear on the same page. The most commonly used examples are product image, price, availability, options, groups, rating, relations, an much more.
+The *product details* page shows basic product information, like the name, description, and attributes of the product. But there are lots of optional features that can appear on the same page. The most commonly used examples are product image, price, availability, options, groups, rating, relations, and much more.
 
 {% endinfo_block %}
 
 ![PDP ratings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/pdp-ratings.png)
 
 The *Pages* and *Widgets* concept offers a solution to tailor projects to their custom needs.
-When you get the general understanding of the Pages/Widgets concept, its time to investigate how the *Pages* module looks like, why and how the module can be extended.
+When you get a general understanding of the Pages and Widgets concept, it's time to investigate what the *Pages* module looks like and why and how the module can be extended.
 
-### Page module appearance and pages extension
+## Page module appearance and pages extension
 
-A Page module typically contains a `RouteProviderPlugin` plugin for routing (see [URL Routing](/docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html)) and some Controllers with their twig templates (see [Controllers and Actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)). The implementation scope of a *Page* module should be decided individually, depending on its need of re-usability.
+A Page module typically contains a `RouteProviderPlugin` plugin for routing (see [URL Routing](/docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html)) and some Controllers with their twig templates (see [Controllers and Actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)). The implementation scope of a *Page* module should be decided individually, depending on its need fo re-usability.
 
 {% info_block infoBox %}
 
@@ -90,7 +88,7 @@ The more generic a Page module is the more it can be reused, but also it needs m
 
 As more features you need to have on in your *Page* module, as much you need to extend it.
 
-To extend a Page with an additional functionality you use **Widgets**. When you extend the front-end by rendering a template fragment in a template of a controller action, you need to specify the exact place of each extension point on a template level.
+To extend a Page with an additional functionality you use **Widgets**. When you extend the frontend by rendering a template fragment in a template of a controller action, you need to specify the exact place of each extension point on a template level.
 
 ![PDP schema template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Front+End/Yves/Modular+Frontend/product-details-page-schema-temlate.png)
 
@@ -155,7 +153,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 For more information on how to implement a Widget, see the [How to Implement a Widget Plugin](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html) section in *Tutorial - Widgets and Widget Plugins*.  
 
-### Widget twig tag reference
+## Widget twig tag reference
 
 ```twig
 {% raw %}{%{% endraw %} widget WIDGET_EXPRESSION args WIDGET_ARGUMENTS use TWIG_TEMPLATE_PATH with TWIG_PARAMETERS only {% raw %}%}{% endraw %}

@@ -33,7 +33,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | -------------------------------- |
-| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ---------------- | ---------------------- | ----------------------------- |
@@ -548,7 +548,7 @@ To retrieve detailed information about an order, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------- | ------------ | -------- | ---------------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 
 | String parameter | Description     | Possible values    |
@@ -1378,7 +1378,7 @@ To retrieve detailed information about an order, send the request:
 | billingAddress.email       | String | Email address to use for communication.                      |
 | billingAddress.country     | String | Specifies the country.                                       |
 | billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
-| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html).|
+| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html).|
 
 #### Order item information
 

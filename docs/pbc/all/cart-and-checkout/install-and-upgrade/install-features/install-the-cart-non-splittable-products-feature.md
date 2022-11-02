@@ -1,5 +1,5 @@
 ---
-title: Install the Cart + Non-splittable products feature
+title: Install the Cart + Non-splittable Products feature
 description: The guide describes the process of installing the Cart and Non-splittable Products features into your project
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -11,10 +11,5 @@ redirect_from:
   - /docs/cart-non-splittable-products-feature-integration
   - /docs/en/cart-non-splittable-products-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/cart-non-splittable-products-feature-integration.html
-related:
-  - title: Cart feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
-  - title: Non-splittable Products feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/non-splittable-products-feature-walkthrough.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-cart-non-splittable-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-cart-non-splittable-products-feature.md -->

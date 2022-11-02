@@ -10,7 +10,7 @@ To start feature integration, overview and install the necessary features:
 | ------------- | ------ | ------------------------ |
 | Glue API: Spryker Core                | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Glue API: Cart                        | {{site.version}}  | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html) |
-| Glue API: Customer Account Management | {{site.version}}  | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Glue API: Customer Account Management | {{site.version}}  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-manager/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Glue API: Payments                    | {{site.version}}  | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-payments-feature-integration.html) |
 | Glue API: Shipment                   | {{site.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) |
 
@@ -441,7 +441,7 @@ To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you 
 
 {% endinfo_block %}
 
-For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html).
+For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html).
 
 ### Configure mapping
 

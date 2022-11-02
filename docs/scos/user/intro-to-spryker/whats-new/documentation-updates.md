@@ -275,7 +275,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
+[Install the Product Rating and Reviews Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
 </details>
 
@@ -299,7 +299,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 ### Spryker in Docker
 
-* [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
+* [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html#queue)
 * [Deploy File Reference](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)

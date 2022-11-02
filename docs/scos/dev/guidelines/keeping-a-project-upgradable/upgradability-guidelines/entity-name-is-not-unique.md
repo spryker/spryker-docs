@@ -256,7 +256,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-## Constant name is not unique
+---
+
+## Module name is not unique
 
 Module names must be unique. Check the examples below to learn how to fix the error.
 

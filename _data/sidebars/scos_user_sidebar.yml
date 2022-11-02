@@ -2724,14 +2724,6 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-      - title: Define global thresholds
-        url: /docs/scos/user/back-office-user-guides/administration/define-global-thresholds.html
-        include_versions:
-        - "202204.0"
-      - title: Manage threshold settings
-        url: /docs/scos/user/back-office-user-guides/administration/manage-threshold-settings.html
-        include_versions:
-        - "202204.0"
       - title: Define merchant order thresholds
         url: /docs/scos/user/back-office-user-guides/administration/define-merchant-order-thresholds.html
         include_versions:
@@ -3128,7 +3120,6 @@ entries:
     - title: Taxes
       include_versions:
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Avalara
         url: /docs/scos/user/technology-partners/taxes/avalara.html

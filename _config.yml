@@ -218,6 +218,11 @@ versioned_categories:
       - legacy-demoshop
       - technology-partner-guides
       - devops-migration-guides
+      - system-requirements
+  pbc:
+    all:
+      - user-management
+      - identity-access-manager
 
 # these are defaults used for the front matter for these file types
 

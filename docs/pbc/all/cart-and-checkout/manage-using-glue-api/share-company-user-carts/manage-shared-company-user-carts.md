@@ -38,13 +38,13 @@ To change permissions for a shared cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}*** | Unique identifier of a shared cart to change the permissions of. |
+| ***{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}*** | The unique ID of a shared cart to change the permissions of. |
 
 ### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | A string containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa`
 
@@ -61,7 +61,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| idCartPermissionGroup | Integer | ✓ | Unique identifier of the cart permission group that describes the permissions granted to the users with whom the cart is shared. |
+| idCartPermissionGroup | Integer | ✓ | The unique ID of the cart permission group that describes the permissions granted to the users with whom the cart is shared. |
 
 ### Response
 
@@ -85,8 +85,8 @@ Response sample:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| idCompanyUser | String | Name of the company user the cart is shared with. |
-| idCartPermissionGroup | Integer | Unique identifier of the cart permission group that describes the permissions granted to the user. |
+| idCompanyUser | String | The name of the company user the cart is shared with. |
+| idCartPermissionGroup | Integer | The unique ID of the cart's permission group that describes the permissions granted to the user. |
 
 ## Stop sharing a cart
 
@@ -98,7 +98,7 @@ To stop sharing a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}*** | Unique identifier of a shared cart to stop sharing. |
+| ***{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}*** | The unique ID of a shared cart to stop sharing. |
 
 ### Request
 

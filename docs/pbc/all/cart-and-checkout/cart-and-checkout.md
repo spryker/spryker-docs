@@ -5,7 +5,7 @@ last_updated: Oct 2, 2022
 template: concept-topic-template
 ---
 
-The *Cart and Checkout* capability enables customers and guest users to create and manage multiple shopping carts. After filling a cart, they go through a multi-step checkout to fill all the details and place an order.
+The *Cart and Checkout* capability enables customers and guest users to create and manage multiple shopping carts. After filling a cart, they go through a multi-step checkout to fill in all the details and place an order.
 
 To learn about cart and checkout, see the following feature overviews:
 

@@ -38,6 +38,6 @@ This document describes new features and enhancements we released for Spryker Cl
 
 * **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/cloud/dev/spryker-cloud-commerce-os/connecting-a-code-repository.html#connect-a-gitlab-code-repository).
 
-* **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, troubleshooting. See [Docker SDK](https://documentation.spryker.com/docs/docker-sdk).
+* **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, and troubleshooting. See [Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 
 * **Load and stress test tool**: released a tool that contains predefined Spryker-specific test scenarios. The tool is based on [Gatling.io](http://gatling.io/) and can be used as a package integrated into a Spryker project or as a standalone package.

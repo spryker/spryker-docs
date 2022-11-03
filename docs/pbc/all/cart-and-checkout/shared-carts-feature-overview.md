@@ -72,7 +72,7 @@ The *Read-only* permission allows:
 
 {% info_block warningBox "Note" %}
 
-With the *Read-only* permission, no cart actions are available to the user, except for adding comments and editing a custom order reference.
+With the *Read-only* permission, no cart actions are available to the user, except for adding comments and editing a custom order's reference.
 
 {% endinfo_block %}
 
@@ -100,7 +100,7 @@ The *Full access* permission allows the following:
 
 * *Adding products to a cart*. A user can add any products to the cart with full access.
 
-* *Removing products from a cart*. Having clicked on Remove, the user can remove an item from the cart. Having clicked on Clear cart, the user deletes all the items in the cart.
+* *Removing products from a cart*. By clicking on Remove, the user can remove an item from the cart. By clicking on Clear cart, the user deletes all the items in the cart.
 
 * *Leaving notes for products in the cart*. A user can leave a note to a particular product in the cart on the **Shopping cart summary** page.
 
@@ -118,25 +118,25 @@ The *Full access* permission allows the following:
 
 * *Duplicating a shopping cart*. The shopping cart can be duplicated on the **Shopping Cart** page.
 
-* *Dismissing a shared shopping cart*. Company users within one business unit can share carts. For example, such carts can be dismissed if they are no longer needed.
+* *Dismissing a shared shopping cart*. Company users within one business unit can share carts. Such carts can be dismissed if they are no longer needed.
 
 * *Deleting a shopping cart*. The shopping cart can be deleted on the **Shopping Cart** page. Deleting a shared shopping cart also deletes it for users it has been shared with.
 
 ![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/shopping-cart-actions.png)
 
-By default, the user who has created the cart has Owner access permission. Owner access permission allows everything that allows Full access permission and an ability to share the cart with other users.
+By default, the user who has created the cart has Owner access permission. Owner access permission allows everything that allows Full access permission and grants the ability to share the cart with other users.
 
 If a user does not need a cart that has been shared with them, they can remove it from their shopping carts and thus cancel sharing. To do so, on the **Shopping Cart** page, in **Actions** next to the respective shared shopping cart, the user clicks **Dismiss**. They can dismiss sharing shopping carts with both *Read only* and *Full access* rights. Own shopping carts cannot be dismissed.
 
 {% info_block errorBox "Important!" %}
 
-If the shared cart has been dismissed individually by the user, this user can't see it if this cart is shared next time.
+If the shared cart has been dismissed individually by a user, this user can't see it if this cart is shared next time.
 
 {% endinfo_block %}
 
 ## Current constraints
 
-With the current functionality, the shopping cart cannot be shared outside of a [business unit](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/business-units-overview.html) where the owner belongs.
+With the current functionality, the shopping cart cannot be shared outside of the [business unit](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/business-units-overview.html) to which the owner belongs to.
 
 ## Shared Cart on the Storefront
 <a id=shared-cart-on-the-storefront></a>

@@ -527,7 +527,7 @@ class GatewayController extends AbstractGatewayController
 }																															
 ```
 
-1. To reverse the string, In Yves, from `IndexController`, call the client.
+2. To reverse the string, In Yves, from `IndexController`, call the client.
 
 ```php					
 /**
@@ -543,7 +543,13 @@ public function indexAction(Request $request)
     $helloSprykerTransfer = $this->getClient()
 	    ->reverseString($helloSprykerTransfer);
 
-    return ['reversedString' => $helloSprykerTransfer->getReversedString()];
+    $data = ['reversedString' => $helloSprykerTransfer->getReversedString()];
+
+    return $this->view(
+        $data,
+        [],
+        '@HelloSpryker/views/index/index.twig'
+    );
 }			
 ```
 

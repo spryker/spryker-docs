@@ -135,7 +135,7 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 
-Ebsure that the following changes have been applied by checking your database:
+Make sure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY                                            | TYPE | EVENT |
 |------------------------------------------------------------| --- | --- |
@@ -961,7 +961,7 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure the plugins work correctly:
-1. Add a configurable product with incomplete configuration to thecart.
+1. Add a configurable product with an incomplete configuration to the cart.
 2. Check that the Checkout and Request for quote buttons are not available.
 
 {% endinfo_block %}

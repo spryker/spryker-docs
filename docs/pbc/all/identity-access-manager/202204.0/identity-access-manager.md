@@ -57,7 +57,7 @@ Each of the identity managers is an ECO module that must be developed separately
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Log in to the Back Office](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-in-the-back-office/log-into-the-back-office.html) |
+| [Log in to the Back Office](/docs/pbc/all/identity-access-manager/{{page.version}}/log-into-the-back-office.html) |
 
 
 

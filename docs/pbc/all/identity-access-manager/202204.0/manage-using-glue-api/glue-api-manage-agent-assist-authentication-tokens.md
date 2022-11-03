@@ -1,5 +1,5 @@
 ---
-title: Managing agent assist authentication tokens
+title: "Glue API: Managing agent assist authentication tokens"
 description: Refresh an agent assist token and revoke an agent assist refresh token.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

@@ -378,10 +378,45 @@ entries:
                 url: /docs/pbc/all/identity-access-manager/202204.0/install-and-upgrade/install-the-spryker-core-back-office-feature.md
               - title: Install the Customer Access Glue API
                 url: /docs/pbc/all/identity-access-manager/202204.0/install-and-upgrade/install-the-customer-access-glue-api.md
-              - title: Install the Spryker Core Back Office feature
-                url: /docs/pbc/all/identity-access-manager/202204.0/install-and-upgrade/install-the-spryker-core-back-office-feature.md
-              - title: Install the Spryker Core Back Office feature
-                url: /docs/pbc/all/identity-access-manager/202204.0/install-and-upgrade/install-the-spryker-core-back-office-feature.md
+              - title: Install the Customer Account Management Glue API
+                url: /docs/pbc/all/identity-access-manager/202204.0/install-and-upgrade/install-the-customer-account-management-glue-api.md
+              - title: Install Microsoft Azure Active Directory
+                url: /docs/pbc/all/identity-access-manager/202204.0/install-and-upgrade/install-microsoft-azure-active-directory.md
+          - title: Log into the Back Office
+            url: /docs/pbc/all/identity-access-manager/202204.0/log-into-the-back-office.md
+          - title: Manage using Glue API
+            nested:
+              - title: Authentication and authorization
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-authentication-and-authorization.md
+              - title: Security and authentication
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-security-and-authentication.md
+              - title: Create customers
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.md
+              - title: Confirm customer registration
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-confirm-customer-registration.md
+              - title: Manage customer passwords
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-customer-passwords.md
+              - title: Authenticate as a customer
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-authenticate-as-a-customer.md
+              - title: Manage customer authentication tokens via OAuth 2.0
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.md
+              - title: Manage customer authentication tokens
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.md
+              - title: Authenticating as a company user
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-authenticate-as-a-company-user.md
+              - title: Manage company user authentication tokens
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.md
+              - title: Authenticate as an agent assist
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.md
+              - title: Managing agent assist authentication tokens
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.md
+              - title: Delete expired refresh tokens
+                url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.md
+          - title: Configure basic .htaccess authentication
+            url: /docs/pbc/all/identity-access-manager/configure-basic-htaccess-authentication.md
+
+
+
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
@@ -689,6 +724,12 @@ entries:
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html
               - title: Integrate Avalara Tax + Shipment
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
+      - title: User Management
+        url: /docs/pbc/all/user-management/202204.0/user-management.md
+        nested:
+          - title: Manage in the Back Office
+            nested:
+              - title: 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
         nested:

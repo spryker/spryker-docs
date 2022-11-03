@@ -1,5 +1,5 @@
 ---
-title: Authenticate as an agent assist
+title: "Glue API: Authenticate as an agent assist"
 description: Authenticate as an agent assist on the Storefront.
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template

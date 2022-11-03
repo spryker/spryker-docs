@@ -538,7 +538,7 @@ image:
 
 By default, the APM will display in the form of `company-staging-newrelic-app` within the New Relic dashboard. This behavior can be updated so that each of the available applications shows as their own APM (i.e. `YVES-DE (docker.dev)`) for improved visibility.
 
-To do so, additional changes will need to be made to the Monitoring service. Within `src/Pyz/Service/Monitoring/`, we can edit the `MonitoringDependencyProvider.php` to enable this functionality.
+To do so, additional changes will need to be made to the Monitoring service. Within `src/Pyz/Service/Monitoring/`, we can edit the `MonitoringDependencyProvider.php` to enable this functionality. You may need to add both this directory and class if they are missing from the Monitoring service.
 
 ```php
 <?php declare(strict_types = 1);

@@ -518,7 +518,7 @@ Follow the steps to enable New Relic for your local environment:
 docker:
     newrelic:
         license: {new_relic_license}
-		distributed tracing:
+	distributed tracing:
             enabled: true
 ```
 

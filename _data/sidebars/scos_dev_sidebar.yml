@@ -47,8 +47,6 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html
         - title: Integrating the Docker SDK into existing projects
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html
-        - title: Running production
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html
       - title: Configuring
         nested:
         - title: Setting up a self-signed SSL certificate
@@ -1194,7 +1192,7 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
           include_versions:
           - "202204.0"
-        - title: How to create a route 
+        - title: How to create a route
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-route.html
           include_versions:
           - "202204.0"
@@ -4810,7 +4808,7 @@ entries:
         - title: Define custom prefixes for core entity names
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
         - title: Define evaluation rules to ignore
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-evaluation-rules-to-ignore.html          
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-evaluation-rules-to-ignore.html
     - title: Performance guidelines
       nested:
       - title: Elastic computing

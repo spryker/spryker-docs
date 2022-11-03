@@ -22,23 +22,6 @@ related:
 
 
 
-## Create and edit file list content item page
-
-The following table describes the attributes on the pages:
- * *CreateContent Item: File List*
- * *Edit Content Item: File List*
-
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| **Name** | The name for a File List content item. |
-| **Description** | Descriptive information on what a File List content item is used for. |
-| **Selected Files** | A top table that displays the selected files. |
-| **Actions** | A set of actions you can perform on a File List content item:<ul><li>**Move Down** or **Move Up** allows you to change the order of files in the list. </li><li>**Delete** allows removing the selected file.</li></ul> |
-| **Available Files** | A bottom table that displays a list of files uploaded to the File Manager. |
-| **ID** | A sequence number. |
-| **File Name** |A file name.  |
-| **Selected** | A column that contains **+ Add to list** you can click to add a file to the top table so that it can be added to the File List content item. |
-
 ## Create and edit navigation content item page
 
 The following table describes the attributes on the *Create Content Item: Navigation* and *Edit Content Item: Navigation* pages:

@@ -9,7 +9,7 @@ This topic describes how to create file list content items in the Back Office.
 
 ## Prerequisites
 
-Make sure to review [reference information](#create-product-set-content-items) before you start, or look up the necessary information as you go through the process.
+Make sure to review [reference information](#create-file-list-content-items) before you start, or look up the necessary information as you go through the process.
 
 ## Create a product set content item
 
@@ -38,17 +38,38 @@ The following logic applies in a multi-language setup:
 To clear product selection on a tab, click **Clear locale**.
 
 
-### Reference information: Create a file list content item
+### Reference information: Create file list content items
 
 The following table describes the attributes on the *Create Content Item: File List* page.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Name | Name for a file list content item. |
-| Description | Descriptive information on what a file list content item is used for. |
+| NAME | Name for a file list content item. |
+| DESCRIPTION | Descriptive information on what a file list content item is used for. |
 | Selected Files | Top table that displays the selected files. |
-| Actions | Set of actions you can perform on a File List content item:<ul><li>**Move Down** or **Move Up** allows you to change the order of files in the list. </li><li>**Delete** allows removing the selected file.</li></ul> |
 | Available Files | Bottom table that displays a list of files uploaded to the file manager. |
 | ID | Sequence number. |
 | File Name | File name.  |
-| Selected| Column that contains **+ Add to list** you can click to add a file to the top table so that it can be added to the file list content item. |
+
+
+### Reference information: File list content item widget
+
+The widget allows you to insert a File List content item that will be displayed as a link or icon to download the file, such as video, image, zip, pdf, etc on a page or block.
+
+{% info_block infoBox %}
+
+You can add only files uploaded to **File Manager**. Thus, if you make any changes to files in the File Manager section, for example, remove the file, these changes will be applied in the Content Items section as well. <br>See the _File Uploader Feature Overview_ article to learn more about file types that can be uploaded to File Manager.
+
+{% endinfo_block %}
+
+**Use case example:** This widget can be used, for example, to submit some additional information or attach a pdf promotion presentation of your products to a page.
+
+You can view how it looks like on the store website:
+
+* **B2C**
+    <br>Template used: File icon and size
+![File list content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/file-list-yves-b2c.gif)
+
+* **B2B**
+    <br>Template used: Text Link
+![File list content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/file-list-yves-b2b.gif)

@@ -3,6 +3,8 @@ title: Create banner content items
 description: Learn how to create banner content items in the Back Office.
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202204.0/content/content-items/references/reference-information-content-item-widgets-types.html
 ---
 
 This topic describes how to create content items in the Back Office.

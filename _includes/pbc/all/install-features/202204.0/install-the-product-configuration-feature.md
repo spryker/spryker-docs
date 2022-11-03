@@ -1255,7 +1255,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 ```
 
-<details>
+</details>
 
 <details><summary markdown='span'>src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
@@ -1314,6 +1314,8 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 }
 
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 

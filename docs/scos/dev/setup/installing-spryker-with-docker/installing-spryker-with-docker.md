@@ -48,7 +48,7 @@ Review the installation prerequisites for your operating system:
 
 ## Installation
 
-There are several ways to install a Docker-based instance of Spryker. See [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to learn about them in detail.
+There are several ways to install a Docker-based instance of Spryker. For more details about them, see [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html).
 
 If you've already selected an installation mode, follow one of the guides below:
 

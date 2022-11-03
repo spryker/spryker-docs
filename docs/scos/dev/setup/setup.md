@@ -10,6 +10,6 @@ This section contains instructions for installing local instances of Spryker Com
 
 To replicate a PaaS environment on your machine, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
 
-For other solutions that are not compatible with PaaS environments, see the following:
+For other solutions that are not compatible with PaaS environments, see the following documents:
 * [Installing Spryker with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html)
 * [Installing Spryker without Development Virtual Machine or Docker](/docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html)

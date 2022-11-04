@@ -225,7 +225,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Enabling the CMS content widgets button in the WYSIWYG Editor
         url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/enabling-cms-content-widgets-button.html
         include_versions:
@@ -332,7 +331,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Non-splittable Products
       url: /docs/scos/dev/feature-walkthroughs/non-splittable-products-feature-walkthrough.html
       include_versions:
@@ -1191,7 +1189,7 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
           include_versions:
           - "202204.0"
-        - title: How to create a route 
+        - title: How to create a route
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-route.html
           include_versions:
           - "202204.0"
@@ -3176,70 +3174,60 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_template.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-template.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_page_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-page-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_block_category.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-category.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_block_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - content_banner.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-banner.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_slot_block.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot-block.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_page.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-page.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_block.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - content_product_abstract_list.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - content_navigation.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-navigation.csv.html
           include_versions:
@@ -3252,21 +3240,18 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_slot.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_block_category_postion.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Miscellaneous
         url: /docs/scos/dev/data-import/data-import-categories/miscellaneous/miscellaneous.html
         include_versions:

@@ -62,7 +62,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-manager/{{site.version}}manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Request
 
@@ -1601,13 +1601,13 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 | vouchers, cart-rules | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
 | vouchers, cart-rules | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| shared-carts | idCompanyUser | String | The unique ID of the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
+| shared-carts | idCompanyUser | String | The unique ID of the [company user](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
 | shared-carts | idCartPermissionGroup | Integer | The unique ID of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
 | cart-permission-groups | name | String | The permission group's name. |
 | cart-permission-groups | isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
-| company-users | id | String | Unique identifier of the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
-| company-users | isActive | Boolean | If true, the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html)is active. |
-| company-users | isDefault | Boolean | If true, the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| company-users | id | String | Unique identifier of the [company user](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
+| company-users | isActive | Boolean | If true, the [company user](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)is active. |
+| company-users | isDefault | Boolean | If true, the [company user](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 For the attributes of the included resources, see:
 

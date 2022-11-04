@@ -33,7 +33,7 @@ For more details about agent assist, see [Agent assist feature overview](/docs/p
 
 | OVERVIEWS | BACK OFFICE USER GUIDES|
 | - |---|
-| [Agent Assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.md) | ["Best practices: Manage users and their permissions with roles and groups"](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html)|
+| [Agent Assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) | ["Best practices: Manage users and their permissions with roles and groups"](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html)|
 | | [Create user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-roles/create-user-roles.html) |
 | | [Edit user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-roles/edit-user-roles.html) |
 | | [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html) |
@@ -47,5 +47,5 @@ For more details about agent assist, see [Agent assist feature overview](/docs/p
 
 | OVERVIEWS | GLUE API GUIDES |
 | - | - |
-| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html) | [Search by customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.md) |
-| | [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.md) |
+| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html) | [Search by customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html) |
+| | [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html) |

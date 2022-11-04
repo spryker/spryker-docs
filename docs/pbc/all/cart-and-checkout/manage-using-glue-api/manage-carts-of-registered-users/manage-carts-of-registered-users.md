@@ -1740,7 +1740,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | cart-permission-groups | isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
 | company-users |  id | String | The unique ID of the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
 | company-users |  isActive | Boolean | If true, the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) is active. |
-| company-users |  isDefault | Boolean | If true, the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) is default for the [customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
+| company-users |  isDefault | Boolean | If true, the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 For the attributes of the included resources, see:
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
@@ -1764,7 +1764,7 @@ To retrieve a particular cart, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | The alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | The alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -2960,7 +2960,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | The alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | The alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 | If-Match | 075d700b908d7e41f751c5d2d4392407 | &check; | Makes the request conditional. It matches the listed conditional ETags from the headers when retrieving the cart. The patch is applied only if the tag value matches. |
 
 Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9`

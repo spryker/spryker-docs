@@ -1607,7 +1607,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 | cart-permission-groups | isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
 | company-users | id | String | Unique identifier of the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
 | company-users | isActive | Boolean | If true, the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html)is active. |
-| company-users | isDefault | Boolean | If true, the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) is default for the [customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
+| company-users | isDefault | Boolean | If true, the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-manager/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 For the attributes of the included resources, see:
 

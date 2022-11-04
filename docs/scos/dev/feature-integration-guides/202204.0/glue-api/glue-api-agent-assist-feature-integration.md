@@ -18,11 +18,11 @@ related:
   - title: Authenticating as an agent assist
     link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
     link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-agent-assist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-agent-assist-glue-api.md -->

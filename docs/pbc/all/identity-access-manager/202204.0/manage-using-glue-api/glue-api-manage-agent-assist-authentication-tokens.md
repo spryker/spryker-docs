@@ -16,9 +16,9 @@ related:
   - title: Authenticate as an agent assist
     link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
 This endpoint allows to refresh an agent assist access token or revoke a refresh token.

@@ -11,7 +11,7 @@ This topic describes how to create file list content items in the Back Office.
 
 Make sure to review [reference information](#create-file-list-content-items) before you start, or look up the necessary information as you go through the process.
 
-## Create a product set content item
+## Create a navigation content item
 
 1. Go to **Content&nbsp;<span aria-label="and then">></span> Content Items**.
 2. On the **Overview of Content Items** page, click **Add Content Item&nbsp;<span aria-label="and then">></span> File list**.

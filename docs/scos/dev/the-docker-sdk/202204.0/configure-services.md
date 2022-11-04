@@ -1,7 +1,7 @@
 ---
 title: Configure services
 description: Learn how to configure services.
-last_updated: Jun 16, 2021
+last_updated: Nov 4, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
 originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8
@@ -45,26 +45,22 @@ This document describes how to configure services shipped by default.
 
 ## Prerequisites
 
-Install or update the Docker SDK to the latest version:
+1. Install or update the Docker SDK to the latest version:
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git ./docker
 ```
 
 
-{% info_block warningBox "After updating a service" %}
-
-After you've updated a service's configuration, bootstrap it:
+1. After updating a service's configuration, bootstrap it:
 
 ```bash
 docker/sdk boot {DEPLOY_FILE_NAME}
 ```
 
-{% endinfo_block %}
-
 ## Service versions
 
-When configuring a service, you will need to define it's version. The Docker SDK supports the following service versions:
+When configuring a service, you need to define its version. The Docker SDK supports the following service versions:
 
 | SERVICE | ENGINE  | VERSIONS | ARM SUPPORT | NOTE |
 |----|----|----|----|---|
@@ -104,15 +100,15 @@ When configuring a service, you will need to define it's version. The Docker SDK
 
 [MariaDB](https://mariadb.org/) is provided as a service by default. MariaDB is about 40% faster on write operations when compared, for example, to PostgreSQL.
 
-Anyway, you can switch to MySQL or PostgreSQL as described below.
+Anyway, you can switch to MySQL or PostgreSQL, as described in the following sections.
 
 ### MariaDB
 
 [MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://www.mysql.com/) relational database management system.
 
-See [MariaDB knowledge base](https://mariadb.com/kb/en/) for more details.
+For more details, see [MariaDB knowledge base](https://mariadb.com/kb/en/).
 
-{% info_block warningBox "Default service" %}
+{% info_block infoBox "Default service" %}
 
 MariaDB is provided as a service by default. You may only need to use this configuration if you are running an older version of the Docker SDK or if you've previously switched to another database engine.
 
@@ -120,9 +116,9 @@ MariaDB is provided as a service by default. You may only need to use this confi
 
 #### Configure MariaDB
 
-Follow the steps below to switch the database service to MariaDB:
+To switch the database service to MariaDB, follow these steps:
 
-1. Adjust `deploy.*.yml` in the `services:` section:
+1. In the `services:` section, adjust `deploy.*.yml`:
 
 ```yaml
 ...
@@ -144,18 +140,17 @@ docker/sdk clean-data
 docker/sdk up --build --data
 ```
 
-
 ### MySQL
 
-[MySQL](https://www.mysql.com) is an open source relational database management system based on Structured Query Language (SQL). MySQL enables data to be stored and accessed across multiple storage engines, including InnoDB, CSV and NDB. MySQL is also capable of replicating data and partitioning tables for better performance and durability.
+[MySQL](https://www.mysql.com) is an open-source relational database management system based on Structured Query Language (SQL). MySQL allows data to be stored and accessed across multiple storage engines, including InnoDB, CSV, and NDB. Also, MySQL can replicate data and partition tables for better performance and durability.
 
-See [MySQL documentation](https://dev.mysql.com/doc/) for more details.
+For more details, see [MySQL documentation](https://dev.mysql.com/doc/).
 
 #### Configure MySQL
 
-Follow the steps below to switch database engine to MySQL:
+To switch the database engine to MySQL, follow these steps: 
 
-1. Adjust `deploy.*.yaml` in the `services:` section:
+1. In the `services:` section, adjust `deploy.*.yaml`:
 
 ```yaml
 ...
@@ -179,15 +174,15 @@ docker/sdk up --build --data
 
 ### PostgreSQL
 
-[PostgreSQL](https://www.postgresql.org/) PostgreSQL is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
+[PostgreSQL](https://www.postgresql.org/) is an open-source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
 
-See [PostgreSQL documentation](https://www.postgresql.org/docs/) for more details.
+For more details., see [PostgreSQL documentation](https://www.postgresql.org/docs/).
 
 #### Configure PostgreSQL
 
-Follow the steps below to switch database engine to PostgreSQL:
+To switch the database engine to PostgreSQL, follow these steps:
 
-1. Adjust `deploy.*.yml` in the `services:` section:
+1. In the `services:` section, adjust `deploy.*.yml`:
 
 ```yaml
 ...
@@ -212,14 +207,14 @@ docker/sdk up --build --data
 
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 
-See:
+For more information, see the following documents:
 
-* [Configure Elasticsearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html) to learn more about ElastciSearch configuration in Spryker.
-* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information on ElasticSearch.
+* [Configure Elasticsearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
+* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
 
 ### Configure ElasticSearch
 
-Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing ElasticSearch:
+In the `services:` section, adjust `deploy.*.yml` to open the port used for accessing ElasticSearch:
 ```yaml
 services:
     search:
@@ -231,17 +226,17 @@ services:
 
 ## Kibana UI
 
-[Kibana](https://www.elastic.co/kibana) is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps.
+[Kibana](https://www.elastic.co/kibana) is an open-source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps.
 
-See [Kibana documentation](https://www.elastic.co/guide/en/kibana/current/index.html) to learn more.
+For more information, see [Kibana documentation](https://www.elastic.co/guide/en/kibana/current/index.html).
 
 In Docker SDK, Kibana UI is provided as a service by default.
 
 ### Configure Kibana UI
 
-Follow the steps to configure an endpoint for Kibana UI:
+To configure an endpoint for Kibana UI, follow these steps:
 
-1. Adjust `deploy.*.yml` in the `services:` section:
+1. In the `services:` section, adjust `deploy.*.yml`:
 
 ```yaml
 services:
@@ -252,7 +247,7 @@ services:
             {custom_endpoint}:
 ```
 
-2. Add the endpoint to the hosts file:
+2. Add the endpoint to the `hosts` file:
 
 ```bash
 echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
@@ -260,11 +255,11 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 ## RabbitMQ
 
-[RabbitMQ](https://www.rabbitmq.com/) is a messaging broker - an intermediary for messaging. It gives your applications a common platform to send and receive messages, and your messages a safe place to live until received.
+[RabbitMQ](https://www.rabbitmq.com/) is a messaging broker—an intermediary for messaging. It gives your applications a common platform to send and receive messages and your messages a safe place to live until received.
 
 ### Configure RabbitMQ
 
-Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing RabbitMQ:
+In the `services:` section, adjust `deploy.*.yml`  to open the port used for accessing RabbitMQ:
 ```yaml
 services:
     broker:
@@ -278,21 +273,21 @@ services:
 
 ## Swagger UI
 
-[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone—be it your development team or your end consumers—to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for back end implementation and client-side consumption.
+[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone—be it your development team or your end consumers—to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for backend implementation and client-side consumption.
 
-See [Swagger UI documentation](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/) for more details.
+For more details, see [Swagger UI documentation](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/).
 
 In Docker SDK, Swagger UI is provided as a service by default.
 
 ### Rest API Reference in Spryker
 
-Spryker provides the basic functionality to generate [OpenApi schema specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) for REST API endpoints. This document provides an overview of REST API endpoints. For each endpoint, you will find the URL, REST request parameters as well as the appropriate request and response data formats.
+Spryker provides the basic functionality to generate [OpenApi schema specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) for REST API endpoints. This document provides an overview of REST API endpoints. For each endpoint, you can find the URL, REST request parameters as well as the appropriate request and response data formats.
 
 ### Configure Swagger UI
 
-Follow the steps to configure an endpoint for Swagger UI:
+To configure an endpoint for Swagger UI, follow these steps:
 
-1. Adjust `deploy.*.yml` in the `services:` section:
+1. In the `services:` section, adjust `deploy.*.yml`:
 
 ```yaml
 services:
@@ -303,7 +298,7 @@ services:
             {custom_endpoint}:
 ```
 
-2. Add the endpoint to the hosts file:
+2. Add the endpoint to the `hosts` file:
 
 ```bash
 echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
@@ -311,13 +306,13 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 ## Redis
 
-[Redis](https://redis.io) is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams.
+[Redis](https://redis.io) is an open-source (BSD licensed), in-memory data structure store used as a database, cache, and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries, and streams.
 
-See [Redis documentation](https://redis.io/documentation) for more details.
+For more information, see [Redis documentation](https://redis.io/documentation).
 
 ### Configure Redis
 
-Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing Redis:
+In the `services:` section, adjust `deploy.*.yml`  to open the port used for accessing Redis:
 
 ```yaml
 services:
@@ -328,15 +323,14 @@ services:
                 protocol: tcp
 ```
 
-
 ## Redis GUI
-[Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys or import/export databases.
+[Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys, or import and export databases.
 
 ### Configure Redis GUI
 
-Follow the steps to configure an endpoint for Redis Commander:
+To configure an endpoint for Redis Commander, follow the steps:
 
-1. Adjust `deploy.*.yml` in the `services:` section:
+1. In the `services:` section, adjust `deploy.*.yml`:
 
 ```yaml
 services:
@@ -357,23 +351,22 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 [MailHog](https://github.com/mailhog/MailHog) is a mail catcher service that is used with Spryker in Docker for Demo and Development environments. Developers use this email testing tool to catch and show emails locally without an SMTP (Simple Mail Transfer Protocol) server.
 
-With the MailHog service, developers can:
-
-* configure an application to use MailHog for SMTP delivery;
-* view messages in the web UI or retrieve them via JSON API.
+With the MailHog service, developers can do the following:
+* Configure an application to use MailHog for SMTP delivery.
+* View messages in the web UI or retrieve them via JSON API.
 
 {% info_block infoBox %}
 
-By default the following applies:
+By default, the following applies:
 
-*  `http://mail.demo-spryker.com/` is used to see incoming emails.
-* Login is not required
+* `http://mail.demo-spryker.com/` is used to see incoming emails.
+* A login is not required.
 
 {% endinfo_block %}
 
 ### Configure MailHog
 
-Adjust `deploy.*.yml` in the `services:` section to specify a custom endpoint:
+In the `services:` section, adjust `deploy.*.yml`  to specify a custom endpoint:
 
 ```yaml
 services:
@@ -386,13 +379,13 @@ services:
 
 ## Blackfire
 
-[Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked via Blackfire web interface.
+[Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
 
 ### Configure Blackfire
 
-Follow the steps to enable Blackfire:
+To enable Blackfire, follow these steps:
 
-1. Adjust `deploy.*.yml` in the `image:` section to enable the Blackfire PHP extension:
+1. In the `image:` section, adjust `deploy.*.yml` to enable the Blackfire PHP extension:
 
 ```yaml
 image:
@@ -403,7 +396,7 @@ image:
             - blackfire
 ```
 
-2. Adjust `deploy.*.yml` in the `services:` section to configure Blackfire client:
+2. In the `services:` section, adjust `deploy.*.yml` to configure the Blackfire client:
 
 ```yaml
 services:
@@ -418,11 +411,11 @@ services:
 
 #### Alternative configuration
 
-Use the following configuration if you are going to change server or client details often, or if you don’t want to define them in your deploy file.
+Use the following configuration if you are going to change server or client details often or if you don’t want to define them in your deploy file.
 
-Follow the steps to enable Blackfire:
+To enable Blackfire, follow these steps:
 
-1. Adjust `deploy.*.yml` in the `image:` section to enable the Blackfire PHP extension:
+1. In the `image:` section, adjust `deploy.*.yml` to enable the Blackfire PHP extension:
 
 ```yaml
 image:
@@ -433,7 +426,7 @@ image:
             - blackfire
 ```
 
-2. Adjust `deploy.*.yml` in the `services:` section to enable the Blackfire service:
+2. In the `services:` section, adjust `deploy.*.yml` to enable the Blackfire service:
 
 ```yaml
 services:
@@ -454,31 +447,31 @@ BLACKFIRE_CLIENT_ID={client_id} BLACKFIRE_CLIENT_TOKEN={client-token} docker/sdk
 BLACKFIRE_SERVER_ID={client-token} BLACKFIRE_SERVER_TOKEN={server_token} docker/sdk up
 ```
 
-{% info_block warningBox "Note" %}
+{% info_block infoBox %}
 
 You can pass the server details only with the `docker/sdk up` command.
 
-{% endinfo_block %}
-
 It is not obligatory to pass all the details as environment variables or define all the details in the deploy file. You can pass the details in any combination.
+
+{% endinfo_block %}
 
 ## New Relic
 
-[New Relic](https://newrelic.com/) is a tool used to track the performance of services, environment to quickly find and fix issues.
+[New Relic](https://newrelic.com/) is a tool used to track the performance of services and the environment to quickly find and fix issues.
 
-The solution consists of a client and a server. The client is used to collect the data about applications in an environment and send it to the server for further analysis and presentation. The server is used to aggregate, analyse and present the data.
+The solution consists of a client and a server. The client is used to collect data about applications in an environment and send it to the server for further analysis and presentation. The server is used to aggregate, analyse, and present the data.
 
 ### Prerequisites
 
-* Access to New Relic with an APM account.
+* Access to New Relic with an APM [account](#configure-new).
 * A New Relic license key.
 * The New Relic module.
 
-Spryker provides is own New Relic licenses for use with its PaaS environments. A New Relic license key is only required if you wish to set up your own local monitoring.
+Spryker provides its own New Relic licenses for use with its PaaS environments. A New Relic license key is only required if you wish to set up your own local monitoring.
 
 #### Installing the New Relic module
 
-While most environments may come with New Relic already available, you may need to include the module for your project. Available from Spryker, you can find the [Spryker new-relic module](https://github.com/spryker-eco/new-relic) within our module repositories. To include this repository into your project, it will need to be added to your `composer.json` file with the following command:
+While most environments may come with New Relic already available, you may need to include the module for your project. Available from Spryker, you can find the [Spryker new-relic module](https://github.com/spryker-eco/new-relic) within our module repositories. To include this repository in your project, add it to your `composer.json` file as follows:
 
 ```bash
 composer require spryker-eco/new-relic
@@ -486,9 +479,7 @@ composer require spryker-eco/new-relic
 
 ### Configure New Relic (PaaS)
 
-Follow the steps to enable New Relic for your PaaS environment:
-
-1. Adjust `deploy.*.yml` in the `image:` section:
+To enable New Relic for your PaaS environment, in the `image:` section, adjust `deploy.*.yml`:
 
 ```yaml
 image:
@@ -500,19 +491,19 @@ image:
             - newrelic
 ```
 
-Once New Relic has been enabled in your deploy file, please [contact Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html) to have it integrated into your environment. This can be done by submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html). The Support team will confirm that a New Relic APM account is available for you and will ensure that the correct application naming convention is set up to cascade to the appropriate APM.
+Once New Relic has been enabled in your deploy file, [contact Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html) to have it integrated into your environment. This can be done by submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html). The Support team will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
 
-Once these changes have been enabled and integrated, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name set up in the configuration files. If you update the name of your application, please reach out to Spryker Support to have these changes reflected in your APM.
+Once these changes have been enabled and integrated, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files. If you update the name of your application, reach out to Spryker Support to have these changes reflected in your APM.
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRPsydm6Ds2eRmKS_lMRNjBnqhBLsvtN_ul_R1EMO7Z4pj74Mbpw3kMdAnjH6gIwLt9cvOqLcI=w1920-h919)
 
 ### Configure New Relic (local)
 
-To enable New Relic on your local environment, a license key is required. For help with creating an API key with New Relic, please refer to the following documentation: [New Relic API keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
+To enable New Relic on your local environment, a license key is required. For help with creating an API key with New Relic, refer to the following documentation: [New Relic API keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
 
-Follow the steps to enable New Relic for your local environment:
+To enable New Relic for your local environment, follow these steps:
 
-1. Adjust `deploy.*.yml` in the `docker:` section:
+1. In the `docker:` section, adjust `deploy.*.yml`:
 
 ```yaml
 docker:
@@ -522,7 +513,7 @@ docker:
             enabled: true
 ```
 
-2. Adjust `deploy.*.yml` in the `image:` section:
+2. In the `image:` section, adjust `deploy.*.yml`:
 
 ```yaml
 image:
@@ -536,9 +527,9 @@ image:
 
 ### Showing YVES, ZED, and GLUE as their own APM
 
-By default, the APM will display in the form of `company-staging-newrelic-app` within the New Relic dashboard. This behavior can be updated so that each of the available applications shows as their own APM (i.e. `YVES-DE (docker.dev)`) for improved visibility.
+By default, the APM displays in the form of `company-staging-newrelic-app` within the New Relic dashboard. This behavior can be updated so that each of the available applications shows as their own APM (for example, `YVES-DE (docker.dev)`) for improved visibility.
 
-To do so, additional changes will need to be made to the Monitoring service. Within `src/Pyz/Service/Monitoring/`, we can edit the `MonitoringDependencyProvider.php` to enable this functionality. You may need to add both this directory and class if they are missing from the Monitoring service.
+To do so, additional changes need to be made to the Monitoring service. Within `src/Pyz/Service/Monitoring/`, you can edit `MonitoringDependencyProvider.php` to enable this functionality. You may need to add both this directory and class if they are missing from the Monitoring service.
 
 ```php
 <?php declare(strict_types = 1);
@@ -567,13 +558,13 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 }
 ```
 
-With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned within the `getMonitoringExtensions()` function, this tells the Monitoring class to include New Relic. Without these changes, New Relic will only report the base (i.e. `index.php`) without showing the appropriate  endpoint or class being called with each transaction.
+With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned within the `getMonitoringExtensions()` function, this tells the Monitoring class to include New Relic. Without these changes, New Relic only reports the base (for example, `index.php`) without showing the appropriate endpoint or class being called with each transaction.
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTnab3UR-VObOo2cPS2IzeFY5uYPy6WmdBgvn9FLBn7WV3b-kouvW0rUUw1MjKppzpck4InEtc=w1920-h878)
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
 
-{% info_block warningBox "Note" %}
+{% info_block infoBox %}
 
 Different builds may have the Monitoring service built into the Yves application. If you are unable to locate `MonitoringDependencyProvider.php` within `src/Pyz/Service/Monitoring/`, you may find it integrated at `src/Pyz/Yves/Monitoring/`
 
@@ -581,13 +572,13 @@ Different builds may have the Monitoring service built into the Yves application
 
 ## Webdriver
 
-ChromeDriver is provided as a webdriver service by default, but you can switch to PhantomJS as described below.
+ChromeDriver is provided as a web driver service by default, but you can switch to PhantomJS as described in the following sections.
 
 ### ChromeDriver
 
-[ChromeDriver](https://chromedriver.chromium.org/) is a thin wrapper on WebDriver and [Chromium](https://chromedriver.chromium.org/) headless browser. It is used for automating web page interaction, JavaScript execution, and other testing-related activities. It provides full-control API to make end-to-end testing flexible and comfortable.  
+[ChromeDriver](https://chromedriver.chromium.org/) is a thin wrapper on WebDriver and a [Chromium](https://chromedriver.chromium.org/) headless browser. It is used for automating web page interaction, JavaScript execution, and other testing-related activities. It provides full-control API to make end-to-end testing flexible and comfortable.  
 
-{% info_block warningBox "Default service" %}
+{% info_block infoBox "Default service" %}
 
 Chromedriver is provided as a service by default. You may only need to use this configuration if you are running an older version of the Docker SDK or if you've previously switched to another WebDriver.
 
@@ -621,9 +612,9 @@ services:
 
 Dashboard is a tool that helps to monitor logs in real time. You can monitor logs in all or a particular container.
 
-### Configure Dashboard
+### Configure dashboard
 
-To configure Dashboard, adjust `deploy.*.yml` in the `services:` section:
+To configure Dashboard, in the `services:` section, adjust `deploy.*.yml`:
 
 ```yaml
 services:
@@ -641,7 +632,7 @@ services:
 
 To configure Tideways, do the following:
 
-1. Adjust `deploy.*.yml` in the `services:` section:
+1. In the `services:` section, adjust `deploy.*.yml`:
 
 ```yaml
 services:
@@ -652,7 +643,7 @@ services:
         cli-enabled: {true|false}
 ```
 
-2. Add Tideways to the list of enabled extensions in the `image:` section of `deploy.*.yml`:
+2. In the `image:` section of `deploy.*.yml`, add Tideways to the list of enabled extensions:
 
 ```yaml
 image:

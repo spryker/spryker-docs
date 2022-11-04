@@ -92,12 +92,19 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-## 4) Build the Storefront UI frontend
+## 4) Install npm dependency
+
+Add `autonumeric` dependency:
+
+```bash
+npm install autonumeric@~4.6.0
+```
+
+## 5) Build the Storefront UI frontend
 
 Enable Javascript and CSS changes for the Storefront:
 
 ```bash
-npm install
 console frontend:yves:build
 ```
 

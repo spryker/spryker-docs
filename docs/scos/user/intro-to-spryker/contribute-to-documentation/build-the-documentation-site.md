@@ -28,7 +28,13 @@ We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. 
 
 ## Prerequisites
 
-Before you begin, install the following:
+To use Jekyll, you also need to install the following:
+
+{% info_block infoBox "MacOS" %}
+
+MacOS users should _not_ install these until beginning the [Install Jekyll on MacOS](#install-jekyll-on-macos) process below. 
+
+{% endinfo_block %}
 
 * [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your version, run `ruby -v`.
 * [RubyGems](https://rubygems.org/pages/download), the latest version. To check your RubyGems version, run `gem -v`.
@@ -40,7 +46,48 @@ Depending on your operating system, follow the Jekyll installation guides below.
 
 ### Install Jekyll on MacOS
 
-To install Jekyll on MacOS:
+{% info_block infoBox "MacOS" %}
+
+The installation process is different depending whether you are using a Mac with an Intel processor or a Mac with an Apple Silicon M1 chip. To find out whether you have an Intel or an Silicon M1 Mac, click the **Apple** menu and choose **About This Mac**.
+
+	•	Silicon Macs with the M1 processor show an item labeled _Chip_ followed by the name of the Apple chip.
+	•	Intel-based Macs show an item labeled _Processor_ followed by the name and/or model number of the Intel processor.
+
+{% endinfo_block %}
+
+On a **MacBook with the M1 processor**, to install Jekyll on MacOS:
+
+{% info_block warningBox "Open Terminal using Rosetta" %}
+
+First, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables older non-native Intel x86 apps, including Homebrew, to run on new Apple Silicon Macs. 
+
+To open your terminal using Rosetta:
+	1.	Open a Finder window.
+	2.	In Applications, locate Terminal.
+	3.	Right click on **Terminal** and select **Get Info**. 
+	4.	Make sure _Open using Rosetta_ is checked. 
+  
+{% endinfo_block %}
+
+#### 1. Install Homebrew
+
+Homebrew is a package manager for macOS (because by default, Mac doesn’t have a package manager). You'll use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically. 
+
+To install Homebrew: 
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+On MacOS on M1 processor, Homebrew files are installed into the /opt/homebrew folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output, to add Homebrew to your PATH. In the example below, the actual username is replaced by _username_ in italics:  /Users/_username_/.zprofile
+
+```bash
+==> Next steps:
+- Run these three commands in your terminal to add Homebrew to your PATH:
+    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/_username_/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/_username_/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+On a **MacBook with the M1 processor**, to install Jekyll on MacOS:
 
 #### 1. Install command line tools
 To compile native extensions, install the command line tools:

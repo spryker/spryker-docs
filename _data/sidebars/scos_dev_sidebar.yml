@@ -379,6 +379,9 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/money-module-reference-information.html
       - title: "PriceProduct module details: reference information"
         url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
     - title: Product
       url: /docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html
       include_versions:
@@ -400,6 +403,16 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/product-lists-feature-walkthrough.html
     - title: Product Options
       url: /docs/scos/dev/feature-walkthroughs/product-options-feature-walkthrough.html
+    - title: Product Rating and Reviews
+      url: /docs/scos/dev/feature-walkthroughs/product-rating-reviews-feature-walkthrough.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Product Relations
       url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough.html
       include_versions:
@@ -1523,6 +1536,9 @@ entries:
       - title: Glue API - Product Price
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-price-feature-integration.html
         include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -1534,7 +1550,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Product Relations
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
       - title: Glue API - Product Tax Sets
@@ -1620,7 +1635,7 @@ entries:
             url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-scopes-integration.html
             include_versions:
             - "202204.0"
-          - title: Glue API - Authorization protected endpoints integration
+          - title: Glue API - Authorization protected endpoints
             url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-protected-endpoints-integration.html
             include_versions:
               - "202204.0"
@@ -1727,8 +1742,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
-      - "202212.0"
     - title: Catalog + Category Management
       url: /docs/scos/dev/feature-integration-guides/catalog-category-management-feature-integration.html
       include_versions:
@@ -1776,6 +1789,8 @@ entries:
     - title: Checkout Workflow
       url: /docs/scos/dev/feature-integration-guides/checkout-workflow-integration-guide.html
       include_versions:
+      - "201811.0"
+      - "201903.0"
       - "201907.0"
       - "202001.0"
       - "202005.0"
@@ -1942,6 +1957,16 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
+    - title: Enabling Gift Cards
+      url: /docs/scos/dev/feature-integration-guides/enabling-gift-cards.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Enabling the Content Widget
       url: /docs/scos/dev/feature-integration-guides/enabling-the-content-widget.html
     - title: Gift Cards
@@ -1952,6 +1977,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+      - "202204.0"
     - title: Installing the Category CMS Blocks
       url: /docs/scos/dev/feature-integration-guides/installing-the-category-cms-blocks.html
       include_versions:
@@ -1996,6 +2022,11 @@ entries:
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-integration-guides/merchant-custom-prices-feature-integration.html
       include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
       - "202009.0"
       - "202108.0"
     - title: Merchant Product Restrictions
@@ -2421,6 +2452,7 @@ entries:
     - title: Spryker Core
       url: /docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html
       include_versions:
+      - "201903.0"
       - "201907.0"
       - "202001.0"
       - "202005.0"
@@ -2437,7 +2469,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Volume Prices
@@ -3009,6 +3040,7 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
+          - "202204.0"
           nested:
           - title: File details - product_price.csv
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
@@ -3016,12 +3048,14 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
+            - "202204.0"
           - title: File details - product_price_schedule.csv
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
+            - "202204.0"
       - title: Special product types
         url: /docs/scos/dev/data-import/data-import-categories/special-product-types/special-product-types-import-category.html
         include_versions:
@@ -3036,6 +3070,7 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
+          - "202204.0"
           nested:
           - title: File details - gift_card_concrete_configuration.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
@@ -3043,12 +3078,14 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
+            - "202204.0"
           - title: File details - gift_card_abstract_configuration.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
+            - "202204.0"
         - title: Product options
           url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/product-options.html
           include_versions:
@@ -3108,6 +3145,7 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
+            - "202204.0"
           - title: File details - product_alternative.csv
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html
             include_versions:
@@ -3362,6 +3400,7 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
+          - "202204.0"
     - title: Creating a data importer
       url: /docs/scos/dev/data-import/creating-a-data-importer.html
       include_versions:
@@ -3429,7 +3468,7 @@ entries:
     - title: Yves
       url: /docs/scos/dev/back-end-development/yves/yves.html
       nested:
-      - title: Modular Frontend
+      - title: Modular frontend
         url: /docs/scos/dev/back-end-development/yves/modular-frontend.html
       - title: Controllers and actions
         url: /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
@@ -3522,7 +3561,6 @@ entries:
       nested:
       - title: Console commands in Spryker
         url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
-        include_versions:
       - title: Implement a new console command
         url: /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
       - title: Get the list of console commands and available options
@@ -3614,18 +3652,18 @@ entries:
         - title: Direct Debit payment
           url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
           nested:
-          - title: Implement of Direct Debit in Yves
+          - title: Implement Direct Debit in Yves
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
           - title: Integrate Direct Debit into checkout
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
           - title: Implement Direct Debit in Zed
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
-          - title: Implement Direct Debit in the shared layer
+          - title: Implement Direct Debit in the Shared layer
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
           - title: Test Your Direct Debit Implementation
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
-          - title: Prepayment
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+        - title: Prepayment
+          url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
           nested:
           - title: Implement prepayment in frontend
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
@@ -3633,7 +3671,7 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
           - title: Implement prepayment in backend
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
-          - title: Implement prepayment in shared layer
+          - title: Implement prepayment in Shared layer
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
           - title: Test the prepayment implementation
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
@@ -3646,7 +3684,7 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
           - title: Implement invoice payment in backend
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
-          - title: Implement invoice payment in shared layer
+          - title: Implement invoice payment in Shared layer
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
           - title: Test the invoice payment implementation
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
@@ -4215,8 +4253,8 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html
           - title: "HowTo: Create a custom content item"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
-        - title: "HowTo: Define if a cart should be deleted after placing an order"
-          url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
+          - title: "HowTo: Define if a cart should be deleted after placing an order"
+            url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
         - title: "HowTo: Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
         - title: "HowTo: Disable split delivery in Yves interface"

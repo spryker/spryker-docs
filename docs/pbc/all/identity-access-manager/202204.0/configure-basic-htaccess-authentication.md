@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Configure basic .htaccess authentication"
+title: Configure basic .htaccess authentication
 description: Learn how to configure basic htaccess authentication for the Storefront and the Back Office.
 last_updated: Jun 16, 2021
 template: howto-guide-template

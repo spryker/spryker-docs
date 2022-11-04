@@ -1,5 +1,5 @@
 ---
-title: Search by customers as an agent assist
+title: "Glue API: Search by customers as an agent assist"
 description: As an agent assist, search by customers to find the customer reference you want to impersonate.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/searching-by-customers-as-an-agent-assist
 related:
   - title: Agent Assist feature overview
-    link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/authenticate-as-an-agent-assist.html
+    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/manage-agent-assist-authentication-tokens.html
+    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
 ---
 
 
@@ -43,7 +43,7 @@ To search by customers, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | ✓ |  String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | ✓ |  String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 

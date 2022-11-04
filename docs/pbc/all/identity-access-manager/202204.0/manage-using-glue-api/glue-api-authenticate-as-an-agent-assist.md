@@ -1,5 +1,5 @@
 ---
-title: Authenticate as an agent assist
+title: "Glue API: Authenticate as an agent assist"
 description: Authenticate as an agent assist on the Storefront.
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/authenticating-as-an-agent-assist
 related:
   - title: Agent Assist feature overview
-    link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/manage-agent-assist-authentication-tokens.html
+    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
 Log into the Storefront as an [agent assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you’ve logged in, you can search by customers and impersonate them to perform any action available to them.

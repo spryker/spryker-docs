@@ -16,11 +16,11 @@ redirect_from:
 
 The *Persistent Cart Sharing* feature lets company users generate the URL to share the cart with different access levels. To generate the link, you need to be logged in to a company account.
 
-URL is generated with the following structure: `your_domain/cart/preview/UIID`—for example, `http://mysprykershop.com/cart/preview/bea563fe-3f03-594e-8586-c5ae11e253fd`.
+The URL is generated with the following structure: `your_domain/cart/preview/UIID`—for example, `http://mysprykershop.com/cart/preview/bea563fe-3f03-594e-8586-c5ae11e253fd`.
 
-The cart can be shared with internal users—the users of the business unit, and external users—non-company users (friends, relatives, followers on social media). By accessing the provided URL, a user can perform the actions depending on the permissions level:
+The cart can be shared with internal users, the users of the business unit, and external users, and non-company users (friends, relatives, followers on social media). By accessing the provided URL, a user can perform the actions depending on the permissions level:
 
-* *Preview*: this option is available for external users that do not belong to the company account or are not logged in.
+* *Preview*: this option is available for external users that do not belong to the company account, or are not logged in.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/external-users-interface.png)
 

@@ -1,14 +1,14 @@
 ---
 title: "Cart module: reference information"
 last_updated: Aug 12, 2021
-description: The extensive Cart lets your customers add products to their cart by simply selecting the desired quantity.
+description: The extensive Cart module lets your customers add products to their cart by simply selecting the desired quantity.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202005.0/cart-feature-walkthrough/cart-module-reference-information.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/cart-feature-walkthrough/cart-module-reference-information.html
 ---
 
-The `Cart` module consists of a few components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.
+The `Cart` module consists of several components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.
 
 Cart operations are invoked in `CartClient`, which contains methods for all common operations (add, update, remove).
 
@@ -26,9 +26,9 @@ The `Cart` module in Zed has a cart operation class that handles cart operation 
 
 * *Expands cart items*. Augments cart items with additional data (prices, product details, and product options).
 * *Persisting*. Storage provider stores items into the database and merges items if the same item is added. By default, it uses `NonPersistentProvider`.
-* *Item grouping*. `Cart` uses the item grouper to group items in the cart using a specially crafted group key, which is provided by the cart expander—for example, a list containing the same item coming from different merchants must be split into separate groups and shipped separately).
-* *Log operation message*. `Cart` writes messages to the messenger. These messages are returned to Yves—for example, validation messages, success, and failure messages.
-* *Cart recalculation*. It happens for each operation in cart recalculation. Cart amounts are reset and recalculated with newly added items.
+* *Item grouping*. `Cart` uses the item grouper to group items in the cart using a specially crafted group key, which is provided by the cart expander. For example, a list containing the same item coming from different merchants must be split into separate groups and shipped separately.
+* *Log operation message*. `Cart` writes messages to the messenger. These messages are returned to Yves — for example, validation messages, success, and failure messages.
+* *Cart recalculation*. This happens for each operation in cart recalculation. Cart amounts are reset and recalculated with newly added items.
 
 ## Cart persistence providers
 
@@ -38,7 +38,7 @@ The `Cart` module in Zed has a cart operation class that handles cart operation 
 
 Zed `Cart` modules can have expander plugins registered. Expander plugins expand the cart with additional data such as price information and product information, and they add product options.
 
-Currently, we ship with a couple of plugins:
+Currently, we ship with several plugins:
 
 | CART EXPANDER | DESCRIPTION |
 | --- | --- |
@@ -46,7 +46,7 @@ Currently, we ship with a couple of plugins:
 | CartItemPricePlugin | Adds `unitGrossPrice` into `itemTransfer`. |
 | CartItemProductOptionPlugin | Adds the `productOption` collection into `ItemTransfer`. |
 | SkuGroupKeyPlugin | Appends SKU to the group key, so the item's int are grouped by SKU. |
-| CartItemGroupKeyOptionPlugin | Creates a product option group key from option IDs, so items with different option combinations are placed separatly. |
+| CartItemGroupKeyOptionPlugin | Creates a product option group key from option IDs, so items with different option combinations are placed separately. |
 
 ## Cart prechecks
 
@@ -56,6 +56,6 @@ Currently, we ship a couple of default prechecks:
 
 | CART PRE-CHECK | DESCRIPTION |
 | --- | --- |
-| ProductExistsCartPreCheckPlugin | Checks that passed products exist in the DB. This plugin is provided by the `ProductCartConnector` module. |
-| CartBundleAvailabilityPreCheckPlugin | Check availability of new cart items (products and product bundles). Provided by the `ProductBundle` module. |
-| CheckAvailabilityPlugin | Check availability of new cart items (only products). Provided by the `AvailabilityCartConnector` module. |
+| ProductExistsCartPreCheckPlugin | Checks that the passed products exist in the DB. This plugin is provided by the `ProductCartConnector` module. |
+| CartBundleAvailabilityPreCheckPlugin | Checks the availability of new cart items (products and product bundles). Provided by the `ProductBundle` module. |
+| CheckAvailabilityPlugin | Checks the availability of new cart items (only products). Provided by the `AvailabilityCartConnector` module. |

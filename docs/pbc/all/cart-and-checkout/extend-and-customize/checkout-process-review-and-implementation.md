@@ -33,7 +33,7 @@ To use the checkout in Yves, you need to configure it correctly and provide depe
 * _Step_—a class that implements the StepInterface and handles the data passed through the form.
 * _Twig template_—template where the form is rendered.
 
-Each form in the checkout uses `QuoteTransfer` for data storage. When the data is submitted, it's automatically mapped by the Symfony form component to `QuoteTransfer`. If the form is valid, the updated `QuoteTransfer` is passed to the `Step::execute()` method, where you can modify it further or apply custom logic. Also, there is a Symfony Request object passed if additional or manual data mapping is required.
+Each form in the checkout uses `QuoteTransfer` for data storage. When the data is submitted, it's automatically mapped by the Symfony form component to `QuoteTransfer`. If the form is valid, the updated `QuoteTransfer` is passed to the `Step::execute()` method, where you can modify it further or apply custom logic. There is also a Symfony Request object passed if additional or manual data mapping is required.
 
 There are a few factories provided for checkout dependency wiring:
 
@@ -71,7 +71,7 @@ Inside your step, you can set a postcondition error route if you need to redirec
 
 ### How the quote transfer is mapped inside forms
 
-Symfony forms provide a mechanism to store data into objects without needing manual mapping. It's called [Data transformers](https://symfony.com/doc/current/form/data_transformers.html). There are a few important things to make this work. Because you are passing the entire `QuoteTransfer`, the form handler does not know which fields you are trying to use. Symfony provides a few ways to handle this situation:
+Symfony forms provide a mechanism to store data into objects without needing manual mapping. It's called [Data transformers](https://symfony.com/doc/current/form/data_transformers.html). There are a few important conditions required to make this work. Because you are passing the entire `QuoteTransfer`, the form handler does not know which fields you are trying to use. Symfony provides a few ways to handle this situation:
 * Using [property_path](https://symfony.com/doc/current/reference/forms/types/form.html#property-path) configuration directive. It uses the full path to object property you are about to map form into—for example, `payment.paypal` maps your form to `QuoteTransfer:payment:paypal`; this works when the property is not on the same level and when you are using subforms.
 * Using the main form that includes subforms. Each subform has to be configured with the `data_class` option, which is the FQCN of the transfer object you are about to use. This works when the property is on the top level.
 
@@ -91,13 +91,13 @@ Normally each step requires input from the customer. However, there are cases wh
 
 #### Precondition and escape route
 
-Preconditions are called before each step; this is a check to indicate that step can't be processed in a usual way.
+Preconditions are called before each step; this is a check to indicate that the step can't be processed in a usual way.
 
 For example, the cart is empty. If `preCondition()` returns false, the customer is redirected to `escapeRoute` provided when configuring the step.
 
 #### External redirect URL
 
-Sometimes it's needed to redirect the customer to an external URL (outside application). The step must implement `StepWithExternalRedirectInterface::getExternalRedirectUrl()`, which returns the URL to redirect customer after `execute()` is ran.
+Sometimes it's required to redirect the customer to an external URL (outside application). The step must implement `StepWithExternalRedirectInterface::getExternalRedirectUrl()`, which returns the URL to redirect customer after `execute()` is ran.
 
 {% info_block errorBox %}
 
@@ -109,7 +109,7 @@ Each step must implement `StepInterface`.
 
 ### Placing the order
 
-After the customer clicks the submit button during `SummaryStep`, `PlaceOrderStep` is started. This step takes `QuoteTransfer` and starts the checkout workflow to store the order in the system. Zed Checkout module contains some plugins where you can add additional behavior, check preconditions, and save or execute postcondition checks.
+After the customer clicks the submit button during `SummaryStep`, `PlaceOrderStep` is started. This step takes `QuoteTransfer` and starts the checkout workflow to store the order in the system. Zed's Checkout module contains some plugins where you can add additional behavior, check preconditions, and save or execute postcondition checks.
 
 #### Plugins
 
@@ -117,14 +117,14 @@ Zed's Checkout module contains four types of plugins to extend the behavior on p
 
 * `PreCondition`—is for checking if the order satisfies predefined constraints—for example, if the quantity of items is still available.
 * `OrderSavers`—is for saving the order. Each plugin is responsible for collecting certain parts of the order (sales module saves items, discount module saves discounts, product option module saves options). Each `OrderSaver` plugin is wrapped into a single transaction; if an exception is thrown, the transaction is rolled back.
-* `CheckPostConditions`—is for checking conditions after saving, last time to react if something did not happen by the plan. It's called after the state machine execution.
-* `PostSaveHook`—is called after order placement, sets the success flag to false, if redirect must be headed to an error page afterward.
+* `CheckPostConditions`—is for checking conditions after saving, the last time to react if something did not happen according to plan. It's called after the state machine execution.
+* `PostSaveHook`—is called after order placement, and sets the success flag to false, if redirect must be headed to an error page afterward.
 
 #### Checkout response transfer
 
-* `isSuccess` (bool)—indicates if the checkout process was successful.
+* `isSuccess` (boolean)—indicates if the checkout process was successful.
 * errors (`CheckoutErrorTransfer`)—list of errors that occurred during the execution of the plugins.
-* `isExternalRedirect` (bool)—specifies if the redirect, after the successful order placement is external.
+* `isExternalRedirect` (boolean)—specifies if the redirect, after the successful order placement is external.
 * `redirectUrl` (string)—URL to redirect customer after the order was placed successfully.
 * `saveOrder` (`SaveOrderTransfer`)—stores ids of the items that OrderSaver plugins have saved.
 
@@ -142,9 +142,9 @@ Zed's Checkout module contains four types of plugins to extend the behavior on p
 
 #### Save order transfer
 
-* `idSalesOrder` (int)—ID of the current saved order.
-* `orderReference` (string)—an auto-generated ID of the order.
-* `orderItems` (`ItemTransfer`)—saved order items.
+* `idSalesOrder` (int)—The unique ID of the current saved order.
+* `orderReference` (string)—An auto-generated unique ID of the order.
+* `orderItems` (`ItemTransfer`)—The saved order items.
 
 There are already some plugins implemented with each of those types:
 
@@ -155,7 +155,7 @@ There are already some plugins implemented with each of those types:
 
 #### Postcondition plugins
 
-* `OrderCustomerSavePlugin`—saves or creates a customer in the database if the customer is new or the ID is not set (guest customer is ignored).
+* `OrderCustomerSavePlugin`—saves or creates a customer in the database if the customer is new or the ID is not set (guest customers are ignored).
 * `SalesOrderSaverPlugin`—saves order information and creates `sales_order` and `sales_order_item` tables.
 * `ProductOptionOrderSaverPlugin`—saves product options to the `sales_product_item` table.
 * `DiscountOrderSavePlugin`—saves order discounts to the `sales_discounts` table.

@@ -63,9 +63,9 @@ class CustomAuthorizationStrategyPlugin extends AbstractPlugin implements Author
 ```
 </details>
 
-This plugin is run by `AuthorizationClient::authorize()`.
+`AuthorizationClient::authorize()` runs the plugin.
 
-There is a way to connect the resources and custom routes with this strategy. They need to implement `AuthorizationStrategyAwareResourceRoutePluginInterface` pointing to the strategy:
+To connect the resources and custom routes with this strategy, they need to implement `AuthorizationStrategyAwareResourceRoutePluginInterface` pointing to the strategy:
 
 **AuthorizationStrategyAwareResourceRoutePluginInterface**
 

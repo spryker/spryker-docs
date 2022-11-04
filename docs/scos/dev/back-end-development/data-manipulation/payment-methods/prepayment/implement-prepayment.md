@@ -48,8 +48,8 @@ The order of the implementation steps does not matter; however, ensure to comple
 
 {% endinfo_block %}
 
-* [Implement prepayment in frontend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html)
-* [Integrate Prepayment into checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html)
-* [Implement prepayment in Backend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html)
-* [Implement prepayment in shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html)
-* [Test prepayment implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html)
+1. [Implement prepayment in frontend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html).
+2. [Integrate Prepayment into checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html).
+3. [Implement prepayment in Backend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html).
+4. [Implement prepayment in shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html).
+5. [Test prepayment implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html).

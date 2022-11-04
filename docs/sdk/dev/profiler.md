@@ -10,8 +10,8 @@ Profiler is available only in the dev environment.
 To enable the profiler, add `SDK_PROFILER_ENABLED=1` into the `.env.dev.local` configuration.
 
 ## Usage
-After you enabled the profiler, the data is collected into the `<project-dir>/var/profiler` directory.
-Each file represents the particular SDK process call.
+After you enable the profiler, the data is collected into the `<project-dir>/var/profiler` directory.
+Each file represents a specific SDK process call.
 You can manually clean or manage the files in the directory.
 
 ## Viewing the profiler data

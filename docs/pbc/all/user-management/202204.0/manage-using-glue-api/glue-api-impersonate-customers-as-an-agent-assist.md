@@ -1,5 +1,5 @@
 ---
-title: Glue API: Impersonate customers as an agent assist
+title: "Glue API: Impersonate customers as an agent assist"
 description: As an agent assist, authenticate as a customer and impersonate them.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

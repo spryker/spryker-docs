@@ -1,6 +1,6 @@
 ---
 title: Installing Spryker without Docker
-description: Learn how to install a B2B or a B2C Demo Shop without the Development Virtual Machine
+description: Learn how to install a B2B or a B2C Demo Shop without the Docker
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2b-b2c-demo-shop-installation-without-development-virtual-machine
@@ -21,7 +21,7 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
   - /docs/scos/dev/setup/installing-spryker-without-devvm.html
   - /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
-related: 
+related:
   - title: Install module structure and configuration
     link: docs/scos/dev/setup/install-module-structure-and-configuration.html
   - title: Installing Spryker with custom set of modules

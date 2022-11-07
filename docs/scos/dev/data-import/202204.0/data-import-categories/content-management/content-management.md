@@ -13,7 +13,7 @@ redirect_from:
 
 The **Content Management** category contains data required to create and manage content elements, such es CMS pages, blocks, etc. for your online store.
 
-The table below provides details on Content Management data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
+The following table provides details about Content Management data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
 | --- | --- | --- | --- |--- |

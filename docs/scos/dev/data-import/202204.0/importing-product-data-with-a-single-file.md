@@ -33,7 +33,7 @@ To import combined product data through a single file, you need to:
 ## Single CSV file for combined product data import
 <a name="single-csv-file-for-combined-product-data-import"></a>
 
-The CSV file for the main product data import contains product-related data that you can import into your system. Check out the [template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Importing+Product+Data+With+a+Single+File/TEMPLATE+Product+import+with+single+file.csv) of the file for details on the data it contains.
+The CSV file for the main product data import contains product-related data that you can import into your system. Check out the [template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Importing+Product+Data+With+a+Single+File/TEMPLATE+Product+import+with+single+file.csv) of the file for details about the data it contains.
 
 The headers in this file are prefixed with the names of the individual product-related import CSV files where they originally belong and contain field names that match those in the individual product import CSV files. The prefixes are separated from the field names by a dot, for example:
 
@@ -57,7 +57,7 @@ If you import only abstract products, the following fields must be populated in 
 * product_abstract.category_key
 * product_abstract.url.{LOCALE}
 
-For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+For details about these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 If you import concrete products as well, the following fields are also mandatory:
 
@@ -66,11 +66,11 @@ If you import concrete products as well, the following fields are also mandatory
 * product.attribute_key_{NUMBER}
 * product.value_{NUMBER}
 
-For details on these and other concrete product-related fields, see [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html).
+For details about these and other concrete product-related fields, see [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html).
 
 All other fields with prefixes `product_abstract` and `product.` are optional.
 
-If you need to import other product data as well, for example, prices, images, etc., see the table below for details on where you can take field descriptions, information about mandatory fields and data dependencies.
+If you need to import other product data as well, for example, prices, images, etc., see the following table for details about where you can take field descriptions, information about mandatory fields and data dependencies.
 
 
 | FIELDS IN THE COMBINED PRODUCT DATA FILE | CSV FILE WITH DEPENDENCIES AND DETAILS ABOUT THE FIELD |
@@ -131,4 +131,4 @@ By default, the configuration YML file resides in `data/import/common`.  As, for
 
 To import **all** product-related data from the YML configuration command, run the command `console data:import --config=xxx/ccc/file-name.yml -t`, where `xxx/ccc/file-name.yml` is the location of the YML file with the product data.
 
-To import data for a **specific entity** only, specify the `data_entity` name after `data:import` in the command above. For example, if you want to import data for `combined-product-concrete` data entity only, your command should like this: `console data:import combined-product-concrete --config=xxx/ccc/file-name.yml -t`.
+To import data for a **specific entity** only, specify the `data_entity` name after `data:import` in the preceding command. For example, if you want to import data for `combined-product-concrete` data entity only, your command looks like this: `console data:import combined-product-concrete --config=xxx/ccc/file-name.yml -t`.

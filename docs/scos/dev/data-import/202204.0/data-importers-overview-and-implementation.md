@@ -132,7 +132,7 @@ Currently, we have two approaches to data importers. Most of the importers are p
 * Shipment Price Importer **(Beta)**
 * Shipment Store Importer **(Beta)**
 
-To use a module-based importer, add it to the plugin stack. See the example below.
+To use a module-based importer, add it to the plugin stack. See the following example.
 
 ```php
 <?php
@@ -159,7 +159,7 @@ To use a module-based importer, add it to the plugin stack. See the example belo
 
 All those plugins should implement `Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface`.
 
-By default, CSV files with data are stored under the module directory in a data folder. It's possible to place them on the project level by extending the `config.yml` file with the required source for the data importer. See the example below:
+By default, CSV files with data are stored under the module directory in a data folder. It's possible to place them on the project level by extending the `config.yml` file with the required source for the data importer. See the following example:
 
 ```yml
 action:

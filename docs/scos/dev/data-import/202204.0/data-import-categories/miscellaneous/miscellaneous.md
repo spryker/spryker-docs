@@ -13,7 +13,7 @@ redirect_from:
 
 The **Miscellaneous** category contains several additional data that you need to sell the products/services online. This category contains a group of data importers and CSV content files that do not fit under the previous categories.
 
-The table below provides details on Miscellaneous data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
+The following table provides details about Miscellaneous data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
 | --- | --- | --- | --- |--- |

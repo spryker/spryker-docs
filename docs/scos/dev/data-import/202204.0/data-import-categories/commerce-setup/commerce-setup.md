@@ -12,7 +12,7 @@ redirect_from:
 ---
 
 The *Commerce Setup* category contains data required to set up the multi-store environment, warehouses, tax levels, shipping and payment methods, etc., so you could start selling products and services online.
-The table below provides details on Commerce Setup data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
+The following table provides details about Commerce Setup data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |

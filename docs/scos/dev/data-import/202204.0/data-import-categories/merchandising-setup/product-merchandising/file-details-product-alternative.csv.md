@@ -44,7 +44,7 @@ It does not exist on by default on the project level. It can be created in order
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

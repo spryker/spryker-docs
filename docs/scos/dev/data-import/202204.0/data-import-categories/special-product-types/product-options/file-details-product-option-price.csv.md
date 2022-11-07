@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
 ---
 
-This document describes the `product_option_price.csv` file to configure Product Option Price information on your Spryker Demo Shop. Importing the Product Option Price data sets the net and gross prices for each of the Product Options, per store and per currency.
+This document describes the `product_option_price.csv` file to configure Product Option Price information about your Spryker Demo Shop. Importing the Product Option Price data sets the net and gross prices for each of the Product Options, per store and per currency.
 
 To import the file, run
 
@@ -40,7 +40,7 @@ This file has the following dependencies: [product_option.csv](/docs/scos/dev/da
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

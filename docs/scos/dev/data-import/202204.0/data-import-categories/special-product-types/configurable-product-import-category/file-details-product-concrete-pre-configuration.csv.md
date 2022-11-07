@@ -39,7 +39,7 @@ The file has the following dependency: [File details: product_concrete.csv](/doc
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

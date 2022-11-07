@@ -40,7 +40,7 @@ The file has the following dependency: *stores.php* configuration file of the De
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 |-|-|

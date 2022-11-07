@@ -22,7 +22,7 @@ Currently, we only support CSV as a format for file imports out of the box. Howe
 
 ## Prerequisites
 
-<a name="prerequisites"></a>Before you start creating a data importer, you need to know what data it needs to include. We recommend you start by checking out the respective database tables you want to fill with data. The image below shows the table relation for product images.
+<a name="prerequisites"></a>Before you start creating a data importer, you need to know what data it needs to include. We recommend you start by checking out the respective database tables you want to fill with data. The following image shows the table relation for product images.
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_database_schema.png) 
 
 From this schema, you can easily identify the data columns you need for your import file. So the relevant fields to fill are:
@@ -208,7 +208,7 @@ This command will execute all the `DataImporter` registered in your `full_import
 
 {% endinfo_block %}
 
-As you already made it in the example above, you can add the command with a new name over and over again. This brings in the ability to execute only a specific data importer.
+As you already made it in the preceding example, you can add the command with a new name over and over again. This brings in the ability to execute only a specific data importer.
 
 When you now execute `vendor/bin/console data:import:product-image` you will see the debug output from the `ProductImageWriterStep`.
 
@@ -230,11 +230,11 @@ There are a couple more options, you can see them when you execute `vendor/bin/c
 
 ## Finalize the data importer
 
-We have made sure that the data importer can be executed, but we only print a debug message right now. We need to do some additional things to really save some data. Follow the steps below to finalize your data importer.
+We have made sure that the data importer can be executed, but we only print a debug message right now. We need to do some additional things to really save some data. To finalize your data importer, follow these steps. 
 
 ### 1. Convert logical identifier to foreign keys
 
-As mentioned in the [Prerequisites](#prerequisites), we can not use foreign keys in our import file - we need a logical identifier that can now be used to get the foreign key of a related entity.
+As mentioned in the [Prerequisites](#prerequisites), we can not use foreign keys in our import file—we need a logical identifier that can now be used to get the foreign key of a related entity.
 
 There are several ways of how we can get the logical identifier. For example, we could add a new Step e.g. `LocaleNameToIdLocaleStep`. However, in our case, it’s better to use a Repository, which provides us with a getter to retrieve the `id_locale` by its name. We will take this approach and do the following:
 

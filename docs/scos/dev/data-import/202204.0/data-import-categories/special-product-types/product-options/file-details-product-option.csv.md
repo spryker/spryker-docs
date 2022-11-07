@@ -45,7 +45,7 @@ This file has the following dependencies: [product_abstract.csv](/docs/scos/dev/
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

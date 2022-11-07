@@ -22,7 +22,7 @@ The order of data importers is defined in the [YML configuration file](/docs/sco
 
 This operation has some dependencies, as data importers execution follows certain precedences. For example, you can not import Concrete products before importing the Abstract products, as Concrete products can not exists without Abstracts.
 
-The list below illustrates the order followed to run the data importers, and import the: Commerce shop configuration setup data, product catalog data, and other content.
+The following list illustrates the order followed to run the data importers, and import the: Commerce shop configuration setup data, product catalog data, and other content.
 
 1. [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html) data import
 
@@ -41,76 +41,76 @@ The list below illustrates the order followed to run the data importers, and imp
 
 2. [Catalog Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/catalog-setup.html) data import - Catalog Setup category includes sub-categories: Categories, Products, Pricing, Stocks
 
-  1. category-template
-  2. category
-  3. product-attribute-key
-  4. product-management-attribute
-  5. product-abstract
-  6. product-abstract-store
-  7. product-concrete
-  8. product-image
-  9. product-price
-  10. product-price-schedule
-  11. product-stock
+  13. category-template
+  14. category
+  15. product-attribute-key
+  16. product-management-attribute
+  17. product-abstract
+  18. product-abstract-store
+  19. product-concrete
+  20. product-image
+  21. product-price
+  22. product-price-schedule
+  23. product-stock
 
 
 3. [Special Product Types Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/special-product-types-import-category.html) data import - Special Product Types category includes sub-categories: Product Options, Measurements, Product Bundles, Gift Cards
 
-  1. product-option
-  2. product-option-price
-  3. gift-card-abstract-configuration
-  4. gift-card-concrete-configuration
-  5. product-packaging-unit-type
-  6. product-packaging-unit
-  7. product-measurement-unit
-  8. product-measurement-base-unit
-  9. product-measurement-sales-unit
-  10. product-measurement-sales-unit-store
-  11. configurable-bundle-template
-  12. configurable-bundle-template-slot
-  13. configurable-bundle-template-image
+  24. product-option
+  25. product-option-price
+  26. gift-card-abstract-configuration
+  27. gift-card-concrete-configuration
+  28. product-packaging-unit-type
+  29. product-packaging-unit
+  30. product-measurement-unit
+  31. product-measurement-base-unit
+  32. product-measurement-sales-unit
+  33. product-measurement-sales-unit-store
+  34. configurable-bundle-template
+  35. configurable-bundle-template-slot
+  36. configurable-bundle-template-image
 
 
 4. [Merchandising Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/merchandising-setup.html) data import
 
-  1. discount
-  2. discount-store
-  3. discount-voucher
-  4. product-group
-  5. product-relation
-  6. product-review
-  7. product-label
-  8. product-set
-  9. product-search-attribute-map
-  10. product-search-attribute
-  11. discount-amount
-  12. product-discontinued
-  13. product-alternative
-  14. product-quantity
-  15. product-list
-  16. product-list-category
-  17. product-list-product-concrete
+  37. discount
+  38. discount-store
+  39. discount-voucher
+  40. product-group
+  41. product-relation
+  42. product-review
+  43. product-label
+  44. product-set
+  45. product-search-attribute-map
+  46. product-search-attribute
+  47. discount-amount
+  48. product-discontinued
+  49. product-alternative
+  50. product-quantity
+  51. product-list
+  52. product-list-category
+  53. product-list-product-concrete
 
 5. [Navigation Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/navigation-setup.html) data import
 
-  1. navigation
-  2. navigation-node
+  54. navigation
+  55. navigation-node
 
 6. [Content Management Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/content-management.html) data import
 
-  1. cms-template
-  2. cms-block
-  3. cms-block-store
-  4. cms-block-category-position
-  5. cms-block-category
-  6. content-banner
-  7. content-product-abstract-list
-  8. content-product-set
-  9. cms-page
-  10. cms-page-store
-  11. cms-slot-template
-  12. cms-slot
-  13. cms-slot-block
+  56. cms-template
+  57. cms-block
+  58. cms-block-store
+  59. cms-block-category-position
+  60. cms-block-category
+  61. content-banner
+  62. content-product-abstract-list
+  63. content-product-set
+  64. cms-page
+  65. cms-page-store
+  66. cms-slot-template
+  67. cms-slot
+  68. cms-slot-block
 
 **7. [Miscellaneous Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/miscellaneous/miscellaneous.html) import**
 

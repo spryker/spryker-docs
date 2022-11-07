@@ -41,7 +41,7 @@ This file has the following dependency: [product_set.csv](/docs/scos/dev/data-im
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

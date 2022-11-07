@@ -20,7 +20,7 @@ The **Products** category contains all products-related data you need to manage 
 * [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html): lets you import concrete product information, including their descriptions, attributes' values, searchability, relations to abstract products, and more information.
 * [product_image.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html): lets you import the images of the concrete products, local ones, as well as the ones through URLs.
 
-The table below provides details on Products data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
+The following table provides details about Products data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILES(S) | DEPENDENCIES |
 | --- | --- | --- | --- |--- |

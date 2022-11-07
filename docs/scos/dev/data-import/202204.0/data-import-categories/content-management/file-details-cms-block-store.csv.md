@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-block-store.csv.html
 ---
 
-This document describes the `cms_block_store.csv` file to configure CMS Block Store information on your Spryker Demo Shop.
+This document describes the `cms_block_store.csv` file to configure CMS Block Store information about your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -38,7 +38,7 @@ This file has the following dependencies:
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

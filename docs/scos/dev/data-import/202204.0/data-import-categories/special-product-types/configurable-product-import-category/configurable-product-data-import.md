@@ -13,7 +13,7 @@ redirect_from:
 
 The *Configurable Product* data import describes how you can import the configuration of [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html). 
 
-The table below provides details on Configurable Product data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
+The following table provides details about Configurable Product data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
 | --- | --- | --- | --- |--- |

@@ -41,7 +41,7 @@ This file has the following dependencies: [navigation.csv](/docs/scos/dev/data-i
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

@@ -36,9 +36,9 @@ To use Jekyll, you also need to install the following:
 * [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/). To check your GCC version, run `gcc -v,g++ -v`, for Make version run `make -v`.
 
 
-{% info_block infoBox "MacOS" %}
+{% info_block warningBox "MacOS" %}
 
-If you are using MacOS, we recommend you do not install these prerequisites before you begin. Depending on your Mac processor and your previously installed applications, installing these before reading the instructions below may cause your installation to fail.
+If you are using MacOS, we recommend you do **not** install these prerequisites before you begin. Depending on your Mac processor and your previously installed applications, installing these before reading the instructions below may cause your installation to fail.
 
 {% endinfo_block %}
   
@@ -50,7 +50,7 @@ Depending on your operating system, follow the Jekyll installation guides below.
 
 {% info_block infoBox "Determine Your Mac's Processor Type" %}
 
-The installation process is different depending whether you are using a Mac with an Intel processor or with an Apple Silicon M1 chip. To find out whether you have an Intel or a Silicon M1 Mac, click the **Apple** menu and choose **About This Mac**.
+The installation process is different depending whether you are using a Mac with an Intel processor or with a Silicon M1 chip. To find out whether you have an Intel or a Silicon M1 Mac, click the **Apple** menu and choose **About This Mac**.
 
 - Silicon Macs with the M1 processor show an item labeled _Chip_ followed by the name of the Apple chip.
 
@@ -74,7 +74,7 @@ On either an M1 or an Intel Mac, follow the steps below to install Jekyll. M1-sp
 
 #### 1. Install Homebrew
 
-Homebrew is a package manager for macOS (because by default, Mac doesn’t have a package manager). You'll use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically. 
+Homebrew is a package manager for macOS (because by default, Mac doesn’t have a package manager). You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically. 
 
 To install Homebrew: 
 ```bash
@@ -82,7 +82,7 @@ To install Homebrew:
 ```
 {% info_block infoBox "MacOS on M1 processor" %}
 
-On MacOS on M1 processor, Homebrew files are installed into the /opt/homebrew folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output to add Homebrew to your PATH. In the example below, your actual username is replaced by _username_ in italics:  /Users/_username_/.zprofile
+On an M1 Mac, Homebrew files are installed into the /opt/homebrew folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output to add Homebrew to your PATH. In the example below, we've replaced your actual username with:  /Users/_username_/.zprofile
 
 {% endinfo_block %}
 
@@ -99,9 +99,9 @@ Alternately, or if you have problems using these commands to update your PATH, y
 nano ~/.zprofile
 ```
 
-If the profile file has not yet been created on your system, this command creates a new one. If the file already exists, this command opens it, and you can then edit it to add Homebrew.
+If the profile file has not yet been created on your system, this command creates a new one. If the file already exists, this command opens it.
 
-Paste this text into the .zprofile file open in your terminal:
+To add Homebrew, paste this text into the .zprofile file open in your terminal:
 ```bash
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -121,7 +121,7 @@ ruby -v
 ```
 {% info_block infoBox "Don't Use System Ruby" %}
 
-You should not use the Ruby version that came pre-installed with your Mac. (Apple includes an older version of Ruby on macOS for compatibility with legacy software.) It can’t be updated because Apple restricts access to it.) 
+You should not use the Ruby version that came pre-installed with your Mac. (Apple includes an older, non-updatable version of Ruby on macOS for compatibility with legacy software.)
 
 {% endinfo_block %}
 
@@ -136,11 +136,11 @@ Add the brew Ruby and gems path to your Shell configuration:
     echo $SHELL
     ```
 2. Add the path using one of the following commands:
-        * Zsh:
+   * Zsh:
         ```bash
         echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.zshrc
         ```
-        * Bash:
+   * Bash:
         ```bash
         echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
         ```
@@ -190,7 +190,7 @@ bundle install
 ```
 {% info_block infoBox "MacOS on M1 processor" %}
 
-On a MacBook with the M1 processor, run the following command instead::
+On a MacBook with the M1 processor, run the following command instead:
 
 ```bash
 arch -arch x86_64 bundle install

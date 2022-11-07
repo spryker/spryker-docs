@@ -26,7 +26,7 @@ data:import:category-store
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|
@@ -36,7 +36,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-The file has the following dependency: *stores.php* configuration file of the Demo Shop PHP project.
+The file has the following dependency: the `stores.php` configuration file of the Demo Shop PHP project.
 
 ## Import template file and content example
 

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/content-management
 ---
 
-The **Content Management** category contains data required to create and manage content elements, such es CMS pages, blocks, etc. for your online store.
+The *Content Management* category contains data required to create and manage content elements, such as CMS pages and blocks for your online store.
 
 The following table provides details about Content Management data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
@@ -35,7 +35,7 @@ The following table provides details about Content Management data importers, th
 
 {% info_block warningBox "Import order" %}
 
-The order in which the files are imported is **very strict**. For this reason, the data importers should be executed in the following order:
+The order in which the files are imported is *very strict*. For this reason, the data importers should be executed in the following order:
 
 1. [CMS Template](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-template.csv.html)
 2. [CMS Block](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html)

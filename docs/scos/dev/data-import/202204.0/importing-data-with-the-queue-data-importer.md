@@ -1,6 +1,6 @@
 ---
 title: Importing data with the queue data importer
-description: This article describes the process of importing data with the Queue Data Importer in the Spryker OS.
+description: This document describes the process of importing data with the Queue Data Importer in the Spryker OS.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-data-with-queue-data-importer
@@ -215,7 +215,7 @@ vendor/bin/console data:import:product-abstract --group=QUEUE_WRITERS
 
 {% info_block warningBox "Note" %}
 
-We also recommend preparing the properly structured data for the import in queues from the very beginning instead of actually importing it from CSV, XML, etc., as the first step. In this case, a queue can be treated as an original source of data for import which would make the overall process more convenient. 
+We also recommend preparing the properly structured data for the import in queues from the very beginning instead of actually importing it from CSV or XML as the first step. In this case, a queue can be treated as an original source of data for import which would make the overall process more convenient. 
 
 {% endinfo_block %}
 

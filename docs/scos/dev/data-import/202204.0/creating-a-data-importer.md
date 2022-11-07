@@ -1,6 +1,6 @@
 ---
 title: Creating a Data Importer
-description: The following article describes how to build your own DataImport for a specific type. All steps in this article are built on real life example for importing product images.
+description: The following document describes how to build your own DataImport for a specific type. All steps in this document are built on real life example for importing product images.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-data-import
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/ht-data-import
 ---
 
-The following article describes how to build your data importer for a specific type. All steps in this article are built on the real-life example for importing product images.
+The following document describes how to build your data importer for a specific type. All steps in this document are built on the real-life example for importing product images.
 
 {% info_block infoBox "File Import Formats" %}
 
@@ -40,7 +40,7 @@ All `fk_*` fields are foreign keys to other database tables. We can not know the
 
 {% endinfo_block %}
 
-For the database field `fk_locale` we will use the name of the locale for which we need the id (e.g. de_DE). This value will then be used later to fetch the id for the given locale name.
+For the database field `fk_locale` we will use the name of the locale for which we need the ID—for example, de_DE. This value will then be used later to fetch the id for the given locale name.
 We will use the same technique for the `fk_product` and `fk_product_abstract` fields.
 
 {% info_block infoBox "Info" %}
@@ -66,7 +66,7 @@ Your CSV file for the product images import will contain the following header co
 
 Now, you can start to fill in some data into the new file. We recommend adding only a couple of entries to check after the first import run if all needed data is imported.
 
-Once you populate all columns, your CSV file should be similar to this one:
+Once you populate all columns, your CSV file is similar to this one:
 ![CSV file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_csv_file_example.png) 
 
 Save the new file under `data/import/*`.
@@ -236,7 +236,7 @@ We have made sure that the data importer can be executed, but we only print a de
 
 As mentioned in the [Prerequisites](#prerequisites), we can not use foreign keys in our import file—we need a logical identifier that can now be used to get the foreign key of a related entity.
 
-There are several ways of how we can get the logical identifier. For example, we could add a new Step e.g. `LocaleNameToIdLocaleStep`. However, in our case, it’s better to use a Repository, which provides us with a getter to retrieve the `id_locale` by its name. We will take this approach and do the following:
+There are several ways of how we can get the logical identifier. For example, we could add a new Step—for example, `LocaleNameToIdLocaleStep`. However, in our case, it’s better to use a Repository, which provides us with a getter to retrieve the `id_locale` by its name. We will take this approach and do the following:
 
 1. Add `LocaleRepository` to get the foreign key of a locale by its name:
 

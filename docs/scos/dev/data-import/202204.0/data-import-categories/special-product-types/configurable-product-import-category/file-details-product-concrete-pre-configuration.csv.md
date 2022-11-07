@@ -23,7 +23,7 @@ data:import:product-configuration
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS AND COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |

@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/importing-product-data-with-a-single-file
 ---
 
-Besides importing product-related data with multiple CSV files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html), etc., you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
+Besides importing product-related data with multiple CSV files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), or [product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html), you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
 
-* Have different environments (production, staging, etc.), and you need to populate them all with the product data.
+* Have different environments (for example, production and staging), and you need to populate them all with the product data.
 * Frequently import product data.
 * Want to provide more autonomy to employees dealing with the administration of the products.
 
@@ -43,9 +43,9 @@ The headers in this file are prefixed with the names of the individual product-r
 
 The only exceptions are `abstract_sku` and `concrete_sku` headers that are not prefixed.
 
-Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Due to this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data through the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html).
+Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Due to this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data through the combined product data file (headers *productimage.imageset_name* or *productimage.externalurl_large*), you must mind the dependencies and mandatory fields as for [product_image.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html).
 
-By default, the import CSV file resides in data/import/common/{STORE}/. As, for example, the [combined_product_DE.csv](https://github.com/spryker-shop/suite/blob/master/data/import/common/DE/combined_product.csv) file in Spryker Master Suite.
+By default, the import CSV file resides in `data/import/common/{STORE}/`. As, for example, the [combined_product_DE.csv](https://github.com/spryker-shop/suite/blob/master/data/import/common/DE/combined_product.csv) file in Spryker Master Suite.
 
 <a name="mandatory-fields"></a>
 
@@ -70,7 +70,7 @@ For details about these and other concrete product-related fields, see [File det
 
 All other fields with prefixes `product_abstract` and `product.` are optional.
 
-If you need to import other product data as well, for example, prices, images, etc., see the following table for details about where you can take field descriptions, information about mandatory fields and data dependencies.
+If you need to import other product data as well—for example, prices or images—see the following table for details about where you can take field descriptions, information about mandatory fields and data dependencies.
 
 
 | FIELDS IN THE COMBINED PRODUCT DATA FILE | CSV FILE WITH DEPENDENCIES AND DETAILS ABOUT THE FIELD |

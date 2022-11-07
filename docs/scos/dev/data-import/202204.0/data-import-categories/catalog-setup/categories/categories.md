@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/categories
 ---
 
-**Categories** contains data required to set up categories in your online store. We have structured this section according to the two CSV files that you will have to use to import the data:
+*Categories* contains data required to set up categories in your online store. We have structured this section according to the two CSV files that you must use to import the data:
 
 * [category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html): lets you import all relevant information about the categories such as categories names, key, descriptions and additional settings like activating them or allowing customers to search for them.
 * [category_template.csv:](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html) lets you import any category templates.

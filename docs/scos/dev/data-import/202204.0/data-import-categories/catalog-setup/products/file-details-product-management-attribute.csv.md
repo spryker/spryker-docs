@@ -21,12 +21,12 @@ data:import:product-management-attribute
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | key | &check; | String |   | Key identifier of the product attribute. |
-| input_type | &check; | String | Value from a pre-defined list. | Input type of the product attribute, for example, text, number, select, etc. |
+| input_type | &check; | String | Value from a pre-defined list. | Input type of the product attribute—for example, text, number, or select. |
 | allow_input |  | String |  *yes/no* field. Will be set to *no* if an empty value is provided. |Indicates if custom values can be entered in this product attribute.  |
 | is_multiple | No | String | *yes/no* field. Will be set to *no* if an empty value is provided. |Indicates if the attribute can have multiple values.  |
 | values |  | String |  | Selectable values. Field *values* is a string defining possible attribute values, separated by commas. For example, "16 GB, 32 GB, 64 GB, 128 GB" means that attribute can accept values "16 GB", "32 GB", "64 GB", "128 GB". |

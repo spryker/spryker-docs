@@ -1,6 +1,6 @@
 ---
 title: Data Importer Speed Optimization
-description: This article defines the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize.
+description: This document defines the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize.
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/dataimporter-speed-optimization
@@ -16,11 +16,11 @@ redirect_from:
 
 **"Writing code is the easy part of every feature but writing a scalable and fast solution is a challenge"**
 
-This article will define the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize. After several reviews and tests, we found that we need to define these rules to help developers to write more scalable and high-performance code when they implementing their features. Most of the time when developers create features, they don't consider very high traffic or heavy data processing for big data. This article is going to describe all necessary requirements when you want to create new features and they should work with big data, for example, you want to create a new DataImport or a new P&S module which save millions of entities into a database in a very short amount of time.
+This document will define the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize. After several reviews and tests, we found that we need to define these rules to help developers to write more scalable and high-performance code when they implementing their features. Most of the time when developers create features, they don't consider very high traffic or heavy data processing for big data. This document describes all necessary requirements when you want to create new features and they need to work with big data. For example, you want to create a new DataImport or a new P&S module which save millions of entities into a database in a very short amount of time.
 
 ## Rules for data importers
 
-`DataImport` module is responsible for reading data from different formats like CSV, JSON, etc and import them into a database with proper Spryker data structure. Usually importing of data is a time-consuming process and we need to follow some best practices to increase the performance. Here you will find some of them:
+The `DataImport` module is responsible for reading data from different formats like CSV and JSON and import them into a database with proper Spryker data structure. Usually importing of data is a time-consuming process and we need to follow some best practices to increase the performance. Here you will find some of them:
 
 ### Single vs batch operation
 
@@ -125,7 +125,7 @@ Spryker supports PostgreSQL, MySQL, and MariaDB. When working with databases, it
 
 ## Rules for Publish and Synchronize
 
-P&S is a concept for transferring data from Zed database to Yves databases like Redis and ES, This operation is separated into two isolated processes which call **Publish** and **Synchronize**. Publishing is a process to aggregating data and writing it to Database and Queue. Synchronization is a process to read an aggregated message from a queue and write it to external endpoints. The performance issues mostly come from **Publishing** part. Again we need to follow the best practices to increase the performance. Here you will find some of them:
+P&S is a concept for transferring data from Zed database to Yves databases like Redis and ES, This operation is separated into two isolated processes which call *Publish* and *Synchronize*. Publishing is a process to aggregating data and writing it to Database and Queue. Synchronization is a process to read an aggregated message from a queue and write it to external endpoints. The performance issues mostly come from the *Publishing* part. Again we need to follow the best practices to increase the performance. Here you will find some of them:
 
 ### Single vs batch operation
 
@@ -169,8 +169,8 @@ Another point that we need to be very careful here is to call Facade API without
 
 DataImporters are triggering events manually, this is happening because of performance reasons :
 
-Triggering events automatically will generate so many duplicates events during data importing, (e.g: Inserting a Product into `spy_product` and `spy_product_localized_attribute` table will generate two events with the same `id_product`).
-Events will be triggered one by one.
+Triggering events automatically generates so many duplicates events during data importing—for example, inserting a product into `spy_product` and `spy_product_localized_attribute` table generates two events with the same `id_product`.
+Events are triggered one by one.
 
 You can always switch the Event Triggering process with two methods:
 
@@ -185,8 +185,8 @@ use Spryker\Zed\EventBehavior\EventBehaviorConfig;
          */
         EventBehaviorConfig::disableEvent();
   
-        // 1.Create many entities in multiple tables (e.g API bulk import, nightly update jobs)
-        // 2.Trigger proper events if it's necessary ($eventFacade->triggerBulk('ProductAbstractPublish', $eventTransfers))
+        // 1. Create many entities in multiple tables—for example, API bulk import, nightly update jobs)
+        // 2. Trigger proper events if it's necessary ($eventFacade->triggerBulk('ProductAbstractPublish', $eventTransfers))
   
         /**
          * Enable the events triggering automatically

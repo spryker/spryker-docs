@@ -161,7 +161,7 @@ actions:
 
 {% endinfo_block %}
 
-#### Defining the Date and Time Range for Order Data Export
+#### Defining the Ddte and time range for order data export
 
 The default date and time range filter criteria—for example, the order creation dates filter applied to all `data_entity` items by default—is specified in the `defaults` section:
 

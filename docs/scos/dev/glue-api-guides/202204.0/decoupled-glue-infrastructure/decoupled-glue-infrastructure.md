@@ -11,12 +11,12 @@ redirect_from:
 New Glue projects can create API applications. This is what you need to do in order to create one.
 
 
-Because the backend and storefront APIs have different sets of configured services, they also have different settings in Docker. Therefore, first of all, ensure your `deploy.yml` file contains the correct setting for `application`. The available options are listed in the following table:
+Because the backend and storefront APIs have different sets of configured services, they also have different settings in Docker and has different containers. Therefore, first of all, ensure your `deploy.yml` file contains the correct setting for `application`. The available options are listed in the following table:
 
 | OPTION | MEANING |
 | --- | --- |
 | `glue` | Old application value. For the new APIs, choose one of the following options. |
-| `glue-storefront` | Application that has access to key, value, store and search.   |
+| `glue-storefront` | Application that has access to the following: <ul><li>key, value, store</li><li>search</li><li>Zed via RPC call</li></ul>.   |
 | `glue-backend` | Application that has access to the following: <ul><li>database</li><li>broker</li><li>key, value, store</li><li>session</li><li>search</li></ul> |
 
 **deploy.yml**

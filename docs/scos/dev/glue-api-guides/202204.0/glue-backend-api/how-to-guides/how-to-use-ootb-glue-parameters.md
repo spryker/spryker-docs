@@ -9,7 +9,7 @@ redirect_from:
 
 This document explains how to pass the parameters and how to use them in code.
 
-Glue conventions provide some parameters parsing out of the box. The following are among them:
+Glue JSON API convention provide some parameters parsing out of the box. The following are among them:
 * Pagination
 * Sorting
 * Filters

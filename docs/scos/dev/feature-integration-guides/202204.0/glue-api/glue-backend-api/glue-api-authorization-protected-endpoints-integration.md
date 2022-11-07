@@ -45,7 +45,7 @@ Make sure that the following modules have been installed:
 Generate transfers:
 
 ```bash
-console transfer:generate
+vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}

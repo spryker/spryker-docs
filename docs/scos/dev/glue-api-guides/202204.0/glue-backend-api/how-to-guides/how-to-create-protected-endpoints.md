@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-protected-endpoints.html
 ---
 
-This guide describes how you can create a protected endpoint using a resource for the storefront and backend API applications.
+This guide describes how you can create a protected endpoint for resource or custom-route in the storefront and backend API applications.
 
 Let's say you have a module named `ModuleRestApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods.  To create the protected endpoint, follow these steps::
 

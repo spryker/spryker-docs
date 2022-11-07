@@ -1,5 +1,5 @@
 ---
-title: How to create a resource
+title: How to create a storefront resource
 description: This guide shows how to create an API endpoint using a resource for the storefront API application.
 last_updated: September 30, 2022
 template: howto-guide-template
@@ -13,7 +13,7 @@ Let's say you have a module named `ModuleRestApi`, where you want to have a new 
 
 1. Create `ModuleRestApiConfig` and add the resource name:
 
-**\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig`**
+**\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig**
 
  ```php
 <?php
@@ -38,11 +38,13 @@ class ModuleRestApiConfig extends AbstractBundleConfig
     //add transfer fields
   </transfer>
   
+    //used for declared list of methods in Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface::getDeclaredMethods()
   <transfer name="GlueResourceMethodCollection">
     <property name="get" type="GlueResourceMethodConfiguration"/>
     <property name="post" type="GlueResourceMethodConfiguration"/>
   </transfer>
 
+    //used for declared method in Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface::getDeclaredMethods()
   <transfer name="GlueResourceMethodConfiguration">
     <property name="controller" type="string"/>
     <property name="action" type="string"/>
@@ -55,7 +57,7 @@ class ModuleRestApiConfig extends AbstractBundleConfig
 
 3. Create `ModuleController`: 
 
-**\Pyz\Glue\ModuleRestApi\Controller\ModuleController`**
+**\Pyz\Glue\ModuleRestApi\Controller\ModuleController**
 
 ```php
 <?php
@@ -104,7 +106,7 @@ class ModuleResourceController extends AbstractStorefrontApiController
 
 **\Pyz\Glue\ModuleRestApi\Plugin\ModuleResource**
 
-```PHP
+```php
 <?php
 
 namespace Pyz\Glue\ModuleRestApi\Plugin;

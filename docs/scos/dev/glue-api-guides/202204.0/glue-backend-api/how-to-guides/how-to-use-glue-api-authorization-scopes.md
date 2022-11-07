@@ -79,7 +79,7 @@ class ModuleBarRouteProviderPlugin extends AbstractPlugin implements RouteProvid
 4. Regenerate the scopes cache file:
 
 ```bash
-console oauth:scope-collection-file:generate
+vendor/bin/console oauth:scope-collection-file:generate
 ```
 
 {% info_block warningBox "Verification" %}

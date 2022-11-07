@@ -30,8 +30,7 @@ You can describe your resources in the Glue doc-comment annotation on the releva
 ```php
 /**
  * @Glue({
- *     "getResourceById": {
- *          "isIdNullable": true,
+ *     "post": {
  *          "summary": [
  *              "Retrieves resource by id."
  *          ],
@@ -42,39 +41,40 @@ You can describe your resources in the Glue doc-comment annotation on the releva
  *              "200": "Resource found.",
  *              "422": "Unprocessable entity."
  *          },
- *          "responseAttributesClassName": "Generated\\Shared\\Transfer\\RestResourcesAttributesTransfer",
- *          "path": "/resources/{resourceId}/resource-items/{resourceItemsId}"
+ *          "responseAttributesClassName": "Generated\\Shared\\Transfer\\ResourcesAttributesTransfer",
+ *          "requestAttributesClassName": "Generated\\Shared\\Transfer\\RequestAttributesTransfer",
+ *     }
+ * })
+ *
+ * @param \Generated\Shared\Transfer\RequestAttributesTransfer $requestAttributesTransfer
+ * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
+ *
+ * @return \Generated\Shared\Transfer\GlueResponseTransfer
+ */
+ public function postAction(RequestAttributesTransfer $requestAttributesTransfer, GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
+{
+}
+
+/**
+ * @Glue({
+ *     "getResourceById": {
+ *         ...
  *     },
  *     "getCollection": {
  *         ...
  *     }
  * })
  *
- * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
+ * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
  *
- * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
- */
-public function getAction(RestRequestInterface $restRequest): RestResponseInterface
-{
-}
-
-/**
- * @Glue({
- *     "post": {
- *         ...
- *     }
- * })
- *
- * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
- *
- * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
+ * @return \Generated\Shared\Transfer\GlueResponseTransfer
  */
 
 ```
 
 Glue annotation must be in a valid JSON format.
 
-You can define a Glue annotation on each action in the controller. You can define two annotations on the `get` action so they have separate descriptions for getting collections and for getting resources by ID actions. Possible top-level keys are: `getResourceById`, `getCollection`, `post`, `patch`, and `delete`.
+You can define a Glue annotation on each action in the controller. You can define two annotations on the `get` action so they have separate descriptions for getting collections and for getting resources by ID actions. Possible top-level keys are: **getResourceById**, **getCollection**, **post**, **patch**, and **delete**.
 
 `isIdNullable` is false by default but can be defined as true for the cases like `/catalog-search` or `/url-resolver`.
 
@@ -82,7 +82,7 @@ Always describe all the possible error statuses that your resource can return in
 
 To describe request body structure in the schema, you can use additional transfer properties attributes:
 
-**resources_rest_api.transfer.xml**
+**request_attributes.transfer.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -90,7 +90,7 @@ To describe request body structure in the schema, you can use additional transfe
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
 
-    <transfer name="ApiResourcesAttributes">
+    <transfer name="RequestAttributes">
         <property name="sku" type="string" restRequestParameter="required"/>
         <property name="quantity" type="int" restRequestParameter="required"/>
         <property name="productOptions" type="string[]" restRequestParameter="yes"/>
@@ -128,21 +128,22 @@ Always check the schema your resources are described with before releasing your 
 
 The following table lists descriptions of the properties you can use in the annotations:
 
-| PROPERTY | DESCRIPTION |
-| --- | --- |
-| `deprecated` | Path is marked deprecated. |
-| `responseAttributesClassName` | Transfer is used as a representation of the response attributes. |
-| `isIdNullable` | JSON:API response `id` is null. |
-| `path` | Resource is available on the path. This property can be used if the *type+id* is not the path the resource uses. |
-| `summary` | Path's summary that briefly describes what the endpoint does. |
-| `parameters` | List of parameters the endpoint accepts. |
-| `isEmptyResponse` | Flag used to mark endpoint that return empty responses. |
-| `responses` | List possible responses of endpoint. The object must contain key-value pairs with HTTP codes as key, and description as value. |
+| PROPERTY                      | DESCRIPTION                                                                                                                    |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| `deprecated`                  | Path is marked deprecated.                                                                                                     |
+| `responseAttributesClassName` | Transfer is used as a representation of the response attributes.                                                               |
+| `requestAttributesClassName`  | Transfer is used as a representation of the request attributes.(refers to requests that have a request body)                   |
+| `isIdNullable`                | JSON:API response `id` is null.                                                                                                |
+| `path`                        | Resource is available on the path. This property can be used if the *type+id* is not the path the resource uses.               |
+| `summary`                     | Path's summary that briefly describes what the endpoint does.                                                                  |
+| `parameters`                  | List of parameters the endpoint accepts.                                                                                       |
+| `isEmptyResponse`             | Flag used to mark endpoint that return empty responses.                                                                        |
+| `responses`                   | List possible responses of endpoint. The object must contain key-value pairs with HTTP codes as key, and description as value. |
 
 ### Extending the behavior
 
 The following interfaces can be used to add more data to the generated documentation.
 
-* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\PluginApiApplicationProviderPluginInterface` interface: Adds a new application for which documentation will get generated.
-* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\ContextExpanderPluginInterface` interface: Adds information to the documentation generation context.
-* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\SchemaFormatterPluginInterface` interface: Formats the part of the documentation and must return an array of data ready for getting converted to YAML.
+* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\PluginApiApplicationProviderPluginInterface` interface: Adds a new application for which documentation will get generated, for example: `\Spryker\Glue\GlueStorefrontApiApplication\Plugin\DocumentationGeneratorApi\StorefrontApiApplicationProviderPlugin`.
+* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\ContextExpanderPluginInterface` interface: Adds information to the documentation generation context, for example: `\Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi\ControllerAnnotationsContextExpanderPlugin`.
+* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\SchemaFormatterPluginInterface` interface: Formats the part of the documentation and must return an array of data ready for getting converted to YAML, for example: `\Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi\DocumentationGeneratorOpenApiSchemaFormatterPlugin`.

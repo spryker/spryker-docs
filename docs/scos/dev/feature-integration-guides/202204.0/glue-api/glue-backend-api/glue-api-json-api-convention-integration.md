@@ -66,7 +66,7 @@ $config[GlueJsonApiConventionConstants::GLUE_DOMAIN]
 Generate transfers:
 
 ```
-console transfer:generate
+vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}

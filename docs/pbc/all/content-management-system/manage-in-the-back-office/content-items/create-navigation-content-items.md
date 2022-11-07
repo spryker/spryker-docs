@@ -9,7 +9,7 @@ This topic describes how to create navigation content items in the Back Office.
 
 ## Prerequisites
 
-Make sure to review [reference information](#create-file-list-content-items) before you start, or look up the necessary information as you go through the process.
+Make sure to review [reference information](#create-navigation-content-items) before you start, or look up the necessary information as you go through the process.
 
 ## Create a navigation content item
 
@@ -18,3 +18,33 @@ Make sure to review [reference information](#create-file-list-content-items) bef
 3. On the **Create Content Item: Product Set** page, enter a **NAME**.
 4. Optional: Enter a **DESCRIPTION**.
 5. On the **Default** tab, for **NAVIGATION**, select a navigation element.
+6. Optional: Repeat the previous step on the needed locale-specific tabs.
+
+{% info_block infoBox "Multi-language setup" %}
+
+The following logic applies in a multi-language setup:
+* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
+* If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
+
+{% endinfo_block %}
+
+7. Click **Save**.
+    This opens the **Overview of Content Items** page with a success message displayed. The content item is displayed in the list.
+
+
+**Tips and tricks**
+To clear navigation selection on a tab, click **Clear locale**.
+
+
+## Reference information: Create navigation content items    
+
+| ATTRIBUTE | DESCRIPTION |
+| --- | --- |
+| NAME | Name of the content item. |
+| DESCRIPTION | Description of the content item. |
+| NAVIGATION | A navigation element to display in the content item. To create one, see [Create navigation elements](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) |
+
+## Next steps
+
+* [Add content items to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+* [Edit content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html).

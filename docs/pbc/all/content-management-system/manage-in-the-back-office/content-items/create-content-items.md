@@ -43,15 +43,3 @@ This takes you to the *Overview of Content Items* page. You can see the message 
 ### Reference information: Create a navigation content item
 
 The following table describes the attributes on the *Create Content Item: Navigation* page.
-
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| Name | Name of the content item. |
-| Description | Description of the content item. |
-| Navigation | Field to select an existing navigation element. |
-
-**What's next?**
-<br>The content item is created. Now, you can add it to a CMS block.
-
-* To learn about adding content item to CMS blocks or a pages, see [Adding content items to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
-* To learn about editing content items, see [Editing content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html).

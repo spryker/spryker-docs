@@ -38,7 +38,7 @@ The following logic applies in a multi-language setup:
 To clear product selection on a tab, click **Clear locale**.
 
 
-### Reference information: Create file list content items
+## Reference information: Create file list content items
 
 The following table describes the attributes on the *Create Content Item: File List* page.
 
@@ -52,7 +52,7 @@ The following table describes the attributes on the *Create Content Item: File L
 | File Name | File name.  |
 
 
-### Reference information: File list content item widget
+## Reference information: File list content item widget
 
 The widget allows you to insert a File List content item that will be displayed as a link or icon to download the file, such as video, image, zip, pdf, etc on a page or block.
 

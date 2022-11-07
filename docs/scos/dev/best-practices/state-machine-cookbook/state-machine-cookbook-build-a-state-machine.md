@@ -183,7 +183,7 @@ Next, let's identify the events that can tell if a transition can be fired.
 |      |    Items returned    |   manual="true"   |                                                              |
 |      |    Refund payment    |   manual="true"   |                                                              |
 
-Now that we identified the events, we can add them in the XML file that defines our state machine.
+Now that you have identified the events, you can add them to the XML file that defines your state machine.
 
 ```xml
 <events>
@@ -307,7 +307,7 @@ Now, let's draw the possible transitions between the previously defined states a
 
 You can check the current state of your state machine in Zed: [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14).
 
-We can highlight the best-case scenario by adding the `happy="true"` attribute to the transitions, where is the case, as in the following example:
+You can highlight the best-case scenario by adding the `happy="true"` attribute to the transitions, where is the case, as in the following example:
 
 ```xml
 <transition happy="true">
@@ -317,14 +317,16 @@ We can highlight the best-case scenario by adding the `happy="true"` attribute t
 </transition>
 ```
 
-This transition would be the happy case, rather than the situation when the user returns some order items. If you check again the visual representation of the state machine we are building, you'll observe that the best case scenario transitions are now highlighted.
+This transition would be the happy case, rather than the situation when the user returns some order items. If you check again the visual representation of the state machine being built, you can observe that the best-case scenario transitions are now highlighted.
 
 {% info_block warningBox %}
-Adding the **happy** attribute does not interfere to the behavior of the state machine; it just helps you visualize better the business processes that are modeled in the state machine.
+
+Adding the `happy` attribute does not interfere with the behavior of the state machine; it just helps you visualize better the business processes that are modeled in the state machine.
+
 {% endinfo_block %}
 
-### Implement the Commands and Conditions
-Now we can visualize the transitions defined in our state machine and we have an idea about the business processes that are involved when a prepaid order is submitted, but our state machine doesn't do much for the moment. We need to attach the logic that gets executed when an event is fired or condition to check if a transition is possible. We'll update the XML file that defines our state machine by adding the necessary commands and conditions to it.
+### Implement the commands and conditions
+Now you can visualize the transitions defined in your state machine and you have an idea about the business processes that are involved when a prepaid order is submitted, but your state machine doesn't do much for the moment. You need to attach the logic that gets executed when an event is fired or condition to check if a transition is possible. Update the XML file that defines your state machine by adding the necessary commands and conditions to it.
 
 ```xml
 <?xml version="1.0"?>
@@ -455,12 +457,11 @@ Now we can visualize the transitions defined in our state machine and we have an
 ```
 
 
-Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. You'll see that some of the events now have commands associated and some of the transitions appear to have conditions attached, but they are marked as being not yet implemented. For our state machine to be functional, we need to implement the configured commands and conditions.
+Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. Some of the events now have commands associated and some of the transitions appear to have conditions attached, but they are marked as not yet implemented. For your state machine to be functional, you need to implement the configured commands and conditions.
 
-The implementation for the commands will be placed in `the` OMS module on the project level, under `Communication/Plugin/Oms/Commandand` for the conditions under `Communication/Plugin/Oms/Condition`. After you finish with the implementation, the code must be linked to the XML file where we defined the state machine. To pass the right implementations of `commands/conditions` to your state machine, you must register the plugins in the `OmsDependencyProvider`: the conditions will be registered under `thegetConditionPlugins()` and the commands under the `getCommandPlugins()` operation.
+The implementation for the commands must be placed in `the` OMS module on the project level, under `Communication/Plugin/Oms/Commandand` for the conditions under `Communication/Plugin/Oms/Condition`. After you finish with the implementation, the code must be linked to the XML file where the state machine is defined. To pass the right implementations of `commands/conditions` to your state machine, register the plugins in the `OmsDependencyProvider`: the conditions are registered under `thegetConditionPlugins()` and the commands under the `getCommandPlugins()` operation.
 
 **Example**:
-
 
 ```php
 <?php
@@ -503,14 +504,14 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
-Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. You'll see that the implementation is linked to the state machine.
+Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. The implementation is linked to the state machine.
 
-## Integrate the State Machine
+## Integrate the state machine
 You can have more than one state machine defined in your application and apply them according to the details of the order that gets submitted.
 
-For example, you can have a state machine that doesn't involve shipping for goods that are delivered electronic. Also, you can have a dedicated state machine for each payment method (invoice payment method involves other patterns than credit card payment does).
+For example, you can have a state machine that doesn't involve shipping for goods that are delivered electronics. Also, you can have a dedicated state machine for each payment method (invoice payment method involves other patterns than credit card payment does).
 
-The mapping between a submitted order and the corresponding state machine that is able to process the payment is done in the `SalesConfig` class, under the `determineProcessForOrderItem(OrderTransfer $order, QuoteTransfer $request)` operation; here, you will set the corresponding process for your order.
+The mapping between a submitted order and the corresponding state machine that can process the payment is done in the `SalesConfig` class, under the `determineProcessForOrderItem(OrderTransfer $order, QuoteTransfer $request)` operation; here, set the corresponding process for your order.
 
 ```php
 <?php

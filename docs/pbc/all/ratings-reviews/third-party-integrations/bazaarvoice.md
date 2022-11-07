@@ -43,3 +43,4 @@ The BazaarVoice app requires the following Spryker modules:
 * `spryker-shop/asset-widget: ^1.0.0`
 * `spryker-shop/product-detail-page: ^3.17.0`
 * `spryker-shop/product-category-widget: ^1.6.0`
+* `spryker-shop/shop-ui: ^1.59.0`

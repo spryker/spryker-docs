@@ -52,7 +52,7 @@ This file has the following dependency: [ product_abstract.csv](/docs/scos/dev/d
 
 ## Recommendations & other information
 
-Every concrete product is linked to an abstract one via the `abstract_sku` field.
+Every concrete product is linked to an abstract one through the `abstract_sku` field.
 
 ## Import template file and content example
 

@@ -15,13 +15,13 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/queue-data-import-feature-integration.html
 ---
 
-Queue data import allows you to import data via message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
+Queue data import lets you import data through message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
 
 * Parallel message consumption by multiple consumers using round-robin.
 * Fast transmitting of large amounts of data.
 * Bulk message processing.
 
-Also, queue data import allows you to use different import groups.
+Also, queue data import lets you use different import groups.
 
 ## Why do you need it?
 
@@ -193,7 +193,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 Pay attention to the `::setImportGroup()` method call on the data importer instance. By calling this method, an import group can be set for each separate data import. Import groups allow you to run importers separately on a per-group basis by supplying the group name as an option for the data import console command. Three groups are supported out of the box: *FULL*, *QUEUE_READERS*, *QUEUE_WRITERS*. With no call to `::setImportGroup`, the data importer is placed into the FULL group by default.
 {% info_block warningBox "Note" %}
 
-We not recommend using the QUEUE_READERS group. This executes all the configured queue importers during one import run. Because in a lot of scenarios the order, in which the data is imported, matters and because of the possibility of the race condition, this can lead to various malfunctions or inconsistencies in the imported data. We recommend structuring the import process in a way that would allow importing data via the message queues apart from other imported resources.
+We not recommend using the QUEUE_READERS group. This executes all the configured queue importers during one import run. Because in a lot of scenarios the order, in which the data is imported, matters and because of the possibility of the race condition, this can lead to various malfunctions or inconsistencies in the imported data. We recommend structuring the import process in a way that would allow importing data through the message queues apart from other imported resources.
 
 {% endinfo_block %}
 

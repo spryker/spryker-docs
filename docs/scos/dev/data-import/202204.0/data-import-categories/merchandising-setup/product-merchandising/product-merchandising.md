@@ -13,16 +13,16 @@ redirect_from:
 
 The **Product Merchandising** category contains all data you need to manage merchandising information in your online store. We have structured this section according to the following CSV files that you will have to use to import the data:
 
-* [product_group.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html): allows you to create product groups.
-* [product_label.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html): allows you to create labels to assign to products. You can use the "New" or  "Special sales", etc. labels to promote the products.
-* product_relation.csv: allows you to define which products are related to each other.
-* [product_review.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html): allows you to load information about product reviews.
+* [product_group.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html): lets you create product groups.
+* [product_label.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html): lets you create labels to assign to products. You can use the "New" or  "Special sales", etc. labels to promote the products.
+* product_relation.csv: lets you define which products are related to each other.
+* [product_review.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html): lets you load information about product reviews.
 * [product_search_attribute.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html): sets additional search attributes for products.
 * [product_search_attribute_map.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute-map.csv.html): maps the product attributes that are imported in the *product_attribute_key.csv* file with Elasticsearch-specific properties.
-* [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html): allows you to define product sets.
-* [product_discontinued.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html): allows you to define discontinued products.
-* [product_alternative.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html): allows you to define alternative products.
-* [product_quantity.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html): allows you to set product quantity restrictions.
+* [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html): lets you define product sets.
+* [product_discontinued.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html): lets you define discontinued products.
+* [product_alternative.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html): lets you define alternative products.
+* [product_quantity.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html): lets you set product quantity restrictions.
 
 The table below provides details on Product Merchandising data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 

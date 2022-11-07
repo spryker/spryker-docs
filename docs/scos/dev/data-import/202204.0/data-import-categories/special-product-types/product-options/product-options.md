@@ -13,8 +13,8 @@ redirect_from:
 
 The **Product Options** category contains all data you need to manage product options in your online store. We have structured this section according to the following CSV files that you will have to use to import the data:
 
-* [product_option.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html): allows you to define product options, like insurance, warranty or gift wrapping, and its abstract products.
-* [product_option_price.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html): allows you to define the net and gross prices for each product option.  
+* [product_option.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html): lets you define product options, like insurance, warranty or gift wrapping, and its abstract products.
+* [product_option_price.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html): lets you define the net and gross prices for each product option.  
 
 The table below provides details on Product Options data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 

@@ -22,7 +22,7 @@ Currently, we only support CSV as a format for file imports out of the box. Howe
 
 ## Prerequisites
 
-<a name="prerequisites"></a>Before you start creating a data importer, you need to know what data it should include. We recommend you start by checking out the respective database tables you want to fill with data. The image below shows the table relation for product images.
+<a name="prerequisites"></a>Before you start creating a data importer, you need to know what data it needs to include. We recommend you start by checking out the respective database tables you want to fill with data. The image below shows the table relation for product images.
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_database_schema.png) 
 
 From this schema, you can easily identify the data columns you need for your import file. So the relevant fields to fill are:

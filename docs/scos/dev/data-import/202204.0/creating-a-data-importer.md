@@ -45,15 +45,15 @@ We will use the same technique for the `fk_product` and `fk_product_abstract` fi
 
 {% info_block infoBox "Info" %}
 
-To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html).
+To identify the data for your import file, you can also check out the CSV files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html).
 
 {% endinfo_block %}
 
-Now that you know what data your import file should include, you can proceed with the first step of creating a data importer: creating an import file.
+Now that you know what data your import file needs to include, you can proceed with the first step of creating a data importer: creating an import file.
 
 ## Create an import file
 
-Since only CSV format is supported for import out of the box, we will start with creating a .csv file in any preferred editor.
+Since only CSV format is supported for import out of the box, we will start with creating a CSV file in any preferred editor.
 
 Your CSV file for the product images import will contain the following header columns:
 

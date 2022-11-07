@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/importing-product-data-with-a-single-file
 ---
 
-Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html), etc., you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
+Besides importing product-related data with multiple CSV files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html), etc., you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
 
 * Have different environments (production, staging, etc.), and you need to populate them all with the product data.
 * Frequently import product data.
@@ -30,7 +30,7 @@ To import combined product data through a single file, you need to:
 * Prepare a [YML file](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
 * Run a [console command](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
 
-## Single .csv file for combined product data import
+## Single CSV file for combined product data import
 <a name="single-csv-file-for-combined-product-data-import"></a>
 
 The CSV file for the main product data import contains product-related data that you can import into your system. Check out the [template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Importing+Product+Data+With+a+Single+File/TEMPLATE+Product+import+with+single+file.csv) of the file for details on the data it contains.

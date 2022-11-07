@@ -38,7 +38,7 @@ Queue data import is designed to be done in two separate steps.
 
 ## Exporting data from CSV to queue
 
-If your provide data in the .CSV format, you can import it to the queues.
+If your provide data in the CSV format, you can import it to the queues.
 The [DataImport](https://github.com/spryker/data-import) module has classes responsible for providing the preconfigured queue writer instances to the data import facilities. It is configured on the project level.
 
 To import data into a message queue, use an instance of `Spryker\Zed\DataImport\Business\DataWriter\QueueWriter\QueueWriter` as a data writer during import. 

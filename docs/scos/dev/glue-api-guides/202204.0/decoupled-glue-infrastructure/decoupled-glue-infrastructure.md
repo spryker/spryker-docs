@@ -1,10 +1,11 @@
 ---
-title: How to create API applications
+title: How to create API applications in decoupled Glue infrastructure
 description: This document describes how to create a new API application
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-api-application.html
+- /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-api-application.html
+- /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-api-applications.html
 ---
 
 New Glue projects can create API applications. This is what you need to do in order to create one.
@@ -133,7 +134,7 @@ class CustomApiGlueApplicationBootstrapPlugin extends AbstractPlugin implements 
 
 *Line 19* creates an instance of `ApplicationInterface`, which can take an array of `ApplicationPluginInterface`. You can add features like DB access using these plugins.
 
-In the factory, the constructor looks like this: 
+In the factory, the constructor looks like this:
 
 <details>
 <summary markdown='span'>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationFactory.php</summary>
@@ -181,7 +182,7 @@ class CustomApiApplicationFactory extends AbstractFactory
 ```
 </details>
 
-The dependency provider looks like this: 
+The dependency provider looks like this:
 
 <details><summary markdown='span'>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationDependencyProvider.php</summary>
 
@@ -235,7 +236,7 @@ class CustomApiApplicationDependencyProvider extends AbstractBundleDependencyPro
 ```
 </details>
 
-The following example is what the `Application` can look like: 
+The following example is what the `Application` can look like:
 
 <details><summary markdown='span'>src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php</summary>
 
@@ -303,7 +304,7 @@ Each method in `CustomApiApplication` represents a step in the API application r
 
 This application extends `RequestFlowAwareApiApplication`, which means that this API application follows the default Glue workflow. This is beneficial because it lets you make use the most of the Spryker conventions and features that wire into the request flow.
 
-If your API uses its own workflow, you can opt for extending `RequestFlowAgnosticApiApplication`. This kind of application has everything—a separate set of application plugins, boot, and run methods—but not the request flow actions. The application that follows the `RequestFlowAgnosticApiApplication` extension is the old Glue storefront API application; it is request-agnostic and creates and follows its own request flow. Here is an example of the application: 
+If your API uses its own workflow, you can opt for extending `RequestFlowAgnosticApiApplication`. This kind of application has everything—a separate set of application plugins, boot, and run methods—but not the request flow actions. The application that follows the `RequestFlowAgnosticApiApplication` extension is the old Glue storefront API application; it is request-agnostic and creates and follows its own request flow. Here is an example of the application:
 
 **src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php**
 

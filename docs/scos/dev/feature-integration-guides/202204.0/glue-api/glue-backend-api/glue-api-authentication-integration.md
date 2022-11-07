@@ -57,9 +57,9 @@ Make sure that the following modules have been installed:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
-console propel:install
-console transfer:generate
+vendor/bin/console transfer:generate
+vendor/bin/console propel:install
+vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -367,7 +367,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 2. Set up the Oauth client:
 
 ```bash
-console setup:init-db
+vendor/bin/console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}

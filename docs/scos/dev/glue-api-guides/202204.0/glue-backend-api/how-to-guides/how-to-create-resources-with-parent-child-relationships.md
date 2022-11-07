@@ -9,7 +9,7 @@ redirect_from:
 
 Glue API lets you create resources with parent-child relationships or, in other words, nested resources. To enable such relationship, you need to create a resource that implements `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceWithParentPluginInterface`.
 
-Such a plugin routes requests from the parent resources to the correct child resource. This interface must be implemented together with `ResourceInterface`.
+Such a plugin routes requests from the parent resources to the correct child resource. This interface must be implemented together with `ResourceInterface` or with convention resource interface.
 
 The `ResourceInterface` interface provides only one method: `getParentResourceType`. The method must return the type of the immediate parent resource within the context in which the child resource is implemented.
 
@@ -99,6 +99,8 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     {
         return [
             new BarResource(),
+            //Parent resource for BarResource
+            new ModuleResource(),
         ];
     }
 }

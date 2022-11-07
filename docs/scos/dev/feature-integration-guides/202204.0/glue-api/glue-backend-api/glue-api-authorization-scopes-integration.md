@@ -26,7 +26,7 @@ To start feature integration, overview and install the necessary feature:
 Generate transfers:
 
 ```bash
-console transfer:generate
+vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}

@@ -275,7 +275,7 @@ Verify that your domains are available: `http://glue-storefront.de.spryker.local
 Generate transfers:
 
 ```bash
-console transfer:generate
+vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -447,9 +447,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 If the console commands are setup correctly, the following commands are available:
-* `glue glue-api:controller:cache:warm-up`
-* `glue router:debug application_name`
-* `glue api:router:cache:warm-up [application_name]`
+* `vendor/bin/glue glue-api:controller:cache:warm-up`
+* `vendor/bin/glue router:debug [application_name]`
+* `vendor/bin/glue api:router:cache:warm-up [application_name]`
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>

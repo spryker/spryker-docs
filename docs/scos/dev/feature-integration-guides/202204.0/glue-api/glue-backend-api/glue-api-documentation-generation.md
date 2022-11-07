@@ -1,5 +1,5 @@
 ---
-title: Glue documentation generation feature integration
+title: Glue API - Glue documentation generation feature integration
 description: Integrate the Glue documentation generation into your project
 template: feature-integration-guide-template
 ---
@@ -44,7 +44,7 @@ Make sure that the following modules have been installed:
 Generate transfers:
 
 ```bash
-console transfer:generate
+vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -245,7 +245,7 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 In order to make sure that `StorefrontApiApplicationProviderPlugin` and `BackendApiApplicationProviderPlugin` are setup correctly,
 attempt to generate the documentation for `storerfront` or `backend`. Do so by passing the optional `--application` parameter:
 ```
-glue api:generate:documentation --application storefront
+vendor/bin/glue api:generate:documentation --application storefront
 ```
 Make sure only the "storefront" application documentation was generated.
 

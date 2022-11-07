@@ -1186,10 +1186,14 @@ entries:
         include_versions:
         - "202204.0"
         nested:
-        - title: How to create a resource
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-resource.html
+        - title: How to create a storefront resource
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-storefront-resource.html
           include_versions:
           - "202204.0"
+        - title: How to create a backend resource
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-backendbackend-resource.html
+          include_versions:
+            - "202204.0"
         - title: How to create resources with parent-child relationships
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
           include_versions:
@@ -1624,6 +1628,10 @@ entries:
             - "202204.0"
           - title: Glue API - Authorization protected endpoints integration
             url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-protected-endpoints-integration.html
+            include_versions:
+              - "202204.0"
+          - title: Glue API - Glue documentation generation feature integration
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-documentation-generation.html
             include_versions:
               - "202204.0"
     - title: Agent Assist

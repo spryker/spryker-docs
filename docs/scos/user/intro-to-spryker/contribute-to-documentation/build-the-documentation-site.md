@@ -30,12 +30,6 @@ We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. 
 
 To use Jekyll, you also need to install the following:
 
-{% info_block infoBox "MacOS" %}
-
-MacOS users should _not_ install these until beginning the [Install Jekyll on MacOS](#install-jekyll-on-macos) process below. 
-
-{% endinfo_block %}
-
 * [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your version, run `ruby -v`.
 * [RubyGems](https://rubygems.org/pages/download), the latest version. To check your RubyGems version, run `gem -v`.
 * [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/). To check your GCC version, run `gcc -v,g++ -v`, for Make version run `make -v`.
@@ -57,14 +51,14 @@ Depending on your operating system, follow the Jekyll installation guides below.
 
 The installation process is different depending whether you are using a Mac with an Intel processor or with a Silicon M1 chip. To find out whether you have an Intel or a Silicon M1 Mac, click the **Apple** menu and choose **About This Mac**.
 
-- Silicon Macs with the M1 processor show an item labeled _Chip_ followed by the name of the Apple chip.
+* Silicon Macs with the M1 processor show an item labeled _Chip_ followed by the name of the Apple chip.
 
-- Intel-based Macs show an item labeled _Processor_ followed by the name and/or model number of the Intel processor.
+* Intel-based Macs show an item labeled _Processor_ followed by the name and/or model number of the Intel processor.
 
 {% endinfo_block %}
 
 
-{% info_block warningBox "On M1 Macs, Open Terminal using Rosetta" %}
+{% info_block warningBox "MacOS on M1 processor – Open Terminal using Rosetta" %}
 
 On a **MacBook with the M1 processor**, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables non-native Intel x86 apps, including Homebrew, to run on Apple Silicon Macs. 
 To open your terminal using Rosetta:
@@ -89,8 +83,6 @@ To install Homebrew:
 
 On an M1 Mac, Homebrew files are installed into the /opt/homebrew folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output to add Homebrew to your PATH. In the example below, we've replaced your actual username with:  /Users/_username_/.zprofile
 
-{% endinfo_block %}
-
 ```bash
 ==> Next steps:
 - Run these three commands in your terminal to add Homebrew to your PATH:
@@ -111,6 +103,9 @@ To add Homebrew, paste this text into the .zprofile file open in your terminal:
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
+Click **control o** to save the updated .zprofile file. Then click **control x** to exit out of the .zprofile file.
+
+{% endinfo_block %}
 
 #### 2. Install Make
 
@@ -130,17 +125,17 @@ You should not use the Ruby version that came pre-installed with your Mac. (Appl
 
 {% endinfo_block %}
 
-If you have not yet installed a recent Ruby version, do the following, install Ruby: 
+If you have not yet installed a recent Ruby version, install Ruby: 
  
 ```bash
 brew install ruby
 ```
-Add the brew Ruby and gems path to your Shell configuration:
-1. Check what Shell you are using:
+Add the brew Ruby and gems path to your shell configuration:
+1. Check what shell you are using:
     ```
     echo $SHELL
     ```
-2. Add the path using one of the following commands:
+2. Depending which shell you are using, add the path using one of the following commands:
    * Zsh:
         ```bash
         echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.zshrc

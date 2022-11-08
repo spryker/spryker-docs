@@ -1263,7 +1263,7 @@ Enable Twig plugins:
 | --- | --- | --- |
 | CmsBlockTwigPlugin | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | SprykerShop\Yves\CmsBlockWidget\Plugin |
 | CmsTwigPlugin | Provides the `spyCms` function. | SprykerShop\Yves\CmsPage\Plugin\Twig |
-| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/pbc/all/content-management-system/navigation-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
+| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
 | ShopCmsSlotTwigPlugin | Provides the `cms_slot` Twig tag. | SprykerShop\Yves\ShopCmsSlot\Plugin\Twig |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**
@@ -1496,14 +1496,14 @@ class ShopCmsSlotDependencyProvider extends SprykerShopShopCmsSlotDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html) for references.
+Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for references.
 
 {% endinfo_block %}
 
 ### Set up SprykerCmsBlocks content provider behavior
 
 {% info_block infoBox %}
-Follow the further steps only if you are going to use the [visibility conidtions](/docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+Follow the further steps only if you are going to use the [visibility conidtions](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 {% endinfo_block %}
 
 #### 1) Install the required modules using Composer

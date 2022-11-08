@@ -12,7 +12,7 @@ related:
   - title: CMS Block
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/cms-block.html
   - title: Migration Guide - CMS Block
-    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
+    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
 ---
 
 Category blocks are blocks that can be embedded into the category template.

@@ -80,7 +80,7 @@ The [Content Items](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content
 
 ### Content item types: module relations
 
-[This document](/docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html) describes each content item type and the module relations used for them.
+[This document](/docs/pbc/all/content-management-system/{{page.version}}/domain-model-and-relationships/content-item-types-module-relations.html) describes each content item type and the module relations used for them.
 
 ## Customer Access
 

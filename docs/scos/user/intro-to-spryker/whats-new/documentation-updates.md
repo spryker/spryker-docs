@@ -142,19 +142,19 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [CMS Templates & Slots](/docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html)
+* [CMS Templates & Slots](/docs/pbc/all/content-management-system/{{page.version}}/{{site.version}}cms-feature-overview/templates-and-slots-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[CMS Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html )
+[CMS Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/{{page.version}}/{{site.version}}cms-feature-overview/templates-and-slots-overview.html )
 
 </details>
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Install the CMS feature](/docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-feature.html)
+[Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/{{site.version}}install-and-upgrade/install-features/install-the-cms-feature.html)
 
 </details>
 
@@ -162,9 +162,9 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Migration guides</summary>
 
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html#upgrading-from-version-2-to-version-3)
-* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockstorage.html)
-* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockwidget.html)
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/pbc/all/content-management-system/{{page.version}}/{{site.version}}install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html#upgrading-from-version-2-to-version-3)
+* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{page.version}}/{{site.version}}install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockstorage.html)
+* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{page.version}}/{{site.version}}install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockwidget.html)
 
 
 </details>

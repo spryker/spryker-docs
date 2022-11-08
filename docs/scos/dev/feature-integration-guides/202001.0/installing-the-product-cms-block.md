@@ -16,9 +16,9 @@ related:
   - title: Managing CMS Blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
   - title: Migration Guide - CMS Block
-    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
+    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
   - title: Migration Guide - CMS Block GUI
-    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html
+    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html
 ---
 
 Product blocks are blocks that can be embedded in the product template, for which we can specify on which specific product we want them to be rendered.

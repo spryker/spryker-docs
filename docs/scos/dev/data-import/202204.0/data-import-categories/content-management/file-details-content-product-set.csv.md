@@ -33,7 +33,7 @@ The file must have the following parameters:
 | product_set_key.default | &check; | String |  | Default key identifier of the product set. |
 | product_set_key.{ANY_LOCALE_NAME}*<br>Example value: *product_set_key.en_US* |  | String |  | Key identifier of the product set, translated |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 

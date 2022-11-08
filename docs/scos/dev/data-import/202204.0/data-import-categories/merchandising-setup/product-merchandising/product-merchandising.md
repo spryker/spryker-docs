@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/product-merchandising
 ---
 
-The **Product Merchandising** category contains all data you need to manage merchandising information in your online store. We have structured this section according to the following CSV files that you must use to import the data:
+The *Product Merchandising* category contains all data you need to manage merchandising information in your online store. We have structured this section according to the following CSV files that you must use to import the data:
 
 * [product_group.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html): lets you create product groups.
 * [product_label.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html): lets you create labels to assign to products. You can use the "New" or "Special sales" labels to promote the products.

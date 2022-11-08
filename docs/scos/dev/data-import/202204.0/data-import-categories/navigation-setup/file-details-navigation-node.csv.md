@@ -38,7 +38,7 @@ The file must have the following parameters:
 | valid_from | &check; | Date | |  Date from which the navigation node is valid.|
 | valid_to | &check; | Date | |  Date to which the navigation node is valid.|
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 

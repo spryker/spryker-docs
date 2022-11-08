@@ -28,13 +28,11 @@ The file must have the following parameters:
 | sku_concrete | &check; | String |N/A* | SKU of the concrete discontinued product. |
 | note.{ANY_LOCALE_NAME}*<br>Example value: *note.en_US* |  | String |N/A | Note translated into the specified locale (US for our example).  |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 
-This file has the following dependency:
-
-* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+This file has the following dependency: [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html).
 
 ## Import template file and content example
 

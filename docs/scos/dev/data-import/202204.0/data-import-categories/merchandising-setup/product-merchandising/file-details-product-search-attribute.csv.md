@@ -30,7 +30,7 @@ The file must have the following parameters:
 | position |  | Number |N/A | Position of the product search attribute, Elasticsearch specific. |
 | key.{ANY_LOCALE_NAME}*<br>Example value: *key.en_US*  | &check; | String |N/A | Key identifier string of the product search attribute, translated in the specified locale US for our example). |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 
@@ -38,7 +38,7 @@ This file has the following dependency: [product_attribute_key.csv](/docs/scos/d
 
 ## Additional information
 
-The attribute key is previously loaded from `productattributekey.csv`, which can be translated in key.* fields.
+The attribute key is previously loaded from `productattributekey.csv`, which can be translated into the key.* fields.
 
 ## Import template file and content example
 

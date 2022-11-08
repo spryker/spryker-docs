@@ -41,7 +41,7 @@ The file must have the following parameters:
 | alt_text.default | &check; | String |  | Default alt text of the content. |
 | alt_text.{ANY_LOCALE_NAME}*<br>Example value: *alt_text.en_US* |  | String |  | Alt text of the content, translated into the specified locale (US for our example).|
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 

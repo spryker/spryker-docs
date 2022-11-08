@@ -43,7 +43,7 @@ The file must have the following parameters:
 
 *N/A: Not applicable.
 
-** ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+** ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 ** NUMBER: Any number of  the attribute-value column pair can be added
 
 ## Import file dependencies

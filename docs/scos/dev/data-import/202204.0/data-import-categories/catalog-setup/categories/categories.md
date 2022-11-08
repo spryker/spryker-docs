@@ -14,12 +14,12 @@ redirect_from:
 *Categories* contains data required to set up categories in your online store. We have structured this section according to the two CSV files that you must use to import the data:
 
 * [category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html): lets you import all relevant information about the categories such as categories names, key, descriptions and additional settings like activating them or allowing customers to search for them.
-* [category_template.csv:](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html) lets you import any category templates.
+* [category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html): lets you import any category templates.
 
 The following table provides details about Categories data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
 | --- | --- | --- | --- |--- |
-| Category   | Imports information about product categories definition. |`data:import:category` | [category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html)| [category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html)|
-| Category Template   | Imports information relative to product category templates. |`data:import:category-template` |[category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html) |None|
+| Category | Imports information about product categories definition. |`data:import:category` | [category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html)| [category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html)|
+| Category Template | Imports information relative to product category templates. |`data:import:category-template` |[category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html) |None|
 | Category Store | Imports configuration of assignments of categories. | `data:import:category-store` | [category_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html) | stores.php |

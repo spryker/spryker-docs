@@ -34,7 +34,7 @@ The file must have the following parameters:
 This file has the following dependencies:
 
 * [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
+* The `stores.php` configuration file of the demo shop PHP project
 
 ## Import template file and content example
 

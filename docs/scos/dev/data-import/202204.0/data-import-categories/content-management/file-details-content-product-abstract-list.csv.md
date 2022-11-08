@@ -33,7 +33,7 @@ The file must have the following parameters:
 | skus.default | &check; | String |N/A | Default list of product abstract SKUs. |
 | skus.{ANY_LOCALE_NAME}*<br>Example value: *skus.en_US* |  | String | N/A |List of product abstract SKUs, translated into the specified locale (US for our example). |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 

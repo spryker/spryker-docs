@@ -35,7 +35,7 @@ The file must have the following parameters:
 | name.{ANY_LOCALE_NAME}*<br>Example value: *name.en_US* |  | String |  | Name of the label, in the available locale (US for our example). |
 | product_abstract_skus |  | String |  | List of comma-separated product abstract SKUs.  |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 

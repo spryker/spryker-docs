@@ -38,9 +38,7 @@ This file has the following dependencies:
 
 ## Additional information
 
-It does not exist on by default on the project level. It can be created in order to override the CSV file from module: 
-
-* `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`
+It does not exist by default on the project level. It can be created in order to override the CSV file from the module: `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`.
 
 ## Import template file and content example
 

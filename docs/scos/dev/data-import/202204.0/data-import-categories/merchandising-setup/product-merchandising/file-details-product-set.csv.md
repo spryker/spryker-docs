@@ -43,7 +43,7 @@ The file must have the following parameters:
 | image_small.1.2 |  | String |  | Small image of the second product of the product set.  |
 | image_large.1.2 |  | String |  | Large image of the second product of the product set. |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 

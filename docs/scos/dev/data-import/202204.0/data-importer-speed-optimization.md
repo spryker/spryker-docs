@@ -16,11 +16,11 @@ redirect_from:
 
 **"Writing code is the easy part of every feature but writing a scalable and fast solution is a challenge"**
 
-This document will define the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize. After several reviews and tests, we found that we need to define these rules to help developers to write more scalable and high-performance code when they implementing their features. Most of the time when developers create features, they don't consider very high traffic or heavy data processing for big data. This document describes all necessary requirements when you want to create new features and they need to work with big data. For example, you want to create a new DataImport or a new P&S module which save millions of entities into a database in a very short amount of time.
+This document defines the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize. After several reviews and tests, we decided to define these rules to help developers to write more scalable and high-performance code when they implement their features. Most of the time when developers create features, they don't consider very high traffic or heavy data processing for big data. This document describes all necessary requirements when you want to create new features and they need to work with big data. For example, you want to create a new DataImport or a new P&S module that save millions of entities into a database in a very short amount of time.
 
 ## Rules for data importers
 
-The `DataImport` module is responsible for reading data from different formats like CSV and JSON and import them into a database with proper Spryker data structure. Usually importing of data is a time-consuming process and we need to follow some best practices to increase the performance. Here you will find some of them:
+The `DataImport` module is responsible for reading data from different formats like CSV and JSON and importing them into a database with proper Spryker data structure. Usually, data import is a time-consuming process and you need to follow some best practices to increase performance. In the following sections, you can find some of them.
 
 ### Single vs batch operation
 
@@ -52,17 +52,17 @@ protected function importProductAbstract(DataSetInterface $dataSet): void
 
 `importProductAbstract` method will call for each line of your CSV, imagine if you have one CSV file with 1,000,000 lines, it means you will run this query again and again for 1 million times! The possible solution is to avoid single processing and implementing a batch query for it.
 
-The current solution for DataImport is to add another step before the main step to gather all the information you need for the next steps. like querying all categories and remember them in memory and the next step can do a fast PHP look up from that result in memory.
+The current solution for `DataImport` is to add another step before the main step to gather all the information you need for the next steps. like querying all categories and remember them in memory and the next step can do a fast PHP look up from that result in memory.
 
 {% info_block warningBox "Note" %}
 
-`DataImport` v1.4.x doesn't support the batch processing by default and the next version will provide a very clear solution for it.
+`DataImport` v1.4.x doesn't support batch processing by default and the next version will provide a very clear solution for it.
 
 {% endinfo_block %}
 
 ### ORM vs PDO
 
-ORM (Object-relational mapping) is a very good approach when we are working on very big and complex software but it's not always the answer to all problems especially when it comes to batch processing. ORM is slow by design as they need to handle so many internal hydration and mapping.
+*Object-relational mapping (ORM)* is a very good approach when you work on very big and complex software but it's not always the answer to all problems especially when it comes to batch processing. ORMs is slow by design because it needs to handle so much internal hydration and mapping.
 
 Here is an example of using the Propel ORM, this is a very clean and nice approach but not optimized enough for importing big data.
 
@@ -88,8 +88,8 @@ This approach has two problems:
 
 The solution is:
 
-1. Avoid ORM, you can use a very simple raw SQL but you should also avoid complex raw or big raw SQL queries.  
-2. Implement `DataSetWriterInterface` to achieve the batch processing approach, prepare one by one and write them once (Take a look at `ProductAbstractWriter` in `Dataimport` as an example).
+1. Avoid ORM, you can use a very simple raw SQL but also avoid complex raw or big raw SQL queries.  
+2. Implement `DataSetWriterInterface` to achieve the batch processing approach, prepare one by one and write them once—take a look at `ProductAbstractWriter` in `Dataimport` as an example.
 
 ### Facade calls
 
@@ -121,19 +121,19 @@ Let's say you already started to work with the batch operation, one of the chall
 
 ### Database vendor approach
 
-Spryker supports PostgreSQL, MySQL, and MariaDB. When working with databases, it's good to know their related features. For example, one of the great features we like is [CTE](https://www.postgresql.org/docs/9.1/queries-with.html). If you are inserting or updating big amounts of data, like millions of millions, use CTE as a replaceable for multiple inserts and updates. You can find examples of implementations in our [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops).
+Spryker supports PostgreSQL, MySQL, and MariaDB. When working with databases, it's good to know their related features. For example, one of the great features is [CTE](https://www.postgresql.org/docs/9.1/queries-with.html). If you insert or update big amounts of data, like millions of millions, use CTE as a replacement for multiple inserts and updates. You can find examples of implementations in our [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops).
 
 ## Rules for Publish and Synchronize
 
-P&S is a concept for transferring data from Zed database to Yves databases like Redis and ES, This operation is separated into two isolated processes which call *Publish* and *Synchronize*. Publishing is a process to aggregating data and writing it to Database and Queue. Synchronization is a process to read an aggregated message from a queue and write it to external endpoints. The performance issues mostly come from the *Publishing* part. Again we need to follow the best practices to increase the performance. Here you will find some of them:
+P&S is a concept for transferring data from the Zed database to Yves databases like Redis and ES, This operation is separated into two isolated processes, which call *Publish* and *Synchronize*. Publishing is a process of aggregating data and writing it to Database and Queue. Synchronization is a process to read an aggregated message from a queue and write it to external endpoints. The performance issues mostly come from the *Publishing* part. Again, you need to follow the best practices to increase performance. Here, you can find some of them:
 
 ### Single vs batch operation
 
-When you are creating a new listener you should consider these rules:
+When creating a new listener, consider these rules:
 
 * Run your logic against a chunk of event messages not per each.
-* Don't run the query inside of for-loop 
-* Try to save them with a bulk operation, not one by one
+* Don't run the query inside for-loop statements.
+* Try to save them with a bulk operation, not one by one.
 
 Take a look at this example:
 
@@ -147,9 +147,9 @@ public function publish(array $productAbstractIds): void
 }
 ```
 
-Here we are passing a set of ids and then we try to run a query for each product abstract. Imagine if you have 2000 events as a chunk, then you have 2000 queries to a database.
+Here, a set of IDs is passed, and then a query for each product abstract is run. Imagine if you have 2000 events as a chunk, then you have 2000 queries in a database.
 
-We can easily fix this by changing the query and run query only once per 2000 ids.
+You can easily fix this by changing the query and running the query only once per 2000 IDs.
 
 ```php
 public function publish(array $productAbstractIds): void
@@ -160,16 +160,16 @@ public function publish(array $productAbstractIds): void
 
 ### Facade calls
 
-Another point that we need to be very careful here is to call Facade API without any thinking through, we must make sure that these APIs will not run queries inside same as DataImport rule. You are allowed to call Facade API but if:
+Another point that you need to be very careful about here is to call Facade API without any thinking through. You must make sure that these APIs will not run queries inside the same as the `DataImport` rule. You are allowed to call Facade API but if :
 
 * There is no query inside
 * Facade API designed for batch operation (`findPriceForSku` vs `findPricesForSkus`) 
 
 ### Triggering events
 
-DataImporters are triggering events manually, this is happening because of performance reasons :
+DataImporters are triggering events manually, this is happening because of performance reasons:
 
-Triggering events automatically generates so many duplicates events during data importing—for example, inserting a product into `spy_product` and `spy_product_localized_attribute` table generates two events with the same `id_product`.
+Triggering events automatically generates many duplicated events during data importing—for example, inserting a product into the `spy_product` and `spy_product_localized_attribute` table generates two events with the same `id_product`.
 Events are triggered one by one.
 
 You can always switch the Event Triggering process with two methods:
@@ -197,11 +197,11 @@ use Spryker\Zed\EventBehavior\EventBehaviorConfig;
  
 ### P&S and CTE
 
-Sometimes the amount of the data which needs be synced is very high, for this reason, we can not rely on a standard ORM solution for storing data in the database tables. we recommend you to use bulk insert operation whenever you have more than hundreds of thousand of data. you can still use the CTE technique which was used in DataImporter before. Spryker suite comes with several examples of using CTE technique in Storage and Search module you can replace them by overwriting the Business Factory in the modules:
+Sometimes the amount of data that needs to be synced is very high. For this reason, you can not rely on a standard ORM solution for storing data in the database tables. we recommend you use bulk insert operation whenever you have more than hundreds of thousand of data. You can still use the CTE technique, which was used in DataImporter before. Spryker suite comes with several examples of using the CTE technique. In the Storage and Search modules you can replace them by overwriting the Business Factory in the modules:
 
 {% info_block warningBox "Note" %}
 
-These examples only tested for PostgreSQL.
+The following examples were only tested for PostgreSQL:
 
 * `src/Pyz/Zed/PriceProductStorage/Business/Storage/PriceProductAbstractStorageWriter.php`
 * `src/Pyz/Zed/PriceProductStorage/Business/Storage/PriceProductConcreteStorageWriter.php`
@@ -217,11 +217,11 @@ Example classes are going to be replaced with a Core CTE solution.
 
 ## Conclusion
 
-When we are facing some batch operation, we need to think about big data and performance under heavy loading, we are not allowed to write same code that only does the job, it needs to be scalable and fast for high usages. The following are main points:
+When facing some batch operation, think about big data and performance under heavy loading. You are not allowed to write code that only does the job, the code needs to be scalable and fast for high usage. The main points are as follows:
 
 * Create batch queries and processes.
 * Don’t use ORM for batch processing as it’s slow by design.
-* Don’t run separated queries for each data-set.
+* Don’t run separate queries for each data set.
 * Don’t call any facade logic if they are slow or run internal queries.
-* Release memory after each bulk operations to prevent memory issues.
-* Use CTE technique (supported by PostgreSQL or MySQL >= 8, and MariaDB >= 10.2).
+* Release memory after each bulk operation to prevent memory issues.
+* Use the CTE technique (supported by PostgreSQL or MySQL >= 8, and MariaDB >= 10.2).

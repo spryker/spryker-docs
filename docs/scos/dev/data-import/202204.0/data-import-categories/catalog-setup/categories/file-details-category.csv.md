@@ -46,7 +46,7 @@ The file must have the following parameters:
 
 {% info_block infoBox "Info" %}
 
-*ANY_LOCALE_NAME: Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files. For the following fields, it can be replaced by two sets of fields: one for *de_DE* and another for *en_US*
+*ANY_LOCALE_NAME: Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files. For the following fields, it can be replaced by two sets of fields: one for *de_DE* and another for *en_US*.
 
 {% endinfo_block %}
 

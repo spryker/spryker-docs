@@ -1,6 +1,6 @@
 ---
 title: "HowTo: Add support for number formatting in the Storefront"
-description: This document explains how to add support for number formatting in the Storefront UI.
+description: Add support for numbers formatting in the Storefront UI.
 template: howto-guide-template
 last_updated: Nov 04, 2022
 ---
@@ -9,7 +9,7 @@ This document explains how to add support for number formatting in the Storefron
 
 ## Prerequisites
 
-To add support for number formatting in the Storefront, integrate the required features:
+To add support fornumber formatting in the Storefront, integrate the required features:
 
 | NAME                                   | VERSION          | INTEGRATION GUIDE                                                                                                                                              |
 |----------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|

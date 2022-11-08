@@ -16,7 +16,7 @@ related:
   - title: Impersonate customers as an agent assist
     link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
   - title: Search by customers as an agent assist
     link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---

@@ -16,7 +16,7 @@ related:
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Glue API - Customer Account Management feature integration
-    link: docs/pbc/all/identity-access-manager/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
+    link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
   - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
   - title: Customer Login overview
@@ -133,9 +133,9 @@ Response sample with an error:
 ## User types
 
 Different endpoints require the client to be authenticated as different users. By default, you can:
-* [Authenticate as a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html)
-* [Authenticate as a company user](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)
-* [Authenticate as an agent assist](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html)
+* [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html)
+* [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)
+* [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html)
 
 ## Next steps
 

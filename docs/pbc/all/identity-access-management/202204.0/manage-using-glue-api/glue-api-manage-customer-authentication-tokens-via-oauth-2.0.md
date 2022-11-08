@@ -16,19 +16,19 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Confirming customer registration
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-confirm-customer-registration.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-confirm-customer-registration.html
   - title: Authenticating as a customer
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Managing customer authentication tokens
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
   - title: Managing customers
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
   - title: Managing customer passwords
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Retrieve customer carts
@@ -41,7 +41,7 @@ This endpoint allows authenticating as a customer and refreshing customer authen
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Customer Account Management feature integration](/docs/pbc/all/identity-access-manager/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 ## Authenticate as a customer
 
@@ -71,8 +71,8 @@ To authenticate as a customer, send the request:
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
 | grant_type | password | &check; | Method through which the application can gain Access Tokens and by which you grant limited access to the resources to another entity without exposing credentials. |
-| username | String | &check; | Customer's username. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
-| password | String | &check; | Customer's password. You define it when [creating a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| username | String | &check; | Customer's username. You define it when [creating a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| password | String | &check; | Customer's password. You define it when [creating a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Response
 

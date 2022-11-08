@@ -21,7 +21,7 @@ related:
   - title: Retrieving company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
   - title: Managing company user authentication tokens
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Retrieving business units
@@ -29,7 +29,7 @@ related:
   - title: Retrieving business unit addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-addresses.html
   - title: Authenticating as a customer
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---
 
 This endpoint allows authenticating as a company user.
@@ -48,7 +48,7 @@ To authenticate as a company user, send the request:
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
+| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 ### Request
 
@@ -102,7 +102,7 @@ Request sample: authenticate as a company user
 | tokenType | String | Token type. The default value is `Bearer`. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the company user. |
 | expiresIn | Integer | Time in seconds in which the token expires. The default value is `28800`. |
-| refreshToken | String | Token used to [refresh](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
+| refreshToken | String | Token used to [refresh](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
 
 ## Possible errors
 
@@ -121,4 +121,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 * [Retrieve business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)
 * [Retrieve company company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
 * [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/pbc/all/identity-access-manager/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)
+* [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)

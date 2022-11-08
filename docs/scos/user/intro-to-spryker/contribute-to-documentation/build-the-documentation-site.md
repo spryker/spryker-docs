@@ -125,7 +125,7 @@ You should not use the Ruby version that came pre-installed with your Mac. (Appl
 
 {% endinfo_block %}
 
-If you have not yet installed a later Ruby version, do the following, install Ruby: 
+If you have not yet installed a recent Ruby version, do the following, install Ruby: 
  
 ```bash
 brew install ruby

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/sdk/dev/developing-the-sdk.html
 ---
 
-To install the Spryker SDK for your development needs, clone the project and export `SPRYKER_SDK_ENV` with the `dev` environment and create an alias:
+To install the Spryker SDK for your development needs, clone the project and export `SPRYKER_SDK_ENV` with the `dev` environment, then create an alias:
 
 ```shell
 git clone git@github.com:spryker-sdk/sdk.git && \

@@ -21,13 +21,13 @@ The *Digital Asset Management* capability lets you upload and manage your assets
 
 A Back Office user can upload files and add them to CMS pages and blocks to display on the Storefront.
 
-Apart from images, you can add a great variety of different types of assets to your project, including but not limited to the following:
+Apart from images, you can add a variety of different types of assets to your project, including but not limited to:
 * Presentations
 * PDF documents
 * Graphics
 * Banners
 
-This lets content managers create rich, compelling, and attractive content for your customers and also gives them a chance to offer your customers additional information they might be interested in, like user manuals or instructions.
+Digital assets let content managers create rich, compelling, and attractive content for your customers. They also allow you to offer your customers additional information like user manuals or instructions.
 
 ## File tree
 

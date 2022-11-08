@@ -5,6 +5,7 @@ last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-backend-vs-storefront-api-endpoint.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/backend-and-storefront-api-module-differences.html
 ---
 
 This document describes differences between the backend and storefront code in API modules.

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/creating-cms-block
   - /docs/scos/user/back-office-user-guides/202200.0/content/blocks/creating-cms-blocks.html
   - /docs/scos/user/back-office-user-guides/202204.0/content/blocks/creating-cms-blocks.html
+  - /docs/scos/user/back-office-user-guides/202204.0/content/blocks/view-cms-blocks.html
 related:
   - title: Edit CMS blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/edit-cms-blocks.html

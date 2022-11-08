@@ -1,5 +1,5 @@
 ---
-title: Editing content items
+title: Edit content items
 description: The guide provides steps on how to update content items in the Back Office.
 last_updated: Jul 9, 2021
 template: back-office-user-guide-template
@@ -38,7 +38,7 @@ Clicking **Back to Content Items** in the top right corner of the page can trigg
 * Selecting this option *prior to* saving the changes will discard all the changes and then take you to the _List of Content Items_ page.
 * Selecting this option *after* the changes have been saved will redirect you to the _List of Content Items_ page.
 
-### Reference information: Editing a content item
+## Reference information: Editing a content item
 
 This section describes atribbutes on the *Overview of Content Items* page and attribbutes of the following content item pages:
 * [Edit Content Item Banner: [Content Item Key]](#edit-content-item-banner-content-item-key-page)
@@ -68,9 +68,7 @@ On the *Overview of Content Items* page, you can:
 * Filter content items using the search by *Content Item Key*, *Name*, *Description*, *Content type*, *Created*, and *Updated* dates.
 * Edit a content item.
 
-#### <a name="edit-content-item-banner-content-item-key-page"></a> Edit content Item Banner: [Content Item Key] page
-
-The following table describes the attributes on the *Edit Content Item Banner: [Content Item Key]* page.
+### Edit content Item Banner: [Content Item Key] page
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -82,9 +80,7 @@ The following table describes the attributes on the *Edit Content Item Banner: [
 | Click URL | URL of the target page to which your shop visitors are redirected. |
 | Alt-text | Some additional text that describes the image. |
 
-#### <a name="edit-content-item-abstract-product-list-content-item-key-page"></a> Edit Content Item Abstract Product List: [Content Item Key] page
-
-The following table describes the attributes on the *Edit Content Item Abstract Product List: [Content Item Key]* page.
+### Edit Content Item Abstract Product List: [Content Item Key] page
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -102,9 +98,7 @@ The following table describes the attributes on the *Edit Content Item Abstract 
 | Selected | Column that contains **+ Add to list** you can click to add a product to the top table so that it can be added to the abstract product list content item.|
 
 
-#### <a name="edit-content-item-product-set-content-item-key-page"></a>Edit Content Item Product Set: [Content Item Key] page
-
-The following table describes the attributes on the *Edit Content Item Product Set: [Content Item Key]* page.
+### Edit Content Item Product Set: [Content Item Key] page
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -119,9 +113,7 @@ The following table describes the attributes on the *Edit Content Item Product S
 |Status  | Shows the status of the product set: active or inactive. |
 |Actions (the bottom table)  | Column that contains **+ Add** you can click to add a product set to the top table so that it can be added to the product set content item. |
 
-#### <a name="edit-content-item-file-list-content-item-key-page"></a>Edit Content Item File List: [Content Item Key] page
-
-The following table describes the attributes on the *Edit Content Item File List: [Content Item Key]* page.
+### Edit Content Item File List: [Content Item Key] page
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -135,9 +127,7 @@ The following table describes the attributes on the *Edit Content Item File List
 | Selected| Column that contains **+ Add to list** you can click to add a file to the top table so that it can be added to the file list content item. |
 
 
-#### <a name="edit-content-item-navigation-content-item-key-page"></a>Edit Content Item Navigation: [Content Item Key] page
-
-The following table describes the attributes on the *Create Content Item: Navigation* page.
+### Edit Content Item Navigation: [Content Item Key] page
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

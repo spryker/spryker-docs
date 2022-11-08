@@ -410,8 +410,39 @@ entries:
                 url: /docs/pbc/all/content-management-system/{{page.version}}/manage-using-glue-api/retrieve-navigation-trees.html
           - title: Manage in the Back Office
             nested:
+              - title: Navigation
+                nested:
 
-
+              - title: Content items
+                nested:
+                  - title: Create abstract product list content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html
+                  - title: Create banner content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-banner-content-items.html
+                  - title: Create file list content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-file-list-content-items.html
+                  - title: Create navigation content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-navigation-content-items.html
+                  - title: Create product set content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-product-set-content-items.html
+                  - title: Edit content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/edit-content-items.html
+              - title: Blocks
+                nested:
+                  - title: Create CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-cms-blocks.html
+                  - title: Create category CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-category-cms-blocks.html
+                  - title: Create email CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-email-cms-blocks.html
+                  - title: Create product CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-product-cms-blocks.html
+                  - title: Edit CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/edit-cms-blocks.html
+                  - title: Add content items to CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
+                  - title: Edit placeholders in CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html                                                                                                                     
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Create a custom content item"

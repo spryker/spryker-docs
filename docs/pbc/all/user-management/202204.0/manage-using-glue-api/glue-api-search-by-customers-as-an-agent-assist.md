@@ -22,7 +22,7 @@ related:
 ---
 
 
-Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html#impersonate-a-customer).
+Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer).
 
 ## Installation
 
@@ -322,4 +322,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html) for details.
+After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html) for details.

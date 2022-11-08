@@ -1,5 +1,5 @@
 ---
-title: File details - product_set.csv
+title: "File details: product_set.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-setcsv

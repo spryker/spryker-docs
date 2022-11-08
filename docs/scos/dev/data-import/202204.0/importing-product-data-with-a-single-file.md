@@ -1,5 +1,5 @@
 ---
-title: Importing Product Data With a Single File
+title: Importing product data with a single file
 description: Learn how to import all main product data with a single file
 last_updated: Jun 16, 2021
 template: data-import-template

@@ -1,5 +1,5 @@
 ---
-title: About Data Import Categories
+title: About data import categories
 last_updated: Aug 10, 2022
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-data-import-categories

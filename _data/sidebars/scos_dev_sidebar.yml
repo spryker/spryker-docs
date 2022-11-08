@@ -2847,87 +2847,87 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
-        - title: File details - payment_method.csv
+        - title: "File details: payment_method.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-payment-method.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - payment_method_store.csv
+        - title: "File details: payment_method_store.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - customer.csv
+        - title: "File details: customer.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - warehouse.csv
+        - title: "File details: warehouse.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: File details - warehouse_address.csv
+        - title: "File details: warehouse_address.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
           include_versions:
           - "202108.0"
-        - title: File details - warehouse_store.csv
+        - title: "File details: warehouse_store.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: File details - tax.csv
+        - title: "File details: tax.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-tax.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: File details - glossary.csv
+        - title: "File details: glossary.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - shipment.csv
+        - title: "File details: shipment.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: File details - shipment_method_store.csv
+        - title: "File details: shipment_method_store.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: File details - shipment_price.csv
+        - title: "File details: shipment_price.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment-price.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: File details - sales_order_threshold.csv
+        - title: "File details: sales_order_threshold.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: File details - currency.csv
+        - title: "File details: currency.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-currency.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-        - title: File details - order-status.csv
+        - title: "File details: order-status.csv"
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-order-status.csv.html
           include_versions:
           - "202108.0"
@@ -2948,46 +2948,46 @@ entries:
           - "202108.0"
           - "202204.0"
           nested:
-          - title: File details - product_image.csv
+          - title: "File details: product_image.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-image.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_attribute_key.csv
+          - title: "File details: product_attribute_key.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_abstract.csv
+          - title: "File details: product_abstract.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_abstract_store.csv
+          - title: "File details: product_abstract_store.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_abstract_approval_status.csv
+          - title: "File details: product_abstract_approval_status.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract-approval-status.csv.html
             include_versions:
             - "202204.0"
-          - title: File details - product_concrete.csv
+          - title: "File details: product_concrete.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_management_attribute.csv
+          - title: "File details: product_management_attribute.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html
             include_versions:
             - "202005.0"
@@ -3001,7 +3001,7 @@ entries:
           - "202009.0"
           - "202108.0"
           nested:
-          - title: File details - product_stock.csv
+          - title: "File details: product_stock.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
             include_versions:
             - "202005.0"
@@ -3015,21 +3015,21 @@ entries:
           - "202108.0"
           - "202204.0"
           nested:
-          - title: File details - category.csv
+          - title: "File details: category.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - category_template.csv
+          - title: "File details: category_template.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - category_store.csv
+          - title: "File details: category_store.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html
             include_versions:
             - "202108.0"
@@ -3042,14 +3042,14 @@ entries:
           - "202108.0"
           - "202204.0"
           nested:
-          - title: File details - product_price.csv
+          - title: "File details: product_price.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_price_schedule.csv
+          - title: "File details: product_price_schedule.csv"
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
             include_versions:
             - "202005.0"
@@ -3072,14 +3072,14 @@ entries:
           - "202108.0"
           - "202204.0"
           nested:
-          - title: File details - gift_card_concrete_configuration.csv
+          - title: "File details: gift_card_concrete_configuration.csv"
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - gift_card_abstract_configuration.csv
+          - title: "File details: gift_card_abstract_configuration.csv"
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
             include_versions:
             - "202005.0"
@@ -3094,14 +3094,14 @@ entries:
           - "202108.0"
           - "202204.0"
           nested:
-          - title: File details - product_option.csv
+          - title: "File details: product_option.csv"
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_option_price.csv
+          - title: "File details: product_option_price.csv"
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
             include_versions:
             - "202005.0"
@@ -3113,7 +3113,7 @@ entries:
           - "202108.0"
           - "202204.0"
           nested:
-          - title: File details - product_concrete_pre_configuration.csv
+          - title: "File details: product_concrete_pre_configuration.csv"
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
             include_versions:
             - "202108.0"
@@ -3139,77 +3139,77 @@ entries:
           - "202108.0"
           - "202204.0"
           nested:
-          - title: File details - product_review.csv
+          - title: "File details: product_review.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_alternative.csv
+          - title: "File details: product_alternative.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_group.csv
+          - title: "File details: product_group.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_label.csv
+          - title: "File details: product_label.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_search_attribute_map.csv
+          - title: "File details: product_search_attribute_map.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute-map.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_discontinued.csv
+          - title: "File details: product_discontinued.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_relation.csv
+          - title: "File details: product_relation.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-relation.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_search_attribute.csv
+          - title: "File details: product_search_attribute.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_quantity.csv
+          - title: "File details: product_quantity.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_set.csv
+          - title: "File details: product_set.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - product_label_store.csv
+          - title: "File details: product_label_store.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
             include_versions:
             - "202009.0"
@@ -3223,28 +3223,28 @@ entries:
           - "202108.0"
           - "202204.0"
           nested:
-          - title: File details - discount.csv
+          - title: "File details: discount.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - discount_amount.csv
+          - title: "File details: discount_amount.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - discount_voucher.csv
+          - title: "File details: discount_voucher.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
             - "202204.0"
-          - title: File details - discount_store.csv
+          - title: "File details: discount_store.csv"
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html
             include_versions:
             - "202005.0"
@@ -3259,14 +3259,14 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
-        - title: File details - navigation_node.csv
+        - title: "File details: navigation_node.csv"
           url: /docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - navigation.csv
+        - title: "File details: navigation.csv"
           url: /docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html
           include_versions:
           - "202005.0"
@@ -3281,98 +3281,98 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
-        - title: File details - cms_slot_template.csv
+        - title: "File details: cms_slot_template.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot-template.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_template.csv
+        - title: "File details: cms_template.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-template.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_page_store.csv
+        - title: "File details: cms_page_store.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-page-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_block_category.csv
+        - title: "File details: cms_block_category.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-category.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_block_store.csv
+        - title: "File details: cms_block_store.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - content_banner.csv
+        - title: "File details: content_banner.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-banner.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_slot_block.csv
+        - title: "File details: cms_slot_block.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot-block.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_page.csv
+        - title: "File details: cms_page.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-page.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_block.csv
+        - title: "File details: cms_block.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - content_product_abstract_list.csv
+        - title: "File details: content_product_abstract_list.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - content_navigation.csv
+        - title: "File details: content_navigation.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-navigation.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - content_product_set.csv
+        - title: "File details: content_product_set.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-product-set.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_slot.csv
+        - title: "File details: cms_slot.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - cms_block_category_postion.csv
+        - title: "File details: cms_block_category_postion.csv"
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html
           include_versions:
           - "202005.0"
@@ -3387,14 +3387,14 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
-        - title: File details - comment.csv
+        - title: "File details: comment.csv"
           url: /docs/scos/dev/data-import/data-import-categories/miscellaneous/file-details-comment.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
           - "202204.0"
-        - title: File details - mime_type.csv
+        - title: "File details: mime_type.csv"
           url: /docs/scos/dev/data-import/data-import-categories/miscellaneous/file-details-mime-type.csv.html
           include_versions:
           - "202005.0"

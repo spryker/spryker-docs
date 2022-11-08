@@ -37,7 +37,7 @@ In the [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categori
 
 {% info_block warningBox "Import order" %}
 
-By default, most of the product data is stored in a separate subfolder in `data/import/icecat_biz_data`. The order in which the files are imported is **very strict**:
+By default, most of the product data is stored in a separate subfolder in `data/import/icecat_biz_data`. The order in which the files are imported is *very strict*:
 
 1. Any product-related entities such as categories, attributes, and tax sets must be imported before the actual products.
 2. [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) and for multi-store setups [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html).

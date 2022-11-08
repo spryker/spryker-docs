@@ -1,5 +1,5 @@
 ---
-title: File details - content_navigation.csv
+title: "File details: content_navigation.csv"
 description: Description of the import file of the navigation content item.
 last_updated: Jun 16, 2021
 template: data-import-template

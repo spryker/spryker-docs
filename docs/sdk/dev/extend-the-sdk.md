@@ -38,6 +38,7 @@ help: string|null #e.g: Fix codestyle violations, lorem ipsum, etc.
 stage: string #e.g.: build
 command: string #e.g.: php %project_dir%/vendor/bin/phpcs -f --standard=%project_dir%/vendor/spryker/code-sniffer/Spryker/ruleset.xml %module_dir%
 type: string #e.g.: local_cli
+version: string #e.g.: 1.0.0
 placeholders:
 - name: string #e.g.: %project_dir%
   valueResolver: string #e.g.: PROJECT_DIR, mapping to a value resolver with id PROJECT_DIR or  a FQCN

@@ -30,6 +30,11 @@ We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. 
 
 To use Jekyll, you also need to install the following:
 
+{% info_block infoBox "MacOS" %}
+
+MacOS users should _not_ install these until beginning the [Install Jekyll on MacOS](#install-jekyll-on-macos) process below. 
+
+{% endinfo_block %}
 
 * [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your version, run `ruby -v`.
 * [RubyGems](https://rubygems.org/pages/download), the latest version. To check your RubyGems version, run `gem -v`.

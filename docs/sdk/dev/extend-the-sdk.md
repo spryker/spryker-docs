@@ -40,7 +40,7 @@ command: string #e.g.: php %project_dir%/vendor/bin/phpcs -f --standard=%project
 type: string #e.g.: local_cli
 placeholders:
 - name: string #e.g.: %project_dir%
-  valueResolver: string #e.g.: PROJECT_DIR, mapping to a value resolver with id PROJECT_DIR or  a FQCN
+  value_resolver: string #e.g.: PROJECT_DIR, mapping to a value resolver with id PROJECT_DIR or  a FQCN
   optional: bool
 ```
 

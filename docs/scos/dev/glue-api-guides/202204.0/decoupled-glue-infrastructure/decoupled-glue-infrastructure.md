@@ -4,8 +4,8 @@ description: This document describes how to create a new API application
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
-- /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-api-application.html
-- /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-api-applications.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-api-application.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-api-applications.html
 ---
 
 New Glue projects can create API applications. This is what you need to do in order to create one.

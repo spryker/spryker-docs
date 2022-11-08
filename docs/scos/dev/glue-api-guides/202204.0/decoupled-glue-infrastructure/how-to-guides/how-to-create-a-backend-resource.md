@@ -3,6 +3,8 @@ title: How to create a backend resource
 description: This guide shows how to create an API endpoint using a resource for the backend API application.
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-backend-resource.html
 ---
 
 This guide shows how to create an API endpoint using a resource for the backend API application.
@@ -151,7 +153,7 @@ class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
 }
 ```
 
-See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html) guide.
+See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-or-change-a-convention.html) guide.
 
 5. Declare the resource: 
 

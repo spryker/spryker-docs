@@ -5,6 +5,7 @@ last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-protected-endpoints.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-protected-endpoints.html
 ---
 
 This guide describes how you can create a protected endpoint for resource or custom-route in the storefront and backend API applications.

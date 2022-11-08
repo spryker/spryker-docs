@@ -5,6 +5,7 @@ last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create_change-convention.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
 ---
 
 The Glue API *Convention* feature lets you change the way your API accepts or returns data.

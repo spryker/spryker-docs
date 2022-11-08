@@ -31,7 +31,13 @@ The following library is a suggestion, not a requirement.
 composer require "firebase/php-jwt": "^5.4" --update-with-dependencies
 ```
 
-For detailed information about the modules related to OAuth and customer account management that provide the API functionality and related installation instructions, see [Glue API - Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
+For detailed information about the modules related to OAuth and GLUE Authentication integration that provide the API functionality and related installation instructions, see [Glue API - Authentication integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-backend-api//glue-api-authentication-integration.html).
+
+## Module dependency graph
+
+The following diagram illustrates the dependencies between the core modules and the CIAM provider module
+
+![Module Dependency Graph](/docs/scos/dev/drafts-dev/ciam-integration-module-dependency-graph.png)
 
 ## 1. Create the CIAM provider Module
 
@@ -279,31 +285,40 @@ The adjustment of Glue modules to include the new authorization functionality is
 
 ### 1. Extend the `AuthRestApi` module
 
-In the `AuthRestApi` module, extend the access token validation step with your CIAM provider token parsing service.
+In the `OauthApi` module, extend the access token validation step with your CIAM provider token parsing service.
 
 ```
 + Glue/
-  + AuthRestApi/
+  + OauthApi/
     + Processor/
-        + AccessToken
+        + Validator
           + AccessTokenValidator.php // [Extended Class]
   ...
 ```
 
-You need to adjust `AuthRestApiFactory` and `AuthRestApiDependencyProvider` to include the CIAM provider service. 
+You need to adjust `OauthApiFactory` and `OauthApiDependencyProvider` to include the CIAM provider service. 
 In the implementation example, it is `Pyz\Service\CiamProvider\CiamProviderServiceInterface`.
 
 The following example extends `AccessTokenValidator` to validate the authorization header using the CIAM provider parser:
 
 ```php
-    public function validate(Request $request): ?RestErrorMessageTransfer
+    public function validate(GlueRequestTransfer $glueRequestTransfer): GlueRequestValidationTransfer
     {
-        $authorizationToken = $request->headers->get(AuthRestApiConfig::HEADER_AUTHORIZATION);
-        $ciamToken = $this->ciamProviderService->parseCiamToken($authorizationToken);
+        $glueRequestValidationTransfer = new GlueRequestValidationTransfer();
+        $accessTokenData = $this->accessTokenExtractor->extract($glueRequestTransfer);
+        $ciamTokenData = $this->ciamProviderService->parseCiamToken($accessTokenData);
 
-        if ($ciamToken !== null) {
-            return null;
-        }
+       if ($ciamTokenData === null) {
+                return $glueRequestValidationTransfer
+                    ->setIsValid(false)
+                    ->setStatus(Response::HTTP_FORBIDDEN)
+                    ->addError(
+                        (new GlueErrorTransfer())
+                            ->setStatus(Response::HTTP_FORBIDDEN)
+                            ->setCode(OauthApiConfig::RESPONSE_CODE_FORBIDDEN)
+                            ->setMessage(OauthApiConfig::RESPONSE_DETAIL_MISSING_ACCESS_TOKEN),
+                    );
+            }
 
         return parent::validate($request);
     }
@@ -311,10 +326,10 @@ The following example extends `AccessTokenValidator` to validate the authorizati
 
 ### 2. Create a CIAM provider Rest API Module
 
-To finalize your CIAM provider implementation and include it in the existing GLUE authorization process, you need to implement `RestUserFinderPluginInterface` and `RestRequestValidatorPluginInterface`. 
+To finalize your CIAM provider implementation and include it in the existing GLUE authorization process, you need to implement `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestBuilderPluginInterface` together with `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestValidatorPluginInterface`.
 Their implementations must persist in the `CiamProviderRestApi` module following the implementation example.
-
-The logic within the `RestUserFinderPluginInterface` implementation must combine the usage of the previously implemented steps.
+You can also extend `GlueRequestCustomerTransfer` with Ciam Provider attributes that you would like to use, e.g., Token, TokenId.
+The logic within the `CiamTokenUserRequestBuilderInterface` implementation must combine the usage of the previously implemented steps.
 It triggers the CIAM token parser, the CIAM token decoder, and the Customer creator.
 
 The folder structure is similar to the following: 
@@ -324,12 +339,12 @@ The folder structure is similar to the following:
   + CiamProviderRestApi/
     + Plugin/
         + GlueApplication/
-          + CiamProviderTokenRestRequestValidatorPluginInterface.php // Triggers CiamTokenValidator 
-          + CiamProviderRestUserFinderPluginInterface.php // Triggers CiamTokenUserFinder
+          + CiamProviderRequestValidatorPlugin.php // Triggers CiamTokenValidator 
+          + CiamTokenUserRequestBuilderPlugin.php // Triggers CiamTokenUserRequestBuilder
     + Processor/
-        + Finder/
-          + CiamTokenUserFinder.php // Parses and decodes the token; then, it maps the token's attributes to the customer transfer and triggers the create customer functionality 
-          + CiamTokenUserFinderInterface.php
+        + RequestBuilder/
+          + CiamTokenUserRequestBuilder.php // Parses and decodes the token; then, it maps the token's attributes to the customer transfer and triggers the create customer functionality 
+          + CiamTokenUserRequestBuilderInterface.php
         + Mapper/
           + CustomerMapper.php // Maps customer attributes from CiamProviderToken Transfer to Customer Transfer to be used in the customer creator
           + CustomerMapperInterface.php
@@ -339,13 +354,13 @@ The folder structure is similar to the following:
   ...
 ```
 
-The following code is an example of `CiamTokenUserFinder` using the previously added implementation:
+The following code is an example of `CiamTokenUserRequestBuilder` using the previously added implementation:
 
 ```php
- public function findUser(RestRequestInterface $restRequest): ?RestUserTransfer
+public function buildRequest(GlueRequestTransfer $glueRequestTransfer): GlueRequestTransfer
     {
-        $authorizationToken = $restRequest->getHttpRequest()->headers->get(CiamProviderRestApiConfig::HEADER_AUTHORIZATION);
-        $ciamToken = $this->ciamProviderService->parseCiamToken($authorizationToken);
+        $accessTokenData = $this->accessTokenExtractor->extract($glueRequestTransfer);
+        $ciamToken = $this->ciamProviderService->parseCiamToken($accessTokenData);
 
         if (!$ciamToken) {
             return null;
@@ -371,32 +386,35 @@ The following code is an example of `CiamTokenUserFinder` using the previously a
         if (!$customerResponseTransfer->getIsSuccess()) {
             return null;
         }
-
-        return (new RestUserTransfer())
-            ->fromArray($customerResponseTransfer->getCustomerTransfer()->toArray(), true);
+        
+        $glueRequestCustomerTransfer = (new GlueRequestCustomerTransfer())
+            ->setNaturalIdentifier($customerResponseTransfer->getCustomerTransfer()->getCustomerReference())
+            ->setCiampProviderToken($ciamToken);
+            
+        return $glueRequestTransfer->setRequestCustomer($glueRequestCustomerTransfer);
     }
 ```
 
-Your plugin implementations are ready. Inject them into `Glue/GlueApplication/GlueApplicationDependencyProvider.php`. This requires you to extend it.
+Your plugin implementations are ready. Inject them into `\Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider`. This requires you to extend it.
 
 Example:
 
 ```php
-    protected function getRestUserFinderPlugins(): array
+    protected function getRequestBuilderPlugins(): array
     {
         return [
             ...
-            new CiamProviderRestUserFinderByTokenPlugin(),
+            new CiamTokenUserRequestBuilderPlugin(),
         ];
     }
 ```
 
 ```php
-    protected function getRestRequestValidatorPlugins(): array
+    protected function getRequestValidatorPlugins(): array
     {
         return [
             ...
-            new CiamProviderTokenRestRequestValidatorPlugin(),
+            new CiamProviderRequestValidatorPlugin(),
         ];
     }
 ```

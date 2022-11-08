@@ -1,17 +1,17 @@
 ---
 title: Glue API - Glue JSON:API Convention integration
-description: Integrate the Glue JSON API convention for Storefront API application into a Spryker project.
+description: Integrate the Glue JSON:API convention for Storefront API application into a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-json-api-convention-integration.html
 ---
 
-This document describes how to integrate the Glue JSON API convention for Storefront API application into a Spryker project.
+This document describes how to integrate the Glue JSON:API convention for Storefront API application into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Glue JSON API convention core.
+Follow the steps below to install the Glue JSON:API convention core.
 
 ### Prerequisites
 

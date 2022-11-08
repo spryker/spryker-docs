@@ -9,7 +9,7 @@ This document explains how to add support for number formatting in the Storefron
 
 ## Prerequisites
 
-To add support fornumber formatting in the Storefront, integrate the required features:
+To add support for number formatting in the Storefront, integrate the required features:
 
 | NAME                                   | VERSION          | INTEGRATION GUIDE                                                                                                                                              |
 |----------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,8 +34,6 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
----
-
 ## 2) Set up transfer objects
 
 Generate transfers:
@@ -56,8 +54,6 @@ Ensure the following transfers have been created:
 | NumberFormatFloatRequest  | class | created | src/Generated/Shared/Transfer/NumberFormatFloatRequestTransfer |
 
 {% endinfo_block %}
-
----
 
 ## 3) Set up behavior
 

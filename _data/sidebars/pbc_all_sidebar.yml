@@ -414,9 +414,6 @@ entries:
                 url: /docs/pbc/all/identity-access-manager/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html
           - title: Configure basic .htaccess authentication
             url: /docs/pbc/all/identity-access-manager/configure-basic-htaccess-authentication.html
-
-
-
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:

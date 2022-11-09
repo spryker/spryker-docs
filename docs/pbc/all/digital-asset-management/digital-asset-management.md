@@ -17,11 +17,16 @@ redirect_from:
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
 ---
 
-The *Digital Asset Management* capability lets you upload and manage your assets effectively.
+The *Digital Asset Management* capability lets you upload and manage your assets effectively. You can:
+* Bulk upload/remove files
+* Add/delete files via the Back Office user interface
+* Maintain multiple versions of individual files
+* Drag and drop to create and update your assets’ file structure
+* Manage files from a list view 
 
-A Back Office user can upload files and add them to CMS pages and blocks to display on the Storefront.
+A Back Office user can upload files then add them to CMS pages and blocks to display on the Storefront.
 
-Apart from images, you can add a variety of different types of assets to your project, including but not limited to:
+Apart from images, you can add many different types of assets to your project, including but not limited to:
 * Presentations
 * PDF documents
 * Graphics
@@ -31,40 +36,40 @@ Digital assets let content managers create rich, compelling, and attractive cont
 
 ## File tree
 
-The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders under **File Directories Tree** in a hierarchical system and manage the folders by dragging and dropping them in the file tree.
+The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders under **File Directories Tree** and organize them into a hierarchical system by dragging and dropping them in the file tree.
 
 The changes take effect after **Save** is selected.
 ![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
 
-Every folder within File Directories Tree can be deleted by selecting **Delete Directory**. If the folder that is being deleted contains files in it, the files are automatically moved to the parent directory. Parent directory File Directories Tree cannot be deleted.
+The Back Office user can delete any folder within File Directories Tree by selecting **Delete Directory**. (If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in File Directories Tree cannot be deleted.)
 
 ## File List
 
-File List submenu represents a table listing all the files uploaded to the Back Office:
+File List displays all the files uploaded to the Back Office in a table view. The Back Office user can view, edit, and delete files here.
 ![File list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-list.png)
 
 
 ## Versions
 
-**File Uploader** feature lets a Back Office user have several versions for every file.
+**File Uploader** lets you store multiple versions of any file.
 
-For example, at first, you upload `Instruction1.txt` file (`v.1`), then you update and reupload it to the Back Office as `v.2`.
-After that, you decide that the image instruction is more useful in this case and upload `Instruction.png` (`v.3`) to the file.
+For example: A Back Office user uploads Instruction1.txt file (v.1). The user then updates and reuploads the .txt file (v.2). Next, the user decides that the image instruction is more useful and upload Instruction.png (v.3).
 
-Thus, you have three versions of a file available: two text instructions and one image instruction.
+There are now three versions of the file available: two versions of the text instructions and one instruction image.
 ![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png)
 
-By default, the latest version of all available is shown to the buyer in the shop application.
+By default, the latest version of the file is displayed to the buyer in the shop application.
 
 ## MIME Type Settings
 
-The **MIME Type Settings** submenu lets a Back Office user define the file types that can be uploaded to the Back Office based on their nature and format.
+**MIME Type Settings** let you define the file types that can be uploaded to the Back Office.
 
-[MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type helps browsers decide how to process a document. For example, if the MIME type is set as `text/html`, then a client opens the document in Notepad, if the MIME type is set as `image/jpeg`, then the client opens it with the image viewer program.
+
+[MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type indicates how  a web browser will process a file. For example, if the MIME type is set as 'text/html', the document will open in Notepad. If the MIME type is set as 'image/jpeg', the document will open with an image viewer program.
 
 ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/mime-type-settings.png)
 
-Only files with the MIME types ticked in the **Is Allowed** column are allowed for uploading to the Administration Interface.
+The Back Office user can only upload files with a MIME type that is selected in the **Is Allowed** column.
 
 Most popular file types that a shop owner can allow uploading to the Back Office are:
 

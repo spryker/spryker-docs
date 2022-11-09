@@ -51,13 +51,6 @@ This document describes how to configure services shipped by default.
 git clone https://github.com/spryker/docker-sdk.git ./docker
 ```
 
-
-1. After updating a service's configuration, bootstrap it:
-
-```bash
-docker/sdk boot {DEPLOY_FILE_NAME}
-```
-
 ## Service versions
 
 When configuring a service, you need to define its version. The Docker SDK supports the following service versions:
@@ -100,7 +93,7 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 
 [MariaDB](https://mariadb.org/) is provided as a service by default. MariaDB is about 40% faster on write operations when compared, for example, to PostgreSQL.
 
-Anyway, you can switch to MySQL or PostgreSQL, as described in the following sections.
+You can switch to MySQL or PostgreSQL as described in the following sections.
 
 ### MariaDB
 
@@ -148,7 +141,7 @@ For more details, see [MySQL documentation](https://dev.mysql.com/doc/).
 
 #### Configure MySQL
 
-To switch the database engine to MySQL, follow these steps: 
+To switch the database engine to MySQL, follow these steps:
 
 1. In the `services:` section, adjust `deploy.*.yaml`:
 
@@ -176,7 +169,7 @@ docker/sdk up --build --data
 
 [PostgreSQL](https://www.postgresql.org/) is an open-source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
 
-For more details., see [PostgreSQL documentation](https://www.postgresql.org/docs/).
+For more details, see [PostgreSQL documentation](https://www.postgresql.org/docs/).
 
 #### Configure PostgreSQL
 
@@ -360,7 +353,7 @@ With the MailHog service, developers can do the following:
 By default, the following applies:
 
 * `http://mail.demo-spryker.com/` is used to see incoming emails.
-* A login is not required.
+* Login is not required.
 
 {% endinfo_block %}
 
@@ -463,7 +456,7 @@ The solution consists of a client and a server. The client is used to collect da
 
 ### Prerequisites
 
-* Access to New Relic with an APM [account](#configure-new-relic-paas).
+* Access to New Relic with an [APM account](#configure-new-relic-paas).
 * A New Relic license key.
 * The New Relic module.
 

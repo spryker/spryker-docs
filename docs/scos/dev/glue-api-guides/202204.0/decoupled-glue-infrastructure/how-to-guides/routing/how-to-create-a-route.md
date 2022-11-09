@@ -129,6 +129,12 @@ curl --location --request GET 'https://glue-backend.mysprykershop.com/module/bar
 --header 'Accept: application/json'
 ```
 
+{% info_block infoBox %}
+
+In Development mode you do not need to refresh a cache.
+
+{% endinfo_block %}
+
 5. Add a `POST` method to the same route:
 
    1. Add a method to a controller: `\Pyz\Glue\ModuleRestApi\Controller\ModuleBarController`
@@ -171,3 +177,23 @@ curl --location --request GET 'https://glue-backend.mysprykershop.com/module/bar
        "name": "bar"
    }'
    ```
+
+6. Debug existing routes.
+
+There is a special command to debug all existing routes
+
+`glue route:bebug <applicationType> <options>`
+
+Check the example below how to debug Backend routes.
+
+```shell
+$ docker/sdk/cli
+╭─/data | Store: DE | Env: docker.dev | Debug: (.) | Testing: (.)
+╰─$ glue route:debug Backend -c
+Code bucket: DE | Store: DE | Environment: docker.dev
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+  Name                Method   Scheme   Host   Path     Controller                                                                      Is Protected  
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+  tokenResourcePost   POST     ANY      ANY    /token   Spryker\Glue\OauthBackendApi\Controller\TokenResourceController::postAction()   No            
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------------- -------------- 
+```

@@ -1,10 +1,10 @@
 ---
 title: "HowTo: Integrate a CIAM provider"
 description: Learn how to integrate CIAM into a Spryker project
-last_updated: Oct 21, 2022
+last_updated: Nov 9, 2022
 template: howto-guide-template
 ---
-
+ 
 This document describes how to integrate a third-party _customer identity and access management (CIAM)_ provider into a Spryker project.
 
 The following steps help you integrate between a Spryker project and CIAM leveraging standard APIs that the CIAM provider exposes, which can be used in the context of a customer whose data is to be read or updated.
@@ -15,9 +15,9 @@ Depending on your requirements, the integration can either extend the existing a
 
 We recommend using JWT-based tokens to transfer required customer data between CIAM and Spryker for more details about JWT, see [JSON Web Tokens](https://auth0.com/docs/secure/tokens/json-web-tokens). 
 
-There is a ready PHP-based library which provides JWT decoding such as [firebase/php-jwt](https://packagist.org/packages/firebase/php-jwt).
+There is a ready PHP-based library that provides JWT decoding such as [firebase/php-jwt](https://packagist.org/packages/firebase/php-jwt).
 
-### Install the required modules using Composer
+## Install the required modules using Composer
 
 Install the required modules:
 
@@ -35,11 +35,11 @@ For detailed information about the modules related to OAuth and GLUE Authenticat
 
 ## Module dependency graph
 
-The following diagram illustrates the dependencies between the core modules and the CIAM provider module
+The following diagram illustrates the dependencies between the core modules and the CIAM provider module.
 
-![Module Dependency Graph](/docs/scos/dev/drafts-dev/ciam-integration-module-dependency-graph.png)
+![Module Dependency Graph](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/howto-integrate-a-ciam-provider/ciam-integration-module-dependency-graph.png)
 
-## 1. Create the CIAM provider Module
+## 1. Create the CIAM provider module
 
 Create a separate CIAM provider Client layer with the following structure: 
 
@@ -129,7 +129,7 @@ class CiamTokenDecoder implements CiamTokenDecoderInterface
 
 In relation to the CIAM provider module, you need to add a service as well to extract and parse the token from the authorization header. 
 
-The logic falls under the `Pyz/Service/<CIAM Provider>`:
+The logic falls under `Pyz/Service/<CIAM Provider>`:
 ```php
 <?php
 interface CiamProviderServiceInterface
@@ -227,7 +227,7 @@ class CiamTokenParser implements CiamtokenParserInterface
 
 Depending on the attributes that you plan to use from the CIAM provider in the customer creation, you need to extend the customer module accordingly.
 
-The following are the Customer Zed layer's touchpoints required to be extended or created. In a standard integration, more changes might be required depending on the implementation:
+The following are the Customer `Zed` layer's touchpoints required to be extended or created. In a standard integration, more changes might be required depending on the implementation:
 
 ```
 + Zed/
@@ -248,7 +248,7 @@ The following are the Customer Zed layer's touchpoints required to be extended o
   ...
 ```
 
-The extended functionality here must not be complex and must not include any extra logic apart from validation of the required attributes and creating the customer entity. 
+The extended functionality here must not be complex and must not include any extra logic apart from validation of the required attributes and the customer entity creation. 
 
 The following is an example of the create customer functionality in `CustomerCreator.php`:
 
@@ -275,7 +275,7 @@ The following is an example of the create customer functionality in `CustomerCre
 
 {% info_block infoBox %}
 
-After extending the Customer Zed layer, you need to extend the Customer Client layer as well to access the Zed layer accordingly.
+After extending the Customer `Zed` layer, you need to extend the Customer `Client` layer as well to access the `Zed` layer accordingly.
 
 {% endinfo_block %}
 
@@ -296,7 +296,7 @@ In the `OauthApi` module, extend the access token validation step with your CIAM
   ...
 ```
 
-You need to adjust `OauthApiFactory` and `OauthApiDependencyProvider` to include the CIAM provider service. 
+Adjust `OauthApiFactory` and `OauthApiDependencyProvider` to include the CIAM provider service. 
 In the implementation example, it is `Pyz\Service\CiamProvider\CiamProviderServiceInterface`.
 
 The following example extends `AccessTokenValidator` to validate the authorization header using the CIAM provider parser:
@@ -328,7 +328,7 @@ The following example extends `AccessTokenValidator` to validate the authorizati
 
 To finalize your CIAM provider implementation and include it in the existing GLUE authorization process, you need to implement `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestBuilderPluginInterface` together with `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestValidatorPluginInterface`.
 Their implementations must persist in the `CiamProviderRestApi` module following the implementation example.
-You can also extend `GlueRequestCustomerTransfer` with Ciam Provider attributes that you would like to use, e.g., Token, TokenId.
+You can also extend `GlueRequestCustomerTransfer` with Ciam Provider's attributes that you want to use—for example, Token, TokenId.
 The logic within the `CiamTokenUserRequestBuilderInterface` implementation must combine the usage of the previously implemented steps.
 It triggers the CIAM token parser, the CIAM token decoder, and the Customer creator.
 

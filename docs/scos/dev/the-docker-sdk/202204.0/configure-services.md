@@ -118,7 +118,7 @@ MariaDB is provided as a service by default. You may only need to use this confi
 
 To switch the database service to MariaDB, follow these steps:
 
-1. In the `services:` section, adjust `deploy.*.yml`:
+1. In `deploy.*.yml`, adjust the `services` section:
 
 ```yaml
 ...
@@ -150,7 +150,7 @@ For more details, see [MySQL documentation](https://dev.mysql.com/doc/).
 
 To switch the database engine to MySQL, follow these steps: 
 
-1. In the `services:` section, adjust `deploy.*.yaml`:
+1. In `deploy.*.yaml`, adjust the `services` section:
 
 ```yaml
 ...
@@ -182,7 +182,7 @@ For more details., see [PostgreSQL documentation](https://www.postgresql.org/doc
 
 To switch the database engine to PostgreSQL, follow these steps:
 
-1. In the `services:` section, adjust `deploy.*.yml`:
+1. In `deploy.*.yml`, adjust the `services` section:
 
 ```yaml
 ...
@@ -214,7 +214,7 @@ For more information, see the following documents:
 
 ### Configure ElasticSearch
 
-In the `services:` section, adjust `deploy.*.yml` to open the port used for accessing ElasticSearch:
+In `deploy.*.yml`, adjust the `services` section to open the port used for accessing ElasticSearch:
 ```yaml
 services:
     search:
@@ -236,7 +236,7 @@ In Docker SDK, Kibana UI is provided as a service by default.
 
 To configure an endpoint for Kibana UI, follow these steps:
 
-1. In the `services:` section, adjust `deploy.*.yml`:
+1. In `deploy.*.yml`, adjust the `services` section:
 
 ```yaml
 services:
@@ -259,7 +259,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 ### Configure RabbitMQ
 
-In the `services:` section, adjust `deploy.*.yml`  to open the port used for accessing RabbitMQ:
+In `deploy.*.yml`, adjust the `services` section to open the port used for accessing RabbitMQ:
 ```yaml
 services:
     broker:
@@ -287,7 +287,7 @@ Spryker provides the basic functionality to generate [OpenApi schema specificati
 
 To configure an endpoint for Swagger UI, follow these steps:
 
-1. In the `services:` section, adjust `deploy.*.yml`:
+1. In `deploy.*.yml`, adjust the `services` section:
 
 ```yaml
 services:
@@ -312,7 +312,7 @@ For more information, see [Redis documentation](https://redis.io/documentation).
 
 ### Configure Redis
 
-In the `services:` section, adjust `deploy.*.yml`  to open the port used for accessing Redis:
+In `deploy.*.yml`, adjust the `services` section to open the port used for accessing Redis:
 
 ```yaml
 services:
@@ -330,7 +330,7 @@ services:
 
 To configure an endpoint for Redis Commander, follow the steps:
 
-1. In the `services:` section, adjust `deploy.*.yml`:
+1. In `deploy.*.yml`, adjust the `services` section:
 
 ```yaml
 services:
@@ -366,7 +366,7 @@ By default, the following applies:
 
 ### Configure MailHog
 
-In the `services:` section, adjust `deploy.*.yml`  to specify a custom endpoint:
+In `deploy.*.yml`, adjust the `services` section to specify a custom endpoint:
 
 ```yaml
 services:
@@ -385,18 +385,18 @@ services:
 
 To enable Blackfire, follow these steps:
 
-1. In the `image:` section, adjust `deploy.*.yml` to enable the Blackfire PHP extension:
+1. In the `image` section, adjust `deploy.*.yml` to enable the Blackfire PHP extension:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # Use the same tag you had in `image:`
+    tag: spryker/php:7.4 # Use the same tag you had in `image`
     php:
         ...
         enabled-extensions:
             - blackfire
 ```
 
-2. In the `services:` section, adjust `deploy.*.yml` to configure the Blackfire client:
+1. In `deploy.*.yml`, adjust the `services` section to configure the Blackfire client:
 
 ```yaml
 services:
@@ -415,18 +415,18 @@ Use the following configuration if you are going to change server or client deta
 
 To enable Blackfire, follow these steps:
 
-1. In the `image:` section, adjust `deploy.*.yml` to enable the Blackfire PHP extension:
+1. In the `image` section, adjust `deploy.*.yml` to enable the Blackfire PHP extension:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # Use the same tag you had in `image:`
+    tag: spryker/php:7.4 # Use the same tag you had in `image`
     php:
         ...
         enabled-extensions:
             - blackfire
 ```
 
-2. In the `services:` section, adjust `deploy.*.yml` to enable the Blackfire service:
+2. In the `services` section, adjust `deploy.*.yml` to enable the Blackfire service:
 
 ```yaml
 services:
@@ -479,11 +479,11 @@ composer require spryker-eco/new-relic
 
 ### Configure New Relic (PaaS)
 
-To enable New Relic for your PaaS environment, in the `image:` section, adjust `deploy.*.yml`:
+To enable New Relic for your PaaS environment, in the `image` section, adjust `deploy.*.yml`:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # the image tag that has been previously used in `image:`
+    tag: spryker/php:7.4 # the image tag that has been previously used in `image`
     php:
         ...
         enabled-extensions:
@@ -503,7 +503,7 @@ To enable New Relic on your local environment, a license key is required. For he
 
 To enable New Relic for your local environment, follow these steps:
 
-1. In the `docker:` section, adjust `deploy.*.yml`:
+1. In `deploy.*.yml`, adjust the `docker` section:
 
 ```yaml
 docker:
@@ -513,11 +513,11 @@ docker:
             enabled: true
 ```
 
-2. In the `image:` section, adjust `deploy.*.yml`:
+1. In the `deploy.*.yml`, adjust the `image` section:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # the image tag that has been previously used in `image:`
+    tag: spryker/php:7.4 # the image tag that has been previously used in `image`
     php:
         ...
         enabled-extensions:
@@ -614,7 +614,7 @@ Dashboard is a tool that helps to monitor logs in real time. You can monitor log
 
 ### Configure dashboard
 
-To configure Dashboard, in the `services:` section, adjust `deploy.*.yml`:
+To configure Dashboard, in the `services` section, adjust `deploy.*.yml`:
 
 ```yaml
 services:
@@ -632,7 +632,7 @@ services:
 
 To configure Tideways, do the following:
 
-1. In the `services:` section, adjust `deploy.*.yml`:
+1. In `deploy.*.yml`, adjust the `services` section:
 
 ```yaml
 services:
@@ -643,11 +643,11 @@ services:
         cli-enabled: {true|false}
 ```
 
-2. In the `image:` section of `deploy.*.yml`, add Tideways to the list of enabled extensions:
+2. In the `image` section of `deploy.*.yml`, add Tideways to the list of enabled extensions:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # the image tag was previously used in `image:`
+    tag: spryker/php:7.4 # the image tag was previously used in `image`
     php:
         ...
         enabled-extensions:

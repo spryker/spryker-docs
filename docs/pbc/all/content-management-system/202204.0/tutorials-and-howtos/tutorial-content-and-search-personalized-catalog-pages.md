@@ -457,8 +457,6 @@ To see how personalized products are displayed for different customers, do the f
 3. To change your session ID, remove the Spryker cookie.
 4. Refresh the page. You should see different products.
 
-{% endinfo_block %}
-
 ## 3. Put the personalized products in the CMS page
 
 This section describes how to add personalized products to the CMS page you've created before, so they get the same look and feel of the whole shop with extra content around them.

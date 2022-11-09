@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/content-item-types-module-relations
   - /docs/content-item-types-module-relations
   - /docs/en/content-item-types-module-relations
-  - /docs/scos/dev/feature-walkthroughs/202204.0/content-items-feature-walkthrough/content-item-types-module-relations.html
+  - /docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html
 related:
   - title: Creating Content Items
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/creating-content-items.html
@@ -20,7 +20,7 @@ This document describes each content item type and the modules relations used fo
 
 ## Banner
 
-The Banner content item is a content piece that consists of text, a background image, and a link. A content manager specifies the values when [creating the content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-banner-content-item) in the Back Office > **Content Management** > **Content Items**.
+The Banner content item is a content piece that consists of text, a background image, and a link. A content manager specifies the values when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-banner-content-items.html) in the Back Office > **Content Management** > **Content Items**.
 
 The schema shows the module relations of the Banner content item:
 
@@ -46,7 +46,7 @@ See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{pa
 
 ## Abstract Product List
 
-The Abstract product list content item is a content piece that consists of text and [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html). A content manager selects existing abstract products when [creating the content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-an-abstract-product-list-content-item) in the Back Office > **Content Management** > **Content Items**.
+The Abstract product list content item is a content piece that consists of text and [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html). A content manager selects existing abstract products when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) in the Back Office > **Content Management** > **Content Items**.
 
 The schema below shows the module relations of the Abstract product list content item and its components:
 
@@ -69,7 +69,7 @@ A developer can fetch the information on each abstract product included into a c
 
 ## Product Set
 
-The Product set content item is a content piece that consists of text and a [product set](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html). A content manager selects an existing product set when [creating the content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-product-set-content-item) in the Back Office > **Content Management** > **Content Items**.
+The Product set content item is a content piece that consists of text and a [product set](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html). A content manager selects an existing product set when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-product-set-content-items.html#create-a-product-set-content-item) in the Back Office > **Content Management** > **Content Items**.
 
 The schema below shows the module relations of the Product set content item and its importer:
 ![Product Set content item module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/product-set-module-relations.png)
@@ -84,14 +84,14 @@ See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{pa
 
 ## File list
 
-The File list content item is a content piece that consists of text and a clickable link or icon to download a file. A content manager selects existing files when [creating the content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-file-list-content-item) in the Back Office > **Content Management** > **Content Items**.
+The File list content item is a content piece that consists of text and a clickable link or icon to download a file. A content manager selects existing files when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-file-list-content-items.html) in the Back Office > **Content Management** > **Content Items**.
 
 The schema below shows the module relations of the File list content item:
 ![File List module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/file-list-module-relations.png)
 
 ## Navigation
 
-The Navigation content item is a content piece that consists of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/domain-model-and-relationships/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office.
+The Navigation content item is a content piece that consists of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/domain-model-and-relationships/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-navigation-content-items.html) in the Back Office.
 
 The schema shows the module relations of the Navigation content item:
 

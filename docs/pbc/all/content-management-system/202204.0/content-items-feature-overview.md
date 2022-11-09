@@ -34,7 +34,7 @@ For use cases and examples of each of the content items, see [Content Item Widge
 
 {% endinfo_block %}
 
-A content manager can [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
+A content manager can [create content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-banner-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 A developer can do the following:
 * [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
 * [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-using-glue-api/retrieve-banner-content-items.html)
@@ -73,7 +73,7 @@ The schema shows how the Content items feature affects content management in Spr
 
 ![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom)
 
-To learn more about working with content item widgets in the WYSIWYG editor, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+To learn more about working with content item widgets in the WYSIWYG editor, see [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
 
 ### Content Item Widget Template
 
@@ -134,9 +134,9 @@ Structure:
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html)  |
-|  [Edit content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html)  |
-|  [Add content items to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html)  |
+|  [Create content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-banner-content-items.html)  |
+|  [Edit content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/edit-content-items.html)  |
+|  [Add content items to CMS pages and blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html)  |
 |  [Edit content items in CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items-in-cms-pages-and-blocks.html)   |
 
 ## Related Developer articles

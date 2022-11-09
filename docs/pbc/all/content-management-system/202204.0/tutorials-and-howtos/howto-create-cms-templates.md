@@ -113,7 +113,7 @@ Create the Twig template—`src/Pyz/Shared/CmsBlock/Theme/default/template//hell
 </div>
 ```
 
-A content manager can apply this template when [creating a CMS block](/docs/scos/user/back-office-user-guides/{{site.version}}/content/blocks/creating-cms-blocks.html) in the Back Office.
+A content manager can apply this template when [creating a CMS block](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/create-cms-blocks.html) in the Back Office.
 
 ## Content item widget template
 

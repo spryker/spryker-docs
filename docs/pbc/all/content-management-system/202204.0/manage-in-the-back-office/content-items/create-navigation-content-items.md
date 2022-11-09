@@ -46,5 +46,5 @@ To clear navigation selection on a tab, click **Clear locale**.
 
 ## Next steps
 
-* [Add content items to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
-* [Edit content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html).
+* [Add content items to CMS pages and blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
+* [Edit content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/edit-content-items.html).

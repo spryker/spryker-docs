@@ -138,4 +138,4 @@ On the *Overview of Content Items* page, you can:
 **What's next?**
 <br>When content item is updated, you can add it via content item widgets to a block or a page if needed.
 
-* To learn more about adding content item widgets to a block or page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+* To learn more about adding content item widgets to a block or page, see [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).

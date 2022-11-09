@@ -44,7 +44,7 @@ Create the following content items:
 * Abstract product list of top sellers—*Best Selling Products*
 * Abstract product list of featured products—*Featured Products*
 
-See [Creating content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) for more details.
+See [Creating content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-banner-content-items.html) for more details.
 
 If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html) for more details.
 
@@ -60,7 +60,7 @@ Follow the steps to create the CMS blocks with the needed content:
     * Writing materials reference - *Category Banner-2*
     * Sticky notes reference - *Category Banner-3*
 
-See [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html) for more details.
+See [Create CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/create-cms-blocks.html) for more details.
 
 {% info_block warningBox "Activation" %}
 

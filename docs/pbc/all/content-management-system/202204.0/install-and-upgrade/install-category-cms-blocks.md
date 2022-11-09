@@ -184,6 +184,6 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-Now you can create category CMS blocks and add them to category pages. For instructions, see [Create category CMS blocks](/docs/scos/user/back-office-user-guides/{{site.version}}/content/blocks/create-category-cms-blocks.html).
+Now you can create category CMS blocks and add them to category pages. For instructions, see [Create category CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/create-category-cms-blocks.html).
 
 Also, you can [define custom positions for category blocks](/docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html).

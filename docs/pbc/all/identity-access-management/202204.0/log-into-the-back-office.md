@@ -68,7 +68,7 @@ You are taken to the Back Office home page as a logged-in user. User with the em
 
 {% info_block warningBox %}
 
-Depending on the [third-party login strategy](/docs/pbc/all/identity-access-manager/{{page.version}}/identity-access-manager.html#back-office-authentication) configured in your project, you might not be allowed to log in with a third-party account unless a user with an email that matches the existing third-party user email has not been [preliminary created](#prerequisites) and [activated](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/activating-and-deactivating-users.html).
+Depending on the [third-party login strategy](/docs/pbc/all/identity-access-management/{{page.version}}/identity-access-management.html#back-office-authentication) configured in your project, you might not be allowed to log in with a third-party account unless a user with an email that matches the existing third-party user email has not been [preliminary created](#prerequisites) and [activated](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/activating-and-deactivating-users.html).
 
 {% endinfo_block %}
 

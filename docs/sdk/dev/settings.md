@@ -4,17 +4,17 @@ description: There are three types of settings in the Spryker SDK - shared, loca
 template: howto-guide-template
 ---
 
-The Spryker SDK has three types of settings: shared, local(private), and SDK.
+The Spryker SDK has three types of settings: shared, local (private), and SDK.
 
 ## Shared setting
 
-Shared setting is a project setting.
+The shared setting is a project setting.
 Shared settings are generated at the project *init* step and placed in the `.ssdk/setting` file in the target project.
-This type of settings is shared across the team, these settings are not in `.gitignore`.
+As this type of settings is shared across the team, these settings are not in `.gitignore`.
 
 ## Local (private) setting
 
-Local setting is a project setting.
+The local setting is a project setting.
 Local settings are generated at the project *init* step and placed in the `.ssdk/setting.local` file in the target project.
 Local setting contains only private settings and should not be shared.
 
@@ -24,7 +24,6 @@ This is the SDK setting. SDK settings are generated at the SDK *init* step and e
 
 ## Setting inheritance
 
-There are the following setting inheritance rules:
+There are the following settings inheritance rules:
 
-- SDK setting can be overwritten by the Shared or Local setting. That is, `SDK -> Shared -> Local`.
-- Shared setting can be overwritten by the Local setting.
+- The SDK setting can be overwritten by the Shared or Local setting. That is, `SDK -> Shared -> Local`.

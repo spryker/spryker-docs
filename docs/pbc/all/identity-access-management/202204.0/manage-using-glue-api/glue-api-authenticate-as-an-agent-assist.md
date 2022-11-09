@@ -16,7 +16,7 @@ related:
   - title: Impersonate customers as an agent assist
     link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
-    link: docs/pbc/all/identity-access-manager/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
   - title: Search by customers as an agent assist
     link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
@@ -111,5 +111,5 @@ To view generic errors that originate from the Glue Application, see [Reference 
 ## Next steps
 
 After you’ve authenticated in as an agent assist, you can:
-* [Search by customers](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/search-by-customers-as-an-agent-assist.html#search-by-customers)
-* [Impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/impersonate-customers-as-an-agent-assist.html#impersonate-a-customer)
+* [Search by customers](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html#search-by-customers)
+* [Impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer)

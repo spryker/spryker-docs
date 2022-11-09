@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/tutorials/201903.0/howtos/feature-howtos/howto-import-merchants-and-merchant-relations.html
 ---
 
-When setting up a Spryker's Demo Shop, data content sample is imported while executing a sequence of data importers. The data importer is a PHP class which handles the data import. Each data importer uses a CSV file to load data that will then be imported into the Demo Shop database(s). The importing order of the CSV files is dependent on the order the data importers are executed.
+When setting up a Spryker's Demo Shop, a data content sample is imported while executing a sequence of data importers. A data importer is a PHP class that handles the data import. Each data importer uses a CSV file to load data that is then imported into the Demo Shop databases. The importing order of the CSV files depends on the order data importers are executed.
 
 {% info_block infoBox "Info" %}
 
@@ -20,9 +20,9 @@ The order of data importers is defined in the [YML configuration file](/docs/sco
 
 {% endinfo_block %}
 
-This operation has some dependencies, as data importers execution follows certain precedences. For example, you can not import Concrete products before importing the Abstract products, as Concrete products can not exists without Abstracts.
+This operation has some dependencies, as data the importer execution follows certain precedences. For example, you can not import concrete products before importing abstract products, because concrete products can not exist without abstract ones.
 
-The following list illustrates the order followed to run the data importers, and import the: Commerce shop configuration setup data, product catalog data, and other content.
+The following list illustrates the order followed to run the data importers, and import the commerce shop's configuration setup data, product catalog data, and other content.
 
 1. [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html) data import
 
@@ -39,7 +39,7 @@ The following list illustrates the order followed to run the data importers, and
   11. payment-method
   12. payment-method-store
 
-2. [Catalog Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/catalog-setup.html) data import - Catalog Setup category includes sub-categories: Categories, Products, Pricing, Stocks
+2. [Catalog setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/catalog-setup.html) data import: Catalog Setup category includes Categories, Products, Pricing, and Stocks subcategories.
 
   13. category-template
   14. category
@@ -54,7 +54,7 @@ The following list illustrates the order followed to run the data importers, and
   23. product-stock
 
 
-3. [Special Product Types Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/special-product-types-import-category.html) data import - Special Product Types category includes sub-categories: Product Options, Measurements, Product Bundles, Gift Cards
+3. [Special Product Types Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/special-product-types-import-category.html) data import—Special Product Types category includes subcategories: Product Options, Measurements, Product Bundles, Gift Cards
 
   24. product-option
   25. product-option-price
@@ -112,12 +112,12 @@ The following list illustrates the order followed to run the data importers, and
   67. cms-slot
   68. cms-slot-block
 
-**7. [Miscellaneous Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/miscellaneous/miscellaneous.html) import**
+7. [Miscellaneous Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/miscellaneous/miscellaneous.html) import
 
   1. comment
   2. mime-type
 
-**8. B2B data import**
+8. B2B data import
 
 *  **B2B Company**
 

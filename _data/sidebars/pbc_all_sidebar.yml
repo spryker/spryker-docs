@@ -442,7 +442,27 @@ entries:
                   - title: Add content items to CMS blocks
                     url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
                   - title: Edit placeholders in CMS blocks
-                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html                                                                                                                     
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
+              - title: Pages
+                nested:
+                  - title: Create CMS pages
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/create-cms-pages.html
+                  - title: Edit CMS pages
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/edit-cms-pages.html
+                  - title: Add content items to CMS pages
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
+                  - title: Manage CMS page versions
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-page-versions.html
+                  - title: Manage CMS pages
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-pages.html
+              - title: Manage slots
+                url: /docs/pbc/all/content-management-system/202204.0/manage-in-the-back-office/manage-slots.html
+              - title: Redirects
+                nested:
+                  - title: Create CMS redirects
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/redirects/create-cms-redirects.html
+                  - title: Manage CMS redirects
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/redirects/manage-cms-redirects.html                                                                                                                                                                       #
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Create a custom content item"

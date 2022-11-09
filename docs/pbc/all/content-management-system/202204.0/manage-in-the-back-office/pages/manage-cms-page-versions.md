@@ -1,5 +1,5 @@
 ---
-title: Managing CMS page versions
+title: Manage CMS page versions
 description: The guide provides instructions on how to view CMS page versions, roll back to a specific version or view SEO information in the Back Office.
 last_updated: Jun 18, 2021
 template: back-office-user-guide-template

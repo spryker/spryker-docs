@@ -1,13 +1,14 @@
 ---
-title: How to create a backend resource
-description: This guide shows how to create an API endpoint using a resource for the backend API application.
+title: How to create a storefront resource
+description: This guide shows how to create an API endpoint using a resource for the storefront API application.
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-backend-resource.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-a-resource.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-storefront-resource.html
 ---
 
-This guide shows how to create an API endpoint using a resource for the backend API application.
+This guide shows how to create an API endpoint using a resource for the storefront API application.
 
 Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module` with `GET` and `POST` methods. To create the endpoint, follow these steps:
 
@@ -85,9 +86,9 @@ use Generated\Shared\Transfer\GlueRequestTransfer;
 use Generated\Shared\Transfer\GlueResourceTransfer;
 use Generated\Shared\Transfer\GlueResponseTransfer;
 use Pyz\Glue\ModuleRestApi\ModuleRestApiConfig;
-use Spryker\Glue\Kernel\Backend\Controller\AbstractBackendApiController;
+use Spryker\Glue\Kernel\Controller\AbstractStorefrontApiController;
 
-class ModuleResourceController extends AbstractBackendApiController
+class ModuleResourceController extends AbstractStorefrontApiController
 {
     public function getAction(
       string $id, 
@@ -126,10 +127,56 @@ use Generated\Shared\Transfer\GlueResourceMethodConfigurationTransfer;
 use Generated\Shared\Transfer\ModuleRestAttributesTransfer;
 use Pyz\Glue\ModuleRestApi\Controller\ModuleResourceController;
 use Spryker\Glue\ModuleRestApi\ModuleRestApiConfig;
-use Spryker\Glue\GlueApplication\Plugin\GlueApplication\Backend\AbstractResourcePlugin;
+use Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface;
 
 class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
+{
+    public function getType(): string
+    {
+        return ModuleRestApiConfig::RESOURCE_MODULE;
+    }
+    
+    public function getController(): string
+    {
+        return ModuleResourceController::class;
+    }
+
+    public function getDeclaredMethods(): GlueResourceMethodCollectionTransfer
+    {
+        return (new GlueResourceMethodCollectionTransfer())
+            ->setGet(new GlueResourceMethodConfigurationTransfer())
+            ->setPost(
+                (new GlueResourceMethodConfigurationTransfer())
+                    ->setAction('postAction')->setAttributes(ModuleRestAttributesTransfer::class),
+            );
+    }
+}
+```
+
+{% info_block infoBox "JSON:API convention resource" %}
+
+To follow the JSON:API convention, the resource must implement `JsonApiResourceInterface`.
+
+{% endinfo_block %}
+
+
+**\Pyz\Glue\ModuleRestApi\Plugin\JsonConventionModuleResource**
+
+```php
+<?php
+
+namespace Pyz\Glue\ModuleRestApi\Plugin;
+
+use Generated\Shared\Transfer\GlueResourceMethodCollectionTransfer;
+use Generated\Shared\Transfer\GlueResourceMethodConfigurationTransfer;
+use Generated\Shared\Transfer\ModuleRestAttributesTransfer;
+use Pyz\Glue\ModuleRestApi\Controller\ModuleResourceController;
+use Spryker\Glue\ModuleRestApi\ModuleRestApiConfig;
+use Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin;
+use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceInterface;
+
+class ModuleResource extends AbstractResourcePlugin implements JsonApiResourceInterface
 {
     public function getType(): string
     {
@@ -162,12 +209,12 @@ See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{
 ```php
 <?php
 
-namespace Pyz\Glue\GlueBackendApiApplication;
+namespace Pyz\Glue\GlueStorefrontApiApplication;
 
 use Pyz\Glue\ModuleRestApi\Plugin\ModuleResource;
-use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
 
-class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
 {
     /**
      * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
@@ -187,4 +234,30 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 vendor/bin/glue glue-api:controller:cache:warm-up
 ```
 
-If everything is set up correctly, you can access `https://glue-backend.mysprykershop.com/module`.
+If everything is set up correctly, you can access `https://glue-storefront.mysprykershop.com/module`.
+
+{% info_block infoBox %}
+
+In Development mode you do not need to refresh a cache.
+
+{% endinfo_block %}
+
+7. Debug existing routes.
+
+There is a special command to debug all existing routes
+
+`glue route:bebug <applicationType> <options>`
+
+Check the example below how to debug Backend routes.
+
+```shell
+$ docker/sdk/cli
+╭─/data | Store: DE | Env: docker.dev | Debug: (.) | Testing: (.)
+╰─$ glue route:debug Storefront -c
+Code bucket: DE | Store: DE | Environment: docker.dev
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ -------------- 
+  Name                Method   Scheme   Host   Path     Controller                                                               Is Protected  
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ -------------- 
+  tokenResourcePost   POST     ANY      ANY    /token   Spryker\Glue\OauthApi\Controller\TokenResourceController::postAction()   No            
+ ------------------- -------- -------- ------ -------- ------------------------------------------------------------------------ -------------- 
+```

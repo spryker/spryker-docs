@@ -154,3 +154,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
+{% info_block infoBox %}
+
+If no convention defined - endpoints will work with default(no convention) behavior.
+In this case resource should implement `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface`
+Response will return in `application/json` format.
+
+{% endinfo_block %}

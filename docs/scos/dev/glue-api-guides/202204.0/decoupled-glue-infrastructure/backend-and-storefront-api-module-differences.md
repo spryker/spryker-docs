@@ -122,8 +122,8 @@ use Spryker\Glue\Kernel\Backend\AbstractPlugin;
 /**
  * @method \Pyz\Zed\CustomApiApplication\Business\CustomApiApplicationFacadeInterface getFacade()
  * @method \Pyz\Glue\CustomApiApplication\CustomApiApplicationFactory getFactory()
- * @method \Spryker\Zed\CustomApiApplication\Persistence\CustomApiApplicationRepositoryInterface getRepository()
- * @method \Spryker\Zed\CustomApiApplication\Persistence\CustomApiApplicationEntityManagerInterface getEntityManager()
+ * @method \Pyz\Zed\CustomApiApplication\Persistence\CustomApiApplicationRepositoryInterface getRepository()
+ * @method \Pyz\Zed\CustomApiApplication\Persistence\CustomApiApplicationEntityManagerInterface getEntityManager()
  */
 class CustomApiGlueContextExpanderPlugin extends AbstractPlugin implements GlueContextExpanderPluginInterface
 {

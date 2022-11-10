@@ -242,6 +242,12 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 
 ```
 
+{% info_block infoBox %}
+
+If the second parameter `array $apiApplications` for `$contextExpanderCollection->addExpander()` inside `DocumentationGeneratorApiDependencyProvider::getContextExpanderPlugins()` not passed - expander will apply for all existing applications.
+
+{% endinfo_block %}
+
 {% info_block warningBox “Verification” %}
 
 In order to make sure that `StorefrontApiApplicationProviderPlugin` and `BackendApiApplicationProviderPlugin` are setup correctly,

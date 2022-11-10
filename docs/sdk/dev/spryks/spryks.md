@@ -44,7 +44,7 @@ We support the following Spryk definition types:
 * **Structure definitions.** A structure definition lets you define a directory structure. For example, the `CreateSprykerModule` definition contains the description of the created directories. The main argument of a structure definition is directories, which enables you to add a list of directories to be created.
 * **Method definitions.** A method definition can add methods to a specified target, such as `Spryker\Zed\FooBar\Business\FooBarFacade`. This type of definition needs more arguments to do their job.
 
-## Installation
+## Install Spryk
 
 To install Spryk, do the following:
 

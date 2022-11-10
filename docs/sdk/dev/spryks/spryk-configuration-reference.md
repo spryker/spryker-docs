@@ -70,7 +70,7 @@ The Spryks that must be executed after the current Spryk.
 Excludes the execution of the Spryks that are placed in `preSpryks` and `postSpryks`. Useful when you reuse a Spryk and you don't need some of the Spryks defined in `preSpryks` or `postSpryks`.
 
 ### preCommands
-The commands that should be executed before the current Spryk.
+The commands that must be executed before the current Spryk.
 
 ### postCommands
 The commands that should be executed after the current Spryk.

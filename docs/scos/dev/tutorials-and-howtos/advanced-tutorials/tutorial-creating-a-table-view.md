@@ -44,25 +44,25 @@ Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/
 namespace Pyz\Zed\HelloWorld\Communication\Table;
 
 use Orm\Zed\Product\Persistence\Map\SpyProductTableMap;
-use Orm\Zed\Product\Persistence\SpyProductQueryContainerInterface;
+use Orm\Zed\Product\Persistence\SpyProductQuery;
 use Spryker\Zed\Gui\Communication\Table\AbstractTable;
 use Spryker\Zed\Gui\Communication\Table\TableConfiguration;
 
 class ProductTable extends AbstractTable
 {
     /**
-     * @var \Orm\Zed\Product\Persistence\SpyProductQueryContainerInterface
+     * @var \Orm\Zed\Product\Persistence\SpyProductQuery
      */
-    protected $spyProductQueryContainer;
+    protected $spyProductQuery;
 
     /**
      * ProductTable constructor.
      *
-     * @param \Orm\Zed\Product\Persistence\SpyProductQueryContainerInterface $spyProductQueryContainer
+     * @param \Orm\Zed\Product\Persistence\SpyProductQuery $spyProductQuery
      */
-    public function __construct(SpyProductQueryContainerInterface $spyProductQueryContainer)
+    public function __construct(SpyProductQuery $spyProductQuery)
     {
-        $this->spyProductQueryContainer = $spyProductQueryContainer;
+        $this->spyProductQuery = $spyProductQuery;
     }
 
     /**
@@ -87,7 +87,7 @@ class ProductTable extends AbstractTable
      */
     protected function prepareData(TableConfiguration $config): array
     {
-        $queryResult = $this->runQuery($this->spyProductQueryContainer->querySpyProduct(), $config);
+        $queryResult = $this->runQuery($this->spyProductQuery, $config);
 
         $results = [];
         foreach ($queryResult as $resultItem) {
@@ -122,13 +122,13 @@ class HelloWorldCommunicationFactory extends AbstractCommunicationFactory
      */
     public function createProductTable(): ProductTable
     {
-        return new ProductTable($this->createProductPropelQuery());
+        return new ProductTable($this->createProductQuery());
     }
 
     /**
      * @return \Orm\Zed\Product\Persistence\SpyProductQuery
      */
-    public function createProductPropelQuery(): SpyProductQuery
+    public function createProductQuery(): SpyProductQuery
     {
         return SpyProductQuery::create();
     }
@@ -210,7 +210,7 @@ Add the products variable to `Pyz/Zed/HelloWorld/Presentation/Index/index.twig` 
 Run the command:
 
 ```bash
-vendor/bin/console router:cache:warm-up
+vendor/bin/console router:cache:warm-up:backoffice
 ```
 
 This is all! To see the table you created, go to `https://zed.mysprykershop.com/hello-world`. You will be able to see the products listed in the table.

@@ -156,7 +156,7 @@ For more information on adding new Spryks, see [Adding a new Spryk](/docs/sdk/de
 
 To add a Spryk template, create the template in your project's `config/spryk/templates/` directory.
 
-The tool will find the Spryk template in this directory, and the template can be used in your Spryks.
+The tool finds the Spryk template in this directory, and the template can be used in your Spryks.
 
 ## Configuration
 

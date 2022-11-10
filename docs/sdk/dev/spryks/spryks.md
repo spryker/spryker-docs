@@ -140,7 +140,7 @@ vendor/bin/codecept run Integration -g {YOUR TEST GROUP}
 
 This shows a message that the definition was not found by the given name. You can then add the definition file for your new definition to `spryker/spryk/config/spryk/spryks`. After that, rerun the tests.
 
-What comes next depends on your chosen definition type. If you have selected the template definition, then you will most likely see an error indicating that the defined template cannot be found. In this case, add your template to `spryker/spryker/config/spryk/templates` and re-run the tests. They should now be green.
+What comes next depends on your chosen definition type. If you select the template definition, an error can be displayed, indicating that the defined template cannot be found. In this case, add your template to `spryker/spryker/config/spryk/templates` and rerun the tests. After doing this, they turn green.
 
 ## Extending Spryks
 

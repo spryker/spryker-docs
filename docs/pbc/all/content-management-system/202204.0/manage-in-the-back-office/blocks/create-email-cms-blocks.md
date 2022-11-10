@@ -20,7 +20,7 @@ You can manage the content of emails you send to customers by editing [email tem
 
 There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
 
-If a developer introduced a new email for your project, you need to create an email block for it. Blocks for the default email templates are already created, and you can [edit them as regular blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html).
+If a developer introduced a new email for your project, you need to create an email block for it. Blocks for the default email templates are already created, and you can [edit them as regular blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/edit-cms-blocks.html).
 
 ## Prerequisites
 

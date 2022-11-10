@@ -80,7 +80,7 @@ To learn how the template is created, check the following exemplary procedure:
 
 The text in the defined placeholders is replaced at runtime by the glossary keys assigned to them.
 
-A content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) in the Back Office.
+A content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/create-cms-pages.html) in the Back Office.
 
 ## Template with slots
 
@@ -91,7 +91,7 @@ Create a template with slots:
 2. For each slot that you want to have in the template, insert a [slot widget](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
 3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
 
-Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) or [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
+Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/create-cms-pages.html) or [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
 
 {% info_block warningBox %}
 

@@ -17,7 +17,7 @@ related:
   - title: Editing CMS Pages
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
   - title: Managing CMS Page Versions
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/pages/manage-cms-page-versions.html
 ---
 
 This article describes how to manage CMS pages.
@@ -65,7 +65,7 @@ To preview a draft of your CMS page from the *Overview of CMS Pages* page:
 1. On the *Overview of CMS Pages* page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode is opened in a new tab of your browser.
 
-To preview a draft of your CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+To preview a draft of your CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/edit-cms-pages.html#selecting-the-placeholders-option) section.
 
 
 ## Publishing a CMS page
@@ -75,7 +75,7 @@ To keep changes and display them on the shop website, you need to publish them.
 You can publish your page either from the *Overview of CMS Pages* page or from the *Edit Placeholders* editor:
 
 * To publish a CMS page from the *Overview of CMS Pages* page, click **Publish** in the _Actions_ column. The page is successfully published.
-* To publish a CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+* To publish a CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/edit-cms-pages.html#selecting-the-placeholders-option) section.
 
 ## Viewing a CMS page
 

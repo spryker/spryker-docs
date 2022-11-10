@@ -61,4 +61,4 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Next steps
 
-[Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html)  
+[Edit CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/edit-cms-blocks.html)  

@@ -15,7 +15,7 @@ related:
   - title: CMS Page overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
   - title: Managing CMS Page Versions
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/pages/manage-cms-page-versions.html
 ---
 
 The topic describes how to edit CMS pages in the Back Office.

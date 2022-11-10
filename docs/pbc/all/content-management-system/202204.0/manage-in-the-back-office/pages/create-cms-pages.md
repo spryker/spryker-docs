@@ -17,7 +17,7 @@ related:
   - title: Editing CMS Pages
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
   - title: Managing CMS Page Versions
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/pages/manage-cms-page-versions.html
 ---
 
 This topic describes how to create a CMS page in the Back Office.

@@ -78,7 +78,7 @@ There are two commands for Spryk Console: `SprykDumpConsole` and `SprykRunConsol
 
 <div class="width-100">
 
-| Command      | Description |
+| COMMAND      | DESCRIPTION |
 | ----------- | ----------- |
 | vendor/bin/console spryk-dump      | Lists top level Spryks       |
 | vendor/bin/spryk-dump {SPRYK NAME} | Lists all options available for a specific Spryk |

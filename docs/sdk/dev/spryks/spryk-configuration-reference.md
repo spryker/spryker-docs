@@ -44,7 +44,7 @@ The mode of the Spryk. This is used to run specific Spryks by passing the `--mod
 
 The following modes are available:
 
-- `mode: project` - Spryk runs only with the `--mode=project` option in the CLI command.
+- `mode: project`—Spryk runs only with the `--mode=project` option in the CLI command.
 
 - `mode: core` - Spryk runs only with the `--mode=core` option in the CLI command.
 

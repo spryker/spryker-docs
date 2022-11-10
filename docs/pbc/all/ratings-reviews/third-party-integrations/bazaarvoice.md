@@ -31,6 +31,16 @@ If you have Bazaarvoice integrated, the Spryker default [Product Ratings and Rev
 
 {% endinfo_block %}
 
+## Prerequisites to use Bazaarvoice in your project
 
+The BazaarVoice app requires the following Spryker modules:
 
-
+* `spryker/asset: ^1.2.0`
+* `spryker/asset-storage: ^1.1.0`
+* `spryker/message-broker: ^1.0.0`
+* `spryker/message-broker-aws: ^1.0.0`
+* `spryker/message-broker-extension: ^1.0.0`
+* `spryker-shop/asset-widget: ^1.0.0`
+* `spryker-shop/product-detail-page: ^3.17.0`
+* `spryker-shop/product-category-widget: ^1.6.0`
+* `spryker-shop/shop-ui: ^1.59.0`

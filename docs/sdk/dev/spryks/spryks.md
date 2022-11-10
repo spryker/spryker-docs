@@ -89,7 +89,7 @@ There are two commands for Spryk Console: `SprykDumpConsole` and `SprykRunConsol
 
 </div>
 
-When you run a Spryk, the console asks you to provide all the needed arguments to build the Spryk. It is also possible to print all possible arguments to the console by using the `--{argument name}={argument value}` key.
+When you run a Spryk, the console asks you to provide all the needed arguments to build the Spryk. You can print all possible arguments to the console by using the `--{argument name}={argument value}` key.
 
 ### SprykGUI
 

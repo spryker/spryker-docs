@@ -64,7 +64,7 @@ The Spryk argument list. These arguments are used in the Spryk builder. See [Arg
 The Spryks that should be executed before the current Spryk.
 
 ### postSpryks
-The Spryks that should be executed after the current Spryk.
+The Spryks that must be executed after the current Spryk.
 
 ### excludedSpryks
 Excludes the execution of the Spryks that are placed in `preSpryks` and `postSpryks`. Useful when you reuse a Spryk and you don't need some of the Spryks defined in `preSpryks` or `postSpryks`.

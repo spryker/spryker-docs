@@ -142,7 +142,7 @@ This shows a message that the definition was not found by the given name. You ca
 
 What comes next depends on your chosen definition type. If you select the template definition, an error can be displayed, indicating that the defined template cannot be found. In this case, add your template to `spryker/spryker/config/spryk/templates` and rerun the tests. After doing this, they turn green.
 
-## Extending Spryks
+## Extend Spryks
 
 There are two ways to extend Spryks: by adding new Spryks and by adding Spryk templates.
 

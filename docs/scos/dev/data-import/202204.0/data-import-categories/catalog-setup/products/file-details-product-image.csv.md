@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-imagecsv
 ---
 
-This document describes the `product_image.csv` file to configure [Product Image](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
+This document describes the `product_image.csv` file to configure [Product Image](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -51,4 +51,3 @@ Find the template and an example of the file below:
 | --- | --- |
 | [product_image.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_image.csv) | Exemplary import file with headers only. |
 | [product_image.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_image.csv) | Exemplary import file with Demo Shop data. |
-

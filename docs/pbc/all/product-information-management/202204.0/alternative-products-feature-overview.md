@@ -23,7 +23,7 @@ A Back Office user can add product alternatives for both abstract and concrete p
 All the available alternative products are shown on the abstract product details page if one of the following occurs:
 
 * All the concrete products of the abstract one are in the `out of stock` status.
-* All the concrete products of the abstract one are [discontinued](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html).
+* All the concrete products of the abstract one are [discontinued](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/discontinued-products-overview.html).
 
 {% info_block infoBox %}
 

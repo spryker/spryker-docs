@@ -15,7 +15,7 @@ related:
   - title: Adding Product Alternatives
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
   - title: Discontinued products overview
-    link: docs/scos/user/features/page.version/product-feature-overview/discontinued-products-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/discontinued-products-overview.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

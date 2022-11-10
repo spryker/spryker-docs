@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-product-attributes
 related:
   - title: Configurable Bundle feature overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-attributes-overview.html
 ---
 
 The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) available in your shop system.

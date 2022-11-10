@@ -20,7 +20,7 @@ related:
   - title: Retrieving sales units
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
   - title: Product image management
-    link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-images-overview.html
 ---
 
 This endpoint allows retrieving image sets of concrete products.

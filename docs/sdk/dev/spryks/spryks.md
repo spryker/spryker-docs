@@ -126,7 +126,7 @@ console spryk:run {% raw %}{{{% endraw %} SprykName {% raw %}}}{% endraw %}
 ```
 
 with the `--mode='core'` argument in CLI.
-Afterwards, Spryk will use the *Core* mode and an appropriate root path.
+Afterwards, Spryk uses the *Core* mode and an appropriate root path.
 
 ## Creating a definition
 

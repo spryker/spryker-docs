@@ -48,7 +48,7 @@ The following modes are available:
 
 - `mode: core`—Spryk runs only with the `--mode=core` option in the CLI command.
 
-- `mode: both` - Spryk runs regardless of the `--mode` option value, or without this option at all in the CLI command.
+- `mode: both`—Spryk runs regardless of the `--mode` option value, or without this option at all in the CLI command.
 
 ### level
 Used only for the Spryk dumper to dump the specific level of Spryks. You can use, for example,

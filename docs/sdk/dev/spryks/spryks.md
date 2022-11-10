@@ -152,7 +152,7 @@ You can add your own Spryks by creating a Spryk definition in your project's `co
 
 For more information on adding new Spryks, see [Adding a new Spryk](/docs/sdk/dev/spryks/adding-a-new-spryk.html).
 
-### Adding Spryk templates
+### Add Spryk templates
 
 To add a Spryk template, create the template in your project's `config/spryk/templates/` directory.
 

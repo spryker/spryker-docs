@@ -17,7 +17,7 @@ For example, `spryk: Template` uses the `SprykerSdk\Spryk\Model\Spryk\Builder\Te
 
 Spryks can depend on other Spryks that are executed before or after the current Spryk. The Spryks hierarchy structure resembles a tree, or even a graph in some cases, that is controlled by the `preSpryks` and `postSpryks` configuration keys.
 
-The best practice to follow is to have a Spryk build only one small structural unit and call other Spryks that build the rest of the structure with classes, interfaces, configs, etc. When executing a Spryk, you should get a completely valid structure of files.
+The best practice to follow is to have a Spryk build only one small structural unit and call other Spryks that build the rest of the structure with classes, interfaces, and configs. After executing a Spryk, you get a completely valid structure of files.
 
 The arguments of the children's Spryks can inherit the values of the same arguments of the parent Spryk. To achieve that, you need to define the `inherit: true` option in the argument definition block. See [Spryk configuration reference](/docs/sdk/dev/spryks/spryk-configuration-reference.html#the-root-configuration) for details on the Spryk file structure and its arguments.
 

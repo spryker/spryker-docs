@@ -329,3 +329,9 @@ Tracking
 ### Multi-Language support
 If you have multi-language setup, you should provide locale as GET parameter to retrieve the proper version of a CSV file: `curl  http://mysprykershop.com/econda/index/product?locale=en_US`
 You can check `stores.php` file in your project to see what locales you have enabled.
+
+{% info_block infoBox "Info" %}
+
+At this time, Spryker only supports one locale per key (i.e. `en_US` vs `en_GB`). Selecting multiple locales with the same key may result in unexpected behavior.
+
+{% endinfo_block %}

@@ -51,7 +51,11 @@ For each store, you can define a set of locales, and the first locale is the def
 
 In the previous example, the `en` key is associated with the `en_US` locale.
 
+At this time, Spryker only supports one locale per key (i.e. `en_US` vs `en_GB`). Selecting multiple locales with the same key may result in unexpected behavior.
+
 {% endinfo_block %}
+
+
 
 ### URL routing for stores with multiple locales
 

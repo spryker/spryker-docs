@@ -44,6 +44,12 @@ You can define a set of locales for each store. The first locale is the default 
 
 In the example above, the `en` key is associated with the `en_US` locale.
 
+{% info_block infoBox "Info" %}
+
+At this time, Spryker only supports one locale per key (i.e. `en_US` vs `en_GB`). Selecting multiple locales with the same key may result in unexpected behavior.
+
+{% endinfo_block %}
+
 ## Route URLs for stores with multiple locales
 
 In Yves, the key for the selected locale is contained in the URL; if no key is contained in the URL, the default locale is considered the current one.

@@ -2484,8 +2484,6 @@ entries:
         url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
       - title: Migration Guide - CompanyUsersRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/companyusersrestapi-migration-guide.html
-      - title: Migration Guide - ContentBannersRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-contentbannersrestapi.html
       - title: Migration Guide - OrdersRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html
       - title: Migration Guide - ProductAvailabilitiesRestApi

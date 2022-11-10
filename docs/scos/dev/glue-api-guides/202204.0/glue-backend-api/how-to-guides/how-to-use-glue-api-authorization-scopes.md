@@ -1,17 +1,17 @@
 ---
 title: How to use Glue API authorization scopes
-description: This guide describes how to add scopes to the resource and custom route for the Storefront API and Backend API applications
+description: This guide describes how to add scopes to the resource and custom route for the storefront API and backend API applications
 last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authorization-scopes.html
 ---
 
-This guide describes how to add scopes to the resource and custom route for the Storefront API and Backend API applications.
+This guide describes how to add scopes to the resource and custom route for the storefront API and backend API applications.
 
 Let's say you have a module named `ModuleRestApi` with `GET` and `POST` methods, where you want to add scopes. To add scopes, follow these steps:
 
-1. Set up a resource for the Storefront API application and a route for the Backend API application.
+1. Set up a resource for the storefront API application and a route for the backend API application.
 
 2. To implement `ScopeDefinitionPluginInterface` and set up the scopes, adjust `ModuleResource`:
 
@@ -78,18 +78,18 @@ class ModuleBarRouteProviderPlugin extends AbstractPlugin implements RouteProvid
 
 4. Regenerate the scopes cache file:
 
-```
+```bash
 console oauth:scope-collection-file:generate
 ```
 
 {% info_block warningBox "Verification" %}
 
-* Ensure that when accessing `https://glue-storefront.mysprykershop.com/module` or `https://glue-backend.mysprykershop.com/module/bar` without an access token, you receive the 403 response with the message `Unauthorized request`.
+* Ensure that when accessing `https://glue-storefront.mysprykershop.com/module` or `https://glue-backend.mysprykershop.com/module/bar` without an access token, you receive the `403` response with the message `Unauthorized request`.
 
 * Ensure that you can authenticate as a customer:
    1. Send the request:
 
-    ```
+    ```yaml
     POST /token/ HTTP/1.1
     Host: glue-storefront.mysprykershop.com
     Content-Type: application/x-www-form-urlencoded
@@ -105,7 +105,7 @@ console oauth:scope-collection-file:generate
 * Ensure that you can authenticate as a user:
    1. Send the request:
 
-    ```
+    ```yaml
     POST /token/ HTTP/1.1
     Host: glue-backend.mysprykershop.com
     Content-Type: application/x-www-form-urlencoded

@@ -360,7 +360,7 @@ In the following example, you have a plain text template with:
 {% raw %}{{{% endraw %} 'mail.customer.registration.text' | trans {% raw %}}}{% endraw %}
 ```
 
-The templates must be placed within the module's `Presentation` layer—fpr example, `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`. You can use the same trans filter as used with Yves and Zed templates.
+The templates must be placed within the module's `Presentation` layer—for example, `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`. You can use the same trans filter as used with Yves and Zed templates.
 
 `TwigRenderer` is the default renderer, but you can add your own renderer by implementing `RendererInterface`.
 

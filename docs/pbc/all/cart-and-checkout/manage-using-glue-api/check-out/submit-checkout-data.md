@@ -18,7 +18,7 @@ related:
     link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html
 ---
 
-This endpoint allows submitting checkout data as many times as you need. Using the endpoint, you can implement checkout steps in your Glue API client, perform verification steps and execute other operations that require multiple calls to complete. The endpoint does not allow placing an order.
+This endpoint allows submitting checkout data as many times as required. Using the endpoint, you can implement checkout steps in your Glue API client, perform verification steps, and execute other operations that require multiple calls to complete. This endpoint does not allow placing an order.
 
 To help customers select payment and shipment methods, the endpoint allows retrieving all the available methods so that you can display them to the customers. To simplify navigation through all the available methods, you can sort them by any attribute.  
 
@@ -42,7 +42,7 @@ To submit checkout data without order confirmation, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when submitting data of a [guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| X-Anonymous-Customer-Unique-Id | String | Required when submitting data of a [guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html). | A guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 | Authorization | String | Required when submitting data of a [registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
@@ -964,27 +964,27 @@ In case of a successful update, the endpoint responds with information that can 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| payment-methods | paymentMethodName | String | Payment method name. |
-| payment-methods | paymentProviderName | String | Payment provider name. |
+| payment-methods | paymentMethodName | String | The name of the payment method. |
+| payment-methods | paymentProviderName | String | The name of the payment provider. |
 | payment-methods | priority | String | Defines the order of returned payment methods in ascending order. |
 | payment-methods | requiredRequestData | Object | An array of attributes required by the given method to effectuate a purchase. The exact attribute list depends on the specific provider. |
-| shipment-methods | name | String | Shipment method name. |
-| shipment-methods | id | String | Unique identifier of the shipment method. |
-| shipment-methods | name | String | Shipment method name. |
-| shipment-methods | carrierName | String | Carrier name. |
-| shipment-methods | deliveryTime | Integer | Estimated delivery time. |
+| shipment-methods | name | String | The name of the shipment method. |
+| shipment-methods | id | String | The unique ID of the shipment method. |
+| shipment-methods | name | String | The name of the shipment method. |
+| shipment-methods | carrierName | String | The name of the carrier.. |
+| shipment-methods | deliveryTime | Integer | The estimated delivery time. |
 | shipment-methods | defaultGrossPrice | Integer | Default gross price, in cents. |
 | shipment-methods | defaultNetPrice | Integer | Default net price, in cents. |
 | shipment-methods | currencyIsoCode | String | ISO 4217 code of the currency in which the prices are specified. |
-| addresses | salutation | String | Salutation to use when addressing the customer. |
-| addresses |  firstName | String | Customer's first name. |
-| addresses | lastName | String | Customer's last name. |
+| addresses | salutation | String | The salutation to use when addressing the customer. |
+| addresses |  firstName | String | The customer's first name. |
+| addresses | lastName | String | The customer's last name. |
 | addresses | address1 | String | The 1st line of the customer's address. |
 | addresses | address2 | String | The 2nd line of the customer's address. |
 | addresses | address3 | String | The 3rd line of the customer's address. |
 | addresses | zipCode | String | ZIP code. |
-| addresses | city | String | City. |
-| addresses | country | String | Country. |
+| addresses | city | String |The name of the city. |
+| addresses | country | String | The name of the country. |
 | addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | addresses | company | String | Specifies the customer's company. |
 | addresses | phone | String | Specifies the customer's phone number. |
@@ -993,41 +993,41 @@ In case of a successful update, the endpoint responds with information that can 
 | shipments | Items | Array | A list of items in the shipment. |
 | shipments | requestedDeliveryDate | Date | Desired delivery date. |
 | shipments | shippingAddress | Object | The address to which this shipment will be delivered. |
-| shipments | shippingAddress.id | String | Unique identifier of a customer address. |
-| shipments | shippingAddress.salutation | String | Salutation to use when addressing the customer. |
-| shipments | shippingAddress.firstName | String | Customer's first name. |
-| shipments | shippingAddress.lastName | String | Customer's last name. |
+| shipments | shippingAddress.id | String | The unique ID of a customer's address. |
+| shipments | shippingAddress.salutation | String | The salutation to use when addressing the customer. |
+| shipments | shippingAddress.firstName | String | The customer's first name. |
+| shipments | shippingAddress.lastName | String | The customer's last name. |
 | shipments | shippingAddress.address1 | String | The 1st line of the customer's address. |
 | shipments | shippingAddress.address2 | String | The 2nd line of the customer's address. |
 | shipments | shippingAddress.address3 | String | The 3rd line of the customer's address. |
 | shipments | shippingAddress.zipCode | String | ZIP code. |
-| shipments | shippingAddress.city | String | City. |
-| shipments | shippingAddress.country | String | Country. |
+| shipments | shippingAddress.city | String | The name of the city. |
+| shipments | shippingAddress.country | String | The name of the country. |
 | shipments | shippingAddress.iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | shipments | shippingAddress.company | String | Specifies the customer's company. |
 | shipments | shippingAddress.phone | String | Specifies the customer's phone number. |
-| shipments | shippingAddress.isDefaultShipping | Boolean | Defines if it is the default shipping address of the customer. |
-| shipments | shippingAddress.isDefaultBilling | Boolean | Defines if it is the default billing address of the customer. |
-| shipments | shippingAddress.idCompanyBusinessUnitAddress | String | Unique identifier of a business unit address used for this shipment. |
+| shipments | shippingAddress.isDefaultShipping | Boolean | If true, this is the default shipping address of the customer. |
+| shipments | shippingAddress.isDefaultBilling | Boolean | If true, this is the default billing address of the customer. |
+| shipments | shippingAddress.idCompanyBusinessUnitAddress | String | The unique ID of the business unit address used for this shipment. |
 | shipments | selectedShipmentMethod | Object | Describes the shipment method for the shipment. |
-| shipments | selectedShipmentMethod.id | String | Unique identifier of the shipment method. |
-| shipments | selectedShipmentMethod.name | String | Name of the shipment method. |
-| shipments | selectedShipmentMethod.carrierName | String | Name of the shipment method provider. |
-| shipments | selectedShipmentMethod.price | String | Price of the shipment method. |
-| shipments | selectedShipmentMethod.taxRate | String | Tax rate for this shipment method. |
-| shipments | selectedShipmentMethod.deliveryTime | String | Estimated delivery time provided by the shipment method provider. |
-| shipments | selectedShipmentMethod.currencyIsoCode | String | ISO 4217 code of the currency in which the price is specified. |
+| shipments | selectedShipmentMethod.id | String | The unique ID of the shipment method. |
+| shipments | selectedShipmentMethod.name | String | The name of the shipment method. |
+| shipments | selectedShipmentMethod.carrierName | String | The name of the shipment method provider. |
+| shipments | selectedShipmentMethod.price | String | The price of the shipment method. |
+| shipments | selectedShipmentMethod.taxRate | String | The tax rate for this shipment method. |
+| shipments | selectedShipmentMethod.deliveryTime | String | The estimated delivery time provided by the shipment method provider. |
+| shipments | selectedShipmentMethod.currencyIsoCode | String | The ISO 4217 code of the currency in which the price is specified. |
 | shipment-methods | name | String | Shipment method name. |
-| shipment-methods | id | String | Unique identifier of the shipment method. |
-| shipment-methods | carrierName | String | Carrier name. |
+| shipment-methods | id | String | The unique ID of the shipment method. |
+| shipment-methods | carrierName | String | The name of the carrier. |
 | shipment-methods | deliveryTime | Integer | Estimated delivery time. |
 | shipment-methods | Price | Integer | Price of the shipment method. |
-| shipment-methods | currencyIsoCode | String | ISO 4217 code of the currency in which the price is specified. |
+| shipment-methods | currencyIsoCode | String |The ISO 4217 code of the currency in which the price is specified. |
 | company-business-unit-addresses | address1 | String | The 1st line of the customer's address. |
 | company-business-unit-addresses | address2 | String | The 2nd line of the customer's address. |
 | company-business-unit-addresses | address3 | String | The 3rd line of the customer's address. |
-| company-business-unit-addresses | zipCode | String | ZIP code. |
-| company-business-unit-addresses | city | String | City. |
+| company-business-unit-addresses | zipCode | String | The ZIP code. |
+| company-business-unit-addresses | city | String | The name of the city. |
 | company-business-unit-addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | company-business-unit-addresses | phone | String | Specifies the customer's phone number. |
 | company-business-unit-addresses | comment | String | Comment of the business unit address. |

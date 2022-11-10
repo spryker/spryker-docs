@@ -3,57 +3,59 @@ title: Algolia
 description: Algolia is a search engine that 
 ---
 
-Algolia is a powerful search engine that stands out from others due to its speed, easy implementation, and good support.
+Algolia is a powerful search engine that stands out from others due to its speed, easy implementation, and good support. With the Algolia app, your users can conduct advanced search of active concrete products in your store. Deactivated products are not included in the search results.
 
-## Attributes for searching
-What are attributes for searching, spryker attributes for searching
+{% info_block infoBox "Product offers and product reviews" %}
 
-The following data is sent to Algolia and can be seen o algolia side:
+The search is made in product offers and product reviews as well, however these entities are represented in product attributes in the Algolia search results.
 
-SKU
+{% endinfo_block %}
 
-Name
+To use Algolia as your search engine, you need an account with Algolia. For details, see [Integrate Algolia](/docs/pbc/all/search/integrate-algolia.html)
 
-Description
+## Searchable attributes
 
-Keywords
+Your users can search for concrete products by the following attributes:
 
-Currency
+- SKU
+- Name
+- Description
+- Keywords
+- Currency
+- Gross Price
+- Net Price
+- Product Abstract SKU
+- Rating (average approved rating for a respective abstract product)
+- Images
+- Categories
+- Attributes
+- Merchants
 
-Gross Price
+Here is an example of the search results in Algolia:
 
-Net Price
-
-Product Abstract SKU
-
-Rating (average approved rating for a respective abstract product)
-
-Images
-
-Categories
-
-Attributes
-
-Merchants
-
-Example from Alglolia
-
-Deactivated product can’t be found at shop
+![algolia-search-results](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia-search-results.png)
 
 ## Indexes
 
-What is index in Algolia
+An index is the place where the data used by Algolia is stored.
+
+In case of the Spryker store, the index is a complete list of all active concrete products that can be in search results.
+There are separate indexes per locale and per sorting strategy. With the Algolia app, the search results in your store can be sorted by:
+
+- Relevance
+- From highest to lowest rating
+- From lowest to highest rating
+- By price in ascending order
+- By price in descending order
+
+For example, if you have two locales, there will be 10 indexes for your store in Algolia: one per each local and sorting strategy:
 
 ### Searchable entities
 What is searchable entity, what are our searchable entities
 
 Our searchable entity is concrete products.
 
-{% info_block infoBox "Product offers and product reviews" %}
 
-Product offers and product reviews are represented in search results as part of the product attributes.
-
-{% endinfo_block %}
 
 ### Sorting strategies
 What is sorting strategy, what are our sorting strategies

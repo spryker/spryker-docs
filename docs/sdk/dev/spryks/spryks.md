@@ -146,7 +146,7 @@ What comes next depends on your chosen definition type. If you have selected the
 
 There are two ways to extend Spryks: by adding new Spryks and by adding Spryk templates.
 
-### Adding Spryks
+### Add Spryks
 
 You can add your own Spryks by creating a Spryk definition in your project's `config/spryk/spryks/` directory. The tool will find the Spryk definitions in this directory, and the Spryk definitions can be executed as usual.
 

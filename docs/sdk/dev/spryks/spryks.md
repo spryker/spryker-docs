@@ -128,7 +128,7 @@ console spryk:run {% raw %}{{{% endraw %} SprykName {% raw %}}}{% endraw %}
 with the `--mode='core'` argument in CLI.
 Afterwards, Spryk uses the *Core* mode and an appropriate root path.
 
-## Creating a definition
+## Create a definition
 
 As the whole tool is covered by tests, you should also start to create your own definition by adding a test. To only add a new definition configuration, start by adding an integration test. You also need to add the name of the definition you want to test (for example, *AddMySuperNiceFile*), and the assertion to have this file created after you have executed the test.
 

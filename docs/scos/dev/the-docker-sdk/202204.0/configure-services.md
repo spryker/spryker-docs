@@ -457,22 +457,22 @@ The solution consists of a client and a server. The client is used to collect da
 ### Prerequisites
 
 * Access to New Relic with an [APM account](#configure-new-relic-paas).
-* A New Relic license key.
+* Local: [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/).
 * The New Relic module.
 
 Spryker provides its own New Relic licenses for use with its PaaS environments. A New Relic license key is only required if you wish to set up your own local monitoring.
 
-#### Installing the New Relic module
+## Install the New Relic module
 
-While most environments may come with New Relic already available, you may need to include the module for your project. Available from Spryker, you can find the [Spryker new-relic module](https://github.com/spryker-eco/new-relic) within our module repositories. To include this repository in your project, add it to your `composer.json` file as follows:
+While most environments come with New Relic already available, you may need to add the module to your project. Add the module to your `composer.json`:
 
 ```bash
 composer require spryker-eco/new-relic
 ```
 
-### Configure New Relic (PaaS)
+### PaaS: Configure New Relic
 
-To enable New Relic for your PaaS environment, in the `image` section, adjust `deploy.*.yml`:
+1. Adjust `deploy.*.yml` in the `image:` section:
 
 ```yaml
 image:
@@ -484,17 +484,16 @@ image:
             - newrelic
 ```
 
-Once New Relic has been enabled in your deploy file, [contact Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html) to have it integrated into your environment. This can be done by submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html). The Support team will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
+2. Submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html).
+  We will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
 
-Once these changes have been enabled and integrated, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files. If you update the name of your application, reach out to Spryker Support to have these changes reflected in your APM.
+Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
+
+If you update the name of your application, reach out to Spryker Support to have these changes reflected in your APM.
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRPsydm6Ds2eRmKS_lMRNjBnqhBLsvtN_ul_R1EMO7Z4pj74Mbpw3kMdAnjH6gIwLt9cvOqLcI=w1920-h919)
 
-### Configure New Relic (local)
-
-To enable New Relic on your local environment, a license key is required. For help with creating an API key with New Relic, refer to the following documentation: [New Relic API keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/)
-
-To enable New Relic for your local environment, follow these steps:
+### Local: Configure New Relic
 
 1. In `deploy.*.yml`, adjust the `docker` section:
 

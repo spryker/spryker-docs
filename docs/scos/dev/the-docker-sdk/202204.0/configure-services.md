@@ -500,7 +500,7 @@ image:
             - newrelic
 ```
 
-Once New Relic has been enabled in your deploy file, please [contact Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html) to have it integrated into your environment. This can be done by submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html). The Support team will confirm that a New Relic APM account is available for you and will ensure that the correct application naming convention is set up to cascade to the appropriate APM.
+Once you have enabled New Relic in your deploy file and pushed it for deploy, please [contact Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html) to have it integrated into your environment. This can be done by submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html). The Support team will confirm that a New Relic APM account is available for you and will ensure that the correct application naming convention is set up to cascade to the appropriate APM.
 
 Once these changes have been enabled and integrated, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name set up in the configuration files. If you update the name of your application, please reach out to Spryker Support to have these changes reflected in your APM.
 

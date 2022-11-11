@@ -1683,7 +1683,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-        nested:
+      nested:
         - title: Creating content items
           url: /docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html
           include_versions:

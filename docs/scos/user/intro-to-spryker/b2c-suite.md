@@ -58,7 +58,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Mailing & Notifications](/docs/scos/user/features/{{site.version}}/mailing-and-notifications-feature-overview.html)
 - [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
-- [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html)
+- [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/alternative-products-feature-overview.html)
 - [Product Groups](/docs/scos/user/features/{{site.version}}/product-groups-feature-overview.html)
 - [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html)
 - [Product Sets](/docs/scos/user/features/{{site.version}}/product-sets-feature-overview.html)

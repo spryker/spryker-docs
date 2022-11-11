@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-alternativecsv
 ---
 
-This document describes the `product_alternative.csv` file to configure [Alternative Product](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_alternative.csv` file to configure [Alternative Product](/docs/pbc/all/product-information-management/{{page.version}}/alternative-products-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -38,7 +38,7 @@ This file has the following dependencies:
 
 ## Additional information
 
-It does not exist on by default on the project level. It can be created in order to override the CSV file from module: 
+It does not exist on by default on the project level. It can be created in order to override the CSV file from module:
 
 * `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`
 

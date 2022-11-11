@@ -39,22 +39,39 @@ redirect_from:
   - /v1/docs/en/about-yves
   - /v1/docs/yves
   - /v1/docs/en/yves
+related:
+  - title: Yves overview
+    link: docs/scos/dev/back-end-development/yves/yves.html
+  - title: Add translations for Yves
+    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
+  - title: CLI entry point for Yves
+    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+  - title: Controllers and actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+  - title: Modular Frontend
+    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+  - title: Yves bootstrapping
+    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+  - title: Yves routes
+    link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-Yves is one of the application layers of the Spryker Commerce OS, providing the front-end functionality.
+Yves is one of the application layers of the Spryker Commerce OS, providing the frontend functionality.
 
 {% info_block infoBox %}
 
-See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) to learn more about the Spryker applications and their layers.
+To learn more about the Spryker applications and their layers, see [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 
 {% endinfo_block %}
 
 Yves is divided into two parts:
 
-* The part with controllers, forms, templates etc. covered in the following articles:
-    * [Controllers and actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)
-    * [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html)
-    * [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html)
- * Client part which provides access to the search and storage engine and the Zed application. See the following articles for more information on the Client:
-     * [Client](/docs/scos/dev/back-end-development/client/client.html)
-     * [Implementing a Client](/docs/scos/dev/back-end-development/client/implementing-a-client.html)
+* The part with controllers, forms, and templates is covered in the following documents:
+  * [Controllers and actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)
+  * [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html)
+  * [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html)
+* Client part that provides access to the search and storage engine and the Zed application. See the following documents for more information on the Client:
+  * [Client](/docs/scos/dev/back-end-development/client/client.html)
+  * [Implement a client](/docs/scos/dev/back-end-development/client/implement-a-client.html)

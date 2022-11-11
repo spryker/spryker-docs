@@ -1,5 +1,5 @@
 ---
-title: HowTo - Use blocks
+title: "HowTo: Use blocks"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-cms-blocks
@@ -21,23 +21,29 @@ redirect_from:
   - /v2/docs/en/ht-use-cms-blocks
   - /v1/docs/ht-use-cms-blocks
   - /v1/docs/en/ht-use-cms-blocks
+related:
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 
-Blocks can be viewed as partial content snippets that can be embedded in other pages. From a SEO perspective, blocks are a real advantage.
+Blocks can be viewed as partial content snippets that can be embedded in other pages. From an SEO perspective, blocks are a real advantage.
 
 The CMS Block module supports flexible extension by adding a new connector.
-Spryker provides two extensions as examples CMS Block Category Connector and CMS Block Product Connector. But you are free to extend and create new relations of blocks to other system subjects.
+
+Spryker provides two extensions as examples CMS Block Category Connector and CMS Block Product Connector. However, you are free to extend and create new relations of blocks to other system subjects.
 
 {% info_block infoBox "CMS Block GUI" %}
 
-CMS Block module provides only business logic. For better experience install CMS Block GUI module, which will add GUI to Zed panel.
+CMS Block module provides only business logic. For a better experience, install the CMS Block GUI module, which adds GUI to the Zed panel.
 
 {% endinfo_block %}
 
-The following steps will help you become familiar with how blocks work. To add a block with a hello message, follow these steps:
+The following steps show how CMS blocks work.
 
-1. Add a template for the new block - similar to templates for pages.
-2. Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/template/` folder. We'll call it `hello.twig` and it will contain the following structure :
+To add a CMS block with a hello message, follow these steps:
+
+1. Add a template for the new block—similar to templates for pages.
+2. Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/template/` folder. We call it `hello.twig`, and it contains the following structure:
 
 ```php
 <!-- CMS_BLOCK_PLACEHOLDER : "helloBlockText" -->
@@ -47,12 +53,13 @@ The following steps will help you become familiar with how blocks work. To add a
 </div>
 ```
 
-3. Next, configure the new block in the CMS Block interface and add the corresponding glossary keys for the 2 included placeholders.
-4. Click **Create CMS Block** to take you to the page for creating a new block
-5. Select the newly created template from the list, select static type and give it a proper unique name ("HelloMessage").
-6. Enter the **Valid From** and **Valid To** dates if you want to limit the availability to a date range and click **Save**.
-7. Create the glossary keys for the placeholders ( see previous example)
-8. Run the collectors so that the changes are effective in Yves.
+3. Configure the new block in the CMS Block interface and add the corresponding glossary keys for the two included placeholders.
+4. In Back Office, in **Content&nbsp;<span aria-label="and then">></span> Blocks**, click **Create Block**.
+5. Select the newly created template from the list, select a static type, and enter a proper unique **NAME** ("HelloMessage").
+6. To limit the availability to a date range, enter the **VALID FROM** and **VALID TO** dates.
+7. Click **Save**.
+8. Create the glossary keys for the placeholders (see the previous example).
+9. Run the collectors so that the changes are effective in Yves.
 
 The new block is now ready to be used and integrated in other Twig templates.
 
@@ -62,6 +69,6 @@ The new block is now ready to be used and integrated in other Twig templates.
 
 ## Multi-store environment
 
-In case you have multiple store environment configured, you can also define in which of your stores the CMS Block is allowed to appear.
+If you have a multiple store environment configured, you can also define in which of your stores the CMS Block can appear.
 
-In the example above, the CMS Block is assigned to DE and US only. If the CMS Block is enabled, then it will appear only in store DE and US. Afterward the user could define another CMS Block assigned to AT store only and have a different content per store.
+In the previous example, the CMS Block is assigned to DE and US only. If the CMS Block is enabled, it appears only in DE and US stores. Afterward, the user can define another CMS Block assigned to AT store only and have different content per store.

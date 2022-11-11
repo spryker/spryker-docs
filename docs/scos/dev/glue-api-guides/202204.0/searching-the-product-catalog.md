@@ -10,11 +10,14 @@ redirect_from:
   - /2021080/docs/en/searching-the-product-catalog
   - /docs/searching-the-product-catalog
   - /docs/en/searching-the-product-catalog
+  - /docs/scos/dev/glue-api-guides/202200.0/searching-the-product-catalog.html
 related:
-  - title: Catalog feature overview
-    link: docs/scos/user/features/page.version/catalog-feature-overview.html
+  - title: Retrieving autocomplete and search suggestions
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
   - title: Glue API - Catalog feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-catalog-feature-integration.html
+  - title: Catalog feature overview
+    link: docs/scos/user/features/page.version/catalog-feature-overview.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
@@ -6661,7 +6664,7 @@ To search by products, send the request:
 For other abstract product attributes, see:
 
 * [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
-* [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)
+* [Retrieving abstract product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html)
 
 **Value facets**
 

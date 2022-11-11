@@ -3,6 +3,11 @@ title: Managing merchant users
 last_updated: Apr 23, 2021
 description: This guide explains how Marketplace administrator can manage merchant users in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Managing merchants
+    link: docs/marketplace/user/back-office-user-guides/202204.0/marketplace/merchants/managing-merchants.html
+  - title: Merchant users overview
+    link: docs/marketplace/user/features/202204.0/marketplace-merchant-feature-overview/merchant-users-overview.html
 ---
 
 A merchant user is a user that performs tasks on behalf of the merchant in the Merchant Portal. Marketplace administrator can manage merchant users in the Back Office.
@@ -11,7 +16,8 @@ A merchant user is a user that performs tasks on behalf of the merchant in the M
 
 ## Prerequisites
 
-To start managing merchant users:
+To start managing merchant users, do the following:
+
 1. Navigate to the **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
 2. Next to the merchant you want to create a merchant user for, click **Edit** in the **Actions** column. You are taken to the **Edit Merchant: [Merchant ID]** page.
 
@@ -35,7 +41,7 @@ To create a merchant user, do the following:
 
 4. Click **Create**.
 
-By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/editing-users.html) user record.
+By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/edit-users.html).
 
 ### Reference information: Creating a merchant user
 
@@ -44,6 +50,7 @@ This section contains the attributes description you see when creating a merchan
 #### Users tab
 
 On the **Users** tab, you see a table with all the merchant users available for the merchant. The following information is included in the table:
+
 * Merchant user ID
 * Email
 * First Name
@@ -69,7 +76,7 @@ To edit a merchant user, do the following:
 
 1. On the **Edit Merchant** page, on the **Users** tab, click **Edit** for a merchant user you want to edit.
 
-On the **Edit Merchant user** page, edit the merchant user details.
+2. On the **Edit Merchant user** page, edit the merchant user details.
 
 ### Reference information: Editing a merchant user
 

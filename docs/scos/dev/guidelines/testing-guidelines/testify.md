@@ -17,6 +17,29 @@ redirect_from:
   - /v5/docs/testify-1
   - /v5/docs/en/testify-1
   - /docs/scos/dev/guidelines/testing/testify.html
+related:
+  - title: Available test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+  - title: Code coverage
+    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+  - title: Data builders
+    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+  - title: Executing tests
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+  - title: Publish and Synchronization testing
+    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+  - title: Setting up tests
+    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+  - title: Test framework
+    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+  - title: Test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+  - title: Testing best practices
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+  - title: Testing concepts
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+  - title: Testing console commands
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
 On top of [Codeception](https://codeception.com), Spryker offers some classes to make your test life easier. In the Spryker [Testify](https://github.com/spryker/testify) module, you can find many useful  helpers.

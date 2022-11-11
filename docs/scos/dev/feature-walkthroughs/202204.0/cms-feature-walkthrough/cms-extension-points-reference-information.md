@@ -3,9 +3,12 @@ title: "CMS extension points: reference information"
 last_updated: Aug 13, 2021
 description: The CMS module provides an extension point for post activation and deactivation of CMS pages.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/201903.0/cms-feature-walkthrough/cms-extension-points-reference-information.html
+  - /docs/scos/dev/feature-walkthroughs/202005.0/cms-feature-walkthrough/cms-extension-points-reference-information.html
 ---
 
-The CMS module provides an extension point for post activation and deactivation of CMS pages. The plugin interface set for this extension point is as follows:
+The `CMS` module provides an extension point for post activation and deactivation of CMS pages. The plugin interface set for this extension point is as follows:
 
 ```php
 <?php
@@ -30,7 +33,7 @@ interface PostCmsPageActivatorPluginInterface
 }
 ```
 
-For example, Navigation is connected with activation and deactivation of CMS pages, so there is a plugin in the `CmsNavigationConnector` module that is called `PostCmsPageActivatorNavigationPlugin`.
+For example, navigation is connected with the activation and deactivation of CMS pages, so there is a plugin in the `CmsNavigationConnector` module that is called `PostCmsPageActivatorNavigationPlugin`.
 
 It implements the interface as follows:
 
@@ -61,4 +64,4 @@ class PostCmsPageActivatorNavigationPlugin extends AbstractPlugin implements Pos
 }
 ```
 
-And then in the `CmsDependencyProvider`, in the function `getCmsPagePostActivatorPlugins`, you can register this plugin (or any plugin implementing the above interface) for it to execute post activation or deactivation of CMS pages.
+Found within `CmsDependencyProvider`, in the function `getCmsPagePostActivatorPlugins`, you can register this plugin (or any plugin implementing the above interface) for it to execute post activation or deactivation of CMS pages.

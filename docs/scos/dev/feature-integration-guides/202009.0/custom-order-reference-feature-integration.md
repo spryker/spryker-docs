@@ -8,6 +8,10 @@ originalArticleId: c4cca4f3-c253-4589-878b-1cf38c80ae00
 redirect_from:
   - /v6/docs/custom-order-reference-feature-integration
   - /v6/docs/en/custom-order-reference-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/custom-order-reference-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/custom-order-reference-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/custom-order-reference-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/custom-order-reference-feature-integration.html
 ---
 
 ## Install Feature Core
@@ -171,7 +175,7 @@ Make sure that if you are logged in, you can see the *Custom Order Reference* se
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.

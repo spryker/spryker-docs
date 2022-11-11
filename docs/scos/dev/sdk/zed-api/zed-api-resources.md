@@ -28,6 +28,17 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/zed-api/zed-api-resources.html
   - /docs/scos/dev/sdk/202009.0/zed-api/zed-api-resources.html
   - /docs/scos/dev/sdk/202108.0/zed-api/zed-api-resources.html
+related:
+  - title: Zed API (Beta)
+    link: docs/scos/dev/sdk/zed-api/zed-api-beta.html
+  - title: Zed API configuration
+    link: docs/scos/dev/sdk/zed-api/zed-api-configuration.html
+  - title: Zed API CRUD functionality
+    link: docs/scos/dev/sdk/zed-api/zed-api-crud-functionality.html
+  - title: Zed API processor stack
+    link: docs/scos/dev/sdk/zed-api/zed-api-processor-stack.html
+  - title: Zed API project implementation
+    link: docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
 ---
 
 Each module can have a “{module}Api” module(e.g. CustomerApi for Customer). Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.

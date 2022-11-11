@@ -8,13 +8,14 @@ originalArticleId: 87ec1804-7443-4361-af1f-bb0f12e7d2de
 redirect_from:
   - /v3/docs/navigation-api-feature-integration-1
   - /v3/docs/en/navigation-api-feature-integration-1
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/navigation-api-feature-integration.html
 ---
 
 {% info_block errorBox %}
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Navigation REST API** functionality.
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -65,14 +66,14 @@ Specify mapping for the source field from which the resourceId field should be f
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\NavigationsRestApi;
- 
+
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfig;
- 
+
 class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 {
 	/**
@@ -110,12 +111,12 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\NavigationsRestApi\Plugin\ResourceRoute\NavigationsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -127,7 +128,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new NavigationsResourceRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -140,7 +141,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			NavigationsRestApiConfig::RESOURCE_NAVIGATIONS,
 			new CategoryNodeByResourceIdResourceRelationshipPlugin()
 		);
-  
+
 		return $resourceRelationshipCollection;
 	}
 }

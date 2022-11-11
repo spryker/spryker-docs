@@ -4,7 +4,7 @@ This repository contains the documentation for the [Spryker documentation portal
 
 ## Installation
 
-To build the documentation site locally, see [buidling the documentation site](https://docs.spryker.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html).
+To build the documentation site locally, see [building the documentation site](https://docs.spryker.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html).
 
 ### Build with Docker
 
@@ -29,3 +29,11 @@ For the specific Markdown syntax we use in documentation, see [Markdown syntax](
 
 
 That’s it! Your pull request has been created. Our Documentation team will review it, and once approved, your changes will be merged and available on the documentation website.
+
+## Contributors
+
+Thank you to all our contributors!
+
+<a href="https://github.com/spryker/spryker-docs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=spryker/spryker-docs" />
+</a>

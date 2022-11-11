@@ -8,6 +8,8 @@ originalArticleId: b819f69e-1426-4b8a-b14e-4284219a55cb
 redirect_from:
   - /v3/docs/crefopay-provided-payment-methods
   - /v3/docs/en/crefopay-provided-payment-methods
+  - /scos/user/technology-partners/201907.0/payment-partners/crefopay/crefopay-payment-methods.html
+  - /docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/crefopay-payment-methods.html
 related:
   - title: Integrating CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html
@@ -17,7 +19,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/installing-and-configuring-crefopay.html
   - title: CrefoPay capture and refund Processes
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay — Enabling B2B payments
+  - title: CrefoPay—Enabling B2B payments
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
   - title: CrefoPay callbacks
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-callbacks.html

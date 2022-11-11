@@ -10,8 +10,17 @@ redirect_from:
   - /2021080/docs/en/retrieving-abstract-products
   - /docs/retrieving-abstract-products
   - /docs/en/retrieving-abstract-products
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
 related:
-  - title: Product overview
+  - title: Retrieve abstract product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - title: Retrieving abstract product prices
+    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html
+  - title: Retrieving image sets of abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+  - title: Retrieving tax sets
+    link: docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
+  - title: Product feature overview
     link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
@@ -19,12 +28,13 @@ This endpoint allows retrieving general information about abstract products.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
+* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
 
 
 
@@ -46,7 +56,7 @@ To retrieve general information about an abstract product, send the request:
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>abstract-product-prices</li><li> concrete-products</li><li>product-labels</li><li>abstract-product-image-sets</li><li>abstract-product-availabilities</li><li>category-nodes</li><li>product-tax-sets</li><li>product-options</li><li>product-reviews</li><li>bundled-products</li></ul> |
+| include | Adds resource relationships to the request. | <ul><li>abstract-product-prices</li><li>concrete-products</li><li>product-labels</li><li>abstract-product-image-sets</li><li>abstract-product-availabilities</li><li>category-nodes</li><li>product-tax-sets</li><li>product-options</li><li>product-reviews</li><li>bundled-products</li></ul> |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
 
 {% info_block infoBox "Included resources" %}
@@ -70,7 +80,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its default prices. |
-| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)). |
+| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
 | `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
@@ -324,7 +334,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about default product prices</summary>
+<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
 
 ```json
 {
@@ -725,7 +735,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax rates</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax sets</summary>
 
 ```json
 {
@@ -1915,23 +1925,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 <a name="abstract-products-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| sku | String | SKU of the abstract product. |
-| averageRating | String | Average rating of the product based on customer rating. |
-| reviewCount | Integer | Number of reviews left by customer for this abstract product. |
-| name | String | Name of the abstract product. |
-| description | String | Description of the abstract product. |
-| attributes | Object | List of attributes and their values. |
-| superAttributeDefinition | String | Attributes flagged as super attributes that are, however, not relevant to distinguish between the product variants. |
-| attributeMap | Object | Each super attribute / value combination and the corresponding concrete product IDs are listed here. |
-| attributeMap.super_attributes | Object | Applicable super attribute and its values for the product variants. |
-| attributeMap.attribute_variants | Object | List of super attributes with the list of values. |
-| attributeMap.product_concrete_ids | String | Product IDs of the product variants. |
-| metaTitle | String | Meta title of the product. |
-| metaKeywords | String | Meta keywords of the product. |
-| metaDescription | String | Meta description of the product. |
-| attributeNames | Object | All non-super attribute / value combinations for the abstract product. |
+{% include pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
@@ -1943,13 +1937,13 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 For the attributes of other included resources, see:
 * [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
-* [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
-* [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)
+* [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html#abstract-product-availability-response-attributes)
+* [Retrieve prices of an abstract product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
-* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-* [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
+* [Retrieve product reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 
 ## Possible errors

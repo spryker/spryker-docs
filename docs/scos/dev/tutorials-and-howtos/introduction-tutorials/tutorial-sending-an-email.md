@@ -1,5 +1,5 @@
 ---
-title: "Tutorial - Sending an email"
+title: "Tutorial: Sending an email"
 description: The tutorial provides code samples on how to process customer registration information in Zed to register the customer and send a confirmation email.
 last_updated: Sep 27, 2021
 template: howto-guide-template
@@ -16,11 +16,11 @@ redirect_from:
 
 The following example represents a real-world scenario: `CustomerRegistration`.
 
-A customer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer will receive a confirmation email.
+A customer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer receives a confirmation email.
 
-## 1. Handling mail usage
+## 1. Handle mail usage
 
-In the model which handles the registration, you can override the  `sendRegistrationToken` function:
+In the model which handles the registration, you can override the `sendRegistrationToken` function:
 
 ```php
 <?php
@@ -65,7 +65,7 @@ class Customer extends SprykerCustomer
 }
 ```
 
-Also, you need to override factory:
+Also, override factory:
 
 ```php
 <?php
@@ -102,9 +102,9 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 }
 ```
 
-All MailTransfer’s need at least to know which mail type (nothing more than a string) should be used for further internal processing.
+All `MailTransfers` need to know which mail type (nothing more than a string) must be used for further internal processing.
 
-A minimalistic example could look like this:
+A simple example is as follows:
 
 ```php
 protected function sendRegistrationToken()
@@ -117,9 +117,9 @@ protected function sendRegistrationToken()
 
 ## 2. Creating a MailTypePlugin
 
-Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html) for more information on creating a MailTypePlugin:
+Create the `MailType` plugin for this example. For more information about creating a `MailTypePlugin`, see [HowTo: Create and register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html):
 
-**Code sample:**
+<details><summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -228,11 +228,13 @@ class CustomCustomerRegistrationMailTypePlugin extends AbstractPlugin implements
 }
 ```
 
-The Mail module’s default `MailBuilder` is already pre-defined to build the `MailTransfer`. `MailBuilder` internally adds a new `MailRecipientTransfer` with the passed information, email, and name.
+</details>
 
-## 3. Registering a Plugin
+The `Mail` module’s default `MailBuilder` is already pre-defined to build the `MailTransfer`. `MailBuilder` internally adds a new `MailRecipientTransfer` with the passed information, email, and name.
 
-When the plugin is created, it should be registered in `MailDependencyProvider`:
+## 3. Registering a plugin
+
+When the plugin is created, it must be registered in `MailDependencyProvider`:
 
 ```php
 <?php
@@ -301,7 +303,7 @@ namespace Spryker\Zed\Mail\Business\Model\Mail\Builder;
 }
 ```
 
-As you can see above, you can also translate with the placeholder. For the `mail.order.shipped.subject` key, we have `Your order {orderReference} is on its way as translation`.
+As you can see above, you can also translate with the placeholder. For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
 
 In your `MailType` plugin, you can use the `orderReference` from the given `OrderTransfer` within the subject:
 
@@ -325,9 +327,11 @@ protected function setSubject(MailBuilderInterface $mailBuilder)
 }
 ```
 
-## Setting templates
+## Set templates
 
-Usually you will have a `.twig` file which contains the template you want to use for mail. You need to set the template which should be used in your `MailType` plugin:
+Usually, you have a `.twig` file which contains the template you want to use for mail. 
+
+Set the template which must be used in your `MailType` plugin:
 
 ```php
 <?php
@@ -340,7 +344,7 @@ protected function setTextTemplate(MailBuilderInterface $mailBuilder)
 }
 ```
 
-The provider determines the template final look. It can contain a plain text, HTML, etc. For example, you can even have a template which generates JSON:
+The provider determines the template's final look. It can contain plain text or HTML. For example, you can even have a template that generates JSON:
 
 ```twig
 {
@@ -350,17 +354,17 @@ The provider determines the template final look. It can contain a plain text, HT
 }
 ```
 
-In our example we have a plain text template with:
+In the following example, you have a plain text template with:
 
 ```twig
 {% raw %}{{{% endraw %} 'mail.customer.registration.text' | trans {% raw %}}}{% endraw %}
 ```
 
-The templates must be placed within the module's Presentation layer. In our example `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`, you can use the same trans filter as used with Yves and Zed templates.
+The templates must be placed within the module's `Presentation` layer—for example, `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`. You can use the same trans filter as used with Yves and Zed templates.
 
-`TwigRenderer` is the default renderer, but you can add your own Renderer by implementing the `RendererInterface`.
+`TwigRenderer` is the default renderer, but you can add your own renderer by implementing `RendererInterface`.
 
-We also provide a basic layout file where you can inject concrete content files to. If you want to build your own layout, you need to have the following in your template:
+We also provide a basic layout file, where you can inject concrete content files into. If you want to build your own layout, you need the following in your template:
 
 ```twig
 {% raw %}{%{% endraw %} for template in mail.templates {% raw %}%}{% endraw %}
@@ -370,9 +374,9 @@ We also provide a basic layout file where you can inject concrete content files 
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-This one is used for plain text messages, and templates can also be used to generate JSON or a query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`—it’s up to your provider to decide what you need to render.
+The preceeding template is used for plain text messages, and templates can also be used to generate JSON or query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`. It’s up to your provider to decide what to render.
 
-For HTML messages you need to have this in your layout file:
+For HTML messages, you need to have this in your layout file:
 
 ```twig
 {% raw %}{%{% endraw %} for template in mail.templates {% raw %}%}{% endraw %}
@@ -382,4 +386,4 @@ For HTML messages you need to have this in your layout file:
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-Once you have completed the steps below, call `MailFacade::handleMail()` to activate the mail functionality.
+When you complete the steps, to activate the mail functionality, call `MailFacade::handleMail()`.

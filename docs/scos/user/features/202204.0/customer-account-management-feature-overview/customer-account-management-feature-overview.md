@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/customer-account-management
   - /docs/customer-account-management
   - /docs/en/customer-account-management
+  - /docs/scos/user/features/202200.0/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 The *Customer Account Management* feature enables a wide range of management options for customer accounts, as well as additional functionalities.
@@ -21,13 +22,13 @@ Customers create accounts to save their personal details. Back Office users mana
 * Order history
 * Language and shipping preferences
 
-Password management enables the basic password security for customer accounts. It lets customers:
+Password management enables basic password security for customer accounts. It lets customers do the following:
 
 * Specify the account password when registering.
 * Change the password in their customer account.
 * Request a password reset email.
 
-Also, it lets you manage customer access, request a password change or change it on your side. You can restrict the possibility for the customers to register with simple passwords and lock out accounts after several unsuccessful logins for a certain period of time.
+Also, it lets you manage customer access, request a password change, or change it on your side. You can restrict the possibility for the customers to register with simple passwords and lock out accounts after several unsuccessful logins for a certain period of time.
 
 ## Related Business User articles
 

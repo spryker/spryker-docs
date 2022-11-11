@@ -8,9 +8,10 @@ originalArticleId: f7049250-e07b-486b-95ce-76ff246d0ff4
 redirect_from:
   - /v5/docs/quick-order-shopping-lists-feature-integration
   - /v5/docs/en/quick-order-shopping-lists-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202005.0/quick-order-shopping-lists-feature-integration.html
 ---
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
@@ -31,12 +32,12 @@ Register the following global widget:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use SprykerShop\Yves\ShoppingListWidget\Widget\AddItemsToShoppingListWidget;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**
@@ -69,12 +70,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\QuickOrderPage;
- 
+
 use SprykerShop\Yves\QuickOrderPage\QuickOrderPageDependencyProvider as SprykerQuickOrderPageDependencyProvider;
 use SprykerShop\Yves\ShoppingListWidget\Plugin\QuickOrderPage\ShoppingListQuickOrderFormHandlerStrategyPlugin;
- 
+
 class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
 {
 	/**
@@ -86,7 +87,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 			new ShoppingListQuickOrderFormHandlerStrategyPlugin(), #ShoppingListFeature
 		];
 	}
-}	
+}
 ```
 
 {% info_block warningBox "Verification" %}

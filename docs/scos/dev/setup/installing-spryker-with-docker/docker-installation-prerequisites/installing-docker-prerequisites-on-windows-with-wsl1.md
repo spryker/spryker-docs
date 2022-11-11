@@ -3,6 +3,13 @@ title: Installing Docker prerequisites on Windows with WSL1
 description: This page describes the steps that are to be performed before you can start working with Spryker in Docker on Windows.
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/docker-installation-prerequisites-windows
+related:
+  - title: Installing Docker prerequisites on Linux
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html
+  - title: Installing Docker prerequisites on MacOS
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
+  - title: Installing Docker prerequisites on Windows with WSL2
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
 This document describes the prerequisites for installing Spryker in Docker on Windows.
@@ -182,7 +189,7 @@ sudo gem install docker-sync
 
     a. Open the **Docker for Windows** settings and select **Expose daemon on tcp://localhost:2375 without TLS**.
     b. Run the following command in your WSL shell:
-    
+
     ```bash
     echo "export DOCKER_HOST=tcp://127.0.0.1:2375" >> ~/.bashrc
     ```
@@ -276,4 +283,3 @@ If you've already selected an installation mode, follow one of the guides below:
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html)

@@ -10,22 +10,23 @@ redirect_from:
   - /2021080/docs/en/retrieving-protected-resources
   - /docs/retrieving-protected-resources
   - /docs/en/retrieving-protected-resources
+  - /docs/scos/dev/glue-api-guides/202005.0/getting-the-list-of-protected-resources.html
 related:
-  - title: Authentication and Authorization
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
-  - title: Hide Content from Logged out Users Overview
+  - title: Authenticating as a customer
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
+  - title: Customer Access feature overview
     link: docs/scos/user/features/page.version/customer-access-feature-overview.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
 ---
 
-Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authentication-and-authorization.html).
 
 In your development, the Customer Access API helps you to protect resources from guest access and perform pre-flight checks to avoid sending requests to protected resources without authentication.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Customer Access feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-access-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Customer Access feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html).
 
 ## Retrieve protected resources
 

@@ -2,6 +2,9 @@
 title: Reorder category filters
 description: Learn how to reorder category filters in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Assign and deassign filters from categories
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
 ---
 
 To reorder category filter in the Back Office, do the following:

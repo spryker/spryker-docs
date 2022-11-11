@@ -20,6 +20,11 @@ redirect_from:
   - /v3/docs/en/container-201903
   - /v2/docs/container-201903
   - /v2/docs/en/container-201903
+related:
+  - title: Silex replacement
+    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
+  - title: Application
+    link: docs/scos/dev/migration-concepts/silex-replacement/application.html
 ---
 
 A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the [PSR-11 interface](https://www.php-fig.org/psr/psr-11/).

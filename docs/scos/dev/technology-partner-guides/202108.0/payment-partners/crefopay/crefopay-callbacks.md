@@ -10,12 +10,13 @@ redirect_from:
   - /2021080/docs/en/crefopay-callback
   - /docs/crefopay-callback
   - /docs/en/crefopay-callback
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
 related:
   - title: Integrating CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html
   - title: Installing and configuring CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/installing-and-configuring-crefopay.html
-  - title: CrefoPay — Enabling B2B payments
+  - title: CrefoPay—Enabling B2B payments
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
   - title: CrefoPay payment methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-payment-methods.html

@@ -21,11 +21,19 @@ redirect_from:
   - /v1/docs/en/getting-support
   - /v6/docs/getting-support
   - /v6/docs/en/getting-support
+related:
+  - title: How to use the Support Portal
+    link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
+  - title: How Spryker Support works
+    link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+  - title: How to get the most out of Spryker Support
+    link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
+  
 ---
 
 If you need technical help for issues that can't be resolved with our documentation, you can always count on our support team.
 
-Depending on the types of issues, there are two ways to report them and request support from us:
-1. For bug reports and product issues, feel free to create a case for our support team at the [support portal](https://support.spryker.com).
-2. For security-related issues please follow the instructions at [Security Support](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html).
-3. For general discussions of Spryker related questions, join the [Spryker Community in Slack](https://join.slack.com/t/sprykercommunity/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg).
+Depending on the types of issues, there are several ways to report them and request support from us:
+* For bug reports and product issues, feel free to create a case for our support team at the [support portal](https://support.spryker.com).
+* For security-related issues, follow the instructions at [Security Support](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html).
+* For general discussions of Spryker-related questions, join the [Spryker Community in Slack](https://join.slack.com/t/sprykercommunity/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg).

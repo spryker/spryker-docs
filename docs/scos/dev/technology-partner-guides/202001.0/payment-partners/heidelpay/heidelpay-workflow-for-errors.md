@@ -44,4 +44,4 @@ The only exception is a redirect to the URL after the `placeOrderAction` (`/chec
  $config[HeidelpayConstants::CONFIG_YVES_CHECKOUT_PAYMENT_FAILED_URL] = 'http://' . $config[ApplicationConstants::HOST_YVES] . '/heidelpay/payment-failed?error_code=%s';
  ```
 Data flow containing information about the Heidelpay transaction error is marked red.
-[Heidelpay error handling workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-workflow-for-errors.md/heidelpay-error-handling-workflow.png) 
+[Heidelpay error handling workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-workflow-for-errors.md/heidelpay-error-handling-workflow.png)

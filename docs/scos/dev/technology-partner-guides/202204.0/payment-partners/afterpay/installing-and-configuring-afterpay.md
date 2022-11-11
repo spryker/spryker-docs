@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/afterpay-installation-and-configuration
   - /docs/afterpay-installation-and-configuration
   - /docs/en/afterpay-installation-and-configuration
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/afterpay/installing-and-configuring-afterpay.html
 related:
   - title: Afterpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay.html
@@ -17,7 +18,7 @@ related:
 
 {% info_block errorBox %}
 
-Currently, AfterPay does not work correctly with [gift cards](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) AfterPay. We will update the document after resolving the conflict.
+Currently, AfterPay does not work correctly with [gift cards](/docs/pbc/all/gift-cards/gift-cards.html) AfterPay. We will update the document after resolving the conflict.
 
 {% endinfo_block %}
 

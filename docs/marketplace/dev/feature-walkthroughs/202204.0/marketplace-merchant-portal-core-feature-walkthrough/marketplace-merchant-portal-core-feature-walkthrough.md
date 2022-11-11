@@ -1,10 +1,10 @@
 ---
 title: Marketplace Merchant Portal Core feature walkthrough
-description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as security login.
+description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as secure login.
 template: concept-topic-template
 ---
 
-The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as security login, GUI tables, and dashboards. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, debug.
+The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as secure login, GUI tables, and dashboards. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, and debug.
 
 {% info_block warningBox "Note" %}
 
@@ -58,23 +58,23 @@ The following schema illustrates the Marketplace MerchantPortal Core domain mode
 
 ## Gui Table
 
-GuiTable is a Spryker infrastructure component which displays data as tables and provides search, filtering, sorting, and various interactions with table rows.
-GuiTables are widely used in the Marketplace Merchant Portal for displaying orders, offers, products etc.
-GuiTable frontend component knows how to create the table itself, where to go for the data, and how to interpret the provided data based on the configuration provided.
+`GuiTable` is a Spryker infrastructure component, which displays data as tables and provides search, filtering, sorting, and various interactions with table rows.
+`GuiTable` components are widely used in the Marketplace Merchant Portal for displaying orders, offers, and products.
+The `GuiTable` frontend component knows how to create the table itself, where to go for the data, and how to interpret the provided data based on the configuration provided.
 
 {% info_block warningBox "Table design" %}
 
-To learn more about Table design, see [Table design](/docs/marketplace/dev/front-end/table-design/).
+To learn more about table design, see [Table design](/docs/marketplace/dev/front-end/{{page.version}}/table-design/).
 
 {% endinfo_block %}
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
 | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)          |          | [File details: merchant_user.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-user.csv.html)           | [GUI modules concept](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html) |
 |        |          |          | [How to create a new GUI module](/docs/marketplace/dev/howtos/how-to-create-gui-module.html)  |
 |        |          |          | [How to create a new Gui table](/docs/marketplace/dev/howtos/how-to-create-gui-table.html)  |
 |        |          |          | [How to extend an existing Gui table](/docs/marketplace/dev/howtos/how-to-extend-gui-table.html)  |
 |        |          |          | [How to create a new Gui table filter type](/docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html)  |
-|        |          |          | [How to extend Merchant portal dashboard](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |
+|        |          |          | [How to extend Merchant Portal dashboard](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |

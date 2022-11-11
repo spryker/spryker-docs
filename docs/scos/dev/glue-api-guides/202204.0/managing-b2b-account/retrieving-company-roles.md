@@ -10,17 +10,27 @@ redirect_from:
   - /2021080/docs/en/retrieving-company-roles
   - /docs/retrieving-company-roles
   - /docs/en/retrieving-company-roles
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-roles.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-roles.html
 related:
-  - title: Logging In as Company User
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
-  - title: Retrieving Company Information
+  - title: Retrieving companies
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
-  - title: Retrieving Company User Information
+  - title: Retrieving company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
-  - title: Company User Roles and Permissions Feature Overview
+  - title: "Glue API: Authenticating as a company user"
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
+  - title: Managing company user authentication tokens
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Retrieving business units
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
+  - title: Retrieving business unit addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-addresses.html
+  - title: Company user roles and permissions overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
-  - title: Authentication and Authorization
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Authenticating as a customer
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---
 
 In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html) to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). This endpoint allows retrieving information about the company roles.
@@ -45,7 +55,7 @@ To retrieve a company role, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value. |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value. |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -170,4 +180,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 ##  Next steps
 
 * [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html)
+* [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)

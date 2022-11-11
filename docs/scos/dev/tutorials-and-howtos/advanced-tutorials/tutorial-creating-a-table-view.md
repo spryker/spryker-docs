@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Creating a table view
+title: "Tutorial: Creating a table view"
 description: Use the guide to render data, fetched from the database, in the table.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -30,7 +30,7 @@ This tutorial explains how to retrieve data from the database and render it in a
 
 ## Prerequisites
 
-You have created a new [module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
+You have created a new [module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html).
 
 ## Create a table
 

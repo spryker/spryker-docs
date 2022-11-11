@@ -10,9 +10,10 @@ redirect_from:
   - /2021080/docs/en/cms-blocks-overview
   - /docs/cms-blocks-overview
   - /docs/en/cms-blocks-overview
+  - /docs/scos/user/features/202200.0/cms-feature-overview/cms-blocks-overview.html
 ---
 
-A *CMS block* is a piece of reusable content which you can add to multipe CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page.
+A *CMS block* is a piece of reusable content that you can add to multiple CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page.
 
 ## CMS block template
 
@@ -37,7 +38,7 @@ Each placeholder in a block has locale-specific content (for as many locales as 
 ## Reusing CMS blocks
 
 If you add a CMS block to multiple pages and edit it, the content is updated on all the pages you've added it to.
-This applies to the content and the configuration of blocks. For example, if you update a picture in a block, the new picture will be displayed on all the pages the block is added to. Or, if you update the store relation, the block will stop being displayed on the pages of the store the block is not configured to be displayed on.
+This applies to the content and the configuration of blocks. For example, if you update a picture in a block, the new picture is displayed on all the pages the block is added to. Or, if you update the store relation, the block stops being displayed on the pages of the store the block is not configured to be displayed on.
 
 
 <!---
@@ -49,7 +50,7 @@ You can create connections to other objects like Customer Groups (show a block o
 ### Category Blocks
 Category blocks are blocks that can be embedded into the category template, for which we can specify on which specific categories we want them to be rendered.
 
-For example, we have a Christmas sale that affects the categories  related to toys and sweets. We want to apply the following discount rule for these categories: "When you buy 3 products from this category, the product with a lower price is  free".
+For example, we have a Christmas sale that affects the categories related to toys and sweets. We want to apply the following discount rule for these categories: "When you buy 3 products from this category, the product with a lower price is free".
 
 We want to promote this sale by placing a block that displays the discount rule on the affected categories only.
 
@@ -63,8 +64,8 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html)  |
-| [Manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html)  |
+| [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html)  |
+| [Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

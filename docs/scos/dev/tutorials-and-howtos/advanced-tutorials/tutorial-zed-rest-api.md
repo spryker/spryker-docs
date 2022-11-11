@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Zed Rest API
+title: "Tutorial: Zed Rest API"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-zed-rest-api
@@ -22,18 +22,16 @@ redirect_from:
   - /v1/docs/t-zed-rest-api
   - /v1/docs/en/t-zed-rest-api
 related:
-  - title: About Facade
+  - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
-  - title: Creating, using, and extending the transfer objects
-    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
-  - title: Adding a New Module
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+  - title: Create, use, and extend the transfer objects
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
+  - title: Add a new module
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
   - title: Controllers and Actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
 
 ---
-
-<!--used to be: http://spryker.github.io/challenge/zed-restapi/-->
 
 Spryker-based shop exposes module business logic through a simple API in Zed. The API is self-documented and can be easily explored for each module.
 
@@ -44,9 +42,9 @@ This tutorial describes how to:
 
 ## Preparation
 
-As a basis for solution, we will use an idea of exposing facade methods through HTTP. Each module provides a stateless public interface, which operates either by using scalar types or transfer objects. We can dynamically examine this API using PHP Reflection and expose it through a Zed controller. This will require to be authorized in Zed, which is fine for a demo challenge, as a bonus challenge one might implement a separate authentication for the API endpoint.
+As a basis for solution, we use an idea of exposing facade methods through HTTP. Each module provides a stateless public interface, which operates either by using scalar types or transfer objects. We can dynamically examine this API using PHP Reflection and expose it through a Zed controller. This requires to be authorized in Zed, which is fine for a demo challenge, as a bonus challenge one might implement a separate authentication for the API endpoint.
 
-Transfer objects can de-serialized from JSON, this will simplify a transport layer.
+Transfer objects can be deserialized from JSON; this simplifies a transport layer.
 
 {% info_block errorBox %}
 
@@ -58,13 +56,13 @@ It is advised to recap the following topics before starting the challenge:
 
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
-* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html)
-* [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)
+* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
+* ["Tutorial: Add a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html)
 * [Controllers in Zed](/docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}
 
-Code snippets below are stripped of doc strings and comments to minimize footprint, it is advised to always correctly specify method signatures to take advantage of IDE autocompletion.
+The following code snippets are stripped of doc strings and comments to minimize footprint. We recommend always correctly specifying method signatures to take advantage of IDE autocompletion.
 
 {% endinfo_block %}
 
@@ -106,7 +104,7 @@ class V1Controller extends AbstractController
 }
 ```
 
-After this step log in to Zed and try opening `http://ZED_HOST/api/v1/doc` and `http://ZED_HOST/api/v1/docTransfer`.
+After this step log in to Zed and try opening `http://ZED_HOST/api/v1/doc` and `http://ZED_HOST/api/v1/doc-transfer`.
 
 ## 2. Create a business model to examine facade classes using reflection
 
@@ -290,34 +288,34 @@ Now modify template to output the array:
 <summary markdown='span'>Code sample</summary>
 
 ```html
-&lt;html&gt;
-    &lt;table border="1"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;&lt;td&gt;Method&lt;/td&gt;&lt;td&gt;Annotation&lt;/td&gt;&lt;td&gt;Parameters&lt;/td&gt;&lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
+<html>
+    <table border="1">
+        <thead>
+            <tr><td>Method</td><td>Annotation</td><td>Parameters</td></tr>
+        </thead>
+        <tbody>
         {% raw %}{%{% endraw %} for method, annotation in annotations {% raw %}%}{% endraw %}
-            &lt;tr&gt;
-                &lt;td&gt;{% raw %}{{{% endraw %} method | nl2br{% raw %}}}{% endraw %}&lt;/td&gt;
-                &lt;td&gt;{% raw %}{{{% endraw %} annotation.docString | nl2br {% raw %}}}{% endraw %}&lt;/td&gt;
-                &lt;td&gt;
+            <tr>
+                <td>{% raw %}{{{% endraw %} method | nl2br{% raw %}}}{% endraw %}</td>
+                <td>{% raw %}{{{% endraw %} annotation.docString | nl2br {% raw %}}}{% endraw %}</td>
+                <td>
                     {% raw %}{%{% endraw %} for parameter_name, parameter_annotation in annotation.parameters {% raw %}%}{% endraw %}
                         {% raw %}{{{% endraw %} parameter_name {% raw %}}}{% endraw %}:
                         {% raw %}{%{% endraw %} if parameter_annotation.isTransfer {% raw %}%}{% endraw %}
-                            &lt;a href="docTransfer?transfer={% raw %}{{{% endraw %} parameter_annotation.type | escape{% raw %}}}{% endraw %}" target="_blank"&gt;
+                            <a href="docTransfer?transfer={% raw %}{{{% endraw %} parameter_annotation.type | escape{% raw %}}}{% endraw %}" target="_blank">
                         {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
                         {% raw %}{{{% endraw %} parameter_annotation.type {% raw %}}}{% endraw %}
                         {% raw %}{%{% endraw %} if parameter_annotation.isTransfer {% raw %}%}{% endraw %}
-                            &lt;/a&gt;
+                            </a>
                         {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
-                        &lt;/br&gt;
+                        </br>
                     {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
-                &lt;/td&gt;
-            &lt;/tr&gt;
+                </td>
+            </tr>
         {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/html&gt;
+        </tbody>
+    </table>
+</html>
 ```
 </details>
 
@@ -355,21 +353,21 @@ class TransferAnnotator implements TransferAnnotatorInterface
 Template `doc-transfer.twig`:
 
 ```html
-&lt;html&gt;
-    &lt;table border="1"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;&lt;td&gt;Property&lt;/td&gt;&lt;td&gt;Type&lt;/td&gt;&lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
+<html>
+    <table border="1">
+        <thead>
+            <tr><td>Property</td><td>Type</td></tr>
+        </thead>
+        <tbody>
         {% raw %}{%{% endraw %} for name, annotation in transfer_annotation {% raw %}%}{% endraw %}
-            &lt;tr&gt;
-                &lt;td&gt;{% raw %}{{{% endraw %} name | nl2br{% raw %}}}{% endraw %}&lt;/td&gt;
-                &lt;td&gt;{% raw %}{{{% endraw %} annotation | nl2br {% raw %}}}{% endraw %}&lt;/td&gt;
-            &lt;/tr&gt;
+            <tr>
+                <td>{% raw %}{{{% endraw %} name | nl2br{% raw %}}}{% endraw %}</td>
+                <td>{% raw %}{{{% endraw %} annotation | nl2br {% raw %}}}{% endraw %}</td>
+            </tr>
         {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/html&gt;
+        </tbody>
+    </table>
+</html>
 ```
 
 After completing this step we should be able to see transfer object annotation by accessing `http://ZED_HOST/api/v1/docTransfer?transfer=Generated\Shared\Transfer\CustomerGroupTransfer`.

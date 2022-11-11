@@ -2,6 +2,11 @@
 title: "Glue API: Marketplace Inventory Management + Wishlist feature integration"
 description: This document describes how to integrate the Marketplace Inventory Management + Wishlist Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Inventory Management feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
+  - title: Marketplace Wishlist feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-wishlist-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Inventory Management + Wishlist Glue API feature into a Spryker project.
@@ -18,7 +23,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
-| Marketplace Inventory Management API | {{page.version}} | [Glue API: Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-feature-integration.html) |
+| Marketplace Inventory Management API | {{page.version}} | [Install the Inventory Management Glue API](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-feature-integration.html) |
 
 ### 1) Set up behavior
 
@@ -43,7 +48,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface>
      */
     protected function getWishlistItemExpanderPlugins(): array
     {
@@ -68,7 +73,7 @@ use Spryker\Glue\WishlistsRestApi\WishlistsRestApiDependencyProvider as SprykerW
 class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface[]
+     * @return array<\Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface>
      */
     protected function getRestWishlistItemsAttributesMapperPlugins(): array
     {

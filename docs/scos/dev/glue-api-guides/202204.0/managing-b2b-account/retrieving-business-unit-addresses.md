@@ -10,6 +10,27 @@ redirect_from:
   - /2021080/docs/en/retrieving-business-unit-addresses
   - /docs/retrieving-business-unit-addresses
   - /docs/en/retrieving-business-unit-addresses
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-business-unit-addresses.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-unit-addresses.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-business-unit-addresses.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-business-unit-addresses.html
+related:
+  - title: Retrieving companies
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+  - title: Retrieving company roles
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+  - title: Retrieving company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+  - title: "Glue API: Authenticating as a company user"
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
+  - title: Managing company user authentication tokens
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Retrieving business units
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
+  - title: Authenticating as a customer
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---
 
 This endpoint allows retrieving business unit addresses.
@@ -31,7 +52,7 @@ To retrieve a business unit address, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: retrieve a business unit address
 
@@ -97,4 +118,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ##  Next steps
 
-* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html)
+* [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)

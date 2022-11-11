@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/factory
   - /v1/docs/factory
   - /v1/docs/en/factory
+related:
+  - title: Injecting dependencies within factories - container globals
+    link: docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
 ---
 
 All modules are shipped with a dedicated factory for each layer. The responsibility of the factory is to create new instances of the classes from the same layer and module.
@@ -64,27 +67,29 @@ class CmsBlockFactory extends AbstractFactory
 ```
 
 ## Conventions for factory methods
+
 The factories contain two types of methods:
+* Methods that create internal classes.
+* Methods that provide external dependencies.
 
-* methods which create internal classes
-* methods which provide external dependencies
-
-| Naming convention | Example                | Purpose                                                      |
-| ----------------- | ---------------------- | ------------------------------------------------------------ |
+| NAMING CONVENTION | EXAMPLE  | PURPOSE |
+| ----------------- | ----------------- | -------------- |
 | `createXXX()`       | `createCmsBlockFinder()` | These methods inject dependencies and create instances of internal classes. They always start with the `create-`prefix. It is highly recommended to have only one occurrence of `new` per method. |
-| `getXXX()`          | `getCustomerClient()`    | These methods retrieve a provided external dependency which can be injected into an internal model. Typical external dependencies are Clients, Facades, and QueryContainer. It is a good practice to add the type of the object as a suffix (for example, `getCustomerFacade()`). |
+| `getXXX()`          | `getCustomerClient()`    | These methods retrieve a provided external dependency which can be injected into an internal model. Typical external dependencies are Clients, Facades, and QueryContainer. It is a good practice to add the type of the object as a suffix—for example, `getCustomerFacade()`. |
 
 ## Inherited methods from AbstractFactory
+
 The extended `AbstractFactory` holds some important methods:
 
-| Method              | Purpose                                                      | Available |
-| ------------------- | ------------------------------------------------------------ | --------- |
+| METHOD    | PURPOSE  | AVAILABLE |
+| ------------------- | ----------------- | --------- |
 | `getConfig()`         | The module config contains all of the needed settings for the current module. | Zed only  |
-| `getRepository()` | The dependency container always holds a direct connection to the module’s repository, which is often required by internal models. | Zed only  |
-| `getEntityManager()`| The dependency container always holds a direct connection to the module’s entity manager, which is often required by internal models.| Zed only  |
+| `getRepository()` | The dependency container always holds a direct connection to the module's repository, which is often required by internal models. | Zed only  |
+| `getEntityManager()`| The dependency container always holds a direct connection to the module's entity manager, which is often required by internal models.| Zed only  |
 
 ## Snippets to create a new factory
-The factory pattern is used all over our code-base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace ‘MyBundle’ with your real module name. To enable auto-completion, it is recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
+
+The factory pattern is used all over our code base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace `MyBundle` with your real module name. To enable auto-completion, it is recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
 
 ### Yves
 
@@ -101,6 +106,7 @@ class MyBundleFactory extends AbstractFactory
 ```
 
 ### Client
+
 ```php
 <?php
 
@@ -113,7 +119,8 @@ class MyBundleFactory extends AbstractFactory
 }
 ```
 
-### Zed - Communication layer
+### Zed: Communication layer
+
 ```php
 <?php
 
@@ -131,7 +138,8 @@ class MyBundleCommunicationFactory extends AbstractCommunicationFactory
 }
 ```
 
-### Zed - Business layer
+### Zed: Business layer
+
 ```php
 <?php
 
@@ -170,6 +178,7 @@ class MyBundlePersistenceFactory extends AbstractPersistenceFactory
 ```
 
 ## Using the factory
+
 You can retrieve an instance of the factory by calling `$this->getFactory();`. This returns the instance of the factory defined in the same layer.
 
 ```php
@@ -186,12 +195,12 @@ You can retrieve an instance of the factory by calling `$this->getFactory();`. T
 ```
 
 ## Related Spryks
+
 You might use the following definitions to generate related code:
+* `vendor/bin/console spryk:run AddZedPersistenceFactory`: Adds Zed Persistence Factory.
+* `vendor/bin/console spryk:run AddZedCommunicationFactory`: Adds Zed Communication Factory.
+* `vendor/bin/console spryk:run AddZedBusinessFactory`: Adds Zed Business Factory.
+* `vendor/bin/console spryk:run AddZedBusinessFactoryMethod`: Adds Zed Business Factory Method.
+* `vendor/bin/console spryk:run AddClientFactory`: Adds Client Factory.
 
-* `vendor/bin/console spryk:run AddZedPersistenceFactory` - Add Zed Persistence Factory
-* `vendor/bin/console spryk:run AddZedCommunicationFactory` - Add Zed Communication Factory
-* `vendor/bin/console spryk:run AddZedBusinessFactory` - Add Zed Business Factory     
-* `vendor/bin/console spryk:run AddZedBusinessFactoryMethod` - Add Zed Business Factory Method 
-* `vendor/bin/console spryk:run AddClientFactory` - Add Client Factory
-
-See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.
+For details, see the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation.

@@ -3,6 +3,9 @@ title: Marketplace Product Offer feature integration
 last_updated: Mar 7, 2022
 description: This document describes the process how to integrate the Marketplace Product Offer feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Product Offer feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer into a Spryker project.
@@ -21,7 +24,7 @@ To start feature integration, integrate the required features:
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Product              | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
 
-###  1) Install the required modules using Composer
+### 1) Install the required modules using Composer
 
 Install the required modules:
 
@@ -104,31 +107,31 @@ Verify that the following changes have been implemented by checking your databas
 
 Make sure that the following changes were applied in transfer objects:
 
-| TRANSFER  | TYPE  | EVENT | PATH  |
-| --------------- | -------- | ------ | ---------------- |
-| Item.productOfferReference | property | created | src/Generated/Shared/Transfer/ItemTransfer
-| MerchantProductOfferCriteria | class | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaTransfer
-| PageMap.merchantReferences | property | created | src/Generated/Shared/Transfer/PageMapTransfer
-| ProductAbstractMerchant.merchantReferences | property | created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer
-| ProductOffer | class | created | src/Generated/Shared/Transfer/ProductOfferTransfer
-| ProductOfferCollection | class | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer
-| ProductOfferCriteria | class | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer
-| ProductOfferError | class | created | src/Generated/Shared/Transfer/ProductOfferErrorTransfer
-| ProductOfferResponse | class | created | src/Generated/Shared/Transfer/ProductOfferResponseTransfer
-| ProductOfferStorage | class | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer
-| ProductOfferStorageCollection | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer
-| ProductOfferStorageCriteria | class | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer
-| ProductOfferStore | class | created | src/Generated/Shared/Transfer/ProductOfferStoreTransfer
-| ProductOfferValidity | class | created | src/Generated/Shared/Transfer/ProductOfferValidityTransfer
-| ProductOfferValidityCollection | class | created | src/Generated/Shared/Transfer/ProductOfferValidityCollectionTransfer
-| EventEntity | class | created | src/Generated/Shared/Transfer/EventEntityTransfer
-| ProductPageSearch.merchantReferences | property | created | src/Generated/Shared/Transfer/ProductPageSearchTransfer
-| ProductPayload.merchantReferences | property | created | src/Generated/Shared/Transfer/ProductPayloadTransfer
-| ProductStorageCriteria.merchantReference | property | created | src/Generated/Shared/Transfer/ProductStorageCriteriaTransfer
-| ProductView.productOfferReference | property | created | src/Generated/Shared/Transfer/ProductViewTransfer
-| Merchant.merchantReference | property | created | src/Generated/Shared/Transfer/MerchantTransfer
-| Merchant.status | property | created | src/Generated/Shared/Transfer/MerchantTransfer
-
+| TRANSFER  | TYPE     | EVENT   | PATH |
+|-------------|----------|---------|-----------|
+| Item.productOfferReference                 | property | created | src/Generated/Shared/Transfer/ItemTransfer                           |
+| MerchantProductOfferCriteria               | class    | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaTransfer   |
+| PageMap.merchantReferences                 | property | created | src/Generated/Shared/Transfer/PageMapTransfer                        |
+| ProductAbstractMerchant.merchantReferences | property | created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer        |
+| ProductOffer                               | class    | created | src/Generated/Shared/Transfer/ProductOfferTransfer                   |
+| ProductOfferCollection                     | class    | created | src/Generated/Shared/Transfer/ProductOfferCollectionTransfer         |
+| ProductOfferCriteria                       | class    | created | src/Generated/Shared/Transfer/ProductOfferCriteriaTransfer           |
+| ProductOfferError                          | class    | created | src/Generated/Shared/Transfer/ProductOfferErrorTransfer              |
+| ProductOfferResponse                       | class    | created | src/Generated/Shared/Transfer/ProductOfferResponseTransfer           |
+| ProductOfferStorage                        | class    | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer            |
+| ProductOfferStorageCollection              | class    | created | src/Generated/Shared/Transfer/ProductOfferStorageCollectionTransfer  |
+| ProductOfferStorageCriteria                | class    | created | src/Generated/Shared/Transfer/ProductOfferStorageCriteriaTransfer    |
+| ProductOfferStore                          | class    | created | src/Generated/Shared/Transfer/ProductOfferStoreTransfer              |
+| ProductOfferValidity                       | class    | created | src/Generated/Shared/Transfer/ProductOfferValidityTransfer           |
+| ProductOfferValidityCollection             | class    | created | src/Generated/Shared/Transfer/ProductOfferValidityCollectionTransfer |
+| EventEntity                                | class    | created | src/Generated/Shared/Transfer/EventEntityTransfer                    |
+| ProductConcretePageSearch                  | class    | created | src/Generated/Shared/Transfer/ProductConcretePageSearchTransfer      |
+| ProductPageSearch.merchantReferences       | property | created | src/Generated/Shared/Transfer/ProductPageSearchTransfer              |
+| ProductPayload.merchantReferences          | property | created | src/Generated/Shared/Transfer/ProductPayloadTransfer                 |
+| ProductStorageCriteria.merchantReference   | property | created | src/Generated/Shared/Transfer/ProductStorageCriteriaTransfer         |
+| ProductView.productOfferReference          | property | created | src/Generated/Shared/Transfer/ProductViewTransfer                    |
+| Merchant.merchantReference                 | property | created | src/Generated/Shared/Transfer/MerchantTransfer                       |
+| Merchant.status                            | property | created | src/Generated/Shared/Transfer/MerchantTransfer                       |
 
 {% endinfo_block %}
 
@@ -154,6 +157,8 @@ To configure export to Redis and Elasticsearch, take the following steps:
 | ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                         |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer |
 | MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.            |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
 | MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -164,6 +169,8 @@ namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant\MerchantProductOfferWritePublisherPlugin;
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer\MerchantProductConcreteProductOfferWritePublisherPlugin;
+use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer\ProductConcreteWritePublisherPlugin as ProductOfferProductConcreteWritePublisherPlugin;
+use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore\ProductConcreteWritePublisherPlugin as ProductOfferStoreProductConcreteWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersDeletePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferDeletePublisherPlugin;
@@ -206,15 +213,25 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new MerchantProductOfferWritePublisherPlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    protected function getMerchantProductOfferSearchPlugins(): array
+    {
+        return [
+            new ProductOfferProductConcreteWritePublisherPlugin(),
+            new ProductOfferStoreProductConcreteWritePublisherPlugin(),
+        ];
+    }
 }
 ```
-
 </details>
 
 #### Set up event listeners
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --------------- |------------------------------------------------------------------------------------------| ----------- | ---------------- |
+| --------------- |----------------------| ----------- | ---------------- |
 | MerchantProductOfferSearchEventSubscriber  | Registers listeners responsible for publishing merchant product offer search to storage. |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
 | MerchantSearchEventSubscriber              | Registers listeners responsible for publishing merchant search to storage.               |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
 
@@ -292,7 +309,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface[]
+     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
     protected function getProcessorMessagePlugins(Container $container)
     {
@@ -324,7 +341,7 @@ use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSync
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface[]
+     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */
     protected function getSynchronizationDataPlugins(): array
     {
@@ -425,7 +442,7 @@ Prepare your data according to your requirements using the demo data:
 
 <details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
-```csv
+```
 product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,approval_status
 offer1,093_24495843,MER000001,GS952M00H-Q11,1,approved
 offer2,090_24495844,MER000002,,1,approved
@@ -562,7 +579,6 @@ offer416,112_306918001,MER000002,,1,approved
 offer417,112_312526191,MER000005,,1,approved
 offer418,112_312526172,MER000002,,1,approved
 ```
-
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -576,7 +592,7 @@ offer418,112_312526172,MER000002,,1,approved
 
 <details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
 
-```csv
+```
 product_offer_reference,store_name
 offer1,DE
 offer2,DE
@@ -963,7 +979,6 @@ offer416,AT
 offer417,AT
 offer418,AT
 ```
-
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -973,7 +988,7 @@ offer418,AT
 
 **data/import/common/common/marketplace/product_offer_validity.csv**
 
-```csv
+```
 product_offer_reference,valid_from,valid_to
 offer1,,2020-01-20 00:00:00.000000
 offer2,,2020-01-20 00:00:00.000000
@@ -1007,8 +1022,8 @@ offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 
 Register the following plugins to enable data import:
 
-| PLUGIN | SPECIFICATION                                     | PREREQUISITES | NAMESPACE |
-| ------------------ |---------------------------------------------------| ---------- | ---------------------- |
+| PLUGIN | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+| ------------------ |----------------| ---------- | ---------------------- |
 | MerchantProductOfferDataImportPlugin      | Imports merchant product offer data.              |           | Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin\DataImport |
 | MerchantProductOfferStoreDataImportPlugin | Imports the product offer to store relation data. |           | Spryker\Zed\MerchantProductOfferDataImport\Communication\Plugin\DataImport |
 | ProductOfferValidityDataImportPlugin      | Imports product offer validity data.              |           | Spryker\Zed\ProductOfferValidityDataImport\Communication\DataImport     |
@@ -1040,6 +1055,36 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-product-offer
+    source: data/import/common/common/marketplace/merchant_product_offer.csv
+  - data_entity: merchant-product-offer-store
+    source: data/import/common/DE/merchant_product_offer_store.csv
+  - data_entity: merchant-product-offer-store
+    source: data/import/common/AT/merchant_product_offer_store.csv
+  - data_entity: product-offer-validity
+    source: data/import/common/common/marketplace/product_offer_validity.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-product-offer
+    source: data/import/common/common/marketplace/merchant_product_offer.csv
+  - data_entity: merchant-product-offer-store
+    source: data/import/common/US/merchant_product_offer_store.csv
+  - data_entity: product-offer-validity
+    source: data/import/common/common/marketplace/product_offer_validity.csv
+```
+
 Import data:
 
 ```bash
@@ -1062,8 +1107,8 @@ Make sure that the product offer validity data is correctly imported in `spy_pro
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                               | DESCRIPTION                                                                                                            | PREREQUISITES                         | NAMESPACE                                                                        |
-|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------------------------------------------------------|
+| PLUGIN   | DESCRIPTION  | PREREQUISITES  | NAMESPACE  |
+|----------------|-----------------|-------------------|--------------------------|
 | MerchantProductOfferTableExpanderPlugin              | Expands the  `ProductOfferGui` product table with merchant data.                                                       |                                       | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin                         |
 | MerchantProductOfferViewSectionPlugin                | Adds a new merchant section to the `ProductOfferGui` view.                                                             |                                       | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\ProductOfferGui         |
 | ProductOfferValidityProductOfferViewSectionPlugin    | Adds a new validity section to the `ProductOfferGui` view.                                                             |                                       | Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui         |
@@ -1075,13 +1120,14 @@ Enable the following behaviors by registering the plugins:
 | MerchantNamesProductAbstractMapExpanderPlugin        | Adds merchant names to product abstract search data.                                                                   |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 | MerchantReferencesProductAbstractsMapExpanderPlugin  | Adds merchant references to product abstract search data.                                                              |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 | DefaultProductOfferReferenceStrategyPlugin           | Sets the default selected product offer in PDP for a concrete product. It selects the first product offer in the list. | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
-| ProductOfferReferenceStrategyPlugin                  | Sets selected oroduct offer in `ProductConcreteTransfer` if one is already selected on PDP.                            | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
+| ProductOfferReferenceStrategyPlugin                  | Sets selected product offer in `ProductConcreteTransfer` if one is already selected on PDP.                            | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
 | ProductViewProductOfferExpanderPlugin                | Adds product offer data to `ProductViewTransfer` when a retrieving product.                                            |                                       | Spryker\Client\ProductOfferStorage\Plugin\ProductStorage                         |
 | ProductOfferValidityProductOfferPostCreatePlugin     | Creates product offer validity dates after the product offer is created.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityProductOfferPostUpdatePlugin     | Updates product offer validity dates after the product offer is updated.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityProductOfferExpanderPlugin       | Expands product offer data with validity dates when the product offer is fetched.                                      |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityConsole                          | Updates product offers to have the `isActive` flag to be `false` where their validity date is not current anymore.     |                                       | Spryker\Zed\ProductOfferValidity\Communication\Console                           |
 | MerchantProductOfferStorageMapperPlugin              | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
+| MerchantProductOfferProductConcretePageMapExpanderPlugin  | Expands the provided `PageMap` transfer object with related merchant references.                                  |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
@@ -1096,7 +1142,7 @@ use Spryker\Client\MerchantProductOfferSearch\Plugin\Search\MerchantReferenceQue
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
     /**
-     * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]|\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
     protected function createCatalogSearchQueryExpanderPlugins()
     {
@@ -1104,11 +1150,21 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new MerchantReferenceQueryExpanderPlugin(),
         ];
     }
-
+    
     /**
-     * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]|\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
     protected function createSuggestionQueryExpanderPlugins()
+    {
+        return [
+            new MerchantReferenceQueryExpanderPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
+     */
+    protected function getProductConcreteCatalogSearchQueryExpanderPlugins(): array
     {
         return [
             new MerchantReferenceQueryExpanderPlugin(),
@@ -1133,7 +1189,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return \Spryker\Client\Search\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\SearchConfigExpanderPluginInterface>
      */
     protected function createSearchConfigExpanderPlugins(Container $container)
     {
@@ -1162,7 +1218,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
      */
     protected function getSearchConfigExpanderPlugins(Container $container): array
     {
@@ -1173,7 +1229,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>**
+<details><summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1189,7 +1245,7 @@ use Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui\Pro
 class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferListActionViewDataExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferListActionViewDataExpanderPluginInterface>
      */
     protected function getProductOfferListActionViewDataExpanderPlugins(): array
     {
@@ -1199,7 +1255,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
     }
 
     /**
-     * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferTableExpanderPluginInterface>
      */
     protected function getProductOfferTableExpanderPlugins(): array
     {
@@ -1209,7 +1265,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
     }
 
     /**
-     * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface>
      */
     public function getProductOfferViewSectionPlugins(): array
     {
@@ -1220,7 +1276,6 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
     }
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
@@ -1240,7 +1295,7 @@ use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as Spryker
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductPageSearch\Dependency\Plugin\ProductPageDataExpanderInterface[]
+     * @return array<\Spryker\Zed\ProductPageSearch\Dependency\Plugin\ProductPageDataExpanderInterface>
      */
     protected function getDataExpanderPlugins()
     {
@@ -1252,7 +1307,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 
     /**
-     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface>
      */
     protected function getDataLoaderPlugins()
     {
@@ -1262,7 +1317,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 
     /**
-     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface>
      */
     protected function getProductAbstractMapExpanderPlugins(): array
     {
@@ -1271,9 +1326,18 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new MerchantReferencesProductAbstractsMapExpanderPlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageMapExpanderPluginInterface>
+     */
+    protected function getConcreteProductMapExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductOfferProductConcretePageMapExpanderPlugin(),
+        ];
+    }
 }
 ```
-
 </details>
 
 **src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
@@ -1315,7 +1379,7 @@ use Spryker\Client\ProductStorage\ProductStorageDependencyProvider as SprykerPro
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface[]
+     * @return array<\Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface>
      */
     protected function getProductViewExpanderPlugins()
     {
@@ -1341,7 +1405,7 @@ use Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer\ProductOf
 class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostCreatePluginInterface>
      */
     protected function getProductOfferPostCreatePlugins(): array
     {
@@ -1351,7 +1415,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostUpdatePluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostUpdatePluginInterface>
      */
     protected function getProductOfferPostUpdatePlugins(): array
     {
@@ -1361,7 +1425,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferExpanderPluginInterface>
      */
     protected function getProductOfferExpanderPlugins(): array
     {
@@ -1371,7 +1435,6 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
-
 </details>
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -1389,7 +1452,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container)
     {
@@ -1424,7 +1487,6 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
         ];
     }
 }
-
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1433,14 +1495,16 @@ Make sure that a default product offer is given when retrieving product concrete
 
 Make sure that validity data is saved when saving a product offer.
 
-Make sure Merchant and Product Offer Validity sections exist on the product offer edit page in `ProductOfferGui`.
+Make sure Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
 
 Make sure the Merchant column is in the Product Offers list in `ProductOfferGui`.
 
 Make sure the console command invalidates expired product offers and reactivates product offers that are within their validity dates.
 
 Make sure that when a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages.
+
 It means the following:
+
 1. If a merchant gets deactivated, `ProductAbstract`s that were on the catalog search only because they had a product offer from that merchant get removed.
 2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
 
@@ -1477,12 +1541,12 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Offers** menu item.
+Make sure that in the navigation menu of the Back Office, you can see the **Marketplace->Offers** menu item.
 
 {% endinfo_block %}
 
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Marketplace Product Offer feature front end.
 
@@ -1507,6 +1571,7 @@ Verify that the following modules were installed:
 |----------------------------|--------------------------------------------|
 | MerchantProductOfferWidget | spryker-shop/merchant-product-offer-widget |
 | ProductOfferWidget         | spryker-shop/product-offer-widget          |
+| MerchantProductOfferWidgetExtension | spryker-shop/merchant-product-offer-widget-extension |
 
 {% endinfo_block %}
 
@@ -1514,9 +1579,9 @@ Verify that the following modules were installed:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
-```csv
+```
 merchant_product_offer.view_seller,View Seller,en_US
 merchant_product_offer.view_seller,Händler ansehen,de_DE
 merchant_product_offer.sold_by,Sold by,en_US
@@ -1527,6 +1592,8 @@ product-offer.info.reference.invalid,Product offer reference not found for produ
 product-offer.info.reference.invalid,Produktangebotsreferenz für Produkt mit SKU '% sku%' nicht gefunden.,de_DE
 product-offer.message.not-active-or-approved,"Product offer not active for product with SKU '%sku%'.",en_US
 product-offer.message.not-active-or-approved,"Produktangebot ist inaktiv für Produkt mit SKU '%sku%'.",de_DE
+merchant_product_offer_widget.merchant_name,Merchant,en_US
+merchant_product_offer_widget.merchant_name,Händler,de_DE
 ```
 
 Import data:
@@ -1537,17 +1604,58 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
-### 2) Set up widgets
+### 3) Enable controllers
+
+Enable controllers as follows:
+
+Register the following route provider on the Storefront:
+
+| PROVIDER | NAMESPACE |
+| --- | --- |
+| MerchantProductOfferWidgetRouteProviderPlugin | | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router                        |
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\Router;
+
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router\MerchantProductOfferWidgetRouteProviderPlugin;
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     */
+    protected function getRouteProvider(): array
+    {
+        return [
+            new MerchantProductOfferWidgetRouteProviderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the `yves.mysprykershop.com/merchant-product-offer-widget/merchant-product-offers-select` routes is available for `GET` requests.
+
+{% endinfo_block %}
+
+### 4) Set up widgets
 
 Register the following plugins to enable widgets:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | -------------- | --------------- | ------ | ---------------- |
 | MerchantProductOfferWidget       | Shows the list of the offers with their prices for a concrete product. | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
+| MerchantProductOffersSelectWidget | Shows the list of product offers for the concrete product.             | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1562,12 +1670,13 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {
         return [
             MerchantProductOfferWidget::class,
+            MerchantProductOffersSelectWidget::class,
         ];
     }
 }
@@ -1586,16 +1695,52 @@ Make sure that the following widgets were registered:
 | MODULE | TEST |
 | ----------------- | ----------------- |
 | MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
+| MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders product offers list after performing a product search.                    |
 
 {% endinfo_block %}
 
+### 5) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN  | DESCRIPTION | PREREQUISITES | NAMESPACE  |
+|---------------|-------------|---------------|------------|
+| MerchantProductOfferProductQuickAddFormExpanderPlugin | Expands `ProductQuickAddForm` with `product_offer_reference` hidden field. |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget |
+
+**src/Pyz/Yves/ProductSearchWidget/ProductSearchWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ProductSearchWidget;
+
+use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget\MerchantProductOfferProductQuickAddFormExpanderPlugin;
+use SprykerShop\Yves\ProductSearchWidget\ProductSearchWidgetDependencyProvider as SprykerProductSearchWidgetDependencyProvider;
+
+class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\ProductSearchWidgetExtension\Dependency\Plugin\ProductQuickAddFormExpanderPluginInterface>
+     */
+    protected function getProductQuickAddFormExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductOfferProductQuickAddFormExpanderPlugin(),
+        ];
+    }
+}
+```
+
 ## Related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| -------------- | -------------------------------- | ----------------- |
-| Marketplace Merchant Portal Product Offer Management | | [Marketplace Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |
-| Marketplace Product Offer API | | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html) |
-| Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
-| Marketplace Product Offer + Cart | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html) |
-| Marketplace Product Offer + Checkout | | [Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html) |
-| Marketplace Product Offer + Prices | | [Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) |
+| FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+|--------------|---------------|-----------------|
+| Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)                                           |
+| Marketplace Product Offer Prices                     |                           | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)                             |
+| Marketplace Merchant Portal Product Offer Management |                                  | [Marketplace Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)     |
+| Marketplace Product Offer API                        |                                  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)                            |
+| Marketplace Product + Marketplace Product Offer      |                                  | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| Marketplace Product Offer + Cart                     |                                  | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html)                               |
+| Marketplace Product Offer + Checkout                 |                                  | [Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html)                       |
+| Marketplace Product Offer + Prices                   |                                  | [Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)                           |
+| Marketplace Product Offer + Quick Add to Cart | | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html) |

@@ -18,6 +18,7 @@ redirect_from:
   - /v2/docs/en/demoshop-with-atomic-frontend
   - /v1/docs/demoshop-with-atomic-frontend
   - /v1/docs/en/demoshop-with-atomic-frontend
+  - /docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
 related:
   - title: Twig Compatibility- Legacy Demoshop vs SCOS
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html

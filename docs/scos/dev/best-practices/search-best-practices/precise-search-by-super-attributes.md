@@ -11,11 +11,32 @@ redirect_from:
   - /docs/en/precise-search-by-super-attributes
   - /v6/docs/precise-search-by-super-attributes
   - /v6/docs/en/precise-search-by-super-attributes
+related:
+  - title: Data-driven ranking
+    link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+  - title: Full-text search
+    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+  - title: Generic faceted search
+    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+  - title: On-site search
+    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+  - title: Other best practices
+    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+  - title: Multi-term autocompletion
+    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+  - title: Simple spelling suggestions
+    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+  - title: Naive product centric approach
+    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+  - title: Personalization - dynamic pricing
+    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
+  - title: Usage-driven schema and document structure
+    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
 ## Task to achieve
 
-Imagine shop selling laptop (abstract product) with Ram: *16/32Gb* and CPU: *i5/i7* options. One day there’re only 2 models in stock: **16Gb + i5** and **32Gb + i7**.
+Imagine shop selling laptop (abstract product) with Ram: *16/32Gb* and CPU: *i5/i7* options. One day there're only 2 models in stock: **16Gb + i5** and **32Gb + i7**.
 
 Selecting in the search **Ram: 16Gb + CPU: i7** will show you this abstract product in the catalog/search, while none of it's concretes matched the requirements.
 
@@ -69,7 +90,7 @@ Make sure to use updated plugin in the `CatalogDependencyProvider`
 
 #### Downsides
 
-As you see from the implementation, we cannot actually paginate results of the last query abstract products index. It’s impossible to deal with smooth pagination, since it’s unknown how many concretes should be skip or queried to get next page with abstract products.
+As you see from the implementation, we cannot actually paginate results of the last query abstract products index. It's impossible to deal with smooth pagination, since it's unknown how many concretes should be skip or queried to get next page with abstract products.
 
 
 ### Solution 2: Concrete products index is used as a main search index
@@ -92,4 +113,4 @@ Update query plugin used to point to concrete index, using `ProductConcreteCatal
 
 You will get duplicate abstract products in the search results, accompanied with a single concrete product.
 
-Please consider merging same abstract products, if you do not need duplicates on the page.
+Consider merging same abstract products, if you do not need duplicates on the page.

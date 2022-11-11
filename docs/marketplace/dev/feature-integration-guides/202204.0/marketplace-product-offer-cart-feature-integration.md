@@ -3,6 +3,11 @@ title: Marketplace Product Offer + Cart feature integration
 last_updated: Dec 17, 2020
 description: This integration guide provides steps on how to integrate the Marketplace Product Offer + Cart feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Product Offer feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+  - title: Marketplace Cart feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer + Car feature into a Spryker project.
@@ -18,7 +23,7 @@ To start feature integration, integrate the required features:
 | NAME      | VERSION  | INTEGRATION GUIDE |
 | --------- | -------- | ------------------|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-| Cart | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)
+| Cart | {{page.version}}   | [Cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-feature.html)
 
 ### Set up behavior
 
@@ -49,7 +54,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
      */
     protected function getExpanderPlugins(Container $container): array
     {
@@ -60,7 +65,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface>
      */
     protected function getCartPreCheckPlugins(Container $container): array
     {
@@ -72,7 +77,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
      */
     protected function getPreReloadPlugins(Container $container): array
     {
@@ -104,7 +109,7 @@ To start feature integration, overview, and install the necessary features:
 | NAME        | VERSION    | INTEGRATION GUIDE |
 | ----------- | ---------- | ------------------|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
-| Cart                      | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
+| Cart                      | {{page.version}}   | [Cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ### Set up behavior
 
@@ -114,7 +119,7 @@ Enable the following behaviors by registering the plugins:
 | - | - | - | - |
 | MerchantProductOfferPreAddToCartPlugin | Sets the product offer reference to the item transfer |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage |
 
-**src/Pyz/Yves/Cart/CartDependencyProvider.php**
+**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
 ```
 <?php
@@ -127,7 +132,7 @@ use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage\MerchantProductO
 class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface[]
+     * @return array<\SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface>
      */
     protected function getPreAddToCartPlugins(): array
     {

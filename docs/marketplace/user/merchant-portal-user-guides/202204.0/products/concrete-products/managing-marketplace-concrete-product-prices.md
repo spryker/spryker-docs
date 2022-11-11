@@ -1,15 +1,20 @@
 ---
 title: Managing marketplace concrete product prices
-last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace concrete product prices in the Merchant Portal.
 template: back-office-user-guide-template
+related:
+  - title: Marketplace Product feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+  - title: Marketplace Merchant Custom Prices feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-merchant-custom-prices-feature-overview.html
 ---
 
 This document describes how to manage marketplace concrete product prices in the Merchant Portal.
 
 ## Prerequisites
 
-To start working with the marketplace concrete products, take the following steps:
+To start working with the marketplace concrete products, follow these steps:
+
 1. Go to **Merchant Portal&nbsp;<span aria-label="and then">></span> Products**.
 2. Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. The ***[Product name]*** drawer opens.
 3. Navigate to the **Concrete Products** tab.
@@ -18,19 +23,31 @@ This document contains reference information. Make sure to review it before you 
 
 ## Adding a marketplace concrete product price
 
-To add a new price for a marketplace concrete product:
+To add a new price for a marketplace concrete product, follow these steps:
 
-1. On the **Concrete Products** page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
+1. On the **Concrete Products** page, next to the concrete product you want to edit, hold the pointer over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
 2. Scroll down to the **Price** pane.
 3. In the **Price** pane, click **+Add**. The empty cells appear in the following table.
-4. From the drop-down menu **Store**, select the store for which the price is created.
-5. From the drop-down menu **Currency**, select the currency in which the price is defined.
-6. For the **NET DEFAULT** cell, enter a price. Use `.` or `,` separators.
-7. For the **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
-8. Optional: For the **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
-9. Optional: For the **NET ORIGINAL** cell, enter a price. Use `.` or `,` separators.
-10. Optional: For the **GROSS ORIGINAL** cell, enter a price. Use `.` or `,` separators.
-11. For the **QUANTITY** cell, enter the number of items. By default, the quantity is 1. For an example, see [Adding volume prices](#adding-volume-prices).
+4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) to apply the price to.
+
+  {% info_block infoBox "Note" %}
+
+  In order for the business unit to which the customer is assigned to appear in the **Customers** drop-down menu, in the Back Office, create the [merchant relation](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html).
+
+  You can set customer-specific prices for [marketplace products](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), not [product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html).
+
+  Also, you cannot combine customer-specific prices with volume prices.
+
+  {% endinfo_block %}
+
+5. From the drop-down menu **STORE**, select the store for which the price is created.
+6. From the drop-down menu **CURRENCY**, select the currency in which the price is defined.
+7. For the **NET DEFAULT** cell, enter a price. Use `.` or `,` separators.
+8. For the **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
+9. Optional: For the **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
+10. Optional: For the **NET ORIGINAL** cell, enter a price. Use `.` or `,` separators.
+11. Optional: For the **GROSS ORIGINAL** cell, enter a price. Use `.` or `,` separators.
+12. For the **QUANTITY** cell, enter the number of items. By default, the quantity is 1. For an example, see [Adding volume prices](#adding-volume-prices).
 
 **Tips and tricks**
 
@@ -40,10 +57,11 @@ To keep the prices of the abstract product, select **Use Abstract Product price 
 
 ## Editing marketplace concrete product prices
 
-To edit prices of a marketplace concrete product:
-1. On the **Concrete Products** page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
+To edit marketplace concrete product's prices, follow these steps:
+
+1. On the **Concrete Products** page, next to the concrete product you want to edit, hold the pointer over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
 2. Scroll down to the **Price** pane.
-2. Hover over the table and update the necessary cells.
+3. Next to the price you want to edit, hover over the table and update the necessary cells.
 
 **Tips and tricks**
 
@@ -51,27 +69,28 @@ You can sort the prices by stores and currencies. To do that, in the **Price** p
 
 ## Deleting marketplace concrete product prices
 
-To remove price of a marketplace concrete product:
+To remove a marketplace concrete product's price, follow these steps:
 
-1. On the **Concrete Products** page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
+1. On the **Concrete Products** page, next to the concrete product you want to edit, hold the pointer over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
 2. Scroll down to the **Price** pane.
-3. Next to the price you want to remove, hover over the three dots in the table, and click **Delete**.
+3. Next to the price you want to remove, hold the pointer over the three dots in the table, and click **Delete**.
 
 ### Reference information: Price pane
 
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |
+| Customer | Defines whether the price will be applied to all customers or a specific one. If **Default** is selected, the price will be applied to all customers.   |
 | Store          | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the price will be displayed. |
 | Currency       | Currency in which the concrete product price is defined.           |
 | Net default    | Default item price before tax. |
 | Gross default  | Item price after tax.   |
 | Net original   | Item price before tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
 | Gross original |Item price after tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
-| Quantity       | Number of items for which the price is defined. This field ID used to define the volume prices for the concrete product.  |
+| Quantity       | Number of items for which the price is defined. This field ID is used to define the volume prices for the concrete product.  |
 
 ### Adding volume prices
 
-Let's say you have a product that you want to sell with a special price if a user wants to buy a specific number of the same product. For example, a laptop costs €354.35, but you have defined that if a user buys three items, the cost will be €340 instead of €354.35. In this case, you can define a product quantity starting from which a special [volume price](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) applies.
+Let's say you have a product that you want to sell with a special price if a user wants to buy a specific number of the same product. For example, a laptop costs €354.35, but you have defined that if a user buys three items, the cost will be €340 instead of €354.35. In this case, you can define a product quantity starting from which a special [volume price](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html) applies.
 
 ![Volume prices - marketplace product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Products/volume-prices-merchant-products.gif)
 

@@ -2,6 +2,17 @@
 title: Keeping a project upgradable
 description: Tools and guidelines for keeping a project upgradable
 template: concept-topic-template
+related:
+  - title: Upgradability guidelines
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+  - title: Upgrader tool overview
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
+  - title: Run the evaluator tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
+  - title: Running the upgrader tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
+  - title: Define custom prefixes for core entity names
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---
 
 Keeping software up to date is a known concern, especially when it comes to transactional business models with sophisticated requirements.
@@ -45,35 +56,14 @@ Total messages: 0
 
 If one or more checks fail, Evaluator returns errors per check.
 
-<details open>
-    <summary>Evaluation example with compliance errors</summary>
-
 ```bash
 ...
-NotUnique:Constant Pyz\Shared\ContentBannerGui\ContentBannerGuiConfig::WIDGET_TEMPLATE_DISPLAY_NAME_SLIDER_WITHOUT_LINK name has to have project namespace, like PYZ_WIDGET_TEMPLATE_DISPLAY_NAME_SLIDER_WITHOUT_LINK.
------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseColumn Database column name has to have project prefix Pyz in src/Pyz/Zed/ExampleStateMachine/Persistence/Propel/Schema/spy_example_state_machine.schema.xml, like pyz_name
------------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:Method Method name Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider::extendPaymentMethodHandler() should contains project prefix, like pyzExtendPyzPaymentMethodHandler
----------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferName Transfer object name ProductAbstractStore has to have project prefix Pyz in src/Pyz/Shared/Product/Transfer/product.transfer.xml, like PyzProductAbstractStore
----------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferProperty Transfer property contentWidgetParameterMap for LocaleCmsPageData has to have project prefix Pyz in src/Pyz/Shared/Cms/Transfer/cms.transfer.xml, like pyzContentWidgetParameterMap
--------------------------- ----------------------------------------------------------------------------------------------------
-PrivateApi:Dependency Please avoid usage of ProductStorageDependencyProvider::FACADE_PRODUCT in Pyz\Zed\ProductStorage\Business\ProductStorageBusinessFactory
---------------------- ----------------------------------------------------------------------------------------------------
-PrivateApi:Extension Please avoid extension of the PrivateApi SprykerShop\Yves\ContentProductWidget\Twig\ContentProductAbstractListTwigFunctionProvider in Pyz\Yves\ContentProductWidget\Twig\ContentProductAbstractListTwigFunctionProvider
--------------------- ----------------------------------------------------------------------------------------------------
-PrivateApi:PrivateApiDependencyInBusinessModel Please avoid usage of Spryker\Zed\ProductSet\Business\Model\Touch\ProductSetTouchInterface in Pyz\Zed\ProductSet\Business\Model\ProductSetUpdater
----------------------------------------------- ----------------------------------------------------------------------------------------------------
-PrivateApi:MethodIsOverwritten Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
+PrivateApi:MethodIsOverridden Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
 ------------------------------ ----------------------------------------------------------------------------------------------------
 ...
-Total messages: 11
+Total messages: 1
 
 ```    
-
-</details>
 
 
 ### Using the evaluator tool
@@ -92,7 +82,7 @@ analyze:php:code-compliance
 analyze:php:code-compliance-report
 ```
 
-For detailed instructions, see [Running the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html).
+For detailed instructions, see [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 
 ## 4. Resolve the evaluation issues
 

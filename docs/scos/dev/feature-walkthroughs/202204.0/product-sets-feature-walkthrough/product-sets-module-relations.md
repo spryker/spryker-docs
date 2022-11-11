@@ -1,7 +1,9 @@
 ---
-title: Product Sets- module relations
+title: "Product Sets: module relations"
 description: Module relations and database schema of the Product Sets feature.
 template: feature-walkthrough-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-sets-feature-walkthrough/product-sets-module-relations.html
 ---
 
 The Product Set feature consists of the following modules:

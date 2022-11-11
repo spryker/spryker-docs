@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/computop-credit-card
   - /docs/computop-credit-card
   - /docs/en/computop-credit-card
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
+  - /docs/scos/dev/technology-partner-guides/20204.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html

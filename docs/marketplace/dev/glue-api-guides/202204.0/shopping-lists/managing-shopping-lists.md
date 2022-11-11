@@ -1,24 +1,26 @@
 ---
 title: Managing shopping lists
-last_updated: Feb 22, 2022
+last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:
-  - title: Glue API - Shopping Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
+  - title: Marketplace Shopping Lists feature integration
+    link: docs/marketplace/dev/feature-integration-guides/page.version/marketplace-shopping-lists-feature-integration.html
+  - title: Glue API - Marketplace Shopping Lists feature integration
+    link: docs/marketplace/dev/feature-integration-guides/page.version/glue/marketplace-shopping-lists-feature-integration.html
   - title: Managing shopping list items
     link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-list-items.html
 ---
 
-With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
-
+The Marketplace Shopping Lists API feature lets you manage shopping lists in the Marketplace, as well as managing the items in them.
 
 In your development, the resources can help you to enable the shopping list functionality in your application.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
+* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-shopping-lists-feature-integration.html)
 
 
 ## Create a shopping list
@@ -34,9 +36,11 @@ To create a shopping list for a registered user, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Request sample: `POST https://glue.mysprykershop.com/shopping-lists`
+Request sample:
+
+`POST https://glue.mysprykershop.com/shopping-lists`
 
 ```json
 {
@@ -55,8 +59,7 @@ Request sample: `POST https://glue.mysprykershop.com/shopping-lists`
 
 ### Response
 
-<details>
-<summary markdown='span'>Response sample</summary>
+Response sample:
 
 ```json
 {
@@ -76,7 +79,6 @@ Request sample: `POST https://glue.mysprykershop.com/shopping-lists`
     }
 }
 ```
-</details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
@@ -98,7 +100,7 @@ To retrieve shopping lists, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -118,7 +120,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample with no shopping lists</summary>
+<summary markdown='span'>Response sample: retrieve all shopping lists</summary>
 
 ```json
   {
@@ -131,7 +133,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>    
 
 <details>
-<summary markdown='span'>Response sample with own and shared shopping lists</summary>
+<summary markdown='span'>Response sample: retrieve own and shared shopping lists</summary>
 
 ```json
 {
@@ -187,7 +189,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and concrete products</summary>
+<summary markdown='span'>Response sample: retrieve all shopping lists with its items and respective concrete products</summary>
 
 ```json
 {
@@ -326,10 +328,10 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ```
 </details>
 
-For response attributes, see [Create a shopping list](#create-a-shopping-list).
+For the response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Retrieve a shopping list
@@ -349,28 +351,35 @@ To retrieve a shopping list, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | shopping-list-items, concrete-products|
+| include | Adds resource relationships to the request. | <ul><li>shopping-list-items</li><li>concrete-products</li><li>merchants</li><li>product-offers</li></ul> |
 
 {% info_block infoBox "Included resources" %}
 
 To retrieve concrete products in a shopping list, include `shopping-list-items` and `concrete-products` resources.
 
+To retrieve merchants in a shopping list, include `shopping-list-items` and `merchants` resources.
+
+To retrieve product offers in a shopping list, include `shopping-list-items` and `product-offers` resources.
+
 {% endinfo_block %}
+
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` | Retrieve the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`. |
 | `GET https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items. |
 | `GET https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items and respective concrete products. |
+| `GET https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,merchants` | Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its merchants. |
+| `GET https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,product-offers,product-offer-availabilities`| Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its product offers and product offer availabilities. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list</summary>
 
 ```json
 {
@@ -393,7 +402,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>   
 
 <details>
-<summary markdown='span'>Response sample with shopping list items</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items</summary>
 
 ```json
 {
@@ -446,7 +455,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and concrete products</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items and concrete products</summary>
 
 ```json
 {
@@ -583,13 +592,217 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
-</details>    
+</details>  
+
+<details>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items and merchants</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-lists",
+        "id": "c0bc6296-8a0c-50d9-b25e-5bface7671ce",
+        "attributes": {
+            "owner": "Andrew Wedner",
+            "name": "Test shopping list",
+            "numberOfItems": 6,
+            "updatedAt": "2022-03-17 09:44:24.000000",
+            "createdAt": "2022-03-17 09:44:24.000000"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,merchants"
+        },
+        "relationships": {
+            "shopping-list-items": {
+                "data": [
+                    {
+                        "type": "shopping-list-items",
+                        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+                    },
+                    {
+                        "type": "shopping-list-items",
+                        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "merchants",
+            "id": "MER000001",
+            "attributes": {
+                "merchantName": "Spryker",
+                "merchantUrl": "/de/merchant/spryker",
+                "contactPersonRole": "E-Commerce Manager",
+                "contactPersonTitle": "Mr",
+                "contactPersonFirstName": "Harald",
+                "contactPersonLastName": "Schmidt",
+                "contactPersonPhone": "+49 30 208498350",
+                "logoUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-logo.png",
+                "publicEmail": "info@spryker.com",
+                "publicPhone": "+49 30 234567891",
+                "description": "Spryker ist der Haupthändler auf dem Demo-Marktplatz.",
+                "bannerUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png",
+                "deliveryTime": "1-3 Tage",
+                "faxNumber": "+49 30 234567800",
+                "legalInformation": {
+                    "terms": "<p><h3>§ 1 Geltungsbereich &amp; Abwehrklausel</h3><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><h3>§ 2 Zustandekommen des Vertrages</h3><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-E-Mail. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><h3>§ 3 Eigentumsvorbehalt</h3><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><h3>§ 4 Fälligkeit</h3><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>",
+                    "cancellationPolicy": "Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",
+                    "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Vertreten durch<br>Geschäftsführer: Alexander Graf, Boris Lokschin<br>Registergericht: Hamburg<br>Registernummer: HRB 134310<br></p>",
+                    "dataPrivacy": "Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Spryker Systems GmbH."
+                },
+                "categories": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/merchants/MER000001"
+            }
+        },
+        {
+            "type": "shopping-list-items",
+            "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+            "attributes": {
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "110_19682159"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+            },
+            "relationships": {
+                "merchants": {
+                    "data": [
+                        {
+                            "type": "merchants",
+                            "id": "MER000001"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "shopping-list-items",
+            "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+            "attributes": {
+                "productOfferReference": "offer3",
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "091_25873091"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+            },
+            "relationships": {
+                "merchants": {
+                    "data": [
+                        {
+                            "type": "merchants",
+                            "id": "MER000001"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items, product offers and product offer availabilities</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-lists",
+        "id": "c0bc6296-8a0c-50d9-b25e-5bface7671ce",
+        "attributes": {
+            "owner": "Andrew Wedner",
+            "name": "Test shopping list",
+            "numberOfItems": 6,
+            "updatedAt": "2022-03-17 09:44:24.000000",
+            "createdAt": "2022-03-17 09:44:24.000000"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,product-offers,product-offer-availabilities"
+        },
+        "relationships": {
+            "shopping-list-items": {
+                "data": [
+                    {
+                        "type": "shopping-list-items",
+                        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+                    },
+                    {
+                        "type": "shopping-list-items",
+                        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "shopping-list-items",
+            "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+            "attributes": {
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "110_19682159"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer3",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000001",
+                "isDefault": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer3"
+            }
+        },
+        {
+            "type": "shopping-list-items",
+            "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+            "attributes": {
+                "productOfferReference": "offer3",
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "091_25873091"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer3"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)
+* [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 
 ## Edit a shopping list
 
@@ -607,7 +820,7 @@ To edit a shopping list, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -643,7 +856,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: edit the shopping list</summary>
 
 ```json
 {
@@ -666,7 +879,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>Response sample: edit the shopping list with its items and respective concrete products</summary>
 
 ```json
 "data": {
@@ -804,7 +1017,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Delete a shopping list
@@ -821,11 +1034,13 @@ To delete a shopping list, send the request:
 
 ### Request
 
-Request sample: `DELETE https://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` — Delete the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`.
+Request sample:
+
+`DELETE https://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` — Delete the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`.
 
 ### Response
 
-If the shopping list is deleted successfully, the endpoint retruns the `204 No Content` status code.
+If the shopping list is deleted successfully, the endpoint returns the `204 No Content` status code.
 
 ## Possible errors
 
@@ -833,12 +1048,17 @@ If the shopping list is deleted successfully, the endpoint retruns the `204 No C
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
-| 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
+| 400 | Provided access token is not an [access token of a сompany user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html). |
 | 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
-| 1501 | Shopping list ID or item is not specified. |
+| 1501 | Shopping list ID is not specified. |
+| 1502 | Shopping list item is not specified. |
 | 1503 | Specified shopping list is not found. |
+| 1504 | Shopping list item is not found. |
+| 1505 | Shopping list write permission is required. |
 | 1506 | Shopping list with given name already exists. |
+| 1507 | Shopping list item quantity is not valid. |
 | 1508 | Concrete product not found. |
+| 1509 | Shopping list validation failed.  |
 | 1510 | Product is discontinued. |
 | 1511 | Product is not active. |
 | 1512 | Merchant is inactive. |
@@ -846,8 +1066,8 @@ If the shopping list is deleted successfully, the endpoint retruns the `204 No C
 | 1514 | Product offer is not approved. |
 | 1515 | Product is not approved. |
 | 1516 | Product offer is not active. |
-| 1517 | Product offer is not found.
-| 1518 | Product is not equal to the current Store.
-| 1519 | Product offer is not equal to the current Store.
+| 1517 | Product offer is not found. |
+| 1518 | Product is not equal to the current Store. |
+| 1519 | Product offer is not equal to the current Store. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

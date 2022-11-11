@@ -13,6 +13,6 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES | TUTORIALS AND HOWTOS |
+|INSTALLATION GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Product Groups feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-groups-feature-integration.html) | [HowTo - Display product groups by color on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |
+| [Product Groups feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-groups-feature-integration.html) | [HowTo: Display product groups by color on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |

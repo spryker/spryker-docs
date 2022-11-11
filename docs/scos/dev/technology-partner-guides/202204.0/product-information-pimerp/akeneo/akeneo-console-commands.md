@@ -1,5 +1,5 @@
 ---
-title: Akeneo — Console commands
+title: Akeneo—Console commands
 description: This guide provides the console commands for the Akeneo module.
 last_updated: Jun 16, 2021
 template: concept-topic-template

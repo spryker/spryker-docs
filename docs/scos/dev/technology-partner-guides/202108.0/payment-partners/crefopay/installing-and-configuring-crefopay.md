@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/crefopay-configuration
   - /docs/crefopay-configuration
   - /docs/en/crefopay-configuration
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/crefopay/crefopay-installation-and-configuration.html
 related:
   - title: Integrating CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html
@@ -19,7 +20,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-payment-methods.html
   - title: CrefoPay capture and refund Processes
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay — Enabling B2B payments
+  - title: CrefoPay—Enabling B2B payments
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
   - title: CrefoPay callbacks
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-callbacks.html
@@ -97,6 +98,6 @@ CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
 
 See [CrefoPay payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html) for more information on the payment methods provided by CrefoPay.
 
-## What's next?
+## Next steps
 
 Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/integrating-crefopay.html).

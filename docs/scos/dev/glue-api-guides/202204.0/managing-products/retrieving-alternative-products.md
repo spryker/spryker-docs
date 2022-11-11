@@ -10,20 +10,23 @@ redirect_from:
   - /2021080/docs/en/retrieving-alternative-products
   - /docs/retrieving-alternative-products
   - /docs/en/retrieving-alternative-products
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-alternative-products.html
 related:
-  - title: Retrieving Related Products
+  - title: Retrieving related products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-related-products.html
-  - title: Alternative Products Feature Overview
+  - title: Alternative Products feature overview
     link: docs/scos/user/features/page.version/alternative-products-feature-overview.html
 ---
 
 The _Alternative Products_ feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) and [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html).
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
+
 * Find out whether a concrete product is discontinued.
 * Retrieve a list of alternative products of a product.
 
 In your development, the endpoints help to:
+
 * Provide alternatives for a product that runs out or unavailable, for example, due to local restrictions.
 * Provide alternatives if a product is discontinued.
 * Make alternative products available to customers in their shopping list or suggestions area to make searching and comparing similar products easier.

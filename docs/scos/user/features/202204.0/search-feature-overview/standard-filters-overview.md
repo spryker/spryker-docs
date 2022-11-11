@@ -9,15 +9,17 @@ redirect_from:
   - /2021080/docs/en/standard-filters-overview
   - /docs/standard-filters-overview
   - /docs/en/standard-filters-overview
+  - /docs/scos/user/features/201811.0/search-feature-overview/standard-filters-overview.html
 ---
 
-E-commerce solutions usually offer a huge product catalog to display products and their variations. To help buyers find the products they are looking for in the catalog, we have the *Standard Filters* feature.
+Ecommerce solutions usually offer a huge product catalog to display products and their variations. To help buyers find the products they are looking for in the catalog, we have the *Standard Filters* feature.
 
 With Standard Filters, you can filter the products according to the specified price range, product ratings, product labels, color, material, or brand.
 
 ![Filter Attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/filter-attributes-b2c.png)
 
 ## Filter types
+
 In Spryker Commerce OS, the following filter types exist:
 
 * **Single-select**—lets a user select only one filter option.

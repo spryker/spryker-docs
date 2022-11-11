@@ -1,6 +1,6 @@
 ---
 title: Customer Access feature overview
-description: The Customer Access feature allows deciding whether certain information is visible to logged out users or not
+description: The Customer Access feature lets you decide whether certain information is visible to logged out users or not
 last_updated: Aug 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-access-feature-overview
@@ -10,11 +10,12 @@ redirect_from:
   - /2021080/docs/en/customer-access-feature-overview
   - /docs/customer-access-feature-overview
   - /docs/en/customer-access-feature-overview
+  - /docs/scos/user/features/202200.0/customer-access-feature-overview.html
 ---
 
-_Customer Access_ lets store administrators define whether a certain information is visible to logged out users.
+_Customer Access_ lets store administrators define whether certain information is visible to logged-out users.
 
-The feature lets you give your customers the ability to hide content from customers that are not logged-in to their shop. You can restrict access to prices, products, product availability, carts, and shopping lists.
+The feature lets you give your customers the ability to hide content from customers that are not logged in to their shop. You can restrict access to prices, products, product availability, carts, and shopping lists.
 
 ![Content Restrictions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users/Content+restrictions.png)
 
@@ -32,13 +33,13 @@ Settings in Admin UI (on the left)
 
 * order-place-submit: after selecting **Checkout**, the customer is taken to the login page.
 
-* add-to-cart: to be able to add an item to cart, a customer needs to log in.
+* add-to-cart: to add an item to the cart, a customer needs to log in.
 
-* wishlist: **Add to wishlist** button is not available for a logged out user.
+* wishlist: **Add to wishlist** button is not available for a logged-out user.
 
-* shopping-list: Add to shopping list button is not available for a logged out user.
+* shopping-list: Add to shopping list button is not available for a logged-out user.
 
-By default, all content types are hidden for a logged out user.
+By default, all content types are hidden for a logged-out user.
 
 A developer can add more content types on a project level.
 
@@ -52,7 +53,7 @@ Even if the **Add to Cart** button is available, an unauthenticated customer is 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer access](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-access.html) |
+| [Manage customer access](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-customer-access.html) |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/overview-of-the-feature-guides
   - /docs/overview-of-the-feature-guides
   - /docs/en/overview-of-the-feature-guides
+  - /docs/scos/user/features/202200.0/features.html
 ---
 
 The feature guides describe features in details, highlight their functional abilities, business values, and use-case examples. This information might be useful for:
@@ -18,15 +19,14 @@ The feature guides describe features in details, highlight their functional abil
 
 The **Features** section is divided into capabilities. Each capability contains a capability description and conceptual documentation of all the features a capability includes.
 
-In the feature documentation, you will find the following information:
-
+In the feature documentation, you can find the following information:
 
 * A short feature summary with guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas).
 * A detailed feature overview, workflows, database structure, and more.
 
 {% info_block infoBox "Reference documentation" %}
 
-The documentation in the **Features** section provides reference information that should not be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
+The documentation in the **Features** section provides reference information that can't be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
 
 Or, you can go directly to the following guides:
 

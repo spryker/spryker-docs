@@ -3,6 +3,9 @@ title: Marketplace Shipment feature integration
 last_updated: Jul 05, 2021
 description: This document describes the process how to integrate Marketplace Shipment feature into your project
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Shipment feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shipment feature into a Spryker project.
@@ -18,7 +21,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Merchant | {{page.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Shipment | {{page.version}} | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
+| Shipment | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -61,7 +64,7 @@ use Spryker\Service\Shipment\ShipmentConfig as SprykerShipmentConfig;
 class ShipmentConfig extends SprykerShipmentConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getShipmentHashFields(): array
     {
@@ -72,7 +75,7 @@ class ShipmentConfig extends SprykerShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
+Place an order and check that items are grouped by merchant shipment in backoffice.
 
 {% endinfo_block %}
 
@@ -129,7 +132,7 @@ use Spryker\Zed\ShipmentGui\ShipmentGuiDependencyProvider as SprykerShipmentGuiD
 class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ShipmentGuiExtension\Dependency\Plugin\ShipmentOrderItemTemplatePluginInterface[]
+     * @return array<\Spryker\Zed\ShipmentGuiExtension\Dependency\Plugin\ShipmentOrderItemTemplatePluginInterface>
      */
     protected function getShipmentOrderItemTemplatePlugins(): array
     {

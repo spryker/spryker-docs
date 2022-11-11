@@ -16,13 +16,13 @@ redirect_from:
   - /docs/en/multiple-stores
 ---
 
-{% info_block warningBox "Cloud environment restrictions" %}
+{% info_block warningBox "Multiple stores in cloud environments" %}
 
-Currently, Spryker Cloud Commerce OS does not support all the multi-store configuration options, like creation of different regions. Soon, we will publish the documentation on all the available configuration options for the cloud environment. In the meantime, if you want to set up multiple stores, [contact support](https://spryker.force.com/support/s/knowledge-center) to learn about available configuration options.
+For instructions on setting up multiple stores in Spryker Cloud Commerce OS, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
 
 {% endinfo_block %}
 
-With the Spryker Commerce OS, you can create multiple stores for different scenarios per your business requirements. The multi-store setup is very versatile and customizable. For example, you can:
+With the Spryker Commerce OS, you can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable. For example, you can do the following:
 
 * Build one store for multiple countries and languages or separate stores for each region.
 * Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
@@ -35,15 +35,15 @@ Multi-store setup 1: Database, search engine, and key-value storage are shared b
 
 ![multi-store setup 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-1.png)
 
-Due to the resources being shared, the infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and small amount of data like products and prices.
+Due to the resources being shared, the infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and a small amount of data like products and prices.
 
 Multi-store setup 2: Each store has a dedicated search engine and key-value storage while the database is shared.
 
 ![multi-store setup 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-2.png)
 
-This setup is most suitable for B2B projects with high traffic and a big amount of data.
+This setup is most suitable for B2B projects with high traffic and a large amount of data.
 
-Multi-store setup 3: Each store has a dedicated database, a search engine, and a key-value storage.
+Multi-store setup 3: Each store has a dedicated database, search engine, and key-value storage.
 
 ![multi-store setup 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-3.png)
 
@@ -56,21 +56,17 @@ This setup is most suitable for the projects with the following requirements:
 
 It’s the most expensive but flexible option in terms of per-store scaling and performance.
 
-## Setting up multiple stores
+## Set up multiple stores
 
-To set up multiple stores, do the following.
+To set up multiple stores, follow the steps in the following sections:
 
-### Configuring code buckets
+### Configure code buckets
 
-Code buckets provide an easy way to execute different business logics in runtime based on different HTTP or console command requests. To configure code buckets, see [Code buckets](/docs/scos/dev/architecture/code-buckets.html).
+Code buckets provide an easy way to execute different business logic in runtime based on different HTTP or console command requests. To configure code buckets, see [Code buckets](/docs/scos/dev/architecture/code-buckets.html).
 
-### Configuring stores
+### Configure stores
 
-To configure stores, do the following.
-
-#### 1. Define the stores
-
-Define the desired stores in `config/Shared/stores.php`. In the example below, we define DE and AT stores:
+1. Define the desired stores in `config/Shared/stores.php`. In the following example, DE and AT stores are defined:
 
 <details><summary markdown='span'>config/Shared/stores.php</summary>
 
@@ -145,25 +141,22 @@ return $stores;
 ```
 </details>
 
-#### 2. Optional: define store-specific configuration
+2. Optional: Define store-specific configuration:
+  1. For one or more stores you’ve defined in `config/Shared/stores.php`, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
+  2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment` section.
 
-1. For one or more stores you’ve defined in `config/Shared/stores.php`, define separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
+  In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment):
 
-2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment:` section.
-In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment).
+  ```yaml
+  ....
 
-```yaml
-....
+  environment: docker_de
 
-environment: docker_de
+  image:
+    tag:
+  ```
 
-image:
-  tag:
-```
-
-#### 3. Define the default store
-
-Define the default store in `config/Shared/default_store.php`. In the following example, we define `DE` as the default store.
+3. Define the default store in `config/Shared/default_store.php`. In the following example, we define `DE` as the default store.
 
 ```php
 <?php
@@ -172,9 +165,9 @@ return 'DE';
 ...
 ```
 
-#### 4. Adjust data import configuration
+4. To import data for the stores you’ve added, adjust all the [import files and import configuration](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html).
 
-Adjust all the [import files and import configuration](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) to import data for the stores you’ve added. For example, define the import source for the `DE` store you’ve added:
+For example, define the import source for the `DE` store you’ve added:
 
 ```php
 #2. Catalog Setup data import
@@ -184,7 +177,7 @@ Adjust all the [import files and import configuration](/docs/scos/dev/data-impor
 ...   
 ```
 
-#### 5. Configure installation recipes
+5. Configure installation recipes
 
 Add the new stores to the installation recipes in `config/install/*` as follows:
 
@@ -197,7 +190,7 @@ stores:
 ...    
 ```
 
-For example, to add the `AT` and `DE` stores, we adjust an installation recipe as follows:
+For example, to add the `AT` and `DE` stores, adjust an installation recipe as follows:
 
 ```yaml
 ...
@@ -209,11 +202,11 @@ stores:
 ...    
 ```
 
-## Configuring the deploy file
+## Configure the deploy file
 
-According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the example below, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
+According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
 
-<details><summary markdown='span'>Deploy file configuration for the multi-store setup 1</summary>
+Deploy file configuration for the multi-store setup 1:
 
 ```yaml
 ......
@@ -252,16 +245,15 @@ regions:
                         namespace: 4
 ....                        
 ```
-</details>
 
-We use the following configuration parameters in this example:
+The following configuration parameters are used in this example:
 
-* *Region* defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. Visibility of the project's *Stores* is limited to operate only with the *Stores* that belong to a *Region*. *Region* refers to geographical terms like data centers, regions, and continents in the real world.
-* *Store* defines the list of *Stores* and store-specific settings for *Services*.
+* The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. The visibility of the project's stores is limited to operating only with the stores that belong to a region. Region refers to geographical terms like data centers, regions, and continents in the real world.
+* The `stores` parameter defines the list of stores and store-specific settings for `services`.
 
 For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
-## Defining the store context
+## Define the store context
 
 You can define stores by domains or by headers. We recommend defining stores by domains, which is supported by default.  
 
@@ -269,7 +261,7 @@ Defining stores by headers is not supported by default, but you can use the foll
 
 {% info_block infoBox %}
 
-The workaround is only supported by the [multi-store store setup 1](#multi-store-setup-infrastructure-options), when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
+The workaround is only supported by the [multi-store store setup 1](#multi-store-setup-infrastructure-options) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
 
 **public/Glue/index.php**
 ```php

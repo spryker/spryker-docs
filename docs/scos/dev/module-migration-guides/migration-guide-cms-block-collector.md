@@ -37,21 +37,4 @@ related:
   - title: CMS Block
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
-
-## Upgrading from version 1.* to version 2.*
-
-This version provides support for multi-store CMS Block handling.
-
-To upgrade to the new version of the module, do the following:
-
-1. Update `spryker/cms-block-collector` module to at least version 2.0.0.
-2. Update `spryker/collector` module to at least version 6.0.0. See [Migration Guide - Collector](/docs/scos/dev/module-migration-guides/migration-guide-collector.html).
-3. Install/upgrade `spryker/cms-block` to at least version 2.0.0. You can find additional guide to migration [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html).
-4. Additionally these internal classes have changed. Take a look if you have customized them:
-* `CmsBlockCollector`
-* `CmsBlockCollectorQuery`
-
-You can find more details for these changes on the [CMS Block Collector module release page](https://github.com/spryker/cms-block-collector/releases) and in [Migration Guide - Collector](/docs/scos/dev/module-migration-guides/migration-guide-collector.html).
-
-CMS Block Collector is ready to be used in multi-store environment.
-You can find further information about multi-store CMS Blocks here.
+{% include pbc/all/upgrade-modules/upgrade-the-cms-block-collector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cms-block-collector-module.md -->

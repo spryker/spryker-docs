@@ -2,6 +2,11 @@
 title: Retrieving product offer availabilities
 description: Retrieve Marketplace product offer availabilities via Glue API
 template: glue-api-storefront-guide-template
+related:
+  - title: Retrieving product offer prices
+    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-prices.html
+  - title: Retrieving product offers
+    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offers.html 
 ---
 
 This document describes how to retrieve product offer availabilities via Glue API.

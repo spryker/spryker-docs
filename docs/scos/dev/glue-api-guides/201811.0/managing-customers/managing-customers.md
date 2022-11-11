@@ -7,6 +7,7 @@ originalArticleId: bff44067-c078-4006-9f30-ba1c01f4666b
 redirect_from:
   - /v1/docs/managing-customers-api
   - /v1/docs/en/managing-customers-api
+  - /docs/scos/dev/glue-api-guides/201811.0/manging-customers/managing-customers.html
 related:
   - title: Managing Wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
@@ -111,7 +112,9 @@ Request sample: `GET http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to retrieve.
 
 {% info_block warningBox "Authentication" %}
+
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 If a customer with the specified ID was found, the endpoint will respond with a **RestCustomersRequest**.
@@ -163,14 +166,18 @@ To modify an existing customer account, send a _PATCH_ request to the following 
 `/customers/{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}`
 
 {% info_block infoBox "Modifying Customer Addresses " %}
+
 You need to use specialized endpoints to retrieve and manage addresses registered for a customer. For details, see [Managing the List of Customer Addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html#managing-the-list-of-customer-addresses).
+
 {% endinfo_block %}
 
 Request sample: `PATCH http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to modify.
 
 {% info_block warningBox "Authentication " %}
+
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 To modify a customer, the client must send a **RestCustomersRequest**.
@@ -235,7 +242,9 @@ If a customer is modified successfully, the endpoint will respond with a **RestC
 Customers can provide a set of addresses used for billing, goods delivery, and other purposes. The **Customer API** provides a set of endpoints to manage addresses of a registered customer.
 
 {% info_block warningBox "Authentication " %}
+
 Only authenticated users can manage customer addresses. For details on how to authenticate a customer, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ## Adding an Address

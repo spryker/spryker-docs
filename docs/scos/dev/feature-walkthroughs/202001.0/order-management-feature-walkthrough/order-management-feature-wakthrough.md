@@ -31,10 +31,10 @@ The following scheme illustrates relations between **Shipment**, **ShipmentGui**
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+| INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|
-| [Custom Order Reference feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/custom-order-reference-feature-integration.html) | [Split delivery migration concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html) | | [HowTo - Disable split delivery in Yves interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) | [Sales module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) |
-|  |  |  | [HowTo - Emailing invoices using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html) | |
+| [Custom Order Reference feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/custom-order-reference-feature-integration.html) | [Split delivery migration concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html) | | [HowTo: Disable split delivery in Yves interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) | [Sales module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) |
+|  |  |  | [HowTo: Emailing invoices using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html) | |
 | [Quick Order + Non-splittable Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-non-splittable-products-feature-integration.html) |  |  |  |  |
 | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |  |  |  |  |
 |[ Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) |  |  |  |  |

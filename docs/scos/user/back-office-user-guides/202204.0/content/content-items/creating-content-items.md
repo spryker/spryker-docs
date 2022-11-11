@@ -10,8 +10,10 @@ redirect_from:
   - /2021080/docs/en/creating-content-items
   - /docs/creating-content-items
   - /docs/en/creating-content-items
+  - /docs/scos/user/back-office-user-guides/201811.0/content/content-items/creating-content-items.html
+  - /docs/scos/user/back-office-user-guides/201903.0/content/content-items/creating-content-items.html
 related:
-  - title: Content Items Feature Overview
+  - title: Content Items feature overview
     link: docs/scos/user/features/page.version/content-items-feature-overview.html
   - title: Editing Content Items
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items.html

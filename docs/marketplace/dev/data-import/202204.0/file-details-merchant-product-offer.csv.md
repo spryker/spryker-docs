@@ -3,6 +3,11 @@ title: "File details: merchant_product_offer.csv"
 last_updated: Feb 26, 2021
 description: This document describes the `merchant_product_offer.csv` file to configure merchant product offer information in your Spryker shop.
 template: import-file-template
+related:
+  - title: Marketplace Product Offer feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+  - title: Marketplace Product Offer feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
 ---
 
 This document describes the `merchant_product_offer.csv` file to configure [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.

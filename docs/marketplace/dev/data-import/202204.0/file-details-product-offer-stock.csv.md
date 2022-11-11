@@ -3,6 +3,11 @@ title: "File details: product_offer_stock.csv"
 last_updated: Feb 26, 2021
 description: This document describes the product_offer_stock.csv file to configure merchant product offer stock in your Spryker shop.
 template: import-file-template
+related:
+  - title: Marketplace Product Offer feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+  - title: Marketplace Product Offer feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
 ---
 
 This document describes the `product_offer_stock.csv` file to configure [Merchant product offer stock](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-stock-management) information in your Spryker shop.
@@ -29,7 +34,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)
-- [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
+- [warehouse.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html)
 
 ## Import template file and content example
 

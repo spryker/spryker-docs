@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/product-set
   - /docs/product-set
   - /docs/en/product-set
+  - /docs/scos/user/features/202200.0/product-sets-feature-overview.html
 ---
 
 The *Product Sets* feature lets you create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. The "Shop-the-Look" function is a common example of a product set, where you can build a collection of items based on relations or recommendations.
@@ -29,10 +30,10 @@ A Back Office user can define the following:
 * The order of products sets displayed on the Storefront. It's relevant if you have multiple product sets on the same page.
 * The unique product set URL.
 
-A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+A Back Office user can add product sets to any page by [creating a product set content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 
-For more details about product sets, check the video:
+For more details about product sets, watch the video:
 
 {% wistia 9co7uw35a9 720 480 %}
 

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-optioncsv
   - /docs/file-details-product-optioncsv
   - /docs/en/file-details-product-optioncsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
 ---
 
 This document describes the `product_option.csv` file to configure [product option](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) information in your Spryker Demo Shop.
@@ -33,7 +36,7 @@ The file should have the following parameters:
 | option_name_translation_key |  | String | | Translation key of the name of the option in different locales. |
 | option_name.{ANY_LOCALE_NAME}<br>Example value: *option_name.en_US |  | String || Name of the option in the specified locale (US for our example).  |
 | sku | | String | | SKU identifier of the product option. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 ## Dependencies

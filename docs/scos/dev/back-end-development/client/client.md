@@ -1,6 +1,6 @@
 ---
 title: Client
-description: This article provides general information about the Client part of the Yves applications layer and describes how to use it.
+description: This document provides general information about the client part of the Yves applications layer and describes how to use it.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/client
@@ -22,41 +22,48 @@ redirect_from:
   - /v2/docs/en/client
   - /v1/docs/client
   - /v1/docs/en/client
+related:
+  - title: Implementing a client
+    link: docs/scos/dev/back-end-development/client/implement-a-client.html
+  - title: Use and configuring Redis as a key-value storage
+    link: docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
 ---
 
-This article provides general information about the Client part of the Yves applications layer and describes how to use it.
+This document provides general information about the client part of the Yves applications layer and describes how to use it.
 
 {% info_block infoBox %}
 
-See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) to learn more about the Spryker applications and their layers.
+To learn more about the Spryker applications and their layers, see [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 
 {% endinfo_block %}
 
 ## General information
 
-End customers interact only with the front-end application. The front-end application needs to get data from the storage, send search requests to the search engine, and send the customer requests to the Commerce OS whenever needed, like adding to the cart, as the Commerce OS performs all the business logic.
+End customers interact only with the frontend application. The frontend application needs to get data from the storage, send search requests to the search engine, and send the customer requests to the Commerce OS whenever needed, like adding to the cart, because the Commerce OS performs all the business logic.
 
-The Client’s job is to connect the front-end application to all of the surrounding resources needed for the front-end application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
+The _client's_ job is to connect the frontend application to all of the surrounding resources needed for the frontend application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
 
-For each of these resources, there is a Client. So, it is not only one Client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following Clients:
+For each of these resources, there is a client. So, it is not only one client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following clients:
 
 * SearchClient: to connect to Elasticsearch using its API.
 * StorageClient: to connect to Redis using the Redis protocol; RESP.
-* Commerce OS Clients: every functional unit, a module as it’s called in Spryker, has its Client. For example, there are separated Clients for cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
+* Commerce OS clients: every functional unit, a module as it's called in Spryker, has its client. For example, there are separated clients for the cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
 
-Commerce OS Clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.
-The ClientClient’s purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the Client.
+Commerce OS clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.
+The client's purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the client.
+
 ![Client Schematic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/client-schematic.png)
 
 
 ## How to use a Client in Yves
 
-`getClient()` method in Yves
+The `getClient()` method in Yves
 
-Spryker provides several clients. For instance there is a cart client which contains methods like `addItem()` or `removeItem()`. And there is a catalog client that handles query strings. In each module, you can access the related Client with the `getClient()` method, which is available in controllers and plugins.
+Spryker provides several clients. For example, there is a cart client which contains methods like `addItem()` or `removeItem()`. And there is a catalog client that handles query strings. In each module, you can access the related client with the `getClient()` method, which is available in controllers and plugins.
+
 ![Yves Get Client](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/yves-getclient.png)
 
-The following example shows how the cart Client is used inside the `CartController.` As you can see, the Client uses [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) as an input parameter.
+The following example shows how the cart client is used inside the `CartController.` As you can see, the client uses [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) as an input parameter.
 
 ```php
 <?php
@@ -92,7 +99,7 @@ class CartController extends AbstractController
         $itemTransfer->setQuantity($quantity);
 
         // Add the item:
-        //  Behind this there is a request to Zed.
+        //  Behind this, there is a request to Zed.
         //  The response is stored in the session.
         $cartClient->addItem($itemTransfer);
 
@@ -103,7 +110,7 @@ class CartController extends AbstractController
 
 ## Client execution time
 
-You can do as many usages of the storage and search engine, but you should be aware that each call takes some time. There is a restriction for calls to Zed. Each Call to Zed takes some time to start the application and perform the action. As a result, the execution time of Yves becomes slower.
+You can do as many usages of the storage and search engine, but be aware that each call takes some time. There is a restriction for calls to Zed. Each call to Zed takes some time to start the application and perform the action. As a result, the execution time of Yves becomes slower.
 
 | CLIENT        | AVERAGE EXECUTION TIME          |
 | ------------- | --------------------------- |
@@ -117,9 +124,9 @@ The real execution time in your project depends on the environment, the performa
 
 The request from Yves to Zed involves two important classes:
 
-* The **stub** represents the remote methods in the Client.
-* The **gateway controller** represents the entry point on the Zed side.
+* The *stub* represents the remote methods in the client.
+* The *gateway controller* represents the entry point on the Zed side.
 
-## What’s next?
+## What's next?
 
-To implement a Client for your project, see [Implementing a Client](/docs/scos/dev/back-end-development/client/implementing-a-client.html).
+To implement a client for your project, see [Implementing a client](/docs/scos/dev/back-end-development/client/implement-a-client.html).

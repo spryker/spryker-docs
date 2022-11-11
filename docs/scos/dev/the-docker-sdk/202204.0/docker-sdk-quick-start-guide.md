@@ -10,6 +10,27 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-quick-start-guide
   - /docs/docker-sdk-quick-start-guide
   - /docs/en/docker-sdk-quick-start-guide
+related:
+  - title: The Docker SDK
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+  - title: Docker environment infrastructure
+    link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
+  - title: Configuring services
+    link: docs/scos/dev/the-docker-sdk/page.version/configuring-services.html
+  - title: Docker SDK configuration reference
+    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
+  - title: Choosing a Docker SDK version
+    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+  - title: Choosing a mount mode
+    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-mount-mode.html
+  - title: Configuring a mount mode
+    link: docs/scos/dev/the-docker-sdk/page.version/configuring-a-mount-mode.html
+  - title: Configuring access to private repositories
+    link: docs/scos/dev/the-docker-sdk/page.version/configuring-access-to-private-repositories.html
+  - title: Configuring debugging in Docker
+    link: docs/scos/dev/the-docker-sdk/page.version/configuring-debugging-in-docker.html
+  - title: Running tests with the Docker SDK
+    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
 ---
 
 This document describes how you can quickly set up a local environment with the Docker SDK.
@@ -105,4 +126,4 @@ For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/sc
 
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html)
+* [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html)

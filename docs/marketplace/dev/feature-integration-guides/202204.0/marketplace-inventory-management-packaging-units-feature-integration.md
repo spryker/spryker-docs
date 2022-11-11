@@ -3,6 +3,11 @@ title: Marketplace Inventory Management + Packaging Units feature integration
 last_updated: Sep 07, 2021
 description: This document describes the process how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Inventory Management feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
+  - title: Packaging Unit feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/packaging-units-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
@@ -42,7 +47,7 @@ use Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms\ProductOfferP
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface[]
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
      */
     protected function getOmsReservationAggregationPlugins(): array
     {
@@ -59,6 +64,6 @@ Make sure that availability is calculated properly for the product offers that b
 
 * Add such a product offer to the cart.
 * Place an order.
-* Make sure that `spy_product_offer_reservation` contains a new row, which has reserved the quantity equal to the amount of the bought packaging unit.
+* Make sure that `spy_oms_product_offer_reservation` contains a new row, which has reserved the quantity equal to the amount of the bought packaging unit.
 
 {% endinfo_block %}

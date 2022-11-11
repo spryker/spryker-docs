@@ -33,7 +33,7 @@ See [Content Items](/docs/scos/user/features/{{page.version}}/content-items.html
 {% endinfo_block %} to learn how to create and manage content items in the Back Office.)
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/user/features/{{page.version}}/content-items.html-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
 
 ## Retrieving Abstract Product List Content Item Data
 To retrieve the full information on the abstract product list by the content item key, send a GET request to the following endpoint:
@@ -72,7 +72,7 @@ If the request is successful and the Abstract Product List content item with the
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": [
@@ -167,7 +167,7 @@ If the request is successful and the Abstract Product List content item with the
 	}
 }
 ```
-    
+
 <br>
 </details>
 
@@ -206,7 +206,7 @@ If the request is successful and the abstract product image sets with the specif
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 ...
 			},
@@ -225,7 +225,7 @@ If the request is successful and the abstract product image sets with the specif
 			}
 		},
 	...
-	
+
 			"links": {
 				"self": "http://mysprykershop.com/abstract-products/205"
 			},
@@ -288,7 +288,7 @@ If the request is successful and the abstract product image sets with the specif
 	]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -311,7 +311,7 @@ If the request is successful and the availability of abstract products with the 
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 "data": [
@@ -664,7 +664,7 @@ The following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": [
@@ -884,7 +884,7 @@ The following additional attributes will be added to the response:
 	]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -907,7 +907,7 @@ The following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": [
@@ -1111,7 +1111,7 @@ The following additional attributes will be added to the response:
 	]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -1134,7 +1134,7 @@ The following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": [
@@ -1228,7 +1228,7 @@ The following additional attributes will be added to the response:
 		"self": "http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?include=product-labels"
 }
 ```
-    
+
 <br>
 </details>
 
@@ -1240,7 +1240,7 @@ Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl
 where **apl-1** is the key of the Abstract Product List content item you want to retrieve.
 
 **Sample response:**
-    
+
 ```php
 {
 	"data": [

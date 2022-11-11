@@ -10,13 +10,14 @@ redirect_from:
   - /2021080/docs/en/company-accounts-overview
   - /docs/company-accounts-overview
   - /docs/en/company-accounts-overview
+  - /docs/scos/user/features/202200.0/company-account-feature-overview/company-accounts-overview.html
 ---
 
-Company accounts let you build an organizational structure of your B2B business.
+*Company accounts* let you build an organizational structure for your B2B business.
 
 ## Company
 
-The top level of every B2B business model hierarchy is a *company*. The company represents a legal organization, which is related to stores and has specific metadata, like a tax-number. A company can have a name, activity state, and status attributes.
+The top level of every B2B business model hierarchy is a *company*. The company represents a legal organization related to stores and has specific metadata, like a tax number. A company can have a name, activity state, and status attributes.
 
 {% info_block warningBox "Company statuses" %}
 
@@ -29,23 +30,23 @@ On initial registration of a company, in the Back Office, it appears with the *P
 
 ## Business unit
 
-A company consists of several *business units* which you can consider as physical divisions of the company. The business units, can have a hierarchical structure too. They can have their own departments and teams. Business units also have metadata, like a tax-number.
+A company consists of several *business units*, which you can consider physical divisions of the company. Business units can have a hierarchical structure too. They can have their own departments and teams. Business units also have metadata, like a tax number.
 
 ![company-account-overview.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/company-account-overview.png)
 
 ## Company address
 
-The level below the business unit is *company address*. The company address is a physical representation of a company.
+The level below the business unit is the *company address*. The company address is a physical representation of a company.
 
 One company address can be assigned to several business units. For example, if IT and Sales departments are located in the same office, they can share one company address.
 
-However, a department may distributed between several locations and have several addresses. For example, if the company is a building firm and each unit is a construction site. In this case, for each order made for this department, one should select which address of the department the order should be delivered to. Also, default billing and shipping addresses can't be assigned to business units.
+However, a department may be distributed between several locations and have several addresses. For example, if it is a building company, and each unit is a construction site, for each order made for this department, one selects which address of the department the order is to be delivered to. Also, default billing and shipping addresses can't be assigned to business units.
 
 ## Company user
 
 The process of a new company registration begins with the registration of a customer. A customer that is an employee of a company is referred to as a *company user*. A company user always belongs to at least one business unit.
 
-The company user contains all the information about the customer and has a one-to-one relation to the customer. Actually, when a new company user is created, a respective customer is created too. Therefore, the customer and company user always go together. The only difference between them is that the company user can contain meta information related to its company.
+The company user contains all the information about the customer and has a one-to-one relationship with the customer. Actually, when a new company user is created, a respective customer is created too. Therefore, the customer and company user always go together. The only difference between them is that the company user can contain meta information related to its company.
 
 
 ## Company account on the Storefront

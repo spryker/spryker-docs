@@ -12,17 +12,20 @@ redirect_from:
   - /docs/en/howto-reset-a-docker-environment
   - /v6/docs/howto-reset-a-docker-environment
   - /v6/docs/en/howto-reset-a-docker-environment
+related:
+  - title: Docker SDK quick start guide
+    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
 ---
 
-Sometimes, after experimenting or getting unexpected behavior from the docker/sdk up command, it may be useful to reset the entire Docker environment and start from scratch.
+Sometimes, after experimenting or getting unexpected behavior from the `docker/sdk up` command, it may be helpful to reset the entire Docker environment and start from scratch.
 
 {% info_block warningBox "Data removal" %}
 
-By following the instructions below, you remove all the Docker data.
+To remove all the Docker data, use the following instructions.
 
 {% endinfo_block %}
 
-To reset a Docker environment:
+To reset a Docker environment, follow these steps:
 
 1. Delete all containers, networks, unused images, and build cache:
 

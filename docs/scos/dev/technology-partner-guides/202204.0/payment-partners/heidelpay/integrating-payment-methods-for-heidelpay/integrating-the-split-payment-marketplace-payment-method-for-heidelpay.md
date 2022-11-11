@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-split-payment-marketplace
   - /docs/heidelpay-split-payment-marketplace
   - /docs/en/heidelpay-split-payment-marketplace
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html
@@ -46,7 +47,7 @@ $config[HeidelpayConstants::CONFIG_IS_SPLIT_PAYMENT_ENABLED_KEY] = true;
 
 ## Project Implementation
 
-A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-expanders).
+A project level should set quote items and expenses information the field Heidelpay Item Channel Id. It could be done [using cart expander plugin](/docs/pbc/all/cart-and-checkout/extend-and-customize/cart-module-reference-information.html#cart-expanders).
 
 Example:
 

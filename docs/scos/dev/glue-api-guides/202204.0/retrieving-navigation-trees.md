@@ -10,14 +10,15 @@ redirect_from:
   - /2021080/docs/en/retrieving-navigation-trees
   - /docs/retrieving-navigation-trees
   - /docs/en/retrieving-navigation-trees
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-navigation-trees.html
 related:
   - title: Migration Guide - NavigationsRestApi
     link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
-  - title: Browsing a Category Tree
+  - title: Retrieving category trees
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
 
-The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
+The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigation elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
 
 A navigation element with its child nodes forms a navigation tree. You can only retrieve the entire navigation tree but not a navigation element.
 
@@ -26,6 +27,7 @@ A navigation element with its child nodes forms a navigation tree. You can only 
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Retrieving a navigation tree
+
 To retrieve a navigation tree, send the request:
 
 ---

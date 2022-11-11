@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/integrating-the-direct-debit-payment-method-for-heidelpay.html
   - /docs/integrating-the-direct-debit-payment-method-for-heidelpay.html
   - /docs/en/integrating-the-direct-debit-payment-method-for-heidelpay.html
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

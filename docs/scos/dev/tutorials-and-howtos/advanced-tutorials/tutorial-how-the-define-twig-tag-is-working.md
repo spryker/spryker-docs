@@ -1,5 +1,5 @@
 ---
-title: Tutorial - How the "define" Twig Tag is Working
+title: "Tutorial: How the define Twig tag is working"
 description: Use the guide to learn how to the define twig tag works in the template.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -16,6 +16,9 @@ redirect_from:
   - /v5/docs/en/tutorial-how-define-twig-tag-is-working
   - /v4/docs/tutorial-how-define-twig-tag-is-working
   - /v4/docs/en/tutorial-how-define-twig-tag-is-working
+related:
+  - title: "Tutorial: Twig extensions"
+    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
 ---
 
 This tutorial explains how the *define* tag works on particular examples.

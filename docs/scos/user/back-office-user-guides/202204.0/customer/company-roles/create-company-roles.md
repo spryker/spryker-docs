@@ -11,9 +11,12 @@ redirect_from:
   - /docs/managing-company-roles
   - /docs/en/managing-company-roles
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-roles.html
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-roles.html
 related:
   - title: Managing Companies
     link: docs/scos/user/back-office-user-guides/page.version/customer/manage-companies.html
+  - title: Company user roles and permissions overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 This document describes how to create company roles in the Back Office.

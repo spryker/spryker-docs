@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/file-details-content-product-abstract-listcsv
   - /docs/file-details-content-product-abstract-listcsv
   - /docs/en/file-details-content-product-abstract-listcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
 ---
 
 This document describes the `content_product_abstract_list.csv` file to configure [Content Product Abstract List](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
@@ -29,7 +31,7 @@ The file should have the following parameters:
 | name | &check; | String |Human-readable name. | Name of the content. |
 | description |  | String |N/A | Description of the content. |
 | skus.default | &check; | String |N/A | Default list of product abstract SKUs. |
-| skus.{ANY_LOCALE_NAME}*<br>Example value: *skus.en_US* |  | String | N/A |List of product abstract SKUs, translated into the specified locale (US for our example). | 
+| skus.{ANY_LOCALE_NAME}*<br>Example value: *skus.en_US* |  | String | N/A |List of product abstract SKUs, translated into the specified locale (US for our example). |
 
 *ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
 

@@ -2,6 +2,13 @@
 title: Managing merchant orders
 description: This document describes the actions a merchant can do in the Orders section of the Merchant Portal.
 template: back-office-user-guide-template
+related:
+  - title: Merchant order overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
+  - title: Marketplace and merchant state machines overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+  - title: Marketplace and merchant state machines interaction
+    link: docs/marketplace/user/features/202204.0/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 ---
 
 This document describes the actions a merchant can do in the Orders section of the Merchant Portal.

@@ -2,6 +2,17 @@
 title: Edit company users
 description: Learn how to edit company users in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-users.html
+related:
+  - title: Create company users
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-users/create-company-users.html
+  - title: Create company roles
+    link: docs/scos/user/back-office-user-guides/page.version/customer/company-roles/create-company-roles.html
+  - title: Managing Companies
+    link: docs/scos/user/back-office-user-guides/page.version/customer/manage-companies.html
+  - title: Company user roles and permissions overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 This document describes how to edit company users.

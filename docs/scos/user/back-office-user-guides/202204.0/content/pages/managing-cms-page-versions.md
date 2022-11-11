@@ -10,8 +10,9 @@ redirect_from:
   - /2021080/docs/en/managing-cms-page-versions
   - /docs/managing-cms-page-versions
   - /docs/en/managing-cms-page-versions
+  - /docs/scos/user/back-office-user-guides/202200.0/content/pages/managing-cms-page-versions.html
 related:
-  - title: CMS Page
+  - title: CMS Page overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---
 
@@ -25,6 +26,7 @@ To start working with CMS page versions, go to **Content&nbsp;<span aria-label="
 ## Viewing the history of CMS pages
 
 To view version history of a CMS page:
+
 1. On the *Overview of CMS pages* page in the _Actions_ column, select **View&nbsp;<span aria-label="and then">></span> Version History** next to the page whose version history you want to view.
 2. On the *Version History: [Page Name]* page, the following information is available:
     * Information on the current version and when it was published.
@@ -39,6 +41,7 @@ On the *Version History: [Page Name]* page, you can return to the list of CMS pa
 ### Rolling back to a CMS page version
 
 To roll back to the specific version:
+
 1. On the *Version History: [Page Name]* page from the drop-down list, select the version you want to return to.
 ![Rolling back to the selected version](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/CMS+Pages+Versioning/page-versioning.png)
 
@@ -46,6 +49,8 @@ To roll back to the specific version:
 
 
 ### Comparing CMS Versions
+
 To compare CMS versions to see what changes you have made to the current version:
+
 1. On the *Version History: [Page Name]* page from the drop-down list, select the version you want to compare with the current one.
 2. Click **Compare**. The information of the selected version is displayed next to the information about the current version.

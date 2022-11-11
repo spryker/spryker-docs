@@ -10,6 +10,13 @@ redirect_from:
   - /2021080/docs/en/retrieving-cms-pages
   - /docs/retrieving-cms-pages
   - /docs/en/retrieving-cms-pages
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-cms-pages.html
+  - /docs/scos/dev/glue-api-guides/202005.0/retrieving-cms-pages.html
+related:
+  - title: CMS Pages overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+  - title: Glue API - CMS feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cms-feature-integration.html
 ---
 
 [CMS pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.

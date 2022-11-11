@@ -10,10 +10,11 @@ redirect_from:
   - /2021080/docs/en/retireving-abstract-product-list-content-items
   - /docs/retireving-abstract-product-list-content-items
   - /docs/en/retireving-abstract-product-list-content-items
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
 related:
   - title: REST API Reference
     link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
-  - title: Content Items Feature Overview
+  - title: Content Items feature overview
     link: docs/scos/user/features/page.version/content-items-feature-overview.html
 ---
 

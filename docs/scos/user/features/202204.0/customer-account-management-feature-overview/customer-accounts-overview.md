@@ -30,14 +30,14 @@ There are slight differences in customer accounts' information for the B2B and B
 
 | CUSTOMER ACCOUNT SECTION | B2B SHOP | B2C SHOP |
 | --- | --- | --- |
-| Overview | ✓ | ✓|
-| Profile | ✓ | ✓ |
-| Addresses | ✓ | ✓ |
-| Order History | ✓ | ✓ |
-| Newsletter | ✓ | ✓ |
-| Shopping Lists | ✓ |  |
-| Shopping Carts | ✓ |  |
-| Wishlist |  | ✓ |
+| Overview | &check; | &check;|
+| Profile | &check; | &check; |
+| Addresses | &check; | &check; |
+| Order History | &check; | &check; |
+| Newsletter | &check; | &check; |
+| Shopping Lists | &check; |  |
+| Shopping Carts | &check; |  |
+| Wishlist |  | &check; |
 
 For details about how customer accounts can be created, see [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html).
 
@@ -49,7 +49,7 @@ To comply with international regulations, a Back Office user can delete a custom
 
 {% info_block warningBox %}
 
-Deleting a customer account does not affect billing and order-related information. Deleting an account anonymizes customer information and address data. By default, customer email addresses are anonymized, making it possible for customers to return and re-register with a completely new account.
+Deleting a customer account does not affect billing and order-related information. Deleting an account anonymizes customer information and address data. By default, customer email addresses are anonymized, letting customers return and re-register with a completely new account.
 
 {% endinfo_block %}
 
@@ -57,18 +57,18 @@ A Back Office user can do the following:
 
 * Add notes attached for customers.
 * Set a preferred locale per customer.
-* Deleting a customer data using an anonymization mechanism.
+* Deleting customer data using an anonymization mechanism.
 * Configure a non-linear customer reference for external communication.
 * Set address books with default addresses for billing and shipping.
 * Send a password token by email.
-* Check last orders of a customer in the shop.
+* Check the last orders of a customer in the shop.
 
 For details, see the following:
 * [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)
 * [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)
 
 ## Customer account on the Storefront
-Customer can perform the following actions the Storefront:
+A customer can perform the following actions on the Storefront:
 
 <details>
 <summary markdown='span'>View the account activity</summary>

@@ -10,8 +10,9 @@ redirect_from:
   - /2021080/docs/en/adding-product-alternatives
   - /docs/adding-product-alternatives
   - /docs/en/adding-product-alternatives
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/adding-product-alternatives.html
 related:
-  - title: Alternative Products Feature Overview
+  - title: Alternative Products feature overview
     link: docs/scos/user/features/page.version/alternative-products-feature-overview.html
 ---
 
@@ -27,6 +28,7 @@ To start working with product alternatives, go to **Catalog&nbsp;<span aria-labe
 ## Adding product alternatives for a product
 
 To added product alternatives for a product, do the following:
+
 1. On the *Edit Concrete Product* page, switch to the *Product Alternatives* tab.
 2. To add product alternatives, enter _Product Name_ or its _SKU_ in the **Add Product Alternative by Name** or **SKU** field.
 You can add multiple alternative products.
@@ -43,6 +45,6 @@ To remove any alternative product, in the _Actions_ column, click **Remove**.
 In addition to the alternatives section, a dynamic label is assigned to the product for which the alternatives are set up.
 ![Product label alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/product-label-alternatives.png)
 
-## What's next?
+## Next steps
 
 See the articles in the _References_ section for more examples of the alternative products.

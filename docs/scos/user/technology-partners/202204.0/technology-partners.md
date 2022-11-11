@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/payment-provider-integration-guide
   - /docs/payment-provider-integration-guide
   - /docs/en/payment-provider-integration-guide
+  - /docs/scos/user/technology-partners/202200.0/technology-partners.html
 ---
 
 In this section you will find information about our Technology Partner Integration solutions.
@@ -130,11 +131,3 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 <!--* [Censhare](/docs/scos/user/technology-partners/{{page.version}}/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/contentserv.html)-->
 <!--* [Tradebyte](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)-->
-
- ## Shipment
-
-* [Paazl](/docs/scos/user/technology-partners/{{page.version}}/shipment/paazl.html)
-* [Paqato](/docs/scos/user/technology-partners/{{page.version}}/shipment/paqato.html)
-* [Seven Senders](/docs/scos/user/technology-partners/{{page.version}}/shipment/seven-senders.html)
-
-Become a partner now!

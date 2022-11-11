@@ -2,6 +2,9 @@
 title: Marketplace Merchant feature overview
 description: This document contains concept information for the Merchants feature in the Spryker Commerce OS.
 template: concept-topic-template
+related:
+  - title: Managing merchants
+    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchants.html
 ---
 
 A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  

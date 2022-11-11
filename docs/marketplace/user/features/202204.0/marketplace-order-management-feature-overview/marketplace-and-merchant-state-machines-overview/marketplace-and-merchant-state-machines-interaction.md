@@ -2,6 +2,15 @@
 title: Marketplace and merchant state machines interaction
 description: This document contains details about how the Marketplace and merchant state machines interact with each other in the Spryker Commerce OS.
 template: concept-topic-template
+related:
+  - title: Marketplace and merchant state machines overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+  - title: Marketplace Order Management feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+  - title: Marketplace order overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-overview.html
+  - title: Merchant order overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
 When viewed independently of each other, the Marketplace and Merchant State Machines workflows look like this:
@@ -12,7 +21,7 @@ Marketplace State Machine workflow:
 Merchant State Machine workflow:
 ![Merchant state machine workflow](https://confluence-connect.gliffy.net/embed/image/b938441d-1a4a-4fe3-903d-580965b1bfea.png?utm_medium=live&utm_source=custom)
 
-In this article, we'll look into the process of how Marketplace and merchant state machines interfere and check what statuses are displayed in the Back Office to a Marketplace Administrator, in the Merchant Portal to a merchant, and on the Storefront to a buyer.
+In this article, we'll look into the process of how Marketplace and merchant state machines interfere and check what statuses are displayed in the Back Office to a Marketplace administrator, in the Merchant Portal to a merchant, and on the Storefront to a buyer.
 
 ## Order item’s status progress: New
 The process starts when a customer places an order. The Marketplace order obtains state *New*.

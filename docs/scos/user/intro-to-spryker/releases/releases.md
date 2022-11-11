@@ -22,6 +22,29 @@ redirect_from:
   - /v1/docs/en/releases
   - /v6/docs/releases
   - /v6/docs/en/releases
+  - /docs/scos/user/intro-to-spryker/releases/releases-archive.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-1-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-2-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-1-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-2-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-1-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-2-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-1-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-2-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-1-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-2-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-1-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-2-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-1-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-2-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-1-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-2-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-december-2017.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-january-2018.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-2-2018.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-1-2018.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-march-2018.html
+  - /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-april-2018.html
 ---
 
 This section contains the notes for each [Product release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases) made by Spryker. Make sure that you check this section from time-to-time to stay up to date with the improvements, bug fixes and new features that are delivered by our team.
@@ -32,6 +55,7 @@ See [release-history](https://api.release.spryker.com/release-history) for lates
 It also comes with an RSS feed.
 
 ## Mailing lists
+
 We recommend that you subscribe to our release newsletter and security updates mailing lists so that we can let you know about new features and be immediately informed of any security updates that you need to know about.
 
 To join our release notes mailing list, subscribe here:

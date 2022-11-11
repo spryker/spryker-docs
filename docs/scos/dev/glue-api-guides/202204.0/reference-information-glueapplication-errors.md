@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/reference-information-glueapplication-errors
   - /docs/reference-information-glueapplication-errors
   - /docs/en/reference-information-glueapplication-errors
+  - /docs/scos/dev/glue-api-guides/202200.0/reference-information-glueapplication-errors.html
+related: 
+  - title: Glue REST API
+    link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
 ---
 
 This page lists the generic errors that originate from the Glue Application. These errors can occur for any resource, and they are always the same for all the resources.

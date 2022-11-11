@@ -2,6 +2,17 @@
 title: Merchant order overview
 description: This document contains concept information for the Merchant order feature in the Spryker Commerce OS.
 template: concept-topic-template
+related:
+  - title: Marketplace Order Management feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+  - title: Marketplace order overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-overview.html
+  - title: Marketplace and merchant state machines overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+  - title: Marketplace and merchant state machines interaction
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+  - title: Managing merchant orders
+    link: docs/marketplace/user/merchant-portal-user-guides/page.version/orders/managing-merchant-orders.html
 ---
 
 In the marketplace, when a buyer goes through checkout, the [Marketplace order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) is created. Such an order can contain offers and products from different merchants. The part of the order that belongs to a certain merchant is called *merchant order*. The merchant order created in the system after the Marketplace order has been placed. Thus, each merchant order contains at least one item from the Marketplace order.
@@ -9,10 +20,9 @@ In the marketplace, when a buyer goes through checkout, the [Marketplace order](
 ![Merchant order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+order+management/Marketplace+Order+Management+feature+overview/Merchant+Order+overview/Merchant+Order+schema.png)
 
 
-
 ## Merchant order calculation
 
-A merchant order consists of merchant order items, which are items (products) purchased by a customer. All the calculations for merchant order items are performed using the product offer, merchant products price, and *merchant order totals*. These are the [initial totals](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html) that are calculated according to the product offer purchased:
+A merchant order consists of merchant order items, which are items (products) purchased by a customer. All the calculations for merchant order items are performed using the product offer, merchant products price, and *merchant order totals*. These are the [initial totals](/docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-3-0.html) that are calculated according to the product offer purchased:
 
 | TOTAL | DESCRIPTION |
 | -------- | -------------- |

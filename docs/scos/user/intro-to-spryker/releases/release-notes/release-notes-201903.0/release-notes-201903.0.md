@@ -22,6 +22,9 @@ redirect_from:
   - /v1/docs/en/release-notes-201903-0
   - /v6/docs/release-notes-201903-0
   - /v6/docs/en/release-notes-201903-0
+related:
+  - title: Security Release Notes 201903.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/security-release-notes-201903.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in March of 2019.
@@ -111,7 +114,7 @@ PHPStan has been updated with config file inheritance. From now on, only new or 
 ### Spryk: Code Generation Tool
 With this release, Spryker introduces a new code generator called Spryk. It helps with the generation of required boilerplate code. Spryk works for new and existing code and supports multiple scenarios or definitions. Some scenarios are complex and implemented as independent Spryk definitions linked together, allowing a developer to run code generation for the whole scenario or only for a part of it.
 
-**Documentation**: [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html).
+**Documentation**: [Spryk](/docs/sdk/dev/spryks/spryks.html).
 
 ## Spryker Glue REST API
 ### Product Relations

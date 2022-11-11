@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-abstractcsv
   - /docs/file-details-product-abstractcsv
   - /docs/en/file-details-product-abstractcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
 ---
 
 This document describes the `product_abstract.csv` file to configure [Abstract Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
@@ -45,7 +48,7 @@ The file should have the following parameters:
 | icecat_license |  | String | | Icecat product catalogue license code. |
 | new_from |  | Date | | To be considered a new product from this presented date. |
 | new_to |  | String | | To be considered a new product until this presented date. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 ## Import file dependencies

@@ -3,6 +3,11 @@ title: Merchant Portal - Marketplace Product + Inventory Management feature inte
 last_updated: Sep 13, 2021
 description: This document describes the process how to integrate theMerchant Portal - Marketplace Product + Inventory Management feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Product feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+  - title: Marketplace Inventory Management feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Portal - Marketplace Product + Inventory Management feature into a Spryker project.
@@ -60,7 +65,7 @@ use Spryker\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvi
 class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\ProductConcreteTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\ProductConcreteTableExpanderPluginInterface>
      */
     protected function getProductConcreteTableExpanderPlugins(): array
     {

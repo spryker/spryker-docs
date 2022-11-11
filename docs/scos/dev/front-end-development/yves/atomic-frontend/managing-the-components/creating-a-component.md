@@ -21,6 +21,13 @@ redirect_from:
   - /v2/docs/en/t-create-component
   - /v1/docs/t-create-component
   - /v1/docs/en/t-create-component
+related:
+  - title: Using a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html
+  - title: Extending a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
+  - title: Overriding a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 ---
 
 As Spryker Shop implements the [Component Model](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#component-model), adding new functionality to it usually means implementing a new component. In this document, we shall review creation of a new component on the example of a simple block that displays the count of DOM elements of a certain type. To implement it:

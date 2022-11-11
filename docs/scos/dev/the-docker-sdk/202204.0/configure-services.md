@@ -489,9 +489,20 @@ image:
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
 
-If you update the name of your application, reach out to Spryker Support to have these changes reflected in your APM.
-
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRPsydm6Ds2eRmKS_lMRNjBnqhBLsvtN_ul_R1EMO7Z4pj74Mbpw3kMdAnjH6gIwLt9cvOqLcI=w1920-h919)
+
+
+
+{% info_block infoBox %}
+
+If you update the name of an application, [contact support]((/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
+
+{% endinfo_block %}
+
+
+
+
+
 
 ### Local: Configure New Relic
 
@@ -505,7 +516,7 @@ docker:
             enabled: true
 ```
 
-1. In the `deploy.*.yml`, adjust the `image` section:
+2. In the `deploy.*.yml`, adjust the `image` section:
 
 ```yaml
 image:
@@ -517,11 +528,11 @@ image:
             - newrelic
 ```
 
-### Showing YVES, ZED, and GLUE as their own APM
+### Configure YVES, ZED, and GLUE as separate APMs
 
-By default, the APM displays in the form of `company-staging-newrelic-app` within the New Relic dashboard. This behavior can be updated so that each of the available applications shows as their own APM (for example, `YVES-DE (docker.dev)`) for improved visibility.
+By default, in the New Relic dashboard, the APM displays in the form of `company-staging-newrelic-app`. To improve visibility, you may want to configure each application as a separate APM. For example, `YVES-DE (docker.dev)`.
 
-To do so, additional changes need to be made to the Monitoring service. Within `src/Pyz/Service/Monitoring/`, you can edit `MonitoringDependencyProvider.php` to enable this functionality. You may need to add both this directory and class if they are missing from the Monitoring service.
+To do it, adjust the Monitoring service in `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php`:  
 
 ```php
 <?php declare(strict_types = 1);
@@ -550,17 +561,22 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 }
 ```
 
-With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned within the `getMonitoringExtensions()` function, this tells the Monitoring class to include New Relic. Without these changes, New Relic only reports the base (for example, `index.php`) without showing the appropriate endpoint or class being called with each transaction.
+{% info_block infoBox %}
 
-![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTnab3UR-VObOo2cPS2IzeFY5uYPy6WmdBgvn9FLBn7WV3b-kouvW0rUUw1MjKppzpck4InEtc=w1920-h878)
+* Some builds have the Monitoring service built into the Yves application. If `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php` does not exist, you may want to check `src/Pyz/Yves/Monitoring/`.
+
+* If the class is missing from the Monitoring service, just add it.
+
+
+{% endinfo_block %}
+
+
+
+With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned with the `getMonitoringExtensions()` function, the Monitoring class includes New Relic. Now New Relic shows the appropriate endpoint or class being called with each transaction.
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
 
-{% info_block infoBox %}
 
-Different builds may have the Monitoring service built into the Yves application. If you are unable to locate `MonitoringDependencyProvider.php` within `src/Pyz/Service/Monitoring/`, you may find it integrated at `src/Pyz/Yves/Monitoring/`
-
-{% endinfo_block %}
 
 ## Webdriver
 

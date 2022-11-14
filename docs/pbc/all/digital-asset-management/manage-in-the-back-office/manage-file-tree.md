@@ -82,6 +82,8 @@ To upload a file:
 4. Once done, click **Save**.
 The file is uploaded to the selected folder.
 
+
+
 ## Managing files
 
 Once the file is uploaded, you can manage it from two locations:
@@ -95,8 +97,16 @@ To manage a file in File Tree:
 2. In the *Files List* section, select one of the following in the *Actions* column for the file:
     * **View** to view the file. You are redirected to the *View file* page. You can download the file by clicking **Download** in the *Actions* column.
     * **Edit** to edit the file. You are redirected to the *Edit file* page. 
-      * **File tab**: Here you can update the file name information. 
-      * **File versions tab**: You can upload multiple version of the file. The *File versions* tab lets you maintain multiple versions of any file. For example, your Content Manager may upload Instruction1.txt file (v.1), then decide that an image is more useful in this case and upload Instruction.png (v.2) to the file.
+      * **File tab**: Here you can update the file name information. Click **Save** to apply your updates. You can also upload another version of a file. *Edit File* lets you maintain multiple versions of any file. For example, the Content Manager may upload Instruction1.txt file (v.1), then decide that an image is more useful in this case and upload Instruction.png (v.2) to the file. To upload another version of a file, click **Choose File**, optionally change the file name and the *Alt* and *Title* fields for each locale, the click **Save**.
+      
+      * **File versions tab**: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and delete a version. 
+
+{% info_block warningBox "Warning" %}
+
+    Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone. 
+
+    {% endinfo_block %}
+      
     * **Delete** to immediately delete a file.
     
     {% info_block warningBox "Warning" %}

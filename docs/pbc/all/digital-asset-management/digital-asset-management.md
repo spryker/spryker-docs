@@ -17,9 +17,9 @@ redirect_from:
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
 ---
 
-The *Digital Asset Management* capability lets you upload and manage your assets effectively. You can:
-* Bulk upload/remove files
-* Add/delete files via the Back Office user interface
+The *Digital Asset Management* capability lets you upload and manage your assets (media files) effectively. You can:
+* Upload and delete files in bulk
+* Add and delete files manually via the Back Office
 * Maintain multiple versions of individual files
 * Drag and drop to create and update your assets’ file structure
 * Manage files from a list view 
@@ -36,7 +36,7 @@ Digital assets let content managers create rich, compelling, and attractive cont
 
 ## File tree
 
-The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders under **File Directories Tree** and organize them into a hierarchical system by dragging and dropping them in the file tree.
+The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders (also known as directories) under **File Directories Tree** and organize them into a hierarchical system by dragging and dropping them in the file tree.
 
 The changes take effect after **Save** is selected.
 ![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
@@ -55,7 +55,7 @@ File List displays all the files uploaded to the Back Office in a table view. Th
 
 For example: A Back Office user uploads Instruction1.txt file (v.1). The user then updates and reuploads the .txt file (v.2). Next, the user decides that the image instruction is more useful and upload Instruction.png (v.3).
 
-There are now three versions of the file available: two versions of the text instructions and one instruction image.
+There are now three versions of the file available: two text files and one image file.
 ![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png)
 
 By default, the latest version of the file is displayed to the buyer in the shop application.
@@ -69,7 +69,7 @@ By default, the latest version of the file is displayed to the buyer in the shop
 
 ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/mime-type-settings.png)
 
-The Back Office user can only upload files with a MIME type that is selected in the **Is Allowed** column.
+The Back Office user can only upload files with a MIME type that is selected in the **Is Allowed** column. (If no MIME types are defined, files of any type can be uploaded. If you add at least one MIME type, only the files of the added types can be uploaded.)
 
 Most popular file types that a shop owner can allow uploading to the Back Office are:
 

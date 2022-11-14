@@ -3,7 +3,7 @@ title: Algolia
 description: Algolia is a search engine that 
 ---
 
-Algolia is a powerful search engine that stands out from others due to its speed, easy implementation, and good support. With the Algolia app, your users can conduct advanced search of active concrete products in your store. Deactivated products are not included in the search results.
+Algolia is a search engine that stands out from others due to its performance. With the Algolia app, your users can conduct advanced search of active concrete products in your store. 
 
 {% info_block infoBox "Product offers and product reviews" %}
 
@@ -15,7 +15,7 @@ To use Algolia as your search engine, you need an account with Algolia. For deta
 
 ## Searchable attributes
 
-Your users can search for concrete products by the following attributes:
+Your users can search for active concrete products by the following attributes:
 
 - SKU
 - Name
@@ -39,7 +39,7 @@ Here is an example of the search results in Algolia:
 
 An index is the place where the data used by Algolia is stored.
 
-In case of the Spryker store, the index is a complete list of all active concrete products that can be in search results.
+In case of the Spryker store, the index is a complete list of all active concrete products that can sppear in search results.
 There are separate indexes per locale and per sorting strategy. With the Algolia app, the search results in your store can be sorted by:
 
 - Relevance
@@ -50,28 +50,5 @@ There are separate indexes per locale and per sorting strategy. With the Algolia
 
 For example, if you have two locales, there will be 10 indexes for your store in Algolia: one per each local and sorting strategy:
 
-### Searchable entities
-What is searchable entity, what are our searchable entities
 
-Our searchable entity is concrete products.
-
-
-
-### Sorting strategies
-What is sorting strategy, what are our sorting strategies
-
-search results in shop can be sorted by:
-
-Relevance
-
-From highest to lowest rating
-
-From lowest to highest rating
-
-By price in ascending order
-
-By price in descending order
-
-Per searchable entity, there is 1 index per locale, and per sorting strategy.
-
-When a record is changed in the Back Office, Algolia index automatically gets updated as well.
+The Algolia index is always kept up-to-date with the product data changes. That means, that if a Back Office user changed some searchable product attribute, like, for example, a description, the change is immediately reflected in the Algolia search results as well.

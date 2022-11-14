@@ -1,5 +1,5 @@
 ---
-title: Security guidelines
+title: Security guidelines for on-premise Application
 last_updated: Sep 2, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
@@ -27,11 +27,13 @@ related:
 
 This document describes the guidelines for securing your customers' and partners' data.
 
-## Passwords
+> Cloud topics related to the configuration infrastructure (like AWS) for customers have been managed by Spryker and not described in the document
+
+## Passwords ```app```
 
 The most important about password security is to not save it in plain text. Therefore, Spryker uses BCrypt based on Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use 2-factor authentication and CAPTCHA.
 
-## Encrypted communication
+## Encrypted communication ```app```
 
 As HTTP is a textual protocol having no built-in encryption, passwords and customer personal data are transferred to shops in plain text. So, a good practice is to configure and implement transport layer security (TLS), which is widely known to most users as HTTPS.
 
@@ -45,9 +47,18 @@ You can force HTTPS for the Storefront, Back Office, and Glue using the `Strict-
 * `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
 
+## Encrypted communication ```cloud```
+
+For [PaaS+ projects](/docs/paas-plus/dev/platform-as-a-service-plus.html), encyrpted communication is implemented on the infrastructure level.
+
+TLS configuration is configured on the webserver level. See the following configuration references for both web servers:
+
+* [Nginx](https://nginx.org/en/docs/http/configuring_https_servers.html)
+* [Apache](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
+
 To test web server configuration, use online tools like [SSL Server Test](https://www.ssllabs.com/ssltest/).
 
-## Session security and hijacking
+## Session security and hijacking ```app```
 
 Websites include many third-party JavaScript libraries that can access the content of a page.
 
@@ -58,11 +69,11 @@ Websites include many third-party JavaScript libraries that can access the conte
 * Make sure that `*_SESSION_COOKIE_DOMAIN` matches only your domain to disallow a browser to send the cookie to another domain or subdomain.
 * Never send a session ID as a GET parameter of a URL, because the ID can be logged in logs or forwarded to external websites in HTTP Referer header.
 
-## Cross-site request forgery (CSRF)
+## Cross-site request forgery (CSRF) ```app```
 
 CSRF forces a user to execute unwanted actions while being logged in and either click on a specially crafted link or just embed the URL into some HTML tags triggering the request automatically—for example, the `src` attribute of `img`. To prevent such attacks, Symfony Form provides the `csrf_protection` token by default. We recommend using it in all forms.
 
-## Cross-site scripting (XSS)
+## Cross-site scripting (XSS) ```app```
 
 Cross-site scripting is a possibility to inject malicious scripts to be executed in the browser context, for example, for a logged-in user to scrape information from the page or steal cookies. To prevent such vulnerabilities, developers should filter input and sanitize output to prevent rendering HTML or JS code from user input.
 
@@ -72,15 +83,20 @@ Usually, shop operators are trusted to enter raw HTML. Because you can't limit t
 
 Additionally, you can set [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) using `HeadersSecurityServiceProvider`.
 
-## Security between the Storefront and the Back Office
+## Security between the Storefront and the Back Office ```app```
 
 The Storefront uses HTTP RPC calls to communicate with the Back Office. Secure these calls by enabling Back Office authorization for Storefront requests:
 
 * Set `ZedRequestConstants::AUTH_ZED_ENABLED` and `AuthConstants::AUTH_ZED_ENABLED` to true.
 * Set a random value of `AuthConstants::AUTH_DEFAULT_CREDENTIALS[‘zed_request’][‘token’]` for each environment.
-* Optional: Change the user name used by Storefront in `UserConstants::USER_SYSTEM_USERS`.
+* Optional: Change the username used by Storefront in `UserConstants::USER_SYSTEM_USERS`.
 
-## Remote code execution
+## Security between the Storefront and the Back Office ```cloud```
+
+* Implement whitelisting or DMZ between the Storefront and the Back Office. If possible, make the Back Office unavailable publicly.
+* When communication is happening through untrusted networks and DMZ is not possible, use TLS. This adds some latency to communication.
+
+## Remote code execution ```app```
 
 Avoid triggering remote code execution as follows:
 
@@ -89,7 +105,7 @@ Avoid triggering remote code execution as follows:
 * Unsafe deserialization. Serialized data should not be sent to the browser and should not be accepted back by the server. During deserialization of serialized data, PHP might instantiate classes mentioned in the payload and invoke some actions. Avoid this behavior or implement signature verification methods to validate this input.
 * Command injection: avoid forwarding user input to `exec`, `system`, `passthru`, or similar functions.
 
-## SQL injection
+## SQL injection ```app```
 
 SQL injections are happening when unsanitized user input is embedded into an SQL statement. Use the following mechanisms to prevent SQL injections:
 
@@ -98,15 +114,15 @@ SQL injections are happening when unsanitized user input is embedded into an SQL
 * Casting incoming data to concrete data types like integer or string.
 * The `CastId` method in Zed controllers.
 
-## Clickjacking
+## Clickjacking ```app```
 
 Clickjacking is when UI tweaked to force users to click on specific buttons or links. To prevent clickjacking, set correct headers in `X-Frame-Options` and `Content-Security-Policy` provided by `HeadersSecurityServiceProvider`. Make sure that the headers are not deleted by webserver configuration. For more information about clickjacking, see the [OWASP](https://owasp.org/www-community/attacks/Clickjacking) article.
 
-## Obsolete or outdated dependencies
+## Obsolete or outdated dependencies ```app```
 
 To make sure that all the security updates are installed, keep Spryker and third-party modules up to date. For upgradability guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
 
-## Exceptions and debug mode
+## Exceptions and debug mode ```app```
 
 Make sure that, in your production environment, the debugging mode is disabled, and exceptions are not shown.
 
@@ -116,19 +132,19 @@ Debug mode is configured with the following:
 * `ShopApplicationConstants::ENABLE_APPLICATION_DEBUG`
 * `GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG`
 
-## Demo data
+## Demo data ```app```
 
 *Remove all the demo data from the environment*. A project should only use the real data that will be used after going live. Remove all the demo data that comes with Spryker, which includes demo and admin users. Demo admin users in a live shop pose a significant security risk for your project. Also, make sure to set strong passwords when creating new admin users.
 
-## Summary
+## Summary ```app``` + ```cloud```
 
 To sum up, the main points to keep the data secure are the following:
 
 * Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) in your team.
-* Check the presence of security-related HTTP headers.
+* Check web server configuration and presence of security-related HTTP headers.
 * Check cookie settings.
 * Configure TLS.
-* Secure the communication between the Storefront and the Back Office.
+* Secure the Back Office, do not make it public.
 * Check Spryker configuration and change default authentication parameters like users and passwords.
 * Keep systems and applications up to date.
 * Make sure that exceptions are not shown and debug mode is disabled on production.

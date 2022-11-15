@@ -90,7 +90,7 @@ The schema shows how the Navigation feature affects content management in a Spry
 ![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom)
 
 To learn how a Back Office user can create a Navigation content item, see [Create a Navigation Content Item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-navigation-content-items.html).
-To learn how a marketing content manager can add content to the Storefront, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html).
+To learn how a marketing content manager can add content to the Storefront, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html).
 
 ### Navigation content item templates
 

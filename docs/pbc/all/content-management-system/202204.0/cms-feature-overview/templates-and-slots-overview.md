@@ -379,7 +379,7 @@ The functionality has the following functional constraints which are going to be
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 | - | - |
-| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) |  [Learn about the CoreMedia technology partner integration](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/coremedia.html)  |
+| [Add content to the Storefront using templates and slots](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html) |  [Learn about the CoreMedia technology partner integration](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/coremedia.html)  |
 | [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   | |
 
 

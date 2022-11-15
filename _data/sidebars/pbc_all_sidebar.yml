@@ -265,7 +265,7 @@ entries:
         url: /docs/pbc/all/content-management-system/content-management-system.html
         nested:
           - title: What's changed
-            url: /docs/pbc/all/content-management-system/whats-changed-in-content-management-system.html
+            url: /docs/pbc/all/content-management-system/whats-changed-in-cms.html
           - title: CMS feature overview
             url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-feature-overview.html
             nested:
@@ -456,7 +456,7 @@ entries:
                   - title: Manage CMS pages
                     url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-pages.html
               - title: Manage slots
-                url: /docs/pbc/all/content-management-system/202204.0/manage-in-the-back-office/manage-slots.html
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-slots.html
               - title: Redirects
                 nested:
                   - title: Create CMS redirects
@@ -478,7 +478,7 @@ entries:
               - title: "Tutorial: CMS"
                 url: /docs/pbc/all/content-management-system/tutorials-and-howtos/tutorial-cms.html
               - title: "Tutorial: Content and search - personalized catalog pages"
-                url: /tutorial-content-and-search-personalized-catalog-pages.html
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
           - title: Third-party integrations
             nested:
               - title: Censhare

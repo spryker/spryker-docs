@@ -41,11 +41,11 @@ The files in the Back Office are kept in a tree-like structure. A Back Office us
 The changes take effect after **Save** is selected.
 ![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
 
-A Back Office user can delete any folder within File Directories Tree by selecting **Delete Directory**. (If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in File Directories Tree cannot be deleted.)
+A Back Office user can delete any folder within **File Directories Tree** by selecting **Delete Directory**. (If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in **File Directories Tree** cannot be deleted.)
 
-## File List
+## Files List
 
-File List displays all the files uploaded to the Back Office in a table view. The Back Office user can view, edit, and delete files here.
+**Files List** displays all the files uploaded to the Back Office in a table view. The Back Office user can view, edit, and delete files here.
 ![File list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-list.png)
 
 

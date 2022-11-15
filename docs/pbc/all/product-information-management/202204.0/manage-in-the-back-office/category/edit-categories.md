@@ -18,7 +18,7 @@ related:
   - title: Assigning Products to Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assigning-products-to-categories.html
   - title: Category Management feature overview
-    link: docs/scos/user/features/page.version/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
 ---
 
 This doc describes how to edit categories in the Back Office.

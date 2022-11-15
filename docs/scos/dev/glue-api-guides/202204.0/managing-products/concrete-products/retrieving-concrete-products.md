@@ -21,7 +21,7 @@ related:
   - title: Retrieving sales units
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
   - title: Product Options feature overview
-    link: docs/scos/user/features/page.version/product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-options-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about concrete products.

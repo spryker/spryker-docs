@@ -55,7 +55,7 @@ This approach is suitable only for Scenario 1 - that is, when the service is opt
 
 {% endinfo_block %}
 
-You can make the service, in our example, the installation service, a [product option](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service.
+You can make the service, in our example, the installation service, a [product option](/docs/pbc/all/product-information-management/{{page.version}}/product-options-feature-overview.html) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service.
 
 To implement this approach, you need to create the Service product option and tie it to the respective product.
 

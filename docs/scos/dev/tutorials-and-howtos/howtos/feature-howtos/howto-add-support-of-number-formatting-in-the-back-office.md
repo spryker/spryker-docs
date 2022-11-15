@@ -231,7 +231,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Product Options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/product-options-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 

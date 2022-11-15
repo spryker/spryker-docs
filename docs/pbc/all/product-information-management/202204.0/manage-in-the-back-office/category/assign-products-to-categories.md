@@ -17,7 +17,7 @@ related:
   - title: Creating Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
   - title: Category Management feature overview
-    link: docs/scos/user/features/page.version/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
 ---
 
 To assign and deassign products from categories in the Back Office, follow the steps:

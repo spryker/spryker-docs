@@ -13,7 +13,7 @@ redirect_from:
   - /docs/configurable-bundle
 ---
 
-A *configurable bundle* is a [product bundle](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
+A *configurable bundle* is a [product bundle](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
@@ -68,7 +68,7 @@ For example, a *Kitchen furniture set* configurable bundle template can have the
 
 ![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
-When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management&nbsp;<span aria-label="and then">></span> Product Lists** section or by editing the slot in the configurable bundle template.
+When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/pbc/all/product-information-management/{{page.version}}/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management&nbsp;<span aria-label="and then">></span> Product Lists** section or by editing the slot in the configurable bundle template.
 
 {% info_block warningBox "Slots" %}
 
@@ -234,11 +234,11 @@ The feature has the following functional constraints which are going to be resol
 * A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html)
-    - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html)
+    - [Product bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html)
     - [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
-    * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
-    * [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html)
+    * [Product options](/docs/pbc/all/product-information-management/{{page.version}}/product-options-feature-overview.html)
+    * [Product labels](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html)
     * [Product quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.

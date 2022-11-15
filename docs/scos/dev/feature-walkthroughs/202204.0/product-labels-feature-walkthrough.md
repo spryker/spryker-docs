@@ -10,7 +10,7 @@ redirect_from:
 The _Product Labels_ feature enables product catalog managers to highlight the desired products by adding a special type of information—product labels.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Labels feature overview](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Labels feature overview](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) for business users.
 
 
 

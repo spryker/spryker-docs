@@ -47,7 +47,7 @@ Each section contains reference information. Make sure to look up the necessary 
 | SKU PREFIX | Unique product identifier that helps to track unique information related to the product. |
 | NAME | Name that's displayed for the product on the Storefront. |
 | DESCRIPTION | Description that's displayed for the product on the Storefront. |
-| NEW FROM<br>NEW TO  | Define the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul>|
+| NEW FROM<br>NEW TO  | Define the period of time for which: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html)</li></ul>|
 
 ## Edit prices of an abstract product or product bundle
 

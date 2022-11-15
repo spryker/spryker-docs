@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-bundled-products.html
 related:
   - title: Product Bundles feature overview
-    link: docs/scos/user/features/page.version/product-bundles-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-bundles-feature-overview.html
 ---
 
 This endpoint allows retrieving the products that belong to a bundle.

@@ -18,7 +18,7 @@ related:
   - title: Retrieving category trees
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Category Management feature overview
-    link: docs/scos/user/features/page.version/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
 ---
 
 This endpoint allows retrieving category nodes.

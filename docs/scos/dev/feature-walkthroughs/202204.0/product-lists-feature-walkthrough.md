@@ -10,7 +10,7 @@ redirect_from:
 The _Product Lists_ feature lets you configure product availability for specific companies by blacklisting or whitelisting products for them.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Lists feature overview](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Lists feature overview](/docs/pbc/all/product-information-management/{{page.version}}/product-lists-feature-overview.html) for business users.
 
 
 

@@ -10,7 +10,7 @@ redirect_from:
 The _Product Options_ feature lets a Back Office user create and assign product options to abstract products.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Options feature overview](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Options feature overview](/docs/pbc/all/product-information-management/{{page.version}}/product-options-feature-overview.html) for business users.
 
 
 ## Related Developer articles

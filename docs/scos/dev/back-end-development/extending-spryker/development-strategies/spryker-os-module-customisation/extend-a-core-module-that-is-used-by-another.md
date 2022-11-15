@@ -104,7 +104,7 @@ Bridges are for core-level only. If you use them at the project level, you are d
 
 {% info_block errorBox %}
 
-Spryker is constantly improving type declararations of all methods, thus some bridge interfaces might be incompatible with Facade interfaces, so this approach will not work. To prevent this, please consider module version patch-lock.
+Spryker is constantly improving type declarations of all methods. Thus, some bridge interfaces might be incompatible with Facade interfaces, so this approach does not work. To prevent this, consider module version patch-lock.
 
 {% endinfo_block %}
 

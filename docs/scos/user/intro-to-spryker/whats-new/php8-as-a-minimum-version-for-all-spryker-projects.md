@@ -1,0 +1,64 @@
+---
+title: PHP 8.0 as the minimum version for all Spryker projects
+description: In the coming weeks, Spryker will release a new version of its Demo Shops requiring PHP 8.0 as the minimum version.
+last_updated: November 14, 2022
+template: concept-topic-template
+---
+
+In the coming weeks, Spryker will release a new version of its Demo Shops requiring PHP 8.0 as the minimum version. PHP 7.4 will no longer be supported. Spryker's new module releases will only be compatible with PHP version 8.0 or later.
+
+## Impacts
+
+We have not broken the backward compatibility. If your project followed our recommendations and requirements in the past twelve months, you wouldn't experience any upgradeability issues.
+
+## Migration steps
+
+To migrate your project to PHP 8.0 version, follow these steps:
+
+1. Update your modules manually in `composer.json`.
+Use the major lock `^` or the minor lock `~` if you have changes on the project level for respective module constraints.
+
+```php
+spryker/cms-block-gui => 2.8.0
+codeception/codeception => 4.1.24
+codeception/lib-innerbrowser => 1.3.3
+codeception/module-phpbrowser => 1.0.1
+psalm/phar => 4.3.1
+roave/better-reflection => 5.0.0
+spryker-sdk/benchmark => 0.2.2
+spryker-sdk/spryk => 0.3.4
+spryker-sdk/spryk-gui => 0.2.2
+```
+
+2. Change the PHP version in `composer.json`:
+
+`config.platform.php => 8.0`
+
+3. Make sure there are no project-specific changes in the following repositories and remove them from your `composer.json`:
+
+```json
+"repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/spryker-sdk/lib-innerbrowser.git"
+  }
+],
+```
+
+{% info_block infoBox "Project-specific changes" %}
+
+If you have project-specific changes in these repositories, consider either giving up the changes or copying them to the project code.
+
+{% endinfo_block %}
+
+4. Execute the following command:
+
+```bash
+composer update roave/better-reflection spryker-sdk/spryk
+spryker-sdk/spryk-gui spryker/cms-block-gui spryker-sdk/benchmark
+codeception/lib-innerbrowser codeception/module-phpbrowser psalm/phar
+spryker-sdk/benchmark phpbench/phpbench jetbrains/phpstorm-stubs psalm/phar
+phpbench/dom
+```
+
+5. Run your end-to-end tests and make sure that the changes have not impacted your business functionalities.

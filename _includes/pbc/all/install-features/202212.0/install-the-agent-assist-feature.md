@@ -28,12 +28,10 @@ composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-d
 
 Ensure that the following modules have been installed:
 
-| MODULE                          | EXPECTED DIRECTORY                               |
-|---------------------------------|--------------------------------------------------|
-| Agent                           | vendor/spryker/agent                             |
-| AgentGui                        | vendor/spryker/agent-gui                         |
-| SessionAgentValidation          | vendor/spryker-shop/session-agent-validation     |
-| SessionAgentValidationExtension | spryker-shop/session-agent-validation-extension  |
+| MODULE   | EXPECTED DIRECTORY       |
+|----------|--------------------------|
+| Agent    | vendor/spryker/agent     |
+| AgentGui | vendor/spryker/agent-gui |
 
 {% endinfo_block %}
 
@@ -160,10 +158,11 @@ composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-d
 
 Ensure that the following modules have been installed:
 
-| MODULE      | EXPECTED DIRECTORY               |
-|-------------|----------------------------------|
-| AgentPage   | vendor/spryker-shop/agent-page   |
-| AgentWidget | vendor/spryker-shop/agent-widget |
+| MODULE                 | EXPECTED DIRECTORY                           |
+|------------------------|----------------------------------------------|
+| AgentPage              | vendor/spryker-shop/agent-page               |
+| AgentWidget            | vendor/spryker-shop/agent-widget             |
+| SessionAgentValidation | vendor/spryker-shop/session-agent-validation |
 
 {% endinfo_block %}
 
@@ -241,45 +240,6 @@ console data:import:glossary
 
 Enable the following controllers.
 
-#### Service provider list
-
-Register the service provider in the Yves application:
-
-| PROVIDER                         | NAMESPACE                                  | SPECIFICATION                                                                                             |
-|----------------------------------|--------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| AgentPageSecurityServiceProvider | SprykerShop\Yves\AgentPage\Plugin\Provider | Registers security firewalls, access rules, impersonate rules, login and logout handlers for Agent users. |
-
-**src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\ShopApplication;
-
-use SprykerShop\Yves\AgentPage\Plugin\Provider\AgentPageSecurityServiceProvider;
-use SprykerShop\Yves\ShopApplication\YvesBootstrap as SprykerYvesBootstrap;
-
-class YvesBootstrap extends SprykerYvesBootstrap
-{
-    /**
-     * @return void
-     */
-    protected function registerServiceProviders()
-    {
-        $this->application->register(new AgentPageSecurityServiceProvider()); # AgentFeature
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Ensure that you've registered the providers correctly:
-
-1. Open http://mysprykershop.com/agent/secured.
-2. This should redirect you to http://mysprykershop.com/agent/login.
-
-{% endinfo_block %}
-
 #### Controller provider list
 
 Register the controller provider(s) in the Yves application:
@@ -332,6 +292,48 @@ Ensure that you have registered the providers correctly:
 
 Set up the following behaviors.
 
+#### Agent page security
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                   | DESCRIPTION                                                                                               | PREREQUISITES | NAMESPACE                                  |
+|--------------------------|-----------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------|
+| AgentPageSecurityPlugin  | Registers security firewalls, access rules, impersonate rules, login and logout handlers for Agent users. | None          | SprykerShop\Yves\AgentPage\Plugin\Security |
+
+**src/Pyz/Yves/Security/SecurityDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\Security;
+
+use Spryker\Yves\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
+use SprykerShop\Yves\AgentPage\Plugin\Security\AgentPageSecurityPlugin;
+
+class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
+     */
+    protected function getSecurityPlugins(): array
+    {
+        return [
+            new AgentPageSecurityPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Open http://mysprykershop.com/agent/login.
+2. Ensure that the login form is displayed and that only a user with an agent role can log in.
+3. Go to http://mysprykershop.com/agent/overview
+4. Ensure that only the user with the agent role can access the page.
+5. Ensure that the agent can log out.
+
+{% endinfo_block %}
+
 #### Configure agent session validation
 
 Enable the following behaviors by registering the plugins:
@@ -366,6 +368,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     protected function getSecurityPlugins(): array
     {
         return [
+            ...
             new ValidateAgentSessionSecurityPlugin(),
             new SaveAgentSessionSecurityPlugin(),
         ];
@@ -422,6 +425,16 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+1. Log in as an agent.
+2. Ensure that the following Redis key exists and contains data:
+   `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
+3. Changed the session data to an invalid value.
+4. Verify that the agent was logged out.
+
+{% endinfo_block %}
+
 {% info_block warningBox "Warning" %}
 
 Apply the following changes only if session data is store in a file.
@@ -464,7 +477,8 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 {% info_block warningBox "Verification" %}
 
 1. Log in as an agent.
-2. Verify that the session key was added to a storage (Redis or File).
+2. Ensure that a file in the following path exists and contains data:
+   `data/session/session:agent:{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}`
 3. Changed the session data to an invalid value.
 4. Verify that the agent was logged out.
 

@@ -7,7 +7,7 @@ Algolia is a search engine that stands out from others due to its performance. W
 
 {% info_block infoBox "Product offers and product reviews" %}
 
-The search is made in product offers and product reviews as well, however these entities are represented in product attributes in the Algolia search results.
+Algolia searches in product offers and product reviews as well, however these entities are represented in product attributes in the Algolia search results.
 
 {% endinfo_block %}
 
@@ -39,7 +39,7 @@ Here is an example of the search results in Algolia:
 
 An index is the place where the data used by Algolia is stored.
 
-In case of the Spryker store, the index is a complete list of all active concrete products that can sppear in search results.
+In case of the Spryker store, the index is a complete list of all active concrete products that can appear in search results.
 There are separate indexes per locale and per sorting strategy. With the Algolia app, the search results in your store can be sorted by:
 
 - Relevance

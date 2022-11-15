@@ -100,10 +100,6 @@ public function provideBusinessLayerDependencies(Container $container)
 
 Bridges are for core-level only. If you use them at the project level, you are doing it wrong.
 
-{% endinfo_block %}
-
-{% info_block errorBox %}
-
 Spryker is constantly improving type declarations of all methods. Thus, some bridge interfaces might be incompatible with Facade interfaces, so this approach does not work. To prevent this, consider module version patch-lock.
 
 {% endinfo_block %}

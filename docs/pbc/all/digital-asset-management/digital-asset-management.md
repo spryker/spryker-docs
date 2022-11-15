@@ -32,7 +32,7 @@ Apart from images, you can add many different types of assets to your project, i
 * Graphics
 * Banners
 
-Digital assets let content managers create rich, compelling, and attractive content for your customers. They also allow you to offer your customers additional information like user manuals or instructions.
+Digital assets let content managers create rich, compelling, and attractive content for your customers. They also let you offer your customers additional information like user manuals or instructions.
 
 ## File tree
 
@@ -41,7 +41,7 @@ The files in the Back Office are kept in a tree-like structure. A Back Office us
 The changes take effect after **Save** is selected.
 ![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
 
-The Back Office user can delete any folder within File Directories Tree by selecting **Delete Directory**. (If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in File Directories Tree cannot be deleted.)
+A Back Office user can delete any folder within File Directories Tree by selecting **Delete Directory**. (If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in File Directories Tree cannot be deleted.)
 
 ## File List
 
@@ -53,7 +53,7 @@ File List displays all the files uploaded to the Back Office in a table view. Th
 
 **File Uploader** lets you store multiple versions of any file.
 
-For example: A Back Office user uploads Instruction1.txt file (v.1). The user then updates and reuploads the .txt file (v.2). Next, the user decides that the image instruction is more useful and upload Instruction.png (v.3).
+For example: a Back Office user uploads Instruction1.txt file (v.1). The user then updates and reuploads the .txt file (v.2). Next, the user decides that the image instruction is more useful and upload Instruction.png (v.3).
 
 There are now three versions of the file available: two text files and one image file.
 ![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png)
@@ -71,7 +71,7 @@ By default, the latest version of the file is displayed to the buyer in the shop
 
 The Back Office user can only upload files with a MIME type that is selected in the **Is Allowed** column. (If no MIME types are defined, files of any type can be uploaded. If you add at least one MIME type, only the files of the added types can be uploaded.)
 
-Most popular file types that a shop owner can allow uploading to the Back Office are:
+The most popular file types that shop owners allow to be uploaded to the Back Office are:
 
 | TYPE | DESCRIPTION | EXAMPLE OF MIME TYPE |
 | --- | --- | --- |
@@ -87,7 +87,7 @@ There are two types of assets in the Spryker Commerce OS: dynamic and static.
 
 *Dynamic assets* are files added during content and product creation: adding or changing CMS pages and adding product images.
 
-*Static assets* are images, fonts, CSS, JS, and HTML and PHP files that are available and used by default. All the files are split into folders according to the application they are used for: Zed, Yves, or Glue. PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
+*Static assets* are images, fonts, CSS, JS, and HTML and PHP files that are available and used by default. All static asset files are split into folders according to the application they are used for: Zed, Yves, or Glue. PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
 
 {% info_block infoBox %}
 
@@ -95,7 +95,7 @@ Except for the error handling files, there are no Glue-related assets.
 
 {% endinfo_block %}
 
-### Location of assets
+### Location of static assets
 
 By default, static assets are stored locally in the following folders:
 
@@ -109,7 +109,7 @@ The following environment variables are used for that:
 * `SPRYKER_ZED_ASSETS_BASE_URL`
 * `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
-Check [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
+See [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
 
 
 ## Related Business User articles

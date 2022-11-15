@@ -729,6 +729,42 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 }
 ```
 
+### 5) Add Form plugin
+
+#### Register XSS Protection Form plugin
+
+1. Enable Form plugins to add XSS protection options in Backoffice
+
+| PLUGIN                             | SPECIFICATION                                                                                       | PREREQUISITES | NAMESPACE                                 |
+|------------------------------------|-----------------------------------------------------------------------------------------------------|---------------|-------------------------------------------|
+| SanitizeXssTypeExtensionFormPlugin | Registers options `allowed_attributes`, `allowed_html_tags`, `sanitize_xss` in Backoffice CMS forms | None          | Spryker\Zed\Gui\Communication\Plugin\Form |
+
+**src/Pyz/Zed/Form/FormDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Form;
+
+use Spryker\Zed\Form\FormDependencyProvider as SprykerFormDependencyProvider;
+use Spryker\Zed\Gui\Communication\Plugin\Form\SanitizeXssTypeExtensionFormPlugin;
+
+class FormDependencyProvider extends SprykerFormDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\FormExtension\Dependency\Plugin\FormPluginInterface>
+     */
+    protected function getFormPlugins(): array
+    {
+        $plugins = [
+            new SanitizeXssTypeExtensionFormPlugin(),
+        ];
+
+        return $plugins;
+    }
+}
+```
+
 ### 6) Import Data
 
 #### Import Cms Pages

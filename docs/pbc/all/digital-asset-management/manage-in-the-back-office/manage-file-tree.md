@@ -24,29 +24,29 @@ related:
 ---
 ---
 
-This article describes how to manage the file tree. The file tree lets a Back Office user create folders (directories) under **File Directories Tree** and organize them in a hierarchical system by dragging and dropping.
+This article describes how to manage the file tree. The file tree lets a Back Office user create folders (directories) under *File Directories Tree* and organize them in a hierarchical system by dragging and dropping.
 
 To preserve a logical structure of the files uploaded to the system for use in marketing campaigns, you should define the structure in which your files are stored. Structured marketing campaign materials also help other Marketing Team members to manage files.
 
-The **File Tree** section is used to upload the files, create or delete the directories and manage the order of files and directories.
+The *File Tree* section is used to upload the files, create or delete the directories and manage the order of files and directories.
 
 To start working with file tree elements, navigate to **Content&nbsp;<span aria-label="and then">></span> File Tree** section.
 
 
 ## Prerequisites
 
-If there are no MIME types defined in the **MIME Type Settings** section, you can upload any type of file. If you have at least one MIME type defined as *Is Allowed*, you can upload only allowed file types, until you add more allowed types. See [Add and edit MIME types](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html) for more details.
+If there are no MIME types defined in the *MIME Type Settings* section, you can upload any type of file. If you have at least one MIME type defined as *Is Allowed*, you can upload only allowed file types, until you add more allowed types. See [Add and edit MIME types](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html) for more details.
 
 
 ## Creating file directories
 
 To create a file directory:
 
-1. On the **Overview of File Tree** page, click **Create File Directory** in the top right corner.
-2. On the **Create Directory Element** page, enter the name of your directory in the **Name** field and populate the **Title** field for all locales.
+1. On the *Overview of File Tree* page, click **Create File Directory** in the top right corner.
+2. On the *Create Directory Element* page, enter the name of your directory in the *Name* field and populate the *Title* field for all locales.
 3. Once done, click **Save**.
 
-The created folder will be displayed on the left of the **Overview of File Tree** page.
+The created folder will be displayed on the left of the *Overview of File Tree* page.
 You can create multilevel structures by changing the directory order.
 
 ## Reordering directories
@@ -60,7 +60,7 @@ Once you are satisfied with the order, click **Save Order**.
 
 To delete a directory:
 
-1. Click on the directory in the **File Tree** section.
+1. Click on the directory in the *File Tree* section.
 2. Click **Delete Directory** in the top right corner of the page.
 3. On the system message pop-up, click **Confirm** to confirm the action.
 ![Deleting directories](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+File+Tree/deleting-directories.gif)
@@ -72,13 +72,13 @@ Once you have set up the directory structure, you can proceed with uploading fil
 To upload a file:
 
 1. Click on the directory into which you will upload the file.
-2. In the top right corner of the **Files List** section, click **Add File**.
-3. On the **Add a file** page, do the following:
+2. In the top right corner of the *Files List* section, click **Add File**.
+3. On the *Add a file* page, do the following:
     * Enter the file name.
-        Alternately, leave this field blank and select the **use file name** checkbox if you do not want to change the file's existing name.
+        Alternately, leave this field blank and select the *use file name* checkbox if you do not want to change the file's existing name.
      * Browse and select the file to upload.
-     * Make sure the **use file name** checkbox is selected if you do not want to change the file's existing name.
-     * Optionally, populate the **Alt** and **Title** fields for each locale.
+     * Make sure the *use file name* checkbox is selected if you do not want to change the file's existing name.
+     * Optionally, populate the *Alt* and *Title* fields for each locale.
 4. Once done, click **Save**.
 The file is uploaded to the selected folder.
 
@@ -98,7 +98,7 @@ To manage a file in File Tree:
     * **View** to view the file. You are redirected to the *View file* page. You can download the file by clicking **Download** in the *Actions* column.
   
     * **Edit** to edit the file. You are redirected to the *Edit file* page. 
-      * **File tab**: Here you can update the file name information. Click **Save** to apply your updates. 
+      * *File tab*: Here you can update the file name information. Click **Save** to apply your updates. 
 
         You can also upload another version of a file. 
        
@@ -110,7 +110,7 @@ To manage a file in File Tree:
           
         To upload another version of a file, click **Choose File**, optionally change the file name and the *Alt* and *Title* fields for each locale, then click **Save**.
       
-      * **File versions tab**: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version. 
+      * *File versions tab*: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version. 
  
      * **Delete** to immediately delete a file.
 

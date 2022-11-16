@@ -13,7 +13,7 @@ Backwards compatibility remains unaffected. If your project followed our recomme
 
 ## Migration steps
 
-To migrate your project to PHP 8.0 version, follow these steps:
+To migrate your project to the 8.0 version of PHP, follow these steps:
 
 1. Update your modules manually in `composer.json`.
 Use the major lock `^` or the minor lock `~` if you have changes on the project level for respective module constraints.

@@ -81,7 +81,7 @@ To install Homebrew, follow these steps:
 ```
 {% info_block infoBox "MacOS on M1 processor" %}
 
-On an M1 Mac, Homebrew files are installed into the /opt/homebrew folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output to add Homebrew to your PATH. In the example below, we've replaced your actual username with:  /Users/_username_/.zprofile
+On an M1 Mac, Homebrew files are installed into the `/opt/homebrew` folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output to add Homebrew to your PATH. In the example below, we've replaced your actual username with:  `/Users/_username_/.zprofile`.
 
 ```bash
 ==> Next steps:

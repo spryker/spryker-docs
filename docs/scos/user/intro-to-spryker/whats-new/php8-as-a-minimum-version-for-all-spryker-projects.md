@@ -9,7 +9,7 @@ In the coming weeks, Spryker will release a new version of its Demo Shops, which
 
 ## Impacts
 
-We have not broken the backward compatibility. If your project followed our recommendations and requirements in the past twelve months, you wouldn't experience any upgradeability issues.
+Backwards compatibility remains unaffected. If your project followed our recommendations and requirements in the past twelve months, you will not experience any upgradeability issues.
 
 ## Migration steps
 

@@ -27,7 +27,7 @@ For instructions on creating user roles and groups, see the following documents:
 
 An agent assist is a Back Office user that has permissions to act on customers' behalf. Using their account, they can log into a customer's account on the Storefront and help them with requested actions.
 
-For more details about agent assist, see [Agent assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html)
+For more details about the agent assist feature, see the [Agent assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html)
 
 ## Related Business User articles
 

@@ -25,9 +25,7 @@ related:
     link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
-This document describes the guidelines for securing your customers' and partners' data.
-
-> Cloud topics related to the configuration infrastructure (like AWS) for customers have been managed by Spryker and not described in the document
+This document describes the guidelines for securing your customers' and partners' data on the application level. In PaaS and PaaS+ environments, infrastructure security measures are implemented by default, and they are not described in this document.
 
 ## Passwords
 
@@ -120,15 +118,15 @@ Debug mode is configured with the following:
 
 *Remove all the demo data from the environment*. A project should only use the real data that will be used after going live. Remove all the demo data that comes with Spryker, which includes demo and admin users. Demo admin users in a live shop pose a significant security risk for your project. Also, make sure to set strong passwords when creating new admin users.
 
-## Summary ```app``` + ```cloud```
+## Summary
 
 To sum up, the main points to keep the data secure are the following:
 
 * Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) in your team.
-* Check web server configuration and presence of security-related HTTP headers.
+* Check the presence of security-related HTTP headers.
 * Check cookie settings.
 * Configure TLS.
-* Secure the Back Office, do not make it public.
+* Secure the Back Office.
 * Check Spryker configuration and change default authentication parameters like users and passwords.
 * Keep systems and applications up to date.
 * Make sure that exceptions are not shown and debug mode is disabled on production.

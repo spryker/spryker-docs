@@ -36,22 +36,22 @@ Digital assets let content managers create rich, compelling, and attractive cont
 
 ## File tree
 
-The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders (also known as directories) under **File Directories Tree** and organize them into a hierarchical system by dragging and dropping them in the file tree.
+The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders (also known as directories) under *File Directories Tree* and organize them into a hierarchical system by dragging and dropping them in the file tree.
 
 The changes take effect after **Save** is selected.
 ![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
 
-A Back Office user can delete any folder within **File Directories Tree** by selecting **Delete Directory**. (If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in **File Directories Tree** cannot be deleted.)
+A Back Office user can delete any folder within *File Directories Tree* by selecting **Delete Directory**. If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in *File Directories Tree* cannot be deleted.
 
 ## Files List
 
-**Files List** displays all the files uploaded to the Back Office in a table view. The Back Office user can view, edit, and delete files here.
+*Files List* displays all the files uploaded to the Back Office in a table view. The Back Office user can view, edit, and delete files here.
 ![File list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-list.png)
 
 
 ## Versions
 
-**File Uploader** lets you store multiple versions of any file.
+*File Uploader* lets you store multiple versions of any file.
 
 For example: a Back Office user uploads Instruction1.txt file (v.1). The user then updates and reuploads the .txt file (v.2). Next, the user decides that the image instruction is more useful and upload Instruction.png (v.3).
 
@@ -62,14 +62,14 @@ By default, the latest version of the file is displayed to the buyer in the shop
 
 ## MIME Type Settings
 
-**MIME Type Settings** let you define the file types that can be uploaded to the Back Office.
+*MIME Type Settings* let you define the file types that can be uploaded to the Back Office.
 
 
 [MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type indicates how  a web browser will process a file. For example, if the MIME type is set as 'text/html', the document will open in Notepad. If the MIME type is set as 'image/jpeg', the document will open with an image viewer program.
 
 ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/mime-type-settings.png)
 
-The Back Office user can only upload files with a MIME type that is selected in the **Is Allowed** column. (If no MIME types are defined, files of any type can be uploaded. If you add at least one MIME type, only the files of the added types can be uploaded.)
+The Back Office user can only upload files with a MIME type that is selected in the *Is Allowed* column. If no MIME types are defined, files of any type can be uploaded. If you add at least one MIME type, only the files of the added types can be uploaded.
 
 The most popular file types that shop owners allow to be uploaded to the Back Office are:
 

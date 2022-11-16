@@ -42,7 +42,7 @@ To create a page:
 
 {% info_block infoBox %}
 
-Templates are project-specific and are usually created by a developer and business person. If you are missing a CMS page template, contact them and refer to the [HowTo - Create CMS templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template).
+Templates are project-specific and are usually created by a developer and business person. If you are missing a CMS page template, contact them and refer to the [HowTo - Create CMS templates](/docs/pbc/all/content-management-system/{{page.version}}/tutorials-and-howtos/howto-create-cms-templates.html#cms-page-template).
 
 {% endinfo_block %}
 

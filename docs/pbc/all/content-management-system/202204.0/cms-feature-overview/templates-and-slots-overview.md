@@ -60,7 +60,7 @@ A content manager can [manage templates with slots](/docs/pbc/all/content-manage
 
 </details>
 
-To learn about the creation of CMS templates, see [HowTo: Create CMS templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html).
+To learn about the creation of CMS templates, see [HowTo: Create CMS templates](/docs/pbc/all/content-management-system/{{page.version}}/tutorials-and-howtos/howto-create-cms-templates.html).
 
 
 
@@ -187,7 +187,7 @@ With templates and slots, the following applies:
 
 * Spryker CMS Blocks is the content provider for all the slots.
 * Slots embed content from [CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/cms-blocks-overview.html).
-* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html#content-item-widget).
+* Content for CMS blocks is created in the WYSIWYG Editor.
 * Templates with slots are managed in the Back Office&nbsp;<span aria-label="and then">></span> **Slots** section.
 
 The following schema shows how content is managed with the help of templates with slots:

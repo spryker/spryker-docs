@@ -63,7 +63,7 @@ The installation process is different depending whether you are using a Mac with
 On a **MacBook with the M1 processor**, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables non-native Intel x86 apps, including Homebrew, to run on Apple Silicon Macs. 
 To open your terminal using Rosetta, follow these steps:
 1.	Open a Finder window.
-2.	In Applications, locate Terminal.
+2.	In _Applications_, locate _Terminal_.
 3.	Right click on **Terminal** and select **Get Info**. 
 4.	Make sure _Open using Rosetta_ is checked. 
   

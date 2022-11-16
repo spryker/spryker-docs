@@ -567,7 +567,7 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 }
 ```
 
-With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned within the `getMonitoringExtensions()` function, this tells the Monitoring class to include New Relic. Without these changes, New Relic will only report the base (i.e. `index.php`) without showing the appropriate  endpoint or class being called with each transaction.
+With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned within the `getMonitoringExtensions()` function, this tells the Monitoring class to include New Relic. Please note that with these changes, New Relic may change how transactions are displayed for each APM. Prior to these changes, it will only report the base (i.e. `index.php`) without showing the appropriate endpoint or class being called with each transaction.
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTnab3UR-VObOo2cPS2IzeFY5uYPy6WmdBgvn9FLBn7WV3b-kouvW0rUUw1MjKppzpck4InEtc=w1920-h878)
 

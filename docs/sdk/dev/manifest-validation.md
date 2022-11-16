@@ -9,7 +9,7 @@ It checks the structure, types, and related entities.
 
 ### How to use the manifest validation
 
-To validate YAML definition of a task, run the following command:
+To validate the YAML definition of a task, run the following command:
 
 ```bash
 spryker-sdk sdk:validate:task

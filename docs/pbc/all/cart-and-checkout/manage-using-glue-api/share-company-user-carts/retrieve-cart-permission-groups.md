@@ -38,7 +38,7 @@ To retrieve cart permission groups, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | A string containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 
@@ -83,9 +83,9 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| id | String | A unique identifier that is used to define permissions with this permission group. |
-| name | String | Permission group name. For example, `READ_ONLY` or `FULL_ACCESS`. |
-| isDefault | Boolean | Defines if the permission group is applied to shared carts by default. |
+| id | String | A unique ID that is used to define permissions with this permission group. |
+| name | String | The permission group's name. For example, `READ_ONLY` or `FULL_ACCESS`. |
+| isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
 
 
 ## Retrieve a cart permission group
@@ -98,13 +98,13 @@ To retrieve a cart permission group, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}*** | Unique identifier of a cart permission group to retrieve. |
+| ***{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}*** | The unique identifier of a cart's permission group to retrieve. |
 
 ### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | A string containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
@@ -131,9 +131,9 @@ Request sample: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| id | String | A unique identifier that is used to assign permissions with this permission group. |
-| name | String | Permission group name. For example, `READ_ONLY` or `FULL_ACCESS`. |
-| isDefault | Boolean | Defines if the permission group is applied to shared carts by default. |
+| id | String | A unique ID that is used to assign permissions with this permission group. |
+| name | String | The permission group's name. For example, `READ_ONLY` or `FULL_ACCESS`. |
+| isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
 
 ## Possible errors
 

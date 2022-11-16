@@ -16,15 +16,15 @@ related:
   - title: Customer Account Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
   - title: Authenticating as a customer
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Confirming customer registration
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-confirm-customer-registration.html
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Managing customer authentication tokens via OAuth 2.0
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
   - title: Managing customer passwords
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Managing customers
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
 ---

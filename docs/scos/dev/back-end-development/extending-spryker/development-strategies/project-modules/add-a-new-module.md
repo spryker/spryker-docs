@@ -71,7 +71,7 @@ namespace Pyz\Zed\HelloWorld\Communication\Controller;
 use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
 class IndexController extends AbstractController
 {
-    public function indexAction()
+    public function indexAction(): array
     {
         return [];
     }
@@ -116,7 +116,7 @@ class MessageGenerator
     /**
      * @return string
      */
-    public function generateHelloMessage()
+    public function generateHelloMessage(): string
     {
         $helloMessages = ["Hello!","Bonjour!","Namaste!","Hallo", "Hola!", "Ciao!"];
         shuffle($helloMessages);
@@ -140,7 +140,7 @@ class HelloWorldBusinessFactory extends AbstractBusinessFactory
     /**
      * @return MessageGenerator
      */
-    public function createMessageGenerator()
+    public function createMessageGenerator(): MessageGenerator
     {
         return new MessageGenerator();
     }
@@ -163,9 +163,9 @@ class HelloWorldFacade extends AbstractFacade implements HelloWorldFacadeInterfa
     /**
      * @return string
      */
-    public function getSalutationMessage()
+    public function getSalutationMessage(): string
     {
-         return  $this->getFactory()->createMessageGenerator()->generateHelloMessage();
+         return $this->getFactory()->createMessageGenerator()->generateHelloMessage();
     }
 }
 ```
@@ -185,7 +185,7 @@ interface HelloWorldFacadeInterface
      *
      * @return string
      */
-    public function getSalutationMessage();
+    public function getSalutationMessage(): string;
 }
 ```
 
@@ -205,7 +205,7 @@ class IndexController extends AbstractController
     /**
      * @return array
      */
-    public function indexAction()
+    public function indexAction(): array
     {
         $helloMessage = $this->getFacade()->getSalutationMessage();
         return [

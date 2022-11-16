@@ -50,7 +50,7 @@ Guest users have one guest cart by default. If you already have a guest cart, yo
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}*** | The unique ID of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 
@@ -64,7 +64,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.|
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | The guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.|
 
 | PATH PARAMETER | DESCRIPTION | Possible values |
 | --- | --- | --- |
@@ -991,18 +991,18 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| product-options | optionGroupName | String | Name of the group to which the option belongs. |
-| product-options | sku | String | SKU of the product option. |
-| product-options | optionName | String | Product option name. |
-| product-options | price | Integer | Product option price in cents. |
-| product-options | currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
-| vouchers, cart-rules | displayName | String | Discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | Amount of the provided discount. |
-| vouchers, cart-rules | code | String | Discount code. |
-| vouchers, cart-rules | discountType | String | Discount type. |
-| vouchers, cart-rules  | isExclusive | Boolean | Discount exclusivity. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
+| product-options | optionGroupName | String | The name of the group to which the option belongs. |
+| product-options | sku | String | The SKU of the product option. |
+| product-options | optionName | String | The product option's name. |
+| product-options | price | Integer | The product option's price in cents. |
+| product-options | currencyIsoCode | String | The ISO 4217 code of the currency in which the product option price is specified. |
+| vouchers, cart-rules | displayName | String | The discount name displayed on the Storefront. |
+| vouchers, cart-rules | amount | Integer | The amount of the provided discount. |
+| vouchers, cart-rules | code | String | The code of the discount. |
+| vouchers, cart-rules | discountType | String | The type of the discount. |
+| vouchers, cart-rules  | isExclusive | Boolean | If true, this discount is exclusive. |
+| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
+| vouchers, cart-rules | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 
@@ -1018,7 +1018,7 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, for example, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, merge the carts, include the unique ID associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/multiple-carts-feature-overview.html) environment:
 
@@ -1028,7 +1028,7 @@ Upon login, the behavior depends on whether your project is a single cart or [m
 The workflow is displayed in the diagram below:
 ![Assign cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png)
 
-Below, you can see an exemplary workflow for converting a guest cart into a regular cart:
+Below, you can see an example workflow for converting a guest cart into a regular cart:
 
 1. The customer adds items to a guest cart.
 
@@ -1051,7 +1051,7 @@ Request sample:
 
 | HEADER KEY | HEADER VALUE | DESCRIPTION |
 | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | guest-user-001 | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
+| X-Anonymous-Customer-Unique-Id | guest-user-001 | A guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
 
 **Response sample**
 
@@ -1087,7 +1087,7 @@ Request sample:
 
 | HEADER KEY | HEADER VALUE | DESCRIPTION |
 | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | guest-user-001 | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| X-Anonymous-Customer-Unique-Id | guest-user-001 | A Guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
 **Response sample**
 
@@ -1116,7 +1116,7 @@ Request sample:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 In the **multi-cart** environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
 

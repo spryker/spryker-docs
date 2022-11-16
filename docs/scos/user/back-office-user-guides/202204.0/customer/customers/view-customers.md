@@ -30,4 +30,4 @@ To view a customer in the Back Office, follow the steps:
 | Phone | Phone number.|
 | Date of birth	 | Date of birth.|
 | Registered at	| Date and time of the customer's creation. |
-| Zed Account Reference	| Unique identifier of the Back Office user this [customer is assigned](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/assigning-customers-to-users.html) to. |
+| Zed Account Reference	| Unique identifier of the Back Office user this [customer is assigned](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html) to. |

@@ -22,17 +22,25 @@ In Spryker, we welcome contributions in all forms, be it detailed Issues or Pull
 
 ## Licenses
 
-Spryker uses different licenses: our proprietary licenses and common open-source licenses. In general, you can contribute to our public repositories—[spryker](https://github.com/spryker), [spryker-shop](https://github.com/spryker-shop), [spryker-feature](https://github.com/spryker-feature). Read `CONTRIBUTING.md` of a module before opening a PR.
+Spryker uses different licenses: our proprietary licenses and common open-source licenses. In general, you can contribute to our public repositories
+- [spryker](https://github.com/spryker)
+- [spryker-shop](https://github.com/spryker-shop)
+- [spryker-eco](https://github.com/spryker-eco)
+- [spryker-sdk](https://github.com/spryker-sdk)
+- [spryker-middleware](https://github.com/spryker-middleware)
+ 
+Read `CONTRIBUTING.md` of a module before opening a PR.
 
 ## Opening pull requests
 
 To contribute to a Spryker repository, follow these steps:
 1. Fork the repository and create a branch with your changes. Ensure that the commit messages explain the aim of the applied changes or fixes.
 2. Open a PR in the repository. Ensure that the title and description clearly describe the context of your work.
+3. Create a Support Case in (https://spryker.force.com/support/s/) and link your pull request inside it.
 
 If we cannot merge a PR due to our release process, we manually introduce the change. Once the change is released, we inform you by closing the PR. We also provide the link to the relevant release or releases so you can check your changes. Issue integration process is shown in the following diagram.
 
-3. Create a Support Case in (https://spryker.force.com/support/s/) and link your pull request inside it.
+For most Spryker and SprykerShop modules we need a special process since those are developed in a mono-repo:
 <div style="text-align:center;"><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Code+Contribution+Guide/code-contirubtion.png" alt="code-contirubtion.png"></div>
 
 

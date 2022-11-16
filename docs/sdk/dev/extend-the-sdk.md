@@ -10,8 +10,8 @@ The SDK offers different extension points to enable third parties to contribute 
 
 From simple to complex, the SDK can be extended by:
 
-- Providing additional [tasks](/docs/sdk/dev/task.html) or [settings](/docs/sdk/dev/settings.html) via YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrate existing tools that come with a standalone executable.
-- Providing additional tasks, [value resolvers](/docs/sdk/dev/value-resolvers.html), or settings via the PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php) and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example, validating content of a YAML file by using Symphony validators.
+- Providing additional [tasks](/docs/sdk/dev/task.html) or [settings](/docs/sdk/dev/settings.html) via a YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrating existing tools that come with a standalone executable.
+- Providing additional tasks, [value resolvers](/docs/sdk/dev/value-resolvers.html), or settings via a PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php) and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example validating the content of a YAML file by using Symfony validators.
 - Providing additional tasks, value resolvers, or settings that come with additional dependencies. This approach follows the same guideline as the previous approach with the PHP implementation but requires building  your own [SDK docker image](/docs/sdk/dev/building-flavored-spryker-sdks.html) that includes those dependencies.
 
 To extend the SDK, follow these steps.
@@ -20,8 +20,8 @@ To extend the SDK, follow these steps.
 
 A *task* is the execution of a very specific function. For example, executing an external tool through a CLI call is a task.
 
-There are two possibilities to define a new task: based on YAML for simple task definitions, and
-implementation via PHP and Symfony services for specialized purposes.
+There are two possibilities to define a new task: one based on YAML for simple task definitions, and one based on
+implementations via PHP and Symfony services for specialized purposes.
 
 ### Implementation via YAML definition
 
@@ -38,9 +38,10 @@ help: string|null #e.g: Fix codestyle violations, lorem ipsum, etc.
 stage: string #e.g.: build
 command: string #e.g.: php %project_dir%/vendor/bin/phpcs -f --standard=%project_dir%/vendor/spryker/code-sniffer/Spryker/ruleset.xml %module_dir%
 type: string #e.g.: local_cli
+version: string #e.g.:   1.0.0
 placeholders:
 - name: string #e.g.: %project_dir%
-  valueResolver: string #e.g.: PROJECT_DIR, mapping to a value resolver with id PROJECT_DIR or  a FQCN
+  value_resolver: string #e.g.: PROJECT_DIR, mapping to a value resolver with id PROJECT_DIR or  a FQCN
   optional: bool
 ```
 
@@ -55,8 +56,8 @@ You can add the tasks located in `extension/<your extension name>/Task` to the S
 In case when a task is more than just a call to an existing tool, you can implement the task as a PHP class and register the task using the Symfony service tagging feature.
 This requires you to make the task a part of the Symfony bundle. To achieve this, follow these steps:
 
-1. Create s Symfony bundle.<br> 
-Refer to the [official Symfony documentation](https://symfony.com/doc/current/bundles.html) for details on how to do that.
+1. Create a Symfony bundle.<br> 
+Refer to [official Symfony documentation](https://symfony.com/doc/current/bundles.html) for details on how to do that.
 
 {% info_block infoBox "Info" %}
 
@@ -167,7 +168,7 @@ A placeholder needs a specific name that is not used anywhere in the command the
 
 You can append `%` and suffix the placeholder, which makes the placeholder easier to recognize in a command.
 
-You can reference the used value resolver by its ID or the fully qualified class name (FQCN), whereas the FQCN is preferred.
+You can reference the used value resolver by its ID or by the fully qualified class name (FQCN), whereas the FQCN is preferred.
 
 {% endinfo_block %}
 
@@ -208,7 +209,7 @@ services:
 
 6. Register your bundle.
 
-If your bundle does not have dependencies that differ from the Spryker SDK, you don't need to register the bundle. Instead, place it into the `extension` directory that is a part of your SDK installation.
+If your bundle does not have dependencies that differ from the Spryker SDK, you don't need to register the bundle. Instead, place it into the `extension` directory that is part of your SDK installation.
 
 For more complex bundles that require additional dependencies, follow the guidelines in [Building a flavored Spryker SDK](/docs/sdk/dev/building-flavored-spryker-sdks.html).
 
@@ -309,11 +310,11 @@ You can define settings in the `settings.yaml` file and add them to the SDK by c
 ```yaml
 settings:
   - path: string #e.g.: some_setting
-    initialization_description: string #Will be used when a user is asked to provide the setting value
+    initialization_description: string #will be used when a user is asked to provide the setting value
     strategy: string #merge or overwrite, where merge will add the value to the list and overwrite will replace it
-    init: bool #if the user should be asked for the setting value when `spryker-sdk sdk:init:sdk` or `spryker-sdk sdk:init:project` is called
-    type: string #Use array for lists of values or any scalar type (string|integer|float|boolean)
-    is_project: boolean #defines if the setting is persisted across projects and initialized during `spryker-sdk sdk:init:sdk` or per project and initialized with `spryker-sdk sdk:init:project`
+    init: bool #if true, the user should be asked for the setting value when `spryker-sdk sdk:init:sdk` or `spryker-sdk sdk:init:project` is called
+    type: string #use array for lists of values or any scalar type (string|integer|float|boolean)
+    is_project: boolean #if true, the setting is persisted across projects and initialized during `spryker-sdk sdk:init:sdk` or per project and initialized with `spryker-sdk sdk:init:project`
     values: array|string|integer|float|boolean #serve as default values for initialization
 ```
 

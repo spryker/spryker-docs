@@ -47,7 +47,7 @@ spryker-sdk/spryk-gui => 0.2.2
 
 {% info_block infoBox "Project-specific changes" %}
 
-If you have project-specific changes in these repositories, consider either giving up the changes or copying them to the project code.
+If you have project-specific changes in these repositories, consider either giving up the changes or copying them into the project code.
 
 {% endinfo_block %}
 

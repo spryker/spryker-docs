@@ -49,6 +49,6 @@ This opens the **Edit CMS Block** page.
 | --- | --- | --- |
 | STORE RELATION | Stores in which the block is displayed. | Irrelevant. |
 | TEMPLATE | Defines the layout of the block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). | Defines the layout of the email block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
-| NAME | The name is used when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
+| NAME | The name is used when [assigning the block to a slot in a page](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is visible on the Storefront. | Irrelevant. |
 | PRODUCTS | Products to which the block is assigned. The block is displayed on the products' details pages. | Irrelevant. |

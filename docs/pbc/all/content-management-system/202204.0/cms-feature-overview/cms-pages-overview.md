@@ -59,7 +59,7 @@ With the CMS Pages feature, you can:
 | [Create a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/create-cms-pages.html)  |
 | [Manage CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/create-cms-pages.html)  |
 | [Edit CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/edit-cms-pages.html)  |
-| [Manage versions of a CMS page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html)  |
+| [Manage versions of a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/manage-cms-pages.html)  |
 
 
 ## See next

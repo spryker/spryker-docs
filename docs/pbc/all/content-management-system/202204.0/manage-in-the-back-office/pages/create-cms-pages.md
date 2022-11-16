@@ -100,4 +100,4 @@ The following table describes the attributes you enter when creating a CMS page.
 **What's next?**
 <br>Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
 
-To learn how to view or publish the page, see [Managing CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html).
+To learn how to view or publish the page, see [Managing CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/manage-cms-pages.html).

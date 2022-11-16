@@ -41,7 +41,7 @@ related:
 | --- | --- |
 | STORE RELATION |  Stores to display the block in. |
 | TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
-| NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). |
+| NAME | You will use this name when [assigning the block to a slot in a page](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots). |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is to be visible on the Storefront. |
 | PRODUCTS | The block will be displayed on the product details pages of these products. |
 

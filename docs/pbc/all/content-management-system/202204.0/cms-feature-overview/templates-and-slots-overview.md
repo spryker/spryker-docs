@@ -52,7 +52,7 @@ The following templates with slots are shipped with the CMS feature:
 * Product details page template
 * CMS page template
 
-A content manager can [manage templates with slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+A content manager can [manage templates with slots](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 <details open><summary markdown='span'>Template representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-template.png)
@@ -81,7 +81,7 @@ By importing a [slot list](#slot-list), a developer can do the following:
 * Delete slots.
 * Define slot configurations.
 
-A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+A content manager can [manage slots](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 <details open><summary markdown='span'>Slot representation—the Back Office</summary>
 
@@ -101,7 +101,7 @@ A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{p
 
 </details>
 
-A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+A content manager can [manage CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 
 <details open><summary markdown='span'> CMS block representation—the Back Office</summary>
@@ -217,7 +217,7 @@ For product details page type, you can use the Product ID or Category ID identif
 To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID, or Navigation Nodes. To learn more, see [HowTo: Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html).
 
 
-A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+A content manager can define visibility conditions by [selecting pages](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html#selecting-pages) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 
@@ -380,7 +380,7 @@ The functionality has the following functional constraints which are going to be
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 | - | - |
 | [Add content to the Storefront using templates and slots](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html) |  [Learn about the CoreMedia technology partner integration](/docs/pbc/all/content-management-system/{{page.version}}/third-party-integrations/coremedia.html)  |
-| [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   | |
+| [Manage slots](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html)   | |
 
 
 

@@ -28,12 +28,6 @@ A *content item* is the smallest content unit in Spryker. There are four content
 
 You can use each content item for different purposes. For example, A *Banner content item* can be used to promote a specific brand or collection. A *Product Set content* item can be added to the landing page to display a product set as a slider or carousel. The File List adds a link or icon to download a selected file. The Navigation content item can be used to add different types of navigation elements to different shop pages.
 
-{% info_block infoBox %}
-
-For use cases and examples of each of the content items, see [Content Item Widgets types: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html) and [Content Item Widgets templates: Reference Information.](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-templates.html)
-
-{% endinfo_block %}
-
 A content manager can [create content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-banner-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 A developer can do the following:
 * [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)

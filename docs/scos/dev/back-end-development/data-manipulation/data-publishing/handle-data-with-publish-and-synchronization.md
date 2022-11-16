@@ -380,7 +380,7 @@ Now, you can manually trigger events. For this, do the following:
 1.  Stop all cron jobs or disable background queue processing in Jenkins:
 
 ```bash
-vendor/bin/console schedule:suspend
+vendor/bin/console scheduler:suspend
 ```
 
 2. Create a controller class as follows and run it by navigating to `http://[YOUR_BACKOFFICE_URL]/hello-world`.
@@ -716,7 +716,7 @@ class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorag
 }
 ```
 
-4. In order to connect the facade methods to the business logic in the Writer and Deleter, we need to create the Business factory that created the Writer abd Deleter objects. We also need to create interfaces for these objects.
+4. In order to connect the facade methods to the business logic in the Writer and Deleter, we need to create the Business factory that creates the Writer abd Deleter objects. It is also good practice to create interfaces for these objects.
 
 Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory.php`
 

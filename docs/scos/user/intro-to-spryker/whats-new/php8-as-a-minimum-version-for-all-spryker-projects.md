@@ -1,6 +1,6 @@
 ---
 title: PHP 8.0 as the minimum version for all Spryker projects
-description: In the coming weeks, Spryker will release a new version of its Demo Shops requiring PHP 8.0 as the minimum version.
+description: On the 18th of November 2022, Spryker will release a new version of its Demo Shops requiring PHP 8.0 as the minimum version.
 last_updated: November 14, 2022
 template: concept-topic-template
 ---

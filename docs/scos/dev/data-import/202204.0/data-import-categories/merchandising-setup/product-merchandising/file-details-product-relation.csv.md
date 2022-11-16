@@ -30,7 +30,7 @@ The file must have the following parameters:
 | rule |  | String |  | Query which defines the relation between the product and the other products. |
 | product_relation_key | &check; | String |  | Key that is used to assign store relations. |
 | is_active |  | Integer |  | Defines if the product relation is active. |
-| is_rebuild_scheduled |  | Integer |  | Defines if the list of related products should be regularly updated by running a cronjob. |
+| is_rebuild_scheduled |  | Integer |  | Defines if the list of related products must be regularly updated by running a cronjob. |
 
 ## Import file dependencies
 

@@ -13,7 +13,7 @@ redirect_from:
 
 The *Products* category contains all product-related data you need to manage and sell products in your online store. We have structured this section according to the following CSV files that you must use to import the data:
 
-* [product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html): lets you define whether specific attributes should be considered super attributes.
+* [product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html): lets you define whether specific attributes are considered super attributes.
 * [product_management_attribute.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html): lets you define additional product attributes, including type of attribute (text or number), as well as set custom and multiple values. 
 * [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html): includes the information needed for setting up abstract products and encompasses a wide range of information such as names, categories, attributes, descriptions, keywords, and tax rates.
 * [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html): in the case of multi-store setups, lets you define in which stores you wish to sell those abstract products.

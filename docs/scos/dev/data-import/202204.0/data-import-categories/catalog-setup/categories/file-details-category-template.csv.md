@@ -29,7 +29,7 @@ The file must have the following parameters:
 | PARAMETER | REQUIRED | TYPE |  REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | template_name | &check; | String |   | Name of the category template. |
-| template_path | &check; | String |   | Must be a valid path to a twig file and it is a unique field, for example, the file cannot have more than one line with the same template path. | Path of the category template. |
+| template_path | &check; | String |   | Must be a valid path to a twig file and it is a unique field—for example, the file cannot have more than one line with the same template path. | Path of the category template. |
 
 ## Import file dependencies
 

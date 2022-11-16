@@ -81,7 +81,7 @@ Here, you specify the names for the queues:
 
 3. Specify the name for the method, which creates an instance of `DataImportQueueWriterConfigurationTransfer` and initializes it with the main queue name and the size of a chunk data is written in.
 
-4. Create a plugin class, which configures and hooks up queue writer with the data importer. This plugin must extend `Spryker\Zed\DataImport\Communication\Plugin\AbstractQueueWriterPlugin` and has to provide implementations for its two abstract methods:
+4. Create a plugin class, which configures and hooks up a queue writer with the data importer. This plugin must extend `Spryker\Zed\DataImport\Communication\Plugin\AbstractQueueWriterPlugin` and has to provide implementations for its two abstract methods:
 
 **Pyz\Zed\DataImport\Communication\Plugin\ProductAbstract\ProductAbstractQueueWriterPlugin**
 
@@ -108,7 +108,7 @@ class ProductAbstractQueueWriterPlugin extends AbstractQueueWriterPlugin
 }
 ```
 
-The plugin should call the newly created method from the config class, thus providing the configuration values to the queue writer instance.
+The plugin calls the newly created method from the config class, thus providing the configuration values to the queue writer instance.
 
 {% info_block warningBox "Note" %}
 
@@ -116,7 +116,7 @@ Create additional plugins for other resources, should they need to be imported w
 
 {% endinfo_block %}
 
-5. Add the names of the new queues to the `RabbitMq` module configuration class. In `Pyz\Client\RabbitMq\RabbitMqConfig`, register the new queues for the resource.
+1. Add the names of the new queues to the `RabbitMq` module configuration class. In `Pyz\Client\RabbitMq\RabbitMqConfig`, register the new queues for the resource.
 
 **Pyz\Client\RabbitMq\RabbitMqConfig**
 

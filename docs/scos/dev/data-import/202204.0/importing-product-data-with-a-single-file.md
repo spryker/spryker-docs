@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/importing-product-data-with-a-single-file
 ---
 
-Besides importing product-related data with multiple CSV files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), or [product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html), you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
+Besides importing product-related data with multiple CSV files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), or [product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html), you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful in the following cases:
 
-* Have different environments (for example, production and staging), and you need to populate them all with the product data.
-* Frequently import product data.
-* Want to provide more autonomy to employees dealing with the administration of the products.
+* You have different environments (for example, production and staging), and you need to populate them all with the product data.
+* You frequently import product data.
+* You want to provide more autonomy to employees dealing with the administration of the products.
 
 {% info_block warningBox "Prerequisites" %}
 
@@ -24,7 +24,7 @@ Before you can import all main product data, make sure that *combined_product* [
 
 {% endinfo_block %}
 
-To import combined product data through a single file, you need to:
+To import combined product data through a single file, you need to do the following:
 
 * Populate a [CSV file for product data import](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
 * Prepare a [YML file](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
@@ -35,11 +35,11 @@ To import combined product data through a single file, you need to:
 
 The CSV file for the main product data import contains product-related data that you can import into your system. Check out the [template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Importing+Product+Data+With+a+Single+File/TEMPLATE+Product+import+with+single+file.csv) of the file for details about the data it contains.
 
-The headers in this file are prefixed with the names of the individual product-related import CSV files where they originally belong and contain field names that match those in the individual product import CSV files. The prefixes are separated from the field names by a dot, for example:
+The headers in this file are prefixed with the names of the individual product-related import CSV files where they originally belong and contain field names that match those in the individual product import CSV files. The prefixes are separated from the field names by a dot—for example:
 
-* `product_abstract_store.store_name` - corresponds to the `store_name` field in the `product_abstract_store.csv` file
-* `product_abstract.category_key` - corresponds to the `category_key` field in the `product_abstract.csv` file
-* `product_concrete.is_quantity_splittable` -  corresponds to the `is_quantity_splittable` field in the `product_concrete.csv` file
+* `product_abstract_store.store_name`—corresponds to the `store_name` field in the `product_abstract_store.csv` file.
+* `product_abstract.category_key`—corresponds to the `category_key` field in the `product_abstract.csv` file.
+* `product_concrete.is_quantity_splittable`—corresponds to the `is_quantity_splittable` field in the `product_concrete.csv` file.
 
 The only exceptions are `abstract_sku` and `concrete_sku` headers that are not prefixed.
 
@@ -129,6 +129,6 @@ By default, the configuration YML file resides in `data/import/common`.  As, for
 
 ## Console commands for product data import
 
-To import **all** product-related data from the YML configuration command, run the command `console data:import --config=xxx/ccc/file-name.yml -t`, where `xxx/ccc/file-name.yml` is the location of the YML file with the product data.
+To import *all* product-related data from the YML configuration command, run the command `console data:import --config=xxx/ccc/file-name.yml -t`, where `xxx/ccc/file-name.yml` is the location of the YML file with the product data.
 
-To import data for a **specific entity** only, specify the `data_entity` name after `data:import` in the preceding command. For example, if you want to import data for `combined-product-concrete` data entity only, your command looks like this: `console data:import combined-product-concrete --config=xxx/ccc/file-name.yml -t`.
+To import data for a *specific entity* only, specify the `data_entity` name after `data:import` in the preceding command. For example, if you want to import data for `combined-product-concrete` data entity only, your command looks like this: `console data:import combined-product-concrete --config=xxx/ccc/file-name.yml -t`.

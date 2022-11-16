@@ -91,7 +91,7 @@ On an M1 Mac, Homebrew files are installed into the `/opt/homebrew` folder. Be
     eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-Alternately, or if you have problems using these commands to update your PATH, you can add Homebrew to your .zprofile file. First, run:
+Alternately, or if you have problems using these commands to update your PATH, you can add Homebrew to your .zprofile file. First, run the following command:
 ```bash
 nano ~/.zprofile
 ```

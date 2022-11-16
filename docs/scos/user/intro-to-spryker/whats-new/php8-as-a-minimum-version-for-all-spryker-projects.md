@@ -5,15 +5,16 @@ last_updated: November 14, 2022
 template: concept-topic-template
 ---
 
-In the coming weeks, Spryker will release a new version of its Demo Shops requiring PHP 8.0 as the minimum version. Spryker's new module releases will only be compatible with PHP version 8.0 or later. See [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html) for details about the supported PHP versions.
+
+On the 18th of November 2022, Spryker will release a new version of its Demo Shops, which will require PHP 8.0 as their minimum PHP version. PHP 7.4 will no longer be supported. Spryker's new module releases will only be compatible with PHP version 8.0 or later. See [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html) for details about the supported PHP versions.
 
 ## Impacts
 
-We have not broken the backward compatibility. If your project followed our recommendations and requirements in the past twelve months, you wouldn't experience any upgradeability issues.
+Backwards compatibility remains unaffected. If your project followed our recommendations and requirements in the past twelve months, you will not experience any upgradeability issues.
 
 ## Migration steps
 
-To migrate your project to PHP 8.0 version, follow these steps:
+To migrate your project to the 8.0 version of PHP, follow these steps:
 
 1. Update your modules manually in `composer.json`.
 Use the major lock `^` or the minor lock `~` if you have changes on the project level for respective module constraints.
@@ -34,7 +35,7 @@ spryker-sdk/spryk-gui => 0.2.2
 
 `config.platform.php => 8.0`
 
-3. Make sure there are no project-specific changes in the following repositories and remove them from your `composer.json`:
+3. Make sure there are no project-specific changes in the following repositories, and remove them from your `composer.json`:
 
 ```json
 "repositories": [
@@ -47,7 +48,7 @@ spryker-sdk/spryk-gui => 0.2.2
 
 {% info_block infoBox "Project-specific changes" %}
 
-If you have project-specific changes in these repositories, consider either giving up the changes or copying them to the project code.
+If you have project-specific changes in these repositories, consider either giving up the changes or copying them into the project code.
 
 {% endinfo_block %}
 

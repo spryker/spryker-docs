@@ -151,7 +151,7 @@ Before you start writing the tests, check out the [PHPBench documentation](https
 You can write tests without any additional knowledge, but Benchmark has some default helpers that can make writing benchmarks easier for Spryker:
 
 * **RequestBuilder**—helps you to build the `Request` object.
-* **HttpHelper** - sends a request.
+* **HttpHelper**—sends a request.
 * **LoginHelper**—lets you log in with some credentials during or before the benchmark.
 * **FormCsrfTokenHelper**—lets you get a valid CSRF token if you want to submit a form on the page.
 

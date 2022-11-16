@@ -103,7 +103,7 @@ To add Homebrew, paste this text into the .zprofile file open in your terminal:
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
-Click **control o** to save the updated .zprofile file. Then click **control x** to exit out of the .zprofile file.
+To save the updated .zprofile file, click **control o**. Then, to exit the .zprofile file, click **control x**.
 
 {% endinfo_block %}
 

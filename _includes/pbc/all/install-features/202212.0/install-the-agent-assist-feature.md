@@ -368,7 +368,6 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     protected function getSecurityPlugins(): array
     {
         return [
-            ...
             new ValidateAgentSessionSecurityPlugin(),
             new SaveAgentSessionSecurityPlugin(),
         ];

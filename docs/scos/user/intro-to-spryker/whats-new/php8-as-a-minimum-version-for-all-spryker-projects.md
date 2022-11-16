@@ -34,7 +34,7 @@ spryker-sdk/spryk-gui => 0.2.2
 
 `config.platform.php => 8.0`
 
-3. Make sure there are no project-specific changes in the following repositories and remove them from your `composer.json`:
+3. Make sure there are no project-specific changes in the following repositories, and remove them from your `composer.json`:
 
 ```json
 "repositories": [

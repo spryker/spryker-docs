@@ -631,5 +631,5 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 </details>
 
 If everything is set up correctly, you can access it as follows:
- * Glue Backend API application: `http://glue-backend.mysprykershop.com` and `http://glue-storefront.mysprykershop.com`.
- * Glue Storefront API application: `http://glue-storefront.mysprykershop.com`.
+ * Glue Backend API application: `http://glue-backend.us.spryker.local` and `http://glue-backend.de.spryker.local`.
+ * Glue Storefront API application: `http://glue-storefront.us.spryker.local` and `http://glue-storefront.de.spryker.local`.

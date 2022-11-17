@@ -39,7 +39,7 @@ Digital assets let content managers create rich, compelling, and attractive cont
 The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders (also known as directories) under *File Directories Tree* and organize them into a hierarchical system by dragging and dropping them in the file tree.
 
 The changes take effect after **Save** is selected.
-![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
+![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/digital-asset-management/pbc-file-tree.png)
 
 A Back Office user can delete any folder within *File Directories Tree* by selecting **Delete Directory**. If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in *File Directories Tree* cannot be deleted.
 

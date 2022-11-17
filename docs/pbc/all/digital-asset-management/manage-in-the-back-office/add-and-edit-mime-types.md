@@ -30,27 +30,27 @@ To manage MIME types, go to **Administration&nbsp;<span aria-label="and then">><
 
 ## Add a MIME type
 
-1. On the **MIME Type Setting** page, click **Add MIME type**.
-2. On the **Add MIME type** page, enter a **MIME TYPE**.
-3. Optional: Enter a **COMMENT**.
-4. Select **IS ALLOWED** to allow this file type to be uploaded.
+1. On the *MIME Type Setting* page, click **Add MIME type**.
+2. On the *Add MIME type* page, enter a *MIME TYPE*.
+3. Optional: Enter a *COMMENT*.
+4. Select *IS ALLOWED* to allow this file type to be uploaded.
 5. Click **Save**.
-    This opens the **MIME Type Setting** page with a success message displayed. The MIME type you just added is displayed in the list.
+    This opens the *MIME Type Setting* page with a success message displayed. The MIME type you just added is displayed in the list.
 
 ## Edit a MIME type
 
-1. On the **MIME Type Setting** page, next to the MIME type you want to edit, click **Edit**.
-2. On the **Edit MIME type** page, make your changes.
-3. Optional: Enter a **COMMENT**.
-4. To allow uploading of this file type, select **IS ALLOWED**.
+1. On the *MIME Type Setting* page, next to the MIME type you want to edit, click **Edit**.
+2. On the *Edit MIME type* page, make your changes.
+3. Optional: Enter a *COMMENT*.
+4. To allow uploading of this file type, select *IS ALLOWED*.
 5. Click **Save**.
-    This opens the **MIME Type Setting** page with a success message displayed. The changed are reflected in the list.    
+    This opens the *MIME Type Setting* page with a success message displayed. The changed are reflected in the list.    
 
 ## Reference information: MIME TYPE
 
 The MIME Type Settings submenu lets a Back Office user define the file types that can be uploaded to the Back Office based on their nature and format.
 
-If no MIME types are defined, files of any type can be uploaded. If you add at least one MIME type, only files with the MIME types checked in the Is Allowed column are allowed to be uploaded to the Administration Interface.
+If no MIME types are defined, files of any type can be uploaded. If you add at least one MIME type, only files with the MIME types checked in the *Is Allowed* column are allowed to be uploaded to the Back Office.
 
 [MIME (Multipurpose Internet Mail Extensions) type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) is a standard that describes the contents of the files. MIME type indicates how a browser will process a document. For example, if the MIME type is set as image/jpeg, then the browser opens it with an image viewer program.
 

@@ -32,7 +32,7 @@ Gatling is capable of creating an immense amount of traffic from a single node, 
 - Java 8+
 - Node 10.10+
 
-## Integrating the load testing tool into an environment
+## Including the load testing tool into an environment
 
 The purpose of this guide is to show you how to integrate Spryker's load testing tool into your environment. While the instructions here will focus on setting this up with using one of Spryker’s many available demo shops, it can also be implemented into an on-going project.
 
@@ -161,18 +161,132 @@ You've set up your Spryker B2C Demo Shop and can now access your applications.
 
 With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html). 
 
-These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to configure these commands to run with a Jenkins.
+These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to take separate steps to generate parity data between the load-testing tool and your cloud-based environment. 
 
+#### Steps for using a cloud-hosted environment.
 
-#### Steps for configuring a job in Jenkins
+The Gatling test tool uses pre-seeded data which is used locally for both testing and generating the fixtures in the project's database. If you wish to test a production or a staging environment, there are several factors which need to be addressed. 
 
-Jenkins is the default scheduler which ships with Spryker. It is an automation service which helps to automate tasks within Spryker. For an environment that is already set-up and hosted in the cloud, Jenkins can be used to schedule the necessary tasks you need for the data preparation step.
+- You may have data you wish to test with directly which the sample dummy data may not cover.
+- Cloud-hosted applications are not able to be run in test mode.
+- Cloud-hosted applications are not set up to run `codeception`.
+- Jenkins jobs in a cloud-hosted application are set up to run differently than those found on a locally-hosted environment.
+- Some cloud-hosted applications may require `BASIC AUTH` authentication or require being connected to a VPN to access.
+
+Data used for Gatling's load testing can be found in **/load-test-tool-dir/tests/_data**. Any data that you generate from your cloud-hosted environment will need to be stored here.
+
+##### Setting up for basic authentication.
+
+If your environment is set for `BASIC AUTH` authentication and requires a user name and password before the site can be loaded, Gatling needs additional configuration. Found within **/load-test-tool-dir/resources/scenarios/spryker/**, two files control the HTTP protocol which is used by each test within the same directory. `GlueProtocol.scala` and `YvesProtocol.scala` each have a value (`httpProtocol`) which needs an additional argument to account for this authentication mode. 
+
+```scala
+val httpProtocol = http
+   .baseUrl(baseUrl)
+
+...
+   .basicAuth("usernamehere","passwordhere")
+...
+
+   .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
+```
+
+**usernamehere** and **passwordhere** should match the username and password used for your environment's basic authentication and not an account created within Spryker. This username and password are typically set up within your deploy file.
+
+##### Generating product data
+
+{% info_block errorBox %}
+
+You will need to be connected to the appropriate VPN for whichever resource you are trying to access.
+
+{% endinfo_block %}
+
+Product data can be generated from existing product data for use with the load-testing tool. Within **/load-test-tool-dir/tests/_data**, you will find `product_concrete.csv` which stores the necessary **sku** and **pdp_url** for each product. This information can be parsed directly from the existing data of your cloud-hosted environment. To do so, connect to your store's database. Product data is stored in the `data` column found within the `spy_product_concrete_storage` table as a JSON entry. We can extract this information and format it with the appropriate column names with the following command:
+
+```sql
+SELECT
+       JSON_UNQUOTE(JSON_EXTRACT(data, "$.sku")) as `sku`,
+       JSON_UNQUOTE(JSON_EXTRACT(data, "$.url")) as `url`
+FROM `us-docker`.`spy_product_concrete_storage`;
+```
+
+This command parses through that JSON entry and extracts what we need. Once this information has been generated, it should be saved as `product_concrete.csv` and saved in the **/load-test-tool-dir/tests/_data** directory.
+
+##### Generating customer data
+
+{% info_block errorBox %}
+
+You will need to be connected to the appropriate VPN for whichever resource you are trying to access.
+
+{% endinfo_block %}
+
+Customer data can be generated from existing product data for use with the load-testing tool. Within **/load-test-tool-dir/tests/_data**, you will find `customer.csv` which stores the necessary fields for each user (email, password, auth_token, first_name, and last_name). Most of this information can be parsed directly from the existing data of your cloud-hosted environment. There are a number of caveats which come with generating this customer data:
+
+- To generate information for `auth_token`, a separate Glue call is required.
+- Passwords are encrypted in the database, while the load-testing tool requires a password to use in plain-test.
+
+Because of these aforementioned issues, it is recommended that you create the test users you need first through the Zed or Backoffice interface. For help with creating users, please refer to [Managing customers](/docs/scos/user/back-office-user-guides/202009.0/customer/customer-customer-access-customer-groups/managing-customers.html).
+
+Once the users have been created, you will need to generate access tokens for each. This can be done using Glue with the `access-token` end point. You can review the [access-token](/docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/managing-company-user-authentication-tokens.html) documentation for further guidance, but below is a sample of the call to be made.
+
+Expected request body
+```json
+{
+  "data": {
+    "type": "string",
+    "attributes": {
+      "username": "string",
+      "password": "string"
+    }
+  }
+}
+```
+
+Sample call with CURL
+```bash
+curl -X POST "http://glue.de.spryker.local/access-tokens" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"data\":{\"type\":\"access-tokens\",\"attributes\":{\"username\":\"emailgoeshere\",\"password\":\"passwordgoeshere\"}}}"
+```
 
 {% info_block infoBox %}
 
-For most environments hosted, you will need to be connected to a VPN to access the Jenkins web UI.
+For each of these, the username is typically the email of the user that was created. Within the response from Glue, you will also want the **accessToken** to be saved for the **auth_token** column.
 
 {% endinfo_block %}
+
+Once users have been created and access tokens generated, this information should be stored and formatted in `customer.csv` and saved in the **/load-test-tool-dir/tests/_data** directory. Make sure to put the correct information under the appropriate column name.
+
+#### Steps for using a local environment
+
+To start, entering testing mode with the following command:
+
+```bash
+docker/sdk testing
+```
+
+Once inside the Docker SDK CLI, to create and load the fixtures, do the following:
+
+1. Generate fixtures and data for the load testing tool to utilize. As we are specifying a different location for the configuration files, we will need to use the `-c` or `--config` flag with our command. These tests will run to generate the data that is needed for load testing purposes. This can be done with the following:
+
+```bash
+vendor/bin/codecept fixtures -c vendor/spryker-sdk/load-testing
+```
+
+2. As we generated fixtures to be used with the Spryker load testing tool, the data needs to be republished. To do this, we need to trigger all *publish* events to publish Zed resources, such as products and prices, to storage and search functionality.
+
+```bash
+console publish:trigger-events
+```
+
+3. Run the *queue worker*. The [Queue System](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html) provides a protocol for managing asynchronous processing, meaning that the sender and the receiver do not have access to the same message at the same time. Queue Workers are commands which send the queued task to a background process and provides it with parallel processing. The `-s` or `--stop-when-empty` flag stops worker execution only when the queues are empty.
+
+```bash
+console queue:worker:start -s 
+```
+
+You should have the fixtures loaded into the databases and can exit the CLI to install Gatling into the project.
+
+#### Alternative method to generate local fixtures.
+
+Jenkins is the default scheduler which ships with Spryker. It is an automation service which helps to automate tasks within Spryker. For an environment that is already set-up and hosted in the cloud, Jenkins can be used to schedule the necessary tasks you need for the data preparation step.
 
 1. From the Dashboard, select `New Item`.
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTzW2A-gkFX6PC1YiG4r0EUQX5S2xWDRQWq4hkgzKn889xva_FwrEaDo-lYl2i3CWgXiMqebPA=w1920-h919)
@@ -220,36 +334,6 @@ While it is possible to change the Jenkins cronjobs found at **/config/Zed/cronj
 {% endinfo_block %}
 
 You are now done and can move on to [Installing Gatling](#installing-gatling)!
-
-#### Steps for using a local environment
-
-To start, entering testing mode with the following command:
-
-```bash
-docker/sdk testing
-```
-
-Once inside the Docker SDK CLI, to create and load the fixtures, do the following:
-
-1. Generate fixtures and data for the load testing tool to utilize. As we are specifying a different location for the configuration files, we will need to use the `-c` or `--config` flag with our command. These tests will run to generate the data that is needed for load testing purposes. This can be done with the following:
-
-```bash
-vendor/bin/codecept fixtures -c vendor/spryker-sdk/load-testing
-```
-
-2. As we generated fixtures to be used with the Spryker load testing tool, the data needs to be republished. To do this, we need to trigger all *publish* events to publish Zed resources, such as products and prices, to storage and search functionality.
-
-```bash
-console publish:trigger-events
-```
-
-3. Run the *queue worker*. The [Queue System](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html) provides a protocol for managing asynchronous processing, meaning that the sender and the receiver do not have access to the same message at the same time. Queue Workers are commands which send the queued task to a background process and provides it with parallel processing. The `-s` or `--stop-when-empty` flag stops worker execution only when the queues are empty.
-
-```bash
-console queue:worker:start -s 
-```
-
-You should have the fixtures loaded into the databases and can exit the CLI to install Gatling into the project.
 
 ### Installing Gatling
 

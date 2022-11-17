@@ -47,20 +47,15 @@ Depending on your operating system, follow the Jekyll installation guides below.
 
 ### Install Jekyll on MacOS
 
-{% info_block infoBox "Determine Your Mac's Processor Type" %}
-
 The installation process is different depending whether you are using a Mac with an Intel processor or with a Silicon M1 chip. To find out whether you have an Intel or a Silicon M1 Mac, click the **Apple** menu and choose **About This Mac**.
 
 * Silicon Macs with the M1 processor show an item labeled _Chip_ followed by the name of the Apple chip.
 
 * Intel-based Macs show an item labeled _Processor_ followed by the name and/or model number of the Intel processor.
 
-{% endinfo_block %}
-
-
 {% info_block warningBox "MacOS on M1 processor – Open Terminal using Rosetta" %}
 
-On a **MacBook with the M1 processor**, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables non-native Intel x86 apps, including Homebrew, to run on Apple Silicon Macs. 
+On a MacBook with the M1 processor, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables non-native Intel x86 apps, including Homebrew, to run on Apple Silicon Macs. 
 To open your terminal using Rosetta, follow these steps:
 1.	Open a _Finder_ window.
 2.	In _Applications_, locate _Terminal_.
@@ -73,7 +68,7 @@ On either an M1 or an Intel Mac, follow the steps below to install Jekyll. M1-sp
 
 #### 1. Install Homebrew
 
-Homebrew is a package manager for macOS (because by default, Mac doesn’t have a package manager). You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically. 
+Homebrew is a package manager for macOS because by default, Mac doesn’t have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically. 
 
 To install Homebrew, follow these steps: 
 ```bash
@@ -121,7 +116,7 @@ ruby -v
 ```
 {% info_block infoBox "Don't use system Ruby" %}
 
-You should not use the Ruby version that came pre-installed with your Mac. (Apple includes an older, non-updatable version of Ruby on macOS for compatibility with legacy software.)
+You should not use the Ruby version that came pre-installed with your Mac. Apple includes an older, non-updatable version of Ruby on macOS for compatibility with legacy software.
 
 {% endinfo_block %}
 

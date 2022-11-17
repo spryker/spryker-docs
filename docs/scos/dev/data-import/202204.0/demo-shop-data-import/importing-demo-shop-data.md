@@ -19,7 +19,7 @@ To import data into a Spryker Demo Shop, you need to do the following:
 3. [Define the correct order of import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html).
 4. Run either [individual data importers, or in bulk](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html#console-commands-to-run-import). 
 
-This section helps you with this process. Here you can find an explanation of the purpose and format of each import file and what combination of import files to use to accomplish common tasks like setting up store configuration or populating the catalog.
+This section helps you with this process. Here, you can find an explanation of the purpose and format of each import file and what combination of import files to use to accomplish common tasks like setting up store configuration or populating the catalog.
 To help you create your import files, see details, examples, and templates of the import CSV files structured by categories in the [Data Import Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html) section.
 
 

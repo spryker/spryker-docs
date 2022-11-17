@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/ht-data-import
 ---
 
-The following document describes how to build your data importer for a specific type. All steps in this document are built on the real-life example of importing product images.
+This document describes how to build your data importer for a specific type. All steps in this document are built on a real-life example of importing product images.
 
 {% info_block infoBox "File Import Formats" %}
 
-Currently, we only support CSV as a format for file imports out of the box. However, you can create your own file reader if you want to use a different format.
+We only support CSV as a format for file imports out of the box. However, you can create your own file reader if you want to use a different format.
 
 {% endinfo_block %}
 
@@ -25,7 +25,7 @@ Currently, we only support CSV as a format for file imports out of the box. Howe
 <a name="prerequisites"></a>Before you start creating a data importer, you need to know what data it needs to include. We recommend you start by checking out the respective database tables you want to fill with data. The following image shows the table relation for product images.
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_database_schema.png) 
 
-From this schema, you can easily identify the data columns you need for your import file. So the relevant fields to fill are:
+From this schema, you can easily identify the data columns you need for your import file. The following are the relevant fields to fill:
 
 * name (spy_product_image_set)
 * external_url_large (spy_product_image)
@@ -40,7 +40,7 @@ All `fk_*` fields are foreign keys to other database tables. You can't know the 
 
 {% endinfo_block %}
 
-For the database field `fk_locale`, the name of the locale is used for which you need the ID—for example, de_DE. This value is then used to fetch the ID for the given locale name.
+For the database field `fk_locale`, the name of the locale is used for which you need the ID—for example, `de_DE`. This value is then used to fetch the ID for the given locale name.
 The same technique is used for the `fk_product` and `fk_product_abstract` fields.
 
 {% info_block infoBox "Info" %}
@@ -49,7 +49,7 @@ To identify the data for your import file, you can also check out the CSV files 
 
 {% endinfo_block %}
 
-Now that you know what data your import file needs to include, you can proceed with the first step of creating a data importer: creating an import file.
+Now that you know what data your import file needs to include, you can start creating an import file.
 
 ## Create an import file
 
@@ -71,7 +71,7 @@ Once you populate all columns, your CSV file is similar to this one:
 
 Save the new file under `data/import/*`.
 
-That's it - your import file is ready. Now you have to configure the data importer.
+That's it. Your import file is ready. Now you have to configure the data importer.
 
 ## Configure the data importer
 
@@ -83,7 +83,7 @@ The constant is used to identify an import type. More information about it follo
 
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration YML file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+In the [configuration YML file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html), you also need to define the new data importer. Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
 
 ```yml
 actions:
@@ -101,7 +101,7 @@ where:
 
 {% info_block infoBox "Steps" %}
 
-(Each importer needs at least one step to write the data from the file to a database. You can add as many steps as you need to your `DataSetStepBroker`.
+Each importer needs at least one step to write the data from the file to a database. You can add as many steps as you need to your `DataSetStepBroker`.
 
 {% endinfo_block %}
 
@@ -232,9 +232,9 @@ There are a couple more options, you can see them when you execute `vendor/bin/c
 
 You have made sure that the data importer can be executed, but you can only print a debug message. You need to do some additional things to save some data. To finalize your data importer, follow these steps. 
 
-### 1. Convert logical identifier to foreign keys
+### 1. Convert a logical identifier to foreign keys
 
-As mentioned in the [Prerequisites](#prerequisites), you can not use foreign keys in our import file—you need a logical identifier that can now be used to get the foreign key of a related entity.
+As mentioned in the [Prerequisites](#prerequisites), you can not use foreign keys in your import file—you need a logical identifier that can now be used to get the foreign key of a related entity.
 
 There are several ways how you can get the logical identifier. For example, you can add a new step—for example, `LocaleNameToIdLocaleStep`. However, in this case, it's better to use a repository that provides us with a getter to retrieve the `id_locale` by its name. Take this approach and do the following:
 
@@ -375,7 +375,7 @@ protected function getIdLocaleByLocale(DataSetInterface $dataSet)
 
 Allow `fk_locale` to be null. Either `fk_product` or `fk_product_abstract` must be set. For performance reasons, save the entity only when it's new or modified.
 
-1. Find or create the `spy_product_image` by adding the following code to the `ProductImageWriterStep`:
+2. Find or create the `spy_product_image` by adding the following code to the `ProductImageWriterStep`:
 
 ```php
 /**
@@ -427,7 +427,7 @@ protected function updateOrCreateImageToImageSetRelation(SpyProductImageSet $ima
 }
 ```
 
-### 3. Fill the Execute method:
+### 3. Fill in the Execute method:
 
 ```php
 /**
@@ -446,6 +446,6 @@ public function execute(DataSetInterface $dataSet)
 
 ## 7. Run the importer
 
-That's it! Run the console command `vendor/bin/console data:import:product-image` to see an output similar to this one:
+That's it! To see an output similar to the following one, run `vendor/bin/console data:import:product-image`:
 
 ![Importer command](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_console_output.png) 

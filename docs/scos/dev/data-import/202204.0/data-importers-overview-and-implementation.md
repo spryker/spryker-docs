@@ -79,7 +79,7 @@ Currently, there are the following importers in Spryker Commerce OS:
 * Payment Method Importer - **B2B/B2C**
 * Shipment Store Importer - **B2B/B2C**
 
-Each of the importers can be executed one by one with the separate command (for example, `./vendor/bin/console data:import:product-abstract`).
+Each of the importers can be executed one by one with the separate command—for example, `./vendor/bin/console data:import:product-abstract`.
 
 However, if you want to execute specific import types **in bulk**, you can create a `config.yml` configuration file with the following structure:
 

@@ -45,7 +45,7 @@ To import data into a message queue, use an instance of `Spryker\Zed\DataImport\
 
 Do the following:
 1. Provide two pieces of configuration to a queue writer's `::write()` method:
-* Queue name—the name of the resource-based queue, which stores the imported data between the steps (for example, `import.product_abstract`).
+* Queue name—the name of the resource-based queue, which stores the imported data between the steps—for example, `import.product_abstract`ß.
 * Chunk size—the size of the chunks in which data is written to a queue.
 2. Define a dedicated configuration method in `Pyz\Zed\DataImport\DataImportConfig`:
 
@@ -190,7 +190,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 ```
 </details>
 
-Pay attention to the `::setImportGroup()` method call on the data importer instance. By calling this method, an import group can be set for each separate data import. Import groups allow you to run importers separately on a per-group basis by supplying the group name as an option for the data import console command. Three groups are supported out of the box: *FULL*, *QUEUE_READERS*, *QUEUE_WRITERS*. With no call to `::setImportGroup`, the data importer is placed into the FULL group by default.
+Pay attention to the `::setImportGroup()` method call on the data importer instance. By calling this method, an import group can be set for each separate data import. Import groups let you run importers separately on a per-group basis by supplying the group name as an option for the data import console command. Three groups are supported out of the box: *FULL*, *QUEUE_READERS*, *QUEUE_WRITERS*. With no call to `::setImportGroup`, the data importer is placed into the FULL group by default.
 {% info_block warningBox "Note" %}
 
 We not recommend using the QUEUE_READERS group. This executes all the configured queue importers during one import run. Because in a lot of scenarios the order, in which the data is imported, matters and because of the possibility of the race condition, this can lead to various malfunctions or inconsistencies in the imported data. We recommend structuring the import process in a way that would allow importing data through the message queues apart from other imported resources.

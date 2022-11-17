@@ -14,7 +14,7 @@ redirect_from:
 
 Besides importing product-related data with multiple CSV files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), or [product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html), you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful in the following cases:
 
-* You have different environments (for example, production and staging), and you need to populate them all with the product data.
+* You have different environments—for example, production and staging—ßand you need to populate them all with the product data.
 * You frequently import product data.
 * You want to provide more autonomy to employees dealing with the administration of the products.
 
@@ -90,7 +90,7 @@ The combined product data import file contains three additional fields that are 
 * product_price.assigned_product_type
 * product_image.assigned_product_type
 
-These fields can have the following values: *abstract, concrete*, and *both* that indicate what product types you import the data for. For example, if you have set *both* for the `product.assigned_product_type` field, it means that data from all fields with prefix `product.` (for example, `product.name.{LOCALE}`, `product.attribute_key_{NUMBER}`) will be imported for both abstract and concrete products. Likewise, you can import data for fields with prefix `product., product_price.`, `product_image.` for just *abstract* or *concrete* products.
+These fields can have the following values: *abstract, concrete*, and *both* that indicate what product types you import the data for. For example, if you have set *both* for the `product.assigned_product_type` field, it means that data from all fields with prefix `product.`—for example, `product.name.{LOCALE}`, `product.attribute_key_{NUMBER}`—is imported for both abstract and concrete products. Likewise, you can import data for fields with prefix `product., product_price.`, `product_image.` for just *abstract* or *concrete* products.
 
 {% info_block infoBox %}
 

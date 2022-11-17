@@ -14,7 +14,11 @@ redirect_from:
 
 ## Concept
 
-**"Writing code is the easy part of every feature but writing a scalable and fast solution is a challenge"**
+{% info_block infoBox "Info" %}
+
+Writing code is the easy part of every feature but writing a scalable and fast solution is a challenge.
+
+{% endinfo_block %}
 
 This document defines the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize. After several reviews and tests, we decided to define these rules to help developers to write more scalable and high-performance code when they implement their features. Most of the time when developers create features, they don't consider very high traffic or heavy data processing for big data. This document describes all necessary requirements when you want to create new features and they need to work with big data. For example, you want to create a new DataImport or a new P&S module that save millions of entities into a database in a very short amount of time.
 
@@ -62,7 +66,7 @@ The current solution for `DataImport` is to add another step before the main ste
 
 ### ORM vs PDO
 
-*Object-relational mapping (ORM)* is a very good approach when you work on very big and complex software but it's not always the answer to all problems especially when it comes to batch processing. ORMs are slow by design because they need to handle so much internal hydration and mapping.
+*Object-relational mapping (ORM)* is an approach when you work on very big and complex software but it's not always the answer to all problems especially when it comes to batch processing. ORMs are slow by design because they need to handle so much internal hydration and mapping.
 
 Here is an example of using the Propel ORM, this is a very clean and nice approach but not optimized enough for importing big data.
 
@@ -95,7 +99,7 @@ The solution is as follows:
 
 Sometimes you may need to run some validation or business logic for each data set, the easiest and safest way would be a Facade API call, that's totally fine, but then imagine if these APIs also call some heavy queries very deep! this has a huge side effect on your performance during importing millions of data.
 
-Here you can see for each product stock, there are two facade calls, each facade call may run more than five queries. This means, for importing 1,000,000 data, you need 10,000,000 queries! (this will never finish!).
+Here, you can see for each product stock, there are two facade calls, each facade call may run more than five queries. This means, for importing 1,000,000 data, you need 10,000,000 queries! (this will never finish!).
 
 ```php
 protected function updateBundleAvailability(): void

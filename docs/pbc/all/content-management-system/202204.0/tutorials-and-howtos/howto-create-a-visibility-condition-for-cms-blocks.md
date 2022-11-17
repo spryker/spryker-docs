@@ -19,7 +19,7 @@ related:
   - title: Templates & Slots overview
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
   - title: Managing slots
-    link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/manage-slots.html
 ---
 
 *Visibility Condition* is a [Templates & Slots](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) feature functionality that lets you define when a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:

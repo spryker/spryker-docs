@@ -170,14 +170,6 @@ Below you will find the list of the new/updated documentation released as part o
 </details>
 
 <details>
-<summary markdown='span'>Back Office user guides</summary>
-
-* [Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
-* [Managing Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
-
-</details>
-
-<details>
 <summary markdown='span'>Technology Partners guides</summary>
 
 [Coremedia with Templates & Slots](/docs/scos/user/technology-partners/{{site.version}}/content-management/coremedia.html)

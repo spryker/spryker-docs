@@ -119,7 +119,7 @@ Check your current Ruby version:
 ```bash
 ruby -v
 ```
-{% info_block infoBox "Don't Use System Ruby" %}
+{% info_block infoBox "Don't use system Ruby" %}
 
 You should not use the Ruby version that came pre-installed with your Mac. (Apple includes an older, non-updatable version of Ruby on macOS for compatibility with legacy software.)
 

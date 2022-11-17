@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
 ---
 
-This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#navigation-node-types) information in your Spryker Demo Shop.
+This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/pbc/all/content-management-system/202204.0/manage-in-the-back-office/navigation/create-navigation-nodes.html#reference-information-navigation-node-types) information in your Spryker Demo Shop.
 
 
 ## Import file dependencies

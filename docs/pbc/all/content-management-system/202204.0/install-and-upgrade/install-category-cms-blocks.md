@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html
 related:
   - title: Migration Guide - CMS Block
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
+    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
 
 A category block is a CMS block that can be embedded into a category template.

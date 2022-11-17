@@ -16,7 +16,7 @@ related:
   - title: Install the CMS feature
     link: docs/scos/dev/feature-integration-guides/page.version/cms-feature-integration.html
   - title: Retrieve CMS pages
-    link: docs/pbc/all/content-management-system/{{page.version}}/manage-using-glue-api/retrieve-cms-pages.html
+    link: docs/pbc/all/content-management-system/page.version/manage-using-glue-api/retrieve-cms-pages.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-cms-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-cms-glue-api.md -->

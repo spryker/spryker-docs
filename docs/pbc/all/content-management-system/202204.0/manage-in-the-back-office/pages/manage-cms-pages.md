@@ -15,7 +15,7 @@ related:
   - title: CMS Page overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
   - title: Editing CMS Pages
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/pages/edit-cms-pages.html
   - title: Managing CMS Page Versions
     link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/pages/manage-cms-page-versions.html
 ---

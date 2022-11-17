@@ -17,7 +17,7 @@ related:
   - title: Catalog feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
   - title: CMS pages in search results
-    link: docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html
+    link: docs/pbc/all/content-management-system/page.version/cms-feature-overview/cms-pages-in-search-results-overview.html
   - title: CMS page
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---

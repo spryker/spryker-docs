@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/navigation-feature-integration.html
 related:
     - title: Install the Navigation Glue API
-      link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
+      link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-navigation-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-navigation-feature.md -->

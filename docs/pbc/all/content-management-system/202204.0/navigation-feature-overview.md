@@ -72,7 +72,7 @@ The only class you can use by default is *label*. This class capitalizes the nav
 
 A frontend developer can create more classes for navigation nodes.
 
-To learn how a Back office user can define a navigation node design, see [Creating a navigation node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
+To learn how a Back office user can define a navigation node design, see [Creating a navigation node](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes.html).
 
 ## Navigation node validity period
 
@@ -80,7 +80,7 @@ You can define the time period a navigation node is valid for:
 * When the validity period ends, the navigation node with its child stops being displayed on the Storefront.
 * When the validity period starts, the navigation node with its child is displayed on the Storefront.
 
-To learn how a product catalog manager can define a navigation node validity period, see [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
+To learn how a product catalog manager can define a navigation node validity period, see [Creating a Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes.html).
 
 ## Navigation as content item
 

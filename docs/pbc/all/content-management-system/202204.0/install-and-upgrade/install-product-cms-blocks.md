@@ -21,9 +21,9 @@ related:
   - title: Managing CMS Blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
   - title: Migration Guide - CMS Block
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
+    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
   - title: Migration Guide - CMS Block GUI
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html
+    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html
 ---
 
 Product blocks are CMS blocks that are embedded in the product template and rendered on product details pages of selected products.
@@ -150,4 +150,4 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-Now you can create product CMS blocks and add them to product pages. For instructions, see [Create product CMS blocks](/docs/scos/user/back-office-user-guides/{{site.version}}/content/blocks/create-product-cms-blocks.html).
+Now you can create product CMS blocks and add them to product pages. For instructions, see [Create product CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/create-product-cms-blocks.html).

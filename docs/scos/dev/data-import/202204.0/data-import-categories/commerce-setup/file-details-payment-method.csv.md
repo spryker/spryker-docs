@@ -29,7 +29,7 @@ The file must have the following parameters:
 | payment_method_name | &check; | String |  | Name of the payment method. |
 | payment_provider_key | &check; | String |  | Identifier of the payment provider. |
 | payment_provider_name | &check; | String |  | Name of the payment provider. |
-| is_active | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If the field is empty, it will be set to 0 (false).</li></ul> | Status indicating whether the payment method is active or not. |
+| is_active | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If the field is empty, it is set to 0 (false).</li></ul> | Status indicating whether the payment method is active or not. |
 
 ## Import file dependencies
 

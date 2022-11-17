@@ -15,6 +15,6 @@ The **Miscellaneous** category contains several additional data that you need to
 
 The following table provides details about Miscellaneous data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
-| DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
+| DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE | DEPENDENCIES |
 | --- | --- | --- | --- |--- |
 | Comment  | Imports information relative to customer comments. | `data:import:comment`|[comment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/miscellaneous/file-details-comment.csv.html)|[customer.csv ](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-customer.csv.html)|

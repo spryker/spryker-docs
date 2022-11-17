@@ -39,7 +39,7 @@ The file must have the following parameters:
 | is_searchable.{ANY_LOCALE_NAME}<br>Example value: *is_searchable.en_US*|  | Integer |  | Indicates if the product is searchable in the specified locale (US for our example). |
 | icecat_license |  | String |  | Icecat product catalogue license code. |
 | bundled |  | String | | Products SKUs separated by comas, that are part of the bundle. |
-| is_quantity_splittable |  | Boolean |If it is empty, will be *False*.<br>False = 0<br>True = 1 | To be considered a new product until this presented date. |
+| is_quantity_splittable |  | Boolean |If empty, than *False*.<br>False = 0<br>True = 1 | To be considered a new product until this presented date. |
 
 *N/A: Not applicable.
 
@@ -50,7 +50,7 @@ The file must have the following parameters:
 
 This file has the following dependency: [ product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
-## Recommendations & other information
+## Recommendations and other information
 
 Every concrete product is linked to an abstract one through the `abstract_sku` field.
 

@@ -224,7 +224,7 @@ The `DataImporter` catches exceptions by default and continues to import data. I
 
 {% info_block infoBox "Info" %}
 
-There are a couple more options, you can see them when you execute `vendor/bin/console data:import:product-image -h`, the console command will then print the help page for the given command.
+There are a couple more options, you can see them when you execute `vendor/bin/console data:import:product-image -h`, the console command prints the help page for the given command.
 
 {% endinfo_block %}
 
@@ -446,6 +446,6 @@ public function execute(DataSetInterface $dataSet)
 
 ## 7. Run the importer
 
-That's it! Now when you run the console command `vendor/bin/console data:import:product-image`, you will see an output similar to this one:
+That's it! Run the console command `vendor/bin/console data:import:product-image` to see an output similar to this one:
 
 ![Importer command](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_console_output.png) 

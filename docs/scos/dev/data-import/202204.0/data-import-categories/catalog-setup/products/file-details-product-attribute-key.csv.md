@@ -26,7 +26,7 @@ The file must have the following parameters:
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | attribute_key | &check;  | String | Must be unique. | Product attribute key name. |
-| is_super |  | Boolean | If empty it will be imported as *False* (0).<br>False = 0 = It is not a super attribute.<br>True = 1 = It is a super attribute. | Indicates whether it is a super attribute or not.  |
+| is_super |  | Boolean | If empty it is imported as *False* (0).<br>False = 0 = It is not a super attribute.<br>True = 1 = It is a super attribute. | Indicates whether it is a super attribute or not.  |
 
 
 ## Import file dependencies

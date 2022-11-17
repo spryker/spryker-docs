@@ -16,9 +16,9 @@ The **Merchandising Setup** category contains data required to manage the mercha
 * [Product Merchandising](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html)
 * [Discounts](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/discounts.html)
 
-Within the [Product Merchandising](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html) section, you will find all information about the data imports required to manage product merchandising, which includes management of the Product Groups, Product Labels, and Product Sets.
+Within the [Product Merchandising](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html) section, you can find all information about the data imports required to manage product merchandising, which includes management of the Product Groups, Product Labels, and Product Sets.
 
-In the [Discounts](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/discounts.html) section, you will be able to import all data related to product discounts.
+In the [Discounts](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/discounts.html) section, you can import all data related to product discounts.
 
 {% info_block warningBox "Import order" %}
 

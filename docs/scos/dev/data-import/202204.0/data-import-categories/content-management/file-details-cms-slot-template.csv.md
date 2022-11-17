@@ -27,8 +27,8 @@ The file must have the following parameters:
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | template_path | &check;  | String |Must be a valid path to a twig template. | Path to the Twig file template. |
-| name |  &check;  | String | Human-readable. | Alphabetical identifier of the slot. It will be shown in the Back Office. |
-| description |    | String |  | Description of the slot. It will be shown in the Back Office. |
+| name |  &check;  | String | Human-readable. | Alphabetical identifier of the slot. It is shown in the Back Office. |
+| description |    | String |  | Description of the slot. It is shown in the Back Office. |
 
 ## Import file dependencies
 

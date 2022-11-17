@@ -37,7 +37,7 @@ protected function importProductAbstract(DataSetInterface $dataSet): void
 }
 ```
 
-This will work fine and you already achieved to your goals, but can you see the problem here?
+This works fine and you already achieved your goals, but can you see the problem here?
 
 Here is the problem:
 
@@ -50,19 +50,19 @@ protected function importProductAbstract(DataSetInterface $dataSet): void
 }
 ```
 
-`importProductAbstract` method will call for each line of your CSV, imagine if you have one CSV file with 1,000,000 lines, it means you will run this query again and again for 1 million times! The possible solution is to avoid single processing and implementing a batch query for it.
+`importProductAbstract` method calls for each line of your CSV, imagine if you have one CSV file with 1,000,000 lines, it means you run this query again and again one million times! The possible solution is to avoid single processing and implement a batch query for it.
 
-The current solution for `DataImport` is to add another step before the main step to gather all the information you need for the next steps. like querying all categories and remember them in memory and the next step can do a fast PHP look up from that result in memory.
+The current solution for `DataImport` is to add another step before the main step to gather all the information you need for the next steps. like querying all categories and remembering them in memory and the next step can do a fast PHP look-up from that result in memory.
 
 {% info_block warningBox "Note" %}
 
-`DataImport` v1.4.x doesn't support batch processing by default and the next version will provide a very clear solution for it.
+`DataImport` v1.4.x doesn't support batch processing by default and the next version provides a very clear solution for it.
 
 {% endinfo_block %}
 
 ### ORM vs PDO
 
-*Object-relational mapping (ORM)* is a very good approach when you work on very big and complex software but it's not always the answer to all problems especially when it comes to batch processing. ORMs is slow by design because it needs to handle so much internal hydration and mapping.
+*Object-relational mapping (ORM)* is a very good approach when you work on very big and complex software but it's not always the answer to all problems especially when it comes to batch processing. ORMs are slow by design because they need to handle so much internal hydration and mapping.
 
 Here is an example of using the Propel ORM, this is a very clean and nice approach but not optimized enough for importing big data.
 
@@ -83,19 +83,19 @@ protected function createOrUpdateProductAbstract(DataSetInterface $dataSet): Spy
 
 This approach has two problems:
 
-1. It runs two queries, one SELECT for `findOneOrCreate` and one INSERT or UPDATE for `save`.
-2. Single process approach (repeated per each entry)
+* It runs two queries, one SELECT for `findOneOrCreate` and one INSERT or UPDATE for `save`.
+* Single process approach (repeated per each entry).
 
-The solution is:
+The solution is as follows:
 
 1. Avoid ORM, you can use a very simple raw SQL but also avoid complex raw or big raw SQL queries.  
-2. Implement `DataSetWriterInterface` to achieve the batch processing approach, prepare one by one and write them once—take a look at `ProductAbstractWriter` in `Dataimport` as an example.
+2. To achieve the batch processing approach implement `DataSetWriterInterface`, prepare one by one and write them once—take a look at `ProductAbstractWriter` in `Dataimport` as an example.
 
 ### Facade calls
 
 Sometimes you may need to run some validation or business logic for each data set, the easiest and safest way would be a Facade API call, that's totally fine, but then imagine if these APIs also call some heavy queries very deep! this has a huge side effect on your performance during importing millions of data.
 
-Here you can see for each product stock, there are two facade calls, each facade call may run more than 5 queries, this means for importing 1,000,000 data, you will have 10,000,000 queries! (this will never finish!).
+Here you can see for each product stock, there are two facade calls, each facade call may run more than five queries. This means, for importing 1,000,000 data, you need 10,000,000 queries! (this will never finish!).
 
 ```php
 protected function updateBundleAvailability(): void
@@ -110,14 +110,14 @@ protected function updateBundleAvailability(): void
 }
 ```
 
-The solution is:
+The solution is as follows:
 
-1. Implement a new Facade API for batch operation  
-2. Only call facade if they are very lightweight and they don't run any query to a database
+1. Implement a new Facade API for batch operation. 
+2. Only call facade if they are very lightweight, and they don't run any query to a database.
 
 ### Memory management
 
-Let's say you already started to work with the batch operation, one of the challenges would be to keep the memory as low as possible. Sometimes you create variables and try to remember them always, but you may need them only until the end of the batch operation, so it's better to release them as soon as possible.
+Let's say you already started to work with the batch operation, one of the challenges is to keep the memory as low as possible. Sometimes you create variables and try to remember them always, but you may need them only until the end of the batch operation, so it's better to release them as soon as possible.
 
 ### Database vendor approach
 
@@ -160,10 +160,10 @@ public function publish(array $productAbstractIds): void
 
 ### Facade calls
 
-Another point that you need to be very careful about here is to call Facade API without any thinking through. You must make sure that these APIs will not run queries inside the same as the `DataImport` rule. You are allowed to call Facade API but if :
+Another point that you need to be very careful about here is to call Facade API without any thinking through. You must make sure that these APIs do not run queries inside the same as the `DataImport` rule. You are allowed to call Facade API if the following conditions are met:
 
-* There is no query inside
-* Facade API designed for batch operation (`findPriceForSku` vs `findPricesForSkus`) 
+* There is no query inside.
+* Facade API designed for batch operation (`findPriceForSku` versus `findPricesForSkus`).
 
 ### Triggering events
 

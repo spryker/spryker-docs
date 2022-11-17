@@ -33,7 +33,7 @@ The file must have the following parameters:
 | abstract_sku | &check;  | String | | SKU identifier of the abstract product. |
 | name.{ANY_LOCALE_NAME}<br>Example value: *name.en_US* | &check; | String |Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postifx can be changed or removed, and any number of columns with different locales can be added to the CSV files. | Name of the product in the specified location (US for our example). |
 | url.{ANY_LOCALE_NAME}<br>Example value: *value_1.en_US* | &check; | String | | URL page of the product image in the specified location (US for our example). |
-|is_featured |  | String |If it is empty, will be “False”. <br>False = 0<br>True = 1 | Indicates if it is a featured product. |
+|is_featured |  | String |If empty, than “False”. <br>False = 0<br>True = 1 | Indicates if it is a featured product. |
 | attribute_key_{NUMBER}<br>Example value: *attribute_key_1*<br> | &check; (if this attribute is defined) | String | | Product attribute key for the attribute. |
 | value_{NUMBER}<br>Example value: *value_1*<br>|&check; (if this attribute is defined) | String | | Product value for the attribute. |
 | attribute_key_{NUMBER}.{ANY_LOCALE_NAME}<br>Example value: *attribute_key_1.en_US*<br> |  | String | | Product attribute key, for the first attribute, translated in the specified locale (US for our example). |

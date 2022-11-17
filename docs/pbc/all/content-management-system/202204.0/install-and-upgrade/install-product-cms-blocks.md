@@ -13,17 +13,6 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/enabling-the-product-cms-block.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-product-cms-blocks.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrate-product-cms-blocks.html
-related:
-  - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
-  - title: Creating CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/creating-cms-blocks.html
-  - title: Managing CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
-  - title: Migration Guide - CMS Block
-    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
-  - title: Migration Guide - CMS Block GUI
-    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html
 ---
 
 Product blocks are CMS blocks that are embedded in the product template and rendered on product details pages of selected products.

@@ -240,4 +240,4 @@ INSERT INTO spy_cms_block_store (fk_cms_block, fk_store)
 
 You can find more details for these changes on [CMS Block module release page](https://github.com/spryker/cms-block/releases).
 
-CMS Block is ready to be used in multi-store environment. Additionally you might want to update the `spryker/cms-block-gui` Administration Interface to manage CMS Blocks and their store configuration. You can find further information about multi-store CMS Blocks here, and Zed Admin UI module migration guide in [Migration Guide - CMS Block GUI](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html).
+CMS Block is ready to be used in multi-store environment. Additionally you might want to update the `spryker/cms-block-gui` Administration Interface to manage CMS Blocks and their store configuration. You can find further information about multi-store CMS Blocks here, and Zed Admin UI module migration guide in [Migration Guide - CMS Block GUI](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulegui.html).

@@ -162,9 +162,9 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Migration guides</summary>
 
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html#upgrading-from-version-2-to-version-3)
-* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockstorage.html)
-* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockwidget.html)
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-2-to-version-3)
+* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulestorage.html)
+* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulewidget.html)
 
 
 </details>

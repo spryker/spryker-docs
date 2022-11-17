@@ -29,12 +29,5 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cms-block-collector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms-block-collector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms-block-collector.html
-related:
-  - title: Upgrade the CMS Block
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
-  - title: Upgrade the CMS Block GUI
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html
-  - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cms-block-collector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cms-block-collector-module.md -->

@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
 ---
 
-This document describes the `content_product_abstract_list.csv` file to configure [Content Product Abstract List](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html#content-item) information in your Spryker Demo Shop.
+This document describes the `content_product_abstract_list.csv` file to configure [Content Product Abstract List](/docs/pbc/all/content-management-system/{{page.version}}/content-items-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 

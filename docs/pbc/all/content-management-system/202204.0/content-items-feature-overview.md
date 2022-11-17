@@ -19,6 +19,7 @@ redirect_from:
 The *Content Items* feature creates an abstraction layer for content management in the Back Office. It lets content managers create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).
 
 ## Content item
+
 A *content item* is the smallest content unit in Spryker. There are four content item types shipped by default:
 * Banner
 * Abstract Product List

@@ -426,7 +426,7 @@ For *Glue API*:
 
 {% info_block errorBox %}
 
-Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Please visit the [Glue Cart](http://127.0.0.1:4000/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) reference for more details.
+Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Please visit the [Glue Cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) reference for more details.
 
 {% endinfo_block %}
 

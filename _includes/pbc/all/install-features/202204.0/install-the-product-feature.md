@@ -21,7 +21,7 @@ Please overview and install the necessary features before beginning the integrat
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
@@ -255,7 +255,7 @@ Overview and install the necessary features before beginning the integration ste
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies

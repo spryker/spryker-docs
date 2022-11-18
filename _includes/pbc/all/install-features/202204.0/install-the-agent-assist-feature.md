@@ -17,7 +17,7 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules using composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
@@ -36,7 +36,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up the database schema
 
-Run the following commands to apply database changes and to generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -139,7 +139,7 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies

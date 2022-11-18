@@ -42,7 +42,7 @@ console transfer:generate
 Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | `RestCartsAttributesTransfer:name` | property | added | `src/Generated/Shared/Transfer/RestCartsAttributesTransfer` |
 | `RestCartsAttributesTransfer:isDefault` | property | added | `src/Generated/Shared/Transfer/RestCartsAttributesTransfer` |
@@ -51,7 +51,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 On a project level, install the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `QuoteCreatorPlugin` | Creates a quote for a customer. | None | `Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi` |
 

@@ -135,7 +135,7 @@ This step will publish tables on change (create, edit, delete) to the `spy_produ
 Set up the following plugin(s):
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductGroupStorageEventSubscriber | Registers listeners that are responsible to publish product abstract group storage entity changes when a related entity change event occurs. | None | Spryker\Zed\ProductGroupStorage\Communication\Plugin\Event\Subscriber |
 

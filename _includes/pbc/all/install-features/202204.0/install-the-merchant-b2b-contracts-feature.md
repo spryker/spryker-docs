@@ -56,7 +56,7 @@ Make sure that the following changes by checking your database:
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | MerchantRelationship | class | created | src/Generated/Shared/Transfer/MerchantRelationshipTransfer |
 | SpyMerchantRelationshipEntity | class | created | src/Generated/Shared/Transfer/SpyMerchantRelationshipEntityTransfer |

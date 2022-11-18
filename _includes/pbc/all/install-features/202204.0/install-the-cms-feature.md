@@ -153,7 +153,7 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | SpyCmsTemplateEntity | class | created | src/Generated/Shared/Transfer/SpyCmsTemplateEntityTransfer |
 | SpyCmsPageEntity | class | created | src/Generated/Shared/Transfer/SpyCmsPageEntityTransfer |

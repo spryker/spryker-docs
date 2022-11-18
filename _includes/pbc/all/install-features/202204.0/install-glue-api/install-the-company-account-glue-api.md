@@ -22,11 +22,7 @@ To start the feature integration, overview and install the necessary features:
 | Glue API: Shipment                    | {{site.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) |
 | Glue API: Checkout                    | {{site.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 
-
-
 ## 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/company-user-auth-rest-api:"^2.0.0" spryker/oauth-company-user:"^2.0.0" spryker/oauth-permission:"^1.2.0" spryker/companies-rest-api:"^1.1.0" spryker/company-business-units-rest-api:"^1.2.0" spryker/company-business-unit-addresses-rest-api:"^1.1.0" spryker/company-roles-rest-api:"^1.1.0" spryker/company-users-rest-api:"^2.2.0" --update-with-dependencies
@@ -52,7 +48,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up configuration: Configure the resources available for company users
 
-Add the following resource to the list of resources that are accessible only for company users:
+Add the following resource to the list of resources that are accessible only to company users:
 
 **src/Pyz/Glue/CompanyUsersRestApi/CompanyUsersRestApiConfig.php**
 
@@ -75,13 +71,10 @@ class CompanyUsersRestApiConfig extends SprykerCompanyUsersRestApiConfig
 
 ## 3) Set up database schema and transfer objects
 
-Generate transfer changes:
-
 ```bash
 console propel:install
 console transfer:generate
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -134,10 +127,6 @@ Make sure that the following changes have occurred:
 | CheckoutErrorTransfer                                      | class    | created | src/Generated/Shared/Transfer/CheckoutErrorTransfer.php      |
 | RestShipmentsTransfer                                      | class    | created | src/Generated/Shared/Transfer/RestShipmentsTransfer.php      |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Verify that the following changes have occurred in the database:
 
 | DATABASE ENTITY                | TYPE   | EVENT |
@@ -173,18 +162,13 @@ Make sure that in the database the configured data has been added to the `spy_gl
 
 {% endinfo_block %}
 
-## 5) Set up behavior
-
-Set up the following behaviors.
-
-### Generate UUIDs for the existing company records without UUIDs
+## 5) Generate UUIDs for the existing company records without UUIDs
 
 Generate the `UUID` column values in the `spy_company` database table:
 
 ```bash
 console uuid:generate Company spy_company
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -198,12 +182,9 @@ select count(*) from spy_company where uuid is NULL;
 
 ### Generate UUIDs for the existing company business unit records without UUID
 
-Run the following command:
-
 ```bash
 console uuid:generate CompanyBusinessUnit spy_company_business_unit
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -217,12 +198,9 @@ select count(*) from spy_company_business_unit where uuid is NULL;
 
 ### Generate UUIDs for the existing company role records without UUID
 
-Run the following command:
-
 ```bash
 console uuid:generate CompanyRole spy_company_role
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -235,8 +213,6 @@ select count(*) from spy_company_role where uuid is NULL;
 {% endinfo_block %}
 
 ### Generate UUIDs for the existing Company Business Unit Address records without UUID
-
-Run the following command:
 
 ```bash
 console uuid:generate CompanyUnitAddress spy_company_unit_address
@@ -253,8 +229,6 @@ select count(*) from spy_company_unit_address where uuid is NULL;
 {% endinfo_block %}
 
 ### Generate UUIDs for the existing company user records without UUID:
-
-Run the following command:
 
 ```bash
 console uuid:generate CompanyUser spy_company_user

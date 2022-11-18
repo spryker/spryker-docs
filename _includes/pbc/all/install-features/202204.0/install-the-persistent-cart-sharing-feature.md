@@ -42,7 +42,7 @@ console transfer:generate
 
 Make sure that the following changes in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ResourceShareData.idQuote | property | added | src/Generated/Shared/Transfer/ResourceShareDataTransfer |
 | ResourceShareData.ownerCompanyUserId | property | added | src/Generated/Shared/Transfer/ResourceShareDataTransfer |

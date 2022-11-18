@@ -14,8 +14,6 @@ To start feature integration, overview and install the necessary features:
 
 ## 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
-
 ```bash
 composer require spryker/alternative-products-rest-api:"^1.0.0" --update-with-dependencies
 ```
@@ -29,7 +27,6 @@ Make sure that the following module is installed:
 | AlternativeProductsRestApi | vendor/spryker/alternative-products-rest-api |
 
 {% endinfo_block %}
-
 
 ## 2) Set up behavior
 

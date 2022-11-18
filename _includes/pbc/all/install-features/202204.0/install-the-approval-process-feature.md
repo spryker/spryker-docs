@@ -15,7 +15,7 @@ To start feature integration, review and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker-feature/approval-process:"{{site.version}}" --update-with-dependencies
@@ -385,7 +385,7 @@ To start feature integration, review and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker-feature/approval-process: "{{site.version}}" --update-with-dependencies

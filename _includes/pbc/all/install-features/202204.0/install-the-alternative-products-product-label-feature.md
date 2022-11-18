@@ -13,7 +13,7 @@ Please review and install the necessary features before beginning the integratio
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```yaml
 composer require spryker/product-alternative-product-label-connector:"^1.0.0" --update-with-dependencies

@@ -16,7 +16,7 @@ Product| {{site.version}} |[Products API](/docs/scos/dev/feature-integration-gui
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-products-rest-api:"^1.0.0" --update-with-dependencies

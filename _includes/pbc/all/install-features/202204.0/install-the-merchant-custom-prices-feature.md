@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 | Product | {{site.version}} |
 
 ### 1) Install the required modules using Composer
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker-feature/merchant-custom-prices:"{{site.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies

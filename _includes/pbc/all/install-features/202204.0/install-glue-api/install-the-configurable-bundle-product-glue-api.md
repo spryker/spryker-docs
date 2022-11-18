@@ -43,7 +43,7 @@ console transfer:generate
 
 Make sure that the following changes have been applied in the transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ConcreteProductsRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer |
 | ProductConcreteCriteriaFilterTransfer | class | created src/Generated/Shared/Transfer/ProductConcreteCriteriaFilterTransfer |

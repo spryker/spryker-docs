@@ -15,6 +15,8 @@ If you want to execute a full load test on a production-like dataset and traffic
 
 If you are unable to use real data for your load tests, you can use the [test data](https://drive.google.com/drive/folders/1QvwDp2wGz6C4aqGI1O9nK7G9Q_U8UUS-?usp=sharing) for an expanding amount of use cases. Please note that we do not provide support for this data. However, if your specific use case is not covered, you can [contact support](https://spryker.force.com/support/s/knowledge-center), and we will try to accommodate your needs.
 
+Based on our experience, the [Load testing tool](https://github.com/spryker-sdk/load-testing) can greatly assist you in conducting more effective load tests.
+
 # Load testing tool for Spryker
 
 To assist in performance testing, we have a [load testing tool](https://github.com/spryker-sdk/load-testing). The tool contains predefined test scenarios that are specific to Spryker. Test runs based on Gatling.io, an open-source tool. Web UI helps to manage runs and multiple target projects are supported simultaneously.
@@ -228,7 +230,7 @@ Customer data can be generated from existing product data for use with the load-
 
 Because of these aforementioned issues, it is recommended that you create the test users you need first through the Zed or Backoffice interface. For help with creating users, please refer to [Managing customers](/docs/scos/user/back-office-user-guides/202009.0/customer/customer-customer-access-customer-groups/managing-customers.html).
 
-Once the users have been created, you will need to generate access tokens for each. This can be done using Glue with the `access-token` end point. You can review the [access-token](/docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/managing-company-user-authentication-tokens.html) documentation for further guidance, but below is a sample of the call to be made.
+Once the users have been created, you will need to generate access tokens for each. This can be done using Glue with the `access-token` end point. You can review the [access-token](/docs/scos/dev/glue-api-guides/202108.0/managing-b2b-account/managing-company-user-authentication-tokens.html) documentation for further guidance, but below is a sample of the call to be made.
 
 Expected request body
 ```json
@@ -422,6 +424,13 @@ For *Glue API*:
 - `GuestCartApi` - scenario to add a product to cart for guest user
 - `PdpApi` - request a random product detail page from fixtures
 
+{% info_block errorBox %}
+
+Tests like **CartApi** and **GuestCartApi** use an older method of the `cart` end-point and will need to have their scenarios updated. These and other tests may need to be updated to take this into account. Please visit the [Glue Cart](http://127.0.0.1:4000/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) reference for more details.
+
+{% endinfo_block %}
+
+
 ## Using Gatling
 
 In the testing tool Web UI, you can do the following:
@@ -595,5 +604,3 @@ This chart displays the number of responses received per second overtime: total,
 
 This chart shows how the response time for the given request is distributed, depending on the overall number of requests at the same time.
 ![screenshot](https://github.com/spryker-sdk/load-testing/raw/master/docs/images/response-time-against-global-rps.png)
-
-Based on our experience, the [Load testing tool](https://github.com/spryker-sdk/load-testing) can greatly assist you in conducting more effective load tests.

@@ -203,10 +203,12 @@ You will need to be connected to the appropriate VPN for whichever resource you 
 Product data can be generated from existing product data for use with the load-testing tool. Within **/load-test-tool-dir/tests/_data**, you will find `product_concrete.csv` which stores the necessary **sku** and **pdp_url** for each product. This information can be parsed directly from the existing data of your cloud-hosted environment. To do so, connect to your store's database. Product data is stored in the `data` column found within the `spy_product_concrete_storage` table as a JSON entry. We can extract this information and format it with the appropriate column names with the following command:
 
 ```sql
+-- `us-docker` refers to your database name. Please make the appropriate adjustments in the SQL query below
+
 SELECT
        JSON_UNQUOTE(JSON_EXTRACT(data, "$.sku")) as `sku`,
        JSON_UNQUOTE(JSON_EXTRACT(data, "$.url")) as `url`
-FROM `us-docker`.`spy_product_concrete_storage`;
+FROM `us-docker`.`spy_product_concrete_storage`; 
 ```
 
 This command parses through that JSON entry and extracts what we need. Once this information has been generated, it should be saved as `product_concrete.csv` and saved in the **/load-test-tool-dir/tests/_data** directory.
@@ -222,7 +224,7 @@ You will need to be connected to the appropriate VPN for whichever resource you 
 Customer data can be generated from existing product data for use with the load-testing tool. Within **/load-test-tool-dir/tests/_data**, you will find `customer.csv` which stores the necessary fields for each user (email, password, auth_token, first_name, and last_name). Most of this information can be parsed directly from the existing data of your cloud-hosted environment. There are a number of caveats which come with generating this customer data:
 
 - To generate information for `auth_token`, a separate Glue call is required.
-- Passwords are encrypted in the database, while the load-testing tool requires a password to use in plain-test.
+- Passwords are encrypted in the database, while the load-testing tool requires a password to use in plain-text.
 
 Because of these aforementioned issues, it is recommended that you create the test users you need first through the Zed or Backoffice interface. For help with creating users, please refer to [Managing customers](/docs/scos/user/back-office-user-guides/202009.0/customer/customer-customer-access-customer-groups/managing-customers.html).
 
@@ -282,11 +284,11 @@ console publish:trigger-events
 console queue:worker:start -s 
 ```
 
-You should have the fixtures loaded into the databases and can exit the CLI to install Gatling into the project.
+You should have the fixtures loaded into the databases and can exit the CLI to install Gatling into the project. 
 
 #### Alternative method to generate local fixtures.
 
-Jenkins is the default scheduler which ships with Spryker. It is an automation service which helps to automate tasks within Spryker. For an environment that is already set-up and hosted in the cloud, Jenkins can be used to schedule the necessary tasks you need for the data preparation step.
+Jenkins is the default scheduler which ships with Spryker. It is an automation service which helps to automate tasks within Spryker. If you would like an alternative way to generate fixtures for your local environment, Jenkins can be used to schedule the necessary tasks you need for the data preparation step.
 
 1. From the Dashboard, select `New Item`.
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTzW2A-gkFX6PC1YiG4r0EUQX5S2xWDRQWq4hkgzKn889xva_FwrEaDo-lYl2i3CWgXiMqebPA=w1920-h919)

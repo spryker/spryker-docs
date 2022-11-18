@@ -63,7 +63,7 @@ To delete a directory:
 1. Click on the directory in the *File Tree* section.
 2. Click **Delete Directory** in the top right corner of the page.
 3. On the system message pop-up, click **Confirm** to confirm the action.
-![Deleting directories](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+File+Tree/deleting-directories.gif)
+![Deleting directories](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/digital-asset-management/deleting-directories.png)
 
 ## Uploading files
 
@@ -97,7 +97,7 @@ To manage a file in File Tree:
 2. In the *Files List* section, select one of the following in the *Actions* column for the file:
     * **View** to view the file. You are redirected to the *View file* page. You can download the file by clicking **Download** in the *Actions* column.
   
-    * **Edit** to edit the file. You are redirected to the *Edit file* page. 
+    * **Edit** to edit the file and manage multiple versions of the file. You are redirected to the *Edit file* page. 
       * *File tab*: Here you can update the file name information. Click **Save** to apply your updates. 
 
         You can also upload another version of a file. 

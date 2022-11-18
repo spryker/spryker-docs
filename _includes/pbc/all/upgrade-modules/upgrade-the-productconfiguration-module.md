@@ -5,7 +5,6 @@
 `ProductConfiguration` v1.0.0 introduces the following backward incompatible changes:
 
 * Adjusted ProductConfigurationFacade::getProductConfigurationCollection() so it is now getting product configurations by ProductConfigurationCriteria instead of ProductConfigurationFilterTransfer.
-* Impacted ProductConfigurationCartToProductConfigurationFacadeBridge::getProductConfigurationCollection() with facade changes.
 * Introduced spy_product_configuration.uuid field to allow unique identifier.
 
 To upgrade the `ProductConfiguration` module from version 0.2.* to version 1.0.*, do the following:

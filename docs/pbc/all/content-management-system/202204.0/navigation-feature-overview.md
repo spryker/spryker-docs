@@ -24,7 +24,7 @@ A *navigation element* is a page section that contains links to shop resources, 
 
 ![navigation-element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation+element.png)
 
-To learn how a Back Office user can create a navigation element, see [Creating a navigation element](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements.html#creating-a-navigation-element).
+To learn how a Back Office user can create a navigation element, see [Creating a navigation element](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements.html).
 
 ### Navigation element duplication
 
@@ -60,7 +60,7 @@ A navigation node can be both the parent and child type. For example, the parent
 
 ![child-parent-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/child-parent-navigation-node.png)
 
-To learn how a Back Office user can create navigation node, see [Creating a Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes.html#creating-a-navigation-node).
+To learn how a Back Office user can create navigation node, see [Creating a Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes.html).
 
 ### Navigation node design
 
@@ -134,7 +134,12 @@ For more details about navigation, check the video:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage navigation elements](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html)   |
+| [Create navigation elements](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements) |
+| [Create navigation nodes](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes) |
+| [Duplicate navigation nodes](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/duplicate-navigation-nodes) |
+| [Edit navigation elements](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-elements) |
+| [Edit navigation nodes](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-nodes) |
+| [Delete navigation nodes](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/delete-navigation-nodes) |
 
 ## Related Developer articles
 

@@ -8,7 +8,7 @@ related:
     link: docs/scos/user/features/page.version/navigation-feature-overview.html
 ---
 
-This document describes how to create [navigation nodes](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html#navigation-node).
+This document describes how to create [navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html#navigation-node).
 
 ## Prerequisites
 

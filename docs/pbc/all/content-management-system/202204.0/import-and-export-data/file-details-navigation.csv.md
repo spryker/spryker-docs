@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/navigation-setup/file-details-navigation.csv.html
 ---
 
-This document describes the `navigation.csv` file to configure [Navigation](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `navigation.csv` file to configure [Navigation](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file parameters
 

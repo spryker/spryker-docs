@@ -42,7 +42,7 @@ To clear navigation selection on a tab, click **Clear locale**.
 | --- | --- |
 | NAME | Name of the content item. |
 | DESCRIPTION | Description of the content item. |
-| NAVIGATION | A navigation element to display in the content item. To create one, see [Create navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements) |
+| NAVIGATION | A navigation element to display in the content item. To create one, see [Create navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements.html) |
 
 ## Next steps
 

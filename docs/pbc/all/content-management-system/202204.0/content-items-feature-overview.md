@@ -129,10 +129,14 @@ Structure:
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Create content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-banner-content-items.html)  |
+| [Create abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) |
+| [Create banner content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-banner-content-items.html)   |
+| [Create file list content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-file-list-content-items.html) |
+| [Create navigation content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-navigation-content-items.html) |
+| [Create product set content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-product-set-content-items.html)     |
 |  [Edit content items](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/edit-content-items.html)  |
-|  [Add content items to CMS pages and blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html)  |
-|  [Edit content items in CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items-in-cms-pages-and-blocks.html)   |
+|  [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html)  |
+|  [Add content items to CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items-in-cms-pages-and-blocks.html)   |
 
 ## Related Developer articles
 

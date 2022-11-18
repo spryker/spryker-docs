@@ -33,6 +33,6 @@ related:
   - title: Upgrade the CMS Block
     link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
   - title: Upgrade the CMS Block Collector
-    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html
+    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcollector-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cmsblockgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsblockgui-module.md -->

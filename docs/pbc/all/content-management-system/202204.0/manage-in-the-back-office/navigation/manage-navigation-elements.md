@@ -16,11 +16,11 @@ related:
     link: docs/scos/user/features/page.version/navigation-feature-overview.html
 ---
 
-This topic describes how to manage [navigation elements](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html#navigation-element).
+This topic describes how to manage [navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overvieweature-overview.html#navigation-element).
 
 ## Prerequisites
 
-To start working with navigation elements, 
+To start working with navigation elements,
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 

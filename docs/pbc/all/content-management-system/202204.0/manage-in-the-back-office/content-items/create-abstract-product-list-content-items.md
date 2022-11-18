@@ -9,7 +9,7 @@ This topic describes how to create abstract product list content items in the Ba
 
 ## Prerequisites
 
-Make sure to review [reference information](#create-abstract-product-list-content-items) before you start, or look up the necessary information as you go through the process.
+Make sure to review [reference information](#reference-information-create-abstract-product-list-content-items) before you start, or look up the necessary information as you go through the process.
 
 ## Create an abstract product list content item
 
@@ -37,7 +37,7 @@ The following logic applies in a multi-language setup:
 
 To clear product selection on a tab, click **Clear locale**.
 
-## Reference information: Create an abstract product list content item
+## Reference information: Create abstract product list content items
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

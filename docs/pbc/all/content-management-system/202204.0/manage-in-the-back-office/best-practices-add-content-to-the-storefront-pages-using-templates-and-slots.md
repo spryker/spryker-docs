@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
 related:
   - title: Managing Slots
-    link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/manage-slots.html
   - title: Templates & Slots feature overview
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---

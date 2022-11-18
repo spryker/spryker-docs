@@ -14,7 +14,7 @@ related:
   - title: Migration Guide - CMS
     link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-module.html
   - title: Migration Guide - CMS Collector
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-modulecollector.html
+    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html
 ---
 
 The CMS module provides an extension point for post activation and deactivation of CMS pages. The plugin interface set for this extension point is as follows:

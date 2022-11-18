@@ -32,6 +32,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-migration-guide-cmsblockcategoryconnector-migration-console.html
 related:
   - title: Upgrade the CmsBlockCategoryConnector
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-module-block-category-connector.html
+    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.md -->

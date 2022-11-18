@@ -5,7 +5,7 @@ last_updated: June 2, 2022
 template: back-office-user-guide-template
 related:
   - title: Edit CMS blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/edit-cms-blocks.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/blocks/edit-cms-blocks.html
 ---
 
 ## Prerequisites

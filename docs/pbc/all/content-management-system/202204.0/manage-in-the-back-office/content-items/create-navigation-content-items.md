@@ -9,7 +9,7 @@ This topic describes how to create navigation content items in the Back Office.
 
 ## Prerequisites
 
-Make sure to review [reference information](#create-navigation-content-items) before you start, or look up the necessary information as you go through the process.
+Make sure to review [reference information](#reference-information-create-navigation-content-items) before you start, or look up the necessary information as you go through the process.
 
 ## Create a navigation content item
 
@@ -42,7 +42,7 @@ To clear navigation selection on a tab, click **Clear locale**.
 | --- | --- |
 | NAME | Name of the content item. |
 | DESCRIPTION | Description of the content item. |
-| NAVIGATION | A navigation element to display in the content item. To create one, see [Create navigation elements](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) |
+| NAVIGATION | A navigation element to display in the content item. To create one, see [Create navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements) |
 
 ## Next steps
 

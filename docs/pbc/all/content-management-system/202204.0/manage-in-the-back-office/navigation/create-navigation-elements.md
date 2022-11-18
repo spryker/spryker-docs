@@ -14,16 +14,15 @@ related:
     link: docs/scos/user/features/page.version/navigation-feature-overview.html
 ---
 
-This document describes how to create [navigation elements](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html#navigation-element).
-
-## Create a navigation element
+To create a [navigation element](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html#navigation-element) in the Back Office, follow the steps:
 
 1. Go to **Content&nbsp;<span aria-label="and then">></span> Navigation**.
 2. On the **Overview of Navigation Elements** page, click **+Create Navigation Element**.
-3. On the **Create Navigation Element** page, enter **NAME** and **KEY**.
-4. Select the **Active** checkbox if you want to activate the navigation element.
+3. On the **Create Navigation Element** page, enter a **NAME**.
+4. Enter a **KEY**.
+5. To activate the element after creating it, select **ACTIVE**.
 5. Click **Save**.
-This opens the **Overview of Navigation Elements** page with a success message displayed. The created navigation element is displayed in *List of navigation elements*.
+This opens the **Overview of Navigation Elements** page with a success message displayed. The created navigation element is displayed in the **List of navigation elements** pane.
 
 ### Reference information: Create navigation elements
 
@@ -33,3 +32,5 @@ This opens the **Overview of Navigation Elements** page with a success message d
 | NAME | Name of the navigation element. It will be displayed on the Storefront. |
 | KEY | Unique identifier that will be used to reference the navigation element on the Storefront. |
 | ACTIVE | Defines if the navigation element will be active. Active navigation elements and their child nodes are displayed on Storefront.  |
+
+{% wistia 2iepfhl6fu 960 720 %}

@@ -15,7 +15,7 @@ related:
   - title: Migration Guide - Navigation
     link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-navigation-module.html
   - title: Migration Guide - NavigationGui
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
+    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
   - title: Navigation Module Integration
     link: docs/scos/dev/feature-integration-guides/page.version/navigation-module-integration.html
 ---

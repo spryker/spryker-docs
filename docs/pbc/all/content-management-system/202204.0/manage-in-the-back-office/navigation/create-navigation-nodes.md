@@ -82,3 +82,5 @@ Depending on the type of the node, there is various node related information tha
 * Localized CMS page URL (**only for “CMS” type**): When you are assigning a CMS page to the node, you can search by the CMS page name to select the correct CMS page URL you want to assign. Keep in mind that this is also localized information, so for multiple locales, you will need to make sure that you select the same CMS page for all locales.
 * Link (**only for “Link” type**): This is the relative path of your internal link. For example, if you would like to link a login page that is under “/login”, then this is exactly what you will use as an input for the Link field.
 * External URL (**only for “External URL” type**): If you would like to link an external URL to your nodes, you will use this field to define the absolute URL. This could be used, for example, to link your corporate website page in your shop. Unlike internal links, the URL of the external link should be absolute, which means it needs to include the protocol as well as domain, e.g., https://mydomain.com/page
+
+{% wistia 2iepfhl6fu 960 720 %}

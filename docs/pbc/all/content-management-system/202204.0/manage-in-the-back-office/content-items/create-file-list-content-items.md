@@ -9,7 +9,7 @@ This topic describes how to create file list content items in the Back Office.
 
 ## Prerequisites
 
-Make sure to review [reference information](#create-file-list-content-items) before you start, or look up the necessary information as you go through the process.
+Make sure to review [reference information](#reference-information-create-file-list-content-items) before you start, or look up the necessary information as you go through the process.
 
 ## Create a navigation content item
 

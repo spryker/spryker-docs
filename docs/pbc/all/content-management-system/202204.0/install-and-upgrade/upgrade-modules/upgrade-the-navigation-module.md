@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-navigation.html
 related:
   - title: Upgrade the NavigationGui
-    link: docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
+    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-navigation-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-navigation-module.md -->

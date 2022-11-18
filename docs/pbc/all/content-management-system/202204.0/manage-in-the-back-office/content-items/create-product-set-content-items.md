@@ -9,7 +9,7 @@ This topic describes how to create product set content items in the Back Office.
 
 ## Prerequisites
 
-Make sure to review [reference information](#create-product-set-content-items) before you start, or look up the necessary information as you go through the process.
+Make sure to review [reference information](#reference-information-create-product-set-content-items) before you start, or look up the necessary information as you go through the process.
 
 ## Create a product set content item
 

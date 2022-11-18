@@ -56,6 +56,25 @@ In Demoshop, for listing the current content of the cart, the following URLs are
 | https://mysprykershop.com/de/cart | de_DE|
 | https://mysprykershop.com/en/cart | en_US|
 
+You can define a list of available locales in the `\Pyz\Yves\Router\RouterConfig::getAllowedLanguages()` method.
+
+```php
+<?php
+class RouterConfig extends SprykerRouterConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getAllowedLanguages(): array
+    {
+        return [
+            'de',
+            'en',
+        ];
+    }
+}
+```
+
 ## Products with localized attributes
 
 The details of the abstract products are stored localized in the `spy_product_abstract_localized_attributes` table. For each abstract product, there is an entry in this table that corresponds to each locale, containing the associated attributes for the defined locale.

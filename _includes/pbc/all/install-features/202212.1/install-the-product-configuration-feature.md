@@ -312,24 +312,6 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
      */
     protected function getQueueConfiguration(): array
     {
-        return array_merge(
-            [
-                EventConstants::EVENT_QUEUE => [
-                    EventConfig::EVENT_ROUTING_KEY_RETRY => EventConstants::EVENT_QUEUE_RETRY,
-                    EventConfig::EVENT_ROUTING_KEY_ERROR => EventConstants::EVENT_QUEUE_ERROR,
-                ],
-                $this->get(LogConstants::LOG_QUEUE_NAME),
-            ],
-            $this->getPublishQueueConfiguration(),
-            $this->getSynchronizationQueueConfiguration(),
-        );
-    }
-
-    /**
-     * @return array<mixed>
-     */
-    protected function getSynchronizationQueueConfiguration(): array
-    {
         return [
             ProductConfigurationStorageConfig::PRODUCT_CONFIGURATION_SYNC_STORAGE_QUEUE,
         ];
@@ -617,9 +599,9 @@ Make sure that the cart plugins work correctly:
 
 5. Set up checkout plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductConfigurationCheckoutPreConditionPlugin | Returns `true` if all product configuration items in a quote are complete. Otherwise, returns `false`. | None | Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Checkout |
+| PLUGIN                                         | SPECIFICATION                                                                                          | PREREQUISITES  | NAMESPACE                                                          |
+|------------------------------------------------|--------------------------------------------------------------------------------------------------------|----------------|--------------------------------------------------------------------|
+| ProductConfigurationCheckoutPreConditionPlugin | Returns `true` if all product configuration items in a quote are complete. Otherwise, returns `false`. | None           | Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Checkout |
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
@@ -698,12 +680,9 @@ Check that product management plugins work correctly:
 
 7. Set up sales plugins:
 
-
 | PLUGIN                                      | SPECIFICATION                                                                                                | PREREQUISITES  | NAMESPACE                                                        |
 |---------------------------------------------|--------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------------------------|
 | ProductConfigurationOrderItemExpanderPlugin | Expands items with product configuration.                                                                    | None           | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales |
-| ProductConfigurationOrderPostSavePlugin     | Persists product configuration from `ItemTransfer` in `Quote` to the `sales_order_item_configuration` table. | None           | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales |
-
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
@@ -1437,7 +1416,7 @@ Overview and install the necessary features before beginning the integration ste
 Install the required modules:
 
 ```bash
-composer require "spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
+composer require "spryker-feature/product-configuration:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1446,7 +1425,6 @@ Make sure that the following modules have been installed:
 
 | MODULE                                 | EXPECTED DIRECTORY                                             |
 |----------------------------------------|----------------------------------------------------------------|
-| DateTimeConfiguratorPageExample        | vendor/spryker-shop/date-time-configurator-page-example        |
 | ProductConfigurationCartWidget         | vendor/spryker-shop/product-configuration-cart-widget          |
 | ProductConfigurationWidget             | vendor/spryker-shop/product-configuration-widget               |
 | ProductConfigurationWishlistWidget     | vendor/spryker-shop/product-configuration-wishlist-widget      |
@@ -1531,9 +1509,9 @@ Enable controllers as follows:
 
 1.  Register the following route provider on the Storefront:
 
-| PROVIDER | NAMESPACE |
-| --- | --- |
-|  ProductConfiguratorGatewayPageRouteProviderPlugin  | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin\Router |
+| PROVIDER                                          | NAMESPACE                                                     |
+|---------------------------------------------------|---------------------------------------------------------------|
+| ProductConfiguratorGatewayPageRouteProviderPlugin | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1552,7 +1530,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
      */
     protected function getRouteProvider(): array
     {
-        $routeProviders = [
+        return [
             new ProductConfiguratorGatewayPageRouteProviderPlugin(),
         ];
     }
@@ -1567,9 +1545,9 @@ Make sure that the `yves.mysprykershop.com/product-configurator-gateway/request`
 
 2. Register the following reorder item expander plugin:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductConfigurationReorderItemExpanderPlugin | Expands items with product configuration based on data from order items. | None | SprykerShop\Yves\SalesProductConfigurationWidget\Plugin\CustomerReorderWidget |
+| PLUGIN                                        | SPECIFICATION                                                            | PREREQUISITES  | NAMESPACE                                                                     |
+|-----------------------------------------------|--------------------------------------------------------------------------|----------------|-------------------------------------------------------------------------------|
+| ProductConfigurationReorderItemExpanderPlugin | Expands items with product configuration based on data from order items. | None           | SprykerShop\Yves\SalesProductConfigurationWidget\Plugin\CustomerReorderWidget |
 
 **src/Pyz/Yves/CustomerReorderWidget/CustomerReorderWidgetDependencyProvider.php**
 
@@ -1763,19 +1741,19 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
-| WIDGET | VERIFICATION |
-| --- | --- |
-| ProductConfigurationCartItemDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationCartItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
-| ProductConfigurationCartPageButtonWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationCartPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
+| WIDGET                                            | VERIFICATION                                                                                                                                                                          |
+|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ProductConfigurationCartItemDisplayWidget         | `{% raw %}{%{% endraw %} widget 'ProductConfigurationCartItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`         |
+| ProductConfigurationCartPageButtonWidget          | `{% raw %}{%{% endraw %} widget 'ProductConfigurationCartPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`          |
 | ProductConfigurationProductDetailPageButtonWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationProductDetailPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
-| ProductConfigurationProductViewDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationProductViewDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
-| ProductConfigurationQuoteValidatorWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationQuoteValidatorWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
-| ProductConfigurationOrderItemDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationOrderItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
-| ProductConfigurationWishlistFormWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistFormWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
-| ProductConfigurationWishlistItemDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
-| ProductConfigurationWishlistPageButtonWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
-| ProductConfigurationShoppingListItemDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationShoppingListItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
-| ProductConfigurationShoppingListPageButtonWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationShoppingListPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
+| ProductConfigurationProductViewDisplayWidget      | `{% raw %}{%{% endraw %} widget 'ProductConfigurationProductViewDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`      |
+| ProductConfigurationQuoteValidatorWidget          | `{% raw %}{%{% endraw %} widget 'ProductConfigurationQuoteValidatorWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`          |
+| ProductConfigurationOrderItemDisplayWidget        | `{% raw %}{%{% endraw %} widget 'ProductConfigurationOrderItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`        |
+| ProductConfigurationWishlistFormWidget            | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistFormWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`            |
+| ProductConfigurationWishlistItemDisplayWidget     | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`     |
+| ProductConfigurationWishlistPageButtonWidget      | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`      |
+| ProductConfigurationShoppingListItemDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationShoppingListItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
+| ProductConfigurationShoppingListPageButtonWidget  | `{% raw %}{%{% endraw %} widget 'ProductConfigurationShoppingListPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`  |
 
 {% endinfo_block %}
 

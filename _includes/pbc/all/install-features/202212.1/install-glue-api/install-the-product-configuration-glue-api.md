@@ -31,12 +31,9 @@ Make sure that the following modules have been installed:
 | MODULE                                            | EXPECTED DIRECTORY                                                     |
 |---------------------------------------------------|------------------------------------------------------------------------|
 | ProductConfigurationsRestApi                      | vendor/spryker/product-configurations-rest-api                         |
-| ProductConfigurationsRestApiExtension             | vendor/spryker/product-configurations-rest-api-extension               |
 | ProductConfigurationsPriceProductVolumesRestApi   | vendor/spryker/product-configurations-price-product-volumes-rest-api   |
 | ProductConfigurationWishlistsRestApi              | vendor/spryker/product-configuration-wishlists-rest-api                |
-| ProductConfigurationWishlistsRestApiExtension     | vendor/spryker/product-configuration-wishlists-rest-api-extension      |
 | ProductConfigurationShoppingListsRestApi          | vendor/spryker/product-configuration-shopping-lists-rest-api           |
-| ProductConfigurationShoppingListsRestApiExtension | vendor/spryker/product-configuration-shopping-lists-rest-api-extension |
 
 {% endinfo_block %}
 
@@ -1025,7 +1022,7 @@ class ShoppingListsRestApiDependencyProvider extends SprykerShoppingListsRestApi
 
 {% info_block warningBox "Verification" %}
 
-Ensure that wishlist item CRUD operations support configurable products.
+Ensure that shopping list item CRUD operations support configurable products.
 For an example, see the following response to the `POST https://glue.mysprykershop.com/shopping-lists/63b14493-021f-59c2-ae70-94041beb5c06/shopping-list-items` request:
 
 <details>

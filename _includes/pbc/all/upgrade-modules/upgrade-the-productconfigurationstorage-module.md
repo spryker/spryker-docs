@@ -4,8 +4,9 @@
 
 `ProductConfigurationStorage` v1.0.0 introduces the following backward incompatible changes:
 
-* Replaced ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku() with ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection().
-* Replaced ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku() with ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection().
+* Removed ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku().
+* Removed ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku().
+* Added ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection().
 * Impacted ProductConfigurationPublisherTriggerPlugin with facade changes.
 
 To upgrade the `ProductConfigurationStorage` module from version 0.2.* to version 1.0.*, do the following:

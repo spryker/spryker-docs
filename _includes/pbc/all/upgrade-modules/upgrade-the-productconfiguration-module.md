@@ -6,6 +6,7 @@
 
 * Adjusted ProductConfigurationFacade::getProductConfigurationCollection() so it is now getting product configurations by ProductConfigurationCriteria instead of ProductConfigurationFilterTransfer.
 * Introduced spy_product_configuration.uuid field to allow unique identifier.
+* Introduced spy_product_configuration-unique-uuid unique index.
 
 To upgrade the `ProductConfiguration` module from version 0.2.* to version 1.0.*, do the following:
 
@@ -15,16 +16,11 @@ To upgrade the `ProductConfiguration` module from version 0.2.* to version 1.0.*
 composer require "spryker/product-configuration":"^1.0.0" --update-with-dependencies
 ```
 
-2. Generate transfer classes:
-
-```bash
-console transfer:generate
-```
-
-3. Run the database migration:
+2. Update the database schema and the generated classes:
 
 ```bash
 console propel:install
+console transfer:generate
 ```
 
 ## Upgrading from version 0.1.* to version 0.2.*

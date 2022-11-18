@@ -8,7 +8,7 @@ template: concept-topic-template
 
 The *User Management* capability lets you create and manage Back Office users and their permissions.
 
-The default Back Office user has permissions to create user accounts and manage their permissions. For instructions, see [Create users](/docs/pbc/all/user-management/{{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
+The default Back Office user has permissions to create user accounts and manage their permissions. For instructions, see [Create users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
 
 ## User permissions
 
@@ -20,14 +20,14 @@ To make the process of managing permissions easier, instead of assigning roles t
 
 For instructions on creating user roles and groups, see the following documents:
 
-* [Create user roles](/docs/pbc/all/user-management/{{{page.version}}/manage-in-the-back-office/manage-user-roles/create-user-roles.html)
-* [Create user groups](/docs/pbc/all/user-management/{{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html)
+* [Create user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-roles/create-user-roles.html)
+* [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html)
 
 ## Agent assist
 
 An agent assist is a Back Office user that has permissions to act on customers' behalf. Using their account, they can log into a customer's account on the Storefront and help them with requested actions.
 
-For more details about agent assist, see [Agent assist feature overview](/docs/pbc/all/user-management/{{{page.version}}/agent-assist-feature-overview.html)
+For more details about the agent assist feature, see the [Agent assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html)
 
 ## Related Business User articles
 

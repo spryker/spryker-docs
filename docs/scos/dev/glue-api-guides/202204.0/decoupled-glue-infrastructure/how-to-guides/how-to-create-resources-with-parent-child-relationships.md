@@ -10,13 +10,13 @@ redirect_from:
 
 Glue API lets you create resources with parent-child relationships or, in other words, nested resources. To enable such relationship, you need to create a resource that implements `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceWithParentPluginInterface`.
 
-Such a plugin routes requests from the parent resources to the correct child resource. This interface must be implemented together with `ResourceInterface` or with convention resource interface.
+Such a plugin routes requests from parent resources to the correct child resource. This interface must be implemented together with `ResourceInterface` or with the convention resource interface.
 
 The `ResourceInterface` interface provides only one method: `getParentResourceType`. The method must return the type of the immediate parent resource within the context in which the child resource is implemented.
 
 Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module/1/bar` with `GET` and `POST` methods. To create the new endpoint, follow these steps:
 
-1. Create a resource. For this, follow the steps described in the [How to create a resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-a-resource.html) guide.
+1. Create a resource using the steps described in the [How to create a resource](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-a-resource.html) guide.
 2. Add a child resource name:
 
 **src\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig.php**

@@ -238,17 +238,17 @@ If everything is set up correctly, you can access `https://glue-storefront.myspr
 
 {% info_block infoBox %}
 
-In Development mode you do not need to refresh a cache.
+In Development mode, you do not need to refresh a cache.
 
 {% endinfo_block %}
 
 7. Debug existing routes.
 
-There is a special command to debug all existing routes
+There is a special command to debug all existing routes.
 
 `glue route:bebug <applicationType> <options>`
 
-Check the example below how to debug Backend routes.
+The example below shows how to debug Backend routes.
 
 ```shell
 $ docker/sdk/cli

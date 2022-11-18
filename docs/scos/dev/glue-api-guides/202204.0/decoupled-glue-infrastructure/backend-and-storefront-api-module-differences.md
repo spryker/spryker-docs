@@ -12,7 +12,7 @@ This document describes differences between the backend and storefront code in A
 
 The Glue infrastructure can build not only the storefront but also backend APIs in the same project. *storefront APIs* inherit the possibilities of the old Spryker Glue implementation in terms of what they can do and what they have access to. For example, storefront APIs can access Storage and Elasticsearch and make RPC Zed calls using Clients. *backend APIs* have direct access to Facades, which lets you create performant backend APIs that you might often need for your projects.
 
-The storefront API uses auth based on the customer and the backend API - is based on the user.
+The storefront API uses authentication based on the customer, while the backend API is based on the user.
 
 The main difference between storefront and backend APIs is in the base classes that each type of module uses. Since storefront APIs continue providing lightweight APIs like Spryker Glue of the previous implementation did, they use the same base classes. backend APIs are getting abstract classes that have access to Facades from other modules.
 
@@ -25,7 +25,7 @@ The following table shows classes to use for the backend and storefront:
 | Container | `\Spryker\Glue\Kernel\Container` | `\Spryker\Glue\Kernel\Backend\Container` |
 | AbstractPlugin | `\Spryker\Glue\Kernel\AbstractPlugin` | `\Spryker\Glue\Kernel\Backend\AbstractPlugin` |
 
-Storefront and backend classes MUST be in different modules. For storefront it should be `ResourceNameStorefrontApi` and for backend - `ResourceNameBackendApi`
+Storefront and backend classes MUST be in different modules. For storefront it should be `ResourceNameStorefrontApi`, and for backend `ResourceNameBackendApi`.
 
 Let's go through the creation of backend module infrastructure classes:
 

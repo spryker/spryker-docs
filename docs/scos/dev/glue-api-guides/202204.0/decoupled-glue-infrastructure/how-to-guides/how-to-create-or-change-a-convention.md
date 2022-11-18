@@ -131,7 +131,7 @@ class CustomConventionPlugin extends AbstractPlugin implements ConventionPluginI
 ```
 
 ## Use a convention
-To use newly created convention you must add it to the `GlueApplicationDependencyProvider` to the method `getConventionPlugins()`.
+To use the newly created convention, you must add it to the `GlueApplicationDependencyProvider::getConventionPlugins()`.
 
 ```php
 <?php
@@ -157,7 +157,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block infoBox %}
 
-If no convention defined - endpoints will work with default(no convention) behavior.
-In this case resource should implement `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface`
+If no convention has been defined, endpoints will work with default (no convention) behavior.
+In this case, the resource should implement `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface`.
 
 {% endinfo_block %}

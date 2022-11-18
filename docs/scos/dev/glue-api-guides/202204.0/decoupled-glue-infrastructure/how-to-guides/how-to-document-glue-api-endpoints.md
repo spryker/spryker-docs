@@ -131,15 +131,15 @@ The following table lists descriptions of the properties you can use in the anno
 
 | PROPERTY                      | DESCRIPTION                                                                                                                    |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| `deprecated`                  | Path is marked deprecated.                                                                                                     |
+| `deprecated`                  | The path is marked deprecated.                                                                                                 |
 | `responseAttributesClassName` | Transfer is used as a representation of the response attributes.                                                               |
-| `requestAttributesClassName`  | Transfer is used as a representation of the request attributes.(refers to requests that have a request body)                   |
-| `isIdNullable`                | JSON:API response `id` is null.                                                                                                |
-| `path`                        | Resource is available on the path. This property can be used if the *type+id* is not the path the resource uses.               |
-| `summary`                     | Path's summary that briefly describes what the endpoint does.                                                                  |
-| `parameters`                  | List of parameters the endpoint accepts.                                                                                       |
-| `isEmptyResponse`             | Flag used to mark endpoint that return empty responses.                                                                        |
-| `responses`                   | List possible responses of endpoint. The object must contain key-value pairs with HTTP codes as key, and description as value. |
+| `requestAttributesClassName`  | Transfer is used as a representation of the request attributes. (refers to requests that have a request body)                  |
+| `isIdNullable`                | The JSON:API response `id` is null.                                                                                            |
+| `path`                        | The resource is available on the path. This property can be used if the *type+id* is not the path the resource uses.               |
+| `summary`                     | The path's summary that briefly describes what the endpoint does.                                                                  |
+| `parameters`                  | A list of parameters the endpoint accepts.                                                                                       |
+| `isEmptyResponse`             | The flag used to mark an endpoint that returns empty responses.                                                                        |
+| `responses`                   | A list of possible responses of the endpoint. The object must contain key-value pairs with HTTP codes as key, and a description as the value. |
 
 ### Extending the behavior
 

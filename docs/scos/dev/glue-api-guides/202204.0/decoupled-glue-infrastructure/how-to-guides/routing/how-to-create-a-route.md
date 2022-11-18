@@ -12,7 +12,7 @@ This guide describes how to create an API endpoint using a custom route.
 
 Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
-Custom routes are based on Symfony routing component; for more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).
+Custom routes are based on a Symfony routing component; for more information on it, check out Symfony's [documentation](https://symfony.com/doc/current/routing.html).
 
 Let's say you have a Storefront module named `ModuleRestApi`, where you want to have a new backend API endpoint `/module/bar` with `GET` and `POST` methods. To create the new backend API endpoint, follow these steps:
 
@@ -131,7 +131,7 @@ curl --location --request GET 'https://glue-backend.mysprykershop.com/module/bar
 
 {% info_block infoBox %}
 
-In Development mode you do not need to refresh a cache.
+In Development mode, you do not need to refresh a cache.
 
 {% endinfo_block %}
 
@@ -180,11 +180,11 @@ In Development mode you do not need to refresh a cache.
 
 6. Debug existing routes.
 
-There is a special command to debug all existing routes
+There is a special command to debug all existing routes.
 
 `glue route:bebug <applicationType> <options>`
 
-Check the example below how to debug Backend routes.
+The example below shows how to debug Backend routes.
 
 ```shell
 $ docker/sdk/cli

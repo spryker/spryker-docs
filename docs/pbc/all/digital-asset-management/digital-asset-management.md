@@ -43,7 +43,7 @@ The changes take effect after **Save** is selected.
 
 A Back Office user can delete any folder within *File Directories Tree* by selecting **Delete Directory**. If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in *File Directories Tree* cannot be deleted.
 
-## Files List
+## File List
 
 *Files List* displays all the files uploaded to the Back Office in a table view. The Back Office user can view, edit, and delete files here.
 ![File list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-list.png)
@@ -65,7 +65,7 @@ By default, the latest version of the file is displayed to the buyer in the shop
 *MIME Type Settings* let you define the file types that can be uploaded to the Back Office.
 
 
-[MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type indicates how  a web browser will process a file. For example, if the MIME type is set as 'text/html', the document will open in Notepad. If the MIME type is set as 'image/jpeg', the document will open with an image viewer program.
+[MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type indicates how a web browser will process a file. For example, if the MIME type is set as 'text/html', the document will open in Notepad. If the MIME type is set as 'image/jpeg', the document will open with an image viewer program.
 
 ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/mime-type-settings.png)
 

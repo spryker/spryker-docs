@@ -16,7 +16,7 @@ related:
     link: docs/scos/user/features/page.version/navigation-feature-overview.html
 ---
 
-This topic describes how to manage [navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overvieweature-overview.html#navigation-element).
+This topic describes how to manage [navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html#navigation-element).
 
 ## Prerequisites
 

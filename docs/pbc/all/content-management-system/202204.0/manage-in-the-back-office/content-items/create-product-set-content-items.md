@@ -33,7 +33,7 @@ The following logic applies in a multi-language setup:
     This opens the **Overview of Content Items** page with a success message displayed. The content item is displayed in the list.
 
 
-## Reference information: Create a product set content item
+## Reference information: Create product set content items
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

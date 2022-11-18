@@ -29,7 +29,7 @@ To learn how a Back Office user can create a navigation element, see [Creating a
 ### Navigation element duplication
 
 If you have a configured navigation element in a shop and want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario.
-To learn how a Back Office user can do that, see [Duplicating a navigation element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element).
+To learn how a Back Office user can do that, see [Duplicating a navigation element](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/duplicate-navigation-elements.html).
 
 ## Navigation tree
 
@@ -134,12 +134,12 @@ For more details about navigation, check the video:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create navigation elements](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements) |
-| [Create navigation nodes](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes) |
-| [Duplicate navigation nodes](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/duplicate-navigation-nodes) |
-| [Edit navigation elements](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-elements) |
-| [Edit navigation nodes](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-nodes) |
-| [Delete navigation nodes](docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/delete-navigation-nodes) |
+| [Create navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements.html) |
+| [Create navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes.html) |
+| [Duplicate navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/duplicate-navigation-nodes.html) |
+| [Edit navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-elements.html) |
+| [Edit navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-nodes.html) |
+| [Delete navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/delete-navigation-nodes.html) |
 
 ## Related Developer articles
 

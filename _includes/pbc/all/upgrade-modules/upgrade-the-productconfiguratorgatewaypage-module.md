@@ -1,4 +1,25 @@
+## Upgrading from version 0.5.* to version 1.0.*
 
+*Estimated migration time: 5 minutes*
+
+`ProductConfiguratorGatewayPage` v1.0.0 introduces the following backward incompatible changes:
+
+* Replaced ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku() with ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection().
+* Replaced ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku() with ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection().
+
+To upgrade the `ProductConfiguratorGatewayPage` module from version 0.5.* to version 1.0.*, do the following:
+
+1. Update the `ProductConfiguratorGatewayPage` module to version 1.0.0:
+
+```bash
+composer require "spryker-shop/product-configurator-gateaway-page":"^1.0.0" update-with-dependencies
+```
+
+2. Generate transfers:
+
+```bash
+console transfer:generate
+```
 
 ## Upgrading from version 0.3.* to version 0.4.*
 

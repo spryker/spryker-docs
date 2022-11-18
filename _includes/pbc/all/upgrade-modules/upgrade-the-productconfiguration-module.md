@@ -1,4 +1,32 @@
+## Upgrading from version 0.2.* to version 1.0.*
 
+*Estimated migration time: 5 minutes*
+
+`ProductConfiguration` v1.0.0 introduces the following backward incompatible changes:
+
+* Adjusted ProductConfigurationFacade::getProductConfigurationCollection() so it is now getting product configurations by ProductConfigurationCriteria instead of ProductConfigurationFilterTransfer.
+* Impacted ProductConfigurationCartToProductConfigurationFacadeBridge::getProductConfigurationCollection() with facade changes.
+* Introduced spy_product_configuration.uuid field to allow unique identifier.
+
+To upgrade the `ProductConfiguration` module from version 0.2.* to version 1.0.*, do the following:
+
+1. Update the `ProductConfiguration` module to version 1.0.0:
+
+```bash
+composer require "spryker/product-configuration":"^1.0.0" --update-with-dependencies
+```
+
+2. Generate transfer classes:
+
+```bash
+console transfer:generate
+```
+
+3. Run the database migration:
+
+```bash
+console propel:install
+```
 
 ## Upgrading from version 0.1.* to version 0.2.*
 
@@ -9,7 +37,7 @@ To upgrade the `ProductConfiguration` module from version 0.1.* to version 0.2.*
 1. Update the `ProductConfiguration` module to version 0.2.0:
 
 ```bash
-composer require spryker/product-configuration:"^0.2.0" --update-with-dependencies
+composer require spryker/product-configuration:"^0.2.0" --update-with-dependencies
 ```
 
 2. Generate transfer classes:

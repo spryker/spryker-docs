@@ -97,7 +97,7 @@ vendor/bin/console oauth:scope-collection-file:generate
     Accept: application/json
     Content-Length: 131
 
-    grantType=password&username={customer_username}&password={customer_password}&scope=storefront%3module%3read%20storefront%3modulebar%3read
+    grant_type=password&username={customer_username}&password={customer_password}&scope=storefront%3module%3read%20storefront%3modulebar%3read
     ```
 
    2. Check that the output contains the 201 response with a valid token.
@@ -113,7 +113,7 @@ vendor/bin/console oauth:scope-collection-file:generate
     Accept: application/json
     Content-Length: 117
 
-    grantType=password&username={user_username}&password={user_password}&scope=backend%3module%3read%20backend%3modulebar%3read
+    grant_type=password&username={user_username}&password={user_password}&scope=backend%3module%3read%20backend%3modulebar%3read
     ```
 
    2. Check that the output contains the 201 response with a valid token.

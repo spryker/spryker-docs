@@ -1,0 +1,20 @@
+---
+title: Best practices
+description: Best practices for developers working on Spryker Commerce OS
+template: concept-topic-template
+redirect_from:
+  - /docs/about-installation
+---
+
+This section contains best practices guidelines for the core elements of the Spryker Commerce OS that will help make your endeavor successful:  
+
+[Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html) optimize SEO To increase search result ranking in the Spryker system, we use some basic SEO approaches.
+
+[Coding Best Practices](/docs/scos/dev/best-practices/coding-best-practices.html) In this article we outline a few common PHP coding problems and the recommended solutions.
+
+[Search best practices] provide you with a list of some additional and potentially useful principles regarding the setup of an on-site search experience.
+
+State machine cookbook. Describes State machine fundamentals A State Machine, originating from mathematics, is a tool that helps you implement complex processes
+easily and map out different business workflows, allowing you to increase efficiency fast.
+
+For other, see the following documents:

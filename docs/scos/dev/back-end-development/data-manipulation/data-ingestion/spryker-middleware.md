@@ -656,7 +656,7 @@ Use the following format to define translation rules:
 
 To create your own translator function, extend `SprykerMiddleware\Zed\Process\Business\Translator\TranslatorFunction\AbstractTranslatorFunction` and implement the `translate()` method.
 
-After that, you are ready to create the validator plugin. You need to extend `SprykerMiddleware\Zed\Process\Communication\Plugin\TranslatorFunction\AbstractGenericTranslatorFunctionPlugin`, implement the `getName()` and `getTranslatorFunctionClassName()` methods, and use this plugin in the `SprykerMiddleware\Zed\Process\ProcessDependencyProvider::getTranslatorFunctionStack()` method.
+After that, you are ready to create the translator plugin. You need to extend `SprykerMiddleware\Zed\Process\Communication\Plugin\TranslatorFunction\AbstractGenericTranslatorFunctionPlugin`, implement the `getName()` and `getTranslatorFunctionClassName()` methods, and use this plugin in the `SprykerMiddleware\Zed\Process\ProcessDependencyProvider::getTranslatorFunctionStack()` method.
 
 Check out an example of the following dictionary:
 

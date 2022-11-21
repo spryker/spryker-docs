@@ -5,7 +5,7 @@ template: howto-guide-template
 ---
 
 To avoid dependency conflicts, `spryker-sdk/spryk-src` is compiled into a `phar` archive. The archive is then pushed to `spryker-sdk/spryk` and included as a dependency into the target project.
-You have to recompile `spryker-sdk/spryk-src` every time when you need to check something. However, this approach is not suitable if you update and debug regularly.
+You have to recompile `spryker-sdk/spryk-src` every time when you need to check something. However, this approach is not ideal if you update and debug regularly.
 
 Instead, you can install the package into the vendor folder without adding the dependency to `composer.json` and test it directly on project files for development purposes:
 

@@ -71,7 +71,7 @@ namespace Pyz\Zed\HelloWorld\Communication\Controller;
 use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
 class IndexController extends AbstractController
 {
-    public function indexAction()
+    public function indexAction(): array
     {
         return [];
     }
@@ -116,7 +116,7 @@ class MessageGenerator
     /**
      * @return string
      */
-    public function generateHelloMessage()
+    public function generateHelloMessage(): string
     {
         $helloMessages = ["Hello!","Bonjour!","Namaste!","Hallo", "Hola!", "Ciao!"];
         shuffle($helloMessages);
@@ -140,14 +140,14 @@ class HelloWorldBusinessFactory extends AbstractBusinessFactory
     /**
      * @return MessageGenerator
      */
-    public function createMessageGenerator()
+    public function createMessageGenerator(): MessageGenerator
     {
         return new MessageGenerator();
     }
 }
 ```
 
-3. Create `HelloWorldFacade` and call this functionality from it:
+3. Create the `HelloWorldFacade` and the corresponding interface and call this functionality from it:
 
 ```php
 <?php
@@ -163,14 +163,33 @@ class HelloWorldFacade extends AbstractFacade implements HelloWorldFacadeInterfa
     /**
      * @return string
      */
-    public function getSalutationMessage()
+    public function getSalutationMessage(): string
     {
-         return  $this->getFactory()->createMessageGenerator()->generateHelloMessage();
+         return $this->getFactory()->createMessageGenerator()->generateHelloMessage();
     }
 }
 ```
 
-4. Modify the controller so that it calls the method added to your facade:
+```php
+<?php
+
+namespace Pyz\Zed\HelloWorld\Business;
+
+interface HelloWorldFacadeInterface
+{
+    /**
+     * Specification:
+     * - Returns a salutation text
+     *
+     * @api
+     *
+     * @return string
+     */
+    public function getSalutationMessage(): string;
+}
+```
+
+4. Modify the controller so that it calls the just added method to your facade:
 
 ```php
 <?php
@@ -186,7 +205,7 @@ class IndexController extends AbstractController
     /**
      * @return array
      */
-    public function indexAction()
+    public function indexAction(): array
     {
         $helloMessage = $this->getFacade()->getSalutationMessage();
         return [

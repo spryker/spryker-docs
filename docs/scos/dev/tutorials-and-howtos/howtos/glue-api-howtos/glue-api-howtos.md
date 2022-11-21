@@ -31,3 +31,4 @@ From these guides, you can learn how to perform the following tasks:
 * [Configuring visibility of the included section](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html)
 * [Configuring Glue for cross-origin requests](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html)
 * [Managing customer access to API resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
+* [HowTo: Integrate a CIAM provider](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/howto-integrate-a-ciam-provider.html)

@@ -30,7 +30,7 @@ To create a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ---------- | -------- | -------- | -------------- |
-| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 Request sample: create a wishlist
 
@@ -104,7 +104,7 @@ To retrieve all wishlists of a customer, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ------------ | ----------- | -------- | --------- |
-| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 ### Response
 
@@ -446,7 +446,7 @@ To retrieve a specific wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION  |
 | ------------ | ----------- | ------- | -------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION     | POSSIBLE VALUES |
 | ---------- | -------------------- | --------------------- |
@@ -2244,7 +2244,7 @@ To edit a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION    |
 | ------ | ------ | ------ | -------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 Request sample: edit a wishlist
 
@@ -2296,7 +2296,7 @@ To delete a wishlist, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION   |
 | ---------- | -------- | ----- | ----------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 Request sample:
 

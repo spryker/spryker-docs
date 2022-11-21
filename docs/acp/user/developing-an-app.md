@@ -9,7 +9,7 @@ To develop an app, follow the instructions in this document.
 ## Prerequisites
 
 - You have completed the [thought process](#thought-process) for your app.
-- You have [installed the Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html#installation).
+- You have [installed the Spryker SDK](/docs/sdk/dev/spryker-sdk.html#installation).
 - You have an empty GitHub repository.
 - You have a local project directory where you want to work, for example, `/www/my-app`.
  

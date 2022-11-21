@@ -15,7 +15,7 @@ redirect_from:
 
 This endpoint allows finalizing the checkout process by placing an order.
 
-After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Thus, use the endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html).  
+After sending a request, the cart is deleted, and you cannot make any further changes in the checkout data. This means the endpoint is best used for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html).  
 
 The endpoint also provides information on whether it is necessary to redirect the user to a third-party page to complete the payment.
 
@@ -48,8 +48,8 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when checking out a [cart of registered user](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
+| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html). | A guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | String | Required when checking out a [cart of registered user](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 
 
@@ -1199,9 +1199,9 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| orderReference | String | Unique identifier of the order. |
+| orderReference | String | The unique ID of the order. |
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
-| isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
+| isExternalRedirect | Boolean | If true, the customer is redirected to an external URL. |
 
 {% include pbc/all/glue-api-guides/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/check-out-puchases-response-attributes-of-included-resources.md -->
 

@@ -4,7 +4,7 @@ This document describes how to integrate the [Agent Assist](/docs/pbc/all/user-m
 
 ## Install feature core
 
-Follow the steps below to install the feature core.
+Follow the steps below to install the Agent Assist feature core.
 
 ### Prerequisites
 
@@ -18,7 +18,7 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules using composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
@@ -37,7 +37,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up the database schema
 
-Run the following commands to apply database changes and to generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -76,7 +76,7 @@ Enable the following behaviors by registering the plugins:
 | UserAgentTableConfigExpanderPlugin                                            | Adds the *is an agent* column to the Zed Users table.                                                     | None                                                     | Spryker\Zed\AgentGui\Communication\Plugin               |
 | UserAgentTableDataExpanderPlugin                                              | Fills the *is an agent* column in the Zed Users table.                                                    | Expects the *is an agent* checkbox in the Zed User form. | Spryker\Zed\AgentGui\Communication\Plugin               |
 
-**src/Pyz/Zed/User/UserDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -122,21 +122,23 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 }
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following plugins have been registered:
 
-| MODULE                             | TEST                                                                                                                                                                                                                                                                                                                                                                                       |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users** > **Users**. <br>2. Select **Edit** next to a user. <br>3. Ensure that the *This user is an agent* checkbox exists.                                                                                                                                                                                                                                 |
-| UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users** > **Users**. <br>2. Ensure that the *Agent* column exists.                                                                                                                                                                                                                                                                                          |
-| UserAgentTableDataExpanderPlugin   | 1. In the *Back Office*, go to **Users** > **Users**. <br>2. Select **Edit** next to a non-agent user. <br>3. Select the **This user is an agent** checkbox. <br>4. Select **Update**. This takes you to the *Users List* page with the message about successful update displayed. <br>5. Ensure that in the *Agent* column next to the user you've updated, the *Agent* tag is displayed. |
+| MODULE                             | TEST                                                                                                                                                                                                                                                                                                                                                                                           |
+|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users > Users**. <br>2. Next to a user, select **Edit**  <br>3. Ensure that the **This user is an agent** checkbox exists.                                                                                                                                                                                                                                      |
+| UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users > Users**. <br>2. Ensure that the *Agent* column exists.                                                                                                                                                                                                                                                                                                  |
+| UserAgentTableDataExpanderPlugin   | 1. In the *Back Office*, go to **Users > Users**. <br>2. Select **Edit** next to a non-agent user. <br>3. Select the **This user is an agent** checkbox. <br>4. Select **Update**. This takes you to the *Users List* page with the message about the successful update displayed. <br>5. Ensure that in the **Agent** column next to the user you've updated, the **Agent** tag is displayed. |
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the feature front end.
+Follow the steps below to install the feature frontend.
 
 ### Prerequisites
 
@@ -147,8 +149,6 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
-
-Run the following command to install the required modules:
 
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
@@ -168,7 +168,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-By default, in Spryker, posting login form (where SecurityBlocker will make its check and block agents who made too many failed login attempts) is locale-independent. So, to be able to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
+By default, in Spryker, posting a login form (where SecurityBlocker makes its check and blocks agents who made too many failed login attempts) is locale-independent. So, to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
 
 **src/Pyz/Yves/AgentPage/AgentPageConfig.php**
 
@@ -193,13 +193,11 @@ class AgentPageConfig extends SprykerAgentPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code. For example, `/de/agent/login_check` would be the default value for the agent.
+Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code. For example, `/de/agent/login_check` is the default value for the agent.
 
 {% endinfo_block %}
 
 ### 3) Add translations
-
-Add translations as follows:
 
 1. Append the glossary according to your configuration:
 
@@ -230,19 +228,15 @@ autocomplete.placeholder,Search,en_US
 autocomplete.placeholder,Suche,de_DE
 ```
 
-2. Run the following command to add the glossary keys:
+2. Add the glossary keys:
 
 ```bash
 console data:import:glossary
 ```
 
-### 4) Enable controllers
+### 4) Enable the controller providers
 
-Enable the following controllers.
-
-#### Controller provider list
-
-Register the controller provider(s) in the Yves application:
+Register the controller providers in the Yves application:
 
 | PROVIDER                      | NAMESPACE                                    | ENABLED CONTROLLER                         | CONTROLLER SPECIFICATION                                             |
 |-------------------------------|----------------------------------------------|--------------------------------------------|----------------------------------------------------------------------|
@@ -326,9 +320,9 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. Open http://mysprykershop.com/agent/login.
+1. Open `https://mysprykershop.com/agent/login`.
 2. Ensure that the login form is displayed and that only a user with an agent role can log in.
-3. Go to http://mysprykershop.com/agent/overview
+3. Go to `https://mysprykershop.com/agent/overview`
 4. Ensure that only the user with the agent role can access the page.
 5. Ensure that the agent can log out.
 
@@ -485,8 +479,6 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 
 ### 6) Set up widgets
 
-Set up widgets as follows:
-
 1. Register the following global widget(s):
 
 | WIDGET                | SPECIFICATION                                      | NAMESPACE                           |
@@ -534,8 +526,8 @@ console frontend:yves:build
 
 Ensure that the following widgets have been registered:
 
-| MODULE                | TEST                                                                            |
-|-----------------------|---------------------------------------------------------------------------------|
-| AgentControlBarWidget | Log in as an agent. The control bar widget should appear above the site header. |
+| MODULE                | TEST                                                                      |
+|-----------------------|---------------------------------------------------------------------------|
+| AgentControlBarWidget | Log in as an agent. The control bar widget appears above the site header. |
 
 {% endinfo_block %}

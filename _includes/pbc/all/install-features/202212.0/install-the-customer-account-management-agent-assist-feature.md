@@ -13,7 +13,7 @@ To start the feature integration, overview and install the necessary features:
 
 ## 1) Install the required modules using composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/oauth-agent-connector:"^1.0.0" --update-with-dependencies
@@ -70,7 +70,7 @@ Ensure that `console setup:init-db` installs agent-specific scopes configured in
 
 ## 3) Set up transfer objects
 
-Run the following command to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate

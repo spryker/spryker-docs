@@ -13,15 +13,14 @@ redirect_from:
 
 This document describes the `product_management_attribute.csv` file to configure [product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run:
 
-```bash
-data:import:product-management-attribute
-```
+## Import file dependencies
+
+* [product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -35,18 +34,15 @@ The file should have the following parameters:
 | value_translations.en_US |  | String |  | Translation attribute value to the locale US language. |
 | value_translations.de_DE |  | String |  | Translation attribute value to the locale DE language. |
 
-## Import file dependencies
-
-This file has the following dependencies:
-
-* [ product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
-* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
-
 ## Import template file and content example
 
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [product_management_attribute.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_management_attribute.csv) | Exemplary import file with headers only. |
 | [product_management_attribute.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_management_attribute.csv) | Exemplary import file with Demo Shop data. |
+
+
+```bash
+data:import:product-management-attribute
+```

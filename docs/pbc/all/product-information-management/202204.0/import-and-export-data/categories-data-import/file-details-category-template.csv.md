@@ -16,7 +16,7 @@ redirect_from:
 
 This document describes the `category_template.csv` file to configure category templates in your Spryker shop.
 
-To import the file, run:
+
 
 ```bash
 data:import:category-template
@@ -24,7 +24,7 @@ data:import:category-template
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE |  REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ This file has no dependencies.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

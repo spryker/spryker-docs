@@ -14,15 +14,16 @@ redirect_from:
 
 This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run:
 
-```bash
-data:import:product-concrete
-```
+## Import file dependencies
+
+This file has the following dependency: [ product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+
+
+
 
 ## Import file parameters
 
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -41,24 +42,22 @@ The file should have the following parameters:
 | bundled |  | String | | Products SKUs separated by comas, that are part of the bundle. |
 | is_quantity_splittable |  | Boolean |If it is empty, will be *False*.<br>False = 0<br>True = 1 | To be considered a new product until this presented date. |
 
-*N/A: Not applicable.
 
 ** ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
 ** NUMBER: Any number of  the attribute-value column pair can be added
 
-## Import file dependencies
 
-This file has the following dependency: [ product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
-
-## Recommendations & other information
+## Recommendations and other information
 
 Every concrete product is linked to an abstract one via the `abstract_sku` field.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
-
 | FILE | DESCRIPTION |
 | --- | --- |
 | [product_concrete.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_concrete.csv) | Product Exemplary import file with headers only. |
 | [product_concrete.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_concrete.csv) | Exemplary import file with Demo Shop data. |
+
+```bash
+data:import:product-concrete
+```

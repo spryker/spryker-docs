@@ -13,15 +13,13 @@ redirect_from:
 
 This document describes the `product_abstract_store.csv` file to configure Product Abstract Store information in your Spryker Demo Shop.
 
-To import the file, run:
+## Import file dependencies
 
-```bash
-data:import:product-abstract-store
-```
+* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* *stores.php* configuration file of the demo shop PHP project
+
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -29,18 +27,15 @@ The file should have the following parameters:
 | store_name | &check; | String |  | Name of the store that has this product. |
 
 
-## Import file dependencies
-
-This file has the following dependencies:
-
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
-
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [product_abstract_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_abstract_store.csv) | Exemplary import file with headers only. |
 | [product_abstract_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_abstract_store.csv) | Exemplary import file with Demo Shop data. |
+
+## Import command
+
+```bash
+data:import:product-abstract-store
+```

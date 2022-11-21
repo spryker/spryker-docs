@@ -16,7 +16,7 @@ redirect_from:
 
 This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html) in your Spryker shop.
 
-To import the file, run:
+
 
 ```bash
 data:import:category
@@ -24,7 +24,7 @@ data:import:category
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ This file has the following dependency: [category_template.csv](/docs/scos/dev/d
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

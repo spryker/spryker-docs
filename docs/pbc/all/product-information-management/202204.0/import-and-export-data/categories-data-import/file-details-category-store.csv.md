@@ -18,15 +18,11 @@ redirect_from:
 
 This document describes the `category_store.csv` file to configure assignments of categories in your Spryker shop.
 
-To import the file, run:
+## Import file dependencies
 
-```bash
-data:import:category-store
-```
+The file has the following dependency: *stores.php* configuration file of the Demo Shop PHP project.
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|
@@ -34,15 +30,16 @@ The file should have the following parameters:
 | included_store_names |   | String |   | To accept all stores, use the asterisk (*) symbol. | Holds store names to include separated by a comma. |
 | excluded_store_names |   | String |   | To remove all stores, use the asterisk (*) symbol. | Holds store names to exclude separated by a comma. |
 
-## Import file dependencies
 
-The file has the following dependency: *stores.php* configuration file of the Demo Shop PHP project.
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 |-|-|
 | [template_category_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/template+category_store.csv) | Exemplary import file with headers only. |
 | [category_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/category_store.csv) | Exemplary import file with Demo Shop data. |
+
+
+```bash
+data:import:category-store
+```

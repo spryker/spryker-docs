@@ -19,6 +19,7 @@ composer require "spryker/product-configuration":"^1.0.0" --update-with-dependen
 2. Update the database schema and the generated classes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -741,16 +741,7 @@ To verify that feature is set up correctly go throw the following steps:
 3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user).
 Check that the response contains all the necessary data.
 
-{% endinfo_block %}
-
-
-{% info_block warningBox "Verification" %}
-
 To verify that all the required data is provided in the access token, at [jwt.io](https://jwt.io/), decode the token and check that, in the `sub` property of the payload data, the required `customer_reference`, `id_customer`, `id_company_user`, and permissions are present.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the permission data is filtered out based on the record in the spy_oauth_access_token table. To do so, run the following SQL query and check that the result doesn't have any `permissions-related` data from the `user_identifier` column.
 
@@ -758,22 +749,11 @@ Make sure that the permission data is filtered out based on the record in the sp
 SELECT * FROM spy_oauth_access_token WHERE user_identifier LIKE '%{"id_company_user":"8da78283-e629-5667-9f84-e13207a7aef9"%';
 ```
 
-{% endinfo_block %}
-
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the permission data is filtered out based on the record in the `spy_oauth_refresh_token` table. To do so, run the following SQL query and check that the result doesn't have any permissions-related data from the `user_identifier` column.
 
 ```sql
 SELECT * FROM spy_oauth_refresh_token WHERE user_identifier LIKE '%{"id_company_user":"8da78283-e629-5667-9f84-e13207a7aef9"%';
 ```
-
-{% endinfo_block %}
-
-
-
-{% info_block warningBox "Verification" %}
 
 To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check that a non-company user can't access the resources listed in the `CompanyUsersRestApiConfig::COMPANY_USER_RESOURCES`, and the following error is returned:
 
@@ -788,10 +768,6 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
     ]
 }
 ```
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 - Send the `GET https://glue.mysprykershop.com/companies/mine` request. Make sure that the response contains a collection of resources with the companies your current company user belongs to.
 - Send the `GET https://glue.mysprykershop.com/companies/{% raw %}{{{% endraw %}company_uuid{% raw %}}}{% endraw %}` request. Make sure that the response contains only the company resource your current company user belongs to.
@@ -818,18 +794,10 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
     - One company user
     - The `company-roles`, `companies`, `company-business-units`, and `customers` relationships
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Verify the following using merchant prices and merchant threshold:
 
 - Make sure the company account information is saved during order placement: send the `POST https://glue.mysprykershop.com/checkout` request with a company user access token and check the company-related restrictions are applied to your order.
 - Make sure the company account information is used during cart operations: send the `POST https://glue.mysprykershop.com/carts/:uuid/items` request with company user access token and make sure the company-related restrictions are applied to your cart.
-
-{% endinfo_block %}
-{% info_block warningBox "Verification" %}
-
 
 To verify that `CompanyBusinessUnitAddressByCheckoutDataResourceRelationshipPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses` request and check that the response contains the `company-business-unit-addresses` resource.
 

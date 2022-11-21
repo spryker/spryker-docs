@@ -3,15 +3,17 @@ title: Algolia
 description: Algolia is a search engine that 
 ---
 
-Algolia is a search engine that stands out from others due to its performance. With the Algolia app, your users can conduct advanced search of active concrete products in your store. 
+By default, all Spryker stores have [Elasticsearch](https://www.elastic.co/elasticsearch/) as their search engine. However, you can replace it with the Algolia one.
+
+The Algolia search engine that stands out from others due to its performance. With the Algolia app, your users can conduct advanced search of active concrete products in your store. 
 
 {% info_block infoBox "Product offers and product reviews" %}
 
-Algolia searches in product offers and product reviews as well, however these entities are represented in product attributes in the Algolia search results.
+Algolia searches in product offers and product reviews as well. However, these entities are represented in product attributes in the Algolia search results.
 
 {% endinfo_block %}
 
-To use Algolia as your search engine, you need an account with Algolia. For details, see [Integrate Algolia](/docs/pbc/all/search/integrate-algolia.html)
+To use Algolia as your search engine, you need an account with Algolia. For details about Algolia integration, see [Integrate Algolia](/docs/pbc/all/search/integrate-algolia.html).
 
 ## Searchable attributes
 
@@ -31,9 +33,9 @@ Your users can search for active concrete products by the following attributes:
 - Attributes
 - Merchants
 
-Here is an example of the search results in Algolia:
+Here is an example of the search results with these attributes in Algolia:
 
-![algolia-search-results](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia-search-results.png)
+![algolia-search-results](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/algolia-search-results.png)
 
 ## Indexes
 
@@ -48,7 +50,7 @@ There are separate indexes per locale and per sorting strategy. With the Algolia
 - By price in ascending order
 - By price in descending order
 
-For example, if you have two locales, there will be 10 indexes for your store in Algolia: one per each local and sorting strategy:
-
+For example, if you have two locales, there will be 10 indexes for your store in Algolia: one per each locale and per sorting strategy:
+![algolia-indexes](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/algolia-index.png)
 
 The Algolia index is always kept up-to-date with the product data changes. That means, that if a Back Office user changed some searchable product attribute, like, for example, a description, the change is immediately reflected in the Algolia search results as well.

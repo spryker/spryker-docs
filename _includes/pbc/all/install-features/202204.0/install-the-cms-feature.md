@@ -733,7 +733,7 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 
 #### Register XSS Protection Form plugin
 
-1. Enable Form plugins to add XSS protection options in Backoffice
+1. Enable the form plugin to add XSS protection options in Backoffice.
 
 | PLUGIN                             | SPECIFICATION                                                                                       | PREREQUISITES | NAMESPACE                                 |
 |------------------------------------|-----------------------------------------------------------------------------------------------------|---------------|-------------------------------------------|

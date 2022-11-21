@@ -425,7 +425,7 @@ entries:
                   title: Edit navigation nodes
                   url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/edit-navigation-nodes.html
                   title: Delete navigation nodes
-                  url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/delete-navigation-nodes.html)
+                  url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/delete-navigation-nodes.html
               - title: Content items
                 nested:
                   - title: Create abstract product list content items

@@ -412,20 +412,6 @@ entries:
             nested:
               - title: "Best practices: Add content to the Storefront pages using templates and slots"
                 url: /docs/pbc/all/content-management-system/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
-              - title: Navigation
-                nested:
-                  title: Create navigation elements
-                  url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/create-navigation-elements.html
-                  title: Create navigation nodes
-                  url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/create-navigation-nodes.html
-                  title: Duplicate navigation elements
-                  url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
-                  title: Edit navigation elements
-                  url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/edit-navigation-elements.html
-                  title: Edit navigation nodes
-                  url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/edit-navigation-nodes.html
-                  title: Delete navigation nodes
-                  url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/delete-navigation-nodes.html
               - title: Content items
                 nested:
                   - title: Create abstract product list content items

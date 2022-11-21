@@ -53,4 +53,4 @@ There are separate indexes per locale and per sorting strategy. With the Algolia
 For example, if you have two locales, there will be 10 indexes for your store in Algolia: one per each locale and per sorting strategy:
 ![algolia-indexes](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/algolia-index.png)
 
-The Algolia index is always kept up-to-date with the product data changes. That means, that if a Back Office user changed some searchable product attribute, like, for example, a description, the change is immediately reflected in the Algolia search results as well.
+The Algolia index is always kept up-to-date with the product data changes. That means, that if a Back Office user added or changed some searchable product attribute, like, for example, a description, the change is immediately reflected in the Algolia search results as well.

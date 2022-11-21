@@ -136,7 +136,7 @@ For more details about navigation, check the video:
 |---|
 | [Create navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-elements.html) |
 | [Create navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes.html) |
-| [Duplicate navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/duplicate-navigation-nodes.html) |
+| [Duplicate navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/duplicate-navigation-elements.html) |
 | [Edit navigation elements](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-elements.html) |
 | [Edit navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-nodes.html) |
 | [Delete navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/delete-navigation-nodes.html) |

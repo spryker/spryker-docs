@@ -1,25 +1,31 @@
-# Overview
+---
+title: Spryker Cloud Commerce management
+description: The goal of this RACI Matrix is to define and document responsibilities, consultation- and reporting-obligations while providing Platform-as-a-Service hosting for a Spryker customer.
+last_updated: Nov 21, 2022
+template: concept-topic-template
+---
+
 The goal of this RACI Matrix is to define and document responsibilities, consultation- and reporting-obligations while providing Platform-as-a-Service hosting for a Spryker customer.
 
-# Glossary
+## Glossary
 
-**Responsible** Those who do the work to complete the task.
+**Responsible**: Those who do the work to complete the task.
 
-**Accountable** The one ultimately answerable for the correct and thorough completion of the deliverable or task, and the one who delegates the work to those responsible.
+**Accountable**: The one ultimately answerable for the correct and thorough completion of the deliverable or task, and the one who delegates the work to those responsible.
 
-**Consulted** Those whose opinions are sought, typically subject matter experts; and with whom there is two-way communication.
+**Consulted**: Those whose opinions are sought, typically subject matter experts; and with whom there is two-way communication.
 
-**Informed** Those who are kept up-to-date on progress, often only on completion of the task or deliverable; and with whom there is just one-way communication.
+**Informed**: Those who are kept up-to-date on progress, often only on completion of the task or deliverable; and with whom there is just one-way communication.
 
 
-**Application** Customer Commerce Solution build using Spryker Commerce OS
+**Application**: Customer Commerce Solution build using Spryker Commerce OS
 
-**Infrastructure** Underlying cloud infrastructure managed by Spryker to deliver Spryker Cloud Commerce to Spryker customers.
+**Infrastructure**: Underlying cloud infrastructure managed by Spryker to deliver Spryker Cloud Commerce to Spryker customers.
 
-# RACI Matrix
+## RACI Matrix
 
-| Activity | Customer | Responsible Developing Party (Customer or Partner) | Spryker |
-| ---------|:------:|:------:|:------:|
+| ACTIVITY | CUSTOMER | RESPONSIBLE DEVELOPING PARTY (CUSTOMER OR PARTNER) | SPRYKER |
+| --- | ---| --- | --- |
 | Application Health, Security and Performance|
 | Provide code operational application (docker-sdk and Spryker Code) | C | A/R | I | 
 | Optimize Application  performance applying best practices | I/C | R/A | I | 

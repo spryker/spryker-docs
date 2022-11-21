@@ -1189,7 +1189,7 @@ entries:
           include_versions:
           - "202204.0"
         - title: How to create a backend resource
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backendbackend-resource.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html
           include_versions:
             - "202204.0"
         - title: How to create resources with parent-child relationships

@@ -130,9 +130,9 @@ Ensure that the following plugins have been registered:
 
 | MODULE                             | TEST                                                                                                                                                                                                                                                                                                                                                                                           |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users > Users**. <br>2. Next to a user, select **Edit**  <br>3. Ensure that the **This user is an agent** checkbox exists.                                                                                                                                                                                                                                      |
-| UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users > Users**. <br>2. Ensure that the *Agent* column exists.                                                                                                                                                                                                                                                                                                  |
-| UserAgentTableDataExpanderPlugin   | 1. In the *Back Office*, go to **Users > Users**. <br>2. Select **Edit** next to a non-agent user. <br>3. Select the **This user is an agent** checkbox. <br>4. Select **Update**. This takes you to the *Users List* page with the message about the successful update displayed. <br>5. Ensure that in the **Agent** column next to the user you've updated, the **Agent** tag is displayed. |
+| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users > Users**. <br>2. Next to a user, select **Edit**  <br>3. Ensure that the **This user is an agent** checkbox.exists.                                                                                                                                                                                                                                      |
+| UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users > Users**. <br>2. Ensure that the **Agent** column.exists.                                                                                                                                                                                                                                                                                                  |
+| UserAgentTableDataExpanderPlugin   | 1. In the Back Office, go to **Users > Users**. <br>2. Next to a non-agent user, select **Edit**. <br>3. Select the **This user is an agent** checkbox. <br>4. Select **Update**. This takes you to the *Users List* page with the message about the successful update displayed. <br>5. Ensure that in the **Agent** column, next to the user you've updated, the **Agent** tag is displayed. |
 
 {% endinfo_block %}
 
@@ -479,7 +479,7 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 
 ### 6) Set up widgets
 
-1. Register the following global widget(s):
+1. Register the following global widget:
 
 | WIDGET                | SPECIFICATION                                      | NAMESPACE                           |
 |-----------------------|----------------------------------------------------|-------------------------------------|

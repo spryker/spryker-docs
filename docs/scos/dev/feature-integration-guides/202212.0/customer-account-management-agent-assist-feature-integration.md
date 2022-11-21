@@ -1,7 +1,7 @@
 ---
 title: Customer Account Management + Agent Assist feature integration
 description: Integrate the Customer Account Management + Agent Assist feature into your project.
-last_updated: Nov 10, 2021
+last_updated: Nov 21, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-agent-assist-feature-integration
 originalArticleId: ac6402fe-4140-479f-a08a-76c03b263afa
@@ -17,4 +17,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-customer-account-management-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-customer-account-management-agent-assist-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-customer-account-management-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-customer-account-management-agent-assist-feature.md -->

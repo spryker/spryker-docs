@@ -1,8 +1,12 @@
 
 
-Follow the steps below to install the Customer Account Management + Agent Assist feature core.
+This document describes how to integrate the Customer Account Management + Agent Assist feature into a Spryker project.
 
-## Prerequisites
+## Install feature core
+
+Follow the steps below to install the Customer Account Management + Agent Assist feature core.
+ 
+### Prerequisites
 
 To start the feature integration, overview and install the necessary features:
 
@@ -11,9 +15,7 @@ To start the feature integration, overview and install the necessary features:
 | Customer Account ManagemenT | {{site.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
 | Agent Assist                | {{site.version}} | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html)                               |
 
-## 1) Install the required modules using composer
-
-Install the required modules:
+### 1) Install the required modules using composer
 
 ```bash
 composer require spryker/oauth-agent-connector:"^1.0.0" --update-with-dependencies
@@ -29,7 +31,7 @@ Ensure that the following module has been installed:
 
 {% endinfo_block %}
 
-## 2) Set up configuration
+### 2) Set up configuration
 
 Activate the following plugin:
 
@@ -68,7 +70,7 @@ Ensure that `console setup:init-db` installs agent-specific scopes configured in
 
 {% endinfo_block %}
 
-## 3) Set up transfer objects
+### 3) Set up transfer objects
 
 Generate transfer changes:
 
@@ -93,7 +95,7 @@ Ensure that the following changes have been applied in the transfer objects:
 
 {% endinfo_block %}
 
-## 4) Set up behavior
+### 4) Set up behavior
 
 Activate the following plugins:
 
@@ -104,7 +106,7 @@ Activate the following plugins:
 | AgentCredentialsOauthGrantTypeConfigurationProviderPlugin   | Provides configuration of the`agent_credentials` grant type.                            | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth   |
 | UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin  | Updates agent's session data in storage if access is granted and an agent is logged in. | None          | SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage  |
 
-**src/Pyz/Zed/Oauth/OauthDependencyProvider.php**
+<details open><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -150,6 +152,8 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
+</details>
+
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
 ```php
@@ -178,7 +182,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 Ensure that the Agent can get the access token with valid credentials by sending the request:
 
-<details open><summary markdown='span'>Request sample</summary>
+**Request sample**
 
 `POST https://glue.mysprykershop.com/agent-access-tokens`
 
@@ -193,9 +197,8 @@ Ensure that the Agent can get the access token with valid credentials by sending
     }
 }
 ```
-</details>
 
-<details open><summary markdown='span'>Expected response</summary>
+**Expected response**
 
 ```json
 {
@@ -214,7 +217,7 @@ Ensure that the Agent can get the access token with valid credentials by sending
     }
 }
 ```
-</details>
+
 
 {% endinfo_block %}
 

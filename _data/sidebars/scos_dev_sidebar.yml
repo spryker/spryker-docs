@@ -1185,11 +1185,11 @@ entries:
         - "202204.0"
         nested:
         - title: How to create a storefront resource
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-a-storefront-resource.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-storefront-resource.html
           include_versions:
           - "202204.0"
         - title: How to create a backend resource
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-a-backendbackend-resource.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backendbackend-resource.html
           include_versions:
             - "202204.0"
         - title: How to create resources with parent-child relationships
@@ -1197,11 +1197,11 @@ entries:
           include_versions:
           - "202204.0"
         - title: How to create a route
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-a-route.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-route.html
           include_versions:
           - "202204.0"
         - title: Backend and Storefront API module differences
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/backend-and-storefront-api-module-differences.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html
           include_versions:
           - "202204.0"
         - title: How to use OOTB Glue parameters
@@ -1227,7 +1227,7 @@ entries:
           include_versions:
           - "202204.0"
         - title: How to create API applications
-          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-api-applications.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/decoupled-glue-infrastructure.html
           include_versions:
           - "202204.0"
         - title: How to create or change a convention

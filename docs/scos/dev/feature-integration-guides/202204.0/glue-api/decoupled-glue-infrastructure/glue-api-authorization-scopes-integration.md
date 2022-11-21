@@ -5,6 +5,7 @@ last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/authorization-scopes-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-api-authorization-scopes-integration.html
 ---
 
 This document describes how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.
@@ -26,7 +27,7 @@ To start feature integration, overview and install the necessary feature:
 Generate transfers:
 
 ```bash
-console transfer:generate
+vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}

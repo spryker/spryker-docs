@@ -5,7 +5,7 @@ last_updated: Nov 21, 2022
 template: concept-topic-template
 ---
 
-The goal of this RACI Matrix is to define and document responsibilities, consultation- and reporting-obligations while providing Platform-as-a-Service hosting for a Spryker customer.
+The goal of this RACI Matrix is to define and document responsibilities, consultation- and reporting-obligations while providing Platform-as-a-Service (PaaS) hosting for a Spryker customer.
 
 ## Glossary
 
@@ -18,7 +18,7 @@ The goal of this RACI Matrix is to define and document responsibilities, consult
 **Informed**: Those who are kept up-to-date on progress, often only on completion of the task or deliverable; and with whom there is just one-way communication.
 
 
-**Application**: Customer Commerce Solution build using Spryker Commerce OS
+**Application**: Customer Commerce Solution build using Spryker Commerce OS.
 
 **Infrastructure**: Underlying cloud infrastructure managed by Spryker to deliver Spryker Cloud Commerce to Spryker customers.
 

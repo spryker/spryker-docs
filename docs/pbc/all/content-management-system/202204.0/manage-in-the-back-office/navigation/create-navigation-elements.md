@@ -24,7 +24,7 @@ To create a [navigation element](/docs/pbc/all/content-management-system/{{page.
 5. Click **Save**.
 This opens the **Overview of Navigation Elements** page with a success message displayed. The created navigation element is displayed in the **List of navigation elements** pane.
 
-### Reference information: Create navigation elements
+## Reference information: Create navigation elements
 
 
 | ATTRIBUTE | DESCRIPTION |

@@ -23,11 +23,18 @@ redirect_from:
   - /v1/docs/ht-create-register-provider-plugin
   - /v1/docs/en/ht-create-register-provider-plugin
 related:
-  - title: "HowTo: Create and register a MailTypePlugin"
-    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
+  - title: "HowTo: Create and register a MailTypeBuilderPlugin"
+    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-type-builder-plugin.html
   - title: "Tutorial: Sending an email"
     link: docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
 ---
+
+{% info_block infoBox "Info" %}
+
+Spryker provides sending mails via Symfony mailer component. 
+Follow this link on order to use it [Mailing and Notifications integration guide](docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.md).
+
+{% endinfo_block %}
 
 This guide shows how to create and register a mail provider you want to use.
 

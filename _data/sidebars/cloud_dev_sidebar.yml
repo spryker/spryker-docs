@@ -132,4 +132,4 @@ entries:
       - title: Release notes
         url: /docs/cloud/dev/spryker-cloud-commerce-os/release-notes.html
       - title: Spryker Cloud Commerce OS management
-      - url: docs/cloud/dev/spryker-cloud-commerce-os/spryker-cloud-commerce-os-management.md
+      - url: /docs/cloud/dev/spryker-cloud-commerce-os/spryker-cloud-commerce-os-management.html

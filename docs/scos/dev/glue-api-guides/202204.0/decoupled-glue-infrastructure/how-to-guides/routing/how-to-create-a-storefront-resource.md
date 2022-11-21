@@ -200,6 +200,12 @@ class ModuleResource extends AbstractResourcePlugin implements JsonApiResourceIn
 }
 ```
 
+{% info_block infoBox %}
+
+The default request and response data format are CamelCase, to apply a snake_case naming convention set `true` for `GlueResourceMethodConfigurationTransfer->setIsSnakeCased()` for each method where you want to change the request and response data format.
+
+{% endinfo_block %}
+
 See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-or-change-a-convention.html) guide.
 
 5. Declare the resource: 

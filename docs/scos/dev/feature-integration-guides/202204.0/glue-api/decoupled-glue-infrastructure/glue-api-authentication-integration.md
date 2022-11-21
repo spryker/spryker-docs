@@ -392,7 +392,7 @@ vendor/bin/console setup:init-db
     Accept: application/json
     Content-Length: 66
 
-    grantType=password&username={customer_username}&password={customer_password}
+    grant_type=password&username={customer_username}&password={customer_password}
     ```
     
   2. Check that the output contains the 201 response with a valid token.
@@ -407,7 +407,7 @@ vendor/bin/console setup:init-db
     Accept: application/json
     Content-Length: 66
 
-    grantType=password&username={user_username}&password={user_password}
+    grant_type=password&username={user_username}&password={user_password}
     ```
 
   2. Check that the output contains the 201 response with a valid token.

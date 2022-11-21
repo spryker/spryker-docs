@@ -39,7 +39,7 @@ The list below illustrates the order followed to run the data importers, and imp
   11. payment-method
   12. payment-method-store
 
-2. [Catalog Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/catalog-setup.html) data import - Catalog Setup category includes sub-categories: Categories, Products, Pricing, Stocks
+2. [Catalog Setup](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-catalog-data-import.html) data import - Catalog Setup category includes sub-categories: Categories, Products, Pricing, Stocks
 
   1. category-template
   2. category

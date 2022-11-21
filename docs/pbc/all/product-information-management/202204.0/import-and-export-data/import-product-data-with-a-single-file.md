@@ -1,5 +1,5 @@
 ---
-title: Importing Product Data With a Single File
+title: Import product data with a single file
 description: Learn how to import all main product data with a single file
 last_updated: Jun 16, 2021
 template: data-import-template
@@ -26,9 +26,9 @@ Before you can import all main product data, make sure that *combined_product* [
 
 To import combined product data via a single file, you need to:
 
-* Populate a [CSV file for product data import](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
-* Prepare a [YML file](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
-* Run a [console command](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
+* Populate a [CSV file for product data import](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/import-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
+* Prepare a [YML file](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/import-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
+* Run a [console command](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
 
 ## Single .csv file for combined product data import
 <a name="single-csv-file-for-combined-product-data-import"></a>
@@ -101,7 +101,7 @@ Depending on the product types you specified for the `product.assigned_product_t
 ## YML configuration file for product data import
 <a href="#yml-configuration-file-for-product-data-import"></a>
 
-The YML configuration file for product data import allows sequentially running importers for product data. This file can be used to import all product-related data sets, or just some of them. See [Console Commands for Product Data Import](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for details.
+The YML configuration file for product data import allows sequentially running importers for product data. This file can be used to import all product-related data sets, or just some of them. See [Console Commands for Product Data Import](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/import-product-data-with-a-single-file.html#console-commands-for-product-data-import) for details.
 
 The `data_entity` names in the YML file match the prefixes (text before `.` ) in the combined product data import CSV file, with `combined-` added before them:
 

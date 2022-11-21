@@ -28,7 +28,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require "spryker-feature/configurable-product":"^1.0.0" --update-with-dependencies
+composer require "spryker-feature/configurable-product":"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1416,7 +1416,7 @@ Overview and install the necessary features before beginning the integration ste
 Install the required modules:
 
 ```bash
-composer require "spryker/product-configuration":"^1.0.0" --update-with-dependencies
+composer require "spryker-feature/configurable-product":"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1785,7 +1785,7 @@ Overview and install the necessary features before beginning the integration ste
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require "spryker-shop/date-time-configurator-page-example":"dev-master" --update-with-dependencies
+composer require "spryker-shop/date-time-configurator-page-example":"^0.2.3" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

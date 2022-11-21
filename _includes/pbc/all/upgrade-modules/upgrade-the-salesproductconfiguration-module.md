@@ -15,3 +15,31 @@ To upgrade the `SalesProductConfiguration` module from version 0.2.* to version 
 ```bash
 composer require "spryker/sales-product-configuration":"^1.0.0" --update-with-dependencies
 ```
+
+2. Remove `\Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Checkout\ProductConfigurationOrderSaverPlugin` in `\Pyz\Zed\Checkout\CheckoutDependencyProvider::getCheckoutOrderSavers()`.
+
+3. Remove `\Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales\ProductConfigurationOrderPostSavePlugin` in `\Pyz\Zed\Sales\SalesDependencyProvider::getOrderPostSavePlugins()`.
+
+4. Add `\Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales\ProductConfigurationOrderItemsPostSavePlugin` to `\Pyz\Zed\Sales\SalesDependencyProvider` on project level:
+
+```php
+<?php
+
+namespace Pyz\Zed\Sales;
+
+use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
+use Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales\ProductConfigurationOrderItemsPostSavePlugin;
+
+class SalesDependencyProvider extends SprykerSalesDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
+     */
+    protected function getOrderItemsPostSavePlugins(): array
+    {
+        return [
+            new ProductConfigurationOrderItemsPostSavePlugin(),
+        ];
+    }
+}
+```

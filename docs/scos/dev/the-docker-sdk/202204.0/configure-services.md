@@ -462,7 +462,7 @@ The solution consists of a client and a server. The client is used to collect da
 
 Spryker provides its own New Relic licenses for use with its PaaS environments. A New Relic license key is only required if you wish to set up your own local monitoring.
 
-## Install the New Relic module
+### Install the New Relic module
 
 While most environments come with New Relic already available, you may need to add the module to your project. Add the module to your `composer.json`:
 
@@ -470,7 +470,7 @@ While most environments come with New Relic already available, you may need to a
 composer require spryker-eco/new-relic
 ```
 
-### PaaS: Configure New Relic
+### SCCOS: Configure New Relic
 
 1. Adjust `deploy.*.yml` in the `image:` section:
 
@@ -484,7 +484,14 @@ image:
             - newrelic
 ```
 
-2. Submitting an infrastructure change request through the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html).
+2. Push and deploy the changes using one of the following guides:
+
+  * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
+  * [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
+
+
+
+3. Submit an infrastructure change request via the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html).
   We will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
@@ -492,15 +499,11 @@ Once New Relic is enabled, in the New Relic dashboard, you may see either `compa
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRPsydm6Ds2eRmKS_lMRNjBnqhBLsvtN_ul_R1EMO7Z4pj74Mbpw3kMdAnjH6gIwLt9cvOqLcI=w1920-h919)
 
 
-
 {% info_block infoBox %}
 
 If you update the name of an application, [contact support]((/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
 
 {% endinfo_block %}
-
-
-
 
 
 
@@ -530,7 +533,7 @@ image:
 
 ### Configure YVES, ZED, and GLUE as separate APMs
 
-By default, in the New Relic dashboard, the APM displays in the form of `company-staging-newrelic-app`. To improve visibility, you may want to configure each application as a separate APM. For example, `YVES-DE (docker.dev)`.
+By default, in the New Relic dashboard, the APM is displayed as `company-staging-newrelic-app`. To improve visibility, you may want to configure each application as a separate APM. For example, `YVES-DE (docker.dev)`.
 
 To do it, adjust the Monitoring service in `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php`:  
 
@@ -565,14 +568,14 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 
 * Some builds have the Monitoring service built into the Yves application. If `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php` does not exist, you may want to check `src/Pyz/Yves/Monitoring/`.
 
-* If the class is missing from the Monitoring service, just add it.
+* If the class is missing from the Monitoring service, create it.
 
 
 {% endinfo_block %}
 
 
 
-With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned with the `getMonitoringExtensions()` function, the Monitoring class includes New Relic. Now New Relic shows the appropriate endpoint or class being called with each transaction.
+With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned with the `getMonitoringExtensions()` function, the Monitoring class includes New Relic. Now applications are displayed as separate APMs, and an appropriate endpoint or class is displayed with each transaction.
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
 

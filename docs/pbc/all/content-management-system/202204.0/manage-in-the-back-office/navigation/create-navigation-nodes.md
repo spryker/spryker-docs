@@ -64,5 +64,3 @@ This displays a success message. The **NAVIGATION TREE** refreshes with the crea
 | ACTIVE | Checkbox to define if the navigation node will be active. Inactive navigation nodes and their sub-nodes are not displayed on the Storefront.  |
 
 ## Reference information: Navigation node types
-
-{% include pbc/all/content-management-system/manage-in-the-back-office/navigation/reference-information-navigation-node-types.md %} <!-- To edit, see /_includes/pbc/all/content-management-system/manage-in-the-back-office/navigation/reference-information-navigation-node-types.md -->

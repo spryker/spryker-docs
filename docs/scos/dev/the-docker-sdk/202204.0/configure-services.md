@@ -456,7 +456,7 @@ The solution consists of a client and a server. The client is used to collect da
 
 ### Prerequisites
 
-* Access to New Relic with an [APM account](#configure-new-relic-paas).
+* Access to New Relic with an APM account.
 * Local: [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/).
 * The New Relic module.
 

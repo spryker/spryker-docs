@@ -8,6 +8,8 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/glue-backend-api/how-to-guides/create-grant-type-parameters.html
   - title: How to use authentication server
     link: docs/scos/dev/glue-api-guides/page.version/glue-backend-api/how-to-guides/using-authentication-server.html
+redirect_from:
+    - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
 ---
 
 For authentication, Spryker implements the [OAuth 2.0 mechanism](https://tools.ietf.org/html/rfc6749). On the REST API level, it is represented by the Login API.
@@ -28,7 +30,7 @@ Expired tokens are stored in the database, and you can configure them to be dele
 
 ## Authentication in the storefront and backend applications
 
-Below, you can find information about [differences between backend and storefront API modules](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/backend-and-storefront-api-module-differences.html) and [Authentication integration.](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api/glue-api-authentication-integration.html).
+Below, you can find information about [the differences between backend and storefront API modules](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html) and [Authentication integration.](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html).
 
 In the Storefront, authentication is used to authenticate as a *customer*, and the Backend is used to authenticate as a *user*.
 
@@ -60,7 +62,7 @@ Response sample with an error:
 }
 ```
 
-For more details, see [How to create protected endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/how-to-create-protected-endpoints.html)
+For more details, see [How to create protected endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-protected-endpoints.html)
 
 
 

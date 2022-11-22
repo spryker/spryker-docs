@@ -73,7 +73,7 @@ The *Edit File* page also displays an additional tab named *File versions*. The 
 
 <br>In the *File versions* tab, you can manage versions of a file by:
 
-* Removing uneeded versions. To permanently remove a version of the file, click **Delete** in the _Actions_ column. Before deleting, read [Deleting files](#deleting-files) below.
+* Removing unneeded versions. To permanently remove a version of the file, click **Delete** in the _Actions_ column. Before deleting, read [Deleting files](#deleting-files) below.
 * Downloading a specific version of the file. Click **Download** in the _Actions_ column.
 
 ## Deleting files

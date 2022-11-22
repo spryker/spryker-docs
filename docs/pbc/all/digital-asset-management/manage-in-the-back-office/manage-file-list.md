@@ -53,9 +53,9 @@ You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/dig
 
 ## Editing files
 
-*Edit file* lets you edit a file, upload multiple versions of a file, and manage file versions.
+*Edit file* lets you edit a file's attributes, upload multiple versions of a file, and manage file versions.
 
-To edit a file:
+To edit a file's attributes:
 
 1. On the *File List* page in the _Actions_ column, click **Edit**.
 2. On the *Edit File* page, on the *File* tab, update the attributes.
@@ -66,6 +66,13 @@ To edit a file:
  1. In the *File Upload* section, click **Choose File**.
  2. Optionally change the file name and the *Alt* and *Title* fields for each locale.
  3. Click **Save**.
+
+{% info_block infoBox "Creating a new version of a file" %}
+
+* A new version is created when you upload a new file.
+* If you only edit the attributes, no new version is created.
+
+{% endinfo_block %}
 
 The *Edit File* page also displays an additional tab named *File versions*. The *File versions* tab lists the version of the file and lets you manage versions of a file.
 

@@ -15,7 +15,7 @@ This document describes the `product_abstract_store.csv` file to configure Produ
 
 ## Import file dependencies
 
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 

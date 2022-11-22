@@ -8,7 +8,7 @@ This document contains content of the `product_approval_status_default.csv` file
 
 ## Import file dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
 
 
 ## Import file parameters

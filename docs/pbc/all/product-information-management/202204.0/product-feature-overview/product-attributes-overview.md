@@ -22,7 +22,7 @@ You can create characteristic attributes for products, like brand or special fea
 
 A Back Office user can [create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
 
-A developer can import [product attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html).
+A developer can import [product attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html).
 
 
 ## Product attribute inheritance

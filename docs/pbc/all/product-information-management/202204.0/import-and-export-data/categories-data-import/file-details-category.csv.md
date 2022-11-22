@@ -52,7 +52,7 @@ data:import:category
 
 ## Import file dependencies
 
-This file has the following dependency: [category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html).
+This file has the following dependency: [category_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category-template.csv.html).
 
 ## Import template file and content example
 

@@ -5,11 +5,12 @@ last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/glue-parameters-usage.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-use-ootb-glue-parameters.html
 ---
 
 This document explains how to pass the parameters and how to use them in code.
 
-Glue conventions provide some parameters parsing out of the box. The following are among them:
+The Glue JSON:API convention provides some parameter parsing out of the box. The following are among them:
 * Pagination
 * Sorting
 * Filters

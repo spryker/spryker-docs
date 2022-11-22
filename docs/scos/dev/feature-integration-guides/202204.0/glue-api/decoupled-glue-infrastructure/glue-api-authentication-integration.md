@@ -5,6 +5,7 @@ last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-authentication-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-api-authentication-integration.html
 ---
 
 This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
@@ -57,9 +58,9 @@ Make sure that the following modules have been installed:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
-console propel:install
-console transfer:generate
+vendor/bin/console transfer:generate
+vendor/bin/console propel:install
+vendor/bin/console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -367,7 +368,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 2. Set up the Oauth client:
 
 ```bash
-console setup:init-db
+vendor/bin/console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}
@@ -391,7 +392,7 @@ console setup:init-db
     Accept: application/json
     Content-Length: 66
 
-    grantType=password&username={customer_username}&password={customer_password}
+    grant_type=password&username={customer_username}&password={customer_password}
     ```
     
   2. Check that the output contains the 201 response with a valid token.
@@ -406,7 +407,7 @@ console setup:init-db
     Accept: application/json
     Content-Length: 66
 
-    grantType=password&username={user_username}&password={user_password}
+    grant_type=password&username={user_username}&password={user_password}
     ```
 
   2. Check that the output contains the 201 response with a valid token.

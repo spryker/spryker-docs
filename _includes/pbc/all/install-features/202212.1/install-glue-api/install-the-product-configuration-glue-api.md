@@ -882,8 +882,7 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 Ensure that wishlist item CRUD operations support configurable products.
 For an example, see the following response to the `POST https://glue.mysprykershop.com/wishlists/63b14493-021f-59c2-ae70-94041beb5c06/wishlist-items` request:
 
-<details>
-<summary markdown='span'>Request sample</summary>
+**Request sample**
 
 ```json
 {
@@ -902,10 +901,9 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>Response sample</summary>
+
+**Response sample**
 
 ```json
 {
@@ -935,7 +933,6 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
-</details>
 
 {% endinfo_block %}
 
@@ -1025,8 +1022,7 @@ class ShoppingListsRestApiDependencyProvider extends SprykerShoppingListsRestApi
 Ensure that shopping list item CRUD operations support configurable products.
 For an example, see the following response to the `POST https://glue.mysprykershop.com/shopping-lists/63b14493-021f-59c2-ae70-94041beb5c06/shopping-list-items` request:
 
-<details>
-<summary markdown='span'>Request sample</summary>
+**Request sample**
 
 ```json
 {
@@ -1046,10 +1042,8 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>Response sample</summary>
+**Response sample**
 
 ```json
 {
@@ -1078,6 +1072,5 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
-</details>
 
 {% endinfo_block %}

@@ -2,6 +2,10 @@
 
 This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) feature API into a Spryker project.
 
+## Install feature core
+
+Follow the steps below to install the Product Configuration feature core.
+
 ## Prerequisites
 
 To start feature integration, integrate the required features and Glue APIs:
@@ -765,12 +769,12 @@ Set up wishlist plugins:
 
 | PLUGIN                                                                   | SPECIFICATION                                                                                                                                                                                                                                                                            | PREREQUISITES  | NAMESPACE                                                                                                |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------|
-| ProductConfigurationRestWishlistItemsAttributesMapperPlugin              | Concatenates product sku with product configuration instance hash, sets created reference to `RestWishlistItemsAttributesTransfer::id` and maps the `WishlistItemTransfer::productConfigurationInstance` to `RestWishlistItemsAttributes::productConfigurationInstance` transfer object. | None           | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi                                |
-| ProductConfigurationWishlistItemRequestMapperPlugin                      | Maps the `RestWishlistItemsAttributesTransfer::productConfigurationInstance` to `WishlistItemRequestTransfer::productConfigurationInstance`.                                                                                                                                             | None           | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi                                |
+| ProductConfigurationRestWishlistItemsAttributesMapperPlugin              | Concatenates product sku with product configuration instance hash, sets created reference to `RestWishlistItemsAttributesTransfer::id` and maps `WishlistItemTransfer::productConfigurationInstance` to the `RestWishlistItemsAttributes::productConfigurationInstance` transfer object. | None           | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi                                |
+| ProductConfigurationWishlistItemRequestMapperPlugin                      | Maps `RestWishlistItemsAttributesTransfer::productConfigurationInstance` to `WishlistItemRequestTransfer::productConfigurationInstance`.                                                                                                                                             | None           | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi                                |
 | ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin     | Maps product configuration volume price data to `ProductConfigurationInstanceTransfer`.                                                                                                                                                                                                  | None           | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationWishlistsRestApi |
 | ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `RestProductConfigurationPriceAttributesTransfer[]`.                                                                                                                                                                                     | None           | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationWishlistsRestApi |
-| ProductConfigurationRestWishlistItemsAttributesDeleteStrategyPlugin      | Finds an item by product sku + product configuration instance hash in the collection of `WishlistItem` transfer objects and deletes found wishlist item.                                                                                                                                 | None           | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi                   |
-| ProductConfigurationRestWishlistItemsAttributesUpdateStrategyPlugin      | Finds an item by product sku + product configuration instance hash the in collection of `WishlistItem` transfer objects and updates found wishlist item.                                                                                                                                 | None           | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi                   |
+| ProductConfigurationRestWishlistItemsAttributesDeleteStrategyPlugin      | Finds an item by product sku + product configuration instance hash in the collection of the `WishlistItem` transfer objects and deletes the found wishlist item.                                                                                                                                 | None           | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi                   |
+| ProductConfigurationRestWishlistItemsAttributesUpdateStrategyPlugin      | Finds an item by product sku + product configuration instance hash the in the collection of the `WishlistItem` transfer objects and updates the found wishlist item.                                                                                                                                 | None           | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi                   |
 
 **src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php**
 
@@ -936,13 +940,13 @@ For an example, see the following response to the `POST https://glue.mysprykersh
 
 {% endinfo_block %}
 
-Set up shopping list plugins:
+Set up the following shopping list plugins:
 
 | PLUGIN                                                                   | SPECIFICATION                                                                                        | PREREQUISITES | NAMESPACE |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------| --- | --- |
 | ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin     | Maps product configuration volume price data to `ProductConfigurationInstanceTransfer`.              | None | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationsRestApi |
 | ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `RestProductConfigurationPriceAttributesTransfer[]`. | None | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationShoppingListsRestApi |
-| ProductConfigurationRestShoppingListItemsAttributesMapperPlugin          | Maps `ShoppingListItemTransfer` product configuration to `RestShoppingListItemsAttributesTransfer`.  | None | Spryker\Glue\ProductConfigurationShoppingListsRestApi\Plugin\ShoppingListsRestApi |
+| ProductConfigurationRestShoppingListItemsAttributesMapperPlugin          | Maps the `ShoppingListItemTransfer` product configuration to `RestShoppingListItemsAttributesTransfer`.  | None | Spryker\Glue\ProductConfigurationShoppingListsRestApi\Plugin\ShoppingListsRestApi |
 | ProductConfigurationShoppingListItemRequestMapperPlugin                  | Maps product configuration from rest attributes to shopping list item.                               | None | Spryker\Glue\ProductConfigurationShoppingListsRestApi\Plugin\ShoppingListsRestApi |
 
 **src/Pyz/Glue/ProductConfigurationShoppingListsRestApi/ProductConfigurationShoppingListsRestApiDependencyProvider.php**

@@ -5,9 +5,13 @@ last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-json-api-convention-integration.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-json-api-relationship.html
 ---
+Some modules represent relationships between two different resources. Their task is to extend the response of one of the resources with the data of related resources.
 
-This guide describes how to add resources through relationships. The following concept is allowed only for applications that implemented the Glue JSON API convention.
+To query certain data, you often need to use endpoints from different APIs to get the necessary information. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
+
+This guide describes how to add resources through relationships. The following concept is only allowed for resources that implemented the Glue JSON:API convention.
 
 Let's say you have a module named `ModuleRestApi`, where you want to add the `bar` resource related to the `module` resource. To do this, follow these steps:
 

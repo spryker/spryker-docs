@@ -5,6 +5,7 @@ last_updated: September 30, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authorization-scopes.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-use-glue-api-authorization-scopes.html
 ---
 
 This guide describes how to add scopes to the resource and custom route for the storefront API and backend API applications.
@@ -79,7 +80,7 @@ class ModuleBarRouteProviderPlugin extends AbstractPlugin implements RouteProvid
 4. Regenerate the scopes cache file:
 
 ```bash
-console oauth:scope-collection-file:generate
+vendor/bin/console oauth:scope-collection-file:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -96,7 +97,7 @@ console oauth:scope-collection-file:generate
     Accept: application/json
     Content-Length: 131
 
-    grantType=password&username={customer_username}&password={customer_password}&scope=storefront%3module%3read%20storefront%3modulebar%3read
+    grant_type=password&username={customer_username}&password={customer_password}&scope=storefront%3module%3read%20storefront%3modulebar%3read
     ```
 
    2. Check that the output contains the 201 response with a valid token.
@@ -112,7 +113,7 @@ console oauth:scope-collection-file:generate
     Accept: application/json
     Content-Length: 117
 
-    grantType=password&username={user_username}&password={user_password}&scope=backend%3module%3read%20backend%3modulebar%3read
+    grant_type=password&username={user_username}&password={user_password}&scope=backend%3module%3read%20backend%3modulebar%3read
     ```
 
    2. Check that the output contains the 201 response with a valid token.

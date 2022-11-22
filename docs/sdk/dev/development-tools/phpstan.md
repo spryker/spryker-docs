@@ -1,6 +1,6 @@
 ---
 title: PHPStan
-description: Use the article to learn how to install and use PHPStan
+description: Learn how to install and use PHPStan, a static code analyzer
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/phpstan

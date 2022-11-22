@@ -15,17 +15,17 @@ For example, `spryk: Template` uses the `SprykerSdk\Spryk\Model\Spryk\Builder\Te
 
 ### The Spryks hierarchy structure
 
-Spryks can depend on other Spryks that are executed before or after the current Spryk. The Spryks hierarchy structure resembles a tree, or even a graph in some cases, that is controlled by `preSpryks` and `postSpryks` configuration keys.
+Spryks can depend on other Spryks that are executed before or after the current Spryk. The Spryks hierarchy structure resembles a tree, or even a graph in some cases, that is controlled by the `preSpryks` and `postSpryks` configuration keys.
 
-The best practice is when a Spryk builds only one small structural unit and calls other Spryks that build the rest of the structure with classes, interfaces, configs, etc. When executing a Spryk, one should get a completely valid structure of files.
+The best practice to follow is to have a Spryk build only one small structural unit and call other Spryks that build the rest of the structure with classes, interfaces, and configs. After executing a Spryk, you get a completely valid structure of files.
 
-The arguments of the children's Spryks can inherit the values of the same arguments of the parent Spryk. To achieve that, you need to define the `inherit: true` option in the argument definition block. See [Spryk configuration reference](/docs/sdk/dev/spryks/spryk-configuration-reference.html#the-root-configuration) for details on the Spryk file structure and its arguments.
+The arguments of the children's Spryks can inherit the values of the same arguments of the parent Spryk. To achieve that, you need to define the `inherit: true` option in the argument definition block. For details about the Spryk file structure and its arguments, see [Spryk configuration reference](/docs/sdk/dev/spryks/spryk-configuration-reference.html#the-root-configuration).
 
 ### Overriding arguments in preSpryks or postSpryks
 
 Overriding is useful for the customization of a used Spryk in the `preSpryks` or `postSpryks` section. You can pass or override arguments here.
 
-You can even add arguments that are not defined in the used Spryk itself. This is useful primarily when you use a Twig template with more arguments than the original used template has.
+You can even add arguments that are not defined in the used Spryk itself. This is useful primarily when you use a Twig template with more arguments than the original template.
 
 ```yaml
 postSpryks:
@@ -36,7 +36,7 @@ postSpryks:
                 value: \Spryker\Zed\DataImport\DataImportDependencyProvider
 ```
 
-As explained earlier, Spryks pose some sort of hierarchy where one Spryk uses several other Spryks. In some cases, you don't need the full hierarchy. To exclude the execution of one or more Spryks, you can use the `excludedSpryks` option.
+As explained earlier, Spryks can pose a sort of hierarchy where one Spryk uses several other Spryks. In some cases, you don't need the full hierarchy. To exclude the execution of one or more Spryks, use the `excludedSpryks` option.
 
 ```yaml
 postSpryks:
@@ -62,7 +62,7 @@ postSpryks:
 
 ### Conditional Spryks
 
-In some cases, you need to run a Spryk only when a specific condition is matched. For example, one of the passed arguments has a specific value. For these cases, you can use the `condition` option.
+In some cases, you need to run a Spryk only when a specific condition is matched. For example, when one of the passed arguments has a specific value. For these cases, you can use the `condition` option.
 For condition evaluation, the `symfony/expression-language` component is used.
 
 ```yaml
@@ -84,8 +84,8 @@ postSpryks:
 ```
 ### The wrapper Spryk
 
-To merge some Spryks into a bigger structure to enable execution of all of them with a command, you can use a wrapper Spryk.
-This Spryk only executes `preSpryks` or `postSpryks` and receives the arguments.
+To merge some Spryks into a bigger structure to enable execution of all of them with a single command, you can use a wrapper Spryk.
+This Spryk only executes `preSpryks` or `postSpryks`, and receives arguments.
 
 ```yaml
 spryk: wrapper
@@ -118,10 +118,10 @@ postSpryks:
   ...
 ```
 
-### The best practices
+### Best practices
 
-- Try not to create your own Spryks unless you're sure that you can not customize an existing Spryk.
-- For re-use, prefer the basic common Spryks located in `config/spryk/spryks/Spryker/Common/.
-- Try not to create the deep hierarchy of Spryks.
-- Always populate Spryks and argument descriptions.
+- Try not to create your own Spryks unless you're sure that you can not customize an existing Spryk to fit your needs.
+- For re-use, try to opt for the basic common Spryks located in `config/spryk/spryks/Spryker/Common/.
+- Try not to create a deep hierarchy of Spryks.
+- Always populate Spryks and their argument descriptions.
 - Try not to generate unused methods, classes, configs, etc. Use `conditions` option to resolve the issues.

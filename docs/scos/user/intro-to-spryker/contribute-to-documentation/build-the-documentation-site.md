@@ -26,21 +26,7 @@ We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. 
 2. Set up the documentation site locally
 3. Run the documentation site locally
 
-## Prerequisites
 
-To use Jekyll, you also need to install the following:
-
-* [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your version, run `ruby -v`.
-* [RubyGems](https://rubygems.org/pages/download), the latest version. To check your RubyGems version, run `gem -v`.
-* [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/). To check your GCC version, run `gcc -v,g++ -v`, for Make version run `make -v`.
-
-
-{% info_block warningBox "MacOS" %}
-
-If you are using MacOS, we recommend you do **not** install these prerequisites before you begin. Depending on your Mac processor and your previously installed applications, installing these before reading the instructions below may cause your installation to fail.
-
-{% endinfo_block %}
-  
 ## Install Jekyll 
 
 Depending on your operating system, follow the Jekyll installation guides below.
@@ -68,7 +54,7 @@ On either an M1 or an Intel Mac, follow the steps below to install Jekyll. M1-sp
 
 #### 1. Install Homebrew
 
-Homebrew is a package manager for macOS because by default, Mac doesn’t have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically. 
+Homebrew is a package manager for macOS because by default Mac doesn’t have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically. 
 
 To install Homebrew, follow these steps: 
 ```bash
@@ -158,6 +144,16 @@ ruby -v
     ```bash
     echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
     ```
+    
+## Install Jekyll on Windows, Ubuntu, or Other Linux systems – Prerequisites
+
+To use Jekyll, you also need to install the following:
+
+* [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your version, run `ruby -v`.
+* [RubyGems](https://rubygems.org/pages/download), the latest version. To check your RubyGems version, run `gem -v`.
+* [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/). To check your GCC version, run `gcc -v,g++ -v`, for Make version run `make -v`.
+
+  
 ### Install Jekyll on Windows
 
 To install Jekyll on Windows, follow the [official Jekyll on Windows documentation](https://jekyllrb.com/docs/installation/windows/).

@@ -53,7 +53,7 @@ A Back Office user can delete any folder within *File Directories Tree* by selec
 
 *File Uploader* lets you store multiple versions of any file.
 
-For example: a Back Office user uploads Instruction1.txt file (v.1). The user then updates and reuploads the .txt file (v.2). Next, the user decides that the image instruction is more useful and upload Instruction.png (v.3).
+For example: a Back Office user uploads Instruction1.txt file (v.1). The user then updates and reuploads the .txt file (v.2). Next, the user decides that the image instruction is more useful and uploads Instruction.png (v.3).
 
 There are now three versions of the file available: two text files and one image file.
 ![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png)

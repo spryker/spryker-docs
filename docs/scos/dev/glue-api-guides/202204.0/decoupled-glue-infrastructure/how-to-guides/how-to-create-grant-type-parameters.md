@@ -5,11 +5,12 @@ last_updated: October 24, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-grant-type-parameters.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-grant-type-parameters.html
 ---
 
 This document explains how to create and use a [grant type](https://oauth.net/2/grant-types/) parameter.
 
-Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api/glue-api-authentication-integration.html) guide.
+Integrate authentication following the [Glue API Authentication integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html) guide.
 
 Glue provides [grant types](https://www.rfc-editor.org/rfc/rfc6749#appendix-A.10) `password` for a customer and a user out of the box:
 

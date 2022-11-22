@@ -1,6 +1,6 @@
 ---
 title: Tooling config file
-description: The article provides information about a tooling config file that contains settings for supported tools and directives.
+description: This document provides information about a tooling config file that contains settings for supported tools and directives.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.tooling-config-fileer.com/2021080/docs/tooling-config-file
@@ -49,7 +49,7 @@ related:
     link: docs/scos/dev/sdk/development-tools/static-security-checker.html
 ---
 
-In order to make the tool configuring more convenient, we introduce the `.tooling.yml` file. It contains settings for different tools (the Architecture and the Code sniffers are supported at the moment) in one place, helping you to keep the number of files on the root level as small as possible. The `.tooling.yml` file should also be in `.gitattributes` to be ignored for tagging:
+In order to make the tool configuring more convenient, we introduced the `.tooling.yml` file. It contains a variety of settings for different tools (At the moment, the Architecture and the Code sniffers are supported) in one place, helping you to keep the number of files on the root level as small as possible. The `.tooling.yml` file should also be in `.gitattributes` to be ignored for tagging:
 
 ```yml
 ... export-ignore

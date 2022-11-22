@@ -71,7 +71,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+### 3) Set up behavior
 
 Activate the following plugins:
 

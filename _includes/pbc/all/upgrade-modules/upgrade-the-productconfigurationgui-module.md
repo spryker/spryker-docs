@@ -2,9 +2,7 @@
 
 *Estimated migration time: 10 minutes*
 
-`ProductConfigurationGui` v1.0.0 introduces the following backward incompatible changes:
-
-* Removed deprecated ProductConfigurationTableDataExpanderPlugin
+`ProductConfigurationGui` v1.0.0 introduces the following backward incompatible changes: removed deprecated `ProductConfigurationTableDataExpanderPlugin`.
 
 To upgrade the `ProductConfigurationGui` module from version 0.1.* to version 1.0.*, do the following:
 
@@ -14,12 +12,11 @@ To upgrade the `ProductConfigurationGui` module from version 0.1.* to version 1.
 composer require "spryker/product-configuration-gui":"^1.0.0" --update-with-dependencies
 ```
 
-2. Remove usage of \Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationTableDataExpanderPlugin.
+2. Remove the usage of `\Spryker\Zed\ProductConfigurationGui\Communication\Plugin\ProductManagement\ProductConfigurationTableDataExpanderPlugin`.
 
-3. Add new plugin to \Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins().
+3. Add the new plugin to `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()`.
 
 ```php 
-
 <?php
 
 namespace Pyz\Zed\ProductManagement;

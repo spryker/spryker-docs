@@ -1,7 +1,7 @@
 ---
 title: Configurable Product feature walkthrough
 last_updated: Nov 16, 2022
-description: The _Configurable Product_ feature introduces a new type of product that can be customized by customers — a configurable product
+description: The Configurable Product feature introduces a new type of product that can be customized by customers — a configurable product
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202108.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html

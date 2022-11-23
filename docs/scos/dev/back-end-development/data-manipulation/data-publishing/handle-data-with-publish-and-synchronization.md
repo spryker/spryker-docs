@@ -36,11 +36,11 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-_Publish and Synchronization_ (P&S) lets you export data from Spryker backend (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).
+_Publish and Synchronization_ (P&S) lets you export data from Spryker backend (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).
 
-This document shows how P&S works and how to export data using a HelloWorld P&S module example. The module synchronizes the data stored in a Zed database table to Redis. When a record is changed, created, or deleted in the table, the module automatically makes changes in Redis.
+This document shows how P&S works and how to export data using a HelloWorld P&S module example. The module synchronizes the data stored in a Zed database table to Redis. When a record is changed, created, or deleted in the table, the module automatically makes changes in Redis.
 
-## 1. Module and table
+## 1. Module and table
 
 Follow these steps to create the following:
 * Data source module
@@ -50,7 +50,7 @@ Follow these steps to create the following:
 1. Create the `HelloWorld` module by creating the `HelloWorld` folder in Zed. The module is the source of data for publishing.
 
 2. Create `spy_hello_world_message` table in the database:<br>
-   a. In the `HelloWorld` module, define the table schema by creating `\Pyz\Zed\HelloWorld\Persistence\Propel\Schema\spy_hello_world.schema.xml`:
+   a. In the `HelloWorld` module, define the table schema by creating `\Pyz\Zed\HelloWorld\Persistence\Propel\Schema\spy_hello_world.schema.xml`:
 
     ```xml
     {% raw %}
@@ -72,19 +72,19 @@ Follow these steps to create the following:
     console propel:install
     ```
     
-    c. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
+    c. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
 
 {% info_block infoBox "Naming conventions" %}
 
 The following P&S naming conventions are applied:
-- All the modules related to Redis should have the `Storage` suffix.
-- All the modules related to Elasticsearch should have the `Search` suffix.
+- All the modules related to Redis should have the `Storage` suffix.
+- All the modules related to Elasticsearch should have the `Search` suffix.
 
 {% endinfo_block %}
 
 ## 2. Data structure
 
-The data for Yves is structured differently than the data for Zed. It's because the data model used in Redis and Elasticsearch is optimized to be used by the frontend. With P&S, data is always carried in the form of [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) between Zed and Yves.
+The data for Yves is structured differently than the data for Zed. It's because the data model used in Redis and Elasticsearch is optimized to be used by the frontend. With P&S, data is always carried in the form of [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) between Zed and Yves.
 
 Follow these steps to create a transfer object that represents the target data structure of the frontend.
 
@@ -110,7 +110,7 @@ To publish changes in the Zed database table automatically, you need to enable a
 
 To enable events, follow the steps:
 
-1. Activate Event Propel Behavior in `spy_hello_world.schema.xml` you've created in step 1 [Module and table](#module-and-table).
+1. Activate Event Propel Behavior in `spy_hello_world.schema.xml` you've created in step 1 [Module and table](#module-and-table).
 
 ```xml
 {% raw %}
@@ -137,7 +137,7 @@ To track changes in all the table columns, the _*_ (asterisk) for the `column` a
 console propel:install
 ```
 
-The `SpyHelloWorldMessage` entity model has three events for creating, updating, and deleting a record. These events are referred to as *publish events*.
+The `SpyHelloWorldMessage` entity model has three events for creating, updating, and deleting a record. These events are referred to as *publish events*.
 
 3. To map the events to the constants, which you can use in code later, create the `\Pyz\Shared\HelloWorldStorage\HelloWorldStorageConfig` configuration file:
 
@@ -167,7 +167,7 @@ class HelloWorldStorageConfig extends AbstractBundleConfig
 }
 ```
 
-You have enabled events for the `SpyHelloWorldMessage` entity.
+You have enabled events for the `SpyHelloWorldMessage` entity.
 
 ## 4. Publishers
 
@@ -383,7 +383,7 @@ Now, you can manually trigger events. For this, do the following:
 vendor/bin/console schedule:suspend
 ```
 
-2. Create a controller class as follows and run it.
+2. Create a controller class as follows and run it by navigating to `http://[YOUR_BACKOFFICE_URL]/hello-world`.
 
 ```php
 <?php
@@ -413,7 +413,7 @@ class IndexController extends AbstractController
 
 Ensure that the event has been created:
 1. Open the RabbitMQ management GUI at `http(s)://{host_name}:15672/#/queues`.
-2. You should see the event in the `publish.hello_world` queue:
+2. You should see the event in the `publish.hello_world` queue:
 ![rabbitmq-event](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/rabbitmq-event.png)
 
 Ensure that the triggered event has the correct structure:
@@ -443,10 +443,10 @@ Ensure that the triggered event has the correct structure:
 
 2. Verify the data required for the publisher to process it:
 
-* Event name: `Entity.spy_hello_spryker_message.create`
-* Listener: `HelloWorldWritePublisherPlugin`
-* Table name: `spy_hello_spryker_message`
-* Modified columns: `spy_hello_spryker_message.name` and `spy_hello_spryker_message.message`
+* Event name: `Entity.spy_hello_spryker_message.create`
+* Listener: `HelloWorldWritePublisherPlugin`
+* Table name: `spy_hello_spryker_message`
+* Modified columns: `spy_hello_spryker_message.name` and `spy_hello_spryker_message.message`
 * ID: the primary key of the record
 * ForeignKey: the key to backtrack the updated Propel entities
 
@@ -501,7 +501,7 @@ Ensure that the event has been processed correctly:
 - The `publish.hello_world` queue is empty:
 ![empty-rabbitmq-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/empty-rabbitmq-queue.png)
 
-For debugging purposes, use the `-k` option to keep messages in the queue `queue:task:start publish.hello_world -k`.
+For debugging purposes, use the `-k` option to keep messages in the queue `queue:task:start publish.hello_world -k`.
 
 {% endinfo_block %}
 
@@ -511,24 +511,31 @@ To synchronize data with Redis, an intermediate Zed database table is required. 
 
 Follow the steps to create the table:
 
-1. Create the table schema file:
+1. Create the table schema file in `Pyz\Zed\HelloWorldStorage\Persistance\Propel\Schema\spy_hello_world_storage.schema.xml`:
 
 ```xml
 {% raw %}
-<table name="spy_hello_world_message_storage" idMethod="native" allowPkInsert="true">
-    <column name="id_hello_world_message_storage" type="BIGINT" autoIncrement="true" primaryKey="true"/>
-    <column name="fk_hello_world_message" type="INTEGER" required="true"/>
-    <index name="spy_hello_world_message_storage-fk_hello_world_message">
-        <index-column name="fk_hello_world_message"/>
-    </index>
-    <behavior name="synchronization">
-        <parameter name="resource" value="message"/>
-        <parameter name="key_suffix_column" value="fk_hello_world_message"/>
-        <parameter name="queue_group" value="sync.storage.hello"/>
-    </behavior>
-    <behavior name="timestampable"/>
-        <id-method-parameter value="spy_hello_world_message_storage_pk_seq"/>
-</table>
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\HelloWorldStorage\Persistence" package="src.Orm.Zed.HelloWorldStorage.Persistence">
+
+   <table name="spy_hello_world_message_storage" identifierQuoting="true">
+      <column name="id_hello_world_message_storage" type="BIGINT" autoIncrement="true" primaryKey="true"/>
+      <column name="fk_hello_world_message" type="INTEGER" required="true"/>
+      <index name="spy_hello_world_message_storage-fk_hello_world_message">
+         <index-column name="fk_hello_world_message"/>
+      </index>
+      <id-method-parameter value="spy_hello_world_message_storage_pk_seq"/>
+      <behavior name="synchronization">
+         <parameter name="resource" value="message"/>
+         <parameter name="store" required="false"/>
+         <parameter name="key_suffix_column" value="fk_hello_world_message"/>
+         <parameter name="queue_group" value="sync.storage.hello"/>
+      </behavior>
+      <behavior name="timestampable"/>
+   </table>
+</database>
 {% endraw %}
 ```
 
@@ -543,18 +550,18 @@ The schema file defines the table as follows:
 - `ID` is a primary key of the table (`id_hello_world_message_storage` in the example).
 - `ForeignKey` is a foreign key to the main resource that you want to export (`fk_hello_world_message` for `spy_hello_world_message`).
 -  `SynchronizationBehaviour` modifies the table as follows:
-    - Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`.
-    - Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
+    - Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`.
+    - Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
     - Defines `Resource` name for key generation.
     - Defines `Store` value for store-specific data.
     - Defines `Locale` value for localizable data.
     - Defines `Key Suffix Column` value for key generation.
-    - Defines `queue_group` to send a copy of the `data` column.
+    - Defines `queue_group` to send a copy of the `data` column.
 - Timestamp behavior is added to keep timestamps and use an incremental sync strategy.
 
 {% info_block infoBox "Incremental sync" %}
 
-An *incremental sync* is a sync that only processes the data records that have changed (created or modified) since the last time the integration ran as opposed to processing the entire data set every time.
+An *incremental sync* is a sync that only processes the data records that have changed (created or modified) since the last time the integration ran as opposed to processing the entire data set every time.
 
 {% endinfo_block %}
 
@@ -578,7 +585,7 @@ To create complex keys to use more than one column, do the following:
 
 At this point, you can complete the publishing part. Follow the standard conventions and let publishers delegate the execution process through the facade to the models behind.
 
-To do this, create facade and model classes to handle the logic of the publish part as follows.
+To do this, create facade and model classes to handle the logic of the publish part as follows.
 
 The Facade methods are:
 
@@ -586,7 +593,7 @@ The Facade methods are:
 
 - `deleteCollectionByHelloWorldEvents(array $eventTransfers)`
 
-1. Create the `HelloWorldStorageWriter` model and implement the following method:
+1. Create the `HelloWorldStorageWriter` model and implement the following method:
 
 ```php
 <?php
@@ -628,7 +635,7 @@ class HelloWorldStorageWriter implements HelloWorldStorageWriterInterface
 }
 ```
 
-2. Create the `HelloWorldStorageDeleter` model and implement the following method:
+2. Create the `HelloWorldStorageDeleter` model and implement the following method:
 
 ```php
 <?php
@@ -678,6 +685,9 @@ namespace Pyz\Zed\HelloWorldStorage\Business;
 
 use Spryker\Zed\Kernel\Business\AbstractFacade;
 
+/**
+ * @method \Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory getFactory();
+ */
 class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorageFacadeInterface
 {
     /**
@@ -706,7 +716,88 @@ class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorag
 }
 ```
 
-4. Refactor the publisher classes and call the Facade methods:
+4. In order to connect the facade methods to the business logic in the Writer and Deleter, we need to create the Business factory that created the Writer abd Deleter objects. We also need to create interfaces for these objects.
+
+Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory.php`
+
+```php
+<?php
+
+namespace Pyz\Zed\HelloWorldStorage\Business;
+
+use Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleter;
+use Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleterInterface;
+use Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriter;
+use Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriterInterface;
+use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
+
+
+
+class HelloWorldStorageBusinessFactory extends AbstractBusinessFactory
+{
+
+    /**
+     * @return HelloWorldStorageWriterInterface
+     */
+    public function createHelloWorldMessageStorageWriter(): HelloWorldStorageWriterInterface
+    {
+        return new HelloWorldStorageWriter();
+    }
+
+    /**
+     * @return HelloWorldStorageDeleterInterface
+     */
+
+    public function createHelloWorldMessageStorageDeleter(): HelloWorldStorageDeleterInterface
+    {
+        return new HelloWorldStorageDeleter();
+    }
+}
+
+```
+
+As you see, these methods return interfaces, so let's create them.
+
+Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriterInterface.php`
+
+```php
+<?php
+
+namespace Pyz\Zed\HelloWorldStorage\Business\Writer;
+
+interface HelloWorldStorageWriterInterface
+{
+	/**
+	 * @param   \Generated\Shared\Transfer\EventEntityTransfer[]  $eventTransfers
+	 *
+	 * @return void
+	 */
+	public function writeCollectionByHelloWorldEvents(array $eventTransfers): void;
+}
+
+```
+
+Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleterInterface.php`
+
+```php
+<?php
+
+namespace Pyz\Zed\HelloWorldStorage\Business\Deleter;
+
+interface HelloWorldStorageDeleterInterface
+{
+	/**
+	 * @param   \Generated\Shared\Transfer\EventEntityTransfer[]  $eventTransfers
+	 *
+	 * @return void
+	 */
+	public function deleteCollectionByHelloWorldEvents(array $eventTransfers): void;
+}
+
+```
+
+
+5. Refactor the publisher classes and call the Facade methods:
 
 ```php
 <?php
@@ -783,7 +874,7 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 This section describes how to create the queue to synchronize data to Redis.
 
-To create the `sync.storage.hello` queue, do the following:
+To create the `sync.storage.hello` queue, do the following:
 
 1. Adjust `\Pyz\Shared\HelloWorldStorage\HelloWorldStorageConfig`:
 
@@ -838,7 +929,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 ```
 
-3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`:
+3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`:
 
 ```php
 <?php
@@ -863,11 +954,11 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-1. To update the table, run the `IndexController` class created in [step 4](#publishers) 
+1. To update the table, run the `IndexController` class created in [step 4](#publishers) 
 
 {% info_block warningBox "Verification" %}
 
-Ensure that a new event is created in the `publish.hello_world` queue.
+Ensure that a new event is created in the `publish.hello_world` queue.
 
 {% endinfo_block %}
 
@@ -881,7 +972,7 @@ Store: DE | Environment: development
 {% info_block warningBox "Verification" %}
 
 Ensure that the records have been added to the table:  
-1. Open `spy_hello_world_message_storage`.
+1. Open `spy_hello_world_message_storage`.
 2. You should see a record similar to the following pear per each message:
 
 | id_hello_world_message_storage | fk_hello_world_message | data | key | created_at | updated_at |
@@ -894,7 +985,7 @@ The Publish process is complete.
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the data has been exported to a secondary queue for the Synchronize process. The `sync.storage.hello` queue must have at least one message:
+Ensure that the data has been exported to a secondary queue for the Synchronize process. The `sync.storage.hello` queue must have at least one message:
 
 ![separate-sync-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/separate-sync-queue.jpeg)
 
@@ -914,7 +1005,7 @@ Ensure that the sync queue is empty.
 
 {% info_block infoBox "Info" %}
 
-To run all queues at once, run use the following command: `console queue:worker:start -vvv`
+To run all queues at once, run use the following command: `console queue:worker:start -vvv`
 
 {% endinfo_block %}
 
@@ -923,7 +1014,7 @@ To run all queues at once, run use the following command: `console queue:worker
 This section describes how to check the data synchronization in Redis.
 
 Follow the steps to check the data in Redis:
-1. Connect to Redis Desktop Manager at `http(s)://{host}:10009`.
+1. Connect to Redis Desktop Manager at `http(s)://{host}:10009`.
 2. Check if the data is structured correctly:   
 ![data-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/data-structure.jpeg)
 
@@ -933,34 +1024,237 @@ This section describes how to read the data from Redis.
 
 To read the data from Redis, create the following:
 
-- Client layer
+Create client interface in `Pyz\Client\HelloWorld\HelloWorldClientInterface.php`
 
-- `Client\Storage\MessageStorageReader` class:
+```php
+<?php
+
+namespace Pyz\Client\HelloWorld;
+
+use Generated\Shared\Transfer\HelloWorldStorageItemsTransfer;
+use Generated\Shared\Transfer\HelloWorldStorageTransfer;
+
+interface HelloWorldClientInterface
+{
+    public function getMessages(): HelloWorldStorageItemsTransfer;
+
+    public function getMessageById(int $messageId): HelloWorldStorageTransfer;
+}
+```
+
+Create client in `Pyz\Client\HelloWorld\HelloWorldClient.php`
+```php
+<?php
+
+namespace Pyz\Client\HelloWorld;
+
+use Generated\Shared\Transfer\HelloWorldStorageItemsTransfer;
+use Generated\Shared\Transfer\HelloWorldStorageTransfer;
+use Spryker\Client\Kernel\AbstractClient;
+use Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException;
+
+
+/**
+ * @method \Pyz\Client\HelloWorld\HelloWorldFactory getFactory()
+ */
+class HelloWorldClient extends AbstractClient implements HelloWorldClientInterface
+{
+    /**
+     * @throws ContainerKeyNotFoundException
+     */
+    public function getMessageById(int $messageId): HelloWorldStorageTransfer
+    {
+        return $this->getFactory()
+            ->createMessageStorageReader()
+            ->getMessageById($messageId);
+    }
+
+    /**
+     * @return HelloWorldStorageItemsTransfer
+     * @throws ContainerKeyNotFoundException
+     */
+    public function getMessages(): HelloWorldStorageItemsTransfer
+    {
+        return $this->getFactory()
+            ->createMessageStorageReader()
+            ->getMessages();
+    }
+}
+
+```
+
+Add the factory `Pyz/Client/HelloWorld/HelloWorldFactory.php` for `$this->getFactory()` method call within the `HelloWorldClient` methods
+
+```php
+<?php
+
+namespace Pyz\Client\HelloWorld;
+
+use Pyz\Client\HelloWorld\Dependency\Client\HelloWorldToZedRequestClientInterface;
+use Pyz\Client\HelloWorld\Storage\MessageStorageReader;
+use Pyz\Client\HelloWorld\Zed\HelloWorldZedStub;
+use Pyz\Client\HelloWorld\Zed\HelloWorldZedStubInterface;
+use Spryker\Client\Kernel\AbstractFactory;
+use Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException;
+use Spryker\Client\Storage\StorageClientInterface;
+use Spryker\Service\Synchronization\SynchronizationServiceInterface;
+
+class HelloWorldFactory extends AbstractFactory
+{
+    /**
+     * @throws ContainerKeyNotFoundException
+     */
+    public function createMessageStorageReader(): MessageStorageReader
+    {
+        return new MessageStorageReader($this->getSyncService(), $this->getStorageClient());
+    }
+
+
+    /**
+     * @throws ContainerKeyNotFoundException
+     */
+    private function getSyncService(): SynchronizationServiceInterface
+    {
+      return  $this->getProvidedDependency(HelloWorldDependencyProvider::CLIENT_HELLO_WORLD_SYNC_SERVICE);
+    }
+
+    /**
+     * @throws ContainerKeyNotFoundException
+     */
+    private function getStorageClient(): StorageClientInterface
+    {
+      return  $this->getProvidedDependency(HelloWorldDependencyProvider::CLIENT_HELLO_WORLD_REDIS_CLIENT);
+    }
+}
+
+```
+
+The HelloWorldFactory needs a dependency provider to handle dependencies required by the redis / reader classes
+
+Add `Pyz/Client/HelloWorld/HelloWorldDependencyProvider.php`
+
+```php
+<?php
+
+namespace Pyz\Client\HelloWorld;
+
+use Spryker\Client\Kernel\AbstractDependencyProvider;
+use Spryker\Client\Kernel\Container;
+use Spryker\Service\Container\Exception\FrozenServiceException;
+
+class HelloWorldDependencyProvider extends AbstractDependencyProvider
+{
+    public const CLIENT_HELLO_WORLD = 'CLIENT_HELLO_WORLD';
+    public const CLIENT_HELLO_WORLD_REDIS_CLIENT = 'CLIENT_HELLO_WORLD_REDIS_CLIENT';
+    public const CLIENT_HELLO_WORLD_SYNC_SERVICE = 'CLIENT_HELLO_WORLD_SYNC_SERVICE';
+
+    public function provideServiceLayerDependencies(Container $container): Container
+    {
+        $container = parent::provideServiceLayerDependencies($container);
+        $container = $this->addMessageStorageDependencies($container);
+
+        return $container;
+    }
+
+    /**
+     * @throws FrozenServiceException
+     */
+    protected function addMessageStorageDependencies(Container $container): Container
+    {
+
+        $container->set(static::CLIENT_HELLO_WORLD_REDIS_CLIENT, function (Container $container) {
+            return $container->getLocator()->storage()->client();
+        });
+
+        $container->set(static::CLIENT_HELLO_WORLD_SYNC_SERVICE, function (Container $container) {
+            return $container->getLocator()->synchronization()->service();
+        });
+
+        return  $container;
+
+    }
+}
+
+
+```
+
+Update the transfer in `Pyz/Shared/HelloWorldStorage/Transfer/hello_world_storage.transfer.xml` to add an array of items that can be returned
+
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="HelloWorldStorage">
+        <property name="name" type="string" />
+        <property name="message" type="string" />
+        <property name="id" type="integer" />
+    </transfer>
+
+    <transfer name="HelloWorldStorageItems">
+        <property name="items" type="HelloWorldStorage[]" singular="HelloWorldStorage" />
+    </transfer>
+
+</transfers>
+
+```
+
+Run the transfer generate command
+```bash
+    docker/sdk console transfer:generate
+```
+
+
+- Add `Pyz\Client\Storage\MessageStorageReaderInterface.php` interface
 
 ```php
 <?php
 
 namespace Pyz\Client\HelloWorld\Storage;
 
+use Generated\Shared\Transfer\HelloWorldStorageTransfer;
+
+interface MessageStorageReaderInterface
+{
+
+    public function getMessages(): HelloWorldStorageItemsTransfer
+
+    public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
+}
+```
+
+- Add `Pyz\Client\Storage\MessageStorageReader.php` class:
+
+```php
+<?php
+
+namespace Pyz\Client\HelloWorld\Storage;
+
+use ArrayObject;
+use Generated\Shared\Transfer\HelloWorldStorageItemsTransfer;
 use Generated\Shared\Transfer\SynchronizationDataTransfer;
-use Spryker\Client\Storage\StorageClient;
+use Generated\Shared\Transfer\HelloWorldStorageTransfer;
 use Spryker\Client\Storage\StorageClientInterface;
-use Spryker\Service\Synchronization\SynchronizationService;
 use Spryker\Service\Synchronization\SynchronizationServiceInterface;
 
 class MessageStorageReader implements MessageStorageReaderInterface
 {
-	...
+    protected SynchronizationServiceInterface $syncService;
+    protected StorageClientInterface $storageClient;
 
-    public function getMessageById($idMessage)
+    public function __construct(SynchronizationServiceInterface $syncService, StorageClientInterface $storageClient)
     {
-        $synchronizationDataTransfer = new SynchronizationDataTransfer();
-        $synchronizationDataTransfer
-            ->setReference($idMessage);
+        $this->syncService = $syncService;
+        $this->storageClient = $storageClient;
+    }
 
-        $key = $this->synchronizationService
-            ->getStorageKeyBuilder('message') // "message" is the resource name
-            ->generateKey($synchronizationDataTransfer);
+    public function getMessageById(int $idMessage): HelloWorldStorageTransfer
+    {
+        $syncDataTransfer = new SynchronizationDataTransfer();
+        $syncDataTransfer->setReference($idMessage);
+
+        $key = $this->syncService->getStorageKeyBuilder('message')
+            ->generateKey($syncDataTransfer);
 
         $data = $this->storageClient->get($key);
 
@@ -970,6 +1264,87 @@ class MessageStorageReader implements MessageStorageReaderInterface
         return $messageStorageTransfer;
     }
 
-    ...
+    public function getMessages(): HelloWorldStorageItemsTransfer
+    {
+        $helloWorldKeys = $this->storageClient->getKeys('message:*');
+
+        $messageStorageItemsTransfer = new HelloWorldStorageItemsTransfer();
+
+        $items = [];
+        foreach ($helloWorldKeys as $helloWorldKey) {
+            $items[] = $this->storageClient->get(str_replace('kv:', '', $helloWorldKey));
+        }
+
+        $transfers = [];
+        foreach ($items as $item) {
+            $itemTransfer = new HelloWorldStorageTransfer();
+            $itemTransfer->setName($item['name']);
+            $itemTransfer->setMessage($item['message']);
+            $itemTransfer->setId($item['id']);
+            $transfers[] = $itemTransfer;
+        }
+
+        $messageStorageItemsTransfer->setItems(new ArrayObject($transfers));
+
+        return $messageStorageItemsTransfer;
+    }
 }
+```
+
+Add another endpoint to the controller in `Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php`
+
+```php
+/**
+     * @param int $messageId
+     * @return JsonResponse
+     * @throws \Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException
+     */
+    public function searchAction(Request $request): JsonResponse
+    {
+        // get the client
+        $client = new HelloWorldClient();
+        $id = $request->get('id');
+        $message = $client->getMessageById($id);
+
+        return $this->jsonResponse([
+            'status' => 'success',
+            'message' =>  $message->toArray()
+        ]);
+    }
+
+
+    /**
+     * @return JsonResponse
+     * @throws \Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException
+     */
+    public function allAction(): JsonResponse
+    {
+        // get the client
+        $client = new HelloWorldClient();
+        $message = $client->getMessages();
+
+        return $this->jsonResponse([
+            'status' => 'success',
+            'messages' =>  $message->toArray()
+        ]);
+    }
+```
+
+Update the routes for back office using the following command: 
+```
+docker/sdk console router:cache:warm-up:backoffice
+```
+
+You should now have another 2 urls to get messages from redis storage via the newly created HelloWorldClient
+
+Check the redis-commander to get an id of a message object that actually exists. 
+
+Then access it via this endpoint 
+```
+http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]
+```
+
+To return more than one message from redis use the multi endpoint
+```
+http://[YOUR_BACKOFFICE_URL]/hello-world/index/all
 ```

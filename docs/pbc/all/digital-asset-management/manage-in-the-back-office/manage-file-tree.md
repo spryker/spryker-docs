@@ -30,7 +30,7 @@ To preserve a logical structure of the files uploaded to the system for use in m
 
 The *File Tree* section is used to upload the files, create or delete the directories and manage the order of files and directories.
 
-To start working with file tree elements, navigate to **Content&nbsp;<span aria-label="and then">></span> File Tree** section.
+To start working with file tree elements, navigate to **Content>File Tree** section.
 
 
 ## Prerequisites

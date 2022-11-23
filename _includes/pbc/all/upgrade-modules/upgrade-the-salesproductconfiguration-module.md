@@ -4,9 +4,9 @@
 
 `SalesProductConfiguration` v1.0.0 introduces the following backward incompatible changes:
 
-* Removed ProductConfigurationOrderSaverPlugin.
-* Removed ProductConfigurationOrderPostSavePlugin.
-* Removed dependency on CheckoutExtension module.
+* Removed `ProductConfigurationOrderSaverPlugin`.
+* Removed `ProductConfigurationOrderPostSavePlugin`.
+* Removed dependency on `CheckoutExtension` module.
 
 To upgrade the `SalesProductConfiguration` module from version 0.2.* to version 1.0.*, do the following:
 
@@ -16,9 +16,9 @@ To upgrade the `SalesProductConfiguration` module from version 0.2.* to version 
 composer require "spryker/sales-product-configuration":"^1.0.0" --update-with-dependencies
 ```
 
-2. Remove `\Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Checkout\ProductConfigurationOrderSaverPlugin` in `\Pyz\Zed\Checkout\CheckoutDependencyProvider::getCheckoutOrderSavers()`.
+2. In `\Pyz\Zed\Checkout\CheckoutDependencyProvider::getCheckoutOrderSavers()`, remove `\Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Checkout\ProductConfigurationOrderSaverPlugin`.
 
-3. Remove `\Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales\ProductConfigurationOrderPostSavePlugin` in `\Pyz\Zed\Sales\SalesDependencyProvider::getOrderPostSavePlugins()`.
+3. In `\Pyz\Zed\Sales\SalesDependencyProvider::getOrderPostSavePlugins()`, remove `\Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales\ProductConfigurationOrderPostSavePlugin`.
 
 4. Add `\Spryker\Zed\SalesProductConfiguration\Communication\Plugin\Sales\ProductConfigurationOrderItemsPostSavePlugin` to `\Pyz\Zed\Sales\SalesDependencyProvider` on project level:
 

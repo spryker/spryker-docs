@@ -4,8 +4,8 @@
 
 `ProductConfiguratorGatewayPage` v1.0.0 introduces the following backward incompatible changes:
 
-* Replaced ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku() with ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection().
-* Replaced ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku() with ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection().
+* Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`.
+* Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`.
 
 To upgrade the `ProductConfiguratorGatewayPage` module from version 0.5.* to version 1.0.*, do the following:
 
@@ -33,7 +33,7 @@ To upgrade the `ProductConfiguratorGatewayPage` module from version 0.3.* to ver
 composer require spryker-shop/product-configurator-gateaway-page:"^0.4.0" --update-with-dependencies
 ```
 
-2. Re-generate transfer classes:
+2. Regenerate transfer classes:
 
 ```bash
 console transfer:generate
@@ -41,7 +41,7 @@ console transfer:generate
 
 3. From `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider`, remove the plugin stack: `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider::getProductConfiguratorGatewayBackUrlResolverStrategyPlugins()`.
 
-4. In `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider`, on project level, register the new strategy plugins:
+4. In `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider`, on the project level, register the new strategy plugins:
 
 <details open>
 <summary markdown='span'>\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider</summary>

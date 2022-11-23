@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/product-labels-feature-overview
   - /docs/scos/user/features/202200.0/product-labels-feature-overview.html
   - /docs/product-label
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-labels-feature-walkthrough.html  
 ---
 
 The _Product Label_ feature lets product catalog managers highlight the needed products by adding a special type of information—product labels.
@@ -153,8 +154,11 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 | [Create product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html)  |
 | [Edit product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/edit-product-labels.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Product Labels feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-labels-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES |
+|---|---|---|
+| [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-labels-feature-integration.html) | [ProductLabel migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabel.html) | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html) |
+| [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html) | [ProductLabelGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html) |  |
+|  | [ProductLabelSearch migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html |  |
+|  | [ProductLabelStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabelstorage.html |  |

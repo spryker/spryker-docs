@@ -11,6 +11,7 @@ redirect_from:
   - /docs/catalog
   - /docs/en/catalog
   - /docs/scos/user/features/202200.0/catalog-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/catalog-feature-walkthrough.html
 ---
 
 Catalogs are used to clearly build and organize your products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.
@@ -31,8 +32,9 @@ To keep your catalog dynamic, you can include auto-generated pages based on cate
 
 The main benefits of working with the catalog are to pave the way for a smooth shopping journey with well-organized categories that organize and extend your catalog to match your business needs.
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Catalog feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  | GLUE API GUIDES  |
+|---------|---------|
+| [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html)  | [Searching the product catalog](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) |
+|  | [Retrieving autocomplete and search suggestions](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-autocomplete-and-search-suggestions.html)  |

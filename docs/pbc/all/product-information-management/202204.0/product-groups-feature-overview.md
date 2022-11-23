@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/product-groups-feature-overview
   - /docs/scos/user/features/202200.0/product-groups-feature-overview.html
   - /docs/product-group
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-groups-feature-walkthrough.html  
 ---
 
 The *Product Groups* feature lets product catalog managers group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
@@ -70,8 +71,8 @@ Check out this video tutorial on product groups:
 {% wistia r5l2kit2c1 720 480 %}
 
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Product Groups feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-groups-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---------|---------|---------|
+| [Product Groups feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-groups-feature-integration.html) | [File details: product_group.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html)  | [HowTo: Display product groups by color on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |

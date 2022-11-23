@@ -1,5 +1,5 @@
 ---
-title: Product feature walkthrough
+title: Product feature overview
 last_updated: Aug 19, 2021
 description: The Product feature lets you create products, manage their characteristics and settings.
 template: concept-topic-template

@@ -43,8 +43,13 @@ On the product details page of a product that's a product alternative for anothe
 |---|
 | [Add product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Alternative Products feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/alternative-products-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  | GLUE API GUIDES  | DATA IMPORT |
+|---------|---------|---------|
+| [Alternative products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)  | [Retrieving alternative products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html)  | [File details: product_alternative.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html)  |
+| [Alternative Products + Discontinued Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-discontinued-products-feature-integration.html) |   |
+| [Alternative Products + Product Label feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-product-label-feature-integration.html) |   |
+| [Alternative products + Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-inventory-management-feature-integration.html)   |   |
+| [Alternative products + Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-wishlist-feature-integration.html) |   |
+| [Glue API: Alternative products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html) |   |

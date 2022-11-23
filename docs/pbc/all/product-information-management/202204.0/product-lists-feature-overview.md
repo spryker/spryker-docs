@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/product-lists-feature-overview
   - /docs/scos/user/features/202200.0/product-lists-feature-overview.html
   - /docs/product-lists
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-lists-feature-walkthrough.html  
 ---
 
 The *Product Lists* feature lets you configure product availability for specific companies by adding their products to an excludelist or allowlist. For example, if you want to hide some products, or even a category, from a company you've signed a contract with, with this feature, you can create an excludelist of those products and assign it to the company. This lets the company purchase products from the excludelist.
@@ -25,8 +26,8 @@ The *Product Lists* feature lets you configure product availability for specific
 | [Create product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/create-product-lists.html)  |
 | [Edit product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/edit-product-lists.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Product Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-lists-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES |
+|---------|
+| [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) |

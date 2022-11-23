@@ -17,6 +17,7 @@ redirect_from:
   - /docs/scos/user/shop-user-guides/201811.0/shop-guide-managing-products.html
   - /docs/scos/user/shop-user-guides/201903.0/shop-guide-managing-products.html
   - /docs/scos/user/features/202200.0/product-options-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-options-feature-walkthrough.html  
 ---
 
 The *Product Options* feature lets a Back Office user create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, or warranty. Product options do not have stock but an SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
@@ -84,8 +85,10 @@ The feature has the following functional constraints, which are going to be reso
 | [Create product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html)  |
 | [Edit product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/edit-product-options.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-options-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES | DATA IMPORT |
+|---------|---------|---------|
+| [Shopping Lists + Product Options feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html)  | [ProductOption migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productoption.html)  |[File details: product_option.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) |
+| [Product options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-options-order-management-feature-integration.html)  | | [File details: product_option_price.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html) |
+| [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)  | | |

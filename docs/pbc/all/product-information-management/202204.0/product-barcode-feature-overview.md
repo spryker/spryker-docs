@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/product-barcode-feature-overview
   - /docs/scos/user/features/202200.0/product-barcode-feature-overview.html
   - /docs/product-barcode
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-barcode-feature-walkthrough.html
 ---
 
 The *Product Barcode* feature lets you create barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
@@ -19,7 +20,7 @@ The *Product Barcode* feature lets you create barcodes for any kind of entity. B
 A barcode is a square or rectangular image consisting of a series of parallel black lines (bars) and white spaces of varying widths that can be read by a scanner and printed. Barcodes are applied to entities as a means of quick identification.
 ![Barcode example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Barcode+Generator/Barcode+Generator+Feature+Overview/barcode.png)
 
-By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format. 
+By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format.
 
 Though, Spryker highly provides customizable solutions through plugins that let you change the setup.
 
@@ -62,8 +63,6 @@ Barcodes are often overlooked as a way to cut costs and save time. A valuable an
 |---|
 | [Viewing product barcodes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-barcodes/viewing-product-barcodes.html)  |
 
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Product Barcodes feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-barcode-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| MIGRATION GUIDES|
+|---------|
+| [Migrating from CodeItNow to BarcodeLaminas](/docs/scos/dev/module-migration-guides/migration-guide-codeitnow-to-barcodelaminas.html) |

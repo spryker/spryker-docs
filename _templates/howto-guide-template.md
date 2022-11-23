@@ -25,7 +25,7 @@ template: howto-guide-template
 
 <!---In a few sentences, summarize what the reader has just learned. Describe the end result they should obtain after executing the instructions of your HowTo.-->
 
-## What's next
+## Next steps
 
 <!---If your HowTo consists of several interdependent guides, add the "What's Next" section where you guide the reader to the next step. For example: *Now that the SprykerModule is installed*, <u>integrate it to your project</u> (this would be a link to the next HowTo explaining how to integrate the module).-->
 

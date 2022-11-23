@@ -2,6 +2,7 @@
 title: Product Configuration feature integration
 description: Learn how to integrate the Product Configuration feature into a Spryker project.
 template: feature-integration-guide-template
+last_updated: Nov 23, 2022
 related:
   - title: Glue API - Product Configuration feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-configuration-feature-integration.html

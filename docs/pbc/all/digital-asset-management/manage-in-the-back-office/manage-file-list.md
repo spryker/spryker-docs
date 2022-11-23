@@ -27,7 +27,7 @@ The *File List* section is a way to quickly review all the files from the file t
 
 In the *File List* section, you can manage files that have already been uploaded to the file tree.
 
-To start working with the file list, navigate to **File Manager&nbsp;<span aria-label="and then">></span> File List**.
+To start working with the file list, navigate to **File Manager>File List**.
 
 ## Viewing files
 
@@ -35,7 +35,7 @@ To start working with the file list, navigate to **File Manager&nbsp;<span aria-
 
 To view a file:
 
-1. On the *File List* page in the _Actions_ column, click **View**.
+1. On the *File List* page in the *Actions* column, click **View**.
 2. On the *View File* page, you see the version, file name, the date and time when the file was uploaded.
 
 {% info_block infoBox "Info" %}
@@ -44,11 +44,11 @@ You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/dig
 
 {% endinfo_block %}
 
-**Tips and tricks**
+### Tips and tricks
 
-<br>On this page, you can download the file:
+On this page, you can download the file:
 
-1. Click **Download** in the _Actions_ column.
+1. Click **Download** in the *Actions* column.
 2. Follow the download pop-up instructions.
 
 ## Editing files
@@ -57,7 +57,7 @@ You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/dig
 
 To edit a file's attributes:
 
-1. On the *File List* page in the _Actions_ column, click **Edit**.
+1. On the *File List* page in the *Actions* column, click **Edit**.
 2. On the *Edit File* page, on the *File* tab, update the attributes.
 3. Click **Save**.
 
@@ -76,18 +76,18 @@ To edit a file's attributes:
 
 The *Edit File* page also displays an additional tab named *File versions*. The *File versions* tab lists the version of the file and lets you manage versions of a file.
 
-**Tips and tricks**
+### Tips and tricks
 
-<br>In the *File versions* tab, you can manage versions of a file by:
+In the *File versions* tab, you can manage versions of a file by:
 
-* Removing unneeded versions. To permanently remove a version of the file, click **Delete** in the _Actions_ column. Before deleting, read [Deleting files](#deleting-files) below.
-* Downloading a specific version of the file. Click **Download** in the _Actions_ column.
+* Removing unneeded versions. To permanently remove a version of the file, click **Delete** in the *Actions* column. Before deleting, read [Deleting files](#deleting-files) below.
+* Downloading a specific version of the file. Click **Download** in the *Actions* column.
 
 ## Deleting files
 
 If the file is no longer needed, you can permanently delete it from the system.
 
-To delete a file, in the _Actions_ column, click **Delete** for a file you want to remove.
+To delete a file, in the *Actions* column, click **Delete** for a file you want to remove.
 
 {% info_block warningBox "Warning" %}
 

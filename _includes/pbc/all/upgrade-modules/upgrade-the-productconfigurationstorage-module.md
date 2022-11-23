@@ -2,7 +2,7 @@
 
 *Estimated migration time: 5 minutes*
 
-`ProductConfigurationStorage` v1.0.0 introduces the following backward incompatible changes:
+Version 1.0.0 of the `ProductConfigurationStorage` module introduces the following backward incompatible changes:
 
 * Removed `ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku()`.
 * Removed `ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku()`.

@@ -2,7 +2,7 @@
 
 *Estimated migration time: 10 minutes*
 
-`ProductConfigurationGui` v1.0.0 introduces the following backward incompatible changes: removed deprecated `ProductConfigurationTableDataExpanderPlugin`.
+Version 1.0.0 of the `ProductConfigurationGui` module introduces the following backward incompatible changes: removed deprecated `ProductConfigurationTableDataExpanderPlugin`.
 
 To upgrade the `ProductConfigurationGui` module from version 0.1.* to version 1.0.*, do the following:
 

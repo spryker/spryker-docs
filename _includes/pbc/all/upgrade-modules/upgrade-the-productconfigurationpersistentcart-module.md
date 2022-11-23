@@ -2,7 +2,7 @@
 
 *Estimated migration time: 5 minutes*
 
-`ProductConfigurationPersistentCart` v1.0.0 introduces the following backward incompatible changes:
+Version 1.0.0 of the`ProductConfigurationPersistentCart` module introduces the following backward incompatible changes:
 
 * Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`
 

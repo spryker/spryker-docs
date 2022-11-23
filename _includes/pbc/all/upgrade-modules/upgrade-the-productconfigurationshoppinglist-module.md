@@ -2,7 +2,7 @@
 
 *Estimated migration time: 5 minutes*
 
-`ProductConfigurationShoppingList` v1.0.0 introduces the following backward incompatible changes:
+Version 1.0.0 of the`ProductConfigurationShoppingList` module introduces the following backward incompatible changes:
 
 * Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`.
 * Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`.

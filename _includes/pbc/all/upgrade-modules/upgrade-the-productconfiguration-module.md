@@ -4,7 +4,7 @@
 
 *Estimated migration time: 5 minutes*
 
-`ProductConfiguration` v1.0.0 introduces the following backward incompatible changes:
+Version 1.0.0 of the `ProductConfiguration` module introduces the following backward incompatible changes:
 
 * Adjusted `ProductConfigurationFacade::getProductConfigurationCollection()` so it is now getting product configurations by `ProductConfigurationCriteria` instead of `ProductConfigurationFilterTransfer`.
 * Introduced the `spy_product_configuration.uuid` field to allow unique identifier.

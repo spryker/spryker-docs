@@ -40,7 +40,7 @@ To view a file:
 
 {% info_block infoBox "Info" %}
 
-You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/digital-asset-management/digital-asset-management.md#versions) for more information. [Editing files](#editing-files) below explains how to add multiple versions of a file.
+You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/digital-asset-management/digital-asset-management.html#versions) for more information. [Editing files](#editing-files) below explains how to add multiple versions of a file.
 
 {% endinfo_block %}
 
@@ -91,6 +91,6 @@ To delete a file, in the *Actions* column, click **Delete** for a file you want 
 
 {% info_block warningBox "Warning" %}
 
-    Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone. 
+Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone. 
 
-    {% endinfo_block %}
+{% endinfo_block %}

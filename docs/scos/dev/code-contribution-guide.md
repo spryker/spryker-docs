@@ -20,7 +20,7 @@ redirect_from:
 In Spryker, we welcome contributions in all forms, be it detailed Issues or Pull Requests (PRs). As PRs directly show the changes and the context, we verify and ship them faster. Therefore, *PRs are the preferred method of contribution*.
 
 
-## Licenses
+## Licenses test
 
 Spryker uses different licenses: our proprietary licenses and common open-source licenses. In general, you can contribute to our public repositories
 - [spryker](https://github.com/spryker)

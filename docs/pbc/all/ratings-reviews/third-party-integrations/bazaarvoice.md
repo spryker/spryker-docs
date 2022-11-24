@@ -30,17 +30,3 @@ When you connect Bazaarvoice, the app puts JavaScrip tags into your store, and t
 If you have Bazaarvoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
 
 {% endinfo_block %}
-
-## Prerequisites to use Bazaarvoice in your project
-
-The BazaarVoice app requires the following Spryker modules:
-
-* `spryker/asset: ^1.2.0`
-* `spryker/asset-storage: ^1.1.0`
-* `spryker/message-broker: ^1.0.0`
-* `spryker/message-broker-aws: ^1.0.0`
-* `spryker/message-broker-extension: ^1.0.0`
-* `spryker-shop/asset-widget: ^1.0.0`
-* `spryker-shop/product-detail-page: ^3.17.0`
-* `spryker-shop/product-category-widget: ^1.6.0`
-* `spryker-shop/shop-ui: ^1.59.0`

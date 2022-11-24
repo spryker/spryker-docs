@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [CMS](/docs/scos/user/features/{{site.cersion}}/cms-feature-overview/cms-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

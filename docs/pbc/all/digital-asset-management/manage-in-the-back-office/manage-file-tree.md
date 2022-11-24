@@ -74,11 +74,10 @@ To upload a file:
 1. Click on the directory into which you will upload the file.
 2. In the top right corner of the *Files List* section, click **Add File**.
 3. On the *Add a file* page, do the following:
-    * Enter the file name.
-        Alternately, leave this field blank and select the *use file name* checkbox if you do not want to change the file's existing name.
-     * Browse and select the file to upload.
-     * Make sure the *use file name* checkbox is selected if you do not want to change the file's existing name.
-     * Optionally, populate the *Alt* and *Title* fields for each locale.
+    * Enter the file name. Alternately, leave this field blank and select the *use file name* checkbox if you do not want to change the file's existing name.
+    * Browse and select the file to upload.
+    * Make sure the *use file name* checkbox is selected if you do not want to change the file's existing name.
+    * Optionally, populate the *Alt* and *Title* fields for each locale.
 4. Once done, click **Save**.
 The file is uploaded to the selected folder.
 
@@ -98,7 +97,8 @@ To manage a file in File Tree:
     * **View** to view the file. You are redirected to the *View file* page. You can download the file by clicking **Download** in the *Actions* column.
   
     * **Edit** to edit the file and manage multiple versions of the file. You are redirected to the *Edit file* page. 
-      * *File tab*: Here you can update the file name information. Click **Save** to apply your updates. 
+   
+        * *File tab*: Here you can update the file name information. Click **Save** to apply your updates. 
 
         You can also upload another version of a file. 
        
@@ -106,17 +106,17 @@ To manage a file in File Tree:
        
          *Edit File* lets you maintain multiple versions of any file. For example, the Content Manager may upload Instruction1.txt file (v.1), then decide that an image is more useful in this case and upload Instruction.png (v.2) to the file. 
         
-          {% endinfo_block %}
+        {% endinfo_block %}
           
         To upload another version of a file, click **Choose File**, optionally change the file name and the *Alt* and *Title* fields for each locale, then click **Save**.
       
-      * *File versions tab*: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version. 
+        * *File versions tab*: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version. 
  
      * **Delete** to immediately delete a file.
 
 {% info_block warningBox "Warning" %}
 
-    Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone. 
+Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone. 
 
-    {% endinfo_block %}
+{% endinfo_block %}
       

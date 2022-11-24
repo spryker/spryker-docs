@@ -48,7 +48,7 @@ For most Spryker and SprykerShop modules we need a special process since those a
 
 The processing time depends on the importance of the changes and the amount of work required to check and implement the changes. In case an important change is requested via a PR, we may be able to ship it within one day.
 
-If you create a PR and feel that the issue is important, [contact our support](https://spryker.force.com/support/s/) to speed up the process.
+If you create a PR and feel that tshe issue is important, [contact our support](https://spryker.force.com/support/s/) to speed up the process.
 
 ---
 **See also:**

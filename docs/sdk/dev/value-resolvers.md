@@ -4,7 +4,7 @@ description: The Spryker SDK has several value resolvers described in this docum
 template: concept-topic-template
 ---
 
-The Spryker SDK has the following value resolvers:
+The Spryker SDK has the following value resolvers: test
 
 | Value Resolver name | Description                                                                                          |
 |---------------------|------------------------------------------------------------------------------------------------------|

@@ -7,8 +7,8 @@ template: feature-integration-guide-template
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place. This guide only describes installing
-SymfonyMailer in order to provide mail sending via `symfony/mailer` component.
+The following feature integration guide expects the basic feature to be in place.
+This guide describes all steps needed to be performed in order to integrate mailing provider into your project.
 
 {% endinfo_block %}
 
@@ -29,7 +29,7 @@ To start feature integration, overview and install the necessary features:
 Install the required modules:
 
 ```bash
-composer require spryker/symfony-mailer:^1.0.0 --update-with-dependencies
+composer require spryker/symfony-mailer:^1.1.0 --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -72,16 +72,19 @@ Activate the following plugins:
 
 ```php
 <?php
-
 namespace Pyz\Zed\Mail;
 
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Mail\Business\Model\Provider\MailProviderCollectionAddInterface;
+use Spryker\Zed\Mail\MailConfig;
 use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
+use Spryker\Zed\SymfonyMailer\Communication\Plugin\Mail\SymfonyMailerProviderPlugin;
 
 class MailDependencyProvider extends SprykerMailDependencyProvider
 {
     protected function extendMailProviderCollection(Container $container): Container
     {
-        $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollectionAddInterface $mailProviderCollection) {
+        $container->extend(static::MAIL_PROVIDER_COLLECTION, function (MailProviderCollectionAddInterface $mailProviderCollection) {
             $mailProviderCollection
                 ->addProvider(new SymfonyMailerProviderPlugin(), [
                     MailConfig::MAIL_TYPE_ALL,

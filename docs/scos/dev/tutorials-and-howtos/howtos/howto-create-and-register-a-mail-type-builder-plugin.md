@@ -91,7 +91,7 @@ class FooBarMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuil
 }
 ```
 
-2. Declare the `FooBarMailTypeBuilderPlugin`:
+2. Register the `FooBarMailTypeBuilderPlugin`:
 
 ```php
 <?php
@@ -111,5 +111,22 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-When you complete the steps, to activate the mail functionality, call `MailFacade::handleMail()`.
+{% info_block warningBox "Verification" %}
+
+In order to activate the mail functionality follow these steps:
+1. Verify the mail provider is created and registered - [How to create and register a mail provider](docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.md).
+2. Create and adjust `MailTransfer`
+
+```php
+    $mailTransfer = new MailTransfer();
+    $mailTransfer->setFooBar(new FooBarTransfer());
+    $mailTransfer->setLocale('DE');
+```
+3. Call `MailFacade::handleMail($mailTransfer)`.
+
+If everything is set up properly the mail must be sent.
+
+Follow [Tutorial sending an email](docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.md) to get more information.
+
+{% endinfo_block %}
 

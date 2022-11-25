@@ -31,8 +31,8 @@ related:
 
 {% info_block infoBox "Info" %}
 
-Spryker provides sending mails via Symfony mailer component. 
-Follow this link on order to use it [Mailing and Notifications integration guide](docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.md).
+Spryker provides sending emails via Symfony mailer component. 
+Follow this link on order to use it [Mailing and Notifications feature integration guide](docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.md).
 
 {% endinfo_block %}
 

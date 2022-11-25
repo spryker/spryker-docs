@@ -1,5 +1,5 @@
 ---
-title: index
+title: Best practices
 description: Best practices for developers working on Spryker Commerce OS
 template: concept-topic-template
 ---

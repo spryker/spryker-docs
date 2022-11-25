@@ -1,5 +1,5 @@
 ---
-title: index
+title: Technology partner guides
 description: Guides for developers working with Spryker technology partners
 template: concept-topic-template
 ---

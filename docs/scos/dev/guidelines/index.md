@@ -1,5 +1,5 @@
 ---
-title: index
+title: Guidelines
 description: Guidelines for developers working on Spryker Commerce OS
 template: concept-topic-template
 ---

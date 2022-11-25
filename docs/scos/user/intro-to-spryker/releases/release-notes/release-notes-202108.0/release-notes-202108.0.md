@@ -195,7 +195,7 @@ With the **Product Bundles APIs**, you can create representations that cover the
 
 * [Retrieving bundled products](/docs/scos/dev/glue-api-guides/202108.0/managing-products/retrieving-bundled-products.html)
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/202108.0/managing-products/concrete-products/retrieving-concrete-products.html)
-* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/202108.0/managing-products/abstract-products/retrieving-abstract-products.html)
+* [Retrieve abstract products](/docs/scos/dev/glue-api-guides/202108.0/managing-products/abstract-products/retrieving-abstract-products.html)
 * [Managing items in carts of registered users](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Managing guest cart items](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/guest-carts/managing-guest-cart-items.html)
 

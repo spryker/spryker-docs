@@ -10,11 +10,6 @@ redirect_from:
   - /2021080/docs/en/alternative-products-discontinued-products-feature-integration
   - /docs/alternative-products-discontinued-products-feature-integration
   - /docs/en/alternative-products-discontinued-products-feature-integration
-related:
-  - title: Alternative Products feature walkthrough
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
-  - title: Product feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-alternative-products-discontinued-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-discontinued-products-feature.md -->

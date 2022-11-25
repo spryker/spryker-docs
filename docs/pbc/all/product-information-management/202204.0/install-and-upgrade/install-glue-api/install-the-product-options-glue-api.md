@@ -17,7 +17,7 @@ redirect_from:
 related:
   - title: Product Options feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-options-feature-walkthrough.html
-  - title: Retrieving abstract products
+  - title: Retrieve abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
   - title: Retrieving concrete products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html

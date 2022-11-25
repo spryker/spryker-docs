@@ -12,5 +12,5 @@ With 202212.0, Spryker released a new version of its Demo Shops requiring PHP 8.
 
 Backward compatibility remains unaffected. If your project followed our recommendations and requirements in the past twelve months, you would not experience any upgradeability issues.
 
-Documentation:
-[How to migrate](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html#migration-steps)
+**Documentation:**
+[How to migrate](/docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html#migration-steps)

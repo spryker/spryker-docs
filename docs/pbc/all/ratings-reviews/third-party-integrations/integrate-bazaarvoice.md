@@ -4,7 +4,23 @@ description: Find out how you can integrate Bazaarvoice into your Spryker shop
 template: howto-guide-template 
 ---
 
-To integrate Bazaarvoice, follow the steps:
+## Prerequisites
+
+The BazaarVoice app requires the following Spryker modules:
+
+* `spryker/asset: ^1.2.0`
+* `spryker/asset-storage: ^1.1.0`
+* `spryker/message-broker: ^1.0.0`
+* `spryker/message-broker-aws: ^1.0.0`
+* `spryker/message-broker-extension: ^1.0.0`
+* `spryker-shop/asset-widget: ^1.0.0`
+* `spryker-shop/product-detail-page: ^3.17.0`
+* `spryker-shop/product-category-widget: ^1.6.0`
+* `spryker-shop/shop-ui: ^1.59.0`
+
+## Integration
+
+To integrate Bazaarvoice, follow these steps:
 
 1. In your store's Back Office, go to **Apps > Catalog**.
 2. Click **Bazaarvoice**.

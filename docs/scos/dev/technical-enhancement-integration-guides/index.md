@@ -1,5 +1,5 @@
 ---
-title: index
+title: Technical enhancement integration guides
 description: technical enhancement integration guides
 template: concept-topic-template
 ---

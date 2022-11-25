@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/approval-process-feature-overview
   - /docs/approval-process-feature-overview
   - /docs/en/approval-process-feature-overview
-  - /docs/scos/user/features/201811.0/approval-process-feature-overview.html
+  - /docs/scos/user/features/201811.0/approval-process-feature-overview.html  
 ---
 
 The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
@@ -48,11 +48,11 @@ It is mandatory for the Buyer role to set this permission if you want to use the
 
 {% endinfo_block %}
 
-To configure this permission, use [this step-by-step instruction](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront).
+To configure this permission, use [this step-by-step instruction](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
 * The *Send cart for approval* permission, which lets a buyer send a cart for approval to their manager. Without this permission, a buyer cannot see the *Request for Approval* widget.
 
-* The *Approve up to grand total* permission, which lets an approver approve the carts that do not hit the cart grand total limit specified there. To learn how to set up the permission in the Storefront, see [Configuring the Approve up to grand total permission](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront).
+* The *Approve up to grand total* permission, which lets an approver approve the carts that do not hit the cart grand total limit specified there. To learn how to set up the permission in the Storefront, see [Configuring the Approve up to grand total permission](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
 Every approval request can have three statuses:
 * *Waiting*—the approver has been assigned, but the approval hasn't been confirmed.
@@ -67,7 +67,7 @@ Here’s how approvals fit into the buying process:
 
 ### 1. Submitting the request for approval
 
-<br>The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout, depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. For details about how to submit a request for approval, see [Approval Process on the Storefront](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront). After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
+<br>The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout, depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. For details about how to submit a request for approval, see [Approval Process on the Storefront](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html#approval-process-on-the-storefront). After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
 
 {% info_block warningBox "Note" %}
 
@@ -192,8 +192,9 @@ Company users can perform the following actions using the Approval Process featu
 </details>
 
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Approval Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/approval-process-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  | TUTORIALS AND HOWTOS |
+|---------|---------|
+| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo: Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
+| [Shipment + Approval Process feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html)  |   |

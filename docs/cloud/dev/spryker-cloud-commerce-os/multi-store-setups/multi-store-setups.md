@@ -63,4 +63,4 @@ With the separated setup, store share the same codebase but have dedicated datab
 
 ### Separated setup: Integration
 
-New projects are shipped with a shared setup by default. To switch to a separated setup, reach out to your Sales Representative.
+New projects are shipped with a shared setup by default. To switch to a separated setup, reach out to your sales representative.

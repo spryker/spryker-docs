@@ -28,7 +28,7 @@ The Algolia app is now integrated to your store and starts exporting your produc
 
 {% info_block infoBox "Info" %}
 
-The more products you have, the longer you have to wait until Algolia finishes the export.
+The more products you have, the longer you have to wait until Algolia finishes the export. The average export speed is around 100 products per minute.
 
 {% endinfo_block %}
 

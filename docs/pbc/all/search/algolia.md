@@ -1,11 +1,11 @@
 ---
 title: Algolia
-description: Algolia is a search engine that 
+description: Algolia empowers Builders with Search and Recommendation services to create world-class digital experiences.
 ---
 
-By default, all Spryker stores have [Elasticsearch](https://www.elastic.co/elasticsearch/) as their search engine. However, you can replace it with the Algolia one.
+Spryker is shipped with [Elasticsearch]((https://www.elastic.co/elasticsearch/)) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/).
 
-The Algolia search engine that stands out from others due to its performance. With the Algolia app, your users can conduct advanced search of active concrete products in your store. 
+The Algolia search engine stands out from others due to its performance. With the Algolia app, your users can conduct advanced search of active concrete products in your store. 
 
 {% info_block infoBox "Product offers and product reviews" %}
 
@@ -31,7 +31,6 @@ Your users can search for active concrete products by the following attributes:
 - Images
 - Categories
 - Attributes
-- Merchants
 
 Here is an example of the search results with these attributes in Algolia:
 

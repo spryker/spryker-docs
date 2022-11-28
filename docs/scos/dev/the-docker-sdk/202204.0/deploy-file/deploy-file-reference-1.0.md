@@ -14,8 +14,8 @@ redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
 related:
   - title: Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html 
-  - title: Deploy file inheritance — common use cases
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+  - title: Deploy file inheritance—common use cases
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
   - title: Deploy file
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file.html
@@ -209,7 +209,7 @@ Affects the included deploy file that it follows in an array of included deploy 
 
 Defines the configuration of the import:
 
-* `{import_name}: template:` — defines the deploy file to be included into a build  as part of this import.
+* `{import_name}: template:`—defines the deploy file to be included into a build  as part of this import.
 * `{import_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml
@@ -716,6 +716,19 @@ docker:
 ```
 
 * `docker: debug: xdebug: enabled:` - defines if Xdebug is enabled.
+
+***
+
+### docker: maintenance: enabled:
+
+Defines if applications work in maintenance mode. The default value is `false`.
+
+```yaml
+version: 1.0
+docker:
+    maintenance:
+        enabled: {true | false}
+ ```
 
 ***
 

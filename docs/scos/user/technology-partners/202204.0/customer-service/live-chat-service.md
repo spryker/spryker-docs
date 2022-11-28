@@ -18,7 +18,7 @@ related:
 
 ## Partner Information
 
-[ABOUT LIVECHAT SERVICE](https://livechatservice.de/)
+[ABOUT LIVECHAT SERVICE](https://conversation24.de/)
 
 We are the plus for your company
 

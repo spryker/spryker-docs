@@ -1,7 +1,7 @@
 ---
 title: "Manage stocks in a multi-store environment: Best practices"
 last_updated: Aug 13, 2021
-description: This article explains how to choose and implement the most suitable warehouse management workflow using the Inventory Management feature.
+description: This document explains how to choose and implement the most suitable warehouse management workflow using the Inventory Management feature.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html
@@ -13,7 +13,7 @@ In a multi-store environment, you can manage relationships between warehouses, s
 
 {% info_block infoBox "" %}
 
-To enable this scenario for your project, a developer should configure it.
+To enable this scenario for your project, a developer needs to configure it.
 
 {% endinfo_block %}
 
@@ -39,7 +39,7 @@ In this case, you can have a common warehouse for all your stores but separate d
 
 ![image](https://confluence-connect.gliffy.net/embed/image/728ee336-f3e0-4d03-b519-24bc15566360.png?utm_medium=live&utm_source=custom)
 
-This approach is appropriate for big businesses that can’t have or don’t need multiple warehouses, but still wish to have the data of each store separated.
+This approach is appropriate for big businesses that can't have or don't need multiple warehouses, but still wish to have the data of each store separated.
 
 ### Implementation reference
 
@@ -56,7 +56,7 @@ Also, there are plugins to help you implement synchronization of the reservation
 | --- | --- |
 |/Spryker/Zed/Oms/Business/OmsFacadeInterface::importReservation | You can use this plugin when reading export data from another store. The plugin stores reservation information to `spy_oms_product_reservation_store` table and updates all timestamps accordingly. |
 | /Spryker/Zed/Oms/Communication/Plugin/Oms/ReservationHandler/ReservationVersionHandlerPlugin | The plugin is called when a customer makes an order, and a reservation is made. It stores reservation in the `spy_oms_reservation_change_version` database table. Register this plugin in `/Pyz/Zed/Oms/OmsDependencyProvider::getReservationHandlerPlugins` plugin stack. |
-| /Spryker/Zed/Oms/Communication/Plugin/Oms/ReservationImport/ReservationExportPlugin | The plugin is called when a reservation export to another store is initiated. This plugin decides if the export should be accepted. We do not provide the delivery mechanism: you could do this with files or a queue. For example, when `ReservationExportPlugin` is called, you can write a file copy to another server and read it there. Same for queue: you could publish an event in the queue and then consume it on the other end. |
+| /Spryker/Zed/Oms/Communication/Plugin/Oms/ReservationImport/ReservationExportPlugin | The plugin is called when a reservation export to another store is initiated. This plugin decides whether the export must be accepted. We do not provide the delivery mechanism: you could do this with files or a queue. For example, when `ReservationExportPlugin` is called, you can write a file copy to another server and read it there. Same for queue: you could publish an event in the queue and then consume it on the other end. |
 
 {% info_block infoBox "" %}
 
@@ -84,17 +84,17 @@ When a buyer places an order, a reservation record is created in the database. T
 
 {% endinfo_block %}
 
-This scenario is good for medium and large online shops that want to have a common database of product, user, and other data. It’s a good option to, for example, allow registered users to buy from any store without having to re-register.
+This scenario is good for medium and large online shops that want to have a common database of product, user, and other data. It's a good option to, for example, allow registered users to buy from any store without having to re-register.
 
 ## Scenario 4: Warehouse and database are shared between stores
 
 {% info_block infoBox "" %}
 
-To enable this scenario for your project, a developer should configure it.
+To enable this scenario for your project, a developer needs to configure it.
 
 {% endinfo_block %}
 
-Suppose you own a small to large e-commerce business and can’t have or don’t need separate warehouses for each store. You also want all the data stored in one place. In this example, if a product is unavailable in the DE store, but available in the AT store, a registered user can switch from DE store to AT store and buy the product there.
+Suppose you own a small or large e-commerce business and can't have or don't need separate warehouses per store. You also want all the data stored in one place. So, for example, if a product is unavailable in the DE store, but available in the AT store, a registered user can switch from the DE store to AT store and buy the product there.
 
 In this instance, consider having a shared warehouse and a shared database for all stores. Since the warehouse is shared, for the correct product availability calculations, product reservations are synced between the stores:
 

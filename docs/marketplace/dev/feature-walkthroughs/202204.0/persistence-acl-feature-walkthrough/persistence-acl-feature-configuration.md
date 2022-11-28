@@ -1,7 +1,7 @@
 ---
 title: Persistence ACL feature configuration
 last_updated: Nov 05, 2021
-description: In this article, you will learn how to configure the Persistence ACL feature.
+description: Learn how to configure the Persistence ACL feature.
 template: concept-topic-template
 ---
 This document describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
@@ -12,7 +12,7 @@ The Persistence ACL functionality is based on the Propel behavior. You can enabl
 
 ## Connect Persistence ACL feature to one or more database tables
 
-In the following code snippet, only SpyMerchant entity is configured to be handled by ACL.
+In the following code snippet, only the `SpyMerchant` entity is configured to be handled by ACL.
 
 ```xml
 <?xml version="1.0"?>

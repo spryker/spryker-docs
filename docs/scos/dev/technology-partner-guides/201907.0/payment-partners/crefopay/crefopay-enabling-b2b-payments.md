@@ -1,5 +1,5 @@
 ---
-title: CrefoPay — Enabling B2B payments
+title: CrefoPay—Enabling B2B payments
 description: CrefoPay module provides B2B strategy in payments.
 last_updated: Nov 22, 2019
 template: concept-topic-template

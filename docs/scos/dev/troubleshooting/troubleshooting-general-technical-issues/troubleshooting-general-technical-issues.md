@@ -56,7 +56,7 @@ This section helps you troubleshoot general technical issues you might encounter
 * [RuntimeException: Failed to execute regex: PREG_JIT_STACKLIMIT_ERROR](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/runtimeexception-failed-to-execute-regex-preg-jit-stacklimit-error.html)
 * [The spy_oms_transition_log table takes up too much space](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html)
 * [ERROR: remove spryker_logs: volume is in use](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-remove-spryker-logs-volume-is-in-use.html)
-* [Fail whale on the front end](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-front-end.html)
+* [Fail whale on the front end](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-frontend.html)
 * [No data on the Storefront](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html)
 * [Error response from daemon: OCI runtime create failed: .... \\\"no such file or directory\\\"\"": unknown](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html)
 * [Composer version 2 compatibility issues](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html)

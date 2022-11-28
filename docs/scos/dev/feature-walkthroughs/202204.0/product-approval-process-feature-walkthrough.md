@@ -4,7 +4,7 @@ description: Product Approval Process feature adds approval mechanism for produc
 template: feature-walkthrough-template
 ---
 
-The *Product Approval Process* feature adds approval mechanism for products by providing
+The *Product Approval Process* feature adds the approval mechanism for products by providing
 an optional `spy_product_abstract.approval_status` DB column to store product approval statuses. Thus,
 a shop owner can follow the review process and manage which products will be placed in the store by setting the
 corresponding approval statuses. The feature also provides the Back Office UI for managing the approval statuses and

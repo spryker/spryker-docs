@@ -1,18 +1,18 @@
 
 
+This document describes how to integrate the [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html) feature into a Spryker project.
+
 ## Install feature core
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/202204.0/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/cms:"{{site.version}}" --update-with-dependencies
@@ -114,7 +114,7 @@ Make sure that the following modules have been installed:
 </database>
 ```
 
-2. Run the following commands to apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -147,13 +147,9 @@ Make sure that the following changes have been applied by checking your database
 | spy_cms_template | table | created |
 | spy_cms_version | table | created |
 
-{% endinfo_block %}
+Make sure that the following changes have been applied in transfer objects.
 
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes have been applied in transfer objects:
-
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | SpyCmsTemplateEntity | class | created | src/Generated/Shared/Transfer/SpyCmsTemplateEntityTransfer |
 | SpyCmsPageEntity | class | created | src/Generated/Shared/Transfer/SpyCmsPageEntityTransfer |
@@ -221,7 +217,8 @@ Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
 ### 3) Add translations
-Run the following command to update translations:
+
+Update translations:
 
 ```bash
 console translator:generate-cache
@@ -235,7 +232,7 @@ You can switch the language in the **Back Office > User Control > User section >
 
 ### 4) Configure export to Redis and Elasticsearch
 
-1. Set up event listeners. By doing this step, you enable tables to be published upon a change - create, edit or delete.
+1. Set up event listeners. By doing this step, you enable tables to be published upon a change—create, edit, or delete.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -247,7 +244,8 @@ You can switch the language in the **Back Office > User Control > User section >
 | CmsBlockCategoryStorageEventSubscriber | Registers listeners that are responsible for publishing category to CMS block relations to storage when a related entity changes (optional) | None | Spryker\Zed\CmsBlockCategoryStorage\Communication\Plugin\Event\Subscriber |
 | CmsBlockProductStorageEventSubscriber | Registers listeners that are responsible for publishing product to CMS block relations to storage when a related entity changes (optional) | None | Spryker\Zed\CmsBlockProductStorage\Communication\Plugin\Event\Subscriber |
 
-**Pyz\Zed\Event\EventDependencyProvider**
+<details>
+<summary markdown='span'>Pyz\Zed\Event\EventDependencyProvider</summary>
 
 ```php
 <?php
@@ -296,8 +294,9 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     }
 }
 ```
+</details>
 
-2. Add Queue configuration.
+1. Add Queue configuration.
 
 **Pyz\Zed\Queue\QueueDependencyProvider**
 
@@ -451,7 +450,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-5. Enable event trigger plugins to be able to re-trigger publish events.
+5. Enable event trigger plugins to be able to retrigger publish events.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -519,7 +518,8 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 
 {% endinfo_block %}
 
-**Example Expected Data Fragment: Redis, CmsBlock**
+<details open>
+<summary markdown='span'>Example Expected Data Fragment: Redis, CmsBlock</summary>
 
 ```json
 {
@@ -592,6 +592,7 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
   "_timestamp": 1574922736.1419849
 }
 ```
+</details>
 
 **Example Expected Data Fragment: Redis, CmsBlockCategory**
 
@@ -729,13 +730,45 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 }
 ```
 
-### 6) Import Data
+### 5) Register XSS Protection Form plugin
 
-#### Import Cms Pages
+1. Enable the form plugin to add XSS protection options in Backoffice.
+
+| PLUGIN                             | SPECIFICATION                                                                                       | PREREQUISITES | NAMESPACE                                 |
+|------------------------------------|-----------------------------------------------------------------------------------------------------|---------------|-------------------------------------------|
+| SanitizeXssTypeExtensionFormPlugin | Registers options `allowed_attributes`, `allowed_html_tags`, `sanitize_xss` in Backoffice CMS forms | None          | Spryker\Zed\Gui\Communication\Plugin\Form |
+
+**src/Pyz/Zed/Form/FormDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Form;
+
+use Spryker\Zed\Form\FormDependencyProvider as SprykerFormDependencyProvider;
+use Spryker\Zed\Gui\Communication\Plugin\Form\SanitizeXssTypeExtensionFormPlugin;
+
+class FormDependencyProvider extends SprykerFormDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\FormExtension\Dependency\Plugin\FormPluginInterface>
+     */
+    protected function getFormPlugins(): array
+    {
+        $plugins = [
+            new SanitizeXssTypeExtensionFormPlugin(),
+        ];
+
+        return $plugins;
+    }
+}
+```
+
+### 6) Import CMS pages
 
 1. Prepare your pages data according to your requirements using our demo data:
 
-<details open>
+<details>
 <summary markdown='span'>vendor/spryker/cms-page-data-import/data/import/cms_page.csv</summary>
 
 ```yaml
@@ -798,7 +831,8 @@ cms-page--7,US
 | page_key | mandatory | string | page_5 | Unique page identifier. |
 | store_name | mandatory | string | DE | Unique store identifier. |
 
-**vendor/spryker/cms-slot-data-import/data/import/cms_block.csv**
+<details>
+<summary markdown='span'>vendor/spryker/cms-slot-data-import/data/import/cms_block.csv</summary>
 
 ```yaml
 block_key,block_name,template_name,template_path,active,placeholder.title.de_DE,placeholder.title.en_US,placeholder.description.de_DE,placeholder.description.en_US,placeholder.link.de_DE,placeholder.link.en_US,placeholder.content.de_DE,placeholder.content.en_US
@@ -813,6 +847,7 @@ blck-8,CMS block for the main navigation desktop,Navigation block,@CmsBlock/temp
 blck-9,CMS block for the main navigation mobile,Navigation block,@CmsBlock/template/navigation_block.twig,1,,,"{% raw %}{{{% endraw %} content_navigation('navigation-main-mobile', 'tree') {% raw %}}}{% endraw %}","{% raw %}{{{% endraw %} content_navigation('navigation-main-mobile', 'tree') {% raw %}}}{% endraw %}",,,,
 blck-10,CMS block for the footer navigation,Navigation block,@CmsBlock/template/navigation_block.twig,1,,,"<div class=""grid""><div class=""col col--sm-12 col--md-6 col--lg-6 spacing-bottom"">{% raw %}{{{% endraw %} content_navigation('navigation-footer', 'list') {% raw %}}}{% endraw %}</div><ul class=""col col--sm-12 col--md-6 col--lg-3""><li><h5>{% raw %}{{{% endraw %} 'global.get_in_touch' | trans {% raw %}}}{% endraw %}</h5></li><li>+49 (0)30 2084983 50</li><li><a href=""mailto:info@spryker.com"">info@spryker.com</a></li></ul><div class=""col col--lg-3 is-hidden-sm-md""><h5>{% raw %}{{{% endraw %} 'global.social' | trans {% raw %}}}{% endraw %}</h5>{% raw %}{{{% endraw %} content_navigation('navigation-social-links', 'list-inline') {% raw %}}}{% endraw %}</div><div class=""is-hidden-lg-xl""><h5>{% raw %}{{{% endraw %} 'global.social' | trans {% raw %}}}{% endraw %}</h5>{% raw %}{{{% endraw %} content_navigation('navigation-social-links', 'list-inline') {% raw %}}}{% endraw %}</div></div>","<div class=""grid""><div class=""col col--sm-12 col--md-6 col--lg-6 spacing-bottom"">{% raw %}{{{% endraw %} content_navigation('navigation-footer', 'list') {% raw %}}}{% endraw %}</div><ul class=""col col--sm-12 col--md-6 col--lg-3""><li><h5>{% raw %}{{{% endraw %} 'global.get_in_touch' | trans {% raw %}}}{% endraw %}</h5></li><li>+49 (0)30 2084983 50</li><li><a href=""mailto:info@spryker.com"">info@spryker.com</a></li></ul><div class=""col col--lg-3 is-hidden-sm-md""><h5>{% raw %}{{{% endraw %} 'global.social' | trans {% raw %}}}{% endraw %}</h5>{% raw %}{{{% endraw %} content_navigation('navigation-social-links', 'list-inline') {% raw %}}}{% endraw %}</div><div class=""is-hidden-lg-xl""><h5>{% raw %}{{{% endraw %} 'global.social' | trans {% raw %}}}{% endraw %}</h5>{% raw %}{{{% endraw %} content_navigation('navigation-social-links', 'list-inline') {% raw %}}}{% endraw %}</div></div>",,,,
 ```
+</details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
@@ -977,7 +1012,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console commands to import data:
+1. Import data:
 
 ```bash
 console data:import:cms-template
@@ -1004,9 +1039,7 @@ Make sure that, in the database, the configured data has been added to the follo
 
 {% endinfo_block %}
 
-### 7) Set up behavior
-
-#### Set up additional functionality
+### 7) Set up additional functionality
 
 Enable the following behaviors by registering the plugins:
 
@@ -1147,21 +1180,21 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
+Make sure the following:
 
-* the expanded data for CMS Page and CMS Block content is present in storage;
-* you have a **Preview** button:
-    * in the Back Office > **Content Management** > **Pages** > **List of CMS pages**;
-    * in the Back Office > **Content Management** > **Pages**/**Blocks** > *create/edit placeholder* pages.
- * you are able to use twig function `renderCmsBlockAsTwig` in the Back Office templates (for example in email templates).
+* The expanded data for CMS Page and CMS Block content is present in storage.
+* You have the **Preview** button in the following sections:
+    * In the Back Office, in **Content Management > Pages > List of CMS pages**.
+    * In the Back Office, in **Content Management > Pages/Blocks** > *create* or *edit placeholder* pages.
+ * You can use the twig function `renderCmsBlockAsTwig` in the Back Office templates—for example, in email templates.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
-### 1) Install the required modules using Composer
+Follow the steps below to install the CMS feature frontend.
 
-Run the following command(s) to install the required modules:
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/cms:"{{site.version}}" --update-with-dependencies
@@ -1201,7 +1234,7 @@ cms.page.itemsFound,Artikel gefunden,de_DE
 cms.page.itemsFound,Items found,en_US
 ```
 
-2. Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -1215,7 +1248,7 @@ Make sure that in the configured data has been added to the `spy_glossary` table
 
 ### 3) Enable controllers
 
-Register route provider(s) in the Yves application:
+Register route providers in the Yves application:
 
 **Pyz\Yves\Router\RouterDependencyProvider**
 
@@ -1263,7 +1296,7 @@ Enable Twig plugins:
 | --- | --- | --- |
 | CmsBlockTwigPlugin | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | SprykerShop\Yves\CmsBlockWidget\Plugin |
 | CmsTwigPlugin | Provides the `spyCms` function. | SprykerShop\Yves\CmsPage\Plugin\Twig |
-| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
+| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
 | ShopCmsSlotTwigPlugin | Provides the `cms_slot` Twig tag. | SprykerShop\Yves\ShopCmsSlot\Plugin\Twig |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**
@@ -1393,7 +1426,7 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by searching for a CMS page. On the *Search* page you should be able to see CMS pages in the search results, sort the CMS pages and use pagination.
+Verify the changes by searching for a CMS page. On the **Search** page, you can see CMS pages in the search results, sort the CMS pages and use pagination.
 
 {% endinfo_block %}
 
@@ -1496,19 +1529,17 @@ class ShopCmsSlotDependencyProvider extends SprykerShopShopCmsSlotDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html) for references.
+Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for references.
 
 {% endinfo_block %}
 
 ### Set up SprykerCmsBlocks content provider behavior
 
 {% info_block infoBox %}
-Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+Follow the further steps only if you are going to use the [visibility conidtions](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 {% endinfo_block %}
 
 #### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker/cms-slot-block-product-category-connector:"^1.0.0" sspryker/cms-slot-block-product-category-gui:"^1.0.0" spryker/cms-slot-block-category-connector:"^1.0.0" sspryker/cms-slot-block-category-gui:"^1.0.0" spryker/cms-slot-block-cms-connector:"^1.0.0" spryker/cms-slot-block-cms-gui:"^1.0.0" --update-with-dependencies
@@ -1610,12 +1641,11 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 {% info_block warningBox "Verification" %}
 
 
-1. Go to the Back Office > **Content Management** > **Slots** section.
-1. In the **List of Templates**, choose the template for which you've created the visibility condition.
-1. Choose a slot in the **List of Slots for {name} Template**.
-1. Select or [assign](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for {name} Slot**.
-1. Make sure that for each CMS block, there is an additional form allowing you to define the visibility condition you have created.
-
+1. In the Back Office, go to **Content Management > Slots**.
+2. In **List of Templates**, choose the template for which you've created the visibility condition.
+3. Choose a slot in the **List of Slots for [NAME] Template**.
+4. Select or [assign](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for [NAME] Slot**.
+5. Make sure that for each CMS block, there is an additional form allowing you to define the visibility condition you have created.
 
 {% endinfo_block %}
 
@@ -1659,8 +1689,9 @@ class CmsSlotBlockDependencyProvider extends SprykerCmsSlotBlockDependencyProvid
 
 In the Storefront, open a product details page that contains a CMS block for which you have selected the visibility conditions.
 
-* Make sure that you fulfill the visibility conditions and see the CMS block content.
-* Make sure that you do not fulfill the visibility conditions and do not see the CMS block content.
+Make sure the following:
+* You fulfill the visibility conditions and see the CMS block content.
+* You do not fulfill the visibility conditions and do not see the CMS block content.
 
 
 {% endinfo_block %}

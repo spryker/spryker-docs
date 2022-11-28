@@ -22,7 +22,7 @@ data:import:shipment-price
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependencies:
+
 
 * [shipment.csv](/docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html)
 * [currency.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-currency.csv.html)
@@ -42,13 +42,13 @@ This file has the following dependencies:
 
 ## Additional information
 
-Field *value* must be *integer* as it is the internal format to store money (currency) in Spryker demo shop. Float values get converted into integer by multiplying by 100 (for example, if the shipment cost is 5.50 EUR, the value in CSV file should be 550).
+The field *value* must be an *integer* as it is the internal format to store money (currency) in the Spryker Demo Shop. Float values get converted into integer through multiplying by 100. For example, if the shipment cost is 5.50 EUR, the value in the CSV file should be 550.
 
-Fields *shipment_method_key*, *store* and *currency* are mandatory, and must be valid (imported already from existing database values, or created manually using precedent CSV files: `shipment_method.csv` and `currency.csv` and *stores.php* configuration project file). Empty value fields will be imported as zeros.
+Fields `shipment_method_key`, `store` and `currency` are mandatory, and must be valid (imported already from existing database values, or created manually using the precedent CSV files: `shipment_method.csv` and `currency.csv` and `stores.php` configuration project file). Empty value fields are imported as zeros.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

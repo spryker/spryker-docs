@@ -40,10 +40,10 @@ This doc describes how to add delivery methods in the Back Office.
 8. Optional: Select a **DELIVERY TIME PLUGIN**.
 9. To activate the delivery method after creating it, select **IS ACTIVE**.
 10. Click the **Price & Tax** tab.
-11. Enter the needed prices per needed locales.
+11. Enter the required prices per required locales.
 12. Select a **TAX SET**.
 13. Click the **Store Relation** tab.
-14. For **AVAILABLE IN THE FOLLOWING STORE(S)** select the stores to display the delivery method in.
+14. In **AVAILABLE IN THE FOLLOWING STORE(S)**, select the stores to display the delivery method for.
 15. Click **Save**.
     This opens the **Delivery Methods** page with a success message displayed. The created delivery method is displayed in the list.
 
@@ -51,12 +51,12 @@ This doc describes how to add delivery methods in the Back Office.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| DELIVERY METHOD KEY | Unique identifier of the delivery method. |
-| NAME | Name of the delivery method to be displayed on the Storefront. |
-| CARRIER | Carrier company that will be handling the delivery of this method. To add one, see [Add carrier companies](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html). |
-| AVAILABILITY PLUGIN | Plugin that checks if the delivery method is available for the customer. A developer can create plugins. |
-|  PRICE PLUGIN | Plugin that calculates the price of delivery. If you select a price  plugin, it will override the prices specified in the **Price & Tax** tab. A developer can create plugins. |
-| DELIVERY TIME PLUGIN | Plugins that calculates estimated delivery time. A developer can create plugins. |
-| IS ACTIVE | Defines if customers will be able to choose the method on the Storefront. |
-| TAX SET | Tax set to apply to the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html).
-| AVAILABLE IN THE FOLLOWING STORE(S) | Defines which stores the method will be available in. |
+| DELIVERY METHOD KEY | The unique identifier of the delivery method. |
+| NAME | The name of the delivery method to be displayed on the Storefront. |
+| CARRIER | The carrier company that will be handling the delivery of this method. To add one, see [Add carrier companies](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html). |
+| AVAILABILITY PLUGIN | The plugin that checks if the delivery method is available for the customer. A developer can create plugins. |
+|  PRICE PLUGIN | The plugin that calculates the price of delivery. If you select a price  plugin, it will override the prices specified in the **Price & Tax** tab. A developer can create plugins. |
+| DELIVERY TIME PLUGIN | The plugin that calculates the estimated delivery time. A developer can create plugins. |
+| IS ACTIVE | Defines if customers will be able to choose the delivery method on the Storefront. |
+| TAX SET | The tax set to apply to the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html).
+| AVAILABLE IN THE FOLLOWING STORE(S) | Defines which stores the method will be available for. |

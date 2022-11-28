@@ -142,19 +142,19 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [CMS Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
+* [CMS Templates & Slots](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html )
+[CMS Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html )
 
 </details>
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[CMS Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html)
+[Install the CMS feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-feature.html)
 
 </details>
 
@@ -162,18 +162,10 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Migration guides</summary>
 
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
-* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html)
-* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockwidget.html)
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-2-to-version-3)
+* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulestorage.html)
+* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulewidget.html)
 
-
-</details>
-
-<details>
-<summary markdown='span'>Back Office user guides</summary>
-
-* [Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
-* [Managing Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
 
 </details>
 
@@ -275,7 +267,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
+[Install the Product Rating and Reviews Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
 </details>
 
@@ -299,7 +291,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 ### Spryker in Docker
 
-* [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
+* [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html#queue)
 * [Deploy File Reference](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)

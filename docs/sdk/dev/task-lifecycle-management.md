@@ -4,10 +4,10 @@ description: Each task can subscribe to lifecycle events so that whenever the SD
 template: concept-topic-template
 ---
 
-An SDK task can change over time. It may need to update the tool it wraps or get replaced by a successor task.
+An SDK [task](/docs/sdk/dev/task.html) can change over time. It may need to update the tool it wraps, or get replaced by a successor task.
 Each task can subscribe to certain lifecycle events to react, so that whenever the SDK is updated, the task is initialized or removed.
 
-To be able to emit those lifecycle events to a specific task, the task needs to subscribe to the event and it needs to be versioned.
+To be able to emit those lifecycle events to a specific task, the task needs to subscribe to the event, and needs to be versioned.
 
 ## Subscribing to lifecycle events
 
@@ -25,7 +25,7 @@ There are the following event types:
 
 ## Adding events to task created via YAML files
 
-The following examples illustrates how you can add the lifecycle events to [tasks created via a YAML file](/docs/sdk/dev/extending-the-sdk.html#implementation-via-yaml-definition):
+The following examples illustrates how you can add the lifecycle events to [tasks created via a YAML file](/docs/sdk/dev/extend-the-sdk.html#implementation-via-yaml-definition):
 
 ```yaml
 ---
@@ -40,7 +40,7 @@ lifecycle:
       - '%vendor_dir%/bin/composer require --dev "spryker/code-sniffer: dev-master"'
     files:
       - path: path # e.g.: '%project_dir%/.cs_config' # does not really exist, only for the example
-        content: string # e.g.: "serverity: 3"
+        content: string # e.g.: "severity: 3"
     placeholders:
       - name: string # e.g.: '%project_dir%'
         valueResolver: string #e.g.: PROJECT_DIR mapping to a ValueResolver
@@ -50,4 +50,4 @@ lifecycle:
 
 ## Adding events to task create via a PHP class
 
-A [task implemented in a PHP class](/docs/sdk/dev/extending-the-sdk.html#implementation-via-a-php-class) only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk/blob/master/src/Core/Domain/Entity/Lifecycle/TaskLifecycleInterface.php) to subscribe to the lifecycle events.
+A [task implemented in a PHP class](/docs/sdk/dev/extend-the-sdk.html#implementation-via-a-php-class) only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk/blob/master/src/Core/Domain/Entity/Lifecycle/TaskLifecycleInterface.php) to subscribe to the lifecycle events.

@@ -30,7 +30,7 @@ namespace Pyz\Zed\Customer\Business\Customer;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\MailTransfer;
 use Spryker\Zed\Customer\Business\Customer\Customer as SprykerCustomer;
-use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomerRegistrationMailTypePlugin;
+use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomCustomerRegistrationMailTypeBuilderPlugin;
 
 class Customer extends SprykerCustomer
 {
@@ -44,6 +44,11 @@ class Customer extends SprykerCustomer
         // Create a MailTransfer instance which is
         // used for further processing
         $mailTransfer = new MailTransfer();
+        
+        // Set the mail type which is used for the
+        // internal mapping—for example, which mail provider
+        // should send this mail
+        $mailTransfer->setType(CustomCustomerRegistrationMailTypeBuilderPlugin::MAIL_TYPE);
 
         // Set the CustomerTransfer to the MailTransfer
         // this can be any Transfer object which is
@@ -197,18 +202,30 @@ The `MailTypeBuilderPlugin` also has access to the glossary with the `setSubject
 ```php
 <?php
 use Generated\Shared\Transfer\MailTransfer;
+use Generated\Shared\Transfer\MailRecipientTransfer;
+use Generated\Shared\Transfer\MailSenderTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
 
 class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuilderPluginInterface
 {
     protected const GLOSSARY_KEY_MAIL_SUBJECT = 'mail.customer.registration.subject';
+    protected const GLOSSARY_KEY_MAIL_RECIPIENT_NAME = 'mail.customer.registration.recipient.name';
+    protected const GLOSSARY_KEY_MAIL_SENDER_NAME = 'mail.customer.registration.sender.name';
     
     public function build(MailTransfer $mailTransfer): MailTransfer
     {
         return $mailTransfer
             //
-            ->setSubject(static::GLOSSARY_KEY_MAIL_SUBJECT);
+            ->setSubject(static::GLOSSARY_KEY_MAIL_SUBJECT)
+            ->addRecipient(
+                (new MailRecipientTransfer())
+                    ->setName(static::GLOSSARY_KEY_MAIL_RECIPIENT_NAME),
+            )
+            ->addRecipient(
+                (new MailSenderTransfer())
+                    ->setName(static::GLOSSARY_KEY_MAIL_SENDER_NAME),
+            );
     }
 }
 ```
@@ -221,6 +238,8 @@ In your `MailTypeBuilderPlugin` you can use the `orderReference` from the given 
 ```php
 <?php
 use Generated\Shared\Transfer\MailTransfer;
+use Generated\Shared\Transfer\MailRecipientTransfer;
+use Generated\Shared\Transfer\MailSenderTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
 
@@ -232,7 +251,19 @@ class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin imp
             //
             ->setSubjectTranslations([
                 '{orderReference}' => $mailTransfer->getOrder()->getOrderReference()
-            ]);
+            ])
+            ->addRecipient(
+                (new MailRecipientTransfer())
+                    ->setNameTranslationParameters([
+                        '{name}' => $mailTransfer->getUser()->getFirstName()
+                ]),
+            )
+            ->addRecipient(
+                (new MailSenderTransfer())
+                    ->setNameTranslationParameters([
+                        '{defaultSenderName}' => 'Sender'
+                ]),
+            );
     }
 }
 ```

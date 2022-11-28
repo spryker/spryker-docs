@@ -119,6 +119,7 @@ In order to activate the mail functionality follow these steps:
 
 ```php
     $mailTransfer = new MailTransfer();
+    $mailTransfer->setType('MAIL_TYPE');
     $mailTransfer->setFooBar(new FooBarTransfer());
     $mailTransfer->setLocale('DE');
 ```

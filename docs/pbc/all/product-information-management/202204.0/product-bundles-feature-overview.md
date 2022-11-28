@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/product-bundles-feature-overview
   - /docs/scos/user/features/202200.0/product-bundles-feature-overview.html
   - /docs/product-bundles
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-bundles-feature-walkthrough.html
 ---
 
 With the _Product Bundles_ feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
@@ -109,8 +110,8 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 |---|
 | [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Product Bundles feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-bundles-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES | GLUE API GUIDES  |
+|---------|---------|
+|[Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html) | [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-bundled-products.html) |

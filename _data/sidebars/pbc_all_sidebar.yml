@@ -134,7 +134,7 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html
                   - title: Checkout + Quotation Process
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
-                  - title: Checkout Workflow
+                  - title: Multiple Carts + Reorder
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html
                   - title: Multiple Carts
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-comments-feature.html
@@ -157,13 +157,13 @@ entries:
                   - title: Quick Add to Cart + Measurement Units
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-resource-sharing-feature.html
                   - title: Quick Add to Cart + Non-splittable Products
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
                   - title: Quick Add to Cart + Packaging Units
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html
                   - title: Quick Add to Cart + Shopping Lists
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html
                   - title: Resource Sharing
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-resource-sharing-feature.html
                   - title: Shared Carts
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
               - title: Install Glue API

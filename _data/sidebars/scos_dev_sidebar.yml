@@ -118,6 +118,13 @@ entries:
       - "202108.0"
     - title: Cart
       url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/cart-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Calculation 3.0
         url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/calculation-3-0.html
@@ -310,6 +317,13 @@ entries:
         - "202204.0"
     - title: Multiple Carts
       url: /docs/scos/dev/feature-walkthroughs/multiple-carts-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Navigation
       url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-feature-walkthrough.html
       nested:
@@ -355,7 +369,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       nested:
       - title: "Persistent Cart Sharing: module relations"
         url: /docs/scos/dev/feature-walkthroughs/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html
@@ -524,6 +537,13 @@ entries:
       - "202204.0"
     - title: Shared Carts
       url: /docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Shipment
       url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
       include_versions:
@@ -908,7 +928,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Guest carts
         nested:
@@ -1719,9 +1738,15 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Cart integration
       url: /docs/scos/dev/feature-integration-guides/cart-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"      
     - title: Cart + Non-splittable Products
       url: /docs/scos/dev/feature-integration-guides/cart-non-splittable-products-feature-integration.html
       include_versions:

@@ -15,3 +15,15 @@ To learn about cart and checkout, see the following feature overviews:
 * [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html)
 * [Shared Carts feature overview](/docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html)
 * [Checkout feature overview](/docs/pbc/all/cart-and-checkout/checkout-feature-overview/checkout-feature-overview.html)
+
+## Installation
+
+To install the PBC, follow the steps:
+
+1. Run the following command to install the required modules:
+
+```bash
+composer require spryker-feature/cart: "{{site.version}}" spryker-feature/order-threshold: "{{site.version}}" spryker-feature/quick-add-to-cart: "{{site.version}}" spryker-feature/resource-sharing: "{{site.version}}" spryker-feature/shared-carts: "{{site.version}}" --update-with-dependencies
+```
+
+2.

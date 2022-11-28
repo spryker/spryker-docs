@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/comments-feature-integration
   - /docs/comments-feature-integration
   - /docs/en/comments-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/comments-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-comments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-comments-feature.md -->

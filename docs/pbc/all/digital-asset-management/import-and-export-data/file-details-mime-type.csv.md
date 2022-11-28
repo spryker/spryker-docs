@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/miscellaneous/file-details-mime-type.csv.html  
 ---
 
-This document describes the `mime_type.csv` file to configure Mime Type information in your Spryker Demo Shop.
+This document describes the `mime_type.csv` file used to configure MIME Type information in your Spryker Demo Shop. For more information about MIME types, see [Reference information: MIME TYPE](https://github.com/spryker/spryker-docs/blob/review-digital-asset-management/docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.md#reference-information-mime-type).
 
 ## Prerequisites
 
@@ -23,15 +23,15 @@ This file does not exist by default on the project level. To override the defaul
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | name | &check; | String | Must be a valid MIME type. | Name of the MIME type. |
-| is_allowed | &check; | Boolean |<ul><li>True = 1</li><li>False = 0</li></ul> | Indicates if the MIME type is allowed or not. |
+| is_allowed | &check; | Boolean |<ul><li>True = 1</li><li>False = 0</li></ul> | Indicates whether the MIME type is allowed or not. |
 
 
 ## Import template file and content example
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [mime_type.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Miscellaneous/Template+mime_type.csv) | Exemplary import file with headers only. |
-| [mime_type.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Miscellaneous/mime_type.csv) | Exemplary import file with Demo Shop data. |
+| [mime_type.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Miscellaneous/Template+mime_type.csv) | Example import file with headers only. |
+| [mime_type.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Miscellaneous/mime_type.csv) | Example import file with Demo Shop data. |
 
 ## Import file command
 

@@ -20,7 +20,7 @@ We have structured this section according to the following .csv files that you w
 The table below provides details on Product Merchandising data importers, their purpose, .csv files, dependencies, and other details. Each data importer contains links to .csv files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 <div>
-| Data Importer | Purpose | Console Command| File(s) | Dependencies |
+| Data Importer | Purpose | Console Command| FILES | Dependencies |
 | --- | --- | --- | --- |--- |
 | **Discount**   |Imports information about the discounts and their attributes. |`data:import:discount`| [discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html) | None|
 | **Discount Amount**  | Imports information used to set the values of the discounts imported with *discount.csv*. |`data:import:discount-amount`| [discount_amount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html) |<ul><li>discount.csv</li><li>discount_store.csv</li></ul> |

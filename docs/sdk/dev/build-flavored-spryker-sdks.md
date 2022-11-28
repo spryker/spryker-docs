@@ -15,7 +15,7 @@ You must add these extensions through a PHP implementation as a composer depende
 
 ### 1. Download the SDK source code
 
-To be able to build your own flavored Spryker SDK, first, download the source:
+To be able to build your own flavored Spryker SDK, first download the source:
 
 `git clone --depth 1 --branch <tag_name> git@github.com:spryker-sdk/sdk.git`
 

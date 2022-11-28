@@ -33,7 +33,7 @@ For more details about the agent assist feature, see the [Agent assist feature o
 
 | OVERVIEWS | BACK OFFICE USER GUIDES|
 | - |---|
-| [Agent Assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) | ["Best practices: Manage users and their permissions with roles and groups"](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html)|
+| [Agent Assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) | [Best practices: Manage users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html)|
 | | [Create user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-roles/create-user-roles.html) |
 | | [Edit user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-roles/edit-user-roles.html) |
 | | [Create user groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html) |

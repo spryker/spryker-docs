@@ -623,6 +623,8 @@ entries:
                     url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
           - title: Module relations
             url: /docs/pbc/all/request-for-quote/quotation-process-module-relations.html
+          - title: Use cases
+            url: /docs/pbc/all/request-for-quote/use-cases-request-for-quote-processes.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

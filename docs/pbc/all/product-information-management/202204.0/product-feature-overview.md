@@ -3,6 +3,8 @@ title: Product feature overview
 last_updated: Aug 19, 2021
 description: The Product feature lets you create products, manage their characteristics and settings.
 template: concept-topic-template
+redirect_from:
+- /docs/scos/user/features/202204.0/product-feature-overview/product-feature-overview.html
 ---
 
 The _Product_ feature lets you create products and manage their characteristics and settings.

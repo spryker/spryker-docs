@@ -1,5 +1,5 @@
 ---
-title: Installing and configuring Akeneo
+title: Install and configure Akeneo
 description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.
 last_updated: Jun 16, 2021
 template: concept-topic-template

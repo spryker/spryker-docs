@@ -11,6 +11,7 @@ redirect_from:
   - /docs/category-management-feature-overview
   - /docs/en/category-management-feature-overview
   - /docs/scos/user/features/202200.0/category-management-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/category-management-feature-walkthrough.html  
 ---
 
 A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category-store.csv.html). For details about how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
@@ -79,9 +80,12 @@ The Category Management feature has the following functional constraints, which 
 | [Delete categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/delete-categories.html) |
 
 
+## Related Developer articles
 
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---------|---------|---------|---------|---------|
+| [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) | [CategoryGui migration](/docs/scos/dev/module-migration-guides/migration-guide-categorygui.html)| [Retrieving category trees](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html)  | [File details: category.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category.csv.html)  | [HowTo: Manage a big number of categories](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html)  |
+| [Product + Category feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-category-feature-integration.html)  | [Category migration](/docs/scos/dev/module-migration-guides/migration-guide-category.html) | [Retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html) | [File details: category_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category-template.csv.html)  |   |
+| [CMS + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-category-management-feature-integration.html)  | [CategoryPageSearch migration](/docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html) |  | [File details: category_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category-store.csv.html) |   |
+| [Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/catalog-category-management-feature-integration.html) | [CategoryStorage migration](/docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html) |   |   |   |
+| [Glue API: Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) | [ProductCategoryStorage migration](/docs/scos/dev/module-migration-guides//migration-guide-productcategorystorage.html) |   |   |   |

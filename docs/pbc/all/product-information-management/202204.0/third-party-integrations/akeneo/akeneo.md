@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/akeneo
   - /docs/akeneo
   - /docs/en/akeneo
+  - /docs/scos/user/technology-partners/202204.0/product-information-pimerp/akeneo.html
 related:
   - title: Akeneo — Console commands
     link: docs/scos/dev/technology-partner-guides/page.version/product-information-pimerp/akeneo/akeneo-console-commands.html

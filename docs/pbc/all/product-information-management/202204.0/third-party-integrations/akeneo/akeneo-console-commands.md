@@ -1,5 +1,5 @@
 ---
-title: Akeneo—Console commands
+title: "Akeneo: Console commands"
 description: This guide provides the console commands for the Akeneo module.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/akeneo-console-commands
   - /docs/akeneo-console-commands
   - /docs/en/akeneo-console-commands
+  - /docs/scos/dev/technology-partner-guides/202204.0/product-information-pimerp/akeneo/akeneo-console-commands.html
 ---
 
 The following console commands are available in your project after successful [installation](/docs/scos/dev/technology-partner-guides/{{page.version}}/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html) of the Akeneo module. Run them one by one.

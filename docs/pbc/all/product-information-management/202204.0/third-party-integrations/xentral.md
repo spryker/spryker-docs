@@ -11,9 +11,7 @@ redirect_from:
   - /docs/xentral
   - /docs/en/xentral
   - /docs/scos/user/technology-partners/202200.0/product-information-pimerp/xentral.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+  - /docs/scos/user/technology-partners/202204.0/product-information-pimerp/xentral.html
 ---
 
 ## Partner Information

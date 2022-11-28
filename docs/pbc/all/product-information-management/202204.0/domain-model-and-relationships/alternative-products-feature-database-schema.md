@@ -1,8 +1,10 @@
 ---
-title: Alternative Products feature database schema
+title: "Alternative Products feature: database schema"
 last_updated: Aug 11, 2021
 description: The Alternative Products feature lets you define alternative products for products that are discontinued or out of stock.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202204.0/alternative-products-feature-walkthrough.html
 ---
 
 

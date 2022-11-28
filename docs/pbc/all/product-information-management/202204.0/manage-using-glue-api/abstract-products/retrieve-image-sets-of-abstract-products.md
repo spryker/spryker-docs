@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-image-sets-of-abstract-products
   - /docs/retrieving-image-sets-of-abstract-products
   - /docs/en/retrieving-image-sets-of-abstract-products
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
 related:
   - title: Retrieving abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html

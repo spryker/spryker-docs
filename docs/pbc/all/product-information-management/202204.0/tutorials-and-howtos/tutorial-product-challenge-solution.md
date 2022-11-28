@@ -21,6 +21,7 @@ redirect_from:
   - /v2/docs/en/t-product-challenge-solution
   - /v1/docs/t-product-challenge-solution
   - /v1/docs/en/t-product-challenge-solution
+  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-product-challenge-solution.html
 ---
 
 <!-- used to be: http://spryker.github.io/onboarding/product-solution/ -->

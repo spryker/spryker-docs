@@ -45,9 +45,9 @@ entries:
           url: /docs/sdk/dev/spryks/fileresolver.html
       - title: Development tools
         nested:
-        - title: Architecture sniffer
+        - title: Architecture Sniffer
           url: /docs/sdk/dev/development-tools/architecture-sniffer.html
-        - title: Code sniffer
+        - title: Code Sniffer
           url: /docs/sdk/dev/development-tools/code-sniffer.html
         - title: Performance audit tool- Benchmark
           url: /docs/sdk/dev/development-tools/performance-audit-tool-benchmark.html

@@ -21,7 +21,7 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
 * [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree)
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#retrieve-a-category-node)
-* [Retrieve a CMS page](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)
+* [Retrieve a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/manage-using-glue-api/retrieve-cms-pages.html)
 
 In your development, the endpoints can help you to:
 * significantly boost the SEO presence of your product store
@@ -44,7 +44,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 | PATH PARAMETER  | DESCRIPTION |
 | --------------- | ---------------- |
-| ***{% raw %}{{{% endraw %}SEF URL{% raw %}}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)</li><li>[retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)</li><li>[retrieving cms pages](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)</li></ul>|
+| ***{% raw %}{{{% endraw %}SEF URL{% raw %}}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)</li><li>[retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)</li><li>[Retrieve CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/manage-using-glue-api/retrieve-cms-pages.html)</li></ul>|
 
 ### Request
 

@@ -12,6 +12,8 @@ entries:
       - title: Release notes
         url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
         nested:
+        - title: Release notes 202211.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html
         - title: Release notes 202204.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
         - title: Release notes 202108.0
@@ -274,6 +276,9 @@ entries:
       - "202204.0"
     - title: CMS
       url: /docs/scos/user/features/cms-feature-overview/cms-feature-overview.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: CMS pages
         url: /docs/scos/user/features/cms-feature-overview/cms-pages-overview.html
@@ -288,7 +293,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Templates and slots
         url: /docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html
         include_versions:
@@ -296,13 +300,11 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Email as a CMS block
         url: /docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: CMS Page Drafts and Previews
         url: /docs/scos/user/features/cms-feature-overview/cms-page-drafts-and-previews.html
         include_versions:
@@ -335,7 +337,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Customer Access
       url: /docs/scos/user/features/customer-access-feature-overview.html
     - title: Customer Account Management
@@ -1676,7 +1677,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Content items
         include_versions:
         - "201907.0"
@@ -1684,7 +1684,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Creating content items
           url: /docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html
@@ -1694,7 +1693,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Editing content items
           url: /docs/scos/user/back-office-user-guides/content/content-items/editing-content-items.html
           include_versions:
@@ -1703,7 +1701,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Adding content items to CMS pages and blocks
           url: /docs/scos/user/back-office-user-guides/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
           include_versions:
@@ -1712,7 +1709,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Editing content items in CMS pages and blocks
           url: /docs/scos/user/back-office-user-guides/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
           include_versions:
@@ -1721,7 +1717,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "201907.0"
@@ -1761,34 +1756,6 @@ entries:
           - "202001.0"
       - title: Blocks
         nested:
-        - title: Create CMS blocks
-          url: /docs/scos/user/back-office-user-guides/content/blocks/create-cms-blocks.html
-          include_versions:
-          - "202204.0"
-        - title: Create category CMS blocks
-          url: /docs/scos/user/back-office-user-guides/content/blocks/create-category-cms-blocks.html
-          include_versions:
-          - "202204.0"
-        - title: Create product CMS blocks
-          url: /docs/scos/user/back-office-user-guides/content/blocks/create-product-cms-blocks.html
-          include_versions:
-          - "202204.0"
-        - title: Create email CMS blocks
-          url: /docs/scos/user/back-office-user-guides/content/blocks/create-email-cms-blocks.html
-          include_versions:
-          - "202204.0"
-        - title: Edit CMS blocks
-          url: /docs/scos/user/back-office-user-guides/content/blocks/edit-cms-blocks.html
-          include_versions:
-          - "202204.0"
-        - title: Edit placeholders in CMS blocks
-          url: /docs/scos/user/back-office-user-guides/content/blocks/edit-placeholders-in-cms-blocks.html
-          include_versions:
-          - "202204.0"
-        - title: View CMS blocks
-          url: /docs/scos/user/back-office-user-guides/content/blocks/view-cms-blocks.html
-          include_versions:
-          - "202204.0"
         - title: Creating CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/creating-cms-blocks.html
           include_versions:
@@ -1814,7 +1781,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Assigning Blocks to Category or Product Pages
           url: /docs/scos/user/back-office-user-guides/content/blocks/assigning-blocks-to-category-or-product-pages.html
           include_versions:
@@ -1856,6 +1822,11 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Pages
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Creating CMS pages
           url: /docs/scos/user/back-office-user-guides/content/pages/creating-cms-pages.html
@@ -1905,6 +1876,11 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Navigation
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing navigation elements
           url: /docs/scos/user/back-office-user-guides/content/navigation/managing-navigation-elements.html
@@ -1932,7 +1908,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Managing slots
           url: /docs/scos/user/back-office-user-guides/content/slots/managing-slots.html
@@ -1941,7 +1916,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202001.0"
@@ -1955,6 +1929,11 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Redirects
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Creating CMS redirects
           url: /docs/scos/user/back-office-user-guides/content/redirects/creating-cms-redirects.html

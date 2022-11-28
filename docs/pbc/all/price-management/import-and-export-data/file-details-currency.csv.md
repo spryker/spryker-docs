@@ -22,7 +22,7 @@ data:import:currency
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -30,9 +30,9 @@ The file should have the following parameters:
 | currency_symbol | &check; | String |   | Currency symbol. |
 | name | &check; | String |   | Currency name. |
 
-## Import file dependencies
 
-This file has no dependencies.
+
+
 
 ## Additional information
 
@@ -42,7 +42,7 @@ Default currency might be set up when setting up the store. Check [here](https:/
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

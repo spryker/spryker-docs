@@ -25,7 +25,7 @@ data:import:shipment
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -35,13 +35,13 @@ The file should have the following parameters:
 | taxSetName |  &check; | String | | 	The name of the tax set. |
 | avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
-## Import file dependencies
 
-This file has no dependencies.
+
+
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

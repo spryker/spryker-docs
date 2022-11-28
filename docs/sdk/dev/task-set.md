@@ -3,7 +3,7 @@ title: Task set
 description: Task set is a group of related tasks that you can run with one command.
 template: concept-topic-template
 ---
-Sometimes, you might need to run multiple related [tasks](/docs/sdk/dev/task.html) at a time. In this case, you can create a task set. The *task set* is a group of related tasks that you can run with one command. To create a tasks set, you can either create the task set [YAML configuration file](/docs/sdk/dev/task.html#task-yaml-configuration-file), or implement `\SprykerSdk\SdkContracts\Entity\TaskSetInterface`.
+Sometimes, you might need to run multiple related [tasks](/docs/sdk/dev/task.html) at a time. In this case, you can create a task set. A *task set* is a group of related tasks that you can run with one command. To create a task set, you can either create the task set [YAML configuration file](/docs/sdk/dev/task.html#task-yaml-configuration-file), or implement `\SprykerSdk\SdkContracts\Entity\TaskSetInterface`.
 
 {% info_block infoBox "Info" %}
 
@@ -23,7 +23,7 @@ This mapping is also available for the PHP tasks sets in `TaskSetInterface`.
 
 {% endinfo_block %}
 
-Example of the YAML task set configuration file:
+Example of a YAML task set configuration file:
 
 ```yaml
 id: "sdk:task:set"

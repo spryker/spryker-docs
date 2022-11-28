@@ -197,38 +197,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 ## 4. Mail translations
 
-The `MailTypeBuilderPlugin` also has access to the glossary with the `setSubject()` method. This is used for translations as follows:
-
-```php
-<?php
-use Generated\Shared\Transfer\MailTransfer;
-use Generated\Shared\Transfer\MailRecipientTransfer;
-use Generated\Shared\Transfer\MailSenderTransfer;
-use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
-
-class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuilderPluginInterface
-{
-    protected const GLOSSARY_KEY_MAIL_SUBJECT = 'mail.customer.registration.subject';
-    protected const GLOSSARY_KEY_MAIL_RECIPIENT_NAME = 'mail.customer.registration.recipient.name';
-    protected const GLOSSARY_KEY_MAIL_SENDER_NAME = 'mail.customer.registration.sender.name';
-    
-    public function build(MailTransfer $mailTransfer): MailTransfer
-    {
-        return $mailTransfer
-            //
-            ->setSubject(static::GLOSSARY_KEY_MAIL_SUBJECT)
-            ->addRecipient(
-                (new MailRecipientTransfer())
-                    ->setName(static::GLOSSARY_KEY_MAIL_RECIPIENT_NAME),
-            )
-            ->addRecipient(
-                (new MailSenderTransfer())
-                    ->setName(static::GLOSSARY_KEY_MAIL_SENDER_NAME),
-            );
-    }
-}
-```
+The `MailTypeBuilderPlugin` also has access to the glossary with the `setSubject()` method.
 
 A string is used as a key of the translation. The default mail provider internally does the translation through `GlossaryFacade`.
 
@@ -249,19 +218,22 @@ class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin imp
     {
         return $mailTransfer
             //
+            ->setSubject('Registration {customerName}')
             ->setSubjectTranslations([
-                '{orderReference}' => $mailTransfer->getOrder()->getOrderReference()
+                '{customerName}' => 'Spencor Hopkins'
             ])
             ->addRecipient(
                 (new MailRecipientTransfer())
+                    ->setName('{customerName}')
                     ->setNameTranslationParameters([
-                        '{name}' => $mailTransfer->getUser()->getFirstName()
+                        '{customerName}' => 'Spencor Hopkins'
                 ]),
             )
-            ->addRecipient(
+            ->addSender(
                 (new MailSenderTransfer())
+                    ->setName('{senderName}')
                     ->setNameTranslationParameters([
-                        '{defaultSenderName}' => 'Sender'
+                        '{senderName}' => 'Spryker'
                 ]),
             );
     }

@@ -49,7 +49,7 @@ Product abstract card:
 
 In the Back Office, a product catalog manager can view what product group an abstract product belongs to.
 
-Also, they can insert product groups into CMS pages using content widgets in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
+Also, they can insert product groups into CMS pages using content widgets in the [WYSIWYG editor](/docs/pbc/all/content-management-system/{{page.version}}/content-items-feature-overview.html#content-item-widget).
 
 ## Creating product groups
 

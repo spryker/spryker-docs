@@ -15,67 +15,66 @@ For the manifest, make sure to follow these conditions:
 
 ```json
 {
-  "name": "App name",
-  "provider": "App provider",
-  "descriptionShort": "App short description",
-  "description": "App long description",
-  "url": "https://www.app-url.com",
-  "isAvailable": true,
-  "businessModels": [
-    "B2B",
-    "B2C"
-  ],
-  "categories": [
-    "PAYMENT"
-  ],
-  "pages": {
-    "Overview": [
-      {
-        "title": "Advantages",
-        "type": "list",
-        "data": [
-          "Advantage 1",
-          "Advantage 2"
-        ]
-      },
-      {
-		"title": "Features",
-		"type": "list",
-		"data": [
-		  "Feature 1",
-		  "Feature 2"
-		]
-	  }
-    ]},
-  "assets": [
+    "name": "App name",
+    "provider": "App provider",
+    "descriptionShort": "App short description",
+    "description": "App long description",
+    "url": "https://www.app-url.com",
+    "is_available": true,
+    "business_models": [
+        "B2B",
+        "B2C"
+    ],
+    "categories": [
+        "PAYMENT"
+    ],
+    "pages":
     {
-      "type": "icon",
-      "url": "/assets/images/app_name/logo.svg"
+        "Overview": [
+        {
+            "title": "Advantages",
+            "type": "list",
+            "data": [
+                "Advantage 1",
+                "Advantage 2"
+            ]
+        },
+        {
+            "title": "Features",
+            "type": "list",
+            "data": [
+                "Feature 1",
+                "Feature 2"
+            ]
+        }]
+    },
+    "assets": [
+    {
+        "type": "icon",
+        "url": "/assets/images/app_name/logo.svg"
     },
     {
-      "type": "image",
-      "url": "/assets/images/app_name/gallery/app_picture_1.jpeg"
+        "type": "image",
+        "url": "/assets/images/app_name/gallery/app_picture_1.jpeg"
     },
     {
-      "type": "image",
-      "url": "/assets/images/app_name/gallery/app_picture_1.png"
-    }
-  ],
-  "labels": [
-    "Gold Partner"
-  ],
-  "resources": [
+        "type": "image",
+        "url": "/assets/images/app_name/gallery/app_picture_1.png"
+    }],
+    "labels": [
+        "Gold Partner"
+    ],
+    "resources": [
     {
-      "title": "User Guide",
-      "url": "https://link-to-user-guide.com",
-      "type": "internal-documentation"
+        "title": "User Guide",
+        "url": "https://link-to-user-guide.com",
+        "type": "internal-documentation"
     }
     {
-      "title": "Homepage",
-      "url": "https://www.app-name.com/DE-de",
-      "type": "homepage"
-    }
-  ]
+        "title": "Homepage",
+        "url": "https://www.app-name.com/DE-de",
+        "type": "homepage"
+    }]
 }
 ```
 </details>
@@ -101,8 +100,8 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>businessModels example</summary>
 
-```yml
-"businessModels": [
+```json
+"business_models": [
   "B2B",
   "B2C"
 ]
@@ -112,7 +111,7 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>categories example</summary>
 
-```yml
+```json
 "categories": [
   "PAYMENT"
 ]
@@ -122,43 +121,48 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>pages example</summary>
 
-```yml
-"pages": {
-  "Overview": [
+```json
+{
+    ...
+    "pages": 
     {
-      "title": "Advantages",
-      "type": "list",
-      "data": [
-        "One solution, one partner, one contract. Simple & efficient. Technical processing and financial services from a single source.",
-        "International payment processing. Access to international and local payment methods.",
-        "Automatic debtor management. Effective accounting support through transaction allocation and reconciliation.",
-        "Credit entries independent of payment type. Fast returns management. With automated refunds.",
-        "Short time to market thanks to plug'n pay 1-click checkout and seamless integration. For an increasing conversion rate."
-      ]
-    },
-    {
-	  "title": "Available Payment Methods (Credit Card)",
-	  "type": "list",
-	  "data": [
-	    "Authorization",
-	    "Preauthorization and Capture",
-	    "3DS",
-	    "PCI DSS Compliance via SAQ A"
-	  ]
-	},
-	{
-	  "title": "Available Payment Methods (PayPal)",
-	  "type": "text",
-	  "data": "Preauthorization and Capture"
-	}
-]}
+        "Overview": [
+        {
+            "title": "Advantages",
+            "type": "list",
+            "data": [
+                "One solution, one partner, one contract. Simple & efficient. Technical processing and financial services from a single source.",
+                "International payment processing. Access to international and local payment methods.",
+                "Automatic debtor management. Effective accounting support through transaction allocation and reconciliation.",
+                "Credit entries independent of payment type. Fast returns management. With automated refunds.",
+                "Short time to market thanks to plug'n pay 1-click checkout and seamless integration. For an increasing conversion rate."
+            ]
+        },
+        {
+            "title": "Available Payment Methods (Credit Card)",
+            "type": "list",
+            "data": [
+                "Authorization",
+                "Preauthorization and Capture",
+                "3DS",
+                "PCI DSS Compliance via SAQ A"
+            ]
+        },
+        {
+            "title": "Available Payment Methods (PayPal)",
+            "type": "text",
+            "data": "Preauthorization and Capture"
+        }]
+    }
+    ...
+}
 ```
 </details>
 
 <details>
 <summary>assets example</summary>
 
-```yml
+```json
 "assets": [
   {
     "type": "icon",
@@ -179,7 +183,7 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>labels example</summary>
 
-```yml
+```json
 "labels": [
   "Gold Partner"
 ]
@@ -189,7 +193,7 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>resources example</summary>
 
-```yml
+```json
 "resources": [
   {
     "title": "User Guide",

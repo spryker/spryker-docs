@@ -37,7 +37,7 @@ This file has the following dependencies:
 A template and an example **content_navigation.csv** file can be downloaded here:
 
 
-| File(s) | Description |
+| FILES | Description |
 | --- | --- |
 | [content_navigation.csv Template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_navigation.csv) | Content Navigation CSV template file (empty content, contains headers only). |
 | [content_navigation.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_navigation.csv) | Content Navigation CSV file containing a Demo Shop data sample. |

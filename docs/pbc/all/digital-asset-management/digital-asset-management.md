@@ -17,56 +17,61 @@ redirect_from:
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
 ---
 
-The *Digital Asset Management* capability lets you upload and manage your assets effectively.
+The *Digital Asset Management* capability lets you upload and manage your assets (media files) effectively. You can:
+* Upload and delete files in bulk
+* Add and delete files manually via the Back Office
+* Maintain multiple versions of individual files
+* Drag and drop to create and update your assets’ file structure
+* Manage files from a list view 
 
-A Back Office user can upload files and add them to CMS pages and blocks to display on the Storefront.
+A Back Office user can upload files then add them to CMS pages and blocks to display on the Storefront.
 
-Apart from images, you can add a great variety of different types of assets to your project, including but not limited to the following:
+Apart from images, you can add many different types of assets to your project, including but not limited to:
 * Presentations
 * PDF documents
 * Graphics
 * Banners
 
-This lets content managers create rich, compelling, and attractive content for your customers and also gives them a chance to offer your customers additional information they might be interested in, like user manuals or instructions.
+Digital assets let content managers create rich, compelling, and attractive content for your customers. They also let you offer your customers additional information like user manuals or instructions.
 
 ## File tree
 
-The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders under **File Directories Tree** in a hierarchical system and manage the folders by dragging and dropping them in the file tree.
+The files in the Back Office are kept in a tree-like structure. A Back Office user can create folders (also known as directories) under *File Directories Tree* and organize them into a hierarchical system by dragging and dropping them in the file tree.
 
 The changes take effect after **Save** is selected.
-![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
+![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/digital-asset-management/pbc-file-tree.png)
 
-Every folder within File Directories Tree can be deleted by selecting **Delete Directory**. If the folder that is being deleted contains files in it, the files are automatically moved to the parent directory. Parent directory File Directories Tree cannot be deleted.
+A Back Office user can delete any folder within *File Directories Tree* by selecting **Delete Directory**. If the deleted folder contains files, those files are automatically moved to the parent directory. Parent directory in *File Directories Tree* cannot be deleted.
 
 ## File List
 
-File List submenu represents a table listing all the files uploaded to the Back Office:
+*Files List* displays all the files uploaded to the Back Office in a table view. The Back Office user can view, edit, and delete files here.
 ![File list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-list.png)
 
 
 ## Versions
 
-**File Uploader** feature lets a Back Office user have several versions for every file.
+*File Uploader* lets you store multiple versions of any file.
 
-For example, at first, you upload `Instruction1.txt` file (`v.1`), then you update and reupload it to the Back Office as `v.2`.
-After that, you decide that the image instruction is more useful in this case and upload `Instruction.png` (`v.3`) to the file.
+For example: a Back Office user uploads Instruction1.txt file (v.1). The user then updates and reuploads the .txt file (v.2). Next, the user decides that the image instruction is more useful and uploads Instruction.png (v.3).
 
-Thus, you have three versions of a file available: two text instructions and one image instruction.
+There are now three versions of the file available: two text files and one image file.
 ![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png)
 
-By default, the latest version of all available is shown to the buyer in the shop application.
+By default, the latest version of the file is displayed to the buyer in the shop application.
 
 ## MIME Type Settings
 
-The **MIME Type Settings** submenu lets a Back Office user define the file types that can be uploaded to the Back Office based on their nature and format.
+*MIME Type Settings* let you define the file types that can be uploaded to the Back Office.
 
-[MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type helps browsers decide how to process a document. For example, if the MIME type is set as `text/html`, then a client opens the document in Notepad, if the MIME type is set as `image/jpeg`, then the client opens it with the image viewer program.
+
+[MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type indicates how a web browser will process a file. For example, if the MIME type is set as `text/html`, the document will open in Notepad. If the MIME type is set as `image/jpeg`, the document will open with an image viewer program.
 
 ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/mime-type-settings.png)
 
-Only files with the MIME types ticked in the **Is Allowed** column are allowed for uploading to the Administration Interface.
+The Back Office user can only upload files with a MIME type that is selected in the *Is Allowed* column. If no MIME types are defined, files of any type can be uploaded. If you add at least one MIME type, only the files of the added types can be uploaded.
 
-Most popular file types that a shop owner can allow uploading to the Back Office are:
+The most popular file types that shop owners allow to be uploaded to the Back Office are:
 
 | TYPE | DESCRIPTION | EXAMPLE OF MIME TYPE |
 | --- | --- | --- |
@@ -82,7 +87,7 @@ There are two types of assets in the Spryker Commerce OS: dynamic and static.
 
 *Dynamic assets* are files added during content and product creation: adding or changing CMS pages and adding product images.
 
-*Static assets* are images, fonts, CSS, JS, and HTML and PHP files that are available and used by default. All the files are split into folders according to the application they are used for: Zed, Yves, or Glue. PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
+*Static assets* are images, fonts, CSS, JS, HTML, and PHP files that are available and used by default. All static asset files are split into folders according to the application they are used for: Zed, Yves, or Glue. PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
 
 {% info_block infoBox %}
 
@@ -90,7 +95,7 @@ Except for the error handling files, there are no Glue-related assets.
 
 {% endinfo_block %}
 
-### Location of assets
+### Location of static assets
 
 By default, static assets are stored locally in the following folders:
 
@@ -104,7 +109,7 @@ The following environment variables are used for that:
 * `SPRYKER_ZED_ASSETS_BASE_URL`
 * `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
-Check [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
+See [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
 
 
 ## Related Business User articles

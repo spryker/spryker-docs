@@ -98,7 +98,7 @@ If the configuration is complete, on entering the **Product details** page, a cu
 
 ![configurtion-complete-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/Features/Configurable+Product+feature+overview/configurtion-complete-message.png)
 
-If the configuration is complete, on entering the **Product details** page, a customer sees a message that the configuration needs to be completed. To purchase the product, they open the configurator and select a configuration. However, they can add a product with an incomplete configuration to a wishlist. In this case, they can finish the configuration from the **Wishlist** page.
+If the configuration is not complete, on the *Product details* page, a customer sees a message that the configuration needs to be completed. To purchase the product, they open the configurator and select a configuration. However, they can add a product with an incomplete configuration to a wishlist. In this scenario, they can finish the configuration from the *Wishlist* page.
 
 ![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
 

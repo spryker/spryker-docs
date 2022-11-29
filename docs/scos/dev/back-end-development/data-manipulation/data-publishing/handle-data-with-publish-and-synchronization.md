@@ -756,9 +756,9 @@ class HelloWorldStorageBusinessFactory extends AbstractBusinessFactory
 
 ```
 
-As you see, these methods return interfaces, so let's create them.
+As you see, these methods return interfaces.
 
-Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriterInterface.php`
+In `src\Pyz\Zed\HelloWorldStorage\Business\Writer\HelloWorldStorageWriterInterface.php`, create the interfaces.
 
 ```php
 <?php

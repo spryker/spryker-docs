@@ -8,7 +8,7 @@ template: feature-integration-guide-template
 {% info_block errorBox %}
 
 The following feature integration guide expects the basic feature to be in place.
-This guide describes all steps needed to be performed in order to integrate mailing provider into your project.
+This guide describes all the required steps in order to integrate a mailing provider into your project.
 
 {% endinfo_block %}
 

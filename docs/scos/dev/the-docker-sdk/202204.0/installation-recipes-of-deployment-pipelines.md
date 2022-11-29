@@ -108,7 +108,7 @@ For [Staging and Production](/docs/cloud/dev/spryker-cloud-commerce-os/environme
 - pre-deploy.yml
 - production.yml
 
-You can use them as a hook definition when [customizing pipelines](docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/customizing-deployment-pipelines.html#adding-a-single-command-to-a-deployment-pipeline):
+You can use them as a hook definition when [customizing pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/customizing-deployment-pipelines.html#adding-a-single-command-to-a-deployment-pipeline):
 
 ```shell
 image:

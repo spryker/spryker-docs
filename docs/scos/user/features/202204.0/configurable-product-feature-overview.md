@@ -37,7 +37,7 @@ Configurable products are created in two steps:
 
 ### Managing configurable products
 
-As regular products, a Back Office user can add configurable products to pages, categories, and content items.
+A Back Office user can add configurable products as regular products to pages, categories, and content items.
 
 They can see which products are configurable in the product catalog and edit them as regular products. However, a Back Office user cannot change configuration parameters.
 

@@ -2,7 +2,7 @@
 title: Release notes 202211.0
 last_updated: November 22, 2022
 template: concept-topic-template
-description: Release notes for the Spryker SCOS release 2022124.0
+description: Release notes for the Spryker SCOS release 202211.0
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.

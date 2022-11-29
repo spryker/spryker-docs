@@ -777,7 +777,7 @@ interface HelloWorldStorageWriterInterface
 
 ```
 
-Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleterInterface.php`
+Create `src\Pyz\Zed\HelloWorldStorage\Business\Deleter\HelloWorldStorageDeleterInterface.php`.
 
 ```php
 <?php

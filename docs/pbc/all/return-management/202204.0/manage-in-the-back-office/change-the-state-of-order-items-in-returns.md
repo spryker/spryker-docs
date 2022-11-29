@@ -1,5 +1,5 @@
 ---
-title: Changing the state of order items in returns
+title: Change the state of order items in returns
 description: Learn how to change the state of order items in returns in the Back Office.
 template: back-office-user-guide-template
 related:
@@ -10,7 +10,7 @@ related:
   - title: Managing returns
     link: docs/scos/user/back-office-user-guides/page.version/sales/returns/managing-returns.html
   - title: Return Management feature overview
-    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/pbc/all/return-management/page.version/return-management-feature-overview.html
 ---
 
 This document describes how to change the state of order items in returns. Each return is linked to the order it was created from. When you change the state of an order in a return, you change it in the linked order.

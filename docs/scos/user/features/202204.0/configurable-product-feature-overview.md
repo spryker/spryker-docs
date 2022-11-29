@@ -80,7 +80,7 @@ Display parameter values are usually converted from configuration parameter valu
 
 The availability of a configurable product is based on the selected configuration.
 
-A customer selects the quantity of a product in a configurator or a shop. If a configurator lets them select a product quantity, it passes the specified quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and they select the product quantity in the shop.
+A customer selects the quantity of a product in a configurator or a shop. If a configurator allows them to select a product quantity, it passes the specified quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and they select the product quantity in the shop.
 
 If a configurator does not pass availability, [regular product availability](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html) is used.
 

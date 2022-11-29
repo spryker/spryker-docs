@@ -2,7 +2,6 @@
 title: Users Management
 description: User Management capability lets you manage Back Office users.
 last_updated: Aug 20, 2021
-description:
 template: concept-topic-template
 ---
 
@@ -28,6 +27,16 @@ For instructions on creating user roles and groups, see the following documents:
 An agent assist is a Back Office user that has permissions to act on customers' behalf. Using their account, they can log into a customer's account on the Storefront and help them with requested actions.
 
 For more details about the agent assist feature, see the [Agent assist feature overview](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html)
+
+## Installation
+
+To install the User Management capability, do the following:
+
+1. Install the required modules:
+```bash
+composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature/acl:"{{site.version}}" --update-with-dependencies
+```
+2. Follow the integration guides in [Related Developer articles](#related-developer-articles).
 
 ## Related Business User articles
 

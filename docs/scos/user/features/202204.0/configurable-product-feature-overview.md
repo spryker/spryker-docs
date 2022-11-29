@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
 ---
 
-The *Configurable Product* feature introduces a new type of product that customers—a configurable product, can customize.
+The *Configurable Product* feature introduces a new type of product, a configurable product, that customers can customize.
 
 The feature lets you sell complex products with modular designs or services. For example, if you sell clothes, your customers can define the material and color and add their names to the product. Or, if you are selling a service, you can allow them to select a preferred date and time of the service delivery.
 

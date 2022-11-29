@@ -718,7 +718,7 @@ class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorag
 
 4. To connect the facade methods to the business logic in the Writer and Deleter, create the Business factory that creates the Writer and Deleter objects. We also recommend creating interfaces for these objects.
 
-Create the file: `src\Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory.php`
+Create `src\Pyz\Zed\HelloWorldStorage\Business\HelloWorldStorageBusinessFactory.php`.
 
 ```php
 <?php

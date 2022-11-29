@@ -43,7 +43,7 @@ They can see which products are configurable in the product catalog and edit the
 
 ![configurable-product-entry-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-entry-in-the-back-office.png)
 
-In the orders, A Back Office can see which products are configurable. They can also see the configuration of each product, but they cannot change the selected parameters.
+In the orders, a Back Office user can see which products are configurable. They can also see the configuration of each product, but they cannot change the selected parameters.
 
 ![order-with-a-configurable-product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/order-with-a-configurable-product.png)
 

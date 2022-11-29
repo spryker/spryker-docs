@@ -255,12 +255,16 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
           - title: Domain model and relationships
             nested:
-              - title: Checkout feature entity diagram
-                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/checkout-feature-entity-diagram.html
+              - title: "Approval Process feature: module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/approval-process-feature-module-relations.html
+              - title: "Checkout feature: module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/checkout-feature-module-relations.html
+              - title: "Comments feature: Module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/comments-feature-module-relations.html
               - title: "Persistent Cart Sharing: module relations"
                 url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/persistent-cart-sharing-feature-module-relations.html
-              - title: Quick Add to Cart feature entity diagram
-                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/quick-add-to-cart-feature-entity-diagram.html
+              - title: "Quick Add to Cart feature: Module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html
       - title: Content Management System
         url: /docs/pbc/all/content-management-system/content-management-system.html
         nested:

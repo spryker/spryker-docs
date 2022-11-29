@@ -1,5 +1,5 @@
 ---
-title: Checkout feature: module relations
+title: "Checkout feature: module relations"
 last_updated: Aug 13, 2021
 description: Module relations of the Checkout feature
 template: concept-topic-template

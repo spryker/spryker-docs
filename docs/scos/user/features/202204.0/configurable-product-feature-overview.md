@@ -123,7 +123,7 @@ The information in [Complete and incomplete configuration](#complete-and-incompl
 
 When a developer creates configurable products by importing them, they can preconfigure parameter values. If customers choose to configure such a product, they start with the preconfigured parameter values and can change them.
 
-If a developer also defines that the configuration of such a product is complete, a customer sees the preconfigured parameter values on entering the **Product details** page. They can add the product to the cart without adjusting the configuration.
+If a developer also defines that the configuration of such a product is complete, a customer sees the preconfigured parameter values on the *Product details* page. They can add the product to the cart without adjusting the configuration.
 
 If a developer defines that the configuration of such a product needs to be completed, on the *Product details* page a customer does not see the preconfigured parameter values. However, they are still assigned to the product. The customer has to configure the product, but they can keep the same preconfigured parameter values.
 

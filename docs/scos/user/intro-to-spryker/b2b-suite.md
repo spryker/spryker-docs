@@ -33,7 +33,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/pbc/all/cart-and-checkout/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html)
-- [Resource Sharing](/docs/scos/user/features/{{site.version}}/resource-sharing-feature-overview.html)
+- [Resource Sharing](/docs/pbc/all/cart-and-checkout/resource-sharing-feature-overview.html)
 - [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
 - [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 - [Approval process](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html)

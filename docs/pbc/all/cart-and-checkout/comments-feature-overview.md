@@ -82,4 +82,4 @@ Company users can perform the following actions using the Comments widget on the
 |---------|---------|
 | [Comments feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-feature.html)  | [File details: comment.csv](/docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-comment.csv.html)  |
 | [Comments + persistent cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html) |
-| [Comments + order management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/comments-order-management-feature-integration.html) |
+| [Comments + order management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/comments-order-management-feature-integration.html) |

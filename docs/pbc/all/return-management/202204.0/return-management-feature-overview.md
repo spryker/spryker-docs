@@ -115,6 +115,16 @@ The feature has the following functional constraints which are going to be resol
 * There is no user interface for managing the return policy and the return reasons.
 * You can’t return individual items of a Product Bundle.
 
+## Installation
+
+To install the return management capability, do the following:
+
+1. Install the required modules:
+
+```bash
+composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
+```
+
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
@@ -123,8 +133,17 @@ The feature has the following functional constraints which are going to be resol
 | [View return details, set return statuses and print return slips in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html)  |
 | [Choose a suitable return management process for your project](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Return Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
+|---|---|---|
+| [Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/return-management-feature-integration.html) | [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html) | [HowTo: Set number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) |
+| [Configurable Bundle + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-order-management-feature-integration.html) |  |  |
+| [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-return-management-feature-integration.html) |  |  |
+| [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |  |  |
+| [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |  |  |
+| [Product Bundles + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-order-management-feature-integration.html) |  |  |
+| [Product Bundles + Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-return-management-feature-integration.html) |  |  |
+| [Product Measurement Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |  |  |
+| [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-options-order-management-feature-integration.html) |  |  |
+| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html) |  |  |

@@ -5,7 +5,7 @@ last_updated: Nov 29, 2022
 template: howto-guide-template
 ---
 
-Installation recipes contain the commands that are run during the [install stage of deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):
+Installation recipes contain the commands that are ran during the [install stage of deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):
 
 ```
 config

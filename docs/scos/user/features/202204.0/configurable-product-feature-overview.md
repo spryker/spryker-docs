@@ -10,7 +10,7 @@ redirect_from:
 
 The *Configurable Product* feature introduces a new type of product that customers—a configurable product, can customize.
 
-The feature enables you to sell complex products with modular designs or services. For example, if you sell clothes, your customers can define the material and color and add their names to the product. Or, if you are selling a service, you can allow them to select a preferred date and time of the service delivery.
+The feature lets you sell complex products with modular designs or services. For example, if you sell clothes, your customers can define the material and color and add their names to the product. Or, if you are selling a service, you can allow them to select a preferred date and time of the service delivery.
 
 ## Configurable product
 
@@ -57,11 +57,11 @@ You can create a product configurator as a part of your shop or integrate a thir
 
 ### How a Spryker shop interacts with a product configurator
 
-A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to the configurator page, the shop passes the customer and product parameters. When the customer is redirected back to the shop, the configurator gives the updated parameters back.
+A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to the configurator page, the shop passes the customer and product parameters. When the customer is redirected back to the shop, the configurator passes the updated parameters back.
 
-The behavior of the configurator is based on the parameters passed by a shop. For example, a shop passes the `store_name` parameter. If a customer is redirected from a US store, the language of the configurator is English. Also, the shop gives the URL of the page the customer is redirected from. After they save the configuration, the configurator uses this URL to redirect them to the same page.
+The behavior of the configurator is based on the parameters passed by a shop. For example, a shop passes the `store_name` parameter. If a customer is redirected from a US store, the language of the configurator is English. Also, the shop passes the URL of the page the customer is redirected from. After they save the configuration, the configurator uses this URL to redirect them to the same page.
 
-The selected configuration is also passed back to the shop as parameters. The shop uses the parameters to display the chosen configuration on all related pages and process the order with the product.
+The selected configuration is also passed back to the shop as parameters. The shop uses the parameters to display the selected configuration on all related pages and process the order with the product.
 
 ### Parameter types
 
@@ -69,7 +69,7 @@ There are two parameter types: configuration parameters and display parameters.
 
 *Configuration parameters* are used by shops to interact with product configurators.
 
-*Display parameters* display product configuration on the Storefront and in the Back Office.
+*Display parameters* are used to display product configuration on the Storefront and in the Back Office.
 
 Display parameter values are usually converted from configuration parameter values to show data in a user-friendly format. For example, a product configurator passes the configuration parameter to a shop: `"time_of_the_day": 3`. Since, in the configurator, `3` stands for `afternoon`, the shop displays **Preferred time of the day: Afternoon**.
 
@@ -80,7 +80,7 @@ Display parameter values are usually converted from configuration parameter valu
 
 The availability of a configurable product is based on the selected configuration.
 
-A customer selects the quantity of a product in a configurator or a shop. If a configurator allows them to choose a product quantity, it passes the specified quantity to the shop as a parameter. Otherwise, it gives the availability as a parameter, and they select the product quantity in the shop.
+A customer selects the quantity of a product in a configurator or a shop. If a configurator lets them select a product quantity, it passes the specified quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and they select the product quantity in the shop.
 
 If a configurator does not pass availability, [regular product availability](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html) is used.
 
@@ -109,15 +109,15 @@ Even if all the parameter values are [preconfigured](#preconfigured-parameter-va
 
 #### Request for Quote with a configurable product
 
-The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A customer can only request a quote for a product with a complete configuration.
+The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A customer can only request a quote for a product with a complete configuration.
 
 #### Shopping List with a configurable product
 
-The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to the [Shopping List](TBD) functionality. A customer can add products with complete or incomplete configuration.
+The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to the [Shopping List](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
 
 #### Wish List with a configurable product
 
-The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to the [Wish List](TBD) functionality. A customer can add products with complete or incomplete configuration.
+The information in [Complete and incomplete configuration](complete-and-incomplete-configuration) applies to the [Wish List](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
 
 ### Preconfigured parameter values
 

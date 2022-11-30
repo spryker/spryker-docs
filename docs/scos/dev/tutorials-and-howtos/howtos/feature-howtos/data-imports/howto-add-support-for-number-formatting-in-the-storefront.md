@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Nov 04, 2022
 ---
 
-Number formats can vary by locales. For example, if in the DE locale the number is _123.456,78_, in the US locale it would be _123,456.78_. To enable the proper number formatting by locale in your store, follow the instructions in this document.
+Number formats can vary by locales. For example, if in the DE locale there is a number _123.456,78_, in the US locale it would be _123,456.78_. To enable the proper number formatting by locale in your store, follow the instructions in this document.
 
 ## Prerequisites
 

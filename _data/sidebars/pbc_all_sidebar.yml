@@ -896,7 +896,7 @@ entries:
               - title: Manage returns
                 url: /docs/pbc/all/return-management/manage-using-glue-api/glue-api-manage-returns.html
               - title: Retrieve return reasons
-                url: /docs/pbc/all/return-management/manage-using-glue-api/retrieve-return-reasons.html
+                url: /docs/pbc/all/return-management/manage-using-glue-api/glue-api-retrieve-return-reasons.html
           - title: "Build a return management process: Best practices"
             url: /docs/pbc/all/return-management/build-a-return-management-process-best-practices.html
           - title: "HowTo: Set number of days for a return policy"

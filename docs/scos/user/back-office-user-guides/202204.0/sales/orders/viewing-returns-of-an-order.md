@@ -6,7 +6,7 @@ related:
   - title: Creating returns
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-returns.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/page.version/return-management-feature-overview.html
+    link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
 This document describes how to view returns of an order in the Back Office.

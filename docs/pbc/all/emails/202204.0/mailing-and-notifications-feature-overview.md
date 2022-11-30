@@ -10,6 +10,7 @@ redirect_from:
   - /docs/mailing-notifications-feature-overview
   - /docs/en/mailing-notifications-feature-overview
   - /docs/scos/user/features/202200.0/mailing-and-notifications-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/mailing-and-notifications-feature-walkthrough.html  
 ---
 
 The *Mailing & Notifications* feature lets you manage newsletters and notifications.
@@ -37,8 +38,10 @@ The following links provide additional information about the Mail module, plugin
 * The tutorial that helps understand the procedure for sending an email—[Tutorial: Sending a mail](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html).
 
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Mailing & Notification feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mailing-and-notifications-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+ | TUTORIALS AND TUTORIALS AND HOWTOS |
+|---------|
+| [HowTo: Create and Register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html) |
+| [HowTo: Create and Register a Mail Provider](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html)  |
+| [Tutorial: Sending an email](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html)  |

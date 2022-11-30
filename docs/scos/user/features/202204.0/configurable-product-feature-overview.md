@@ -33,7 +33,7 @@ After adding a configurable product to the cart, a customer can change the produ
 Configurable products are created in two steps:
 
 1. A Back Office user creates regular products, or a developer imports them. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to learn how products are created in the Back Office or [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) to learn about how developers import the file.
-2. A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
+2. A developer converts regular products into configurable products by importing configuration parameters. To learn about the file they import, see [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html).
 
 ### Managing configurable products
 
@@ -51,7 +51,7 @@ In the orders, a Back Office user can see which products are configurable. They 
 
 A *product configurator* is a tool that allows customers to customize the product parameters provided by the shop owner or product manufacturer.
 
-You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an exemplary product configurator. The exemplary product configurator allows configuring the *Date* and *Preferred time of the day* parameters.
+You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an example product configurator. The example product configurator allows configuring the *Date* and *Preferred time of the day* parameters.
 
 ![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/examplary-product-configurator.png)
 

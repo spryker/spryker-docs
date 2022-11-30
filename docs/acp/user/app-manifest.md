@@ -20,7 +20,7 @@ For the manifest, make sure to follow these conditions:
     "descriptionShort": "App short description",
     "description": "App long description",
     "url": "https://www.app-url.com",
-    "is_available": true,
+    "isAvailable": true,
     "business_models": [
         "B2B",
         "B2C"

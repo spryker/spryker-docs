@@ -34,7 +34,7 @@ In most cases, you can add a specific transfer to the `MailTransfer`—for examp
 
 Let’s say you have a module named `FooBar`, where you want to add automated mail sending. To enable that feature, follow these steps:
 
-1. Example of a `FooBarMailTypeBuilderPlugin`:
+Example of a `FooBarMailTypeBuilderPlugin`:
 
 ```php
 <?php
@@ -87,7 +87,7 @@ class FooBarMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuil
 }
 ```
 
-2. Register the `FooBarMailTypeBuilderPlugin`:
+Register the `FooBarMailTypeBuilderPlugin`:
 
 ```php
 <?php
@@ -119,7 +119,7 @@ In order to activate the mail functionality, follow these steps:
     $mailTransfer->setFooBar(new FooBarTransfer());
     $mailTransfer->setLocale('DE');
 ```
-3. Call `MailFacade::handleMail($mailTransfer)`.
+Call `MailFacade::handleMail($mailTransfer)`.
 
 If everything is set up properly the mail will be sent.
 

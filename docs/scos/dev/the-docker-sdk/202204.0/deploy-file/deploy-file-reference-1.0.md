@@ -739,6 +739,19 @@ docker:
 
 ***
 
+### docker: maintenance: enabled:
+
+Defines if applications work in maintenance mode. The default value is `false`.
+
+```yaml
+version: 1.0
+docker:
+    maintenance:
+        enabled: {true | false}
+ ```
+
+***
+
 ### docker: logs:
 
 * `docker: logs: path:` defines the path to the directory with Docker logs. This variable is optional. If not specified, the default value applies: `path: '/var/log/spryker`.

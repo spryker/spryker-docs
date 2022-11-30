@@ -29,11 +29,11 @@ redirect_from:
 This chapter will help you model a state machine using Spryker to manage your sale orders.
 {% endinfo_block %}
 
-First of all, it’s important to know which tasks must be executed after an order is submitted and in which order. Keep in mind that you can define more than one state machine in your system to cover the use case scenarios you want to enable in your shop.
+First of all, it's important to know which tasks must be executed after an order is submitted and in which order. Keep in mind that you can define more than one state machine in your system to cover the use case scenarios you want to enable in your shop.
 
-Before starting the development and configuration for a new state machine, it’s important to draw on a paper the sequence of the processes that must take place after an order is placed and to think about any scenario that could take place (the order is over/under paid, the order could not be delivered at the given address, etc.). Of course, the state machine can be improved/fixed if you observe that not every possible use case scenario is covered or if the order is not managed as expected.
+Before starting the development and configuration for a new state machine, it's important to draw on paper the sequence of the processes that must take place after an order is placed and to think about any scenario that could take place—the order is over or underpaid, or the order could not be delivered at the given address. Of course, the state machine can be improved or fixed if you observe that not every possible use case scenario is covered or if the order is not managed as expected.
 
-To illustrate how to create and implement a state machine, we'll create one that manages prepaid orders. Please keep in mind that this tutorial is not intended to be a complete use case for a production environment.
+To illustrate how to create and implement a state machine, we'll create one that manages prepaid orders. Keep in mind that this tutorial is not intended to be a complete use case for a production environment.
 
 This use case scenario must implement the following behaviors:
 
@@ -44,7 +44,7 @@ This use case scenario must implement the following behaviors:
 * after 100 days have passed, the order is considered completed.
 * after a return, the order is considered completed.
 
-Please follow the steps described below to model the prepaid state machine:
+To model the prepaid state machine, follow these steps:
 
 * Create the XML file
 * Identify the states
@@ -110,7 +110,7 @@ const ORDER_PROCESS_PREPAYMENT = 'Prepayment';
 ```
 
 ### Identify the States
-Now, let’s identify the states in which the order can be at a moment. Which are the steps in which a order must pass to complete a prepaid order?
+Now, let's identify the states in which the order can be at a moment. Which are the steps in which a order must pass to complete a prepaid order?
 
 1. New
 2. Invoice generated
@@ -125,7 +125,7 @@ Now, let’s identify the states in which the order can be at a moment. Which ar
 11. Refund initiated
 12. Order completed
 
-Add these states in the XML file you previously created, as in the example below:
+Add these states in the XML file you previously created, as in the following example:
 
 ```xml
 <?xml version="1.0"?>
@@ -155,24 +155,24 @@ Add these states in the XML file you previously created, as in the example below
 </statemachine>
 ```
 
-You can check the current state of your state machine in Zed: [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14). You’ll see the states defined before, without any links between them. To pass from one state to another, a transition must be defined between two states. To be able to tell when a transition can be fired, an event attached to that transition must take place.
+You can check the current state of your state machine in Zed: [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14). You'll see the states defined before, without any links between them. To pass from one state to another, a transition must be defined between two states. To be able to tell when a transition can be fired, an event attached to that transition must take place.
 
 ### Identify the Events
-Next, let’s identify the events that can tell if a transition can be fired.
+Next, let's identify the events that can tell if a transition can be fired.
 
 |  #   |        Event         |   Event Trigger   |                           Comments                           |
 | :--: | :------------------: | :---------------: | :----------------------------------------------------------: |
-|      |    Create invoice    |  onEnter=”true”   |                  Event fired automatically                   |
-|      |     Send invoice     |  onEnter=”true”   |                                                              |
-|      | Waiting for payment  |  onEnter=”true”   |                                                              |
-|      | Payment not received |  timeout=”1hour”  |          Fired after the specified time has passed           |
-|      |    Order canceled    |   manual=”true”   | Event fired after user action (either from back-office or from the shop interface) |
-|      |   Payment received   |   manual=”true”   |                 Export order onEnter=”true”                  |
-|      |      Ship order      |   manual=”true”   |                                                              |
-|      |  Items not returned  | timeout=”100days” |                                                              |
-|      |   Ready for return   |  onEnter=”true”   |                                                              |
-|      |    Items returned    |   manual=”true”   |                                                              |
-|      |    Refund payment    |   manual=”true”   |                                                              |
+|      |    Create invoice    |  onEnter="true"   |                  Event fired automatically                   |
+|      |     Send invoice     |  onEnter="true"   |                                                              |
+|      | Waiting for payment  |  onEnter="true"   |                                                              |
+|      | Payment not received |  timeout="1hour"  |          Fired after the specified time has passed           |
+|      |    Order canceled    |   manual="true"   | Event fired after user action (either from back-office or from the shop interface) |
+|      |   Payment received   |   manual="true"   |                 Export order onEnter="true"                  |
+|      |      Ship order      |   manual="true"   |                                                              |
+|      |  Items not returned  | timeout="100days" |                                                              |
+|      |   Ready for return   |  onEnter="true"   |                                                              |
+|      |    Items returned    |   manual="true"   |                                                              |
+|      |    Refund payment    |   manual="true"   |                                                              |
 
 Now that we identified the events, we can add them in the XML file that defines our state machine.
 
@@ -203,7 +203,7 @@ Transitions draw the links from one state to another. They are bound to an event
 
 A transition can have a condition attach which is check when the state machine is currently in the source state by a cronjob that runs periodically. Basically, the condition is linked to a PHP class that contains logic that checks if the transition can take place.
 
-Now, let’s draw the possible transitions between the previously defined states and setup the corresponding event for each of them.
+Now, let's draw the possible transitions between the previously defined states and setup the corresponding event for each of them.
 
 ```xml
 <transitions>
@@ -296,7 +296,7 @@ Now, let’s draw the possible transitions between the previously defined states
 
 You can check the current state of your state machine in Zed: [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14).
 
-We can highlight the best case scenario by adding the happy=”true” attribute to the transitions, where is the case, as in the example below:
+We can highlight the best case scenario by adding the happy="true" attribute to the transitions, where is the case, as in the following example:
 
 ```xml
 <transition happy="true">
@@ -306,14 +306,14 @@ We can highlight the best case scenario by adding the happy=”true” attribute
 </transition>
 ```
 
-This transition would be the happy case, rather than the situation when the user returns some order items. If you check again the visual representation of the state machine we are building, you’ll observe that the best case scenario transitions are now highlighted.
+This transition would be the happy case, rather than the situation when the user returns some order items. If you check again the visual representation of the state machine we are building, you'll observe that the best case scenario transitions are now highlighted.
 
 {% info_block warningBox %}
 Adding the **happy** attribute does not interfere to the behavior of the state machine; it just helps you visualize better the business processes that are modeled in the state machine.
 {% endinfo_block %}
 
 ### Implement the Commands and Conditions
-Now we can visualize the transitions defined in our state machine and we have an idea about the business processes that are involved when a prepaid order is submitted, but our state machine doesn’t do much for the moment. We need to attach the logic that gets executed when an event is fired or condition to check if a transition is possible. We’ll update the XML file that defines our state machine by adding the necessary commands and conditions to it.
+Now we can visualize the transitions defined in our state machine and we have an idea about the business processes that are involved when a prepaid order is submitted, but our state machine doesn't do much for the moment. We need to attach the logic that gets executed when an event is fired or condition to check if a transition is possible. We'll update the XML file that defines our state machine by adding the necessary commands and conditions to it.
 
 ```xml
 <?xml version="1.0"?>
@@ -444,7 +444,7 @@ Now we can visualize the transitions defined in our state machine and we have an
 ```
 
 
-Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. You’ll see that some of the events now have commands associated and some of the transitions appear to have conditions attached, but they are marked as being not yet implemented. For our state machine to be functional, we need to implement the configured commands and conditions.
+Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. You'll see that some of the events now have commands associated and some of the transitions appear to have conditions attached, but they are marked as being not yet implemented. For our state machine to be functional, we need to implement the configured commands and conditions.
 
 The implementation for the commands will be placed in `the` OMS module on the project level, under `Communication/Plugin/Oms/Commandand` for the conditions under `Communication/Plugin/Oms/Condition`. After you finish with the implementation, the code must be linked to the XML file where we defined the state machine. To pass the right implementations of `commands/conditions` to your state machine, you must register the plugins in the `OmsDependencyProvider`: the conditions will be registered under `thegetConditionPlugins()` and the commands under the `getCommandPlugins()` operation.
 
@@ -492,12 +492,12 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
-Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. You’ll see that the implementation is linked to the state machine.
+Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?process=Prepayment&format=svg&font=14) state machine in Zed. You'll see that the implementation is linked to the state machine.
 
 ## Integrate the State Machine
 You can have more than one state machine defined in your application and apply them according to the details of the order that gets submitted.
 
-E.g.: you can have a state machine that doesn’t involve shipping for goods that are delivered electronic. Also, you can have a dedicated state machine for each payment method (invoice payment method involves other patterns than credit card payment does).
+For example, you can have a state machine that doesn't involve shipping for goods that are delivered electronic. Also, you can have a dedicated state machine for each payment method (invoice payment method involves other patterns than credit card payment does).
 
 The mapping between a submitted order and the corresponding state machine that is able to process the payment is done in the `SalesConfig` class, under the `determineProcessForOrderItem(OrderTransfer $order, QuoteTransfer $request)` operation; here, you will set the corresponding process for your order.
 

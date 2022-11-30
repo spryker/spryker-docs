@@ -50,7 +50,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
-- [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
+- [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html)
 - [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
 <!---- [Invoice]()-->
 - [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
@@ -74,7 +74,6 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 - [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
-- [File Manager](/docs/pbc/all/digital-asset-management/digital-asset-management.html)
 
 <br>
 </details>

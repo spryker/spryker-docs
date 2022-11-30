@@ -29,13 +29,13 @@ related:
     link: docs/scos/dev/back-end-development/messages-and-errors/showing-messages-in-zed.html
 ---
 
-The document describes how to configure the behavior when an internal server error occurs. Whether you need to show the details of the error or render a static page for any internal error, this is done through configuration.
+The document describes how to configure the behavior when an internal server error occurs. Whether you need to show the details of the error or render a static page for an internal error, this is done through configuration.
 
 ## Configure internal server error
 
-Page Depending on the environment on which the application is running, you can configure if you wish to show the stack trace of the error or to display a static HTML page.
+Depending on the environment in which the application is running, you can set the configuration to show the stack trace of the error or to display a static HTML page.
 
-For example, for a development environment, you want to see the details of the error, so you need to have the following configuration in `Config/Shared/config_default.php`:
+For a *development environment*, to see the details of the error, you need to have the following configuration in `Config/Shared/config_default.php`:
 
 ```php
 <?php
@@ -43,7 +43,7 @@ $config[YvesConfig::YVES_SHOW_EXCEPTION_STACK_TRACE] = true;
 $config[SystemConfig::ZED_SHOW_EXCEPTION_STACK_TRACE] = true;
 ```
 
-For production environments, you need to set those fields to false. To configure the error page you want to display, set the path to the error page to the following fields in the config files:
+For *production environments*, you need to set those fields to false. To configure the error page you want to display, set the path to the error page to the following fields in the config files:
 
 ```php
 <?php
@@ -55,7 +55,7 @@ $config[SystemConfig::ZED_ERROR_PAGE] = APPLICATION_ROOT_DIR . '/static/public/Y
 
 By default behavior, HTTP errors are converted to exceptions. To render different content when a specific error occurs, we have a built-in custom error handler.
 
-*To create a custom error, follow these steps*
+*To create a custom error, follow these steps:*
 
 1. Register the exception in the exception handlers under the `ApplicationFactory`, as shown in the following example:
 

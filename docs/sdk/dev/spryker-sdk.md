@@ -2,8 +2,10 @@
 title: Spryker SDK
 description: Learn about the Spryker SDK and how you can use it in your project.
 template: concept-topic-template
+redirect_from: 
+    - /docs/sdk/dev/sdk-conventions.com
 ---
-The Spryker SDK aims to provide a single entry point to accelerate your productivity working with Spryker. The Spryker SDK provides tools to validate the existing code, implement new features with Spryker, and go live with your project.
+The Spryker SDK aims to provide a single entry point to accelerate your productivity while working with Spryker. The Spryker SDK provides tools to validate existing code, implement new features with Spryker, and go live with your project.
 
 ## Installation
 
@@ -19,4 +21,4 @@ Run `sdk:setting:set` to set up your local settings.
 
 To get an overview of the available capabilities of the Spryker SDK, run `spryker-sdk list`.
 
-You can execute any task by running `spryker-sdk <task-id>` from the project root folder. To get information about the options that you can pass into the task, run `bin/consolespryker-sdk <task-id> -h`.
+You can execute any task by running `spryker-sdk <task-id>` from the project root folder. To get information about the options that you can pass into a task, run `bin/consolespryker-sdk <task-id> -h`.

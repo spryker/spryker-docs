@@ -25,23 +25,23 @@ data:import:shipment
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| shipment_method_key| &check; | String | | Identifier of the shipment method. |
-| name|  &check; | String | | Name of the shipment method. |
-| carrier |  &check; | String |  | Name of the shipment carrier. |
-| taxSetName |  &check; | String | | 	Name of the tax set. |
+| shipment_method_key| &check; | String | | The identifier of the shipment method. |
+| name|  &check; | String | | The name of the shipment method. |
+| carrier |  &check; | String |  | The name of the shipment carrier. |
+| taxSetName |  &check; | String | | 	The name of the tax set. |
 | avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
-## Import file dependencies
 
-This file has no dependencies.
+
+
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

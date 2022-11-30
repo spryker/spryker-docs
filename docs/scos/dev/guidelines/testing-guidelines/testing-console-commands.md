@@ -38,7 +38,7 @@ To test console commands, do the following:
 suites:
     Communication:
         path: Communication
-        class_name: {ModuleName}CommunnicationTester
+        actor: {ModuleName}CommunnicationTester
         modules:
             enabled:
                 - \SprykerTest\Zed\Console\Helper\ConsoleHelper

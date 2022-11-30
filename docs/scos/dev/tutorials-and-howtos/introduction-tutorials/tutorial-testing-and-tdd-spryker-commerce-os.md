@@ -24,12 +24,6 @@ redirect_from:
   - /v1/docs/en/t-testing-tdd-scos
 ---
 
-{% info_block infoBox %}
-
-This tutorial is also available on the Spryker Training website. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) website.
-
-{% endinfo_block %}
-
 This document helps you understand the main concepts of testing with Spryker and see how simple it is to build tests. You will use the *Test-Driven Development (TDD)* approach.
 
 Spryker's testing structure and data handling make it very easy to develop using TDD. You will build a simple module that reverses a string and test it.
@@ -60,7 +54,7 @@ paths:
     tests: .
     data: _data
     support: _support
-    log: _output
+    output: _output
 
 coverage:
     enabled: true
@@ -70,7 +64,7 @@ coverage:
 suites:
     Business:
         path: Business
-        class_name: StringReverserBusinessTester
+        actor: StringReverserBusinessTester
         modules:
             enabled:
                 - Asserts

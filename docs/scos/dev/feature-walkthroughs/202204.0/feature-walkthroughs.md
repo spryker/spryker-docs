@@ -80,7 +80,7 @@ The [Content Items](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content
 
 ### Content item types: module relations
 
-[This document](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) describes each content item type and the module relations used for them.
+[This document](/docs/pbc/all/content-management-system/{{page.version}}/domain-model-and-relationships/content-item-types-module-relations.html) describes each content item type and the module relations used for them.
 
 ## Customer Access
 
@@ -129,13 +129,9 @@ The [Merchant Product Restrictions](/docs/scos/dev/feature-walkthroughs/{{page.v
 
 [On this page](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html), you can find commonly encountered cases of product restrictions behavior.
 
-## Navigation
-
-The [Navigation](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-feature-walkthrough.html) feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.
-
 ### Navigation module: reference information
 
-The [Navigation module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-module-reference-information.html) manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.
+The [Navigation module](/docs/pbc/all/content-management-system/{{page.version}}/extend-and-customize/navigation-module-reference-information.html) manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.
 
 ## Non-splittable Products
 
@@ -249,10 +245,6 @@ The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature
 ## Spryker Core Back Office
 
 The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts’ setup.
-
-### Users and rights overview
-
-[User and rights management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html) is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.
 
 ## Tax
 

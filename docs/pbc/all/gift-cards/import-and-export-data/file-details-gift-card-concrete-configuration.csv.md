@@ -25,7 +25,7 @@ data:import:gift-card-concrete-configuration
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS AND COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ This file has the following dependency: [product_concrete.csv](/docs/scos/dev/da
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

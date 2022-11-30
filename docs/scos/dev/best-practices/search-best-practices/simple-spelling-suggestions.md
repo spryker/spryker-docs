@@ -49,9 +49,9 @@ Spelling suggestions provide the users with alternative search terms when the se
 
 ![Spell checking](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Simple+Spelling+Suggestions/spell-checking.png) 
 
-Translation: *Unfortunately there were 0 results for your exact search term “**hammer holk**”. Did you possibly mean **hammer holz**?*
+Translation: *Unfortunately there were 0 results for your exact search term "**hammer holk**". Did you possibly mean **hammer holz**?*
 
-This is one of the simplest features you can build with Elasticsearch and also one that your users expect to see. Elasticsearch has a highly configurable [term suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-term.html), which enables suggestions based on the edit distance between indexed terms and search terms. We recommend putting all attributes that are suitable for spelling suggestions (for example, short strings such as product and category names where you are sure that they are spelled correctly) into a single document field:
+This is one of the simplest features you can build with Elasticsearch and also one that your users expect to see. Elasticsearch has a highly configurable [term suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-term.html), which enables suggestions based on the edit distance between indexed terms and search terms. We recommend putting all attributes that are suitable for spelling suggestions—for example, short strings such as product and category names where you are sure that they are spelled correctly—into a single document field:
 
 ```php
 "suggestion_terms": [
@@ -68,7 +68,7 @@ Suggestion terms are then indexed by splitting them by whitespace and lowercasin
 }
 ```
 
-At query time, a suggest part is added to every query. It will try to return the closest tokens (based on edit distance) for all terms that were not matched in the query. For tokens that match at least one document, no suggestions are going to be calculated. In case you have doubts about the quality of the suggestion_terms, it’s possible to fetch several suggestions per term from Elasticsearch and then use some heuristics in the back end to select one that exhibits a good combination of distance score and term frequency.
+At query time, a suggest part is added to every query. It will try to return the closest tokens (based on edit distance) for all terms that were not matched in the query. For tokens that match at least one document, no suggestions are going to be calculated. In case you have doubts about the quality of the suggestion_terms, it's possible to fetch several suggestions per term from Elasticsearch and then use some heuristics in the backend to select one that exhibits a good combination of distance score and term frequency.
 
 ```php
 "suggest": {

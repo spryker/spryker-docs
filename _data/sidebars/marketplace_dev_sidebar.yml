@@ -1004,7 +1004,8 @@ entries:
               - title: "Table Features"
                 url: /docs/marketplace/dev/front-end/table-design/table-features/
                 include_versions:
-                - "202204.0"                             
+                - "202204.0"
+                - "202212.0"
                 nested:
 
                   - title: "Batch Actions"
@@ -1031,6 +1032,7 @@ entries:
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
                     include_versions:
                     - "202204.0"
+                    - "202212.0"
                     
                   - title: "Selectable"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html

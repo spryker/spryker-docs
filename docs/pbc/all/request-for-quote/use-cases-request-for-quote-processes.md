@@ -7,7 +7,7 @@ template: concept-topic-template
 
 This document describes the use cases of [Requests for Quote (RFQ)](/docs/pbc/all/request-for-quote/request-for-quote.html) and proposed solutions.
 
-## Use Case 1: Long waiting time until RFQ gets processed
+## Use Case 1: Long waiting time until Request for Quote (RFQ) gets processed
 
 The request for quote process is currently not entirely efficient because it is manual. As a result, sometimes, customers have to wait for a long time until their RFQ gets approved or denied. 
 

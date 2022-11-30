@@ -3792,6 +3792,7 @@ entries:
     - title: Migration guide - Switch from Yarn to NPM v8
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
+    url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
     - title: Decimal Stock migration concept
       url: /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
@@ -3799,8 +3800,6 @@ entries:
       url: /docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
     - title: Search migration concept
       url: /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
-    - title: About migration concepts
-      url: /docs/scos/dev/migration-concepts/about-migration-concepts.html
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Split delivery migration concept

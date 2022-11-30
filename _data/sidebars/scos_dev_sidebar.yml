@@ -3542,9 +3542,8 @@ entries:
     - title: Running production
       url: /docs/scos/dev/back-end-development/running-production.html
     - title: Console commands
+      url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
       nested:
-      - title: Console commands in Spryker
-        url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
       - title: Implement a new console command
         url: /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
       - title: Get the list of console commands and available options

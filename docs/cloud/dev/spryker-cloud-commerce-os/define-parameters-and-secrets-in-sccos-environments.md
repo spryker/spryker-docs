@@ -26,8 +26,11 @@ To define parameters and their values, do the following.
 
 ## Define parameter and secret values         
 
-
-
-
-
+1. In the AWS Management Console, go to **Services** > **Parameter Store**.
+2. In the **My parameters** pane, click the parameter or secret you want to define the value for.
+    You can use search to filter parameters by the name you've defined in the deploy file.
+3. On the page of the parameter, click **Edit**.
+4. Enter a **Value**.
+5. Click **Save changes**.
+6. This opens the **Parameter Store** page with a success message displayed.    
     After adding parameters and their values, you can use them for your application.

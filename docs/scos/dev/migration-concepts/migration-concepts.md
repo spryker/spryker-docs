@@ -25,8 +25,10 @@ related:
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Decimal Stock migration concept
     link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
-  - title: Float Stock for Products
+  - title: Float Stock for products migration concept
     link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
+  - title: Search migration concept 
+    link: docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
   - title: Migrating from Twig v1 to Twig v3
     link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
   - title: Split Delivery migration concept
@@ -37,7 +39,4 @@ related:
 
 This section will help the developers to handle situations when a new feature requires an extensive migration effort for modules, or some technical solution used in Spryker needs to be replaced with a new one.
 
-Here you will find instructions on how implement these changes in your project. The section includes the following parts:
-
-* [Split Delivery migration concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html): Contains general information about the Split Delivery feature and describes the steps to update all the affected modules in bulk.
-* [Silex Replacement migration concept](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html): Outlines the main changes to be applied in a project and concepts on how to migrate away from Silex to the Spryker Application replacing it.
+Here you will find instructions on how implement these changes in your project. 

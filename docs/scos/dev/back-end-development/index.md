@@ -24,14 +24,14 @@ This section contains overviews and instructions for back-end developing on the 
 
 * [Running production](https://docs.spryker.com/docs/scos/dev/back-end-development/running-production.html)
 
-* Console commands
+* [Console commands](https://docs.spryker.com/docs/scos/dev/back-end-development/console-commands/console-commands.html)
 
 * Data manipulation
 
 * Extending Spryker
 
-* Zed UI tables
+* [Zed UI tables](https://github.com/spryker/spryker-docs/blob/add-landing-page/docs/scos/dev/back-end-development/zed-ui-tables/zed-ui-tables.html)
 
-* Messages and errors
+* [Messages and errors](https://github.com/spryker/spryker-docs/blob/add-landing-page/docs/scos/dev/back-end-development/messages-and-errors/messages-and-errors.html)
 
 * [Factory](https://docs.spryker.com/docs/scos/dev/back-end-development/factory/factory.html)

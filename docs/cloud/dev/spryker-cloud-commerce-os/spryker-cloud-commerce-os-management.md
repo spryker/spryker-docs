@@ -1,5 +1,5 @@
 ---
-title: Spryker Cloud Commerce management
+title: Spryker Cloud Commerce OS management
 description: The goal of this RACI Matrix is to define and document responsibilities, consultation- and reporting-obligations while providing Platform-as-a-Service hosting for a Spryker customer.
 last_updated: Nov 21, 2022
 template: concept-topic-template

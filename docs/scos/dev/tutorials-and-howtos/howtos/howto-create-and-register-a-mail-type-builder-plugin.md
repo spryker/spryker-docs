@@ -25,10 +25,6 @@ redirect_from:
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 ---
 
-This guide shows how to create and register `MailTypeBuilderPlugin`.
-
-## Create a `MailTypeBuilderPlugin`
-
 `MailTypeBuilderPlugin` is used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypeBuilderPlugin` within the `Mail` module, which sends out the emails, and implement `MailTypeBuilderPluginInterface`. 
 Then, in the `build()` method, set up your email.
 

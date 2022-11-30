@@ -30,7 +30,7 @@ namespace Pyz\Zed\Customer\Business\Customer;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Generated\Shared\Transfer\MailTransfer;
 use Spryker\Zed\Customer\Business\Customer\Customer as SprykerCustomer;
-use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomerRegistrationMailTypePlugin;
+use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomCustomerRegistrationMailTypeBuilderPlugin;
 
 class Customer extends SprykerCustomer
 {
@@ -44,11 +44,11 @@ class Customer extends SprykerCustomer
         // Create a MailTransfer instance which is
         // used for further processing
         $mailTransfer = new MailTransfer();
-
+        
         // Set the mail type which is used for the
         // internal mapping—for example, which mail provider
         // should send this mail
-        $mailTransfer->setType(CustomerRegistrationMailTypePlugin::MAIL_TYPE);
+        $mailTransfer->setType(CustomCustomerRegistrationMailTypeBuilderPlugin::MAIL_TYPE);
 
         // Set the CustomerTransfer to the MailTransfer
         // this can be any Transfer object which is
@@ -115,9 +115,9 @@ protected function sendRegistrationToken()
 }
 ```
 
-## 2. Creating a MailTypePlugin
+## 2. Creating a MailTypeBuilderPlugin
 
-Create the `MailType` plugin for this example. For more information about creating a `MailTypePlugin`, see [HowTo: Create and register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html):
+Create `MailTypeBuilderPlugin` implementing the `MailTypeBuilderPluginInterface`. For more information about creating a `MailTypeBuilderPlugin`, see [HowTo: Create and register a MailTypeBuilderPlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html):
 
 <details><summary markdown='span'>Code sample:</summary>
 
@@ -126,111 +126,52 @@ Create the `MailType` plugin for this example. For more information about creati
 
 namespace Pyz\Zed\Customer\Communication\Plugin\Mail;
 
+use Generated\Shared\Transfer\MailRecipientTransfer;
+use Generated\Shared\Transfer\MailTemplateTransfer;
+use Generated\Shared\Transfer\MailTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface;
-use Spryker\Zed\Mail\Dependency\Plugin\MailTypePluginInterface;
+use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
 
-class CustomCustomerRegistrationMailTypePlugin extends AbstractPlugin implements MailTypePluginInterface
+class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuilderPluginInterface
 {
-    public const MAIL_TYPE = 'custom customer registration mail';
+    protected const MAIL_TYPE = 'custom customer registration mail';
+    
+    protected const MAIL_TEMPLATE_HTML = 'customer/mail/customer_registration.html.twig';
 
-    /**
-     * @api
-     *
-     * @return string
-     */
+    protected const MAIL_TEMPLATE_TEXT = 'customer/mail/customer_registration.text.twig';
+
+    protected const GLOSSARY_KEY_MAIL_SUBJECT = 'mail.customer.registration.subject';
+
     public function getName(): string
     {
         return static::MAIL_TYPE;
     }
 
-    /**
-     * @api
-     *
-     * @param \Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface $mailBuilder
-     *
-     * @return void
-     */
-    public function build(MailBuilderInterface $mailBuilder): void
+    public function build(MailTransfer $mailTransfer): MailTransfer
     {
-        $this
-            ->setSubject($mailBuilder)
-            ->setHtmlTemplate($mailBuilder)
-            ->setTextTemplate($mailBuilder)
-            ->setSender($mailBuilder)
-            ->setRecipient($mailBuilder);
-    }
-
-    /**
-     * @param \Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface $mailBuilder
-     *
-     * @return $this
-     */
-    protected function setSubject(MailBuilderInterface $mailBuilder)
-    {
-        $mailBuilder->setSubject('mail.customer.registration.subject');
-
-        return $this;
-    }
-
-    /**
-     * @param \Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface $mailBuilder
-     *
-     * @return $this
-     */
-    protected function setHtmlTemplate(MailBuilderInterface $mailBuilder)
-    {
-        $mailBuilder->setHtmlTemplate('customer/mail/customer_registration.html.twig');
-
-        return $this;
-    }
-
-    /**
-     * @param \Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface $mailBuilder
-     *
-     * @return $this
-     */
-    protected function setTextTemplate(MailBuilderInterface $mailBuilder)
-    {
-        $mailBuilder->setTextTemplate('customer/mail/customer_registration.text.twig');
-
-        return $this;
-    }
-
-    /**
-     * @param \Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface $mailBuilder
-     *
-     * @return $this
-     */
-    protected function setRecipient(MailBuilderInterface $mailBuilder)
-    {
-        $customerTransfer = $mailBuilder->getMailTransfer()->requireCustomer()->getCustomer();
-
-        $mailBuilder->addRecipient(
-            $customerTransfer->getEmail(),
-            $customerTransfer->getFirstName() . ' ' . $customerTransfer->getLastName()
-        );
-
-        return $this;
-    }
-
-    /**
-     * @param \Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface $mailBuilder
-     *
-     * @return $this
-     */
-    protected function setSender(MailBuilderInterface $mailBuilder)
-    {
-        $mailBuilder->setSender('mail.sender.email', 'Custom email sender name');
-
-        return $this;
+        $customerTransfer = $mailTransfer->requireCustomer()->getCustomer();
+    
+        return $mailTransfer
+            ->setSubject(static::GLOSSARY_KEY_MAIL_SUBJECT)
+            ->addTemplate(
+                (new MailTemplateTransfer())
+                    ->setName(static::MAIL_TEMPLATE_HTML)
+                    ->setIsHtml(true),
+            )
+            ->addTemplate(
+                (new MailTemplateTransfer())
+                    ->setName(static::MAIL_TEMPLATE_TEXT)
+                    ->setIsHtml(false),
+            )
+            ->addRecipient(
+                (new MailRecipientTransfer())
+                    ->setEmail($customerTransfer->getEmail())
+                    ->setName(sprintf('%s %s', $customerTransfer->getFirstName(), $customerTransfer->getLastName())),
+            );
     }
 }
 ```
-
 </details>
-
-The `Mail` module’s default `MailBuilder` is already pre-defined to build the `MailTransfer`. `MailBuilder` internally adds a new `MailRecipientTransfer` with the passed information, email, and name.
 
 ## 3. Registering a plugin
 
@@ -238,109 +179,98 @@ When the plugin is created, it must be registered in `MailDependencyProvider`:
 
 ```php
 <?php
-        ...
-        $container->extend(self::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
-            ....
-            $mailCollection->add(new CustomCustomerRegistrationMailTypePlugin());
+namespace Pyz\Zed\Mail;
 
-            return $mailCollection
-        });
-        ...
- ?>
+use Pyz\Zed\Customer\Communication\Plugin\Mail\CustomCustomerRegistrationMailTypeBuilderPlugin;
+use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    protected function getMailTypeBuilderPlugins(): array
+    {
+        return [
+            new CustomCustomerRegistrationMailTypeBuilderPlugin(),
+        ];
+    }
+}
 ```
 
 ## 4. Mail translations
 
-The default `MailBuilder` also has access to the glossary with the `setSubject()` method. This is used for translations as follows:
+The `MailTypeBuilderPlugin` also has access to the glossary with the `setSubject()` method.
+
+A string is used as a key of the translation. The default mail provider internally does the translation through `GlossaryFacade`.
+
+You can also translate with the parameters setting up the placeholder to be replaced.  For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
+In your `MailTypeBuilderPlugin` you can use the `orderReference` from the given `OrderTransfer` within the subject translations:
 
 ```php
 <?php
-namespace Pyz\Zed\Customer\Communication\Plugin\Mail;
-
+use Generated\Shared\Transfer\MailTransfer;
+use Generated\Shared\Transfer\MailRecipientTransfer;
+use Generated\Shared\Transfer\MailSenderTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\Mail\Business\Model\Mail\Builder\MailBuilderInterface;
-use Spryker\Zed\Mail\Dependency\Plugin\MailTypeInterface;
+use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
 
-class CustomerCustomerRegistrationMailTypePlugin extends AbstractPlugin implements MailTypePluginInterface
+class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuilderPluginInterface
 {
-    ...
-    protected function setSubject(MailBuilderInterface $mailBuilder)
+    public function build(MailTransfer $mailTransfer): MailTransfer
     {
-        $mailBuilder->setSubject('mail.customer.registration.subject');
-    }
-    ...
-}
-```
-
-A string is used as a key of the translation. The `MailBuilder` internally does the translation through `GlossaryFacade`:
-
-```php
-<?php
-namespace Spryker\Zed\Mail\Business\Model\Mail\Builder;
-
-    ...
-
-    protected function setSubject($subject, array $data = [])
-    {
-        $subject = $this->translate($subject, $data);
-
-        $this->getMailTransfer()->setSubject($subject);
-
-        return $this;
-    }
-    ...
-
-    protected function translate($keyName, array $data = [])
-    {
-        $localeTransfer = $this->getLocaleTransfer();
-
-        if ($this->glossaryFacade->hasTranslation($keyName, $localeTransfer)) {
-            $keyName = $this->glossaryFacade->translate($keyName, $data, $localeTransfer);
-        }
-
-        return $keyName;
+        return $mailTransfer
+            //
+            ->setSubject('Registration {customerName}')
+            ->setSubjectTranslations([
+                '{customerName}' => 'Spencor Hopkins'
+            ])
+            ->addRecipient(
+                (new MailRecipientTransfer())
+                    ->setName('{customerName}')
+                    ->setNameTranslationParameters([
+                        '{customerName}' => 'Spencor Hopkins'
+                ]),
+            )
+            ->addSender(
+                (new MailSenderTransfer())
+                    ->setName('{senderName}')
+                    ->setNameTranslationParameters([
+                        '{senderName}' => 'Spryker'
+                ]),
+            );
     }
 }
 ```
 
-As you can see above, you can also translate with the placeholder. For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
-
-In your `MailType` plugin, you can use the `orderReference` from the given `OrderTransfer` within the subject:
-
-```php
-<?php
-...
-protected function setSubject(MailBuilderInterface $mailBuilder)
-{
-    $orderTransfer = $mailBuilder->getMailTransfer()->getOrder();
-
-    $mailBuilder->setSubject(
-        'mail.order.shipped.subject',
-        [
-            '{orderReference}' => $orderTransfer->getOrderReference()
-        ]
-    );
-}
-...
-}
-...
-}
-```
+{% info_block infoBox "Info" %}
+Note `MailSenderTransfer.setName()` and `MailRecipientTransfer.setName()` as well as `MailTransfer.setSubject()` allow setting up the translations.
+Besides that `MailSenderTransfer.setNameTranslations()` and  `MailRecipientTransfer.setNameTranslations()` are used in order to translate with parameters.
+{% endinfo_block %}
 
 ## Set templates
 
 Usually, you have a `.twig` file which contains the template you want to use for mail. 
 
-Set the template which must be used in your `MailType` plugin:
+Set the template in `MailTransfer` which must be used in your `MailTypeBuilderPlugin` plugin.
 
 ```php
 <?php
-...
-protected function setTextTemplate(MailBuilderInterface $mailBuilder)
+use Generated\Shared\Transfer\MailTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
+
+class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuilderPluginInterface
 {
-    $mailBuilder->setTextTemplate('customer/mail/customer_registration.text.twig');
-}
-...
+    protected const MAIL_TEMPLATE_TEXT = 'customer/mail/customer_registration.text.twig';
+
+    public function build(MailTransfer $mailTransfer): MailTransfer
+    {
+        return $mailTransfer
+            //
+            ->addTemplate(
+                (new MailTemplateTransfer())
+                    ->setName(static::MAIL_TEMPLATE_TEXT)
+                    ->setIsHtml(false),
+            );
+    }
 }
 ```
 
@@ -348,9 +278,7 @@ The provider determines the template's final look. It can contain plain text or 
 
 ```twig
 {
-    ...
     customer: "{% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %} {% raw %}{{{% endraw %} mail.customer.lastName {% raw %}}}{% endraw %}",
-    ...
 }
 ```
 

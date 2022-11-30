@@ -5,7 +5,6 @@ last_updated: Nov 15, 2022
 template: concept-topic-template
 ---
 
-This document describes the use cases of [Requests for Quote (RFQ)](/docs/pbc/all/request-for-quote/request-for-quote.html) and proposed solutions.
 
 ## Use Case 1: Long waiting time until Request for Quote (RFQ) gets processed
 

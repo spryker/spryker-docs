@@ -13,8 +13,6 @@ redirect_from:
 related:
   - title: Return Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/return-management-feature-integration.html
-  - title: Return Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
   - title: Managing the returns
     link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html
   - title: Retrieving return reasons

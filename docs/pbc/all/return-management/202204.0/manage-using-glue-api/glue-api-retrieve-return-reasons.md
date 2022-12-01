@@ -14,7 +14,7 @@ related:
   - title: Managing the returns
     link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/page.version/return-management-feature-overview.html
+    link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
 This endpoint allows retrieving returns reasons.

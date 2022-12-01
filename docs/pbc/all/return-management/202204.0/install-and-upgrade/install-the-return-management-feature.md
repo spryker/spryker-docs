@@ -13,8 +13,6 @@ redirect_from:
 related:
     - title: Glue API - Return Management feature integration
       link: docs/pbc/all/return-management/page.version/install-and-upgrade/install-the-return-management-glue-api.html
-    - title: Return Management feature walkthrough
-      link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-return-management-feature.md -->

@@ -97,7 +97,7 @@ A Back Office user can create returns for the [returnable items](#returnable-ite
 
 {% info_block infoBox "Return management process" %}
 
-To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/pbc/all/return-management/{{page.version}}/building-a-return-management-process-best-practices.html).
+To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/pbc/all/return-management/{{page.version}}/build-a-return-management-process-best-practices.html).
 
 {% endinfo_block %}
 
@@ -131,7 +131,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 |---|
 | [Create returns in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html)  |
 | [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html)  |
-| [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/building-a-return-management-process-best-practices.html)  |
+| [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/build-a-return-management-process-best-practices.html)  |
 
 ## Related Developer articles
 

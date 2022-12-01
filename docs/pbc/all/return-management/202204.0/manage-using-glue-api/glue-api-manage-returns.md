@@ -14,7 +14,7 @@ related:
   - title: Retrieving the return reasons
     link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-retrieve-return-reasons.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/page.version/return-management-feature-overview.html
+    link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
 The Return Management API allows developers to retrieve return information and create returns. The list of retrievable information includes:

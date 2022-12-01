@@ -114,6 +114,14 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/multi-step-checkout-overview.html
               - title: Order thresholds overview
                 url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/order-thresholds-overview.html
+          - title: Approval Process feature overview
+            url: /docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html
+          - title: Comments feature overview
+            url: /docs/pbc/all/cart-and-checkout/comments-feature-overview.html
+          - title: Non-splittable Products feature overview
+            url: /docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html
+          - title: Approval Process feature overview
+            url: /docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features

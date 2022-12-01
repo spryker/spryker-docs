@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/glue-api-return-management-feature-integration
 related:
   - title: Return Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/return-management-feature-integration.html
+    link: docs/pbc/all/return-management/page.version/install-and-upgrade/install-the-return-management-feature.html
   - title: Managing the returns
     link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html
   - title: Retrieving return reasons

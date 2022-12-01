@@ -120,8 +120,8 @@ entries:
             url: /docs/pbc/all/cart-and-checkout/comments-feature-overview.html
           - title: Non-splittable Products feature overview
             url: /docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html
-          - title: Approval Process feature overview
-            url: /docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html
+          - title: Resource Sharing feature overview
+            url: /docs/pbc/all/cart-and-checkout/resource-sharing-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features

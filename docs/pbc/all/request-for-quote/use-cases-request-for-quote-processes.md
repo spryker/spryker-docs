@@ -6,17 +6,17 @@ template: concept-topic-template
 ---
 
 
-## Use case 1: Long waiting time until Request for Quote (RFQ) gets processed
+## Use case 1: Long waiting time until Request for Quote gets processed
 
-The [request for quote](/docs/pbc/all/request-for-quote/request-for-quote.html) process is currently not entirely efficient because it is manual. As a result, sometimes, customers have to wait for a long time until their RFQ gets approved or denied. 
+The [Request for Quote](/docs/pbc/all/request-for-quote/request-for-quote.html) (RFQ) process is currently not fully efficient because it is manual. As a result, sometimes customers have to wait a long time until their RFQ gets approved or denied. 
 
 ### Solution
 
-To solve this issue, merchants must react faster to quote requests. For example, they can take the following measures:
-* Clarify the essential details upfront with customers.
+To solve this issue, merchants may need to react faster to quote requests. For example, they can take the following measures:
+* Clarify the essential details ahead of time with customers.
 * Automate the RFQ process where possible: create assignment criteria and define workflows with predefined thresholds per customer if needed.
-* Notify customers about the processing of their RFQs through, for example, email with provided estimated delivery dates.
-* Notify merchants about new or updated RFQ through, for example, email.
+* Notify customers about the processing of their RFQs—for example through an email with the provided estimated delivery dates.
+* Notify merchants about new or updated RFQs through email or other means.
 
 ## Use case 2: Marketplace customers must create separate carts and RFQs for each merchant
 

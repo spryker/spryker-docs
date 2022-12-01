@@ -26,13 +26,14 @@ redirect_from:
 
 ## PHP 7
 
-PHP 7.4 is officially EOL for Spryker software since July 2022. Please upgrade to 8.0+ immediately to avoid issues with security or critical updates.
+PHP 7.4 is officially EOL for Spryker software since July 2022. 
+Please upgrade to 8.0+ immediately to avoid issues with security or critical updates.
 
 ## PHP 8
 
 Since October 2021, Spryker has been compatible with PHP 8.0.
-PHP 8.1 support has been added in July 2022.
-PHP 8.2 support has been added in December 2022. Please use with caution.
+- PHP 8.1 support has been added in July 2022.
+- PHP 8.2 support has been added in December 2022. Please use with caution.
 
 We **recommend** using **PHP 8.1** currently. Anyone on 8.0 is encouraged to migrate beginning of 2023 to allow a smooth upgrade path.
 

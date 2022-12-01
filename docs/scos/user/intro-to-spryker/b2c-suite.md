@@ -27,7 +27,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 <summary markdown='span'>B2C feature list</summary>
 
 - [Configurable Product](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html)
-- [Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
+- [Return Management](/docs/pbc/all/return-management/{{site.version}}/return-management.html)
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html)

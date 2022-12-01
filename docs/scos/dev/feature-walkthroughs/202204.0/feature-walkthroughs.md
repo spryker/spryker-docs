@@ -234,10 +234,6 @@ The [Reorder](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reorder-featu
 
 The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spryker Commerce OS. For each entity, you must use an additional connector-module. For example, to share a cart through a URL, Resource Sharing should be combined with Persistent Cart Sharing.
 
-## Return Management
-
-The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) feature lets you create and manage returns for a sales order.
-
 ## Search
 
 The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.

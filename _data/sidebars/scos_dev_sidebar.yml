@@ -512,7 +512,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/return-management-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Scheduled Prices
       url: /docs/scos/dev/feature-walkthroughs/scheduled-prices-feature-walkthrough.html
       include_versions:
@@ -1036,14 +1035,12 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving return reasons
         url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-reasons.html
         include_versions:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving returnable items
         url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-returnable-items.html
         include_versions:
@@ -1553,7 +1550,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Shared Carts
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shared-carts-feature-integration.html
         include_versions:
@@ -2373,7 +2369,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Sales Data Export
       url: /docs/scos/dev/feature-integration-guides/sales-data-export-feature-integration.html
       include_versions:
@@ -4152,8 +4147,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html
         - title: "HowTo: Display product groups by color on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-        - title: "HowTo: Set number of days for a return policy"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
         - title: "HowTo: Make a product searchable and shown on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
         - title: "HowTo: Add support of number formatting in the Back Office"

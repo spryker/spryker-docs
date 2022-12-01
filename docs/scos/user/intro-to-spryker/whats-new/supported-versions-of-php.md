@@ -1,7 +1,7 @@
 ---
 title: Supported versions of PHP
 description: This document provides information about the PHP versions Spryker supports.
-last_updated: May 12, 2022
+last_updated: Dezember 1, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/supported-versions-of-php
 originalArticleId: 9eba7382-df72-44fd-b601-a3de5c592455

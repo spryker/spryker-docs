@@ -12,4 +12,4 @@ Testing with real or at least mock data gives significantly better and more reli
 
 If you can't use real data in staging environments, we offer [test data](https://drive.google.com/drive/folders/1QvwDp2wGz6C4aqGI1O9nK7G9Q_U8UUS-?usp=sharing) for an expanding amount of use cases. We do not provide support for this data, but, if your use case is not covered, [contact support](https://spryker.force.com/support/s/knowledge-center) and we will try to accomodate.
 
-To improve load testing further, we recommend installing the [load testing tool](https://github.com/spryker-sdk/load-testing) as part of your environment or on a separate server.  
+To improve load testing further, you can install the [load testing tool](https://github.com/spryker-sdk/load-testing) as part of your environment or on a separate server.  

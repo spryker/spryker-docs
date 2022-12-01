@@ -40,5 +40,30 @@ To integrate Payone, follow these steps.
 If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. The payment methods you've selected in step 8, appear in **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
 ![payone-credit-card](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-credit-card.png).
 
+## 3. Whitelist Payone Domain
+
+To enable Payone to redirect your customers to their 3D Secure page and later one to your success page, you must add Payone domain inside your **Content Security Policy**. To do that please change `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
+
+Changes required in the `deploy.yml` file.
+
+```yml
+image:
+  environment:
+    SPRYKER_AOP_APPLICATION: '{
+      "APP_DOMAINS": [
+        "os.apps.aop.spryker.com",
+        ...
+      ],
+      ...
+    }'
+```
+
+Changes required in the `config/Shared/config_default.php` file.
+
+```php
+$config[KernelConstants::DOMAIN_WHITELIST][] = 'os.apps.aop.spryker.com';
+```
+
 ## Next steps
+
 [Activate the added payment methods](/docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/edit-payment-methods.html)

@@ -65,6 +65,8 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 | POST https://glue.mysprykershop.com/checkout-data?include=shipments,shipment-methods | Submit checkout data and include all the order shipments and all available shipment methods in the response. |
 | POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses | Submit checkout data and include the logged-in company users' company business unit addresses in the response. |
 | POST https://glue.mysprykershop.com/checkout-data?include=shipment-methods&sort=shipment-methods.carrierName,-shipment-methods.defaultNetPrice | Submit checkout data and include all available shipment methods in the response. Sort the returned shipment methods `carrierName` in ascending order and by `defaultNetPrice` in descending order. |
+| POST https://glue.mysprykershop.com/checkout-data?include=carts  | Submit checkout data and include the logged-in customer's cart data in the response. |
+| POST https://glue.mysprykershop.com/checkout-data?include=carts  | Submit checkout data and include the guest customer's cart data in the response. |
 
 
 <details>
@@ -256,6 +258,8 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 }
 ```
 </details>
+
+
 
 
 {% include pbc/all/glue-api-guides/submit-checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/submit-checkout-data-request-attributes.md -->
@@ -958,6 +962,75 @@ In case of a successful update, the endpoint responds with information that can 
 ```
 </details>
 
+<details>
+<summary markdown='span'>Response sample: submit checkout data with the logged-in customer's cart data.</summary>
+
+```json
+{
+    "data": {
+        "type": "checkout-data",
+        "id": null,
+        "attributes": {
+            "addresses": [],
+            "paymentProviders": [],
+            "shipmentMethods": [],
+            "selectedShipmentMethods": [],
+            "selectedPaymentMethods": []
+        },
+        "links": {
+            "self": "http://glue.de.spryker.local/checkout-data?include=carts"
+        },
+        "relationships": {
+            "carts": {
+                "data": [
+                    {
+                        "type": "carts",
+                        "id": "482bdbd6-137f-5b58-bd1c-37f3fa735a16"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "carts",
+            "id": "482bdbd6-137f-5b58-bd1c-37f3fa735a16",
+            "attributes": {
+                "priceMode": "GROSS_MODE",
+                "currency": "EUR",
+                "store": "DE",
+                "name": "Test1",
+                "isDefault": true,
+                "totals": {
+                    "expenseTotal": 490,
+                    "discountTotal": 0,
+                    "taxTotal": 78,
+                    "subtotal": 0,
+                    "grandTotal": 490,
+                    "priceToPay": 490,
+                    "shipmentTotal": 490
+                },
+                "discounts": [],
+                "thresholds": []
+            },
+            "links": {
+                "self": "http://glue.de.spryker.local/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Response sample: submit checkout data with the guest customer's cart data.</summary>
+
+```json
+// TO DO 
+```
+
+</details>
 
 {% include pbc/all/glue-api-guides/submit-checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/submit-checkout-data-response-attributes.md -->
 

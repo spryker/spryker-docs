@@ -126,6 +126,8 @@ entries:
             nested:
               - title: Install features
                 nested:
+                  - title: Approval Process
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-approval-process-feature.html
                   - title: Cart + Agent Assist
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
                   - title: Cart
@@ -142,6 +144,12 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html
                   - title: Checkout + Quotation Process
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
+                  - title: Comments
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-feature.html
+                  - title: Comments + Order Management
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-order-management-feature.html
+                  - title: Comments
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html
                   - title: Multiple Carts + Reorder
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html
                   - title: Multiple Carts
@@ -163,7 +171,7 @@ entries:
                   - title: Quick Add to Cart
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html
                   - title: Quick Add to Cart + Measurement Units
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-resource-sharing-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html
                   - title: Quick Add to Cart + Non-splittable Products
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
                   - title: Quick Add to Cart + Packaging Units
@@ -190,21 +198,21 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html
               - title: Upgrade modules
                 nested:
-                  - title: Upgrade the Cart module
+                  - title: Cart
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
-                  - title: Upgrade the CartExtension module
+                  - title: CartExtension
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html
-                  - title: Upgrade the CartPage module
+                  - title: CartPage
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html
-                  - title: Upgrade the CartsRestApi module
+                  - title: CartsRestApi
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartsrestapi-module.html
-                  - title: Upgrade the CartVariant module
+                  - title: CartVariant
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html
-                  - title: Upgrade the Checkout module
+                  - title: Checkout
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html
-                  - title: Upgrade the CheckoutPage module
+                  - title: CheckoutPage
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
-                  - title: Upgrade the CheckoutRestApi module
+                  - title: CheckoutRestApi
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
           - title: Extend and customize
             nested:
@@ -222,6 +230,10 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-steps.html
           - title: Import and export data
             nested:
+              - title: File details - comment.csv
+                url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-comment.csv.html
+              - title: File details - product_quantity.csv
+                url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-product-quantity.csv.html
               - title: File details - sales_order_threshold.csv
                 url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-sales-order-threshold.csv.html
           - title: Manage in the Back Office
@@ -269,7 +281,7 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/checkout-feature-module-relations.html
               - title: "Comments feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/comments-feature-module-relations.html
-              - title: "Persistent Cart Sharing: module relations"
+              - title: "Persistent Cart Sharing feature: module relations"
                 url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/persistent-cart-sharing-feature-module-relations.html
               - title: "Quick Add to Cart feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html

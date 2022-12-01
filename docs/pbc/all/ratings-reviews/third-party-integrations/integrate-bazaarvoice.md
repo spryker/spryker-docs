@@ -20,6 +20,8 @@ The BazaarVoice app requires the following Spryker modules:
 
 ## Integration
 
+## 1. Connect Bazaarvoice
+
 To integrate Bazaarvoice, follow these steps:
 
 1. In your store's Back Office, go to **Apps > Catalog**.
@@ -39,6 +41,30 @@ That's it. You have integrated the Bazaarvoice app into your store. It usually t
 You can do the administration work on the Bazaarvoice reviews from the [Bazaarvoice portal](https://portal.bazaarvoice.com/signin?ref=spryker-documentation). For example, you can approve individual reviews. See [Workbench overview](https://knowledge.bazaarvoice.com/wp-content/brandedge-pro-wb/en_US/basics/workbench_overview.html#log-in-to-workbench?ref=spryker-documentation) for details on how you can manage reviews from the Bazaarvoice portal.
 
 {% endinfo_block %}
+
+## 2. Whitelist Bazaarvoice Domain
+
+To enable your customers to leave reviews on your products, you must add Bazaarvoice domain inside your **Content Security Policy** whitelist. To do that please change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
+
+Changes required in the `deploy.yml` file.
+
+```yml
+image:
+  environment:
+    SPRYKER_AOP_APPLICATION: '{
+      "APP_DOMAINS": [
+        "*.bazaarvoice.com",
+        ...
+      ],
+      ...
+    }'
+```
+
+Alternatively, you may whitelist the domain from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, then this step can be ignored.
+
+```php
+$config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
+```
 
 ## Next steps
 [Configure the Bazzarevoice app](/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html) for your store.

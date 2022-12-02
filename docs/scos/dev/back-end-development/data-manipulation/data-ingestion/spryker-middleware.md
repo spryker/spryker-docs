@@ -355,7 +355,7 @@ By default, Middleware supports two strategies:
 
 | STRATEGY | DESCRIPTION |
 | --- | --- |
-| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy skips the keys which are mentioned in the mapper configuration from the payload. |
+| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy skips the keys which are not mentioned in the mapper configuration from the payload. |
 | SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_COPY_UNKNOWN | This strategy copies keys with values which are not mentioned in the mapper configuration from the payload. |
 
 There are five ways to set mapper rules:

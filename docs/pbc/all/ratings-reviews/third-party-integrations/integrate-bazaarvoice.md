@@ -18,9 +18,11 @@ The BazaarVoice app requires the following Spryker modules:
 * `spryker-shop/product-category-widget: ^1.6.0`
 * `spryker-shop/shop-ui: ^1.59.0`
 
+## Integrate Bazaarvoice
+
 To integrate Bazaarvoice, follow these steps:
 
-## 1. Connect Bazaarvoice
+### 1. Connect Bazaarvoice
 
 1. In your store's Back Office, go to **Apps > Catalog**.
 2. Click **Bazaarvoice**.
@@ -40,7 +42,7 @@ You can do the administration work on the Bazaarvoice reviews from the [Bazaarvo
 
 {% endinfo_block %}
 
-## 2. Add Bazaarvoice domain to your allowlist
+### 2. Add Bazaarvoice domain to your allowlist
 
 To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist. To do that, change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
 

@@ -42,9 +42,9 @@ If the app was connected successfully, a corresponding message appears, and the 
 
 ## 3. Whitelist Payone Domain
 
-To enable Payone to redirect your customers to their 3D Secure page and later one to your success page, you must add ACP domain inside your **Content Security Policy** whitelist. To do that please change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
+To enable Payone to redirect your customers to their 3D Secure page and later to your success page, you must add the ACP domain inside your **Content Security Policy** allowlist. To do that, change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
 
-Changes required in the `deploy.yml` file.
+ In the `deploy.yml` file, introduce the required changes:
 
 ```yml
 image:

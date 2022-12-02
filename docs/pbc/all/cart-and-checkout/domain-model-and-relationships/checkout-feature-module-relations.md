@@ -1,7 +1,7 @@
 ---
-title: Checkout feature entity diagram
+title: "Checkout feature: module relations"
 last_updated: Aug 13, 2021
-description: The Checkout feature allows customizing the checkout workflow.
+description: Module relations of the Checkout feature
 template: concept-topic-template
 ---
 

@@ -36,7 +36,7 @@ To install the User Management capability, do the following:
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature/acl:"{{site.version}}" --update-with-dependencies
 ```
-2. Follow the integration guides in [Related Developer articles](#related-developer-articles).
+2. Follow the integration guides for the  [Related Developer articles](#related-developer-articles).
 
 ## Related Business User articles
 
@@ -54,7 +54,6 @@ composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature
 
 ## Related Developer articles
 
-| OVERVIEWS | GLUE API GUIDES |
+| OVERVIEWS | INSTALLATION GUIDES |
 | - | - |
-| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html) | [Search by customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html) |
-| | [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html) |
+| [Users and rights overview](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html) |

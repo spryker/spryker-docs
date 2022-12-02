@@ -42,11 +42,11 @@ You can do the administration work on the Bazaarvoice reviews from the [Bazaarvo
 
 {% endinfo_block %}
 
-## 2. Whitelist Bazaarvoice Domain
+## 2. Add Bazaarvoice domain to your allowlist
 
-To enable your customers to leave reviews on your products, you must add Bazaarvoice domain inside your **Content Security Policy** whitelist. To do that please change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
+To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain inside your **Content Security Policy** allowlist. To do that, change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
 
-Changes required in the `deploy.yml` file.
+In the `deploy.yml` file, introduce the required changes: 
 
 ```yml
 image:
@@ -60,7 +60,7 @@ image:
     }'
 ```
 
-Alternatively, you may whitelist the domain from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, then this step can be ignored.
+Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, then this step can be ignored.
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';

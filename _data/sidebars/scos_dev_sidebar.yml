@@ -3848,10 +3848,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-    - title: Define parameters and secrets locally
-      url: /docs/scos/dev/the-docker-sdk/define-parameters-and-secrets-locally.html
-      include_versions:
-      - "202204.0"
     - title: Configure services
       url: /docs/scos/dev/the-docker-sdk/configure-services.html
       include_versions:

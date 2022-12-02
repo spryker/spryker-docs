@@ -26,23 +26,23 @@ This RACI Matrix defines responsibilities, consultation and reporting obligation
 
 | ACTIVITY | CUSTOMER | RESPONSIBLE DEVELOPING PARTY (CUSTOMER OR PARTNER) | SPRYKER |
 | --- | ---| --- | --- |
-| Application Health, Security and Performance|
-| Provide code operational application (docker-sdk and Spryker Code) | C | A/R | I | 
-| Optimize Application  performance applying best practices | I/C | R/A | I | 
-| Maintain Application up-to-date and secure | I/C | R/A | I |
-| Infrastructure Configuration and Scaling | 
-| Manage environment sizing depending on the current needs | - | C | R/A |
-| Maintain the Infrastructure up-to-date and secure | I | I | R/A |
-| Configuration of the infrastructure for the Application | I | C | R/A |
-| Provide deploy file that can be used in the Spryker Cloud setup | I | R/A | C |
-| Deployments |
+| Application health, security, and performance. |
+| Provide code operational application (docker-sdk and Spryker Code) | C | A/R | I |
+| Optimize application performance by applying best practices | I/C | R/A | I |
+| Maintain application up to date and secure | I/C | R/A | I |
+| Infrastructure configuration and scaling	 |
+| Resize environments according to current needs | - | C | R/A |
+| Maintain the infrastructure up to date and secure | I | I | R/A |
+| Configure infrastructure for the application | I | C | R/A |
+| Provide deploy files for SCCOS environments | I | R/A | C |
+| Deployment |
 | Provide valid access tokens for the repositories and the repository is available to Spryker Cloud as per requirements | - | R/A | I |
 | Conduct appropriate (load) testing, especially regarding data imports before production deployment | I/C | R/A | I |
 | Initial troubleshooting of deployment issues | - | R/A | - |
-| Fix deployment problems with data (data imports, timeouts during data import, wrong data structure, etc) and code | - | R/A | I |
-| Fix deployment infrastructure problems (Placement issues, timeouts building of images, deployment of containers (e.g. Jenkins)) | - | - | R/A |
-| Monitoring/Alerting and Troubleshooting |
-| Analyze logs and conduct troubleshooting to determine Infrastructure problems | I | I| R/A |
-| Analyze logs and conduct troubleshooting to determine Application problems | I/C | R/A | - |
-| Monitor Infrastructure and inform stakeholders about infrastructure problems proactively | I | I | R/A |
-| Monitor Application and inform stakeholders about application problems proactively | I/C | R/A | - |
+| Resolve deployment issues related to code and data, like data imports, timeouts during data import,  or wrong data structure. | - | R/A | I |
+| Resolve deployment infrastructure issues: placement issues, timeouts of image building, deployment of containers like Jenkins. | - | - | R/A |
+| Monitoring, alerting and troubleshooting |
+| Analyze logs and conduct troubleshooting to determine infrastructure issues. | I | I | R/A |
+| Analyze logs and conduct troubleshooting to determine application issues. | I/C | R/A | - |
+| Monitor infrastructure and inform stakeholders about issues proactively. | I | I | R/A |
+| Monitor application and inform stakeholders about issues proactively. | I/C | R/A | - |

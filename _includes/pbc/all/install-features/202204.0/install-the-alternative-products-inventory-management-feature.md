@@ -1,15 +1,18 @@
 
+This document describes how to integrate Alternative Products + Inventory Management into a Spryker project.
 
 ## Install feature core
+
+Follow the steps below to install the feature core.
 
 ### Prerequisites
 
 To start feature integration, review and install the necessary features:
 
-| NAME | VERSION |
+| NAME | VERSION | INTEGRATION GUIDE |
 |---|---|
-|Alternative Products|{{site.version}}|
-|Inventory Management|{{site.version}}|
+|Alternative Products|{{site.version}}| [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)|
+|Inventory Management|{{site.version}}| | [Inventory Management feature integration] |
 
 ### 1) Set up behavior
 

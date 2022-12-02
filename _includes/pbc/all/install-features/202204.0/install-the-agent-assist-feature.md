@@ -125,7 +125,7 @@ Ensure that the following plugins have been registered:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the feature front end.
 

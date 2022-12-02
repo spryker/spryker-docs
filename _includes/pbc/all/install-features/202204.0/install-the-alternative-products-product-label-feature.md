@@ -1,19 +1,19 @@
-
+This document describes how to integrate the [Product Labels](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-labels-feature-integration.html) feature into a Spryker project.
 
 ## Install feature core
+
+Follow the steps below to install the feature core.
 
 ### Prerequisites
 
 Please review and install the necessary features before beginning the integration.
 
-| NAME | VERSION |
+| NAME | VERSION | INTEGRATION GUIDE |
 |---|---|
-|Alternative Products| {{site.version}} |
-|Product Label| {{site.version}} |
+|Alternative Products| {{site.version}} |  |
+|Product Label| {{site.version}} | |
 
 ### 1) Install the required modules using Composer
-
-
 
 ```yaml
 composer require spryker/product-alternative-product-label-connector:"^1.0.0" --update-with-dependencies
@@ -28,9 +28,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Import data
-
-#### Add infrastructural data
+### 2) Add infrastructural data
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
@@ -150,7 +148,7 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
+Make sure the following:
 
 - When you add product alternatives, it adds the corresponding label to the product.
 - When you remove product alternatives, it removes the corresponding label from the product.

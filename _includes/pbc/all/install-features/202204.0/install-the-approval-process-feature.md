@@ -371,7 +371,7 @@ Check that the customer without `PlaceOrderPermission` cannot proceed to checkou
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 ### Prerequisites
 

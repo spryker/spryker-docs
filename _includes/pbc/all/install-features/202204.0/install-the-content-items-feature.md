@@ -722,7 +722,7 @@ Make sure that, when editing CMS pages and blocks in the WYSIWYG editor, you can
 
 
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Content Item feature front end.
 

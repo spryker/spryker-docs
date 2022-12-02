@@ -1,15 +1,18 @@
 
+This document describes how to integrate Alternative Products + Discontinued Products into a Spryker project.
 
 ## Install feature core
 
+Follow the steps below to install the feature core.
+
 ### Prerequisites
 
-Please review and install the necessary features before beginning the integration.
+To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Alternative Products | {{site.version}} |
-| Discontinued Products | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Alternative Products | {{site.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html) |
+| Discontinued Products | {{site.version}} | Discontinued Products feature integration |
 
 ### 1) Set up behavior
 

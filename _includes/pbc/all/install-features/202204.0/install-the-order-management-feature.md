@@ -1095,7 +1095,7 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Order Management feature front end.
 

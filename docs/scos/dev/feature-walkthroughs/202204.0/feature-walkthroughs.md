@@ -214,21 +214,6 @@ The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-se
 
 The [Reclamations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reclamations-feature-walkthrough.html) feature lets Back Office users handle order claims issued by customers.
 
-## Refunds
-
-The [Refunds](/docs/scos/dev/feature-walkthroughs/{{page.version}}/refunds-feature-walkthrough.html) feature lets you issue refunds on orders.
-
-## Reorder
-
-The [Reorder](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reorder-feature-walkthrough.html) feature lets customers repeat their previous orders in one click.
-
-## Return Management
-
-The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) feature lets you create and manage returns for a sales order.
-
-## Search
-
-The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
 
 ## Spryker Core Back Office
 

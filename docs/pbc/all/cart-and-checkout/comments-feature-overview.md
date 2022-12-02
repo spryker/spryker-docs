@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/comments-feature-overview
   - /docs/comments-feature-overview
   - /docs/en/comments-feature-overview
+  - /docs/scos/user/features/202204.0/comments-feature-overview.html
 ---
 
 The *Comments* feature provides the ability for online owners to add the comments widget. The widget lets the customers leave comments, special requests, or instructions to any entity in the Spryker shop and tag these comments depending on your project specification.
@@ -75,8 +76,10 @@ Company users can perform the following actions using the Comments widget on the
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif)
 </details>
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Comments feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/comments-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  | DATA IMPORT |
+|---------|---------|
+| [Comments feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-feature.html)  | [File details: comment.csv](/docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-comment.csv.html)  |
+| [Comments + persistent cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html) |
+| [Comments + order management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/comments-order-management-feature-integration.html) |

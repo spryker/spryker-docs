@@ -5,11 +5,11 @@ Follow the steps below to install Cart feature API.
 
 To start feature integration, overview and install the following features and Glue APIs:
 
-| NAME   | VERSION | INTEGRATION GUIDE     |
-| ------------------- | ------ | ------------------------ |
-| Glue API: Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Glue API: Product      | {{page.version}}  | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Cart                   | {{page.version}}  | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
+| NAME                   | VERSION          | INTEGRATION GUIDE                                                                                                                                                |
+|------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Glue API: Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Product      | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)          |
+| Cart                   | {{page.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                                             |
 
 
 ## 1) Install the required modules using Composer
@@ -24,8 +24,8 @@ composer require spryker/carts-rest-api:"^5.22.0" --update-with-dependencies
 
 Ensure that the following modules have been installed:
 
-| MODULE        | EXPECTED DIRECTORY      |
-| ----------------- | ------------------------- |
+| MODULE                | EXPECTED DIRECTORY                      |
+|-----------------------|-----------------------------------------|
 | CartsRestApi          | vendor/spryker/carts-rest-api           |
 | CartsRestApiExtension | vendor/spryker/carts-rest-api-extension |
 
@@ -47,7 +47,7 @@ console transfer:generate
 Ensure that the following changes have occurred in the database:
 
 | DATABASE ENTITY | TYPE   | EVENT |
-| -------------- | ----- | ---- |
+|-----------------|--------|-------|
 | spy_quote.uuid  | column | added |
 
 {% endinfo_block %}
@@ -57,29 +57,29 @@ Ensure that the following changes have occurred in the database:
 
 Ensure that the following changes have occurred in transfer objects:
 
-| TRANSFER                                               | TYPE     | EVENT   | PATH      |
-|--------------------------------------------------------| ------- | ------ |----------------- |
-| RestCartsAttributesTransfer                            | class    | created | src/Generated/Shared/Transfer/RestCartsAttributesTransfer    |
-| RestCartItemsAttributesTransfer                        | class    | created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer |
-| RestItemsAttributesTransfer                            | class    | created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer    |
-| RestCartVouchersAttributesTransfer                     | class    | created | src/Generated/Shared/Transfer/RestCartVouchersAttributesTransfer |
-| RestCartsDiscountsTransfer                             | class    | created | src/Generated/Shared/Transfer/RestCartsDiscountsTransfer     |
-| RestCartsTotalsTransfer                                | class    | created | src/Generated/Shared/Transfer/RestCartsTotalsTransfer        |
-| RestCartItemCalculationsTransfer                       | class    | created | src/Generated/Shared/Transfer/RestCartItemCalculationsTransfer |
-| CartItemRequestTransfer                                | class    | created | src/Generated/Shared/Transfer/CartItemRequestTransfer        |
-| AssignGuestQuoteRequestTransfer                        | class    | created | src/Generated/Shared/Transfer/AssignGuestQuoteRequestTransfer |
-| CustomerTransfer.companyUserTransfer                   | property | added   | src/Generated/Shared/Transfer/CustomerTransfer               |
-| CustomerTransfer.customerReference                     | property | added   | src/Generated/Shared/Transfer/CustomerTransfer               |
-| QuoteTransfer.uuid                                     | property | added   | src/Generated/Shared/Transfer/QuoteTransfer                  |
-| QuoteTransfer.companyUserId                            | property | added   | src/Generated/Shared/Transfer/QuoteTransfer                  |
-| QuoteTransfer.uuid                                     | property | added   | src/Generated/Shared/Transfer/QuoteTransfer                  |
+| TRANSFER                                               | TYPE     | EVENT   | PATH                                                               |
+|--------------------------------------------------------|----------|---------|--------------------------------------------------------------------|
+| RestCartsAttributesTransfer                            | class    | created | src/Generated/Shared/Transfer/RestCartsAttributesTransfer          |
+| RestCartItemsAttributesTransfer                        | class    | created | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer      |
+| RestItemsAttributesTransfer                            | class    | created | src/Generated/Shared/Transfer/RestItemsAttributesTransfer          |
+| RestCartVouchersAttributesTransfer                     | class    | created | src/Generated/Shared/Transfer/RestCartVouchersAttributesTransfer   |
+| RestCartsDiscountsTransfer                             | class    | created | src/Generated/Shared/Transfer/RestCartsDiscountsTransfer           |
+| RestCartsTotalsTransfer                                | class    | created | src/Generated/Shared/Transfer/RestCartsTotalsTransfer              |
+| RestCartItemCalculationsTransfer                       | class    | created | src/Generated/Shared/Transfer/RestCartItemCalculationsTransfer     |
+| CartItemRequestTransfer                                | class    | created | src/Generated/Shared/Transfer/CartItemRequestTransfer              |
+| AssignGuestQuoteRequestTransfer                        | class    | created | src/Generated/Shared/Transfer/AssignGuestQuoteRequestTransfer      |
+| CustomerTransfer.companyUserTransfer                   | property | added   | src/Generated/Shared/Transfer/CustomerTransfer                     |
+| CustomerTransfer.customerReference                     | property | added   | src/Generated/Shared/Transfer/CustomerTransfer                     |
+| QuoteTransfer.uuid                                     | property | added   | src/Generated/Shared/Transfer/QuoteTransfer                        |
+| QuoteTransfer.companyUserId                            | property | added   | src/Generated/Shared/Transfer/QuoteTransfer                        |
+| QuoteTransfer.uuid                                     | property | added   | src/Generated/Shared/Transfer/QuoteTransfer                        |
 | QuoteUpdateRequestAttributesTransfer.customerReference | property | added   | src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
-| RestUserTransfer.idCompanyUser                         | property | added   | src/Generated/Shared/Transfer/RestUserTransfer               |
-| RestUserTransfer.surrogateIdentifier                   | property | added   | src/Generated/Shared/Transfer/RestUserTransfer               |
-| QuoteCriteriaFilterTransfer.idCompanyUser              | property | added   | src/Generated/Shared/Transfer/QuoteCriteriaFilterTransfer    |
-| QuoteErrorTransfer                                     | class    | created | src/Generated/Shared/Transfer/QuoteErrorTransfer             |
-| QuoteResponseTransfer.errors                           | property | added   | src/Generated/Shared/Transfer/QuoteResponseTransfer          |
-| OauthResponse                                          | class    | added   | src/Generated/Shared/Transfer/OauthResponseTransfer          |
+| RestUserTransfer.idCompanyUser                         | property | added   | src/Generated/Shared/Transfer/RestUserTransfer                     |
+| RestUserTransfer.surrogateIdentifier                   | property | added   | src/Generated/Shared/Transfer/RestUserTransfer                     |
+| QuoteCriteriaFilterTransfer.idCompanyUser              | property | added   | src/Generated/Shared/Transfer/QuoteCriteriaFilterTransfer          |
+| QuoteErrorTransfer                                     | class    | created | src/Generated/Shared/Transfer/QuoteErrorTransfer                   |
+| QuoteResponseTransfer.errors                           | property | added   | src/Generated/Shared/Transfer/QuoteResponseTransfer                |
+| OauthResponse                                          | class    | added   | src/Generated/Shared/Transfer/OauthResponseTransfer                |
 
 
 {% endinfo_block %}
@@ -111,9 +111,9 @@ The result should be `0 records`.
 
 Activate the following plugin:
 
-| PLUGIN   | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
-| ---------------- | ---------------- | ------------ | ------------- |
-| AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource.  |               | Spryker\Glue\CartsRestApi\Plugin\Validator |
+| PLUGIN                                   | SPECIFICATION                                                                                                                                            | PREREQUISITES | NAMESPACE                                  |
+|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------|
+| AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource. |               | Spryker\Glue\CartsRestApi\Plugin\Validator |
  
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
@@ -227,10 +227,10 @@ There are two cart behavior strategies: single cart and multicart. Unlike the si
 
 {% endinfo_block %}
 
-| PROVIDER   | SINGLE-CART BEHAVIOR    | MULTICART BEHAVIOR   |
-| ------------------- | ------------------- | -------------------- |
+| PROVIDER                             | SINGLE-CART BEHAVIOR                                                          | MULTICART BEHAVIOR                                                              |
+|--------------------------------------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | CartsRestApiDependencyProvider (Zed) | Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin | Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin |
-| AuthRestApiDependencyProvider        | AddGuestQuoteItemsToCustomerQuotePostAuthPlugin              | UpdateGuestQuoteToCustomerQuotePostAuthPlugin                |
+| AuthRestApiDependencyProvider        | AddGuestQuoteItemsToCustomerQuotePostAuthPlugin                               | UpdateGuestQuoteToCustomerQuotePostAuthPlugin                                   |
 
 
 <details open>

@@ -1,5 +1,5 @@
 ---
-title: Agent Assist feature integration
+title: Install the Agent Assist feature
 description: Agent Assist enables agent users to log in to shop to perform actions on customers’ behalf. This guide describes how to install Agent Assist in your project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template
@@ -11,9 +11,10 @@ redirect_from:
   - /docs/agent-assist-feature-integration
   - /docs/en/agent-assist-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/agent-assist-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/agent-assist-feature-integration.html
 related:
-  - title: Glue API - Agent Assist feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-agent-assist-feature-integration.html
+  - title: Install the Agent Assist Glue API
+    link: docs/pbc/all/user-management/page.version/install-and-upgrade/install-the-agent-assist-glue-api.html
   - title: Agent Assist feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---

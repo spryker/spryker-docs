@@ -107,7 +107,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Availability Notification
       url: /docs/scos/dev/feature-walkthroughs/availability-notification-feature-walkthrough.html
       include_versions:
@@ -119,6 +118,13 @@ entries:
       - "202108.0"
     - title: Cart
       url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/cart-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Calculation 3.0
         url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/calculation-3-0.html
@@ -178,7 +184,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Company Account
       url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html
       nested:
@@ -315,6 +320,13 @@ entries:
         - "202204.0"
     - title: Multiple Carts
       url: /docs/scos/dev/feature-walkthroughs/multiple-carts-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Navigation
       url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-feature-walkthrough.html
       include_versions:
@@ -340,7 +352,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/non-splittable-products-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Order Management
       url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html
       nested:
@@ -365,7 +376,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       nested:
       - title: "Persistent Cart Sharing: module relations"
         url: /docs/scos/dev/feature-walkthroughs/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html
@@ -450,6 +460,10 @@ entries:
       - "202108.0"
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Configuring separators and default number raws
         url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/configuring-separators-and-default-number-rows.html
@@ -514,7 +528,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Return Management
       url: /docs/scos/dev/feature-walkthroughs/return-management-feature-walkthrough.html
       include_versions:
@@ -534,6 +547,13 @@ entries:
       - "202204.0"
     - title: Shared Carts
       url: /docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Shipment
       url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
       include_versions:
@@ -918,7 +938,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Guest carts
         nested:
@@ -1718,9 +1737,15 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Cart integration
       url: /docs/scos/dev/feature-integration-guides/cart-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Cart + Non-splittable Products
       url: /docs/scos/dev/feature-integration-guides/cart-non-splittable-products-feature-integration.html
       include_versions:
@@ -1830,7 +1855,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Comments + Order Management
       url: /docs/scos/dev/feature-integration-guides/comments-order-management-feature-integration.html
       include_versions:
@@ -1839,7 +1863,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Comments + Persistent Cart
       url: /docs/scos/dev/feature-integration-guides/comments-persistent-cart-feature-integration.html
       include_versions:
@@ -1848,7 +1871,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Company Account
       url: /docs/scos/dev/feature-integration-guides/company-account-feature-integration.html
       include_versions:
@@ -2370,7 +2392,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Return Management
       url: /docs/scos/dev/feature-integration-guides/return-management-feature-integration.html
       include_versions:
@@ -3306,7 +3327,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: File details - comment.csv
           url: /docs/scos/dev/data-import/data-import-categories/miscellaneous/file-details-comment.csv.html

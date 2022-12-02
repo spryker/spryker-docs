@@ -1,6 +1,6 @@
 ---
-title: Managing returns
-description: In this article, you will know how to manage returns in the Back Office.
+title: Manage returns
+description: Learn how to manage returns in the Back Office.
 last_updated: Jun 23, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-returns
@@ -16,12 +16,12 @@ related:
   - title: Viewing returns of an order
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html
   - title: Changing the state of order items in returns
-    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/changing-the-state-of-order-items-in-returns.html
+    link: docs/pbc/all/return-management/page.version/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
   - title: Return Management feature overview
-    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
-This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront).
+This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/pbc/all/return-management/{{page.version}}/return-management.html#return-management-on-the-storefront).
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ On the **Returns** page, next to the return you want to view, click **View**.
 ## Printing return slips
 
 
-Next to the return you want to generate a [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip) for, click **Print Slip**.
+Next to the return you want to generate a [return slip](/docs/pbc/all/return-management/{{page.version}}/return-management.html#return-slip) for, click **Print Slip**.
     This opens the page with an auto-generated slip.
 
 ## Reference information: Managing returns     

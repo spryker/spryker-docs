@@ -1,5 +1,5 @@
 ---
-title: Return Management feature overview
+title: Return Management
 description: This document provides a description for the feature Return Management in the Spryker Commerce OS.
 last_updated: Sep 2, 2021
 template: concept-topic-template
@@ -16,13 +16,13 @@ redirect_from:
   - /docs/en/return-details-reference-information
 ---
 
-The *Return Management* feature lets you create and manage returns for a sales order.
+The *Return Management* capability lets you create and manage returns for a sales order.
 
 Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html).
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns using Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-returns/managing-the-returns.html).
+You can also create and manage returns using Glue API. For details, see [Manging the returns](/docs/pbc/all/return-management/{{page.version}}/manage-using-glue-api/glue-api-manage-returns.html).
 
 {% endinfo_block %}
 
@@ -37,7 +37,7 @@ The *Return Policy* is a set of rules that defines what items can be returned: i
 
 {% info_block infoBox "Info" %}
 
-For now, you can set the Return Policy period in code only. There is no UI for that. For details, see [HowTo: Set the number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html).
+For now, you can set the Return Policy period in code only. There is no UI for that. For details, see [HowTo: Set the number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/howto-set-number-of-days-for-a-return-policy.html).
 
 {% endinfo_block %}
 
@@ -79,7 +79,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). For details about the return states, see [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). For details about the return states, see [Return items states](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html).
 
 {% info_block infoBox "Info" %}
 
@@ -93,11 +93,11 @@ The following figure shows how to create a return, view its details and print a 
 
 ## Return Management in the Back Office
 
-A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
+A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html).
 
 {% info_block infoBox "Return management process" %}
 
-To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html).
+To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/pbc/all/return-management/{{page.version}}/build-a-return-management-process-best-practices.html).
 
 {% endinfo_block %}
 
@@ -115,16 +115,37 @@ The feature has the following functional constraints which are going to be resol
 * There is no user interface for managing the return policy and the return reasons.
 * You can’t return individual items of a Product Bundle.
 
+## Installation
+
+To install the return management capability, do the following:
+
+1. Install the required modules:
+
+```bash
+composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
+```
+
+2. Follow the integration guides in [Related Developer articles](#related-developer-articles).
+
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create returns in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html)  |
-| [View return details, set return statuses and print return slips in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html)  |
-| [Choose a suitable return management process for your project](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html)  |
+| [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html)  |
+| [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/build-a-return-management-process-best-practices.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Return Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
+|---|---|---|
+| [Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/howto-set-number-of-days-for-a-return-policy.html) |
+| [Configurable Bundle + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-order-management-feature-integration.html) |  |  |
+| [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
+| [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |  |  |
+| [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |  |  |
+| [Product Bundles + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-order-management-feature-integration.html) |  |  |
+| [Product Bundles + Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-return-management-feature-integration.html) |  |  |
+| [Product Measurement Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |  |  |
+| [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-options-order-management-feature-integration.html) |  |  |
+| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html) |  |  |

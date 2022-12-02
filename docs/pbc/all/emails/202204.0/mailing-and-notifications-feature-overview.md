@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/mailing-and-notifications-feature-walkthrough.html  
 ---
 
-The *Mailing & Notifications* feature lets you manage newsletters and notifications.
+The *Mailing & Notifications* capability lets you manage newsletters and notifications.
 
 ## Newsletter subscriptions
 

@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/return-details-reference-information
 ---
 
-The *Return Management* feature lets you create and manage returns for a sales order.
+The *Return Management* capability lets you create and manage returns for a sales order.
 
 Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html).
 
@@ -124,6 +124,8 @@ To install the return management capability, do the following:
 ```bash
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
+
+2. Follow the integration guides in [Related Developer articles](#related-developer-articles)
 
 ## Related Business User articles
 

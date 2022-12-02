@@ -58,7 +58,7 @@ image:
     }'
 ```
 
-Alternatively, you may whitelist the domain from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, then this step can be ignored.
+Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, this step can be ignored.
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = 'os.apps.aop.spryker.com';

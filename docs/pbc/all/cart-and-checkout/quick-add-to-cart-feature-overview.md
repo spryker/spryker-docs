@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/quick-add-to-cart-feature-overview.html
 ---
 
-Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing the product's SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/user/features/{{site.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. With this being done, the customer either adds the items to the cart or proceeds directly to checkout.
+Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing the product's SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. With this being done, the customer either adds the items to the cart or proceeds directly to checkout.
 
 The *Quick Add to Cart* feature lets wholesale and returning customers place bulk orders.
 
@@ -77,9 +77,9 @@ However, separators must be the same for all products entered in this form at a 
 
 ## Quantity restrictions for Quick Add to Cart
 
-Quick Add to Cart quantity rules fall under limitations set by [quantity restrictions](/docs/scos/user/features/{{site.version}}/non-splittable-products-feature-overview.html). Quantity restriction values define the number of items that customers can put into the cart.
+Quick Add to Cart quantity rules fall under limitations set by [quantity restrictions](/docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html). Quantity restriction values define the number of items that customers can put into the cart.
 
-When manually filling the **SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/user/features/{{site.version}}/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has a minimum quantity restriction of 4 units, the interval restriction of 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
+When manually filling the **SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has a minimum quantity restriction of 4 units, the interval restriction of 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
 
 The **Quantity** field in the **Quick Order** adheres to these quantities. Therefore, if the shopper enters an invalid number into the **Quantity** field, for example, 5, the number will automatically change to the next higher quantity set in quantity restrictions, that is, 6.
 
@@ -117,7 +117,7 @@ You can upload only one file at a time.
 
 By default, only concrete SKUs are validated. On successful upload, items and quantities are extracted and filled out in the quick order form fields.
 
-In case the quantity is not valid due to [quantity restrictions](/docs/scos/user/features/{{site.version}}/non-splittable-products-feature-overview.html) setting, the quantity is changed to a valid number.
+In case the quantity is not valid due to [quantity restrictions](/docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html) setting, the quantity is changed to a valid number.
 
 If there are already products added to the quick order list, the products from the CSV file are added to the bottom of the quick order template.
 

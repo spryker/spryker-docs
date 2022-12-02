@@ -1,5 +1,5 @@
 ---
-title: Retrieving return reasons
+title: "Glue API: Retrieve return reasons"
 description: In this article, you will find details on how to retrieve the return reasons via the Spryker Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -12,16 +12,16 @@ redirect_from:
   - /docs/en/retrieving-return-reasons
 related:
   - title: Managing the returns
-    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/managing-the-returns.html
+    link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html
   - title: Return Management feature overview
-    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
 This endpoint allows retrieving returns reasons.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-return-management-feature-integration.html)
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/install-and-upgrade/install-the-return-management-glue-api.html)
 
 ## Retrieve return reasons
 

@@ -1,7 +1,7 @@
 ---
 title: Define parameters and secrets
 description: Learn how to declare parameters and define their values.
-last_updated: July 28, 2022
+last_updated: Dec 2, 2022
 template: howto-guide-template
 ---
 
@@ -45,7 +45,8 @@ docker/sdk boot {DEPLOY_FILE_NAME}
 ```bash
 docker/sdk generate-env
 ```
-    This generates the `.env.docker.local` file and adds it to `.gitignore`.
+
+This generates the `.env.docker.local` file and adds it to `.gitignore`.
 
 2. In `.env.docker.local`, define parameter and secret values:
 

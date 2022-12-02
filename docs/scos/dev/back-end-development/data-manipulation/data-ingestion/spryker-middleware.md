@@ -335,7 +335,7 @@ public function provideBusinessLayerDependencies(Container $container)
 {
    $container = parent::provideBusinessLayerDependencies($container);
    $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-       $commandCollection->add(new TriggerOrderExportProcessCommand(), 'Order/Export);
+       $commandCollection->add(new TriggerOrderExportProcessCommand(), 'Order/Export');
 
        return $commandCollection;
    });

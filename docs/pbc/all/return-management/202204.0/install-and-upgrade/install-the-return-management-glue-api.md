@@ -1,5 +1,5 @@
 ---
-title: Glue API - Return Management feature integration
+title: Install the Return Management Glue API
 description: This integration guide provides step-by-step instructions on integrating Glue API - Return Management feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -12,13 +12,11 @@ redirect_from:
   - /docs/en/glue-api-return-management-feature-integration
 related:
   - title: Return Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/return-management-feature-integration.html
-  - title: Return Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
+    link: docs/pbc/all/return-management/page.version/install-and-upgrade/install-the-return-management-feature.html
   - title: Managing the returns
-    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/managing-the-returns.html
+    link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html
   - title: Retrieving return reasons
-    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
+    link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-return-management-glue-api.md -->

@@ -442,7 +442,7 @@ $payload = [
 				'delivery' => [ //DynamicArrayMapRule
 						'delivery',
 						'dynamicItemMap' => [
-							'&locale; => 'is_allowed',
+							'locale' => 'is_allowed',
 						],
 					],
 				'delivery' => [ //ArrayMapRule

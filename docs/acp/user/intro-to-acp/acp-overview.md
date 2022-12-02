@@ -40,6 +40,7 @@ If you started your Spryker project before March 31, 2022, you must install the 
 * add the configuration for the module and its dependency
 <details open>
 <summary>config/Shared/config_default.php</summary>
+
 ```php
 use Spryker\Shared\AppCatalogGui\AppCatalogGuiConstants;
 use Spryker\Shared\OauthAuth0\OauthAuth0Constants;

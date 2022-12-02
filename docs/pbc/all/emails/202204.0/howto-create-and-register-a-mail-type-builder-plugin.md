@@ -110,7 +110,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 {% info_block warningBox "Verification" %}
 
 In order to activate the mail functionality, follow these steps:
-1. To verify the mail provider is created and registered, go to [How to create and register a mail provider](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html).
+1. To verify the mail provider is created and registered, go to [How to create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html).
 2. Create and adjust `MailTransfer`:
 
 ```php

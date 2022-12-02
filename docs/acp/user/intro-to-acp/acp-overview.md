@@ -36,7 +36,29 @@ You can access the ACP catalog only if you are a SCCOS customer. If you were onb
 ### Installing the ACP catalog
 
 If you started your Spryker project before March 31, 2022, you must install the following module into your Spryker project to use the ACP catalog. Your Spryker project must also be hosted in Spryker Cloud.
-* `spryker/app-catalog-gui: ^1.2.0`
+* `spryker/app-catalog-gui: ^1.2.0` or higher
+* add the configuration for the module and its dependency
+<details open>
+<summary>config/Shared/config_default.php</summary>
+```php
+use Spryker\Shared\AppCatalogGui\AppCatalogGuiConstants;
+use Spryker\Shared\OauthAuth0\OauthAuth0Constants;
+use Spryker\Shared\Store\StoreConstants;
+use Spryker\Zed\OauthAuth0\OauthAuth0Config;
+
+$aopApplicationConfiguration = json_decode(html_entity_decode((string)getenv('SPRYKER_AOP_APPLICATION')), true);
+$aopAuthenticationConfiguration = json_decode(html_entity_decode((string)getenv('SPRYKER_AOP_AUTHENTICATION')), true);
+
+$config[AppCatalogGuiConstants::APP_CATALOG_SCRIPT_URL] = $aopApplicationConfiguration['APP_CATALOG_SCRIPT_URL'] ?? '';
+$config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
+$config[AppCatalogGuiConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
+$config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
+$config[OauthAuth0Constants::AUTH0_CUSTOM_DOMAIN] = $aopAuthenticationConfiguration['AUTH0_CUSTOM_DOMAIN'] ?? '';
+$config[OauthAuth0Constants::AUTH0_CLIENT_ID] = $aopAuthenticationConfiguration['AUTH0_CLIENT_ID'] ?? '';
+$config[OauthAuth0Constants::AUTH0_CLIENT_SECRET] = $aopAuthenticationConfiguration['AUTH0_CLIENT_SECRET'] ?? '';
+$config[StoreConstants::STORE_NAME_REFERENCE_MAP] = $aopApplicationConfiguration['STORE_NAME_REFERENCE_MAP'] ?? [];
+```
+</details>
 
 ## Using an app from the ACP catalog
 

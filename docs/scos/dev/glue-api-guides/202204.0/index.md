@@ -11,12 +11,22 @@ related:
     link: docs/scos/dev/glue-api-guides/202204.0/rest-api-b2b-reference.html
   - title: Managing customers
     link: docs/scos/dev/glue-api-guides/202204.0/managing-customers/managing-customers.html
+  - title: Managing B2B Accounts
+    link: docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/searching-by-company-users.html
   - title: Retrieving protected resources
     link: docs/scos/dev/glue-api-guides/202204.0/retrieving-protected-resources.html
+  - title: Managing products
+    link: docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-abstract-products.html
   - title: Handling concurrent REST requests and caching with entity tags
     link: docs/scos/dev/glue-api-guides/202204.0/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
   - title: Resolving search engine friendly URLs
     link: docs/scos/dev/glue-api-guides/202204.0/resolving-search-engine-friendly-urls.html
+  - title: Retreiving categories
+  - link: docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-trees.html
+  - title: Managing wishlists
+  - link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html
+  -  title: Checking out
+    link: docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-trees.html
   - title: Retrieving store configuration
     link: docs/scos/dev/glue-api-guides/202204.0/retrieving-store-configuration.html
   - title: Retrieving measurement units
@@ -33,33 +43,15 @@ related:
     link: docs/scos/dev/glue-api-guides/202204.0/glue-spryks.html
   - title: Glue infrastructure
     link: docs/scos/dev/glue-api-guides/202204.0/glue-infrastructure.html
+  - title: Glue Backend API
+    link: docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-storefront-resource.html
   - title: Glue API tutorials
     link: docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/glue-api-tutorials.html
 ---
 
 This section contains a collection of guides for working with the Spryker Glue API.
 
-Managing Agent Assists
 
-Managing B2B Accounts
-https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/searching-by-company-users.html
 
-Managing products
-https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-abstract-products.html
-
-Managing carts
-
-Managing returns
-
-Retreiving categories
-https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-trees.html
-
-Managing shopping lists
-
-Managing wishlists
-
-Checking out
-
-Glue Backend API
 
 

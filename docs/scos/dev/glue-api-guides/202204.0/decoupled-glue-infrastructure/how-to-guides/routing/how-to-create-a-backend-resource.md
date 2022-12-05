@@ -163,7 +163,7 @@ See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{
 
 5. Declare the resource: 
 
-**\Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider**
+**\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider
 
 ```php
 <?php

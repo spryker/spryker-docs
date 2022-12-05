@@ -3900,13 +3900,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Retrieving promotional items
-      url: /docs/scos/dev/glue-api-guides/retrieving-promotional-items.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
   - title: Legacy Demoshop
     include_versions:
     - "201811.0"

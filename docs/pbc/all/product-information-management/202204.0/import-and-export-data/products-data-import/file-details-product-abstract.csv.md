@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
 ---
 
 This document describes the `product_abstract.csv` file to configure [Abstract Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.

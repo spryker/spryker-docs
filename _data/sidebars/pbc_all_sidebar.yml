@@ -620,6 +620,17 @@ entries:
             nested:
               - title: "HowTo: Create discounts based on shipment"
                 url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+      - title: Emails
+        url: /docs/pbc/all/emails/emails.html
+        nested:
+          - title: "HowTo: Create and register a MailTypePlugin"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mailtypeplugin.html
+          - title: "HowTo: Create and register a mail provider"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mail-provider.html
+          - title: "HowTo: Create and register a MailTypeBuilderPlugin"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mail-type-builder-plugin.html
+          - title: "Tutorial: Sending a mail"
+            url: /docs/pbc/all/emails/tutorial-sending-an-email.html
       - title: Gift Cards
         url: /docs/pbc/all/gift-cards/gift-cards.html
         nested:
@@ -900,6 +911,8 @@ entries:
                     url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
           - title: Module relations
             url: /docs/pbc/all/request-for-quote/quotation-process-module-relations.html
+          - title: Use cases
+            url: /docs/pbc/all/request-for-quote/use-cases-request-for-quote-processes.html
       - title: Return Management
         url: /docs/pbc/all/return-management/return-management.html
         nested:

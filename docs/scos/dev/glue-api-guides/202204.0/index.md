@@ -42,14 +42,17 @@ This section contains a collection of guides for working with the Spryker Glue A
 Managing Agent Assists
 
 Managing B2B Accounts
+https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/searching-by-company-users.html
 
 Managing products
+https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-abstract-products.html
 
 Managing carts
 
 Managing returns
 
 Retreiving categories
+https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-trees.html
 
 Managing shopping lists
 

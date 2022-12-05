@@ -3,7 +3,7 @@ title: Technical enhancement integration guides
 description: guides for integrating technical enhancement tools with Spryker SCOS
 template: concept-topic-template
 related:
- - title: Integrate development tools
+  - title: Integrate development tools
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
   - title: Authorization Enabler
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html
@@ -46,8 +46,7 @@ related:
   - title: Symfony 5
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
   - title: Arm architecture (M1-chip)
-    link: docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
-    
+    link: docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html  
 ---
 
 This section contains a collection of integration guides for tools that enhance the Spryker Commerce OS. 

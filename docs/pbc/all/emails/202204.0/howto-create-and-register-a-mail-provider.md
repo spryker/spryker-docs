@@ -24,14 +24,14 @@ redirect_from:
   - /v1/docs/en/ht-create-register-provider-plugin
 related:
   - title: "HowTo: Create and register a MailTypeBuilderPlugin"
-    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-type-builder-plugin.html
+    link: docs/pbc/all/emails/page.version/howto-create-and-register-a-mail-type-builder-plugin.html
   - title: "Tutorial: Sending an email"
-    link: docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
+    link: docs/pbc/all/emails/page.version/tutorial-sending-an-email.html
 ---
 
 {% info_block infoBox "Info" %}
 
-Spryker lets you send emails via the Symfony mailer component. 
+Spryker lets you send emails via the Symfony mailer component.
 Follow the instructions in this link in order to use it [Mailing and Notifications feature integration guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html).
 For information on how to you use, see [Mailing and Notifications feature integration guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html).
 {% endinfo_block %}
@@ -69,7 +69,7 @@ public function provideBusinessLayerDependencies(Container $container)
 
 By using `$container->extend()`, you get `MailProviderCollectionAddInterface`, where you can add your provider. `MailProviderCollectionAddInterface::addProvider()` takes the provider you want to use as the first argument, and as the second argument, a `MailType` or a list of `MailType` classes, which this provider must use.
 
-As you can see in the preceding example, the provider is registered to all `MailType` classes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to handle only a specific `MailType`, use the `MailType` constant from your `MailTypePlugin`—for example, `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. For information about creating and registering a `MailTypePlugin`, see [HowTo: Creating and registering a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html).
+As you can see in the preceding example, the provider is registered to all `MailType` classes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to handle only a specific `MailType`, use the `MailType` constant from your `MailTypePlugin`—for example, `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. For information about creating and registering a `MailTypePlugin`, see [HowTo: Creating and registering a MailTypePlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html).
 
 ## Use more than one provider
 

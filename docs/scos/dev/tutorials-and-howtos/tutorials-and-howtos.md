@@ -25,6 +25,8 @@ redirect_from:
   - /v1/docs/about-tutorials
   - /v1/docs/en/about-tutorials
 related:
+  - title: Introduction tutorials
+    link: docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html
   - title: Advanced tutorials
     link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/advanced-tutorials.html
   - title: HowTos

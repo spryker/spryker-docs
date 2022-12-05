@@ -4,14 +4,18 @@
 
 To prepare your project to work with Category Filters:
 
-1. Require the Category Filters modules in your composer by running:
+1. Require the Category Filters modules in your Сomposer:
 *  `composer require spryker/product-category-filter`
 *  `composer require spryker/product-category-filter-collector`
 *  `composer require spryker/product-category-filter-gui`
 
-2.  Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
+2. Install the new database tables by running `vendor/bin/console propel:diff`. Propel generates a migration file with the changes.
 
-3. Run `vendor/bin/console propel:migrate` to apply the database changes.
+3. Apply the database changes:
+```bash
+vendor/bin/console propel:migrate
+```
+
 4. Generate ORM models by running `vendor/bin/console propel:model:build`.
 This command will generate some new classes in your project under the `  \Orm\Zed\ProductCategoryFilter\Persistence namespace`.
 It is important to make sure that they extend the base classes from the Spryker core, for example:
@@ -20,10 +24,13 @@ It is important to make sure that they extend the base classes from the Spryker 
 
 * `\Orm\Zed\ProductReview\Persistence\SpyProductCategoryFilterQuery` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilterQuery`
 
-5. Run `vendor/bin/console transfer:generate` to generate the new transfer objects.
+5. Generate the new transfer objects:
+```bash
+vendor/bin/console transfer:generate
+```
 6. Activate the product category filters collector by adding `ProductCategoryFilterCollectorPlugin` to the Storage Collector plugin stack.
 
-<details open>
+<details>
 <summary markdown='span'>Example: collector plugin list extension</summary>
 
 ```php
@@ -62,12 +69,15 @@ It is important to make sure that they extend the base classes from the Spryker 
 ```
 </details>
 
-1. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build zed
+7. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build zed
 for older versions) for that.
-2. Update Zed’s navigation cache to show the new items for the Product Category Filter management user interface by running `vendor/bin/console application:build-navigation-cache`.
+8. Update Zed’s navigation cache to show the new items for the Product Category Filter management user interface:
+```bash
+vendor/bin/console application:build-navigation-cache
+```
 
-You should now be able to use the Zed UI of Category Filters to re-order, remove or add search filters to specific categories, and the collectors should also be able to push those category settings to storage.
-Check out our [Demoshop implementation](https://github.com/spryker/demoshop) for frontend implementation example and the general idea.
+Now you can use the Zed UI of Category Filters to reorder, remove, or add search filters to specific categories, and the collectors also can push those category settings to storage.
+Check out our [Demoshop implementation](https://github.com/spryker/demoshop) for the frontend implementation example and the general idea.
 
 ### Updating filters for a category
 

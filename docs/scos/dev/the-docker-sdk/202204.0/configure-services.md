@@ -583,17 +583,11 @@ With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin(
 
 ## Webdriver
 
-ChromeDriver is provided as a web driver service by default, but you can switch to PhantomJS as described in the following sections.
+PhantomJS is provided as a webdriver service by default, but you can switch to ChromeDriver as described below.
 
 ### ChromeDriver
 
 [ChromeDriver](https://chromedriver.chromium.org/) is a thin wrapper on WebDriver and a [Chromium](https://chromedriver.chromium.org/) headless browser. It is used for automating web page interaction, JavaScript execution, and other testing-related activities. It provides full-control API to make end-to-end testing flexible and comfortable.  
-
-{% info_block infoBox "Default service" %}
-
-Chromedriver is provided as a service by default. You may only need to use this configuration if you are running an older version of the Docker SDK or if you've previously switched to another WebDriver.
-
-{% endinfo_block %}
 
 #### Configure ChromeDriver
 

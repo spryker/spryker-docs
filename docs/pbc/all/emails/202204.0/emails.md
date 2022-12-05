@@ -1,5 +1,5 @@
 ---
-title: Mailing and Notifications feature overview
+title: Emails
 last_updated: Jul 22, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/mailing-notifications-feature-overview
@@ -10,9 +10,10 @@ redirect_from:
   - /docs/mailing-notifications-feature-overview
   - /docs/en/mailing-notifications-feature-overview
   - /docs/scos/user/features/202200.0/mailing-and-notifications-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/mailing-and-notifications-feature-walkthrough.html  
 ---
 
-The *Mailing & Notifications* feature lets you manage newsletters and notifications.
+The *Emails* capability lets you manage newsletters and notifications.
 
 ## Newsletter subscriptions
 
@@ -32,13 +33,16 @@ Automated Emails regarding order status, shipping, or transactions are just a fe
 
 The following links provide additional information about the Mail module, plugins, and procedures:
 
-* `MailTypePlugin` creation and registration—[HowTo: Create and register a `MailTypePlugin`](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html)
-* `MailProviderPlugin` general overview and the registration procedure—[HowTo: Create and register a mail provider](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html)
-* The tutorial that helps understand the procedure for sending an email—[Tutorial: Sending a mail](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html).
+* `MailTypePlugin` creation and registration—[HowTo: Create and register a `MailTypePlugin`](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html)
+* `MailProviderPlugin` general overview and the registration procedure—[HowTo: Create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html)
+* The tutorial that helps understand the procedure for sending an email—[Tutorial: Sending a mail](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html).
 
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Mailing & Notification feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mailing-and-notifications-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+ | TUTORIALS AND HOWTOS |
+|---------|
+| [HowTo: Create and Register a MailTypePlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html) |
+| [HowTo: Create and Register a Mail Provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html)  |
+| [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-type-builder-plugin.html) |
+| [Tutorial: Sending an email](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html)  |

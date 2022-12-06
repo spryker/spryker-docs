@@ -262,7 +262,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
-<summary markdown='span'>Request sample: submit checkout data with the guest customer's cart data.
+<summary markdown='span'>Request sample: submit checkout data with the guest customer's cart data.</summary>
 
 ```json
 {"data": 

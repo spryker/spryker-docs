@@ -3,8 +3,6 @@ title: Project Development Non-Functional Requirement guidelines
 description: @TODO
 last_updated: @TODO
 template: concept-topic-template
-originalLink: @TODO
-originalArticleId: @TODO
 related:
 - title: Operatable feature guidelines
   link: docs/scos/dev/guidelines/operatable-feature-guidelines.html

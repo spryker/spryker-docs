@@ -3,8 +3,6 @@ title: Monitorable process guidelines
 description: @TODO
 last_updated: @TODO
 template: concept-topic-template
-originalLink: @TODO
-originalArticleId: @TODO
 related:
 - title: NFR guidelines
   link: docs/scos/dev/guidelines/nfr-guidelines.html

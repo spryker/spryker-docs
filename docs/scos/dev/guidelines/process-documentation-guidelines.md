@@ -3,8 +3,6 @@ title: Process documentation guidelines
 description: @TODO
 last_updated: @TODO
 template: concept-topic-template
-originalLink: @TODO
-originalArticleId: @TODO
 related:
 - title: NFR guidelines
   link: docs/scos/dev/guidelines/nfr-guidelines.html
@@ -13,8 +11,6 @@ related:
 - title: Monitorable process guidelines
   link: docs/scos/dev/guidelines/monitorable-process-guidelines.html
 ---
-
--- NOTE: THIS IS A TEMPLATE THAT PROJECTS SHOULD TAKE AND CUSTOMIZE
 
 The process documentation guidelines are in place to enhance the communication between cross-teams over all processes and to 
 ensure that they can operate and deploy their applications the best-possible way.

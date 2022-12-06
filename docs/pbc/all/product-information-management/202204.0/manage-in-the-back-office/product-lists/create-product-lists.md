@@ -18,7 +18,7 @@ This doc describes how to create product lists. Product lists are used to allow 
 
 ## Prerequisites
 
-* If you want to assign categories to the product list, [create the categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/create-categories.html).
+* If you want to assign categories to the product list, [create the categories](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/category/create-categories.html).
 * If you want to assign or import products for the product list, [create the products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html).
 
 ## Create a product list

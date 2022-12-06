@@ -835,6 +835,13 @@ entries:
                 url: /docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
               - title: "PriceProduct module details: reference information"
                 url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
+      - title: Product Information Management
+        url: /docs/pbc/all/product-information-management/product-information-management.html
+        nested:
+          - title: Product feature overview
+            url: /docs/pbc/all/product-information-management/202204.0/product-feature-overview/product-feature-overview.html
+            nested:
+              - title: 
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:

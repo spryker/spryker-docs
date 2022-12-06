@@ -18,7 +18,7 @@ This doc describes how to edit product lists in the Back Office.
 
 ## Prerequisites
 
-* If you want to assign categories to a product list, [create the categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/create-categories.html).
+* If you want to assign categories to a product list, [create the categories](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/category/create-categories.html).
 * If you want to assign or import products for a product list, [create the products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html).
 * To start editing product lists, follow the steps:
     1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.

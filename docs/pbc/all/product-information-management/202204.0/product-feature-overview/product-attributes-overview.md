@@ -21,7 +21,7 @@ You can create characteristic attributes for products, like brand or special fea
 
 ![Descriptive attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/descriptive-attributes.png)
 
-A Back Office user can [create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
+A Back Office user can [create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 
 A developer can import [product attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html).
 
@@ -33,7 +33,7 @@ A Back Office user can add product attributes to abstract and concrete products.
 
 ## Declared attributes
 
-A declared attribute is an attribute that was [created](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
+A declared attribute is an attribute that was [created](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
 
 After declaring an attribute, Back Office users can add it to products, and developers can import products with it.
 
@@ -175,8 +175,8 @@ We recommend defining all the atributes you want to use.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) |
-| [Edit product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html) |
+| [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) |
+| [Edit product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/edit-product-attributes.html) |
 
 {% info_block warningBox "Developer guides" %}
 

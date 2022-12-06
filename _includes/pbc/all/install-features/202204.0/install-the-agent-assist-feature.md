@@ -7,6 +7,7 @@ This document describes how to integrate the [Agent Assist](/docs/pbc/all/user-m
 Follow the steps below to install the feature core.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |

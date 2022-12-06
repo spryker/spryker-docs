@@ -1,19 +1,20 @@
 
 
-## Install feature core
+
+This document describes how to integrate the [Alternative Products]({) into a Spryker project.
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-|---|---|
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION |INTEGRATION GUIDE |
+|---|---|--|
+| Product | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 ```bash
 composer require spryker-feature/alternative-products: "{{site.version}}" --update-with-dependencies
 ```
@@ -83,7 +84,7 @@ Set up synchronization queue pools so that non-multistore entities (not store sp
 </database>
 ```
 
-Run the following commands to apply the database changes and generate entity and transfer changes:
+Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -137,7 +138,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 {% info_block infoBox "Info" %}
 
-This step will publish tables on change (create, edit, delete to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronize the data to Storage.)
+This step publishes tables on change—create, edit, delete to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronize the data to Storage.
 
 {% endinfo_block %}
 
@@ -169,7 +170,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-#### Set up re-generate and re-sync features
+#### Set up regenerate and resync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
@@ -232,13 +233,11 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-### 4) Import data
-
-#### Import product alternatives
+### 4) Import product alternatives
 
 {% info_block infoBox "Info" %}
 
-The following imported entities will be used as alternative products in the Spryker OS.
+The following imported entities are used as alternative products in the Spryker OS.
 
 {% endinfo_block %}
 
@@ -292,7 +291,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-alternative
@@ -304,9 +303,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 5) Set up behavior
-
-#### Set up alternative products workflow
+### 5) Set up alternative products workflow
 
 Enable the following behaviors by registering the plugins:
 
@@ -403,11 +400,13 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit any product variant in Zed you have "Product Alternatives" tab, and you can add some product SKU's as alternatives.
+Make sure that when you edit any product variant in Zed you have the Product Alternatives tab, and you can add some product SKU's as alternatives.
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
+
+Follow the steps below to install the {Feature Name} feature frontend.
 
 ### Prerequisites
 

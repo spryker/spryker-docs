@@ -11,8 +11,8 @@ Follow the steps below to install the Alternative Products + Inventory Managemen
 
 To start feature integration, review and install the necessary features:
 
-| NAME | VERSION |
-|---|---|
+| NAME | VERSION | INTEGRATION GUIDE |
+|---|---|---|
 |Alternative Products|{{site.version}}| [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-feature-integration.html)|
 |Inventory Management|{{site.version}}| [nventory Management feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 

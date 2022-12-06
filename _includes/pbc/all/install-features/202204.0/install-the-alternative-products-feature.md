@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,7 +12,7 @@ Follow the steps below to install the Alternative Products feature core.
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
-|---|---|--|
+|---|---|---|
 | Product | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
@@ -38,7 +38,7 @@ Make sure that the following modules were installed:
 
 ### 2) Set up Database Schema and Transfer Objects
 
-Adjust the schema definition so that entity changes trigger the events.
+Adjust the schema definition, so that entity changes trigger the events.
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 |---|---|
@@ -62,7 +62,7 @@ Adjust the schema definition so that entity changes trigger the events.
  </database>
  ```
 
-Set up synchronization queue pools so that non-multistore entities (not store specific entities) get synchronized among stores:
+Set up synchronization queue pools so that non-multistore entities (not store-specific entities) get synchronized among stores:
 
 **src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
 
@@ -397,7 +397,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit any product variant in Zed you have the Product Alternatives tab, and you can add some product SKU's as alternatives.
+Make sure that when you edit any product variant in Zed, you have the Product Alternatives tab, and you can add some product SKUs as alternatives.
 
 {% endinfo_block %}
 
@@ -416,7 +416,7 @@ Please overview and install the necessary features before beginning the integrat
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/alternative-products: "^{{site.version}}" --update-with-dependencies
@@ -451,7 +451,7 @@ product_alternative_widget.show_all,Show all,en_US
 product_alternative_widget.show_all,Zeige alles,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -504,7 +504,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -516,17 +516,11 @@ Make sure that the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |
-| ProductAlternativeWidget | Assign some alternative products in Zed, and make sure that they are displayed on the detail page of the product to which they were assigned. |
-| ProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page. |
-| PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page. |
+| ProductAlternativeWidget | Assign some alternative products in Zed, and make sure that they are displayed on the product's detail page (PDP) to which they were assigned. |
+| ProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see the **Replacement for** section on its product detail page. |
+| PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see the **Replacement for** section on its product detail page. |
 | ProductAlternativeListWidget | Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned. |
 
-{% endinfo_block %}
-
-
-{% info_block infoBox "Store relation" %}
-
 If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
-
 
 {% endinfo_block %}

@@ -29,7 +29,7 @@ related:
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-environment-configuration-enhancement.html
   - title: Health checks
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html
-  - title: MariaDB-database engine
+  - title: MariaDB database engine
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-mariadb-database-engine.html
   - title: Multi-database logic
     link: docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
@@ -45,7 +45,7 @@ related:
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html
   - title: Symfony 5
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
-  - title: Arm architecture (M1-chip)
+  - title: Arm architecture (M1 chip)
     link: docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html  
 ---
 

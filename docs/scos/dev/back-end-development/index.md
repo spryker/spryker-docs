@@ -6,32 +6,32 @@ template: concept-topic-template
 
 This section contains overviews and instructions for back-end developing on the the Spryker Commerce OS. It includes the following components and topics:
 
-* [Client](https://docs.spryker.com/docs/scos/dev/back-end-development/client/client.html)
+* [Client](docs/scos/dev/back-end-development/client/client.html)
 
-* [Yves](https://docs.spryker.com/docs/scos/dev/back-end-development/yves/yves.html)
+* [Yves](docs/scos/dev/back-end-development/yves/yves.html)
 
-* [Zed](https://docs.spryker.com/docs/scos/dev/back-end-development/zed/zed.html)
+* [Zed](docs/scos/dev/back-end-development/zed/zed.html)
 
-* [Cronjobs](https://docs.spryker.com/docs/scos/dev/back-end-development/cronjobs/cronjobs.html)
+* [Cronjobs](docs/scos/dev/back-end-development/cronjobs/cronjobs.html)
 
-* [Forms](https://docs.spryker.com/docs/scos/dev/back-end-development/forms/forms.html)
+* [Forms](docs/scos/dev/back-end-development/forms/forms.html)
 
-* [Plugins](https://docs.spryker.com/docs/scos/dev/back-end-development/plugins/plugins.html)
+* [Plugins](docs/scos/dev/back-end-development/plugins/plugins.html)
 
-* [Session handlers](https://docs.spryker.com/docs/scos/dev/back-end-development/session-handlers.html)
+* [Session handlers](docs/scos/dev/back-end-development/session-handlers.html)
 
-* [Session management](https://docs.spryker.com/docs/scos/dev/back-end-development/session-management.html)
+* [Session management](docs/scos/dev/back-end-development/session-management.html)
 
-* [Running production](https://docs.spryker.com/docs/scos/dev/back-end-development/running-production.html)
+* [Running production](docs/scos/dev/back-end-development/running-production.html)
 
-* [Console commands](https://docs.spryker.com/docs/scos/dev/back-end-development/console-commands/console-commands.html)
+* [Console commands](docs/scos/dev/back-end-development/console-commands/console-commands.html)
 
-* Data manipulation
+* [Data manipulation](docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html)
 
-* Extending Spryker
+* [Extending Spryker](docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html)
 
-* [Zed UI tables](https://github.com/spryker/spryker-docs/blob/add-landing-page/docs/scos/dev/back-end-development/zed-ui-tables/zed-ui-tables.html)
+* [Zed UI tables](docs/scos/dev/back-end-development/zed-ui-tables/zed-ui-tables.html)
 
-* [Messages and errors](https://github.com/spryker/spryker-docs/blob/add-landing-page/docs/scos/dev/back-end-development/messages-and-errors/messages-and-errors.html)
+* [Messages and errors](docs/scos/dev/back-end-development/messages-and-errors/messages-and-errors.html)
 
-* [Factory](https://docs.spryker.com/docs/scos/dev/back-end-development/factory/factory.html)
+* [Factory](docs/scos/dev/back-end-development/factory/factory.html)

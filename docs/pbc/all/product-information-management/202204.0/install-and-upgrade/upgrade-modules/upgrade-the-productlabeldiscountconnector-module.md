@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productlabeldiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlabeldiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlabeldiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productlabeldiscountconnector.html
   - /module_migration_guides/mg-product-label-discount-connector.htm
 ---
 

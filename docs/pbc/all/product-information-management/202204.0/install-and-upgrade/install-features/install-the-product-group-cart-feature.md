@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-group-cart-feature-integration
   - /docs/product-group-cart-feature-integration
   - /docs/en/product-group-cart-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-group-cart-feature-integration.html
 related:
   - title: Product Groups feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-groups-feature-walkthrough.html

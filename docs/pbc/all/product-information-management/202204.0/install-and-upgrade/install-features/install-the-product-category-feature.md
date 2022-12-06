@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-category-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-category-feature-integration.html
 related:
     - title: Product feature integration
       link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/product-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/product-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/product-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-feature-integration.html
 related:
   - title: Glue API - Product feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-feature-integration.html

@@ -13,6 +13,7 @@ redirect_from:
   - /v6/docs/en/migration-guide-productlabelstorage
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlabelstorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlabelstorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productlabelstorage.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productlabelstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productlabelstorage-module.md -->

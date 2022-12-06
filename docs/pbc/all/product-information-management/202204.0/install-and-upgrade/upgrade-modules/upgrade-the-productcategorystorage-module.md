@@ -11,6 +11,7 @@ redirect_from:
   - /docs/migration-guide-productcategorystorage
   - /docs/en/migration-guide-productcategorystorage
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productcategorystorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productcategorystorage.html
   - /upcoming-release/docs/migration-guide-productcategorystorage
 ---
 

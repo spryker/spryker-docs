@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/category-image-feature-integration
   - /docs/category-image-feature-integration
   - /docs/en/category-image-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/category-image-feature-integration.html
 related:
   - title: Product image management
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-images-overview.html

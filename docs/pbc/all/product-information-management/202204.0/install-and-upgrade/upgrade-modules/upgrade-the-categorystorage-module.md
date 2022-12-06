@@ -12,5 +12,6 @@ redirect_from:
   - /docs/en/migration-guide-categorystorage
   - /upcoming-release/docs/migration-guide-categorystorage
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-categorystorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-categorystorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-categorystorage-module.md -->

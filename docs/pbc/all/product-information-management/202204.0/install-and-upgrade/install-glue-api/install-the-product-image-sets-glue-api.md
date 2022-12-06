@@ -11,6 +11,7 @@ redirect_from:
   - /docs/glue-api-product-image-sets-api-feature-integration
   - /docs/en/glue-api-product-image-sets-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-image-sets-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-image-sets-feature-integration.html
 related:
   - title: Product feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html

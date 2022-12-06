@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/glue-api-product-relations-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-relations-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-relations-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-relations-feature-integration.html
 related:
   - title: Product Relations feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-relations-feature-integration.html

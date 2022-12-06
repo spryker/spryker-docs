@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/alternative-products-product-labels-feature-integration
   - /docs/alternative-products-product-labels-feature-integration
   - /docs/en/alternative-products-product-labels-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/alternative-products-product-label-feature-integration.html
 related:
   - title: Alternative Products feature walkthrough
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html

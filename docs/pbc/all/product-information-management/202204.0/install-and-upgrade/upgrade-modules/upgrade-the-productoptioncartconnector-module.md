@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoptioncartconnector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoptioncartconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptioncartconnector.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
   - /module_migration_guides/mg-product-option-cart-connector.htm
 related:
   - title: Migration guide - ProductOption

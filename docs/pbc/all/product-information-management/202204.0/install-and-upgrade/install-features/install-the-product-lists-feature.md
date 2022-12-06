@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/product-lists-feature-integration
   - /docs/product-lists-feature-integration
   - /docs/en/product-lists-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/product-lists-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-lists-feature-integration.html
 related:
   - title: Product Lists + Catalog feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-lists-catalog-feature-integration.html

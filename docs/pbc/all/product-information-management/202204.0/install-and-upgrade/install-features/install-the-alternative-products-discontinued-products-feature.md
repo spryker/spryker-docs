@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/alternative-products-discontinued-products-feature-integration
   - /docs/alternative-products-discontinued-products-feature-integration
   - /docs/en/alternative-products-discontinued-products-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/alternative-products-discontinued-products-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-alternative-products-discontinued-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-discontinued-products-feature.md -->

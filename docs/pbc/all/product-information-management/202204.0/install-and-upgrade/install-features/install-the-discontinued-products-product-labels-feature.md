@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/discontinued-products-product-labels-feature-integration
   - /docs/discontinued-products-product-labels-feature-integration
   - /docs/en/discontinued-products-product-labels-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/discontinued-products-product-labels-feature-integration.html
 related:
   - title: Product labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html

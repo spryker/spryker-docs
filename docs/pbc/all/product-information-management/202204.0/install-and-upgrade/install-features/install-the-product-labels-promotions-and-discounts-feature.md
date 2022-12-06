@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-labels-promotions-discounts-feature-integration
   - /docs/product-labels-promotions-discounts-feature-integration
   - /docs/en/product-labels-promotions-discounts-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-labels-promotions-and-discounts-feature-integration.html
 related:
   - title: Product labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html

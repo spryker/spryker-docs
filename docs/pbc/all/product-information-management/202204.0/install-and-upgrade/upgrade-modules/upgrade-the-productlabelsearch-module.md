@@ -16,6 +16,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productlabelsearch.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlabelsearch.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlabelsearch.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productlabelsearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productlabelsearch-module.md -->

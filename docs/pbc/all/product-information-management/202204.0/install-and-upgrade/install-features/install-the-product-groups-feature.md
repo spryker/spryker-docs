@@ -11,6 +11,7 @@ redirect_from:
   - /docs/product-groups-feature-integration
   - /docs/en/product-groups-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/product-groups-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-groups-feature-integration.html
 related:
   - title: Product Groups feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-groups-feature-walkthrough.html

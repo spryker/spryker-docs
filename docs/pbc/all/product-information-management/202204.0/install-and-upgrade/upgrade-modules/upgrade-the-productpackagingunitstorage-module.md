@@ -26,6 +26,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productpackagingunitstorage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productpackagingunitstorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunitstorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html
   - /module_migration_guides/mg-product-packaging-unit-storage.htm
 ---
 

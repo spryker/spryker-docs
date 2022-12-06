@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/product-options-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-options-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-options-order-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202004.0/product-options-order-management-feature-integration.html
 related:
   - title: Glue API - Product Options feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-options-feature-integration.html

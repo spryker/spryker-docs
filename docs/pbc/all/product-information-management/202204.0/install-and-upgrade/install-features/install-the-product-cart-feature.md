@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-cart-feature-integration
   - /docs/product-cart-feature-integration
   - /docs/en/product-cart-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-cart-feature-integration.html
 related:
   - title: Product feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html

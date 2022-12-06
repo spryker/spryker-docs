@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-catalog.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-catalog.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-catalog.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-catalog.html
 related:
   - title: Migration guide - Category
     link: docs/scos/dev/module-migration-guides/migration-guide-category.html

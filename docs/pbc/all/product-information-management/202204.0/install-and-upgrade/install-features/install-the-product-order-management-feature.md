@@ -10,11 +10,12 @@ redirect_from:
   - /2021080/docs/en/product-order-management-feature-integration
   - /docs/product-order-management-feature-integration
   - /docs/en/product-order-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-order-management-feature-integration.html
 related:
   - title: Product feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
   - title: Order Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html 
+    link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-order-management-feature.md -->

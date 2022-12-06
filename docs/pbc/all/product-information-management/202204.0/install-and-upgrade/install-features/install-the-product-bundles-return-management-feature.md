@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-bundles-return-management-feature-integration
   - /docs/product-bundles-return-management-feature-integration
   - /docs/en/product-bundles-return-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-bundles-return-management-feature-integration.html
 related:
   - title: Product Bundles feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html

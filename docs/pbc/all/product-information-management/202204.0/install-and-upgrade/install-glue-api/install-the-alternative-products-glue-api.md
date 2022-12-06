@@ -11,6 +11,7 @@ redirect_from:
   - /docs/glue-api-alternative-products-feature-integration
   - /docs/en/glue-api-alternative-products-feature-integration
   - /scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-alternative-products-feature-integration.html
+  - /scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-alternative-products-feature-integration.html
 related:
   - title: Alternative Products feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-feature-integration.html

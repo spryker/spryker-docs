@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/glue-api-product-labels-feature-integration
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-labels-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-labels-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-labels-feature-integration.html
 related:
   - title: Product Labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html

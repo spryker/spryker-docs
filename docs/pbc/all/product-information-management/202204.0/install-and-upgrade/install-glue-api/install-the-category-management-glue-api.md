@@ -11,6 +11,7 @@ redirect_from:
   - /docs/glue-api-category-management-feature-integration
   - /docs/en/glue-api-category-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-category-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-category-management-feature-integration.html
 related:
   - title: Category Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/category-management-feature-integration.html

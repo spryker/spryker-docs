@@ -9,5 +9,6 @@ redirect_from:
   - /2021080/docs/en/migration-guide-productsetpagesearch
   - /docs/migration-guide-productsetpagesearch
   - /docs/en/migration-guide-productsetpagesearch
+  - /docs/scos/dev/module-migration-guides/migration-guide-productsetpagesearch.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-productsetpagesearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productsetpagesearch-module.md -->

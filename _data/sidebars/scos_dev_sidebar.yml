@@ -4028,6 +4028,7 @@ entries:
       include_versions:
       - "201811.0"
   - title: Technical enhancement integration guides
+    url: /docs/scos/dev/technical-enhancement-integration-guides/index.html
     nested:
     - title: Integrate development tools
       nested:
@@ -4088,6 +4089,7 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: SDK
+    url: /docs/scos/dev/sdk/index.html
     nested:
     - title: Development Virtual Machine, Docker Containers & Console
       url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
@@ -4138,6 +4140,7 @@ entries:
     - title: Data export
       url: /docs/scos/dev/sdk/data-export.html
   - title: Tutorials and HowTos
+    url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     nested:
     - title: Introduction Tutorials
       nested:
@@ -4199,8 +4202,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
       - title: "Tutorial: Console commands"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-console-commands.html
-    - title: About Tutorials
-      url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     - title: HowTos
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
@@ -4314,12 +4315,14 @@ entries:
       - title: "HowTo: Allow Zed CSS/JS on a project"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
   - title: Technology partner guides
+    url: /docs/scos/dev/technology-partner-guides/202204.0/index.html
     nested:
     - title: Hosting providers
       nested:
       - title: Integrating Heroku
         url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
     - title: Marketing and conversion
+      url: /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/marketing-and-conversion.html
       nested:
       - title: Analytics
         nested:
@@ -4890,6 +4893,7 @@ entries:
     - title: Coding best practices
       url: /docs/scos/dev/best-practices/coding-best-practices.html
     - title: Search best practices
+      url: /docs/scos/dev/best-practices/search-best-practices/search-best-practices.html
       nested:
       - title: Full-text search
         url: /docs/scos/dev/best-practices/search-best-practices/full-text-search.html
@@ -4914,6 +4918,7 @@ entries:
       - title: Personalization - Dynamic pricing
         url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
     - title: State machine cookbook
+      url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
       nested:
       - title: State machine fundamentals
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html

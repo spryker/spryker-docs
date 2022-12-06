@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html#prerequisites
   - title: Custom location for static assets
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html
-  - title:Dynamic Yves-Zed tokens
+  - title: Dynamic Yves-Zed tokens
     link: docs/scos/dev/technical-enhancement-integration-guides/configuring-dynamic-yves-zed-tokens.html
   - title: Dynamic Propel configuration
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-dynamic-propel-configuration.html

@@ -1,7 +1,11 @@
 
 
 
-This document describes how to integrate the [Alternative Products]({) into a Spryker project.
+This document describes how to integrate the [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Alternative Products feature core.
 
 ### Prerequisites
 
@@ -29,6 +33,7 @@ Make sure that the following modules were installed:
 | ProductAlternativeDataImport | vendor/spryker/product-alternative-data-import |
 | ProductAlternativeGui | vendor/spryker/product-alternative-gui |
 | ProductAlternativeStorage | vendor/spryker/product-alternative-storage |
+
 {% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
@@ -101,10 +106,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_product_alternative_storage | table | created |
 | spy_product_replacement_for_storage | table | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -121,10 +122,6 @@ Make sure that the following changes have been applied in transfer objects:
 | ProductAlternativeList | class | created | src/Generated/Shared/Transfer/ProductAlternativeList |
 | ProductAlternativeStorage | class | created | src/Generated/Shared/Transfer/ProductAlternativeStorage |
 | ProductReplacementStorage | class | created | src/Generated/Shared/Transfer/ProductReplacementStorage |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
 

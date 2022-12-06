@@ -180,6 +180,6 @@ Security assessment recommendations are created based on the following guides an
 
 - [OWASP Top-10](https://owasp.org/www-project-top-ten/)
 - [OWASP Web Security Testing guide](https://owasp.org/www-project-web-security-testing-guide/)
-- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content.html)
+- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf)
 - [OWASP Security Knowledge Framework](https://owasp.org/www-project-security-knowledge-framework/)
 

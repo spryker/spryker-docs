@@ -1,17 +1,21 @@
 
+This document describes how to integrate the Alternative Products + Wishlist feature into a Spryker project.
 
 ## Install feature frontend
 
+Follow the steps below to install the the Alternative Products + Wishlist feature frontend.
+
+
 ### Prerequisites
 
-To start feature integration, review and install the necessary features:
+To start feature integration, integrate the required features and Glue APIs:
 
-|NAME|VERSION|
-|---|---|
-|Alternative Products|{{site.version}}|
-|Wishlist|{{site.version}}|
+| NAME | VERSION | INTEGRATION GUIDE|
+|---|---|---|
+|Alternative Products| {{site.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-feature-integration.html)|
+|Wishlist|{{site.version}}| |
 
-### 1) Add Translations
+### 1) Add translations
 
 Append glossary according to your configuration:
 
@@ -22,7 +26,7 @@ product_alternative_widget.add_to_wishlist,Add to Wishlist,en_US
 product_alternative_widget.add_to_wishlist,Zur Wunschliste hinzufügen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```yaml
 console data:import glossary
@@ -36,7 +40,7 @@ Make sure that in the database the configured data are added to the `spy_glossar
 
 ### 2) Set up widgets
 
-Register the following plugins to enable widgets:
+To enable widgets, register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
@@ -66,7 +70,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

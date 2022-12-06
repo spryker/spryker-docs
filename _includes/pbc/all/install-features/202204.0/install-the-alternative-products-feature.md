@@ -6,7 +6,7 @@
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 |---|---|
 | Product | {{site.version}} |
 | Spryker Core | {{site.version}} |

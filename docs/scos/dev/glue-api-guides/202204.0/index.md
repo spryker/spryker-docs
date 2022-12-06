@@ -25,7 +25,7 @@ related:
   - link: docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-trees.html
   - title: Managing wishlists
   - link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html
-  -  title: Checking out
+  - title: Checking out
     link: docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-trees.html
   - title: Retrieving store configuration
     link: docs/scos/dev/glue-api-guides/202204.0/retrieving-store-configuration.html

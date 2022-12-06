@@ -37,7 +37,7 @@ related:
     link: docs/scos/dev/glue-api-guides/202204.0/retrieving-autocomplete-and-search-suggestions.html
   - title: Retrieving orders
     link: docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
-  - title: Reference information-GlueApplication errors
+  - title: Reference information – GlueApplication errors
     link: docs/scos/dev/glue-api-guides/202204.0/reference-information-glueapplication-errors.html
   - title: Glue Spryks
     link: docs/scos/dev/glue-api-guides/202204.0/glue-spryks.html

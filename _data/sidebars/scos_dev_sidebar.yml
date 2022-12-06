@@ -572,6 +572,7 @@ entries:
     - title: Wishlist
       url: /docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html
   - title: Glue API guides
+    url: /docs/scos/dev/glue-api-guides/202204.0/index.html
     nested:
     - title: Glue REST API
       url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
@@ -3420,6 +3421,7 @@ entries:
       - "202108.0"
       - "202204.0"
   - title: Data export
+    url: docs/scos/dev/data-export/202204.0/index.html
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3441,6 +3443,7 @@ entries:
       - "202108.0"
       - "202204.0"
   - title: Back-end development
+    url: /docs/scos/dev/back-end-development/index.html
     nested:
     - title: Client
       url: /docs/scos/dev/back-end-development/client/client.html
@@ -3735,6 +3738,7 @@ entries:
       - title: "Inject dependencies within factories: Container globals"
         url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
+    url: /docs/scos/dev/front-end-development/index.html
     nested:
     - title: Zed
       nested:

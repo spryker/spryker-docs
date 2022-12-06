@@ -224,6 +224,8 @@ versioned_categories:
       - content-management-system
       - identity-access-management
       - user-management
+      - return-management
+      - emails
       - product-information-management
 
 

@@ -120,7 +120,7 @@ On the storefront, company users can perform the following actions by using the 
 * To share a cart with external and internal users by a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html).
 * To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
 * To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html).
-* To add comments to a cart, see [Comments feature overview](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html#comments-on-the-storefront).
+* To add comments to a cart, see [Comments feature overview](/docs/pbc/all/cart-and-checkout/comments-feature-overview.html#comments-on-the-storefront).
 * To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html).
 
 

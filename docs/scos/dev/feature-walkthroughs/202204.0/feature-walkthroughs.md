@@ -22,14 +22,6 @@ The [Agent Assist](/docs/scos/dev/feature-walkthroughs/{{page.version}}/agent-as
 
 The [Alternative Products](/docs/scos/dev/feature-walkthroughs/{{page.version}}/alternative-products-feature-walkthrough.html) feature lets you define alternative products for products that are discontinued or out of stock.
 
-## Approval Process
-
-The [Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/approval-process-feature-walkthrough.html) feature enables managers to control purchases requested by their employees.
-
-### Resource Sharing
-
-The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spyker Commerce OS. For each entity, you must use an additional connector-module. For example, to share a cart through a URL, Resource Sharing must be combined with Persistent Cart Sharing.
-
 ## Catalog
 
 The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) feature lets you build and organize products to meet your and your customer’s demands, primarily to make sure everyone can quickly find what they are looking for.
@@ -103,10 +95,6 @@ The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-man
 ### AvailabilityStorage module: reference information
 
 The [AvailabilityStorage module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by Publish and Synchronize.
-
-## Mailing & Notifications
-
-The [Mailing & Notifications ](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mailing-and-notifications-feature-walkthrough.html)feature lets you manage newsletters and notifications.
 
 ## Measurement Units
 
@@ -222,25 +210,6 @@ The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-se
 
 The [Reclamations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reclamations-feature-walkthrough.html) feature lets Back Office users handle order claims issued by customers.
 
-## Refunds
-
-The [Refunds](/docs/scos/dev/feature-walkthroughs/{{page.version}}/refunds-feature-walkthrough.html) feature lets you issue refunds on orders.
-
-## Reorder
-
-The [Reorder](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reorder-feature-walkthrough.html) feature lets customers repeat their previous orders in one click.
-
-## Resource Sharing
-
-The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spryker Commerce OS. For each entity, you must use an additional connector-module. For example, to share a cart through a URL, Resource Sharing should be combined with Persistent Cart Sharing.
-
-## Return Management
-
-The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) feature lets you create and manage returns for a sales order.
-
-## Search
-
-The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
 
 ## Spryker Core Back Office
 

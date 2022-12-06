@@ -172,7 +172,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Availability Notification
       url: /docs/scos/user/features/availability-notification-feature-overview.html
       include_versions:
@@ -267,7 +266,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Configurable Bundle
       url: /docs/scos/user/features/configurable-bundle-feature-overview.html
       include_versions:
@@ -396,6 +394,13 @@ entries:
       - "202108.0"
     - title: Mailing and Notifications
       url: /docs/scos/user/features/mailing-and-notifications-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"      
     - title: Measurement Units
       url: /docs/scos/user/features/measurement-units-feature-overview.html
     - title: Merchant B2B Contracts
@@ -437,7 +442,6 @@ entries:
       - "201907.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Order Management
       url: /docs/scos/user/features/order-management-feature-overview/order-management-feature-overview.html
       nested:
@@ -588,20 +592,17 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Return Management
       url: /docs/scos/user/features/return-management-feature-overview/return-management-feature-overview.html
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Building a return management process- Best practices
         url: /docs/scos/user/features/return-management-feature-overview/building-a-return-management-process-best-practices.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Scheduled Prices
       url: /docs/scos/user/features/scheduled-prices-feature-overview.html
       include_versions:
@@ -1071,7 +1072,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Managing returns
           url: /docs/scos/user/back-office-user-guides/sales/returns/managing-returns.html
@@ -1079,12 +1079,10 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Changing the state of order items in returns
           url: /docs/scos/user/back-office-user-guides/sales/returns/changing-the-state-of-order-items-in-returns.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202005.0"

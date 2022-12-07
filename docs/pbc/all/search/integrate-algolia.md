@@ -24,6 +24,12 @@ To integrate the Algolia app, do the following:
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 10. Click **Save**.
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-integration.mp4" type="video/mp4">
+  </video>
+</figure>
+
 The Algolia app is now integrated to your store and starts exporting your product data automatically. Wait for a few minutes and go back to the Algolia website, to the **Overview -> Search -> Index** page. 
 
 {% info_block infoBox "Info" %}

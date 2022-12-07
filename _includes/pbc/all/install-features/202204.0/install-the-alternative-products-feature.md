@@ -403,16 +403,16 @@ Make sure that when you edit any product variant in Zed, you have the Product Al
 
 ## Install feature frontend
 
-Follow the steps below to install the {Feature Name} feature frontend.
+Follow the steps below to install the Alternative Products feature frontend.
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features:
 
 | NAME | VERSION |
 |---|---|
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Product | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
@@ -521,6 +521,6 @@ Make sure that the following widgets were registered:
 | PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see the **Replacement for** section on its product detail page. |
 | ProductAlternativeListWidget | Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned. |
 
-If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 {% endinfo_block %}

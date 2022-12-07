@@ -68,8 +68,6 @@ Based on their structure and use, all components are divided into the following 
 * *Templates*. Templates can be viewed as combinations of components composed according to a specific graphic layout. They are used to define a visual schema for a set of pages. Typically, pages with a common template have the same structure and share most of the content with the exception of a small portion of page-specific or widget-specific information that changes from page to page. Thus, a template serves as a backbone that defines a set of shared components and the overall layout. Examples of templates are the main site layout or the checkout layout.
 * *Views*. This is the highest point in the frontend hierarchy. A view is a template filled with specific content for use in a specific case. It represents a specific page or widget. Views are the only components that can be called by the backend directly which means that they also serve as a connection point between the backend and frontend. On the backend side, views are always connected to controllers.
 
-For more details about the component model that inspired Spryker Frontend, see [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/).
-
 ## BEM methodology
 
 The styling of Spryker Shop UI components is based upon BEM methodology. It is applied on the **SASS** layer of the shop UI. For a detailed specification and recommended practices, see [CSS with BEM](https://en.bem.info/methodology/css/). For BEM conventions, see the *Naming Conventions* section.

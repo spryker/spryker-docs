@@ -29,8 +29,8 @@ data:import:discount-store
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| discount_key | &check; | String |`discount_key` must be included in the `discount.csv` file. |  |
-| store_name | &check; | String |  | Name of the store to which the discount applies. |
+| discount_key | &check; | String |A `discount_key` must be included in the `discount.csv` file. |  |
+| store_name | &check; | String |  | The name of the store to which the discount applies. |
 
 ## Import file dependencies
 

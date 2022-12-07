@@ -11,11 +11,11 @@ related:
 
 This document explains how to use discounts to promote products using a concrete example.
 
-Let's say that today is January 19, 2017. Soon your shop is going to receive Asus laptops with a new Intel processor. You want to quickly sell the laptops with the old processor. To promote the old laptops, you are going to offer free standard delivery for all Intel-based Asus laptops.
+Let's say that today is January 19, 2017. Soon, your shop is going to receive ASUS laptops with a new Intel processor. You want to quickly sell the laptops with the old processor. To promote the old laptops, you are going to offer free standard delivery for all Intel-based Asus laptops.
 
 To create the corresponding discount, follow the steps in the sections below.
 
-## 1. Define general settings of the discount
+## 1. Define the general settings of the discount
 
 1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 2. On the **Discount** page, click **Create new discount**.
@@ -36,7 +36,7 @@ To create the corresponding discount, follow the steps in the sections below.
 
 ![Define general settings of the discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/best-practices-promote-products-with-discounts.md/define-general-settings-of-the-discount.png)
 
-## 2. Define discount calculation and the products to apply the discount to
+## 2. Define the discount's calculation and the products to apply the discount to
 
 1. Click the **Discount calculation** tab.
 2. For **CALCULATOR TYPE**, select **Percentage**.

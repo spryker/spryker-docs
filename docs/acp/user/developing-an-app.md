@@ -37,7 +37,7 @@ You can use the following tools to design your APIs:
 - [Async API Studio](https://studio.asyncapi.com/)
 - [Swagger Editor](https://editor.swagger.io/)
 
-You can also use wizards provided by Spryker, which will be used by the [SprykerSDK workflow](https://github.com/spryker-sdk/sdk/blob/master/docs/workflow.md).
+You can also use wizards provided by Spryker, which will be used by the [SprykerSDK workflow](/docs/sdk/dev/initialize-and-run-workflows.html).
 
 ## Build an app
 

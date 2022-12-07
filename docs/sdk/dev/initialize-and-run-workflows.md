@@ -62,11 +62,11 @@ There are the following commands for the workflow:
   spryker-sdk sdk:init:project --workflow={workflowName} --workflow={workflowName}
   ```
   ---
-  {% info_block infoBox "Initialising workflows" %}
-  
+{% info_block infoBox "Initialising workflows" %}
+
 If you initialize workflows for the project, you can use only these workflows.
 
-  {% endinfo_block %}
+{% endinfo_block %}
   
   ---
 - To run the workflow process:

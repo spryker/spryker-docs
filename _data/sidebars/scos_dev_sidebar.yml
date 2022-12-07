@@ -3429,7 +3429,7 @@ entries:
     - "202204.0"
     nested:
     - title: Exporting data
-      url: /docs/scos/dev/data-export/data-export.html
+      url: /docs/scos/dev/data-export/index.html
       include_versions:
       - "202005.0"
       - "202009.0"

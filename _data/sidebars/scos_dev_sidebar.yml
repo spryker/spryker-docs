@@ -4806,7 +4806,7 @@ entries:
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Guidelines
     url: /docs/scos/dev/guidelines/index.html
-     nested:
+    nested:
     - title: Coding guidelines
       url: /docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html
       nested:

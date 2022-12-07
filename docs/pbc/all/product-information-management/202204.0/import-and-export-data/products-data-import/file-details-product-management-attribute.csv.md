@@ -43,6 +43,7 @@ This document describes the `product_management_attribute.csv` file to configure
 | [product_management_attribute.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_management_attribute.csv) | Exemplary import file with headers only. |
 | [product_management_attribute.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_management_attribute.csv) | Exemplary import file with Demo Shop data. |
 
+## Import command
 
 ```bash
 data:import:product-management-attribute

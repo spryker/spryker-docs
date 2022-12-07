@@ -21,8 +21,6 @@ This document describes the `product_concrete.csv` file to configure [Concrete P
 This file has the following dependency: [ product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
 
 
-
-
 ## Import file parameters
 
 
@@ -58,6 +56,8 @@ Every concrete product is linked to an abstract one via the `abstract_sku` field
 | --- | --- |
 | [product_concrete.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_concrete.csv) | Product Exemplary import file with headers only. |
 | [product_concrete.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_concrete.csv) | Exemplary import file with Demo Shop data. |
+
+## Import command
 
 ```bash
 data:import:product-concrete

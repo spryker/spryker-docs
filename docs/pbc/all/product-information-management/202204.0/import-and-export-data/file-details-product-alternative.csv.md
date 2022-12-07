@@ -9,19 +9,18 @@ redirect_from:
   - /2021080/docs/en/file-details-product-alternativecsv
   - /docs/file-details-product-alternativecsv
   - /docs/en/file-details-product-alternativecsv
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html
 ---
 
 This document describes the `product_alternative.csv` file to configure [Alternative Product](/docs/pbc/all/product-information-management/{{page.version}}/alternative-products-feature-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run:
+## Import file dependencies
 
-```bash
-data:import:product-alternative
-```
+* [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
+* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -29,24 +28,23 @@ The file should have the following parameters:
 | alternative_product_concrete_sku | &check; (*if the `alternative_product_abstract_sku` is empty*) | String |  | SKU of the alternative concrete product. |
 | alternative_product_abstract_sku | &check; (*if `alternative_product_concrete_sku` is empty*) | String |  | SKU of the alternative abstract product. |
 
-## Import file dependencies
 
-This file has the following dependencies:
-
-* [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Additional information
 
-It does not exist on by default on the project level. It can be created in order to override the CSV file from module:
+It does not exist by default on the project level. You can create it to override the CSV file from module:
 
 * `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
-
 | FILE | DESCRIPTION |
 | --- | --- |
 | [product_alternative.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_alternative.csv) | Exemplary import file with headers only. |
 | [product_alternative.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_alternative.csv) | Exemplary import file with Demo Shop data. |
+
+## Import command
+
+```bash
+data:import:product-alternative
+```

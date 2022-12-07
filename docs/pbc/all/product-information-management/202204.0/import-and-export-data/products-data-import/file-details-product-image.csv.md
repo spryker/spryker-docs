@@ -45,6 +45,8 @@ This document describes the `product_image.csv` file to configure [Product Image
 | [product_image.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_image.csv) | Exemplary import file with headers only. |
 | [product_image.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_image.csv) | Exemplary import file with Demo Shop data. |
 
+## Import command
+
 ```bash
 data:import:product-image
 ```

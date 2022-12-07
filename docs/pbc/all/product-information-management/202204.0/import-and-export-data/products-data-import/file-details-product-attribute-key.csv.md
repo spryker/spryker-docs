@@ -15,9 +15,6 @@ redirect_from:
 This document describes the `product_attribute_key.csv` file to configure [Product Attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) information on your Spryker Demo Shop.
 
 
-
-
-
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
@@ -33,6 +30,7 @@ This document describes the `product_attribute_key.csv` file to configure [Produ
 | [product_attribute_key.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_attribute_key.csv) | Exemplary import file with headers only. |
 | [product_attribute_key.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_attribute_key.csv) | Product Exemplary import file with Demo Shop data. |
 
+## Import command
 
 ```bash
 data:import:product-attribute-key

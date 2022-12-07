@@ -17,15 +17,11 @@ redirect_from:
 
 This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html) in your Spryker shop.
 
+## Import file dependencies
 
-
-```bash
-data:import:category
-```
+[category_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category-template.csv.html).
 
 ## Import file parameters
-
-
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -51,15 +47,18 @@ data:import:category
 
 {% endinfo_block %}
 
-## Import file dependencies
 
-This file has the following dependency: [category_template.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category-template.csv.html).
 
 ## Import template file and content example
-
-
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [category.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Categories/category_template.csv) | Exemplary import file with headers only. |
 | [category.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Categories/category.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import command
+
+```bash
+data:import:category
+```

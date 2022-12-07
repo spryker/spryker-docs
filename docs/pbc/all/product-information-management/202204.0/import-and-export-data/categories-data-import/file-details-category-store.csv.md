@@ -40,6 +40,7 @@ The file has the following dependency: *stores.php* configuration file of the De
 | [template_category_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/template+category_store.csv) | Exemplary import file with headers only. |
 | [category_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/category_store.csv) | Exemplary import file with Demo Shop data. |
 
+## Import file command
 
 ```bash
 data:import:category-store

@@ -4322,7 +4322,7 @@ entries:
       - title: Integrating Heroku
         url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
     - title: Marketing and conversion
-      url: /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/marketing-and-conversion.html
+      url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html
       nested:
       - title: Analytics
         nested:

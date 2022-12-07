@@ -25,7 +25,7 @@ workflow:
 
 {% info_block infoBox "Project Limitations" %}
 
-Note: The project is limited to the workflows specified during initialization.
+**Note:** The project is limited to the workflows specified during initialization.
 
 {% endinfo_block %}
 ---

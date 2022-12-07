@@ -96,7 +96,7 @@ To download voucher codes, click **Export**.
 
 ## Reference information: Edit discount calculation and the products to apply the discount to
 
-This section contains information for defining discount calculations and the product the discount applies to
+This section contains information for defining discount calculations and the product the discount applies to.
 
 ### CALCULATOR TYPE
 

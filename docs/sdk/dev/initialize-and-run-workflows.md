@@ -25,7 +25,7 @@ workflow:
 
 {% info_block infoBox "Project Limitations" %}
 
-**Note:** The project is limited to the workflows specified during initialization.
+The project is limited to the workflows specified during initialization.
 
 {% endinfo_block %}
 ---
@@ -40,7 +40,7 @@ You can start any workflow by providing its name in the `sdk:workflow:run` comma
 ---
 {% info_block infoBox "Identical Workflows" %}
 
-**Note:** Two identical top-level workflows can't run inside the same project.
+Two identical top-level workflows can't run inside the same project.
 
 {% endinfo_block %}
 ---
@@ -64,7 +64,7 @@ There are the following commands for the workflow:
   ---
   {% info_block infoBox "Initialising Workflows" %}
   
- **Note:** If you initialize workflows for the project, you can use only these workflows.
+If you initialize workflows for the project, you can use only these workflows.
 
   {% endinfo_block %}
   

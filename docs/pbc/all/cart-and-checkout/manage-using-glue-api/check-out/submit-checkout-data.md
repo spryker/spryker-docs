@@ -262,6 +262,24 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
+<summary markdown='span'>Request sample: submit checkout data with the logged-in customer's cart data.</summary>
+
+```json
+{"data":
+    {"type": "checkout-data",
+    "attributes":
+        {
+            "idCart": "9743f227-97ec-5d89-8679-bc5ee7a9ea17",
+            "shipment": {
+                "idShipmentMethod": 1
+            }
+        }
+    }
+}
+```
+</details>
+
+<details>
 <summary markdown='span'>Request sample: submit checkout data with the guest customer's cart data.</summary>
 
 ```json
@@ -270,70 +288,9 @@ To retrieve all available shipment methods, submit checkout data with one or mor
     "attributes": 
         {
             "idCart": "9743f227-97ec-5d89-8679-bc5ee7a9ea17",
-            "customer": {
-                "salutation": "Mr",
-                "email": "geust@test.com",
-                "firstName": "guestName",
-                "lastName": "gusetLast"
-            },
-            "billingAddress": {
-                "salutation": "Mr",
-                "firstName": "Spencor",
-                "lastName": "Hopkin",
-                "address1": "Julie-Wolfthorn-Straße",
-                "address2": "1",
-                "address3": null,
-                "zipCode": "10115",
-                "city": "Berlin",
-                "country": {
-                    "id_country": 60,
-                    "iso2_code": "DE",
-                    "iso3_code": "DEU",
-                    "name": "Germany",
-                    "postal_code_mandatory": true,
-                    "postal_code_regex": "\\d{5}",
-                    "regions": {}
-                },
-                "iso2Code": "DE",
-                "company": "spryker",
-                "phone": "+49 (30) 2084 98350",
-                "isDefaultShipping": null,
-                "isDefaultBilling": null
-            },
-            "shippingAddress": {
-                "salutation": "Mr",
-                "firstName": "Spencor",
-                "lastName": "Hopkin",
-                "address1": "Julie-Wolfthorn-Straße",
-                "address2": "1",
-                "address3": null,
-                "zipCode": "10115",
-                "city": "Berlin",
-                "country": {
-                    "id_country": 60,
-                    "iso2_code": "DE",
-                    "iso3_code": "DEU",
-                    "name": "Germany",
-                    "postal_code_mandatory": true,
-                    "postal_code_regex": "\\d{5}",
-                    "regions": {}
-                },
-                "iso2Code": "DE",
-                "company": "spryker",
-                "phone": "+49 (30) 2084 98350",
-                "isDefaultShipping": null,
-                "isDefaultBilling": null
-            },
             "shipment": {
                 "idShipmentMethod": 1
-            },
-            "payments": [
-                {
-                    "paymentProviderName": "DummyPayment",
-                    "paymentMethodName": "Invoice"
-                  
-                }
-            ]
+            }
         }
     }
 }
@@ -1050,7 +1007,17 @@ In case of a successful update, the endpoint responds with information that can 
             "addresses": [],
             "paymentProviders": [],
             "shipmentMethods": [],
-            "selectedShipmentMethods": [],
+            "selectedShipmentMethods": [
+                {
+                    "id": 1,
+                    "name": "Standard",
+                    "carrierName": "Spryker Dummy Shipment",
+                    "price": 490,
+                    "taxRate": null,
+                    "deliveryTime": null,
+                    "currencyIsoCode": "EUR"
+                }
+            ],
             "selectedPaymentMethods": []
         },
         "links": {
@@ -1122,16 +1089,7 @@ In case of a successful update, the endpoint responds with information that can 
                     "currencyIsoCode": "EUR"
                 }
             ],
-            "selectedPaymentMethods": [
-                {
-                    "paymentMethodName": "Invoice",
-                    "paymentProviderName": "DummyPayment",
-                    "requiredRequestData": [
-                        "paymentMethod",
-                        "paymentProvider"
-                    ]
-                }
-            ]
+            "selectedPaymentMethods": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/checkout-data?include=guest-carts"

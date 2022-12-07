@@ -22,7 +22,7 @@ workflow:
 ```
 
 ---
-**Note:** The project is limited to the workflows specified during initialization.
+#### **Note:** The project is limited to the workflows specified during initialization.
 ---
 
 To run a workflow, execute the following command in the project directory:
@@ -33,7 +33,7 @@ spryker-sdk sdk:workflow:run {workflowName}
 You can start any workflow by providing its name in the `sdk:workflow:run` command.
 
 ---
-**Note:** Two identical top-level workflows can't run inside the same project.
+#### **Note:** Two identical top-level workflows can't run inside the same project.
 ---
 
 ## Commands
@@ -53,7 +53,7 @@ There are the following commands for the workflow:
   spryker-sdk sdk:init:project --workflow={workflowName} --workflow={workflowName}
   ```
   ---
-  **Note:** If you initialize workflows for the project, you can use only these workflows.
+  #### **Note:** If you initialize workflows for the project, you can use only these workflows.
   ---
 - To run the workflow process:
   ```bash

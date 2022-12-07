@@ -1,5 +1,5 @@
 ---
-title: Agent Assist + Cart feature integration
+title: Install the Agent Assist + Cart feature
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-cart-feature-integration
@@ -9,9 +9,10 @@ redirect_from:
   - /2021080/docs/en/agent-assist-cart-feature-integration
   - /docs/agent-assist-cart-feature-integration
   - /docs/en/agent-assist-cart-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/agent-assist-cart-feature-integration.html
 related:
-  - title: Glue API - Agent Assist feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-agent-assist-feature-integration.html
+  - title: Install the Agent Assist Glue API
+    link: docs/pbc/all/user-management/page.version/install-and-upgrade/install-the-agent-assist-glue-api.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-agent-assist-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-agent-assist-cart-feature.md -->

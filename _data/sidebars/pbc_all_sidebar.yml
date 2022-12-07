@@ -1043,6 +1043,18 @@ entries:
             url: /docs/pbc/all/user-management/agent-assist-feature-overview.html
           - title: User and rights overview
             url: /docs/pbc/all/user-management/user-and-rights-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install the ACL feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-acl-feature.html
+              - title: Install the Agent Assist feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-feature.html
+              - title: Install the Agent Assist + Cart feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-cart-feature.html
+              - title: Install the Agent Assist + Shopping List feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
+              - title: Install the Agent Assist Glue API
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html                                                   
           - title: Manage in the Back Office
             nested:
               - title: "Best practices: Manage users and their permissions with roles and groups"

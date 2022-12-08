@@ -10,9 +10,9 @@ This section contains a collection of useful guidelines for developing on the Sp
 
 * [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html)
 
-* [Performance guidelines](docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
+* [Performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 
-* [Testing guidelines](docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html)
+* [Testing guidelines](/docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html)
 
 * [Project development guidelines](/docs/scos/dev/guidelines/project-development-guidelines.html)
 

@@ -1,10 +1,17 @@
 
 
+
+This document describes how to integrate the [Category Filters](/docs/scos/user/features/{{site.version}}/search-feature-overview/category-filters-overview.html) into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Category Filters feature core.
+
 ## Prerequisites
 
-To prepare your project to work with Category Filters:
+To prepare your project to work with Category Filters, follow these steps:
 
-1. Require the Category Filters modules in your Сomposer:
+1. Require Category Filters' modules in your Сomposer:
 *  `composer require spryker/product-category-filter`
 *  `composer require spryker/product-category-filter-collector`
 *  `composer require spryker/product-category-filter-gui`
@@ -17,8 +24,9 @@ vendor/bin/console propel:migrate
 ```
 
 4. Generate ORM models by running `vendor/bin/console propel:model:build`.
-This command will generate some new classes in your project under the `  \Orm\Zed\ProductCategoryFilter\Persistence namespace`.
-It is important to make sure that they extend the base classes from the Spryker core, for example:
+This command generates some new classes in your project under the `\Orm\Zed\ProductCategoryFilter\Persistence namespace`. 
+
+Make sure that they extend the base classes from the Spryker core, for example:
 
 * `\Orm\Zed\ProductCategoryFilter\Persistence\SpyProductCategoryFilter` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilter`
 
@@ -30,8 +38,7 @@ vendor/bin/console transfer:generate
 ```
 6. Activate the product category filters collector by adding `ProductCategoryFilterCollectorPlugin` to the Storage Collector plugin stack.
 
-<details>
-<summary markdown='span'>Example: collector plugin list extension</summary>
+**Example: collector plugin list extension:**
 
 ```php
 <?php
@@ -67,9 +74,9 @@ vendor/bin/console transfer:generate
         }
     }
 ```
-</details>
 
-7. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build zed
+
+7. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build Zed
 for older versions) for that.
 8. Update Zed’s navigation cache to show the new items for the Product Category Filter management user interface:
 ```bash
@@ -143,7 +150,7 @@ class CatalogController extends AbstractController
 }
 ```
 
-It is also necessary to add `ProductCategoryFilterClient` to `CatalogFactory`:
+Add `ProductCategoryFilterClient` to `CatalogFactory`:
 
 ```php
 <?php

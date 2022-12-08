@@ -2,6 +2,10 @@
 
 This document describes how to integrate the Catalog + Order Management feature connector into a Spryker project.
 
+## Install feature core
+
+Follow the steps below to install the Catalog + Order Management feature core.
+
 ## 1) Install the required modules using Composer
 
 Install the required modules:
@@ -167,8 +171,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 </details>
 
-
-
 ## 4) Add translations
 
 1. Append the glossary for the feature:
@@ -182,7 +184,7 @@ catalog.sort.popularity,Sortieren nach Beliebtheit,de_DE
 ```
 
 
-2. Run the following console command to import data:
+2. Import data:
 
 ```shell
 console data:import glossary
@@ -218,8 +220,9 @@ vendor/bin/console scheduler:setup
 
 {% info_block warningBox "Verification" %}
 
+For verification, do the following:
 1. Place several orders.
-2. Go to a Catalog page.
+2. Go to the **Catalog** page.
 
 Make sure that you can sort products by popularity.
 

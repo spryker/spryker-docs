@@ -10,17 +10,19 @@ The current feature integration guide only adds the [Add product to cart from th
 
 ## Install feature core
 
+Follow the steps below to install the Cart feature core.
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE|
+| --- | --- | --- |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/cart {{site.version}} --update-with-dependencies
@@ -39,7 +41,7 @@ cart_page.error_message.unexpected_error,Unexpected error occurred.,en_US
 cart_page.error_message.unexpected_error,Ein unerwarteter Fehler aufgetreten.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -47,23 +49,25 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that above keys and corresponding translations are present in the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that the preceding keys and corresponding translations are present in the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
+
+Follow the steps below to install the Cart feature frontend.
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/cart {{site.version}} --update-with-dependencies
@@ -111,7 +115,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

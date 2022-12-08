@@ -7,9 +7,9 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME                   | VERSION          | INTEGRATION GUIDE                                                                                                                                                |
 |------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Glue API: Product      | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)          |
-| Cart                   | {{page.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                                             |
+| Glue API: Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Product      | {{site.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)          |
+| Cart                   | {{site.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                                             |
 
 
 ## 1) Install the required modules using Composer
@@ -218,8 +218,6 @@ Activate the following plugins:
 | CartItemsByQuoteResourceRelationshipPlugin            | Adds the `items` resource as a relationship to the `carts` resource.                                                   |               | Spryker\Glue\CartsRestApi\Plugin\GlueApplication             |
 | GuestCartItemsByQuoteResourceRelationshipPlugin       | Adds the `guest-cart-items` resource as a relationship to the `guest-carts` resource.                                  |               | Spryker\Glue\CartsRestApi\Plugin\GlueApplication             |
 | CustomerCartsResourceRoutePlugin                      | Configuration for resource routing, how HTTP methods map to controller actions, and if actions are protected.          |               | Spryker\Glue\CartsRestApi\Plugin\ResourceRoute               |
-| CartByRestCheckoutDataResourceRelationshipPlugin      | Adds `carts` resource as relationship by `RestCheckoutDataTransfer.quote`. Applies only for registered customers.      |               | Spryker\Glue\CartsRestApi\Plugin\GlueApplication             |
-| GuestCartByRestCheckoutDataResourceRelationshipPlugin | Adds `guest-carts` resource as the relationship by `RestCheckoutDataTransfer.quote`. Applies only for guest customers. |               | Spryker\Glue\CartsRestApi\Plugin\GlueApplication             |
 
 {% info_block infoBox %}
 
@@ -243,8 +241,6 @@ namespace Pyz\Glue\GlueApplication;
 
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\CartsRestApi\Plugin\ControllerBeforeAction\SetAnonymousCustomerIdControllerBeforeActionPlugin;
-use Spryker\Glue\CartsRestApi\Plugin\GlueApplication\CartByRestCheckoutDataResourceRelationshipPlugin;
-use Spryker\Glue\CartsRestApi\Plugin\GlueApplication\GuestCartByRestCheckoutDataResourceRelationshipPlugin;
 use Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\CartItemsResourceRoutePlugin;
 use Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\CartsResourceRoutePlugin;
 use Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\CustomerCartsResourceRoutePlugin;
@@ -296,14 +292,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CartsRestApiConfig::RESOURCE_GUEST_CARTS_ITEMS,
             new ConcreteProductBySkuResourceRelationshipPlugin()
         );
-        $resourceRelationshipCollection->addRelationship(
-            CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
-            new CartByRestCheckoutDataResourceRelationshipPlugin(),
-        );
-        $resourceRelationshipCollection->addRelationship(
-            CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
-            new GuestCartByRestCheckoutDataResourceRelationshipPlugin(),
-        );
 
         return $resourceRelationshipCollection;
     }
@@ -317,9 +305,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
-1. [Create one or more carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart).
+1. [Create one or more carts](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart).
 2. Send the request: `GET https://glue.mysprykershop.com/carts/`.
-3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html) with.
+3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html) with.
 
 {% endinfo_block %}
 
@@ -329,7 +317,7 @@ Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
 Ensure that the `https://glue.mysprykershop.com/guest-carts` endpoint is available:
 
-1. [Create a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart).
+1. [Create a guest cart](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart).
 2 Send the request: `GET https://glue.mysprykershop.com/carts/`.
 3. Check that the response contains the cart you have created.
 
@@ -341,7 +329,7 @@ Ensure that the `https://glue.mysprykershop.com/guest-carts` endpoint is availab
 
 Ensure that the `items` resource relationships is registered as a relationship of the `carts` resource:
 
-1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
 2. Send the request: `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`.
 3. Check that the response contains the relationships to the `items` resource.
 
@@ -354,7 +342,7 @@ Ensure that the `items` resource relationships is registered as a relationship o
 
 Ensure that the `guest-cart-items` resource relationship is registered as a relationship of the `guest-carts` resource:
 
-1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
+1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
 2 Send the request: `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=guest-cart-items`.
 3. Check that the response contains the relationships to the `guest-cart-items` resource.
 
@@ -480,123 +468,3 @@ To verify that `Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\Quote
 ```
 
 {% endinfo_block %}
-
-
-{% info_block warningBox "Verification" %}
-
-To ensure that `CartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly:
-
-1) Send a request with an authorization token to a `checkout-data` endpoint with `carts` relation. For example, send the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request with the request body:
-
-```json
-{"data":
-    {"type": "checkout-data",
-      "attributes":
-      {
-        "idCart": "_cart_id",
-        ...
-        "shipment": {
-          "idShipmentMethod": 1
-        }
-      }
-    }
-}
-```
-
-2) Check that the cart data will be returned as a relationship and contains `shipmentTotal` in cart totals:
-
-```json
-{
-  "data": {
-    "type": "checkout-data",
-     ...
-    },
-    ...
-    "relationships": {
-      "carts": {
-        "data": [
-          {
-            "type": "carts",
-            "id": "_cart_id"
-          }
-        ]
-      }
-    }
-  },
-  "included": [
-    {
-      "type": "carts",
-      "id": "_cart_id",
-      "attributes": {
-        ...
-        "totals": {
-        ...
-          "shipmentTotal": ...
-        }
-      }
-    }
-  ]
-}
-```
-
-{% endinfo_block %}
-
-
-{% info_block warningBox "Verification" %}
-
-To ensure that `GuestCartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly:
-
-1) Send a request with an anonymous customer ID to a `checkout-data` endpoint with `guest-carts` relation. For example, send the `POST https://glue.mysprykershop.com/checkout-data?include=guest-carts` request with the request body:
-
-```json
-{"data":
-    {"type": "checkout-data",
-      "attributes":
-      {
-        "idCart": "_cart_id",
-        "shipment": {
-          "idShipmentMethod": 1
-        }
-      }
-    }
-}
-```
-
-2) Check that the guest cart data will be returned as a relationship and contains `shipmentTotal` in cart totals:
-
-```json
-{
-  "data": {
-    "type": "checkout-data",
-     ...
-    },
-    ...
-    "relationships": {
-      "carts": {
-        "data": [
-          {
-            "type": "carts",
-            "id": "_cart_id"
-          }
-        ]
-      }
-    }
-  },
-  "included": [
-    {
-      "type": "carts",
-      "id": "_cart_id",
-      "attributes": {
-        ...
-        "totals": {
-        ...
-          "shipmentTotal": ...
-        }
-      }
-    }
-  ]
-}
-```
-
-{% endinfo_block %}
-

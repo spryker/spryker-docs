@@ -8,10 +8,10 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE                                | VERSION          | INTEGRATION GUIDE                                                                                                                                                                        |
 |----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core                 | 202204.0         | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-spryker-core-feature-integration.html)                                 |
+| Glue API: Spryker Core                 | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}0/glue-api/glue-api-spryker-core-feature-integration.html)                                 |
 | Glue API: Cart                         | {{site.version}} | [Install the Cart Glue API](/docs/pbc/all/install-features/{{site.version}}/install-glue-api/install-the-cart-glue-api.html)                                                             |
-| Glue API: Customer Account Management  | 202204.0         | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Payments                     | 202204.0         | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html)                                         |
+| Glue API: Customer Account Management  | {{site.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| Glue API: Payments                     | {{site.version}} | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-payments-feature-integration.html)                                         |
 | Glue API: Shipment                     | {{site.version}} | [Glue API: Shipment feature integration](/docs/pbc/all/install-features/{{site.version}}/install-glue-api/install-the-shipment-glue-api.html)                                            |
 
 ## 1) Install the required modules using Composer
@@ -354,6 +354,8 @@ Activate the following plugins:
 | CheckoutResourcePlugin                                | Registers the `checkout` resource.                                                                                     | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
 | OrderRelationshipByOrderReferencePlugin               | Adds a relationship to the `order` entity by order reference.                                                          | None          | Spryker\Glue\OrdersRestApi\Plugin                   |
 | OrderPaymentsResourceRoutePlugin                      | Registers the `order-payments` resource.                                                                               | None          | Spryker\Glue\OrderPaymentsRestApi\Plugin            |
+| CartByRestCheckoutDataResourceRelationshipPlugin      | Adds `carts` resource as relationship by `RestCheckoutDataTransfer.quote`. Applies only for registered customers.      | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
+| GuestCartByRestCheckoutDataResourceRelationshipPlugin | Adds `guest-carts` resource as the relationship by `RestCheckoutDataTransfer.quote`. Applies only for guest customers. | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
 
 
 
@@ -367,6 +369,8 @@ namespace Pyz\Glue\GlueApplication;
 
 use Spryker\Glue\CheckoutRestApi\CheckoutRestApiConfig;
 use Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication\CheckoutDataResourcePlugin;
+use Spryker\Glue\CartsRestApi\Plugin\GlueApplication\CartByRestCheckoutDataResourceRelationshipPlugin;
+use Spryker\Glue\CartsRestApi\Plugin\GlueApplication\GuestCartByRestCheckoutDataResourceRelationshipPlugin;
 use Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication\CheckoutResourcePlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
@@ -399,6 +403,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CheckoutRestApiConfig::RESOURCE_CHECKOUT,
             new OrderRelationshipByOrderReferencePlugin()
         );
+        $resourceRelationshipCollection->addRelationship(
+            CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
+            new CartByRestCheckoutDataResourceRelationshipPlugin(),
+        );
+        $resourceRelationshipCollection->addRelationship(
+            CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
+            new GuestCartByRestCheckoutDataResourceRelationshipPlugin(),
+        );
 
         return $resourceRelationshipCollection;
     }
@@ -412,11 +424,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the following plugins are activated:
 
-| PLUGIN                                  | TEST                                                                                                                                                |
-|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| CheckoutDataResourcePlugin              | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request.                                       |
-| CheckoutResourcePlugin                  | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request.                                            |
-| OrderRelationshipByOrderReferencePlugin | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request. |
+| PLUGIN                                                | TEST                                                                                                                                                                            |
+|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CheckoutDataResourcePlugin                            | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request.                                                                   |
+| CheckoutResourcePlugin                                | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request.                                                                        |
+| OrderRelationshipByOrderReferencePlugin               | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request.                             |
+| CartByRestCheckoutDataResourceRelationshipPlugin      | Check if you get cart data as a relationship from the `checkout-data` resource by sending the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request.        |
+| GuestCartByRestCheckoutDataResourceRelationshipPlugin | Check if you get guest cart data as a relationship from the `checkout-data` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=guest-carts` request. |
+
 
 {% endinfo_block %}
 
@@ -438,6 +453,125 @@ To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you 
     }
 }
 ```
+
+
+{% info_block warningBox "Verification" %}
+
+
+To ensure that `CartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly:
+
+1) Send a request with an authorization token to a `checkout-data` endpoint with `carts` relation. For example, send the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request with the request body:
+
+```json
+{"data":
+    {"type": "checkout-data",
+      "attributes":
+      {
+        "idCart": "_cart_id",
+        "shipment": {
+          "idShipmentMethod": 1
+        }
+      }
+    }
+}
+```
+
+2) Check that the cart data will be returned as a relationship and contains `shipmentTotal` in cart totals:
+
+```json
+{
+  "data": {
+    "type": "checkout-data",
+    ...
+    },
+    ...
+    "relationships": {
+      "carts": {
+        "data": [
+          {
+            "type": "carts",
+            "id": "_cart_id"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "carts",
+      "id": "_cart_id",
+      "attributes": {
+        ...
+        "totals": {
+        ...
+          "shipmentTotal": ...
+        }
+      }
+    }
+  ]
+}
+```
+
+{% endinfo_block %}
+
+
+{% info_block warningBox "Verification" %}
+
+To ensure that `GuestCartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly:
+
+1) Send a request with an anonymous customer ID to a `checkout-data` endpoint with `guest-carts` relation. For example, send the `POST https://glue.mysprykershop.com/checkout-data?include=guest-carts` request with the request body:
+
+```json
+{"data":
+    {"type": "checkout-data",
+      "attributes":
+      {
+        "idCart": "_cart_id",
+        "shipment": {
+          "idShipmentMethod": 1
+        }
+      }
+    }
+}
+```
+
+2) Check that the guest cart data will be returned as a relationship and contains `shipmentTotal` in cart totals:
+
+```json
+{
+  "data": {
+    "type": "checkout-data",
+    ...
+    },
+    ...
+    "relationships": {
+      "guest-carts": {
+        "data": [
+          {
+            "type": "guest-carts",
+            "id": "_cart_id"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "guest-carts",
+      "id": "_cart_id",
+      "attributes": {
+        ...
+        "totals": {
+        ...
+          "shipmentTotal": ...
+        }
+      }
+    }
+  ]
+}
+```
+
+{% endinfo_block %}
 
 For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html).
 

@@ -1,15 +1,3 @@
----
-title: ACL feature integration
-last_updated: Sep 7, 2021
-description: This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
-template: feature-integration-guide-template
-redirect_from:
-  - /docs/marketplace/dev/feature-integration-guides/202200.0/acl-feature-integration.html
-related:
-  - title: Persistence ACL feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/202204.0/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
----
-
 This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
 
 ## Install feature core

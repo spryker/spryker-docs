@@ -1,5 +1,5 @@
 ---
-title: Agent Assist + Shopping List feature integration guide
+title: Install the Agent Assist + Shopping List feature
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-shopping-list-feature-integration
@@ -9,11 +9,7 @@ redirect_from:
   - /2021080/docs/en/agent-assist-shopping-list-feature-integration
   - /docs/agent-assist-shopping-list-feature-integration
   - /docs/en/agent-assist-shopping-list-feature-integration
-related:
-  - title: Agent Assist feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
-  - title: Shopping Lists feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/agent-assist-shopping-list-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-agent-assist-shopping-list-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-agent-assist-shopping-list-feature.md -->

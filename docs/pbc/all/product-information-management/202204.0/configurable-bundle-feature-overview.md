@@ -217,7 +217,7 @@ The order looks as follows:
 
 {% info_block errorBox "Packaging units are not supported" %}
 
-The product splitting logic does not support [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html) with configurable bundle products.
+The product splitting logic does not support [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/packaging-units-feature-overview.html) with configurable bundle products.
 
 {% endinfo_block %}
 
@@ -233,7 +233,7 @@ The feature has the following functional constraints which are going to be resol
 * On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html).
 * A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
-    - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html)
+    - Products with [measurement](/docs/pbc/all/product-information-management/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/packaging-units-feature-overview.html)
     - [Product bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html)
     - [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
@@ -251,8 +251,17 @@ The feature has the following functional constraints which are going to be resol
 |  [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)  |
 |  [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Configurable Bundle feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-bundle-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS |
+|---------|---------|---------|---------|
+| [Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) | [ConfigurableBundle migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundle-module.html) | [Retrieving configurable bundle templates](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html) | [HowTo: Render configurable bundle templates in the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)  |
+| [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html) | [ConfigurableBundleStorage migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundle-modulestorage.html) |   |   |
+| [Product Lists + Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-catalog-feature-integration.html)  | [ProductListGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html) |   |   |
+| [Prices feature integration](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html)  | [MerchantRelationshipProductListGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html)  |   |   |
+| [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |   |   |   |
+| [Product Images + Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-images-configurable-bundle-feature-integration.html)  |   |   |   |
+| [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |   |   |   |
+| [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |   |   |   |
+| [Glue API: Configurable Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |   |   |   |
+| [Glue API: Configurable Bundle + Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html) |   |   |   |

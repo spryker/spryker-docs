@@ -12,8 +12,6 @@ redirect_from:
   - /docs/en/product-group-cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/product-group-cart-feature-integration.html
 related:
-  - title: Product Groups feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-groups-feature-walkthrough.html
   - title: Cart feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
 ---

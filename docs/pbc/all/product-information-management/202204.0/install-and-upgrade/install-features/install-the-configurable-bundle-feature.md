@@ -11,13 +11,14 @@ redirect_from:
   - /docs/configurable-bundle-feature-integration
   - /docs/en/configurable-bundle-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/configurable-bundle-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/configurable-bundle-feature-integration.html
 related:
   - title: Glue API - Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-configurable-bundle-feature-integration.html
   - title: Glue API - Configurable Bundle + Cart feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-configurable-bundle-cart-feature-integration.html
   - title: Glue API - Configurable Bundle + Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-configurable-bundle-product-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
   - title: Product Lists + Catalog feature integration

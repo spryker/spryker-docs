@@ -17,8 +17,6 @@ redirect_from:
 related:
   - title: Glue API - Product Bundles feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-bundles-feature-integration.html
-  - title: Product Bundles feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-bundles-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-bundles-feature.md -->

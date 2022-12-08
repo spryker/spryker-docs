@@ -16,8 +16,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-options-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-options-feature-integration.html
 related:
-  - title: Product Options feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-options-feature-walkthrough.html
   - title: Retrieve abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
   - title: Retrieving concrete products

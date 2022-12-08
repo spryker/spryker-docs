@@ -18,17 +18,6 @@ This section contains a collection of walkthroughs for the features found within
 
 The [Agent Assist](/docs/scos/dev/feature-walkthroughs/{{page.version}}/agent-assist-feature-walkthrough.html) feature lets you add an agent, a person who assists customers: advises the best fit for customers and performs various activities on behalf of a customer on the Storefront.
 
-## Alternative Products
-
-The [Alternative Products](/docs/scos/dev/feature-walkthroughs/{{page.version}}/alternative-products-feature-walkthrough.html) feature lets you define alternative products for products that are discontinued or out of stock.
-
-## Catalog
-
-The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) feature lets you build and organize products to meet your and your customer’s demands, primarily to make sure everyone can quickly find what they are looking for.
-
-## Category Management
-
-The [Category Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) feature lets you manage your product catalog with customized categories, category pages, and filters. All products can be categorized into logical clusters so that customers can filter them on the Storefront.
 
 ## Cms
 
@@ -54,17 +43,9 @@ The [Company Account](/docs/scos/dev/feature-walkthroughs/{{page.version}}/compa
 
 [A token](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html) is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in the base64url format.
 
-## Configurable Bundle
-
-The [Configurable Bundle](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-bundle-feature-walkthrough.html) feature lets you create a configurable list of items.
-
-## Configurable Product
-
-The [Configurable Product](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html) feature introduces a new type of product that can be customized by customers—a configurable product.
-
 ### Configuration process flow of Configurable Product
 
-The [configuration process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough/configuration-process-flow-of-configurable-product.html) of a configurable product consists of eight phases.
+The [configuration process](/docs/pbc/all/product-information-management/{{page.version}}/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) of a configurable product consists of eight phases.
 
 ## Content Items
 
@@ -95,10 +76,6 @@ The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-man
 ### AvailabilityStorage module: reference information
 
 The [AvailabilityStorage module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by Publish and Synchronize.
-
-## Measurement Units
-
-The [Measurement Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/measurement-units-feature-walkthrough.html) feature lets you sell products by any unit of measure defined by in the Back Office.
 
 ## Merchant
 
@@ -137,9 +114,6 @@ The module relations for the [Custom Order Reference](/docs/scos/dev/feature-wal
 
 The [Sales](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) module provides the order management functionality. The functionality is obtained through the ZED UI that renders orders with order details and the Client API to get customer orders.
 
-## Packaging Units
-
-The [Packaging Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/packaging-units-feature-walkthrough.html) feature defines if a packaging unit holds a fixed amount of products or if customers can buy any amount of products in this packaging unit. Also, it lets you apply amount restrictions to products.
 
 ## Payments
 
@@ -154,41 +128,6 @@ The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-fea
 
 This document describes technical details of the [PriceProduct](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
-## Product
-
-The [Product](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) feature lets you create products and manage their characteristics and settings.
-
-## Product Approval Process
-
-The [Product Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-approval-process-feature-walkthrough.html) feature adds approval mechanisms for products by providing an optional `spy_product_abstract.approval_status` DB column to store product approval statuses. Thus, a shop owner can follow the review process and manage which products will be placed in the store by setting the corresponding approval statuses. The feature also provides the Back Office UI for managing the approval statuses and the corresponding Data importer.
-
-## Product Barcode
-
-The [Product Barcode](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-barcode-feature-walkthrough.html) feature lets you create barcodes for any kind of entity.
-
-## Product Bundles
-
-The [Product Bundles](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-bundles-feature-walkthrough.html) feature lets you tie individual items together and sell them as a package.
-
-## Product Groups
-
-The [Product Groups](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-groups-feature-walkthrough.html) feature lets product catalog managers group products by attributes, like color or size.
-
-## Product Labels
-
-The [Product Labels](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-labels-feature-walkthrough.html) feature enables product catalog managers to highlight the desired products by adding a special type of information—product labels.
-
-## Product Lists
-
-The [Product Lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-lists-feature-walkthrough.html) feature lets you configure product availability for specific companies by blacklisting or whitelisting products for them.
-
-## Product Options
-
-The [Product Options](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-options-feature-walkthrough.html) feature lets a Back Office user create and assign product options to abstract products.
-
-## Product Rating and Reviews
-
-The [Product Rating & Reviews](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-rating-reviews-feature-walkthrough.html) feature lets customers add reviews and ratings to abstract products.
 
 ## Product Relations
 
@@ -214,11 +153,3 @@ The [Reclamations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reclamat
 ## Spryker Core Back Office
 
 The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts’ setup.
-
-## Tax
-
-The [Tax](/docs/pbc/all/tax-management/tax-management.html) feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
-
-### Tax module: reference information
-
-The [Tax module](/docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or a shipment.

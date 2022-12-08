@@ -17,7 +17,7 @@ In the [Product Options](/docs/pbc/all/product-information-management/{{page.ver
 
 In the [Gift Cards](/docs/pbc/all/gift-cards/import-and-export-data/import-of-gift-cards.html) section, you will be able to import the data necessary to manage gift cards information in your online store.
 
-In the [Configurable Product data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/configurable-product-data-import.html) section, you will find the details of the file for importing the configuration of [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html).
+In the [Configurable Product data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/configurable-product-data-import.html) section, you will find the details of the file for importing the configuration of [configurable products](/docs/pbc/all/product-information-management/{{page.version}}/configurable-product-feature-overview/configurable-product-feature-overview.html).
 
 {% info_block warningBox "Import order" %}
 

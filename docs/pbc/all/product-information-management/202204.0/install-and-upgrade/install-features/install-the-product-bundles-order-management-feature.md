@@ -11,12 +11,6 @@ redirect_from:
   - /docs/product-bundles-order-management-feature-integration
   - /docs/en/product-bundles-order-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/product-bundles-order-management-feature-integration.html
-related:
-  - title: Product Bundles feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
-  - title: Order Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
-
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-bundles-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-bundles-order-management-feature.md -->

@@ -84,7 +84,7 @@ This approach is suitable only for Scenario 1 - that is, when the service is opt
 
 {% endinfo_block %}
 
-One more way to have a product with an optional service offering would be to make the product a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
+One more way to have a product with an optional service offering would be to make the product a [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
 
 1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/creating-service-offerings-best-practices.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html) for details on how to do that.
 
@@ -94,7 +94,7 @@ If you don’t want to display the Service products in the Storefront so buyers 
 
 {% endinfo_block %}
 
-2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slot) - one for the physical products, and one for the service:
+2. Create a [Configurable Bundle Template](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-template) with two [slots](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slot) - one for the physical products, and one for the service:
     1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Configurable Bundle Templates** section and click Create New Template in the top right corner.
     2. On the **Template details** page, enter the name of your bundle template in the **Name** field for the corresponding locale.
     3. Click **Save**. A new tab Slots will appear on the same page.

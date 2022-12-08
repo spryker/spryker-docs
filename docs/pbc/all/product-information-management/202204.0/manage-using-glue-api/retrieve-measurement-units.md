@@ -1,5 +1,5 @@
 ---
-title: Retrieving measurement units
+title: Retrieve measurement units
 description: Retrieve details about measurement units and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -11,16 +11,17 @@ redirect_from:
   - /docs/retrieving-measurement-units
   - /docs/en/retrieving-measurement-units
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-measurement-units.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-measurement-units.html
 related:
   - title: Measurement Units feature overview
     link: docs/scos/user/features/page.version/measurement-units-feature-overview.html
 ---
 
-The Measurement Units API together with the [Measurement Units](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop.
+The Measurement Units API together with the [Measurement Units](/docs/pbc/all/product-information-management/{{page.version}}/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html).
 
 ## Retrieve a measurement unit
 

@@ -11,19 +11,20 @@ redirect_from:
   - /docs/file-details-product-concrete-pre-configurationcsv
   - /docs/en/file-details-product-concrete-pre-configurationcsv
   - /docs/scos/dev/data-import/202200.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
+  - /2021080/docs/configurable-product-data-import
+  - /2021080/docs/en/configurable-product-data-import
+  - /docs/configurable-product-data-import
+  - /docs/en/configurable-product-data-import  
 ---
 
-This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) information in your Spryker shop.
+This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](/docs/pbc/all/product-information-management/{{page.version}}/configurable-product-feature-overview/configurable-product-feature-overview.html) information in your Spryker shop.
 
-To import the file, run
+## Import file dependencies
 
-```bash
-data:import:product-configuration
-```
+[File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html#import-file-parameters)
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS AND COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
@@ -33,15 +34,15 @@ The file should have the following parameters:
 | default_configuration | | String |  | Accepts JSON. | Defines the configuration customers start configuring the product with. |
 | default_display_data | | String |  | Accepts JSON. | Defines the configuration to be displayed to customers when they start configuring the product. The parameters are taken from `default_configuration`. |
 
-## Import file dependencies
-
-The file has the following dependency: [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html#import-file-parameters)
-
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [Template product_concrete_pre_configuration.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_concrete_pre_configuration.csv) | Import file template with headers only. |
 | [product_concrete_pre_configuration.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_concrete_pre_configuration.csv) | Exemplary import file with Demo Shop data. |
+
+## Import command
+
+```bash
+data:import:product-configuration
+```

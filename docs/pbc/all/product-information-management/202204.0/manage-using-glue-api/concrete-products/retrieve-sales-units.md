@@ -30,7 +30,7 @@ This endpoint allows retrieving sales units of concrete products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
-* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html).
+* [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html).
 
 ## Retrieve sales units
 
@@ -105,7 +105,7 @@ Request sample: retrieve sales units
 | is default | boolean | Defines if the sales unit is selected by default on the product details page. |
 | measurementUnitCode | string | Code of the measurement unit. |
 
-See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html) for more information on managing the sales units.
+See [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html) for more information on managing the sales units.
 
 ## Possible errors
 

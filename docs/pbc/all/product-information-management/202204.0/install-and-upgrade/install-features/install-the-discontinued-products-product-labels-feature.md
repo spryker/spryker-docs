@@ -14,10 +14,6 @@ redirect_from:
 related:
   - title: Product labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
-  - title: Product feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
-  - title: Product Labels feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-discontinued-products-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-discontinued-products-product-labels-feature.md -->

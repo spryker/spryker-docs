@@ -11,11 +11,6 @@ redirect_from:
   - /docs/product-group-product-rating-reviews-feature-integration
   - /docs/en/product-group-product-rating-reviews-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/product-group-product-rating-and-reviews-feature-integration.html
-related:
-  - title: Product Groups feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-groups-feature-walkthrough.html
-  - title: Product Rating and Reviews feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-group-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-group-product-rating-and-reviews-feature.md -->

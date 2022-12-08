@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
+  - /docs/scos/user/features/202204.0/configurable-product-feature-overview.html
 ---
 
 The *Configurable Product* feature introduces a new type of product, a configurable product, that customers can customize.
@@ -33,7 +34,7 @@ After adding a configurable product to the cart, a customer can change the produ
 Configurable products are created in two steps:
 
 1. A Back Office user creates regular products, or a developer imports them. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html) to learn about the file they import.
-2. A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
+2. A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
 
 
 ### Managing configurable products
@@ -93,7 +94,7 @@ If the configurator does not provide a price, [a regular product price](/docs/pb
 
 ### Complete and incomplete configuration
 
-When [importing configurable products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product.
+When [importing configurable products](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product.
 
 If the configuration is complete, on the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first three descriptive attributes set in the configurator. Under the attributes, the **Show** and **Hide** buttons allow the customer to expand and collapse the remaining attributes to review them. The customer can purchase the product without again opening the configurator and selecting parameters, if they determine the configuration is complete.
 
@@ -134,8 +135,13 @@ Customers configure a product on the Storefront as follows:
 
 ![configurable-product-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-on-the-storefront.gif)
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Configurable Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES | MIGRATION GUIDES | DATA IMPORT | REFERENCES |
+|---------|---------|---------|---------|
+| [Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-configuration-feature-integration.html)| [Migration guide - ProductConfiguration](/docs/scos/dev/module-migration-guides/migration-guide-productconfiguration.html) | [File details product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html)  | [Configuration process flow of Configurable Product](/docs/pbc/all/product-information-management/{{page.version}}/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) |
+| [Glue API: Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-configuration-feature-integration.html) |[Migration guide - ProductConfigurationStorage](/docs/scos/dev/module-migration-guides/migration-guide-productconfigurationstorage.html)   |  |  |
+|   | [Migration guide - ProductConfigurationsPriceProductVolumesRestApi](/docs/scos/dev/module-migration-guides/migration-guide-productconfigurationspriceproductvolumesrestapi.html)  |  |  |
+|   | [Migration guide - ProductConfigurationsRestApi](/docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html)  |  |  |
+|   | [Migration guide - ProductConfigurationWidget](/docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html)  |  |  |
+|   | [Migration guide - ProductConfiguratorGatewayPage](/docs/scos/dev/module-migration-guides/migration-guide-productconfiguratorgatewaypage.html)  |  |  |

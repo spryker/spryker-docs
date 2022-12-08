@@ -31,8 +31,6 @@ related:
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 
-## General information
-
 The feature supports decimal inventory in terms of stock and availability, amount of reserved products, as well as amount values of a packaging unit.
 
 ## Migration process
@@ -71,7 +69,7 @@ console transfer:generate
 
 {% info_block errorBox %}
 
-Care should be taken on the project level code to handle the availability and stock values as decimal objects. Due to the PHP floating-point precision issues, all decimal numbers in Spryker are wrapped in `decimal-object` that handles the calculations performed on them to allow exact precision. For more information about the`decimal-object` library, see [HowTo: Integrate and use precise decimal numbers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html).
+Care should be taken on the project level code to handle the availability and stock values as decimal objects. Due to the PHP floating-point precision issues, all decimal numbers in Spryker are wrapped in `decimal-object` that handles the calculations performed on them to allow exact precision. For more information about the`decimal-object` library, see [HowTo: Integrate and use precise decimal numbers](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html).
 
 {% endinfo_block %}
 

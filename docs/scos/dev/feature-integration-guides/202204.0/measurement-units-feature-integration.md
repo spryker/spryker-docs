@@ -20,7 +20,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/product-measurement-units-feature-integration.html
 related:
   - title: Glue API - Measurement Units feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-measurement-units-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
   - title: Measurement Units feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/measurement-units-feature-walkthrough.html
 ---

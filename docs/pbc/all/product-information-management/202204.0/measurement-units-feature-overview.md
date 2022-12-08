@@ -11,6 +11,7 @@ redirect_from:
   - /docs/measurement-units-feature-overview
   - /docs/en/measurement-units-feature-overview
   - /docs/scos/user/features/202200.0/measurement-units-feature-overview.html
+  - /docs/scos/user/features/202204.0/measurement-units-feature-overview.html
 ---
 
 The *Measurement Units* feature lets you sell products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit is assigned to abstract products, and by default, it is "item"; however, it can be changed to any other unit.
@@ -64,8 +65,10 @@ If a global unit conversion exists between the base and sales unit, then factor 
 - A shopper cannot reorder items with the selected measurement units as they are not added automatically. They must be added manually on the product details page.
 - In the [Quick Order](/docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html) form and [Search](/docs/scos/user/features/{{page.version}}/search-feature-overview/search-feature-overview.html), the products use the default measurement units that cannot be changed.
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Measurement Units feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/measurement-units-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES | GLUE API GUIDES |
+|---------|---------|
+| [Product measurement unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html)  | [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html)  |
+| [Quick order + measurement units feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html) | [Retrieving sales units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)  |
+| [Glue API: Measurement units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)  |   |

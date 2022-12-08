@@ -17,8 +17,6 @@ redirect_from:
   - /v4/docs/howto-import-packaging-units
   - /v4/docs/en/howto-import-packaging-units
 related:
-  - title: Packaging Units feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/packaging-units-feature-walkthrough.html
   - title: Packaging Units feature overview
     link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
 ---

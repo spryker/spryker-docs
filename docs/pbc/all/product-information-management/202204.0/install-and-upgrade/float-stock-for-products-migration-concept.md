@@ -1,5 +1,5 @@
 ---
-title: Float Stock for Products
+title: Float stock for products migration concept
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/float-stock-for-products
@@ -25,7 +25,7 @@ related:
   - title: CRUD Scheduled Prices migration concept
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Decimal Stock migration concept
-    link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/decimal-stock-migration-concept.html
   - title: Migrating from Twig v1 to Twig v3
     link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
   - title: Split Delivery migration concept

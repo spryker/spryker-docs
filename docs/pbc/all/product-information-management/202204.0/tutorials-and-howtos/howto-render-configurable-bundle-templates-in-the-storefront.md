@@ -16,9 +16,6 @@ redirect_from:
   - /v5/docs/en/howto-rendering-configurable-bundles-in-the-storefront
   - /v4/docs/howto-rendering-configurable-bundles-in-the-storefront
   - /v4/docs/en/howto-rendering-configurable-bundles-in-the-storefront
-related:
-  - title: Configurable Bundle feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/configurable-bundle-feature-walkthrough.html
 ---
 
 The configurable bundle functionality is implemented by 3 widgets:
@@ -84,7 +81,7 @@ When you set up `ConfiguredBundleNoteWidget` for your product, it is called auto
 
 ## Render configurable bundle templates on the order details page
 
-To render the  configured bundle product on the order details page, in the `order-detail-table` (`CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig`) molecule of the `CustomerReorderWidget`, call `SalesConfiguredBundleWidget` 
+To render the  configured bundle product on the order details page, in the `order-detail-table` (`CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig`) molecule of the `CustomerReorderWidget`, call `SalesConfiguredBundleWidget`
 
 **Code example which renders configured bundle product in the order details page**
 

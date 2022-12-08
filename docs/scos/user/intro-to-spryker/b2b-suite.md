@@ -28,7 +28,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <details>
 <summary markdown='span'>B2B feature list</summary>
 
-- [Configurable Product](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html)
+- [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/configurable-product-feature-overview/configurable-product-feature-overview.html)
 - [Return Management](/docs/pbc/all/return-management/{{site.version}}/return-management.html)
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/pbc/all/cart-and-checkout/comments-feature-overview.html)
@@ -72,7 +72,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
 - [Measurement units](/docs/scos/user/features/{{site.version}}/measurement-units-feature-overview.html)
-- [Packaging units](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
+- [Packaging units](/docs/pbc/all/product-information-management/{{site.version}}/packaging-units-feature-overview.html)
 - [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/alternative-products-feature-overview.html)
 - [Product Groups](/docs/pbc/all/product-information-management/{{site.version}}/product-groups-feature-overview.html)
 - [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html)

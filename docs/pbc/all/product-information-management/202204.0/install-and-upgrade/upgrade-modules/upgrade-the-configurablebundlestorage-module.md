@@ -20,9 +20,10 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-configurablebundlestorage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-configurablebundlestorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-configurablebundlestorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
 related:
   - title: Migration guide - ConfigurableBundle
-    link: docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundle-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-configurablebundlestorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-configurablebundlestorage-module.md -->

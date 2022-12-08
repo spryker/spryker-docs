@@ -1,7 +1,7 @@
 ---
 title: Configuration process flow of configurable products
 last_updated: Jun 2, 2022
-description: This document describes the flow chart that demonstrates the configuration process of the configurable product.
+description: This document shows the configuration process of the configurable product.
 template: concept-topic-template
 ---
 

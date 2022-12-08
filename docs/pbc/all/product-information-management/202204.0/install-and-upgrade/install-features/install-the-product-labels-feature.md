@@ -25,8 +25,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/discontinued-products-product-labels-feature-integration.html
   - title: Product labels + Promotions & Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-promotions-and-discounts-feature-integration.html
-  - title: Product Labels feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-labels-feature.md -->

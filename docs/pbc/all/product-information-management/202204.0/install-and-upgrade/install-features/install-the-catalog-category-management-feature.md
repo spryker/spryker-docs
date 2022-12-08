@@ -14,11 +14,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/catalog-category-management-feature-integration.html
-related:
-  - title: Catalog feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
-  - title: Category Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-catalog-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-catalog-category-management-feature.md -->

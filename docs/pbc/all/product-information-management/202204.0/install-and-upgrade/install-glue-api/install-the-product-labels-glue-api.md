@@ -16,8 +16,6 @@ redirect_from:
 related:
   - title: Product Labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
-  - title: Product Labels feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
   - title: Accessing Product Labels
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-labels.html
   - title: Retrieving product labels

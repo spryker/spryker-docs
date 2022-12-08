@@ -11,6 +11,9 @@ redirect_from:
   - /docs/packaging-units-feature-overview
   - /docs/en/packaging-units-feature-overview
   - /docs/scos/user/features/202200.0/packaging-units-feature-overview.html
+  - /docs/scos/user/features/202204.0/packaging-units-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/packaging-units-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202204.0/packaging-units-feature-walkthrough.html  
 ---
 
 {% info_block infoBox "Terminology used throughout the article" %}
@@ -45,7 +48,7 @@ Each packaging unit is defined on an abstract product level and is represented b
 
 The *leading product* represents the relation between two concrete products and holds the availability. The *measurement unit*, defined on an abstract product level, is the stock unit for all the concrete products of the abstract product. A group of products in a packaging unit, that has a leading product, is called a *product packaging unit group*. Each packaging unit includes a certain amount of products by default (default amount). A shop owner can choose whether the packaging unit—for example, a bag, has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKUs and prices, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a *leading product*.
 
-However, leading products are not always relevant. Packaging units that represent a package of items whose quantity can not be changed, do not need a leading product. In this case, the availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units see [Measurement Units](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units).
+However, leading products are not always relevant. Packaging units that represent a package of items whose quantity can not be changed, do not need a leading product. In this case, the availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units see [Measurement Units](/docs/pbc/all/product-information-management/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units).
 Basically, when a packaging unit does not use the leading product, it means that the stock is not shared.
 
 {% info_block infoBox "Info" %}
@@ -72,7 +75,7 @@ The packaging unit amount can be:
 | --- | --- |
 | Default (default_amount) | Default amount of items that a customer can buy. <br>For example, a customer can buy 40 apples. <br>Also, this value is used for calculating a price when the custom amount is provided. The Amount field in the online shop is prefilled with a value set in `default_amount`.|
 | Variable (is_variable=true) | Customer can buy any number of that item (respecting the amount restrictions). In case of a variable amount the price is adjusted by the formula: (Price) * (Customer Input) / (Default Amount). |
-| Fixed (is_variable=false) | Customer can buy a predetermined, fixed amount of items. When `is_variable` is set to `false`, all amount_* values are set as NULL. When the amount is non-variable, the customer can still see the default amount but can not change it.<br>However, if a product has a sales unit set for it, the customer can select a different sales unit for the amount, which adjusts the displayed amount according to that sales unit.<br> See [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units. |
+| Fixed (is_variable=false) | Customer can buy a predetermined, fixed amount of items. When `is_variable` is set to `false`, all amount_* values are set as NULL. When the amount is non-variable, the customer can still see the default amount but can not change it.<br>However, if a product has a sales unit set for it, the customer can select a different sales unit for the amount, which adjusts the displayed amount according to that sales unit.<br> See [Measurement Units feature overview](/docs/pbc/all/product-information-management/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units. |
 | Interval amount (amount_interval) | Interval of amounts that a customer can buy. <br>For example, you can buy only 40, 80, and 120 but not 45. <br>The interval is shifted by the minimum value (for example, minimum = 5, interval = 3; valid values: 5, 8, 11). Only relevant if is_variable=true.<br>If the amount is set as variable, by default, the interval amount is set to 1. |
 | Minimum amount (amount_minimum) | Minimum amount that a customer can buy. <br> For example, you cannot buy less than 1 apple. <br>Only relevant if is_variable=true. If the amount is set as variable, by default, the minimum amount equals the interval amount.|
 | Maximum amount (amount_maximum) | Maximum amount that a customer can buy.<br>For example, you cannot buy more than 10 apples.<br>Only relevant if is_variable=true. |
@@ -85,7 +88,7 @@ All packaging units having leading products have a base unit of measure and can 
 
 {% info_block infoBox "Info" %}
 
-For example, a packaging unit "bag" can be set to have "item" as a base unit and can also have "kg" and "g" as sales units (see [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about base and sales units for products).
+For example, a packaging unit "bag" can be set to have "item" as a base unit and can also have "kg" and "g" as sales units (see [Measurement Units feature overview](/docs/pbc/all/product-information-management/{{page.version}}/measurement-units-feature-overview.html) to learn about base and sales units for products).
 
 {% endinfo_block %}
 
@@ -178,7 +181,7 @@ In our example, the following conditions are met:
 
 ## Current constraints
 
-* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html) for more details.
+* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-import-packaging-units.html) for more details.
 * We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
 * On the shopping cart as well as the shopping list page, products do not have a drop-down to change the packaging units. You can select a packaging unit on the product details page only.
 * A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They must be added manually on the product details page.
@@ -190,10 +193,9 @@ You have a product in your shop—a pen. And there exists a packaging unit for a
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Developer articles
 
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Packaging Units feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/packaging-units-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
+|---------|---------|---------|
+| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html)  | [Decimal Stock migration concept](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/decimal-stock-migration-concept.html) | [HowTo: Import packaging units](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-import-packaging-units.html) |
+|   |   | [HowTo: Integrate and use precise decimal numbers](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html)  |

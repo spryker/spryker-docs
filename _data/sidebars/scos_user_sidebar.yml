@@ -161,8 +161,22 @@ entries:
       - "202108.0"
     - title: Category Management
       url: /docs/scos/user/features/category-management-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Alternative Products
       url: /docs/scos/user/features/alternative-products-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Approval Process
       url: /docs/scos/user/features/approval-process-feature-overview.html
       include_versions:
@@ -198,6 +212,13 @@ entries:
       url: /docs/scos/user/features/multiple-carts-feature-overview.html
     - title: Catalog
       url: /docs/scos/user/features/catalog-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Checkout
       url: /docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
       include_versions:
@@ -273,7 +294,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: CMS
       url: /docs/scos/user/features/cms-feature-overview/cms-feature-overview.html
       include_versions:
@@ -373,7 +393,6 @@ entries:
       url: /docs/scos/user/features/configurable-product-feature-overview.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: File Manager
       include_versions:
       - "202108.0"
@@ -400,9 +419,16 @@ entries:
       - "202001.0"
       - "202005.0"
       - "202009.0"
-      - "202108.0"      
+      - "202108.0"
     - title: Measurement Units
       url: /docs/scos/user/features/measurement-units-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Merchant B2B Contracts
       url: /docs/scos/user/features/merchant-b2b-contracts-feature-overview.html
       include_versions:
@@ -479,6 +505,13 @@ entries:
         - "202204.0"
     - title: Packaging Units
       url: /docs/scos/user/features/packaging-units-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Payments
       url: /docs/scos/user/features/payments-feature-overview.html
     - title: Persistent Cart Sharing
@@ -510,6 +543,13 @@ entries:
         - "202108.0"
     - title: Product
       url: /docs/scos/user/features/product-feature-overview/product-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Product attributes
         url: /docs/scos/user/features/product-feature-overview/product-attributes-overview.html
@@ -538,20 +578,69 @@ entries:
         - "202204.0"
     - title: Product Barcode
       url: /docs/scos/user/features/product-barcode-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Product Bundles
       url: /docs/scos/user/features/product-bundles-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Product Groups
       url: /docs/scos/user/features/product-groups-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Product Labels
       url: /docs/scos/user/features/product-labels-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Product Lists
       url: /docs/scos/user/features/product-lists-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Product Options
       url: /docs/scos/user/features/product-options-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Product Relations
       url: /docs/scos/user/features/product-relations-feature-overview.html
     - title: Product Sets
       url: /docs/scos/user/features/product-sets-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Promotions and Discounts
       url: /docs/scos/user/features/promotions-discounts-feature-overview.html
       include_versions:
@@ -1266,16 +1355,6 @@ entries:
       nested:
       - title: Products
         nested:
-        - title: Manage abstract products and product bundles
-          include_versions:
-          - "202204.0"
-          nested:
-          - title: Create
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
-          - title: Assign product attributes
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
-          - title: Edit
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
         - title: Manage abstract products
           include_versions:
           - "201811.0"

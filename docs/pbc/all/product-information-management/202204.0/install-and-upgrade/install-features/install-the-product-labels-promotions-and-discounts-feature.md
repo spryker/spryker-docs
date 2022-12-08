@@ -16,8 +16,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
   - title: Promotions and Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/promotions-and-discounts-feature-integration.html
-  - title: Product Labels feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
 
 ---
 

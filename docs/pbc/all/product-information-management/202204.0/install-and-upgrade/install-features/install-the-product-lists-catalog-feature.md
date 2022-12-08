@@ -14,10 +14,6 @@ redirect_from:
 related:
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
-  - title: Product Lists feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html
-  - title: Catalog feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-lists-catalog-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-lists-catalog-feature.md -->

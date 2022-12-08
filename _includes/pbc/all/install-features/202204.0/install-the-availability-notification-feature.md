@@ -1,17 +1,22 @@
 
 
+
+This document describes how to integrate the [Availability Notification feature](docs/pbc/all/warehouse-management-system/availability-notification-feature-overview.html) into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Availability Notification feature core.
 
 ### Prerequisites
 
-Ensure that the related features are installed:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Mailing and Notifications | {{site.version}} |
-| Inventory Management | {{site.version}} |
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Mailing and Notifications | {{site.version}} | [Mailing and Notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
+| Inventory Management | {{site.version}} |Install [the Inventory Management feature](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
+| Product | {{site.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -33,7 +38,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Apply database changes, generate entities and transfer changes:
+Apply database changes and generate entities and transfer changes:
 
 ```bash
 console propel:install
@@ -48,20 +53,12 @@ Make sure that the following changes have been implemented in your database:
 | --- | --- | --- |
 | spy_availability_notification_subscription | table | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
 
 | CLASS PATH | EXTENDS |
 | --- | --- |
 | src/Orm/Zed/AvailabilityNotification/Persistence/SpyAvailabilityNotificationSubscription.php | Spryker\Zed\AvailabilityNotification\Persistence\Propel\AbstractSpyAvailabilityNotificationSubscription |
 | src/Orm/Zed/AvailabilityNotification/Persistence/SpyAvailabilityNotificationSubscriptionQuery.php | Spryker\Zed\AvailabilityNotification\Persistence\Propel\AbstractSpyAvailabilityNotificationSubscriptionQuery |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been implemented in transfer objects:
 
@@ -78,6 +75,8 @@ Make sure that the following changes have been implemented in transfer objects:
 {% endinfo_block %}
 
 ### 3) Set up behavior
+
+Setting up behavior is not a single step. To set it up, you need to perform the steps provided in the following subsections.
 
 #### Listening to the availability_notification event
 
@@ -185,11 +184,11 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AvailabilityNotificationSubscriptionMailTypePlugin`, `AvailabilityNotificationUnsubscribedMailTypePlugin` and `AvailabilityNotificationMailTypePlugin` are working:
+To verify that `AvailabilityNotificationSubscriptionMailTypePlugin`, `AvailabilityNotificationUnsubscribedMailTypePlugin`, and `AvailabilityNotificationMailTypePlugin` are working:
 1. Add a new product.
 2. On YVES, as a customer, subscribe to its availability notifications.
 3. Switch the availability status of the product several times.
-4. Check your mailbox for the emails about the product's status being switched to available and unavailable.
+4. Check your mailbox for emails about the product's status being switched to available and unavailable.
 
 {% endinfo_block %}
 
@@ -246,20 +245,16 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AvailabilityNotificationAnonymizerPlugin` is working:
+To verify that `AvailabilityNotificationAnonymizerPlugin` is working, follow these steps:
 1. Add a new product.
 2. On Yves, as a company user, subscribe to its availability notifications.
 3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.</li><li>Delete this user.
 4. Check that the line is deleted from the `spy_availability_notification_subscription` table.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` is working:
+To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` is working, follow these steps:
 1. Add a new product.
 2. On Yves, as a company user, subscribe to its availability notifications.
-3. On Yves, go to account overview > *Newsletters*.
+3. On Yves, go to account overview > **Newsletters**.
 4. Check that you are subscribed to the product's availability notifications.
 
 {% endinfo_block %}
@@ -289,9 +284,8 @@ class AvailabilityNotificationConfig extends SprykerAvailabilityNotificationConf
 
 {% info_block warningBox “Verification” %}
 
-
 We recommend setting `AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` to true. 
-Make sure that you are not catching the mentioned above exception somewhere in your Pyz code but use check of `$availabilityNotificationSubscriptionResponseTransfer->getIsSuccess()`.
+Make sure that you are not catching the mentioned above exception somewhere in your `Pyz` code but use the check of `$availabilityNotificationSubscriptionResponseTransfer->getIsSuccess()`.
 
 The config setting exists for BC reasons only.
 
@@ -390,7 +384,7 @@ Make sure that, in the database, the configured data is added to the `spy_glossa
 
 ### 3) Enable controllers
 
-Register the following controller providers in Yves application:
+Register the following controller providers in the Yves application:
 
 | PROVIDER | NAMESPACE | ENABLE CONTROLLER | CONTROLLER SPECIFICATION |
 | --- | --- | --- | --- |

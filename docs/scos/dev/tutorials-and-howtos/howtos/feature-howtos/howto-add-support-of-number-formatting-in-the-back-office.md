@@ -259,7 +259,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/carrier-management.html) feature installed.
+Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/{{site.version}}/carrier-management.html) feature installed.
 
 {% endinfo_block %}
 

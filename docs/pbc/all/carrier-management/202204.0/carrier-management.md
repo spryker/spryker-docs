@@ -44,6 +44,18 @@ Each shipment method has a dedicated price and tax set in the various currencies
 
 You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations let you freely define a set of rules to be applied to the various discount options.
 
+## Installation
+
+To install Carrier Management, do the following:
+
+1. Install the required modules:
+
+```bash
+composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies
+```
+
+2. Follow the integration guides in [Related Developer articles](#related-developer-articles)
+
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |

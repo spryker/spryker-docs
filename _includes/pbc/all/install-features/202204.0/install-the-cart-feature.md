@@ -123,6 +123,6 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Navigate to catalog and find an abstract product with single concrete. You should see a button for adding this concrete product to the cart right from the catalog page.
+Navigate to the catalog and find an abstract product with single concrete. You should see a button for adding this concrete product to the cart right from the catalog page.
 
 {% endinfo_block %}

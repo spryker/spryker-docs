@@ -3421,7 +3421,7 @@ entries:
       - "202108.0"
       - "202204.0"
   - title: Data export
-    url: docs/scos/dev/data-export/index.html
+    url: /docs/scos/dev/data-export/index.html
     include_versions:
     - "202005.0"
     - "202009.0"

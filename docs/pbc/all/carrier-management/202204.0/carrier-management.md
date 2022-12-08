@@ -27,7 +27,7 @@ The main concepts regarding shipping are as follows:
 
 A sales order can have multiple delivery methods from different carrier companies.
 
-In the Back Office, you can create a carrier company and configure multiple delivery methods. For each delivery method, you can set a price and an associated tax set, define a store for which the delivery method is to be available, as well as activate or deactivate the delivery method. For more information about how to add delivery methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html).
+In the Back Office, you can create a carrier company and configure multiple delivery methods. For each delivery method, you can set a price and an associated tax set, define a store for which the delivery method is to be available, as well as activate or deactivate the delivery method. For more information about how to add delivery methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/manage-in-the-back-office/add-delivery-methods.html).
 
 {% info_block warningBox %}
 
@@ -38,7 +38,7 @@ If a Back Office user creates or edits a shipment of an order created by a custo
 
 {% endinfo_block %}
 
-Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information about method plugins types, see [Reference information: Shipment method plugins](/docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html).
+Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information about method plugins types, see [Reference information: Shipment method plugins](/docs/pbc/all/carrier-management/{{site.version}}/extend-and-customize/shipment-method-plugins-reference-information.html).
 
 Each shipment method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit and their preferred currency selection.
 
@@ -54,22 +54,22 @@ To install Carrier Management, do the following:
 composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies
 ```
 
-2. Follow the integration guides in [Related Developer articles](#related-developer-articles)
+2. Follow the integration guides in [Related Developer articles](#related-developer-articles).
 
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 |---| - |
-| [Add carrier companies](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html)  | [Seven Senders](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders.html) |
-| [Add delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html)  | [Paazl](/docs/pbc/all/carrier-management/third-party-integrations/paazl.html) |
-| [Edit delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/edit-delivery-methods.html)  | [Paqato](/docs/pbc/all/carrier-management/third-party-integrations/paqato.html) | |
+| [Add carrier companies](/docs/pbc/all/carrier-management/{{site.version}}/manage-in-the-back-office/add-carrier-companies.html)  | [Seven Senders](/docs/pbc/all/carrier-management/{{site.version}}/third-party-integrations/seven-senders/seven-senders.html) |
+| [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/manage-in-the-back-office/add-delivery-methods.html)  | [Paazl](/docs/pbc/all/carrier-management/{{site.version}}/third-party-integrations/paazl.html) |
+| [Edit delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/manage-in-the-back-office/edit-delivery-methods.html)  | [Paqato](/docs/pbc/all/carrier-management/{{site.version}}/third-party-integrations/paqato.html) | |
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|
-| [Integrate the Shipment feature](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html) | [Upgrade the Shipment module](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html#activate-a-discount-rule-based-on-a-shipment-carrier) | [Shipment method plugins: reference information](/docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html) |
-| [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) | [Upgrade the ShipmentGui module](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentgui-module.html) | [HowTo: Add a new shipment method 2.0](/docs/pbc/all/carrier-management/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html) | [Shipment method entities in the database: reference information](/docs/pbc/all/carrier-management/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html) |
-| [Integrate the Shipment + Approval Process feature](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html) | [Upgrade the ShipmentCartConnector module](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcartconnector-module.html) |  |  |
-| [Integrate the Shipment + Cart feature](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-cart-feature.html) | [Upgrade the ShipmentCheckoutConnector module](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcheckoutconnector-module.html) |  |  |
-|  | [Upgrade the ShipmentDiscountConnector module](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html) |  |  |
+| [Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html) | [Upgrade the Shipment module](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html#activate-a-discount-rule-based-on-a-shipment-carrier) | [Shipment method plugins: reference information](/docs/pbc/all/carrier-management/{{site.version}}/extend-and-customize/shipment-method-plugins-reference-information.html) |
+| [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-glue-api.html) | [Upgrade the ShipmentGui module](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipmentgui-module.html) | [HowTo: Add a new shipment method 2.0](/docs/pbc/all/carrier-management/{{site.version}}/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html) | [Shipment method entities in the database: reference information](/docs/pbc/all/carrier-management/{{site.version}}/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html) |
+| [Integrate the Shipment + Approval Process feature](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-approval-process-feature.html) | [Upgrade the ShipmentCartConnector module](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipmentcartconnector-module.html) |  |  |
+| [Integrate the Shipment + Cart feature](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-cart-feature.html) | [Upgrade the ShipmentCheckoutConnector module](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipmentcheckoutconnector-module.html) |  |  |
+|  | [Upgrade the ShipmentDiscountConnector module](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html) |  |  |

@@ -13,7 +13,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | ---| --- |
 | Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Agent Assist | {{site.version}}  | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html) |
+| Agent Assist | {{site.version}}  | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{site.version}}/install-and-upgrade/install-the-agent-assist-feature.html) |
 | Cart         | {{site.version}}  | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html) |
 
 
@@ -62,4 +62,4 @@ Integrate the following related features:
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE  |
 | ----------------- | ------------ | ----------------------- |
-| Agent Assist + Shopping List |         | [Agent Assist + Shopping List feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-shopping-list-feature-integration.html) |
+| Agent Assist + Shopping List |         | [Agent Assist + Shopping List feature integration](/docs/pbc/all/user-management/{{site.version}}/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html) |

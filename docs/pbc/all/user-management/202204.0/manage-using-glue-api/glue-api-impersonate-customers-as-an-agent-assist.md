@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/impersonating-customers-as-an-agent-assist
   - /docs/impersonating-customers-as-an-agent-assist
   - /docs/en/impersonating-customers-as-an-agent-assist
-  - /docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
     link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
@@ -29,7 +29,7 @@ Impersonating a customer allows an [agent assist](/docs/pbc/all/user-management/
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html)
+* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
 
 * [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
 

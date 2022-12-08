@@ -25,7 +25,7 @@ redirect_from:
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 ---
 
-`MailTypeBuilderPlugin` is used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypeBuilderPlugin` within the `Mail` module, which sends out the emails, and implement `MailTypeBuilderPluginInterface`. 
+`MailTypeBuilderPlugin` is used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypeBuilderPlugin` within the `Mail` module, which sends out the emails, and implement `MailTypeBuilderPluginInterface`.
 Then, in the `build()` method, set up your email.
 
 All `MailTransfers` need to know which mail type has to be used for further internal processing. The mail type has to be a string.
@@ -49,13 +49,13 @@ use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
 class FooBarMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuilderPluginInterface
 {
     protected const MAIL_TYPE = 'a name of the mail';
-    
+
     protected const MAIL_TEMPLATE_HTML = 'FooBar/mail/your_mail.html.twig';
 
     protected const MAIL_TEMPLATE_TEXT = 'FooBar/mail/your_mail.text.twig';
 
     protected const GLOSSARY_KEY_MAIL_SUBJECT = 'foo_bar.mail.your_mail.subject';
-    
+
     protected const PARAMETER_NAME = '%name%';
 
     public function getName(): string
@@ -110,7 +110,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 {% info_block warningBox "Verification" %}
 
 In order to activate the mail functionality, follow these steps:
-1. To verify the mail provider is created and registered, go to [How to create and register a mail provider](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html).
+1. To verify the mail provider is created and registered, go to [How to create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html).
 2. Create and adjust `MailTransfer`:
 
 ```php
@@ -123,7 +123,6 @@ Call `MailFacade::handleMail($mailTransfer)`.
 
 If everything is set up properly the mail will be sent.
 
-Follow [Tutorial sending an email](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html) to get more information.
+Follow [Tutorial sending an email](/docs/pbc/all/emails/{{site.version}}/tutorial-sending-an-email.html) to get more information.
 
 {% endinfo_block %}
-

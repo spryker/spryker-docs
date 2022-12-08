@@ -274,6 +274,13 @@ entries:
         - "202108.0"
     - title: Mailing and Notifications
       url: /docs/scos/dev/feature-walkthroughs/mailing-and-notifications-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-walkthroughs/measurement-units-feature-walkthrough.html
       include_versions:
@@ -3900,13 +3907,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Retrieving promotional items
-      url: /docs/scos/dev/glue-api-guides/retrieving-promotional-items.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
   - title: Legacy Demoshop
     include_versions:
     - "201811.0"
@@ -4090,8 +4090,6 @@ entries:
     nested:
     - title: Introduction Tutorials
       nested:
-      - title: "Tutorial: Sending an email"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
       - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html
       - title: "Tutorial: Integrating any search engine into a project"
@@ -4202,8 +4200,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
       - title: "HowTo: Integrate and use precise decimal numbers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
-      - title: "HowTo: Create and register a MailTypePlugin"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
       - title: "HowTo: Debug payment integrations locally"
@@ -4238,8 +4234,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-sftp-for-flysystem.html
       - title: "HowTo: Handle case-sensitive file system on Mac OS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
-      - title: "HowTo: Create and register a mail provider"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
       - title: "HowTo: Allow Zed CSS/JS on a project"

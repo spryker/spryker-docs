@@ -44,7 +44,7 @@ class Customer extends SprykerCustomer
         // Create a MailTransfer instance which is
         // used for further processing
         $mailTransfer = new MailTransfer();
-        
+
         // Set the mail type which is used for the
         // internal mapping—for example, which mail provider
         // should send this mail
@@ -117,7 +117,7 @@ protected function sendRegistrationToken()
 
 ## 2. Creating a MailTypeBuilderPlugin
 
-Create `MailTypeBuilderPlugin` implementing the `MailTypeBuilderPluginInterface`. For more information about creating a `MailTypeBuilderPlugin`, see [HowTo: Create and register a MailTypeBuilderPlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html):
+Create `MailTypeBuilderPlugin` implementing the `MailTypeBuilderPluginInterface`. For more information about creating a `MailTypeBuilderPlugin`, see [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html):
 
 <details><summary markdown='span'>Code sample:</summary>
 
@@ -135,7 +135,7 @@ use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
 class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin implements MailTypeBuilderPluginInterface
 {
     protected const MAIL_TYPE = 'custom customer registration mail';
-    
+
     protected const MAIL_TEMPLATE_HTML = 'customer/mail/customer_registration.html.twig';
 
     protected const MAIL_TEMPLATE_TEXT = 'customer/mail/customer_registration.text.twig';
@@ -150,7 +150,7 @@ class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin imp
     public function build(MailTransfer $mailTransfer): MailTransfer
     {
         $customerTransfer = $mailTransfer->requireCustomer()->getCustomer();
-    
+
         return $mailTransfer
             ->setSubject(static::GLOSSARY_KEY_MAIL_SUBJECT)
             ->addTemplate(
@@ -247,7 +247,7 @@ Besides that `MailSenderTransfer.setNameTranslations()` and  `MailRecipientTrans
 
 ## Set templates
 
-Usually, you have a `.twig` file which contains the template you want to use for mail. 
+Usually, you have a `.twig` file which contains the template you want to use for mail.
 
 Set the template in `MailTransfer` which must be used in your `MailTypeBuilderPlugin` plugin.
 

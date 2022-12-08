@@ -620,6 +620,17 @@ entries:
             nested:
               - title: "HowTo: Create discounts based on shipment"
                 url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+      - title: Emails
+        url: /docs/pbc/all/emails/emails.html
+        nested:
+          - title: "HowTo: Create and register a MailTypePlugin"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mailtypeplugin.html
+          - title: "HowTo: Create and register a mail provider"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mail-provider.html
+          - title: "HowTo: Create and register a MailTypeBuilderPlugin"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mail-type-builder-plugin.html
+          - title: "Tutorial: Sending a mail"
+            url: /docs/pbc/all/emails/tutorial-sending-an-email.html
       - title: Gift Cards
         url: /docs/pbc/all/gift-cards/gift-cards.html
         nested:
@@ -1032,6 +1043,18 @@ entries:
             url: /docs/pbc/all/user-management/agent-assist-feature-overview.html
           - title: User and rights overview
             url: /docs/pbc/all/user-management/user-and-rights-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install the ACL feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-acl-feature.html
+              - title: Install the Agent Assist feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-feature.html
+              - title: Install the Agent Assist + Cart feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-cart-feature.html
+              - title: Install the Agent Assist + Shopping List feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
+              - title: Install the Agent Assist Glue API
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html                                                   
           - title: Manage in the Back Office
             nested:
               - title: "Best practices: Manage users and their permissions with roles and groups"

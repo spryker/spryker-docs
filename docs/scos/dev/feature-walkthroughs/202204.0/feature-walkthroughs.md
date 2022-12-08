@@ -96,10 +96,6 @@ The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-man
 
 The [AvailabilityStorage module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by Publish and Synchronize.
 
-## Mailing & Notifications
-
-The [Mailing & Notifications ](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mailing-and-notifications-feature-walkthrough.html)feature lets you manage newsletters and notifications.
-
 ## Measurement Units
 
 The [Measurement Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/measurement-units-feature-walkthrough.html) feature lets you sell products by any unit of measure defined by in the Back Office.

@@ -26,7 +26,7 @@ vendor/bin/console propel:migrate
 4. Generate ORM models by running `vendor/bin/console propel:model:build`.
 This command generates some new classes in your project under the `\Orm\Zed\ProductCategoryFilter\Persistence namespace`. 
 
-Make sure that they extend the base classes from the Spryker core, for example:
+Make sure that they extend the base classes from the Spryker core—for example:
 
 * `\Orm\Zed\ProductCategoryFilter\Persistence\SpyProductCategoryFilter` extends `\Spryker\Zed\ProductCategoryFilter\Persistence\Propel\AbstractSpyProductCategoryFilter`
 
@@ -78,13 +78,13 @@ vendor/bin/console transfer:generate
 
 7. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build Zed
 for older versions) for that.
-8. Update Zed’s navigation cache to show the new items for the Product Category Filter management user interface:
+8. Update Zed's navigation cache to show the new items for the Product Category Filter management user interface:
 ```bash
 vendor/bin/console application:build-navigation-cache
 ```
 
 Now you can use the Zed UI of Category Filters to reorder, remove, or add search filters to specific categories, and the collectors also can push those category settings to storage.
-Check out our [Demoshop implementation](https://github.com/spryker/demoshop) for the frontend implementation example and the general idea.
+Check out our [`demoshop` implementation](https://github.com/spryker/demoshop) for the frontend implementation example and the general idea.
 
 ### Updating filters for a category
 

@@ -30,7 +30,7 @@ data:import:discount-voucher
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | discount_key | &check; | String |`discount_key` must exist in the `discounts.csv` file | The key identifier of the discount. |
-| quantity | &check; | Number |  | The number of vouchers that will be generated. |
+| quantity | &check; | Number |  | The number of vouchers that are generated. |
 | custom_code | &check; | String |  | The  customized code of the voucher, composed of two parts:<ul><li>a prefix of the voucher code that can be set directly in this field,</li><li>a random part with the amount of random symbols equals to the value of random_generated_code_length field.</li></ul> |
 | random_generated_code_length | &check; | String | If quantity >= 1, then `random_generated_code_length`	cannot be empty. | A random part of the voucher code with the amount of random symbols equals to the value of `random_generated_code_length` field. |
 | max_number_of_uses |  | Number | If empty, this will be set to 0. | The maximum amount of times this voucher can be used. |

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Availability Notification feature](docs/pbc/all/warehouse-management-system/availability-notification-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Availability Notification feature](/docs/pbc/all/warehouse-management-system/availability-notification-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 

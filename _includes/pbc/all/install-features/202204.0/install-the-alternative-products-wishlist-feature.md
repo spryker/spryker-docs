@@ -3,7 +3,7 @@ This document describes how to integrate the Alternative Products + Wishlist fea
 
 ## Install feature frontend
 
-Follow the steps below to install the the Alternative Products + Wishlist feature frontend.
+Follow the steps below to install the Alternative Products + Wishlist feature frontend.
 
 
 ### Prerequisites

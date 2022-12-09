@@ -5,9 +5,6 @@ template: feature-integration-guide-template
 last_updated: Mar 11, 2022
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/product-approval-process-feature-integration.html
-related:
-  - title: Approval Process feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-approval-process-feature.md -->

@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Promotions & Discounts | {{site.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html) |
-| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Category Management | {{site.version}} | [Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Set up behavior

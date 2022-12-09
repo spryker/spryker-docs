@@ -14,7 +14,7 @@ To start feature integration, integrate the required features and Glue APIs:
 | Wishlist API| {{site.version}}| [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)|
 | Shopping List API| {{site.version}}| [Glue API: Shopping lists feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)|
 | Order Management API| {{site.version}} |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html)|
-|Product Configuration |{{site.version}} |[Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-configuration-feature-integration.html)|
+|Product Configuration |{{site.version}} |[Product Configuration feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ## 1) Install the required modules using Composer
 

@@ -1341,5 +1341,5 @@ Integrate the following related features:
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
 | GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html) |
-| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/catalog-category-management-feature-integration.html) |
+| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html) |
 | CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|

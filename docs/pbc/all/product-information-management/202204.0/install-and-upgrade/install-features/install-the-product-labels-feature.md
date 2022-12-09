@@ -22,7 +22,7 @@ related:
   - title: Glue API - Product Labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
   - title: Discontinued products + Product Labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/discontinued-products-product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
   - title: Product labels + Promotions & Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-promotions-and-discounts-feature-integration.html
 ---

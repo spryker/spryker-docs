@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-category-management-feature-integration.html
 related:
   - title: Category Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/category-management-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-category-management-feature.html
   - title: Retrieving category trees
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Retrieving category nodes

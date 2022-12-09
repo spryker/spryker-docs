@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-configuration-feature-integration.html
 related:
   - title: Product Configuration feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-configuration-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Configurable Product feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
 ---

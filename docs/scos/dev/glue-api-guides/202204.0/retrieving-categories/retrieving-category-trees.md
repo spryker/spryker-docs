@@ -22,7 +22,7 @@ By means of the category API, you are able to retrieve the exact structure of yo
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-category-management-feature.html).
 
 ## Retrieve a category tree
 

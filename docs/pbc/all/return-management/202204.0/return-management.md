@@ -144,8 +144,8 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 | [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
 | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |  |  |
 | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |  |  |
-| [Product Bundles + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-order-management-feature-integration.html) |  |  |
-| [Product Bundles + Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-return-management-feature-integration.html) |  |  |
+| [Product Bundles + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html) |  |  |
+| [Product Bundles + Return Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html) |  |  |
 | [Product Measurement Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |  |  |
 | [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-options-order-management-feature-integration.html) |  |  |
-| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html) |  |  |
+| [Product Packaging Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |  |  |

@@ -197,5 +197,5 @@ You have a product in your shop—a pen. And there exists a packaging unit for a
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
 |---------|---------|---------|
-| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html)  | [Decimal Stock migration concept](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/decimal-stock-migration-concept.html) | [HowTo: Import packaging units](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-import-packaging-units.html) |
+| [Product Packaging Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-packaging-units-feature.html)  | [Decimal Stock migration concept](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/decimal-stock-migration-concept.html) | [HowTo: Import packaging units](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-import-packaging-units.html) |
 |   |   | [HowTo: Integrate and use precise decimal numbers](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html)  |

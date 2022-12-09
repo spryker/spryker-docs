@@ -10,7 +10,7 @@ To start the feature integration, overview and install the necessary features:
 | ------------------- | ------- | ------------------------------------------------------------ |
 | Spryker Core        | {{site.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 | Catalog             | {{site.version}}  |  |
-| Category Management | {{site.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Category Management | {{site.version}}  | [Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
 ## 1) Set up behavior
 
@@ -93,4 +93,4 @@ Integrate the following related features:
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ------------- | ---------------- | -------------------- |
 | Catalog             |      ✓     | |
-| Category Management |      ✓     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Category Management |      ✓     | [Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-category-management-feature.html) |

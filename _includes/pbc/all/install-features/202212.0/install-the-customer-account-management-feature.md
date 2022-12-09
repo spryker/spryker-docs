@@ -40,7 +40,11 @@ Ensure that the following modules have been installed:
 | MODULE                 | EXPECTED DIRECTORY                      |
 |------------------------|-----------------------------------------|
 | Customer               | vendor/spryker/customer                 |
+| CustomerGroup          | vendor/spryker/customer-group           |
+| CustomerNote           | vendor/spryker/customer-note            |
+| CustomerNoteGui        | vendor/spryker/customer-note-gui        |
 | Oauth                  | vendor/spryker/oauth                    |
+| OauthCryptography      | vendor/spryker/oauth-cryptography       |
 | OauthRevoke            | vendor/spryker/oauth-revoke             |
 | OauthCustomerConnector | vendor/spryker/oauth-customer-connector |
 

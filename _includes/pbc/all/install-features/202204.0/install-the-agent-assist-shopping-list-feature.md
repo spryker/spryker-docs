@@ -2,6 +2,10 @@
 
 This document describes how to integrate the Agent Assist + Shopping List feature into a Spryker project.
 
+## Install feature core
+
+Follow the steps below to install the gent Assist + Shopping List feature core.
+
 ## Prerequisites
 
 To start the feature integration, overview and install the necessary features:

@@ -44,9 +44,8 @@ Each shipment method has a dedicated price and tax set in the various currencies
 
 You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations let you freely define a set of rules to be applied to the various discount options.
 
-## Installation
+## Install Carrier Management
 
-To install Carrier Management, do the following:
 
 1. Install the required modules:
 

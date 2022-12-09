@@ -14,11 +14,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/content/file-manager/managing-file-list.html  
 related:
   - title: Managing File Tree
-    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/manage-file-tree.html
   - title: Add and edit MIME types
-    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/add-and-edit-mime-types.html
   - title: File Manager feature overview
-    link: docs/pbc/all/digital-asset-management/digital-asset-management.html
+    link: docs/pbc/all/content-management-system/page.version/file-manager-feature-overview.html
 ---
 
 The *File List* section is a way to quickly review all the files from the file tree.
@@ -40,7 +40,7 @@ To view a file:
 
 {% info_block infoBox "Info" %}
 
-You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/digital-asset-management/digital-asset-management.html#versions) for more information. [Editing files](#editing-files) below explains how to add multiple versions of a file.
+You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/content-management-system/{{page.version}}/file-manager-feature-overview.html#versions) for more information. [Editing files](#editing-files) below explains how to add multiple versions of a file.
 
 {% endinfo_block %}
 
@@ -62,7 +62,7 @@ To edit a file's attributes:
 3. Click **Save**.
 
  To upload another version of a file:
- 
+
  1. In the *File Upload* section, click **Choose File**.
  2. Optionally change the file name and the *Alt* and *Title* fields for each locale.
  3. Click **Save**.
@@ -91,6 +91,6 @@ To delete a file, in the *Actions* column, click **Delete** for a file you want 
 
 {% info_block warningBox "Warning" %}
 
-Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone. 
+Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone.
 
 {% endinfo_block %}

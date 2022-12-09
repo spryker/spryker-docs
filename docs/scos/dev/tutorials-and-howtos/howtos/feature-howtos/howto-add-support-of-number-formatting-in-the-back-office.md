@@ -268,7 +268,7 @@ Apply the following changes only if you have the [Carrier Management](/docs/pbc/
 ```php
 <?php
 
-use Spryker\Zed\Money\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
+use Spryker\Zed\MoneyGui\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
 use Spryker\Zed\ShipmentGui\ShipmentGuiDependencyProvider as SprykerShipmentGuiDependencyProvider;
 
 class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider

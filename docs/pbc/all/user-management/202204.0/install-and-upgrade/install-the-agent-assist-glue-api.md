@@ -1,5 +1,5 @@
 ---
-title: Glue API - Agent Assist feature integration
+title: Install the Agent Assist Glue API
 description: Integrate the Glue API - Agent Assist feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -10,11 +10,10 @@ redirect_from:
   - /2021080/docs/en/glue-api-agent-assist-feature-integration
   - /docs/glue-api-agent-assist-feature-integration
   - /docs/en/glue-api-agent-assist-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-agent-assist-feature-integration.html
 related:
-  - title: Agent Assist feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/agent-assist-feature-integration.html
-  - title: Agent Assist feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
+  - title: Install the Agent Assist feature
+    link: docs/pbc/all/user-management/page.version/install-and-upgrade/install-the-agent-assist-feature.html
   - title: Authenticating as an agent assist
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist

@@ -235,7 +235,6 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
             include_versions:
             - "202108.0"
-            - "202204.0"
           - title: Combined Product Offer Import feature integration
             url: /docs/marketplace/dev/feature-integration-guides/combined-product-offer-import-feature-integration.html
             include_versions:

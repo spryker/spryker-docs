@@ -245,13 +245,14 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AvailabilityNotificationAnonymizerPlugin` is working, follow these steps:
+Verify that `AvailabilityNotificationAnonymizerPlugin` is working:
 1. Add a new product.
 2. On Yves, as a company user, subscribe to its availability notifications.
-3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.</li><li>Delete this user.
-4. Check that the line is deleted from the `spy_availability_notification_subscription` table.
+3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.
+4. Delete this user.
+5. Check that the line is deleted from the `spy_availability_notification_subscription` table.
 
-To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` is working, follow these steps:
+Verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` is working:
 1. Add a new product.
 2. On Yves, as a company user, subscribe to its availability notifications.
 3. On Yves, go to account overview > **Newsletters**.
@@ -263,7 +264,7 @@ To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlug
 
 {% info_block infoBox %}
 
-You can control whether `AvailabilityNotificationFacade::subscribe()` throws an exception \Spryker\Zed\Product\Business\Exception\MissingProductException (if SKU does not exist in the database) or not. You can do it via the `AvailabilityNotificationConfig::AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` config setting. If set to `false` (by default), then the exception is thrown. If set to `true`, then the exception is not thrown, but `AvailabilityNotificationFacade::subscribe()` returns the instance of `AvailabilityNotificationSubscriptionResponseTransfer::$isSuccess = true`.
+You can control whether `AvailabilityNotificationFacade::subscribe()` throws the exception `\Spryker\Zed\Product\Business\Exception\MissingProductException` (if SKU does not exist in the database) or not. You can do it through the `AvailabilityNotificationConfig::AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` config setting. If set to `false` (by default), then the exception is thrown. If set to `true`, then the exception is not thrown, but `AvailabilityNotificationFacade::subscribe()` returns the instance of `AvailabilityNotificationSubscriptionResponseTransfer::$isSuccess = true`.
 
 {% endinfo_block %}
 
@@ -291,18 +292,20 @@ The config setting exists for BC reasons only.
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
+
+Follow the steps below to install the Availability Notification feature frontend.
 
 ### Prerequisites
 
-Ensure that the related features are installed:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Mailing & Notifications | {{site.version}} |
-| Inventory Management | {{site.version}} |
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Mailing and Notifications | {{site.version}} | [Mailing and Notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
+| Inventory Management | {{site.version}} |Install [the Inventory Management feature](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
+| Product | {{site.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 

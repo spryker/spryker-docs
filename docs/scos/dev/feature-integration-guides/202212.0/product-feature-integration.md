@@ -28,7 +28,7 @@ related:
   - title: Product Images + Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
   - title: Product + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-order-management-feature.html
   - title: Product feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
   - title: Product overview

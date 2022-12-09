@@ -1,5 +1,5 @@
 ---
-title: "Persistent Cart Sharing: module relations"
+title: "Persistent Cart Sharing feature: module relations"
 template: feature-walkthrough-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html

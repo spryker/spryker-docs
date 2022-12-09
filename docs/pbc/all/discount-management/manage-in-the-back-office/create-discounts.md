@@ -87,9 +87,9 @@ This refreshes the page with a success message displayed.
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | STORE RELATION | The stores to display the discount in. |
-| DISCOUNT TYPE | Defines how the discount will be applied: <ul><li>**Cart rule**: the discount will be applied automatically to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to).</li><li>**Voucher codes**: the discount will be applied to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to) when a customer enters a voucher code generated in [Generate voucher codes](#generate-voucher-codes).</li></ul> |
-| NAME | The unique ID of the discount that will be displayed in the Back Office and on the Storefront. |
-| DESCRIPTION | The description will be displayed only in the Back Office.  |
+| DISCOUNT TYPE | Defines how the discount is applied: <ul><li>**Cart rule**: the discount is applied automatically to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to).</li><li>**Voucher codes**: the discount is applied to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to) when a customer enters a voucher code generated in [Generate voucher codes](#generate-voucher-codes).</li></ul> |
+| NAME | The unique ID of the discount that is displayed in the Back Office and on the Storefront. |
+| DESCRIPTION | The description is displayed only in the Back Office.  |
 | PRIORITY | Defines the order of discounts being applied. Accepts integers from `1` to `9999` with `1` being the highest priority. |
 | NON-EXCLUSIVE | Defines that this discount can be applied to a cart together with other non-exclusive discounts. |
 | EXCLUSIVE | Defines that this discount, when applied to a cart, discards all non-exclusive discounts. If multiple exclusive discounts are applied to a cart, only the discount with the bigger discount value is applied.   |
@@ -164,7 +164,7 @@ Example: The discount is applied if 4 or more items with an  Intel Core processo
 | --- | --- |
 | QUANTITY | The number of vouchers to generate. |  
 | CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, for **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, they are by default appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |  
-| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters will be appended to the end of it. If you are generating more than one code, you must select **3** or more. |  
+| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters are appended to the end of it. If you are generating more than one code, you must select **3** or more. |  
 | MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. |  
 
 {% info_block infoBox "Voucher code collections" %}

@@ -22,8 +22,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
-|AvailabilityCheckAlternativeProductApplicablePlugin|Checks whether product alternatives should be shown for the product.|None|`Spryker\Zed\Availability\Communication\Plugin\ProductAlternative|
-|AvailabilityCheckAlternativeProductApplicablePlugin|Checks whether product alternatives should be shown for the product.|Expects SKU and `IdProductAbstract` to be set for `ProductViewTransfer`.|Spryker\Client\AvailabilityStorage\Plugin\ProductAlternativeStorage|
+|AvailabilityCheckAlternativeProductApplicablePlugin|Checks whether product alternatives are to be shown for the product.|None|`Spryker\Zed\Availability\Communication\Plugin\ProductAlternative|
+|AvailabilityCheckAlternativeProductApplicablePlugin|Checks whether product alternatives are to be shown for the product.|Expects SKU and `IdProductAbstract` to be set for `ProductViewTransfer`.|Spryker\Client\AvailabilityStorage\Plugin\ProductAlternativeStorage|
 
 **src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php**
 

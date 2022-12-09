@@ -135,7 +135,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 {% info_block infoBox "Info" %}
 
-This step publishes tables on change—create, edit, delete to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronize the data to Storage.
+This step publishes tables on change—create, edit, delete to `spy_product_alternative_storage` and `spy_product_replacement_for_storage`  and synchronize the data to Storage.
 
 {% endinfo_block %}
 
@@ -397,7 +397,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit any product variant in Zed, you have the Product Alternatives tab, and you can add some product SKUs as alternatives.
+Make sure that when you edit any product variant in Zed, you have the **Product Alternatives** tab, and you can add some product SKUs as alternatives.
 
 {% endinfo_block %}
 

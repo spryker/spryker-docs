@@ -81,13 +81,13 @@ For the manifest, make sure to follow these conditions:
 
 ## Manifest file parts
 
-|Name   |Description   |Example   |
+|NAME   |DESCRIPTION   |EXAMPLE   |
 |---|---|---|
 |name   |The app's name.   |"name": "Payone"   |
 |provider   |App provider's name (not visible on AppCatalog).   |"provider": "Payone"   |
 |descriptionShort   |Short description displayed on the application tile in the application catalog page and at the top of the application detail page.   |"descriptionShort": "A single payment platform to accept payments anywhere on any device."   |
 |description   |Full description of the app. New line symbols and HTML tags are not allowed.   |"description": "BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments."   |
-|url   |URL to a homepage of the application provider (not visible in the AppCatalog).   |"url": "https://www.payone.com"   |
+|url   |URL to a homepage of the application provider (not visible in the AppCatalog).   |"url": "https://www.payone.com/DE-de"   |
 |isAvailable   |Shows if the application is currently available. Possible values:<br><ul><li>false—the application is not available, it’s not possible to connect and configure it.</li><li>true—the application is available, it’s possible to connect, configure, and use it.</li></ul>   |"isAvailable": true   |
 |businessModels   |An array of suite types that are compatible with the application. Possible values:<ul><li>B2C</li><li>B2B</li><li>B2C_MARKETPLACE</li><li>B2B_MARKETPLACE</li></ul>|See *businessModels example* under this table.   |
 |categories   |An array of categories that the application belongs to. Possible values:<ul><li>BI_ANALYTICS</li><li>CUSTOMER</li><li>LOYALTY</li><li>PAYMENT</li><li>PRODUCT_INFORMATION_SYSTEM</li><li>SEARCH</li><li>USER_GENERATED_CONTENT</li></ul>   |See *categories example* under this table.   |

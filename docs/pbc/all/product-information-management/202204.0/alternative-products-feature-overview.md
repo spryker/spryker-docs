@@ -53,4 +53,4 @@ On the product details page of a product that's a product alternative for anothe
 | [Alternative Products + Product Label feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-alternative-products-product-label-feature.html) |   |
 | [Alternative products + Inventory Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/integrate-the-alternative-products-inventory-management-feature.html)   |   |
 | [Alternative products + Wishlist feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html) |   |
-| [Glue API: Alternative products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html) |   |
+| [Glue API: Alternative products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html) |   |

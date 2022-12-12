@@ -12,9 +12,6 @@ redirect_from:
   - /docs/en/alternative-products-wishlist-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/alternative-products-wishlist-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/alternative-products-wishlist-feature-integration.html
-related:
-  - title: Alternative Products feature walkthrough
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-alternative-products-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-wishlist-feature.md -->

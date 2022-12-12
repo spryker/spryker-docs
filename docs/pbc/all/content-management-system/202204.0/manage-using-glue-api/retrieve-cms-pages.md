@@ -17,7 +17,7 @@ related:
   - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
   - title: Install the CMS Glue API
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cms-feature-integration.html
+    link: docs/pbc/all/content-management-system/page.version/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
 ---
 
 [CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.

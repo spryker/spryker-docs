@@ -1,7 +1,7 @@
 ---
 title: Submit checkout data
 description: Submit checkout data and retrieve information needed for completing checkout.
-last_updated: Jul 13, 2021
+last_updated: Dec 1, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/submitting-checkout-data
 originalArticleId: 86d07f3a-6ef0-4dfe-87e0-322cc4cf42a7
@@ -47,8 +47,9 @@ To submit checkout data without order confirmation, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| Include | Adds resource relationships to the request.	 | payment-methods, shipments, shipment-methods, addresses, company-business-unit-addresses |
+| Include | Adds resource relationships to the request.	 | payment-methods, shipments, shipment-methods, addresses, company-business-unit-addresses, carts, guest-carts |
 | sort | Sorts included shipment and payment methods by an attribute. | {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %} |
+
 {% info_block infoBox "Included resources" %}
 
 To retrieve all available shipment methods, submit checkout data with one or more shipments and include `shipments` and `shipment-methods` resources.
@@ -65,6 +66,9 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 | POST https://glue.mysprykershop.com/checkout-data?include=shipments,shipment-methods | Submit checkout data and include all the order shipments and all available shipment methods in the response. |
 | POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses | Submit checkout data and include the logged-in company users' company business unit addresses in the response. |
 | POST https://glue.mysprykershop.com/checkout-data?include=shipment-methods&sort=shipment-methods.carrierName,-shipment-methods.defaultNetPrice | Submit checkout data and include all available shipment methods in the response. Sort the returned shipment methods `carrierName` in ascending order and by `defaultNetPrice` in descending order. |
+| POST https://glue.mysprykershop.com/checkout-data?include=carts  | Submit checkout data and include the logged-in customer's cart data in the response. |
+| POST https://glue.mysprykershop.com/checkout-data?include=guest-carts  | Submit checkout data and include the guest customer's cart data in the response. |
+
 
 
 <details>
@@ -257,6 +261,41 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 ```
 </details>
 
+<details>
+<summary markdown='span'>Request sample: submit checkout data with the logged-in customer's cart data.</summary>
+
+```json
+{"data":
+    {"type": "checkout-data",
+    "attributes":
+        {
+            "idCart": "9743f227-97ec-5d89-8679-bc5ee7a9ea17",
+            "shipment": {
+                "idShipmentMethod": 1
+            }
+        }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Request sample: submit checkout data with the guest customer's cart data.</summary>
+
+```json
+{"data": 
+    {"type": "checkout-data", 
+    "attributes": 
+        {
+            "idCart": "9743f227-97ec-5d89-8679-bc5ee7a9ea17",
+            "shipment": {
+                "idShipmentMethod": 1
+            }
+        }
+    }
+}
+```
+</details>
 
 {% include pbc/all/glue-api-guides/submit-checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/submit-checkout-data-request-attributes.md -->
 
@@ -296,8 +335,6 @@ In case of a successful update, the endpoint responds with information that can 
 }
 ```
 </details>
-
-
 
 <details>
 <summary markdown='span'>Response sample: submit checkout data with a split shipment</summary>
@@ -958,6 +995,155 @@ In case of a successful update, the endpoint responds with information that can 
 ```
 </details>
 
+<details>
+<summary markdown='span'>Response sample: submit checkout data with the logged-in customer's cart data.</summary>
+
+```json
+{
+    "data": {
+        "type": "checkout-data",
+        "id": null,
+        "attributes": {
+            "addresses": [],
+            "paymentProviders": [],
+            "shipmentMethods": [],
+            "selectedShipmentMethods": [
+                {
+                    "id": 1,
+                    "name": "Standard",
+                    "carrierName": "Spryker Dummy Shipment",
+                    "price": 490,
+                    "taxRate": null,
+                    "deliveryTime": null,
+                    "currencyIsoCode": "EUR"
+                }
+            ],
+            "selectedPaymentMethods": []
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/checkout-data?include=carts"
+        },
+        "relationships": {
+            "carts": {
+                "data": [
+                    {
+                        "type": "carts",
+                        "id": "482bdbd6-137f-5b58-bd1c-37f3fa735a16"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "carts",
+            "id": "482bdbd6-137f-5b58-bd1c-37f3fa735a16",
+            "attributes": {
+                "priceMode": "GROSS_MODE",
+                "currency": "EUR",
+                "store": "DE",
+                "name": "Test1",
+                "isDefault": true,
+                "totals": {
+                    "expenseTotal": 490,
+                    "discountTotal": 0,
+                    "taxTotal": 78,
+                    "subtotal": 0,
+                    "grandTotal": 490,
+                    "priceToPay": 490,
+                    "shipmentTotal": 490
+                },
+                "discounts": [],
+                "thresholds": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Response sample: submit checkout data with the guest customer's cart data.</summary>
+
+```json
+{
+    "data": {
+        "type": "checkout-data",
+        "id": null,
+        "attributes": {
+            "addresses": [],
+            "paymentProviders": [],
+            "shipmentMethods": [],
+            "selectedShipmentMethods": [
+                {
+                    "id": 1,
+                    "name": "Standard",
+                    "carrierName": "Spryker Dummy Shipment",
+                    "price": 490,
+                    "taxRate": null,
+                    "deliveryTime": null,
+                    "currencyIsoCode": "EUR"
+                }
+            ],
+            "selectedPaymentMethods": []
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/checkout-data?include=guest-carts"
+        },
+        "relationships": {
+            "guest-carts": {
+                "data": [
+                    {
+                        "type": "guest-carts",
+                        "id": "9743f227-97ec-5d89-8679-bc5ee7a9ea17"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "guest-carts",
+            "id": "9743f227-97ec-5d89-8679-bc5ee7a9ea17",
+            "attributes": {
+                "priceMode": "GROSS_MODE",
+                "currency": "EUR",
+                "store": "DE",
+                "name": "Shopping cart",
+                "isDefault": true,
+                "totals": {
+                    "expenseTotal": 490,
+                    "discountTotal": 0,
+                    "taxTotal": 489,
+                    "subtotal": 6277,
+                    "grandTotal": 6767,
+                    "priceToPay": 6767,
+                    "shipmentTotal": 490
+                },
+                "discounts": [],
+                "thresholds": [
+                    {
+                        "type": "soft-minimum-threshold",
+                        "threshold": 100000,
+                        "fee": 0,
+                        "deltaWithSubtotal": 93723,
+                        "message": "You need to add items for €1,000.00 to pass a recommended threshold, but if you want can proceed to checkout."
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/guest-carts/9743f227-97ec-5d89-8679-bc5ee7a9ea17"
+            }
+        }
+    ]
+}
+```
+
+</details>
 
 {% include pbc/all/glue-api-guides/submit-checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/submit-checkout-data-response-attributes.md -->
 

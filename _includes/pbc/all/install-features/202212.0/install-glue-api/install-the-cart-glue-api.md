@@ -14,7 +14,7 @@ To start feature integration, integrate the required features and Glue APIs:
 | Cart                   | {{site.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                                             |
 
 
-## 1) Install the required modules using Composer
+### 1) Install the required modules using Composer
 
 Install the required module:
 
@@ -34,7 +34,7 @@ Ensure that the following modules have been installed:
 {% endinfo_block %}
 
 
-## 2) Set up database schema and transfer objects
+### 2) Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
 
@@ -80,11 +80,11 @@ Ensure that the following changes have occurred in transfer objects:
 
 {% endinfo_block %}
 
-## 3) Set up behavior
+### 3) Set up behavior
 
 Enable the following behaviors.
 
-### Generate UUIDs for the existing quote records without them
+#### Generate UUIDs for the existing quote records without them
 
 Generate UUIDs for the Existing Quote Records Without UUID:
 
@@ -103,7 +103,7 @@ The result is `0 records`.
 
 {% endinfo_block %}
 
-### Enable validation
+#### Enable validation
 
 Activate the following plugin:
 
@@ -154,7 +154,7 @@ To ensure that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, s
 
 {% endinfo_block %}
 
-### Disable the cart item eager relationship
+#### Disable the cart item eager relationship
 
 To use `CartItemsByQuoteResourceRelationshipPlugin` and `GuestCartItemsByQuoteResourceRelationshipPlugin`, disable the `items` and `guest-cart-items` resources to be returned when retrieving carts:
 
@@ -174,7 +174,7 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 }
 ```
 
-### Configure quote creation
+#### Configure quote creation
 
 You can enable the creation of a cart for a newly authenticated customer while merging the guest cart with the customer cart by adjusting the configuration constant:
 

@@ -110,6 +110,23 @@ class ProductConfigurationConfig extends SprykerProductConfigurationConfig
 }
 ```
 
+{% info_block warningBox "Warning" %}
+
+Please, specify only fields that are defined in the transfer definition. Otherwise, you can define them on the project level
+
+{% endinfo_block %}
+
+**src/Pyz/Shared/ProductConfiguration/Transfer/product_configuration.transfer.xml**
+
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="ProductConfigurationInstance">
+        <property name="quantity" type="int"/>
+    </transfer>
+</transfers>
+```
+
 ### 3) Set up database schema and transfer objects
 
 1. For entity changes to trigger events, adjust the schema definition:

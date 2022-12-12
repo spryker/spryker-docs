@@ -101,8 +101,8 @@ Activate the following plugins:
 
 | PLUGIN                                                     | SPECIFICATION                                                                                                       | PREREQUISITES | NAMESPACE                                                        |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
-| AgentOauthUserProviderPlugin                               | Authenticates an Agent, reads Agent data and provides it for the access token.                                      | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
-| AgentOauthScopeProviderPlugin                              | Provides the Agent scopes.                                                                                          | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
+| AgentOauthUserProviderPlugin                               | Authenticates an agent, reads the agent's data and provides it for the access token.                                      | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
+| AgentOauthScopeProviderPlugin                              | Provides the agent scopes.                                                                                          | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
 | AgentCredentialsOauthGrantTypeConfigurationProviderPlugin  | Provides configuration of the`agent_credentials` grant type.                                                        | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
 | UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin | Updates agent's session data in storage if access is granted and an agent is logged in.                             | None          | SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage      |
 | CustomerUpdateSessionPostImpersonationPlugin               | Updates customer's session data in storage if a given customer is valid after the session impersonation is started. | None          | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\AgentPage  |
@@ -157,7 +157,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the Agent can get the access token with valid credentials by sending the request:
+Ensure that the agent can get the access token with valid credentials by sending the request:
 
 **Request sample**
 

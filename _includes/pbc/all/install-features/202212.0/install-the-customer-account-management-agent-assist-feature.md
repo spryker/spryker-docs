@@ -15,7 +15,7 @@ To start the feature integration, overview and install the necessary features:
 | Customer Account ManagemenT | {{site.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
 | Agent Assist                | {{site.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{site.version}}/install-and-upgrade/install-the-agent-assist-feature.html)                               |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker/oauth-agent-connector:"^1.0.0" --update-with-dependencies
@@ -107,7 +107,7 @@ Activate the following plugins:
 | UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin | Updates agent's session data in storage if access is granted and an agent is logged in.                             | None          | SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage      |
 | CustomerUpdateSessionPostImpersonationPlugin               | Updates customer's session data in storage if a given customer is valid after the session impersonation is started. | None          | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\AgentPage  |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -225,10 +225,10 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 1. Log in as an agent.
 2. Log in as a customer.
-3. Ensure that the agent's session data in storage is created / updated:
-    - If session data is store in Redis, ensure that the following Redis key exists and contains data:
+3. Ensure that the agent's session data in storage is created or updated:
+    - If session data is stored in Redis, ensure that the following Redis key exists and contains data:
       `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
-    - If session data is store in a file, ensure that a file in the following path exists and contains data:
+    - If session data is stored in a file, ensure that a file in the following path exists and contains data:
       `data/session/session:agent:{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
@@ -261,10 +261,10 @@ class AgentPageDependencyProvider extends SprykerAgentPageDependencyProvider
 
 1. Log in as an agent.
 2. Start impersonation session as a customer.
-3. Ensure that the customer's session data in storage is created / updated:
-   - If session data is store in Redis, ensure that the following Redis key exists and contains data:
+3. Ensure that the customer's session data in storage is created or updated:
+   - If session data is stored in Redis, ensure that the following Redis key exists and contains data:
      `{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}:customer:entity`
-   - If session data is store in a file, ensure that a file in the following path exists and contains data:
+   - If session data is stored in a file, ensure that a file in the following path exists and contains data:
      `data/session/session:customer:{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}

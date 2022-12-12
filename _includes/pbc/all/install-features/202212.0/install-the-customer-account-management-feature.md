@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Customer Account Management feature into a Spryker project.
+This document describes how to integrate the [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
 {% info_block errorBox "Included features" %}
 
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds:
@@ -19,7 +19,7 @@ Follow the steps below to install the Customer Account Management feature core.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration.
+To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -52,12 +52,11 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-To set up configuration
 1. Set the required OAuth config:
 
 {% info_block infoBox %}
 
-See [OAauth 2.0 Server Installation](https://oauth2.thephpleague.com/installation/) for more details on key generation.
+For more details about key generation, see [OAuth 2.0 Server Installation](https://oauth2.thephpleague.com/installation/).
 
 {% endinfo_block %}
 
@@ -98,7 +97,7 @@ Ensure that the double opt-in is enabled by registering a new customer and recei
 
 {% endinfo_block %}
 
-3. Optional: in order to control the customer account confirmation link sent in the registration confirmation email, use `CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL`. Note that the value has to contain the "%s" placeholder the actual customer's token value will be inserted to. You can set the configuration in the environment config:
+3. Optional: to control the customer account confirmation link sent in the registration confirmation email, use `CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL`. Note that the value must contain the `%s` placeholder the actual customer's token value is inserted to. You can set the configuration in the environment config:
 
 **config/Shared/config_default.php**
 
@@ -110,7 +109,7 @@ use Spryker\Shared\Customer\CustomerConstants;
 $config[CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL] = $config[ApplicationConstants::BASE_URL_YVES] . '/register/confirm?token=%s';
 ```
 
-In case you do use double opt-in, you can also configure the link the customer will get in an email. This is valuable in case you use an alternative storefront. The Default link will lead to yves customer confirmation page.
+If you use double opt-in, you can also configure the link the customer gets in an email. This is valuable if you use an alternative storefront. The default link leads to the Yves customer confirmation page.
 
 **config/Shared/config_default.php**
 
@@ -128,7 +127,7 @@ Ensure that email to confirm the registration uses the alternative link.
 
 {% endinfo_block %}
 
-There is a possibility to configure the password strength validation settings. You can do it in `src/Pyz/Zed/Customer/CustomerConfig.php`:
+You can configure the password strength validation settings in `src/Pyz/Zed/Customer/CustomerConfig.php`:
 
 **src/Pyz/Zed/Customer/CustomerConfig.php**
 
@@ -189,7 +188,7 @@ class CustomerConfig extends SprykerCustomerConfig
 }
 ```
 
-Here is the description of the settings:
+The following table describes the settings:
 
 | SETTING                                                                 | MEANING                                                                                                                                                                   |
 |-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -241,15 +240,13 @@ Ensure that the following changes have been applied in the transfer objects:
 
 ### 4) Set up behavior
 
-Set up behavior as follows:
-
 1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                         | SPECIFICATION                                                                                                                                                                                                | PREREQUISITES | NAMESPACE                                                     |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
 | CustomerOauthUserProviderPlugin                                | Provides a customer OAuth user.                                                                                                                                                                              | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin       |
 | CustomerOauthScopeProviderPlugin                               | Provides a list of customer scopes.                                                                                                                                                                          | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin       |		
-| CustomerImpersonationOauthUserProviderPlugin                   | Authenticates a customer by customer reference.                                                                                                                                                              | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth |		
+| CustomerImpersonationOauthUserProviderPlugin                   | Authenticates a customer by the customer reference.                                                                                                                                                              | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth |		
 | CustomerImpersonationOauthScopeProviderPlugin                  | Returns the customer impersonation scopes.                                                                                                                                                                   | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth |		
 | CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin | Provides configuration of `customer_impersonation` grant type.                                                                                                                                               | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth |
 | OauthExpiredRefreshTokenRemoverPlugin                          | Removes expired refresh tokens by the provided criteria transfer.                                                                                                                                            | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth            |
@@ -425,21 +422,13 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the OAuth client has been added to the `spy_oauth_client` table by running following SQL-query. The result should contain one record
+Ensure that the OAuth client has been added to the `spy_oauth_client` table by running the following SQL query. The result must contain one record.
  
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) for details.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
+Ensure you can obtain the customer OAuth access token with customer credentials or customer reference. For details, see [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 Ensure that `OauthRefreshTokenRemoverPlugin` is set up correctly:
 1. Run the command:
@@ -448,10 +437,6 @@ Ensure that `OauthRefreshTokenRemoverPlugin` is set up correctly:
 console oauth:refresh-token:remove-expired
 ```
 2. Check that all expired refresh tokens that are older than defined by the removal interval you configured in `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` have been deleted:
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Ensure that running the `console customer:password:reset` command sends the password reset emails to all customers:
 
@@ -463,10 +448,6 @@ console customer:password:reset
 
 2. Open the `spy_customer.restore_password_key` table and ensure that all the customers have the password reset hash.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Ensure that running the `console customer:password:set` command sends the password reset emails to all the customers without passwords:
 
 1. Send password reset emails to all the customers without passwords:
@@ -476,10 +457,6 @@ console customer:password:set
 ```
 
 2. Open the `spy_customer.restore_password_key` table and ensure that all the customers without passwords have the password reset hash.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Ensure that running the `console customer:password:reset`command sends the password reset emails to all customers:
 
@@ -491,10 +468,6 @@ console customer:password:reset
 
 2. Open the `spy_customer.restore_password_key` table and ensure that all the customers have the password reset hash.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Ensure that running the `console customer:password:set`command sends the password reset emails to all the customers without passwords:
 1. Send password reset emails to all the customers without passwords:
 
@@ -505,7 +478,7 @@ console customer:password:set
 
 {% endinfo_block %}
 
-<details open><summary markdown='span'>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
 
 ```php
 <?php
@@ -544,11 +517,11 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that customer confirmation email is sent to the newly registered customers upon registration.
+Ensure that the customer confirmation email is sent to the newly registered customers upon registration.
 
 {% endinfo_block %}
 
-2. Enable Jenkins check for finding and deleting expired refresh tokens:
+1. Enable Jenkins check for finding and deleting expired refresh tokens:
 
 **config/Zed/cronjobs/jenkins.php**
 
@@ -616,7 +589,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-2. Run the following command to set up the OAuth client:
+2. Set up the OAuth client:
 
 ```bash
 console setup:init-db
@@ -624,30 +597,30 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Ensure that:
+Ensure the following:
 
-* `spy_oauth_client` is populated with the OAuth client you configured in the `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_IDENTIFIER` of environment config files.
+* The `spy_oauth_client` table is populated with the OAuth client you configured in the `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_IDENTIFIER` of environment config files.
 
-* `spy_oauth_scope` tables are filled with customer scopes.
+* The `spy_oauth_scope` tables are filled with customer scopes.
 
 {% endinfo_block %}
 
 
 ## Install feature frontend
 
-Follow the steps below to install the Customer Account Management feature frontend.
+Follow the steps below to install the [Customer Account Management]([Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)) feature frontend.
 
 ### Prerequisites
 
 Overview and install the necessary features before beginning the integration.
 
-| NAME         | VERSION          |
-|--------------|------------------|
-| Spryker Core | {{site.version}} |
+| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
+|--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/customer-account-management: "{{site.version}}" --update-with-dependencies
@@ -693,7 +666,7 @@ Ensure that double opt-in is enabled by registering a new customer and checking 
 
 {% endinfo_block %}
 
-By default, in Spryker, posting the login form (where SecurityBlocker will make its check and block customers who made too many failed login attempts) is local-independent. So, to be able to see error messages translated into different languages, you need to configure the locale to be added to the login path. You can do this by modifying the following configs:
+By default, in Spryker, posting the login form (where SecurityBlocker makes its check and blocks users who made too many failed login attempts) is local-independent. So, to see error messages translated into different languages, you need to configure the locale to be added to the login path. You can do this by modifying the following configs:
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
 
@@ -718,11 +691,11 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the login form for the customer is submitted, the URL it uses contains a locale code. For example, `/de/login_check` would be the default value for the customer.
+Make sure that when the login form for the customer is submitted, the URL it uses contains a locale code—for example, `/de/login_check` is the default value for the customer.
 
 {% endinfo_block %}
 
-You can define the password minimum and maximum length the frontend will be using. They should be using the same as you defined for the core feature in the `CustomerConfig` above:
+You can define the password minimum and maximum length the frontend can use. They must use the same as you defined for the core feature in the previous `CustomerConfig`:
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
 
@@ -772,8 +745,6 @@ Ensure the following transfers have been created:
 
 ### 4) Add translations
 
-To add translations:
-
 1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -795,17 +766,17 @@ password.strong,Strong,en_US
 password.strong,Stark,de_DE
 password.very_strong,Very strong,en_US
 password.very_strong,Sehr stark,de_DE
-password.message,Try lengthening password or adding numbers or symbols.,en_US
+password.message,Try lengthening the password or adding numbers or symbols.,en_US
 password.message,Versuchen Sie es zu verlängern oder Zahlen oder Symbole hinzuzufügen.,de_DE
 customer.password.error.deny_list,"This password is considered common. Please use another one.",en_US
 customer.password.error.deny_list,"Dieses Passwort ist zu allgemein. Bitte ein neues Passwort eingeben.",de_DE
 customer.password.error.sequence,"You repeated the same character too many times.",en_US
 customer.password.error.sequence,"Es wurde zu oft das gleiche Zeichen verwendet.",de_DE
-customer.password.error.character_set,"Password must contain at least 1 character of each allowed character group: upper case, lower case, digit and a special character.",en_US
+customer.password.error.character_set,"Password must contain at least 1 character of each allowed character group: upper case, lower case, digit, and a special character.",en_US
 customer.password.error.character_set,"Passwort muss mindestens 1 Zeichen von jeder erlaubten Zeichengruppe enthalten: Großschreibung, Kleinschreibung, Zahl und ein Sonderzeichen.",de_DE
 ```
 
-2. Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -829,10 +800,10 @@ Enable the following behaviors by registering the plugins:
 | CustomerConfirmationUserCheckerApplicationPlugin | Adds a service that checks if a customer confirmed the registration before authorizing them. | None                             | SprykerShop\Yves\CustomerPage\Plugin\Application               |
 | SaveCustomerSessionSecurityPlugin                | Extends security builder event dispatcher with save customer session listener.               | None                             | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security |
 | ValidateCustomerSessionSecurityPlugin            | Extends security service with customer session validator listener.                           | None                             | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security |
-| RedisCustomerSessionSaverPlugin                  | Saves customer's session data to Redis storage.                                              | Session data is store in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage |
-| RedisCustomerSessionValidatorPlugin              | Validates customer's session data in Redis storage.                                          | Session data is store in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage |
-| FileCustomerSessionSaverPlugin                   | Saves customer's session data to a file.                                                     | Session data is store in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage  |
-| FileCustomerSessionValidatorPlugin               | Validates customer's session data in a file.                                                 | Session data is store in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage  |
+| RedisCustomerSessionSaverPlugin                  | Saves customer's session data to Redis storage.                                              | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage |
+| RedisCustomerSessionValidatorPlugin              | Validates customer's session data in Redis storage.                                          | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage |
+| FileCustomerSessionSaverPlugin                   | Saves customer's session data to a file.                                                     | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage  |
+| FileCustomerSessionValidatorPlugin               | Validates customer's session data in a file.                                                 | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage  |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -923,7 +894,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if session data is store in Redis.
+Apply the following changes only if session data is stored in Redis.
 
 {% endinfo_block %}
 
@@ -975,7 +946,7 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if session data is store in a file.
+Apply the following changes only if session data is stored in a file.
 
 {% endinfo_block %}
 
@@ -1025,8 +996,8 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 
 {% endinfo_block %}
 
-
 ## Related features
+
 | NAME                                           | INTEGRATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |

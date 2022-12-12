@@ -80,6 +80,36 @@ To make sure that the changes have been applied, check that the exemplary produc
 
 {% endinfo_block %}
 
+{% info_block infoBox %}
+
+You can control whether particular fields should be filtered out and not used for Product Configuration instance hash generation. You can do it via the `ProductConfigurationConfig::getConfigurationFieldsNotAllowedForEncoding()` config setting.
+
+{% endinfo_block %}
+
+**src/Pyz/Service/ProductConfiguration/ProductConfigurationConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Service\ProductConfiguration;
+
+use Generated\Shared\Transfer\ProductConfigurationInstanceTransfer;
+use Spryker\Service\ProductConfiguration\ProductConfigurationConfig as SprykerProductConfigurationConfig;
+
+class ProductConfigurationConfig extends SprykerProductConfigurationConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getConfigurationFieldsNotAllowedForEncoding(): array
+    {
+        return [
+            ProductConfigurationInstanceTransfer::QUANTITY,
+        ];
+    }
+}
+```
+
 ### 3) Set up database schema and transfer objects
 
 1. For entity changes to trigger events, adjust the schema definition:
@@ -325,7 +355,7 @@ Make sure that, after creating a product configuration, you can find the corresp
 
 {% endinfo_block %}
 
-1. Setup regenerate and resync features by setting up the following plugins:
+2. Setup regenerate and resync features by setting up the following plugins:
 
 | PLUGIN                                                  | SPECIFICATION                                                                                              | PREREQUISITES  | NAMESPACE                                                                    |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------------------------------------|

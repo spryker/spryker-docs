@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Aug 30, 2022
 ---
 
-This document explains how to add support of number formatting in Back Office UI.
+This document explains how to add support of number formatting in the Back Office UI.
 
 ## Prerequisites
 
@@ -38,11 +38,9 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
----
-
 ## 2) Set up configuration
 
-Extend `Discount` configuration settings:
+Extend the `Discount` configuration settings:
 
 {% info_block warningBox "Warning" %}
 
@@ -57,7 +55,7 @@ Apply the following changes only if you have the [Promotions & Discounts](/docs/
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information, view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Discount;
@@ -105,7 +103,6 @@ Ensure the following transfers have been created:
 
 {% endinfo_block %}
 
----
 
 ## 4) Set up behavior
 

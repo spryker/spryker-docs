@@ -318,6 +318,11 @@ image:
 ### image: php:
 
 Defines PHP settings.
+{% info_block warningBox "Memory Limits" %}
+
+Please note that the maximum recommended PHP memory limit is 2048M. Going above this limit is rarely necessary and can lead to stability and performance issues in your environment. Test any configuration change carefully in a non-production setting.
+
+{% endinfo_block %}
 
 * `image: php: ini:` - defines `php.ini` configuration.
 * `image: php: enabled-extensions` - defines enabled PHP extensions. The following extensions are allowed:

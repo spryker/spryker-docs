@@ -26,7 +26,7 @@ For more details about how to create the discount conditions, see [Create discou
 
 {% endinfo_block %}
 
-In your development, the Promotions API helps you enable customers to redeem the benefits provided by promotions and check the correct order amount with the discount included.
+In your development, the Promotions API helps you to allow customers to redeem the benefits provided by promotions and check the correct order amount with the discount included.
 
 ## Installation
 

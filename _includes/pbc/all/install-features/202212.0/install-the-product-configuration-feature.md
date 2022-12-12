@@ -112,7 +112,7 @@ class ProductConfigurationConfig extends SprykerProductConfigurationConfig
 
 {% info_block warningBox "Warning" %}
 
-Please, specify only fields that are defined in the transfer definition. Otherwise, you can define them on the project level
+Please, specify only fields that are defined in the transfer definition. Otherwise, you must define them on the project level
 
 {% endinfo_block %}
 

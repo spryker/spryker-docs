@@ -98,4 +98,4 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-To verify that everything is set up correctly and send an email, see [How to create and register MailTypeBuilderPlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-type-builder-plugin.html).
+To verify that everything is set up correctly and send an email, see [How to create and register MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-type-builder-plugin.html).

@@ -222,8 +222,10 @@ versioned_categories:
   pbc:
     all:
       - content-management-system
-      - identity-access-management      
+      - identity-access-management
       - user-management
+      - return-management
+      - emails
 
 
 

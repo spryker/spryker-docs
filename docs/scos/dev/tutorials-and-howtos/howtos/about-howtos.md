@@ -39,7 +39,6 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 * [HowTo: Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)
 * [HowTo: Render Configurable Bundle Templates on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)
 * [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
-* [HowTo: Set number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html)
 * [HowTo: Use blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html)
 * [HowTo: Create a custom content item](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html)
 * [HowTo: Create a visibility condition for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html)

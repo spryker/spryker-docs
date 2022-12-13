@@ -428,6 +428,16 @@ where
 960 - is the video’s width 
 720 - is the video’s height
 
+## Adding other videos
+To add a link to a video in the .mp4 format that originates not from Wistia, add this block with the link to your video:
+
+```
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="link-to-your-video.mp4" type="video/mp4">
+  </video>
+</figure>
+```
 
 ## Embedding PDF files
 

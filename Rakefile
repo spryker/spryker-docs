@@ -44,7 +44,8 @@ commonOptions = {
     /www.phpunit.de\/[\.\w\-\/\?]+/,
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,
-    /atom.io\/[\.\w\-\/\?]+/
+    /php.net\/[\.\w\-\/\?]+/,
+    /atom.io\/[\.\w\-\/\?]+/,
   ],
   :file_ignore => [],
   :typhoeus => {

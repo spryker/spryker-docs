@@ -22,7 +22,7 @@ Permissions related to the approval process are configured based on the restrict
 
 Approvers can only approve orders of employees *within their own business unit*.
 
-If there is an employee with a *Buy up to grand total* limit in a business unit that does not have any approvers, then this employee won't see any approvers they could send their order to at the checkout and thus won't be able to proceed with their order. Not even if another business unit of the same company does have an approver, and not even if that other business unit is the direct parent of the employee's business unit.
+If there is an employee with a *Buy up to grand total* limit in a business unit that does not have any approvers, then this employee will not see any approvers they could send their order to at the checkout and thus will not be able to proceed with their order. Not even if another business unit of the same company does have an approver, and not even if that other business unit is the direct parent of the employee's business unit.
 
 {% endinfo_block %}
 

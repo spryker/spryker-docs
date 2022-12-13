@@ -7,20 +7,29 @@ template: concept-topic-template
 
 This RACI Matrix defines responsibilities, consultation and reporting obligations while providing Platform-as-a-Service (PaaS) hosting for Spryker customers.
 
-## Glossary
+<div class="bg-section">
+<h2> Glossary</h2>
+<dl>
+<dt>Responsible</dt>
+<dd>Those who do the work to complete a task.</dd>
 
-**Responsible**: Those who do the work to complete a task.
+<dt>Accountable</dt>
+<dd>The one ultimately answerable for the correct and thorough completion of a deliverable or task, and the one who delegates the work to those responsible.</dd>
 
-**Accountable**: The one ultimately answerable for the correct and thorough completion of a deliverable or task, and the one who delegates the work to those responsible.
+<dt>Consulted</dt>
+<dd>Those whose opinions are sought, typically subject matter experts; and with whom there is a  two-way communication.</dd>
 
-**Consulted**: Those whose opinions are sought, typically subject matter experts; and with whom there is a  two-way communication.
+<dt>Informed</dt>
+<dd>Those who are kept up to date on progress, often only on completion of a task or deliverable; and with whom there is just one-way communication.</dd>
 
-**Informed**: Those who are kept up to date on progress, often only on completion of a task or deliverable; and with whom there is just one-way communication.
+<dt>Application</dt>
+<dd>Customer Commerce Solution build using Spryker Commerce OS.</dd>
 
+<dt>Infrastructure</dt>
+<dd>Underlying cloud infrastructure managed by Spryker to deliver Spryker Cloud Commerce to Spryker customers.</dd>
 
-**Application**: Customer Commerce Solution build using Spryker Commerce OS.
-
-**Infrastructure**: Underlying cloud infrastructure managed by Spryker to deliver Spryker Cloud Commerce to Spryker customers.
+</dl>
+</div>
 
 ## RACI Matrix
 

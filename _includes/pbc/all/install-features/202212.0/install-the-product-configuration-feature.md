@@ -82,7 +82,7 @@ To make sure that the changes have been applied, check that the exemplary produc
 
 {% info_block infoBox %}
 
-You can control whether particular fields should be filtered out and not used for Product Configuration instance hash generation. You can do it via the `ProductConfigurationConfig::getConfigurationFieldsNotAllowedForEncoding()` config setting.
+You can control whether particular fields must be filtered out and not used for Product Configuration instance hash generation. You can do it through the `ProductConfigurationConfig::getConfigurationFieldsNotAllowedForEncoding()` config setting.
 
 {% endinfo_block %}
 
@@ -112,7 +112,7 @@ class ProductConfigurationConfig extends SprykerProductConfigurationConfig
 
 {% info_block warningBox "Warning" %}
 
-Please, specify only fields that are defined in the transfer definition. Otherwise, you must define them on the project level
+Specify only fields that are defined in the transfer definition. Otherwise, you must define them on the project level.
 
 {% endinfo_block %}
 
@@ -372,7 +372,7 @@ Make sure that, after creating a product configuration, you can find the corresp
 
 {% endinfo_block %}
 
-2. Setup regenerate and resync features by setting up the following plugins:
+2. Set up, regenerate, and resync features by setting up the following plugins:
 
 | PLUGIN                                                  | SPECIFICATION                                                                                              | PREREQUISITES  | NAMESPACE                                                                    |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------------------------------------|
@@ -679,9 +679,9 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that checkout plugins work correctly:
-1.  Add a configurable product to the cart without completing its configuration.
-2.  Try to place an order with the product.
-3.  Make sure that the order is not placed and you get an error message about incomplete configuration.
+1. Add a configurable product to the cart without completing its configuration.
+2. Try to place an order with the product.
+3. Make sure that the order is not placed and you get an error message about incomplete configuration.
 
 {% endinfo_block %}
 

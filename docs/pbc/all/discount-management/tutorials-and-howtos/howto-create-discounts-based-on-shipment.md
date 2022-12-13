@@ -24,7 +24,7 @@ related:
     link: docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html
 ---
 
-The HowTo guide shows how to do the following:
+This How To guide shows how to do the following:
 
 * Activate a discount rule based on a shipment carrier, a shipment method, or a shipment price.
 * Add a shipment pre-check plugin to checkout.
@@ -33,7 +33,7 @@ The HowTo guide shows how to do the following:
 
 You can create a discount rule based on a shipment carrier, a shipment method, or a shipment price.
 
-To have a discount calculated based on a shipment method, select the `shipment-method` rule in the discount UI, **Discount calculation**. Then, the discount applies only to the shipment expense with the chosen method. To define that your discount is applied only when the order is delivered by the chosen method, you can select a shipment method rule for **Conditions**.
+To have a discount calculated based on a shipment method, select the `shipment-method` rule in the discount UI, **Discount calculation**. The discount then applies only to the shipment expense with the chosen method. To define that your discount is applied only when the order is delivered by the chosen method, you can select a shipment method rule for **Conditions**.
 
 The same approach works for a carrier (`shipment-carrier`) and price (`shipment.price`). You can combine these rules together based on your requirements.
 
@@ -87,7 +87,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 }
 ```
 
-You are ready to use the shipment discounts.
+You are now ready to use the shipment discounts.
 
 ## Add the checkout shipment precheck plugin to checkout
 

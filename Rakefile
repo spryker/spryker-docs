@@ -46,8 +46,6 @@ commonOptions = {
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,
     /php.net\/[\.\w\-\/\?]+/,
     /atom.io\/[\.\w\-\/\?]+/,
-    /github.com/spryker/spryker/tree/master/Bundles/DiscountExtension\/[\.\w\-\/\?]+/,
-    /github.com/spryker/spryker/tree/master/Bundles/SalesQuantity\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

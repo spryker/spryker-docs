@@ -80,6 +80,53 @@ To make sure that the changes have been applied, check that the exemplary produc
 
 {% endinfo_block %}
 
+{% info_block infoBox %}
+
+You can control whether particular fields must be filtered out and not used for Product Configuration instance hash generation. You can do it through the `ProductConfigurationConfig::getConfigurationFieldsNotAllowedForEncoding()` config setting.
+
+{% endinfo_block %}
+
+**src/Pyz/Service/ProductConfiguration/ProductConfigurationConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Service\ProductConfiguration;
+
+use Generated\Shared\Transfer\ProductConfigurationInstanceTransfer;
+use Spryker\Service\ProductConfiguration\ProductConfigurationConfig as SprykerProductConfigurationConfig;
+
+class ProductConfigurationConfig extends SprykerProductConfigurationConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getConfigurationFieldsNotAllowedForEncoding(): array
+    {
+        return [
+            ProductConfigurationInstanceTransfer::QUANTITY,
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Warning" %}
+
+Specify only fields that are defined in the transfer definition. Otherwise, you must define them on the project level.
+
+{% endinfo_block %}
+
+**src/Pyz/Shared/ProductConfiguration/Transfer/product_configuration.transfer.xml**
+
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="ProductConfigurationInstance">
+        <property name="quantity" type="int"/>
+    </transfer>
+</transfers>
+```
+
 ### 3) Set up database schema and transfer objects
 
 1. For entity changes to trigger events, adjust the schema definition:
@@ -325,7 +372,7 @@ Make sure that, after creating a product configuration, you can find the corresp
 
 {% endinfo_block %}
 
-1. Setup regenerate and resync features by setting up the following plugins:
+2. Set up, regenerate, and resync features by setting up the following plugins:
 
 | PLUGIN                                                  | SPECIFICATION                                                                                              | PREREQUISITES  | NAMESPACE                                                                    |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------------------------------------|
@@ -632,9 +679,9 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that checkout plugins work correctly:
-1.  Add a configurable product to the cart without completing its configuration.
-2.  Try to place an order with the product.
-3.  Make sure that the order is not placed and you get an error message about incomplete configuration.
+1. Add a configurable product to the cart without completing its configuration.
+2. Try to place an order with the product.
+3. Make sure that the order is not placed and you get an error message about incomplete configuration.
 
 {% endinfo_block %}
 

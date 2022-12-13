@@ -304,9 +304,9 @@ Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
 Ensure that the `https://glue.mysprykershop.com/guest-carts` endpoint is available:
 
-1. [Create a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-guest-cart).
-2 Send the request: `GET https://glue.mysprykershop.com/carts/`.
-1. Check that the response contains the cart you have created.
+1. [Create a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart).
+2. Send the request: `GET https://glue.mysprykershop.com/carts/`.
+3. Check that the response contains the cart you have created.
 
 Ensure that the `items` resource relationships are registered as a relationship of the `carts` resource:
 

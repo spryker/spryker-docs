@@ -38,5 +38,5 @@ The main benefits of working with the catalog are to pave the way for a smooth s
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-| [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html)  | [Searching the product catalog](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) |
+| [Glue API: Catalog feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-catalog-glue-api.html)  | [Searching the product catalog](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) |
 |  | [Retrieving autocomplete and search suggestions](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-autocomplete-and-search-suggestions.html)  |

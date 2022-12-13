@@ -16,8 +16,6 @@ redirect_from:
 related:
   - title: Product Relations feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-relations-feature-integration.html
-  - title: Product Relations feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
   - title: Retrieving related products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-related-products.html
 ---

@@ -213,5 +213,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Products | ✓ | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Product Bundles |✓ |[Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-bundles-feature-integration.html)|
+| Products | ✓ | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Product Bundles |✓ |[Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)|

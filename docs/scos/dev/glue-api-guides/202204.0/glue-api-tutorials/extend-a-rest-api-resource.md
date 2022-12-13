@@ -40,7 +40,7 @@ The following guide relies on your knowledge of the structure of the Glue REST A
 
 * [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html).
 * [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html).
-* [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
+* [Integrate Products API](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 {% info_block infoBox %}
 
@@ -108,10 +108,10 @@ console spryk:run AddSharedRestAttributesTransfer --mode=project --module=Resour
 
 ## 2. Put data
 
-If automatic transfer-to-transfer conversion can be performed, you do not need to take extra steps to put data in the attribute you have added in step 1. 
+If automatic transfer-to-transfer conversion can be performed, you do not need to take extra steps to put data in the attribute you have added in step 1.
 Automatic conversion occurs when the attribute name defined in the REST transfer matches exactly the name of the respective field in the storage transfer.
 
-In more complicated cases, to pull data from alternative storage or map data differently from what auto-mapping does, you need to override the processor classes. 
+In more complicated cases, to pull data from alternative storage or map data differently from what auto-mapping does, you need to override the processor classes.
 To add the `manufacturerCountry` attribute data, override the `AbstractProductsResourceMapper` class by extending the `ProductsRestApi` module, which implements the Products API:
 
 1. Create the `src/Pyz/Glue/ProductsRestApi` directory.

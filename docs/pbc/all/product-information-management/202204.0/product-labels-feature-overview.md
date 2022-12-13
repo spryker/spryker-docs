@@ -161,6 +161,6 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES |
 |---|---|---|
 | [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-labels-feature-integration.html) | [ProductLabel migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabel.html) | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html) |
-| [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html) | [ProductLabelGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html) |  |
+| [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html) | [ProductLabelGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html) |  |
 |  | [ProductLabelSearch migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html |  |
 |  | [ProductLabelStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabelstorage.html |  |

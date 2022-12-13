@@ -15,7 +15,7 @@ For detailed information about the modules that provide the API functionality an
 * [Cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-feature.html)
 * [Glue API: Measurement Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
-* [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Options feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Glue API: Marketplace Product Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 
 

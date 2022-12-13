@@ -16,7 +16,7 @@ related:
   - title: Glue API - Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-configurable-bundle-feature-integration.html
   - title: Glue API - Configurable Bundle + Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-configurable-bundle-cart-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
   - title: Glue API - Configurable Bundle + Product feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
   - title: Merchant Product Restrictions feature integration

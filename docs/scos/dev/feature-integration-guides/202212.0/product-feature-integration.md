@@ -16,7 +16,7 @@ related:
   - title: Glue API - Product feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-feature-integration.html
   - title: Glue API - Product Image Sets feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-image-sets-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html
   - title: Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Product Lists feature integration

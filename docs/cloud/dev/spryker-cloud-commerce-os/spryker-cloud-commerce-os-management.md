@@ -37,7 +37,7 @@ This RACI Matrix defines responsibilities, consultation and reporting obligation
 | Provide deploy files for SCCOS environments | I | R/A | C |
 | Deployment |
 | Provide valid access tokens for the repositories and the repository is available to Spryker Cloud as per requirements | - | R/A | I |
-| Conduct appropriate (load) testing, especially regarding data imports before production deployment | I/C | R/A | I |
+| Conduct appropriate testing, especially the load testing of data import  before production deployments. | I/C | R/A | I |
 | Initial troubleshooting of deployment issues | - | R/A | - |
 | Resolve deployment issues related to code and data, like data imports, timeouts during data import,  or wrong data structure. | - | R/A | I |
 | Resolve deployment infrastructure issues: placement issues, timeouts of image building, deployment of containers like Jenkins. | - | - | R/A |

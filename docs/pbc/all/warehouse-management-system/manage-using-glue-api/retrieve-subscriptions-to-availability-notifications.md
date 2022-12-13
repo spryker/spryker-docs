@@ -80,7 +80,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ## Other management options
 
-There is an alternative way to retrieve subscriptions to availability notifications of a registered customer. For details, see [Managing customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#create-a-customer).
+There is an alternative way to retrieve subscriptions to availability notifications of a registered customer. For details, see [Managing customers](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer).
 
 ## Possible errors
 

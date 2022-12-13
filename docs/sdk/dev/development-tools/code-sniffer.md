@@ -1,6 +1,6 @@
 ---
-title: Code sniffer
-description: With the tool, you can keep your code clean, find issues and fix them automatically.
+title: Code Sniffer
+description: With the Code Sniffer tool, you can keep your code clean, find issues, and fix them automatically.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-sniffer
@@ -53,7 +53,7 @@ related:
 
 To correspond to [PSR-2 standards](http://www.php-fig.org/psr/psr-2/), we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 
-Code Sniffer is a very powerful tool that helps to keep the code clean and prevent simple mistakes. The sniffer can find all the issues, and can also auto-fix most of them (when used with -f option).
+Code Sniffer is a very powerful tool that helps to keep your code clean and prevent simple mistakes. The Sniffer can find all existing issues, and can also auto-fix the majority of them (when used with the `-f` option).
 
 ```php
 $ vendor/bin/console code:sniff:style
@@ -71,7 +71,7 @@ $ vendor/bin/console code:sniff:style
 	$ vendor/bin/console code:sniff:style ... -s Spryker.Commenting.FullyQualifiedClassNameInDocBlock
 ```
 
-There are two levels of sniffer severity: Level 1 (normal, used by default) and Level 2 (strict). Level 2 was added to support an additional check of extra complexity. It is recommended to use it for Core modules development. The full list of the included snippets can be found on [GitHub](https://github.com/spryker/code-sniffer/tree/master/docs).
+There are two levels of the Sniffer's severity: Level 1 (normal, used by default) and Level 2 (strict). Level 2 was added to support an additional check of extra complexity. It is recommended to use it for the development of Core modules. A full list of the included snippets can be found on [GitHub](https://github.com/spryker/code-sniffer/tree/master/docs).
 
 ```php
 	// Run code sniffer with Level 1
@@ -92,8 +92,8 @@ Additional options:
 * `-v`: Verbose output
 * `-d`: Dry-run, only output the command to be run
 
-Always commit your changes before executing this command!
+Remember to always commit your changes before executing this command!
 
-Run `–help` or `-h` to get help about usage of all options available.
+Run `–help` or `-h` to get help about the usage of all available options.
 
-See the [code sniffer](https://github.com/spryker/code-sniffer) documentation for details and information on how to set it up for your CI system as a checking tool for each PR.
+See the [Code Sniffer](https://github.com/spryker/code-sniffer) documentation for details and information on how to set it up for your CI system as a checking tool for each PR.

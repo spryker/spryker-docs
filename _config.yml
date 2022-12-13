@@ -219,6 +219,15 @@ versioned_categories:
       - technology-partner-guides
       - devops-migration-guides
       - system-requirements
+  pbc:
+    all:
+      - content-management-system
+      - identity-access-management
+      - user-management
+      - return-management
+      - emails
+
+
 
 # these are defaults used for the front matter for these file types
 

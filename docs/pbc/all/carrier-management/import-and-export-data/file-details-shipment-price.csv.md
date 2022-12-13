@@ -22,7 +22,7 @@ data:import:shipment-price
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependencies:
+
 
 * [shipment.csv](/docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html)
 * [currency.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-currency.csv.html)
@@ -48,7 +48,7 @@ Fields `shipment_method_key`, `store` and `currency` are mandatory, and must be 
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

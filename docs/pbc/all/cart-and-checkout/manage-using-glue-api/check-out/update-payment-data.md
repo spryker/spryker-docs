@@ -56,8 +56,8 @@ To update payment with a payload from a third-party payment provider, send the r
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when checking out a [cart of a registered user](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html). | A guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | String | Required when checking out a [cart of a registered user](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 <details>
 <summary markdown='span'>Request sample: update payment data</summary>
@@ -87,7 +87,7 @@ To update payment with a payload from a third-party payment provider, send the r
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| paymentIdentifier | String |  | Unique payment identifier. To get it, [place. an order](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html#implement-payload-processor-plugin). |
+| paymentIdentifier | String |  | The Unique payment ID. To get it, [place. an order](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html#implement-payload-processor-plugin). |
 | dataPayload | Array | v | Payload from the payment service provider. The attributes of the payload depend on the selected payment service provider. |
 
 
@@ -123,7 +123,7 @@ Response sample: update payment data
 
 | ATTRIBUTE | TYPE |	DESCRIPTION |
 |---|---|---|
-| paymentIdentifier |	String | Unique payment identifier.|
+| paymentIdentifier |	String | The unique payment ID.|
 | dataPayload | Array |	The payload you need to pass to the third-party provider. If the value is `null`, you don't need to do it. |
 
 

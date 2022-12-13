@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/multiple-carts-feature-walkthrough.html
 ---
 
-Sometimes customers need more than one shopping cart—for example, one for daily purchases and the other one for monthly expenses. The *Multiple Carts* feature lets you create and manage multiple shopping carts in one customer account.
+Sometimes customers need more than one shopping cart, such as one for daily purchases and another one for monthly expenses. The *Multiple Carts* feature lets you create and manage multiple shopping carts in one customer account.
 
 ## Creating and managing multiple shopping carts
 
@@ -77,7 +77,7 @@ There are two ways to set a shopping cart as active:
 * Clicking on the cart name in the shopping cart widget in the header of the shop.
 * Clicking on the cart name on the **Shopping Cart** page in the **My Account** menu.
 
-After the shopping cart is set to active, the user is redirected to a respective cart page where the table with the following information is available:
+After the shopping cart is set to active, the user is redirected to the respective cart page where a table with the following information is available:
 
 * Product image
 * Product name
@@ -97,7 +97,7 @@ After the shopping cart is set to active, the user is redirected to a respective
 ![Shopping Cart Page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/a-shopping-cart-page.png)
 
 ## Multiple Carts on the Storefront
-On the storefront, company users can perform the following actions using the Multiple Carts feature:
+On the storefront, company users can perform the following actions by using the Multiple Carts feature:
 <a name="multiple-carts-per-user-on-the-storefront"></a>
 
 <details>
@@ -120,7 +120,7 @@ On the storefront, company users can perform the following actions using the Mul
 * To share a cart with external and internal users by a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html).
 * To share a cart with users within one business unit, see [Shared Cart feature overview](/docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html#shared-cart-on-the-storefront).
 * To add a custom order reference to a cart, see [Custom Order Reference feature overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html).
-* To add comments to a cart, see [Comments feature overview](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html#comments-on-the-storefront).
+* To add comments to a cart, see [Comments feature overview](/docs/pbc/all/cart-and-checkout/comments-feature-overview.html#comments-on-the-storefront).
 * To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/custom-order-reference-overview.html).
 
 

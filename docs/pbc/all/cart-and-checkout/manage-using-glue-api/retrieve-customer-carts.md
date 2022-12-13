@@ -20,21 +20,21 @@ related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
   - title: Authentication and authorization
-    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Confirming customer registration
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-confirm-customer-registration.html
   - title: Authenticating as a customer
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Managing customer authentication tokens
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
   - title: Managing customer authentication tokens via OAuth 2.0
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
   - title: Managing customers
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
   - title: Managing customer passwords
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Retrieving customer orders
@@ -62,13 +62,13 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |-|-|-|
@@ -1585,29 +1585,29 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
-| promotional-items | id | String | Unique identifier of the promotional item. The ID can be used to apply the promotion to the given purchase. |
-| promotional-items | sku | String | SKU of the promoted abstract product. |
+| promotional-items | id | String | The unique ID of the promotional item. The ID can be used to apply the promotion to the given purchase. |
+| promotional-items | sku | String | The SKU of the promoted abstract product. |
 | promotional-items | quantity | Integer | Specifies how many promotions can be applied to the given purchase. |
-| product-options | optionGroupName | String | Name of the group to which the option belongs. |
-| product-options | sku | String | SKU of the product option. |
-| product-options | optionName | String | Product option name. |
-| product-options | price | Integer | Product option price in cents. |
-| product-options | currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
-| vouchers, cart-rules | displayName | String | Discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | Amount of the provided discount. |
-| vouchers, cart-rules | code | String | Discount code. |
-| vouchers, cart-rules | discountType | String | Discount type. |
-| vouchers, cart-rules | isExclusive | Boolean | Discount exclusivity. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
+| product-options | optionGroupName | String | The name of the group to which the option belongs. |
+| product-options | sku | String | The SKU of the product option. |
+| product-options | optionName | String | The product option's name. |
+| product-options | price | Integer | The product option price in cents. |
+| product-options | currencyIsoCode | String | The ISO 4217 code of the currency in which the product option price is specified. |
+| vouchers, cart-rules | displayName | String | The discount name displayed on the Storefront. |
+| vouchers, cart-rules | amount | Integer | The amount of the provided discount. |
+| vouchers, cart-rules | code | String | The discount code. |
+| vouchers, cart-rules | discountType | String | The type of the discount. |
+| vouchers, cart-rules | isExclusive | Boolean | If true, the discount is exclusive.. |
+| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
+| vouchers, cart-rules | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
-| shared-carts | idCompanyUser | String | Unique identifier of the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
-| shared-carts | idCartPermissionGroup | Integer | Unique identifier of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
-| cart-permission-groups | name | String | Permission group name. |
-| cart-permission-groups | isDefault | Boolean | Defines if the permission group is applied to shared carts by default. |
-| company-users | id | String | Unique identifier of the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) with whom the cart is shared. |
-| company-users | isActive | Boolean | Defines if the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html)is active. |
-| company-users | isDefault | Boolean | Defines if the [company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html) is default for the [customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
+| shared-carts | idCompanyUser | String | The unique ID of the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
+| shared-carts | idCartPermissionGroup | Integer | The unique ID of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
+| cart-permission-groups | name | String | The permission group's name. |
+| cart-permission-groups | isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
+| company-users | id | String | Unique identifier of the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
+| company-users | isActive | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)is active. |
+| company-users | isDefault | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 For the attributes of the included resources, see:
 

@@ -308,7 +308,7 @@ Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
 1. [Create one or more carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart).
 2. Send the request: `GET https://glue.mysprykershop.com/carts/`.
-3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html) with.
+3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with.
 
 {% endinfo_block %}
 

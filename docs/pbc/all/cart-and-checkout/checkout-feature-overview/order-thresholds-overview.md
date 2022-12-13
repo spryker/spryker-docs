@@ -23,11 +23,11 @@ For example, if the hard maximum threshold is €3000, and a customer adds items
 
 A Back Office user can enter a message that is displayed in the cart when the hard maximum threshold is reached.
 
-To learn how a Back Office user configures the maximum hard threshold, see [Define a maximum hard threshold](/docs/pbc/all/cart-and-checkout/manage-in-the-back-office/define-global-thresholds.html#define-a-maximum-hard-threshold).
+To learn how a Back Office user can configure the maximum hard threshold, see [Define a maximum hard threshold](/docs/pbc/all/cart-and-checkout/manage-in-the-back-office/define-global-thresholds.html#define-a-maximum-hard-threshold).
 
 
 ## Minimum thresholds
-A *minimum threshold* is a monetary value that must be reached for an order to be placed. If the order subtotal is below the minimum order value, the customer cannot place the order or place it under the conditions defined by the shop owner. For example, a customer can be requested to pay a fee.
+A *minimum threshold* is a monetary value that must be reached for an order to be placed. If the order subtotal is below the minimum order value, the customer cannot place the order or can instead place it under conditions defined by the shop owner. For example, the customer can be requested to pay a fee.
 
 
 ### Hard minimum threshold
@@ -65,7 +65,7 @@ For example, a shop owner sets a soft minimum threshold of €400 with a fixed f
 #### Soft minimum threshold with a flexible fee
 The *soft threshold with a flexible fee* lets you place an order with the value below the threshold and adds a percentage of the order value to the order subtotal. If a customer with a fee adds more products to their cart to reach the threshold value, the fee is removed from the cart.
 
-For example, a shop owner sets a soft minimum threshold of €400 with a flexible fee of 10%. If a customer adds products to their cart for €195, they can still place the order, but the flexible fee of €19.5 is added to their cart. If the customer adds more products and the order subtotal becomes equal to or greater than €400, the fee is removed from the cart.
+For example, a shop owner sets a soft minimum threshold of €400 with a flexible fee of 10%. If a customer adds products to their cart for €195, they can still place the order, but the flexible fee of 10% (€19.5) is added to their cart. If the customer adds more products and the order subtotal becomes equal to or greater than €400, the fee is removed from the cart.
 
 
 The following diagram shows how orders are checked against defined thresholds.
@@ -75,14 +75,14 @@ The following diagram shows how orders are checked against defined thresholds.
 ## Thresholds and discounts
 When an order is checked against the defined thresholds, discounts are not taken into account.
 
-Example with the hard *minimum* threshold:
+Example with a hard *minimum* threshold:
 
 1. The hard minimum threshold value is €400.
 2. A customer adds products for €450 to the cart.
 3. The customer applies a discount voucher, which decreases the order subtotal to €385.
 4. The customer *can* place the order.
 
-Example with the hard *maximum* threshold:
+Example with a hard *maximum* threshold:
 
 1. The hard maximum threshold value is €50.
 2. The customer adds products for €55 to the cart.

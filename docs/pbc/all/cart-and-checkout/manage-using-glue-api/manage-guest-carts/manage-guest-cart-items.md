@@ -59,7 +59,7 @@ To add items to a guest cart, send the request:
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | A guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -314,12 +314,12 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| idPromotionalItem | String |  | Promotional item ID. You need to specify the ID to apply the promotion benefits. |
-| salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
-| salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
-| salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
-| productOptions | Array |  | List of attributes defining the product option to add to the cart. |
-| productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
+| idPromotionalItem | String |  | The promotional item's ID. You need to specify the ID to apply the promotion's benefits. |
+| salesUnit | Object |  | A list of attributes defining the sales unit to be used for item amount calculation. |
+| salesUnit.id | Integer |  | The unique ID of the sales units to calculate the item amount in. |
+| salesUnit.amount | Decimal |  | The amount of the product in the defined sales units. |    
+| productOptions | Array |  | A list of attributes defining the product option to add to the cart. |
+| productOptions.sku | String |  | The unique ID of the product option to add to the cart.  |
 
 {% info_block infoBox "Conversion" %}
 
@@ -2648,7 +2648,7 @@ To add a configurable bundle to a guest cart, send the request:
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
 <details>
 <summary markdown='span'>Request sample: add a configurable bundle to a guest cart</summary>
@@ -2685,10 +2685,10 @@ To add a configurable bundle to a guest cart, send the request:
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | Number of the configurable bundles to add. |
 | templateUuid | 	
-String | &check; | Unique identifier of the [Configurable Bundle Template](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
+String | &check; | The unique ID of the [Configurable Bundle Template](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| slotUuid | String | &check; | Unique identifier of the slot in the configurable bundle. |
+| slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |
 
 ### Response
 
@@ -2871,15 +2871,15 @@ To change item quantity, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | The unique ID of the guest cart in the system. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | The group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
 
 ### Request
 
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique ID. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
 
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
@@ -2913,8 +2913,8 @@ To change item quantity, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| sku | String |  | SKU of the item to be updated. |
-| quantity | String | &check; | Quantity of the item to be set. |
+| sku | String |  | The SKU of the item to be updated. |
+| quantity | String | &check; | The quantity of the item to be set. |
 
 For more request body examples, see [Add items to a guest cart](#add-items-to-a-guest-cart)
 
@@ -2939,7 +2939,7 @@ To change the quantity of the configurable bundles in a guest cart, send the req
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique ID. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
 
 Request sample: change quantity of configurable bundles in a guest cart
 
@@ -2957,7 +2957,7 @@ Request sample: change quantity of configurable bundles in a guest cart
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | String | &check; | Quantity of the items to add. |
+| quantity | String | &check; | The quantity of the items to add. |
 
 ### Response
 
@@ -3242,14 +3242,14 @@ To remove an item from a guest cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | The unique ID of the guest cart in the system. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | The group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique ID. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
 
 Request sample: remove an item from a guest cart
 
@@ -3269,12 +3269,12 @@ To remove a configurable bundle from a guest cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a guest cart](#add-a-configurable-bundle-to-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | The unique ID of the guest cart in the system. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | The group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and the items selected in the slot. You can get it when [adding the configurable bundle to a guest cart](#add-a-configurable-bundle-to-a-guest-cart). |
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique ID. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
 
 Request sample: remove a configurable bundle from a guest cart
 

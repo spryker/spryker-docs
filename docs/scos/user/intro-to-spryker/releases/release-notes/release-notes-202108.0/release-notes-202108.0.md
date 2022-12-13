@@ -34,9 +34,9 @@ Password configuration comes with a brute force attack protection: after a certa
 * [Customer Login overview](/docs/scos/user/features/202108.0/customer-account-management-feature-overview/customer-login-overview.html)
 
 
-### Identity Access Manager: Back Office Login
+### Identity Access Management: Back Office Login
 
-With the support of the OpenID Connect protocol, you can now use Identity Access Managers to log in to the Spryker Back Office. To illustrate this capability, we offer the integration of the Microsoft Azure Active Directory service that allows your users to log in to the Back Office with their Microsoft Azure Active Directory credentials.
+With the support of the OpenID Connect protocol, you can now use Identity Access Management to log in to the Spryker Back Office. To illustrate this capability, we offer the integration of the Microsoft Azure Active Directory service that allows your users to log in to the Back Office with their Microsoft Azure Active Directory credentials.
 
 #### Documentation
 
@@ -174,7 +174,7 @@ If you use content banners and content product abstracts for your CMS page repre
 
 #### Documentation
 
-[Retrieving CMS pages](/docs/scos/dev/glue-api-guides/202108.0/retrieving-cms-pages.html)
+[Retrieve CMS pages](/docs/scos/dev/glue-api-guides/202108.0/retrieving-cms-pages.html)
 
 ### Agent Assist APIs
 
@@ -182,8 +182,8 @@ With the **Agent Assist APIs**, you can create representations that enable a use
 
 #### Documentation
 
-* [Authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html)
-* [Searching by customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html)
+* [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html)
+* [Search by customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html)
 * [Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html)
 * [Managing agent assist authentication tokens](/docs/scos/dev/glue-api-guides/202108.0/managing-agent-assists/managing-agent-assist-authentication-tokens.html)
 

@@ -39,13 +39,13 @@ To share a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart to share. |
+| ***{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}*** | The unique ID of a cart to share. |
 
 ### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | A string containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts`
 
@@ -63,8 +63,8 @@ Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-ae
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| idCompanyUser | String | ✓ | Unique identifier of a company user to share the cart with.<br>The user must belong to the same company as the cart owner. |
-| idCartPermissionGroup | Integer | ✓ | Unique identifier of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html#retrieve-cart-permission-groups). |
+| idCompanyUser | String | ✓ | The unique ID of a company user to share the cart with.<br>The user must belong to the same company as the cart owner. |
+| idCartPermissionGroup | Integer | ✓ | The unique ID of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html#retrieve-cart-permission-groups). |
 
 ### Response
 
@@ -88,9 +88,9 @@ Response sample:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| id | String | Unique identifier used for sharing the cart. |
-| idCompanyUser | String | Unique identifier of the company user the cart is shared with. |
-| idCartPermissionGroup | Integer | Unique identifier of the cart permission group that describes the permissions granted to the user the cart is shared with. |
+| id | String | The unique ID used for sharing the cart. |
+| idCompanyUser | String | The unique ID of the company user the cart is shared with. |
+| idCartPermissionGroup | Integer | The unique ID of the cart permission group that describes the permissions granted to the user the cart is shared with. |
 
 ## Possible errors
 

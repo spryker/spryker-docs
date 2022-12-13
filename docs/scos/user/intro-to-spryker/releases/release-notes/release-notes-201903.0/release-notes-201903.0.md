@@ -125,7 +125,7 @@ The Spryker Glue REST API now includes endpoints for retrieving lists of related
 ### Navigation
 Every navigation node and its structure are retrievable via the navigation API endpoint.
 
-**Documentation**: [Retrieving Navigation Trees](/docs/scos/user/features/201903.0/navigation-feature-overview.html).
+**Documentation**: [Retrieve navigation trees](/docs/scos/user/features/201903.0/navigation-feature-overview.html).
 
 ### Alternative Products
 Product alternatives for concrete and abstract products are available via the respective endpoints. This allows you to offer alternatives for discontinued and unavailable products when needed.

@@ -21,9 +21,9 @@ To start feature integration, integrate the required features:
 | NAME | VERSION          | INTEGRATION GUIDE |
 | -------------------- |------------------| ---------|
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Spryker Core BO      | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
+| Spryker Core BO      | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Acl | {{page.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/acl-feature-integration.html) |
+| Acl | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html) |
 
 ###  1) Install the required modules using Composer
 
@@ -322,7 +322,7 @@ class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvid
             new MerchantAclMerchantUserPostCreatePlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\MerchantUserExtension\Dependency\Plugin\MerchantUserRoleFilterPreConditionPluginInterface>
      */
@@ -538,7 +538,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [
             new MerchantPortalRouterCacheWarmUpConsole(),
         ];
-        
+
         return $commands;
     }
 }
@@ -548,7 +548,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```yaml
 env:
     NEW_RELIC_ENABLED: 0
-    
+
 sections:
     build:
       router-cache-warmup-merchant-portal:
@@ -1052,7 +1052,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new MerchantPortalInstallDependenciesConsole(),
             new MerchantPortalBuildFrontendConsole(),
         ];
-        
+
         return $commands;
     }
 }

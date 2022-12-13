@@ -81,7 +81,7 @@ vendor/bin/console security:check
 
 {% info_block warningBox "False-positive vulnerability CVE-NONE-0001" %}
 
-There is a known false-positive issue CVE-NONE-0001. The issue is not valid, and, therefore, we suspend the notice about it. If you want the details of the suspended notice, run
+There is a known false-positive issue CVE-NONE-0001. This issue is not valid. We have suspended the notice about it. If you want the details of the suspended notice, run
 
 ```bash
 vendor/bin/console security:check -v

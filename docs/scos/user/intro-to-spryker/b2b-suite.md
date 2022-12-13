@@ -29,14 +29,14 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <summary markdown='span'>B2B feature list</summary>
 
 - [Configurable Product](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html)
-- [Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
+- [Return Management](/docs/pbc/all/return-management/{{site.version}}/return-management.html)
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
-- [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
+- [Comments](/docs/pbc/all/cart-and-checkout/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html)
-- [Resource Sharing](/docs/scos/user/features/{{site.version}}/resource-sharing-feature-overview.html)
+- [Resource Sharing](/docs/pbc/all/cart-and-checkout/resource-sharing-feature-overview.html)
 - [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
 - [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
-- [Approval process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
+- [Approval process](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
 - [Customer Access](/docs/scos/user/features/{{site.version}}/customer-access-feature-overview.html)
@@ -64,11 +64,11 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Shared carts](/docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html)
 - [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
-- [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
+- [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html)
 - [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
 <!---- [Invoice]()-->
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
-- [Mailing & Notifications](/docs/scos/user/features/{{site.version}}/mailing-and-notifications-feature-overview.html)
+- [Mailing & Notifications](/docs/pbc/all/emails/{{site.version}}/emails.html)
 - [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html)
 - [Measurement units](/docs/scos/user/features/{{site.version}}/measurement-units-feature-overview.html)
@@ -84,13 +84,12 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Product Rating & Reviews](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html)
 - [Product Labels](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
 - [Product Lists](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html)
-- [Non-splittable Products](/docs/scos/user/features/{{site.version}}/non-splittable-products-feature-overview.html)
+- [Non-splittable Products](/docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html)
 - [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
 - [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html)
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 - [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
-- [File Manager](/docs/pbc/all/digital-asset-management/digital-asset-management.html)
 
 <br>
 </details>

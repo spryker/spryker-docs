@@ -25,7 +25,7 @@ data:import:discount-amount
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -35,16 +35,16 @@ The file should have the following parameters:
 | value_net |  | Number |  | Net value of the discount. |
 | value_gross |  | Number |  | Gross value of the discount. |
 
-## Import file dependencies
 
-This file has the following dependencies:
+
+
 
 * [discount.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html)
 * [discount_store.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount-store.csv.html)
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

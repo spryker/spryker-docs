@@ -11,5 +11,6 @@ redirect_from:
   - /docs/quick-order-packaging-units-feature-integration
   - /docs/en/quick-order-packaging-units-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-packaging-units-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/quick-add-to-cart-packaging-units-feature-integration.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-quick-add-to-cart-packaging-units-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-packaging-units-feature.md -->

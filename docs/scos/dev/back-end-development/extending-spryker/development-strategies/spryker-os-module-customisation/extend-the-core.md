@@ -56,6 +56,7 @@ Inheritance is easy to do but it creates a tight coupling to a concrete class. T
 
 ```php
 <?php
+
 namespace Pyz\Zed\MyBundle\Business\Model;
 
 use Spryker\Zed\MyBundle\Business\Model\AnyModel as SprykerAnyModel;
@@ -72,15 +73,15 @@ As an alternative to class inheritance, you can also implement the composition o
 
 ```php
 <?php
+
 namespace Pyz\Zed\MyBundle\Business\Model;
 
-use Spryker\Zed\MyBundle\Business\Model\AnyModelInterface
+use Spryker\Zed\MyBundle\Business\Model\AnyModelInterface;
 
 class AnyModel implements AnyModelInterface
 {
-
     /**
-      * @var AnyModelInterface
+      * @var \Spryker\Zed\MyBundle\Business\Model\AnyModelInterface
       */
     private $anyModelFromCore;
 
@@ -106,7 +107,6 @@ class AnyModel implements AnyModelInterface
     {
         return $this->anyModelFromCore->c();
     }
-
 }
 ```
 
@@ -125,12 +125,12 @@ When you extend a class from the core, you want the core code to go use that one
 
 ```php
 <?php
-namespace Pyz\Zed\MyBundle\Business;
-use Pyz\Zed\MyBundle\Business\Model\AnyModel;
 
+namespace Pyz\Zed\MyBundle\Business;
+
+use Pyz\Zed\MyBundle\Business\Model\AnyModel;
 use Pyz\Zed\MyBundle\MyBundleConfig;
 use Pyz\Zed\MyBundle\Persistence\MyBundleQueryContainer;
-use Spryker\Zed\MyBundle\Business\Block\BlockManager;
 use Spryker\Zed\MyBundle\Business\MyBundleBusinessFactory as SprykerMyBundleBusinessFactory;
 
 /**
@@ -139,14 +139,15 @@ use Spryker\Zed\MyBundle\Business\MyBundleBusinessFactory as SprykerMyBundleBusi
  */
 class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
 {
-
+    /**
+     * @return \Pyz\Zed\MyBundle\Business\Model\AnyModel
+     */
     public function createAnyModel()
     {
         // Returns your sub-class which inherits from the core.
         // If needed you can inject any dependencies here as well.
         return new AnyModel();
     }
-
 }
 ```
 
@@ -154,10 +155,10 @@ class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
 
 ```php
 <?php
+
 namespace Pyz\Zed\MyBundle\Business;
 
 use Pyz\Zed\MyBundle\Business\Model\AnyModel;
-
 use Pyz\Zed\MyBundle\MyBundleConfig;
 use Pyz\Zed\MyBundle\Persistence\MyBundleQueryContainer;
 use Spryker\Zed\MyBundle\Business\Model\AnyModel as SprykerAnyModel;
@@ -169,7 +170,9 @@ use Spryker\Zed\MyBundle\Business\MyBundleBusinessFactory as SprykerMyBundleBusi
  */
 class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
 {
-
+    /**
+     * @return \Pyz\Zed\MyBundle\Business\Model\AnyModel
+     */
     public function createAnyModel()
     {
         // First you need to instantiate the original class from core.
@@ -182,6 +185,5 @@ class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
         // Now you create the composed object which gets the original class injected
         return new AnyModel($anyModelFromCore); // TODO OWN CREATE METHOD
     }
-
 }
 ```

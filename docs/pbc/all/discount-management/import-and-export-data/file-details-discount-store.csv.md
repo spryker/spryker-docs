@@ -25,7 +25,7 @@ data:import:discount-store
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -34,14 +34,14 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependencies:
+
 
 * [discount.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

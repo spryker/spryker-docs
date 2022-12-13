@@ -24,7 +24,7 @@ data:import:shipment-method-store
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -33,14 +33,14 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependencies:
+
 
 * [shipment.csv](/docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html)
 * *stores.php* The configuration file of the Spryker Demo Shop PHP project
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

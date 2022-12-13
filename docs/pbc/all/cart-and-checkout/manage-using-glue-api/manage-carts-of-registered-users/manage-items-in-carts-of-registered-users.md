@@ -18,7 +18,7 @@ related:
     link: docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html
 ---
 
-This endpoint allows Manage items in carts of registered users by adding, changing, and deleting them.
+This endpoint allows you to manage items in the carts of registered users by adding, changing, and deleting them.
 
 ## Installation
 
@@ -52,7 +52,7 @@ To add items to a cart, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | The alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUE |
 | --- | --- | --- |
@@ -286,12 +286,12 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
 | quantity | String | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
-| salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
-| salesUnit.amount | Integer |  | Amount of the product in the defined sales units.  |
-| idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
-| productOptions | Array |  | List of attributes defining the product option to add to the cart. |
-| productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
+| salesUnit | Object |  | A list of attributes defining the sales unit to be used for item amount calculation. |
+| salesUnit.id | Integer |  | The unique ID of the sales units to calculate the item amount in. |
+| salesUnit.amount | Integer |  | The amount of the product in the defined sales units.  |
+| idPromotionalItem | String |  | The promotional item ID. Specify the ID to apply the promotion benefits.  |
+| productOptions | Array |  | A list of attributes defining the product option to add to the cart. |
+| productOptions.sku | String |  | The unique ID of the product option to add to the cart.  |
 
 {% info_block infoBox "Conversion" %}
 
@@ -2466,13 +2466,13 @@ To add a configurable bundle to a registered user’s cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***cart_uuid*** | The unique ID of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string |&check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string |&check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/configured-bundles`
 
@@ -2504,10 +2504,10 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | The number of the configurable bundles to add. |
-| templateUuid | String | &check; | Unique identifier of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
+| templateUuid | String | &check; | The unique ID of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| slotUuid | String | &check; | Unique identifier of the slot in the configurable bundle. |
+| slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |
 
 ### Response
 
@@ -2673,12 +2673,12 @@ For the attributes of the response sample, see [Add an item a to a registered us
 | --- | --- | --- | --- |
 | configuredBundle | template | Object | Information about the template used for the configurable bundle. |
 | configuredBundleItem | slot | Object | Information about the slot of the configurable bundle. |
-| configuredBundle | name | String | Name of the configurable bundle. |
-| configuredBundleItem | quantityPerSlot | Integer | Number of items that a slot may contain. |
+| configuredBundle | name | String | The name of the configurable bundle. |
+| configuredBundleItem | quantityPerSlot | Integer | The number of items that a slot may contain. |
 | configuredBundle | quantity | Integer | Specifies the quantity of the configurable bundles. |
-| configuredBundle | groupKey | String | Unique identifier of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. |
-| configuredBundle | uuid | String | Unique identifier of the configurable bundle template in the system. |
-| configuredBundleItem | uuid | String | Unique identifier of the slot in the configurable bundle. |
+| configuredBundle | groupKey | String | The unique ID of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. |
+| configuredBundle | uuid | String | The unique ID of the configurable bundle template in the system. |
+| configuredBundleItem | uuid | String | The unique ID of the slot in the configurable bundle. |
 
 ## Change item quantity
 
@@ -2697,7 +2697,7 @@ To change the number of items in a cart, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 
 Request sample:
@@ -2867,7 +2867,7 @@ To change quantity of configurable bundles in a registered user’s cart, send t
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 Request sample:
 
@@ -3180,7 +3180,7 @@ To remove an item from a registered user's cart, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 Request sample: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
@@ -3199,13 +3199,13 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
+| ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | The group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 Request sample: `DELETE https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526`
 

@@ -15,7 +15,7 @@ related:
 ---
 {% info_block warningBox "Warning" %}
 
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+We will soon discontinue the support of DevVM. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
 
 {% endinfo_block %}
 

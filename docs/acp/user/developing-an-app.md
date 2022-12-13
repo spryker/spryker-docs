@@ -9,7 +9,7 @@ To develop an app, follow the instructions in this document.
 ## Prerequisites
 
 - You have completed the [thought process](#thought-process) for your app.
-- You have [installed the Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html#installation).
+- You have [installed the Spryker SDK](/docs/sdk/dev/spryker-sdk.html#installation).
 - You have an empty GitHub repository.
 - You have a local project directory where you want to work, for example, `/www/my-app`.
  
@@ -37,7 +37,7 @@ You can use the following tools to design your APIs:
 - [Async API Studio](https://studio.asyncapi.com/)
 - [Swagger Editor](https://editor.swagger.io/)
 
-You can also use wizards provided by Spryker, which will be used by the [SprykerSDK workflow](https://github.com/spryker-sdk/sdk/blob/master/docs/workflow.md).
+You can also use wizards provided by Spryker, which will be used by the [SprykerSDK workflow](/docs/sdk/dev/initialize-and-run-workflows.html).
 
 ## Build an app
 

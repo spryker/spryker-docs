@@ -85,8 +85,8 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
 |  price_type | mandatory | string | DEFAULT |  |
 |  store | mandatory | string | DE | Store in which the specific product has that specific price |
 |  currency | mandatory | string | EUR | The currency in which the specific product has that specific price |
-|  value_net | mandatory | integer | 10200 | The net (after tax) price in cents |
-|  value_gross | mandatory | integer | 12000 | The gross (before tax) price in cents |
+|  value_net | mandatory | integer | 10200 | The net (before tax) price in cents |
+|  value_gross | mandatory | integer | 12000 | The gross (after tax) price in cents |
 |  price_data.volume_prices | optional | json string |  `"[{""quantity"":5,""net_price"":150,""gross_price"":165}]"` | A json description of the prices when the quantity changes (volume based pricing). In the example given, the product bought, when it has a quantity of less than 5, it uses the normal price, but uses this Volume Price when the quantity is greater than 5 |
 
 Register the following plugin to enable data import:

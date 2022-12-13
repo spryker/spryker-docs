@@ -1,6 +1,6 @@
 ---
 title: Performance audit tool- Benchmark
-description: The Benchmark tool allows you to assess an application\'s performance by seeing how long it takes to load a page and how much memory the application consumes during requests.
+description: The Benchmark tool allows you to assess an application's performance by seeing how long it takes to load a page and how much memory the application consumes during requests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-audit-tool-benchmark
@@ -93,9 +93,9 @@ To have the same code on production and development environments, we recommend a
 
 {% endinfo_block %}
 
-4. Create test folders, so there is a different folder per each application: `tests/Benchmark(Yves|Glue|Zed)`.
+4. Create test folders, so there is a different folder for each application: `tests/Benchmark(Yves|Glue|Zed)`.
 
-5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file (e.g., `public/Zed/index.php`). The Benchmark tool has default bootstrap files out-of-the-box, but it’s recommended to add one on the project level, as shown below.
+5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file (e.g. `public/Zed/index.php`). The Benchmark tool has default bootstrap files out-of-the-box, but it’s recommended to add one on the project level, as shown below.
 
 **tests\Benchmark\bootstrap.php**
 
@@ -124,7 +124,7 @@ That’s it. You now have the Benchmark tool installed.
 
 ## Running the tests
 
-To run the tests, execute the following command:
+To run the Benchmark's tests, execute the following command:
 
 ```bash
 vendor/bin/console benchmark:run
@@ -150,12 +150,12 @@ Before you start writing the tests, check out the [PHPBench documentation](https
 
 You can write tests without any additional knowledge, but Benchmark has some default helpers that can make writing benchmarks easier for Spryker:
 
-* **RequestBuilder** - helps you to build the `Request` object
-* **HttpHelper** - sends a request
-* **LoginHelper** - allows you to log in with some credentials during or before the benchmark
-* **FormCsrfTokenHelper** - allows you to get valid CSRF token if you want to submit some form on the page
+* **RequestBuilder**—helps you to build the `Request` object.
+* **HttpHelper**—sends a request.
+* **LoginHelper**—lets you log in with some credentials during or before the benchmark.
+* **FormCsrfTokenHelper**—lets you get a valid CSRF token if you want to submit a form on the page.
 
-To use these helpers, there are some respective factory classes:
+To use these helpers, there are several respective factory classes:
 
 * `RequestBuilderFactory`
 * `HttpHelperFactory`

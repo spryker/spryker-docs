@@ -189,7 +189,7 @@ sudo gem install docker-sync
 
     a. Open the **Docker for Windows** settings and select **Expose daemon on tcp://localhost:2375 without TLS**.
     b. Run the following command in your WSL shell:
-    
+
     ```bash
     echo "export DOCKER_HOST=tcp://127.0.0.1:2375" >> ~/.bashrc
     ```
@@ -283,4 +283,3 @@ If you've already selected an installation mode, follow one of the guides below:
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html)

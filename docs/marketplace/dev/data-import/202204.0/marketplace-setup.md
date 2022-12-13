@@ -9,7 +9,7 @@ The Marketplace setup category contains data required to set up the Marketplace 
 
 The following table provides details about Marketplace setup data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
-| DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
+| DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILES | DEPENDENCIES |
 |-|-|-|-|-|
 | Merchants | Imports basic merchant information. | `data:import merchant` | [merchant.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html) | [merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html)  |
 | Merchant profile | Imports merchant profile information. | `data:import merchant-profile`  | [merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) | [merchant.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html) |

@@ -46,8 +46,8 @@ The order of the implementation steps does not matter; however, ensure to comple
 
 {% endinfo_block %}
 
-* [Implement invoice payment in frontend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html)
-* [Integrate invoice payment into checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html)
-* [Implement invoice payment  in backend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html)
-* [Implement invoice payment in shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html)
-* [Test the invoice payment implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html)
+1. [Implement invoice payment in frontend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html).
+2. [Integrate invoice payment into checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html).
+3. [Implement invoice payment in backend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html).
+4. [Implement invoice payment in shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html).
+5. [Test the invoice payment implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html).

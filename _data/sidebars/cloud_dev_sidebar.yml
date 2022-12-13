@@ -71,8 +71,8 @@ entries:
             url: /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-bitbucket-pipelines.html
       - title: Configuring data import from an S3 bucket
         url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
-      - title: Enable and disable maintenance mode
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/enable-and-disable-maintenance-mode.html
+#      - title: Enable and disable maintenance mode
+#        url: /docs/cloud/dev/spryker-cloud-commerce-os/enable-and-disable-maintenance-mode.html
       - title: Create and restore databse backups
         url: /docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html
       - title: Managing parameters in the Parameter Store

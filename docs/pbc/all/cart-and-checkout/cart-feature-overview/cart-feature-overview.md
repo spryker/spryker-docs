@@ -19,7 +19,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/cart-feature-walkthrough/cart-feature-walkthrough.html    
 ---
 
-The *Cart* feature lets your customers add products to their cart by selecting the needed quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.
+The *Cart* feature lets your customers add products to their cart by selecting the preferred quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.
 
 Any changes the customer makes within the cart trigger an automatic sum-recalculation that is immediately applied to the total in the sum. Predefined taxes are applied and shown automatically. Additionally, logged-in customers can see and edit their cart from any device.  
 

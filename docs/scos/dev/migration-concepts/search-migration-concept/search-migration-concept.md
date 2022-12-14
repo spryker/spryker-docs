@@ -179,7 +179,7 @@ To migrate from Elasticsearch 5.x to Elasticsearch 7.x:
 
 1. Follow the guidelines in this Search migration concept from the very beginning, to make your project code is Elasticsearch 6 compatible.
 2. After that, follow the [guidelines for migrating from Elasticsearch 6.x to Elasticsearch 7.x](#Elasticsearch7) described above.
-3. 
+3.
 {% info_block warningBox "your title goes here" %}
 
 To perform the upgrade without shutting down the cluster, you have to do a rolling upgrade as described in the [Elasticserach rolling upgrades documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/rolling-upgrades.html).
@@ -194,7 +194,7 @@ The Search migration effort implies an upgrade of the following modules:
 
 * [Search](/docs/scos/dev/module-migration-guides/migration-guide-search.html#upgrading-from-version-89-to-version-810)
 * [Console](/docs/scos/dev/module-migration-guides/migration-guide-console.html)
-* [CmsPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html#upgrading-from-version-21-to-version-22)
+* [CmsPageSearch](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html#upgrading-from-version-21-to-version-22)
 * [Catalog](/docs/scos/dev/module-migration-guides/migration-guide-catalog.html#upgrading-from-version-55-to-version-56)
 * [ProductPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html#upgrading-from-version-311-to-version-312)
 * [ProductReviewSearch](/docs/scos/dev/module-migration-guides/migration-guide-productreviewsearch.html#upgrading-from-version-13-to-version-14)

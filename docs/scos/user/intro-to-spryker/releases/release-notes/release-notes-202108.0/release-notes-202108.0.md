@@ -174,7 +174,7 @@ If you use content banners and content product abstracts for your CMS page repre
 
 #### Documentation
 
-[Retrieving CMS pages](/docs/scos/dev/glue-api-guides/202108.0/retrieving-cms-pages.html)
+[Retrieve CMS pages](/docs/scos/dev/glue-api-guides/202108.0/retrieving-cms-pages.html)
 
 ### Agent Assist APIs
 

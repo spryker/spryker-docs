@@ -10,10 +10,5 @@ redirect_from:
   - /2021080/docs/en/product-bundles-return-management-feature-integration
   - /docs/product-bundles-return-management-feature-integration
   - /docs/en/product-bundles-return-management-feature-integration
-related:
-  - title: Product Bundles feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
-  - title: Return Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-product-bundles-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-bundles-return-management-feature.md -->

@@ -10,7 +10,7 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
 * [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html)
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)
-* [Retrieve a CMS page](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)
+* [Retrieve a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/manage-using-glue-api/retrieve-cms-pages.html)
 * [Retrieve a merchant](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#retrieve-a-merchant)
 
 In your development, the endpoints can help you to:
@@ -36,7 +36,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 | PATH PARAMETER  | DESCRIPTION |
 | --------------- | ---------------- |
-| {% raw %}***{{SEF URL}}***{% endraw %} | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)</li><li>[retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)</li><li>[retrieving CMS pages](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)</li><li>[retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)</li></ul>|
+| {% raw %}***{{SEF URL}}***{% endraw %} | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)</li><li>[retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)</li><li>[Retrieve CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/manage-using-glue-api/retrieve-cms-pages.html)</li><li>[retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)</li></ul>|
 
 ### Request
 

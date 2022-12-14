@@ -133,7 +133,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker-shop/product-detail-page | 2.0.0 | [Migration Guide - ProductDetailPage](/docs/scos/dev/module-migration-guides/migration-guide-productdetailpage.html) |
 | spryker-shop/product-measurement-unit-widget | 0.7.0 | [Migration Guide - ProductMeasurementUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunitwidget.html) |
 | spryker-shop/product-packaging-unit-widget | 0.3.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html) |
-| spryker-shop/product-search-widget | 2.0.0 | [Migration Guide - ProductSearchWidget](/docs/scos/dev/module-migration-guides/migration-guide-productsearchwidget.html) |
+| spryker-shop/product-search-widget | 2.0.0 | [Migration Guide - ProductSearchWidget](/docs/pbc/all/product-information-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html) |
 | spryker-shop/quick-order-page | 3.0.0 | [Migration Guide - QuickOrderPage](/docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html) |
 | spryker-shop/shopping-list-page | 0.7.0 | [Migration Guide - ShoppingListPage](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html) |
 | spryker-shop/shopping-list-widget | 0.5.0 | [Migration Guide - ShoppingListWidget](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html) |

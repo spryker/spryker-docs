@@ -71,7 +71,7 @@ We continue to add support for new Storefront APIs.
 
 Spryker Glue API will update the total order price after a delivery method is selected or changed in the checkout flow.
 
-It will allow your customers to always see the accurate price they must pay for the entire order. As a benefit, you will have fewer abandoned carts and improve your conversion rate.
+It will let your customers always see the accurate price they must pay for the entire order. As a benefit, you will have fewer abandoned carts and improve your conversion rate.
 
 **Labels**: improvement
 

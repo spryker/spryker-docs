@@ -16,7 +16,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ## Add items to a guest cart
 
-To add items to a guest cart, send the request:
+To add items to a guest cart, send the following request:
 
 ***
 `POST` **/guest-cart-items**
@@ -24,14 +24,14 @@ To add items to a guest cart, send the request:
 
 {% info_block infoBox "Creating a guest cart" %}
 
-* If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
+* If a guest cart does not exist for the current user, and you send a request to add items, a guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
 * Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
 
 `POST` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*/guest-cart-items**
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | The unique ID of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 
@@ -39,7 +39,7 @@ To add items to a guest cart, send the request:
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | A guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| idPromotionalItem | String |  | Promotional item ID. You need to specify the ID to apply the promotion benefits. |
+| idPromotionalItem | String |  | The ID of the Promotional item. You need to specify the ID to apply the promotion benefits. |
 
 
 

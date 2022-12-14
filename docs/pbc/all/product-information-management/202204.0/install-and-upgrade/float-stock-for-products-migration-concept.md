@@ -115,7 +115,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/product-option-cart-connector | 6.0.0 | [Migration Guide - ProductOptionCartConnector](/docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html) |
 | spryker/product-packaging-unit | 2.0.0 | [Migration Guide - ProductPackagingUnit](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html) |
 | spryker/product-packaging-unit-storage | 3.0.0 | [Migration Guide - ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html) |
-| spryker/product-quantity | 2.0.0 | [Migration Guide - ProductQuantity](/docs/scos/dev/module-migration-guides/migration-guide-productquantity.html) |
+| spryker/product-quantity | 2.0.0 | [Migration Guide - ProductQuantity](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productquantity-module.html) |
 | spryker/product-quantity-data-import | 2.0.0 | [Migration Guide - ProductQuantityDataImport](/docs/scos/dev/module-migration-guides/migration-guide-productquantitydataimport.html) |
 | spryker/product-quantity-storage | 2.0.0 | [Migration Guide - ProductQuantityStorage](/docs/scos/dev/module-migration-guides/migration-guide-productquantitystorage.html) |
 | spryker/quick-order | 2.0.0 | [Migration Guide - QuickOrder](/docs/scos/dev/module-migration-guides/migration-guide-quickorder.html) |
@@ -132,7 +132,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker-shop/discount-promotion-widget | 2.0.0 | [Migration Guide - DiscountPromotionWidget](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html) |
 | spryker-shop/product-detail-page | 2.0.0 | [Migration Guide - ProductDetailPage](/docs/scos/dev/module-migration-guides/migration-guide-productdetailpage.html) |
 | spryker-shop/product-measurement-unit-widget | 0.7.0 | [Migration Guide - ProductMeasurementUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunitwidget.html) |
-| spryker-shop/product-packaging-unit-widget | 0.3.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html) |
+| spryker-shop/product-packaging-unit-widget | 0.3.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html) |
 | spryker-shop/product-search-widget | 2.0.0 | [Migration Guide - ProductSearchWidget](/docs/pbc/all/product-information-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html) |
 | spryker-shop/quick-order-page | 3.0.0 | [Migration Guide - QuickOrderPage](/docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html) |
 | spryker-shop/shopping-list-page | 0.7.0 | [Migration Guide - ShoppingListPage](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html) |

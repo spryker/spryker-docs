@@ -196,7 +196,7 @@ The Search migration effort implies an upgrade of the following modules:
 * [Console](/docs/scos/dev/module-migration-guides/migration-guide-console.html)
 * [CmsPageSearch](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html#upgrading-from-version-21-to-version-22)
 * [Catalog](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html#upgrading-from-version-55-to-version-56)
-* [ProductPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html#upgrading-from-version-311-to-version-312)
+* [ProductPageSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)
 * [ProductReviewSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html#upgrading-from-version-13-to-version-14)
 * [ProductLabelSearch](/docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html#upgrading-from-version-12-to-version-13)
 * [ProductSetPageSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html#upgrading-from-version-13-to-version-14)

@@ -9,7 +9,11 @@ The Spryker Commerce OS is an end-to-end solution for digital commerce. This doc
 
 For information about installing the Spryker Commerce OS, see [Getting started guide](https://documentation.spryker.com/docs/dev-getting-started).
 
-## Configurable Products
+## Spryker Commerce OS
+
+This section describes the new features released for Spryker Commerce OS.
+
+### Configurable Products
 
 Spryker has recently extended the range of functionalities for Configurable Products. Customers can now save configurable products in their shopping list and wishlist, where they can also finalize or change the configuration of these products.
 
@@ -21,15 +25,16 @@ Customers can access a standalone configurator page and choose from various avai
 
 Configured Products can be saved, accessed, and configured again in Carts or from a product details page. Customers can also easily reorder past purchases. Configurable Products can also be part of a [Request For Quote (RFQ)](/docs/pbc/all/request-for-quote/request-for-quote.html)—Spryker's powerful Quotation and Management feature can overwrite all automatically calculated prices from the Configurable Product tool.
 
-**Business Benefit**: Configurable Products maximize customer satisfaction through product personalization and by providing a robust customer self-service experience. This also adds value to your business by reducing the lead times Sales teams would have previously dedicated to finalizing product configurations with customers.
+**Business benefit**: Configurable Products maximize customer satisfaction through product personalization and by providing a robust customer self-service experience. This also adds value to your business by reducing the lead times Sales teams would have previously dedicated to finalizing product configurations with customers.
 
 **Labels**: feature
 
-Learn more: [Configurable Product feature overview](/docs/scos/user/features/202204.0/configurable-product-feature-overview.html)
+#### Documentation
 
-**Technical Prerequisites**: [Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/202212.0/product-configuration-feature-integration.html)
+* **Technical prerequisites**: [Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/202212.0/product-configuration-feature-integration.html)
+* [Configurable Product feature overview](/docs/scos/user/features/202204.0/configurable-product-feature-overview.html)
 
-## Localization improvements
+### Localization improvements
 
 Adapting your offerings to your customers' needs and customs is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we improved the number formatting in this release for any locale. Based on the locale and browser language setting, your customers in the Storefront and your company users in the Back Office are shown the number format they expect to see. Look at the following example with a product price:
 
@@ -40,21 +45,42 @@ Adapting your offerings to your customers' needs and customs is crucial for prov
 
 **Labels**: improvement
 
-## Number formatting in Storefront
-
-https://spryker.atlassian.net/browse/CC-13275
+### Number formatting in the Storefront
 
 Allowing for an effortless shopping experience, the localized number formatting is available throughout the Storefront for any user locale. Whether it is a catalog, product details page, cart, checkout, or customer account, your customers and guests can now enjoy their known number format avoiding any confusion about pricing or quantities.
+
+#### Documentation
 
 **Technical Prerequisites**: [HowTo: Add support for number formatting in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
 
 
-## Number formatting in Back Office
-
-https://spryker.atlassian.net/browse/CC-13273 
+## Number formatting in the Back Office
 
 Efficiency and accuracy are essential when working in the Back Office. Letting you increase the efficiency of your company users in any locale, locale-based number formats are available in all relevant places throughout the Back Office. Whether it's prices, quantities, or stocks: Your company users can stay focused on their tasks while enjoying the number format they are familiar with.
 
-**Technical Prerequisites:** [HowTo: Add support of number formatting in the Back Office](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
+### Documentation
+
+**Technical prerequisites:** [HowTo: Add support of number formatting in the Back Office](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
 
  
+## Spryker Glue API
+
+We continue to add support for new Storefront APIs.
+
+### Update cart totals based on delivery method
+
+Spryker Glue API will update the total order price after a delivery method is selected or changed in the checkout flow.
+
+It will allow your customers to always see the accurate price they must pay for the entire order. As a benefit, you will have fewer abandoned carts and improve your conversion rate.
+
+**Labels**: improvement
+
+#### Documentation
+
+**Technical Prerequisites:**
+
+* [Install the Cart Glue API](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+* [Install the Checkout Glue API](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+* [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-product-configuration-feature-integration.html)
+* [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/202212.0/install-and-upgrade/integrate-the-shipment-glue-api.html)
+

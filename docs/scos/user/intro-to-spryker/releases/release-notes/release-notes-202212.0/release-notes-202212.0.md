@@ -1,8 +1,8 @@
 ---
 title: Release notes 202212.0
+description: Release notes for the Spryker SCOS release 202212.0
 last_updated: Dec 14, 2022
 template: concept-topic-template
-description: Release notes for the Spryker SCOS release 202212.0
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
@@ -13,7 +13,7 @@ For information about installing the Spryker Commerce OS, see [Getting started g
 
 Spryker has recently extended the range of functionalities for Configurable Products. Customers can now save configurable products in their shopping list and wishlist, where they can also finalize or change the configuration of these products.
 
-Configurable Products are useful for items with a range of customizable options. For example, when buying a t-shirt from your online store, customers can choose the size, material, and color, or even add their name or logo to the product. If you are selling services, Configurable Products let customers select a preferred time and date for the delivery of that service.
+Configurable Products are useful for items with a range of customizable options. For example, when buying a t-shirt from your online store, customers can choose the size, material, and color or even add their name or logo to the product. If you are selling services, Configurable Products let customers select a preferred time and date for the delivery of that service.
 
 Customers can access a standalone configurator page and choose from various available product options based on their preferences. Depending on the configuration choices, the product price is adjusted accordingly.
 
@@ -31,9 +31,9 @@ Learn more: [Configurable Product feature overview](/docs/scos/user/features/202
 
 ## Localization improvements
 
-Adapting your offerings to your customers’ needs and customs is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we improved the number formatting in this release for any locale. Based on the locale and browser language setting, your customers in the Storefront and your company users in the Back Office are shown the number format they expect to see. Look at the following example with a product price:
+Adapting your offerings to your customers' needs and customs is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we improved the number formatting in this release for any locale. Based on the locale and browser language setting, your customers in the Storefront and your company users in the Back Office are shown the number format they expect to see. Look at the following example with a product price:
 
-| LOCALE | EXAMPLE |
+| LOCALE | PRODUCT PRICE |
 |---|---|
 | de_DE | 123.456,78 |
 | en_US | 123,456.78 |
@@ -44,7 +44,7 @@ Adapting your offerings to your customers’ needs and customs is crucial for pr
 
 https://spryker.atlassian.net/browse/CC-13275
 
-Allowing for an effortless shopping experience, the localized number formatting is available throughout the Storefront for any user locale. Whether it is catalog, product details page, cart, checkout, or customer account, your customers and guests can now enjoy their known number format avoiding any confusion about pricing or quantities.
+Allowing for an effortless shopping experience, the localized number formatting is available throughout the Storefront for any user locale. Whether it is a catalog, product details page, cart, checkout, or customer account, your customers and guests can now enjoy their known number format avoiding any confusion about pricing or quantities.
 
 **Technical Prerequisites**: [HowTo: Add support for number formatting in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
 

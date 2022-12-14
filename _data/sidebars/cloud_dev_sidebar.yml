@@ -131,3 +131,5 @@ entries:
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-yves-or-zed-not-restarting-after-deployment.html
       - title: Release notes
         url: /docs/cloud/dev/spryker-cloud-commerce-os/release-notes.html
+      - title: Spryker Cloud Commerce OS management
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/spryker-cloud-commerce-os-management.html

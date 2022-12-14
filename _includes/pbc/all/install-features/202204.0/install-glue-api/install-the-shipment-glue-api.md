@@ -1,39 +1,43 @@
 
 
-This document describes how to integrate the Shipment feature API into a Spryker project.
 
-## Prerequisites
+This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{site.version}}/carrier-management.html) feature API into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Shipment feature core.
+
+### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
 | FEATURE | VERSION | INTEGRATION GUIDE  |
 | ----------------- | ------ | ------------------- |
 | Glue API: Spryker Core     | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Shipment                  | {{site.version}}  | [Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html) |
+| Shipment                  | {{site.version}}  | [Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html) |
 | Glue API: Checkout         | {{site.version}}  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 | Glue API: Glue Application      | {{site.version}}  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Glue API: Order Management | {{site.version}}  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html) |
 
-## 1) Install the required modules using Composer
+### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/shipments-rest-api:"1.4.0" --update-with-dependencies
+composer require spryker/shipments-rest-api:"1.6.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| MODULE         | EXPECTED DIRECTORY            |
-| -------------- | ----------------------------- |
+| MODULE           | EXPECTED DIRECTORY                |
+|------------------|-----------------------------------|
 | ShipmentsRestApi | vendor/spryker/shipments-rest-api |
 
 {% endinfo_block %}
 
-
-## 2) Set up transfer objects
+### 2) Set up transfer objects
 
 Generate transfer changes:
 
@@ -45,52 +49,53 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER    | TYPE     | EVENT   | PATH     |
-| ----------------- | ------ | ----- | -------------------------- |
-| RestCheckoutDataTransfer                   | class    | created | src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php   |
-| RestCheckoutRequestAttributesTransfer      | class    | created | src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer.php |
-| RestShipmentTransfer                       | class    | created | src/Generated/Shared/Transfer/RestShipmentTransfer.php       |
+| TRANSFER                                   | TYPE     | EVENT   | PATH                                                                         |
+|--------------------------------------------|----------|---------|------------------------------------------------------------------------------|
+| RestCheckoutDataTransfer                   | class    | created | src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php                   |
+| RestCheckoutRequestAttributesTransfer      | class    | created | src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer.php      |
+| RestShipmentTransfer                       | class    | created | src/Generated/Shared/Transfer/RestShipmentTransfer.php                       |
 | RestCheckoutDataResponseAttributesTransfer | class    | created | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php |
-| RestShipmentMethodTransfer                 | class    | created | src/Generated/Shared/Transfer/RestShipmentMethodTransfer.php |
-| CheckoutResponseTransfer                   | class    | created | src/Generated/Shared/Transfer/CheckoutResponseTransfer.php   |
-| CheckoutErrorTransfer                      | class    | created | src/Generated/Shared/Transfer/CheckoutErrorTransfer.php      |
-| AddressTransfer                            | class    | created | src/Generated/Shared/Transfer/AddressTransfer.php            |
-| ShipmentMethodTransfer                     | class    | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer.php     |
-| ShipmentMethodsTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentMethodsTransfer.php    |
-| QuoteTransfer                              | class    | created | src/Generated/Shared/Transfer/QuoteTransfer.php              |
-| StoreTransfer                              | class    | created | src/Generated/Shared/Transfer/StoreTransfer.php              |
-| MoneyValueTransfer                         | class    | created | src/Generated/Shared/Transfer/MoneyValueTransfer.php         |
-| CurrencyTransfer                           | class    | created | src/Generated/Shared/Transfer/CurrencyTransfer.php           |
-| ShipmentTransfer                           | class    | created | src/Generated/Shared/Transfer/ShipmentTransfer.php           |
-| CheckoutDataTransfer                       | class    | created | src/Generated/Shared/Transfer/CheckoutDataTransfer.php       |
-| ExpenseTransfer                            | class    | created | src/Generated/Shared/Transfer/ExpenseTransfer.php            |
-| ItemTransfer                               | class    | created | src/Generated/Shared/Transfer/ItemTransfer.php               |
-| RestShipmentMethodsAttributesTransfer      | class    | created | src/Generated/Shared/Transfer/RestShipmentMethodsAttributesTransfer.php |
-| RestShipmentsAttributesTransfer            | class    | created | src/Generated/Shared/Transfer/RestShipmentsAttributesTransfer.php |
-| RestShipmentsTransfer                      | class    | created | src/Generated/Shared/Transfer/RestShipmentsTransfer.php      |
-| RestAddressTransfer                        | class    | created | src/Generated/Shared/Transfer/RestAddressTransfer.php        |
-| CountryTransfer                            | class    | created | src/Generated/Shared/Transfer/CountryTransfer.php            |
-| RestErrorCollectionTransfer                | class    | created | src/Generated/Shared/Transfer/RestErrorCollectionTransfer.php |
-| RestErrorMessageTransfer                   | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer.php   |
-| ShipmentGroupTransfer                      | class    | created | src/Generated/Shared/Transfer/ShipmentGroupTransfer.php      |
-| ShipmentMethodsCollectionTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentMethodsCollectionTransfer.php |
-| RestOrderShipmentsAttributesTransfer       | class    | created | src/Generated/Shared/Transfer/RestOrderShipmentsAttributesTransfer.php |
-| RestOrderAddressTransfer                   | class    | created | src/Generated/Shared/Transfer/RestOrderAddressTransfer.php   |
-| OrderTransfer                              | class    | created | src/Generated/Shared/Transfer/OrderTransfer.php              |
-| RestOrderDetailsAttributesTransfer         | class    | created | src/Generated/Shared/Transfer/RestOrderDetailsAttributesTransfer.php |
-| RestOrderItemsAttributesTransfer           | class    | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer.php |
-| ShipmentCarrierTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentCarrierTransfer.php    |
-| RestOrderExpensesAttributesTransfer        | class    | created | src/Generated/Shared/Transfer/RestOrderExpensesAttributesTransfer.php |
-| GiftCardMetadataTransfer                   | class    | created | src/Generated/Shared/Transfer/GiftCardMetadataTransfer.php   |
-| QuoteTransfer.bundleItems                  | property | added   | src/Generated/Shared/Transfer/QuoteTransfer.php              |
-| ShipmentMethodTransfer.name                | property | added   | src/Generated/Shared/Transfer/ShipmentMethodTransfer.php     |
-| ExpenseTransfer.idSalesExpense             | property | added   | src/Generated/Shared/Transfer/ExpenseTransfer.php            |
-| CheckoutErrorTransfer.parameters           | property | added   | src/Generated/Shared/Transfer/CheckoutErrorTransfer.php      |
-| ShipmentMethodsTransfer.shipmentHash       | property | added   | src/Generated/Shared/Transfer/ShipmentMethodsTransfer.php    |
+| RestShipmentMethodTransfer                 | class    | created | src/Generated/Shared/Transfer/RestShipmentMethodTransfer.php                 |
+| CheckoutResponseTransfer                   | class    | created | src/Generated/Shared/Transfer/CheckoutResponseTransfer.php                   |
+| CheckoutErrorTransfer                      | class    | created | src/Generated/Shared/Transfer/CheckoutErrorTransfer.php                      |
+| AddressTransfer                            | class    | created | src/Generated/Shared/Transfer/AddressTransfer.php                            |
+| ShipmentMethodTransfer                     | class    | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer.php                     |
+| ShipmentMethodsTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentMethodsTransfer.php                    |
+| QuoteTransfer                              | class    | created | src/Generated/Shared/Transfer/QuoteTransfer.php                              |
+| StoreTransfer                              | class    | created | src/Generated/Shared/Transfer/StoreTransfer.php                              |
+| MoneyValueTransfer                         | class    | created | src/Generated/Shared/Transfer/MoneyValueTransfer.php                         |
+| CurrencyTransfer                           | class    | created | src/Generated/Shared/Transfer/CurrencyTransfer.php                           |
+| ShipmentTransfer                           | class    | created | src/Generated/Shared/Transfer/ShipmentTransfer.php                           |
+| CheckoutDataTransfer                       | class    | created | src/Generated/Shared/Transfer/CheckoutDataTransfer.php                       |
+| ExpenseTransfer                            | class    | created | src/Generated/Shared/Transfer/ExpenseTransfer.php                            |
+| ItemTransfer                               | class    | created | src/Generated/Shared/Transfer/ItemTransfer.php                               |
+| RestShipmentMethodsAttributesTransfer      | class    | created | src/Generated/Shared/Transfer/RestShipmentMethodsAttributesTransfer.php      |
+| RestShipmentsAttributesTransfer            | class    | created | src/Generated/Shared/Transfer/RestShipmentsAttributesTransfer.php            |
+| RestShipmentsTransfer                      | class    | created | src/Generated/Shared/Transfer/RestShipmentsTransfer.php                      |
+| RestAddressTransfer                        | class    | created | src/Generated/Shared/Transfer/RestAddressTransfer.php                        |
+| RestCartsTotalsTransfer                    | class    | created | src/Generated/Shared/Transfer/RestCartsTotalsTransfer.php                    |
+| CountryTransfer                            | class    | created | src/Generated/Shared/Transfer/CountryTransfer.php                            |
+| RestErrorCollectionTransfer                | class    | created | src/Generated/Shared/Transfer/RestErrorCollectionTransfer.php                |
+| RestErrorMessageTransfer                   | class    | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer.php                   |
+| ShipmentGroupTransfer                      | class    | created | src/Generated/Shared/Transfer/ShipmentGroupTransfer.php                      |
+| ShipmentMethodsCollectionTransfer          | class    | created | src/Generated/Shared/Transfer/ShipmentMethodsCollectionTransfer.php          |
+| RestOrderShipmentsAttributesTransfer       | class    | created | src/Generated/Shared/Transfer/RestOrderShipmentsAttributesTransfer.php       |
+| RestOrderAddressTransfer                   | class    | created | src/Generated/Shared/Transfer/RestOrderAddressTransfer.php                   |
+| OrderTransfer                              | class    | created | src/Generated/Shared/Transfer/OrderTransfer.php                              |
+| RestOrderDetailsAttributesTransfer         | class    | created | src/Generated/Shared/Transfer/RestOrderDetailsAttributesTransfer.php         |
+| RestOrderItemsAttributesTransfer           | class    | created | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer.php           |
+| ShipmentCarrierTransfer                    | class    | created | src/Generated/Shared/Transfer/ShipmentCarrierTransfer.php                    |
+| RestOrderExpensesAttributesTransfer        | class    | created | src/Generated/Shared/Transfer/RestOrderExpensesAttributesTransfer.php        |
+| GiftCardMetadataTransfer                   | class    | created | src/Generated/Shared/Transfer/GiftCardMetadataTransfer.php                   |
+| QuoteTransfer.bundleItems                  | property | added   | src/Generated/Shared/Transfer/QuoteTransfer.php                              |
+| ShipmentMethodTransfer.name                | property | added   | src/Generated/Shared/Transfer/ShipmentMethodTransfer.php                     |
+| ExpenseTransfer.idSalesExpense             | property | added   | src/Generated/Shared/Transfer/ExpenseTransfer.php                            |
+| CheckoutErrorTransfer.parameters           | property | added   | src/Generated/Shared/Transfer/CheckoutErrorTransfer.php                      |
+| ShipmentMethodsTransfer.shipmentHash       | property | added   | src/Generated/Shared/Transfer/ShipmentMethodsTransfer.php                    |
 
 {% endinfo_block %}
 
-## 3) Add translations
+### 3) Add translations
 
 Add translations as follows:
 
@@ -109,29 +114,27 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
-
-## 4) Set up behavior
+### 4) Set up behavior
 
 Set up the following behaviors.
 
-### Enable resources and relationships
+#### Enable resources and relationships
 
-Activate the following plugin(s):
+Activate the following plugins:
 
-
-| PLUGIN  | SPECIFICATION   | PREREQUISITES | NAMESPACE        |
-|--------- | -------------------- | ---------- | -------------- |
+| PLUGIN                                                  | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                            |
+|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------|
 | ShipmentMethodsByCheckoutDataResourceRelationshipPlugin | If `RestCheckoutDataTransfer` is provided as payload, adds the `shipment-methods` resource as relationship. |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
-| OrderShipmentByOrderResourceRelationshipPlugin          | If `OrderTransfer` is provided as a payload, adds the `order-shipments` resource as a relationship . |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
-| ShipmentMethodsByShipmentResourceRelationshipPlugin     | If`ShipmentGroupTransfer` is provided as payload, adds the `shipment-methods` resource as relationship. |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
-| ShipmentsByCheckoutDataResourceRelationshipPlugin       | Adds `shipments` resource as relationship if `RestCheckoutDataTransfer` is provided as payload. |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
+| OrderShipmentByOrderResourceRelationshipPlugin          | If `OrderTransfer` is provided as a payload, adds the `order-shipments` resource as a relationship .        |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
+| ShipmentMethodsByShipmentResourceRelationshipPlugin     | If`ShipmentGroupTransfer` is provided as payload, adds the `shipment-methods` resource as relationship.     |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
+| ShipmentsByCheckoutDataResourceRelationshipPlugin       | Adds `shipments` resource as relationship if `RestCheckoutDataTransfer` is provided as payload.             |               | Spryker\Glue\ShipmentsRestApi\Plugin\GlueApplication |
 
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
@@ -186,15 +189,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% endinfo_block %}
 
-
-###  Configure mapping
+#### Configure mapping
 
 To map the data from requests to `QuoteTransfer`, configure the following mappers on the project level:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
-| ---------------------- | ---------------------- |---------- | ------------------------- |
-| ShipmentQuoteMapperPlugin                      | Adds a mapper that maps shipment information to `QuoteTransfer`. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
-| ShipmentRestOrderDetailsAttributesMapperPlugin | Maps the shipments from `OrderTransfer` to `RestOrderDetailsAttributesTransfer`. |               | Spryker\Glue\ShipmentsRestApi\Plugin\OrdersRestApi           |
+| PLUGIN                                         | SPECIFICATION                                                                       | PREREQUISITES | NAMESPACE                                                         |
+|------------------------------------------------|-------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
+| ShipmentQuoteMapperPlugin                      | Adds a mapper that maps shipment information to `QuoteTransfer`.                    |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentRestOrderDetailsAttributesMapperPlugin | Maps the shipments from `OrderTransfer` to `RestOrderDetailsAttributesTransfer`.    |               | Spryker\Glue\ShipmentsRestApi\Plugin\OrdersRestApi                |
 | ShipmentsQuoteMapperPlugin                     | Maps the shipments from `RestCheckoutRequestAttributesTransfer` to `QuoteTransfer`. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 
 
@@ -252,9 +254,9 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-* To make sure that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the order contains the shipment method you’ve provided in the request.
-* To verify that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout?include=shipments` and check that the order contains the shipments you’ve provided in the request.
-* To verify that `ShipmentRestOrderDetailsAttributesMapperPlugin` is activated, send the `GET https://glue.mysprykershop.com/orders?include=order-shipments` request and make sure that the order contains the shipments you’ve provided in the request.
+* To make sure that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the order contains the shipment method you've provided in the request.
+* To verify that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout?include=shipments` and check that the order contains the shipments you've provided in the request.
+* To verify that `ShipmentRestOrderDetailsAttributesMapperPlugin` is activated, send the `GET https://glue.mysprykershop.com/orders?include=order-shipments` request and make sure that the order contains the shipments you've provided in the request.
 
 {% endinfo_block %}
 
@@ -262,10 +264,10 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 Activate the following plugin(s):
 
-| PLUGIN   | SPECIFICATION    | PREREQUISITES | NAMESPACE   |
-| ----------------- | ------------------------- | ---------- | -------------------- |
-| SelectedShipmentMethodCheckoutDataResponseMapperPlugin | Maps the selected shipment method data to the `checkout-data`resource attributes. |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi         |
-| ShipmentMethodCheckoutDataValidatorPlugin              | Validates shipment methods.                                  |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
+| PLUGIN                                                 | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                         |
+|--------------------------------------------------------|-----------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
+| SelectedShipmentMethodCheckoutDataResponseMapperPlugin | Maps the selected shipment method data to the `checkout-data`resource attributes. |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi              |
+| ShipmentMethodCheckoutDataValidatorPlugin              | Validates shipment methods.                                                       |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -319,7 +321,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data` request endpoint with shipment a method id and check that, in the response, the `selectedShipmentMethods` is not empty:
+To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data` request endpoint with shipment a method ID and check that, in the response, the `selectedShipmentMethods` is not empty:
 
 **Response sample**
 
@@ -350,25 +352,21 @@ To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is ac
 }
 ```
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that you get the error saying that a shipment method is not found.
 
 {% endinfo_block %}
 
-### Configure the multi-shipment method validator and expander plugins
+#### Configure the multi-shipment method validator and expander plugins
 
 Activate the following plugins:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE     |
-| ------------------- | --------------------------- | ------------ | -------------------- |
-| AddressSourceCheckoutRequestValidatorPlugin | Validates the attributes of given shipments and returns an array of errors if necessary. |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi         |
-| ShipmentDataCheckoutRequestValidatorPlugin  | Checks if `RestCheckoutRequestAttributesTransfer` provides shipment data per item or per order. |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi         |
-| ItemsCheckoutDataValidatorPlugin            | Checks if `CheckoutDataTransfer` provides shipment data per item and per bundle item. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
-| ItemsReadCheckoutDataValidatorPlugin        | Checks if `CheckoutDataTransfer` provides shipment data per item and bundle item. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
-| ShipmentCheckoutDataExpanderPlugin          | Expands `RestCheckoutDataTransfer` with available shipment methods. |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
+| PLUGIN                                      | SPECIFICATION                                                                                   | PREREQUISITES | NAMESPACE                                                         |
+|---------------------------------------------|-------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
+| AddressSourceCheckoutRequestValidatorPlugin | Validates the attributes of given shipments and returns an array of errors if necessary.        |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi              |
+| ShipmentDataCheckoutRequestValidatorPlugin  | Checks if `RestCheckoutRequestAttributesTransfer` provides shipment data per item or per order. |               | Spryker\Glue\ShipmentsRestApi\Plugin\CheckoutRestApi              |
+| ItemsCheckoutDataValidatorPlugin            | Checks if `CheckoutDataTransfer` provides shipment data per item and per bundle item.           |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
+| ItemsReadCheckoutDataValidatorPlugin        | Checks if `CheckoutDataTransfer` provides shipment data per item and bundle item.               |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentCheckoutDataExpanderPlugin          | Expands `RestCheckoutDataTransfer` with available shipment methods.                             |               | Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi |
 
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -398,7 +396,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```php
@@ -452,11 +450,10 @@ To make sure that the plugins are activated, send the `POST https://glue.myspryk
 
 {% endinfo_block %}
 
-
 ## Related features
 
 Integrate the following related features.
 
-| FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE       |
-| ------- | -------------- | ------------------------- |
-| Glue API: Checkout | ✓                                | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                               |
+|--------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Glue API: Checkout | &check;                                | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |

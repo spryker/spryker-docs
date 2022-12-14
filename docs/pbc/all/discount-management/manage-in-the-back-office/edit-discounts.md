@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/edit-discounts.html
 ---
 
-This topic describes how to edit discounts in the Back Office.
+This document describes how to edit discounts in the Back Office.
 
 ## Prerequisites
 
@@ -87,16 +87,16 @@ To download voucher codes, click **Export**.
 | --- | --- |
 | STORE RELATION | The stores in which the discount is applicable. |
 | DISCOUNT TYPE | Defines how the discount is applied: <ul><li>**Cart rule**: the discount is applied automatically to the products defined in [Edit discount calculation and the products to apply the discount to](#edit-discount-calculation-and-the-products-to-apply-the-discount-to).</li><li>**Voucher codes**: the discount applies to the products defined in [Edit discount calculation and the products to apply the discount to](#edit-discount-calculation-and-the-products-to-apply-the-discount-to) when a customer enters a voucher code generated in [Voucher discount: Generate voucher codes](#voucher-discount-generate-voucher-codes).</li></ul> |
-| NAME | Unique identifier of the discount that is displayed in the Back Office and on the Storefront. |
+| NAME | The unique ID of the discount that is displayed in the Back Office and on the Storefront. |
 | DESCRIPTION | The description is displayed only in the Back Office.  |
 | PRIORITY | Defines the order of discounts being applied. Accepts integers from `1` to `9999` with `1` being the highest priority. |
 | NON-EXCLUSIVE | Defines that this discount can be applied to a cart together with other non-exclusive discounts. |
-| EXCLUSIVE | Defines that this discount, when applied to a cart, discards all the other non-exclusive discounts. If multiple exclusive discounts are applied to a cart, only the discount with the bigger discount value is applied.   |
+| EXCLUSIVE | Defines that this discount, when applied to a cart, discards all non-exclusive discounts. If multiple exclusive discounts are applied to a cart, only the discount with the bigger discount value is applied.   |
 | VALID FROM and VALID TO | Inclusively, define the dates between which the discount can be applied.|
 
 ## Reference information: Edit discount calculation and the products to apply the discount to
 
-This section contains information for defining discount calculation and the product to apply the discount to.
+This section contains information for defining discount calculations and the product the discount applies to.
 
 ### CALCULATOR TYPE
 
@@ -131,9 +131,9 @@ You can find query examples in the following table.
 
 |PLAIN QUERY|EXPLANATION|
 |---|---|
-|day-of-week = '1'| Discount applies to the orders that are placed on Monday.|
-|shipment-carrier != '1' AND price-mode = 'GROSS_MODE'| Discount applies if the shipment carrier with the identifier `1` is not chosen and gross pricing is selected.|
-|currency != 'EUR' OR price-mode = 'GROSS_MODE'|Discount applies if the selected currency is not Euro or the pricing mode is gross.|
+|day-of-week = '1'| Discount applies to any orders that are placed on Monday.|
+|shipment-carrier != '1' AND price-mode = 'GROSS_MODE'| Discount applies if the shipment carrier with the identifier `1` is not chosen,and if gross pricing is selected.|
+|currency != 'EUR' OR price-mode = 'GROSS_MODE'|Discount applies if the selected currency is not the Euro, or if the pricing mode is gross.|
 
 
 ### DISCOUNT APPLICATION TYPE: PROMOTIONAL PRODUCT
@@ -141,18 +141,18 @@ You can find query examples in the following table.
 The promotional product lets you select a product that is to be displayed in a customer's cart with a discount. The **ABSTRACT PRODUCT SKU** defines the discounted product, and **QUANTITY** defines how many products a customer can buy with a discount.
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/Application+type.png)
 
-To give away a promotional product for free, select percentage calculator type and enter 100 percents.
+To give away a promotional product for free, select percentage calculator type and enter 100 percent.
 
 ## Reference information: Edit the conditions on which the discount can be applied
 
-Similarly do [defining discounted products](#discount-application-type-query-string), the conditions on which a discount is a applied are defined using a query string.
+Similarly do [defining discounted products](#discount-application-type-query-string), the conditions in which a discount is a applied are defined using a query string.
 
-Example: Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
+Example: The discount is applied if five or more items are in the cart, and if it is Tuesday or Wednesday.
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
 
 The **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** defines a minimum number of items that must fulfill the query for the discount to be applies. By default, the minimum order amount value is 1. It means that the discount is applied if there is one item in a cart the fulfills the query.
 
-Example: Discount is applied if 4 or more items with the Intel Core processor are in the cart.
+Example: The discount is applied if 4 or more items with an Intel Core processor are in the cart.
 ![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/threshold.png)
 
 
@@ -161,8 +161,8 @@ Example: Discount is applied if 4 or more items with the Intel Core processor ar
 
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |
-| QUANTITY | Number of vouchers to generate. |  
-| CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, for **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, by default, they are appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |  
+| QUANTITY | The number of vouchers to generate. |  
+| CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, in **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, they are by default appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |  
 | ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters will be appended to the end of it. If you are generating more than one code, you must select **3** or more. |  
 | MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. |  
 
@@ -180,16 +180,16 @@ This section contains additional information for defining decision rules.
 
 | ATTRIBUTE | VALUE TYPE | DESCRIPTION |
 |-|-|-|-|
-|calendar-week|Number| Week number in a year: 1-52. |
-|day-of-week|Number| Day of week: 1-7. |
-|grand-total| Decimal number | Sum of all totals. |
-|sub-total| Decimal number | Sum of item prices without shipment expenses and discounts. |
-|item-price| Decimal number | Price of one item. |
-|item-quantity|Number|Number of items. |
-|month|Number| Month of the year: 1-12. |
-|sku|String| SKU of a product. |
-|time| hour:minute | Time of the day. |
-|total-quantity|Number| Total cart quantity. |
+|calendar-week|Number| The number of a week in a year: 1-52. |
+|day-of-week|Number| The day of week: 1-7. |
+|grand-total| Decimal number | The sum of all totals. |
+|sub-total| Decimal number | The sum of item prices without shipment expenses and discounts. |
+|item-price| Decimal number | The price of one item. |
+|item-quantity|Number| The number of items. |
+|month|Number| The month of the year: 1-12. |
+|sku|String| The SKU of a product. |
+|time| hour:minute | The time of the day. |
+|total-quantity|Number| The total cart quantity. |
 |attribute.*|String, number| Any value. |
 |customer-group|String| Any value, use a customer group name for an exact match. |
 
@@ -199,12 +199,12 @@ This section contains additional information for defining decision rules.
 |Contains|CONTAINS|String, Number| Checks if the value is contained in the field. |
 |Doesn’t contain|DOES NOT CONTAIN|String, Number| Checks if the value is not contained in the field. |
 |Equal | = | String, Number |Checks if the value is equal to the value of the right operand|
-|Not Equal|!=|String, Number|Checks if the value is not equal to the value of the right operand|
-|In|IS IN|List|Values need to be semicolon-separated|
-|Not In|IS NOT IN|List|Values need to be semicolon-separated|
-|Less|<|Number|Checks if the value is less than the value of the right operand|
-|Less or equal|<=|Number|Checks if the value is less than or equal to the value of the right operand|
-|Greater|>|Number|Checks if the value is greater than the value of the right operand|
+|Not Equal|!=| String, Number|Checks if the value is not equal to the value of the right operand|
+|In|IS IN|List| The values need to be semicolon-separated|
+|Not In|IS NOT IN|List| The values need to be semicolon-separated|
+|Less|<|Number| Checks if the value is less than the value of the right operand|
+|Less or equal|<=|Number| Checks if the value is less than or equal to the value of the right operand|
+|Greater|>|Number| Checks if the value is greater than the value of the right operand|
 |Greater or equal|>=|Number| Checks if the value is greater than or equal to the value of the right operand |
 
 ## Next steps

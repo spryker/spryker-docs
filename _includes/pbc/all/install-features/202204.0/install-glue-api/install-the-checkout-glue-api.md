@@ -17,7 +17,7 @@ To start feature integration, overview and install the necessary features:
 | Glue API: Cart                         | {{site.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                                                             |
 | Glue API: Customer Account Management  | {{site.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Glue API: Payments                     | {{site.version}} | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-payments-feature-integration.html)                                         |
-| Glue API: Shipment                     | {{site.version}} | [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html)                                            |
+| Glue API: Shipment                     | {{site.version}} | [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-glue-api.html)                                            |
 
 ### 1) Install the required modules using Composer
 

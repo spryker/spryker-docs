@@ -29,13 +29,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoption.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoption.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoption.html
-  - /docs/scos/dev/module-migration-guides/migration-guide-productoption.html
   - /module_migration_guides/mg-product-option.htm
 related:
   - title: Migration guide - Currency
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
   - title: Migration guide - ProductOptionCartConnector
-    link: docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productoption-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productoption-module.md -->

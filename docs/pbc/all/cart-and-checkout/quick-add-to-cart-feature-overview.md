@@ -137,7 +137,7 @@ The following figure shows how to perform these actions:
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES |
 |---|---|
-| [Install the Quick Add to Cart feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-feature.html) | [Upgrade the ProductPackagingUnitStorage module](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html) |
+| [Install the Quick Add to Cart feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-feature.html) | [Upgrade the ProductPackagingUnitStorage module](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html) |
 | [Install the Quick Add to Cart + Shopping Lists feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html) | [ProductPageSearch migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html) |
 | [Install the Quick Add to Cart + Discontinued Products feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html) | [QuickOrderPage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html) |
 | [Install the Quick Add to Cart + Measurement Units feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html) |  |

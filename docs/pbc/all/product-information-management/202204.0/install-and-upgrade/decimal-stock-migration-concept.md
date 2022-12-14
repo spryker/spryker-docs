@@ -48,7 +48,7 @@ composer update "spryker/*" "spryker-shop/*"
 composer require "spryker/availability: ^9.0.0" "spryker/oms: ^11.0.0" "spryker/stock: ^8.0.0" "spryker/stock-gui: ^2.0.0" "spryker/availability-storage: ^2.0.0" "spryker/availability-gui: ^6.0.0" "spryker/availability-cart-connector: ^7.0.0" "spryker/availability-offer-connector: ^4.0.0" "spryker/cart-variant: ^2.0.0" "spryker/product-availabilities-rest-api: ^4.0.0" "spryker/product-bundle: ^7.0.0" "spryker/discount-promotion: ^4.0.0" "spryker/product-packaging-unit: ^4.0.0" "spryker/product-measurement-unit: ^5.0.0" "spryker/product-packaging-unit-data-import: ^2.0.0" "spryker/product-packaging-unit-storage: ^5.0.0" "spryker/product-management: ^0.19.0" "spryker-shop/product-packaging-unit-widget: ^0.5.0" --update-with-dependencies
 ```
 
-2. Follow the steps in the individual migration guide for [ProductPackagingUnit](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html#upgrading-from-version-3-to-version-400).
+2. Follow the steps in the individual migration guide for [ProductPackagingUnit](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html#upgrading-from-version-3-to-version-400).
 3. Update the database entity schema for each store in the system:
 
 ```bash
@@ -64,7 +64,7 @@ console propel:install
 console transfer:generate
 ```
 
-5. Follow the steps in the individual migration guide for [ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-v--version-500).
+5. Follow the steps in the individual migration guide for [ProductPackagingUnitStorage](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html#upgrading-from-version-4-to-v--version-500).
 6. Follow the steps in the individual migration guide for [Availability](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900).
 
 {% info_block errorBox %}
@@ -88,9 +88,9 @@ The following table lists the modules affected by the Decimal Stock update and w
 | `spryker/product-availabilities-rest-api` | 4.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html#upgrading-from-version-3-to-version-4) |
 | `spryker/product-bundle` | 7.0.0 | [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html#upgrading-from-version-6-to-version-700) |
 | `spryker/discount-promotion` | 4.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotion-module.html#upgrading-from-version-3-to-version-400) |
-| `spryker/product-packaging-unit` | 4.0.0 | [Migration Guide - ProductPackagingUnit](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html#upgrading-from-version-3-to-version-400) |
-| `spryker/product-measurement-unit` | 5.0.0 | [Migration Guide - ProductMeasurementUnit](/docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunit.html#upgrading-from-version-4-to-version-500) |
-| `spryker/product-packaging-unit-data-import` | 2.0.0 | [Migration Guide - ProductPackagingUnitDataImport](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitdataimport.html#upgrading-from-version-1-to-version-200) |
-| `spryker/product-packaging-unit-storage` | 5.0.0 | [Migration Guide - ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-v--version-500) |
+| `spryker/product-packaging-unit` | 4.0.0 | [Migration Guide - ProductPackagingUnit](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html#upgrading-from-version-3-to-version-400) |
+| `spryker/product-measurement-unit` | 5.0.0 | [Migration Guide - ProductMeasurementUnit](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunit-module.html#upgrading-from-version-4-to-version-500) |
+| `spryker/product-packaging-unit-data-import` | 2.0.0 | [Migration Guide - ProductPackagingUnitDataImport](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitdataimport-module.html#upgrading-from-version-1-to-version-200) |
+| `spryker/product-packaging-unit-storage` | 5.0.0 | [Migration Guide - ProductPackagingUnitStorage](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html#upgrading-from-version-4-to-v--version-500) |
 | `spryker/product-management` | 0.19.0 | [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html#upgrading-from-version-018-to-version-0190) |
 | `spryker-shop/product-packaging-unit-widget` | 0.5.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html#upgrading-from-version-04-to-version-050) |

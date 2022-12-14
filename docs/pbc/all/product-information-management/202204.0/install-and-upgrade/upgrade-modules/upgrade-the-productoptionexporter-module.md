@@ -40,7 +40,7 @@ related:
   - title: Migration guide - ProductLabelGui
     link: docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html
   - title: Migration guide - ProductOptionDiscountConnector
-    link: docs/scos/dev/module-migration-guides/migration-guide-productoptiondiscountconnector.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productoptionexporter-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productoptionexporter-module.md -->

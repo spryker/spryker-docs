@@ -66,5 +66,91 @@ Alternatively, you may add the domain to the allowlist from the `config/Shared/c
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
 ```
 
+### 3. Add markup to custom templates
+
+The Bazaarvoice PBC takes data of products from Yves pages (for example Product Detail Page).
+To get necessary data from the pages are used schemas from [Schema.org](https://schema.org/).
+By default, all the necessary markups are already added to Yves templates.
+
+To custom templates the markups required for the Bazaarvoice PBC must be added according to the tables below.
+
+#### DCC (product catalog collection)
+Core Template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
+
+| schema.org property          | Bazaarvoice property |
+|------------------------------|----------------------|
+| product.sku                  | productId            |
+| product.name                 | productName          |
+| product.description          | productDescription   |
+| product.image                | productImageURL      |
+| product.url                  | productPageURL       |
+| brand.name                   | brandId, brandName   |
+| product.category             | categoryPath         |
+| product.gtin12               | upcs                 |
+| product.inProductGroupWithID | family               |
+
+#### DCC (merchant catalog collection)
+Core Template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+
+| schema.org property        | Bazaarvoice property |
+|----------------------------|----------------------|
+| organization.identifier    | productId            |
+| organization.name          | productName          |
+| organization.logo          | productDescription   |
+
+#### Tracking Pixel
+Core Templates:
+* `SprykerShop/Yves/PaymentPage/Theme/default/views/payment-success/index.twig`
+* `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
+* `SprykerShop/Yves/MerchantWidget/Theme/default/views/merchant-meta-schema/merchant-meta-schema.twig` (only for a Marketplace)
+
+| schema.org property                        | Bazaarvoice property | Only for a Marketplace |
+|--------------------------------------------|----------------------|------------------------|
+| invoice.email                              | email                |                        |
+| invoice.priceCurrency                      | currency             |                        |
+| invoice.identifier                         | orderId              |                        |
+| invoice.total                              | price                |                        |
+| invoice.orderItem.price                    | items.price          |                        |
+| invoice.orderItem.orderQuantity            | items.quantity       |                        |
+| invoice.orderItem.sku                      | items.productId      |                        |
+| invoice.orderItem.name                     | items.name           |                        |
+| invoice.orderItem.offers.seller.name       | items.productId      | *                      |
+| invoice.orderItem.offers.seller.identifier | items.name           | *                      |
+
+#### Ratings and Reviews (Product)
+Core Templates:
+* `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
+* `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`
+* `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.twig`
+
+| schema.org property         | CLass name                |
+|-----------------------------|---------------------------|
+| product.sku                 |                           |
+| aggregateRating.ratingValue |                           |
+| aggregateRating.bestRating  |                           |
+|                             | review-summary            |
+
+#### Ratings and Reviews (Merchant)
+Core Template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+
+| schema.org property         | CLass name                |
+|-----------------------------|---------------------------|
+| aggregateRating             |                           |
+|                             | review-summary            |
+
+#### Inline Ratings
+Core Templates:
+* `SprykerShop/Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.twig`
+* `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/product-review-display/product-review-display.twig`
+* `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.twig`
+
+| schema.org property         | CLass name      |
+|-----------------------------|-----------------|
+| product.sku                 |                 |
+| aggregateRating.ratingValue |                 |
+| aggregateRating.bestRating  |                 |
+|                             | rating-selector |
+
 ## Next steps
+
 [Configure the Bazzarevoice app](/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html) for your store.

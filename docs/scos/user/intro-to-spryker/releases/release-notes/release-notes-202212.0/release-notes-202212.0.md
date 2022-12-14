@@ -69,18 +69,18 @@ We continue to add support for new Storefront APIs.
 
 ### Update cart totals based on delivery method
 
-Spryker Glue API will update the total order price after a delivery method is selected or changed in the checkout flow.
+Spryker Glue API updates the total order price after a delivery method is selected or changed in the checkout flow.
 
-It will let your customers always see the accurate price they must pay for the entire order. As a benefit, you will have fewer abandoned carts and improve your conversion rate.
+It lets your customers always see the accurate price they must pay for the entire order. As a benefit, you can have fewer abandoned carts and improve your conversion rate.
 
 **Labels**: improvement
 
 #### Documentation
 
-**Technical Prerequisites:**
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
 
-* [Install the Cart Glue API](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Install the Checkout Glue API](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
-* [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-product-configuration-feature-integration.html)
-* [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/202212.0/install-and-upgrade/integrate-the-shipment-glue-api.html)
+* **Technical Prerequisites:**
+  * [Install the Cart Glue API](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+  * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/202212.0/install-and-upgrade/integrate-the-shipment-glue-api.html)
 

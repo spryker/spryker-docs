@@ -152,5 +152,4 @@ Core Templates:
 |                             | rating-selector |
 
 ## Next steps
-
 [Configure the Bazzarevoice app](/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html) for your store.

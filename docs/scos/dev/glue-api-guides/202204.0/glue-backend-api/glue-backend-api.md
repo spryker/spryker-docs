@@ -36,7 +36,7 @@ related:
   - title: Authentication and authorization
     link: docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/authentication-and-authorization.html
   - title: Security and authentication
-    link: ocs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/security-and-authentication.html
+    link: docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/security-and-authentication.html
 ---
 
 This section contains a collection of how-to guides for working with the Spryker Glue Backend API.

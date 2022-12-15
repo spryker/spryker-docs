@@ -29,7 +29,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve carts of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | The Customer's unique ID to retrieve the carts of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Request
 
@@ -250,7 +250,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts withe the information on  promotional items included</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts withe the information on promotional items included</summary>
 
 ```json
 {
@@ -320,21 +320,21 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
-| promotional-items | id | String | Unique identifier of the promotional item. The ID can be used to apply the promotion to the given purchase. |
-| promotional-items | sku | String | SKU of the promoted abstract product. |
+| promotional-items | id | String | The unique ID of the promotional item. The ID can be used to apply the promotion to the given purchase. |
+| promotional-items | sku | String | The  SKU of the promoted abstract product. |
 | promotional-items | quantity | Integer | Specifies how many promotions can be applied to the given purchase. |
-| product-options | optionGroupName | String | Name of the group to which the option belongs. |
-| product-options | sku | String | SKU of the product option. |
-| product-options | optionName | String | Product option name. |
-| product-options | price | Integer | Product option price in cents. |
-| product-options | currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
-| vouchers, cart-rules | displayName | String | Discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | Amount of the provided discount. |
-| vouchers, cart-rules | code | String | Discount code. |
-| vouchers, cart-rules | discountType | String | Discount type. |
-| vouchers, cart-rules | isExclusive | Boolean | Discount exclusivity. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
+| product-options | optionGroupName | String | The  name of the group to which the option belongs. |
+| product-options | sku | String | The  SKU of the product option. |
+| product-options | optionName | String | The  product option's name. |
+| product-options | price | Integer | The  product option price in cents. |
+| product-options | currencyIsoCode | String | The  ISO 4217 code of the currency in which the product option price is specified. |
+| vouchers, cart-rules | displayName | String | The  piscount name displayed on the Storefront. |
+| vouchers, cart-rules | amount | Integer | The  amount of the provided discount. |
+| vouchers, cart-rules | code | String | The  discount code. |
+| vouchers, cart-rules | discountType | String | The  discount type. |
+| vouchers, cart-rules | isExclusive | Boolean | If true, the discount is exclusive. |
+| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The  date and time on which the discount expires. |
+| vouchers, cart-rules | discountPromotionAbstractSku | String | The  SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 ## Possible errors

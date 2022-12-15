@@ -70,7 +70,7 @@ Set up database schema and transfer objects:
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           name="zed"
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
-          namespace="OrmZedProductBundleStoragePersistence" package="src.Orm.Zed.ProductBundleStorage.Persistence">
+          namespace="Orm\Zed\ProductBundleStorage\Persistence" package="src.Orm.Zed.ProductBundleStorage.Persistence">
 
     <table name="spy_product_bundle_storage">
         <behavior name="synchronization">

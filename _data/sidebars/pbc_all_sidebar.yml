@@ -1022,6 +1022,8 @@ entries:
             nested:
               - title: Manage shopping lists
                 url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
+              - title: Manage shopping list items
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

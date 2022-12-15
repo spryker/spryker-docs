@@ -23,8 +23,8 @@ The Splittable Order Items feature is shipped with following modules:
 
 | MODULE | DESCRIPTION |
 | --- | --- |
-| [DiscountExtension](https://github.com/spryker/spryker/tree/master/Bundles/DiscountExtension) | Provides extension plugins for the `Discount` module. |
-| [SalesQuantity](https://github.com/spryker/spryker/tree/master/Bundles/SalesQuantity)| Provides support in handling and configuring quantity for sales orders and items. |
+| [DiscountExtension](https://github.com/spryker/discount-extension) | Provides extension plugins for the `Discount` module. |
+| [SalesQuantity](https://github.com/spryker/sales-quantity)| Provides support in handling and configuring quantity for sales orders and items. |
 
 To install the Splittable Order Items feature, follow the steps below:
 

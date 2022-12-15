@@ -25,7 +25,7 @@ redirect_from:
   - /v1/docs/en/ht-add-new-shipment-method
 related:
   - title: "Reference information: Shipment method plugins"
-    link: docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html
+    link: docs/pbc/all/carrier-management/page.version/extend-and-customize/shipment-method-plugins-reference-information.html
 ---
 
 This document shows how to add a new shipment method without integrating with the shipment provider.

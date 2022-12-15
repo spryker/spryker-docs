@@ -1,5 +1,5 @@
 ---
-title: c
+title: Create forms
 description: Spryker uses Symfony forms; this tutorial will help you get started on working with forms.
 last_updated: Jun 16, 2021
 template: howto-guide-template

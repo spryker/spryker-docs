@@ -8,7 +8,7 @@ To initialize a project with a specific workflow, execute the following command:
 spryker-sdk init:sdk:project --workflow={workflowName}
 ```
 
-If the project already has been initialized with the `spryker-sdk init:sdk:project` command, you can manually add workflow to the project config file `{projectDir}/.ssdk/settings`:
+If the project has already been initialized with the `spryker-sdk init:sdk:project` command, you can manually add workflow to the project config file `{projectDir}/.ssdk/settings`:
 
 ```yaml
 # {projectDir}/.ssdk/settings
@@ -40,7 +40,7 @@ There are the following commands for the workflow:
   ```bash
   spryker-sdk sdk:workflow:list
   ```
-- To generate and .SVG image for a specific workflow:
+- To generate an .SVG image for a specific workflow:
   ```bash
   spryker-sdk sdk:workflow:show {workflowName}
   ```
@@ -58,7 +58,7 @@ There are the following commands for the workflow:
 
 ## Configuration reference
 
-In the SDK directory, the workflows are defined in the workflow YAML files either in `config/packages`, or in the configuration of extension bundles.
+In the SDK directory, the workflows are defined in the workflow YAML files, located  either in `config/packages`, or in the configuration of extension bundles.
 
 See the basic workflow documentation in the [Symfony docs](https://symfony.com/doc/current/workflow.html).
 

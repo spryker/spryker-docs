@@ -4,8 +4,8 @@ The SDK offers different extension points to enable third parties to contribute 
 
 From simple to complex, the SDK can be extended by:
 
-- Providing additional tasks or settings via YAML definitions placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrate existing tools that come with a standalone executable.
-- Providing additional tasks, value resolvers, or settings via the PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php), and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example validating the content of a YAML file by using Symfony validators.
+Providing additional [tasks](/docs/sdk/dev/task.html) or [settings](/docs/sdk/dev/settings.html) via a YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrating existing tools that come with a standalone executable.
+Providing additional tasks, [value resolvers](/docs/sdk/dev/value-resolvers.html), or settings via a PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php) and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example validating the content of a YAML file by using Symfony validators.
 - Providing additional tasks, value resolvers, or settings that come with additional dependencies. This approach follows the same guideline as the previous approach with the PHP implementation but requires building  your own [SDK docker image](./build.md) that includes those dependencies.
 
 To extend the SDK, follow these steps.
@@ -306,9 +306,9 @@ settings:
   - path: string #e.g.: some_setting
     initialization_description: string #Will be used when a user is asked to provide the setting value
     strategy: string #merge or overwrite, where merge will add the value to the list and overwrite will replace it
-    init: bool #if the user should be asked for the setting value when `spryker-sdk sdk:init:sdk` or `spryker-sdk sdk:init:project` is called
+    init: bool #if true, the user should be asked for the setting value when `spryker-sdk sdk:init:sdk` or `spryker-sdk sdk:init:project` is called.
     type: string #Use array for lists of values or any scalar type (string|integer|float|boolean)
-    is_project: boolean #defines if the setting is persisted across projects and initialized during `spryker-sdk sdk:init:sdk` or per project and initialized with `spryker-sdk sdk:init:project`
+    is_project: boolean #If true, the setting is persisted across projects and initialized during `spryker-sdk sdk:init:sdk` or per project and initialized with `spryker-sdk sdk:init:project`
     values: array|string|integer|float|boolean #serve as default values for initialization
 ```
 

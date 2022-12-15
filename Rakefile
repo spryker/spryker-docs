@@ -198,6 +198,7 @@ task :check_pbc do
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/paas-plus\/.+/
+    /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/
 
   ]
   HTMLProofer.check_directory("./_site", options).run

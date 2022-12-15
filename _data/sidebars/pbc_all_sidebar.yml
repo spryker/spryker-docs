@@ -23,6 +23,9 @@ entries:
                 - "202204.0"
               - title: Integrate the Shipment Glue API
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html
+                include_versions:
+                - "202204.0"
+                - "202212.0"
               - title: Upgrade the Shipment module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
                 include_versions:

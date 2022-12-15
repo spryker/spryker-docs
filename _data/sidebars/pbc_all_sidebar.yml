@@ -4,9 +4,13 @@ entries:
     nested:
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
+        include_versions:
+        - "202204.0"
         nested:
           - title: What's changed
             url: /docs/pbc/all/carrier-management/whats-changed-in-carrier-management.html
+            include_versions:
+            - "202204.0"
           - title: Install and upgrade
             nested:
               - title: Integrate the Shipment feature

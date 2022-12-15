@@ -44,7 +44,7 @@ If this is your first time creating a new module, see [Tutorial: Add a new modul
 
 {% info_block infoBox "Implementation order" %}
 
-The order of the implementation steps does not matter; however, ensure to complete all the steps.
+The order of the implementation steps does not matter; however, be sure to complete all the steps.
 
 {% endinfo_block %}
 

@@ -11,6 +11,9 @@ entries:
             nested:
               - title: Integrate the Shipment feature
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
+                include_versions:
+                - "202204.0"
+                - "202212.0"
               - title: Integrate the Shipment + Approval Process feature
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
               - title: Integrate the Shipment + Cart feature

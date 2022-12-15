@@ -11,6 +11,8 @@ entries:
             nested:
               - title: Integrate the Shipment feature
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
+                include_versions:
+                - "202204.0"
               - title: Integrate the Shipment + Approval Process feature
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
                 include_versions:
@@ -51,11 +53,11 @@ entries:
                 url: /docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html
                 include_versions:
                 - "202204.0"
-            - title: Edit delivery methods
+              - title: Edit delivery methods
                 url: /docs/pbc/all/carrier-management/manage-in-the-back-office/edit-delivery-methods.html
                 include_versions:
                 - "202204.0"
-         - title: Manage via Glue API
+          - title: Manage via Glue API
             nested:
               - title: Retrieve shipments and shipment methods when submitting checkout data
                 url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html

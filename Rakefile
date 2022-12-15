@@ -197,7 +197,7 @@ task :check_pbc do
     /docs\/cloud\/.+/,
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
-    /docs\/paas-plus\/.+/
+    /docs\/paas-plus\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/
 
   ]

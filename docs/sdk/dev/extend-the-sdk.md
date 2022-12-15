@@ -205,7 +205,7 @@ services:
 
 If your bundle does not have dependencies that differ from the Spryker SDK, you don't need to register the bundle. Instead, place it into the `extension` directory that is a part of your SDK installation.
 
-For more complex bundles that require additional dependencies, follow the guidelines in [Building a flavored Spryker SDK](build.md).
+For more complex bundles that require additional dependencies, follow the guidelines in [Building a flavored Spryker SDK](/docs/dev/sdk/build.html).
 
 ## 2. Add a value resolver
 

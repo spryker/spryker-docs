@@ -5,6 +5,8 @@ template: concept-topic-template
 related:
   - title: Run and revert a database migration
     link: docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
+  - title: Data publishing
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.md
   - title: Configuration management
     link: docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
   - title: Create an order management system - Spryker Commerce OS
@@ -19,7 +21,6 @@ related:
 
 This section contains 
 
-Data Publishing
 
 DataPayload Conversion
 

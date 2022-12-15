@@ -4,7 +4,7 @@ description: how to implement payment methods in the Spryker SCOS back end
 template: concept-topic-template
 ---
 
-This section explains how to implement direct debit payments, prepayment, and invoice payment in the Spryker SCOS.
+This section explains how to implement [direct debit payments](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/direct-debit-payment.html), prepayment, and invoice payment in the Spryker SCOS.
 
 
 

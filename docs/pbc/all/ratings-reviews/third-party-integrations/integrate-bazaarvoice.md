@@ -124,7 +124,7 @@ Core Templates:
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.twig`
 
 Example:
-```
+```html
 <section itemscope itemtype="https://schema.org/Product">
    <meta itemprop="sku" content="{some_sku}}">
    
@@ -141,7 +141,7 @@ Example:
 Core Template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
 Example:
-```
+```html
 <section itemscope itemtype="https://schema.org/Organization">
    <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating"></section>
    
@@ -156,7 +156,7 @@ Core Templates:
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.twig`
 
 Example:
-```
+```html
 <section itemscope itemtype="https://schema.org/Product">
    <meta itemprop="sku" content="{some_sku}}">
    

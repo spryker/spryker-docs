@@ -83,7 +83,7 @@ Core Template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 | product.name                 | productName          |
 | product.description          | productDescription   |
 | product.image                | productImageURL      |
-| product.product.url          | productPageURL       |
+| product.url                  | productPageURL       |
 | product.brand.name           | brandId, brandName   |
 | product.category             | categoryPath         |
 | product.gtin12               | upcs                 |
@@ -126,7 +126,7 @@ Core Templates:
 Example:
 ```html
 <section itemscope itemtype="https://schema.org/Product">
-   <meta itemprop="sku" content="{some_sku}}">
+   <meta itemprop="sku" content="{some_sku}">
    
    <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
       <meta itemprop="ratingValue" content="{rating}">
@@ -158,7 +158,7 @@ Core Templates:
 Example:
 ```html
 <section itemscope itemtype="https://schema.org/Product">
-   <meta itemprop="sku" content="{some_sku}}">
+   <meta itemprop="sku" content="{some_sku}">
    
    <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
       <meta itemprop="ratingValue" content="{rating}">

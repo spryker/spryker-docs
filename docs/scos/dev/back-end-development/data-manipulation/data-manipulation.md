@@ -17,6 +17,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
   - title: Event
     link: docs/scos/dev/back-end-development/data-manipulation/event/event.html
+  - title: Payment methods
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/payment-methods.html
 ---
 
 This section contains 
@@ -26,7 +28,7 @@ DataPayload Conversion
 
 Data interaction
 
-Payment methods
+
 
 
 

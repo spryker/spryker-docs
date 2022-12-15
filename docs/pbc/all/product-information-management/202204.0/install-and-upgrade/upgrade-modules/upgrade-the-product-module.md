@@ -34,7 +34,7 @@ related:
   - title: Migration guide - Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-collector.html
   - title: Migration guide - ProductManagement
-    link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-product-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-product-module.md -->

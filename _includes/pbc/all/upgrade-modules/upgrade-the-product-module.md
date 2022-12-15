@@ -134,7 +134,7 @@ Collectors should now be able to export abstract product data per store both for
 10. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it is not used within the module. Please check your code if you have customized calls to it.
 11. `ProductAbstractManager` internal class was amended to handle `abstract product-store` relation, take a look if you have customized it.
 
-Additionally you might want to update the Product Information Management (PIM) Zed Admin UI to manage abstract products and their store configuration. You can find further information about multi-store products here, and [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html).
+Additionally you might want to update the Product Information Management (PIM) Zed Admin UI to manage abstract products and their store configuration. You can find further information about multi-store products here, and [Migration Guide - ProductManagement](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html).
 
 Note: make sure that `ProductPriceQueryExpanderPlugin` is always registered before `FacetQueryExpanderPlugin` in your dependency provider plugin list definitions.
 Check out our Demoshop implementation for implementation example and idea.

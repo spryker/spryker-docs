@@ -32,9 +32,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html
 related:
   - title: Migration guide - Product
-    link: docs/scos/dev/module-migration-guides/migration-guide-product.html
+    link: docs/pbc/all/product-information-management/site.version/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Migration guide - Product Label
-    link: docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->

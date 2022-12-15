@@ -86,9 +86,9 @@ composer update spryker/*
    * **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
    * **PriceCartConnector >= 4.** — [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) uses the new PriceProduct module.
    * **PriceDataFeed >= 0.2.** — uses the new `PriceProduct` module.
-   * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
-   * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html).
-   * **ProductManagement >= 0.9.** — see [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html). New forms and views have been added.
+   * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
+   * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html).
+   * **ProductManagement >= 0.9.** — see [Migration Guide - ProductManagement](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html). New forms and views have been added.
    * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html).
    * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productrelationcollector-module.html).
    * **ProductSetGui >= 2.** — see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html).

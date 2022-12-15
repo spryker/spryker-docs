@@ -198,7 +198,7 @@ The Search migration effort implies an upgrade of the following modules:
 * [Catalog](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html#upgrading-from-version-55-to-version-56)
 * [ProductPageSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)
 * [ProductReviewSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html#upgrading-from-version-13-to-version-14)
-* [ProductLabelSearch](/docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html#upgrading-from-version-12-to-version-13)
+* [ProductLabelSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html#upgrading-from-version-12-to-version-13)
 * [ProductSetPageSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html#upgrading-from-version-13-to-version-14)
 * [CategoryPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html#upgrading-from-version-14-to-version-15)
 * [ProductNew](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productnew-module.html)

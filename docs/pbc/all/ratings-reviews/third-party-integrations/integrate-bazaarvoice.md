@@ -123,7 +123,7 @@ Core Templates:
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.twig`
 
-| schema.org property         | CLass name                |
+| schema.org property         | Class name                |
 |-----------------------------|---------------------------|
 | product.sku                 |                           |
 | aggregateRating.ratingValue |                           |
@@ -133,7 +133,7 @@ Core Templates:
 #### Ratings and Reviews (Merchant)
 Core Template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
-| schema.org property         | CLass name                |
+| schema.org property         | Class name                |
 |-----------------------------|---------------------------|
 | aggregateRating             |                           |
 |                             | review-summary            |
@@ -144,7 +144,7 @@ Core Templates:
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/product-review-display/product-review-display.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.twig`
 
-| schema.org property         | CLass name      |
+| schema.org property         | Class name      |
 |-----------------------------|-----------------|
 | product.sku                 |                 |
 | aggregateRating.ratingValue |                 |

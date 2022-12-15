@@ -1,3 +1,10 @@
+---
+title: Initialize and run workflows
+description: Learn about the Spryker SDK telemetry configuration. 
+template: howto-guide-template
+redirect_from:
+    - /docs/scos/dev/sdk/initializing-and-running-workflows.html
+---
 # Workflow SDK tool
 
 ## How to initialize and run workflows

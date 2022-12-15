@@ -1,4 +1,9 @@
-Telemetry
+---
+title: Telemetry
+description: Learn about the Spryker SDK telemetry configuration. 
+template: howto-guide-template
+---
+# Telemetry
 
 All the configuration related to telemetry resides in `config/packages/telemetry.yaml`:
 

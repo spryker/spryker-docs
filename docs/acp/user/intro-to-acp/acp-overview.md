@@ -28,10 +28,17 @@ The ACP has the following advantages:
 
 ## Installing the ACP catalog
 
+{% info_block warningBox "" %}
+
+Your project must be hosted in Spryker Cloud.
+
+{% endinfo_block %}
+
 ACP catalog is included by default to the Spryker Cloud product. However, if you started your Spryker project before March 31, 2022, to use the ACP catalog, you must install the following module into your Spryker project:
 
 * `spryker/app-catalog-gui: ^1.2.0` or higher
-* add the configuration for the module and its dependency
+
+Add the configuration for the module and its dependencies.
 
 <details open>
 <summary>config/Shared/config_default.php</summary>
@@ -55,13 +62,6 @@ $config[OauthAuth0Constants::AUTH0_CLIENT_SECRET] = $aopAuthenticationConfigurat
 $config[StoreConstants::STORE_NAME_REFERENCE_MAP] = $aopApplicationConfiguration['STORE_NAME_REFERENCE_MAP'] ?? [];
 ```
 </details>
-
-
-{% info_block warningBox "" %}
-
-Your project must be hosted in Spryker Cloud.
-
-{% endinfo_block %}
 
 ## Accessing the ACP catalog
 

@@ -6,7 +6,9 @@ related:
   - title: Run and revert a database migration
     link: docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
   - title: Data publishing
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.md
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+  - title: DataPayload conversion
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/datapayload-conversion.html
   - title: Configuration management
     link: docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
   - title: Create an order management system - Spryker Commerce OS
@@ -23,8 +25,6 @@ related:
 
 This section contains 
 
-
-DataPayload Conversion
 
 Data interaction
 

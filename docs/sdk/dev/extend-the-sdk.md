@@ -60,7 +60,7 @@ This requires you to make the task a part of the Symfony bundle. To achieve this
 1. Create a Symfony bundle.<br>
 Refer to the [official Symfony documentation](https://symfony.com/doc/current/bundles.html) for details on how to do that.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox Info %}
 
 The bundle has to use the [Spryker SDK Contracts](https://github.com/spryker-sdk/sdk-contracts) via Composer.
 
@@ -165,7 +165,7 @@ class YourCommand implements ExecutableCommandInterface
 Placeholders are resolved at runtime by using a specified value resolver.
 A placeholder needs a specific name that is not used anywhere else in the command the placeholder is used for.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox Info %}
 
 You can append `%` and suffix the placeholder, which makes the placeholder easier to recognize in a command.
 
@@ -218,7 +218,7 @@ For more complex bundles that require additional dependencies, follow the guidel
 
 Most placeholders need a solution to resolve their values during runtime. This can be reading some settings and assembling a value based on the settings content, or any solution that turns a placeholder into a resolved value.
 
-{% info_block warningBox "" %}
+{% info_block warningBox %}
 
 Make sure to unify value resolvers and always use the same name for a value.
 

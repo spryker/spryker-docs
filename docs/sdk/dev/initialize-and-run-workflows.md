@@ -25,7 +25,7 @@ workflow:
 ```
 
 ---
-{% info_block warningBox "Project Limits" %}
+{% info_block warningBox Project Limits %}
 
 The project is limited to the workflows specified during initialization.
 
@@ -40,7 +40,7 @@ spryker-sdk sdk:workflow:run {workflowName}
 You can start any workflow by providing its name in the `sdk:workflow:run` command.
 
 ---
-{% info_block warningBox "Identical workflow exclusion" %}
+{% info_block warningBox Identical workflow exclusion %}
 
 Two identical top-level workflows can't run inside the same project.
 
@@ -64,7 +64,7 @@ There are the following commands for the workflow:
   spryker-sdk sdk:init:project --workflow={workflowName} --workflow={workflowName}
   ```
   ---
-{% info_block warningBox "Workflow Initialization" %}
+{% info_block warningBox Workflow Initialization %}
 
 If you initialize workflows for the project, you can use only these workflows.
 

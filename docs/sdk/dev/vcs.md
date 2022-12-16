@@ -5,15 +5,15 @@ template: concept-topic-template
 ---
 # VCS Connector
 
-VCS Connector is a feature that lets you use a different VCS system with a single command interface.
+VCS Connector lets you use a different VCS system with a single command interface.
 
 ## How to run a VCS
 
-Use the following commands for tasks:
+To run a VCS, do the following:
 
-- To run a task: `spryker-sdk vcs:clone`
-  - After executing the command, you will be prompted to fill in the repository and select a specific vcs.
+- To run a task: ```spryker-sdk vcs:clone```
+ - Fill in the repository and select a specific VCS as prompted.
 
 ## Where to find the cloned project
 
-All project will be cloned in temporary `var/tmp` directory.
+All project are cloned in temporary `var/tmp` directory.

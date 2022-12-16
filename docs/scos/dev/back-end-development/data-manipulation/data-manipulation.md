@@ -9,7 +9,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
   - title: DataPayload conversion
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/datapayload-conversion.html
- - title: Configuration management
+  - title: Configuration management
     link: docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
   - title: Data interaction 
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/data-interaction.html
@@ -25,7 +25,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/payment-methods.html
 ---
 
-This section contains a collection of articles describing how data manipulation works in the SPryker SCOS.
+This section contains a collection of articles describing how data manipulation works in the Spryker SCOS.
 
 
 

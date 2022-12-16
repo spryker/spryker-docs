@@ -1012,7 +1012,7 @@ For the attributes of other included resources, see:
 * [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Gift Cards of Guest Users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
 * [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/retrieve-measurement-units.html#measurement-units-response-attributes)
-* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Assign a guest cart to a registered customer
 

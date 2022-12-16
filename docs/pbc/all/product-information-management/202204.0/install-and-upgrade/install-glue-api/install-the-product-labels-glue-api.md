@@ -16,10 +16,8 @@ redirect_from:
 related:
   - title: Product Labels feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-labels-feature.html
-  - title: Accessing Product Labels
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-labels.html
   - title: Retrieving product labels
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-labels.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/retrieve-product-labels.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-product-labels-feature-integration.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-labels-feature-integration.md -->

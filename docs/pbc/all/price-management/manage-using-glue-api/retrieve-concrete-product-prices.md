@@ -23,7 +23,7 @@ related:
   - title: Retrieving image sets of concrete products
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html
   - title: Retrieving sales units
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-sales-units.html
 ---
 
 This endpoint allows retrieving prices of concrete products.

@@ -19,7 +19,7 @@ related:
   - title: Retrieving concrete product prices
     link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
   - title: Retrieving sales units
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-sales-units.html
   - title: Product image management
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-images-overview.html
 ---

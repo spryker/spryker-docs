@@ -70,5 +70,5 @@ If a global unit conversion exists between the base and sales unit, then factor 
 |INSTALLATION GUIDES | GLUE API GUIDES |
 |---------|---------|
 | [Product measurement unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html)  | [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html)  |
-| [Quick order + measurement units feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html) | [Retrieving sales units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)  |
+| [Quick order + measurement units feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html) | [Retrieving sales units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-sales-units.html)  |
 | [Glue API: Measurement units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)  |   |

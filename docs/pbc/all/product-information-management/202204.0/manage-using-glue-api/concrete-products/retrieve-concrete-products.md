@@ -20,7 +20,7 @@ related:
   - title: Retrieving image sets of concrete products
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html
   - title: Retrieving sales units
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-sales-units.html
   - title: Product Options feature overview
     link: docs/pbc/all/product-information-management/page.version/product-options-feature-overview.html
 ---
@@ -1637,12 +1637,12 @@ To retrieve general information about a concrete product, send the request:
 
 For other attributes of the included resources, see:
 
-* [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html#sales-units-response-attributes)
+* [Retrieve sales units of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-sales-units.html#sales-units-response-attributes)
 * [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve image sets of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
 * [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes)
 * [Retrieve prices of a concrete product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html#response)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-product-labels.html#product-labels-response-attributes)
 * [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
 
 

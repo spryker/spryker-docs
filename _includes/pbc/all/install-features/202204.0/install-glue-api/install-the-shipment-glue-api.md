@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/carrier-management.html) feature API into a Spryker project.
+This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{site.version}}/carrier-management.html) feature API into a Spryker project.
 
 ## Install feature core
 
@@ -11,13 +11,13 @@ Follow the steps below to install the Shipment feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| FEATURE                    | VERSION          | INTEGRATION GUIDE                                                                                                                                                        |
-|----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core     | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html)         |
-| Shipment                   | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html)                                                 |
-| Glue API: Checkout         | {{site.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)                          |
-| Glue API: Glue Application | {{site.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Glue API: Order Management | {{site.version}} | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html) |
+| FEATURE | VERSION | INTEGRATION GUIDE  |
+| ----------------- | ------ | ------------------- |
+| Glue API: Spryker Core     | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Shipment                  | {{site.version}}  | [Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html) |
+| Glue API: Checkout         | {{site.version}}  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Glue Application      | {{site.version}}  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue API: Order Management | {{site.version}}  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

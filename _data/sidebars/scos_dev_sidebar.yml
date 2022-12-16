@@ -1981,9 +1981,9 @@ entries:
       - "202108.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
+      include_versions:
+      - "202009.0"
+      - "202108.0"
     - title: Merchant
       url: /docs/scos/dev/feature-integration-guides/merchant-feature-integration.html
       include_versions:

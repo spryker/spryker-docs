@@ -44,7 +44,7 @@ We highly recommend you to follow our [Security guidelines](/docs/scos/dev/guide
 
 ## Four weeks before go-live
 
-- *Make sure you are familiar with NewRelic APM*. If you have not requested NewRelic APM to be set up for you, please [do so](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests).
+- *Make sure you are familiar with NewRelic APM*. If you have not requested NewRelic APM to be set up for you, please do so. For this, see [Platform change requests](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests) in "How to use the Support Portal."
 - *Performance Tips implemented and verified*. Double-check that you implemented all the provided [performance tips](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 - *Conduct Load Tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 - *The DNS Names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.

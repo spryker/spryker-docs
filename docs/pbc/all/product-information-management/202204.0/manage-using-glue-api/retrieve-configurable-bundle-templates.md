@@ -742,9 +742,9 @@ A list of images assigned to a configurable bundle template.  |
 
 For the attributes of other included resources, see:
 
-* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieving concrete product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html)
-* [Retrieving concrete product image sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
+* [Retrieving concrete product image sets](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html)
 
 ## Possible errors
 

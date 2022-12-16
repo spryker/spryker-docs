@@ -36,7 +36,7 @@ The product labels are applied to products to be displayed on their product card
 
 </details>
 
-A Back Office user can [create product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html) and assign them to products in the Back Office.
+A Back Office user can [create product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/create-product-labels.html) and assign them to products in the Back Office.
 
 A developer can create [dynamic product labels](#dynamic-product-label).
 
@@ -100,7 +100,7 @@ A Back Office user can select the design and the position of the product label o
 
 </details>
 
-When creating a product label, a Back Office user selects a design by entering its name as a **Front-end Reference**. To learn more, see [Creating product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html)
+When creating a product label, a Back Office user selects a design by entering its name as a **Front-end Reference**. To learn more, see [Creating product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/create-product-labels.html)
 
 If the product label designs shipped by default are not sufficient for your project, a developer can create new HTML classes to use as a Front-end Reference.
 
@@ -117,13 +117,13 @@ The product labels are displayed in ascending order of Priority. So, the label w
 
 In the preceding figure, the priority value of the *Alternatives available* product label is *4*. The Priority value of the *Discontinued* product label is *5*.
 
-To learn how a Back Office user can define the product label priority, see [Creating product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html).
+To learn how a Back Office user can define the product label priority, see [Creating product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/create-product-labels.html).
 
 ## Product label store relations
 
 A Back Office user can define the stores each product label is displayed in. For example, if a promotion campaign targets Germany, the *Sale* product label can be displayed only in the *DE* store.
 
-To learn how a Back Office user can define store relation for a product label, see [Creating product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html).
+To learn how a Back Office user can define store relation for a product label, see [Creating product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/create-product-labels.html).
 
 A developer can also [import store relations for product labels](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html).
 
@@ -141,7 +141,7 @@ To learn how a Back Office user can activate and deactivate product labels in th
 
 The *Exclusive* product label is a product label that, when applied to a product, discards all the other product labels applied to it. The other product labels are still applied to the product, but only the exclusive one is displayed on the respective product card and product details page. This might be useful when running several discounts in a store at the same time. By assigning the labels with corresponding discount names to needed products, you can show the shop users to which products each discount is applied.
 
-To learn how a Back Office user can create an exclusive product label, see [Creating product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html).
+To learn how a Back Office user can create an exclusive product label, see [Creating product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/create-product-labels.html).
 
 ## Product label filtering on the Storefront
 
@@ -153,14 +153,14 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html)  |
+| [Create product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/create-product-labels.html)  |
 | [Edit product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/edit-product-labels.html)  |
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES |
 |---|---|---|
-| [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-labels-feature-integration.html) | [ProductLabel migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html) | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html) |
+| [Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-labels-feature.html) | [ProductLabel migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html) | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html) |
 | [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html) | [ProductLabelGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html) |  |
 |  | [ProductLabelSearch migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html |  |
 |  | [ProductLabelStorage migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelstorage-module.html |  |

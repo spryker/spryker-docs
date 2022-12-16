@@ -14,9 +14,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-image-sets-feature-integration.html
 related:
   - title: Retrieving image sets of abstract products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/retrieve-image-sets-of-abstract-products.html
   - title: Retrieving image sets of concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-product-image-sets-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-image-sets-glue-api.md -->

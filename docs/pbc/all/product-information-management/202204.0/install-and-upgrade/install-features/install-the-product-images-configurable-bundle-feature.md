@@ -15,7 +15,7 @@ related:
   - title: Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Product Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-lists-feature.html
   - title: Prices feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
   - title: Product feature integration
@@ -24,8 +24,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
   - title: Product feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
-  - title: Configurable Bundle feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-images-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-images-configurable-bundle-feature.md -->

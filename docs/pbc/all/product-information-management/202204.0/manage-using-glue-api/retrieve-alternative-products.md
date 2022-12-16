@@ -40,7 +40,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ## Check if a product is discontinued
 
-Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product).
+Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#retrieve-a-concrete-product).
 
 {% info_block infoBox %}
 

@@ -270,7 +270,7 @@ To add items to a shopping list, send the request:
 | productOfferReference | String | Unique identifier of the product offer.   |
 | merchantReference | String | Unique identifier of the merchant.   |
 
-For the attributes of the included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+For the attributes of the included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes).
 
 ## Change item quantity in a shopping list
 
@@ -505,7 +505,7 @@ To change the item quantity in a shopping list, send the request:
 </details>
 
 For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
-For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+For the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes).
 
 ## Remove an item from a shopping list
 

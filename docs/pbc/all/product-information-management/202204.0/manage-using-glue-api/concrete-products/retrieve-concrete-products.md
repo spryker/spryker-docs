@@ -18,7 +18,7 @@ related:
   - title: Retrieving concrete product prices
     link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html
   - title: Retrieving sales units
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
   - title: Product Options feature overview
@@ -1639,7 +1639,7 @@ For other attributes of the included resources, see:
 
 * [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html#sales-units-response-attributes)
 * [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html#measurement-units-response-attributes)
-* [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
+* [Retrieve image sets of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
 * [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes)
 * [Retrieve prices of a concrete product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html#response)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)

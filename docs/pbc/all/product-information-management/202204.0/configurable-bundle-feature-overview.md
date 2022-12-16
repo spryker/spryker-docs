@@ -78,7 +78,7 @@ When a Back Office user creates a configurable bundle template, they create the 
 
 {% endinfo_block %}
 
-To learn how a Back Office User edits product lists, see [Edit product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/edit-product-lists.html).
+To learn how a Back Office User edits product lists, see [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/edit-product-lists.html).
 To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html#create-slots-in-a-configurable-bundle-template).
 
 When a Storefront user configures a bundle, for each slot, they select a product from the provided product list.

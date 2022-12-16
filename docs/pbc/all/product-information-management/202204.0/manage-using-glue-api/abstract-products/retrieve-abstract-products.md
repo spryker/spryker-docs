@@ -18,7 +18,7 @@ related:
   - title: Retrieving abstract product prices
     link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/retrieve-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
     link: docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
   - title: Product feature overview
@@ -1937,10 +1937,10 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
 For the attributes of other included resources, see:
-* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
+* [Retrieve image sets of an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/retrieve-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
 * [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html#abstract-product-availability-response-attributes)
 * [Retrieve prices of an abstract product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
 * [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)

@@ -693,8 +693,8 @@ For the attributes of the other included resources, see the docs:
 
 * [Retrieve measurement units](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/retrieve-measurement-units.html)
 * [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/retrieve-abstract-products.html#abstract-products-response-attributes)
 
 
 

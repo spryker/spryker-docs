@@ -332,7 +332,7 @@ For the response attributes, see [Create a shopping list](#create-a-shopping-lis
 
 For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
 
 ## Retrieve a shopping list
 
@@ -800,7 +800,7 @@ For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)
 * [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 
@@ -1018,7 +1018,7 @@ For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
 
 ## Delete a shopping list
 

@@ -37,7 +37,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependencies: [product_option.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html).
+This file has the following dependencies: [product_option.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-options/file-details-product-option.csv.html).
 
 ## Import template file and content example
 

@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/discontinued-products-product-labels-feature-integration.html
 related:
   - title: Product labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-labels-feature.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-discontinued-products-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-discontinued-products-product-labels-feature.md -->

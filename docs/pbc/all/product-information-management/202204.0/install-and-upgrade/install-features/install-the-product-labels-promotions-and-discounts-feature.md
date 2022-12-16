@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/product-labels-promotions-and-discounts-feature-integration.html
 related:
   - title: Product labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-labels-feature.html
   - title: Promotions and Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/promotions-and-discounts-feature-integration.html
 

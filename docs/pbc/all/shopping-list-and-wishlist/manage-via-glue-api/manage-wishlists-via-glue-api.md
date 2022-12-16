@@ -443,7 +443,7 @@ To retrieve all wishlists of a customer, send the request:
 
 For attributes of the included resources, see:
 * [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlist-items-via-glue-api.html#wishlist-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve a wishlist
@@ -760,7 +760,7 @@ To retrieve wishlist items, send the request:
 
 For attributes of the included resources, see:
 * [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlist-items-via-glue-api.html#wishlist-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Edit a wishlist

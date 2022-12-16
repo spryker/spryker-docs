@@ -1478,7 +1478,7 @@ To retrieve general information about an abstract product, send the request:
 
 For the attributes of other included resources, see:
 
-* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)
+* [Retrieve image sets of an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/retrieve-image-sets-of-abstract-products.html)
 * [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html)
 * [Retrieve prices of an abstract product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)

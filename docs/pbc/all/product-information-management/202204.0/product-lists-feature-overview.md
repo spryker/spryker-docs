@@ -25,11 +25,11 @@ The *Product Lists* feature lets you configure product availability for specific
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/create-product-lists.html)  |
-| [Edit product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/edit-product-lists.html)  |
+| [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/create-product-lists.html)  |
+| [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/edit-product-lists.html)  |
 
 ## Related Developer articles
 
 |INSTALLATION GUIDES |
 |---------|
-| [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) |
+| [Product Lists feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html) |

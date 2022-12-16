@@ -784,14 +784,12 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Retrieving abstract products
           url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving abstract product availability
           url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-availability.html
           include_versions:
@@ -812,19 +810,16 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Concrete products
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Retrieving concrete products
           url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving concrete product availability
           url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-availability.html
           include_versions:
@@ -840,13 +835,11 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving sales units
           url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-sales-units.html
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Retrieving product labels
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html
       - title: Managing product ratings and reviews
@@ -875,7 +868,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving configurable bundle templates
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-configurable-bundle-templates.html
         include_versions:
@@ -897,12 +889,10 @@ entries:
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-bundled-products.html
         include_versions:
         - "202108.0"
-        - "202204.0"
       - title: Retrieving product attributes
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-attributes.html
         include_versions:
         - "202108.0"
-        - "202204.0"
       - title: Retrieving product information
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-information.html
         include_versions:

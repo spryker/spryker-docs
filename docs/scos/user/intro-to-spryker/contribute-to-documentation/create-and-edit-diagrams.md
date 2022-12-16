@@ -1,5 +1,5 @@
 ---
-title: Add product sections to the documentation
+title: Create and edit diagrams
 description: Learn how to add a new product to the Spryker docs.
 last_updated: Jul 18, 2022
 template: howto-guide-template
@@ -33,3 +33,11 @@ After creating a diagram, to embed it into a document, do the following:
 3. Copy the script and paste it into the needed place of a document.
 4. Submit a PR with the changes. For instructions on submitting PRs, see [Edit documentation via pull requests](/docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html).
     After the PR is merged, the diagram appears on the page.
+
+## Edit a diagram in documentation
+
+1. On the page of the diagram you want to edit, to enter full screen, click the diagram.
+2. To open the diagram in the diagrams.net editor, click the pencil icon.
+    This creates a copy of the diagram.
+3. In the editor, add the needed changes.
+4. To replace the diagram on the page with the updated one,

@@ -24,7 +24,7 @@ In the [Configurable Product data import](/docs/scos/dev/data-import/{{page.vers
 The order in which the files are imported is *very strict*. Execute the following data importers in the provided order:
 
 1. [Product Option](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html)
-2. [Product Option Price](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html)
+2. [Product Option Price](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-options/file-details-product-option-price.csv.html)
 3. [Gift Card Abstract Configuration](/docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html)
 4. [Gift Card Concrete Configuration](/docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html)
 

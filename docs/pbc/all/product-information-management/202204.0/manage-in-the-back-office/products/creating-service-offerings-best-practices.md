@@ -128,7 +128,7 @@ If you need an approach that would best suit your specific business needs, we re
 
 #### 1. Identify the respective products with labels
 
-First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/create-product-labels.html) for details on how to create labels and assign products to them.
+First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/create-product-labels.html) for details on how to create labels and assign products to them.
 
 #### 2.  Override the Add to Cart functionality
 

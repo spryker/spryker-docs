@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
 ---
 
 This document describes the `product_option.csv` file to configure [product option](/docs/pbc/all/product-information-management/{{page.version}}/product-options-feature-overview.html) information in your Spryker Demo Shop.

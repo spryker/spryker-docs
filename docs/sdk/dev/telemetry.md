@@ -43,7 +43,7 @@ This interface uses `SprykerSdk\Sdk\Core\Application\Dependency\Service\Telemetr
 To implement the custom sender, you need to implement this interface and make sure to throw `SprykerSdk\Sdk\Core\Application\Exception\TelemetryServerUnreachableException` when the destination server is unreachable.
 
 ## Task console event collecting
-Currently, only task commands are collected. This behavior is implemented by listening to the generic console events.
+Only task commands are collected. This behavior is implemented by listening to the generic console events.
 All the event listeners reside in `SprykerSdk\Sdk\Infrastructure\Event\Telemetry\TelemetryConsoleEventListener`.
 To filter the appropriate events, `\SprykerSdk\Sdk\Infrastructure\Event\Telemetry\TelemetryConsoleEventValidatorInterface` is used.
 

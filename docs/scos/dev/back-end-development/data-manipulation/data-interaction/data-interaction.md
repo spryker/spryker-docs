@@ -7,7 +7,7 @@ template: concept-topic-template
 This section contains a coillection of articles describing how data interaction happens in the Spryker SCOS. Topics include:
 * [Standard filters – backend and frontend technical details](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html)
 
-* Search
+* [Search](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/search.html)
 
 * [Transfer data between Yves and Zed](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html)
 

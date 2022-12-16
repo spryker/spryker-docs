@@ -23,7 +23,7 @@ The Spryker SDK has the following value resolvers:
 | STATIC                   | This resolver is used as a universal value resolver with additional settings. It returns the formatted value.                  |
 | ORIGIN                   | This resolver is used as a universal value resolver with additional settings. It returns the original value.                   |
 
-Example of a placeholder with the `STATIC` value resolver and with the configuration. See [conventions](/docs/sdk/conventions.html#Placeholder) for details:
+Example of a placeholder with the `STATIC` value resolver and with the configuration. See [conventions](/docs/sdk/dev/conventions.html#Placeholder) for details:
 
 ```yaml
   - name: "%shortcode_name%" # For replacing in command.

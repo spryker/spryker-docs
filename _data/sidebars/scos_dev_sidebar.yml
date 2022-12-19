@@ -1194,7 +1194,7 @@ entries:
       - "202108.0"
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
-    - title: Glue Backend API
+    - title: Decoupled glue infrastructure
       include_versions:
       - "202204.0"
       nested:
@@ -1618,7 +1618,7 @@ entries:
         - "201907.0"
       - title: Glue API - Wishlist
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
-      - title: Glue Backend API
+      - title: Decoupled glue infrastructure
         include_versions:
         - "202204.0"
         nested:

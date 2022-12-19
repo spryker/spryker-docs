@@ -13,7 +13,7 @@ For example, there is a new camera *Supracam focus* which is popular on the mark
 
 1. Create a *video_recording* product attribute with *Geotagging* and *Autofocus* values. For instructions, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 
-2. Create the *Supracam focus* abstract product and its variants. See [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+2. Create the *Supracam focus* abstract product and its variants. See [Creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
 3. Assign the *video_recording* product attribute to the *Supracam focus* product variant. For instructions, see [Assign product attributes to product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html) or [Assign product attributes to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html).
 

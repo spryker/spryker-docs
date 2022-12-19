@@ -27,7 +27,7 @@ When a Back Office user discountinues a product, they can define the date until 
 
 {% info_block warningBox %}
 
-Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) can become discontinued.
+Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) can become discontinued.
 
 {% endinfo_block %}
 

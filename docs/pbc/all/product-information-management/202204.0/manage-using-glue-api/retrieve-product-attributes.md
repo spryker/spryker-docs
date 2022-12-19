@@ -16,7 +16,7 @@ related:
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-attributes-overview.html
 ---
 
-The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) available in your shop system.
+The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) available in your shop system.
 
 {% info_block infoBox %}
 

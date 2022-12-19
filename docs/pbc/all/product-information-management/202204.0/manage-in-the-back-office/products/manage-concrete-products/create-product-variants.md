@@ -14,11 +14,11 @@ related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html
   - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html
   - title: Product feature overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This topic describes how to add a product variant for an abstract product.
@@ -58,9 +58,9 @@ To create a product variant:
     3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html) for more information.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 5. **Optionally**: Click **Next** to go to the *Image* to add images for the product and define the image order.
-6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to know more.
+6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to know more.
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html) and [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 

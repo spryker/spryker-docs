@@ -4,7 +4,7 @@ description: Learn how to assign product attributes to abstract products in the 
 template: back-office-user-guide-template
 related:
   - title: Product feature overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
   - title: Product Attributes overview
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-attributes-overview.html
 ---
@@ -17,7 +17,7 @@ By assigning a product attribute to an abstract product, you assign it to all it
 
 1. Create the product attributes you want to add to the abstract product. For instructions, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 
-2. Create the abstract product to assign the product attributes to. For instructions, see [Create abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).  
+2. Create the abstract product to assign the product attributes to. For instructions, see [Create abstract products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).  
 
 
 Review the [reference information](#reference-information-assign-product-attributes-to-abstract-products) before you start, or look up the necessary information as you go through the process.

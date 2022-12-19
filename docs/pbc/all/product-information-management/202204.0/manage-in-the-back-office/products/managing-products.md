@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/managing-products
 related:
   - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html
   - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html
   - title: Product feature overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This article describes how to manage abstract and concrete products.

@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/product-barcode-feature-walkthrough.html
 ---
 
-The *Product Barcode* feature lets you create barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
+The *Product Barcode* feature lets you create barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html).
 
 A barcode is a square or rectangular image consisting of a series of parallel black lines (bars) and white spaces of varying widths that can be read by a scanner and printed. Barcodes are applied to entities as a means of quick identification.
 ![Barcode example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Barcode+Generator/Barcode+Generator+Feature+Overview/barcode.png)
@@ -26,7 +26,7 @@ By default, barcodes are generated based on product SKUs using the [Code128](htt
 
 Though, Spryker highly provides customizable solutions through plugins that let you change the setup.
 
-For more information about the product types we differentiate in product abstraction, see [Product feature overview](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
+For more information about the product types we differentiate in product abstraction, see [Product feature overview](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html).
 
 {% info_block errorBox %}
 

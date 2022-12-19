@@ -76,4 +76,4 @@ Product options:
 
 ## Next steps
 
-[Edit product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/edit-product-options.html)
+[Edit product options](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-options/edit-product-options.html)

@@ -22,7 +22,7 @@ related:
   - title: Retrieving tax sets
     link: docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
   - title: Product feature overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about abstract products.

@@ -63,5 +63,5 @@ Review the [reference information](#reference-information-create-product-attribu
 
 ## Next steps
 
-* Assign the attribute to a new abstract product. For instructions, see [Create abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+* Assign the attribute to a new abstract product. For instructions, see [Create abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 * Assign the attribute to an existing abstract product. For instructions, see [Assign product attributes to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html)

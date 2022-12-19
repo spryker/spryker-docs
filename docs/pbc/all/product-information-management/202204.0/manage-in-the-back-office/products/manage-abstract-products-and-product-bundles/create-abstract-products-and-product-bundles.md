@@ -24,16 +24,16 @@ related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html
   - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html
 ---
 
-This doc describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html).
+This doc describes how to create [abstract products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html).
 
 ## Prerequisites
 
-To be able to create [product variants](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) of the abstract product, [create at least one super attribute](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
+To be able to create [product variants](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) of the abstract product, [create at least one super attribute](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 
 Each section contains reference information. Make sure to look up the necessary information as you go through the process.
 
@@ -79,7 +79,7 @@ On the **Price & Tax** tab, do the following:
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
 | MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>. |
-| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
 | DEFAULT price | Default price is the price a customer pays for the product.
 | ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 | TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html). |

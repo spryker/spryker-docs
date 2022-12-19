@@ -198,7 +198,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 

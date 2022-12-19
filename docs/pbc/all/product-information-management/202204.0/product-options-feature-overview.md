@@ -46,7 +46,7 @@ In the Back Office, you can perform the following actions on product options:
 * Assign product option groups to products.
 * Activate product options to make them visible in the Storefront.
 
-To learn more about how to work with product options in the Back Office, see [Create product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html) and [Edit product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/edit-product-options.html).
+To learn more about how to work with product options in the Back Office, see [Create product options](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-options/create-product-options.html) and [Edit product options](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-options/edit-product-options.html).
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png)
 
@@ -84,8 +84,8 @@ The feature has the following functional constraints, which are going to be reso
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html)  |
-| [Edit product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/edit-product-options.html)  |
+| [Create product options](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-options/create-product-options.html)  |
+| [Edit product options](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-options/edit-product-options.html)  |
 
 ## Related Developer articles
 

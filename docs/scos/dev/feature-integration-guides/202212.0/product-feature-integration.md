@@ -32,7 +32,7 @@ related:
   - title: Product feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
   - title: Product overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 {% include pbc/all/install-features/202212.0/install-the-product-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-feature.md -->

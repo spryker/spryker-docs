@@ -4,7 +4,7 @@ description: Learn how to assign product attributes to product variants in the B
 template: back-office-user-guide-template
 related:
   - title: Product feature overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
   - title: Product Attributes overview
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-attributes-overview.html
 ---
@@ -14,7 +14,7 @@ This document describes how to assign product attributes to product variants in 
 ## Prerequisites
 
 1. Create the product attributes you want to add to the product variant. For instructions, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
-2. Create a product variant by [creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) or by [adding a product variant to an existing abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).  
+2. Create a product variant by [creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) or by [adding a product variant to an existing abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).  
 3. To start working with products, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Review the [reference information](#reference-information-assign-product-attributes-to-product-variants) before you start, or look up the necessary information as you go through the process.

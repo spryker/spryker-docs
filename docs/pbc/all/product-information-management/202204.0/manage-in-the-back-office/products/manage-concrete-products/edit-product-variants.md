@@ -15,11 +15,11 @@ related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html
   - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html
   - title: Product feature overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This article describes how to update the product variant added during the abstract product setup.
@@ -51,9 +51,9 @@ To edit a product variant:
     {% endinfo_block %}
 
     3. *Image* tab: define the image(s), image set(s), and the image order for you product variant.
-    4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) for details.
-    5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) to know more.
-    6. *Product Alternatives* tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to know more.
+    4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) for details.
+    5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html) to know more.
+    6. *Product Alternatives* tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html) to know more.
     7. *Scheduled Prices* tab: here you can only review scheduled prices imported via a CSV file if any. The actual import is done in **Prices&nbsp;<span aria-label="and then">></span> Scheduled Prices**.
 3. Click **Save**.
 

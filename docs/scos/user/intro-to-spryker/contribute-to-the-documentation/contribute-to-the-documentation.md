@@ -5,6 +5,7 @@ last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
+  - /docs/scos/user/intro-to-spryker/contribute-to-documentation/contribute-to-documentation.html
 related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html

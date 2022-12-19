@@ -41,7 +41,7 @@ Adapting your offerings to your customers' needs and locales is crucial for prov
 | de_DE | 123.456,78 |
 | en_US | 123,456.78 |
 
-#### Number formatting in the Storefront <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+#### Number formatting in the Storefront
 
 For an effortless shopping experience, the localized number formatting is available throughout the Storefront for any user locale. Whether it is a catalog, product details page, cart, checkout, or customer account, your customers and guests can now enjoy their known number format. This helps to avoid any confusion about pricing or quantities.
 
@@ -50,7 +50,7 @@ For an effortless shopping experience, the localized number formatting is availa
 [HowTo: Add support for number formatting in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html#prerequisites)
 
 
-#### Number formatting in the Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+#### Number formatting in the Back Office
 Efficiency and accuracy are essential when working in the Back Office. Increasing the efficiency of your company users in any locale, locale-based number formats are available in all relevant places throughout the Back Office. Whether it's prices, quantities, or stocks: your company users can stay focused on their tasks while enjoying the number format they are familiar with.
 
 ##### Documentation

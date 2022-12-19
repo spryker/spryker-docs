@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Dec 14, 2022
 ---
 
-The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new Marketplace features and enhancements.
+The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new Marketplace features and enhancements.
 
 For information about installing the Spryker Commerce OS, see [Developer getting started guide](/docs/scos/dev/developer-getting-started-guide.html).
 

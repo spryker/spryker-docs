@@ -23,7 +23,7 @@ Customers can access a standalone configurator page and choose from various avai
 
 ![configurable-product-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-on-the-storefront.gif)
 
-Configured Products can be saved, accessed, and configured again in carts or from the product details page. Customers can also easily reorder past purchases. Configurable Products can also be part of a [Request For Quote (RFQ)](/docs/pbc/all/request-for-quote/request-for-quote.html)—the Spryker's powerful Quotation and Management feature can overwrite all the automatically calculated prices from the Configurable Product tool.
+Configured Products can be saved, accessed, and configured again in carts or from the product details page. Customers can also easily reorder past purchases. Configurable Products can also be part of a [Request For Quote (RFQ)](/docs/pbc/all/request-for-quote/request-for-quote.html) — Spryker's powerful Quotation and Management feature can overwrite all the automatically calculated prices from the Configurable Product tool.
 
 **Business benefit**: Configurable Products maximize customer satisfaction through product personalization and by providing a robust customer self-service experience. This also adds value to your business by reducing the lead times Sales teams would previously have to dedicate to finalizing product configurations with customers.
 
@@ -34,7 +34,7 @@ Configured Products can be saved, accessed, and configured again in carts or fro
 
 ### Localization improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Adapting your offerings to your customers' needs and customs is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we've improved the number formatting for any locale. Based on the locale and browser language setting, your customers in the Storefront and your company users in the Back Office are shown the number format they expect to see. Look at the following example with a product price:
+Adapting your offerings to your customers' needs and locales is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we've improved the number formatting for any locale. Based on the locale and browser language setting, your customers in the Storefront and your company users in the Back Office are shown the number format they expect to see. Look at the following example with a product price:
 
 | LOCALE | PRODUCT PRICE |
 |---|---|
@@ -51,7 +51,7 @@ For an effortless shopping experience, the localized number formatting is availa
 
 
 #### Number formatting in the Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
-Efficiency and accuracy are essential when working in the Back Office. Letting you increase the efficiency of your company users in any locale, locale-based number formats are available in all relevant places throughout the Back Office. Whether it's prices, quantities, or stocks: Your company users can stay focused on their tasks while enjoying the number format they are familiar with.
+Efficiency and accuracy are essential when working in the Back Office. Increasing the efficiency of your company users in any locale, locale-based number formats are available in all relevant places throughout the Back Office. Whether it's prices, quantities, or stocks: your company users can stay focused on their tasks while enjoying the number format they are familiar with.
 
 ##### Documentation
 

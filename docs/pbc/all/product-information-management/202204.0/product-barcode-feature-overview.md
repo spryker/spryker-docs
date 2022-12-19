@@ -63,8 +63,8 @@ Barcodes are often overlooked as a way to cut costs and save time. A valuable an
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Viewing product barcodes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-barcodes/viewing-product-barcodes.html)  |
+| [Viewing product barcodes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/view-product-barcodes.html)  |
 
 | MIGRATION GUIDES|
 |---------|
-| [Migrating from CodeItNow to BarcodeLaminas](/docs/scos/dev/module-migration-guides/migration-guide-codeitnow-to-barcodelaminas.html) |
+| [Migrating from CodeItNow to BarcodeLaminas](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/replace-the-codeitnow-with-the-barcodelaminas-module.html) |

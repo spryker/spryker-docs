@@ -23,7 +23,7 @@ The *Product Groups* feature lets product catalog managers group products by att
 
 {% info_block warningBox "Examplary content" %}
 
-By default, there is no way to display product groups on Storefront. This section describes an exemplary implementation that you can add to your project. For more details, see [HowTo: Display product groups by color on Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html).
+By default, there is no way to display product groups on Storefront. This section describes an exemplary implementation that you can add to your project. For more details, see [HowTo: Display product groups by color on Storefront](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html).
 
 {% endinfo_block %}
 
@@ -56,7 +56,7 @@ Also, they can insert product groups into CMS pages using content widgets in the
 
 ## Creating product groups
 
-Only a developer can create product groups by [importing them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
+Only a developer can create product groups by [importing them](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
 
 
 ## Current constraints
@@ -77,4 +77,4 @@ Check out this video tutorial on product groups:
 
 |INSTALLATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|
-| [Product Groups feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-groups-feature.html) | [File details: product_group.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html)  | [HowTo: Display product groups by color on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |
+| [Product Groups feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-groups-feature.html) | [File details: product_group.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-group.csv.html)  | [HowTo: Display product groups by color on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |

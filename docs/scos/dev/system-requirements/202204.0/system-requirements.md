@@ -42,3 +42,4 @@ redirect_from:
 |Node.js| Version >= 12.0.0 |
 |NPM| Version >= 6.9.0 |
 |Intranet| Back Office application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, and DMZ.) |
+|Available languages| Spryker is available in the following languages:<ul><li>German</li><li>English</li></ul> Spryker offers full UTF-8 left-to-right language support. |

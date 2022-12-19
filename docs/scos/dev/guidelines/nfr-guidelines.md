@@ -10,6 +10,8 @@ related:
   link: docs/scos/dev/guidelines/process-documentation-guidelines.html
 - title: Monitorable process guidelines
   link: docs/scos/dev/guidelines/monitorable-process-guidelines.html
+- title: Architecture performance guidelines
+  link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---
 
 
@@ -20,25 +22,43 @@ Defining NFRs can be as important as defining functional requirements, which are
 too late realization of certain unintended behavior that costs a lot of resources/money for the projects to deal with.
 
 ## NFR guidelines
+There are several factors that can impact the success of NFR definition in a project. One key factor is the involvement of all relevant stakeholders, 
+including architects, developers, business analysts, and end users. Ensuring that all of these parties are involved in the NFR definition 
+process can help to ensure that all relevant requirements are captured and that there is a shared understanding of the technical 
+characteristics and behaviors of the system being developed.
 
-To ensure that the most important aspects are not missed to be considered when defining NFRs, we suggest using the Software Quality Attributes like Availability, Security, Performance, etc.
-You can use the [ISO 25010 standard](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010) as a baseline for Quality Attributes, but you can also come up your own Quality Attributes (QAs)
-and ad it to your list, whichever makes sense for your project's case best.
+Another important factor is the use of a structured approach to NFR definition. This can involve using a specific framework or 
+methodology, such as the [ISO 25010 standard](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010) or the Quality Attribute Workshop (QAW) method
+or even [PASSME](https://nick-goupinets.medium.com/passme-muster-846a9997645b). Using a structured approach can help to ensure that all relevant 
+NFRs are identified and that they are prioritized and organized in a logical manner.
 
-Below you can find several generic NFRs grouped by QAs. Not all of them may be relevant in all cases, so you should use this list 
-as a guide or template to help to start with your own NFRs. Change or extend this list for each of your projects as appropriate.
+Finally, it is important to regularly review and update NFRs as the project progresses. As the system being developed evolves, 
+the NFRs may also need to be adjusted to reflect changes in the project's goals and objectives. Regularly revisiting and updating 
+NFRs can help to ensure that the system being developed continues to meet the technical and functional needs of the business and end users.
+
+## Template for Generic NFRs for Projects.
+
+{% info_block warningBox "Warning" %}
+
+Below you can find several generic NFRs grouped by QAs. In this list, we have provided a starting point for common NFRs that MAY be relevant
+to your project. Not all of these NFRs may be applicable in every case, so you SHOULD use this list as a guide or template to help to start
+with your own NFRs. Be sure to tailor the list to the specific requirements and constraints of your project, and to prioritize and organize
+the NFRs in a logical manner.
+
+{% endinfo_block %}
 
 ### Availability
 Software architecture & design must ensure that there is no negative impact on application availability.
 
 Examples:
-* Do not limit a new application start.
-  * exit in the middle
-  * flag based blocking of application start
-  * process count limit on application level
-* Do not lock shared resources on application level.
-* Aligned adjustments of resource consumptions.
-  * FPM worker count changes
+* Avoid designing the application to limit its own start-up or shut-down.
+  * Avoid design patterns or coding practices that cause the application to exit unexpectedly in the middle of execution.
+  * Avoid using flags or other mechanisms to block the application from starting.
+  * Avoid setting limits on the number of concurrent processes that can be run by the application.
+* Avoid designing the application to lock shared resources at the application level.
+  * For example, if the application uses a database, it should not lock the database tables or rows that it reads or writes to, as this can cause other parts of the system to become unavailable.
+* Align resource consumption with expected workloads.
+  * For example, if using PHP-FPM, ensure that the number of worker processes is sufficient to handle the expected workload without overloading the system.
 
 ### Security
 * Make sure to define and follow your own team's [Security best practices](/docs/scos/dev/guidelines/security-guidelines.html).
@@ -58,9 +78,9 @@ The rollback scripts MUST NOT break the behaviour of current system.
 * The deployed (version N+1) application can rollback current version (N+1) data structures # constants and data sets to previous version (N) without causing downtime.
 
 ### Deployability, Rollback-ability, Consistency, Monitor-ability
-* Asynchronous tasks MUST be limited to 1-at-a-time during deployment/rollback processes.
+* During deployment and rollback processes, only one asynchronous task MUST be allowed to run at a time.
 * The asynchronous task runner MUST report for monitoring: start & end.
-* Application MUST report a failed async migration by throwing an error event to new relic.
+* Application MUST report a failed async migration by throwing an error event to New Relic (or other similar systems in use).
 
 ### Performance
 * Zed UI average load performance should be under 450ms.

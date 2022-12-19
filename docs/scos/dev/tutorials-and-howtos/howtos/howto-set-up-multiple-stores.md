@@ -202,6 +202,16 @@ stores:
 ...    
 ```
 
+Please also make sure that commands that need to trigger for each store have stores: true added as in the example below. This is especially important for validation cache generation in the docker.yml file, as this is responsible for generating the validation cache when your application is deployed on the Spryker PaaS
+
+```yaml
+...
+        rest-request-validation-cache-warmup:
+            command: 'vendor/bin/console rest-api:build-request-validation-cache'
+            stores: true
+...
+```
+
 ## Configure the deploy file
 
 According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:

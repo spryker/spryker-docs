@@ -1,5 +1,6 @@
 
 
+
 This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) feature API into a Spryker project.
 
 ## Prerequisites

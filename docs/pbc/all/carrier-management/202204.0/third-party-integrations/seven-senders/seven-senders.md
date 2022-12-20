@@ -36,11 +36,11 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Install and configure Seven Senders](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/install-and-configure-seven-senders.html)
-* [Integrate Seven Senders](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/integrate-seven-senders.html)
-* [Seven Senders — API requests](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-api-requests.html)
-* [Seven Senders — Mappers](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-mappers.html)
-* [Seven Senders — Persistence layer](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-persistance-layer.html)
+* [Install and configure Seven Senders](/docs/pbc/all/carrier-management/{{page.version}}/third-party-integrations/seven-senders/install-and-configure-seven-senders.html)
+* [Integrate Seven Senders](/docs/pbc/all/carrier-management/{{page.version}}/third-party-integrations/seven-senders/integrate-seven-senders.html)
+* [Seven Senders — API requests](/docs/pbc/all/carrier-management/{{page.version}}/third-party-integrations/seven-senders/seven-senders-api-requests.html)
+* [Seven Senders — Mappers](/docs/pbc/all/carrier-management/{{page.version}}/third-party-integrations/seven-senders/seven-senders-mappers.html)
+* [Seven Senders — Persistence layer](/docs/pbc/all/carrier-management/{{page.version}}/third-party-integrations/seven-senders/seven-senders-persistance-layer.html)
 
 ---
 

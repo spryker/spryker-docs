@@ -88,10 +88,10 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/availability-cart-connector | 5.0.0 | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html) |
 | spryker/availability-gui | 4.0.0 | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html) |
 | spryker/availability-offer-connector | 2.0.0 | [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html) |
-| spryker/cart | 6.0.0 | [Upgrade the Cart module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html) |
-| spryker/cart-extension | 3.0.0 | [Upgrade the CartExtension module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html) |
+| spryker/cart | 6.0.0 | [Upgrade the Cart module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html) |
+| spryker/cart-extension | 3.0.0 | [Upgrade the CartExtension module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html) |
 | spryker/carts-rest-api | 4.0.0 | [Upgrade the CartsRestApi module](/docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html) |
-| spryker/checkout | 5.0.0 | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html) |
+| spryker/checkout | 5.0.0 | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html) |
 | spryker/discount | 8.0.0 | [Migration Guide - Discount](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html) |
 | spryker/discount-promotion | 2.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotion-module.html) |
 | spryker/manual-order-entry-gui | 0.6.0 | [Migration Guide - ManualOrderEntryGui](/docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html) |
@@ -127,7 +127,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/stock | 6.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html) |
 | spryker/stock-sales-connector | 4.0.0 | [Migration Guide - StockSalesConnector](/docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html) |
 | spryker/wishlist | 7.0.0 | [Migration Guide - WishList](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.html) |
-| spryker-shop/cart-page | 2.0.0 | [Upgrade the CartPage module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html) |
+| spryker-shop/cart-page | 2.0.0 | [Upgrade the CartPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html) |
 | spryker-shop/customer-reorder-widget | 5.0.0 | [Migration Guide - CustomerReorderWidget](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html) |
 | spryker-shop/discount-promotion-widget | 2.0.0 | [Migration Guide - DiscountPromotionWidget](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html) |
 | spryker-shop/product-detail-page | 2.0.0 | [Migration Guide - ProductDetailPage](/docs/scos/dev/module-migration-guides/migration-guide-productdetailpage.html) |

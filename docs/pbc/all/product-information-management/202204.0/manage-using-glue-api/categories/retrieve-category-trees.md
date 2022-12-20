@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-trees.html
 related:
   - title: Retrieving category nodes
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-nodes.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/retrieve-category-nodes.html
   - title: Category Management feature overview
     link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
 ---
@@ -180,4 +180,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-[Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)
+[Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/retrieve-category-nodes.html)

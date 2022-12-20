@@ -23,7 +23,7 @@ You can create characteristic attributes for products, like brand or special fea
 
 A Back Office user can [create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 
-A developer can import [product attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html).
+A developer can import [product attributes](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html) and [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html).
 
 
 ## Product attribute inheritance
@@ -33,7 +33,7 @@ A Back Office user can add product attributes to abstract and concrete products.
 
 ## Declared attributes
 
-A declared attribute is an attribute that was [created](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
+A declared attribute is an attribute that was [created](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) or [imported](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html).
 
 After declaring an attribute, Back Office users can add it to products, and developers can import products with it.
 
@@ -177,9 +177,3 @@ We recommend defining all the atributes you want to use.
 |---|
 | [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) |
 | [Edit product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/edit-product-attributes.html) |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

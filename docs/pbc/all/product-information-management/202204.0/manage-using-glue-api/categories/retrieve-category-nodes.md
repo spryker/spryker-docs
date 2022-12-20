@@ -39,7 +39,7 @@ To retrieve a category node, send the request:
 
 |PATH PARAMETER | DESCRIPTION |
 |---|---|
-| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
+| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/retrieve-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
 
 ### Request
 

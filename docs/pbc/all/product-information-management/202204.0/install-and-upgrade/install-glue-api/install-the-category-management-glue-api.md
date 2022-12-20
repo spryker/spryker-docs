@@ -18,6 +18,6 @@ related:
   - title: Retrieving category trees
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/retrieve-category-trees.html
   - title: Retrieving category nodes
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-nodes.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/retrieve-category-nodes.html
 ---
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-category-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-category-management-glue-api.md -->

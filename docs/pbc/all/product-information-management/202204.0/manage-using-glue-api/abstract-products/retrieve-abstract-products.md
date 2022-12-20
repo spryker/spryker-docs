@@ -1941,7 +1941,7 @@ For the attributes of other included resources, see:
 * [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html#abstract-product-availability-response-attributes)
 * [Retrieve prices of an abstract product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
+* [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/retrieve-category-nodes.html#category-nodes-response-attributes)
 * [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-product-labels.html#product-labels-response-attributes)
 * [Retrieve product reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)

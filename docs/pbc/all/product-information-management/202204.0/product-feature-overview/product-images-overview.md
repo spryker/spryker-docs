@@ -35,9 +35,3 @@ You can enjoy the following benefits of the feature:
 |---|
 | [Assign images to a product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#optional-add-images) |
 | [Assign images to categories](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/category/create-categories.html) |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

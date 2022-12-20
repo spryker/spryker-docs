@@ -5,14 +5,14 @@ last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve shipments in orders. For full information about the endpoint, see [Retrieve orders](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html)
+This document describes how to retrieve shipments in orders. For full information about the endpoint, see [Retrieve orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-glue-api.html)
-* [Glue API: Order Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html)
+* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/integrate-the-shipment-glue-api.html)
+* [Glue API: Order Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
 
 ## Retrieve an order
 
@@ -25,13 +25,13 @@ To retrieve detailed information about an order, send the following request:
 
 | PATH PARAMETER     | DESCRIPTON                                                   |
 | ------------------ | -------------------- |
-| ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | The unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html#retrieve-all-orders) to get it. |
+| ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | The unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html#retrieve-all-orders) to get it. |
 
 ### Request
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
-| Authorization | string       | ✓        | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| Authorization | string       | ✓        | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | STRING PARAMETER | DESCRIPTION  | POSSIBLE VALUES    |
 | ---------------- | ---------------- | --------------- |
@@ -352,4 +352,4 @@ To retrieve detailed information about an order, send the following request:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -2487,18 +2487,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
     - title: Migration Guide - Calculation
       url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
-    - title: Migration Guide - Catalog
-      url: /docs/scos/dev/module-migration-guides/migration-guide-catalog.html
-    - title: Migration Guide - Category Template Migration Console
-      url: /docs/scos/dev/module-migration-guides/migration-guide-category-template-migration-console.html
-    - title: Migration Guide - Category
-      url: /docs/scos/dev/module-migration-guides/migration-guide-category.html
-    - title: Migration Guide - CategoryGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-categorygui.html
-    - title: Migration Guide - CategoryPageSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html
-    - title: Migration guide - CategoryStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
     - title: Migration guide - CodeItNow module to BarcodeLaminas module
       url: /docs/scos/dev/module-migration-guides/migration-guide-codeitnow-to-barcodelaminas.html
     - title: Migration Guide - Collector
@@ -2547,8 +2535,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
     - title: Migration guide - MerchantGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
-    - title: Migration Guide - MerchantRelationshipProductListGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
     - title: Migration Guide - Messenger
       url: /docs/scos/dev/module-migration-guides/migration-guide-messenger.html
     - title: Migration Guide - Monitoring

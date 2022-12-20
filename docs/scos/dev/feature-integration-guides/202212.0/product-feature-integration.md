@@ -30,7 +30,7 @@ related:
   - title: Product + Order Management feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-order-management-feature.html
   - title: Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Product overview
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---

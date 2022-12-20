@@ -10,7 +10,7 @@ To start feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product | {{site.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Product | {{site.version}} |[Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ## 1) Install required modules using Composer
 

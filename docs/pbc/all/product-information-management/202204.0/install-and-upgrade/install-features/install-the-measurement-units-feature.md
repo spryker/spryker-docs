@@ -1,5 +1,5 @@
 ---
-title: Measurement Units feature integration
+title: Install the Measurement Units feature
 description: The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -21,8 +21,6 @@ redirect_from:
 related:
   - title: Glue API - Measurement Units feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
-  - title: Measurement Units feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/measurement-units-feature-walkthrough.html
 ---
 
 ## Install feature core

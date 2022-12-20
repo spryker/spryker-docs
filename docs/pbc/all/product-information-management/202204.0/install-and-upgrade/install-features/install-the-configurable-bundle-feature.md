@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/configurable-bundle-feature-integration.html
 related:
   - title: Glue API - Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-configurable-bundle-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
   - title: Glue API - Configurable Bundle + Cart feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
   - title: Glue API - Configurable Bundle + Product feature integration
@@ -22,15 +22,15 @@ related:
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
   - title: Product Lists + Catalog feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-catalog-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
   - title: Prices feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
   - title: Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Product Lists feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-lists-feature.html
   - title: Product Images + Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-configurable-bundle-feature.md -->

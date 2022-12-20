@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-feature-integration.html
 related:
   - title: Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Retrieve abstract products
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/retrieve-abstract-products.html
   - title: Retrieving concrete products

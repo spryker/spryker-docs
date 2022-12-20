@@ -16,7 +16,7 @@ related:
   - title: Category Management feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-category-management-feature.html
   - title: Retrieving category trees
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/retrieve-category-trees.html
   - title: Retrieving category nodes
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-nodes.html
 ---

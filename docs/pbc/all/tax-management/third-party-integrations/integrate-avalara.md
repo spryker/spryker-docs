@@ -31,7 +31,7 @@ Follow the steps below to install the feature core.
 | --- | --- | --- |
 | Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 |Cart | master | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html) |
-|Product  | master | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+|Product  | master | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html) |
 |Tax  | master | |
 | Inventory Management | master | [Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html) |
 |Glue API: Checkout  | master | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)|

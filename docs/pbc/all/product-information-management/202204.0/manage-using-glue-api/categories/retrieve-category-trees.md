@@ -11,6 +11,7 @@ redirect_from:
   - /docs/retrieving-category-trees
   - /docs/en/retrieving-category-trees
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-categories/retrieving-category-trees.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-trees.html
 related:
   - title: Retrieving category nodes
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-nodes.html

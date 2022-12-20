@@ -23,7 +23,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html
 related:
   - title: Migration guide - MerchantRelationshipProductListGui
-    link: docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productlistgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productlistgui-module.md -->

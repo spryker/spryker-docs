@@ -35,8 +35,8 @@ The preview link is the only available option for the B2C environment. B2C users
 
 {% endinfo_block %}
 
-* *Read-only*: for details, see [Read only](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
-* *Full access*: for details, see [Full access](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
+* *Read-only*: for details, see [Read only](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
+* *Full access*: for details, see [Full access](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
 
 {% info_block warningBox %}
 

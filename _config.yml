@@ -227,6 +227,12 @@ versioned_categories:
       - return-management
       - emails
       - carrier-management
+      - price-management
+      - ratings-reviews
+      - request-for-quote
+      - shopping-list-and-wishlist
+      - tax-management
+      - warehouse-management-system
 
 
 

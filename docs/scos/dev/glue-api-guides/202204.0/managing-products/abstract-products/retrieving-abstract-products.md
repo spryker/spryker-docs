@@ -15,11 +15,11 @@ related:
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
-    link: docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
+    link: docs/pbc/all/tax-management/page.version/manage-via-glue-api/retrieve-tax-sets.html
   - title: Product feature overview
     link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
@@ -34,7 +34,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
-* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
+* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
 
 
 
@@ -1937,11 +1937,11 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 For the attributes of other included resources, see:
 * [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
-* [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html#abstract-product-availability-response-attributes)
-* [Retrieve prices of an abstract product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html)
+* [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/manage-using-glue-api/retrieve-abstract-product-availability.html#abstract-product-availability-response-attributes)
+* [Retrieve prices of an abstract product](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
-* [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 * [Retrieve product reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)

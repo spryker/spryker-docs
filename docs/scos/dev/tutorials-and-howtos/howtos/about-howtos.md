@@ -38,11 +38,11 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 * [HowTo: Generate a token for login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html)
 * [HowTo: Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)
 * [HowTo: Render Configurable Bundle Templates on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)
-* [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
+* [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
 * [HowTo: Use blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html)
 * [HowTo: Create a custom content item](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html)
 * [HowTo: Create a visibility condition for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html)
-* [HowTo: Manage business unit specific prices via data import](/docs/pbc/all/price-management/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html)
+* [HowTo: Manage business unit specific prices via data import](/docs/pbc/all/price-management/{{site.version}}/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html)
 * [HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
 * [HowTo: Import warehouse data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
 

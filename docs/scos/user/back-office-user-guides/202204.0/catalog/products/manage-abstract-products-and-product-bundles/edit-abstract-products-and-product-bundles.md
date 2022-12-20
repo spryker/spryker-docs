@@ -63,11 +63,11 @@ Each section contains reference information. Make sure to look up the necessary 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html) the prices apply to. <br>To create one, see [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html). <br>If you select **Default prices**, the prices will apply to all customers. |
+| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/{{site.version}}/merchant-custom-prices-feature-overview.html) the prices apply to. <br>To create one, see [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html). <br>If you select **Default prices**, the prices will apply to all customers. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
 | DEFAULT price | Default price is the price a customer pays for the product.
 | ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| TAX SET | Conditions under which the product is taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html). |
+| TAX SET | Conditions under which the product is taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/create-tax-rates.html). |
 
 ## Edit volume prices of an abstract product or product bundle
 

@@ -1121,7 +1121,7 @@ entries:
               - title: Install the Agent Assist + Shopping List feature
                 url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
               - title: Install the Agent Assist Glue API
-                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html                                                   
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html
           - title: Manage in the Back Office
             nested:
               - title: "Best practices: Manage users and their permissions with roles and groups"

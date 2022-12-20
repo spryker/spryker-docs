@@ -17,4 +17,4 @@ related:
     link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/integrate-the-shipment-feature.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-shipment-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-shipment-cart-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-shipment-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-shipment-cart-feature.md -->

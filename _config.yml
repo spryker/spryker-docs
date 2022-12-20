@@ -222,6 +222,8 @@ versioned_categories:
   pbc:
     all:
       - content-management-system
+      - discount-management
+      - gift-cards
       - identity-access-management
       - user-management
       - return-management

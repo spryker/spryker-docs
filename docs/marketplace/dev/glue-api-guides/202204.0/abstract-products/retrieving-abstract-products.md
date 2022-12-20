@@ -1485,7 +1485,7 @@ For the attributes of other included resources, see:
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)
 * [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-via-glue-api/retrieve-tax-sets.html)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
-* [Retrieve product reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html#retrieve-product-reviews)
+* [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#retrieve-product-reviews)
 *  [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 *  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
 

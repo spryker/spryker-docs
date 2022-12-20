@@ -92,8 +92,8 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/cart-extension | 3.0.0 | [Upgrade the CartExtension module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html) |
 | spryker/carts-rest-api | 4.0.0 | [Upgrade the CartsRestApi module](/docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html) |
 | spryker/checkout | 5.0.0 | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html) |
-| spryker/discount | 8.0.0 | [Migration Guide - Discount](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html) |
-| spryker/discount-promotion | 2.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotion-module.html) |
+| spryker/discount | 8.0.0 | [Migration Guide - Discount](/docs/pbc/all/discount-management/{{site.version}}/install-and-upgrade/upgrade-the-discount-module.html) |
+| spryker/discount-promotion | 2.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/{{site.version}}/install-and-upgrade/upgrade-the-discountpromotion-module.html) |
 | spryker/manual-order-entry-gui | 0.6.0 | [Migration Guide - ManualOrderEntryGui](/docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html) |
 | spryker/offer | 0.2.0 | [Migration Guide - Offer](/docs/scos/dev/module-migration-guides/migration-guide-offer.html) |
 | spryker/offer-gui | 0.2.0 | [Migration Guide - OfferGui](/docs/scos/dev/module-migration-guides/migration-guide-offergui.html) |
@@ -129,7 +129,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/wishlist | 7.0.0 | [Migration Guide - WishList](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/upgrade-the-wishlist-module.html) |
 | spryker-shop/cart-page | 2.0.0 | [Upgrade the CartPage module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html) |
 | spryker-shop/customer-reorder-widget | 5.0.0 | [Migration Guide - CustomerReorderWidget](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html) |
-| spryker-shop/discount-promotion-widget | 2.0.0 | [Migration Guide - DiscountPromotionWidget](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html) |
+| spryker-shop/discount-promotion-widget | 2.0.0 | [Migration Guide - DiscountPromotionWidget](/docs/pbc/all/discount-management/{{site.version}}/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html) |
 | spryker-shop/product-detail-page | 2.0.0 | [Migration Guide - ProductDetailPage](/docs/scos/dev/module-migration-guides/migration-guide-productdetailpage.html) |
 | spryker-shop/product-measurement-unit-widget | 0.7.0 | [Migration Guide - ProductMeasurementUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunitwidget.html) |
 | spryker-shop/product-packaging-unit-widget | 0.3.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html) |

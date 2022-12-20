@@ -1943,7 +1943,7 @@ For the attributes of other included resources, see:
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
 * [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-* [Retrieve product reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
+* [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 
 ## Possible errors

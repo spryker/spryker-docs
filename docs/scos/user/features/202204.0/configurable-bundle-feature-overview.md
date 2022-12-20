@@ -235,7 +235,7 @@ The feature has the following functional constraints which are going to be resol
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html)
     - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html)
-    - [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
+    - [Gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
     * [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html)

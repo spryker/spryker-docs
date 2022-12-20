@@ -1,7 +1,7 @@
 ---
 title: Process documentation guidelines
-description: @TODO
-last_updated: @TODO
+description: Process documentation guidelines to improve communication and ensure smooth deployment of applications within cross-functional teams.
+last_updated: 
 template: concept-topic-template
 related:
 - title: NFR guidelines

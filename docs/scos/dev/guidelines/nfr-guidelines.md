@@ -1,7 +1,7 @@
 ---
 title: Project Development Non-Functional Requirement guidelines
-description: @TODO
-last_updated: @TODO
+description: Guidelines for defining and implementing Non-Functional Requirements (NFRs) to ensure the technical success of a project.
+last_updated: 
 template: concept-topic-template
 related:
 - title: Operatable feature guidelines

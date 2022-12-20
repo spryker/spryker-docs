@@ -1,7 +1,7 @@
 ---
 title: Operatable feature guidelines
-description: @TODO
-last_updated: @TODO
+description: Guidelines for ensuring the effectiveness of application development and operation.
+last_updated: 
 template: concept-topic-template
 related:
 - title: NFR guidelines

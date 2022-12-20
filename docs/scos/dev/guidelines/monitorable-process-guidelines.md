@@ -1,7 +1,7 @@
 ---
 title: Monitorable process guidelines
-description: @TODO
-last_updated: @TODO
+description: Guidelines for log generation and metric generation to enable Operations Teams to track and correlate issues in operated and deployed applications.
+last_updated:
 template: concept-topic-template
 related:
 - title: NFR guidelines

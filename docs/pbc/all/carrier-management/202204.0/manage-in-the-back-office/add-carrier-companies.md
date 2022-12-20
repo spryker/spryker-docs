@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/201811.0/administration/delivery-methods/creating-carrier-companies.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/creating-carrier-companies.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/add-carrier-companies.html
+  - /docs/scos/user/back-office-user-guides/202212.0/administration/delivery-methods/creating-carrier-companies.html
+  - /docs/scos/user/back-office-user-guides/202212.0/administration/delivery-methods/add-carrier-companies.html
 related:
   - title: Creating and Managing Delivery Methods
     link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html

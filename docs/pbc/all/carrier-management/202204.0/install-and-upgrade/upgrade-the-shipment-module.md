@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipment.html
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-shipment.html
   - /docs/scos/dev/module-migration-guides/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-shipment.html
 related:
   - title: "Reference information: Shipment method plugins"
     link: docs/pbc/all/carrier-management/page.version/extend-and-customize/shipment-method-plugins-reference-information.html

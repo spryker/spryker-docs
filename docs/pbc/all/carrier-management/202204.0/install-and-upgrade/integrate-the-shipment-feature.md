@@ -13,7 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/shipment-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/shipment-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202204.0/shipment-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/shipment-feature-integration.html  
 related:
   - title: Glue API - Shipment feature integration
     link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/integrate-the-shipment-feature.html
@@ -25,4 +26,4 @@ related:
     link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-shipment-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-shipment-feature.md -->

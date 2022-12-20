@@ -1,6 +1,6 @@
 ---
 title: Integrate the Shipment Glue API
-last_updated: Jul 13, 2021
+last_updated: Dec 14, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shipment-feature-integration
 originalArticleId: a324452c-5bf0-49f9-a6d8-fd59abf3b414
@@ -22,4 +22,4 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-glue-api/install-the-shipment-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-shipment-glue-api.md -->
+{% include pbc/all/install-features/202212.0/install-glue-api/install-the-shipment-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-shipment-glue-api.md -->

@@ -23,20 +23,14 @@ redirect_from:
 related:
   - title: CRUD Scheduled Prices migration concept
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
-  - title: Decimal Stock migration concept
-    link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
-  - title: Float Stock for products migration concept
-    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
-  - title: Search migration concept 
-    link: docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
-  - title: Migrating from Twig v1 to Twig v3
-    link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
-  - title: Split Delivery migration concept
-    link: docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
-  - title: Silex Replacement migration concept
-    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 
-This section will help the developers to handle situations when a new feature requires an extensive migration effort for modules, or some technical solution used in Spryker needs to be replaced with a new one.
+This section explains how to handle migration when a new feature requires an extensive migration effort for modules, or some technical solution used in Spryker needs to be replaced with a new one.
 
-Here you will find instructions on how implement these changes in your project. 
+Here you will find instructions on how to implement these changes in your project: 
+* [Decimal Stock migration concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html)
+* [Float Stock for products migration concept](/docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html)
+* [Search migration concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html)
+* [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html)
+* [Split Delivery migration concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html)
+* [Silex Replacement migration concept](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html)

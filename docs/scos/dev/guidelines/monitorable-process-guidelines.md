@@ -12,9 +12,17 @@ related:
   link: docs/scos/dev/guidelines/process-documentation-guidelines.html
 ---
 
-In order to enable Operations Team to track/correlate issues in the operated/deployed applications, the following elements need to be applied over
+In order to enable your Operations Team to track/correlate issues in the operated/deployed applications, the following elements need to be applied over
 * log generation
 * and metric generation.
+
+{% info_block warningBox "Warning" %}
+
+This page contains guidelines for project development, not a list of strict requirements. While it is suggested that
+development teams consider these recommendations, they are not hard requirements that must be followed. The purpose of these guidelines
+is to help development teams achieve high quality software.
+
+{% endinfo_block %}
 
 ## Log generation
 Applies to all application components.
@@ -42,9 +50,9 @@ just as the result of remote response (success, error).
 ### What NOT to log?
 * Avoid logging unreasonably. When you decide to have a log-entry, you should have at least 1 use-case in mind where the related data 
 can be considered a helpful addition.
-* Avoid logging in performance critical places. In case there is a performance critical process or an unusually large cycle as a sub-process
+* Minimize logging in performance critical places. In case there is a performance critical process or an unusually large cycle as a sub-process
 element, you should make a careful decision between performance vs traceability.
-* Audit trail (including authentication & authorization): it is recommended to log the audit trails of important entity changes but it should 
+* Audit trail (including authentication & authorization): it is recommended to log the audit trails of important entity changes, but it should 
 not be sent to the regular log system since the typical data here consists mainly of sensitive data.
 
 ### Log levels
@@ -55,7 +63,7 @@ in the System. A wrong category selection MAY de-rail a fellow inspector.
 | Level | Description |
 |-------|-------------|
 | Debug | Provides detailed data, which is mostly used for debugging. These logs allow to check variable values and/or error stacks. |
-| Info | Interesting events. |
+| Info | Interesting events for business or tech. |
 | Notice | Uncommon events. |
 | Warning | Describes events that are less destructive than errors. They usually do not result in any reduction of the program's functionality or its full failure. Undesirable things that are not necessarily wrong. |
 | Error | Identifies error events that may still let the software run, but with restricted capabilities in the impacted routes. |
@@ -71,16 +79,167 @@ A log entry MUST always answer the following items and follow the below describe
 * **what** has happened and/or why has it happened
 * **result** of event (exception, success details, information details)
 
-**TODO: add code example blocks from https://spryker.atlassian.net/wiki/spaces/ALO/pages/3388014860/Monitorable+process+guidelines**
+Draft:
+```JSON
+{
+  "actor": {
+      "actorId": "end-user-1",
+      "sessionId": "end-user-1-session-27",
+      "transactionId": "end-to-end-transaction-555",
+      "parentTransactionId": "end-to-end-transaction-554",
+  },
+  "service": {
+    "host": "ip-11-111-1-111.eu-central-1.compute.internal",
+    "componentType": "GLUE",
+    "component": "StorefrontApi",
+    "activityId": "address-search-suggestions",
+  },
+  "@timestamp": "2022-08-01T18:20:22.602934+00:00",
+  "message":"StorefrontAPI : GET : v2/stores/delivery : start",
+  "messageId":"unique-message-id",
+  "level": 0,
+  "levelCode": 0,
+  "extra" : {
+     "exception": {...}
+     "environment": {
+            "application": "",
+            "environment": "",
+            "store": "",
+            "codeBucket": "",
+            "locale": ""
+     },
+     "server": {
+            "url": "",
+            "isHttps": true,
+            "hostname": "",
+            "requestMethod": "",
+            "referer": null       
+     },
+    "request": {
+            "requestId": "",
+            "type": "",
+            "requestParams": {}
+    },
+    "externalRequest" : {
+      "externalDuration":"0",
+      "externalResponseCode": "remote-service-unique-answer-code"
+    },
+}
+```
+
+Log structure with example values:
+```JSON
+{
+    "@timestamp": "2022-08-01T18:20:22.602934+00:00",
+    "@version": 1,
+    "host": "ip-10-105-6-175.eu-central-1.compute.internal",
+    "message": "StorefrontAPI : Request : v2/stores/delivery",
+    "type": "GLUE",
+    "channel": "Glue",
+    "level": "INFO",
+    "monolog_level": 200,
+    "extra": {
+        "environment": {
+            "application": "GLUE",
+            "environment": "docker.dev",
+            "store": null,
+            "codeBucket": "US",
+            "locale": "en_US"
+        },
+        "server": {
+            "url": "https://api.com/v1/action-name?param1=abc",
+            "is_https": true,
+            "hostname": "api.com",
+            "user_agent": "cypress/test-automation",
+            "user_ip": "35.205.30.220",
+            "request_method": "GET",
+            "referer": null
+        },
+        "request": {
+            "requestId": "3c1f60f1",
+            "type": "WEB",
+            "request_params": {
+                "currency": "USD",
+                "service_type": "delivery",
+                "zip_code": "32773-5600",
+                "address": "3707 S Orlando Dr"
+            }
+        }
+    },
+    "context": {
+        "payload": {
+            "find_by": []
+        }
+    }
+}
+```
+
+Log structure with error values:
+
+```JSON
+{
+  "@timestamp": "2021-08-19T14:54:23.447685+00:00",
+  "@version": 1,
+  "host": "localhost",
+  "message": "Exception - Sniffer run was not successful: Unknown error in \"/.../vendor/spryker/development/src/Spryker/Zed/Development/Business/ArchitectureSniffer/ArchitectureSniffer.php::165\"",
+  "type": "ZED",
+  "channel": "Zed",
+  "level": "CRITICAL",
+  "monolog_level": 500,
+  "extra": {
+    "environment": {
+      "application": "ZED",
+      "environment": "development",
+      "store": "US",
+      "codeBucket": "US",
+      "locale": "en_US"
+    },
+    "server": {
+      "url": "http://:/",
+      "is_https": false,
+      "hostname": "",
+      "user_agent": null,
+      "user_ip": null,
+      "request_method": "cli",
+      "referer": null
+    },
+    "request": {
+      "requestId": "ad26d9e1",
+      "type": "CLI",
+      "request_params": []
+    }
+  },
+  "context": {
+    "exception": {
+      "class": "Exception",
+      "message": "Sniffer run was not successful: Unknown error",
+      "code": 0,
+      "file": "/.../vendor/spryker/development/src/Spryker/Zed/Development/Business/ArchitectureSniffer/ArchitectureSniffer.php:165",
+      "trace": [
+        "/.../vendor/spryker/development/src/Spryker/Zed/Development/Business/ArchitectureSniffer/ArchitectureSniffer.php:117",
+        "/.../vendor/spryker/development/src/Spryker/Zed/Development/Business/DevelopmentFacade.php:484",
+        "/.../vendor/spryker/development/src/Spryker/Zed/Development/Communication/Console/CodeArchitectureSnifferConsole.php:286",
+        "/.../vendor/spryker/development/src/Spryker/Zed/Development/Communication/Console/CodeArchitectureSnifferConsole.php:93",
+        "/.../vendor/symfony/console/Command/Command.php:258",
+        "/.../vendor/symfony/console/Application.php:938",
+        "/.../vendor/symfony/console/Application.php:266",
+        "/.../vendor/spryker/console/src/Spryker/Zed/Console/Communication/Bootstrap/ConsoleBootstrap.php:111",
+        "/.../vendor/symfony/console/Application.php:142",
+        "/.../vendor/spryker/console/bin/console:27"      
+      ]
+    }
+  }
+}
+```
 
 ## Metric generation
-Applies to all application components under ACI scoped processes.
+Each metric represents a condition of some system attributes. There can be many of them, and they can be correlated with each other.
 
-Each metric represents a condition of some system attribute. You can have a lot of them and correlate them with each other.
-
-* Every service / component should define and generate project appropriate metrics for key processes (with basic dimension of the outcome 
-of the operation (success, failure) and duration) to enable us tracking such events and react when they reach undesired scores.
-   * Start and end of a process must be sent to enable us tracking and tuning infrastructure.
-   * Communication durations with remote services must be sent to us to enable us understanding that the local process is delayed for a good reason.
-* Critical metrics together with their threshold vision must be highlighted in the Operational guideline to enable us setting up monitoring system.
-* The deployment & rollback flows should generate metrics in order to enable us tracking and interact with such processes.
+* Every service/component should define and generate project-appropriate metrics for key processes (with a basic dimension of the outcome 
+of the operation (success, failure) and duration) to enable tracking of such events and reacting when they reach undesired scores.
+  * The start and end of a process must be recorded to enable tracking and tuning of the infrastructure.
+  * Communication durations with remote services must be recorded to understand whether the local process is delayed for a good reason.
+* Critical metrics, along with their threshold values, should be highlighted in the 
+[Operational guidelines](docs/scos/dev/guidelines/process-documentation-guidelines.html#operational-guidelines) to enable the setting 
+up of a monitoring system.
+* Deployment and rollback flows should generate metrics to enable tracking and interaction with these processes.

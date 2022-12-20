@@ -12,7 +12,17 @@ related:
   link: docs/scos/dev/guidelines/monitorable-process-guidelines.html
 ---
 
-In order to enable Operations Teams to best-possible operate Applications, the following elements are suggested to be addressed.
+To ensure that Applications can be developed and operated effectively, it is suggested that project development teams consider the following 
+elements. By addressing these issues, development teams can help ensure that the Operations team has the necessary information and resources 
+to maintain the performance and reliability of the applications.
+
+{% info_block warningBox "Warning" %}
+
+This page contains guidelines for project development, not a list of strict requirements. While it is suggested that
+development teams consider these recommendations, they are not hard requirements that must be followed. The purpose of these guidelines 
+is to help development teams achieve high quality software.
+
+{% endinfo_block %}
 
 ### Survive-ability
 An application - during its life-cycle - faces various expected and unexpected challenges. To increase its survive-ability with the help of Operations Team, 
@@ -20,20 +30,22 @@ it is recommended to design additional flexible configuration options (feature o
 (without re-deployment) to decrease resolution impact on critical business flows (such options need to be handed over in the Operational guidelines).
 
 ### Stability
-It is very common use-case that your business/technical teams identifies project specific risks that temporary challenge the stability of your application. 
-To enable us counter such events with a joined team effort or apply alternative solutions for these specific cases, it is recommended to hand over such 
-gathered information to us via the Operational guidelines.
+It is very common for business or technical teams to identify project-specific risks that may temporarily challenge the stability of the application.
+To enable the Operations team to effectively address such events or explore alternative solutions, it is recommended that any gathered information related to these 
+specific cases be shared via the Operational guidelines. This will help ensure that the Operations team has the necessary information to address stability issues 
+and maintain the reliability of the application.
 
 ### Readability
-Code readability is a major quality attribute that affects code review time, code fix time, feature delivery time, developer onboarding time, error 
-evaluation time, human error count (etc.) over your application team and us. In order to decrease all of those negative effects in your application, 
-the QG establishes a set of readability rules that need to be fulfilled.
+Code readability is a major quality attribute that can impact various aspects of a project, including code review time, code fix time, feature delivery time, 
+developer onboarding time, error evaluation time, and the number of human errors. To improve the efficiency and effectiveness of the team, it is important to 
+establish a set of readability rules that need to be followed. This will help ensure that the codebase is easy to understand and maintain, which can lead to 
+faster delivery of features and fewer errors.
 
 ### Credibility
-In order to have a credible application that aims to work 24/7/365 while rolling out huge change-sets during this time, it’s recommended to build/follow 
-test best-practices to aim errorless behaviour on production environment. Optionally a set of production targeted smoke tests (in consideration with their 
-impact on the production environment itself) can be handed over to us (as part of Operational guidelines or Deployment guidelines), to verify the proper 
-behaviour of a recent change in the system.
+To ensure a credible application that can operate continuously (24/7/365) and implement significant changes on a regular basis, it is recommended to develop and adhere 
+to testing best practices that aim for error-free behavior in the production environment. As an optional step, a set of production-targeted smoke tests 
+(considering their impact on the production environment) can be conducted to verify the proper behavior of recent changes to the system. These tests can 
+be included as part of the operational or deployment guidelines.
 
 Note: it is recommended to put extra attention over the environment specific application/infrastructure configurations and settings as those carry a higher 
 risk of business impact on error.

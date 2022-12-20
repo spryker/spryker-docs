@@ -14,9 +14,6 @@ related:
   link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---
 
-
-## Introduction
-
 Non-Functional Requirements (NFRs) are one of the core tools for architects and developers to describe how the system under development supposed to work from technical perspective.
 Defining NFRs can be as important as defining functional requirements, which are usually done by business people (i.e. Product Owners). Missing out on them usually result in
 too late realization of certain unintended behavior that costs a lot of resources/money for the projects to deal with.

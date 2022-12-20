@@ -14,7 +14,7 @@ For more information about upgrading the Spryker Commerce OS with Enterprise Mar
 
 {% info_block infoBox "Info" %}
 
-For detailed infomration about all related changes, see [Localization improvements](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html#localization-improvements) and [Update cart totals based on delivery method](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html#update-cart-totals-based-on-delivery-method)
+For detailed infomration about all related changes, see [Localization improvements](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.md#localization-improvements-) and [Update cart totals based on delivery method](//docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.md#update-cart-totals-based-on-delivery-method-)
 
 {% endinfo_block %}
 

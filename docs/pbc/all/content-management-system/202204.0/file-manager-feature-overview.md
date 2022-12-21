@@ -1,5 +1,5 @@
 ---
-title: Digital Asset Management
+title: File Manager feature overview
 description: Reduce your bounce rate and create an enhanced shopping experience by providing impactful visuals while maintaining fast response times.
 last_updated: Sep 2, 2021
 template: concept-topic-template
@@ -17,12 +17,12 @@ redirect_from:
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
 ---
 
-The *Digital Asset Management* capability lets you upload and manage your assets (media files) effectively. You can:
+The *File Manager* feature lets you upload and manage your assets (media files) effectively. You can:
 * Upload and delete files in bulk
 * Add and delete files manually via the Back Office
 * Maintain multiple versions of individual files
 * Drag and drop to create and update your assets’ file structure
-* Manage files from a list view 
+* Manage files from a list view
 
 A Back Office user can upload files then add them to CMS pages and blocks to display on the Storefront.
 
@@ -111,18 +111,18 @@ The following environment variables are used for that:
 
 See [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
 
-
-## Related Business User articles
-
-| OVERVIEWS |BACK OFFICE USER GUIDES|
-| - | - |
-| [Asset management](/docs/pbc/all/digital-asset-management/digital-asset-management.html) | [Upload files to the Back Office](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html#uploading-files) |
-
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of asset measurement](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)  |
-| [Get a general idea of the file uploader](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-uploader.html)  |
-| [Manage file tree](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html)   |
-| [Manage file list](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html) |
+| [Manage file tree](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-file-tree.html)   |
+| [Manage file list](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-file-list.html) |
+| [Add and edit MIME types](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/add-and-edit-mime-types.html) |
+
+## Related Developer articles
+
+| UPGRADE GUIDES| DATA IMPORT	|
+| - | - |
+| [Upgrade the FileManager module](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html) | [File details - mime_type.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-mime-type.csv.html) |
+| [Upgrade the FileManagerStorage module](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerstorage-module.html) | |
+| [Upgrade the FileManagerWidget module](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerwidget-module.html) | |

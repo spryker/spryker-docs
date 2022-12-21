@@ -19,7 +19,7 @@ related:
   - title: Retrieving concrete products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
   - title: Retrieve concrete product availability
-    link: docs/pbc/all/warehouse-management-system/page.version/page.version/manage-using-glue-api/retrieve-concrete-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/page.version/manage-using-glue-api/retrieve-concrete-product-availability.html
   - title: Retrieving image sets of concrete products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
   - title: Retrieving sales units

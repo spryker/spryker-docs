@@ -26,7 +26,7 @@ The *Prices* feature enables Back Office users to set prices for products and ma
 To accommodate business requirements, there can be various price types. For example, a *default price* is a product's regular price. An *original price* is typically used to show a product's price before a discount was applied. The original price is displayed in a strikethrough font next the the default price.
 
 
-![Default and original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.md/default-and-original-prices.png)
+![Default and original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/default-and-original-prices.png)
 
 
 ## Product types and price inheritance
@@ -35,15 +35,15 @@ Back Office users can set prices for both [abstract products and product variant
 
 On the Storefront, when customers browse catalog and search pages, they see abstract product prices.
 
-![Abstract product prices in catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.md/abstract-product-prices-in-catalog.png)
+![Abstract product prices in catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/abstract-product-prices-in-catalog.png)
 
 When a customer opens a Product Details page, they still see an abstract product price.
 
-![Abstract product price on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.md/abstract-product-prices-on-pdp.png)
+![Abstract product price on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/abstract-product-prices-on-pdp.png)
 
 After selecting a product variant, they see the variant's price.
 
-<iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.md/prices-of-abstract-products-and-pruduct-variants.mp4" frameborder="0" allowfullscreen></iframe>
+<iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/prices-of-abstract-products-and-pruduct-variants.mp4" frameborder="0" allowfullscreen></iframe>
 
 In some cases, you may want to set the same price for all the product variants. Then, you set the price for the abstract product and don't set any for the variants. When the variants don't have prices, they inherit the price of their abstract product.
 

@@ -36,7 +36,7 @@ data:import:discount-store
 
 
 
-* [discount.csv](/docs/pbc/all/discount-management/{{site.version}}import-and-export-data/file-details-discount.csv.html)
+* [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

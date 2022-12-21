@@ -15,7 +15,7 @@ redirect_from:
 The **Discounts** category contains all data you need to manage product discount information in the online store.
 We have structured this section according to the following CSV files, required for importing the data:
 
-* [discount.csv](/docs/pbc/all/discount-management/{{site.version}}import-and-export-data/file-details-discount.csv.html): allows you to import general information about the discounts and their attributes.
+* [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount.csv.html): allows you to import general information about the discounts and their attributes.
 * [discount_amount.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-amount.csv.html):  allows you to import data used to set the values of the discounts imported with *discount.csv*.
 * [discount_store.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-store.csv.html): allows you to link the discounts with the stores.
 * [discount_voucher.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-voucher.csv.html) allows you to import information about vouchers.
@@ -24,7 +24,7 @@ The following table provides details about Product Merchandising data importers,
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILES | DEPENDENCIES |
 | --- | --- | --- | --- |--- |
-| Discount   | Imports information about the discounts and their attributes. |`data:import:discount`| [discount.csv](/docs/pbc/all/discount-management/{{site.version}}import-and-export-data/file-details-discount.csv.html) | None|
+| Discount   | Imports information about the discounts and their attributes. |`data:import:discount`| [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount.csv.html) | None|
 | Discount Amount  | Imports information used to set the values of the discounts imported with *discount.csv*. |`data:import:discount-amount`| [discount_amount.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-amount.csv.html) |<ul><li>discount.csv</li><li>discount_store.csv</li></ul> |
-| Discount Store   | Imports information about this file links the discounts with the stores. |`data:import:discount-store`| [discount_store.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-store.csv.html) | <ul><li>[discount.csv](/docs/pbc/all/discount-management/{{site.version}}import-and-export-data/file-details-discount.csv.html)</li><li>*stores.php* configuration file of demo shop PHP project.</li></ul> |
-| Discount Voucher   | Imports information used to create the discount voucher.|`data:import:discount-voucher`| [discount_voucher.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-voucher.csv.html) | [discount.csv](/docs/pbc/all/discount-management/{{site.version}}import-and-export-data/file-details-discount.csv.html) |
+| Discount Store   | Imports information about this file links the discounts with the stores. |`data:import:discount-store`| [discount_store.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-store.csv.html) | <ul><li>[discount.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount.csv.html)</li><li>*stores.php* configuration file of demo shop PHP project.</li></ul> |
+| Discount Voucher   | Imports information used to create the discount voucher.|`data:import:discount-voucher`| [discount_voucher.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-voucher.csv.html) | [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount.csv.html) |

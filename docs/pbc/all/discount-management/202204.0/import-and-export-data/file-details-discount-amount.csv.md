@@ -39,7 +39,7 @@ data:import:discount-amount
 
 
 
-* [discount.csv](/docs/pbc/all/discount-management/{{site.version}}import-and-export-data/file-details-discount.csv.html)
+* [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount.csv.html)
 * [discount_store.csv](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-store.csv.html)
 
 ## Import template file and content example

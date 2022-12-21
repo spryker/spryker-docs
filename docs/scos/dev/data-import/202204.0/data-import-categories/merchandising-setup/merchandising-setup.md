@@ -24,7 +24,7 @@ In the [Discounts](/docs/scos/dev/data-import/{{page.version}}/data-import-categ
 
 The order in which the files are imported is **very strict**. For this reason, the data importers should be executed in the following order:
 
-1. [Discount](/docs/pbc/all/discount-management/{{site.version}}import-and-export-data/file-details-discount.csv.html)
+1. [Discount](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount.csv.html)
 2. [Discount Store](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-store.csv.html)
 3. [Discount Voucher](/docs/pbc/all/discount-management/{{site.version}}/import-and-export-data/file-details-discount-voucher.csv.html)
 4. [Product Group](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html)

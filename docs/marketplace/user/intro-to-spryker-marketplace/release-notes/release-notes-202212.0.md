@@ -1,5 +1,5 @@
 ---
-title: Release notes 202204.0
+title: Release notes 202212.0
 description: Release notes for the Spryker Marketplace release 202212.0
 template: concept-topic-template
 last_updated: Dec 14, 2022

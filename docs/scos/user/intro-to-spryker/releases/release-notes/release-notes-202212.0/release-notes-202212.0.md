@@ -73,7 +73,7 @@ It lets your customers always see the accurate price they must pay for the entir
 * [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
 
 * Technical prerequisites:
-  * [Install the Cart Glue API](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+  * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/202204.0/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202204.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
   * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/202204.0/install-and-upgrade/integrate-the-shipment-glue-api.html)
 

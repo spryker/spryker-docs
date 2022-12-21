@@ -177,12 +177,12 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [Approval Process](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html)
+* [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/approval-process-feature-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Approval Process Feature Overview](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html)
+[Approval Process Feature Overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/approval-process-feature-overview.html)
 
 </details>
 
@@ -198,7 +198,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Shop User guide</summary>
 
-[Shop Guide - Approval Process](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html)
+[Shop Guide - Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/approval-process-feature-overview.html)
 
 
 </details>

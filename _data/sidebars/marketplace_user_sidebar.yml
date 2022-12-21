@@ -35,6 +35,9 @@ entries:
           - title: Release notes
             nested:
 
+            - title: Release notes 202212.0
+              url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202212.0.html
+
             - title: Release notes 202211.0
               url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202211.0.html
 

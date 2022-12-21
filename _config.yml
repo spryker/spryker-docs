@@ -221,6 +221,7 @@ versioned_categories:
       - system-requirements
   pbc:
     all:
+      - cart-and-checkout
       - content-management-system
       - discount-management
       - gift-cards

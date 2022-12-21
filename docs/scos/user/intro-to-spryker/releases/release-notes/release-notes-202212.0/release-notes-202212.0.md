@@ -34,12 +34,12 @@ Configured Products can be saved, accessed, and configured again in carts or fro
 
 ### Localization improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Adapting your offerings to your customers' needs and locales is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we've improved the number formatting for any locale. Based on the locale and browser language setting, your customers in the Storefront and your company users in the Back Office are shown the number format they expect to see. Look at the following example with a product price:
+Adapting your offerings to your customers' needs and locales is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we've improved the number formatting for any locale. Based on their locale, your customers in the Storefront and your company users in the Back Office will be shown the number format they expect to see. Look at the following example with a product price:
 
 | LOCALE | PRODUCT PRICE |
 |---|---|
-| de_DE | 123.456,78 |
-| en_US | 123,456.78 |
+| de_DE | 1.456,78 |
+| en_US | 1,456.78 |
 
 #### Number formatting in the Storefront
 

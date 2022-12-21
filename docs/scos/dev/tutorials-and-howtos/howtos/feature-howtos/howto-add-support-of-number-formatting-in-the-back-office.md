@@ -44,7 +44,7 @@ Extend the `Discount` configuration settings:
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Promotions & Discounts](/docs/pbc/all/discount-management/{{site.version}}discount-management.html) feature installed.
+Apply the following changes only if you have the [Promotions & Discounts](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html) feature installed.
 
 {% endinfo_block %}
 
@@ -170,7 +170,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Discount Management](/docs/pbc/all/discount-management/{{site.version}}discount-management.html) feature installed.
+Apply the following changes only if you have the [Discount Management](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html) feature installed.
 
 {% endinfo_block %}
 

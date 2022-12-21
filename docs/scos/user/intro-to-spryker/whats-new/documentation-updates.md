@@ -324,7 +324,7 @@ Below you will find the list of the new/updated documentation released as part o
  * Warehouses
     * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-warehouses.html)
     * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html)
-    * [Warehouses: Reference Information](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/inventory-management-feature-overview.html)
+    * [Warehouses: Reference Information](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
     * [Stores](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/stores.html)
 
 #### HowTos:
@@ -335,7 +335,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 #### Other documentation:
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
-* [Inventory](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/inventory-management-feature-overview.html)
+* [Inventory](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)
 

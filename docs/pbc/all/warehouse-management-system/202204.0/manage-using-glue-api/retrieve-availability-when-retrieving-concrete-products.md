@@ -11,7 +11,7 @@ This endpoint allows retrieving general information about concrete products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
+* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
 
 
 ## Retrieve a concrete product
@@ -116,7 +116,7 @@ To retrieve general information about a concrete product, send the request:
 
 {% include pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md -->
 
-For the attributes of concrete product availability, see [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
+For the attributes of concrete product availability, see [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
 
 
 ## Possible errors

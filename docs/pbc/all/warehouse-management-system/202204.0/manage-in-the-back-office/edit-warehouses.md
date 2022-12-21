@@ -54,4 +54,4 @@ Review the [reference information](#reference-information-edit-warehouses) befor
 
 ## Next steps
 
-To learn how to edit stock per warehouse, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
+To learn how to edit stock per warehouse, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).

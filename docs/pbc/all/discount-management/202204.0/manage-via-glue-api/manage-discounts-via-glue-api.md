@@ -18,11 +18,11 @@ related:
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
 ---
 
-The [Promotions](/docs/pbc/all/discount-management/{{site.version}}discount-management.html) functionality lets sellers provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase must fulfill certain discount conditions—for example, the purchase amount exceeding a certain threshold.
+The [Promotions](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html) functionality lets sellers provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase must fulfill certain discount conditions—for example, the purchase amount exceeding a certain threshold.
 
 {% info_block infoBox "Info" %}
 
-For more details about how to create the discount conditions, see [Create discounts](/docs/pbc/all/discount-management/{{site.version}}manage-in-the-back-office/create-discounts.html).
+For more details about how to create the discount conditions, see [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html).
 
 {% endinfo_block %}
 

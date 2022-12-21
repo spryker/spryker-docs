@@ -25,7 +25,7 @@ This endpoint allows managing availability notifications of registered and guest
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Availability Notification Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Availability Notification Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html).
 
 ## Subscribe to availability notifications
 

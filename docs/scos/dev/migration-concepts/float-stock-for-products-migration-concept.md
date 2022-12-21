@@ -84,10 +84,10 @@ You can find the affected modules of the float stock update in the following lis
 
 | OPERATOR | OPERATOR FOR PLAIN QUERY | MIGRATION GUIDE |
 | --- | --- | --- |
-| spryker/availability | 7.0.0 | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html) |
-| spryker/availability-cart-connector | 5.0.0 | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html) |
-| spryker/availability-gui | 4.0.0 | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html) |
-| spryker/availability-offer-connector | 2.0.0 | [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html) |
+| spryker/availability | 7.0.0 | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html) |
+| spryker/availability-cart-connector | 5.0.0 | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html) |
+| spryker/availability-gui | 4.0.0 | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html) |
+| spryker/availability-offer-connector | 2.0.0 | [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html) |
 | spryker/cart | 6.0.0 | [Upgrade the Cart module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html) |
 | spryker/cart-extension | 3.0.0 | [Upgrade the CartExtension module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html) |
 | spryker/carts-rest-api | 4.0.0 | [Upgrade the CartsRestApi module](/docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html) |

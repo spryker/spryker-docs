@@ -67,7 +67,7 @@ console transfer:generate
 ```
 
 5. Follow the steps in the individual migration guide for [ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-v--version-500).
-6. Follow the steps in the individual migration guide for [Availability](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900).
+6. Follow the steps in the individual migration guide for [Availability](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900).
 
 {% info_block errorBox %}
 
@@ -79,7 +79,7 @@ The following table lists the modules affected by the Decimal Stock update and w
 
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
-| `spryker/availability` | 9.0.0 | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900) |
+| `spryker/availability` | 9.0.0 | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900) |
 | `spryker/oms` | 11.0.0 | [Migration Guide - OMS](/docs/scos/dev/module-migration-guides/migration-guide-oms.html#upgrading-from-version-10-to-version-1100) |
 | `spryker/stock` | 8.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7-to-version-800) |
 | `spryker/availability-storage` | 2.0.0 | [Upgrade the AvailabilityStorage module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html#upgrading-from-version-1-to-version-200) |

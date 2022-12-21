@@ -39,7 +39,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Refunds](/docs/scos/user/features/{{site.version}}/refunds-feature-overview.html)
 - [Reclamations](/docs/scos/user/features/{{site.version}}/reclamations-feature-overview.html)
 - [State Machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
-- [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/inventory-management-feature-overview.html)
+- [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->

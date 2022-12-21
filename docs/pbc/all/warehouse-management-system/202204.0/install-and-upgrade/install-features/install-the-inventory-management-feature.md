@@ -3,7 +3,7 @@ title: Install the Inventory Management feature
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template
-originalLink: /docs/pbc/all/warehouse-management-system/{{site.version}}/{{site.version}}/inventory-management-feature-overview.html-feature-integration
+originalLink: /docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html-feature-integration
 originalArticleId: cb79eb0c-0a3a-49c5-a911-ef6f992f1118
 redirect_from:
   - /2021080/docs/inventory-management-feature-integration

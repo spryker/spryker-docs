@@ -15,4 +15,4 @@ For example, you can define one state machine to manage orders that use a credit
 
 A feature heavily utilized by Spryker customers, a state machine translates a variety of business needs into a coherent IT structure.
 
-This section explains state machine fundamentals then explains how to model a state machine. 
+This section explains state machine fundamentals and how to model a state machine. 

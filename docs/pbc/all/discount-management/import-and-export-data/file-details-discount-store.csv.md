@@ -25,23 +25,23 @@ data:import:discount-store
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | discount_key | &check; | String |`discount_key` must be included in the `discount.csv` file. |  |
-| store_name | &check; | String |  | Name of the store to which the discount applies. |
+| store_name | &check; | String |  | The name of the store to which the discount applies. |
 
 ## Import file dependencies
 
-This file has the following dependencies:
+
 
 * [discount.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

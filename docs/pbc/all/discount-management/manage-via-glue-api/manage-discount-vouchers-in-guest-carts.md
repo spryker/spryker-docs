@@ -40,13 +40,13 @@ To apply a discount voucher to a guest cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to apply the discount voucher to. To get it, [Create a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart) or [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).  |
+| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | The unique ID of the guest cart to apply the discount voucher to. To get it, [Create a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart) or [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).  |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | The guest user's unique ID. The value should correspond to the value used when [creating the guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
 
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
@@ -91,7 +91,7 @@ To apply a discount voucher to a guest cart, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| code | String | yes | Unique identifier of a discount voucher to apply.  |
+| code | String | yes | The unique ID of a discount voucher to apply.  |
 
 
 ### Response
@@ -202,13 +202,13 @@ To apply a discount voucher to a guest cart, send the request:
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| vouchers | displayName | String | Discount name displayed on the Storefront. |
-| vouchers | amount | Integer | Amount of the provided discount. |
-| vouchers | code | String | Discount code. |
-| vouchers | discountType | String | Discount type. |
-| vouchers | isExclusive | Boolean | Discount exclusivity. |
-| vouchers | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
-| vouchers | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
+| vouchers | displayName | String | The discount name displayed on the Storefront. |
+| vouchers | amount | Integer | The amount of the provided discount. |
+| vouchers | code | String | The discount code. |
+| vouchers | discountType | String | The discount type. |
+| vouchers | isExclusive | Boolean | If true, the discount is exclusive. |
+| vouchers | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
+| vouchers | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 
@@ -222,14 +222,14 @@ To remove a discount voucher, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to remove the discount voucher from. To get it, [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).  |
-| ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the `vouchers` resource included.  |
+| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | The unique ID of the guest cart to remove the discount voucher from. To get it, [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).  |
+| ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | The unique ID of the voucher to remove. To get it, [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart) with the `vouchers` resource included.  |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | The guest user's unique ID. The value should correspond to the value used when [creating the guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart). |
 
 
 Request sample: remove a discount voucher from a guest cart

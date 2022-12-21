@@ -24,6 +24,10 @@ redirect_from:
   - /v1/docs/en/t-new-relic-monitoring
 ---
 
+{% info_block infoBox %}
+For existing Spryker Cloud Customers, the NewRelic APM is already preconfigured and just needs to be activated by requesting access [here](https://spryker.force.com/support/s/hosting-change-requests/change-request-monitoring-access). Please note the access access can only be requested by a direct customer, not a partner. Please also note that only the NewRelic APM account provided by Spryker should be used. It is not possible to use existing NewRelic APM accounts on a PaaS environment, as this would conflict with our monitoring setup.
+{% endinfo_block %}
+
 ## Installing the PHP agent
 
 When accessing your New Relic APM dashboard, you are asked to download and set up the New Relic agent:

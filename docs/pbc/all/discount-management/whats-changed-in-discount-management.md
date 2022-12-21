@@ -1,7 +1,7 @@
 ---
 title: What's changed in Discount Management
 last_updated: Jul 29, 2022
-description: This document lists latest Discount Management releases
+description: This document lists the latest Discount Management releases
 template: concept-topic-template
 ---
 
@@ -16,7 +16,7 @@ This release contains one module, [Discount](https://github.com/spryker/discount
 **Adjustments**
 
 * Adjusted `main.js` to revert `es6` syntax.
-* Removed redundant `package-lock.json` file from assets.
+* Removed a redundant `package-lock.json` file from assets.
 
 
 ## July 7th, 2022
@@ -27,8 +27,8 @@ This release contains one module, [Discount promotion](https://github.com/spryke
 
 **Improvements**
 
-* Introduced `DiscountPromotionFacade::postUpdateDiscount()` to save promotion discount after discount is updated.
-* Introduced `DiscountPromotionDiscountPostUpdatePlugin` to save promotion discount after discount is updated.
+* Introduced `DiscountPromotionFacade::postUpdateDiscount()` to save the promotion discount after discount is updated.
+* Introduced `DiscountPromotionDiscountPostUpdatePlugin` to save the promotion discount after discount is updated.
 
 
 ## July 4th, 2022

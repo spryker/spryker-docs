@@ -22,7 +22,7 @@ redirect_from:
   - /v2/docs/en/b2c-api-react-example
   - /v1/docs/b2c-api-react-example
   - /v1/docs/en/b2c-api-react-example
-  - 
+  -
 related:
   - title: Install B2C API React example
     link: docs/scos/dev/glue-api-guides/page.version/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
@@ -62,10 +62,10 @@ The Demo Shop was built using and demonstrates the use of the endpoints and reso
 | Product Tax Sets API | [Retrieving product tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html) |
 | Product Image Sets API | [Retrieving image sets of abstract products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)<br>[Retrieving image sets of concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html) |
 | Product Labels API | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html) |
-| Login API | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{site.version}}/authentication-and-authorization.html) |
+| Login API | [Authentication and authorization](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authentication-and-authorization.html) |
 | Customer API | [Managing customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html) |
-| Cart API | [Guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html)<br>[Carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html) |
-| Checkout API | [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html) |
+| Cart API | [Guest carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html)<br>[Carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html) |
+| Checkout API | [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/check-out-purchases.html) |
 | Order History API | [Retrieving customer's order history](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html) |
 | Wishlist API | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html) |
 | Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-store-configuration.html) |

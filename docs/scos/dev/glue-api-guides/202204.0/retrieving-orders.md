@@ -28,7 +28,7 @@ In your development, this resource can help you to:
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html)
+* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html)
 * [Glue API: Order Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
 * [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -50,7 +50,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -130,7 +130,7 @@ To retrieve detailed information on an order, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | STRING PARAMETER | DESCRIPTION  | POSSIBLE VALUES    |
 | ---------------- | ---------------- | --------------- |

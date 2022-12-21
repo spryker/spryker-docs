@@ -15,25 +15,25 @@ related:
   - title: Retrieving orders
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
   - title: Authentication and authorization
-    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Confirming customer registration
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-confirm-customer-registration.html
   - title: Authenticating as a customer
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Managing customer authentication tokens
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
   - title: Managing customer authentication tokens via OAuth 2.0
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
   - title: Managing customers
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
   - title: Managing customer passwords
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/manage-using-glue-api/retrieve-customer-carts.html
 ---
 
 This endpoint allows retrieving a customer’s orders.
@@ -58,13 +58,13 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|

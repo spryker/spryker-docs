@@ -25,7 +25,7 @@ data:import:discount
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -44,9 +44,9 @@ The file should have the following parameters:
 | promotion_sku |  | String | | SKU of the promotion. |
 | promotion_quantity |  | Number |  | Quantity of product items that have this discount. |
 
-## Import file dependencies
 
-This file has no dependencies.
+
+
 
 ## Additional information
 
@@ -54,7 +54,7 @@ If `discount_type` is set to *voucher*  then a voucher pool will be created from
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

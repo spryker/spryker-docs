@@ -13,7 +13,7 @@ redirect_from:
 related:
   - title: Product Lists + Catalog feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-lists-catalog-feature-integration.html
-  - title: CMS + Product Lists + Catalog feature integration
+  - title: Install the CMS + Product Lists + Catalog feature
     link: docs/scos/dev/feature-integration-guides/page.version/cms-product-lists-catalog-feature-integration.html
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html

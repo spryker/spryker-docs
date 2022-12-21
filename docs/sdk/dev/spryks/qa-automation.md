@@ -9,16 +9,17 @@ QA automation is a feature that lets you run QA tools such as code style checks,
 ### How to enable QA automation
 
 You can enable the QA automation at the project initialization step as an additional setting. To achieve this, do the following:
+
 1. Run this command:
    
 ```bash
 spryker-sdk sdk:init:project
 ```
-2. Pick the necessary steps from the list. If none is picked, the default list will be used. You can check the default list in the [settings.yaml](https://github.com/spryker-sdk/sdk/blob/d6cac0ec997ea3ef067f8af07b8b375f96632a4f/src/Extension/Resources/config/setting/settings.yaml) file, in `settings.qa_tasks.values`.
+2. Pick the necessary steps from the list. If none is picked, the default list is used. You can check the default list in the [settings.yaml](https://github.com/spryker-sdk/sdk/blob/d6cac0ec997ea3ef067f8af07b8b375f96632a4f/src/Extension/Resources/config/setting/settings.yaml) file, in `settings.qa_tasks.values`.
    
-After the project initialization, the QA automation tasks are saved to the `.ssdk/setting` file.
+After the project's initialization, its QA automation tasks are saved to the `.ssdk/setting` file.
 
-Result example:
+An example of a result:
 
 ```yaml
 qa_tasks:

@@ -21,7 +21,7 @@ You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you
 - Upgrade your project's code to match the latest demoshop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
 - Migrate the project's database to MariaDB if you are not already using it.
 - Split up your project's Zed endpoints as outlined in the [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) guide.
-- Verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.spryker-b2c-staging.yml).
+- Verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
 - Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
 - Integrate [FlySystem](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
@@ -44,6 +44,7 @@ We highly recommend you to follow our [Security guidelines](/docs/scos/dev/guide
 
 ## Four weeks before go-live
 
+- *Make sure you are familiar with NewRelic APM*. If you have not requested NewRelic APM to be set up for you, please do so. For this, see [Platform change requests](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests) in "How to use the Support Portal."
 - *Performance Tips implemented and verified*. Double-check that you implemented all the provided [performance tips](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 - *Conduct Load Tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 - *The DNS Names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
@@ -59,6 +60,7 @@ If you do not delegate DNS to Spryker, and you want to use a subdomain for your 
 ## Three weeks before go-live
 
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
+- *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
 - *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but do not want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you do not delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 

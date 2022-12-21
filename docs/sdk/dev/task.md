@@ -19,14 +19,14 @@ Use the following commands for tasks:
 
 ## How to create a task
 
-Tasks can be created in a declarative way by specifying the task YAML configuration file or by implementing `\SprykerSdk\SdkContracts\Entity\TaskInterface` as a PHP class.
-Whereas the declarative is the preferred way unless a more complex logic is needed.
+Tasks can be created in a declarative way by specifying the task YAML configuration file, or by implementing `\SprykerSdk\SdkContracts\Entity\TaskInterface` as a PHP class.
+The declarative way is the preferred method unless a more complex logic is needed.
 
 ### Task YAML configuration file
 
 The task configuration file should be placed to the `extension/*/config/task/` or `src/Extension/Resources/config/task/` directory. The table below describes the configuration file's properties.
 
-Example of the YAML configuration file: 
+Example of a YAML configuration file: 
 
 ```yaml
 id: 'hello:world'
@@ -76,17 +76,17 @@ lifecycle:
 
 | Property            | Required | Description                                                                                                                   |
 |---------------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
-| `id`                | yes      | __Unique__ task id. It should consist only of `[\w\:]+` symbols.                                                                  |
-| `short_description` | yes      | Task description that is displayed in the `Description` section in command help.                                                    |
-| `version`           | yes      | Task version. The version format must comply with the semver specification.                                                                            |
-| `type`              | yes      | Tasks type. `local_cli` or `local_cli_interactive` must be used for YAML task declaration and `php` type for a PHP task class |
+| `id`                | yes      | The __Unique__ task id. It should consist only of `[\w\:]+` symbols.                                                                  |
+| `short_description` | yes      | The task description that is displayed in the `Description` section in command. help.                                                    |
+| `version`           | yes      | The task's version. The version format must comply with the server. specification.                                                                            |
+| `type`              | yes      | The task's type. `local_cli` or `local_cli_interactive` must be used for a YAML task declaration and `php` type for a PHP task class |
 | `command`           | yes      | An executable command. string                                                                                                  |
-| `help`              | no       | Help description that is displayed in the *Help* section of the command help.                                                           |
-| `stage`             | no       | Task and command stage.                                                                                                        |
-| `deprecated`        | no       | Defines the task deprecation status.                                                                                           |
-| `successor`         | no       | Task ID that should be used if the current one is deprecated.                                                          |
-| `tags`              | no       | Task command tags.                                                                                                             |
-| `error_message`     | no       | Default command error message that is used in case of non-zero command code return.                                             |
+| `help`              | no       | Help description that is displayed in the *Help* section of the command. help.                                                           |
+| `stage`             | no       | The task and command. stage.                                                                                                        |
+| `deprecated`        | no       | Defines the task's deprecation. status.                                                                                           |
+| `successor`         | no       | The task ID that should be used if the current one is deprecated.                                                          |
+| `tags`              | no       | The task command. tags.                                                                                                             |
+| `error_message`     | no       | The default command error message that is used in case of non-zero command code return.                                             |
 | `placeholders`      | no       | Command [placeholders](#placeholders)   list.                                                                  |
 | `lifecycle`         | no       | Lifecycle commands list. See [Task lifecycle management](/docs/sdk/dev/task-lifecycle-management.html) for details about the lifecycle.                                                                  |
 
@@ -97,9 +97,9 @@ The *placeholders* attribute of the task configuration file has the following pr
 | Property         | Required | Description                                                                                                                      |
 |------------------|----------|----------------------------------------------------------------------------------------------------------------------------------|
 | `name`           | yes      | The placeholder name. The same name should be placed in the command string for substitution. |
-| `value_resolver` | yes      | Value resolver class name or name. It is used for fetching and processing command values.                                             |
+| `value_resolver` | yes      | The value resolver class name or name. It is used for fetching and processing command values.                                             |
 | `optional`       | no       | Defines if the placeholder is optional or not.                                                                                          |
-| `configuration`  | no       | Value resolver configuration. Depends on the particular value resolver.                                                               |
+| `configuration`  | no       | The value resolver configuration. Depends on the particular value resolver.                                                               |
 
 ## How to update tasks
 
@@ -108,7 +108,7 @@ To update all of the existing tasks, run the following command:
 ```bash
 sdk:update:all
 ```
-After you run this command, the [lifecycle events](/docs/sdk/dev/task-lifecycle-management.html) are triggered.
+After you run this command, [lifecycle events](/docs/sdk/dev/task-lifecycle-management.html) are triggered.
 
 ## How to use tasks in the workflows
 

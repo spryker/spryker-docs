@@ -107,7 +107,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Availability Notification
       url: /docs/scos/dev/feature-walkthroughs/availability-notification-feature-walkthrough.html
       include_versions:
@@ -119,6 +118,13 @@ entries:
       - "202108.0"
     - title: Cart
       url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/cart-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Calculation 3.0
         url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/calculation-3-0.html
@@ -159,7 +165,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: "CMS extension points: reference information"
         url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-extension-points-reference-information.html
@@ -167,7 +172,6 @@ entries:
         - "201811.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Enabling the CMS content widgets button in the WYSIWYG Editor
         url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/enabling-cms-content-widgets-button.html
         include_versions:
@@ -180,7 +184,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Company Account
       url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html
       nested:
@@ -216,7 +219,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: "Content item types: module relations"
         url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/content-item-types-module-relations.html
@@ -226,7 +228,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Enabling the CMS content widgets button in the WYSIWYG Editor
         url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/enabling-cms-content-widgets-button.html
         include_versions:
@@ -273,6 +274,13 @@ entries:
         - "202108.0"
     - title: Mailing and Notifications
       url: /docs/scos/dev/feature-walkthroughs/mailing-and-notifications-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-walkthroughs/measurement-units-feature-walkthrough.html
       include_versions:
@@ -312,8 +320,20 @@ entries:
         - "202204.0"
     - title: Multiple Carts
       url: /docs/scos/dev/feature-walkthroughs/multiple-carts-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Navigation
       url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-feature-walkthrough.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Navigation module
         url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-module.html
@@ -328,12 +348,10 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Non-splittable Products
       url: /docs/scos/dev/feature-walkthroughs/non-splittable-products-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Order Management
       url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html
       nested:
@@ -358,7 +376,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       nested:
       - title: "Persistent Cart Sharing: module relations"
         url: /docs/scos/dev/feature-walkthroughs/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html
@@ -443,6 +460,10 @@ entries:
       - "202108.0"
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Configuring separators and default number raws
         url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/configuring-separators-and-default-number-rows.html
@@ -507,12 +528,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Return Management
       url: /docs/scos/dev/feature-walkthroughs/return-management-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Scheduled Prices
       url: /docs/scos/dev/feature-walkthroughs/scheduled-prices-feature-walkthrough.html
       include_versions:
@@ -528,6 +547,13 @@ entries:
       - "202204.0"
     - title: Shared Carts
       url: /docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Shipment
       url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
       include_versions:
@@ -562,9 +588,6 @@ entries:
         - "201903.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
-      nested:
-      - title: Users and rights overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       include_versions:
@@ -575,6 +598,7 @@ entries:
     - title: Wishlist
       url: /docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html
   - title: Glue API guides
+    url: /docs/scos/dev/glue-api-guides/index.html
     nested:
     - title: Glue REST API
       url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
@@ -603,7 +627,6 @@ entries:
         url: /docs/scos/dev/glue-api-guides/managing-customers/confirming-customer-registration.html
         include_versions:
         - "202108.0"
-        - "202204.0"
       - title: Authenticating as a customer
         url: /docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html
         include_versions:
@@ -611,12 +634,10 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Managing customer passwords
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html
         include_versions:
         - "202108.0"
-        - "202204.0"
         - "202009.0"
       - title: Managing customer addresses
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html
@@ -629,12 +650,10 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Managing customer authentication tokens via OAuth 2.0
         url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
         include_versions:
         - "202108.0"
-        - "202204.0"
       - title: Retrieving customer orders
         url: /docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html
         include_versions:
@@ -660,25 +679,21 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Searching by customers as an agent assist
         url: /docs/scos/dev/glue-api-guides/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Impersonating customers as an agent assist
         url: /docs/scos/dev/glue-api-guides/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Managing agent assist authentication tokens
         url: /docs/scos/dev/glue-api-guides/managing-agent-assists/managing-agent-assist-authentication-tokens.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Authentication and authorization
       url: /docs/scos/dev/glue-api-guides/authentication-and-authorization.html
       include_versions:
@@ -687,7 +702,6 @@ entries:
       - "201907.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Managing B2B account
       include_versions:
       - "201907.0"
@@ -711,7 +725,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving company users
         url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html
         include_versions:
@@ -759,7 +772,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: B2B account management
         url: /docs/scos/dev/glue-api-guides/managing-b2b-account/b2b-account-management.html
         include_versions:
@@ -927,7 +939,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Guest carts
         nested:
@@ -1007,7 +1018,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Retrieving content items
       include_versions:
       - "202001.0"
@@ -1015,7 +1025,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Retrieving banner content items
         url: /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-banner-content-items.html
@@ -1025,7 +1034,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving abstract product list content items
         url: /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-abstract-product-list-content-items.html
         include_versions:
@@ -1034,7 +1042,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Resolving search engine friendly URLs
       url: /docs/scos/dev/glue-api-guides/resolving-search-engine-friendly-urls.html
       include_versions:
@@ -1055,14 +1062,12 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving return reasons
         url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-reasons.html
         include_versions:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving returnable items
         url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-returnable-items.html
         include_versions:
@@ -1140,7 +1145,6 @@ entries:
       url: /docs/scos/dev/glue-api-guides/retrieving-cms-pages.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Retrieving store configuration
       url: /docs/scos/dev/glue-api-guides/retrieving-store-configuration.html
     - title: Retrieving measurement units
@@ -1159,7 +1163,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Retrieving promotional items
       url: /docs/scos/dev/glue-api-guides/retrieving-promotional-items.html
       include_versions:
@@ -1187,6 +1190,9 @@ entries:
       url: /docs/scos/dev/glue-api-guides/glue-spryks.html
     - title: Security and authentication
       url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
     - title: Glue Backend API
@@ -1197,66 +1203,70 @@ entries:
         include_versions:
         - "202204.0"
         nested:
-        - title: How to create a resource
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-resource.html
+        - title: How to create a storefront resource
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-storefront-resource.html
           include_versions:
           - "202204.0"
+        - title: How to create a backend resource
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-backend-resource.html
+          include_versions:
+            - "202204.0"
         - title: How to create resources with parent-child relationships
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
           include_versions:
           - "202204.0"
         - title: How to create a route
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-route.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/routing/how-to-create-a-route.html
           include_versions:
           - "202204.0"
         - title: Backend and Storefront API module differences
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/backend-and-storefront-api-module-differences.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html
           include_versions:
           - "202204.0"
         - title: How to use OOTB Glue parameters
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-ootb-glue-parameters.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-use-ootb-glue-parameters.html
           include_versions:
           - "202204.0"
         - title: How to create a JSON:API relationship
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-json-api-relationship.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-a-json-api-relationship.html
           include_versions:
           - "202204.0"
         - title: How to document Glue API endpoints
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-document-glue-api-endpoints.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-document-glue-api-endpoints.html
           include_versions:
           - "202204.0"
         - title: How to use authorization framework
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-authorization-framework.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-use-authorization-framework.html
         - title: How to use the Glue authorization scopes
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-glue-api-authorization-scopes.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-use-glue-api-authorization-scopes.html
           include_versions:
           - "202204.0"
         - title: How to create protected endpoints
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-protected-endpoints.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-protected-endpoints.html
           include_versions:
           - "202204.0"
         - title: How to create API applications
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-api-applications.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/decoupled-glue-infrastructure.html
           include_versions:
           - "202204.0"
         - title: How to create or change a convention
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-or-change-a-convention.html
           include_versions:
           - "202204.0"
         - title: How to create grant type parameters
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-grant-type-parameters.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-create-grant-type-parameters.html
           include_versions:
           - "202204.0"
         - title: How to use an authentication server
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-an-authentication-server.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/how-to-guides/how-to-use-an-authentication-server.html
           include_versions:
           - "202204.0"
         - title: Authentication and authorization
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/authentication-and-authorization.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/authentication-and-authorization.html
           include_versions:
           - "202204.0"
         - title: Security and authentication
-          url: /docs/scos/dev/glue-api-guides/glue-backend-api/security-and-authentication.html
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/security-and-authentication.html
           include_versions:
           - "202204.0"
     - title: Glue API tutorials
@@ -1372,7 +1382,6 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cms-feature-integration.html
         include_versions:
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Company Account
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html
         include_versions:
@@ -1405,7 +1414,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Customer Access
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-access-feature-integration.html
         include_versions:
@@ -1413,7 +1421,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Customer Account Management
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html
         include_versions:
@@ -1423,7 +1430,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Development Tools
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-development-tools-feature-integration.html
         include_versions:
@@ -1469,7 +1475,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Order Management
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html
         include_versions:
@@ -1572,7 +1577,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Shared Carts
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shared-carts-feature-integration.html
         include_versions:
@@ -1620,23 +1624,27 @@ entries:
         - "202204.0"
         nested:
           - title: Glue API - Glue Storefront and Backend API applications
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-glue-storefront-and-backend-api-applications-integration.html
+            url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-glue-storefront-and-backend-api-applications-integration.html
             include_versions:
             - "202204.0"
           - title: Glue API - Authentication
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authentication-integration.html
+            url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
             include_versions:
             - "202204.0"
           - title: Glue API - JSON:API Convention
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-json-api-convention-integration.html
+            url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
             include_versions:
             - "202204.0"
           - title: Glue API - Authorization scopes
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-scopes-integration.html
+            url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-authorization-scopes-integration.html
             include_versions:
             - "202204.0"
           - title: Glue API - Authorization protected endpoints
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authorization-protected-endpoints-integration.html
+            url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-authorization-protected-endpoints-integration.html
+            include_versions:
+              - "202204.0"
+          - title: Glue API - Glue documentation generation
+            url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
             include_versions:
               - "202204.0"
     - title: Agent Assist
@@ -1730,9 +1738,15 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Cart integration
       url: /docs/scos/dev/feature-integration-guides/cart-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Cart + Non-splittable Products
       url: /docs/scos/dev/feature-integration-guides/cart-non-splittable-products-feature-integration.html
       include_versions:
@@ -1805,7 +1819,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: CMS Block Widget
       url: /docs/scos/dev/feature-integration-guides/cms-block-widget-feature-integration.html
       include_versions:
@@ -1822,12 +1835,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: CMS + Category Management
       url: /docs/scos/dev/feature-integration-guides/cms-category-management-feature-integration.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: CMS + Product Lists + Catalog
       url: /docs/scos/dev/feature-integration-guides/cms-product-lists-catalog-feature-integration.html
       include_versions:
@@ -1837,7 +1848,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Comments
       url: /docs/scos/dev/feature-integration-guides/comments-feature-integration.html
       include_versions:
@@ -1846,7 +1856,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Comments + Order Management
       url: /docs/scos/dev/feature-integration-guides/comments-order-management-feature-integration.html
       include_versions:
@@ -1855,7 +1864,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Comments + Persistent Cart
       url: /docs/scos/dev/feature-integration-guides/comments-persistent-cart-feature-integration.html
       include_versions:
@@ -1864,7 +1872,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Company Account
       url: /docs/scos/dev/feature-integration-guides/company-account-feature-integration.html
       include_versions:
@@ -1904,7 +1911,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Customer Access
       url: /docs/scos/dev/feature-integration-guides/customer-access-feature-integration.html
       include_versions:
@@ -1924,6 +1930,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Customer Account Management + Agent Assist
       url: /docs/scos/dev/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html
       include_versions:
@@ -2037,7 +2044,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/microsoft-azure-active-directory.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Minimum Order Value
       url: /docs/scos/dev/feature-integration-guides/minimum-order-value-feature-integration.html
       include_versions:
@@ -2052,6 +2058,9 @@ entries:
       - "202204.0"
     - title: Multi-store CMS Block
       url: /docs/scos/dev/feature-integration-guides/multi-store-cms-block-feature-integration.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
     - title: Multi-store Products
       url: /docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html
     - title: Multiple Carts
@@ -2065,7 +2074,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Order Management
       url: /docs/scos/dev/feature-integration-guides/order-management-feature-integration.html
       include_versions:
@@ -2386,13 +2394,11 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Return Management
       url: /docs/scos/dev/feature-integration-guides/return-management-feature-integration.html
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Sales Data Export
       url: /docs/scos/dev/feature-integration-guides/sales-data-export-feature-integration.html
       include_versions:
@@ -2468,7 +2474,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
+      - "202212.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Volume Prices
@@ -2511,10 +2517,6 @@ entries:
         url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
       - title: Migration Guide - CompanyUsersRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/companyusersrestapi-migration-guide.html
-      - title: Migration Guide - ContentBannersRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-contentbannersrestapi.html
-      - title: Migration Guide - NavigationsRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
       - title: Migration Guide - OrdersRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html
       - title: Migration Guide - ProductAvailabilitiesRestApi
@@ -2543,30 +2545,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html
     - title: Migration guide - CategoryStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
-    - title: Migration Guide - CMS Block Category Connector Migration Console
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html
-    - title: Migration Guide - CMS Block Category Connector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
-    - title: Migration Guide - CMS Block Collector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
-    - title: Migration Guide - CMS
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cms.html
-    - title: Migration Guide - CmsBlock
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
-    - title: Migration Guide - CmsBlockGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
-    - title: Migration Guide - CMSBlockStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html
-    - title: Migration Guide - CmsBlockWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockwidget.html
-    - title: Migration Guide - CmsCollector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html
-    - title: Migration Guide - CmsGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsgui.html
-    - title: Migration Guide - CmsPageSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html
-    - title: Migration Guide - CmsStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html
     - title: Migration guide - CodeItNow module to BarcodeLaminas module
       url: /docs/scos/dev/module-migration-guides/migration-guide-codeitnow-to-barcodelaminas.html
     - title: Migration Guide - Collector
@@ -2581,20 +2559,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
     - title: Migration Guide - Console
       url: /docs/scos/dev/module-migration-guides/migration-guide-console.html
-    - title: Migration Guide - Content
-      url: /docs/scos/dev/module-migration-guides/migration-guide-content.html
-    - title: Migration Guide - ContentBanner
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentbanner.html
-    - title: Migration Guide - ContentBannerGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentbannergui.html
-    - title: Migration Guide - ContentFileGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilegui.html
-    - title: Migration Guide - ContentFileWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilewidget.html
-    - title: Migration Guide - ContentGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentgui.html
-    - title: Migration Guide - ContentStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentstorage.html
     - title: Migration Guide - Customer
       url: /docs/scos/dev/module-migration-guides/migration-guide-customer.html
     - title: Migration Guide - CustomerPage
@@ -2637,10 +2601,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
     - title: Migration Guide - MultiCartPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
-    - title: Migration Guide - Navigation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-navigation.html
-    - title: Migration Guide - NavigationGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
     - title: Migration Guide - Oauth
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
     - title: Migration Guide - OauthCompanyUser
@@ -3257,7 +3217,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: File details - navigation_node.csv
           url: /docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
@@ -3279,7 +3238,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: File details - cms_slot_template.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot-template.csv.html
@@ -3287,105 +3245,90 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_template.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-template.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_page_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-page-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_block_category.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-category.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_block_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - content_banner.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-banner.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_slot_block.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot-block.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_page.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-page.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_block.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - content_product_abstract_list.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - content_navigation.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-navigation.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - content_product_set.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-product-set.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_slot.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - cms_block_category_postion.csv
           url: /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Miscellaneous
         url: /docs/scos/dev/data-import/data-import-categories/miscellaneous/miscellaneous.html
         include_versions:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: File details - comment.csv
           url: /docs/scos/dev/data-import/data-import-categories/miscellaneous/file-details-comment.csv.html
@@ -3436,6 +3379,7 @@ entries:
       - "202108.0"
       - "202204.0"
   - title: Data export
+    url: /docs/scos/dev/data-export/index.html
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3443,7 +3387,7 @@ entries:
     - "202204.0"
     nested:
     - title: Exporting data
-      url: /docs/scos/dev/data-export/data-export.html
+      url: /docs/scos/dev/data-export/index.html
       include_versions:
       - "202005.0"
       - "202009.0"
@@ -3457,6 +3401,7 @@ entries:
       - "202108.0"
       - "202204.0"
   - title: Back-end development
+    url: /docs/scos/dev/back-end-development/index.html
     nested:
     - title: Client
       url: /docs/scos/dev/back-end-development/client/client.html
@@ -3558,9 +3503,8 @@ entries:
     - title: Running production
       url: /docs/scos/dev/back-end-development/running-production.html
     - title: Console commands
+      url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
       nested:
-      - title: Console commands in Spryker
-        url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
       - title: Implement a new console command
         url: /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
       - title: Get the list of console commands and available options
@@ -3752,6 +3696,7 @@ entries:
       - title: "Inject dependencies within factories: Container globals"
         url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
+    url: /docs/scos/dev/front-end-development/index.html
     nested:
     - title: Zed
       nested:
@@ -3809,29 +3754,25 @@ entries:
     - title: Migration guide - Switch from Yarn to NPM v8
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
+    url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
     - title: Decimal Stock migration concept
       url: /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
     - title: Float Stock for products migration concept
       url: /docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
-    - title: Search Migration Concept
-      nested:
-      - title: Search migration concept
-        url: /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
-    - title: About migration concepts
-      url: /docs/scos/dev/migration-concepts/about-migration-concepts.html
+    - title: Search migration concept
+      url: /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Split delivery migration concept
       url: /docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
     - title: Silex Replacement
+      url: /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
       nested:
       - title: Application
         url: /docs/scos/dev/migration-concepts/silex-replacement/application.html
       - title: Container
         url: /docs/scos/dev/migration-concepts/silex-replacement/container.html
-      - title: Silex replacement
-        url: /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
       - title: Router
         nested:
         - title: Router Yves
@@ -3939,6 +3880,8 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+    - title: Installation recipes of deployment pipelines
+      url: /docs/scos/dev/the-docker-sdk/installation-recipes-of-deployment-pipelines.html
     - title: Deploy file reference - 1.0
       url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
       include_versions:
@@ -3961,13 +3904,6 @@ entries:
     - title: Running tests with the Docker SDK
       url: /docs/scos/dev/the-docker-sdk/running-tests-with-the-docker-sdk.html
       include_versions:
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
-    - title: Retrieving promotional items
-      url: /docs/scos/dev/glue-api-guides/retrieving-promotional-items.html
-      include_versions:
-      - "202005.0"
       - "202009.0"
       - "202108.0"
       - "202204.0"
@@ -4045,6 +3981,7 @@ entries:
       include_versions:
       - "201811.0"
   - title: Technical enhancement integration guides
+    url: /docs/scos/dev/technical-enhancement-integration-guides/index.html
     nested:
     - title: Integrate development tools
       nested:
@@ -4064,8 +4001,6 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html
     - title: Cache of unresolved entities for Zed
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html
-    - title: Category CMS blocks
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html
     - title: Chromium browser for tests
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
     - title: CMS block widgets
@@ -4090,8 +4025,6 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
-    - title: Product CMS blocks
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-product-cms-blocks.html
     - title: Propel clean command
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html
     - title: Queue worker signal handling
@@ -4105,6 +4038,7 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: SDK
+    url: /docs/scos/dev/sdk/index.html
     nested:
     - title: Development Virtual Machine, Docker Containers & Console
       url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
@@ -4155,11 +4089,10 @@ entries:
     - title: Data export
       url: /docs/scos/dev/sdk/data-export.html
   - title: Tutorials and HowTos
+    url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     nested:
     - title: Introduction Tutorials
       nested:
-      - title: "Tutorial: Sending an email"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
       - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html
       - title: "Tutorial: Integrating any search engine into a project"
@@ -4171,14 +4104,10 @@ entries:
         nested:
         - title: "Tutorial: Boosting cart based search"
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-attribute-cart-based-catalog-personalization-spryker-commerce-os/tutorial-boosting-cart-based-search.html
-      - title: "Tutorial: CMS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-cms.html
       - title: "Tutorial: Hello world - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-hello-world-spryker-commerce-os.html
       - title: "Tutorial: Architectural Walkthrough - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-architectural-walkthrough-spryker-commerce-os.html
-      - title: "Tutorial: Content and search - personalized catalog pages - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
       - title: "Tutorial: Testing and TDD - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-testing-and-tdd-spryker-commerce-os.html
     - title: Advanced Tutorials
@@ -4216,8 +4145,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
       - title: "Tutorial: Console commands"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-console-commands.html
-    - title: About Tutorials
-      url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     - title: HowTos
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
@@ -4229,32 +4156,20 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
           - title: "HowTo: Import packaging units"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html
+          - title: "HowTo: Add support for number formatting in the Storefront"
+            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-add-support-for-number-formatting-in-the-storefront.html
         - title: "HowTo: Generate a token for login"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
-        - title: "HowTo: Use blocks"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
         - title: "HowTo: Display custom names for order item states on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
         - title: "HowTo: Manage a big number of categories"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html
         - title: "HowTo: Display product groups by color on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-        - title: "HowTo: Set number of days for a return policy"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
         - title: "HowTo: Make a product searchable and shown on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
         - title: "HowTo: Add support of number formatting in the Back Office"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
-        - title: CMS
-          nested:
-          - title: "HowTo: Create CMS templates"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html
-          - title: "HowTo: Create a visibility vondition for CMS blocks"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html
-          - title: "HowTo: Create a custom content item"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
-          - title: "HowTo: Define if a cart should be deleted after placing an order"
-            url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
         - title: "HowTo: Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
         - title: "HowTo: Disable split delivery in Yves interface"
@@ -4278,22 +4193,16 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: "HowTo: Define positions of category CMS blocks"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
       - title: "HowTo: Build your own product relation type"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
       - title: "HowTo: Set up multiple stores"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
       - title: "HowTo: Integrate and use precise decimal numbers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
-      - title: "HowTo: Create and register a MailTypePlugin"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
       - title: "HowTo: Debug payment integrations locally"
         url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
-      - title: "HowTo: Configure basic htaccess authentication"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-basic-htaccess-authentication.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
       - title: "HowTo: Define the maximum size of content fields"
@@ -4324,19 +4233,19 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-sftp-for-flysystem.html
       - title: "HowTo: Handle case-sensitive file system on Mac OS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
-      - title: "HowTo: Create and register a mail provider"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
       - title: "HowTo: Allow Zed CSS/JS on a project"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
   - title: Technology partner guides
+    url: /docs/scos/dev/technology-partner-guides/index.html
     nested:
     - title: Hosting providers
       nested:
       - title: Integrating Heroku
         url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
     - title: Marketing and conversion
+      url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html
       nested:
       - title: Analytics
         nested:
@@ -4819,6 +4728,7 @@ entries:
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Guidelines
+    url: /docs/scos/dev/guidelines/index.html
     nested:
     - title: Coding guidelines
       url: /docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html
@@ -4899,12 +4809,14 @@ entries:
     - title: Security guidelines
       url: /docs/scos/dev/guidelines/security-guidelines.html
   - title: Best practices
+    url: /docs/scos/dev/best-practices/index.html
     nested:
     - title: Basic SEO techniques to use in your project
       url: /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
       url: /docs/scos/dev/best-practices/coding-best-practices.html
     - title: Search best practices
+      url: /docs/scos/dev/best-practices/search-best-practices/search-best-practices.html
       nested:
       - title: Full-text search
         url: /docs/scos/dev/best-practices/search-best-practices/full-text-search.html
@@ -4929,6 +4841,7 @@ entries:
       - title: Personalization - Dynamic pricing
         url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
     - title: State machine cookbook
+      url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
       nested:
       - title: State machine fundamentals
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html

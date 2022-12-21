@@ -30,7 +30,7 @@ A Back Office user can define the following:
 * The order of products sets displayed on the Storefront. It's relevant if you have multiple product sets on the same page.
 * The unique product set URL.
 
-A Back Office user can add product sets to any page by [creating a product set content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+A Back Office user can add product sets to any page by [creating a product set content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-banner-content-items.html) and [adding it to CMS pages and blocks](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
 
 
 For more details about product sets, watch the video:

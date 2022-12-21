@@ -44,6 +44,7 @@ commonOptions = {
     /www.phpunit.de\/[\.\w\-\/\?]+/,
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,
+    /php.net\/[\.\w\-\/\?]+/,
     /atom.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
@@ -196,7 +197,8 @@ task :check_pbc do
     /docs\/cloud\/.+/,
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
-    /docs\/paas-plus\/.+/
+    /docs\/paas-plus\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/
 
   ]
   HTMLProofer.check_directory("./_site", options).run

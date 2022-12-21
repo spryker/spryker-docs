@@ -5,11 +5,11 @@ last_updated: July 29, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to add items with discounts to carts of registered users. For full information on the endpoint, see [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
+This document describes how to add items with discounts to carts of registered users. For full information on the endpoint, see [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information on the modules that provide the API's functionality and related installation instructions, see:
 
 * [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
@@ -24,13 +24,13 @@ To add items to a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | The unique ID of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUE |
 | --- | --- | --- |
@@ -110,7 +110,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
 | quantity | String | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
+| idPromotionalItem | String |  | The ID of the promotional item. Specify the ID to apply the promotion benefits.  |
 
 
 ### Response
@@ -692,7 +692,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 For the attributes of the other included resources, see the docs:
 
 * [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-measurement-units.html)
-* [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart)
+* [Create a cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 

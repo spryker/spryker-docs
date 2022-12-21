@@ -22,7 +22,7 @@ To start the feature integration:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core Back Office | {{site.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
+| Spryker Core Back Office | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 
 2. [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
@@ -110,7 +110,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
     /**
      * @return \Spryker\Zed\SecurityGuiExtension\Dependency\Plugin\AuthenticationLinkPluginInterface[]
      */
-    protected function SecurityGuiDependencyProvider(): array
+    protected function getAuthenticationLinkPlugins(): array
     {
         return [
             new AzureAuthenticationLinkPlugin(),

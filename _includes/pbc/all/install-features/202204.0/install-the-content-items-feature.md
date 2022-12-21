@@ -1,6 +1,6 @@
 
 
-This document describes how. to integrate the [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) feature into a Spryker project.
+This document describes how. to integrate the [Content Items](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

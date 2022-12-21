@@ -26,7 +26,7 @@ For detailed information on the modules that provide the API functionality and r
 
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 * [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
 
 ## Retrieve bundled products
@@ -817,5 +817,5 @@ To view generic errors that originate from the Glue Application, see [Reference 
 You can also manage the `bundled-products` resource as follows:
 * [Retrieve bundled products of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve bundled products of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
-* [Manage bundled products in carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Manage bundled products in guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart)
+* [Manage bundled products in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
+* [Manage bundled products in guest carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart)

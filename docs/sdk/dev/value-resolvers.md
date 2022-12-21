@@ -14,7 +14,7 @@ The Spryker SDK has the following value resolvers:
 | B2BC_TYPE           | Resolves repository for public b2b,b2c.                                                    |
 | CONFIG_PATH         | Resolves a relative path by priority: `project` path, then, by default, the `sdk` path if it exists. |
 | FLAG                | Resolves flag options. This resolver has the boolean type.                                                             |
-| NAMESPACE           | Used for the spryk tool to resolve namespcases for the tool. It is based on settings.                              |
+| NAMESPACE           | Used for the spryk tool to resolve namespaces for the tool. It is based on the settings.                              |
 | PC_SYSTEM           | Resolves operating systems like Linux, Mac, Mac (ARM).                                                       |
 | PRIORITY_PATH       | Resolves relative path for the tool entry point: `project` path, then, by default, the `sdk` path if it exists.       |
 | REPORT_DIR          | Resolves the report file path.                                                                 |

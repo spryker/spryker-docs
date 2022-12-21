@@ -6,18 +6,18 @@ template: glue-api-storefront-guide-template
 
 ---
 
-This document describes how to retrieve cart rules, vouchers, and promotional items in guest carts. For full information on the endpoint, see [Manage guest carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html).
+This document describes how to retrieve cart rules, vouchers, and promotional items in guest carts. For full information on the endpoint, see [Manage guest carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html).
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information on the modules that provide the API's functionality and any related installation instructions, see:
 
 * [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 ## Retrieve a guest cart
 
-To retrieve a guest cart, send the request:
+To retrieve a guest cart, send the following request:
 
 ***
 `GET` **/guest-carts**
@@ -32,7 +32,7 @@ Guest users have one guest cart by default. If you already have a guest cart, yo
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}*** | The unique ID of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 
@@ -46,7 +46,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.|
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A Guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.|
 
 | PATH PARAMETER | DESCRIPTION | Possible values |
 | --- | --- | --- |
@@ -211,13 +211,13 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| vouchers, cart-rules | displayName | String | Discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | Amount of the provided discount. |
-| vouchers, cart-rules | code | String | Discount code. |
-| vouchers, cart-rules | discountType | String | Discount type. |
-| vouchers, cart-rules  | isExclusive | Boolean | Discount exclusivity. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
+| vouchers, cart-rules | displayName | String | The discount name displayed on the Storefront. |
+| vouchers, cart-rules | amount | Integer | The value of the provided discount. |
+| vouchers, cart-rules | code | String | The discount code. |
+| vouchers, cart-rules | discountType | String | The discount type. |
+| vouchers, cart-rules  | isExclusive | Boolean | If true, this discount is exclusive. |
+| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The date and time when the discount expires. |
+| vouchers, cart-rules | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 ## Possible errors
@@ -226,6 +226,6 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | --- | --- |
 | 101 | Cart with given uuid not found. |
 | 104 | Cart uuid is missing. |
-| 109 | Anonymous customer unique id is empty. |
+| 109 | Anonymous customer unique ID is empty. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).

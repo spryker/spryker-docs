@@ -838,7 +838,7 @@ entries:
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:
-          - title: Product feature overview
+          - title: Product
             url: /docs/pbc/all/product-information-management/202204.0/product-feature-overview/product-feature-overview.html
             nested:
               - title: Product Attributes
@@ -851,30 +851,114 @@ entries:
                 url: /docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/timed-product-availability-overview.html
               - title: Search widget for concrete products
                 url: /docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html
-          - title: Alternative Products feature overview
+          - title: Alternative Products
             url: /docs/pbc/all/product-information-management/alternative-products-feature-overview.html
-          - title: Catalog feature overview
+          - title: Catalog
             url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
-          - title: Catalog feature overview
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
+          - title: Category Management
+            url: /docs/pbc/all/product-information-management/category-management-feature-overview.html
+          - title: Configurable Bundle
+            url: /docs/pbc/all/product-information-management/configurable-bundle-feature-overview.html
+          - title: Measurement Units
+            url: /docs/pbc/all/product-information-management/measurement-units-feature-overview.html
+          - title: Packaging Units
+            url: /docs/pbc/all/product-information-management/packaging-units-feature-overview.html
+          - title: Product Approval Process
+            url: /docs/pbc/all/product-information-management/product-approval-process-feature-overview.html
+          - title: Product Barcode
+            url: /docs/pbc/all/product-information-management/product-barcode-feature-overview.html
+          - title: Product Bundles
+            url: /docs/pbc/all/product-information-management/product-bundles-feature-overview.html
+          - title: Product Groups
+            url: /docs/pbc/all/product-information-management/product-groups-feature-overview.html
+          - title: Product Labels
+            url: /docs/pbc/all/product-information-management/product-labels-feature-overview.html
+          - title: Product Lists
+            url: /docs/pbc/all/product-information-management/product-lists-feature-overview.html
+          - title: Product Options
+            url: /docs/pbc/all/product-information-management/product-options-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Alternative Products + Discontinued Products
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
+                  - title: Alternative Products
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-feature.html
+                  - title: Alternative Products + Inventory Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
+                  - title: Alternative Products + Product Label
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-product-label-feature.html
+                  - title: Alternative Products + Wishlist
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
+                  - title: Catalog + Category Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html
+                  - title: Catalog + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-catalog-order-management-feature.html
+                  - title: Category Filters
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-filters-feature.html
+                  - title: Category Image
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-image-feature.html
+                  - title: Category Management + CMS
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-cms-feature.html
+                  - title: Category Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-feature.html
+                  - title: Category Management + Promotions and Discounts
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-promotions-and-discounts-feature.html
+                  - title: Configurable Bundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
+                  - title: Configurable Bundle + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html
+                  - title: Discontinued Products + Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
+                  - title: Measurement Units
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-measurement-units-feature.html
+                  - title: Measurement Units + Quick Add to Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
+                  - title: Packaging Units
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Approval Process
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Bundles + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Bundles
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Bundles + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Bundles + Return Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product + Category
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Configuration
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Group + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Group + Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Group + Product Rating and Reviews
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Groups
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Images + Configurable Bundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product labels + Promotions and Discounts
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Lists + Catalog
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Lists
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Options + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Sets
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:
@@ -1096,7 +1180,7 @@ entries:
               - title: Install the Agent Assist + Shopping List feature
                 url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
               - title: Install the Agent Assist Glue API
-                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html                                                   
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html
           - title: Manage in the Back Office
             nested:
               - title: "Best practices: Manage users and their permissions with roles and groups"

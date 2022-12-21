@@ -597,6 +597,7 @@ entries:
     - title: Wishlist
       url: /docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html
   - title: Glue API guides
+    url: /docs/scos/dev/glue-api-guides/index.html
     nested:
     - title: Glue REST API
       url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
@@ -3371,6 +3372,7 @@ entries:
       - "202108.0"
       - "202204.0"
   - title: Data export
+    url: /docs/scos/dev/data-export/index.html
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3378,7 +3380,7 @@ entries:
     - "202204.0"
     nested:
     - title: Exporting data
-      url: /docs/scos/dev/data-export/data-export.html
+      url: /docs/scos/dev/data-export/index.html
       include_versions:
       - "202005.0"
       - "202009.0"
@@ -3392,6 +3394,7 @@ entries:
       - "202108.0"
       - "202204.0"
   - title: Back-end development
+    url: /docs/scos/dev/back-end-development/index.html
     nested:
     - title: Client
       url: /docs/scos/dev/back-end-development/client/client.html
@@ -3493,9 +3496,8 @@ entries:
     - title: Running production
       url: /docs/scos/dev/back-end-development/running-production.html
     - title: Console commands
+      url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
       nested:
-      - title: Console commands in Spryker
-        url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
       - title: Implement a new console command
         url: /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
       - title: Get the list of console commands and available options
@@ -3687,6 +3689,7 @@ entries:
       - title: "Inject dependencies within factories: Container globals"
         url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
+    url: /docs/scos/dev/front-end-development/index.html
     nested:
     - title: Zed
       nested:
@@ -3744,29 +3747,25 @@ entries:
     - title: Migration guide - Switch from Yarn to NPM v8
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
+    url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
     - title: Decimal Stock migration concept
       url: /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
     - title: Float Stock for products migration concept
       url: /docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
-    - title: Search Migration Concept
-      nested:
-      - title: Search migration concept
-        url: /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
-    - title: About migration concepts
-      url: /docs/scos/dev/migration-concepts/about-migration-concepts.html
+    - title: Search migration concept
+      url: /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Split delivery migration concept
       url: /docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
     - title: Silex Replacement
+      url: /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
       nested:
       - title: Application
         url: /docs/scos/dev/migration-concepts/silex-replacement/application.html
       - title: Container
         url: /docs/scos/dev/migration-concepts/silex-replacement/container.html
-      - title: Silex replacement
-        url: /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
       - title: Router
         nested:
         - title: Router Yves
@@ -3975,6 +3974,7 @@ entries:
       include_versions:
       - "201811.0"
   - title: Technical enhancement integration guides
+    url: /docs/scos/dev/technical-enhancement-integration-guides/index.html
     nested:
     - title: Integrate development tools
       nested:
@@ -4031,6 +4031,7 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: SDK
+    url: /docs/scos/dev/sdk/index.html
     nested:
     - title: Development Virtual Machine, Docker Containers & Console
       url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
@@ -4081,6 +4082,7 @@ entries:
     - title: Data export
       url: /docs/scos/dev/sdk/data-export.html
   - title: Tutorials and HowTos
+    url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     nested:
     - title: Introduction Tutorials
       nested:
@@ -4136,8 +4138,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
       - title: "Tutorial: Console commands"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-console-commands.html
-    - title: About Tutorials
-      url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     - title: HowTos
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
@@ -4163,8 +4163,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
         - title: "HowTo: Add support of number formatting in the Back Office"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
-        - title: "HowTo: Define if a cart should be deleted after placing an order"
-          url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
         - title: "HowTo: Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
         - title: "HowTo: Disable split delivery in Yves interface"
@@ -4233,12 +4231,14 @@ entries:
       - title: "HowTo: Allow Zed CSS/JS on a project"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
   - title: Technology partner guides
+    url: /docs/scos/dev/technology-partner-guides/index.html
     nested:
     - title: Hosting providers
       nested:
       - title: Integrating Heroku
         url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
     - title: Marketing and conversion
+      url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html
       nested:
       - title: Analytics
         nested:
@@ -4721,6 +4721,7 @@ entries:
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Guidelines
+    url: /docs/scos/dev/guidelines/index.html
     nested:
     - title: Coding guidelines
       url: /docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html
@@ -4801,12 +4802,14 @@ entries:
     - title: Security guidelines
       url: /docs/scos/dev/guidelines/security-guidelines.html
   - title: Best practices
+    url: /docs/scos/dev/best-practices/index.html
     nested:
     - title: Basic SEO techniques to use in your project
       url: /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
       url: /docs/scos/dev/best-practices/coding-best-practices.html
     - title: Search best practices
+      url: /docs/scos/dev/best-practices/search-best-practices/search-best-practices.html
       nested:
       - title: Full-text search
         url: /docs/scos/dev/best-practices/search-best-practices/full-text-search.html
@@ -4831,6 +4834,7 @@ entries:
       - title: Personalization - Dynamic pricing
         url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
     - title: State machine cookbook
+      url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
       nested:
       - title: State machine fundamentals
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html

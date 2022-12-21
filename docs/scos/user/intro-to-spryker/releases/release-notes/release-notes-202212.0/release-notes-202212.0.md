@@ -70,7 +70,7 @@ It lets your customers always see the accurate price they must pay for the entir
 
 #### Documentation
 
-* [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/202204.0/manage-using-glue-api/check-out/submit-checkout-data.html)
 
 * Technical prerequisites:
   * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/202204.0/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)

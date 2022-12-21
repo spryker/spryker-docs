@@ -34,12 +34,12 @@ Configured Products can be saved, accessed, and configured again in carts or fro
 
 ### Localization improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Adapting your offerings to your customers' needs and locales is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we've improved the number formatting for any locale. Based on the locale and browser language setting, your customers in the Storefront and your company users in the Back Office are shown the number format they expect to see. Look at the following example with a product price:
+Adapting your offerings to your customers' needs and locales is crucial for providing a superior user experience and ultimately boosting conversion rates. To facilitate this, we've improved the number formatting for any locale. Based on their locale, your customers in the Storefront and your company users in the Back Office will be shown the number format they expect to see. Look at the following example with a product price:
 
 | LOCALE | PRODUCT PRICE |
 |---|---|
-| de_DE | 123.456,78 |
-| en_US | 123,456.78 |
+| de_DE | 1.456,78 |
+| en_US | 1,456.78 |
 
 #### Number formatting in the Storefront
 
@@ -70,10 +70,10 @@ It lets your customers always see the accurate price they must pay for the entir
 
 #### Documentation
 
-* [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/202204.0/manage-using-glue-api/check-out/submit-checkout-data.html)
 
 * Technical prerequisites:
-  * [Install the Cart Glue API](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+  * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/202204.0/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202204.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
   * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/202204.0/install-and-upgrade/integrate-the-shipment-glue-api.html)
 

@@ -9,9 +9,9 @@ redirect_from:
   - /docs/en/preparation-for-going-live
 ---
 
-{% info_block warningBox "IMPORTANT: Do not risk your Go Live!" %}
+{% info_block warningBox "Do not risk your Go-Live!" %}
 
-The prepartion steps listed here are so critical to the success of your go live that we consider them mandatory. Please note that we expect every Spryker Customer and Partner to complete the list as described below. We will generally not be able to assist you with problems related to your go live that are caused by these steps not being completed in time. Please make sure that your project plan contains tasks related to the go live checklist and allows enough time for them to be completed. 
+The preparation steps listed here are mandatory because they are critical to the success of your go-live. We expect every Spryker customer and partner to complete the list as described below. We can't assist you with problems related to your go-live that are caused by these steps not being completed in time. Ensure that your project plan contains tasks related to the go-live checklist and allows enough time for them to be completed. 
 
 {% endinfo_block %}
 

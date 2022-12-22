@@ -68,7 +68,7 @@ Request sample: create a cart
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | name | String | &check; | Sets the cart name.<br>You can pass this field only with the Multiple Carts feature integrated. If you are operating in a single-cart environment, an attempt to set the value returns the `422 Unprocessable Entry` error. |
-| priceMode | Enum | &check; | Sets the price mode for the cart. Possible values:<ul><li>GROSS_MODE: prices after tax</li><li>NET_MODE: prices before tax</li></ul>For details, see [Net &amp; gross prices management](/docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html). |
+| priceMode | Enum | &check; | Sets the price mode for the cart. Possible values:<ul><li>GROSS_MODE: prices after tax</li><li>NET_MODE: prices before tax</li></ul>For details, see [Net &amp; gross prices management](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/configuration-of-price-modes-and-types.html). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 
@@ -2446,7 +2446,7 @@ To retrieve all carts, send the request:
 For the attributes of the included resources, see:
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Add an item to a registered user's cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
@@ -4335,7 +4335,7 @@ For the attributes of carts of registered users and included resources, see [Ret
 
 For the attributes of the included resources, see:
 * [Add an item to a registered user's cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html).
+* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html).
 * [Cart permission groups](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html).
 * [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html).
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
@@ -4396,7 +4396,7 @@ Request sample: edit a cart
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | name | String | &check; | Sets the cart name.This field can be set only if you are using the Multiple Carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. Cart name should be unique and should not be longer than 30 characters.|
-| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net & Gross Prices](/docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html). |
+| priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net & Gross Prices](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/configuration-of-price-modes-and-types.html). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
 

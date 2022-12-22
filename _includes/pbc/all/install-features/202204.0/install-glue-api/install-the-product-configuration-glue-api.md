@@ -3,46 +3,43 @@
 
 This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) feature API into a Spryker project.
 
-## Install feature core
-
-Follow the steps below to install the Product Configuration feature core.
-
 ## Prerequisites
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                  | VERSION          | INTEGRATION GUIDE                                                                                                                                                        |
-|-----------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core API      | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html)         |
-| Product API           | {{site.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)                  |
-| Cart API              | {{site.version}} | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)                                  |
-| Wishlist API          | {{site.version}} | [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)                              |
-| Shopping List API     | {{site.version}} | [Glue API: Shopping lists feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)     |
-| Order Management API  | {{site.version}} | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html) |
-| Product Configuration | {{site.version}} | [Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-configuration-feature-integration.html)                   |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Spryker Core API | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product API |{{site.version}} |[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)|
+| Cart API| {{site.version}}| [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)|
+| Wishlist API| {{site.version}}| [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)|
+| Shopping List API| {{site.version}}| [Glue API: Shopping lists feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)|
+| Order Management API| {{site.version}} |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html)|
+|Product Configuration |{{site.version}} |[Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-configuration-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer install spryker/product-configurations-rest-api:"^1.0.0" spryker/product-configurations-price-product-volumes-rest-api:"^1.0.0" spryker/product-configuration-wishlists-rest-api:"^1.0.0" spryker/product-configuration-shopping-lists-rest-api:"^1.0.0" --update-with-dependencies
+composer install spryker/product-configurations-rest-api:"^0.2.0" spryker/product-configurations-price-product-volumes-rest-api:"^0.2.2" spryker/product-configuration-wishlists-rest-api:"^0.1.0" spryker/product-configuration-shopping-lists-rest-api:"^0.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| MODULE                                            | EXPECTED DIRECTORY                                                     |
-|---------------------------------------------------|------------------------------------------------------------------------|
-| ProductConfigurationsRestApi                      | vendor/spryker/product-configurations-rest-api                         |
-| ProductConfigurationsPriceProductVolumesRestApi   | vendor/spryker/product-configurations-price-product-volumes-rest-api   |
-| ProductConfigurationWishlistsRestApi              | vendor/spryker/product-configuration-wishlists-rest-api                |
-| ProductConfigurationShoppingListsRestApi          | vendor/spryker/product-configuration-shopping-lists-rest-api           |
+| MODULE                                         | EXPECTED DIRECTORY                                                   |
+|------------------------------------------------|----------------------------------------------------------------------|
+| ProductConfigurationsRestApi                   | vendor/spryker/product-configurations-rest-api                       |
+| ProductConfigurationsRestApiExtension          | vendor/spryker/product-configurations-rest-api-extension             |
+| ProductConfigurationsPriceProductVolumesRestApi | vendor/spryker/product-configurations-price-product-volumes-rest-api |
+| ProductConfigurationWishlistsRestApi           | vendor/spryker/product-configuration-wishlists-rest-api              |
+| ProductConfigurationShoppingListsRestApi       | vendor/spryker/product-configuration-shopping-lists-rest-api         |
 
 {% endinfo_block %}
 
-## 2) Set up transfer objects
+## 2) Set up transfer objects
 
 Generate transfers:
 ```bash
@@ -51,48 +48,33 @@ vendor/bin/console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following changes have occurred in transfer objects:
+Ensure that the following changes have occurred in transfer objects:
 
-| TRANSFER                                                           | TYPE   | EVENT    | PATH                                                                                             |
-|--------------------------------------------------------------------|--------|----------|--------------------------------------------------------------------------------------------------|
-| CartItemRequestTransfer                                            | class  | created  | src/Generated/Shared/Transfer/CartItemRequestTransfer                                            |
-| ConcreteProductsRestAttributesTransfer                             | class  | created  | src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer                             |
-| CurrencyTransfer                                                   | class  | created  | src/Generated/Shared/Transfer/CurrencyTransfer                                                   |
-| CustomerTransfer                                                   | class  | created  | src/Generated/Shared/Transfer/CustomerTransfer                                                   |
-| ItemTransfer                                                       | class  | created  | src/Generated/Shared/Transfer/ItemTransfer                                                       |
-| MoneyValueTransfer                                                 | class  | created  | src/Generated/Shared/Transfer/MoneyValueTransfer                                                 |
-| PersistentCartChangeTransfer                                       | class  | created  | src/Generated/Shared/Transfer/PersistentCartChangeTransfer                                       |
-| PersistentItemReplaceTransfer                                      | class  | created  | src/Generated/Shared/Transfer/PersistentItemReplaceTransfer                                      |
-| PriceProductTransfer                                               | class  | created  | src/Generated/Shared/Transfer/PriceProductTransfer                                               |
-| PriceProductDimensionTransfer                                      | class  | created  | src/Generated/Shared/Transfer/PriceProductDimensionTransfer                                      |
-| ProductConfigurationInstanceTransfer                               | class  | created  | src/Generated/Shared/Transfer/ProductConfigurationInstanceTransfer                               |
-| ProductConfigurationInstanceCollectionTransfer                     | class  | created  | src/Generated/Shared/Transfer/ProductConfigurationInstanceCollectionTransfer                     |
-| ProductConfigurationInstanceConditionsTransfer                     | class  | created  | src/Generated/Shared/Transfer/ProductConfigurationInstanceConditionsTransfer                     |
-| ProductConfigurationInstanceCriteriaTransfer                       | class  | created  | src/Generated/Shared/Transfer/ProductConfigurationInstanceCriteriaTransfer                       |
-| QuoteTransfer                                                      | class  | created  | src/Generated/Shared/Transfer/QuoteTransfer                                                      |
-| QuoteErrorTransfer                                                 | class  | created  | src/Generated/Shared/Transfer/QuoteErrorTransfer                                                 |
-| QuoteResponseTransfer                                              | class  | created  | src/Generated/Shared/Transfer/QuoteResponseTransfer                                              |
-| RestCartItemProductConfigurationInstanceAttributesTransfer         | class  | created  | src/Generated/Shared/Transfer/RestCartItemProductConfigurationInstanceAttributesTransfer         |
-| RestCartItemsAttributesTransfer                                    | class  | created  | src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer                                    |
-| RestCurrencyTransfer                                               | class  | created  | src/Generated/Shared/Transfer/RestCurrencyTransfer                                               |
-| RestErrorCollectionTransfer                                        | class  | created  | src/Generated/Shared/Transfer/RestErrorCollectionTransfer                                        |
-| RestErrorMessageTransfer                                           | class  | created  | src/Generated/Shared/Transfer/RestErrorMessageTransfer                                           |
-| RestItemsAttributesTransfer                                        | class  | created  | src/Generated/Shared/Transfer/RestItemsAttributesTransfer                                        |
-| RestOrderItemsAttributesTransfer                                   | class  | created  | src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer                                   |
-| RestProductConfigurationInstanceAttributesTransfer                 | class  | created  | src/Generated/Shared/Transfer/RestProductConfigurationInstanceAttributesTransfer                 |
-| RestProductConfigurationPriceAttributesTransfer                    | class  | created  | src/Generated/Shared/Transfer/RestProductConfigurationPriceAttributesTransfer                    |
-| RestProductPriceVolumesAttributesTransfer                          | class  | created  | src/Generated/Shared/Transfer/RestProductPriceVolumesAttributesTransfer                          |
-| RestSalesOrderItemProductConfigurationInstanceAttributesTransfer   | class  | created  | src/Generated/Shared/Transfer/RestSalesOrderItemProductConfigurationInstanceAttributesTransfer   |
-| RestShoppingListItemProductConfigurationInstanceAttributesTransfer | class  | created  | src/Generated/Shared/Transfer/RestShoppingListItemProductConfigurationInstanceAttributesTransfer |
-| RestShoppingListItemsAttributesTransfer                            | class  | created  | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer                            |
-| RestWishlistItemProductConfigurationInstanceAttributesTransfer     | class  | created  | src/Generated/Shared/Transfer/RestWishlistItemProductConfigurationInstanceAttributesTransfer     |
-| RestWishlistItemsAttributesTransfer                                | class  | created  | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer                                |
-| SalesOrderItemConfigurationTransfer                                | class  | created  | src/Generated/Shared/Transfer/SalesOrderItemConfigurationTransfer                                |
-| ShoppingListItemTransfer                                           | class  | created  | src/Generated/Shared/Transfer/ShoppingListItemTransfer                                           |
-| ShoppingListItemRequestTransfer                                    | class  | created  | src/Generated/Shared/Transfer/ShoppingListItemRequestTransfer                                    |
-| WishlistItemTransfer                                               | class  | created  | src/Generated/Shared/Transfer/WishlistItemTransfer                                               |
-| WishlistItemRequestTransfer                                        | class  | created  | src/Generated/Shared/Transfer/WishlistItemRequestTransfer                                        |
-| WishlistItemResponseTransfer                                       | class  | created  | src/Generated/Shared/Transfer/WishlistItemResponseTransfer                                       |
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
+|RestProductConfigurationInstanceAttributes|class| created | src/Generated/Shared/Transfer/RestProductConfigurationInstanceAttributesTransfer |
+|RestCartItemProductConfigurationInstanceAttributes|class| created |src/Generated/Shared/Transfer/RestCartItemProductConfigurationInstanceAttributesTransfer|
+|RestProductConfigurationPriceAttributes|class|created |src/Generated/Shared/Transfer/RestProductConfigurationPriceAttributesTransfer|
+|RestProductPriceVolumesAttributes|class| added |src/Generated/Shared/Transfer/RestProductPriceVolumesAttributesTransfer|
+|ConcreteProductsRestAttributes.productConfigurationInstance| property |added |src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer|
+|RestCartItemsAttributes.productConfigurationInstance |property| added |src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer|
+|RestItemsAttributes.productConfigurationInstance |property |added |src/Generated/Shared/Transfer/RestItemsAttributesTransfer|
+|RestOrderItemsAttributes.salesOrderItemConfiguration |property |added |src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer|
+|WishlistItemRequest|class| created | src/Generated/Shared/Transfer/WishlistItemRequestTransfer |
+|ProductConfigurationInstance|class| created | src/Generated/Shared/Transfer/ProductConfigurationInstanceTransfer |
+|WishlistItem|class| created | src/Generated/Shared/Transfer/WishlistItemTransfer |
+|WishlistItemResponse|class| created | src/Generated/Shared/Transfer/WishlistItemResponseTransfer |
+|Item|class| created | src/Generated/Shared/Transfer/ItemTransfer |
+|Currency|class| created | src/Generated/Shared/Transfer/CurrencyTransfer |
+|MoneyValue|class| created | src/Generated/Shared/Transfer/MoneyValueTransfer |
+|PriceProduct|class| created | src/Generated/Shared/Transfer/PriceProductTransfer |
+|RestCurrency|class| created | src/Generated/Shared/Transfer/RestCurrencyTransfer |
+|RestWishlistItemProductConfigurationInstanceAttributes|class| created | src/Generated/Shared/Transfer/RestWishlistItemProductConfigurationInstanceAttributesTransfer |
+|RestWishlistItemsAttributes|class| created | src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer |
+|RestShoppingListItemProductConfigurationInstanceAttributes|class| created | src/Generated/Shared/Transfer/RestShoppingListItemProductConfigurationInstanceAttributesTransfer |
+|RestShoppingListItemsAttributes|class| created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer |
+|ShoppingListItem|class| created | src/Generated/Shared/Transfer/ShoppingListItemTransfer |
+|ShoppingListItemRequest|class| created | src/Generated/Shared/Transfer/ShoppingListItemRequestTransfer |
 
 {% endinfo_block %}
 
@@ -104,9 +86,9 @@ Set up the following behaviors.
 
 Activate the following plugin:
 
-| PLUGIN                                                      | SPECIFICATION                                                              | PREREQUISITES | NAMESPACE                                                         |
-|-------------------------------------------------------------|----------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
-| ProductConfigurationConcreteProductsResourceExpanderPlugin  | Expands the `concrete-products` resource with product configuration data.  | None          | Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductsRestApi  |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| ProductConfigurationConcreteProductsResourceExpanderPlugin | Expands the `concrete-products` resource with product configuration data. | None | Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductsRestApi |
 
 **src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php**
 
@@ -121,7 +103,7 @@ use Spryker\Glue\ProductsRestApi\ProductsRestApiDependencyProvider as SprykerPro
 class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\ProductsRestApiExtension\Dependency\Plugin\ConcreteProductsResourceExpanderPluginInterface>
+     * @return \Spryker\Glue\ProductsRestApiExtension\Dependency\Plugin\ConcreteProductsResourceExpanderPluginInterface[]
      */
     protected function getConcreteProductsResourceExpanderPlugins(): array
     {
@@ -199,15 +181,15 @@ Make sure that the `concrete-products` resource is expanded with the product con
 
 Activate the following plugins:
 
-| PLUGIN                                                                   | SPECIFICATION                                                                                                      | PREREQUISITES | NAMESPACE                                                                     |
-|--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| ProductConfigurationRestCartItemsAttributesMapperPlugin                  | Maps `ItemTransfer` product configuration to `RestItemsAttributesTransfer`.                                        | None          | Spryker\Glue\ProductConfigurationsRestApi\Plugin\CartsRestApi                 |
-| ProductConfigurationCartItemExpanderPlugin                               | Expands cart item data with product configuration data.                                                            | None          | Spryker\Glue\ProductConfigurationsRestApi\Plugin\CartsRestApi                 |
-| ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin     | Maps product configuration volume price data to `ProductConfigurationInstanceTransfer`.                            | None          | Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductConfigurationsRestApi |
-| ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `RestCartItemProductConfigurationInstanceAttributesTransfer`.      | None          | Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductConfigurationsRestApi |
-| ProductConfigurationCartItemMapperPlugin                                 | Maps `CartItemRequestTransfer.productConfigurationInstance` to according `PersistentCartChangeTransfer.item`.      | None          | Spryker\Zed\ProductConfigurationsRestApi\Communication\Plugin\CartsRestApi    |
-| CartItemProductConfigurationRestRequestValidatorPlugin                   | Checks if resource with provided product configuration has default product configuration defined.                  | None          | Spryker\Glue\ProductConfigurationsRestApi\Plugin\GlueApplication              |
-| ProductConfigurationRestOrderItemsAttributesMapperPlugin                 | Maps `ItemTransfer.salesOrderItemConfiguration` to `RestOrderItemsAttributesTransfer.salesOrderItemConfiguration`. | None          | Spryker\Glue\ProductConfigurationsRestApi\Plugin\OrdersRestApi                |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| ProductConfigurationRestCartItemsAttributesMapperPlugin | Maps `ItemTransfer` product configuration to `RestItemsAttributesTransfer`. | None | Spryker\Glue\ProductConfigurationsRestApi\Plugin\CartsRestApi |
+| ProductConfigurationCartItemExpanderPlugin |Expands cart item data with product configuration data. |None |Spryker\Glue\ProductConfigurationsRestApi\Plugin\CartsRestApi|
+|ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin| Maps product configuration volume price data to `ProductConfigurationInstanceTransfer`. |None| Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductConfigurationsRestApi|
+|ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin| Maps product configuration volume price data to `RestCartItemProductConfigurationInstanceAttributesTransfer`. |None |Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductConfigurationsRestApi|
+|ProductConfigurationCartItemMapperPlugin | Maps `CartItemRequestTransfer.productConfigurationInstance` to according `PersistentCartChangeTransfer.item`. |None |Spryker\Zed\ProductConfigurationsRestApi\Communication\Plugin\CartsRestApi|
+| CartItemProductConfigurationRestRequestValidatorPlugin |Checks if resource with provided product configuration has default product configuration defined. |None| Spryker\Glue\ProductConfigurationsRestApi\Plugin\GlueApplication|
+| ProductConfigurationRestOrderItemsAttributesMapperPlugin| Maps `ItemTransfer.salesOrderItemConfiguration` to `RestOrderItemsAttributesTransfer.salesOrderItemConfiguration`. |None |Spryker\Glue\ProductConfigurationsRestApi\Plugin\OrdersRestApi|
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 
@@ -223,7 +205,7 @@ use Spryker\Glue\ProductConfigurationsRestApi\Plugin\CartsRestApi\ProductConfigu
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\RestCartItemsAttributesMapperPluginInterface>
+     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\RestCartItemsAttributesMapperPluginInterface[]
      */
     protected function getRestCartItemsAttributesMapperPlugins(): array
     {
@@ -233,7 +215,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface>
+     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface[]
      */
     protected function getCartItemExpanderPlugins(): array
     {
@@ -251,14 +233,14 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 namespace Pyz\Glue\ProductConfigurationsRestApi;
 
-use Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationsRestApi\ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin;
-use Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationsRestApi\ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin;
+use Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductConfigurationsRestApi\ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin;
+use Spryker\Glue\ProductConfigurationsRestApi\Plugin\ProductConfigurationsRestApi\ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin;
 use Spryker\Glue\ProductConfigurationsRestApi\ProductConfigurationsRestApiDependencyProvider as SprykerProductConfigurationsRestApiDependencyProvider;
 
 class ProductConfigurationsRestApiDependencyProvider extends SprykerProductConfigurationsRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\ProductConfigurationsRestApiExtension\Dependency\Plugin\ProductConfigurationPriceMapperPluginInterface>
+     * @return \Spryker\Glue\ProductConfigurationsRestApiExtension\Dependency\Plugin\CartItemProductConfigurationMapperPluginInterface[]
      */
     protected function getProductConfigurationPriceMapperPlugins(): array
     {
@@ -268,7 +250,7 @@ class ProductConfigurationsRestApiDependencyProvider extends SprykerProductConfi
     }
 
     /**
-     * @return array<\Spryker\Glue\ProductConfigurationsRestApiExtension\Dependency\Plugin\RestProductConfigurationPriceMapperPluginInterface>
+     * @return \Spryker\Glue\ProductConfigurationsRestApiExtension\Dependency\Plugin\RestCartItemProductConfigurationMapperPluginInterface[]
      */
     protected function getRestProductConfigurationPriceMapperPlugins(): array
     {
@@ -292,7 +274,7 @@ use Spryker\Zed\ProductConfigurationsRestApi\Communication\Plugin\CartsRestApi\P
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\CartItemMapperPluginInterface>
+     * @return \Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\CartItemMapperPluginInterface[]
      */
     protected function getCartItemMapperPlugins(): array
     {
@@ -316,7 +298,7 @@ use Spryker\Glue\ProductConfigurationsRestApi\Plugin\OrdersRestApi\ProductConfig
 class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\OrdersRestApiExtension\Dependency\Plugin\RestOrderItemsAttributesMapperPluginInterface>
+     * @return \Spryker\Glue\OrdersRestApiExtension\Dependency\Plugin\RestOrderItemsAttributesMapperPluginInterface[]
      */
     protected function getRestOrderItemsAttributesMapperPlugins(): array
     {
@@ -573,7 +555,7 @@ use Spryker\Glue\ProductConfigurationsRestApi\Plugin\GlueApplication\CartItemPro
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestRequestValidatorPluginInterface>
+     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestRequestValidatorPluginInterface[]
      */
     protected function getRestRequestValidatorPlugins(): array
     {
@@ -768,14 +750,14 @@ Make sure that the `items` resource is expanded with the product configuration p
 
 Set up wishlist plugins:
 
-| PLUGIN                                                                   | SPECIFICATION                                                                                                                                                                                                                                                                            | PREREQUISITES  | NAMESPACE                                                                                                |
-|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------|
-| ProductConfigurationRestWishlistItemsAttributesMapperPlugin              | Concatenates product sku with product configuration instance hash, sets created reference to `RestWishlistItemsAttributesTransfer::id` and maps `WishlistItemTransfer::productConfigurationInstance` to the `RestWishlistItemsAttributes::productConfigurationInstance` transfer object. | None           | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi                                |
-| ProductConfigurationWishlistItemRequestMapperPlugin                      | Maps `RestWishlistItemsAttributesTransfer::productConfigurationInstance` to `WishlistItemRequestTransfer::productConfigurationInstance`.                                                                                                                                             | None           | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi                                |
-| ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin     | Maps product configuration volume price data to `ProductConfigurationInstanceTransfer`.                                                                                                                                                                                                  | None           | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationWishlistsRestApi |
-| ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `RestProductConfigurationPriceAttributesTransfer[]`.                                                                                                                                                                                     | None           | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationWishlistsRestApi |
-| ProductConfigurationRestWishlistItemsAttributesDeleteStrategyPlugin      | Finds an item by product sku + product configuration instance hash in the collection of the `WishlistItem` transfer objects and deletes the found wishlist item.                                                                                                                                 | None           | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi                   |
-| ProductConfigurationRestWishlistItemsAttributesUpdateStrategyPlugin      | Finds an item by product sku + product configuration instance hash the in the collection of the `WishlistItem` transfer objects and updates the found wishlist item.                                                                                                                                 | None           | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi                   |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+|ProductConfigurationRestWishlistItemsAttributesMapperPlugin | Concatenates product sku with product configuration instance hash, sets created reference to `RestWishlistItemsAttributesTransfer::id` and maps the `WishlistItemTransfer::productConfigurationInstance` to `RestWishlistItemsAttributes::productConfigurationInstance` transfer object.  | None | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi |
+|ProductConfigurationWishlistItemRequestMapperPlugin | Maps the `RestWishlistItemsAttributesTransfer::productConfigurationInstance` to `WishlistItemRequestTransfer::productConfigurationInstance`. | None | Spryker\Glue\ProductConfigurationWishlistsRestApi\Plugin\WishlistsRestApi |
+|ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `ProductConfigurationInstanceTransfer`. | None | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationWishlistsRestApi |
+|ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `RestProductConfigurationPriceAttributesTransfer[]`. | None | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationWishlistsRestApi |
+|ProductConfigurationRestWishlistItemsAttributesDeleteStrategyPlugin | Finds an item by product sku + product configuration instance hash in the collection of `WishlistItem` transfer objects and deletes found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi |
+|ProductConfigurationRestWishlistItemsAttributesUpdateStrategyPlugin | Finds an item by product sku + product configuration instance hash the in collection of `WishlistItem` transfer objects and updates found wishlist item. | None | Spryker\Zed\ProductConfigurationWishlistsRestApi\Communication\Plugin\WishlistsRestApi |
 
 **src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php**
 
@@ -887,7 +869,8 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 Ensure that wishlist item CRUD operations support configurable products.
 For an example, see the following response to the `POST https://glue.mysprykershop.com/wishlists/63b14493-021f-59c2-ae70-94041beb5c06/wishlist-items` request:
 
-**Request sample**
+<details>
+<summary markdown='span'>Request sample</summary>
 
 ```json
 {
@@ -906,9 +889,10 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
+</details>
 
-
-**Response sample**
+<details>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -938,16 +922,17 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
+</details>
 
 {% endinfo_block %}
 
-Set up the following shopping list plugins:
+Set up shopping list plugins:
 
 | PLUGIN                                                                   | SPECIFICATION                                                                                        | PREREQUISITES | NAMESPACE |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------| --- | --- |
 | ProductConfigurationVolumePriceProductConfigurationPriceMapperPlugin     | Maps product configuration volume price data to `ProductConfigurationInstanceTransfer`.              | None | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationsRestApi |
 | ProductConfigurationVolumePriceRestProductConfigurationPriceMapperPlugin | Maps product configuration volume price data to `RestProductConfigurationPriceAttributesTransfer[]`. | None | Spryker\Glue\ProductConfigurationsPriceProductVolumesRestApi\Plugin\ProductConfigurationShoppingListsRestApi |
-| ProductConfigurationRestShoppingListItemsAttributesMapperPlugin          | Maps the `ShoppingListItemTransfer` product configuration to `RestShoppingListItemsAttributesTransfer`.  | None | Spryker\Glue\ProductConfigurationShoppingListsRestApi\Plugin\ShoppingListsRestApi |
+| ProductConfigurationRestShoppingListItemsAttributesMapperPlugin          | Maps `ShoppingListItemTransfer` product configuration to `RestShoppingListItemsAttributesTransfer`.  | None | Spryker\Glue\ProductConfigurationShoppingListsRestApi\Plugin\ShoppingListsRestApi |
 | ProductConfigurationShoppingListItemRequestMapperPlugin                  | Maps product configuration from rest attributes to shopping list item.                               | None | Spryker\Glue\ProductConfigurationShoppingListsRestApi\Plugin\ShoppingListsRestApi |
 
 **src/Pyz/Glue/ProductConfigurationShoppingListsRestApi/ProductConfigurationShoppingListsRestApiDependencyProvider.php**
@@ -1024,10 +1009,11 @@ class ShoppingListsRestApiDependencyProvider extends SprykerShoppingListsRestApi
 
 {% info_block warningBox "Verification" %}
 
-Ensure that shopping list item CRUD operations support configurable products.
+Ensure that wishlist item CRUD operations support configurable products.
 For an example, see the following response to the `POST https://glue.mysprykershop.com/shopping-lists/63b14493-021f-59c2-ae70-94041beb5c06/shopping-list-items` request:
 
-**Request sample**
+<details>
+<summary markdown='span'>Request sample</summary>
 
 ```json
 {
@@ -1047,8 +1033,10 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
+</details>
 
-**Response sample**
+<details>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -1077,5 +1065,6 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
+</details>
 
 {% endinfo_block %}

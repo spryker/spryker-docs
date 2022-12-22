@@ -239,7 +239,7 @@ The feature has the following functional constraints which are going to be resol
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
     * [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html)
-    * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html)
+    * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/non-splittable-products-feature-overview.html)
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 

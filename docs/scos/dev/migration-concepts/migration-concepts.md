@@ -20,14 +20,11 @@ redirect_from:
   - /v3/docs/en/about-migration-concepts
   - /v2/docs/about-migration-concepts
   - /v2/docs/en/about-migration-concepts
-related:
-  - title: CRUD Scheduled Prices migration concept
-    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
 ---
 
 This section explains how to handle migration when a new feature requires an extensive migration effort for modules, or some technical solution used in Spryker needs to be replaced with a new one.
 
-Here you will find instructions on how to implement these changes in your project: 
+Here you will find instructions on how to implement these changes in your project:
 * [Decimal Stock migration concept](/docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html)
 * [Float Stock for products migration concept](/docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html)
 * [Search migration concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html)

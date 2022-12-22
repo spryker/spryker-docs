@@ -19,7 +19,7 @@ To start feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
-| Prices | {{site.version}} | [Integrate the Prices feature](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Prices | {{site.version}} | [Integrate the Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html) |
 
 ### 1) Install the required modules using Composer
 

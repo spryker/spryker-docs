@@ -1,6 +1,6 @@
 
 
-This document describes how to ingrate the [Inventory Management](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
 
 {% info_block errorBox %}
 
@@ -8,9 +8,9 @@ The following feature integration guide expects the basic feature to be in place
 
 The current feature integration guide adds the following functionality:
 
-* [Warehouse Management](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html)
+* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 * [Add to cart from catalog page](/docs/scos/user/features/{{site.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
-* [Warehouse address](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html#defining-a-warehouse-address)
+* [Warehouse address](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 
@@ -540,5 +540,5 @@ Make sure that the warehouse address management works:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| Inventory Management API | | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html) |
+| Inventory Management API | | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html) |
 | Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-inventory-management-feature-integration.html)|

@@ -15,11 +15,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/add-and-edit-mime-types.html   
 related:
   - title: Managing File Tree
-    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/manage-file-tree.html
   - title: Managing File List
-    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/manage-file-list.html
   - title: File Manager feature overview
-    link: docs/pbc/all/digital-asset-management/digital-asset-management.html
+    link: docs/pbc/all/content-management-system/page.version/file-manager-feature-overview.html
 ---
 
 This document describes how to define what files types can be uploaded to a shop.

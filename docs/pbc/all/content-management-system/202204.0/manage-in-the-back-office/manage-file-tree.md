@@ -14,11 +14,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/content/file-manager/managing-file-tree.html  
 related:
   - title: Managing File List
-    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/manage-file-list.html
   - title: Add and edit MIME types
-    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/add-and-edit-mime-types.html
   - title: File Manager feature overview
-    link: docs/pbc/all/digital-asset-management/digital-asset-management.html
+    link: docs/pbc/all/content-management-system/page.version/file-manager-feature-overview.html
   - title: File uploader overview
     link: docs/scos/user/features/page.version/file-manager-feature-overview/file-uploader.html
 ---
@@ -35,7 +35,7 @@ To start working with file tree elements, navigate to **Content>File Tree** sect
 
 ## Prerequisites
 
-If there are no MIME types defined in the *MIME Type Settings* section, you can upload any type of file. If you have at least one MIME type defined as *Is Allowed*, you can upload only allowed file types, until you add more allowed types. See [Add and edit MIME types](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html) for more details.
+If there are no MIME types defined in the *MIME Type Settings* section, you can upload any type of file. If you have at least one MIME type defined as *Is Allowed*, you can upload only allowed file types, until you add more allowed types. See [Add and edit MIME types](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/add-and-edit-mime-types.html) for more details.
 
 
 ## Creating file directories
@@ -87,7 +87,7 @@ The file is uploaded to the selected folder.
 
 Once the file is uploaded, you can manage it from two locations:
 
-* File List (for more details, see [Manage file List](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html))
+* File List (for more details, see [Manage file List](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-file-list.html))
 * File Tree
 
 To manage a file in File Tree:
@@ -95,28 +95,27 @@ To manage a file in File Tree:
 1. Click on the folder where the file is located.
 2. In the *Files List* section, select one of the following in the *Actions* column for the file:
     * **View** to view the file. You are redirected to the *View file* page. You can download the file by clicking **Download** in the *Actions* column.
-  
-    * **Edit** to edit the file and manage multiple versions of the file. You are redirected to the *Edit file* page. 
-   
-        * *File tab*: Here you can update the file name information. Click **Save** to apply your updates. 
 
-        You can also upload another version of a file. 
-       
+    * **Edit** to edit the file and manage multiple versions of the file. You are redirected to the *Edit file* page.
+
+        * *File tab*: Here you can update the file name information. Click **Save** to apply your updates.
+
+        You can also upload another version of a file.
+
         {% info_block infoBox "Info" %}
-       
-         *Edit File* lets you maintain multiple versions of any file. For example, the Content Manager may upload Instruction1.txt file (v.1), then decide that an image is more useful in this case and upload Instruction.png (v.2) to the file. 
-        
+
+         *Edit File* lets you maintain multiple versions of any file. For example, the Content Manager may upload Instruction1.txt file (v.1), then decide that an image is more useful in this case and upload Instruction.png (v.2) to the file.
+
         {% endinfo_block %}
-          
+
         To upload another version of a file, click **Choose File**, optionally change the file name and the *Alt* and *Title* fields for each locale, then click **Save**.
-      
-        * *File versions tab*: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version. 
- 
+
+        * *File versions tab*: Here you can manage multiple version of the file. You can view each version's information. in the *Actions* column, you can download the file version by clicking **Download** and also delete a version.
+
      * **Delete** to immediately delete a file.
 
 {% info_block warningBox "Warning" %}
 
-Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone. 
+Selecting **Delete** in the *Actions* column immediately deletes the file. There is no confirmation message before the delete occurs. The delete action cannot be undone.
 
 {% endinfo_block %}
-      

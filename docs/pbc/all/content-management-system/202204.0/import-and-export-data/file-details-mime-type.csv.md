@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/miscellaneous/file-details-mime-type.csv.html  
 ---
 
-This document describes the `mime_type.csv` file used to configure MIME Type information in your Spryker Demo Shop. For more information about MIME types, see [Reference information: MIME TYPE](https://github.com/spryker/spryker-docs/blob/review-digital-asset-management/docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.md#reference-information-mime-type).
+This document describes the `mime_type.csv` file used to configure MIME Type information in your Spryker Demo Shop. For more information about MIME types, see [Reference information: MIME TYPE](https://github.com/spryker/spryker-docs/blob/review-digital-asset-management/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/add-and-edit-mime-types.md#reference-information-mime-type).
 
 ## Prerequisites
 

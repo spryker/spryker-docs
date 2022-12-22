@@ -916,49 +916,190 @@ entries:
                   - title: Measurement Units + Quick Add to Cart
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
                   - title: Packaging Units
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                   - title: Product Approval Process
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
                   - title: Product Bundles + Cart
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
                   - title: Product Bundles
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-bundles-feature.html
                   - title: Product Bundles + Order Management
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html
                   - title: Product Bundles + Return Management
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html
                   - title: Product + Cart
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-cart-feature.html
                   - title: Product + Category
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-category-feature.html
                   - title: Product Configuration
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-configuration-feature.html
                   - title: Product
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
                   - title: Product Group + Cart
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-group-cart-feature.html
                   - title: Product Group + Product Labels
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
                   - title: Product Group + Product Rating and Reviews
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-group-product-rating-and-reviews-feature.html
                   - title: Product Groups
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-groups-feature.html
                   - title: Product Images + Configurable Bundle
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
                   - title: Product Labels
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-labels-feature.html
                   - title: Product labels + Promotions and Discounts
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-labels-promotions-and-discounts-feature.html
                   - title: Product Lists + Catalog
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
                   - title: Product Lists
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-lists-feature.html
                   - title: Product Options + Order Management
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html
                   - title: Product + Order Management
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-order-management-feature.html
                   - title: Product Sets
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-sets-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Alternative Products
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
+                  - title: Catalog
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-catalog-glue-api.html
+                  - title: Category Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html
+                  - title: Configurable Bundle + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html
+                  - title: Configurable Bundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
+                  - title: Configurable Bundle + Product
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
+                  - title: Measurement Units
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
+                  - title: Product Bundle + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
+                  - title: Product Bundles
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html
+                  - title: Product Configuration
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html
+                  - title: Product
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-glue-api.html
+                  - title: Product Image Sets
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html
+                  - title: Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
+                  - title: Product Options
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Catalog
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: Category
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-category-module.html
+                  - title: Category Template Migration Console
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-category-template-migration-console-module.html
+                  - title: CategoryGui
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorygui-module.html
+                  - title: CategoryPageSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
+                  - title: CategoryStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorystorage-module.html
+                  - title: ConfigurableBundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundle-module.html
+                  - title: ConfigurableBundleStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundlestorage-module.html
+                  - title: MerchantRelationshipProductListGui
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html
+                  - title: Product
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
+                  - title: ProductAvailabilitiesRestApi
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html
+                  - title: ProductBundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
+                  - title: ProductCategoryFilterGui
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productcategoryfiltergui-module.html
+                  - title: ProductCategoryStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productcategorystorage-module.html
+                  - title: ProductConfiguration
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguration-module.html
+                  - title: ProductConfigurationsPriceProductVolumesRestApi
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.html
+                  - title: ProductConfigurationsRestApi
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationsrestapi-module.html
+                  - title: ProductConfigurationStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationstorage-module.html
+                  - title: ProductConfigurationWidget
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationwidget-module.html
+                  - title: ProductConfiguratorGatewayPage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguratorgatewaypage-module.html
+                  - title: ProductDetailPage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productdetailpage-module.html
+                  - title: ProductDiscountConnector
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productdiscountconnector-module.html
+                  - title: ProductLabel
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
+                  - title: ProductLabelDiscountConnector
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabeldiscountconnector-module.html
+                  - title: ProductLabelGUI
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
+                  - title: ProductLabelSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html
+                  - title: ProductLabelStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabelstorage-module.html
+                  - title: ProductListGui
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html
+                  - title: ProductListSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlistsearch-module.html
+                  - title: ProductManagement
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
+                  - title: ProductMeasurementUnit
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunit-module.html
+                  - title: ProductMeasurementUnitWidget
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunitwidget-module.html
+                  - title: ProductNew
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productnew-module.html
+                  - title: ProductOption
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html
+                  - title: ProductOptionCartConnector
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html
+                  - title: ProductOptionDiscountConnector
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.html
+                  - title: ProductOptionExporter
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productoptionexporter-module.html
+                  - title: ProductPackagingUnit
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html
+                  - title: ProductPackagingUnitDataImport
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitdataimport-module.html
+                  - title: ProductPackagingUnitStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html
+                  - title: ProductPackagingUnitWidget
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html
+                  - title: ProductPageSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html
+                  - title: ProductQuantity
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantity-module.html
+                  - title: ProductQuantityDataImport
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantitydataimport-module.html
+                  - title: ProductQuantityStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantitystorage-module.html
+                  - title: ProductRelationStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productrelationstorage-module.html
+                  - title: ProductReviewSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html
+                  - title: ProductSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsearch-module.html
+                  - title: ProductSearchWidget
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html
+                  - title: ProductSetPageSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html
+                  - title: ProductValidity
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
+              - title: Decimal Stock migration concept
+                url: /docs/pbc/all/product-information-management/install-and-upgrade/decimal-stock-migration-concept.html
+              - title: Float stock for products migration concept
+                url: /docs/pbc/all/product-information-management/install-and-upgrade/float-stock-for-products-migration-concept.html
+              - title: Replace the CodeItNow module with the BarcodeLaminas module
+                url: /docs/pbc/all/product-information-management/install-and-upgrade/replace-the-codeitnow-with-the-barcodelaminas-module.html                                                                                                    
+
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:

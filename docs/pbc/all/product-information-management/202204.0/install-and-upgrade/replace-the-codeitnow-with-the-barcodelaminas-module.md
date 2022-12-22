@@ -1,5 +1,5 @@
 ---
-title: Migration guide - CodeItNow module to BarcodeLaminas module
+title: Replace the CodeItNow module with the BarcodeLaminas module
 description:
 template: module-migration-guide-template
 ---

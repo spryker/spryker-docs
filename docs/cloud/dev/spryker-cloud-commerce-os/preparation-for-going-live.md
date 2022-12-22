@@ -9,6 +9,13 @@ redirect_from:
   - /docs/en/preparation-for-going-live
 ---
 
+{% info_block warningBox "IMPORTANT: Do not risk your Go Live!" %}
+
+The prepartion steps listed here are so critical to the success of your go live that we consider them mandatory. Please note that we expect every Spryker Customer and Partner to complete the list as described below. We will generally not be able to assist you with problems related to your go live that are caused by these steps not being completed in time. Please make sure that your project plan contains tasks related to the go live checklist and allows enough time for them to be completed. 
+
+{% endinfo_block %}
+
+
 This document describes how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
 
 We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all the following tasks are completed one week before going live.

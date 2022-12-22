@@ -1,7 +1,7 @@
 ---
 title: "HowTo: Set up multiple stores"
 description: Learn how to set up multiple stores for your project.
-last_updated: Nov 16, 2021
+last_updated: Dec 22, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-multiple-stores
 originalArticleId: 218ea4d5-de80-4aba-96fc-f67a9d13711c

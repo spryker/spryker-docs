@@ -35,9 +35,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
 related:
   - title: Migration Guide - Multi-Currency
-    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
+    link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
   - title: Migration Guide - Price
-    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Configure Elasticsearch
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
   - title: Configure search features
@@ -50,7 +50,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
-If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.
+If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 
 In the multi-currency feature we store prices grouped by price mode and currency, so prices are as follows:
 ```php

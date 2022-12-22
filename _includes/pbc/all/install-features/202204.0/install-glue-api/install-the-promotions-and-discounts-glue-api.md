@@ -680,7 +680,7 @@ Verify that the `PromotionItemByQuoteTransferResourceRelationshipPlugin` and `Pr
 
 Prerequisites:
 
-* [Create a discount for the product](/docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html). The discount application type should be promotional product.
+* [Create a discount for the product](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html). The discount application type should be promotional product.
 * Create a cart.
 
 Add items to the cart to satisfy the conditions of the discount rule:
@@ -850,7 +850,7 @@ Verify the `DiscountPromotionCartItemExpanderPlugin` and `DiscountPromotionCartI
 
 Prerequisites:
 
-* [Create a discount])(/docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html). Discount application type should be promotional product.
+* [Create a discount])(/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html). Discount application type should be promotional product.
 * Create a cart with items that satisfy the conditions of the discount rule.
 * Get a concrete promotional product SKU.
 

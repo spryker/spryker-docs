@@ -16,7 +16,7 @@ This endpoint lets you manage guest carts.
 
 ## Installation
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [Glue API: Product options feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
@@ -26,7 +26,7 @@ For detailed information about the modules that provide the API functionality an
 
 ## Create a guest cart
 
-To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
+To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
 
 ## Retrieve a guest cart
 
@@ -1934,7 +1934,7 @@ For the attributes of other included resources, see:
 * [Manage guest cart items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-cart-items.html)
 * [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html)
 * [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
-* [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
+* [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
 * [Retrieve a measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-product-labelse-product-labels.html)
 * [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
@@ -1963,7 +1963,7 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 }
 ```
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/multiple-carts-feature-overview.html) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.html) environment:
 
 * In a *single cart* environment, the products in the guest cart are added to the customers' own cart.
 * In a *multiple cart* environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.

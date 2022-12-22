@@ -34,8 +34,8 @@ To add a carrier company in the Back Office, follow these steps:
 | ATTRIBUTE |DESCRIPTION|
 | --- | --- |
 | NAME | You will use the name for creating delivery methods for the company. |
-| ACTIVATE | Defines if you can [create delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html) for the company. |
+| ACTIVATE | Defines if you can [create delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html) for the company. |
 
 ## Next steps
 
-Add shipment methods for the added company. For instructions, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
+Add shipment methods for the added company. For instructions, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).

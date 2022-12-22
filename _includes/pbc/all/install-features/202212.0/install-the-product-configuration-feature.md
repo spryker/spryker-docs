@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | Cart                 | {{site.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                                 |
 | Order Management     | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)         |
 | Checkout             | {{site.version}} | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)                         |
-| Prices               | {{site.version}} | [Prices feature integration](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
+| Prices               | {{site.version}} | [Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
 | Inventory Management | {{site.version}} | [Inventory management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html) |
 | Wishlist             | {{site.version}} ||
 | ShoppingList         | {{site.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shopping-lists-feature-integration.html)             |

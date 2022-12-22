@@ -221,12 +221,21 @@ versioned_categories:
       - system-requirements
   pbc:
     all:
-      - carrier-management      
+      - cart-and-checkout
       - content-management-system
+      - discount-management
+      - gift-cards
       - identity-access-management
       - user-management
       - return-management
       - emails
+      - carrier-management
+      - price-management
+      - ratings-reviews
+      - request-for-quote
+      - shopping-list-and-wishlist
+      - tax-management
+      - warehouse-management-system
       - product-information-management
 
 

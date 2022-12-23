@@ -6,9 +6,9 @@ This document describes how to integrate the CMS + Category Management feature i
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION | CMS |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | ---  |
-| Category Management | {{site.version}} | {{site.version}}|
+| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/202204.0/category-management-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 
@@ -98,8 +98,6 @@ class CategoryConfig extends CategoryCategoryConfig
 |--- | --- | --- |
 |CategorySlotBlockConditionFormPlugin |Extends the CMS slot block form with a category condition form. |Spryker\Zed\CmsSlotBlockCategoryGui\Communication\Plugin|
 
-
-
 **Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider**
 
 ```php
@@ -126,11 +124,11 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to **Content** > **Slots**.
+1. In the Back Office, go to **Content > Slots**.
 
-2. In the *List of Templates* pane, select the template you've configured in [2) Set up configuration](#set-up-configuration).
+1. In the *List of Templates* pane, select the template you've configured in [2) Set up configuration](#set-up-configuration).
 
-3. Make sure that you can see a *List of Blocks for "{selected slot name}" Slot* pane.
+2. Make sure that you can see a *List of Blocks for "{selected slot name}" Slot* pane.
 
 {% endinfo_block %}
 

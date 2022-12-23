@@ -4,13 +4,15 @@ This document describes how to integrate the [CMS](/docs/scos/user/features/{{si
 
 ## Install feature core
 
+Follow the steps below to install the CMS feature core.
+
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/202204.0/spryker-core-feature-integration.html)|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -296,7 +298,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 ```
 </details>
 
-1. Add Queue configuration.
+2. Add Queue configuration.
 
 **Pyz\Zed\Queue\QueueDependencyProvider**
 
@@ -397,7 +399,7 @@ class CmsSlotBlockStorageConfig extends SprykerCmsSlotBlockStorageConfig
 }
 ```
 
-4. Enable synchronization plugins to be re-synchronize data manually (sending data from `*_storage` and `*_search` tables to Storage and Search).
+1. Enable synchronization plugins to resynchronize data manually (sending data from `*_storage` and `*_search` tables to Storage and Search).
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -518,7 +520,7 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 
 {% endinfo_block %}
 
-<details open>
+<details>
 <summary markdown='span'>Example Expected Data Fragment: Redis, CmsBlock</summary>
 
 ```json
@@ -732,7 +734,7 @@ Make sure that all the CMS entity changes performed manually in the Back Office 
 
 ### 5) Register XSS Protection Form plugin
 
-1. Enable the form plugin to add XSS protection options in Backoffice.
+Enable the form plugin to add XSS protection options in the Back Office.
 
 | PLUGIN                             | SPECIFICATION                                                                                       | PREREQUISITES | NAMESPACE                                 |
 |------------------------------------|-----------------------------------------------------------------------------------------------------|---------------|-------------------------------------------|
@@ -1012,7 +1014,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-1. Import data:
+3. Import data:
 
 ```bash
 console data:import:cms-template
@@ -1494,7 +1496,7 @@ class TabsWidgetDependencyProvider extends SprykerTabsWidgetDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by searching for an existing page. You should see the **Page** tab in the search results.
+Verify the changes by searching for an existing page. The **Page** tab is displayed in the search results.
 
 {% endinfo_block %}
 
@@ -1536,7 +1538,9 @@ Verify the changes by adding a slot widget to a page. See [Templates & Slots Fea
 ### Set up SprykerCmsBlocks content provider behavior
 
 {% info_block infoBox %}
-Follow the further steps only if you are going to use the [visibility conidtions](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+
+Follow the further steps only if you are going to use the [visibility conditions](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+
 {% endinfo_block %}
 
 #### 1) Install the required modules using Composer
@@ -1563,7 +1567,7 @@ Make sure that the following modules have been installed:
 
 #### 2) Set up configuration
 
-Add the relation of CMS slot template to condition key:
+Add the relation of the CMS slot template to the condition key:
 
 **Pyz\Zed\CmsSlotBlock\CmsSlotBlockConfig**
 
@@ -1645,7 +1649,7 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 2. In **List of Templates**, choose the template for which you've created the visibility condition.
 3. Choose a slot in the **List of Slots for [NAME] Template**.
 4. Select or [assign](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for [NAME] Slot**.
-5. Make sure that for each CMS block, there is an additional form allowing you to define the visibility condition you have created.
+5. Make sure that for each CMS block, there is an additional form that lets you define the visibility condition you have created.
 
 {% endinfo_block %}
 

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/cms-pages-in-search-results-integration
   - /docs/en/cms-pages-in-search-results-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/cms-catalog-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/cms-catalog-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-cms-catalog-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-cms-catalog-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-cms-catalog-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-cms-catalog-feature.md -->

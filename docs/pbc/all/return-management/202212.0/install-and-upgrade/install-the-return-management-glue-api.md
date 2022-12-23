@@ -19,4 +19,4 @@ related:
     link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-glue-api/install-the-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-return-management-glue-api.md -->
+{% include pbc/all/install-features/202212.0/install-glue-api/install-the-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-return-management-glue-api.md -->

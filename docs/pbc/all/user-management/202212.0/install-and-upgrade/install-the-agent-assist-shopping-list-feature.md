@@ -10,6 +10,7 @@ redirect_from:
   - /docs/agent-assist-shopping-list-feature-integration
   - /docs/en/agent-assist-shopping-list-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/agent-assist-shopping-list-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/agent-assist-shopping-list-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-agent-assist-shopping-list-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-agent-assist-shopping-list-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-agent-assist-shopping-list-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-agent-assist-shopping-list-feature.md -->

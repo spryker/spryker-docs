@@ -12,7 +12,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shipment-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-shipment-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-shipment-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-shipment-feature-integration.html  
 related:
   - title: Shipment feature integration
     link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/integrate-the-shipment-feature.html
@@ -22,4 +23,4 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-glue-api/install-the-shipment-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-shipment-glue-api.md -->
+{% include pbc/all/install-features/202212.0/install-glue-api/install-the-shipment-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-shipment-glue-api.md -->

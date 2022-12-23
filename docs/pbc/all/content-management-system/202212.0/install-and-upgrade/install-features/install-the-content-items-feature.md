@@ -12,9 +12,10 @@ redirect_from:
   - /docs/en/content-items-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/content-items-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/content-items-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/content-items-feature-integration.html
 related:
   - title: Install the Content Items Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-content-items-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-content-items-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-content-items-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-content-items-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-content-items-feature.md -->

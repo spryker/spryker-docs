@@ -11,6 +11,7 @@ redirect_from:
   - /docs/navigation-module-integration
   - /docs/en/navigation-module-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/navigation-module-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/navigation-module-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-navigation-module.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-navigation-module.md -->
+{% include pbc/all/install-features/202212.0/install-the-navigation-module.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-navigation-module.md -->

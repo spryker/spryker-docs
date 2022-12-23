@@ -12,9 +12,10 @@ redirect_from:
   - /docs/en/cms-feature-integration-guide
   - /docs/scos/dev/feature-integration-guides/201811.0/cms-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/cms-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/cms-feature-integration.html
 related:
   - title: Install the CMS Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cms-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-cms-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-cms-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-cms-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-cms-feature.md -->

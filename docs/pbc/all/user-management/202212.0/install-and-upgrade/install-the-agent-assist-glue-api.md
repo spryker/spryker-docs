@@ -11,6 +11,7 @@ redirect_from:
   - /docs/glue-api-agent-assist-feature-integration
   - /docs/en/glue-api-agent-assist-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-agent-assist-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-agent-assist-feature-integration.html
 related:
   - title: Install the Agent Assist feature
     link: docs/pbc/all/user-management/page.version/install-and-upgrade/install-the-agent-assist-feature.html
@@ -24,4 +25,4 @@ related:
     link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-glue-api/install-the-agent-assist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-agent-assist-glue-api.md -->
+{% include pbc/all/install-features/202212.0/install-glue-api/install-the-agent-assist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-agent-assist-glue-api.md -->

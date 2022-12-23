@@ -17,15 +17,11 @@ redirect_from:
 
 This document describes the `product_option.csv` file to configure [product option](/docs/pbc/all/product-information-management/{{page.version}}/product-options-feature-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run
+## Dependencies
 
-```bash
-data:import:product-option
-```
+[product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -39,16 +35,16 @@ The file should have the following parameters:
 | sku | | String | | SKU identifier of the product option. |
 | avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{site.version}}/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
-
-## Dependencies
-
-This file has the following dependencies: [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
-
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [template_product_option.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Special+Product+Types/202109.0/Template_product_option.csv) | Exemplary import file with headers only. |
 | [product_option.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Special+Product+Types/202109.0/product_option.csv) | Exemplary import file with the Demo Shop data. |
+
+
+## Import command
+
+```bash
+data:import:product-option
+```

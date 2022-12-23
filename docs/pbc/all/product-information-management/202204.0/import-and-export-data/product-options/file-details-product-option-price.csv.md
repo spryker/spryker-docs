@@ -17,15 +17,11 @@ redirect_from:
 
 This document describes the `product_option_price.csv` file to configure Product Option Price information on your Spryker Demo Shop. Importing the Product Option Price data sets the net and gross prices for each of the Product Options, per store and per currency.
 
-To import the file, run
+## Import file dependencies
 
-```bash
-data:import:product-option-price
-```
+[product_option.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-options/file-details-product-option.csv.html).
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS AND COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
@@ -35,15 +31,16 @@ The file should have the following parameters:
 | value_net |  | Integer |The original value is multiplied by 100, before stored in this field. | Net price value of the Product Option. |
 | value_gross |  | Integer | The original value is multiplied by 100, before stored in this field. | Gross price value of the Product Option. |
 
-## Import file dependencies
-
-This file has the following dependencies: [product_option.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-options/file-details-product-option.csv.html).
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [product_option_price.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Special+Product+Types/Product+Options/Template+product_option_price.csv) | Exemplary import file with headers only. |
 | [product_option_price.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Special+Product+Types/Product+Options/product_option_price.csv) | Exemplary import file with Demo Shop data. |
+
+## Import command
+
+```bash
+data:import:product-option-price
+```

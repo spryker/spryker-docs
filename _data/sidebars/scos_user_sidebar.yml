@@ -1393,8 +1393,12 @@ entries:
           nested:
           - title: Creating product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html
+            include_versions:
+            - "202108.0"
           - title: Editing product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html
+            include_versions:
+            - "202108.0"            
           - title: Assign product attributes to product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html
             include_versions:
@@ -2237,27 +2241,22 @@ entries:
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/create-product-sets.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Edit product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/edit-product-sets.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: View product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/view-product-sets.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Reorder product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/reorder-product-sets.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Delete product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/delete-product-sets.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Creating product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/creating-product-sets.html
           include_versions:

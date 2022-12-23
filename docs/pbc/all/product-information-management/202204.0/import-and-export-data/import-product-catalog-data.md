@@ -1,5 +1,5 @@
 ---
-title: Product catalog data import
+title: Import product catalog data
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-setup

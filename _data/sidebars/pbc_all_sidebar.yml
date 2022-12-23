@@ -580,7 +580,7 @@ entries:
               - title: Manage file tree
                 url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-file-tree.html
               - title: Add and edit MIME types
-                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/add-and-edit-mime-types.html                                
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/add-and-edit-mime-types.html
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Create a custom content item"
@@ -905,18 +905,18 @@ entries:
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:
           - title: Product
-            url: /docs/pbc/all/product-information-management/202204.0/product-feature-overview/product-feature-overview.html
+            url: /docs/pbc/all/product-information-management/product-feature-overview/product-feature-overview.html
             nested:
               - title: Product Attributes
-                url: /docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html
+                url: /docs/pbc/all/product-information-management/product-feature-overview/product-attributes-overview.html
               - title: Discontinued Products
-                url: /docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/discontinued-products-overview.html
+                url: /docs/pbc/all/product-information-management/product-feature-overview/discontinued-products-overview.html
               - title: Product Images
-                url: /docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-images-overview.html
+                url: /docs/pbc/all/product-information-management/product-feature-overview/product-images-overview.html
               - title: Timed Product Availability
-                url: /docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/timed-product-availability-overview.html
+                url: /docs/pbc/all/product-information-management/product-feature-overview/timed-product-availability-overview.html
               - title: Search widget for concrete products
-                url: /docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html
+                url: /docs/pbc/all/product-information-management/product-feature-overview/search-widget-for-concrete-products-overview.html
           - title: Alternative Products
             url: /docs/pbc/all/product-information-management/alternative-products-feature-overview.html
           - title: Catalog
@@ -1164,7 +1164,45 @@ entries:
               - title: Float stock for products migration concept
                 url: /docs/pbc/all/product-information-management/install-and-upgrade/float-stock-for-products-migration-concept.html
               - title: Replace the CodeItNow module with the BarcodeLaminas module
-                url: /docs/pbc/all/product-information-management/install-and-upgrade/replace-the-codeitnow-with-the-barcodelaminas-module.html                                                                                                    
+                url: /docs/pbc/all/product-information-management/install-and-upgrade/replace-the-codeitnow-with-the-barcodelaminas-module.html
+          - title: Import and export data
+            url: /docs/pbc/all/product-information-management/import-and-export-data/import-product-catalog-data.html
+            nested:
+              - title: Categories data import
+                url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/categories-data-import.html
+                nested:
+                  - title: category_template.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/file-details-category-template.csv.html
+                  - title: category.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/file-details-category.csv.html
+                  - title: category_store.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/file-details-category-store.csv.html
+              - title:  Products data import
+                url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/products-data-import.html
+                nested:
+                  - title: product_attribute_key.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html
+                  - title: product_management_attribute.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html
+                  - title: product_abstract.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-abstract.csv.html
+                  - title: product_abstract_store.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html
+                  - title: product_concrete.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-concrete.csv.html
+                  - title: product_image.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-image.csv.html
+                  - title: product_abstract_approval_status.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-abstract-approval-status.csv.html
+              - title: Product options data import
+                url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/product-options-data-import.html
+                nested:
+                  - title: product_option.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/file-details-product-option.html
+                  - title: product_option_price.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/file-details-product-option-price.csv.html
+              - title: product_alternative.csv
+                url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-alternative.csv.html
 
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html

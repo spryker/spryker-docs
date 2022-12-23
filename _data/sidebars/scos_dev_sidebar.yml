@@ -278,7 +278,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/measurement-units-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Merchant
       url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
     - title: Merchant B2B Contracts
@@ -396,23 +395,30 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
-    - title: Product Approval Process
-      url: /docs/scos/dev/feature-walkthroughs/product-approval-process-feature-walkthrough.html
-      include_versions:
-      - "202204.0"
     - title: Product Barcode
       url: /docs/scos/dev/feature-walkthroughs/product-barcode-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Product Bundles
       url: /docs/scos/dev/feature-walkthroughs/product-bundles-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Product Groups
       url: /docs/scos/dev/feature-walkthroughs/product-groups-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Product Labels
       url: /docs/scos/dev/feature-walkthroughs/product-labels-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Product Lists
       url: /docs/scos/dev/feature-walkthroughs/product-lists-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Product Options
       url: /docs/scos/dev/feature-walkthroughs/product-options-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Product Rating and Reviews
       url: /docs/scos/dev/feature-walkthroughs/product-rating-reviews-feature-walkthrough.html
       include_versions:
@@ -1136,7 +1142,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Retrieving navigation trees
       url: /docs/scos/dev/glue-api-guides/retrieving-navigation-trees.html
       include_versions:
@@ -1446,7 +1451,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Multiple Carts
         url: /docs/scos/dev/feature-integration-guides/glue-api/multiple-carts-api-feature-integration.html
         include_versions:
@@ -2487,8 +2491,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
     - title: Migration Guide - Calculation
       url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
-    - title: Migration guide - CodeItNow module to BarcodeLaminas module
-      url: /docs/scos/dev/module-migration-guides/migration-guide-codeitnow-to-barcodelaminas.html
     - title: Migration Guide - Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
     - title: Migration Guide - CompanyBusinessUnit
@@ -3591,10 +3593,6 @@ entries:
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
-    - title: Decimal Stock migration concept
-      url: /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
-    - title: Float Stock for products migration concept
-      url: /docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
     - title: Search migration concept
       url: /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
     - title: Migrating from Twig v1 to Twig v3

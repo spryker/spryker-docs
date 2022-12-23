@@ -8,8 +8,6 @@ redirect_from:
 related:
   - title: Managing products
     link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
-  - title: Editing product variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variants.html
   - title: Marketplace Product feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---

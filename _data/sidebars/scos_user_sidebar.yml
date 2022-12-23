@@ -1401,15 +1401,19 @@ entries:
           - title: Editing product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html
             include_versions:
-            - "202108.0"            
+            - "202108.0"
           - title: Assign product attributes to product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html
             include_versions:
             - "202108.0"
           - title: Adding product alternatives
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/adding-product-alternatives.html
+            include_versions:
+            - "202108.0"
           - title: Discontinuing products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/discontinuing-products.html
+            include_versions:
+            - "202108.0"            
         - title: Creating service offerings - best practices
           url: /docs/scos/user/back-office-user-guides/catalog/products/creating-service-offerings-best-practices.html
           include_versions:
@@ -2125,17 +2129,14 @@ entries:
           url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/create-product-labels.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Edit product labels
           url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/edit-product-labels.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: View product labels
           url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/view-product-labels.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Creating product labels
           url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/creating-product-labels.html
           include_versions:

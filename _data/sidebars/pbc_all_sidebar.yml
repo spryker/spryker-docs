@@ -1198,7 +1198,7 @@ entries:
                 url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/product-options-data-import.html
                 nested:
                   - title: product_option.csv
-                    url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/file-details-product-option.html
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/file-details-product-option.csv.html
                   - title: product_option_price.csv
                     url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/file-details-product-option-price.csv.html
               - title: product_alternative.csv
@@ -1216,7 +1216,7 @@ entries:
               - title: Install the Product Rating and Reviews + Product Group feature
                 url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html
               - title: Install the Product Rating and Reviews Glue API
-                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
           - title: Import and export data
             nested:
               - title: File details- product_review.csv

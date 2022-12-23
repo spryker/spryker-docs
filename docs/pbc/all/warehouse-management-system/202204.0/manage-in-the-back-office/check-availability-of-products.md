@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/catalog/availability/managing-products-availability.html  
 related:
   - title: Managing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-products.html
   - title: Timed Product Availability Feature Overview
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/timed-product-availability-overview.html
 ---

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/creating-a-product-variant
 related:
   - title: Managing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-products.html
   - title: Discontinuing Products
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html
   - title: Adding Product Alternatives
@@ -135,4 +135,4 @@ On this tab, you see a table with the scheduled prices imported via a CSV file. 
 
 
 **What's next?**
-<br>Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html) section.
+<br>Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-products.html) section.

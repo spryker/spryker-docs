@@ -1413,7 +1413,7 @@ entries:
           - title: Discontinuing products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/discontinuing-products.html
             include_versions:
-            - "202108.0"            
+            - "202108.0"
         - title: Creating service offerings - best practices
           url: /docs/scos/user/back-office-user-guides/catalog/products/creating-service-offerings-best-practices.html
           include_versions:
@@ -1679,6 +1679,8 @@ entries:
         nested:
         - title: Viewing product barcodes
           url: /docs/scos/user/back-office-user-guides/catalog/product-barcodes/viewing-product-barcodes.html
+          include_versions:
+          - "202108.0"
       - title: Scheduled prices
         include_versions:
           - "201907.0"

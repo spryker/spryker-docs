@@ -116,9 +116,9 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 | - |---|
 | [Product Attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html)  | [Create an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) |
 | [Discontinued Products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/discontinued-products-overview.html)  | [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html) |
-| [Product Images](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-images-overview.html)  | [Create a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) |
+| [Product Images](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-images-overview.html)  | [Create a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/create-product-variants.html) |
 | [Timed Product Availability](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/timed-product-availability-overview.html)  | [Edit a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html) |
-|  |  [Manage products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html) |
+|  |  [Manage products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-products.html) |
 
 ## Related Developer articles
 

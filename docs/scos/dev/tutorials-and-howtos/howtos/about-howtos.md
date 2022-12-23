@@ -37,7 +37,6 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 * [HowTo: Create a custom content item](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html)
 * [HowTo: Create a visibility condition for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html)
 * [HowTo: Manage business unit specific prices via data import](/docs/pbc/all/price-management/{{site.version}}/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html)
-* [HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
 * [HowTo: Import warehouse data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
 
 

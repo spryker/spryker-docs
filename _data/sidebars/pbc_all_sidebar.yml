@@ -1171,7 +1171,7 @@ entries:
             url: /docs/pbc/all/product-information-management/import-and-export-data/import-product-catalog-data.html
             nested:
               - title: Import product data with a single file
-                url: /docs/pbc/all/product-information-management/import-and-export-data/import-product-data-with-a-single-file.csv.html
+                url: /docs/pbc/all/product-information-management/import-and-export-data/import-product-data-with-a-single-file.html
               - title: Categories data import
                 url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/categories-data-import.html
                 nested:

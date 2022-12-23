@@ -137,14 +137,6 @@ The [Product Relations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/pro
 
 [This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-relations-feature-walkthrough/product-relations-module-relations.html) illustrates the module relations within the Product Relations feature.
 
-## Product Sets
-
-The [Product Sets](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html) feature lets you create and sell collections of products.
-
-### Product Sets: module relations
-
-The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-module-relations.html) module provides a `spy_product_set` table that stores some non-localized data about Product Sets entities. Localized data is stored in the `spy_product_set_data` table. These tables, along with their related URLs and product image sets, contain all the necessary data about Product Sets entities that you can list on the Storefront or show their representing Product details pages.
-
 ## Reclamations
 
 The [Reclamations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reclamations-feature-walkthrough.html) feature lets Back Office users handle order claims issued by customers.

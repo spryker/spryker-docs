@@ -17,7 +17,7 @@ related:
   - title: Migration Guide - Touch
     link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
   - title: Migration Guide - Product
-    link: docs/pbc/all/product-information-management/site.version/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Migration Guide - ProductManagement
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
 ---

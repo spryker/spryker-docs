@@ -21,8 +21,6 @@ related:
     link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
   - title: CRUD Scheduled Prices migration concept
     link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
-  - title: Float Stock for Products
-    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
   - title: Migrating from Twig v1 to Twig v3
     link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
   - title: Split Delivery migration concept

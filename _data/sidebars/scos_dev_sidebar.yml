@@ -1929,7 +1929,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Customer Account Management + Agent Assist
       url: /docs/scos/dev/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html
       include_versions:
@@ -2129,7 +2128,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Product Approval Process
       url: /docs/scos/dev/feature-integration-guides/product-approval-process-feature-integration.html
       include_versions:
@@ -2430,7 +2428,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202212.0"
     - title: Shipment + Approval Process
       url: /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
       include_versions:
@@ -2473,7 +2470,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202212.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Volume Prices

@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 related:
   - title: Marketplace Product feature walkthrough
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
-  - title: Tax feature walkthrough
+  - title: Tax domain model and relationships
     link: docs/scos/dev/feature-walkthroughs/page.version/tax-feature-walkthrough/tax-feature-walkthrough.html
 ---
 

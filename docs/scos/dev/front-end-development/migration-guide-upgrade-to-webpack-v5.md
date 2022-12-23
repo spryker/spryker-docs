@@ -28,15 +28,18 @@ using the next command `rm -rf node_modules && rm -rf package-lock.json`.
 
 ```json
 {
-   "@types/webpack": "~5.28.0",
-   "clean-webpack-plugin": "~4.0.0",
-   "compression-webpack-plugin": "~10.0.0",
-   "copy-webpack-plugin": "~11.0.0",
-   "mini-css-extract-plugin": "~2.7.2",
-   "optimize-css-assets-webpack-plugin": "~6.0.1",
-   "terser-webpack-plugin": "~5.3.6",
-   "webpack": "~5.74.0",
-   "webpack-merge": "~5.8.0"
+    // update
+    "@types/webpack": "~5.28.0", // If using Merchant Portal
+    "clean-webpack-plugin": "~4.0.0",
+    "compression-webpack-plugin": "~10.0.0",
+    "copy-webpack-plugin": "~11.0.0",
+    "mini-css-extract-plugin": "~2.7.2",
+    "optimize-css-assets-webpack-plugin": "~6.0.1",
+    "terser-webpack-plugin": "~5.3.6",
+    "webpack": "~5.74.0",
+    "webpack-merge": "~5.8.0",
+    // add
+    "postcss": "~8.4.20"
 }
 ```
 
@@ -241,7 +244,7 @@ npm run zed:production
 npm run zed:watch
 ```
 
-3. `MP`:
+3. `MP` (If using Merchant Portal):
 
 ```bash
 npm run mp:build

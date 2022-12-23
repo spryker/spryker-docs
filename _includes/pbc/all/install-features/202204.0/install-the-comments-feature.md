@@ -8,6 +8,7 @@ This document describes how to integrate the [Comments](/docs/pbc/all/cart-and-c
 Follow the steps below to install the Comments feature core.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
@@ -17,7 +18,7 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Istall the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies

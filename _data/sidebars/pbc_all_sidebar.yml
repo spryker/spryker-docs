@@ -958,7 +958,7 @@ entries:
                   - title: Alternative Products + Wishlist
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
                   - title: Approval Process + Shipment
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-approval-process-shipment-feature.html                    
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-approval-process-shipment-feature.html
                   - title: Catalog + Category Management
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html
                   - title: Catalog + Order Management
@@ -1217,11 +1217,7 @@ entries:
                 url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-label-store.csv.html
               - title: product_label.csv
                 url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-label.csv.html
-          - title: Manage in the Back Office
-            nested:
-              - title: Attributes
-                nested:
-                  - title:
+
 
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html

@@ -1746,7 +1746,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 For the attributes of the included resources, see:
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
-* [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve a registered user's cart

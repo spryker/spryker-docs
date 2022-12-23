@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
 ---
 
-This document describes the `product_set.csv` file to configure [Product Set](/docs/pbc/all/product-information-management/{{page.version}}/product-sets-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_set.csv` file to configure [Product Set](/docs/pbc/all/content-management-system/{{page.version}}/product-sets-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

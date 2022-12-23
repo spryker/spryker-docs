@@ -49,7 +49,7 @@ The feature has the following functional constraints which are going to be resol
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Sets feature](/docs/pbc/all/product-information-management/{{page.version}}/product-sets-feature-overview.html) |
+| [Get a general idea of the Product Sets feature](/docs/pbc/all/content-management-system/{{page.version}}/product-sets-feature-overview.html) |
 | [Create product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html) |
 | [Manage product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html) |
 

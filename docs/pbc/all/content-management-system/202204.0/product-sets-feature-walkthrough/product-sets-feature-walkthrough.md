@@ -10,7 +10,7 @@ redirect_from:
 The _Product Sets_ feature lets you create and sale collections of products.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Sets feature overview](/docs/pbc/all/product-information-management/{{page.version}}/product-sets-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Sets feature overview](/docs/pbc/all/content-management-system/{{page.version}}/product-sets-feature-overview.html) for business users.
 
 
 ## Entity diagram

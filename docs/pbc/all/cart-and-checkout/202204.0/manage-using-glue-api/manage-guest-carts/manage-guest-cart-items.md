@@ -2630,7 +2630,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of other included resources, see the following:
-* [Threshold attributes](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#threshold-attributes).
+* [Threshold attributes](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#threshold-attributes).
 * [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#guest-cart-response-attributes)
 * [Gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
 * [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)

@@ -18,6 +18,14 @@ The *Approval Process* feature lets B2B customers have multiple people contribut
 
 Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
 
+{% info_block warningBox "Approvals within a business unit" %}
+
+Approvers can only approve orders of employees *within their own business unit*.
+
+If an employee with a *Buy up to grand total* limit is in a business unit without any approvers, at the checkout, the employee can't see any approvers to send their order to and thus can't proceed with their order. Not even if another business unit of the same company does have an approver. And not even if that other business unit is the direct parent of the employee's business unit.
+
+{% endinfo_block %}
+
 When a company user requests approval for their cart, the cart gets locked, and the users can't edit it.
 
 
@@ -45,7 +53,7 @@ For the approval process, you can set specific permissions for the Approver and 
 
 {% info_block warningBox "Note" %}
 
-It is mandatory for the Buyer role to set this permission if you want to use the Approval Process feature in your project.
+It is mandatory to set this permission for the Buyer role if you want to use the Approval Process feature in your project.
 
 {% endinfo_block %}
 

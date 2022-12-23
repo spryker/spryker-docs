@@ -121,7 +121,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 ```
 
 ```js
-const getCopyConfig = appSettings =>
+const getCopyConfig = (appSettings) =>
     Object.values(appSettings.paths.assets).reduce((copyConfig, assetsPath) => {
         if (fs.existsSync(assetsPath)) {
             copyConfig.push({
@@ -134,7 +134,7 @@ const getCopyConfig = appSettings =>
         return copyConfig;
     }, []);
 // must be
-const getCopyConfig = appSettings =>
+const getCopyConfig = (appSettings) =>
     Object.values(appSettings.paths.assets).reduce((copyConfig, assetsPath) => {
         if (fs.existsSync(assetsPath)) {
             copyConfig.push({
@@ -154,28 +154,32 @@ const getCopyConfig = appSettings =>
 ```
 
 ```js
-const getCopyStaticConfig = appSettings => {
+const getCopyStaticConfig = (appSettings) => {
     const staticAssetsPath = appSettings.paths.assets.staticAssets;
     
     if (fs.existsSync(staticAssetsPath)) {
-        return [{
-            from: staticAssetsPath,
-            to: appSettings.paths.publicStatic
-        }];
+        return [
+            {
+                from: staticAssetsPath,
+                to: appSettings.paths.publicStatic,
+            },
+        ];
     }
     
     return [];
 };
 // must be
-const getCopyStaticConfig = appSettings => {
+const getCopyStaticConfig = (appSettings) => {
     const staticAssetsPath = appSettings.paths.assets.staticAssets;
     
     if (fs.existsSync(staticAssetsPath)) {
-        return [{
-            from: staticAssetsPath,
-            to: appSettings.paths.publicStatic,
-            context: appSettings.context,
-        }];
+        return [
+            {
+                from: staticAssetsPath,
+                to: appSettings.paths.publicStatic,
+                context: appSettings.context,
+            },
+        ];
     }
     
     return [];
@@ -183,7 +187,7 @@ const getCopyStaticConfig = appSettings => {
 ```
 
 ```js
-const getAssetsConfig = appSettings => [
+const getAssetsConfig = (appSettings) => [
     new CleanWebpackPlugin(
         [
             appSettings.paths.public,
@@ -205,7 +209,7 @@ const getAssetsConfig = appSettings => [
     }),
 ];
 // must be
-const getAssetsConfig = appSettings => [
+const getAssetsConfig = (appSettings) => [
     new CleanWebpackPlugin({
         cleanOnceBeforeBuildPatterns: [
             appSettings.paths.public,

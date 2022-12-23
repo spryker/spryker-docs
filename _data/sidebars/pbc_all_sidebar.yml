@@ -372,6 +372,8 @@ entries:
             url: /docs/pbc/all/content-management-system/content-items-feature-overview.html
           - title: Navigation feature overview
             url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
+          - title: File Manager feature overview
+            url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -436,6 +438,12 @@ entries:
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentgui-module.html
                   - title: ContentStorage
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html
+                  - title: FileManager
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html
+                  - title: FileManagerStorage
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerstorage-module.html
+                  - title: FileManagerWidget
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerwidget-module.html
                   - title: Navigation
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigation-module.html
                   - title: NavigationGui
@@ -481,6 +489,8 @@ entries:
                 url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot.csv.html
               - title: cms_slot_block.csv
                 url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot-block.csv.html
+              - title: mime_type.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-mime-type.csv.html
               - title: navigation.csv
                 url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation.csv.html
               - title: navigation_node.csv
@@ -565,6 +575,12 @@ entries:
                     url: /docs/pbc/all/content-management-system/manage-in-the-back-office/redirects/create-cms-redirects.html
                   - title: Manage CMS redirects
                     url: /docs/pbc/all/content-management-system/manage-in-the-back-office/redirects/manage-cms-redirects.html
+              - title: Manage file list
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-file-list.html
+              - title: Manage file tree
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-file-tree.html
+              - title: Add and edit MIME types
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/add-and-edit-mime-types.html                                
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Create a custom content item"
@@ -603,21 +619,6 @@ entries:
             nested:
               - title: "Content item types: module relations"
                 url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
-      - title: Digital Asset Management
-        url: /docs/pbc/all/digital-asset-management/digital-asset-management.html
-        nested:
-          - title: Import and export data
-            nested:
-              - title: File details - mime_type.csv
-                url: /docs/pbc/all/digital-asset-management/import-and-export-data/file-details-mime-type.csv.html
-          - title: Manage in the Back Office
-            nested:
-              - title: Add and edit MIME types
-                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
-              - title: Manage file list
-                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
-              - title: Manage file tree
-                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -1121,7 +1122,7 @@ entries:
               - title: Install the Agent Assist + Shopping List feature
                 url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
               - title: Install the Agent Assist Glue API
-                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html                                                   
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html
           - title: Manage in the Back Office
             nested:
               - title: "Best practices: Manage users and their permissions with roles and groups"

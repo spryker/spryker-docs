@@ -24,7 +24,7 @@ redirect_from:
   - /v6/docs/en/release-notes-2018-12-0
 related:
   - title: Managing Wishlists
-    link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-wishlists-via-glue-api.html
   - title: Retrieving Customer's Order History
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: REST API Reference
@@ -56,17 +56,17 @@ Endpoints ensure access-token login and retrieval. Customers can also register a
 ### Cart
 Customers and guests can add products to their cart. Guest carts are now also persisted and retrievable via anonymous IDs, handled by your client application.
 
-**Documentation**: [Managing Carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
+**Documentation**: [Managing Carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
 
 ### Checkout
 Retrieve all the necessary information to build your checkout for guest customers and already registered customers with their personal data. If you offer different shipment or payment methods on your own conditions, they will be considered.
 
-**Documentation**: [Checking Out Purchases and Getting Checkout Data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html).
+**Documentation**: [Checking Out Purchases and Getting Checkout Data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/check-out-purchases.html).
 
 ### Customer Account
 Your customers can benefit from the same shop experience with the customer account endpoints. Not only can basic customer information be administered, but also wishlist and order history functionality is offered.
 
-**Documentation**: [Managing Customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html), [Managing Wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html), [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html).
+**Documentation**: [Managing Customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html), [Managing Wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-wishlists-via-glue-api.html), [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html).
 
 ## Documentation Swagger Generator
 ![Documentation Swagger generator](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image3.png)

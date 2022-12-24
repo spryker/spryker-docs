@@ -6,7 +6,6 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202212.0/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html  
 ---
 
 <div class="width-100">

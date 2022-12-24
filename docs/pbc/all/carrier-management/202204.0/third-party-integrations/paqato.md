@@ -11,8 +11,7 @@ redirect_from:
   - /docs/paqato
   - /docs/en/paqato
   - /docs/scos/user/technology-partners/202200.0/shipment/paqato.html
-  - /docs/scos/user/technology-partners/202204.0/shipment/paqato.html
-  - /docs/scos/user/technology-partners/202212.0/shipment/paqato.html  
+  - /docs/scos/user/technology-partners/202204.0/shipment/paqato.html  
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

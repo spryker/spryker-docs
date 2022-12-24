@@ -9,8 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-shipment-method-storecsv
   - /docs/file-details-shipment-method-storecsv
   - /docs/en/file-details-shipment-method-storecsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html  
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
 ---
 
 This document describes the `shipment_method_store.csv` file to configure [Shipment Method](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) and Store relation to be added to your Spryker Demo Shop.

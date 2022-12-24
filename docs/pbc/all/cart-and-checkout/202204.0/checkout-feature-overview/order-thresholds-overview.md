@@ -11,7 +11,6 @@ redirect_from:
   - /docs/order-thresholds
   - /docs/en/order-thresholds
   - /docs/scos/user/features/202204.0/checkout-feature-overview/order-thresholds-overview.html
-  - /docs/scos/user/features/202212.0/checkout-feature-overview/order-thresholds-overview.html
 ---
 
 ---

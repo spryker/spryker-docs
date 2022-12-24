@@ -10,8 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-guest-carts
   - /docs/managing-guest-carts
   - /docs/en/managing-guest-carts
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/guest-carts/managing-guest-carts.html  
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/guest-carts/managing-guest-carts.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/guest-carts/managing-guest-carts.html
 related:
   - title: Manage guest cart items
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html

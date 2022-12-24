@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/shipment-approval-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/201907.0/shipment-approval-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/shipment-approval-process-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202212.0/shipment-approval-process-feature-integration.html
 related:
   - title: Install the Approval Process feature
     link: docs/scos/dev/feature-integration-guides/page.version/approval-process-feature-integration.html

@@ -31,7 +31,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentdiscountconnector.html
   - /module_migration_guides/mg-shipment-discount-connector.htm
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-shipmentdiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-shipmentdiscountconnector.html
 
 ---
 

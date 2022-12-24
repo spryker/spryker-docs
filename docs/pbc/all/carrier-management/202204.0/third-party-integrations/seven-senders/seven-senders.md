@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/sevensenders
   - /docs/scos/user/technology-partners/202200.0/shipment/seven-senders.html
   - /docs/scos/user/technology-partners/202204.0/shipment/seven-senders.html
-  - /docs/scos/user/technology-partners/202212.0/shipment/seven-senders.html
 
 ---
 

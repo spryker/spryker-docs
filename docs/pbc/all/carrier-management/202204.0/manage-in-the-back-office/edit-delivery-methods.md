@@ -5,7 +5,6 @@ last_updated: May 31, 2022
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/edit-delivery-methods.html
-  - /docs/scos/user/back-office-user-guides/202212.0/administration/delivery-methods/edit-delivery-methods.html
 ---
 
 This doc describes how to edit delivery methods.

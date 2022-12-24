@@ -94,7 +94,7 @@ For SEO purposes, products that are not available can still be displayed on the 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create a warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html)  |
-| [Manage warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}/manage-in-the-back-office/edit-warehouses.html) |
+| [Manage warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-in-the-back-office/edit-warehouses.html) |
 | [Manage product availabilities](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html)  |
 
 {% info_block warningBox "Developer guides" %}

@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/managing-roles
   - /docs/managing-roles
   - /docs/en/managing-roles
-  - /docs/scos/user/back-office-user-guides/202204.0/users/roles-groups-and-users/managing-roles.html
-  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-user-roles/creating-user-roles.html
+  - /docs/scos/user/back-office-user-guides/202212.0/users/roles-groups-and-users/managing-roles.html
+  - /docs/scos/user/back-office-user-guides/202212.0/users/managing-user-roles/creating-user-roles.html
 related:
   - title: Editing user roles
     link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-roles/edit-user-roles.html

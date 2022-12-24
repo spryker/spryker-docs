@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/checking-out-purchases
   - /docs/checking-out-purchases
   - /docs/en/checking-out-purchases
-  - /docs/scos/dev/glue-api-guides/202204.0/checking-out/checking-out-purchases.html
+  - /docs/scos/dev/glue-api-guides/202212.0/checking-out/checking-out-purchases.html
 ---
 
 This endpoint allows finalizing the checkout process by placing an order.

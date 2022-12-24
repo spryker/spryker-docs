@@ -14,7 +14,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/microsoft-azure-active-directory.html
   - /docs/scos/dev/feature-integration-guides/201907.0/microsoft-azure-active-directory.html
   - /docs/scos/dev/feature-integration-guides/202005.0/microsoft-azure-active-directory.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/microsoft-azure-active-directory.html
   - /docs/scos/dev/feature-integration-guides/202212.0/microsoft-azure-active-directory.html
 ---
 

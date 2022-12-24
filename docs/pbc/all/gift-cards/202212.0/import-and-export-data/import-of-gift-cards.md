@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/gift-cards-import
   - /docs/gift-cards-import
   - /docs/en/gift-cards-import
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/special-product-types/gift-cards/gift-cards.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/special-product-types/gift-cards/gift-cards.html
 ---
 
 The **Gift Cards** category contains all data you need to manage gift cards information in your online store. We have structured this section according to the following CSV files that you will have to use to import the data:

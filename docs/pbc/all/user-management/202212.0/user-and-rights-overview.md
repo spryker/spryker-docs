@@ -10,7 +10,7 @@ redirect_from:
 - /2021080/docs/en/user-and-rights-overview
 - /docs/user-and-rights-overview
 - /docs/en/user-and-rights-overview
-- /docs/scos/dev/feature-walkthroughs/202204.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+- /docs/scos/dev/feature-walkthroughs/202212.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 - /docs/scos/dev/feature-walkthroughs/202200.0/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 

@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/comments-order-management-feature-integration
   - /docs/comments-order-management-feature-integration
   - /docs/en/comments-order-management-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/comments-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/comments-order-management-feature-integration.html
 ---
 {% include pbc/all/install-features/202212.0/install-the-comments-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-comments-order-management-feature.md -->

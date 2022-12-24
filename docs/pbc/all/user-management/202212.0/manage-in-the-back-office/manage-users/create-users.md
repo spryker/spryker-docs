@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/managing-users
   - /docs/managing-users
   - /docs/en/managing-users
-  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-users/activating-and-deactivating-users.html
-  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-users/creating-users.html
+  - /docs/scos/user/back-office-user-guides/202212.0/users/managing-users/activating-and-deactivating-users.html
+  - /docs/scos/user/back-office-user-guides/202212.0/users/managing-users/creating-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html

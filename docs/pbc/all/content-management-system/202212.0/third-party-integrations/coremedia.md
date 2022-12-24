@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/coremedia
   - /docs/coremedia
   - /docs/en/coremedia
-  - /docs/scos/user/technology-partners/202204.0/content-management/coremedia.html
+  - /docs/scos/user/technology-partners/202212.0/content-management/coremedia.html
 ---
 
 ## Partner Information

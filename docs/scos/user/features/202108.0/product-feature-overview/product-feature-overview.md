@@ -114,8 +114,8 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 | [Get a general idea of Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html)  |
 | [Get a general idea Product Images](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)  |
 | [Get a general idea of Timed Product Availability](/docs/scos/user/features/{{page.version}}/product-feature-overview/timed-product-availability-overview.html)  |
-| [Create an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) |
-| [Edit an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html) |
+| [Create an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) |
+| [Edit an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/editing-abstract-products.html) |
 | [Create a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) |
 | [Edit a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html) |
 | [Manage products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html) |

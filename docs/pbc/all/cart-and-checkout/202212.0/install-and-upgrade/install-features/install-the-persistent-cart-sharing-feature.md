@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/persistent-cart-sharing-feature-integration
   - /docs/persistent-cart-sharing-feature-integration
   - /docs/en/persistent-cart-sharing-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/persistent-cart-sharing-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/persistent-cart-sharing-feature-integration.html
 ---
 

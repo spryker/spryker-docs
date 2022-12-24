@@ -6,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/paqato
 originalArticleId: a08912d4-c05c-498a-867b-b4e1d04bd30f
 redirect_from:
-  - /2021080/docs/paqato
-  - /2021080/docs/en/paqato
-  - /docs/paqato
-  - /docs/en/paqato
-  - /docs/scos/user/technology-partners/202200.0/shipment/paqato.html
-  - /docs/scos/user/technology-partners/202204.0/shipment/paqato.html  
+  - /docs/scos/user/technology-partners/202212.0/shipment/paqato.html  
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

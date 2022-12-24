@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/styla
   - /docs/styla
   - /docs/en/styla
-  - /docs/scos/user/technology-partners/202204.0/content-management/styla.html
+  - /docs/scos/user/technology-partners/202212.0/content-management/styla.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/retireving-abstract-product-list-content-items
   - /docs/en/retireving-abstract-product-list-content-items
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
-  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
+  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
 related:
   - title: REST API Reference
     link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html

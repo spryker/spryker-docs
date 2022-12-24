@@ -6,11 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-thresholds
 originalArticleId: b6d4ac1a-fd06-420a-a4bf-9db638e20447
 redirect_from:
-  - /2021080/docs/order-thresholds
-  - /2021080/docs/en/order-thresholds
-  - /docs/order-thresholds
-  - /docs/en/order-thresholds
-  - /docs/scos/user/features/202204.0/checkout-feature-overview/order-thresholds-overview.html
+  - /docs/scos/user/features/202212.0/checkout-feature-overview/order-thresholds-overview.html
 ---
 
 *Order thresholds* let you control the values of the orders that your customers place. You can define a maximum or minimum monetary value for customers to reach to place an order. Apart from just disallowing a customer to place an order if a threshold condition is not fulfilled, you can request them to pay different types of fees.

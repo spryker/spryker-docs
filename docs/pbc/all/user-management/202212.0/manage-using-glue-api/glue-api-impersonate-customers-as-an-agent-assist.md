@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/impersonating-customers-as-an-agent-assist
   - /docs/impersonating-customers-as-an-agent-assist
   - /docs/en/impersonating-customers-as-an-agent-assist
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - /docs/scos/dev/glue-api-guides/202212.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
     link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html

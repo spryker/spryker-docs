@@ -11,7 +11,7 @@ redirect_from:
   - /docs/retrieving-banner-content-items
   - /docs/en/retrieving-banner-content-items
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-banner-content-items.html
-  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-content-items/retrieving-banner-content-items.html
+  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-content-items/retrieving-banner-content-items.html
 related:
   - title: REST API Reference
     link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html

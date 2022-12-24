@@ -3,7 +3,6 @@ title: Install the Quotation Process Glue API
 description: Integrate the Quotation Process feature API into a Spryker project
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-quotation-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-quotation-process-feature-integration.html
 related:
   - title: Install the Quotation Process feature

@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/creating-a-voucher
   - /docs/creating-a-voucher
   - /docs/en/creating-a-voucher
-  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/creating-vouchers.html
-  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/create-discounts.html
+  - /docs/scos/user/back-office-user-guides/202212.0/merchandising/discount/creating-vouchers.html
+  - /docs/scos/user/back-office-user-guides/202212.0/merchandising/discount/create-discounts.html
 ---
 
 This document describes how to create discounts in the Back Office.

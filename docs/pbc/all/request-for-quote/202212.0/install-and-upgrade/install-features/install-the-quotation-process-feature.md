@@ -11,7 +11,6 @@ redirect_from:
   - /docs/quotation-process-feature-integration
   - /docs/en/quotation-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/quotation-process-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/quotation-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/quotation-process-feature-integration.html  
 related:
     - title: Install the Quotation Process Glue API

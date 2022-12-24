@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/user/user-guides/201903.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
   - /docs/scos/user/user-guides/201907.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/warehouses/managing-warehouses.html
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/warehouses/managing-warehouses.html
 related:
   - title: Inventory Management feature overview
     link: docs/scos/user/features/page.version/inventory-management-feature-overview.html

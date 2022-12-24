@@ -11,7 +11,6 @@ redirect_from:
   - /docs/cms-feature-integration-guide
   - /docs/en/cms-feature-integration-guide
   - /docs/scos/dev/feature-integration-guides/201811.0/cms-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/cms-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/cms-feature-integration.html
 related:
   - title: Install the CMS Glue API

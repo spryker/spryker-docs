@@ -11,7 +11,6 @@ redirect_from:
   - /docs/merchant-custom-prices-feature-integration
   - /docs/en/merchant-custom-prices-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/merchant-custom-prices-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/merchant-custom-prices-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/merchant-custom-prices-feature-integration.html
 ---
 

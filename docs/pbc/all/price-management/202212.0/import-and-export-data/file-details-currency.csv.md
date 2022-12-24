@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-currencycsv
   - /docs/file-details-currencycsv
   - /docs/en/file-details-currencycsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-currency.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-currency.csv.html
 ---
 
 This document describes the `currency.csv` file to configure [Currency](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/multiple-currencies-per-store-configuration.html) information in your Spryker Demo Shop.

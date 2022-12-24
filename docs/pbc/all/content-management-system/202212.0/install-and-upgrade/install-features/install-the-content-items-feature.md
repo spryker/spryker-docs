@@ -11,7 +11,6 @@ redirect_from:
   - /docs/content-items-feature-integration
   - /docs/en/content-items-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/content-items-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/content-items-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/content-items-feature-integration.html
 related:
   - title: Install the Content Items Glue API

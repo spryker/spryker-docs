@@ -10,7 +10,7 @@ redirect_from:
   - /docs/managing-tax-sets
   - /docs/en/managing-tax-sets
   - /docs/scos/user/back-office-user-guides/202200.0/administration/tax-sets/managing-tax-sets.html
-  - /docs/scos/user/back-office-user-guides/202204.0/administration/tax-sets/managing-tax-sets.html
+  - /docs/scos/user/back-office-user-guides/202212.0/administration/tax-sets/managing-tax-sets.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

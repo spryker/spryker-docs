@@ -11,7 +11,6 @@ redirect_from:
   - /docs/quick-add-to-cart-discontinued-products-feature-integration
   - /docs/en/quick-add-to-cart-discontinued-products-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-discontinued-products-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/quick-add-to-cart-discontinued-products-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/quick-add-to-cart-discontinued-products-feature-integration.html
 ---
 

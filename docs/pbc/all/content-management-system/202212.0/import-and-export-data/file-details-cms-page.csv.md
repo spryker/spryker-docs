@@ -10,7 +10,7 @@ redirect_from:
   - /docs/file-details-cms-pagecsv
   - /docs/en/file-details-cms-pagecsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-page.csv.html
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-cms-page.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/content-management/file-details-cms-page.csv.html
 ---
 
 

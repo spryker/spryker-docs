@@ -9,9 +9,9 @@ redirect_from:
   - /2021080/docs/en/content-management
   - /docs/content-management
   - /docs/en/content-management
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/navigation-setup/navigation-setup.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/navigation-setup/navigation-setup.html
   - /docs/scos/dev/data-import/202108.0/data-import-categories/content-management/content-management.html
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/content-management.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/content-management/content-management.html
 ---
 
 The CMS data import category contains data required to create and manage content elements like CMS pages or blocks.

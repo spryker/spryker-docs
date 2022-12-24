@@ -10,7 +10,6 @@ redirect_from:
   - /docs/shopping-lists-feature-integration
   - /docs/en/shopping-lists-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/shopping-lists-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/shopping-lists-feature-integration.html
 related:
   - title: Glue API - Shopping Lists feature integration

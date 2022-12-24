@@ -11,7 +11,6 @@ redirect_from:
   - /docs/multiple-carts-quick-order-integration
   - /docs/en/multiple-carts-quick-order-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-quick-order-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/multiple-carts-quick-order-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/multiple-carts-quick-order-feature-integration.html  
 ---
 

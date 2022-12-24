@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-block-categorycsv
   - /docs/file-details-cms-block-categorycsv
   - /docs/en/file-details-cms-block-categorycsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-cms-block-category.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/content-management/file-details-cms-block-category.csv.html
 ---
 
 This document describes the `cms_block_category.csv` file to configure CMS Block Category information in your Spryker Demo Shop.

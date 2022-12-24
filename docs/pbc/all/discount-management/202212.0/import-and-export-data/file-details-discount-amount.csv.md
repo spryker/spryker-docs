@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html  
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html  
 ---
 
 This document describes the `discount_amount.csv` file to configure Discount Amount information in your Spryker Demo Shop.

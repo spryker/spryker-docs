@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/user/features/202200.0/checkout-feature-overview/checkout-feature-overview.html
   - /docs/scos/user/features/202204.0/checkout-feature-overview/checkout-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/checkout-feature-walkthrough.html
+  - /docs/scos/user/features/202212.0/checkout-feature-overview/checkout-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202212.0/checkout-feature-walkthrough.html
 ---
 
 Offer customers a smooth shopping experience by customizing the checkout workflow. Add, delete, and configure any checkout step, like customer account login, shipment and payment methods, or checkout overview.

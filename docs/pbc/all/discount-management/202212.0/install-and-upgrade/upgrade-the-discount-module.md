@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discount.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discount.html
   - /module_migration_guides/mg-discount.htm
-  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-discount.html
+  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-discount.html
 
 ---
 

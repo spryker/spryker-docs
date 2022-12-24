@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-groups
   - /docs/managing-groups
   - /docs/en/managing-groups
-  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-user-groups/creating-user-groups.html
+  - /docs/scos/user/back-office-user-guides/202212.0/users/managing-user-groups/creating-user-groups.html
 related:
   - title: Edit user groups
     link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-groups/edit-user-groups.html

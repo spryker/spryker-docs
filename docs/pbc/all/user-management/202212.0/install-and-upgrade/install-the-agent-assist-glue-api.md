@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/glue-api-agent-assist-feature-integration
   - /docs/glue-api-agent-assist-feature-integration
   - /docs/en/glue-api-agent-assist-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-agent-assist-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-agent-assist-feature-integration.html
 related:
   - title: Install the Agent Assist feature

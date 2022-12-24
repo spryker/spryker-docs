@@ -16,7 +16,8 @@ redirect_from:
   - /docs/scos/user/features/202200.0/cart-feature-overview/cart-feature-overview.html
   - /docs/scos/user/features/202204.0/cart-feature-overview/cart-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/cart-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202204.0/cart-feature-walkthrough/cart-feature-walkthrough.html    
+  - /docs/scos/dev/feature-walkthroughs/202204.0/cart-feature-walkthrough/cart-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202212.0/cart-feature-walkthrough/cart-feature-walkthrough.html    
 ---
 
 The *Cart* feature lets your customers add products to their cart by selecting the preferred quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.

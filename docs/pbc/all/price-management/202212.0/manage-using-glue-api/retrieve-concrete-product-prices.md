@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
+  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
 related:
   - title: Retrieving concrete products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html

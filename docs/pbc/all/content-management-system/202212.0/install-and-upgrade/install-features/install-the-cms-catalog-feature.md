@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/cms-pages-in-search-results-integration
   - /docs/cms-pages-in-search-results-integration
   - /docs/en/cms-pages-in-search-results-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/cms-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/cms-catalog-feature-integration.html
 ---
 

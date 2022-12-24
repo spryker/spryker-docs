@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/magnolia-cms
   - /docs/magnolia-cms
   - /docs/en/magnolia-cms
-  - /docs/scos/user/technology-partners/202204.0/content-management/magnolia.html
+  - /docs/scos/user/technology-partners/202212.0/content-management/magnolia.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

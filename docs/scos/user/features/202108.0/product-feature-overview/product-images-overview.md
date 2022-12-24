@@ -30,7 +30,7 @@ You can enjoy the following benefits of the feature:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Assign images to a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html#adding-images) |
+| [Assign images to a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#adding-images) |
 | [Assign images to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) |
 
 {% info_block warningBox "Developer guides" %}

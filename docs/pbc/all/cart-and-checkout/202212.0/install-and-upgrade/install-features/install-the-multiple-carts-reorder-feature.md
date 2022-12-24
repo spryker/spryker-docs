@@ -6,12 +6,6 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-reorder-feature-integration
 originalArticleId: d5e4f165-d6b1-47fc-a008-ee010307c447
 redirect_from:
-  - /2021080/docs/multiple-carts-reorder-feature-integration
-  - /2021080/docs/en/multiple-carts-reorder-feature-integration
-  - /docs/multiple-carts-reorder-feature-integration
-  - /docs/en/multiple-carts-reorder-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-reorder-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/multiple-carts-reorder-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/multiple-carts-reorder-feature-integration.html  
 ---
 

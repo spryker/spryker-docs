@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/submitting-checkout-data
   - /docs/submitting-checkout-data
   - /docs/en/submitting-checkout-data
-  - /docs/scos/dev/glue-api-guides/202204.0/checking-out/submitting-checkout-data.html
+  - /docs/scos/dev/glue-api-guides/202212.0/checking-out/submitting-checkout-data.html
 related:
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html

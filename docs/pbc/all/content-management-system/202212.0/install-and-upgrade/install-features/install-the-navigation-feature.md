@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/navigation-feature-integration
   - /docs/navigation-feature-integration
   - /docs/en/navigation-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/navigation-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/navigation-feature-integration.html
 related:
     - title: Install the Navigation Glue API

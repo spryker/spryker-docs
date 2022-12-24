@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
 related:
   - title: Retrieving abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html

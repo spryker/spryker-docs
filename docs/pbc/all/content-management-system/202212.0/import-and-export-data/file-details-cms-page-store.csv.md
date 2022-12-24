@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-page-storecsv
   - /docs/file-details-cms-page-storecsv
   - /docs/en/file-details-cms-page-storecsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-cms-page-store.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/content-management/file-details-cms-page-store.csv.html
 ---
 
 This document describes the `cms_page_store.csv` file to configure CMS Page Store information in your Spryker Demo Shop.

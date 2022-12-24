@@ -2226,7 +2226,7 @@ For the attributes of the included resources, see
 
 [Retrieving concrete product availabilities](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html)
 
-[Retrieving concrete product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html)
+[Retrieving concrete product prices](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-concrete-product-prices.html)
 
 [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 

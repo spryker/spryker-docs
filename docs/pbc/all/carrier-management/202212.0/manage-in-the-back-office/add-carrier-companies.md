@@ -6,13 +6,8 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-carrier-company
 originalArticleId: 7335402c-f389-47c0-952c-59d19580cf37
 redirect_from:
-  - /2021080/docs/creating-a-carrier-company
-  - /2021080/docs/en/creating-a-carrier-company
-  - /docs/creating-a-carrier-company
-  - /docs/en/creating-a-carrier-company
-  - /docs/scos/user/back-office-user-guides/201811.0/administration/delivery-methods/creating-carrier-companies.html
-  - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/creating-carrier-companies.html
-  - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/add-carrier-companies.html
+  - /docs/scos/user/back-office-user-guides/202212.0/administration/delivery-methods/add-carrier-companies.html
+  - /docs/scos/user/back-office-user-guides/202212.0/administration/delivery-methods/creating-carrier-companies.html
 related:
   - title: Creating and Managing Delivery Methods
     link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html

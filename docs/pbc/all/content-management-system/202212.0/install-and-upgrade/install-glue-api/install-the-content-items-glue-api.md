@@ -11,7 +11,6 @@ redirect_from:
   - /docs/glue-api-content-items-api-feature-integration
   - /docs/en/glue-api-content-items-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-content-items-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-content-items-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-content-items-feature-integration.html  
 related:
   - title: Install the Content Items feature

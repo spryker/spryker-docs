@@ -12,10 +12,10 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
 ---
 
-This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/pbc/all/content-management-system/202204.0/manage-in-the-back-office/navigation/create-navigation-nodes.html#reference-information-navigation-node-types) information in your Spryker Demo Shop.
+This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/create-navigation-nodes.html#reference-information-navigation-node-types) information in your Spryker Demo Shop.
 
 
 ## Import file dependencies

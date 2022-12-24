@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/prices-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/prices-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/prices-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/prices-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/prices-feature-integration.html
 related:
   - title: Configurable Bundle feature integration

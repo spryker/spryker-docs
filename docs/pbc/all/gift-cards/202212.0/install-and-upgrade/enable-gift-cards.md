@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/enabling-gift-cards
   - /docs/enabling-gift-cards
   - /docs/en/enabling-gift-cards
-  - /docs/scos/dev/feature-integration-guides/202204.0/enabling-gift-cards.html
   - /docs/scos/dev/feature-integration-guides/202212.0/enabling-gift-cards.html
 related:
   - title: Gift Cards feature walkthrough

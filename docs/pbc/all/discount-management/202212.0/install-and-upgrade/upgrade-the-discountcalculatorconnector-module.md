@@ -29,7 +29,7 @@ redirect_from:
   - /dev/module-migration-guides/202005.0/migration-guide-discountcalculatorconnector.html
   - /dev/module-migration-guides/202009.0/migration-guide-discountcalculatorconnector.html
   - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
-  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-discountcalculatorconnector.html  
+  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-discountcalculatorconnector.html  
 related:
   - title: Upgrade the Discount
     link: docs/pbc/all/discount-management/page.version/install-and-upgrade/upgrade-the-discount-module.html

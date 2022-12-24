@@ -19,7 +19,7 @@ When a merchant is created, the corresponding warehouse is created for this merc
 
 {% endinfo_block %}
 
-A warehouse can be assigned to a single store or shared between several stores. For details about how you can manage warehouses and stores in the Back Office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html).
+A warehouse can be assigned to a single store or shared between several stores. For details about how you can manage warehouses and stores in the Back Office, see [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-in-the-back-office/edit-warehouses.html").
 
 ## Marketplace stock management
 
@@ -60,7 +60,7 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. A cust
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
-| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) <!--- UPDATE LINK--> |
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-in-the-back-office/edit-warehouses.html") <!--- UPDATE LINK--> |
 
 {% info_block warningBox "Developer guides" %}
 

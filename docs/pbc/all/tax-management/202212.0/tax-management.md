@@ -19,7 +19,7 @@ redirect_from:
   - /docs/international-tax-rates-sets-1
   - /docs/en/international-tax-rates-sets-1
   - /docs/scos/user/features/202200.0/tax-feature-overview.html
-  - /docs/scos/user/features/202204.0/tax-feature-overview.html  
+  - /docs/scos/user/features/202212.0/tax-feature-overview.html  
 ---
 
 The *Tax Management* capability lets you define taxes for the items you sell. The capability is represented by two entities: tax rates and tax sets.

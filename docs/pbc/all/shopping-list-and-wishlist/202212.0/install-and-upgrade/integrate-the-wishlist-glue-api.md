@@ -11,7 +11,6 @@ redirect_from:
   - /docs/glue-api-wishlist-feature-integration
   - /docs/en/glue-api-wishlist-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-wishlist-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-wishlist-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-wishlist-feature-integration.html
 
 related:

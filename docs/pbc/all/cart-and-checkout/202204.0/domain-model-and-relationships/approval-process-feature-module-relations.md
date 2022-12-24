@@ -9,6 +9,7 @@ redirect_from:
   - /docs/approval-process-module-relations
   - /docs/en/approval-process-module-relations
   - /docs/scos/dev/feature-walkthroughs/202204.0/approval-process-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202212.0/approval-process-feature-walkthrough.html
 ---
 
 

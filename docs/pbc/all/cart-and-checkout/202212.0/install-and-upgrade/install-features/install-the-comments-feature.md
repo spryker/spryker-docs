@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/comments-feature-integration
   - /docs/comments-feature-integration
   - /docs/en/comments-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/comments-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/comments-feature-integration.html
 ---
 

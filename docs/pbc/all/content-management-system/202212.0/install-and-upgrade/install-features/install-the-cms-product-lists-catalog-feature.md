@@ -10,7 +10,6 @@ redirect_from:
   - /docs/cms-page-search-product-lists-catalog-feature-integration
   - /docs/en/cms-page-search-product-lists-catalog-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/cms-product-lists-catalog-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/cms-product-lists-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/cms-product-lists-catalog-feature-integration.html
 related:
   - title: Product Lists feature walkthrough

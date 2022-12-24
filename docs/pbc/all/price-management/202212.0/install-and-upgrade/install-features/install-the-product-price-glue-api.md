@@ -10,7 +10,6 @@ redirect_from:
   - /docs/glue-api-prices-api-feature-integration
   - /docs/en/glue-api-prices-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-price-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-product-price-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-product-price-feature-integration.html  
 related:
   - title: Prices feature integration

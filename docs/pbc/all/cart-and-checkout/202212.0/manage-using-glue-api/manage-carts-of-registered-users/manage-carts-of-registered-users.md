@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-carts-of-registered-users
   - /docs/managing-carts-of-registered-users
   - /docs/en/managing-carts-of-registered-users
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 related:
   - title: Managing items in carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html

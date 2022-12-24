@@ -6,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/sevensenders
 originalArticleId: 2c4285af-8248-4624-8e69-4cc5e9e72c7f
 redirect_from:
-  - /2021080/docs/sevensenders
-  - /2021080/docs/en/sevensenders
-  - /docs/sevensenders
-  - /docs/en/sevensenders
-  - /docs/scos/user/technology-partners/202200.0/shipment/seven-senders.html
-  - /docs/scos/user/technology-partners/202204.0/shipment/seven-senders.html
+  - /docs/scos/user/technology-partners/202212.0/shipment/seven-senders.html
 
 ---
 

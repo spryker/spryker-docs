@@ -15,8 +15,6 @@ redirect_from:
   - /docs/shipment-summary
   - /docs/en/shipment-summary
   - /docs/scos/user/features/202200.0/shipment-feature-overview.html
-  - /docs/scos/user/features/202204.0/shipment-feature-overview.html  
-  - /docs/scos/dev/feature-walkthroughs/202204.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
   - /docs/scos/user/features/202212.0/shipment-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202212.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
 ---

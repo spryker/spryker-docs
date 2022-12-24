@@ -9,7 +9,6 @@ redirect_from:
   - /2021080/docs/en/agent-assist-shopping-list-feature-integration
   - /docs/agent-assist-shopping-list-feature-integration
   - /docs/en/agent-assist-shopping-list-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/agent-assist-shopping-list-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/agent-assist-shopping-list-feature-integration.html
 ---
 

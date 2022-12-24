@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/glue-api-inventory-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-inventory-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-inventory-management-feature-integration.html
 related:
   - title: Install the Inventory Management feature

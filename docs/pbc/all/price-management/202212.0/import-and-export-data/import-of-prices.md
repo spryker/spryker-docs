@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/pricing
   - /docs/pricing
   - /docs/en/pricing
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/pricing/pricing.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/pricing/pricing.html
 ---
 
 The **Pricing** category contains all prices-related data you need to manage and use prices in your online store. We have structured this section according to the following CSV files that you will have to use to import the data:

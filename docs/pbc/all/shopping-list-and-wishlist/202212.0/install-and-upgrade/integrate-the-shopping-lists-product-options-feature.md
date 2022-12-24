@@ -11,7 +11,6 @@ redirect_from:
   - /docs/shopping-lists-product-options-feature-integration
   - /docs/en/shopping-lists-product-options-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-product-options-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/shopping-lists-product-options-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/shopping-lists-product-options-feature-integration.html
 
 related:

@@ -6,14 +6,6 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cart-feature-integration
 originalArticleId: a46d4b97-ad7c-45bd-aef7-23dbfac109c1
 redirect_from:
-  - /2021080/docs/glue-api-cart-feature-integration
-  - /2021080/docs/en/glue-api-cart-feature-integration
-  - /docs/glue-api-cart-feature-integration
-  - /docs/en/glue-api-cart-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-cart-feature-integration.html
 ---
 

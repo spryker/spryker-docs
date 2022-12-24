@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-shipment-pricecsv
   - /docs/file-details-shipment-pricecsv
   - /docs/en/file-details-shipment-pricecsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-shipment-price.csv.html  
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-shipment-price.csv.html  
 ---
 
 This document describes the `shipment_price.csv` file to configure the [Shipment Price](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html) information in your Spryker Demo Shop.
@@ -28,7 +28,7 @@ data:import:shipment-price
 | --- | --- | --- | --- | --- |
 | shipment_method_key | &check; | String  | Value previously imported already by its data importer using the [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/import-and-export-data/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | store | &check; | String | Value previously defined in the *stores.php* project configuration. | Name of the store. |
-| currency | &check; | String | Value previously imported already by its data importer using the [currency.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-currency.csv.html) file. | Currency ISO code. |
+| currency | &check; | String | Value previously imported already by its data importer using the [currency.csv](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-currency.csv.html) file. | Currency ISO code. |
 | value_net | No |Integer | Empty price values will be imported as zeros. | Net value of the shipment cost. |
 | value_gross | No | String | Empty price values will be imported as zeros. | Gross value of the shipment cost.  |
 
@@ -37,7 +37,7 @@ data:import:shipment-price
 
 
 * [shipment.csv](/docs/pbc/all/carrier-management/{{site.version}}/import-and-export-data/file-details-shipment.csv.html)
-* [currency.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-currency.csv.html)
+* [currency.csv](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-currency.csv.html)
 * *stores.ph*p configuration file of the demo shop PHP project
 
 ## Additional information

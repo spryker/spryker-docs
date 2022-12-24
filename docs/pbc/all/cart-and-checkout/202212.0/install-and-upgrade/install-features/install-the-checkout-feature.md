@@ -11,7 +11,6 @@ redirect_from:
   - /docs/checkout-feature-integration
   - /docs/en/checkout-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/checkout-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/checkout-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/checkout-feature-integration.html  
 related:
   - title: Install the Checkout Glue API

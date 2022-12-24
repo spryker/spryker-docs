@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/multi-store-cms-block-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multi-store-cms-block-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202108.0/multi-store-cms-block-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/multi-store-cms-block-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/multi-store-cms-block-feature-integration.html
 related:
   - title: Migration Guide - CMS Block

@@ -6,11 +6,6 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/persisitent-cart-sharing-shared-carts-integration
 originalArticleId: 47b52cfb-cbee-4e76-bb2b-37fcc9cdee20
 redirect_from:
-  - /2021080/docs/persisitent-cart-sharing-shared-carts-integration
-  - /2021080/docs/en/persisitent-cart-sharing-shared-carts-integration
-  - /docs/persisitent-cart-sharing-shared-carts-integration
-  - /docs/en/persisitent-cart-sharing-shared-carts-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/persistent-cart-sharing-shared-carts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/persistent-cart-sharing-shared-carts-feature-integration.html
 ---
 

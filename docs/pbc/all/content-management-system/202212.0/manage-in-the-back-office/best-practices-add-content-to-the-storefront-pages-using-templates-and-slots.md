@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
-  - /docs/scos/user/back-office-user-guides/202204.0/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
+  - /docs/scos/user/back-office-user-guides/202212.0/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
 related:
   - title: Managing Slots
     link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/manage-slots.html

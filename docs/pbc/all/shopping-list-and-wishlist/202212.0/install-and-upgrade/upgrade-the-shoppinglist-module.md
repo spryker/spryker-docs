@@ -29,7 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shoppinglist.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shoppinglist.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglist.html
-  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-shoppinglist.html  
+  - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-shoppinglist.html  
   - /module_migration_guides/mg-shopping-list.htm
 ---
 

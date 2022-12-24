@@ -152,7 +152,7 @@ The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-fea
 
 ### PriceProduct module details: reference information
 
-This document describes technical details of the [PriceProduct](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
+This document describes technical details of the [PriceProduct](/docs/pbc/all/price-management/{{page.version}}/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
 ## Product
 

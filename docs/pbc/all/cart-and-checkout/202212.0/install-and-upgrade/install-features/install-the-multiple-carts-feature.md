@@ -11,7 +11,6 @@ redirect_from:
   - /docs/multiple-carts-feature-integration
   - /docs/en/multiple-carts-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/multiple-carts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/multiple-carts-feature-integration.html
 related:
   - title: Multiple Carts feature overview

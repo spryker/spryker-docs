@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/multi-step-checkout
   - /docs/scos/user/features/201811.0/checkout-feature-overview/multi-step-checkout-overview.html
   - /docs/scos/user/features/202200.0/checkout-feature-overview/multi-step-checkout-overview.html
-  - /docs/scos/user/features/202204.0/checkout-feature-overview/multi-step-checkout-overview.html  
+  - /docs/scos/user/features/202212.0/checkout-feature-overview/multi-step-checkout-overview.html  
 ---
 
 The checkout workflow is a fully customizable multi-step process. The standard steps include customer registration and login, shipping and billing address, shipment method and costs, payment method, checkout overview, and checkout success.

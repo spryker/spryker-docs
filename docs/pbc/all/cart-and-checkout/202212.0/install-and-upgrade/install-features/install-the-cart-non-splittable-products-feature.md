@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/cart-non-splittable-products-feature-integration
   - /docs/cart-non-splittable-products-feature-integration
   - /docs/en/cart-non-splittable-products-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/cart-non-splittable-products-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/cart-non-splittable-products-feature-integration.html
 ---
 {% include pbc/all/install-features/202212.0/install-the-cart-non-splittable-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-cart-non-splittable-products-feature.md -->

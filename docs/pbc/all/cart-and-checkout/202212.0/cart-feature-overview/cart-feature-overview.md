@@ -5,18 +5,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart
 originalArticleId: eb211809-3be4-4b8a-bf28-a2c79140b11c
 redirect_from:
-  - /2021080/docs/cart
-  - /2021080/docs/en/cart
-  - /docs/cart
-  - /docs/en/cart
-  - /2021080/docs/shop-guide-shopping-carts-reference-information
-  - /2021080/docs/en/shop-guide-shopping-carts-reference-information
-  - /docs/shop-guide-shopping-carts-reference-information
-  - /docs/en/shop-guide-shopping-carts-reference-information
-  - /docs/scos/user/features/202200.0/cart-feature-overview/cart-feature-overview.html
-  - /docs/scos/user/features/202204.0/cart-feature-overview/cart-feature-overview.html
-  - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/cart-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202204.0/cart-feature-walkthrough/cart-feature-walkthrough.html    
+  - /docs/scos/user/features/202212.0/cart-feature-overview/cart-feature-overview.html 
+  - /docs/scos/dev/feature-walkthroughs/202212.0/cart-feature-walkthrough/cart-feature-walkthrough.html    
 ---
 
 The *Cart* feature lets your customers add products to their cart by selecting the preferred quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.

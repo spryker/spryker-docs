@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/censhare
   - /docs/censhare
   - /docs/en/censhare
-  - /docs/scos/user/technology-partners/202204.0/content-management/censhare.html
+  - /docs/scos/user/technology-partners/202212.0/content-management/censhare.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

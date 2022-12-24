@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/checkout-quotation-process-feature-integration
   - /docs/checkout-quotation-process-feature-integration
   - /docs/en/checkout-quotation-process-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202204.0/checkout-quotation-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/checkout-quotation-process-feature-integration.html
 related:
   - title: Install the Quotation Process feature

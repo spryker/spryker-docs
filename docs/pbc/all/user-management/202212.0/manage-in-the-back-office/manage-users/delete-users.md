@@ -4,7 +4,7 @@ description: Learn how to delete users in the Back Office
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-users/deleting-users.html
+  - /docs/scos/user/back-office-user-guides/202212.0/users/managing-users/deleting-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html

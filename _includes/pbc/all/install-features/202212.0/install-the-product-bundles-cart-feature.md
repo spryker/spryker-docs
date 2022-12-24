@@ -12,8 +12,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | EXPECTED DIRECTORY | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](https://docs.spryker.com/docs/scos/dev/feature-integration-guides/202204.0/spryker-core-feature-integration.html)|
-| Product Bundles | {{site.version}} | [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/202204.0/product-bundles-feature-integration.html)|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](https://docs.spryker.com/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Product Bundles | {{site.version}} | [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
 | Cart | {{site.version}} | |
 
 

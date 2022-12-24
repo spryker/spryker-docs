@@ -3,7 +3,7 @@ title: Edit user roles
 description: Learn how to edit user roles in the Back Office.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/scos/user/back-office-user-guides/202204.0/users/managing-user-roles/editing-user-roles.html
+  - /docs/scos/user/back-office-user-guides/202212.0/users/managing-user-roles/editing-user-roles.html
 related:
   - title: Creating user roles
     link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-groups/create-user-groups.html

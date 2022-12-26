@@ -117,7 +117,7 @@ The information in [Complete and incomplete configuration](#complete-and-incompl
 
 #### Wish List with a configurable product
 
-The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to the [Wish List](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
+The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to the [Wish List](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/wishlist-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
 
 ### Preconfigured parameter values
 

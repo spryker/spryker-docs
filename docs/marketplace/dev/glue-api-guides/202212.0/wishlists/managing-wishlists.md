@@ -12,7 +12,7 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlist-items-via-glue-api.html
 ---
 
-The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
+The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
 
 ## Installation
 
@@ -2224,7 +2224,7 @@ For the attributes of the included resources, see
 
 [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
-[Retrieving concrete product availabilities](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html)
+[Retrieving concrete product availabilities](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-using-glue-api/retrieve-concrete-product-availability.html)
 
 [Retrieving concrete product prices](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-concrete-product-prices.html)
 

@@ -19,7 +19,7 @@ For detailed information about the modules that provide the API functionality an
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 * [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html
 
 
 ## Retrieve a concrete product
@@ -1129,10 +1129,10 @@ For attributes of the other included resources, see the following:
 * [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
-* [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html)
+* [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-using-glue-api/retrieve-concrete-product-availability.html)
 * [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-concrete-product-prices.html)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
-* [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html)
+* [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
 * [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html#response)

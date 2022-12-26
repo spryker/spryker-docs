@@ -17,4 +17,4 @@ To learn more about the feature and to find out how end users use it, see [Reord
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
-| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html) | CustomerReorderWidget migration guide](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html)  |
+| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html) | CustomerReorderWidget migration guide](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html)  |

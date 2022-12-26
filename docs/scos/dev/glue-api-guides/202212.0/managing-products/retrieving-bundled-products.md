@@ -26,7 +26,7 @@ For detailed information on the modules that provide the API functionality and r
 
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 * [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
 
 ## Retrieve bundled products

@@ -39,13 +39,13 @@ Read more [CHANGELOG-6.0](https://github.com/symfony/symfony/blob/6.0/CHANGELOG-
 To make your project compatible with Symfony 6, update the [Symfony](https://github.com/spryker/symfony) module and all modules that use it:
 
 ```bash
-composer require spryker/symfony:"^3.10.0"
+composer require spryker/symfony:"^3.11.0"
 ```
 
 If you can’t install the required version, run the following command to see what else you need to update:
 
 ```bash
-composer why-not spryker/symfony:3.10.0
+composer why-not spryker/symfony:3.11.0
 ```
 
 This gives you a list of modules that require the latest `spryker/symfony` module and that need to be updated as well.

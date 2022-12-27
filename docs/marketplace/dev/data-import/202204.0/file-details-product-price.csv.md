@@ -14,7 +14,7 @@ related:
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
 
-This document contains content of the **product_price.csv** file to configure [prices](/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
+This document contains content of the **product_price.csv** file to configure [prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:
 

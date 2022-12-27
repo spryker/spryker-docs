@@ -23,7 +23,7 @@ Customers can access a standalone configurator page and choose from various avai
 
 ![configurable-product-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-on-the-storefront.gif)
 
-Configured Products can be saved, accessed, and configured again in carts or from the product details page. Customers can also easily reorder past purchases. Configurable Products can also be part of a [Request For Quote (RFQ)](/docs/pbc/all/request-for-quote/request-for-quote.html) — Spryker's powerful Quotation and Management feature can overwrite all the automatically calculated prices from the Configurable Product tool.
+Configured Products can be saved, accessed, and configured again in carts or from the product details page. Customers can also easily reorder past purchases. Configurable Products can also be part of a [Request For Quote (RFQ)](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) — Spryker's powerful Quotation and Management feature can overwrite all the automatically calculated prices from the Configurable Product tool.
 
 **Business benefit**: Configurable Products maximize customer satisfaction through product personalization and by providing a robust customer self-service experience. This also adds value to your business by reducing the lead times Sales teams would previously have to dedicate to finalizing product configurations with customers.
 
@@ -57,7 +57,7 @@ Efficiency and accuracy are essential when working in the Back Office. Increasin
 
 [HowTo: Add support of number formatting in the Back Office](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html#prerequisites)
 
- 
+
 ## Spryker Glue API
 
 We continue to add support for new Storefront APIs.
@@ -70,10 +70,9 @@ It lets your customers always see the accurate price they must pay for the entir
 
 #### Documentation
 
-* [Submit checkout data](/docs/pbc/all/cart-and-checkout/202204.0/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/submit-checkout-data.html)
 
 * Technical prerequisites:
-  * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/202204.0/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202204.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
-  * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/202204.0/install-and-upgrade/integrate-the-shipment-glue-api.html)
-
+  * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+  * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
+  * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-glue-api.html)

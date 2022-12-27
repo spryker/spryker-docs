@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/approval-process-feature-integration.html
 related:
   - title: Install the Quotation Process + Approval Process feature
-    link: docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
+    link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
   - title: Shipment + Approval Process feature integration
     link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
 ---

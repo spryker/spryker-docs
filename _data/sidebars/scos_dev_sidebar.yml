@@ -246,7 +246,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/file-manager-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Gift Cards
       url: /docs/scos/dev/feature-walkthroughs/gift-cards-feature-walkthrough.html
       include_versions:
@@ -2573,12 +2572,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html
     - title: Migration Guide - EventDispatcher
       url: /docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html
-    - title: Migration Guide - FileManager
-      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanager.html
-    - title: Migration Guide - FileManagerStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanagerstorage.html
-    - title: Migration Guide - FileManagerWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanagerwidget.html
     - title: Migration Guide - Flysystem
       url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
     - title: Migration Guide - Form

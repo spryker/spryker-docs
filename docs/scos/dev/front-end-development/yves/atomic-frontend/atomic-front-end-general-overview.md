@@ -400,7 +400,7 @@ The string is used internally to resolve the component location within the provi
 
 It returns a string in the following format: `data-qa="qa values here"`.
 
-**`unction qa_($qaName: string, $qaValues: string[] = []): string`**
+**`function qa_($qaName: string, $qaValues: string[] = []): string`**
 
 It returns a string in the following format: `data-qa-name="qa values here"`.
 
@@ -448,7 +448,7 @@ A typical `component-name.scss` file looks as follows:
 When defining styles for a component, you can include the global mixins, variables and styles as defined in the `ShopUi` module. They are exposed to every component by default. Also, you can use the styles and mixins of every built-in component, because they are exposed transparently to the project level—for example:
 
 ```scss
-@include shop-ui-side-drawer('.new-existing-component-side-drawer') { //Create component style based on mixin of a core component
+@include shop-ui-side-drawer('.new-existing-component-side-drawer') { // Create component style based on mixin of a core component
     color: $setting-color-alt; // Use system-wide variables
 
     &__overlay {

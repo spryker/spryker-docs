@@ -4,7 +4,7 @@ description: Use the guide to update versions of the Webpack and related modules
 template: module-migration-guide-template
 ---
 
-## Upgrading from version 4.* to version 5.*
+## Upgrading Webpack from version 4.* to version 5.*
 
 This document provides instructions for upgrading Webpack to version 5 in your Spryker project.
 
@@ -17,19 +17,11 @@ So we need to migrate as well to unblock future upgrades of other dependencies.
 
 ## 1) Update dependencies
 
-{% info_block infoBox "Note" %}
-
-To ensure that dependencies will install correctly, delete `node_modules` and `package-lock.json` before installation 
-using the next command `rm -rf node_modules && rm -rf package-lock.json`.
-
-{% endinfo_block %}
-
-1. Update the following dependencies to the new version:
+1. Update the following dependencies to the new version in the `package.json`:
 
 ```json
 {
     // update
-    "@types/webpack": "~5.28.0", // If using Merchant Portal
     "clean-webpack-plugin": "~4.0.0",
     "compression-webpack-plugin": "~10.0.0",
     "copy-webpack-plugin": "~11.0.0",
@@ -43,7 +35,16 @@ using the next command `rm -rf node_modules && rm -rf package-lock.json`.
 }
 ```
 
-2. Run `npm install` to install dependencies and update `package-lock.json` file.
+If using Merchant Portal:
+
+```json
+{
+    // update
+    "@types/webpack": "~5.28.0"
+}
+```
+
+2. Run npm install to update and install dependencies. Ensure that the package-lock.json file and the node_modules folder have been updated.
 
 ## 2) Update configuration files
 
@@ -59,8 +60,8 @@ const { merge } = require('webpack-merge');
 
 2. `frontend/configs/development.js`:
 
-- Rename the `output.jsonpFunction` property to the `chunkLoadingGlobal`.
-- Rename the `optimization.splitChunks.cacheGroups.vendors` property to the `defaultVendors`.
+- Rename the `jsonpFunction` property to the `chunkLoadingGlobal` of the `output` object.
+- Rename the `vendors` property to the `defaultVendors` of the `cacheGroups` object.
 
 3. `frontend/configs/production.js`:
 
@@ -88,13 +89,12 @@ plugins: [
         filename: '[path].gz[query]',
     }),
 
-    new CompressionPlugin({ // or `BrotliPlugin`
-        filename: '[path].br[query]',
-        algorithm: 'brotliCompress',
-        test: /\.(js|css|html|svg)$/,
+    new BrotliPlugin({
+        asset: '[path].br[query]',
+        test: /\.js$|\.css$|\.svg$|\.html$/,
         threshold: 10240,
-        minRatio: 0.8,
-    }),
+        minRatio: 0.8
+    })
 ]
 // must be
 plugins: [
@@ -108,7 +108,7 @@ plugins: [
 ]
 ```
 
-Remove the `cache` property in the `new TerserPlugin({ ... })` minimize plugin.
+Remove the `cache` property in the `new TerserPlugin({ ... })` minimizer plugin.
 
 4. `frontend/libs/assets-configurator.js`:
 

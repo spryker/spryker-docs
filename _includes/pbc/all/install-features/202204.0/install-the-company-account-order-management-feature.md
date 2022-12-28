@@ -137,7 +137,7 @@ Check `spy_sales_order` table and make sure that `company_uuid` and `company_bus
 
 {% endinfo_block %}
 
-Register permission plugins at Zed layer.
+Register permission plugins at the `Zed` layer.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -177,7 +177,7 @@ Make sure that you see rows with plugin names in the `spy_permission` table.
 
 {% endinfo_block %}
 
-Register permission plugins at Client layer.
+Register permission plugins at the `Client` layer.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |

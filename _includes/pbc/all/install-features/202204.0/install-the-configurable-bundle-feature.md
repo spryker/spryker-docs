@@ -173,7 +173,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% info_block infoBox %}
 
-Each configurable bundle template name needs to have Yves translations. Names are translated directly from `spy_configurable_bundle_template.name` field, e.g.: `configurable_bundle.templates.my-bundle.name`.
+Each configurable bundle template name needs to have Yves translations. Names are translated directly from `spy_configurable_bundle_template.name` field—for example, `configurable_bundle.templates.my-bundle.name`.
 
 Same rule is applied for configurable bundle template slots: `spy_configurable_bundle_template_slot.name` → `spy_configurable_bundle.template_slots.my-slot.name`
 
@@ -262,7 +262,11 @@ configurable_bundle_page.configurator.product_became_unavailable,Product with SK
 ```
 </details>
 
-Please note, that if you have any configurable bundle entities already present or coming from data import, then you'll also need to provide translations for templates and slots as given in example below.
+{% info_block infoBox "Note" %}
+
+If you have any configurable bundle entities already present or coming from data import, then you'll also need to provide translations for templates and slots as given in the following example.
+
+{% endinfo_block %}
 
 **src/data/import/glossary.csv**
 
@@ -285,7 +289,7 @@ configurable_bundle.template_slots.slot-6.name,Slot 6,en_US
 configurable_bundle.template_slots.slot-6.name,Slot 6,de_DE
 ```
 
-2. Import data:
+1. Import data:
 
 ```bash
 console data:import glossary

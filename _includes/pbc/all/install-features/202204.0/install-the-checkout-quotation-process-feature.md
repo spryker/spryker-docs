@@ -11,7 +11,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Checkout | {{site.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Quotation Process | {{site.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
+| Quotation Process | {{site.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
 
 ### 1) Set up behavior
 
@@ -81,7 +81,7 @@ Please overview and install the necessary features before beginning the integrat
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Checkout | {{site.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Quotation Process | {{site.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
+| Quotation Process | {{site.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
 
 ### Set up quote request workflow
 

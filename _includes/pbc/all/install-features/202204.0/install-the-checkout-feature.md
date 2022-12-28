@@ -21,10 +21,10 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Cart | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout{{site.version}}install-and-upgrade/install-features/install-the-cart-feature.html) |
-| Checkout |  {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout{{site.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Order Management | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides{{site.version}}order-management-feature-integration.html) |
-| Prices | {{site.version}}  | [Integrate the Prices feature](/docs/pbc/all/price-management{{site.version}}install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Cart | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Checkout |  {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Order Management | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html) |
+| Prices | {{site.version}}  | [Integrate the Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html) |
 | Tax | {{site.version}} | |
 
 ### 1) Install the required modules using Composer

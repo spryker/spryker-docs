@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Approval Process](/docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/approval-process-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -14,8 +14,8 @@ To start feature integration, review and install the necessary features:
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Company Account | {{site.version}}| [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/company-account-feature-integration.html)|
-| Shared Carts | {{site.version}} | [Shared Carts feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
-| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html)|
+| Shared Carts | {{site.version}} | [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
+| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-checkout-feature.html)|
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer

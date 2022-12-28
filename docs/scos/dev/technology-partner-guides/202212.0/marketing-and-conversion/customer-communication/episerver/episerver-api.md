@@ -14,11 +14,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/episerver/episerver-api.html
 related:
   - title: Episerver - Integration into a project
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
   - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
   - title: Episerver - Order referenced commands
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
+    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
 ---
 
 `\SprykerEco\Zed\Episerver\Business\Api\Adapter\EpiserverApiAdapter` contains all needed data for sending it to Episerver for events.

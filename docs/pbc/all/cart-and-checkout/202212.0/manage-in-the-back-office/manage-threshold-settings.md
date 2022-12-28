@@ -15,7 +15,7 @@ related:
   - title: Managing Global Thresholds
     link: docs/pbc/all/cart-and-checkout/page.version/manage-in-the-back-office/define-global-thresholds.html
   - title: Managing Merchant Order Thresholds
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
+    link: docs/scos/user/back-office-user-guides/page.version/administration/define-merchant-order-thresholds.html
   - title: Managing Merchant Relations
     link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
   - title: Order Thresholds feature overview

@@ -37,6 +37,6 @@ The order in which the files are imported is **very strict**. For this reason, t
 11. [Discount Amount](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount-amount.csv.html)
 12. [Product Discontinued](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html)
 13. [Product Alternative](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html)
-14. [Product Quantity](/docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-product-quantity.csv.html)
+14. [Product Quantity](/docs/pbc/all/cart-and-checkout/{{page.version}}/import-and-export-data/file-details-product-quantity.csv.html)
 
 {% endinfo_block %}

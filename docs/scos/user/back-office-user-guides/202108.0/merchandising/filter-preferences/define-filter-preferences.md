@@ -11,9 +11,6 @@ redirect_from:
   - /docs/managing-filter-preferences
   - /docs/en/managing-filter-preferences
   - /docs/scos/user/back-office-user-guides/202108.0/merchandising/search-and-filters/managing-filter-preferences.html
-related:
-  - title: Managing Search Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
 ---
 
 This documents describes how to create filters and define preferences for them in the Back Office.

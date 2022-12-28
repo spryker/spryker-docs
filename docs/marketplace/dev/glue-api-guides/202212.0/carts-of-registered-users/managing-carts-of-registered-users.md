@@ -4336,7 +4336,7 @@ For the attributes of carts of registered users and included resources, see [Ret
 For the attributes of the included resources, see:
 * [Add an item to a registered user's cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
 * [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html).
-* [Cart permission groups](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html).
+* [Cart permission groups](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html).
 * [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html).
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)

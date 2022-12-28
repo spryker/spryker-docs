@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/category-management-feature-overview.html
 ---
 
-A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). For details about how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assign-products-to-categories.html) from the Back Office or [import stores for categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). For details about how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
 
 ## Root, parent, and child categories
 
@@ -50,7 +50,7 @@ On the Storefront, the standard filters let buyers narrow down the search result
 
 #### Dynamic filters and facets
 
-Compared to standard filters, dynamic filters and facets allow the creation of more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details about how to configure the filter preferences in the Back Office, see [Managing filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-filter-preferences.html).
+Compared to standard filters, dynamic filters and facets allow the creation of more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details about how to configure the filter preferences in the Back Office, see [Define filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/define-filter-preferences.html).
 
 ## Video tutorial
 Check out this video on managing categories:

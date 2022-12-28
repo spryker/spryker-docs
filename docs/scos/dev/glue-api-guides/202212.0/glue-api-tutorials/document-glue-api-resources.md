@@ -26,8 +26,6 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
   - title: Glue API installation and configuration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
-  - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
 To help developers understand and use the public API of your project, you need to cover it with complete and up-to-date documentation. Spryker Glue lets you generate it automatically with the help of the `DocumentationGeneratorRestApi` module, which extracts information on your REST API endpoints directly from their implementation. It also can provide additional information on endpoints, such as their purpose, usage details, and request parameters—for example, in headers, paths, queries, or cookies.
@@ -41,7 +39,7 @@ REST API endpoints shipped by Spryker are covered by documentation by default. A
 {% endinfo_block %}
 
 ## Prerequisites
- 
+
 Install and enable [Spryker Glue](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html). Also, see the following documents:
 
 * [Open API Specification](https://github.com/OAI/OpenAPI-Specification)
@@ -68,7 +66,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 
 For information about REST API controllers, see [Create a resource controller](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/implement-a-rest-api-resource.html#create-a-resource-controller) in the *Implement a REST API resource* document.
 
-## 2. Test the documentation generator 
+## 2. Test the documentation generator
 
 Make sure that the documentation generator works properly:
 
@@ -246,8 +244,8 @@ vendor/bin/console rest-api:generate:documentation
 
 ## 5. View results
 
-When the command completes, you can see a specification file generated in the directory with the filename you configure in [step 2. Configuration](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/implement-a-rest-api-resource.html#create-a-configuration-class). 
+When the command completes, you can see a specification file generated in the directory with the filename you configure in [step 2. Configuration](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/implement-a-rest-api-resource.html#create-a-configuration-class).
 
-By default, it is `src/Pyz/Generated/Glue/Specification/spryker_rest_api.schema.yml`. The specification contains all REST API endpoints configured in Glue, on the global and project levels, along with data models for all requests and responses. 
+By default, it is `src/Pyz/Generated/Glue/Specification/spryker_rest_api.schema.yml`. The specification contains all REST API endpoints configured in Glue, on the global and project levels, along with data models for all requests and responses.
 
 To get a visual representation of your API or use it in tools like Postman (with the OpenAPI v.3 support) for development purposes, you can upload the file to [Swagger Editor](https://editor.swagger.io/).

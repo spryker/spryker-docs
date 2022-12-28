@@ -11,11 +11,6 @@ redirect_from:
   - /docs/managing-search-preferences
   - /docs/en/managing-search-preferences
   - /docs/scos/user/back-office-user-guides/202108.0/merchandising/search-and-filters/managing-search-preferences.html
-related:
-  - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
-  - title: Managing Filter Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-filter-preferences.html
 ---
 
 This topic describes how to add product attributes to search and define search preferences.

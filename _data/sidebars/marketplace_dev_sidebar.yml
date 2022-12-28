@@ -1340,3 +1340,6 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
+
+          - title: "Migration guide - Upgrade to Angular v15"
+            url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v15.html

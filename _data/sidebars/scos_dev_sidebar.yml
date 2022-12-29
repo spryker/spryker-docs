@@ -1777,11 +1777,13 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Category Management
       url: /docs/scos/dev/feature-integration-guides/category-management-feature-integration.html
       include_versions:
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Category Management + Promotions and Discounts
       url: /docs/scos/dev/feature-integration-guides/category-management-promotions-and-discounts-feature-integration.html
       include_versions:

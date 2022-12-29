@@ -1,32 +1,173 @@
-source "https://rubygems.org"
+PATH
+  remote: _plugins/page_template_validator
+  specs:
+    page_template_validator (0.1.0)
 
-gem "jekyll", "~> 4.2.0"
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    algolia_html_extractor (2.6.4)
+      json (~> 2.0)
+      nokogiri (~> 1.10)
+    algoliasearch (1.27.5)
+      httpclient (~> 2.8, >= 2.8.3)
+      json (>= 1.5.1)
+    colorator (1.1.0)
+    commonmarker (0.17.13)
+      ruby-enum (~> 0.5)
+    concurrent-ruby (1.1.9)
+    em-websocket (0.5.3)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0)
+    ethon (0.15.0)
+      ffi (>= 1.15.0)
+    eventmachine (1.2.7)
+    eventmachine (1.2.7-x64-mingw32)
+    ffi (1.15.4)
+    ffi (1.15.4-x64-mingw32)
+    filesize (0.2.0)
+    forwardable-extended (2.6.0)
+    html-proofer (3.19.2)
+      addressable (~> 2.3)
+      mercenary (~> 0.3)
+      nokogumbo (~> 2.0)
+      parallel (~> 1.3)
+      rainbow (~> 3.0)
+      typhoeus (~> 1.3)
+      yell (~> 2.0)
+    http_parser.rb (0.8.0)
+    httpclient (2.8.3)
+    i18n (1.8.11)
+      concurrent-ruby (~> 1.0)
+    jekyll (4.2.1)
+      addressable (~> 2.4)
+      colorator (~> 1.0)
+      em-websocket (~> 0.5)
+      i18n (~> 1.0)
+      jekyll-sass-converter (~> 2.0)
+      jekyll-watch (~> 2.0)
+      kramdown (~> 2.3)
+      kramdown-parser-gfm (~> 1.0)
+      liquid (~> 4.0)
+      mercenary (~> 0.4.0)
+      pathutil (~> 0.9)
+      rouge (~> 3.0)
+      safe_yaml (~> 1.0)
+      terminal-table (~> 2.0)
+    jekyll-algolia (1.7.1)
+      algolia_html_extractor (~> 2.6)
+      algoliasearch (~> 1.26)
+      filesize (~> 0.1)
+      jekyll (>= 3.6, < 5.0)
+      json (~> 2.0)
+      nokogiri (~> 1.6)
+      progressbar (~> 1.9)
+      verbal_expressions (~> 0.1.5)
+    jekyll-commonmark (1.3.1)
+      commonmarker (~> 0.14)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-commonmark-ghpages (0.1.6)
+      commonmarker (~> 0.17.6)
+      jekyll-commonmark (~> 1.2)
+      rouge (>= 2.0, < 4.0)
+    jekyll-feed (0.15.1)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-include-cache (0.2.1)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-last-modified-at (1.3.0)
+      jekyll (>= 3.7, < 5.0)
+      posix-spawn (~> 0.3.9)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
+    jekyll-sass-converter (2.1.0)
+      sassc (> 2.0.1, < 3.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-watch (2.2.1)
+      listen (~> 3.0)
+    json (2.6.1)
+    kramdown (2.3.1)
+      rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
+    liquid (4.0.3)
+    liquid-c (4.0.0)
+      liquid (>= 3.0.0)
+    listen (3.7.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
+    mercenary (0.4.0)
+    mini_portile2 (2.6.1)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
+    nokogiri (1.12.5-x64-mingw32)
+      racc (~> 1.4)
+    nokogiri (1.12.5-x86_64-linux)
+      racc (~> 1.4)
+    nokogumbo (2.0.5)
+      nokogiri (~> 1.8, >= 1.8.4)
+    parallel (1.21.0)
+    pathutil (0.16.2)
+      forwardable-extended (~> 2.6)
+    posix-spawn (0.3.15)
+    progressbar (1.11.0)
+    public_suffix (4.0.6)
+    racc (1.6.0)
+    rainbow (3.0.0)
+    rake (13.0.6)
+    rb-fsevent (0.11.0)
+    rb-inotify (0.10.1)
+      ffi (~> 1.0)
+    rexml (3.2.5)
+    rouge (3.26.1)
+    ruby-enum (0.9.0)
+      i18n
+    safe_yaml (1.0.5)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc (2.4.0-x64-mingw32)
+      ffi (~> 1.9)
+    terminal-table (2.0.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
+    thread_safe (0.3.6)
+    typhoeus (1.4.0)
+      ethon (>= 0.9.0)
+    tzinfo (1.2.9)
+      thread_safe (~> 0.1)
+    tzinfo-data (1.2021.5)
+      tzinfo (>= 1.0.0)
+    unicode-display_width (1.8.0)
+    verbal_expressions (0.1.5)
+    wdm (0.1.1)
+    webrick (1.7.0)
+    yell (2.2.2)
 
-gem "webrick", "~> 1.7"
-gem "html-proofer"
+PLATFORMS
+  ruby
+  x64-mingw32
+  x86_64-linux
 
-gem "jekyll-feed", "~> 0.12"
-gem "jekyll-redirect-from"
+DEPENDENCIES
+  html-proofer
+  jekyll (~> 4.2.0)
+  jekyll-algolia (~> 1.0)
+  jekyll-commonmark-ghpages
+  jekyll-feed (~> 0.12)
+  jekyll-include-cache
+  jekyll-last-modified-at
+  jekyll-redirect-from
+  jekyll-sitemap
+  liquid-c
+  page_template_validator!
+  parallel
+  rake
+  tzinfo (~> 1.2)
+  tzinfo-data
+  wdm (~> 0.1.1)
+  webrick (~> 1.7)
 
-group :jekyll_plugins do
-  gem "jekyll-commonmark-ghpages"
-  gem "jekyll-algolia", "~> 1.0"
-  gem "page_template_validator", path: "./_plugins/page_template_validator"
-  gem "jekyll-sitemap"
-  gem "jekyll-last-modified-at"
-  gem "jekyll-include-cache"
-end
-
-gem "rake"
-gem "parallel"
-gem "liquid-c"
-
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
-end
-
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+BUNDLED WITH
+   2.2.16

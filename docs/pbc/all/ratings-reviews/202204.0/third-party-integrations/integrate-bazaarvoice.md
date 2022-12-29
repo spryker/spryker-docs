@@ -96,7 +96,7 @@ Core Template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/
 |----------------------------|----------------------|
 | organization.identifier    | productId            |
 | organization.name          | productName          |
-| organization.logo          | productDescription   |
+| organization.logo          | productImageURL      |
 
 #### Tracking Pixel
 Core Templates:

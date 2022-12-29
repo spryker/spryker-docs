@@ -17,7 +17,7 @@ With the search widget, the customer doesn't need to go to the product details p
 
 You can add a search widget on the Quick Order, Shopping List, and Shopping Cart pages. Using the widget, the customer only needs to paste the necessary items either by entering the concrete products SKUs or typing their name. The matching product variants are suggested in the drop-down.
 
-Using the search widget, online shoppers can find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html) and [price mode](/docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html) settings are searched for.
+Using the search widget, online shoppers can find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/multiple-currencies-per-store-configuration.html) and [price mode](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/configuration-of-price-modes-and-types.html) settings are searched for.
 
 Here's an example of what the search widget looks like on:
 
@@ -54,7 +54,7 @@ In the empty shopping list, the customer can still add products with the help of
 
 ![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/search-widget-demo.png)
 
-In comparison with Shopping Cart, for shopping lists, the quantity that is being added by a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html) the products may have.
+In comparison with Shopping Cart, for shopping lists, the quantity that is being added by a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/non-splittable-products-feature-overview.html) the products may have.
 
 The same works for the [product restriction](/docs/scos/user/features/{{page.version}}/merchant-product-restrictions-feature-overview.html) rules: the shopper can't add blacklisted products to a shopping list. They get "No search results" message in the widget field, and only whitelisted products are suggested in the search results in case of a whitelist.
 

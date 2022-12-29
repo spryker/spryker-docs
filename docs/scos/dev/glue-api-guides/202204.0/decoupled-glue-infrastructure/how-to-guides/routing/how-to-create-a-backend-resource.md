@@ -28,50 +28,7 @@ class ModuleRestApiConfig extends AbstractBundleConfig
 }
 ``` 
 
-2. Create `module_api.transfer.xml`:
-
-```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-
-    //transfer that contains information from the request
-    <transfer name="GlueRequest">
-    </transfer>
-
-    //transfer that contains information about resource
-    <transfer name="GlueResource">
-        <property name="type" type="string"/>
-        <property name="id" type="string"/>
-        <property name="attributes" type="AbstractAttributes"/>
-    </transfer>
-
-    //transfer that contains information for the response
-    <transfer name="GlueResponse">
-        <property name="resources" type="GlueResource[]" singular="resource"/>
-    </transfer>
-    //used for collect request body data(if needed)
-  <transfer name="ModuleRestAttributes">
-    //add transfer fields
-  </transfer>
-  
-    //used for declared list of methods in Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface::getDeclaredMethods()
-  <transfer name="GlueResourceMethodCollection">
-    <property name="get" type="GlueResourceMethodConfiguration"/>
-    <property name="post" type="GlueResourceMethodConfiguration"/>
-  </transfer>
-
-    //used for declared method in Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface::getDeclaredMethods()
-  <transfer name="GlueResourceMethodConfiguration">
-    <property name="controller" type="string"/>
-    <property name="action" type="string"/>
-    <property name="attributes" type="string"/>
-  </transfer>
-  
-  //add other used transfers
-</transfers>
-```
-
-3. Create `ModuleController`: 
+2. Create `ModuleController`: 
 
 **\Pyz\Glue\ModuleRestApi\Controller\ModuleController**
 
@@ -112,7 +69,7 @@ class ModuleResourceController extends AbstractBackendApiController
 }
 ```
 
-4. Create `ModuleResource`. For no convention resource, it must implement `ResourceInterface`.
+3. Create `ModuleResource`. For no convention resource, it must implement `ResourceInterface`.
 
 **\Pyz\Glue\ModuleRestApi\Plugin\ModuleResource**
 
@@ -161,7 +118,7 @@ The default request and response data format are CamelCase, to apply a snake_cas
 
 See also [How to create or change a convention](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-create-or-change-a-convention.html) guide.
 
-5. Declare the resource: 
+4. Declare the resource: 
 
 **\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider
 
@@ -187,7 +144,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 }
 ```
 
-6. Build a fresh cache for the API application's controllers.
+5. Build a fresh cache for the API application's controllers.
 
 ```bash
 vendor/bin/glue glue-api:controller:cache:warm-up
@@ -201,7 +158,7 @@ In Development mode, you do not need to refresh a cache.
 
 {% endinfo_block %}
 
-7. Debug existing routes.
+6. Debug existing routes.
 
 There is a special command to debug all existing routes.
 

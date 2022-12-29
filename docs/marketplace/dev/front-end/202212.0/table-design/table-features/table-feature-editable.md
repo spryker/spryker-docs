@@ -2,6 +2,7 @@
 title: Table Feature Editable
 description: This document provides details about the Table Feature Editable component in the Components Library.
 template: concept-topic-template
+last_updated: Dec 27, 2022
 related:
   - title: Table Feature extension
     link: docs/marketplace/dev/front-end/page.version/table-design/table-features/index.html
@@ -25,11 +26,11 @@ related:
     link: docs/marketplace/dev/front-end/page.version/table-design/table-features/table-feature-total.html
 ---
 
-This document explains the Table Feature Editable component in the Components Library.
+This document describes the *Table Feature Editable* component in the Components Library.
 
 ## Overview
 
-Table Feature Editable is a feature of the Table Component that allows editing and adding rows to the table.
+Table Feature Editable is a feature of the Table Component that lets you edit and add rows to the table.
 
 Check out an example usage of the Table Feature Editable in the `@spryker/table` config.
 
@@ -58,14 +59,14 @@ Component configuration:
 
 Take a closer look at all the options available.
 
-- `columns` (only required properties are listed, the entire interface can be found in [Table Design](/docs/marketplace/dev/front-end/{{page.version}}/table-design/#interfaces) article.):  
+- `columns`—only required properties are listed; the entire interface can be found in [Table Design](/docs/marketplace/dev/front-end/{{page.version}}/table-design/#interfaces) document:  
     - `id`—a cell `id`.  
     - `type`—a cell `type`.  
-    - `typeOptions`. Check [Column Type](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/)) to learn more about the column types available.):  
+    - `typeOptions`–to learn more about the column types available, see [Column Type](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/):  
         - `value`—sets the default value to the newly added row's cell.  
 
 - `create`:  
-    - `addButon`—this object holds the `Add button` configuration such as `title`, `icon`, `size`.
+    - `addButon`—this object holds the `Add button` configuration such as `title`, `icon`, and `size`.
     - `cancelButon`—an object with the `Cancel button` configuration like `title` and `icon`.
     - `disableForCols`—an array with the cell `ids` to be disabled.  
     - `formInputName`—creates an `input[type=hidden]` element with the specific name.  
@@ -174,7 +175,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Table Feature Editable:
+The following is interfaces for the Table Feature Editable:
 
 ```ts
 export interface TableEditableColumn extends TableColumn {
@@ -217,9 +218,7 @@ export interface TableEditableConfigDataErrorsFields {
     columnErrors?: { [columnId: string]: string | undefined };
 }
 
-export interface TableEditableConfigDataErrors {
-    [rowIdx: string]: TableEditableConfigDataErrorsFields;
-}
+export type TableEditableConfigDataErrors = TableEditableConfigDataErrorsFields[];
 
 export interface TableEditableConfigUrlObject {
     url: string;

@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
 ---
 
-This document describes the `shipment.csv` file to configure the [shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `shipment.csv` file to configure the [shipment](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run
 
@@ -33,7 +33,7 @@ data:import:shipment
 | name|  &check; | String | | The name of the shipment method. |
 | carrier |  &check; | String |  | The name of the shipment carrier. |
 | taxSetName |  &check; | String | | 	The name of the tax set. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{site.version}}/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 

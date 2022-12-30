@@ -64,9 +64,9 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-On the Quote request items edit page, ensure you can't see the **Checkout** button.
+On the **Quote request items edit** page, ensure you can't see the **Checkout** button.
 
-Ensure that after you place an order form quote request, a quote request has the closed status.
+Ensure that after you place an order from a quote request, the quote request has the `closed` status.
 
 {% endinfo_block %}
 

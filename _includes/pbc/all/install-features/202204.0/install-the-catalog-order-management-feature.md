@@ -69,7 +69,7 @@ Register the following plugins:
 | PopularitySortConfigTransferBuilderPlugin | Builds a popularity sort configuration transfer for a catalog page. |               | Spryker\Client\SalesProductConnector\Plugin\PopularitySortConfigTransferBuilderPlugin |
 
 
-<details><summary markdown='span'>/src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details open><summary markdown='span'>/src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -118,7 +118,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -145,9 +145,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-</details>
 
-<details><summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
+
+**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
 ```php  
 <?php
@@ -170,7 +170,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
-</details>
 
 ## 4) Add translations
 
@@ -183,7 +182,6 @@ key,translation,locale
 catalog.sort.popularity,Sort by popularity,en_US
 catalog.sort.popularity,Sortieren nach Beliebtheit,de_DE
 ```
-
 
 2. Import data:
 
@@ -213,7 +211,7 @@ $jobs[] = [
 ];
 ```
 
-2. Optional: To apply the updated cron job configuration without redeploying, run the following command in CLI:
+2. Optional: Apply the updated cron job configuration without redeploying:
 
 ```shell
 vendor/bin/console scheduler:setup
@@ -224,7 +222,6 @@ vendor/bin/console scheduler:setup
 For verification, do the following:
 1. Place several orders.
 2. Go to the **Catalog** page.
-
-Make sure that you can sort products by popularity.
+3. Make sure that you can sort products by popularity.
 
 {% endinfo_block %}

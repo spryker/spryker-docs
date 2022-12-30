@@ -90,8 +90,8 @@ for older versions) for that.
 vendor/bin/console application:build-navigation-cache
 ```
 
-Now you can use the Zed UI of Category Filters to reorder, remove, or add search filters to specific categories, and the collectors also can push those category settings to storage.
-Check out our [`demoshop` implementation](https://github.com/spryker/demoshop) for the frontend implementation example and the general idea.
+Now you can use the Zed UI of Category Filters to reorder, remove, or add search filters to specific categories. The collectors also can push those category settings to storage.
+For the frontend implementation example and the general idea, check out our [`demoshop` implementation](https://github.com/spryker/demoshop).
 
 ### Update filters for a category
 

@@ -1,8 +1,11 @@
 
 
-## Install feature core
 
 This document describes how to integrate the [Quotation Process](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) feature into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Quotation Process feature core.
 
 ### Prerequisites
 

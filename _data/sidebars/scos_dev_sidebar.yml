@@ -2748,6 +2748,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-validator.html
     - title: Migration Guide - WebProfiler
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
+    - title: Upgrade the Quote module
+      url: /docs/scos/dev/module-migration-guides/upgrade-the-quote-module.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"

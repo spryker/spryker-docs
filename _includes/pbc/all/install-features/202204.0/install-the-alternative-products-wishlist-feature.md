@@ -1,4 +1,6 @@
 
+
+
 This document describes how to integrate the Alternative Products + Wishlist feature into a Spryker project.
 
 ## Install feature frontend
@@ -34,7 +36,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

@@ -75,6 +75,6 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
 
 {% info_block warningBox “Verification” %}
 
-Make sure that you can see alternatives for not available products on the product detail page.
+Make sure you can see alternatives for unavailable products on the product detail page.
 
 {% endinfo_block %}

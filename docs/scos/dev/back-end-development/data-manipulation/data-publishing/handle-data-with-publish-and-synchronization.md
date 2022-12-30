@@ -611,8 +611,13 @@ class HelloWorldStorageWriter implements HelloWorldStorageWriterInterface
      */
     public function writeCollectionByHelloWorldEvents(array $eventTransfers): void
     {
+        $idEntities = [];
+        foreach ($eventTransfers as $eventTransfer) {
+            $idEntities[] = $eventTransfer->getId();
+        }
+
         $messages = SpyHelloWorldMessageQuery::create()
-            ->filterByIdHelloWorldMessage_In($eventTransfers)
+            ->filterByIdHelloWorldMessage_In($idEntities)
             ->find();
 
         foreach ($messages as $message) {
@@ -653,8 +658,13 @@ class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
      */
     public function deleteCollectionByHelloWorldEvents(array $eventTransfers): void
     {
+        $idEntities = [];
+        foreach ($eventTransfers as $eventTransfer) {
+            $idEntities[] = $eventTransfer->getId();
+        }
+
         $messages = SpyHelloWorldMessageQuery::create()
-            ->filterByIdHelloWorldMessage_In($eventTransfers)
+            ->filterByIdHelloWorldMessage_In($idEntities)
             ->find();
 
         foreach ($messages as $message) {

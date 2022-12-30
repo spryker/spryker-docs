@@ -521,6 +521,6 @@ Make sure that the following widgets were registered:
 | PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see the **Replacement for** section on its product detail page. |
 | ProductAlternativeListWidget | Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned. |
 
-If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If you integrate the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 {% endinfo_block %}

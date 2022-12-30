@@ -28,7 +28,7 @@ composer require spryker-feature/approval-process:"{{site.version}}" --update-wi
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules are installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -112,13 +112,13 @@ quote_approval.request.send,Send Request,en_US
 quote_approval.request.send,Anfrage Senden,de_DE
 quote_approval.remove,Cancel Request,en_US
 quote_approval.remove,Anfrage Abbrechen,de_DE
-quote_approval.cart.require_approval,"You can't place this order because of your purchasing limit, please send your cart for approval or contact your manager.",en_US
+quote_approval.cart.require_approval,"You can't place this order because of your purchasing limit; please send your cart for approval or contact your manager.",en_US
 quote_approval.cart.require_approval,"Sie können diese Bestellung aufgrund Ihres Einkaufslimits nicht aufgeben. Senden Sie Ihren Einkaufswagen zur Genehmigung oder wenden Sie sich an Ihren Kontakmanager.",de_DE
 quote_approval.cart.waiting_approval,"You can't place this order due to pending approval request.",en_US
 quote_approval.cart.waiting_approval,"Sie können diese Bestellung aufgrund einer ausstehenden Genehmigungsanfrage nicht aufgeben.",de_DE
 quote_approval.create.approver_cant_approve_quote,"Selected approver cannot approve your request due to approver limit.",en_US
 quote_approval.create.approver_cant_approve_quote,"Der ausgewählte Manager kann Ihre Anfrage aufgrund des Genehmigungslimits nicht genehmigen.",de_DE
-quote_approval.create.you_cant_approve_quote,"You can't approve or decline this cart because it's amount higher that your Approver limit.",en_US
+quote_approval.create.you_cant_approve_quote,"You can't approve or decline this cart because its amount is higher than your Approver limit.",en_US
 quote_approval.create.you_cant_approve_quote,"Sie können diesen Einkaufswagen nicht genehmigen oder ablehnen, weil dessen Betrag höher als ihr Genehmigungslimit ist.",de_DE
 quote_approval.create.quote_already_approved,"This Cart was already approved.",en_US
 quote_approval.create.quote_already_approved,"Dieser Einkaufswagen wurde schon zur Genehmigung gesendet.",de_DE
@@ -154,7 +154,7 @@ console data:import glossary
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
+Make sure that the configured data is added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 
@@ -255,14 +255,12 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 #### Synchronize permission plugins with storage:
 
-
-
 {% info_block warningBox "Verification" %}
 
 In the Back Office, in the **Maintenance** menu, click **Sync permissions** and check the following: 
-* The customer with the permission `RequestQuoteApprovalPermission` can request for approval.
-* The customer with the permission `ApproveQuotePermission` can approve the request.
-* The customer with the permission `PlaceOrderPermissionPlugin` can place an order from the quote with the approved request for approval.
+* The customer, with the `RequestQuoteApprovalPermission` permission, can request approval.
+* The customer, with the  `ApproveQuotePermission` permission, can approve the request.
+* The customer, with the `PlaceOrderPermissionPlugin` permission, can place an order from the quote with the approved request for approval.
 
 Check that when you reset the cart lock, all the approval process-related data is removed from the quote.
 
@@ -399,7 +397,7 @@ composer require spryker-feature/approval-process: "{{site.version}}" --update-w
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following module has been installed:
+Make sure that the following module is installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -566,7 +564,7 @@ console frontend:yves:build
 Make sure that the following plugin has been registered:
 
 1. Open Yves and log in to the customer account.
-2. Open `https://mysprykershop.com/company/company-role/` and assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, `ApproveQuotePermission` permissions to any role related to the current customer.
+2. Open `https://mysprykershop.com/company/company-role/` and assign `RequestQuoteApprovalPermission`, `PlaceOrderPermission`, and `ApproveQuotePermission` permissions to any role related to the current customer.
 3. Add the record to the `spy_quote_approval` for the current customer quote ID and current customer company user as an approver.
 
 | MODULE | TEST |
@@ -613,7 +611,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following plugin was registered:
+Make sure that the following plugin is registered:
 
 1. Open Yves and log in to the customer account.
 2. Open `https://mysprykershop.com/company/company-role/`.

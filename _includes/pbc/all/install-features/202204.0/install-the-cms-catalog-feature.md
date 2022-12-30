@@ -9,7 +9,7 @@ Follow the steps below to install the CMS + Catalog feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -37,7 +37,8 @@ Add the following Result Formatter Plugins to your project:
 | PaginatedCmsPageResultFormatterPlugin | Formats the pagination-related raw search result data. | None |  \Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter\PaginatedCmsPageResultFormatterPlugin |
 | RawCmsPageSearchResultFormatterPlugin | Formats the CMS page hits related raw search result data. | None |  \Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter\RawCmsPageSearchResultFormatterPlugin |
 
-**src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -85,10 +86,11 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
  }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
-Once you have finished the full integration of the feature, make sure that the actual CMS page results match the expectations (filtered, sorted, and paginated correctly).
+Once you have finished the full integration of the feature, make sure that the actual CMS page results match the expectations—filtered, sorted, and paginated correctly.
 
 {% endinfo_block %}
 
@@ -135,7 +137,7 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Once you have finished the full integration of the feature, make sure that the actual count of CMS pages as a result matches the expectations (filtered correctly).
+Once you have finished the full integration of the feature, make sure that the actual count of CMS pages as a result matches the expectations—filtered correctly.
 
 {% endinfo_block %}
 
@@ -194,7 +196,7 @@ Follow the steps below to install the CMS + Catalog feature frontend.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |

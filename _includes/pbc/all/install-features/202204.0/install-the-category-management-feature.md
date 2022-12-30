@@ -1,14 +1,15 @@
 
 
+
 This document describes how to integrate the [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
-To install the Category Management feature core, follow the steps below.
+Follow the steps below to install the Category Management feature core.
 
 ### Prerequisites
 
-Overview and install the necessary features.
+To start feature integration, integrate the required feature:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -215,7 +216,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ### 3) Set up database schema and transfer objects 
 
-1.  Adjust the schema definition so that entity changes trigger the events:
+1. Adjust the schema definition so that entity changes trigger the events:
 
 **src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml**
 
@@ -336,7 +337,7 @@ Make sure that propel entities have been generated successfully by checking thei
 
 {% endinfo_block %}
 
-1. Change the generated entity classes to extend from the core classes.
+4. Change the generated entity classes to extend from the core classes.
 
 | CLASS PATH | EXTENDS |
 | --- | --- |
@@ -441,9 +442,9 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 
 ### 5) Configure export to Redis and Elasticsearch
 
-Configure tables to be published to `spy_category_image_storage`, `spy_category_node_storage`, `spy_category_tree_storage`, and`spy_category_node_page_search` and synchronized to the Storage on create, edit, and delete changes:
+Configure tables to be published to `spy_category_image_storage`, `spy_category_node_storage`, `spy_category_tree_storage`, and `spy_category_node_page_search` and synchronized to the Storage on create, edit, and delete changes:
 
-1.  Set up publisher plugins:
+1. Set up publisher plugins:
 
 |PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE|
 |--- | --- | --- | ---|
@@ -563,13 +564,11 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 </details>
 
-1. Set up event listeners:
-
+2. Set up event listeners:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | CategoryImageStorageEventSubscriber | Registers listeners that are responsible for publishing category image information to storage when a related entity changes. |  | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Event\Subscriber |
-
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -747,8 +746,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 }
 ```
 
-
-<details><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
+<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
 
 ```yaml
 {
@@ -817,7 +815,6 @@ Make sure that when a category is created or edited through ORM, it is exported 
 }
 ```
 </details>
-
 
 **EXAMPLE EXPECTED DATA FRAGMENT: category_tree:de:en_us**
 
@@ -892,7 +889,6 @@ Make sure that when a category is created or edited through ORM, it is exported 
 
 {% endinfo_block %}
 
-
 ### 6) Import data
 
 1.  Prepare your data according to your requirements using our demo data:
@@ -936,7 +932,7 @@ demoshop,DE,
 |--- |---| --- | --- | --- |
 | category_key | &check; | string | demoshop | Sluggable name of the category. |
 | included_store_names| |  string | DE | List of the store names to link to the category. |
-| excluded_store_names |   | string | "US,AT" | List of the store names to unlink from the category. |
+| excluded_store_names | | string | "US,AT" | List of the store names to unlink from the category. |
 
 **data/import/category_template.csv**
 
@@ -1054,7 +1050,7 @@ Add the following plugins to your project:
 | UrlStorageCategoryNodeMapperPlugin| If `UrlStorageTransfer.fkResourceCategorynode` is provided, maps the category node storage data to `UrlStorageResourceMapTransfer`. | | Spryker\Client\CategoryStorage\Plugin |
 
 
-<details ><summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
+<details open ><summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1201,13 +1197,13 @@ Make sure you've integrated category store assignments successfully by checking 
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-To install the Category Management feature front end, follow the steps below.
+Follow the steps below to install the Category Management feature front end.
 
 ### Prerequisites
 
-Overview and install the following features.
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -1318,6 +1314,6 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html) |
+| GLUE: Category Management  | | [Glue API - Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html) |
 | Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/catalog-category-management-feature-integration.html) |
 | CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|

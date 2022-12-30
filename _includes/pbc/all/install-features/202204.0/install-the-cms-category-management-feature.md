@@ -1,10 +1,15 @@
 
 
+
 This document describes how to integrate the CMS + Category Management feature into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the CMS + Category Management feature core.
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | ---  |
@@ -32,7 +37,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up configuration
 
-1.  Add a CMS slot template to the condition key relation:
+1. Add a CMS slot template to the condition key relation:
 
 **Pyz\Zed\CmsSlotBlock\CmsSlotBlockConfig**
 
@@ -124,11 +129,11 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to **Content > Slots**.
+1. In the Back Office, go to **Content&nbsp;<span aria-label="and then">></span> Slots**.
 
-1. In the *List of Templates* pane, select the template you've configured in [2) Set up configuration](#set-up-configuration).
+1. In the **List of Templates** pane, select the template you've configured in [2) Set up configuration](#set-up-configuration).
 
-2. Make sure that you can see a *List of Blocks for "{selected slot name}" Slot* pane.
+2. Make sure you see a *List of Blocks for "{selected slot name}" Slot* pane.
 
 {% endinfo_block %}
 

@@ -1,7 +1,7 @@
 
 
-This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html) feature into a Spryker project. 
 
+This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html) feature into a Spryker project. 
 
 {% info_block warningBox %}
 

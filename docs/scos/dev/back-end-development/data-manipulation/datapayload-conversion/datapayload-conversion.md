@@ -20,7 +20,7 @@ related:
   - title: Step engine – use case scenario
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
   - title: Step engine – workflow overview
-    link: ocs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 
 This section explains DataPayload conversion in the Spryker SCOS.

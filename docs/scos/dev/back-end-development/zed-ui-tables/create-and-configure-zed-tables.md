@@ -1,7 +1,7 @@
 ---
 title: Create and configure Zed tables
 description: This document helps you get started on working with tables.
-last_updated: Oct 13, 2021
+last_updated: Jan 02, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
 originalArticleId: e8fc8c5a-88fa-41f8-8d2b-de028e7c4165
@@ -127,6 +127,16 @@ You can also configure the default sort direction (for the initial rendering of 
 
 $config->setDefaultSortDirection(
     \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
+```
+
+### Configure strict search
+
+By default, strict search is disabled. However, you can enable it when setting up the table.
+
+```php
+<?php
+
+$config->setIsStrictSearch(true);
 ```
 
 ## 3. Prepare the data

@@ -10,9 +10,9 @@ This section contains the following guides for developing in collaboration with 
 
 [Heidelpay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/installing-heidelpay.html)
 
-[Payolution] (/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/installing-and-configuring-payolution.html)
+[Payolution](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/installing-and-configuring-payolution.html)
 
-[ratenkauf by easyCredit] (/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.md)
+[ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.md)
 
 [RatePay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay.html)
 

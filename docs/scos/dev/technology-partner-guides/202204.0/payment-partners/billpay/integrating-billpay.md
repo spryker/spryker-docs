@@ -11,6 +11,8 @@ redirect_from:
   - /docs/en/billpay-integration
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/billpay/integrating-billpay.html
 related:
+  - title: Billpay - Switching invoice payments to a preauthorize mode
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
   - title: Billpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay.html
 ---

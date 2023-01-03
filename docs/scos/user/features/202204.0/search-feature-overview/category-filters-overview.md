@@ -14,7 +14,7 @@ redirect_from:
 
 To help your customers locate items in your shop more easily, you can add customizable *category filters* to the catalog pages or simply fall back to the standard category filters. You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.
 
-For details about how you can manage Category filters in the Back Office, see [Managing category filters](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-category-filters.html)
+For details about how you can manage Category filters in the Back Office, see [Managing category filters](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/category-filters/assign-and-deassign-filters-from-categories.html)
 
 ## Current constraints
 
@@ -26,7 +26,7 @@ The feature has the following functional constraints, which are going to be reso
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage category filters](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-category-filters.html)  |
+| [Manage category filters](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/category-filters/assign-and-deassign-filters-from-categories.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

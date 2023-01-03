@@ -42,6 +42,6 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Merchant B2B Contracts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrpugh.html) for developers.
+Are you a developer? See [Merchant B2B Contracts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

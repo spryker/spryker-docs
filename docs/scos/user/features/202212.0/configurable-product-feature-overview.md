@@ -113,7 +113,7 @@ The information in [Complete and incomplete configuration](#complete-and-incompl
 
 #### Shopping List with a configurable product
 
-The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to the [Shopping List](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
+The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to the [Shopping List](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
 
 #### Wish List with a configurable product
 

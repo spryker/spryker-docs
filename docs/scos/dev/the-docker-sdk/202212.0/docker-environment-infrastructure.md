@@ -15,7 +15,7 @@ related:
   - title: Docker SDK quick start guide
     link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
   - title: Configuring services
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-services.html
+    link: docs/scos/dev/the-docker-sdk/page.version/configure-services.html
   - title: Docker SDK configuration reference
     link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version

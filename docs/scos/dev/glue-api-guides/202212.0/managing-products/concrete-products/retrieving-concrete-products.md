@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
 related:
   - title: Retrieve concrete product availability
-    link: docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/page.version/manage-using-glue-api/retrieve-concrete-product-availability.html
   - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
+    link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
   - title: Retrieving sales units
@@ -36,7 +36,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
 * [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
-* [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
+* [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{page.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 
 ## Retrieve a concrete product

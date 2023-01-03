@@ -15,11 +15,11 @@ related:
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
-    link: docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
+    link: docs/pbc/all/tax-management/page.version/manage-via-glue-api/retrieve-tax-sets.html
   - title: Product feature overview
     link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---

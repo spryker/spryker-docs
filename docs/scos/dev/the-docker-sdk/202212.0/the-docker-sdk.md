@@ -18,7 +18,7 @@ related:
   - title: Docker environment infrastructure
     link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
   - title: Configuring services
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-services.html
+    link: docs/scos/dev/the-docker-sdk/page.version/configure-services.html
   - title: Docker SDK configuration reference
     link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version
@@ -58,7 +58,7 @@ The [docker-sdk repository](https://github.com/spryker/docker-sdk) contains the 
 * [docs](https://github.com/spryker/docker-sdk/tree/master/docs): usage documentation.
 * [generator](https://github.com/spryker/docker-sdk/tree/master/generator): generator of the `deployment` folder.
 * [images](https://github.com/spryker/docker-sdk/tree/master/images): Docker files for services, applications, etc.
-  
+
 ## Docker/sdk boot command details
 
 The Docker SDK `boot` command runs the [generator](https://github.com/spryker/docker-sdk/tree/master/generator) application. The generator is deployed as a Docker container. It takes twig templates and project's `deploy.yml` with context and generates the content of the [deployment](https://github.com/spryker/docker-sdk/tree/master/deployment) folder.
@@ -79,7 +79,7 @@ The `boot` command does the following:
 The Docker SDK `up` command does the following:
 
 1. Prepares data in `deployment/default/deploy.sh`:
-   1. Mounts Mutagen: 
+   1. Mounts Mutagen:
       1. Removes the sync volume.
       2. Terminates Mutagen.
       3. Creates the volume.
@@ -101,7 +101,7 @@ The Docker SDK `up` command does the following:
    1. Skips if the database is not empty. If you provide the `--data` argument, then the command is "forced".
    2. Installs and configures RabbitMQ on broker container with the `rabbitmqctl add_vhost …` command.
    3. Suspends scheduler and waits for job termination.
-   4. Initiates storages for each store with the `install -s init_storages_per_store` command. 
+   4. Initiates storages for each store with the `install -s init_storages_per_store` command.
    5. If the database does not exist, creates it on MySQL or PostreSQL container.
 4. Starts a scheduler for each region and store with the `install -s scheduler-setup` command.
 
@@ -123,7 +123,7 @@ The `docker/sdk (up|start) -t` command does the following:
 
 {% info_block infoBox "Leaving the testing mode" %}
 
-To leave the testing mode, run `docker/sdk up|start`. This command shuts down the web driver and starts the scheduler again. 
+To leave the testing mode, run `docker/sdk up|start`. This command shuts down the web driver and starts the scheduler again.
 
 {% endinfo_block %}
 
@@ -229,7 +229,7 @@ Docker images and containers:
 To extend Docker/sdk, you can do the following:
 
 - To use a custom PHP or Nginx image and add extensions or libraries, you can change the application image:
-   
+
    ```
    environment: docker.dev
    image:
@@ -248,8 +248,3 @@ To extend Docker/sdk, you can do the following:
   ```
 
   This approach works for development and CI/CD only, but it's not compatible with SCCOS setup.
-
-
-
-
-

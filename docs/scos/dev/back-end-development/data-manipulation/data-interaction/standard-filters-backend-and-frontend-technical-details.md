@@ -20,7 +20,7 @@ related:
   - title: Category Filters feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/category-filters-feature-integration.html
   - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
 ---
 
 ## Backend technical details

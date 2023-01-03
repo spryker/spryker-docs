@@ -230,12 +230,12 @@ The Configurable Bundle feature looks as follows on the Storefront:
 ### Current constraints
 
 The feature has the following functional constraints which are going to be resolved in the future:
-* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/wishlist-feature-overview.html).
+* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/wishlist-feature-overview.html).
 * A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html)
     - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html)
-    - [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
+    - [Gift cards](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
     * [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html)

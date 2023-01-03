@@ -53,7 +53,7 @@ If you submit a [quote request](/docs/scos/user/features/{{page.version}}/quotat
 
 In the [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 
-When [sharing a cart by a link with external users](/docs/pbc/all/cart-and-checkout/{{page.version}}/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart by a link with internal users](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
+When [sharing a cart by a link with external users](/docs/pbc/all/cart-and-checkout/{{page.version}}/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart by a link with internal users](/docs/pbc/all/cart-and-checkout/{{page.version}}/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
 
 
 ## Current constraints

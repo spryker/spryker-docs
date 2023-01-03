@@ -34,7 +34,9 @@ The resulting document is a full description of your REST API following the [Ope
 
 {% info_block warningBox %}
 
-REST API endpoints shipped by Spryker are covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html).
+REST API endpoints shipped by Spryker are covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see Rest API references:
+* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2b-reference.html)
+* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2c-reference.html)
 
 {% endinfo_block %}
 

@@ -8,7 +8,7 @@ template: glue-api-storefront-guide-template
 This document describes how to retrieve order shipments when checking out through the Glue API. For full information about the endpoint, see [Check out purchases](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/check-out/check-out-purchases.html)
 
 
-This endpoint allows finalizing the checkout process by placing an order. After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Use this endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html).  
+This endpoint allows finalizing the checkout process by placing an order. After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Use this endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/check-out/submit-checkout-data.html).  
 
 ## Installation
 

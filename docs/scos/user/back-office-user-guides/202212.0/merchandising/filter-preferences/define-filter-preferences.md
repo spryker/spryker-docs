@@ -12,8 +12,6 @@ redirect_from:
   - /docs/en/managing-filter-preferences
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-filter-preferences.html
 related:
-  - title: Managing Search Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
   - title: Standard filters overview
     link: docs/scos/user/features/page.version/search-feature-overview/standard-filters-overview.html
 ---

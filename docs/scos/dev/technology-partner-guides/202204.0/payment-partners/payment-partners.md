@@ -6,13 +6,16 @@ template: concept-topic-template
 
 This section contains the following guides for developing in collaboration with payment partners on Spryker Commerce OS: 
 
-[CrefoPay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/crefopay.html)
-
-[Heidelpay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/installing-heidelpay.html)
-
-[Payolution](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/installing-and-configuring-payolution.html)
-
-[ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.md)
-
-[RatePay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay.html)
+* [Adyen](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/adyen/installing-and-configuring-adyen.html)
+* [Afterpay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/afterpay/installing-and-configuring-afterpay.html)
+* [Amazon Pay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/amazon-pay/configuring-amazon-pay.html)
+* [Arvato](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/arvato/installing-and-configuring-arvato.html)
+* [Billpay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/billpay/integrating-billpay.html)
+* [Braintree](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/braintree/installing-and-configuring-braintree.html)
+* [Computop](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/installing-and-configuring-computop.html)
+* [CrefoPay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/crefopay.html)
+* [Heidelpay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/installing-heidelpay.html)
+* [Payolution](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/installing-and-configuring-payolution.html)
+* [ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html)
+* [RatePay](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay.html)
 

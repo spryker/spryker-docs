@@ -5,14 +5,6 @@ last_updated: Dec 7, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/symfony-6-integration
 originalArticleId: d5e96c3b-3ed6-49ed-982c-aa641e09b559
-redirect_from:
-  - /2021080/docs/symfony-6-integration
-  - /2021080/docs/en/symfony-6-integration
-  - /docs/symfony-6-integration
-  - /docs/en/symfony-6-integration
-  - /v6/docs/symfony-6-integration
-  - /v6/docs/en/symfony-6-integration
-  - /docs/scos/dev/technical-enhancements/symfony-6-integration.html
 ---
 
 Spryker supports Symfony 6 that was released in December 2022. We tried to keep BC for all three major versions of Symfony, but due to some changes in version 5, we had to partially drop support for Symfony 4 in October 2022.

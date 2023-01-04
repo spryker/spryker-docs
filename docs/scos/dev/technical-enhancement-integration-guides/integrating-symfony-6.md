@@ -11,7 +11,7 @@ Spryker supports Symfony 6 that was released in December 2022. We tried to keep 
 
 {% info_block warningBox "Old Symfony versions" %}
 
-Even though Spryker still supports older versions of Symfony, it doesn’t mean that you can install them in your project. This is mainly because other packages you use or Spryker uses have different requirements. Anyways, you should always try to keep your dependencies updated.
+Although Spryker still supports older versions of Symfony,you should avoid installing them in your project. This is because any other packages you or Spryker use have different requirements. Always try to keep your dependencies updated.
 
 {% endinfo_block %}
 
@@ -20,11 +20,11 @@ Even though Spryker still supports older versions of Symfony, it doesn’t mean 
 ## Main changes in Symfony 6
 
 Symfony 6 has a new cycle of innovations that starts one that will also last two years, on a modernized codebase that has been cleaned up from the dead weight of the past.
-The big news of Symfony 6 is that PHP 8.0 is now the minimum required version.
+The major change included in Symfony 6 is PHP 8.0 being the minimum required version of PHP.
 The code of Symfony 6 has been updated. You can take advantage of all the new features in PHP.
-For example, the code includes PHP 8 [attributes](https://www.php.net/manual/fr/language.attributes.overview.php), more expressive and rigorous type declarations, etc.
+For example, the code includes PHP 8 [attributes](https://www.php.net/manual/fr/language.attributes.overview.php), more expressive and rigorous type declarations, and more.
 
-Read more [CHANGELOG-6.0](https://github.com/symfony/symfony/blob/6.0/CHANGELOG-6.0.md). 
+Read more at [CHANGELOG-6.0](https://github.com/symfony/symfony/blob/6.0/CHANGELOG-6.0.md). 
 
 ## Integration
 

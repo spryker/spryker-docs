@@ -6,7 +6,7 @@ template: concept-topic-template
 
 This section contains overviews and instructions for frontend developing on the the Spryker Commerce OS. It includes the following components and topics:
 
-* [Zed](/docs/scos/dev/front-end-development/zed.html)
+* [Zed](/docs/scos/dev/front-end-development/zed/zed.html)
 
 * [Yves](/docs/scos/dev/front-end-development/yves/yves.html)
 

@@ -4,8 +4,8 @@ description: Create an authentication token for the Storefront and Backend API a
 last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-authentication-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-api-authentication-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
 ---
 
 This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
@@ -20,8 +20,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
-| Glue Storefront API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
+| Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html) |
+| Glue Storefront API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html) |
 
 ### 1) Install the required modules using Composer
 

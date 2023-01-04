@@ -1,6 +1,7 @@
 
 
 This document describes how to integrate the [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
+
 {% info_block errorBox "Included features" %}
 
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds:

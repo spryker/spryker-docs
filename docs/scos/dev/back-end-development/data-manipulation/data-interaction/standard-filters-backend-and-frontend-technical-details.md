@@ -31,7 +31,7 @@ The backend part of the Standard Filters feature is located in the following mod
 * ProductCategoryFilterGui (`spryker/product-category-filter-gui`)
 * ProductCategoryFilterStorage (`spryker/product-category-filter-storage`)
 
-Category Filters management is described in the [Back Office guide](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/search-and-filters/managing-category-filters.html).
+Category Filters management is described in the [Back Office guide](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/category-filters/assign-and-deassign-filters-from-categories.html).
 
 ## Frontend technical details
 

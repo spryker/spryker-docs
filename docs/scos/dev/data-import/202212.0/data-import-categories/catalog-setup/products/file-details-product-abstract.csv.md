@@ -48,7 +48,7 @@ The file should have the following parameters:
 | icecat_license |  | String | | Icecat product catalogue license code. |
 | new_from |  | Date | | To be considered a new product from this presented date. |
 | new_to |  | String | | To be considered a new product until this presented date. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{page.version}}/tax-management.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 ## Import file dependencies

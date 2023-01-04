@@ -4,8 +4,8 @@ description: Integrate the Glue JSON:API convention for Storefront API applicati
 last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-json-api-convention-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-api-json-api-convention-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
 ---
 
 This document describes how to integrate the Glue JSON:API convention for Storefront API application into a Spryker project.
@@ -20,7 +20,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Storefront and Backend API Applications | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
+| Glue Storefront and Backend API Applications | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html) |
 
 ### 1) Install the required modules using Composer
 

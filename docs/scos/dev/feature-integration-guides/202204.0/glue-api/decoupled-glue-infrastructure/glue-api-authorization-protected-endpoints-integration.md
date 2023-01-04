@@ -4,7 +4,7 @@ description: This document describes how to use the protected endpoints authoriz
 last_updated: October 21, 2022
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-api-authorization-protected-endpoints-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-protected-endpoints-integration.html
 ---
 
 This document describes how to use a protected endpoints authorization strategy for storefront API and backend API applications in a Spryker project.
@@ -19,7 +19,7 @@ To start feature integration, overview and install the necessary feature:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api/glue-api-authentication-integration.html) |
+| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html) |
 
 ### 1) Install the required modules using Composer
 

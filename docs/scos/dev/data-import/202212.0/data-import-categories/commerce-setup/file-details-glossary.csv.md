@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-glossarycsv
 ---
 
-This document describes the `glossary.csv` file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) information in your Spryker Demo Shop.
+This document describes the `glossary.csv` file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/add-translations.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

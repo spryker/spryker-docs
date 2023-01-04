@@ -217,7 +217,7 @@ The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.versio
 
 ## Tax
 
-The [Tax](/docs/pbc/all/tax-management/tax-management.html) feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
+The [Tax](/docs/pbc/all/tax-management/{{page.version}}/tax-management.html) feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
 ### Tax module: reference information
 

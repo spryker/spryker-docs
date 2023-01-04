@@ -91,4 +91,4 @@ In the online store, the descriptive attributes are displayed on the product det
 ![Descriptive attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/descriptive-attributes.png)
 
 ## Next steps
-* Learn how to [manage the product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html).
+* Learn how to [manage the product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html).

@@ -15,14 +15,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/product-sets-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-sets-feature-integration.html
 related:
-  - title: Product Sets feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html
   - title: Product Sets feature overview
     link: docs/scos/user/features/page.version/product-sets-feature-overview.html
-  - title: Managing product sets
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/managing-product-sets.html
-  - title: Creating product sets
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/creating-product-sets.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-sets-feature.md -->

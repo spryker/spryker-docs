@@ -169,7 +169,7 @@ We recommend defining all the atributes you want to use.
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) |
-| [Manage product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html) |
+| [Manage product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) |
 
 {% info_block warningBox "Developer guides" %}
 

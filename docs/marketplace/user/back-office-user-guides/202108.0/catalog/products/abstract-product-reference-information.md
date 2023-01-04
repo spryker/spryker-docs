@@ -43,9 +43,9 @@ No values are available for selection when you create a product bundle. When you
 
 {% endinfo_block %}
 
-* *While creating* an abstract product, you see a list of super attributes that derive from [Catalog > Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html). You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. To add more product variants in the future, add at least one super attribute and define at least one value for it.
+* *While creating* an abstract product, you see a list of super attributes that derive from [Catalog > Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html). You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. To add more product variants in the future, add at least one super attribute and define at least one value for it.
 
-* *While editing the abstract product/product bundle*, you see a table that displays the product variants that exist for this abstract product. From this page, you can view, edit, and manage attributes [for the product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html).
+* *While editing the abstract product/product bundle*, you see a table that displays the product variants that exist for this abstract product. From this page, you can view, edit, and manage attributes [for the product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html).
 
 ### SEO tab
 

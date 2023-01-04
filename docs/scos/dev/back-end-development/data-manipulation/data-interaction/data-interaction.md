@@ -4,7 +4,7 @@ description: how data interacts in the Spryker SCOS
 template: concept-topic-template
 ---
 
-This section contains a coillection of articles describing how data interaction happens in the Spryker SCOS. Topics include:
+This section contains a collection of articles describing how data interaction happens in the Spryker SCOS. Topics include:
 * [Standard filters – backend and frontend technical details](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html)
 
 * [Search](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/search.html)

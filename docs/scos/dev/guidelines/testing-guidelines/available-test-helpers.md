@@ -205,7 +205,16 @@ This helper has the following methods:
 
 #### BusinessHelper
 
-Allows to mock and access business layer classes like BusinessFactory.
+Allows to mock and access business layer classes like BusinessFactory inside a mocked Facade.
+Example of usage:
+```
+$this->tester->mockFacadeMethod('reloadItems', function(){ return new QuoteTransfer()});
+$this->tester->mockFactoryMethod('createQuoteReloader', function() { return ... });
+$facade = $this->tester->getFacade();
+$facade->someThing();
+```
+Alternatively you may pass this as a mock to another module using DependencyHelper.
+
 
 #### CommunicationHelper
 
@@ -223,9 +232,13 @@ The Yves helpers can only be used for testing the Yves application.
 
 Allows you to mock and access the Factory.
 
-#### DependencyProviderHelper
 
-Allows you to mock dependencies required for your tests.
+#### DependencyHelper
+
+Allows you to mock dependencies of a module.
+To enable this feature, you have to set `\Spryker\Shared\Kernel\KernelConstants::ENABLE_CONTAINER_OVERRIDING` to `true` in the config used to run tests. This is already implemented in the config_ci.php in our Demo Shops.
+Calling in your test `$this->tester->setDependency(OmsDependencyProvider::FACADE_SALES, $salesFacadeMock);` will provide $salesFacadeMock whenever any model is created with a dependency to Sales Facade.
+Technically, in Oms module call $this->getProvidedDependency(OmsDependencyProvider::FACADE_SALES) will return $salesFacadeMock.
 
 ## PropelSchemaHelper
 

@@ -5,13 +5,13 @@ template: concept-topic-template
 ---
 
 This section contains the descriptions of the following endpoints used to manage products in Spryker Commerce OS:  
-* Abstract products
+* Abstract products:
  
   * [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
   
   * [Retrieving image sets of abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)
   
-* Concrete products
+* Concrete products:
 
   * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html)
   

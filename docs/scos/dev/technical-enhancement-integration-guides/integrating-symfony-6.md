@@ -7,7 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/symfony-6-integrati
 originalArticleId: d5e96c3b-3ed6-49ed-982c-aa641e09b559
 ---
 
-Spryker supports Symfony 6 that was released in December 2022. We tried to keep BC for all three major versions of Symfony, but due to some changes in version 5, we had to partially drop support for Symfony 4 in October 2022.
+Spryker primarily supports Symfony 6 that was released in December 2022. Backwards compatibility remains for all three major Symfony versions, but support for Symfony 4 was partially dropped in October 2022.
 
 {% info_block warningBox "Old Symfony versions" %}
 
@@ -19,7 +19,7 @@ Although Spryker still supports older versions of Symfony,you should avoid insta
 
 ## Main changes in Symfony 6
 
-Symfony 6 has a new cycle of innovations that starts one that will also last two years, on a modernized codebase that has been cleaned up from the dead weight of the past.
+Symfony 6 has a new cycle of innovations. When it starts, one cycle lasts two years, on a modernized codebase that has been cleaned up from the dead weight of the past.
 The major change included in Symfony 6 is PHP 8.0 being the minimum required version of PHP.
 The code of Symfony 6 has been updated. You can take advantage of all the new features in PHP.
 For example, the code includes PHP 8 [attributes](https://www.php.net/manual/fr/language.attributes.overview.php), more expressive and rigorous type declarations, and more.

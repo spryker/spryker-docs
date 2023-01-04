@@ -4028,6 +4028,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html
     - title: Symfony 5
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
+    - title: Symfony 6
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-6.html
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: SDK

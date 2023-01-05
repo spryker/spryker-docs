@@ -122,6 +122,7 @@ task :check_mp_user do
     /docs\/paas-plus\/.+/,
     /docs\/acp\/.+/,
     /docs\/marketplace\/dev\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/pbc\/.+/,
     /docs\/sdk\/.+/
   ]

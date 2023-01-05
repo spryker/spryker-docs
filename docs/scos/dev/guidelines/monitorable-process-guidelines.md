@@ -45,7 +45,7 @@ just as the result of remote response (success, error).
 * Threats: Suspicious/malicious activities against the application.
 * Unhandled/handled exceptions
 * Silenced exceptions: In case an empty “catch()” clause consumes the exception.
-* Significant user actions/events (including: help requests / cancelled actions)
+* Significant user actions/events (including: help requests / cancelled actions). For example: User 'John Doe' has successfully logged in.
 
 ### What NOT to log?
 * Avoid logging unreasonably. When you decide to have a log-entry, you should have at least 1 use-case in mind where the related data 
@@ -63,13 +63,13 @@ in the System. A wrong category selection MAY de-rail a fellow inspector.
 | Level | Description |
 |-------|-------------|
 | Debug | Provides detailed data, which is mostly used for debugging. These logs allow to check variable values and/or error stacks. |
-| Info | Interesting events for business or tech. |
-| Notice | Uncommon events. |
+| Info |  Provides information about the normal operation of the application. This level is often used to record the progress of a task or operation. |
+| Notice | Provides information about normal, but significant, events that occur within the application. |
 | Warning | Describes events that are less destructive than errors. They usually do not result in any reduction of the program's functionality or its full failure. Undesirable things that are not necessarily wrong. |
 | Error | Identifies error events that may still let the software run, but with restricted capabilities in the impacted routes. |
 | Critical | Identifies extremely serious error events that are likely to cause the program to abort. Typically, this leads to catastrophic failures. |
-| Alert | Action must be taken immediately. |
-| Emergency | An urgent alert. |
+| Alert | Indicates a situation that requires immediate attention. |
+| Emergency | Indicates a severe problem that requires immediate action to prevent damage or loss. |
 
 ### Log entry format
 A log entry MUST always answer the following items and follow the below describes structure
@@ -239,7 +239,7 @@ Each metric represents a condition of some system attributes. There can be many 
 of the operation (success, failure) and duration) to enable tracking of such events and reacting when they reach undesired scores.
   * The start and end of a process must be recorded to enable tracking and tuning of the infrastructure.
   * Communication durations with remote services must be recorded to understand whether the local process is delayed for a good reason.
-* Critical metrics, along with their threshold values, should be highlighted in the 
+* Critical metrics, along with their threshold values, must be highlighted in the 
 [Operational guidelines](docs/scos/dev/guidelines/process-documentation-guidelines.html#operational-guidelines) to enable the setting 
 up of a monitoring system.
 * Deployment and rollback flows should generate metrics to enable tracking and interaction with these processes.

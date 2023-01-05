@@ -47,7 +47,7 @@ the NFRs in a logical manner.
 ### Availability
 Software architecture & design must ensure that there is no negative impact on application availability.
 
-Examples:
+Example NFRs:
 * Avoid designing the application to limit its own start-up or shut-down.
   * Avoid design patterns or coding practices that cause the application to exit unexpectedly in the middle of execution.
   * Avoid using flags or other mechanisms to block the application from starting.

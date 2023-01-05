@@ -2,10 +2,6 @@
 title: DataPayload Conversion
 description: about DataPayload conversion
 template: concept-topic-template
-related:
-  - title: Run and revert a database migration
-    link: docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
-  
 ---
 
 This section explains DataPayload conversion in the Spryker SCOS:

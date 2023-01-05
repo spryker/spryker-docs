@@ -1,6 +1,6 @@
 ---
 title: Implement invoice payment
-description: his document describes the steps to consider implementing the invoice payment method without integrating with a third-party payment service provider.
+description: This document describes the steps to consider implementing the invoice payment method without integrating with a third-party payment service provider.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-invoice-payment
@@ -42,7 +42,7 @@ If this is your first time creating a new module, see [Tutorial: Add a new modul
 
 {% info_block infoBox "Implementation order" %}
 
-The order of the implementation steps does not matter; however, ensure to complete all the steps.
+The order of the implementation steps does not matter; however, be sure to complete all the steps.
 
 {% endinfo_block %}
 

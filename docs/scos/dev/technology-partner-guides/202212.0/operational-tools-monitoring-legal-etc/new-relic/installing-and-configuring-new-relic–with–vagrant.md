@@ -2,7 +2,7 @@
 title: Installing and configuring New Relic with Vagrant
 template: howto-guide-template
 ---
-<!--
+
 {% info_block warningBox "Warning" %}
 
 We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). For installation instructions in Docker-based projects, see [Configure New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html#new-relic)
@@ -25,5 +25,3 @@ The `spryker-eco/new-relic` module provides a `NewRelicMonitoringExtensionPlugin
 ```bash
 composer require spryker-eco/new-relic
 ```
-
--->

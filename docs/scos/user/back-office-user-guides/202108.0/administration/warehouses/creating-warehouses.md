@@ -54,6 +54,6 @@ The following table describes the attributes you see and enter when creating, vi
 
 The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 
-Additionally, you can edit any warehouse. For more details, see the [Editing warehouse details](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-in-the-back-office/edit-warehouses.html"#editing-warehouse-details) section in *Managing Warehouses*.
+Additionally, you can edit any warehouse. For more details, see the [Editing warehouse details](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html#editing-warehouse-details) section in *Managing Warehouses*.
 
 To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html).

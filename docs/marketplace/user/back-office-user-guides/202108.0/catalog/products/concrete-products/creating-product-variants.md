@@ -42,7 +42,7 @@ To create a product variant:
     3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 5. Optional: Click **Next** to go to **Image** to add images for the product and define the image order.
-6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
 7. Click **Save**.
 The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to know more.
 

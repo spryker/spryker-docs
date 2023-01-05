@@ -261,7 +261,8 @@ Ensure that the following changes have been applied in the transfer objects:
 | CustomerPasswordSetConsole                                     | Sends the password reset email to all the customers with the empty password value in the database.                                                                                                           | None          | Spryker\Zed\Customer\Communication\Console                    |		
 | CustomerRegistrationConfirmationMailTypePlugin                 | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled.                                                                                                     | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details open>
+  <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -391,7 +392,8 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 </details>
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<details open>
+  <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -513,8 +515,6 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 

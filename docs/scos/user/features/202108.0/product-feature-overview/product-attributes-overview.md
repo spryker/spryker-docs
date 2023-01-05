@@ -16,7 +16,7 @@ A *product attribute* is a characteristic of a product that consists of a name a
 You can create characteristic attributes for products, like brand or special features. You can define specific values to help you and your customers distinguish between products. You can assign multiple attributes to products to simplify the filter and category functions.
 
 
-A Back Office user can [create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
+A Back Office user can [create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
 
 A developer can import [product attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html).
 
@@ -27,7 +27,7 @@ A Back Office user can add product attributes to abstract and concrete products.
 
 
 ## Declared attributes
-A declared attribute is an attribute that was [created](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
+A declared attribute is an attribute that was [created](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
 
 After declaring an attribute, Back Office users can add it to products, and developers can import products with it.
 
@@ -168,7 +168,7 @@ We recommend defining all the atributes you want to use.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) |
+| [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) |
 | [Manage product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) |
 
 {% info_block warningBox "Developer guides" %}

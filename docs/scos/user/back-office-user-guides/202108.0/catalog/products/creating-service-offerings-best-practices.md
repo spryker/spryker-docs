@@ -27,7 +27,7 @@ The first thing you need to do to start selling a product with either free or ch
 To create the product, do the following:
 
 1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products** section and click **Create Product** on the top-right corner of the page.
-2. Populate the necessary fields in the *General, Price & Tax, Variants, SEO, Image* tabs. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) for details on the tabs and their values.
+2. Populate the necessary fields in the *General, Price & Tax, Variants, SEO, Image* tabs. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) for details on the tabs and their values.
 3. Click **Save**. Your product is now created and will appear in the list of products in the **Catalog&nbsp;<span aria-label="and then">></span> Products** section.
 4. Activate the product:
     1. In the list of products in the **Catalog&nbsp;<span aria-label="and then">></span> Products** section, find your product and click **Edit** in the *Actions* column for it.

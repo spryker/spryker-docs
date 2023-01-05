@@ -17,7 +17,7 @@ This documents describes how to create filters and define preferences for them i
 
 ## Prerequisites
 
-1. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) for the filter that you are going to create.
+1. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for the filter that you are going to create.
 2. [Assign the product attribute to a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html) or [assign the product attribute to an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products.html).
 3. To start working with category filter, go to **Merchandising&nbsp;<span aria-label="and then">></span> Filter Preferences**.
 

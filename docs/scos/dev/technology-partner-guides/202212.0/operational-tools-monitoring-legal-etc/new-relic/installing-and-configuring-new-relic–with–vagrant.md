@@ -9,7 +9,7 @@ We will soon deprecate the DevVM and stop supporting it. Therefore, we highly re
 
 {% endinfo_block %}
 
--->
+
 
 To install and configure New Relic, do the following.
 
@@ -25,3 +25,5 @@ The `spryker-eco/new-relic` module provides a `NewRelicMonitoringExtensionPlugin
 ```bash
 composer require spryker-eco/new-relic
 ```
+
+-->

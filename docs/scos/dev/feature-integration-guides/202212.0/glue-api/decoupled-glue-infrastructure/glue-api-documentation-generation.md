@@ -275,4 +275,4 @@ A sure sign that `JsonApiSchemaFormatterPlugin` and `RestApiSchemaFormatterPlugi
 {% endinfo_block %}
 ```
 
-For more details, see [How to document Glue API endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/how-to-document-glue-api-endpoints.html).
+For more details, see [How to document Glue API endpoints](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-infrastructure/how-to-guides/how-to-document-glue-api-endpoints.html).

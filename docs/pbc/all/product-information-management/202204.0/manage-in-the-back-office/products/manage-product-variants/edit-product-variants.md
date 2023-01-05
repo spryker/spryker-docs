@@ -29,7 +29,7 @@ The described procedure is also valid for an existing product variant.
 
 To start working with product variants, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
-The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/create-product-variants.html).
+The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -118,4 +118,4 @@ On this tab, you see a table with the scheduled prices imported via a CSV file. 
 **What's next?**
 <br>Following the same steps, you will update all variants that you have added to your abstract product.
 
-You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/create-product-variants.html).
+You may also want to add more product variants. Learn how you do that by navigating to [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).

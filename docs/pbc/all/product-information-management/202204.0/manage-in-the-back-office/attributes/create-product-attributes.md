@@ -53,7 +53,7 @@ Review the [reference information](#reference-information-create-product-attribu
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-| ATTRIBUTE KEY | Name that you will use when [assigning the attribute to products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html). For example, `color`. Accepts lower case letters, digits, numbers, underscores, hyphens, and colons. |
+| ATTRIBUTE KEY | Name that you will use when [assigning the attribute to products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html). For example, `color`. Accepts lower case letters, digits, numbers, underscores, hyphens, and colons. |
 | INPUT TYPE | Defines the data format of the attribute's values. |
 | SUPER ATTRIBUTE | Defines if the attribute is to be a [super attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). Super attributes distinguish product variants of an abstract product.  |
 | PREDEFINED VALUES | Values that you will be selecting from when assigning the attribute to products. For example, if the attribute is `color`, the values can be `red`, `green`, `black`, etc. |
@@ -64,4 +64,4 @@ Review the [reference information](#reference-information-create-product-attribu
 ## Next steps
 
 * Assign the attribute to a new abstract product. For instructions, see [Create abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
-* Assign the attribute to an existing abstract product. For instructions, see [Assign product attributes to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html)
+* Assign the attribute to an existing abstract product. For instructions, see [Assign product attributes to abstract products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html)

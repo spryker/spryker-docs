@@ -52,5 +52,5 @@ This document describes how to create merchant relations in the Back Office.
 
 ## Next steps
 
-* Define merchant specific prices. For instructions, see [Creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/create-product-variants.html).
+* Define merchant specific prices. For instructions, see [Creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
 * Define order thresholds for merchants. For instructions, see [Manage merchant order thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html).

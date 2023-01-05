@@ -52,7 +52,7 @@ This opens the **Edit Product Attributes** page.
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-| ATTRIBUTE KEY | Name that you use when [assigning the attribute to products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html). |
+| ATTRIBUTE KEY | Name that you use when [assigning the attribute to products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html). |
 | INPUT TYPE | Defines the data format of the attribute's values. |
 | SUPER ATTRIBUTE | Defines if the attribute is a [super attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). Super attributes distinguish product variants of an abstract product.  |
 | PREDEFINED VALUES | Values that you select from when assigning the attribute to products. For example, if the attribute is `color`, the values can be `red`, `green`, `black`, etc. |

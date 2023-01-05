@@ -1222,7 +1222,7 @@ entries:
               - title: Manage abstract products and product bundles
                 nested:
                   - title: Create abstract products and product bundles
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
                   - title: Edit abstract products and product bundles
                     url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
                   - title: Assign product attributes to abstract products

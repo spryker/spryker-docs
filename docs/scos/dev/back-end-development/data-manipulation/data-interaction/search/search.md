@@ -2,8 +2,6 @@
 title: Data Manipulation
 description: how to work with Search in the Spryker SCOS back end
 template: concept-topic-template
-related:
-  
 ---
 
 This section contains a collection of articles that explain search configuration and how to expand search data:

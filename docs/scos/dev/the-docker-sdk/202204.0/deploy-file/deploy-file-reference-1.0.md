@@ -727,7 +727,7 @@ docker:
 
 ### docker: maintenance: enabled:
 
-Defines if applications work in maintenance mode. The default value is `false`.
+Defines if applications are in maintenance mode. The default value is `false`.
 
 ```yaml
 version: 1.0
@@ -737,49 +737,9 @@ docker:
  ```
 
 
+### docker: maintenance: whitelist: ips:
 
-Maintenance mode. Ips whitelisting.
-
-Defines the whitelisted Ips IP(s) address(es) for the maintenance mode.
-
-Note: It's necessary to define gateway IP addresses to fetch the real IP for `all` defined applications.
-
-```yaml
-x-real-ip: &real-ip
-    real-ip:
-        from:
-            - 10.0.0.0/8 # AWS VPC network
-
-x-frontend-auth: &frontend-auth
-    <<: *real-ip
-
-groups:
-    EU:
-        region: EU
-        applications:
-            boffice:
-                application: backoffice
-                endpoints:
-                    backoffice.de.spryker.com:
-                        store: DE
-                        primal: true
-                        <<: *frontend-auth
-                    backoffice.at.spryker,com:
-                        store: AT
-                        <<: *frontend-auth
-            Yves:
-                application: yves
-                endpoints:
-                    www.de.spryker.com:
-                        store: DE
-                        <<: *frontend-auth
-                    www.at.spryker.com:
-                        store: AT
-                        <<: *frontend-auth
-            ...
-```
-
-* `docker: maintenance: whitelist: ips:` - defines the whitelist of the Ips addresses.
+Defines the allowlisted IP addresses from which the applications in the maintenance mode can be accessed.
 
 ```yaml
 version: 1.0
@@ -789,8 +749,8 @@ docker:
         enabled: true
         whitelist:
           ips:
-              - 0.0.0.0
-              - 1.1.1.1
+              - {IP address}
+              ...
  ```
 
 

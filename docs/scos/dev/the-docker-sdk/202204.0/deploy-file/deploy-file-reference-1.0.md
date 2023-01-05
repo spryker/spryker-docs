@@ -742,7 +742,7 @@ Maintenance mode. Ips whitelisting.
 
 Defines the whitelisted Ips IP(s) address(es) for the maintenance mode.
 
-Note: it's necessary to define gateway IP addresses to fetch the real IP for `all` defined applications.
+Note: It's necessary to define gateway IP addresses to fetch the real IP for `all` defined applications.
 
 ```yaml
 x-real-ip: &real-ip

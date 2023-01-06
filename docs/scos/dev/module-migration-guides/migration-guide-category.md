@@ -32,6 +32,6 @@ redirect_from:
   - /upcoming-release/docs/migration-guide-category
 related:
   - title: Creating Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/create-categories.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-category-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-category-module.md -->

@@ -1906,10 +1906,10 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 For the attributes of other included resources, see:
 * [Manage guest cart items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-cart-items.html)
-* [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html)
+* [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 * [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
-* [Retrieve a measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html#measurement-units-response-attributes)
+* [Retrieve a measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-product-labels.html)
 * [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)

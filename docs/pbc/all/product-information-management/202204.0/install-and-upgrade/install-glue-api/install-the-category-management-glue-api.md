@@ -16,8 +16,8 @@ related:
   - title: Category Management feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-category-management-feature.html
   - title: Retrieving category trees
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/retrieve-category-trees.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
   - title: Retrieving category nodes
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/retrieve-category-nodes.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 ---
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-category-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-category-management-glue-api.md -->

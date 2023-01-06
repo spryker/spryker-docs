@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/retrieving-related-products.html
 related:
   - title: Retrieving alternative products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/retrieve-alternative-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/glue-api-retrieve-alternative-products.html
   - title: Product Relations feature overview
     link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---

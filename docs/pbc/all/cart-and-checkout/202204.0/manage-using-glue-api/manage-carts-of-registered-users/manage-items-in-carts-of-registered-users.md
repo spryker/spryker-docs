@@ -2450,10 +2450,10 @@ It is the responsibility of the API Client to track whether the selected items a
 
 For the attributes of other included resources, see the following:
 
-* [Retrieve measurement units](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/retrieve-measurement-units.html)
+* [Retrieve measurement units](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 * [Create a cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/retrieve-abstract-products.html#abstract-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
 
 ## Add a configurable bundle to a registered user’s cart
 
@@ -2504,7 +2504,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | The number of the configurable bundles to add. |
-| templateUuid | String | &check; | The unique ID of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
+| templateUuid | String | &check; | The unique ID of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |
@@ -2848,7 +2848,7 @@ Request sample:
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving Concrete Products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html).
+For the attributes of the included resources, see [Retrieving Concrete Products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html).
 
 ## Change quantity of configurable bundles in a registered user’s cart
 

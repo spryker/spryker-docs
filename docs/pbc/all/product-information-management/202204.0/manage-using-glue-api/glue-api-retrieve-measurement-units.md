@@ -1,5 +1,5 @@
 ---
-title: Retrieve measurement units
+title: Glue API: Retrieve measurement units
 description: Retrieve details about measurement units and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -74,8 +74,8 @@ Response sample: retrieve a measurement unit
 
 You can use the measurement units resource as follows:
 
-*  Retrieve information about a concrete product, including all the measurement units defined for it—[Retrieve Concrete Products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html).
-* Retrieve sales unit of a product—[Retrieve Sales Units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/retrieve-abstract-products.html).
+*  Retrieve information about a concrete product, including all the measurement units defined for it—[Retrieve Concrete Products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html).
+* Retrieve sales unit of a product—[Retrieve Sales Units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
 *  Add items to carts and retrieve information about them with the amount of cart items defined in product measurement units—[Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
 * Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units—[Manage guest carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html).
 * Retrieve information about items in an order with the amount of order items defined in product measurement units—[Retrieving an Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).

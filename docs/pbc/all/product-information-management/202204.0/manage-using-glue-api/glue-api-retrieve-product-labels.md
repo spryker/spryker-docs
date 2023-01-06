@@ -1,5 +1,5 @@
 ---
-title: Retrieving product labels
+title: Glue API: Retrieving product labels
 description: Learn how to retrieve product labels via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -81,8 +81,8 @@ Request sample: retrieve a product label
 ## Other management options
 
 Apart from using this dedicated endpoint, you can retrieve product lables as an included resource as follows:
-* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/retrieve-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
 * [Retrieve registered user's carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts)
 * [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-a-registered-users-cart)

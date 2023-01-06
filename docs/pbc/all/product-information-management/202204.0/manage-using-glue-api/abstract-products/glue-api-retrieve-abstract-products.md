@@ -1,102 +1,108 @@
 ---
-title: Retrieving concrete products
-description: Retrieve general information about concrete products.
+title: Retrieve abstract products
+description: Retrieve general information about abstract products and related resources.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-products
-originalArticleId: 4f36b42a-e2a2-46a1-be84-ae9f3b2a1a25
+originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-products
+originalArticleId: 6ba1a21c-bbbe-4442-b7ce-81e921924b26
 redirect_from:
-  - /2021080/docs/retrieving-concrete-products
-  - /2021080/docs/en/retrieving-concrete-products
-  - /docs/retrieving-concrete-products
-  - /docs/en/retrieving-concrete-products
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/concrete-products/retrieving-concrete-products.html
+  - /2021080/docs/retrieving-abstract-products
+  - /2021080/docs/en/retrieving-abstract-products
+  - /docs/retrieving-abstract-products
+  - /docs/en/retrieving-abstract-products
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-abstract-products.html
 related:
-  - title: Retrieve concrete product availability
-    link: docs/pbc/all/warehouse-management-system/page.version/manage-using-glue-api/retrieve-concrete-product-availability.html
-  - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-concrete-product-prices.html
-  - title: Retrieving image sets of concrete products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html
-  - title: Retrieving sales units
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-sales-units.html
-  - title: Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-options-feature-overview.html
+  - title: Retrieve abstract product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - title: Retrieving abstract product prices
+    link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-abstract-product-prices.html
+  - title: Retrieving image sets of abstract products
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+  - title: Retrieving tax sets
+    link: docs/pbc/all/tax-management/page.version/manage-via-glue-api/retrieve-tax-sets.html
+  - title: Product feature overview
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---
 
-This endpoint allows retrieving general information about concrete products.
+This endpoint allows retrieving general information about abstract products.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
 * [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
-* [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
 * [Glue API: Product Options Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
 * [Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
 * [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
 * [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
-* [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{page.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 
-## Retrieve a concrete product
 
-To retrieve general information about a concrete product, send the request:
+## Retrieve an abstract product
 
----
-`GET` **/concrete-products/*{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}***
+To retrieve general information about an abstract product, send the request:
 
 ---
+`GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}***
+
+---
+
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get information for. |
+| ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to get information for. |
 
 ### Request
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>concrete-product-image-sets</li><li>concrete-product-availabilities</li><li>product-options</li><li>product-reviews</li><li>product-offers</li><li>concrete-product-prices</li><li>product-measurement-units</li><li>sales-units</li><li>product-labels</li><li>bundled-products</li></ul> |
+| include | Adds resource relationships to the request. | <ul><li>abstract-product-prices</li><li>concrete-products</li><li>product-labels</li><li>abstract-product-image-sets</li><li>abstract-product-availabilities</li><li>category-nodes</li><li>product-tax-sets</li><li>product-options</li><li>product-reviews</li><li>bundled-products</li></ul> |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
+
+{% info_block infoBox "Included resources" %}
+
+To include `bundled products`, include `concrete-products` and `bundled-products` into the request.
+
+{% endinfo_block %}
 
 {% info_block warningBox "Performance" %}
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
 
-{% endinfo_block %}   
+{% endinfo_block %}
 
-| REQUEST  | USAGE |
+
+| REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Get information about the `001_25904006` product with its availability.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its [default prices](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#default-and-original-prices-on-the-storefront). |
-| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices.) |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Get information about the `001_25904006` product with its product options.  |
-| `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Get information about the `001_25904006` product with its product reviews.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
-| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
-| `GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products` | Retrieve the concrete product with SKU `214_123`. If it is a product bundle, retrieve the bundled products. |
-| `GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products,concrete-products,abstract-products` | Retrieve the concrete product with SKU `214_123`. If it is a product bundle, retrieve the bundled products. Retrieve all the related concrete products and the abstract products owning them. |
+| `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its default prices. |
+| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
+| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options`| Retrieve information about the abstract product with SKU `001` with its product options. |
+| `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
+| `GET http://glue.mysprykershop.com/abstract-products/214?included=bundled-products,concrete-products,abstract-products` | Retrieve the abstract product with `SKU 214`, its concrete product bundle and the bundled products inside. Retrieve the abstract products that own the concrete product bundle and the concrete bundled products inside it. |
+
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product by SKU</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product by SKU</summary>
 
 ```json
 {
     "data": {
-        "type": "concrete-products",
-        "id": "001_25904006",
+        "type": "abstract-products",
+        "id": "001",
         "attributes": {
-            "sku": "001_25904006",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
+            "sku": "001",
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
@@ -112,145 +118,22 @@ To retrieve general information about a concrete product, send the request:
             "superAttributesDefinition": [
                 "color"
             ],
-            "metaTitle": "Canon IXUS 160",
-            "metaKeywords": "Canon,Entertainment Electronics",
-            "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
-            "attributeNames": {
-                "megapixel": "Megapixel",
-                "flash_range_tele": "Flash range (tele)",
-                "memory_slots": "Memory slots",
-                "usb_version": "USB version",
-                "brand": "Brand",
-                "color": "Color"
-            }
-        },
-        "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
-        }
-    }
-}
-```
-</details>
-
-<details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the sales units and product measurement units</summary>
-
-```json
-{
-    "data": {
-        "type": "concrete-products",
-        "id": "cable-vga-1-1",
-        "attributes": {
-            "sku": "cable-vga-1-1",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
-            "averageRating": null,
-            "reviewCount": 0,
-            "name": "VGA cable (1.5m)",
-            "description": "Enjoy clear, crisp, immediate connectivity with the High-Speed HDMI Cable. This quality High-Definition Multimedia Interface (HDMI) cable allows you to connect a wide variety of devices in the realms of home entertainment, computing, gaming, and more to your HDTV, projector, or monitor. Perfect for those that interact with multiple platforms and devices, you can rely on strong performance and playback delivery when it comes to your digital experience.",
-            "attributes": {
-                "packaging_unit": "Ring"
-            },
-            "superAttributesDefinition": [
-                "packaging_unit"
-            ],
-            "metaTitle": "",
-            "metaKeywords": "",
-            "metaDescription": "",
-            "attributeNames": {
-                "packaging_unit": "Packaging unit"
-            }
-        },
-        "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
-        },
-        "relationships": {
-            "product-measurement-units": {
-                "data": [
-                    {
-                        "type": "product-measurement-units",
-                        "id": "METR"
-                    }
+            "superAttributes": {
+                "color": [
+                    "Red"
                 ]
             },
-            "sales-units": {
-                "data": [
-                    {
-                        "type": "sales-units",
-                        "id": "32"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "product-measurement-units",
-            "id": "METR",
-            "attributes": {
-                "name": "Meter",
-                "defaultPrecision": 100
-            },
-            "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
-            }
-        },
-        {
-            "type": "sales-units",
-            "id": "32",
-            "attributes": {
-                "conversion": 1,
-                "precision": 100,
-                "isDisplayed": true,
-                "isDefault": true,
-                "productMeasurementUnitCode": "METR"
-            },
-            "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
-            },
-            "relationships": {
-                "product-measurement-units": {
-                    "data": [
-                        {
-                            "type": "product-measurement-units",
-                            "id": "METR"
-                        }
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "001_25904006"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Red"
                     ]
-                }
-            }
-        }
-    ]
-}
-```
-</details>
-
-<details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product labels</summary>
-
-```json
-{
-    "data": {
-        "type": "concrete-products",
-        "id": "001_25904006",
-        "attributes": {
-            "sku": "001_25904006",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
-            "averageRating": null,
-            "reviewCount": 0,
-            "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
-            "attributes": {
-                "megapixel": "20 MP",
-                "flash_range_tele": "4.2-4.9 ft",
-                "memory_slots": "1",
-                "usb_version": "2",
-                "brand": "Canon",
-                "color": "Red"
+                },
+                "attribute_variants": []
             },
-            "superAttributesDefinition": [
-                "color"
-            ],
             "metaTitle": "Canon IXUS 160",
             "metaKeywords": "Canon,Entertainment Electronics",
             "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
@@ -261,10 +144,11 @@ To retrieve general information about a concrete product, send the request:
                 "usb_version": "USB version",
                 "brand": "Brand",
                 "color": "Color"
-            }
+            },
+            "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "http://glue.mysprykershop.com/abstract-products/001"
         }
     }
 }
@@ -272,17 +156,15 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the product image sets</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about image sets</summary>
 
 ```json
 {
     "data": {
-        "type": "concrete-products",
-        "id": "001_25904006",
+        "type": "abstract-products",
+        "id": "001",
         "attributes": {
-            "sku": "001_25904006",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
+            "sku": "001",
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
@@ -298,6 +180,22 @@ To retrieve general information about a concrete product, send the request:
             "superAttributesDefinition": [
                 "color"
             ],
+            "superAttributes": {
+                "color": [
+                    "Red"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "001_25904006"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attribute_variants": []
+            },
             "metaTitle": "Canon IXUS 160",
             "metaKeywords": "Canon,Entertainment Electronics",
             "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
@@ -308,17 +206,18 @@ To retrieve general information about a concrete product, send the request:
                 "usb_version": "USB version",
                 "brand": "Brand",
                 "color": "Color"
-            }
+            },
+            "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets"
+            "self": "https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets"
         },
         "relationships": {
-            "concrete-product-image-sets": {
+            "abstract-product-image-sets": {
                 "data": [
                     {
-                        "type": "concrete-product-image-sets",
-                        "id": "001_25904006"
+                        "type": "abstract-product-image-sets",
+                        "id": "001"
                     }
                 ]
             }
@@ -326,8 +225,8 @@ To retrieve general information about a concrete product, send the request:
     },
     "included": [
         {
-            "type": "concrete-product-image-sets",
-            "id": "001_25904006",
+            "type": "abstract-product-image-sets",
+            "id": "001",
             "attributes": {
                 "imageSets": [
                     {
@@ -342,7 +241,7 @@ To retrieve general information about a concrete product, send the request:
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-image-sets"
             }
         }
     ]
@@ -350,18 +249,17 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
+
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product availability</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with  the details about product availability</summary>
 
 ```json
 {
     "data": {
-        "type": "concrete-products",
-        "id": "001_25904006",
+        "type": "abstract-products",
+        "id": "001",
         "attributes": {
-            "sku": "001_25904006",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
+            "sku": "001",
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
@@ -377,6 +275,22 @@ To retrieve general information about a concrete product, send the request:
             "superAttributesDefinition": [
                 "color"
             ],
+            "superAttributes": {
+                "color": [
+                    "Red"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "001_25904006"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attribute_variants": []
+            },
             "metaTitle": "Canon IXUS 160",
             "metaKeywords": "Canon,Entertainment Electronics",
             "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
@@ -387,17 +301,18 @@ To retrieve general information about a concrete product, send the request:
                 "usb_version": "USB version",
                 "brand": "Brand",
                 "color": "Color"
-            }
+            },
+            "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities"
+            "self": "https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities"
         },
         "relationships": {
-            "concrete-product-availabilities": {
+            "abstract-product-availabilities": {
                 "data": [
                     {
-                        "type": "concrete-product-availabilities",
-                        "id": "001_25904006"
+                        "type": "abstract-product-availabilities",
+                        "id": "001"
                     }
                 ]
             }
@@ -405,15 +320,14 @@ To retrieve general information about a concrete product, send the request:
     },
     "included": [
         {
-            "type": "concrete-product-availabilities",
-            "id": "001_25904006",
+            "type": "abstract-product-availabilities",
+            "id": "001",
             "attributes": {
-                "isNeverOutOfStock": false,
                 "availability": true,
                 "quantity": "10.0000000000"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
             }
         }
     ]
@@ -421,17 +335,15 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default product prices</summary>
+<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
 
 ```json
 {
     "data": {
-        "type": "concrete-products",
-        "id": "001_25904006",
+        "type": "abstract-products",
+        "id": "001",
         "attributes": {
-            "sku": "001_25904006",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
+            "sku": "001",
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
@@ -447,6 +359,22 @@ To retrieve general information about a concrete product, send the request:
             "superAttributesDefinition": [
                 "color"
             ],
+            "superAttributes": {
+                "color": [
+                    "Red"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "001_25904006"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attribute_variants": []
+            },
             "metaTitle": "Canon IXUS 160",
             "metaKeywords": "Canon,Entertainment Electronics",
             "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
@@ -457,17 +385,18 @@ To retrieve general information about a concrete product, send the request:
                 "usb_version": "USB version",
                 "brand": "Brand",
                 "color": "Color"
-            }
+            },
+            "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices"
+            "self": "https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices"
         },
         "relationships": {
-            "concrete-product-prices": {
+            "abstract-product-prices": {
                 "data": [
                     {
-                        "type": "concrete-product-prices",
-                        "id": "001_25904006"
+                        "type": "abstract-product-prices",
+                        "id": "001"
                     }
                 ]
             }
@@ -475,8 +404,8 @@ To retrieve general information about a concrete product, send the request:
     },
     "included": [
         {
-            "type": "concrete-product-prices",
-            "id": "001_25904006",
+            "type": "abstract-product-prices",
+            "id": "001",
             "attributes": {
                 "price": 9999,
                 "prices": [
@@ -503,7 +432,7 @@ To retrieve general information about a concrete product, send the request:
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
             }
         }
     ]
@@ -511,34 +440,48 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
+<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
 
 ```json
 {
     "data": {
-        "type": "concrete-products",
-        "id": "093_24495843",
+        "type": "abstract-products",
+        "id": "093",
         "attributes": {
-            "sku": "093_24495843",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
+            "sku": "093",
+            "merchantReference": "MER000001",
             "averageRating": 4.3,
             "reviewCount": 4,
-            "productAbstractSku": "093",
             "name": "Sony SmartWatch 3",
-            "description": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated, casual, vibrant colours and fitness style, all made from the finest materials. Designed to perform and impress, this smartphone watch delivers a groundbreaking combination of technology and style. Downloadable apps let you customise your SmartWatch 3 SWR50 and how you use it.         Tell SmartWatch 3 SWR50 smartphone watch what you want and it will do it. Search. Command. Find.",
+            "description": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated, casual, vibrant colours and fitness style, all made from the finest materials. Designed to perform and impress, this smartphone watch delivers a groundbreaking combination of technology and style. Downloadable apps let you customise your SmartWatch 3 SWR50 and how you use it.  Tell SmartWatch 3 SWR50 smartphone watch what you want and it will do it. Search. Command. Find.",
             "attributes": {
                 "internal_ram": "512 MB",
                 "flash_memory": "4 GB",
                 "weight": "45 g",
                 "protection_feature": "Water resistent",
                 "brand": "Sony",
-                "color": "Silver"
+                "color": "Yellow"
             },
             "superAttributesDefinition": [
                 "flash_memory",
                 "color"
             ],
+            "superAttributes": {
+                "color": [
+                    "Silver"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "093_24495843"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Silver"
+                    ]
+                },
+                "attribute_variants": []
+            },
             "metaTitle": "Sony SmartWatch 3",
             "metaKeywords": "Sony,Smart Electronics",
             "metaDescription": "The way you like it Whatever your lifestyle SmartWatch 3 SWR50 can be made to suit it. You can choose from a range of wrist straps – formal, sophisticated,",
@@ -549,17 +492,18 @@ To retrieve general information about a concrete product, send the request:
                 "protection_feature": "Protection feature",
                 "brand": "Brand",
                 "color": "Color"
-            }
+            },
+            "url": "/en/sony-smartwatch-3-93"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/093_24495843?include=concrete-product-prices"
+            "self": "https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices"
         },
         "relationships": {
-            "concrete-product-prices": {
+            "abstract-product-prices": {
                 "data": [
                     {
-                        "type": "concrete-product-prices",
-                        "id": "093_24495843"
+                        "type": "abstract-product-prices",
+                        "id": "093"
                     }
                 ]
             }
@@ -567,8 +511,8 @@ To retrieve general information about a concrete product, send the request:
     },
     "included": [
         {
-            "type": "concrete-product-prices",
-            "id": "093_24495843",
+            "type": "abstract-product-prices",
+            "id": "093",
             "attributes": {
                 "price": 24899,
                 "prices": [
@@ -602,7 +546,7 @@ To retrieve general information about a concrete product, send the request:
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/093_24495843/concrete-product-prices"
+                "self": "https://glue.mysprykershop.com/abstract-products/093/abstract-product-prices"
             }
         }
     ]
@@ -611,17 +555,15 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the product options</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about the category nodes</summary>
 
 ```json
 {
     "data": {
-        "type": "concrete-products",
-        "id": "001_25904006",
+        "type": "abstract-products",
+        "id": "001",
         "attributes": {
-            "sku": "001_25904006",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
+            "sku": "001",
             "averageRating": null,
             "reviewCount": 0,
             "name": "Canon IXUS 160",
@@ -637,6 +579,22 @@ To retrieve general information about a concrete product, send the request:
             "superAttributesDefinition": [
                 "color"
             ],
+            "superAttributes": {
+                "color": [
+                    "Red"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "001_25904006"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attribute_variants": []
+            },
             "metaTitle": "Canon IXUS 160",
             "metaKeywords": "Canon,Entertainment Electronics",
             "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
@@ -647,10 +605,525 @@ To retrieve general information about a concrete product, send the request:
                 "usb_version": "USB version",
                 "brand": "Brand",
                 "color": "Color"
-            }
+            },
+            "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options"
+            "self": "https://glue.mysprykershop.com/abstract-products/001?include=category-nodes"
+        },
+        "relationships": {
+            "category-nodes": {
+                "data": [
+                    {
+                        "type": "category-nodes",
+                        "id": "4"
+                    },
+                    {
+                        "type": "category-nodes",
+                        "id": "2"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "category-nodes",
+            "id": "4",
+            "attributes": {
+                "nodeId": 4,
+                "name": "Digital Cameras",
+                "metaTitle": "Digital Cameras",
+                "metaKeywords": "Digital Cameras",
+                "metaDescription": "Digital Cameras",
+                "isActive": true,
+                "order": 100,
+                "url": "/en/cameras-&-camcorders/digital-cameras",
+                "children": [],
+                "parents": [
+                    {
+                        "nodeId": 2,
+                        "name": "Cameras & Camcorders",
+                        "metaTitle": "Cameras & Camcorders",
+                        "metaKeywords": "Cameras & Camcorders",
+                        "metaDescription": "Cameras & Camcorders",
+                        "isActive": true,
+                        "order": 90,
+                        "url": "/en/cameras-&-camcorders",
+                        "children": [],
+                        "parents": [
+                            {
+                                "nodeId": 1,
+                                "name": "Demoshop",
+                                "metaTitle": "Demoshop",
+                                "metaKeywords": "English version of Demoshop",
+                                "metaDescription": "English version of Demoshop",
+                                "isActive": true,
+                                "order": null,
+                                "url": "/en",
+                                "children": [],
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/category-nodes/4"
+            }
+        },
+        {
+            "type": "category-nodes",
+            "id": "2",
+            "attributes": {
+                "nodeId": 2,
+                "name": "Cameras & Camcorders",
+                "metaTitle": "Cameras & Camcorders",
+                "metaKeywords": "Cameras & Camcorders",
+                "metaDescription": "Cameras & Camcorders",
+                "isActive": true,
+                "order": 90,
+                "url": "/en/cameras-&-camcorders",
+                "children": [
+                    {
+                        "nodeId": 4,
+                        "name": "Digital Cameras",
+                        "metaTitle": "Digital Cameras",
+                        "metaKeywords": "Digital Cameras",
+                        "metaDescription": "Digital Cameras",
+                        "isActive": true,
+                        "order": 100,
+                        "url": "/en/cameras-&-camcorders/digital-cameras",
+                        "children": [],
+                        "parents": []
+                    },
+                    {
+                        "nodeId": 3,
+                        "name": "Camcorders",
+                        "metaTitle": "Camcorders",
+                        "metaKeywords": "Camcorders",
+                        "metaDescription": "Camcorders",
+                        "isActive": true,
+                        "order": 90,
+                        "url": "/en/cameras-&-camcorders/camcorders",
+                        "children": [],
+                        "parents": []
+                    }
+                ],
+                "parents": [
+                    {
+                        "nodeId": 1,
+                        "name": "Demoshop",
+                        "metaTitle": "Demoshop",
+                        "metaKeywords": "English version of Demoshop",
+                        "metaDescription": "English version of Demoshop",
+                        "isActive": true,
+                        "order": null,
+                        "url": "/en",
+                        "children": [],
+                        "parents": []
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/category-nodes/2"
+            }
+        }
+    ]
+}
+```
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax sets</summary>
+
+```json
+{
+    "data": {
+        "type": "abstract-products",
+        "id": "001",
+        "attributes": {
+            "sku": "001",
+            "averageRating": null,
+            "reviewCount": 0,
+            "name": "Canon IXUS 160",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "attributes": {
+                "megapixel": "20 MP",
+                "flash_range_tele": "4.2-4.9 ft",
+                "memory_slots": "1",
+                "usb_version": "2",
+                "brand": "Canon",
+                "color": "Red"
+            },
+            "superAttributesDefinition": [
+                "color"
+            ],
+            "superAttributes": {
+                "color": [
+                    "Red"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "001_25904006"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attribute_variants": []
+            },
+            "metaTitle": "Canon IXUS 160",
+            "metaKeywords": "Canon,Entertainment Electronics",
+            "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+            "attributeNames": {
+                "megapixel": "Megapixel",
+                "flash_range_tele": "Flash range (tele)",
+                "memory_slots": "Memory slots",
+                "usb_version": "USB version",
+                "brand": "Brand",
+                "color": "Color"
+            },
+            "url": "/en/canon-ixus-160-1"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets"
+        },
+        "relationships": {
+            "product-tax-sets": {
+                "data": [
+                    {
+                        "type": "product-tax-sets",
+                        "id": "0e93b0d4-6d83-5fc1-ac1d-d6ae11690406"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "product-tax-sets",
+            "id": "0e93b0d4-6d83-5fc1-ac1d-d6ae11690406",
+            "attributes": {
+                "name": "Entertainment Electronics",
+                "restTaxRates": [
+                    {
+                        "name": "Austria Standard",
+                        "rate": "20.00",
+                        "country": "AT"
+                    },
+                    {
+                        "name": "Belgium Standard",
+                        "rate": "21.00",
+                        "country": "BE"
+                    },
+                    {
+                        "name": "Bulgaria Standard",
+                        "rate": "20.00",
+                        "country": "BG"
+                    },
+                    {
+                        "name": "Czech Republic Standard",
+                        "rate": "21.00",
+                        "country": "CZ"
+                    },
+                    {
+                        "name": "Denmark Standard",
+                        "rate": "25.00",
+                        "country": "DK"
+                    },
+                    {
+                        "name": "France Standard",
+                        "rate": "20.00",
+                        "country": "FR"
+                    },
+                    {
+                        "name": "Germany Standard",
+                        "rate": "19.00",
+                        "country": "DE"
+                    },
+                    {
+                        "name": "Hungary Standard",
+                        "rate": "27.00",
+                        "country": "HU"
+                    },
+                    {
+                        "name": "Italy Standard",
+                        "rate": "22.00",
+                        "country": "IT"
+                    },
+                    {
+                        "name": "Luxembourg Standard",
+                        "rate": "17.00",
+                        "country": "LU"
+                    },
+                    {
+                        "name": "Netherlands Standard",
+                        "rate": "21.00",
+                        "country": "NL"
+                    },
+                    {
+                        "name": "Poland Standard",
+                        "rate": "23.00",
+                        "country": "PL"
+                    },
+                    {
+                        "name": "Romania Standard",
+                        "rate": "20.00",
+                        "country": "RO"
+                    },
+                    {
+                        "name": "Slovakia Standard",
+                        "rate": "20.00",
+                        "country": "SK"
+                    },
+                    {
+                        "name": "Slovenia Standard",
+                        "rate": "22.00",
+                        "country": "SI"
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/abstract-products/001/product-tax-sets"
+            }
+        }
+    ]
+}
+```
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about product labels included</summary>
+
+```json
+{
+    "data": {
+        "type": "abstract-products",
+        "id": "001",
+        "attributes": {...},
+        "links": {...},
+        "relationships": {
+            "product-labels": {
+                "data": [
+                    {
+                        "type": "product-labels",
+                        "id": "3"
+                    },
+                    {
+                        "type": "product-labels",
+                        "id": "5"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "product-labels",
+            "id": "3",
+            "attributes": {
+                "name": "Standard Label",
+                "isExclusive": false,
+                "position": 3,
+                "frontEndReference": ""
+            },
+            "links": {
+                "self": "http://glue.mysprykershop.com/product-labels/3"
+            }
+        },
+        {
+            "type": "product-labels",
+            "id": "5",
+            "attributes": {
+                "name": "SALE %",
+                "isExclusive": false,
+                "position": 5,
+                "frontEndReference": "highlight"
+            },
+            "links": {
+                "self": "http://glue.mysprykershop.com/product-labels/5"
+            }
+        }
+    ]
+}
+```
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about concrete products included</summary>
+
+```json
+{
+    "data": {
+        "type": "abstract-products",
+        "id": "001",
+        "attributes": {
+            "sku": "001",
+            "averageRating": null,
+            "reviewCount": 0,
+            "name": "Canon IXUS 160",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "attributes": {
+                "megapixel": "20 MP",
+                "flash_range_tele": "4.2-4.9 ft",
+                "memory_slots": "1",
+                "usb_version": "2",
+                "brand": "Canon",
+                "color": "Red"
+            },
+            "superAttributesDefinition": [
+                "color"
+            ],
+            "superAttributes": {
+                "color": [
+                    "Red"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "001_25904006"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attribute_variants": []
+            },
+            "metaTitle": "Canon IXUS 160",
+            "metaKeywords": "Canon,Entertainment Electronics",
+            "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+            "attributeNames": {
+                "megapixel": "Megapixel",
+                "flash_range_tele": "Flash range (tele)",
+                "memory_slots": "Memory slots",
+                "usb_version": "USB version",
+                "brand": "Brand",
+                "color": "Color"
+            },
+            "url": "/en/canon-ixus-160-1"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/abstract-products/001?include=concrete-products"
+        },
+        "relationships": {
+            "concrete-products": {
+                "data": [
+                    {
+                        "type": "concrete-products",
+                        "id": "001_25904006"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "concrete-products",
+            "id": "001_25904006",
+            "attributes": {
+                "sku": "001_25904006",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "name": "Canon IXUS 160",
+                "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+                "attributes": {
+                    "megapixel": "20 MP",
+                    "flash_range_tele": "4.2-4.9 ft",
+                    "memory_slots": "1",
+                    "usb_version": "2",
+                    "brand": "Canon",
+                    "color": "Red"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon IXUS 160",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+                "attributeNames": {
+                    "megapixel": "Megapixel",
+                    "flash_range_tele": "Flash range (tele)",
+                    "memory_slots": "Memory slots",
+                    "usb_version": "USB version",
+                    "brand": "Brand",
+                    "color": "Color"
+                }
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
+            }
+        }
+    ]
+}
+```
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about product options included</summary>
+
+```json
+{
+    "data": {
+        "type": "abstract-products",
+        "id": "001",
+        "attributes": {
+            "sku": "001",
+            "averageRating": null,
+            "reviewCount": 0,
+            "name": "Canon IXUS 160",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "attributes": {
+                "megapixel": "20 MP",
+                "flash_range_tele": "4.2-4.9 ft",
+                "memory_slots": "1",
+                "usb_version": "2",
+                "brand": "Canon",
+                "color": "Red"
+            },
+            "superAttributesDefinition": [
+                "color"
+            ],
+            "superAttributes": {
+                "color": [
+                    "Red"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "001_25904006"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attribute_variants": []
+            },
+            "metaTitle": "Canon IXUS 160",
+            "metaKeywords": "Canon,Entertainment Electronics",
+            "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+            "attributeNames": {
+                "megapixel": "Megapixel",
+                "flash_range_tele": "Flash range (tele)",
+                "memory_slots": "Memory slots",
+                "usb_version": "USB version",
+                "brand": "Brand",
+                "color": "Color"
+            },
+            "url": "/en/canon-ixus-160-1"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/abstract-products/001?include=product-options"
         },
         "relationships": {
             "product-options": {
@@ -679,7 +1152,7 @@ To retrieve general information about a concrete product, send the request:
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/product-options/OP_insurance"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/product-options/OP_insurance"
             }
         },
         {
@@ -693,7 +1166,7 @@ To retrieve general information about a concrete product, send the request:
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/product-options/OP_gift_wrapping"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/product-options/OP_gift_wrapping"
             }
         }
     ]
@@ -701,18 +1174,18 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
+
+
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product reviews</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about product reviews</summary>
 
 ```json
 {
     "data": {
-        "type": "concrete-products",
-        "id": "035_17360369",
+        "type": "abstract-products",
+        "id": "035",
         "attributes": {
-            "sku": "035_17360369",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
+            "sku": "035",
             "averageRating": 4.7,
             "reviewCount": 3,
             "name": "Canon PowerShot N",
@@ -728,6 +1201,22 @@ To retrieve general information about a concrete product, send the request:
             "superAttributesDefinition": [
                 "color"
             ],
+            "superAttributes": {
+                "color": [
+                    "Silver"
+                ]
+            },
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "035_17360369"
+                ],
+                "super_attributes": {
+                    "color": [
+                        "Silver"
+                    ]
+                },
+                "attribute_variants": []
+            },
             "metaTitle": "Canon PowerShot N",
             "metaKeywords": "Canon,Entertainment Electronics",
             "metaDescription": "Creative Shot Originality is effortless with Creative Shot. Simply take a shot and the camera will analyse the scene then automatically generate five creat",
@@ -738,10 +1227,11 @@ To retrieve general information about a concrete product, send the request:
                 "sensor_type": "Sensor type",
                 "brand": "Brand",
                 "color": "Color"
-            }
+            },
+            "url": "/en/canon-powershot-n-35"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews"
+            "self": "https://glue.mysprykershop.com/abstract-products/035?include=product-reviews"
         },
         "relationships": {
             "product-reviews": {
@@ -807,53 +1297,53 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
+
+
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the bundled products included</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details on items of the product bundle, concrete products</summary>
 
 ```json
 {
     "data": {
-        "type": "concrete-products",
-        "id": "214_123",
+        "type": "abstract-products",
+        "id": "214",
         "attributes": {
-            "sku": "214_123",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
+            "sku": "214",
             "averageRating": null,
             "reviewCount": 0,
-            "productAbstractSku": "214",
             "name": "Samsung Bundle",
-            "description": "This is a unique product bundle featuring various Samsung products. Items in this bundle are 2 x Samsung Galaxy Tab A SM-T550N 32 GB, 3 x Samsung Galaxy Gear, and 1 x Samsung Galaxy S5 mini",
+            "description": "This is a unique product bundle featuring various Samsung products.",
             "attributes": {
                 "brand": "Samsung",
                 "bundled_product": "Yes"
             },
             "superAttributesDefinition": [],
+            "superAttributes": [],
+            "attributeMap": {
+                "product_concrete_ids": [
+                    "214_123"
+                ],
+                "super_attributes": [],
+                "attribute_variants": []
+            },
             "metaTitle": "Samsung Bundle",
             "metaKeywords": "Samsung,Smart Electronics, Bundle",
             "metaDescription": "Ideal for extreme sports and outdoor enthusiasts Exmor R™ CMOS sensor with enhanced sensitivity always gets the shot: Mountain-biking downhill at breakneck",
             "attributeNames": {
                 "brand": "Brand",
                 "bundled_product": "Bundled Product"
-            }
+            },
+            "url": "/en/samsung-bundle-214"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/214_123?include=bundled-products"
+            "self": "https://glue.69.demo-spryker.com:80/abstract-products/214?include=bundled-products,concrete-products,abstract-products"
         },
         "relationships": {
-            "bundled-products": {
+            "concrete-products": {
                 "data": [
                     {
-                        "type": "bundled-products",
-                        "id": "067_24241408"
-                    },
-                    {
-                        "type": "bundled-products",
-                        "id": "110_19682159"
-                    },
-                    {
-                        "type": "bundled-products",
-                        "id": "175_26935356"
+                        "type": "concrete-products",
+                        "id": "214_123"
                     }
                 ]
             }
@@ -862,224 +1352,59 @@ To retrieve general information about a concrete product, send the request:
     "included": [
         {
             "type": "concrete-products",
-            "id": "067_24241408",
+            "id": "214_123",
             "attributes": {
-                "sku": "067_24241408",
+                "sku": "214_123",
                 "isDiscontinued": false,
                 "discontinuedNote": null,
                 "averageRating": null,
                 "reviewCount": 0,
-                "productAbstractSku": "067",
-                "name": "Samsung Galaxy S5 mini",
-                "description": "Galaxy S5 mini continues Samsung design legacy and flagship experience Outfitted with a 4.5-inch HD Super AMOLED display, the Galaxy S5 mini delivers a wide and vivid viewing experience, and its compact size provides users with additional comfort, allowing for easy operation with only one hand. Like the Galaxy S5, the Galaxy S5 mini features a unique perforated pattern on the back cover creating a modern and sleek look, along with a premium, soft touch grip. The Galaxy S5 mini enables users to enjoy the same flagship experience as the Galaxy S5 with innovative features including IP67 certification, Ultra Power Saving Mode, a heart rate monitor, fingerprint scanner, and connectivity with the latest Samsung wearable devices.The Galaxy S5 mini comes equipped with a powerful Quad Core 1.4 GHz processor and 1.5GM RAM for seamless multi-tasking, faster webpage loading, softer UI transition, and quick power up. The high-resolution 8MP camera delivers crisp and clear photos and videos, while the Galaxy S5 mini’s support of LTE Category 4 provides users with ultra-fast downloads of movies and games on-the-go.",
+                "productAbstractSku": "214",
+                "name": "Samsung Bundle",
+                "description": "This is a unique product bundle featuring various Samsung products. Items in this bundle are 2 x Samsung Galaxy Tab A SM-T550N 32 GB, 3 x Samsung Galaxy Gear, and 1 x Samsung Galaxy S5 mini",
                 "attributes": {
-                    "display_diagonal": "44.8 in",
-                    "themes": "Wallpapers",
-                    "os_version": "4.4",
-                    "internal_storage_capacity": "32 GB",
                     "brand": "Samsung",
-                    "color": "Gold"
+                    "bundled_product": "Yes"
                 },
-                "superAttributesDefinition": [
-                    "internal_storage_capacity",
-                    "color"
-                ],
-                "metaTitle": "Samsung Galaxy S5 mini",
-                "metaKeywords": "Samsung,Communication Electronics",
-                "metaDescription": "Galaxy S5 mini continues Samsung design legacy and flagship experience Outfitted with a 4.5-inch HD Super AMOLED display, the Galaxy S5 mini delivers a wid",
+                "superAttributesDefinition": [],
+                "metaTitle": "Samsung Bundle",
+                "metaKeywords": "Samsung,Smart Electronics, Bundle",
+                "metaDescription": "Ideal for extreme sports and outdoor enthusiasts Exmor R™ CMOS sensor with enhanced sensitivity always gets the shot: Mountain-biking downhill at breakneck",
                 "attributeNames": {
-                    "display_diagonal": "Display diagonal",
-                    "themes": "Themes",
-                    "os_version": "OS version",
-                    "internal_storage_capacity": "Internal storage capacity",
                     "brand": "Brand",
-                    "color": "Color"
+                    "bundled_product": "Bundled Product"
                 }
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/067_24241408?include=bundled-products"
-            }
-        },
-        {
-            "type": "bundled-products",
-            "id": "067_24241408",
-            "attributes": {
-                "sku": "067_24241408",
-                "quantity": 1
+                "self": "https://glue.69.demo-spryker.com:80/concrete-products/214_123"
             },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/214_123/bundled-products"
-            }
-        },
-        {
-            "type": "concrete-products",
-            "id": "110_19682159",
-            "attributes": {
-                "sku": "110_19682159",
-                "isDiscontinued": false,
-                "discontinuedNote": null,
-                "averageRating": null,
-                "reviewCount": 0,
-                "productAbstractSku": "110",
-                "name": "Samsung Galaxy Gear",
-                "description": "Voice Operation With Samsung's latest groundbreaking innovation, the Galaxy Gear, it's clear that time's up on the traditional watch. It features the smart technology you love and the functionality that you still need, and is the perfect companion to the new Galaxy Note 3.",
-                "attributes": {
-                    "processor_frequency": "800 MHz",
-                    "bluetooth_version": "4",
-                    "weight": "25.9 oz",
-                    "battery_life": "120 h",
-                    "brand": "Samsung",
-                    "color": "Black"
+            "relationships": {
+                "abstract-products": {
+                    "data": [
+                        {
+                            "type": "abstract-products",
+                            "id": "214"
+                        }
+                    ]
                 },
-                "superAttributesDefinition": [
-                    "processor_frequency",
-                    "color"
-                ],
-                "metaTitle": "Samsung Galaxy Gear",
-                "metaKeywords": "Samsung,Smart Electronics",
-                "metaDescription": "Voice Operation With Samsung's latest groundbreaking innovation, the Galaxy Gear, it's clear that time's up on the traditional watch. It features the smart",
-                "attributeNames": {
-                    "processor_frequency": "Processor frequency",
-                    "bluetooth_version": "Blootooth version",
-                    "weight": "Weight",
-                    "battery_life": "Battery life",
-                    "brand": "Brand",
-                    "color": "Color"
+                "bundled-products": {
+                    "data": [
+                        {
+                            "type": "bundled-products",
+                            "id": "067_24241408"
+                        },
+                        {
+                            "type": "bundled-products",
+                            "id": "110_19682159"
+                        },
+                        {
+                            "type": "bundled-products",
+                            "id": "175_26935356"
+                        }
+                    ]
                 }
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/110_19682159?include=bundled-products"
             }
         },
-        {
-            "type": "bundled-products",
-            "id": "110_19682159",
-            "attributes": {
-                "sku": "110_19682159",
-                "quantity": 3
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/214_123/bundled-products"
-            }
-        },
-        {
-            "type": "concrete-products",
-            "id": "175_26935356",
-            "attributes": {
-                "sku": "175_26935356",
-                "isDiscontinued": false,
-                "discontinuedNote": null,
-                "averageRating": null,
-                "reviewCount": 0,
-                "productAbstractSku": "175",
-                "name": "Samsung Galaxy Tab A SM-T550N 32 GB",
-                "description": "Do Two Things at Once Make the most out of your tablet time with advanced multitasking tools. Easily open two apps side by side so you can flip through your photos while browsing online. Check social media and your social calendar at the same time. With Multi Window™ on the Galaxy Tab A, you can do more, faster. Kids Mode gives parents peace of mind while providing a colorful, engaging place for kids to play. Easily manage what your kids access and how long they spend using it, all while keeping your own documents private. Available for free from Samsung Galaxy Essentials™, Kids Mode keeps your content—and more importantly, your kids— safe and secure. Connecting your Samsung devices is easier than ever. With Samsung SideSync 3.0 and Quick Connect™, you can share content and work effortlessly between your Samsung tablet, smartphone and personal computer.",
-                "attributes": {
-                    "digital_zoom": "4 x",
-                    "video_recording_modes": "720p",
-                    "display_technology": "PLS",
-                    "brand": "Samsung",
-                    "color": "Black",
-                    "internal_storage_capacity": "32 GB"
-                },
-                "superAttributesDefinition": [
-                    "color",
-                    "internal_storage_capacity"
-                ],
-                "metaTitle": "Samsung Galaxy Tab A SM-T550N 16 GB",
-                "metaKeywords": "Samsung,Communication Electronics",
-                "metaDescription": "Do Two Things at Once Make the most out of your tablet time with advanced multitasking tools. Easily open two apps side by side so you can flip through you",
-                "attributeNames": {
-                    "digital_zoom": "Digital zoom",
-                    "video_recording_modes": "Video recording modes",
-                    "display_technology": "Display technology",
-                    "brand": "Brand",
-                    "color": "Color",
-                    "internal_storage_capacity": "Internal storage capacity"
-                }
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/175_26935356?include=bundled-products"
-            }
-        },
-        {
-            "type": "bundled-products",
-            "id": "175_26935356",
-            "attributes": {
-                "sku": "175_26935356",
-                "quantity": 2
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/214_123/bundled-products"
-            }
-        }
-    ]
-}
-```
-</details>
-
-
-<details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the detais on bundled products, concrete products, and abstract products</summary>
-
-```json
-{
-    "data": {
-        "type": "concrete-products",
-        "id": "214_123",
-        "attributes": {
-            "sku": "214_123",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
-            "averageRating": null,
-            "reviewCount": 0,
-            "productAbstractSku": "214",
-            "name": "Samsung Bundle",
-            "description": "This is a unique product bundle featuring various Samsung products. Items in this bundle are 2 x Samsung Galaxy Tab A SM-T550N 32 GB, 3 x Samsung Galaxy Gear, and 1 x Samsung Galaxy S5 mini",
-            "attributes": {
-                "brand": "Samsung",
-                "bundled_product": "Yes"
-            },
-            "superAttributesDefinition": [],
-            "metaTitle": "Samsung Bundle",
-            "metaKeywords": "Samsung,Smart Electronics, Bundle",
-            "metaDescription": "Ideal for extreme sports and outdoor enthusiasts Exmor R™ CMOS sensor with enhanced sensitivity always gets the shot: Mountain-biking downhill at breakneck",
-            "attributeNames": {
-                "brand": "Brand",
-                "bundled_product": "Bundled Product"
-            }
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/214_123?include=bundled-products,concrete-products,abstract-products"
-        },
-        "relationships": {
-            "abstract-products": {
-                "data": [
-                    {
-                        "type": "abstract-products",
-                        "id": "214"
-                    }
-                ]
-            },
-            "bundled-products": {
-                "data": [
-                    {
-                        "type": "bundled-products",
-                        "id": "067_24241408"
-                    },
-                    {
-                        "type": "bundled-products",
-                        "id": "110_19682159"
-                    },
-                    {
-                        "type": "bundled-products",
-                        "id": "175_26935356"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
         {
             "type": "abstract-products",
             "id": "214",
@@ -1112,7 +1437,7 @@ To retrieve general information about a concrete product, send the request:
                 "url": "/en/samsung-bundle-214"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/abstract-products/214"
+                "self": "https://glue.69.demo-spryker.com:80/abstract-products/214?include=bundled-products,concrete-products,abstract-products"
             },
             "relationships": {
                 "concrete-products": {
@@ -1176,7 +1501,7 @@ To retrieve general information about a concrete product, send the request:
                 "url": "/en/samsung-galaxy-s5-mini-67"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/abstract-products/067"
+                "self": "https://glue.69.demo-spryker.com:80/abstract-products/067?include=bundled-products,concrete-products,abstract-products"
             },
             "relationships": {
                 "concrete-products": {
@@ -1226,7 +1551,7 @@ To retrieve general information about a concrete product, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/067_24241408?include=bundled-products,concrete-products,abstract-products"
+                "self": "https://glue.69.demo-spryker.com:80/concrete-products/067_24241408"
             },
             "relationships": {
                 "abstract-products": {
@@ -1247,7 +1572,17 @@ To retrieve general information about a concrete product, send the request:
                 "quantity": 1
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/214_123/bundled-products"
+                "self": "https://glue.69.demo-spryker.com:80/concrete-products/214_123/bundled-products"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "067_24241408"
+                        }
+                    ]
+                }
             }
         },
         {
@@ -1301,7 +1636,7 @@ To retrieve general information about a concrete product, send the request:
                 "url": "/en/samsung-galaxy-gear-110"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/abstract-products/110"
+                "self": "https://glue.69.demo-spryker.com:80/abstract-products/110?include=bundled-products,concrete-products,abstract-products"
             },
             "relationships": {
                 "concrete-products": {
@@ -1351,7 +1686,7 @@ To retrieve general information about a concrete product, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/110_19682159?include=bundled-products,concrete-products,abstract-products"
+                "self": "https://glue.69.demo-spryker.com:80/concrete-products/110_19682159"
             },
             "relationships": {
                 "abstract-products": {
@@ -1372,7 +1707,17 @@ To retrieve general information about a concrete product, send the request:
                 "quantity": 3
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/214_123/bundled-products"
+                "self": "https://glue.69.demo-spryker.com:80/concrete-products/214_123/bundled-products"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "110_19682159"
+                        }
+                    ]
+                }
             }
         },
         {
@@ -1412,7 +1757,7 @@ To retrieve general information about a concrete product, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/175_26564922?include=bundled-products,concrete-products,abstract-products"
+                "self": "https://glue.69.demo-spryker.com:80/concrete-products/175_26564922"
             },
             "relationships": {
                 "abstract-products": {
@@ -1462,7 +1807,7 @@ To retrieve general information about a concrete product, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/175_26935356?include=bundled-products,concrete-products,abstract-products"
+                "self": "https://glue.69.demo-spryker.com:80/concrete-products/175_26935356"
             },
             "relationships": {
                 "abstract-products": {
@@ -1534,7 +1879,7 @@ To retrieve general information about a concrete product, send the request:
                 "url": "/en/samsung-galaxy-tab-a-sm-t550n-16-gb-175"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/abstract-products/175"
+                "self": "https://glue.69.demo-spryker.com:80/abstract-products/175?include=bundled-products,concrete-products,abstract-products"
             },
             "relationships": {
                 "concrete-products": {
@@ -1559,58 +1904,13 @@ To retrieve general information about a concrete product, send the request:
                 "quantity": 2
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/214_123/bundled-products"
-            }
-        },
-        {
-            "type": "concrete-products",
-            "id": "214_123",
-            "attributes": {
-                "sku": "214_123",
-                "isDiscontinued": false,
-                "discontinuedNote": null,
-                "averageRating": null,
-                "reviewCount": 0,
-                "productAbstractSku": "214",
-                "name": "Samsung Bundle",
-                "description": "This is a unique product bundle featuring various Samsung products. Items in this bundle are 2 x Samsung Galaxy Tab A SM-T550N 32 GB, 3 x Samsung Galaxy Gear, and 1 x Samsung Galaxy S5 mini",
-                "attributes": {
-                    "brand": "Samsung",
-                    "bundled_product": "Yes"
-                },
-                "superAttributesDefinition": [],
-                "metaTitle": "Samsung Bundle",
-                "metaKeywords": "Samsung,Smart Electronics, Bundle",
-                "metaDescription": "Ideal for extreme sports and outdoor enthusiasts Exmor R™ CMOS sensor with enhanced sensitivity always gets the shot: Mountain-biking downhill at breakneck",
-                "attributeNames": {
-                    "brand": "Brand",
-                    "bundled_product": "Bundled Product"
-                }
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/214_123?include=bundled-products,concrete-products,abstract-products"
+                "self": "https://glue.69.demo-spryker.com:80/concrete-products/214_123/bundled-products"
             },
             "relationships": {
-                "abstract-products": {
+                "concrete-products": {
                     "data": [
                         {
-                            "type": "abstract-products",
-                            "id": "214"
-                        }
-                    ]
-                },
-                "bundled-products": {
-                    "data": [
-                        {
-                            "type": "bundled-products",
-                            "id": "067_24241408"
-                        },
-                        {
-                            "type": "bundled-products",
-                            "id": "110_19682159"
-                        },
-                        {
-                            "type": "bundled-products",
+                            "type": "concrete-products",
                             "id": "175_26935356"
                         }
                     ]
@@ -1623,9 +1923,10 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 
-<a name="concrete-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md -->
+<a name="abstract-products-response-attributes"></a>
+
+{% include pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
@@ -1635,22 +1936,20 @@ To retrieve general information about a concrete product, send the request:
 | product-options | price | Integer | Specifies the option price in cents. |
 | product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
-For other attributes of the included resources, see:
-
-* [Retrieve sales units of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-sales-units.html#sales-units-response-attributes)
-* [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html#measurement-units-response-attributes)
-* [Retrieve image sets of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
-* [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes)
-* [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-concrete-product-prices.html#response)
+For the attributes of other included resources, see:
+* [Retrieve image sets of an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
+* [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-using-glue-api/retrieve-abstract-product-availability.html#abstract-product-availability-response-attributes)
+* [Retrieve prices of an abstract product](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html#category-nodes-response-attributes)
+* [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-product-labels.html#product-labels-response-attributes)
-* [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
-
+* [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
+* [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 
 ## Possible errors
 
 | CODE | REASON |
-| --- | --- |
-| 302 | Concrete product is not found. |
-| 312 | Concrete product is not specified.  |
-
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+|-|-|
+| 301 | Abstract product is not found. |
+| 311 | Abstract product SKU is not specified. |

@@ -13,13 +13,13 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/concrete-products/retrieving-sales-units.html
 related:
   - title: Retrieving concrete products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
   - title: Retrieve concrete product availability
     link: docs/pbc/all/warehouse-management-system/page.version/manage-using-glue-api/retrieve-concrete-product-availability.html
   - title: Retrieving concrete product prices
     link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
   - title: Measurement units feature overview
     link: docs/scos/user/features/page.version/measurement-units-feature-overview.html
 ---
@@ -105,7 +105,7 @@ Request sample: retrieve sales units
 | is default | boolean | Defines if the sales unit is selected by default on the product details page. |
 | measurementUnitCode | string | Code of the measurement unit. |
 
-See [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-measurement-units.html) for more information on managing the sales units.
+See [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html) for more information on managing the sales units.
 
 ## Possible errors
 

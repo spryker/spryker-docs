@@ -2633,9 +2633,9 @@ For the attributes of other included resources, see the following:
 * [Threshold attributes](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#threshold-attributes).
 * [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#guest-cart-response-attributes)
 * [Gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
-* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/retrieve-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/retrieve-abstract-products.html#abstract-products-response-attributes)
-*  [Retrieving bundled products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/retrieve-bundled-products.html#bundled-products-response-attributes)
+* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
+*  [Retrieving bundled products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-bundled-products.html#bundled-products-response-attributes)
 
 ## Add a configurable bundle to a guest cart
 

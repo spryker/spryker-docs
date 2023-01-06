@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-categories/retrieving-category-nodes.html
 related:
   - title: Retrieving category trees
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/retrieve-category-trees.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
   - title: Category Management feature overview
     link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
 ---
@@ -39,7 +39,7 @@ To retrieve a category node, send the request:
 
 |PATH PARAMETER | DESCRIPTION |
 |---|---|
-| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/retrieve-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
+| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
 
 ### Request
 

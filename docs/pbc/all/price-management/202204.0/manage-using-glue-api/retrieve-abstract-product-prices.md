@@ -18,11 +18,11 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
 related:
   - title: Retrieving abstract products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/retrieve-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving image sets of abstract products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/retrieve-image-sets-of-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
     link: docs/pbc/all/tax-management/page.version/manage-via-glue-api/retrieve-tax-sets.html
 ---

@@ -17,13 +17,13 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
 related:
   - title: Retrieving concrete products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
   - title: Retrieve concrete product availability
     link: docs/pbc/all/warehouse-management-system/page.version/manage-using-glue-api/retrieve-concrete-product-availability.html
   - title: Retrieving image sets of concrete products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-image-sets-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
   - title: Retrieving sales units
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/retrieve-sales-units.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
 ---
 
 This endpoint allows retrieving prices of concrete products.

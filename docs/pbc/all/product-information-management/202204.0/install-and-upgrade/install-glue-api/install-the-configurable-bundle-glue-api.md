@@ -19,7 +19,7 @@ related:
   - title: Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Retrieving configurable bundle templates
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/retrieve-configurable-bundle-templates.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
   - title: Retrieving orders
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
 ---

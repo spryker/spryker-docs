@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/{{site.version}}/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
 ---
 
-This document describes how to retrieve tax sets of abstract products. To retrieve full information of abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/retrieve-abstract-products.html).
+This document describes how to retrieve tax sets of abstract products. To retrieve full information of abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
 
 ## Installation
 

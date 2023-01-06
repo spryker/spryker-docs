@@ -1219,30 +1219,61 @@ entries:
                 url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-label.csv.html
           - title: Manage in the Back Office
             nested:
-              - title: Manage abstract products and product bundles
+              - title: Attributes
                 nested:
-                  - title: Create abstract products and product bundles
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
-                  - title: Edit abstract products and product bundles
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
-                  - title: Assign product attributes to abstract products
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
-              - title: Manage product variants
+                  - title: Create product attributes
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/attributes/create-product-attributes.html
+                  - title: Edit product attributes
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/attributes/edit-product-attributes.html
+              - title: Products
                 nested:
-                  - title: Create product variants
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
-                  - title: Edit product variants
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
-                  - title: Assign product attributes to product variants
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html
-                  - title: Add product alternatives
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
-                  - title: Discontinue products
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
-              - title: "Creating service offerings: best practices"
-                url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/create-service-offerings-best-practices.html
-              - title: Manage products
-                url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-products.html
+                  - title: "Creating service offerings: best practices"
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/create-service-offerings-best-practices.html
+                  - title: Manage abstract products and product bundles
+                    nested:
+                      - title: Create abstract products and product bundles
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
+                      - title: Edit abstract products and product bundles
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
+                      - title: Assign product attributes to abstract products
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
+                  - title: Manage product variants
+                    nested:
+                      - title: Create product variants
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
+                      - title: Edit product variants
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
+                      - title: Assign product attributes to product variants
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html
+                      - title: Add product alternatives
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
+                      - title: Discontinue products
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
+              - title: Product labels
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/create-product-labels.html
+                  - title: Edit
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/edit-product-labels.html
+                  - title: View
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/View-product-labels.html
+              - title: Product lists
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-lists/create-product-lists.html
+                  - title: Edit
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-lists/edit-product-lists.html
+              - title: Product options
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-options/create-product-options.html
+                  - title: Edit
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-options/edit-product-options.html
+          - title: Manage using Glue API
+            url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-manage-products.html
+            nested:
+
+
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:

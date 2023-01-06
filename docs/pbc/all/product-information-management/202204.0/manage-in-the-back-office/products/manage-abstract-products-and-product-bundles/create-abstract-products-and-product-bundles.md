@@ -24,9 +24,9 @@ related:
   - title: Managing Products
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-products.html
   - title: Discontinuing Products
-    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
   - title: Adding Product Alternatives
-    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
 ---
 
 This doc describes how to create [abstract products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html).

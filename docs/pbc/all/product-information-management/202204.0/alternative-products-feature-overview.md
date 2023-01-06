@@ -42,7 +42,7 @@ On the product details page of a product that's a product alternative for anothe
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html) |
+| [Add product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) |
 
 ## Related Developer articles
 

@@ -51,7 +51,7 @@ To create a product variant:
 5. Optional: Click **Next** to go to **Image** to add images for the product and define the image order.
 6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and *Product Alternatives*. See [Discontinuing products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html) and [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and *Product Alternatives*. See [Discontinuing products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html) and [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 

@@ -17,8 +17,6 @@ related:
     link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Decimal Stock migration concept
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/decimal-stock-migration-concept.html
-  - title: Float Stock for Products
-    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
   - title: Split Delivery migration concept
     link: docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
   - title: Silex Replacement migration concept

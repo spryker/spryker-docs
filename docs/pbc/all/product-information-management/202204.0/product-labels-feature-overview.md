@@ -47,9 +47,9 @@ A developer can create [dynamic product labels](#dynamic-product-label).
 The following dynamic product labels are shipped by default:
 
 * *Discontinued*
-<br>The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. To learn more, see [Discontinuing a product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html).
+<br>The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. To learn more, see [Discontinuing a product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html).
 * *Alternatives available*
-<br>The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/pbc/all/product-information-management/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. To learn more, see [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html).
+<br>The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/pbc/all/product-information-management/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. To learn more, see [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html).
 
 * *NEW*
 <br>The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).

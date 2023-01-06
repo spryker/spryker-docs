@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/managing-products
 related:
   - title: Discontinuing Products
-    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/discontinue-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
   - title: Adding Product Alternatives
-    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-concrete-products/add-product-alternatives.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
   - title: Product feature overview
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---

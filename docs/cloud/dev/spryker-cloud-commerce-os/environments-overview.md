@@ -27,7 +27,8 @@ Your production environment must host the code that the end-user gets to interac
 
 {% info_block infoBox "Note" %}
 
-Do not make changes to the production environments directly unless they have been verified on your staging and dev environments first.
+Do not make changes to the production environments directly unless they have been verified on your staging and dev environments first. 
+We highly recommend to test every data load and import, as well as any integrations on your staging environment.
 
 {% endinfo_block %}
 

@@ -50,7 +50,7 @@ This opens the **Edit Tax Set** page with a success message displayed.
 
 * Assign a tax set to an existing product variant by [editing product variants](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/editing-product-variants.html).
 
-* Assign a tax set to a product option by [creating product options](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/product-options/creating-product-options.html).
+* Assign a tax set to a product option by [creating product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html).
 
 * Assign a tax set to a threshold's fee by [managing threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-in-the-back-office/manage-threshold-settings.html).
 

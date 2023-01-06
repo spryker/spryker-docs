@@ -14,8 +14,8 @@ redirect_from:
   - /2021080/docs/en/creating-product-bundles
   - /docs/creating-product-bundles
   - /docs/en/creating-product-bundles
-  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
-  - /docs/scos/user/back-office-user-guides/202204.0/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html  
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html  
 related:
   - title: Creating Product Variants
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html

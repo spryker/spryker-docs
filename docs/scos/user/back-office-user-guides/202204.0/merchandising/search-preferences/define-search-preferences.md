@@ -15,9 +15,9 @@ related:
   - title: Edit search preferences
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-preferences/edit-search-preferences.html
   - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
   - title: Managing Filter Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-filter-preferences.html
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/filter-preferences/define-filter-preferences.html
   - title: Search feature overview
     link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
 ---

@@ -1371,7 +1371,7 @@ entries:
           - "202108.0"
           nested:
           - title: Creating abstract products and product bundles
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
           - title: Adding scheduled prices to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-scheduled-prices-to-abstract-products.html
             include_versions:

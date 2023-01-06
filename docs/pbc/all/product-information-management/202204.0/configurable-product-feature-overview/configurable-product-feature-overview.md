@@ -1,7 +1,7 @@
 ---
 title: Configurable Product feature overview
 description: All the details about the Configurable Product feature of Spryker.
-last_updated: Nov 29, 2022
+last_updated: Dec 27, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
@@ -23,11 +23,11 @@ For example, if you are selling a workstation installation service, before purch
 
 To configure a product, a customer opens a product configurator from the *Product Details* page by clicking the **Configure** button. They are then redirected back to the *Product Details* page and can add the configured product to the wishlist or cart.
 
-![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-product-details-page.png)
+![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configure-button-on-product-details-page.png)
 
 After adding a configurable product to the cart, a customer can change the product configuration from the **Cart** page.
 
-![configure-button-on-the-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-the-cart-page.png)
+![configure-button-on-the-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configure-button-on-the-cart-page.png)
 
 ### Creating configurable products
 
@@ -43,19 +43,19 @@ A Back Office user can add configurable products as regular products to pages, c
 
 They can see which products are configurable in the product catalog and edit them as regular products. However, a Back Office user cannot change configuration parameters.
 
-![configurable-product-entry-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-entry-in-the-back-office.png)
+![configurable-product-entry-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-entry-in-the-back-office.png)
 
 In the orders, a Back Office user can see which products are configurable. They can also see the configuration of each product, but they cannot change the selected parameters.
 
-![order-with-a-configurable-product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/order-with-a-configurable-product.png)
+![order-with-a-configurable-product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/order-with-a-configurable-product.png)
 
 ## Product configurator
 
-A *product configurator* is a tool that allows customers to customize the product parameters provided by the shop owner or product manufacturer.
+A *product configurator* is a tool that lets customers customize the product parameters provided by the shop owner or product manufacturer.
 
 You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an example product configurator. The example product configurator allows configuring the *Date* and *Preferred time of the day* parameters.
 
-![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/examplary-product-configurator.png)
+![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/examplary-product-configurator.png)
 
 ### How a Spryker shop interacts with a product configurator
 
@@ -75,7 +75,7 @@ There are two parameter types: configuration parameters and display parameters.
 
 Display parameter values are usually converted from configuration parameter values to show data in a user-friendly format. For example, a product configurator passes the configuration parameter to a shop: `"time_of_the_day": 3`. Since, in the configurator, `3` stands for `afternoon`, the shop displays **Preferred time of the day: Afternoon**.
 
-![display-data-in-a-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/display-data-in-a-configurator.png)
+![display-data-in-a-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/display-data-in-a-configurator.png)
 
 
 ### Availability calculation in a product configurator
@@ -96,13 +96,13 @@ If the configurator does not provide a price, [a regular product price](/docs/pb
 
 When [importing configurable products](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product.
 
-If the configuration is complete, on the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first three descriptive attributes set in the configurator. Under the attributes, the **Show** and **Hide** buttons allow the customer to expand and collapse the remaining attributes to review them. The customer can purchase the product without again opening the configurator and selecting parameters, if they determine the configuration is complete.
+If the configuration is complete, on the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first three descriptive attributes set in the configurator. Under the attributes, the **Show** and **Hide** buttons let the customer expand and collapse the remaining attributes to review them. The customer can purchase the product without again opening the configurator and selecting parameters, if they determine the configuration is complete.
 
-![configurtion-complete-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/Features/Configurable+Product+feature+overview/configurtion-complete-message.png)
+![configurtion-complete-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurtion-complete-message.png)
 
 If the configuration is not complete, on the *Product details* page, a customer sees a message that the configuration needs to be completed. To purchase the product, they open the configurator and select a configuration. However, they can add a product with an incomplete configuration to a wishlist. In this scenario, they can finish the configuration from the *Wishlist* page.
 
-![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
+![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/incomplete-configurtion-message.png)
 
 
 Even if all the parameter values are [preconfigured](#preconfigured-parameter-values), but the configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the preconfigured values, though.
@@ -111,15 +111,15 @@ Even if all the parameter values are [preconfigured](#preconfigured-parameter-va
 
 #### Request for Quote with a configurable product
 
-The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A customer can only request a quote for a product with a complete configuration.
+The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A customer can only request a quote for a product with a complete configuration.
 
 #### Shopping List with a configurable product
 
-The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to the [Shopping List](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
+The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to the [Shopping List](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
 
 #### Wish List with a configurable product
 
-The information in [Complete and incomplete configuration](#complete-and-incomplete-configuration) applies to the [Wish List](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/wishlist-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
+The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to the [Wish List](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/wishlist-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
 
 ### Preconfigured parameter values
 
@@ -133,7 +133,7 @@ If a developer defines that the configuration of such a product needs to be comp
 
 Customers configure a product on the Storefront as follows:
 
-![configurable-product-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-on-the-storefront.gif)
+<iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" frameborder="0" allowfullscreen></iframe>
 
 ## Related Developer articles
 

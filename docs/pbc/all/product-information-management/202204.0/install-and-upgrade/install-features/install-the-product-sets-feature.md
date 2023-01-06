@@ -18,10 +18,6 @@ redirect_from:
 related:
   - title: Product Sets feature overview
     link: docs/scos/user/features/page.version/product-sets-feature-overview.html
-  - title: Managing product sets
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/managing-product-sets.html
-  - title: Creating product sets
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/creating-product-sets.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-sets-feature.md -->

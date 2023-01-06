@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
 related:
   - title: Merchant Custom Prices feature overview
-    link: docs/scos/user/features/page.version/merchant-custom-prices-feature-overview.html
+    link: docs/pbc/all/price-management/page.version/merchant-custom-prices-feature-overview.html
 ---
 
 {% info_block warningBox "B2B only" %}

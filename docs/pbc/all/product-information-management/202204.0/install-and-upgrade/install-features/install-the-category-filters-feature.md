@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/category-filters-feature-integration.html
 related:
   - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-category-filters-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-category-filters-feature.md -->

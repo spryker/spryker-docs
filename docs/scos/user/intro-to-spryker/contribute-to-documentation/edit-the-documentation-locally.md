@@ -21,4 +21,11 @@ This document describes how to you can edit documents on your machine and submit
 8. Click **Create Branch**.
     This changes the **Current Branch** to the branch name you've entered. The branch exists only on your machine.
 9. To add the branch to our repository on GitHub, click **Publish branch**.
-10.     
+
+
+##
+
+1. Open the document you want to edit in an editor.
+2. Add the needed changes.
+    You'd help us a lot by following [Markdown syntax](/docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html) and [general rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html), but it's completely optional. We are grateful for your contribution in any form.
+3.     

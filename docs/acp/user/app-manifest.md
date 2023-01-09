@@ -225,7 +225,7 @@ For the manifest, make sure to follow these conditions:
       "B2C_MARKETPLACE"
     ]
   }
-}
+]
 ```
 </details>
 

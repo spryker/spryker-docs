@@ -1,5 +1,5 @@
 ---
-title: Glue API: Retrieve measurement units
+title: "Glue API: Retrieve measurement units"
 description: Retrieve details about measurement units and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

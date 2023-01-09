@@ -186,5 +186,3 @@ Out-of-the-box the following payment methods are included:
 In addition to the existing Arvato RSS integration, Spryker has added the AfterPay payment method of Arvato, further extending the overall payment integrations of the Spryker Ecosystem. This invoice payment method includes a risk check of the potential uncertainty behind specific purchases and lowers the overall risk of fraud; used by default for the companies.
 
 **Documentation**: [AfterPay](/docs/scos/user/technology-partners/201903.0/payment-partners/afterpay.html).
-
-Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

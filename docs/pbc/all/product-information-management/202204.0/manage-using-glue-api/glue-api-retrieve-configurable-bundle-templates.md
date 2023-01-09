@@ -1,5 +1,5 @@
 ---
-title: Glue API: Retrieving configurable bundle templates
+title: "Glue API: Retrieving configurable bundle templates"
 description: Retrieve configurable bundle templates via Glue API
 last_updated: Jul 19, 2021
 template: glue-api-storefront-guide-template

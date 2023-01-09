@@ -33,7 +33,7 @@ Tax sets can be applied to an abstract product, product option, and shipment:
 
 | ENTITY | INSTRUCTIONS ON DEFINING TAX SETS FOR THE ENTITY IN THE BACK OFFICE  | DETAILS ON THE IMPORT FILE TO IMPORT TAX SETS FOR THE ENTITY |
 | --- | --- | --- |
-| Abstract product | [Define prices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) |
+| Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) |
 | Product option | [Creating a product option](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/product-options/create-product-options.html) | [File details: product_option.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) |
 | Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/manage-in-the-back-office/add-delivery-methods.html) | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
 

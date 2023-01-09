@@ -1,5 +1,5 @@
 ---
-title: Glue API: Manage products
+title: "Glue API: Manage products"
 description: Describes the endpoints used to manage products
 template: concept-topic-template
 ---

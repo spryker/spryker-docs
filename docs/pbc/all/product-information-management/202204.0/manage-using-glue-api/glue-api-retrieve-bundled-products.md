@@ -1,5 +1,5 @@
 ---
-title: Glue API: Retrieving bundled products
+title: "Glue API: Retrieving bundled products"
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-bundled-products

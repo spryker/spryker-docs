@@ -252,5 +252,3 @@ To improve usability, the `vendor/bin/console setup:search` command which has be
 ### PHP Update
 PHP continuously develops and gets more exciting features. Also, old versions get deprecated, such as PHP7.1, which lost support by the end of 2019. From now on, Spryker modules will require **>=PHP7.2**. Please make sure your project doesn’t rely on deprecated technology and applies required infrastructural upgrades.
 While PHP7.2 is a minimum required version, we recommend looking at 7.3 and 7.4 as 7.2 is close to EOL. Such technology upgrades could require additional project refactoring, so please include them in your planning. For more information on the PHP versions see [here](https://www.php.net/supported-versions.php).
-
-Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

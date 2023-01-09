@@ -1,5 +1,5 @@
 ---
-title: Retrieving category nodes
+title: "Glue API: Retrieving category nodes"
 description: Retrieve information about category nodes.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

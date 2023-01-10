@@ -210,7 +210,7 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 {% info_block infoBox "Product details page" %}
 
-For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assign-products-to-categories.html).
 
 {% endinfo_block %}
 

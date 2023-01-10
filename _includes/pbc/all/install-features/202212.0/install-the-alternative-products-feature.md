@@ -106,20 +106,24 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| SpyProductAlternativeEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductAlternativeEntityTransfer |
-| SpyProductAlternativeStorageEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductAlternativeStorageEntityTransfer |
+| TRANSFER | TYPE | EVENT | PATH                                                                        |
+| --- | --- | --- |-----------------------------------------------------------------------------|
+| SpyProductAlternativeEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductAlternativeEntityTransfer           |
+| SpyProductAlternativeStorageEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductAlternativeStorageEntityTransfer    |
 | SpyProductReplacementForStorageEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductReplacementForStorageEntityTransfer |
-| ProductAlternative | class | created | src/Generated/Shared/Transfer/ProductAlternative |
-| ProductAlternativeResponse | class | created | src/Generated/Shared/Transfer/ProductAlternativeResponse |
-| ResponseMessage | class | created | src/Generated/Shared/Transfer/ResponseMessage |
-| ProductAlternativeCollection | class | created | src/Generated/Shared/Transfer/ProductAlternativeCollection |
-| ProductAlternativeCreateRequest | class | created | src/Generated/Shared/Transfer/ProductAlternativeCreateRequest |
-| ProductAlternativeListItem | class | created | src/Generated/Shared/Transfer/ProductAlternativeListItem |
-| ProductAlternativeList | class | created | src/Generated/Shared/Transfer/ProductAlternativeList |
-| ProductAlternativeStorage | class | created | src/Generated/Shared/Transfer/ProductAlternativeStorage |
-| ProductReplacementStorage | class | created | src/Generated/Shared/Transfer/ProductReplacementStorage |
+| ProductAlternative | class | created | src/Generated/Shared/Transfer/ProductAlternative                            |
+| ProductAlternativeResponse | class | created | src/Generated/Shared/Transfer/ProductAlternativeResponse                    |
+| ResponseMessage | class | created | src/Generated/Shared/Transfer/ResponseMessage                               |
+| ProductAlternativeCollection | class | created | src/Generated/Shared/Transfer/ProductAlternativeCollection                  |
+| ProductAlternativeCreateRequest | class | created | src/Generated/Shared/Transfer/ProductAlternativeCreateRequest               |
+| ProductAlternativeListItem | class | created | src/Generated/Shared/Transfer/ProductAlternativeListItem                    |
+| ProductAlternativeList | class | created | src/Generated/Shared/Transfer/ProductAlternativeList                        |
+| ProductAlternativeStorage | class | created | src/Generated/Shared/Transfer/ProductAlternativeStorage                     |
+| ProductReplacementStorage | class | created | src/Generated/Shared/Transfer/ProductReplacementStorage                     |
+| ProductAlternativeCriteria | class | created | src/Generated/Shared/Transfer/ProductAlternativeCriteriaTransfer            |
+| ProductAlternative | class | created | src/Generated/Shared/Transfer/ProductAlternativeTransfer            |
+| ProductAlternativeCollection | class | created | src/Generated/Shared/Transfer/ProductAlternativeCollectionTransfer            |
+| Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer            |
 
 {% endinfo_block %}
 
@@ -166,6 +170,38 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
  return $eventSubscriberCollection;
  }
+}
+```
+
+#### Set up publisher trigger plugins
+
+Add the following plugins to your project:
+
+| PLUGIN                              | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                                       |
+|-------------------------------------|-----------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| ProductAlternativePublisherTriggerPlugin | Allows publishing or re-publishing product alternative data manually. | None          | Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Publisher |
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\ProductAlternativeStorage\Communication\Plugin\Publisher\ProductAlternativePublisherTriggerPlugin;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new ProductAlternativePublisherTriggerPlugin(),
+        ];
+    }
 }
 ```
 

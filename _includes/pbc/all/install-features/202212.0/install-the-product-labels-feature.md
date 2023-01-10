@@ -160,6 +160,8 @@ Ensure that the following changes have been triggered in transfer objects:
 | ProductLabelProductAbstract | class | created | src/Generated/Shared/Transfer/ProductLabelProductAbstractTransfer |
 | ProductLabelProductAbstractRelations | class | created | src/Generated/Shared/Transfer/ProductLabelProductAbstractRelationsTransfer |
 | ProductLabelResponse | class | created | src/Generated/Shared/Transfer/ProductLabelResponseTransfer |
+| ProductLabelCollection | class | created | src/Generated/Shared/Transfer/ProductLabelCollectionTransfer |
+| Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer |
 | StorageProductLabel | class | created | src/Generated/Shared/Transfer/StorageProductLabelTransfer |
 | Message | class | created | src/Generated/Shared/Transfer/MessageTransfer |
 | FacetConfig | class | created | src/Generated/Shared/Transfer/FacetConfigTransfer |
@@ -189,15 +191,16 @@ Set up the following behaviors:
 
 1. Set up publishers:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductLabelWritePublisherPlugin | Updates the label data of the product page search when triggered by the provided product label events. | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabel |
-| ProductLabelProductAbstractWritePublisherPlugin | Updates the label data of the product page search when triggered by the provided product label product abstract relation events. | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelProductAbstract |
-| ProductLabelStoreWritePublisherPlugin | Updates the product abstract data in the search engine when triggered by the provided publish and unpublish events of the product label and product abstract relation. | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelStore |
-| ProductAbstractLabelWritePublisherPlugin | Updates product abstract data in the storage when triggered by the provided publish and unpublish events of the product label and product abstract relation. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductAbstractLabel |
-| ProductLabelDictionaryWritePublisherPlugin | Updates the data of the product label dictionary in the storage when triggered by the provided product label storage events. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
-| ProductLabelProductAbstractWritePublisherPlugin | Updates the product abstract data in the storage when triggered by the provided events of product label and product abstract relation. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelProductAbstract |
-| ProductLabelDictionaryDeletePublisherPlugin| Removes all the data of the product label dictionary storage when triggered by the provided product label dictionary events. | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
+| PLUGIN                                          | SPECIFICATION                                                                                                                                                          | PREREQUISITES | NAMESPACE |
+|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- | --- |
+| ProductLabelWritePublisherPlugin                | Updates the label data of the product page search when triggered by the provided product label events.                                                                 | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabel |
+| ProductLabelProductAbstractWritePublisherPlugin | Updates the label data of the product page search when triggered by the provided product label product abstract relation events.                                       | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelProductAbstract |
+| ProductLabelStoreWritePublisherPlugin           | Updates the product abstract data in the search engine when triggered by the provided publish and unpublish events of the product label and product abstract relation. | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelStore |
+| ProductAbstractLabelWritePublisherPlugin        | Updates product abstract data in the storage when triggered by the provided publish and unpublish events of the product label and product abstract relation.           | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductAbstractLabel |
+| ProductLabelDictionaryWritePublisherPlugin      | Updates the data of the product label dictionary in the storage when triggered by the provided product label storage events.                                           | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
+| ProductLabelProductAbstractWritePublisherPlugin | Updates the product abstract data in the storage when triggered by the provided events of product label and product abstract relation.                                 | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelProductAbstract |
+| ProductLabelDictionaryDeletePublisherPlugin     | Removes all the data of the product label dictionary storage when triggered by the provided product label dictionary events.                                           | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
+| ProductLabelSearchPublisherTriggerPlugin        | Allows publishing or re-publishing product label search data manually.                                                                                                 | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -206,6 +209,7 @@ Set up the following behaviors:
 
 namespace Pyz\Zed\Publisher;
 
+use Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelSearchPublisherTriggerPlugin
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabel\ProductLabelWritePublisherPlugin as ProductLabelSearchWritePublisherPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelProductAbstract\ProductLabelProductAbstractWritePublisherPlugin as ProductLabelProductAbstractSearchWritePublisherPlugin;
 use Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher\ProductLabelStore\ProductLabelStoreWritePublisherPlugin as ProductLabelStoreSearchWritePublisherPlugin;
@@ -250,6 +254,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductLabelProductAbstractStorageWritePublisherPlugin(),
             new ProductLabelDictionaryStorageWritePublisherPlugin(),
             new ProductLabelDictionaryStorageDeletePublisherPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new ProductLabelSearchPublisherTriggerPlugin(),
         ];
     }
 }

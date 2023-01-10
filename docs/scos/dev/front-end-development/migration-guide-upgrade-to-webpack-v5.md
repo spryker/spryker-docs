@@ -21,30 +21,27 @@ So we need to migrate as well to unblock future upgrades of other dependencies.
 
 ```json
 {
-    // update
     "clean-webpack-plugin": "~4.0.0",
     "compression-webpack-plugin": "~10.0.0",
     "copy-webpack-plugin": "~11.0.0",
     "mini-css-extract-plugin": "~2.7.2",
     "optimize-css-assets-webpack-plugin": "~6.0.1",
+    "postcss": "~8.4.20",
     "terser-webpack-plugin": "~5.3.6",
     "webpack": "~5.74.0",
-    "webpack-merge": "~5.8.0",
-    // add
-    "postcss": "~8.4.20"
+    "webpack-merge": "~5.8.0"
 }
 ```
 
-If using Merchant Portal:
+    - If Merchant Portal is used:
 
-```json
-{
-    // update
-    "@types/webpack": "~5.28.0"
-}
-```
+    ```json
+    {
+        "@types/webpack": "~5.28.0"
+    }
+    ```
 
-2. Run npm install to update and install dependencies. Ensure that the package-lock.json file and the node_modules folder have been updated.
+2. Run `npm i` to update and install dependencies. Make sure that the `package-lock.json` file and the `node_modules` folder have been updated. 
 
 ## 2) Update configuration files
 
@@ -230,7 +227,7 @@ const getAssetsConfig = (appSettings) => [
 
 ## 2) Build assets
 
-**Check correct builds for all layers `Yves`/`Zed`/`MP` including `watch`/`production` modes:**
+**Check correct builds for all layers `Yves`/`Zed`/`MP` (if Merchant Portal is used) including `watch`/`production` modes:**
 
 1. `Yves`:
 
@@ -248,7 +245,7 @@ npm run zed:production
 npm run zed:watch
 ```
 
-3. `MP` (If using Merchant Portal):
+3. `MP` (If Merchant Portal is used):
 
 ```bash
 npm run mp:build

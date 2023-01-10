@@ -112,7 +112,7 @@ So we need to migrate as well to unblock future upgrades of other dependencies.
    ]
    ```
 
-Remove the `cache` property in the `new TerserPlugin({ ... })` minimizer plugin.
+   Remove the `cache` property in the `new TerserPlugin({ ... })` minimizer plugin.
 
 4. `frontend/libs/assets-configurator.js`:
 

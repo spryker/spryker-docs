@@ -8,7 +8,7 @@ template: concept-topic-template
 The _File Manager_ feature allows uploading files required for your shop.
 
 
-To learn more about the feature and to find out how end users use it, see [File Manager](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [File Manager](/docs/scos/user/features/201811.0/file-manager-feature-overview/file-manager-feature-overview.html) for business users.
 
 
 

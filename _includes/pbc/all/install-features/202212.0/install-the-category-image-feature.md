@@ -132,12 +132,12 @@ Make sure that the following changes have been implemented in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| CategoryImageSetTransfer | class | created | src/Generated/Shared/Transfer/CategoryImageSetTransfer.php |
-| CategoryImageTransfer | class | created | src/Generated/Shared/Transfer/CategoryImageTransfer.php |
-| CategoryTransfer | class | created | src/Generated/Shared/Transfer/CategoryTransfer.php |
-| CategoryCriteriaTransfer | class | created | src/Generated/Shared/Transfer/CategoryCriteriaTransfer.php |
-| CategoryCollectionTransfer | class | created | src/Generated/Shared/Transfer/CategoryCollectionTransfer.php |
-| PaginationTransfer | class | created | src/Generated/Shared/Transfer/PaginationTransfer.php |
+| CategoryImageSet | class | created | src/Generated/Shared/Transfer/CategoryImageSetTransfer.php |
+| CategoryImage | class | created | src/Generated/Shared/Transfer/CategoryImageTransfer.php |
+| Category | class | created | src/Generated/Shared/Transfer/CategoryTransfer.php |
+| CategoryCriteria | class | created | src/Generated/Shared/Transfer/CategoryCriteriaTransfer.php |
+| CategoryCollection | class | created | src/Generated/Shared/Transfer/CategoryCollectionTransfer.php |
+| Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer.php |
 
 {% endinfo_block %}
 

@@ -246,6 +246,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/file-manager-feature-walkthrough.html
       include_versions:
       - "202108.0"
+      - "202212.0"
     - title: Gift Cards
       url: /docs/scos/dev/feature-walkthroughs/gift-cards-feature-walkthrough.html
       include_versions:

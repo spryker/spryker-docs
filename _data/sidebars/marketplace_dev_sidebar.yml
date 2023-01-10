@@ -369,6 +369,7 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
+            - "202212.0"
 
           - title: Marketplace Product Offer Prices feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
@@ -404,6 +405,7 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
+            - "202212.0"
 
           - title: Marketplace Product Option + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-option-cart-feature-integration.html
@@ -472,6 +474,7 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
+            - "202212.0"
 
           - title: Merchant Portal - Marketplace Product Option Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-option-management-feature-integration.html
@@ -558,6 +561,7 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
+                - "202212.0"
 
               - title: "Glue API: Marketplace Product Offer + Cart feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html
@@ -577,6 +581,7 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
+                - "202212.0"
 
               - title: "Glue API: Marketplace Product Offer Prices + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-wishlist-feature-integration.html

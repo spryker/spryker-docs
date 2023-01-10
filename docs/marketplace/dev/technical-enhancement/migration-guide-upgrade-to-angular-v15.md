@@ -61,8 +61,7 @@ So the update will require a major release for these modules:
 
 ## 2) Update Webpack
 
-Before starting migration it's required to update Webpack version with related dependencies and configurations.
-Here is the link to [Webpack migration guide](/docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html).
+Before starting the migration, make sure that Webpack is v5, if it's v4, the [Webpack migration guide](/docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html) is required.
 
 ## 3) Update NPM dependencies
 

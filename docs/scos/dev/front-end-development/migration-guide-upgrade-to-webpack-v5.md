@@ -41,7 +41,12 @@ So we need to migrate as well to unblock future upgrades of other dependencies.
      }
      ```
 
-2. Run `npm i` to update and install dependencies. Make sure that the `package-lock.json` file and the `node_modules` folder have been updated. 
+2. Run `npm i` to update and install dependencies. Make sure that the `package-lock.json` file and the `node_modules` folder have been updated:
+
+   ```bash
+	rm -rf node_modules
+	npm install
+	```
 
 ## 2) Update configuration files
 

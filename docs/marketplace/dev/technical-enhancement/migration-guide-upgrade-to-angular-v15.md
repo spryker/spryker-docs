@@ -4,7 +4,7 @@ description: Use the guide to update versions of the Angular and related modules
 template: module-migration-guide-template
 ---
 
-## Upgrading from version 12.* to version 15.*
+## Upgrading Angular from version 12.* to version 15.*
 
 This document provides instructions for upgrading Angular to version 15 in your Spryker project.
 

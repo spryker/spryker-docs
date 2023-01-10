@@ -8,8 +8,6 @@ redirect_from:
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
-  - title: Upgrader tool overview
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
   - title: Define custom prefixes for core entity names
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html    
 ---

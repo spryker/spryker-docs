@@ -3,7 +3,6 @@ title: Glue API - Authentication integration
 description: Create an authentication token for the Storefront and Backend API applications in a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
-redirect_from:
 ---
 
 This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.

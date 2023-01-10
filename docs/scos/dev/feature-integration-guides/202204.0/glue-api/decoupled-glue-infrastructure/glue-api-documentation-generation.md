@@ -2,7 +2,6 @@
 title: Glue API - Glue documentation generation
 description: Integrate the Glue documentation generation into your project
 template: feature-integration-guide-template
-redirect_from:
 ---
 
 This document describes how to integrate the Glue documentation generation into a Spryker project.

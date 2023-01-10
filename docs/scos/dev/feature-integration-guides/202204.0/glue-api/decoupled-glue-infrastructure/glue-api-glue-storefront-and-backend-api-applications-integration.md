@@ -3,7 +3,6 @@ title: Glue API - Glue Storefront and Backend API applications integration
 description: Integrate the Glue Storefront and Backend API applications into a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
-redirect_from:
 ---
 
 This document describes how to integrate the Glue Storefront and Backend API applications into a Spryker project.

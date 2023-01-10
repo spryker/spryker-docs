@@ -224,8 +224,11 @@ Lets you mock and access the factory.
 #### DependencyHelper
 
 Lets you mock the dependencies of a module.
+
 To enable this feature, in the config used to run tests, set `\Spryker\Shared\Kernel\KernelConstants::ENABLE_CONTAINER_OVERRIDING` to `true`. This is already implemented in `config_ci.php` in our Demo Shops.
+
 Calling in your test `$this->tester->setDependency(OmsDependencyProvider::FACADE_SALES, $salesFacadeMock);` provides `$salesFacadeMock` whenever any model is created with a dependency to Sales facade.
+
 Technically, in the `Oms` module, calling `$this->getProvidedDependency(OmsDependencyProvider::FACADE_SALES)` returns `$salesFacadeMock`.
 
 ## PropelSchemaHelper

@@ -20,7 +20,7 @@ related:
   - title: Creating Product Variants
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
   - title: Editing Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variants.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Managing Products
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-products.html
   - title: Discontinuing Products

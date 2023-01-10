@@ -1272,8 +1272,19 @@ entries:
           - title: Manage using Glue API
             url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-manage-products.html
             nested:
-
-
+              - title: Abstract products
+                nested:
+                  - title: Retrieve abstract products
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+                  - title: Retrieve image sets of abstract products
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+              - title: Categories
+                nested:
+                  - title: Retrieve category nodes
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
+                  - title: Retrieve category trees
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
+              - title:
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:

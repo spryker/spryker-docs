@@ -10,10 +10,7 @@ redirect_from:
   - /2021080/docs/en/content-item-types-module-relations
   - /docs/content-item-types-module-relations
   - /docs/en/content-item-types-module-relations
-  - /docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html
-related:
-  - title: Creating Content Items
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/creating-content-items.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/content-items-feature-walkthrough/content-item-types-module-relations.html
 ---
 
 This document describes each content item type and the modules relations used for them.

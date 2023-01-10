@@ -132,7 +132,7 @@ To learn what a content manager can do with content items in the Back Office&nbs
 
 A template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
-* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Create categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/create-categories.html).
+* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Create categories](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/category/create-categories.html).
 * CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. For more information, see [Creating a CMS Page](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/pages/create-cms-pages.html).
 
 A developer can apply templates with slots to all the other page types.

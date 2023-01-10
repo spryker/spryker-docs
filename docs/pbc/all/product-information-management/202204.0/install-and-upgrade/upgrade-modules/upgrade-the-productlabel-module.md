@@ -34,7 +34,7 @@ related:
   - title: Migration guide - Product Label GUI
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
   - title: Migration guide - Product
-    link: docs/pbc/all/product-information-management/site.version/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Migration guide - Product Bundle
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
 ---

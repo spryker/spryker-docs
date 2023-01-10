@@ -91,7 +91,7 @@ Each section contains reference information. Make sure to look up the necessary 
 
 ## Edit product variants of an abstract product
 
-To edit a product variant, see [Edit product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html).
+To edit a product variant, see [Edit product variants](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html).
 To create a product variant, see [Create product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 
 ## Edit meta information of an abstract product or product bundle

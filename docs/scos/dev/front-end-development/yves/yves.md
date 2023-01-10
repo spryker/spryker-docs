@@ -1,6 +1,6 @@
 ---
 title: Yves
-description: working with Yves tools in Spryker Commerce OS
+description: Working with Yves tools in Spryker Commerce OS
 template: concept-topic-template
 last_updated: Jan 10, 2023
 ---

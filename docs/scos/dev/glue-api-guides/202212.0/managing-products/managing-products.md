@@ -1,6 +1,7 @@
 ---
 title: Managing products
 description: Describes the endpoints used to manage products
+last_updated: Jan 10, 2023
 template: concept-topic-template
 ---
 

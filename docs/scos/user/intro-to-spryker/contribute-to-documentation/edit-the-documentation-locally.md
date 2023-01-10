@@ -2,6 +2,7 @@ This document describes how to you can edit documents on your machine and submit
 
 ## Prerequisites
 
+* Account on [GitHub](github.com).
 * [GitHub Desktop](https://desktop.github.com/).
 * Editor of your choice. We recommend [Visual Studio Code](https://code.visualstudio.com/) or similar editors that let you browse files.
 
@@ -22,8 +23,11 @@ This document describes how to you can edit documents on your machine and submit
     This changes the **Current Branch** to the branch name you've entered. The branch exists only on your machine.
 9. To add the branch to our repository on GitHub, click **Publish branch**.
 
+## Find the documents you want to edit on your machine
 
-##
+At this point, you are most likely to know which document you want to edit. To find the document on your machine, you need to look up its path in the URL. Open the document on our website and check the path starting from `/docs/`. For example, the URL of the document you are reading is `https://docs.spryker.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html`. The path of this document on your machine is `docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md`.  
+
+## Edit documents
 
 1. Open the document you want to edit in an editor.
 2. Add the needed changes.
@@ -34,3 +38,14 @@ This document describes how to you can edit documents on your machine and submit
 6. To add your changes to the branch, click **Commit to {BRANCH_NAME}**.
 7. To publish the changes on GitHub, click **Push origin**.
     If you are editing in several sessions, it is good practice to commit and push after each session. If something happens to the changes on your machine, they will be safe on GitHub, and you will be able to keep working on them.
+
+## Submit changes for publishing
+
+1. To prepare the changes to be published on the documentation website, click **Create Pull Request**.
+    This opens the **Open a pull request** page with prefilled name and description.
+2. Optional: Update the name to describe your changes.     
+3. Add a description of what you've changed.
+4. Click **Create pull request**.
+    This refreshes the page and displays the created pull request. The status is **Open**.
+
+That's it. We'll take it from here. During review, we can post comments for your changes. Notifications about comments and PR status changes will be emailed to the email address of your GitHub account.     

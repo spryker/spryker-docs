@@ -1256,7 +1256,7 @@ entries:
                   - title: Edit
                     url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/edit-product-labels.html
                   - title: View
-                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/View-product-labels.html
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/view-product-labels.html
               - title: Product lists
                 nested:
                   - title: Create

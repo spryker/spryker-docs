@@ -69,7 +69,7 @@ A developer can fetch the information on each abstract product included into a c
 
 ## Product Set
 
-The Product set content item is a content piece that consists of text and a [product set](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html). A content manager selects an existing product set when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-product-set-content-items.html#create-a-product-set-content-item) in the Back Office > **Content Management** > **Content Items**.
+The Product set content item is a content piece that consists of text and a [product set](/docs/pbc/all/content-management-system/{{page.version}}/product-sets-feature-overview.html). A content manager selects an existing product set when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/content-items/create-product-set-content-items.html#create-a-product-set-content-item) in the Back Office > **Content Management** > **Content Items**.
 
 The schema below shows the module relations of the Product set content item and its importer:
 ![Product Set content item module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/product-set-module-relations.png)

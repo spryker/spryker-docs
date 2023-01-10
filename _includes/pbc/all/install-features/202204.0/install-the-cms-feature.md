@@ -239,7 +239,7 @@ To switch the language:
 
 ### 4) Configure export to Redis and Elasticsearch
 
-1. Set up event listeners. By doing this step, you enable tables to be published upon a change—create, edit, or delete.
+1. Set up event listeners. This step enables tables to be published upon a change—create, edit, or delete.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -1055,10 +1055,10 @@ Enable the following behaviors by registering the plugins:
 | --- | --- | --- | --- |
 | CmsPageParameterMapExpanderPlugin | Expands collector data with the parameter map of CMS content page. | None | Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsPageDataExpander |
 | CmsBlockStorageStorageParameterMapExpanderPlugin | Expands storage data with the parameter map of CMS content widget. | None | Spryker\Zed\CmsContentWidget\Communication\Plugin\CmsBlockStorage |
-| CmsPageTableExpanderPlugin | **Preview** button in the **List of CMS pages**. | None | Spryker\Zed\CmsGui\Communication\Plugin |
+| CmsPageTableExpanderPlugin | The **Preview** button in the **List of CMS pages**. | None | Spryker\Zed\CmsGui\Communication\Plugin |
 | CreateGlossaryExpanderPlugin | Adds the **Preview** button to the **create a glossary** page. | None | Spryker\Zed\CmsGui\Communication\Plugin |
-|CmsBlockTemplateTwigLoaderPlugin|Loads the CMS block templates for being rendered using the CMS block template paths on Zed level.|None|Spryker\Zed\CmsBlock\Communication\Plugin\Twig|
-|CmsBlockTwigExtensionPlugin|Imports the Twig extension provided in the CMS block module.|None|Spryker\Zed\CmsBlock\Communication\Plugin\Twig|
+|CmsBlockTemplateTwigLoaderPlugin| Loads the CMS block templates for being rendered using the CMS block template paths on Zed level.|None|Spryker\Zed\CmsBlock\Communication\Plugin\Twig|
+|CmsBlockTwigExtensionPlugin| Imports the Twig extension provided in the CMS block module.|None|Spryker\Zed\CmsBlock\Communication\Plugin\Twig|
 
 **Pyz\Zed\Cms\CmsDependencyProvider**
 

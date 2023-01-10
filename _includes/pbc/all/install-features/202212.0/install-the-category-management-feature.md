@@ -600,11 +600,11 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 3. Set up trigger plugins:
 
-| PLUGIN | SPECIFICATION                                                     | PREREQUISITES | NAMESPACE |
-| --- |-------------------------------------------------------------------| --- | --- |
-| CategoryNodePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset.  | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher |
-| CategoryTreePublisherTriggerPlugin | Retrieves category trees based on the provided limit and offset.  | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher |
-| CategoryPagePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset.  | | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher|
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| CategoryNodePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher |
+| CategoryTreePublisherTriggerPlugin | Retrieves category trees based on the provided limit and offset. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher |
+| CategoryPagePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset. | | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher|
 | CategoryImagePublisherTriggerPlugin | Retrieves category images based on the provided limit and offset. | | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Publisher|
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**

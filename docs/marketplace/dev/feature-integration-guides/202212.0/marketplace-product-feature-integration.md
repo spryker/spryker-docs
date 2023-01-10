@@ -20,11 +20,11 @@ Follow the steps below to install the Marketplace Product feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME                 | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
-|----------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                        |
+| NAME | VERSION | INTEGRATION GUIDE        |
+| --------------- | -------- | ------------------ |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product              | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                                  |
+| Product   | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -38,8 +38,8 @@ composer require spryker-feature/marketplace-product:"{{page.version}}" --update
 
 Make sure that the following modules have been installed:
 
-| MODULE                    | EXPECTED DIRECTORY                          |
-|---------------------------|---------------------------------------------|
+| MODULE              | EXPECTED DIRECTORY                   |
+| ------------------- | ------------------------------------ |
 | MerchantProduct           | vendor/spryker/merchant-product             |
 | MerchantProductDataImport | vendor/spryker/merchant-product-data-import |
 | MerchantProductGui        | vendor/spryker/merchant-product-gui         |
@@ -84,9 +84,9 @@ console transfer:generate
 
 Verify that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY                | TYPE  | EVENT   |
-|--------------------------------|-------| ------- |
-| spy_merchant_product_abstract  | table | created |
+| DATABASE ENTITY               | TYPE  | EVENT   |
+| ----------------------------- | ----- | ------- |
+| spy_merchant_product_abstract | table | created |
 
 {% endinfo_block %}
 
@@ -100,21 +100,21 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                          | TYPE     | EVENT   | PATH                                                                    |
-|-----------------------------------|----------|---------|-------------------------------------------------------------------------|
-| MerchantProductCriteria           | class    | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer           |
-| MerchantProduct                   | class    | Created | src/Generated/Shared/Transfer/MerchantProductTransfer                   |
-| MerchantProductAbstract           | class    | Created | src/Generated/Shared/Transfer/MerchantProductAbstractTransfer           |
+| TRANSFER  | TYPE     | EVENT | PATH                                                            |
+| ----------------- |----------| ------ |-----------------------------------------------------------------|
+| MerchantProductCriteria   | class    | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer   |
+| MerchantProduct           | class    | Created | src/Generated/Shared/Transfer/MerchantProductTransfer           |
+| MerchantProductAbstract | class    | Created | src/Generated/Shared/Transfer/MerchantProductAbstractTransfer   |
 | MerchantProductAbstractCollection | class    | Created | src/Generated/Shared/Transfer/MerchantProductAbstractCollectionTransfer |
-| MerchantProductAbstractCriteria   | class    | Created | src/Generated/Shared/Transfer/MerchantProductAbstractCriteriaTransfer   |
-| MerchantProductCollection         | class    | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer         |
-| ProductAbstractMerchant           | class    | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer           |
-| MerchantSearchCollection          | class    | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer          |
-| MerchantProductStorage            | class    | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer            |
-| ProductAbstract.idMerchant        | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer                   |
-| MerchantProductView               | class    | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer               |
-| PageMap.merchantReferences        | property | Created | src/Generated/Shared/Transfer/PageMapTransfer                           |
-| Pagination                        | class    | Created | src/Generated/Shared/Transfer/PaginationTransfer                        |
+| MerchantProductAbstractCriteria | class    | Created | src/Generated/Shared/Transfer/MerchantProductAbstractCriteriaTransfer |
+| MerchantProductCollection | class    | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
+| ProductAbstractMerchant   | class    | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer   |
+| MerchantSearchCollection  | class    | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer  |
+| MerchantProductStorage    | class    | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer    |
+| ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer           |
+| MerchantProductView       | class    | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer       |
+| PageMap.merchantReferences | property | Created | src/Generated/Shared/Transfer/PageMapTransfer                   |
+| Pagination | class    | Created | src/Generated/Shared/Transfer/PaginationTransfer                   |
 
 {% endinfo_block %}
 
@@ -130,14 +130,14 @@ console translator:generate-cache
 
 Install the following plugins:
 
-| PLUGIN                                                    | SPECIFICATION                                                              | PREREQUISITES | NAMESPACE                                                                         |
-|-----------------------------------------------------------|----------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
-| Merchant\MerchantProductSearchWritePublisherPlugin        | Publishes the product by merchant ids to ES.                               |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher                  |
-| MerchantProduct\MerchantProductSearchWritePublisherPlugin | Publishes the product by merchant product abstract ids to ES.              |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher                  |
-| MerchantProductSearchPublisherTriggerPlugin               | Allows publishing or re-publishing  merchant product search data manually. |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher                  |
-| MerchantUpdatePublisherPlugin                             | Publishes the product by merchant ids to Redis.                            |               | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant        |
-| MerchantProductWritePublisherPlugin                       | Publishes the product by merchant product abstract ids to Redis.           |               | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
-| MerchantProductPublisherTriggerPlugin                     | Allows publishing or re-publishing merchant product storage data manually. |               | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher                 |
+| PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
+| --------------------- | ------------------- | --------- | -------------------- |
+| Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProductSearchPublisherTriggerPlugin               | Allows publishing or re-publishing  merchant product search data manually. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
+| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
+| MerchantProductPublisherTriggerPlugin                          | Allows publishing or re-publishing merchant product storage data manually. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -192,8 +192,8 @@ Make sure that the merchant product data appears in the search engine and in the
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                         | SPECIFICATION                                                                                  | PREREQUISITES | NAMESPACE                                                                |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| PLUGIN   | DESCRIPTION  | PREREQUISITES | NAMESPACE   |
+|-------------|---------------------|---------------|---------------|
 | MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.                                     |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.                       |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductTableQueryCriteriaExpanderPlugin         | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant.              |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
@@ -619,9 +619,9 @@ Follow the steps below to install the Marketplace Product feature front end.
 
 Register the following plugins to enable widgets:
 
-| PLUGIN                | DESCRIPTION                   | Prerequisites | NAMESPACE                                     |
-|-----------------------|-------------------------------|---------------|-----------------------------------------------|
-| MerchantProductWidget | Displays alternative product. |               | SprykerShop\Yves\MerchantProductWidget\Widget |
+| PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
+| ----------- | ----------- | ---------- | --------- |
+| MerchantProductWidget | Displays alternative product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
 
 ```php
 <?php
@@ -692,11 +692,11 @@ Make sure that the configured data is added to the spy_glossary_key` and `spy_gl
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                | DESCRIPTION                                                  | PREREQUISITES   | NAMESPACE                                                   |
-|-------------------------------------------------------|--------------------------------------------------------------|-----------------|-------------------------------------------------------------|
-| MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |                 | Spryker\Client\MerchantProductSearch\Plugin\Search          |
-| ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |                 | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
-| MerchantReferenceQueryExpanderPlugin                  | Adds filter by merchant reference to query.                  |                 | Spryker\Client\MerchantProductSearch\Plugin\Search          |
+| PLUGIN  | DESCRIPTION    | PREREQUISITES | NAMESPACE  |
+| ----------------- | ---------------------- | ------------ | -------------------- |
+| MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |           | Spryker\Client\MerchantProductSearch\Plugin\Search          |
+| ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |           | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
+| MerchantReferenceQueryExpanderPlugin  | Adds filter by merchant reference to query. |               | Spryker\Client\MerchantProductSearch\Plugin\Search |
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
 
@@ -822,10 +822,10 @@ Make sure you can filter concrete products by merchant reference while searching
 
 ## Related features
 
-| FEATURE                                         | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                               |
-|-------------------------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Product API                         |                                  | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html)                                        |
-| Marketplace Product + Marketplace Product Offer |                                  | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
-| Marketplace Product + Inventory Management      |                                  | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)           |
-| Marketplace Product + Cart                      |                                  | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html)                                           |
-| Marketplace Product + Quick Add to Cart         |                                  | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html)                 |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| - | - | - |
+| Marketplace Product API | | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
+| Marketplace Product + Cart | | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html) |
+| Marketplace Product + Quick Add to Cart | | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html) |

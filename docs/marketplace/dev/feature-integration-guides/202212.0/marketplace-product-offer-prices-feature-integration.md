@@ -18,11 +18,12 @@ Follow the steps below to install the Marketplace Product Offer Prices feature c
 
 To start feature integration, integrate the required features:
 
-| NAME                      | VERSION          | INTEGRATION GUIDE                                                                                                                                                     |
-|---------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core              | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                  |
-| Prices                    | {{page.version}} | [Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
+| NAME | VERSION | INTEGRATION GUIDE |
+|---|---|---|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Prices | {{page.version}} |[Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/install-and-upgrade/install-features/install-the-prices-feature.html) |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+
 
 ### 1) Install the required modules using Composer
 
@@ -36,15 +37,15 @@ composer require spryker-feature/marketplace-product-offer-prices:"{{page.versio
 
 Make sure that the following modules were installed:
 
-| MODULE                            | EXPECTED DIRECTORY                            |
-|-----------------------------------|-----------------------------------------------|
-| PriceProductOffer                 | spryker/price-product-offer                   |
-| PriceProductOfferDataImport       | spryker/price-product-offer-data-import       |
-| PriceProductOfferGui              | spryker/price-product-offer-gui               |
-| PriceProductOfferStorage          | spryker/price-product-offer-storage           |
+| MODULE | EXPECTED DIRECTORY |
+|-|-|
+| PriceProductOffer | spryker/price-product-offer |
+| PriceProductOfferDataImport | spryker/price-product-offer-data-import |
+| PriceProductOfferGui | spryker/price-product-offer-gui |
+| PriceProductOfferStorage | spryker/price-product-offer-storage |
 | PriceProductOfferStorageExtension | spryker/price-product-offer-storage-extension |
-| PriceProductOfferVolume           | spryker/price-product-offer-volume            |
-| PriceProductOfferVolumeGui        | spryker/price-product-offer-volume-gui        |
+| PriceProductOfferVolume | spryker/price-product-offer-volume |
+| PriceProductOfferVolumeGui | spryker/price-product-offer-volume-gui |
 
 {% endinfo_block %}
 
@@ -82,29 +83,29 @@ console transfer:generate
 
 Verify that the following changes have been implemented by checking your database:
 
-| DATABASE ENTITY                                  | TYPE  | EVENT   |
-|--------------------------------------------------|-------|---------|
-| spy_price_product_offer                          | table | created |
+| DATABASE ENTITY | TYPE | EVENT |
+|-|-|-|
+| spy_price_product_offer | table | created |
 | spy_product_concrete_product_offer_price_storage | table | created |
 
 Make sure that the following changes were applied in transfer objects:
 
-| TRANSFER                                           | TYPE     | EVENT   | PATH                                                               |
-|----------------------------------------------------|----------|---------|--------------------------------------------------------------------|
-| PriceProductOffer                                  | class    | created | src/Generated/Shared/Transfer/PriceProductOfferTransfer            |
-| PriceProductOfferCriteria                          | class    | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer    |
-| PriceProductOfferCollection                        | class    | created | src/Generated/Shared/Transfer/PriceProductOfferCollectionTransfer  |
-| PriceProductStoreCriteria                          | class    | created | src/Generated/Shared/Transfer/PriceProductStoreCriteriaTransfer    |
-| Pagination                                         | class    | created | src/Generated/Shared/Transfer/PaginationTransfer                   |
-| PriceProductCriteria.productOfferReference         | property | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer         |
-| PriceProduct.concreteSku                           | property | created | src/Generated/Shared/Transfer/PriceProductTransfer                 |
-| PriceProductDimension.productOfferReference        | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer        |
-| PriceProductDimension.idProductOffer               | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer        |
-| PriceProductDimension.idPriceProductOffer          | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer        |
-| ProductOffer.prices                                | property | created | src/Generated/Shared/Transfer/ProductOfferTransfer                 |
+| TRANSFER | TYPE | EVENT | PATH |
+|-|-|-|-|
+| PriceProductOffer | class | created | src/Generated/Shared/Transfer/PriceProductOfferTransfer |
+| PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
+| PriceProductOfferCollection | class | created |  src/Generated/Shared/Transfer/PriceProductOfferCollectionTransfer |
+| PriceProductStoreCriteria | class | created | src/Generated/Shared/Transfer/PriceProductStoreCriteriaTransfer |
+| Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer |
+| PriceProductCriteria.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
+| PriceProduct.concreteSku | property | created | src/Generated/Shared/Transfer/PriceProductTransfer |
+| PriceProductDimension.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
+| PriceProductDimension.idProductOffer | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
+| PriceProductDimension.idPriceProductOffer | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
+| ProductOffer.prices | property | created | src/Generated/Shared/Transfer/ProductOfferTransfer |
 | PriceProductFilterIdentifier.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductFilterIdentifierTransfer |
-| ProductOfferStorage.price                          | property | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer          |
-| PriceProductFilter.productOfferReference           | property | created | src/Generated/Shared/Transfer/PriceProductFilterTransfer           |
+| ProductOfferStorage.price | property | created | src/Generated/Shared/Transfer/ProductOfferStorageTransfer |
+| PriceProductFilter.productOfferReference | property | created |src/Generated/Shared/Transfer/PriceProductFilterTransfer |
 
 {% endinfo_block %}
 
@@ -120,9 +121,9 @@ console translator:generate-cache
 
 Set up event listeners
 
-| PLUGIN                                  | SPECIFICATION                                                                            | PREREQUISITES | NAMESPACE                                                                  |
-|-----------------------------------------|------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------|
-| PriceProductOfferStorageEventSubscriber | Registers listeners that are responsible for publishing Product Offer Prices to storage. |               | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Event\Subscriber |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| PriceProductOfferStorageEventSubscriber | Registers listeners that are responsible for publishing Product Offer Prices to storage. |   | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -174,9 +175,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 Configure message processors:
 
-| PLUGIN                                            | SPECIFICATION                                                                                                     | PREREQUISITES | NAMESPACE                                              |
-|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all Merchant Product Offers to sync with Redis storage, and marks messages as failed in case of error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all Merchant Product Offers to sync with Redis storage, and marks messages as failed in case of error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -208,10 +209,10 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 Set up publisher:
 
-| PLUGIN                                   | SPECIFICATION                                                                              | PREREQUISITES | NAMESPACE                                                                             |
-|------------------------------------------|--------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------|
-| PriceProductStoreWritePublisherPlugin    | Publishes product offer prices data by update events from `spy_price_product_store` table. |               | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer |
-| PriceProductOfferPublisherTriggerPlugin  | Allows publishing or re-publishing price product storage data manually.                    |               | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher                   |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| PriceProductStoreWritePublisherPlugin | Publishes product offer prices data by update events from `spy_price_product_store` table. |   | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer |
+| PriceProductOfferPublisherTriggerPlugin | Allows publishing or re-publishing price product storage data manually. |   | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -260,9 +261,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 Set up re-generate and re-sync features:
 
-| PLUGIN                                                   | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                                                 |
-|----------------------------------------------------------|-----------------------------------------------------------------------|---------------|---------------------------------------------------------------------------|
-| PriceProductOfferSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the entire storage table content into Storage.   |               | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Synchronization |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| PriceProductOfferSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the entire storage table content into Storage. |   | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -314,11 +315,12 @@ class PriceProductOfferStorageConfig extends SprykerPriceProductOfferStorageConf
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that after setting up the event listeners, `console sync:data product_concrete_product_offer_price` exports data from the `spy_product_concrete_product_offer_price_storage` table to Redis.
-2. Make sure that when the following entities get updated via the ORM, the corresponding Redis keys have the correct values.
+Make sure that after setting up the event listeners, `console sync:data product_concrete_product_offer_price` exports data from the `spy_product_concrete_product_offer_price_storage` table to Redis.
 
-| TARGET ENTITY     | EXAMPLE EXPECTED DATA IDENTIFIER               |  
-|-------------------|------------------------------------------------|
+Make sure that when the following entities get updated via the ORM, the corresponding Redis keys have the correct values.
+
+| TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
+|-|-|
 | PriceProductOffer | `kv:product_concrete_product_offer_price:de:6` |
 
 <details>
@@ -763,21 +765,21 @@ offer418,DEFAULT,DE,CHF,32000,27000,"[{""quantity"":4,""net_price"":15000,""gros
 
 </details>
 
-| COLUMN                   | REQUIRED? | DATA TYPE | DATA EXAMPLE                                                                                                                                                                         | DATA EXPLANATION                                                                                                                            |
-|--------------------------|-----------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| product_offer_reference  | &check;   | string    | offer1                                                                                                                                                                               | Product offer reference that will have these prices                                                                                         |
-| price_type               | &check;   | string    | DEFAULT                                                                                                                                                                              | Sets price type to product offer price                                                                                                      |
-| store                    | &check;   | string    | DE                                                                                                                                                                                   | Store in which this price will be shown                                                                                                     |
-| currency                 | &check;   | string    | EUR                                                                                                                                                                                  | Currency of the price                                                                                                                       |
-| value_net                | &check;   | number    | 8144                                                                                                                                                                                 | Price of product offer when price mode === NET                                                                                              |
-| value_gross              | &check;   | number    | 10160                                                                                                                                                                                | Price of product offer when price mode === GROSS                                                                                            |
-| price_data.volume_prices | optional  | string    | `"[{""quantity"":5,""net_price"":6050,""gross_price"":7065}, {""quantity"":10,""net_price"":5045,""gross_price"":6058}, {""quantity"":20,""net_price"":4040,""gross_price"":5052}]"` | JSON representation of the volume prices, each entry in the JSON array contains quantity at which `gross_price/net_price` will be activated |
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+|-|-|-|-|-|
+| product_offer_reference | &check; | string | offer1 | Product offer reference that will have these prices |
+| price_type | &check; | string | DEFAULT | Sets price type to product offer price |
+| store | &check; | string | DE | Store in which this price will be shown |
+| currency | &check; | string | EUR | Currency of the price |
+| value_net | &check; | number | 8144 | Price of product offer when price mode === NET |
+| value_gross | &check; | number | 10160 | Price of product offer when price mode === GROSS |
+| price_data.volume_prices | optional | string | `"[{""quantity"":5,""net_price"":6050,""gross_price"":7065}, {""quantity"":10,""net_price"":5045,""gross_price"":6058}, {""quantity"":20,""net_price"":4040,""gross_price"":5052}]"` | JSON representation of the volume prices, each entry in the JSON array contains quantity at which `gross_price/net_price` will be activated |
 
 Register the following plugins to enable data import:
 
-| PLUGIN                              | SPECIFICATION                      | PREREQUISITES | NAMESPACE                                                    |
-|-------------------------------------|------------------------------------|---------------|--------------------------------------------------------------|
-| PriceProductOfferDataImportPlugin   | Imports Product Offer Price data   |               | Spryker\Zed\PriceProductOfferDataImport\Communication\Plugin |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| PriceProductOfferDataImportPlugin | Imports Product Offer Price data |   | Spryker\Zed\PriceProductOfferDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -838,25 +840,25 @@ Make sure that the Product Offer Prices data is in the `spy_price_product_offer`
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                       | SPECIFICATION                                                                                                                                                  | PREREQUISITES | NAMESPACE                                                                  |
-|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------|
-| PriceProductOfferProductOfferExpanderPlugin                  | Expands the Product Offer entity with prices                                                                                                                   |               | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer            |
-| PriceProductOfferProductOfferPostCreatePlugin                | Saves the Product Offer Price data after the Product Offer creation                                                                                            |               | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer            |
-| PriceProductOfferProductOfferPostUpdatePlugin                | Update the Product Offer Price data after Product Offer updating                                                                                               |               | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer            |
-| PriceProductOfferPriceDimensionConcreteSaverPlugin           | Saves product offer prices when product concrete prices are saved                                                                                              |               | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct            |
-| PriceProductOfferPriceDimensionQueryCriteriaPlugin           | Adds the product offer prices as extra price dimensions when reading product concrete prices                                                                   |               | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct            |
-| PriceProductOfferPriceProductDimensionExpanderStrategyPlugin | Sets `PriceProductDimensionTransfer` to PRODUCT_OFFER when it has the product offer reference attached to it                                                   |               | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct            |
-| LowestPriceProductOfferStorageCollectionSorterPlugin         | Sorts product offers of `ProductOfferCollectionTransfer` by lowest price first                                                                                 |               | Spryker\Client\PriceProductOfferStorage\Plugin\ProductOfferStorage         |
-| PriceProductOfferStorageDimensionPlugin                      | Fetches an array of the Product Offer `PriceProductTransfers` and attaches them to the list of `PriceProductTransfers` that are fetched for a product concrete |               | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage         |
-| PriceProductOfferStorageExpanderPlugin                       | Expands `ProductOfferStorageTransfer` with Product Offer Price                                                                                                 |               | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage |
-| PriceProductOfferStorageFilterExpanderPlugin                 | Expands `PriceProductFilterTransfer` with ProductOfferReference when a `ProductViewTransfer` has a ProductOfferReference                                       |               | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage         |
-| PriceProductOfferPriceProductFilterPlugin                    | Filters out inapplicable product offer prices and product concrete prices when a product offer is selected                                                     |               | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct               |
-| PriceProductOfferVolumeExtractorPlugin                       | Extracts volume prices from the price product offer collection.                                                                                                |               | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
-| PriceProductOfferVolumeExpanderPlugin                        | Expands `PriceProductTransfer` with `volumeQuantity`                                                                                                           |               | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
-| PriceProductOfferVolumeValidatorPlugin                       | Validates volume prices.                                                                                                                                       |               | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
-| PriceProductOfferVolumeFilterPlugin                          | Applies correct volume pricing when applicable and quantity is selected                                                                                        |               | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer           |
-| PriceProductOfferProductOfferViewSectionPlugin               | Returns template for render price product offer information                                                                                                    |               | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductOfferGui      |
-| PriceProductVolumeValidatorPlugin                            | Validates volume prices.                                                                                                                                       |               | Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct           |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| PriceProductOfferProductOfferExpanderPlugin | Expands the Product Offer entity with prices |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
+| PriceProductOfferProductOfferPostCreatePlugin | Saves the Product Offer Price data after the Product Offer creation |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
+| PriceProductOfferProductOfferPostUpdatePlugin | Update the Product Offer Price data after Product Offer updating |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\ProductOffer |
+| PriceProductOfferPriceDimensionConcreteSaverPlugin | Saves product offer prices when product concrete prices are saved |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
+| PriceProductOfferPriceDimensionQueryCriteriaPlugin | Adds the product offer prices as extra price dimensions when reading product concrete prices |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
+| PriceProductOfferPriceProductDimensionExpanderStrategyPlugin | Sets `PriceProductDimensionTransfer` to PRODUCT_OFFER when it has the product offer reference attached to it |   | Spryker\Zed\PriceProductOffer\Communication\Plugin\PriceProduct |
+| LowestPriceProductOfferStorageCollectionSorterPlugin | Sorts product offers of `ProductOfferCollectionTransfer` by lowest price first |   | Spryker\Client\PriceProductOfferStorage\Plugin\ProductOfferStorage |
+| PriceProductOfferStorageDimensionPlugin | Fetches an array of the Product Offer `PriceProductTransfers` and attaches them to the list of `PriceProductTransfers` that are fetched for a product concrete  |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
+| PriceProductOfferStorageExpanderPlugin | Expands `ProductOfferStorageTransfer` with Product Offer Price |   | Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage |
+| PriceProductOfferStorageFilterExpanderPlugin | Expands `PriceProductFilterTransfer` with ProductOfferReference when a `ProductViewTransfer` has a ProductOfferReference |   | Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage |
+| PriceProductOfferPriceProductFilterPlugin | Filters out inapplicable product offer prices and product concrete prices when a product offer is selected |   | Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct |
+| PriceProductOfferVolumeExtractorPlugin | Extracts volume prices from the price product offer collection. |  | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
+| PriceProductOfferVolumeExpanderPlugin | Expands `PriceProductTransfer` with `volumeQuantity` |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
+| PriceProductOfferVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer |
+| PriceProductOfferVolumeFilterPlugin | Applies correct volume pricing when applicable and quantity is selected |   | Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer |
+| PriceProductOfferProductOfferViewSectionPlugin | Returns template for render price product offer information |   | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductOfferGui |
+| PriceProductVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -1166,15 +1168,18 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that when a product offer is selected, and its price is shown as the current price. 
-2. Make sure that product offer prices are saved when a product concrete and product offer prices are saved. 
-3. Make sure that product offers are sorted by the lowest price first when fetched as a collection with product concrete. 
-4. Make sure that when a product offer with a volume price is selected, and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
+Make sure that when a product offer is selected, and its price is shown as the current price.
+
+Make sure that product offer prices are saved when a product concrete and product offer prices are saved.
+
+Make sure that product offers are sorted by the lowest price first when fetched as a collection with product concrete.
+
+Make sure that when a product offer with a volume price is selected, and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
 
 {% endinfo_block %}
 
 ## Related features
 
-| FEATURE                                | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                    |
-|----------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Product Offer + Prices API |                                  | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html) |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| -------------- | -------------------------------- | ----------------- |
+| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html) |

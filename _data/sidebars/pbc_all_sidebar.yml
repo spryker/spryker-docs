@@ -580,7 +580,7 @@ entries:
               - title: Manage file tree
                 url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-file-tree.html
               - title: Add and edit MIME types
-                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/add-and-edit-mime-types.html                                
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/add-and-edit-mime-types.html
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Create a custom content item"

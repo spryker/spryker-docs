@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/shared-carts-feature-overview.html
   - /docs/scos/user/features/202204.0/shared-carts-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/shared-carts-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202204.0/shared-carts-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202204.0/shared-carts-feature-walkthrough.html
 ---
 
 *Shopping Cart* is a part of the online shop where the record of the items a buyer has "picked up" from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications or add extra items if needed, and purchase the products.

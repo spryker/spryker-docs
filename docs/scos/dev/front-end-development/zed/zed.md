@@ -2,6 +2,7 @@
 title: Zed
 description: Working with Zed tools in Spryker Commerce OS
 template: concept-topic-template
+last_updated: Jan 10, 2023
 ---
 
 This section contains instructions for frontend Zed developing on the the Spryker Commerce OS. It includes the following components and topics:

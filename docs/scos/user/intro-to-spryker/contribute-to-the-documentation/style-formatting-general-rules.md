@@ -30,7 +30,7 @@ The main directory for holding all the documents is [docs](https://github.com/sp
 
 ## Creating documents and categories
 
-We use [Markdown (.md)](https://en.wikipedia.org/wiki/Markdown) to write documents. All documents reside in the [docs](https://github.com/spryker/spryker-docs/tree/master/docs) directory. For details about how this directory is organized, see [Directory structure](#directory-structure). You can use any text editor for creating the files in Markdown, like [VSCode](https://code.visualstudio.com). For information about specific Markdown syntax for documentation, see [Markdown syntax](/docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html).
+We use [Markdown (.md)](https://en.wikipedia.org/wiki/Markdown) to write documents. All documents reside in the [docs](https://github.com/spryker/spryker-docs/tree/master/docs) directory. For details about how this directory is organized, see [Directory structure](#directory-structure). You can use any text editor for creating the files in Markdown, like [VSCode](https://code.visualstudio.com). For information about specific Markdown syntax for documentation, see [Markdown syntax](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html).
 
 You can create new pages in any documentation category or sub-category under the *realm* directories (`user`, `dev`). You can also create directories for new categories under the *realm* directories.
 

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [File Manager](/docs/scos/user/features/201811.0/file-manager-feature-overview/file-manager-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

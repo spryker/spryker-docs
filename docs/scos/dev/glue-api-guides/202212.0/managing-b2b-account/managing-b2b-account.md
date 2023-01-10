@@ -1,6 +1,7 @@
 ---
 title: Managing B2B account
 description: This document describes the endpoints used to manage a B2B account
+last_updated: Jan 10, 2023
 template: concept-topic-template
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Zed
-description: working with Zed tools in Spryker Commerce OS
+description: Working with Zed tools in Spryker Commerce OS
 template: concept-topic-template
 ---
 

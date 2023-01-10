@@ -1,6 +1,6 @@
 ---
 title: Managing B2B account
-description: Describes the endpoints used to manage a B2B account
+description: This document describes the endpoints used to manage a B2B account
 template: concept-topic-template
 ---
 

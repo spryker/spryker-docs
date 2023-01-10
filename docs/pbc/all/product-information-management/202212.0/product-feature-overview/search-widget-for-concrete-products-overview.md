@@ -64,9 +64,3 @@ The same works for the [product restriction](/docs/scos/user/features/{{page.ver
 The widget allows searching the products on the quick order page too:
 
 ![Quick order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/quick-order-page.png)
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

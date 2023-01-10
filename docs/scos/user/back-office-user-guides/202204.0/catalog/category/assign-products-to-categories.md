@@ -15,7 +15,7 @@ redirect_from:
 
 related:
   - title: Creating Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/create-categories.html
   - title: Category Management feature overview
     link: docs/scos/user/features/page.version/category-management-feature-overview.html
 ---

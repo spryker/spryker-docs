@@ -727,7 +727,7 @@ docker:
 
 ### docker: maintenance: enabled:
 
-Defines if applications work in maintenance mode. The default value is `false`.
+Defines if applications are in maintenance mode. The default value is `false`.
 
 ```yaml
 version: 1.0
@@ -735,6 +735,24 @@ docker:
     maintenance:
         enabled: {true | false}
  ```
+
+
+### docker: maintenance: whitelist: ips:
+
+Defines the allowlisted IP addresses from which the applications in the maintenance mode can be accessed.
+
+```yaml
+version: 1.0
+
+docker:
+    maintenance:
+        enabled: true
+        whitelist:
+          ips:
+              - {IP address}
+              ...
+ ```
+
 
 ***
 

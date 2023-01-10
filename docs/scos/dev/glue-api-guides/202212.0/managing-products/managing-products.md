@@ -15,7 +15,6 @@ This section contains the descriptions of the following endpoints used to manage
   * [Retrieving image sets of concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
   * [Retrieving-sales-units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)
   
-  
 * [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
 * [Retrieving related products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-related-products.html)
 * [Retrieving alternative products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html)

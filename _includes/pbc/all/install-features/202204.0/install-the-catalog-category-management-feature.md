@@ -4,7 +4,7 @@ This document describes how to integrate the Catalog + Category Management into 
 
 ## Prerequisites
 
-To start the feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME                | VERSION | INTEGRATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
@@ -74,23 +74,9 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-- Make sure that `CatalogClient::catalogSearch()` returns category nodes under the `categoryTreeFilter` index.
-- Make sure that the search query has a sort parameter.
+Make sure the following:
+- `CatalogClient::catalogSearch()` returns category nodes under the `categoryTreeFilter` index.
+- The search query has a sort parameter.
+- You can find categories using the global search on the Storefront.
 
 {% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that you can find categories using the global search on the Storefront.
-
-{% endinfo_block %}
-
-## Related features
-
-Integrate the following related features:
-
-
-| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
-| ------------- | ---------------- | -------------------- |
-| Catalog             |      ✓     | |
-| Category Management |      ✓     | [Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-category-management-feature.html) |

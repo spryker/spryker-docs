@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Splittable Order Items](/docs/scos/user/features/202204.0/order-management-feature-overview/splittable-order-items-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Splittable Order Items](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/splittable-order-items-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

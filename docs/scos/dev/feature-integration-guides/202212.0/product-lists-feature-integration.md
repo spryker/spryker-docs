@@ -1,7 +1,7 @@
 ---
 title: Product Lists feature integration
 description: The Product Lists feature allows defining access to particular items. The guide walks you through the process of integrating this feature into your project.
-last_updated: Jun 16, 2021
+last_updated: Jan 11, 2023
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-lists-feature-integration
 originalArticleId: a351c7ab-e1cc-4764-bd7f-3ac60695dac4
@@ -31,4 +31,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-lists-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-lists-feature.md -->

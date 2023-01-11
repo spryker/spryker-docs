@@ -25,4 +25,4 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-alternative-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-alternative-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-alternative-products-feature.md -->

@@ -140,6 +140,8 @@ Make sure that the following changes have been applied in the transfer objects:
 | --- | --- | --- | --- |
 | ProductList | class | created | src/Generated/Shared/Transfer/ProductListTransfer |
 | ProductListCollection | class | created | src/Generated/Shared/Transfer/ProductListCollectionTransfer |
+| ProductListCriteria | class | created | src/Generated/Shared/Transfer/ProductListCriteriaTransfer |
+| Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer |
 | ProductListCategoryRelation | class | created | src/Generated/Shared/Transfer/ProductListCategoryRelationTransfer |
 | ProductListProductConcreteRelation | class | created | src/Generated/Shared/Transfer/ProductListProductConcreteRelationTransfer |
 | CartChange | class | created | src/Generated/Shared/Transfer/CartChangeTransfer |
@@ -432,6 +434,41 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
         return [
             new ProductAbstractProductListSynchronizationDataPlugin(),
             new ProductConcreteProductListSynchronizationDataPlugin(),
+        ];
+    }
+}
+```
+
+### Set up publisher trigger plugins
+
+Add the following plugins to your project:
+
+| PLUGIN                              | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                       |
+|-------------------------------------|----------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| ProductListSearchPublisherTriggerPlugin | Allows publishing or re-publishing product list search data manually. | None          | Spryker\Zed\ProductListSearch\Communication\Plugin\Publisher |
+| ProductListPublisherTriggerPlugin | Allows publishing or re-publishing product list data manually. | None          | Spryker\Zed\ProductListStorage\Communication\Plugin\Publisher |
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\ProductListSearch\Communication\Plugin\Publisher\ProductListSearchPublisherTriggerPlugin;
+use Spryker\Zed\ProductListStorage\Communication\Plugin\Publisher\ProductListPublisherTriggerPlugin;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new ProductListSearchPublisherTriggerPlugin(),
+            new ProductListPublisherTriggerPlugin(),
         ];
     }
 }

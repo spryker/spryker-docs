@@ -6,7 +6,7 @@ related:
   - title: Integrate the Promotions & Discounts Glue API
     link: docs/pbc/all/discount-management/202212.0/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
   - title: Discount Promotion feature integration
-    link: v5/docs/discount-promotion-feature-integration
+    link: docs/scos/dev/feature-integration-guides/202005.0/discount-promotion-feature-integration.html
 ---
 
 Whenever you want to introduce a new discount calculation logic, for example implementing a custom rounding logic, please follow these steps:

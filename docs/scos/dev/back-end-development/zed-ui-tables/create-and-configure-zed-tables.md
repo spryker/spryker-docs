@@ -131,9 +131,9 @@ $config->setDefaultSortDirection(
 
 ### Configure strict search
 
-Fuzzy search is the default search option on back office data tables. Fuzzy search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. This mode can bring to performance issues on large tables since indexes are not being used.
+Fuzzy search is the default search option on backoffice data tables. Fuzzy search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. This mode can bring to performance issues on large tables since indexes are not being used.
 
-In order to solve these performance related issues, strict search mode has been then introduced and can be used on all back office data tables which extend the `AbstractTable` class.
+In order to solve these performance related issues, strict search mode has been then introduced and can be used on all backoffice data tables which extend the `AbstractTable` class.
 
 Strict search is `case sensitive` and the following search patterns will be used:
 

@@ -12,7 +12,7 @@ This document provides instructions for upgrading Angular to version 15 in your 
 
 Our current version of Angular is v12 with v9 compatibility.
 Angular v12 was deprecated on 2022-11-12 according to the [policy](https://angular.io/guide/releases#support-policy-and-schedule).
-The current stable version of Angular is 15.
+The current stable version of Angular is v15.
 We need to upgrade to the latest major to get the latest bug fixes and security fixes as well as performance in runtime and tooling.
 We can't maintain compatibility with older versions of Angular when updating Angular v15.
 So the update will require a major release for these modules:

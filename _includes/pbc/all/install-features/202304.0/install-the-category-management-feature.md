@@ -605,6 +605,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 | CategoryNodePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher |
 | CategoryTreePublisherTriggerPlugin | Retrieves category trees based on the provided limit and offset. | | Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher |
 | CategoryPagePublisherTriggerPlugin | Retrieves category nodes based on the provided limit and offset. | | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher|
+| CategoryImagePublisherTriggerPlugin | Retrieves category images based on the provided limit and offset. | | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Publisher|
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -613,6 +614,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 namespace Pyz\Zed\Publisher;
 
+use Spryker\Zed\CategoryImageStorage\Communication\Plugin\Publisher\CategoryImagePublisherTriggerPlugin;
 use Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher\CategoryPagePublisherTriggerPlugin;
 use Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher\CategoryNodePublisherTriggerPlugin;
 use Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher\CategoryTreePublisherTriggerPlugin;
@@ -639,6 +641,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new CategoryNodePublisherTriggerPlugin(),
             new CategoryTreePublisherTriggerPlugin(),
             new CategoryPagePublisherTriggerPlugin(),
+            new CategoryImagePublisherTriggerPlugin(),
         ];
     }
 }

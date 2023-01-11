@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Option feature integration
-last_updated: Jul 28, 2021
+last_updated: Dec 30, 2022
 Description: This document describes the process how to integrate the Marketplace Product Option feature into a Spryker project.
 template: feature-integration-guide-template
 related:
@@ -94,6 +94,8 @@ Make sure that the following changes were applied in transfer objects:
 | MerchantProductOptionGroup | class | created | src/Generated/Shared/Transfer/MerchantProductOptionGroupTransfer |
 | MerchantProductOptionGroupCriteria | class | created | src/Generated/Shared/Transfer/MerchantProductOptionGroupCriteriaTransfer |
 | MerchantProductOptionGroupCollection | class | created | src/Generated/Shared/Transfer/MerchantProductOptionGroupCollectionTransfer |
+| MerchantProductOptionGroupConditions | class | created | src/Generated/Shared/Transfer/MerchantProductOptionGroupConditionsTransfer |
+| Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer |
 | ProductOptionGroup.merchant | attribute | created | src/Generated/Shared/Transfer/ProductOptionGroupTransfer |
 
 {% endinfo_block %}
@@ -255,6 +257,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOptionGroupExpanderPlugin | Expands a product option group data with the related merchant. | None | Spryker\Zed\MerchantProductOption\Communication\Plugin\ProductOption |
 | MerchantProductOptionCollectionFilterPlugin | Filters merchant product option group transfers by approval status and excludes the product options with the not approved merchant groups. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\ProductOptionStorage |
 | MerchantProductOptionGroupWritePublisherPlugin | Retrieves all abstract product IDs using the  merchant product option group IDs from the event transfers. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption |
+| MerchantProductOptionGroupPublisherTriggerPlugin | Allows publishing or re-publishing merchant product option group storage data manually. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher |
 
 
 **src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php**
@@ -335,6 +338,7 @@ class ProductOptionStorageDependencyProvider extends SprykerProductOptionStorage
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption\MerchantProductOptionGroupWritePublisherPlugin;
+use Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOptionGroupPublisherTriggerPlugin;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -356,6 +360,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return [
             new MerchantProductOptionGroupWritePublisherPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new MerchantProductOptionGroupPublisherTriggerPlugin(),
         ];
     }
 }

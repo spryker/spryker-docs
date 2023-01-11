@@ -3688,7 +3688,7 @@ entries:
     url: /docs/scos/dev/front-end-development/index.html
     nested:
     - title: Zed
-      url: /docs/scos/dev/front-end-development/zed/zed.md
+      url: /docs/scos/dev/front-end-development/zed/zed.html
       nested:
       - title: Oryx Builder overview and setup
         url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html

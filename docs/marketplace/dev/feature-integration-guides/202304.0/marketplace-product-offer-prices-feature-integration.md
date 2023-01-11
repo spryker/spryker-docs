@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Offer Prices feature integration
-last_updated: Mar 7, 2022
+last_updated: Dec 30, 2022
 description: This document describes the process how to integrate the Marketplace Product Offer Prices feature into a Spryker project.
 template: feature-integration-guide-template
 related:
@@ -96,6 +96,7 @@ Make sure that the following changes were applied in transfer objects:
 | PriceProductOfferCriteria | class | created | src/Generated/Shared/Transfer/PriceProductOfferCriteriaTransfer |
 | PriceProductOfferCollection | class | created |  src/Generated/Shared/Transfer/PriceProductOfferCollectionTransfer |
 | PriceProductStoreCriteria | class | created | src/Generated/Shared/Transfer/PriceProductStoreCriteriaTransfer |
+| Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer |
 | PriceProductCriteria.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
 | PriceProduct.concreteSku | property | created | src/Generated/Shared/Transfer/PriceProductTransfer |
 | PriceProductDimension.productOfferReference | property | created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
@@ -211,6 +212,7 @@ Set up publisher:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | PriceProductStoreWritePublisherPlugin | Publishes product offer prices data by update events from `spy_price_product_store` table. |   | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer |
+| PriceProductOfferPublisherTriggerPlugin | Allows publishing or re-publishing price product storage data manually. |   | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -220,6 +222,7 @@ Set up publisher:
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer\PriceProductStoreWritePublisherPlugin;
+use Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOfferPublisherTriggerPlugin;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -241,6 +244,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return [
             new PriceProductStoreWritePublisherPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new PriceProductOfferPublisherTriggerPlugin(),
         ];
     }
 }

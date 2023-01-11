@@ -132,9 +132,12 @@ Make sure that the following changes have been implemented in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
-| CategoryImageSetTransfer | class | created | src/Generated/Shared/Transfer/CategoryImageSetTransfer.php |
-| CategoryImageTransfer | class | created | src/Generated/Shared/Transfer/CategoryImageTransfer.php |
-| CategoryTransfer | class | created | src/Generated/Shared/Transfer/CategoryTransfer.php |
+| CategoryImageSet | class | created | src/Generated/Shared/Transfer/CategoryImageSetTransfer.php |
+| CategoryImage | class | created | src/Generated/Shared/Transfer/CategoryImageTransfer.php |
+| Category | class | created | src/Generated/Shared/Transfer/CategoryTransfer.php |
+| CategoryCriteria | class | created | src/Generated/Shared/Transfer/CategoryCriteriaTransfer.php |
+| CategoryCollection | class | created | src/Generated/Shared/Transfer/CategoryCollectionTransfer.php |
+| Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer.php |
 
 {% endinfo_block %}
 
@@ -194,6 +197,38 @@ class CategoryImageStorageConfig extends SprykerCategoryImageSTorageConfig
 	{
 		return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
 	}
+}
+```
+
+#### Set up publisher trigger plugins
+
+Add the following plugins to your project:
+
+| PLUGIN                              | SPECIFICATION                                                       | PREREQUISITES | NAMESPACE                                                       |
+|-------------------------------------|---------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| CategoryImagePublisherTriggerPlugin | Allows publishing or re-publishing  category images data manually.  | None          | Spryker\Zed\CategoryImageStorage\Communication\Plugin\Publisher |
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\CategoryImageStorage\Communication\Plugin\Publisher\CategoryImagePublisherTriggerPlugin;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+	/**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new CategoryImagePublisherTriggerPlugin(),
+        ];
+    }
 }
 ```
 

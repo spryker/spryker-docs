@@ -246,7 +246,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/file-manager-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202212.0"
+      - "202304.0"
     - title: Gift Cards
       url: /docs/scos/dev/feature-walkthroughs/gift-cards-feature-walkthrough.html
       include_versions:
@@ -1778,13 +1778,13 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
+      - "202304.0"
     - title: Category Management
       url: /docs/scos/dev/feature-integration-guides/category-management-feature-integration.html
       include_versions:
       - "202108.0"
       - "202204.0"
-      - "202212.0"
+      - "202304.0"
     - title: Category Management + Promotions and Discounts
       url: /docs/scos/dev/feature-integration-guides/category-management-promotions-and-discounts-feature-integration.html
       include_versions:

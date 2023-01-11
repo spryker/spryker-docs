@@ -2,7 +2,7 @@
 title: Marketplace Product feature integration
 description: This document describes the process how to integrate the Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
-last_updated: Mar 11, 2022
+last_updated: Dec 30, 2022
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-feature-integration.html
 related:
@@ -100,17 +100,21 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE | EVENT | PATH  |
-| ----------------- | ----- | ------ | -------------------------- |
-| MerchantProductCriteria   | class | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
-| MerchantProduct           | class | Created | src/Generated/Shared/Transfer/MerchantProductTransfer        |
-| MerchantProductCollection | class | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
-| ProductAbstractMerchant   | class | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer |
-| MerchantSearchCollection  | class | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
-| MerchantProductStorage    | class | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
-| ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
-| MerchantProductView       | class | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer |
+| TRANSFER  | TYPE     | EVENT | PATH                                                            |
+| ----------------- |----------| ------ |-----------------------------------------------------------------|
+| MerchantProductCriteria   | class    | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer   |
+| MerchantProduct           | class    | Created | src/Generated/Shared/Transfer/MerchantProductTransfer           |
+| MerchantProductAbstract | class    | Created | src/Generated/Shared/Transfer/MerchantProductAbstractTransfer   |
+| MerchantProductAbstractCollection | class    | Created | src/Generated/Shared/Transfer/MerchantProductAbstractCollectionTransfer |
+| MerchantProductAbstractCriteria | class    | Created | src/Generated/Shared/Transfer/MerchantProductAbstractCriteriaTransfer |
+| MerchantProductCollection | class    | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
+| ProductAbstractMerchant   | class    | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer   |
+| MerchantSearchCollection  | class    | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer  |
+| MerchantProductStorage    | class    | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer    |
+| ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer           |
+| MerchantProductView       | class    | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer       |
 | PageMap.merchantReferences | property | Created | src/Generated/Shared/Transfer/PageMapTransfer                   |
+| Pagination | class    | Created | src/Generated/Shared/Transfer/PaginationTransfer                   |
 
 {% endinfo_block %}
 
@@ -130,8 +134,10 @@ Install the following plugins:
 | --------------------- | ------------------- | --------- | -------------------- |
 | Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProductSearchPublisherTriggerPlugin               | Allows publishing or re-publishing  merchant product search data manually. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantUpdatePublisherPlugin                                | Publishes the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
 | MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
+| MerchantProductPublisherTriggerPlugin                          | Allows publishing or re-publishing merchant product storage data manually. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -142,8 +148,10 @@ namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\Merchant\MerchantProductSearchWritePublisherPlugin as MerchantMerchantProductSearchWritePublisherPlugin;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\MerchantProduct\MerchantProductSearchWritePublisherPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher\MerchantProductSearchPublisherTriggerPlugin;
 use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant\MerchantUpdatePublisherPlugin;
 use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct\MerchantProductWritePublisherPlugin;
+use Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProductPublisherTriggerPlugin;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -158,6 +166,17 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new MerchantUpdatePublisherPlugin(),
             new MerchantMerchantProductSearchWritePublisherPlugin(),
             new MerchantProductSearchWritePublisherPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new MerchantProductSearchPublisherTriggerPlugin(),
+            new MerchantProductPublisherTriggerPlugin(),
         ];
     }
 }

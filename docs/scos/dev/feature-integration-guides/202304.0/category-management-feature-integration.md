@@ -1,6 +1,6 @@
 ---
 title: Category Management feature integration
-last_updated: Jun 29, 2021
+last_updated: Dec 29, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-integration
 originalArticleId: fc4add5d-25e3-4c5c-b171-98726a915e66
@@ -20,4 +20,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-category-management-feature.md -->
+{% include pbc/all/install-features/202304.0/install-the-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-category-management-feature.md -->

@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Offer feature integration
-last_updated: Dec 30, 2022
+last_updated: Jan 11, 2023
 description: This document describes the process how to integrate the Marketplace Product Offer feature into a Spryker project.
 template: feature-integration-guide-template
 related:
@@ -162,6 +162,7 @@ To configure export to Redis and Elasticsearch, take the following steps:
 | ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer |
 | ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore |
 | MerchantProductOfferSearchPublisherTriggerPlugin        | Allows publishing or re-publishing product offer search data manually.                                                                        |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher |
+| ProductOfferPublisherTriggerPlugin                      | Allows publishing or re-publishing product offer data manually.                                                                               |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -236,9 +237,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return [
             new MerchantProductOfferSearchPublisherTriggerPlugin(),
+            new ProductOfferPublisherTriggerPlugin(),
         ];
-    }
-        
+    }       
 }
 ```
 </details>

@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Offer feature integration
-last_updated: Jan 11, 2023
+last_updated: Mar 7, 2022
 description: This document describes the process how to integrate the Marketplace Product Offer feature into a Spryker project.
 template: feature-integration-guide-template
 related:
@@ -111,8 +111,6 @@ Make sure that the following changes were applied in transfer objects:
 |-------------|----------|---------|-----------|
 | Item.productOfferReference                 | property | created | src/Generated/Shared/Transfer/ItemTransfer                           |
 | MerchantProductOfferCriteria               | class    | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaTransfer   |
-| MerchantProductOfferConditions             | class    | created | src/Generated/Shared/Transfer/MerchantProductOfferConditionsTransfer |
-| Pagination                                 | class    | created | src/Generated/Shared/Transfer/PaginationTransfer                     |
 | PageMap.merchantReferences                 | property | created | src/Generated/Shared/Transfer/PageMapTransfer                        |
 | ProductAbstractMerchant.merchantReferences | property | created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer        |
 | ProductOffer                               | class    | created | src/Generated/Shared/Transfer/ProductOfferTransfer                   |
@@ -161,8 +159,6 @@ To configure export to Redis and Elasticsearch, take the following steps:
 | MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant |
 | ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer |
 | ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore |
-| MerchantProductOfferSearchPublisherTriggerPlugin        | Allows publishing or re-publishing product offer search data manually.                                                                        |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher |
-| ProductOfferPublisherTriggerPlugin                      | Allows publishing or re-publishing product offer data manually.                                                                               |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -173,7 +169,6 @@ namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant\MerchantProductOfferWritePublisherPlugin;
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer\MerchantProductConcreteProductOfferWritePublisherPlugin;
-use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\MerchantProductOfferSearchPublisherTriggerPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer\ProductConcreteWritePublisherPlugin as ProductOfferProductConcreteWritePublisherPlugin;
 use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore\ProductConcreteWritePublisherPlugin as ProductOfferStoreProductConcreteWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersDeletePublisherPlugin;
@@ -229,17 +224,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductOfferStoreProductConcreteWritePublisherPlugin(),
         ];
     }
-    
-    /**
-     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
-     */
-    protected function getPublisherTriggerPlugins(): array
-    {
-        return [
-            new MerchantProductOfferSearchPublisherTriggerPlugin(),
-            new ProductOfferPublisherTriggerPlugin(),
-        ];
-    }       
 }
 ```
 </details>

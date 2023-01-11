@@ -1,7 +1,7 @@
 ---
 title: Product Labels feature integration
 description: This guide provides step-by-step instruction on integrating
-last_updated: Jun 16, 2021
+last_updated: Jan 10, 2023
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-labels-feature-integration
 originalArticleId: ccfbad69-0d8f-4f79-b10d-5e1c930fc9be
@@ -28,4 +28,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-labels-feature.md -->
+{% include pbc/all/install-features/202304.0/install-the-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-product-labels-feature.md -->

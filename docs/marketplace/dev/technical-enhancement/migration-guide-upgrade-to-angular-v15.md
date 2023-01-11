@@ -31,7 +31,7 @@ So the update will require a major release for these modules:
 
 ### 1) Update modules
 
-1. Upgrade modules to the new version:
+1. Upgrade modules to the new version: 
 
 	The marketplace modules must correspond to the following versions: 
 	
@@ -287,7 +287,7 @@ Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/
            ...
        },
        ...,
-   	"exclude": [..., "**/*.test.ts"]
+       "exclude": [..., "**/*.test.ts"]
    }
    ```
 
@@ -315,134 +315,132 @@ Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/
 
 2. Add a new `.eslintrc.mp.json` file to the root folder with the following content: 
 
-	```json
-	{
-		 "root": true,
-		 "parser": "@typescript-eslint/parser",
-		 "plugins": ["@typescript-eslint", "@angular-eslint"],
-		 "env": {
-			  "node": true,
-			  "es6": true
-		 },
-		 "parserOptions": {
-			  "ecmaVersion": 2020,
-			  "sourceType": "module",
-			  "project": "./tsconfig.mp.json"
-		 },
-		 "extends": [
-			  "./node_modules/@spryker/frontend-config.eslint/.eslintrc.js",
-			  "plugin:@typescript-eslint/recommended",
-			  "plugin:@angular-eslint/recommended"
-		 ],
-		 "ignorePatterns": ["!**/*"],
-		 "overrides": [
-			  {
-					"files": ["*.ts"],
-					"plugins": ["deprecation"],
-					"extends": [
-						 "plugin:@angular-eslint/template/process-inline-templates"
-					],
-					"rules": {
-						 "deprecation/deprecation": "warn",
-						 "no-console": ["warn", { "allow":  ["warn", "error"] }],
-						 "no-empty": "error",
-						 "no-use-before-define": "off",
-						 "max-classes-per-file": "off",
-						 "@typescript-eslint/array-type": "off",
-						 "@typescript-eslint/no-restricted-imports": ["error", "rxjs/Rx"],
-						 "@typescript-eslint/no-unused-vars": "error",
-						 "@typescript-eslint/no-inferrable-types": ["error", { "ignoreParameters": true }],
-						 "@typescript-eslint/no-non-null-assertion": "error",
-						 "@typescript-eslint/no-var-requires": "off",
-						 "@typescript-eslint/no-explicit-any": "error",
-						 "@typescript-eslint/member-ordering": [
-							  "error",
-							  {
-									"default": ["instance-field", "instance-method", "static-field", "static-method"]
-							  }
-						 ],
-						 "@angular-eslint/contextual-lifecycle": "error",
-						 "@angular-eslint/component-class-suffix": "error",
-						 "@angular-eslint/component-selector": [
-							  "error",
-							  {
-									"type": "element",
-									"prefix": "mp",
-									"style": "kebab-case"
-							  }
-						 ],
-						 "@angular-eslint/directive-class-suffix": "error",
-						 "@angular-eslint/directive-selector": [
-							  "error",
-							  {
-									"type": "attribute",
-									"prefix": "mp",
-									"style": "camelCase"
-							  }
-						 ],
-						 "@angular-eslint/no-conflicting-lifecycle": "error",
-						 "@angular-eslint/no-host-metadata-property": "off",
-						 "@angular-eslint/no-input-rename": "error",
-						 "@angular-eslint/no-inputs-metadata-property": "error",
-						 "@angular-eslint/no-output-native": "error",
-						 "@angular-eslint/no-output-on-prefix": "error",
-						 "@angular-eslint/no-output-rename": "error",
-						 "@angular-eslint/no-outputs-metadata-property": "error",
-						 "@angular-eslint/use-lifecycle-interface": "error",
-						 "@angular-eslint/use-pipe-transform-interface": "error"
-					}
-			  },
-			  {
-					"files": ["*.html"],
-					"parser": "@angular-eslint/template-parser",
-					"extends": ["plugin:@angular-eslint/template/recommended"],
-					"rules": {
-						 "@angular-eslint/template/banana-in-box": "error",
-						 "@angular-eslint/template/no-negated-async": "error"
-					}
-			  }
-		 ]
-	}
-	```
+   ```json
+   {
+       "root": true,
+       "parser": "@typescript-eslint/parser",
+       "plugins": ["@typescript-eslint", "@angular-eslint"],
+       "env": {
+           "node": true,
+           "es6": true
+       },
+       "parserOptions": {
+           "ecmaVersion": 2020,
+           "sourceType": "module",
+           "project": "./tsconfig.mp.json"
+       },
+       "extends": [
+           "./node_modules/@spryker/frontend-config.eslint/.eslintrc.js",
+           "plugin:@typescript-eslint/recommended",
+           "plugin:@angular-eslint/recommended"
+       ],
+       "ignorePatterns": ["!**/*"],
+       "overrides": [
+           {
+               "files": ["*.ts"],
+               "plugins": ["deprecation"],
+               "extends": ["plugin:@angular-eslint/template/process-inline-templates"],
+               "rules": {
+                   "deprecation/deprecation": "warn",
+                   "no-console": ["warn", {"allow": ["warn", "error"]}],
+                   "no-empty": "error",
+                   "no-use-before-define": "off",
+                   "max-classes-per-file": "off",
+                   "@typescript-eslint/array-type": "off",
+                   "@typescript-eslint/no-restricted-imports": ["error", "rxjs/Rx"],
+                   "@typescript-eslint/no-unused-vars": "error",
+                   "@typescript-eslint/no-inferrable-types": ["error", {"ignoreParameters": true}],
+                   "@typescript-eslint/no-non-null-assertion": "error",
+                   "@typescript-eslint/no-var-requires": "off",
+                   "@typescript-eslint/no-explicit-any": "error",
+                   "@typescript-eslint/member-ordering": [
+                       "error",
+                       {
+                           "default": ["instance-field", "instance-method", "static-field", "static-method"]
+                       }
+                   ],
+                   "@angular-eslint/contextual-lifecycle": "error",
+                   "@angular-eslint/component-class-suffix": "error",
+                   "@angular-eslint/component-selector": [
+                       "error",
+                       {
+                           "type": "element",
+                           "prefix": "mp",
+                           "style": "kebab-case"
+                       }
+                   ],
+                   "@angular-eslint/directive-class-suffix": "error",
+                   "@angular-eslint/directive-selector": [
+                       "error",
+                       {
+                           "type": "attribute",
+                           "prefix": "mp",
+                           "style": "camelCase"
+                       }
+                   ],
+                   "@angular-eslint/no-conflicting-lifecycle": "error",
+                   "@angular-eslint/no-host-metadata-property": "off",
+                   "@angular-eslint/no-input-rename": "error",
+                   "@angular-eslint/no-inputs-metadata-property": "error",
+                   "@angular-eslint/no-output-native": "error",
+                   "@angular-eslint/no-output-on-prefix": "error",
+                   "@angular-eslint/no-output-rename": "error",
+                   "@angular-eslint/no-outputs-metadata-property": "error",
+                   "@angular-eslint/use-lifecycle-interface": "error",
+                   "@angular-eslint/use-pipe-transform-interface": "error"
+               }
+           },
+           {
+               "files": ["*.html"],
+               "parser": "@angular-eslint/template-parser",
+               "extends": ["plugin:@angular-eslint/template/recommended"],
+               "rules": {
+                   "@angular-eslint/template/banana-in-box": "error",
+                   "@angular-eslint/template/no-negated-async": "error"
+               }
+           }
+       ]
+   }
+   ```
 
 3. Adjust the `angular.json` to use a new `eslint` schematic:
 
-	```json
-	"lint": {
-		 "builder": "@angular-eslint/builder:lint",
-		 "options": {
-			  "eslintConfig": ".eslintrc.mp.json",
-			  "lintFilePatterns": [
-					"src/Pyz/Zed/*/Presentation/Components/**/*.ts",
-					"src/Pyz/Zed/*/Presentation/Components/**/*.html"
-			  ]
-		 }
-	},
-	```
+   ```json
+   "lint": {
+       "builder": "@angular-eslint/builder:lint",
+       "options": {
+           "eslintConfig": ".eslintrc.mp.json",
+           "lintFilePatterns": [
+               "src/Pyz/Zed/*/Presentation/Components/**/*.ts",
+               "src/Pyz/Zed/*/Presentation/Components/**/*.html"
+           ]
+       }
+   },
+   ```
 
 4. In the `package.json` rename the `mp:lint` script to the `mp:eslint`. 
 
 5. In the `tslint.json` add `"src/Pyz/Zed/*/Presentation/Components/**"` path to the `linterOptions.exlude` section: 
 
-	```json
-	{
-		 ...,
-		 "linterOptions": {
-			  "exclude": [
-					...,
-					"src/Pyz/Zed/*/Presentation/Components/**"
-			  ]
-		 }
-	}
-	```
+   ```json
+   {
+       ...,
+       "linterOptions": {
+           "exclude": [
+               ...,
+               "src/Pyz/Zed/*/Presentation/Components/**"
+           ]
+       }
+   }
+   ```
 
 6. Make sure to replace `tslint` disable comments with `eslint`, for example: 
 
-	```ts
-	/* tslint:disable:no-unnecessary-class */
-	// must be
-	/* eslint-disable @typescript-eslint/no-extraneous-class */
-	```
+   ```ts
+   /* tslint:disable:no-unnecessary-class */
+   // must be
+   /* eslint-disable @typescript-eslint/no-extraneous-class */
+   ```
 
 ## 6) Build the project
 

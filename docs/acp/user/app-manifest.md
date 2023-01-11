@@ -77,9 +77,18 @@ For the manifest, make sure to follow these conditions:
       "type": "homepage"
     }
   ],
-  "dependencies": {
-    "foo/bar": "^1.0.0"
-  }
+  "dependencies": [
+    {
+      "name": "foo/bar",
+      "version": "^1.0.0",
+      "compatibleBusinessModels": [
+        "B2B",
+        "B2C",
+        "B2B_MARKETPLACE",
+        "B2C_MARKETPLACE"
+      ]
+    }
+  ]
 }
 ```
 </details>
@@ -216,7 +225,7 @@ For the manifest, make sure to follow these conditions:
 ```json
 "dependencies": [
   {
-    "name": "foo/bar":,
+    "name": "foo/bar",
     "version": "^1.0.0",
     "compatibleBusinessModels": [
       "B2B",

@@ -136,6 +136,7 @@ Fuzzy search is the default search option on back office data tables. Fuzzy sear
 In order to solve these performance related issues, strict search mode has been then introduced and can be used on all back office data tables which extend the `AbstractTable` class.
 
 Strict search is `case sensitive` and the following search patterns will be used:
+
 if MySql connection is selected the `<%s%s = BINARY %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
 if PostgreSql connection is selected then the `<%s%s = %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
 

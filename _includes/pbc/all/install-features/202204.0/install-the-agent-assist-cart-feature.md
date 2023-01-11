@@ -2,18 +2,22 @@
 
 This document describes how to integrate the Agent Assist + Cart feature into a Spryker project.
 
-## Prerequisites
+## Install feature core
+
+Follow the steps below to install the Agent Assist + Cart feature core.
+
+### Prerequisites
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME         | VERSION | INTEGRATION GUIDE                                            |
-| ------------ | ------- | ------------------------------------------------------------ |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | ---| --- |
 | Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 | Agent Assist | {{site.version}}  | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{site.version}}/install-and-upgrade/install-the-agent-assist-feature.html) |
 | Cart         | {{site.version}}  | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html) |
 
 
-## 1) Set up behavior
+### 1) Set up behavior
 
 Activate the following plugins:
 
@@ -52,7 +56,7 @@ Ensure that, after finishing a customer impersonation, the session quote is empt
 {% endinfo_block %}
 
 
-## Related features
+### Related features
 
 Integrate the following related features:
 

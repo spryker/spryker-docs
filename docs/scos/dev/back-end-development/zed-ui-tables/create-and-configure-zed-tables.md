@@ -131,7 +131,15 @@ $config->setDefaultSortDirection(
 
 ### Configure strict search
 
-By default, strict search is disabled. However, you can enable it when setting up the table.
+Fuzzy search is the default search option on back office data tables. Fuzzy search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. This mode can bring to performance issues on large tables since indexes are not being used.
+
+In order to solve these performance related issues, strict search mode has been then introduced and can be used on all back office data tables which extend the `AbstractTable` class.
+
+Strict search is `case sensitive` and the following search patterns will be used:
+if MySql connection is selected the `<%s%s = BINARY %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
+if PostgreSql connection is selected then the `<%s%s = %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
+
+It is possible to enable it on per table basis, by setting `isStrictSearch` to true on the table configuration as follows:
 
 ```php
 <?php

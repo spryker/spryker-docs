@@ -2,13 +2,11 @@
 title: "HowTo: Create a custom dicsount calculator"
 last_updated: Jan 11, 2023
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2022120/docs/create-a-custom-dicsount-calculator
-originalArticleId: d8eb9816-18d8-4da0-b856-1d3989a07933
 related:
   - title: Integrate the Promotions & Discounts Glue API
     link: /docs/pbc/all/discount-management/202212.0/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
   - title: Discount Promotion feature integration
-    link https://documentation.spryker.com/v5/docs/discount-promotion-feature-integration
+    link: https://documentation.spryker.com/v5/docs/discount-promotion-feature-integration
 ---
 
 Whenever you want to introduce a new discount calculation logic, for example implementing a custom rounding logic, please follow these steps:

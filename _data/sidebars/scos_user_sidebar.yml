@@ -135,22 +135,24 @@ entries:
     - title: Spryker Academy
       url: /docs/scos/user/intro-to-spryker/spryker-academy.html
     - title: Contribute to documentation
-      url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/contribute-to-documentation.html
+      url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html
       nested:
       - title: Build the documentation site
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
       - title: Edit documentation via pull requests
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
       - title: Report documentation issues
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
       - title: Style, formatting, and general rules
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html
       - title: Markdown syntax
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
       - title: Review pull requests
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/review-pull-requests.html
       - title: Add product sections to the documentation
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
+      - title: Add and edit diagrams in the documentation
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentaion.html
 
   - title: Features
     url: /docs/scos/user/features/features.html
@@ -405,7 +407,7 @@ entries:
       - "202001.0"
       - "202005.0"
       - "202009.0"
-      - "202108.0"      
+      - "202108.0"
     - title: Measurement Units
       url: /docs/scos/user/features/measurement-units-feature-overview.html
     - title: Merchant B2B Contracts

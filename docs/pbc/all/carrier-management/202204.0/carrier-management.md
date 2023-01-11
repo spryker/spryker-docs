@@ -2,7 +2,7 @@
 title: Carrier Management
 description: With the Carrier Management capability, you can create and manage carrier companies and their delivery methods for every individual store.
 last_updated: July 07, 2022
-template: concept-topic-template
+template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-feature-overview
 originalArticleId: 9090caf1-5dfb-4b5a-ac10-13f268edab9f
 redirect_from:

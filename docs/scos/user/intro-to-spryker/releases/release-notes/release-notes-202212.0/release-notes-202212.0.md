@@ -21,7 +21,11 @@ Configurable Products are useful for items with a range of customizable options.
 
 Customers can access a standalone configurator page and choose from various available product options based on their preferences. Depending on the configuration choices, the product price is adjusted accordingly.
 
-<iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" frameborder="0" allowfullscreen></iframe>
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" type="video/mp4">
+  </video>
+</figure>
 
 Configured Products can be saved, accessed, and configured again in carts or from the product details page. Customers can also easily reorder past purchases. Configurable Products can also be part of a [Request For Quote (RFQ)](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html)—Spryker's powerful Quotation and Management feature can overwrite all the automatically calculated prices from the Configurable Product tool.
 

@@ -54,11 +54,12 @@ npm install
 Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
 
 {% endinfo_block %}
+
 ## 2) Update configuration files
 
 To update configuration files, make the following changes:
 
-1. In `frontend/configs/development-watch.js`, add the following code:
+1. Adjust `frontend/configs/development-watch.js`:
 
 ```js
 const merge = require('webpack-merge');

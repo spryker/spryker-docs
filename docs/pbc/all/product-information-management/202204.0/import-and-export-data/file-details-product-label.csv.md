@@ -16,7 +16,7 @@ This document describes the `product_label.csv` file to configure [Product Label
 
 ## Import file dependencies
 
-[product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+[product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
 
 ## Import file parameters
 

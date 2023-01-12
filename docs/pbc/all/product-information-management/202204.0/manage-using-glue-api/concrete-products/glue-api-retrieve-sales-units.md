@@ -21,7 +21,7 @@ related:
   - title: Retrieving image sets of concrete products
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
   - title: Measurement units feature overview
-    link: docs/scos/user/features/page.version/measurement-units-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/measurement-units-feature-overview.html
 ---
 
 This endpoint allows retrieving sales units of concrete products.

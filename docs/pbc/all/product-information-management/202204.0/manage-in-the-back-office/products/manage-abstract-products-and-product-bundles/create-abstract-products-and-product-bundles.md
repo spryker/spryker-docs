@@ -161,4 +161,4 @@ This opens the **Edit Product Abstract:{product SKU} page with a success message
 
 * [Add volume prices](/docs/pbc/all/price-management/{{site.version}}/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html)
 * [Add scheduled prices](/docs/pbc/all/price-management/{{site.version}}/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html)
-* [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html)
+* [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html)

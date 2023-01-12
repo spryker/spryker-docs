@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/importing-product-data-with-a-single-file
 ---
 
-Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-product-price.csv.html), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
+Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-product-price.csv.html), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
 
 * Have different environments (production, staging, etc.), and you need to populate them all with the product data.
 * Frequently import product data.
@@ -57,7 +57,7 @@ If you import only abstract products, the following fields must be populated in 
 * product_abstract.category_key
 * product_abstract.url.{LOCALE}
 
-For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
 
 If you import concrete products as well, the following fields are also mandatory:
 

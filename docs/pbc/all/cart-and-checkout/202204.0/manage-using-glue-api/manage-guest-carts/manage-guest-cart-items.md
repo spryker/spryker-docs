@@ -323,7 +323,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/user/features/{{site.version}}/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/pbc/all/product-information-management/{{site.version}}/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -2685,7 +2685,7 @@ To add a configurable bundle to a guest cart, send the request:
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | Number of the configurable bundles to add. |
 | templateUuid | 	
-String | &check; | The unique ID of the [Configurable Bundle Template](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
+String | &check; | The unique ID of the [Configurable Bundle Template](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |

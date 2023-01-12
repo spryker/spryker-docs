@@ -34,11 +34,11 @@ The file should have the following parameters:
 This file has the following dependencies:
 
 * [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
 
 ## Additional information
 
-It does not exist on by default on the project level. It can be created in order to override the CSV file from module: 
+It does not exist on by default on the project level. It can be created in order to override the CSV file from module:
 
 * `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`
 

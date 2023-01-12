@@ -6,7 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
-  - /docs/scos/user/features/202204.0/configurable-product-feature-overview.html
+  - /docs/scos/user/features/202212.0/configurable-product-feature-overview.html
 ---
 
 The *Configurable Product* feature introduces a new type of product, a configurable product, that customers can customize.

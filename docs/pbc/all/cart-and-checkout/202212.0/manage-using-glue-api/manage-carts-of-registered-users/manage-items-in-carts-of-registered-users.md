@@ -295,7 +295,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/scos/user/features/{{site.version}}/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/pbc/all/product-information-management/{{site.version}}/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -2504,7 +2504,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | The number of the configurable bundles to add. |
-| templateUuid | String | &check; | The unique ID of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
+| templateUuid | String | &check; | The unique ID of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |

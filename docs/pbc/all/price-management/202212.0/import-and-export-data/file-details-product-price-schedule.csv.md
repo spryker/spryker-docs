@@ -43,7 +43,7 @@ data:import:product-price-schedule
 
 
 
-* [product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
 * [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 * *stores.php* configuration file of the Demo Shop PHP project
 

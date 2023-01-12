@@ -5,7 +5,7 @@ template: feature-walkthrough-template
 ---
 
 The *Marketplace Product* feature provides a relation between Products and Merchants.
-`MerchantProductAbstract` is a database table used to store data with the Product and Merchant relations. The [Product features work as in the Spryker Commerce OS](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
+`MerchantProductAbstract` is a database table used to store data with the Product and Merchant relations. The [Product features work as in the Spryker Commerce OS](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overviewuct-feature-overview.html).
 However, on the Storefront, there are additional plugins and widgets to support the relation between Products and Merchants.
 Products are extended with the merchant's data and, when purchased, are assigned to the appropriate `MerchantOrder`.
 To learn more about managing products in the Merchant Portal, see [Marketplace Merchant Portal product management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-product-management-feature-walkthrough.html).
@@ -53,4 +53,3 @@ The following schema illustrates the Marketplace Product domain model:
 | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html) ||||
 | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |                                                              |                                                              ||
 | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html) |                                                              |                                                              ||
-

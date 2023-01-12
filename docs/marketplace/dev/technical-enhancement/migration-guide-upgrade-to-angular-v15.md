@@ -169,7 +169,7 @@ export default {
 
 2. In `angular.json`, add the following changes: 
 
-    1. Update the `test` section:
+   1. Update the `test` section:
 
     ```json
     "jestConfig": "frontend/merchant-portal/jest.config.js",
@@ -183,7 +183,7 @@ export default {
     "outputs": ["{projectRoot}/coverage"]
     ```
     
-   1. Remove the `defaultProject` section.
+   2. Remove the `defaultProject` section.
 
 3. In `jest.preset.js`, replace its content with the following: 
 

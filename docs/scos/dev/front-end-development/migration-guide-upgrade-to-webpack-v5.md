@@ -57,7 +57,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 
 To update configuration files, make the following changes:
 
-1. `frontend/configs/development-watch.js`:
+1. In `frontend/configs/development-watch.js`, add the following code:
 
 ```js
 const merge = require('webpack-merge');
@@ -65,11 +65,11 @@ const merge = require('webpack-merge');
 const { merge } = require('webpack-merge');
 ```
 
-2. `frontend/configs/development.js`:
+2. In `frontend/configs/development.js`, do the following:
    - Rename the `jsonpFunction` property to the `chunkLoadingGlobal` of the `output` object.
    - Rename the `vendors` property to the `defaultVendors` of the `cacheGroups` object.
 
-3. `frontend/configs/production.js`:
+3. In `frontend/configs/production.js`, make the following following changes:
 ```js
 const merge = require('webpack-merge');
 // must be
@@ -115,7 +115,7 @@ plugins: [
 
 In the `new TerserPlugin({ ... })` minimizer plugin, remove the `cache` property.
 
-1. `frontend/libs/assets-configurator.js`:
+1. In `frontend/libs/assets-configurator.js`, make the following changes:
 
 ```js
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -235,7 +235,7 @@ const getAssetsConfig = (appSettings) => [
 
 ## 2) Build assets
 
-Check correct builds for all layers `Yves`/`Zed`/`MP` (if Merchant Portal is used) including `watch`/`production` modes:
+Check correct builds for all layers `Yves`, `Zed`, and `MP` (if Merchant Portal is used), including `watch` and `production` modes:
 
 1. `Yves`:
 

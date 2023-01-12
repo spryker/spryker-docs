@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 
 This section describes how to get started with the B2C Demo Marketplace, including requirements and supported browsers. It contains the following topics:
-* [System requirements](/docs/marketplace/dev/setup/202204.0/system-requirements.html)
-* [Infrastructure requirements](/docs/marketplace/dev/setup/202204.0/infrastructure-requirements.html)
-* [Marketplace supported browsers](/docs/marketplace/dev/setup/202204.0/marketplace-supported-browsers.html)
-* [Setup](/docs/marketplace/dev/setup/202204.0/spryker-marketplace-setup.html)
+* [System requirements](/docs/marketplace/dev/setup/{{page.version}}/system-requirements.html)
+* [Infrastructure requirements](/docs/marketplace/dev/setup/{{page.version}}/infrastructure-requirements.html)
+* [Marketplace supported browsers](/docs/marketplace/dev/setup/{{page.version}}/marketplace-supported-browsers.html)
+* [Setup](/docs/marketplace/dev/setup/{{page.version}}/spryker-marketplace-setup.html)

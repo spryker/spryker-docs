@@ -27,8 +27,6 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-wishlists-via-glue-api.html
   - title: Retrieving Customer's Order History
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
-  - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains business level description of major new features and enhancements released in November of 2018.
@@ -73,7 +71,9 @@ Your customers can benefit from the same shop experience with the customer accou
 
 To help you keep track of your API development, we implemented a simple command that will create a YAML file to be used in your Swagger implementation to share the progress of development in your company.
 
-**Documentation**: [REST API Reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-reference.html).
+**Documentation**:
+* [REST API B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2b-reference.html).
+* [REST API B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-b2c-reference.html)
 
 ## B2C API React Example
 ![B2C API React example](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.12.0/image2.png)

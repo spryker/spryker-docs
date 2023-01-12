@@ -1014,8 +1014,6 @@ entries:
 
                   - title: "Editable"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html
-                    include_versions:
-                    - "202204.0"
 
                   - title: "Pagination"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html

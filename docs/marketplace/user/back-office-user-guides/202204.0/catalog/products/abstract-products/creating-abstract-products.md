@@ -18,7 +18,7 @@ redirect_from:
 
 To start working with products:
 
-1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
+1. To create product variants of abstract products, [create at least one super attribute](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 2. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.

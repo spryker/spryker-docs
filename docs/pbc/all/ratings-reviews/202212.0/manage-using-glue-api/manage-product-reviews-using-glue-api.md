@@ -182,7 +182,7 @@ Request sample: provide a rating and a review of products
 ## Other management options
 
 You can retrieve the average rating of a product as follows:
-* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 
 Also, all the endpoints that accept `abstract-products` and `concrete-products` resources as included resources in requests, return the average product rating.

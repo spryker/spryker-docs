@@ -18,7 +18,7 @@ redirect_from:
 
 To start working with products:
 
-1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
+1. To create product variants of abstract products, [create at least one super attribute](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 2. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
@@ -101,7 +101,7 @@ On the **Variants** tab, define product variants:
 
 ### Reference information: Defining product variants
 
-On the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
+On the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) or [manage](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/edit-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 

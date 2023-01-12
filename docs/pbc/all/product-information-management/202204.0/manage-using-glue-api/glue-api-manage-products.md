@@ -7,9 +7,9 @@ template: concept-topic-template
 This section contains the descriptions of the following endpoints used to manage products in Spryker Commerce OS:  
 * Abstract products:
 
-  * [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
+  * [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
 
-  * [Retrieving image sets of abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)
+  * [Retrieving image sets of abstract products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html)
 
 * Concrete products:
 
@@ -20,7 +20,7 @@ This section contains the descriptions of the following endpoints used to manage
   * [Retrieving-sales-units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)
 
 
-* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
+* [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 * [Retrieving related products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-related-products.html)
 * [Retrieving alternative products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html)
 * [Retrieving configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html)

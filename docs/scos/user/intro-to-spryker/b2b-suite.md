@@ -30,7 +30,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 
 - [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/configurable-product-feature-overview/configurable-product-feature-overview.html)
 - [Return Management](/docs/pbc/all/return-management/{{site.version}}/return-management.html)
-- [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
+- [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/pbc/all/cart-and-checkout/{{site.version}}/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/persistent-cart-sharing-feature-overview.html)
 - [Resource Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/resource-sharing-feature-overview.html)

@@ -6663,7 +6663,7 @@ To search by products, send the request:
 
 For other abstract product attributes, see:
 
-* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
+* [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
 * [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html)
 
 **Value facets**

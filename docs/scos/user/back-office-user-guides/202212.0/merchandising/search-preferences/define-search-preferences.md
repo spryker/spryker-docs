@@ -28,7 +28,7 @@ This topic describes how to add product attributes to search and define search p
 
 1. If you are new to the **Search preferences** section, you might want to start with [Best practices: Promote products with search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html).
 
-2. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) for the search preference that you are going to create.
+2. [Create a product attribute](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) for the search preference that you are going to create.
 
 3. Add the product attribute to a product by [creating a product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) or by [editing a product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 

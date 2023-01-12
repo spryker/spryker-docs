@@ -152,8 +152,12 @@ entries:
         - "202204.0"
     - title: Catalog
       url: /docs/scos/dev/feature-walkthroughs/catalog-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Category Management
       url: /docs/scos/dev/feature-walkthroughs/category-management-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Checkout
       url: /docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
       include_versions:
@@ -357,6 +361,12 @@ entries:
         - "202204.0"
     - title: Packaging Units
       url: /docs/scos/dev/feature-walkthroughs/packaging-units-feature-walkthrough.html
+      include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
     - title: Payments
       url: /docs/scos/dev/feature-walkthroughs/payments-feature-walkthrough.html
     - title: Persistent Cart Sharing
@@ -847,6 +857,11 @@ entries:
           - "202108.0"
       - title: Retrieving product labels
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
       - title: Managing product ratings and reviews
         url: /docs/scos/dev/glue-api-guides/managing-products/managing-product-ratings-and-reviews.html
         include_versions:
@@ -1073,6 +1088,10 @@ entries:
         include_versions:
         - "202005.0"
     - title: Retrieving categories
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"       
       nested:
       - title: Retrieving category trees
         url: /docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-trees.html

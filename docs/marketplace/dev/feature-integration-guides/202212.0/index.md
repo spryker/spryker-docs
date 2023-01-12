@@ -51,3 +51,4 @@ This section contains the following Marketplace feature integration guides:
 * [Merchant Portal - Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)
 * [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-tax-feature-integration.html)
 * [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)
+* [Glue API](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/glue.html)

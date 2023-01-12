@@ -9,8 +9,8 @@ related:
 ---
 
 ## 1. Plugins registration
-   
-Manifests support plugins registration in the dependency provider and plugins registration in the configuration files. There are multiple ways how the plugins can be registered inside of the project.
+
+Manifests support the registration of plugins in dependency provider classes and in configuration files. There are multiple ways in which the plugins can be registered inside of a project.
 
 ### 1.1. Plugins registration in the configuration file
 
@@ -30,12 +30,12 @@ $config[LogConstants::LOGGER_CONFIG_GLUE] = GlueLoggerConfigPlugin::class;
 
 ...
 ```
-<em>Code example 1.1</em>: Single plugin registration in the global configuration file (e.g. config_default.php)
+<em>Code example 1.1</em>: A single plugin registration in the global configuration file (e.g. config_default.php)
 
 ## 1.2. Plugins registration in the dependency provider file
 ### 1.2.1. Single plugin registration
 
-Inside of dependency provider call you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. Manifests also support constant concatenation inside of the constructor arguments.
+Inside of a dependency provider call, you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. Manifests also support constant concatenation inside of the constructor arguments.
 
 Code examples:
 
@@ -56,7 +56,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.1</em>: Single plugin registration with arguments in constructor
+<em>Code example 1.2.1</em>: A single plugin registration with arguments in constructor
 
 ```php
 use Spryker\Service\FileSystemExtension\Dependency\Plugin\FileSystemReaderPluginInterface;
@@ -77,18 +77,18 @@ class FileSystemDependencyProvider extends AbstractBundleDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.2</em>: Single plugin registration with wrap method call
+<em>Code example 1.2.2</em>: A single plugin registration with wrap method call
 
 ### 1.2.2. Plugins registration in an indexed array
-Manifests fully support multiple plugins registration in an indexed array. Manifests also support additional conditions for plugin registration and restrictions on the order of the plugins.
+Manifests fully support multiple plugins registration in an indexed array. Manifests also support additional conditions for the registration of plugins, and additional restrictions on the order of plugins.
 
-Restrictions on the order of the plugins can be done with special annotation keys ‘before' and ‘after’ (Code example 1.2.4). 
+Restrictions on the order of plugins can be done with special annotation keys ‘before' and ‘after’ (Code example 1.2.4). 
 
 If the plugin doesn’t contain any of these keys, it will be added to the end of the plugin stack. 
 
 If the plugin contains the ‘after' key and defined plugins in ‘after’ parameter don’t exist on the project side, the plugin will be added to the end of the plugin stack.
 
-If the plugin contains the ‘before' key and defined plugins in ‘before’ parameter don’t exist on the project side, the plugin will be added as the first plugin in plugin stack.
+If the plugin contains the ‘before' key and defined plugins in ‘before’ parameter don’t exist on the project side, the plugin will be added as the first plugin in the plugin stack.
 
 Code examples:
 
@@ -109,7 +109,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
     }
 }
 ```
-<em>Code example 1.2.3</em>: Multiple plugins registration in an indexed array.
+<em>Code example 1.2.3</em>: Multiple plugins registration in an indexed array
 
 ```php
 use Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
@@ -139,7 +139,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
     }
 }
 ```
-<em>Code example 1.2.4</em>: Multiple plugins registration in an indexed array with restrictions on the order of the plugins.
+<em>Code example 1.2.4</em>: Multiple plugins registration in an indexed array with restrictions on the order of the plugins
 
 ```php
 use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;
@@ -190,10 +190,10 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.6</em>: Multiple console commands registration with constant concatenated constructor argument
+<em>Code example 1.2.6</em>: Multiple console commands registration with a constant concatenated constructor argument
 
 ### 1.2.3. Plugins in an associative array
-Manifests fully support multiple plugins registration in associative array. As a key you can use:
+Manifests fully support multiple plugins registration in an associative array. As a key you can use:
 
 * string
 * constant
@@ -252,7 +252,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 <em>Code example 1.2.8</em>: Multiple plugins registration in an indexed array
 
 ### 1.2.4. Plugins in multidimensional array
-Manifests have limited support of multidimensional array:
+Manifests have limited support of multidimensional arrays:
 
 * only arrays that are added through the key are supported
 
@@ -299,7 +299,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.9</em>: Multiple plugins registration in multidimensional array
+<em>Code example 1.2.9</em>: Multiple plugins registration in a multidimensional array
 
 ```php
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
@@ -325,10 +325,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.10</em>: Multiple plugins registration in multidimensional array
+<em>Code example 1.2.10</em>: Multiple plugins registration in a multidimensional array
 
 ### 1.2.5. Container extension
-Manifests fully support the possibility of adding plugins through container extension. Order of the plugins is NOT SUPPORTED inside of the container extension. It means that before and after are NOT SUPPORTED in this case.
+Manifests fully support the possibility of adding plugins through a container extension. The Order of the plugins is NOT SUPPORTED inside of the container extension. It means that `before` and `after` are NOT SUPPORTED in this case.
 
 Code example:
 
@@ -359,10 +359,10 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 }
 ```
-<em>Code example 1.2.11</em>: Multiple plugins registration through container extension
+<em>Code example 1.2.11</em>: Multiple plugins registration through a container extension
 
 ### 1.2.6. Merging plugins
-Manifests fully support the possibility of merging the results of calling multiple plugins registration methods.
+Manifests fully support the possibility of merging the results of calling the registration methods of multiple plugins.
 
 Inside of array merge function call you can use:
 
@@ -448,17 +448,17 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.12</em>: Multiple plugins registration with merging plugins method call
+<em>Code example 1.2.12</em>: Multiple plugins registration with the merging plugins method call
 
 ### 1.3. Special situations
-If the target dependency provider class doesn’t exist in the project, it will be created and all required methods will be created automatically as well.
+If the target dependency provider class doesn’t exist in the project, it will be automatically created, and all required methods will be created automatically as well.
 
-If the target dependency provider class exists, but target method doesn’t exist in the class, the method won’t be created, the changes won’t be applied.
+If the target dependency provider class exists, but the target method doesn’t exist in the class, the method won’t be created, and the changes won’t be applied.
 
-If the target method inside of the dependency provider class was modified on the project level and e.g. array was extracted into the separated method, upgrader won’t find the array, the changes won’t be applied.
+If the target method inside of the dependency provider class was modified on the project level and, for example, the array was extracted into the separated method, the upgrader won’t find the array, and the changes won’t be applied.
 
 ## 2. Event subscribers registration
-Manifests support event subscribers registration in the dependency provider. 
+Manifests support the registration of event subscribers in the dependency provider.
 
 Manifests fully support event subscribers registration in collection. Restrictions to the order of the plugins in collection are NOT SUPPORTED. New plugin will be added to the end of the collection.
 
@@ -483,7 +483,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     }
 }
 ```
-<em>Code example 2.1</em>: Event subscribers registration in collection with parent method call
+<em>Code example 2.1</em>: Event subscribers registration in collection with a parent method call
 
 ```php
 use Spryker\Zed\AvailabilityStorage\Communication\Plugin\Event\Subscriber\AvailabilityStorageEventSubscriber;
@@ -504,14 +504,14 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     }
 }
 ```
-<em>Code example 2.2</em>: Event subscriber registration in collection with chain
+<em>Code example 2.2</em>: Event subscriber registration in a collection with a chain
 
 ## 3. Modules configuration
-Manifests support changes in module configuration files.
+Manifests support changes in a module's configuration files.
 
-Manifests support all scalar types (bool, int, float, string), compound type array and special type null.
+Manifests support all scalar types (bool, int, float, string), alongside the compound type array and the special type null.
 
-Manifests do not support compound types object, callable, iterable and special type resource.
+Manifests do not support the compound types object, or any callable, iterable and special type resources.
 
 Manifest only add the values to configuration files. Manifests DO NOT REMOVE the values from project configuration. 
 
@@ -701,9 +701,9 @@ class MultiCartConfig extends SprykerMultiCartConfig
     }
 }
 ```
-<em>Code example 3.2.4</em>: Method returns associative array (with constants, parent method call and array merging)
+<em>Code example 3.2.4</em>: Method returns with associative array (with constants, parent method call and array merging)
 
-Multidimensional arrays (up to 2 levels) are also supported here, but for its usage the wrapped function MUST be used.
+Multidimensional arrays up to 2 levels are also supported here, but for its usage the wrapped function MUST be used.
 
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;

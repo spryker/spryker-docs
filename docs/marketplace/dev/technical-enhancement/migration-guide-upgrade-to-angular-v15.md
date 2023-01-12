@@ -139,7 +139,11 @@ rm -rf node_modules
 npm install
 ```
 
+{% info_block warningBox "Verification" %}
+
 Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
+
+{% endinfo_block %}
 
 ## 4) Update Angular configuration
 

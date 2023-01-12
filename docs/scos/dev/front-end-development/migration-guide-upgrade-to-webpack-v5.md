@@ -34,15 +34,15 @@ To unblock future upgrades of other dependencies, we need to migrate as well.
 }
 ```
 
-- If Merchant Portal is used, run the following command:
+   - If Merchant Portal is used, run the following command:
 
-```json
-{
-    "@types/webpack": "~5.28.0"
-}
-```
+   ```json
+   {
+       "@types/webpack": "~5.28.0"
+   }
+   ```
 
-2. Update and install package dependencies:
+1. Update and install package dependencies:
 
 ```bash
 rm -rf node_modules
@@ -71,7 +71,8 @@ const { merge } = require('webpack-merge');
    - Rename the `jsonpFunction` property to the `chunkLoadingGlobal` of the `output` object.
    - Rename the `vendors` property to the `defaultVendors` of the `cacheGroups` object.
 
-3. In `frontend/configs/production.js`, make the following following changes:
+3. In `frontend/configs/production.js`, make the following changes:
+
 ```js
 const merge = require('webpack-merge');
 // must be

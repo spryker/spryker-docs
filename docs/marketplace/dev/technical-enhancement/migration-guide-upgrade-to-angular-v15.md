@@ -12,10 +12,10 @@ This document provides instructions for upgrading Angular to version 15 in your 
 ## Overview
 
 Our current version of Angular is v12 with v9 compatibility.
-Angular v12 was deprecated on 2022-11-12 according to the [policy](https://angular.io/guide/releases#support-policy-and-schedule).
+Angular v12 was deprecated on 2022-11-12, according to the [policy](https://angular.io/guide/releases#support-policy-and-schedule).
 The current stable version of Angular is v15.
 
-We need to upgrade to the latest major to get the latest bug fixes and security fixes as well as performance in runtime and tooling.
+We need to upgrade to the latest major to get the latest bug fixes and security fixes, as well as performance in runtime and tooling.
 We can't maintain compatibility with older versions of Angular when updating Angular v15.
 So the update requires a major release for these modules:
 - `ZedUi`
@@ -62,7 +62,7 @@ console transfer:generate
 
 ## 2) Update Webpack
 
-Before starting the migration, make sure that Webpack is v5, if it's v4, the [Webpack migration guide](/docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html) is required.
+Before starting the migration, make sure that Webpack is v5; if it's v4, the [Webpack migration guide](/docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html) is required.
 
 ## 3) Update NPM dependencies
 
@@ -143,7 +143,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 
 ## 4) Update Angular configuration
 
-1. In the `frontend/merchant-portal` folder, rename `jest.config.js` file to `jest.config.ts` and replace its content with the following:
+1. In the `frontend/merchant-portal` folder, rename the `jest.config.js` file to `jest.config.ts` and replace its content with the following:
 
 ```ts
 export default {
@@ -185,7 +185,7 @@ export default {
     
    1. Remove the `defaultProject` section.
 
-3. In `jest.preset.js`, replace content with the following: 
+3. In `jest.preset.js`, replace its content with the following: 
 
 ```js
 const nxPreset = require('@nrwl/jest/preset').default;
@@ -236,7 +236,7 @@ config.resolve.alias = {
 /.angular/
 ```
 
-7. In `nx.json`, replace content with the following: 
+7. In `nx.json`, replace its content with the following: 
 
 ```json
 {
@@ -301,7 +301,7 @@ config.resolve.alias = {
 }
 ```
 
-10. In the `src/Pyz/Zed/ZedUi/Presentation/Layout/layout.twig` template, remove the `importConfig` override or remove the whole template if it only contains this change.
+10. In the `src/Pyz/Zed/ZedUi/Presentation/Layout/layout.twig` template, remove the `importConfig` override, or remove the whole template if it only contains this change.
 
 ## 5) Add Eslint configuration
 

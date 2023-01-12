@@ -10,7 +10,7 @@ related:
     link: docs/scos/dev/feature-integration-guides/202005.0/discount-promotion-feature-integration.html
 ---
 
-This guide explains how to introduce a new discount calculation logic
+This guide explains how to introduce a new discount calculation logic.
 
 To introduce a new discount calculation logic—for example, to implement a custom rounding logic—follow these steps:
 

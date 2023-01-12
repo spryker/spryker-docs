@@ -233,7 +233,7 @@ const getAssetsConfig = (appSettings) => [
 
 ## 2) Build assets
 
-*Check correct builds for all layers `Yves`/`Zed`/`MP` (if Merchant Portal is used) including `watch`/`production` modes:**
+Check correct builds for all layers `Yves`/`Zed`/`MP` (if Merchant Portal is used) including `watch`/`production` modes:
 
 1. `Yves`:
 

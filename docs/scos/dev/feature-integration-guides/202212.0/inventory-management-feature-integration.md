@@ -43,9 +43,9 @@ To start feature integration, overview and install the necessary features:
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1)Install the required modules using Composer
 
-Run the following command to install the required modules:
+Run the following command to install the required modules:
 
 ```bash
 composer require spryker-feature/inventory-management:"{{page.version}}" --update-with-dependencies
@@ -63,14 +63,16 @@ Make sure that the following modules have been installed:
 | StockGui                     | vendor/spryker/stock-gui                      |
 | StockAddress                 | vendor/spryker/stock-address                  |
 | StockAddressDataImport       | vendor/spryker/stock-address-data-import      |
+| WarehouseAllocation          | vendor/spryker/warehouse-allocation           |
+| WarehouseAllocationExtension | vendor/spryker/warehouse-allocation-extension |
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+### 2)Set up database schema and transfer objects
 
 Set up database schema and transfer objects:
 
-1.  Adjust the schema definition so `EventTransfer` has the additional columns for the Availability entity:
+1.  Adjust the schema definition so `EventTransfer` has the additional columns for the Availability entity:
 
 
 **src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy\_availability.schema.xml**
@@ -138,12 +140,14 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| StockTransfer| class| added| src/Generated/Shared/Transfer/StockTransfer.php
-| StockCriteriaFilterTransfer| class| added| src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php|
-| StockResponseTransfer| class| added| src/Generated/Shared/Transfer/StockResponseTransfer.php|
-|StockAddressTransfer| class| added| src/Generated/Shared/Transfer/StockAddressTransfer.php|
+| TRANSFER                    | TYPE  | EVENT | PATH                                                      |
+|-----------------------------|-------|-------|-----------------------------------------------------------|
+| ItemTransfer                | class | added | src/Generated/Shared/Transfer/ItemTransfer                |
+| OrderTransfer               | class | added | src/Generated/Shared/Transfer/OrderTransfer               |
+| StockTransfer               | class | added | src/Generated/Shared/Transfer/StockTransfer               |
+| StockCriteriaFilterTransfer | class | added | src/Generated/Shared/Transfer/StockCriteriaFilterTransfer |
+| StockResponseTransfer       | class | added | src/Generated/Shared/Transfer/StockResponseTransfer       |
+| StockAddressTransfer        | class | added | src/Generated/Shared/Transfer/StockAddressTransfer        |
 
 
 {% endinfo_block %}
@@ -153,11 +157,13 @@ Make sure that the following changes have been applied in transfer objects:
 
 Make sure that the following changes have been applied in the database:
 
-| DATABASE ENTITY | TYPE | EVENT |
-| --- | --- | --- |
-|spy_stock_store| table| added|
-|spy_stock.is_active| column| added|
-|spy_stock_address| table| created
+| DATABASE ENTITY                     | TYPE   | EVENT   |
+|-------------------------------------|--------|---------|
+| spy_sales_order_item.warehouse_uuid | column | added   |
+| spy_stock_store                     | table  | created |
+| spy_stock.is_active                 | column | added   |
+| spy_stock.uuid                      | column | added   |
+| spy_stock_address                   | table  | created |
 
 {% endinfo_block %}
 
@@ -165,10 +171,13 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that propel entities have been generated:
 
-| FILE PATH | EXTENDS |
-| --- | --- |
+| FILE PATH                                                     | EXTENDS                                                                 |
+|---------------------------------------------------------------|-------------------------------------------------------------------------|
+| src/Orm/Zed/Stock/Persistence/Base/SpyStockStore.php          | Spryker/Zed/Stock/Persistence/Propel/AbstractSpyStockStore.php          |
+| src/Orm/Zed/Stock/Persistence/Base/SpyStockStoreQuery.php     | Spryker/Zed/Stock/Persistence/Propel/AbstractSpyStockStoreQuery.php     |
 | src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddress.php | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddress.php |
 | src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddressQuery.php | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddressQuery.php |
+
 
 {% endinfo_block %}
 
@@ -179,7 +188,67 @@ Make sure that `SpyAvailabilityTableMap::getBehaviors()` provides mapping for `s
 
 {% endinfo_block %}
 
-### 3) Configure export to Elasticsearch
+### 3) Configure OMS.
+
+Create the OMS sub-process file.
+
+**config/Zed/oms/WarehouseAllocationSubprocess/WarehouseAllocation01.xml**
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="WarehouseAllocation">
+        <states>
+            <state name="warehouse allocated" reserved="true"/>
+        </states>
+
+        <events>
+            <event name="allocate warehouse" onEnter="true" command="WarehouseAllocation/WarehouseAllocate"/>
+        </events>
+    </process>
+</statemachine>
+```
+
+Using the `DummyPayment01.xml` process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
+
+<details open>
+    <summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+    <process name="DummyPayment01" main="true">
+        <transitions>
+            
+            <transition happy="true">
+                <source>new</source>
+                <target>warehouse allocated</target>
+                <event>allocate warehouse</event>
+            </transition>
+    
+        </transitions>
+        
+        <subprocesses>
+            <process>WarehouseAllocation</process>
+        </subprocesses>
+        
+    </process>
+    
+    <process name="WarehouseAllocation" file="WarehouseAllocationSubprocess/WarehouseAllocation01.xml"/>
+
+</statemachine>
+```
+
+### 4)Configure export to Elasticsearch
 
 {% info_block errorBox %}
 
@@ -224,7 +293,82 @@ Make sure that only abstract products with a single concrete product have the `a
 
 {% endinfo_block %}
 
-### 4) Import data
+### 5)Configure warehouse allocation OMS process.
+
+Enable the following plugins.
+
+| PLUGIN                                          | SPECIFICATION                             | PREREQUISITES | NAMESPACE                                                |
+|-------------------------------------------------|-------------------------------------------|---------------|----------------------------------------------------------|
+| SalesOrderWarehouseAllocationCommandPlugin      | Allocates warehouse for sales order item. | none          | Spryker\Zed\WarehouseAllocation\Communication\Plugin\Oms |
+
+
+**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Oms;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandCollectionInterface;
+use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
+use Spryker\Zed\WarehouseAllocation\Communication\Plugin\Oms\SalesOrderWarehouseAllocationCommandPlugin;
+
+class OmsDependencyProvider extends SprykerOmsDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    protected function extendCommandPlugins(Container $container): Container
+    {
+       $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
+            $commandCollection->add(new SalesOrderWarehouseAllocationCommandPlugin(), 'WarehouseAllocation/WarehouseAllocate');
+
+            return $commandCollection;
+        });
+
+        return $container;
+    }
+}
+```
+
+Using spryker/product-warehouse-allocation-example and spryker/product-offer-warehouse-allocation-example modules as en examples implement order warehouse allocation plugins according to your business requirements and enable them in WarehouseAllocationDependencyProvider.
+
+**src/Pyz/Zed/WarehouseAllocation/WarehouseAllocationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\WarehouseAllocation;
+
+use Spryker\Zed\ProductOfferWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation\ProductOfferSalesOrderWarehouseAllocationPlugin;
+use Spryker\Zed\ProductWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation\ProductSalesOrderWarehouseAllocationPlugin;
+use Spryker\Zed\WarehouseAllocation\WarehouseAllocationDependencyProvider as SprykerWarehouseAllocationDependencyProvider;
+
+class WarehouseAllocationDependencyProvider extends SprykerWarehouseAllocationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\WarehouseAllocationExtension\Dependency\Plugin\SalesOrderWarehouseAllocationPluginInterface>
+     */
+    protected function getSalesOrderWarehouseAllocationPlugins(): array
+    {
+        return [
+            new ProductOfferSalesOrderWarehouseAllocationPlugin(),
+            new ProductSalesOrderWarehouseAllocationPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that after the order is created, order items has `warehouse allocated` status.
+
+{% endinfo_block %}
+
+### 5) Import data
 
 Import warehouses and warehouse address data:
 
@@ -438,7 +582,7 @@ Make sure that warehouse and warehouse address data have been added to the `spy_
 
 {% endinfo_block %}
 
-### 5) Set up behavior 
+### 6) Set up behavior 
 
 Set up behavior:
 

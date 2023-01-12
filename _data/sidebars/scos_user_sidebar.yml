@@ -2928,7 +2928,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Personalization and cross-selling
         nested:
@@ -3125,6 +3124,11 @@ entries:
           - "202001.0"
           - "202005.0"
     - title: Product Information (PIMERP)
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Contentserv
         url: /docs/scos/user/technology-partners/product-information-pimerp/contentserv.html

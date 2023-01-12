@@ -13,6 +13,8 @@ redirect_from:
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
+  - title: Arvato - Risk Check
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-risk-check.html
   - title: Arvato
     link: docs/scos/user/technology-partners/page.version/payment-partners/arvato.html
 ---

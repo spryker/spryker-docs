@@ -1,6 +1,6 @@
 ---
-title: "How-To: Creating of a new MerchantOms flow"
-description: This articles provides details how to create new MerchantOms flow
+title: "How-To: Create a new MerchantOms flow"
+description: This document provides details about how to create the new MerchantOms flow
 template: howto-guide-template
 ---
 

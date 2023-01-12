@@ -17,9 +17,13 @@ redirect_from:
   - /docs/scos/user/technology-partners/202200.0/technology-partners.html
 ---
 
-In this section you will find information about our Technology Partner Integration solutions.
+In this section, you will find information about our Technology Partner Integration solutions. Keep in mind that this list refers only to our existing integrations. For a complete list of the Spryker technology partners, see [Technology Partners](https://spryker.com/technology-partners/).
 
-Visit [Technology Partners](https://spryker.com/technology-partners/) for a complete list of our partners.
+{% info_block infoBox "Info" %}
+
+If you use Spryker Cloud, you can connect applications from our [App Composition Platform overview](https://docs.spryker.com/docs/acp/user/intro-to-acp/acp-overview.html) without any development effort.
+
+{% endinfo_block %}
 
 ##  Hosting Providers
 

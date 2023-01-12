@@ -702,6 +702,7 @@ entries:
       - "202009.0"
       - "202108.0"
     - title: Managing B2B account
+      url: /docs/scos/dev/glue-api-guides/managing-b2b-account/managing-b2b-account.html
       include_versions:
       - "201907.0"
       - "202001.0"
@@ -785,6 +786,7 @@ entries:
       - "202001.0"
       - "202005.0"
     - title: Managing products
+      url: /docs/scos/dev/glue-api-guides/managing-products/managing-products.html
       nested:
       - title: Abstract products
         include_versions:
@@ -2744,6 +2746,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-validator.html
     - title: Migration Guide - WebProfiler
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
+    - title: Upgrade the Quote module
+      url: /docs/scos/dev/module-migration-guides/upgrade-the-quote-module.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -3499,6 +3503,7 @@ entries:
       - title: Get the list of console commands and available options
         url: /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation
+      url: /docs/scos/dev/back-end-development/data-manipulation/data-manipulation.html
       nested:
       - title: Run and revert a database migration
         url: /docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
@@ -3525,6 +3530,7 @@ entries:
         - title: Synchronization behavior - enabling multiple mappings
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
       - title: DataPayload Conversion
+        url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/datapayload-conversion.html
         nested:
         - title: Refund process management
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/refund-process-management.html
@@ -3550,10 +3556,12 @@ entries:
       - title: Configuration management
         url: /docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
       - title: Data interaction
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/data-interaction.html
         nested:
         - title: Standard filters - backend and frontend technical details
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
         - title: Search
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/search.html
           nested:
           - title: Facet filter overview and configuration
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
@@ -3581,9 +3589,10 @@ entries:
         - title: Integrate RabbitMQ Headers in Queue Messages
           url: /docs/scos/dev/back-end-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
       - title: Payment methods
+        url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/payment-methods.html
         nested:
         - title: Direct Debit payment
-          url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
+          url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/direct-debit-payment.html
           nested:
           - title: Implement Direct Debit in Yves
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html

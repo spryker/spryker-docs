@@ -13,7 +13,9 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/afterpay/installing-and-configuring-afterpay.html
 related:
   - title: Afterpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay.html
+    link: docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html
+  - title: Integrating Afterpay  
+    link: docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/afterpay/integrating-afterpay.html
 ---
 
 {% info_block errorBox %}

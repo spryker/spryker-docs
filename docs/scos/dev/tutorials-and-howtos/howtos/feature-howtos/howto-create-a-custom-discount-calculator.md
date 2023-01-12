@@ -12,17 +12,17 @@ related:
 
 This guide explains how to introduce a new discount calculation logic.
 
-To introduce a new discount calculation logic—for example, to implement a custom rounding logic—follow these steps:
+To introduce a new discount calculation logic follow these steps:
 
 1. Implement your version of the calculator, that is, `SpecialDiscountCalculatorPlugin`, implementing a plugin with the interface `\Spryker\Zed\Discount\Dependency\Plugin\DiscountCalculatorPluginInterface`.
-We have at least two existing calculators to use as an example implementation—for example, [PercentagePlugin](https://github.com/spryker/discount/blob/master/src/Spryker/Zed/Discount/Communication/Plugin/Calculator/PercentagePlugin.php) and [FixedPlugin](https://github.com/spryker/discount/blob/master/src/Spryker/Zed/Discount/Communication/Plugin/Calculator/FixedPlugin.php)
+We have at least two existing calculators to use as an example implementation - [PercentagePlugin](https://github.com/spryker/discount/blob/master/src/Spryker/Zed/Discount/Communication/Plugin/Calculator/PercentagePlugin.php) and [FixedPlugin](https://github.com/spryker/discount/blob/master/src/Spryker/Zed/Discount/Communication/Plugin/Calculator/FixedPlugin.php)
 
-2. In `\Pyz\Zed\Discount\DiscountDependencyProvider`, create a new constant—or example:
+2. In `\Pyz\Zed\Discount\DiscountDependencyProvider`, create a new constant - for example:
 ```
     public const PLUGIN_CALCULATOR_CUSTOM = 'PLUGIN_CALCULATOR_CUSTOM';
 ```
 
-3. Override the `\Spryker\Zed\Discount\DiscountDependencyProvider::getAvailableCalculatorPlugins` method on the project level and add your plugin—for example:
+3. Override the `\Spryker\Zed\Discount\DiscountDependencyProvider::getAvailableCalculatorPlugins` method on the project level and add your plugin — for example:
 
 ```php
     public function getAvailableCalculatorPlugins(): array
@@ -35,4 +35,4 @@ We have at least two existing calculators to use as an example implementation—
 
 ```
 
-4. Create new discounts with the PLUGIN_CALCULATOR_CUSTOM calculator. This also works from Zed.
+4. Create new discounts with the PLUGIN_CALCULATOR_CUSTOM calculator. This also works from Zed UI.

@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 
 This section contains the following Marketplace feature integration guides:
-* [Combined Product Offer Import feature-integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)
+* [Combined Product Offer Import feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)
 * [Marketplace Dummy Payment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-dummy-payment-feature-integration.html)
 * [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)
 * [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)
@@ -23,10 +23,15 @@ This section contains the following Marketplace feature integration guides:
 * [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)
 * [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)
 * [Marketplace Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html)
-* [Marketplace](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)
-* [Marketplace](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html)
-* [Marketplace](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)
-* [Marketplace](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html)
+* [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)
+* [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html)
+* [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)
+* [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html)
+
+* [Marketplace ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)
+* [Marketplace ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html)
+* [Marketplace ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html)
+* [Marketplace ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html)
 
 * [Marketplace]
 * 

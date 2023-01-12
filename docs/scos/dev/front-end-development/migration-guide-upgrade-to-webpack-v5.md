@@ -48,7 +48,9 @@ To unblock future upgrades of other dependencies, we need to migrate as well.
 rm -rf node_modules
 npm install
 ```
-   
+
+{% info_block warningBox "Verification" %}
+
 Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
 
 ## 2) Update configuration files

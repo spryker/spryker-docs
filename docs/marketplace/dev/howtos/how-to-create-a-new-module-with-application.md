@@ -1,17 +1,25 @@
 ---
-title: "HowTo: Create a new module with application"
+title: 'HowTo: Create a new Angular Module with application'
 last_updated: Aug 31, 2022
-description: This document shows how to create a new module with the application
+description: This document shows how to create a new Angular Module with the application
 template: howto-guide-template
 ---
 
-This document describes how to create a new module with the application.
+This document describes how to create a new Angular Module with the application.
 
-## 1) Create module scaffolding structure
+You may want to create a new Angular Module for a few reasons:
 
-A new module needs to have a proper scaffolding structure. The necessary list of files is provided in the [Project structure article, Module structure section](/docs/marketplace/dev/front-end/{{site.version}}/project-structure.html#module-structure). Each new module can contain its own set of Twig Web Components.
+- Create new Angular/Web components on the project level
+- Extend existing core Angular Module on the project level
+- Override existing core Angular Module on the project level
 
-## 2) Register a new module
+## 1) Create Angular Module scaffolding structure
+
+A new Angular Module needs to have a proper scaffolding structure.
+The necessary list of files is provided in the [Project structure article, Module structure section](/docs/marketplace/dev/front-end/{{site.version}}/project-structure.html#module-structure).
+Each new Angular Module can contain its own set of Twig Web Components.
+
+## 2) Register a new Angular Module
 
 To register components, a special Angular Module is created. The `components.module.ts` file contains a list of all Angular Components that will be exposed as Web Components.
 
@@ -26,11 +34,11 @@ import { SomeComponentComponent } from './some-component/some-component.componen
 import { SomeComponentModule } from './some-component/some-component.module';
 
 @NgModule({
-    imports: [
-        WebComponentsModule.withComponents([SomeComponentComponent]),
-        SomeComponentModule,
-    ],
-    providers: [],
+  imports: [
+    WebComponentsModule.withComponents([SomeComponentComponent]),
+    SomeComponentModule,
+  ],
+  providers: [],
 })
 export class ComponentsModule {}
 ```
@@ -45,7 +53,7 @@ import { ComponentsModule } from './app/components.module';
 registerNgModule(ComponentsModule);
 ```
 
-By registering and rebuilding this module, a new JS bundle is created, which must be manually added to the Twig page in order to load Web Components.
+By registering and rebuilding this Angular Module, a new JS bundle is created, which must be manually added to the Twig page in order to load Web Components.
 
 {% info_block warningBox %}
 
@@ -78,7 +86,7 @@ export class SomeComponentComponent {}
 
 {% block footerJs %}
     {{ view.importJsBundle('module-name', importConfig) }}
-    
+
     {{ parent() }}
 {% endblock %}
 {% endraw %}

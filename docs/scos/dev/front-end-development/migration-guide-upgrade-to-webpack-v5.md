@@ -34,15 +34,15 @@ To unblock future upgrades of other dependencies, we need to migrate as well.
 }
 ```
 
-   - If Merchant Portal is used, run the following command:
+   - If Merchant Portal is used:
 
-   ```json
-   {
-       "@types/webpack": "~5.28.0"
-   }
-   ```
+        ```json
+        {
+            "@types/webpack": "~5.28.0"
+        }
+        ```
 
-1. Update and install package dependencies:
+2. Update and install package dependencies:
 
 ```bash
 rm -rf node_modules

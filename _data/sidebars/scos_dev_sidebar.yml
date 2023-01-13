@@ -4458,6 +4458,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
       - title: "HowTo: Allow Zed CSS/JS on a project"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
+      - title: "HowTo: Create a custom discount calculator"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-a-custom-discount-calculator.html
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/index.html
     nested:

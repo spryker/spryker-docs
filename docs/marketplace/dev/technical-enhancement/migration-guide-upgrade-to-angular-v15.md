@@ -408,7 +408,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 }
 ```
 
-3. Adjust the `angular.json` to use a new `eslint` schematic:
+3. Adjust `angular.json` to use a new `eslint` schematic:
 
 ```json
 "lint": {

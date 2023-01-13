@@ -44,6 +44,7 @@ entries:
         - title: FileResolver
           url: /docs/sdk/dev/spryks/fileresolver.html
       - title: Development tools
+        url: /docs/sdk/dev/development-tools/index.html
         nested:
         - title: Architecture Sniffer
           url: /docs/sdk/dev/development-tools/architecture-sniffer.html

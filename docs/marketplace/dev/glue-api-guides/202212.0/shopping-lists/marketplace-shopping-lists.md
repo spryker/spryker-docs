@@ -1,6 +1,6 @@
 ---
 title: Marketplace shopping lists
-description: Desscribes the Glue API endpoints used when developing Marketplace shopping lists in Spryker Marketplace
+description: Describes the Glue API endpoints used when developing Marketplace shopping lists in Spryker Marketplace
 last_updated: Jan 13, 2023
 template: concept-topic-template
 ---

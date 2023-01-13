@@ -13,10 +13,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-category-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/product-category-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/product-category-feature-integration.html
 related:
     - title: Product feature integration
       link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-feature.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-product-category-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-category-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-product-category-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-category-feature.md -->

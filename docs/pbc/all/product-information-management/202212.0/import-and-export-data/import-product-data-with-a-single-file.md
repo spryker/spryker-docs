@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/importing-product-data-with-a-single-file
   - /docs/importing-product-data-with-a-single-file
   - /docs/en/importing-product-data-with-a-single-file
-  - /docs/scos/dev/data-import/202204.0/importing-product-data-with-a-single-file.html
+  - /docs/scos/dev/data-import/2022012.0/importing-product-data-with-a-single-file.html
 ---
 
 Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-product-price.csv.html), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:

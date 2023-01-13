@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/categories
   - /docs/categories
   - /docs/en/categories
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/categories/categories.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/categories/categories.html
 ---
 
 **Categories** contains data required to set up categories in your online store. We have structured this section according to the two CSV files that you will have to use to import the data:

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/glue-api-measurement-units-feature-integration
   - /docs/en/glue-api-measurement-units-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-measurement-units-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-measurement-units-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-measurement-units-feature-integration.html
 related:
   - title: Measurement Units feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/measurement-units-feature-integration.html
@@ -25,4 +25,4 @@ related:
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-glue-api/install-the-measurement-units-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-measurement-units-glue-api.md -->
+{% include pbc/all/install-features/202212.0/install-glue-api/install-the-measurement-units-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-measurement-units-glue-api.md -->

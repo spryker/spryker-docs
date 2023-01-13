@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-product-imagecsv
   - /docs/file-details-product-imagecsv
   - /docs/en/file-details-product-imagecsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/products/file-details-product-image.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/products/file-details-product-image.csv.html
 ---
 
 This document describes the `product_image.csv` file to configure [Product Image](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.

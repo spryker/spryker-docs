@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-product-abstract-storecsv
   - /docs/file-details-product-abstract-storecsv
   - /docs/en/file-details-product-abstract-storecsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html
 ---
 
 This document describes the `product_abstract_store.csv` file to configure Product Abstract Store information in your Spryker Demo Shop.

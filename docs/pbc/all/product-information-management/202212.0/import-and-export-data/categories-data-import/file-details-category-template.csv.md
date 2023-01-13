@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
 ---
 
 This document describes the `category_template.csv` file to configure category templates in your Spryker shop.

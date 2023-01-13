@@ -10,7 +10,7 @@ redirect_from:
   - /docs/product-packaging-unit-feature-integration
   - /docs/en/product-packaging-unit-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/packaging-units-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/packaging-units-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/packaging-units-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-packaging-units-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-packaging-units-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-packaging-units-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-packaging-units-feature.md -->

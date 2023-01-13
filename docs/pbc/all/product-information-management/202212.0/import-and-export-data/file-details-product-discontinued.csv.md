@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-product-discontinuedcsv
   - /docs/file-details-product-discontinuedcsv
   - /docs/en/file-details-product-discontinuedcsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
 ---
 
 This document describes the `product_discontinued.csv` file to configure [Discontinued Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html) information in your Spryker Demo Shop.

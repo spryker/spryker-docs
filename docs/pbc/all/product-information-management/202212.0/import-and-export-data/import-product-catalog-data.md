@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/catalog-setup
   - /docs/catalog-setup
   - /docs/en/catalog-setup
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/catalog-setup.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/catalog-setup.html
 ---
 
 *Catalog Setup* contains data required to sell products and build their main structure.

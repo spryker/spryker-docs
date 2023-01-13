@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-product-management-attributecsv
   - /docs/file-details-product-management-attributecsv
   - /docs/en/file-details-product-management-attributecsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html
 ---
 
 This document describes the `product_management_attribute.csv` file to configure [product attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.

@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/category-filter-feature-integration
   - /docs/category-filter-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/category-filters-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/category-filters-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/category-filters-feature-integration.html
 related:
   - title: Managing Category Filters
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-category-filters-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-category-filters-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-category-filters-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-category-filters-feature.md -->

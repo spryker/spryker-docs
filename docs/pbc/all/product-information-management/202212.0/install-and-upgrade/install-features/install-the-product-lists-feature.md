@@ -11,7 +11,7 @@ redirect_from:
   - /docs/product-lists-feature-integration
   - /docs/en/product-lists-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/product-lists-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/product-lists-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/product-lists-feature-integration.html
 related:
   - title: Product Lists + Catalog feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
@@ -31,4 +31,4 @@ related:
     link: docs/scos/user/features/page.version/merchant-product-restrictions-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-lists-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-lists-feature.md -->

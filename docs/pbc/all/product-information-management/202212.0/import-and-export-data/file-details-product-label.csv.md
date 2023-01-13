@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-product-labelcsv
   - /docs/file-details-product-labelcsv
   - /docs/en/file-details-product-labelcsv
-  - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html
 ---
 
 This document describes the `product_label.csv` file to configure [Product Label](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) information in your Spryker Demo Shop.

@@ -17,7 +17,7 @@ related:
   - title: Product feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
   - title: Retrieving abstract products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieving concrete products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
 ---

@@ -374,7 +374,7 @@ Optionally, you can overwrite the existing command runners with a more suitable 
 
 ## 5. Generate a task by a CLI command
 
-It might be useful to generate a task by using a CLI command.
+It might be useful to generate a task by using a CLI command as follows:
 
 ```shell
 # generate yaml task

@@ -11,9 +11,11 @@ VCS Connector lets you use a different VCS system with a single command interfac
 
 To run a VCS, do the following:
 
-- To run a task: ```spryker-sdk vcs:clone```
- - Fill in the repository and select a specific VCS as prompted.
+1. To run a task, use this command:
+```shell
+spryker-sdk vcs:clone
+2. Fill in the repository and select a specific VCS as prompted.
 
 ## Where to find the cloned project
 
-All project are cloned in temporary `var/tmp` directory.
+All projects are cloned to the temporary `var/tmp` directory.

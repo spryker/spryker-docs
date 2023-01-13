@@ -1,6 +1,6 @@
 ---
 title: Wishlists
-description: Desscribes the Glue API endpoints used for Wishlists when developing in Spryker Marketplace
+description: Describes the Glue API endpoints used for Wishlists when developing in Spryker Marketplace
 last_updated: Jan 13, 2023
 template: concept-topic-template
 ---

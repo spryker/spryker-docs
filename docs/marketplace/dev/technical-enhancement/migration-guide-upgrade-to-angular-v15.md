@@ -134,7 +134,7 @@ Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/
    }
    ```
 
-2. Update and install package dependencies:
+3. Update and install package dependencies:
 
 ```bash
 rm -rf node_modules
@@ -408,7 +408,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 }
 ```
 
-3. Adjust `angular.json` to use a new `eslint` schematic:
+3. Adjust the `angular.json` to use a new `eslint` schematic:
 
 ```json
 "lint": {

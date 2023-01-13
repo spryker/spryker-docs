@@ -14,7 +14,7 @@ This section provides a collection of articles that explain the Glue API endpoin
 * [Content items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/content-items/retrieving-abstract-products-in-abstract-product-lists.html)
 * [Guest carts](
 * [Merchants](
-* [Product offers](
+* [Product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/product-offers.html)
 * [Marketplace shopping lists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/marketplace-shopping-lists.html)
 * [Wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/wishlists.html)
 * [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html)

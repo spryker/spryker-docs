@@ -116,9 +116,9 @@ plugins: [
 ]
 ```
 
-In the `new TerserPlugin({ ... })` minimizer plugin, remove the `cache` property.
+   1. In the `new TerserPlugin({ ... })` minimizer plugin, remove the `cache` property.
 
-1. In `frontend/libs/assets-configurator.js`, make the following changes:
+4. In `frontend/libs/assets-configurator.js`, make the following changes:
 
 ```js
 const CleanWebpackPlugin = require('clean-webpack-plugin');

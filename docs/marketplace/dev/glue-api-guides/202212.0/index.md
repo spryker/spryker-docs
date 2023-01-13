@@ -15,7 +15,7 @@ This section provides a collection of articles that explain the Glue API endpoin
 * [Guest carts](
 * [Merchants](
 * [Product offers](
-* [Shopping lists](
+* [Marketplace shopping lists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/marketplace-shopping-lists.html)
 * [Wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/wishlists.html)
 * [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html)
 * [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html)

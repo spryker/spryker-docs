@@ -586,6 +586,7 @@ entries:
             - "202212.0"
 
           - title: Glue API
+            url: /docs/marketplace/dev/feature-integration-guides/glue/glue.html
             nested:
               - title: "Glue API: Marketplace Inventory Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-feature-integration.html
@@ -699,6 +700,7 @@ entries:
                 - "202212.0"
 
       - title: Glue API guides
+        url: /docs/marketplace/dev/glue-api-guides/index.html
         nested:
           - title: REST API Marketplace B2C reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
@@ -722,6 +724,7 @@ entries:
                 - "202212.0"
 
           - title: Concrete products
+            url: /docs/marketplace/dev/glue-api-guides/concrete-products/concrete-products.html
             nested:
               - title: Retrieving concrete products
                 url: /docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
@@ -738,6 +741,7 @@ entries:
                 - "202212.0"
 
           - title: Сarts of registered users
+            url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/carts-of-registered-users.html
             nested:
               - title: Managing carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -763,6 +767,7 @@ entries:
                 - "202212.0"
 
           - title: Guest carts
+            url: /docs/marketplace/dev/glue-api-guides/guest-carts/guest-carts.html
             nested:
               - title: Managing guest carts
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-carts.html
@@ -779,6 +784,7 @@ entries:
                 - "202212.0"
 
           - title: Merchants
+            url: /docs/marketplace/dev/glue-api-guides/merchants/merchants.html
             nested:
               - title: Retrieving merchants
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
@@ -802,6 +808,7 @@ entries:
                 - "202212.0"
 
           - title: Product offers
+            url: /docs/marketplace/dev/glue-api-guides/product-offers/product-offers.html
             nested:
               - title: Retrieving product offers
                 url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html
@@ -817,6 +824,7 @@ entries:
                 - "202212.0"
 
           - title: Shopping lists
+            url: /docs/marketplace/dev/glue-api-guides/shopping-lists/marketplace-shopping-lists.html
             include_versions:
             - "202204.0"
             - "202212.0"
@@ -834,6 +842,7 @@ entries:
                 - "202212.0"
 
           - title: Wishlists
+            url: /docs/marketplace/dev/glue-api-guides/wishlists/wishlists.html
             nested:
               - title: Managing wishlists
                 url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
@@ -883,18 +892,6 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
-
-          - title: Shopping lists
-            nested:
-              - title: Managing shopping lists
-                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
-                include_versions:
-                - "202108.0"
-                - "202204.0"
-                - "202212.0"
-
-              - title: Managing shopping list items
-                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
 
       - title: Data export
         nested:
@@ -1067,6 +1064,7 @@ entries:
             - "202212.0"
 
       - title: Front-end
+        url: /docs/marketplace/dev/front-end/index.html
         include_versions:
         nested:
 
@@ -1501,6 +1499,7 @@ entries:
             - "202212.0"
 
       - title: HowTos
+        url: /docs/marketplace/dev/howtos/index.html
         nested:
 
           - title: "How-To: Upgrade Spryker instance to the Marketplace"
@@ -1534,6 +1533,7 @@ entries:
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
 
       - title: Technical enhancement guides
+        url: /docs/marketplace/dev/technical-enhancement/index.html
         nested:
 
           - title: "Migration guide - Upgrade to Angular v12"

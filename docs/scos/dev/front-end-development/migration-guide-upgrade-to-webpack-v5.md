@@ -34,7 +34,7 @@ To unblock future upgrades of other dependencies, we need to migrate as well.
 }
 ```
 
-- If Merchant Portal is used, run the following command:
+- If Merchant Portal is used:
 
 ```json
 {

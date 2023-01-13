@@ -9,7 +9,7 @@ This section provides a collection of articles that explain the Glue API endpoin
 * [REST API Marketplace B2C reference](/docs/marketplace/dev/glue-api-guides/{{page.version}}/rest-api-b2c-reference.html)
 * [REST API Marketplace B2B reference](/docs/marketplace/dev/glue-api-guides/{{page.version}}/rest-api-b2b-reference.html)
 * [Abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
-* [Concrete products](
+* [Concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/concrete-products.html)
 * [Carts of registered users](
 * [Content items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/content-items/retrieving-abstract-products-in-abstract-product-lists.html)
 * [Guest carts](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/guest-carts.html)

@@ -6,7 +6,6 @@ entries:
     nested:
       - title: Setup
         url: /docs/marketplace/dev/setup/index.html
-        include_versions:
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html

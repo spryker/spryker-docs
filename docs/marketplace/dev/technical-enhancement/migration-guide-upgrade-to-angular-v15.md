@@ -76,63 +76,63 @@ Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/
 
    1. Update or add the following dependencies: 
 
-   ```json
-   {
-       "dependencies": {
-           "@angular/animations": "~15.0.3",
-           "@angular/cdk": "~15.0.3",
-           "@angular/elements": "~15.0.3",
-           "@angular/forms": "~15.0.3",
-           "@angular/router": "~15.0.3",
-           "@angular/common": "~15.0.3",
-           "@angular/compiler": "~15.0.3",
-           "@angular/core": "~15.0.3",
-           "@angular/platform-browser": "~15.0.3",
-           "@angular/platform-browser-dynamic": "~15.0.3",
-           "rxjs": "~7.5.7",
-           "zone.js": "~0.12.0"
-       },
-       "devDependencies": {
-           "@angular-builders/custom-webpack": "~15.0.0",
-           "@angular-devkit/build-angular": "~15.0.3",
-           "@angular-eslint/builder": "~15.0.0",
-           "@angular-eslint/eslint-plugin": "~15.0.0",
-           "@angular-eslint/eslint-plugin-template": "~15.0.0",
-           "@angular-eslint/schematics": "~15.0.0",
-           "@angular-eslint/template-parser": "~15.0.0",
-           "@angular/cli": "~15.0.3",
-           "@angular/compiler-cli": "~15.0.3",
-           "@angular/language-service": "~15.0.3",
-           "@nrwl/cli": "~15.0.7",
-           "@nrwl/jest": "~15.0.7",
-           "@nrwl/workspace": "~15.0.7",
-           "@types/jest": "~28.1.1",
-           "@typescript-eslint/eslint-plugin": "~5.44.0",
-           "@typescript-eslint/parser": "~5.44.0",
-           "eslint": "~8.28.0",
-           "eslint-plugin-deprecation": "~1.3.3",
-           "jest": "~28.1.3",
-           "jest-environment-jsdom": "~28.1.1",
-           "jest-preset-angular": "~12.2.3",
-           "nx": "~15.0.7",
-           "ts-jest": "~28.0.8",
-           "ts-node": "~10.9.1",
-           "typescript": "~4.8.4"
-       }
-   }
-   ```
+        ```json
+        {
+            "dependencies": {
+                "@angular/animations": "~15.0.3",
+                "@angular/cdk": "~15.0.3",
+                "@angular/elements": "~15.0.3",
+                "@angular/forms": "~15.0.3",
+                "@angular/router": "~15.0.3",
+                "@angular/common": "~15.0.3",
+                "@angular/compiler": "~15.0.3",
+                "@angular/core": "~15.0.3",
+                "@angular/platform-browser": "~15.0.3",
+                "@angular/platform-browser-dynamic": "~15.0.3",
+                "rxjs": "~7.5.7",
+                "zone.js": "~0.12.0"
+            },
+            "devDependencies": {
+                "@angular-builders/custom-webpack": "~15.0.0",
+                "@angular-devkit/build-angular": "~15.0.3",
+                "@angular-eslint/builder": "~15.0.0",
+                "@angular-eslint/eslint-plugin": "~15.0.0",
+                "@angular-eslint/eslint-plugin-template": "~15.0.0",
+                "@angular-eslint/schematics": "~15.0.0",
+                "@angular-eslint/template-parser": "~15.0.0",
+                "@angular/cli": "~15.0.3",
+                "@angular/compiler-cli": "~15.0.3",
+                "@angular/language-service": "~15.0.3",
+                "@nrwl/cli": "~15.0.7",
+                "@nrwl/jest": "~15.0.7",
+                "@nrwl/workspace": "~15.0.7",
+                "@types/jest": "~28.1.1",
+                "@typescript-eslint/eslint-plugin": "~5.44.0",
+                "@typescript-eslint/parser": "~5.44.0",
+                "eslint": "~8.28.0",
+                "eslint-plugin-deprecation": "~1.3.3",
+                "jest": "~28.1.3",
+                "jest-environment-jsdom": "~28.1.1",
+                "jest-preset-angular": "~12.2.3",
+                "nx": "~15.0.7",
+                "ts-jest": "~28.0.8",
+                "ts-node": "~10.9.1",
+                "typescript": "~4.8.4"
+            }
+        }
+        ```
 
    2. Remove the following dependencies:
 
-   ```json
-   {
-       "devDependencies": {
-           "@nrwl/tao": "~12.10.1",
-           "codelyzer": "~6.0.0",
-           "typescript-eslint-parser": "~22.0.0"
-       }
-   }
-   ```
+        ```json
+        {
+            "devDependencies": {
+                "@nrwl/tao": "~12.10.1",
+                "codelyzer": "~6.0.0",
+                "typescript-eslint-parser": "~22.0.0"
+            }
+        }
+        ```
 
 3. Update and install package dependencies:
 
@@ -149,76 +149,76 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 
 ## 4) Update Angular configuration
 
-1. In `frontend/merchant-portal` folder:
+1. In `frontend/merchant-portal` folder, do the following:
 
    1. Rename the `jest.config.js` file to `jest.config.ts` and replace its content with the following: 
 
-   ```ts
-   export default {
-       displayName: 'merchant-portal',
-       preset: './jest.preset.js',
-       setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
-       globals: {
-           'ts-jest': {
-               stringifyContentPathRegex: '\\.(html|svg)$',
-               tsconfig: '<rootDir>/tsconfig.spec.json',
-           },
-       },
-       roots: ['<rootDir>/../../vendor/spryker/spryker/Bundles'],
-       testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
-       resolver: '@nrwl/jest/plugins/resolver',
-       moduleFileExtensions: ['ts', 'js', 'html'],
-       collectCoverageFrom: ['**/*.ts', '!**/*.stories.ts', '!**/node_modules/**'],
-       coverageReporters: ['lcov', 'text'],
-       coverageDirectory: '<rootDir>/../../coverage/merchant-portal',
-       passWithNoTests: true,
-   };
-   ```
+        ```ts
+        export default {
+            displayName: 'merchant-portal',
+            preset: './jest.preset.js',
+            setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
+            globals: {
+                'ts-jest': {
+                    stringifyContentPathRegex: '\\.(html|svg)$',
+                    tsconfig: '<rootDir>/tsconfig.spec.json',
+                },
+            },
+            roots: ['<rootDir>/../../vendor/spryker/spryker/Bundles'],
+            testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
+            resolver: '@nrwl/jest/plugins/resolver',
+            moduleFileExtensions: ['ts', 'js', 'html'],
+            collectCoverageFrom: ['**/*.ts', '!**/*.stories.ts', '!**/node_modules/**'],
+            coverageReporters: ['lcov', 'text'],
+            coverageDirectory: '<rootDir>/../../coverage/merchant-portal',
+            passWithNoTests: true,
+        };
+        ```
    
    2. In `jest.preset.js`, replace its content with the following:
 
-   ```js
-   const nxPreset = require('@nrwl/jest/preset').default;
-   
-   module.exports = {
-       ...nxPreset,
-       transform: {
-           '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
-       },
-       transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
-       snapshotSerializers: [
-           'jest-preset-angular/build/serializers/no-ng-attributes',
-           'jest-preset-angular/build/serializers/ng-snapshot',
-           'jest-preset-angular/build/serializers/html-comment',
-       ],
-   };
-   ```
+        ```js
+        const nxPreset = require('@nrwl/jest/preset').default;
+
+        module.exports = {
+            ...nxPreset,
+            transform: {
+                '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
+            },
+            transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
+            snapshotSerializers: [
+                'jest-preset-angular/build/serializers/no-ng-attributes',
+                'jest-preset-angular/build/serializers/ng-snapshot',
+                'jest-preset-angular/build/serializers/html-comment',
+            ],
+        };
+        ```
 
    3. In `tsconfig.spec.json`, add the `emitDecoratorMetadata` property to the `compilerOptions` section and add the `"jest.config.ts"` path to the `include` section:
 
-   ```json
-   {
-       ...,
-       "compilerOptions": {
-           ...,
-           "emitDecoratorMetadata": false
-       },
-       ...,
-       "include": [
-           ...,
-           "jest.config.ts"
-       ]
-   }
-   ```
+        ```json
+        {
+            ...,
+            "compilerOptions": {
+                ...,
+                "emitDecoratorMetadata": false
+            },
+            ...,
+            "include": [
+                ...,
+                "jest.config.ts"
+            ]
+        }
+        ```
    
    4. In `webpack.config.ts`, add aliases to resolve imports paths in `.less` files:
 
-   ```js
-   config.resolve.alias = {
-       '~@spryker': path.resolve(__dirname, '../../node_modules/@spryker'),
-       '~@angular': path.resolve(__dirname, '../../node_modules/@angular'),
-   };
-   ```
+        ```js
+        config.resolve.alias = {
+            '~@spryker': path.resolve(__dirname, '../../node_modules/@spryker'),
+            '~@angular': path.resolve(__dirname, '../../node_modules/@angular'),
+        };
+        ```
 
 2. In `angular.json`, add the following changes: 
 

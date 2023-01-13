@@ -72,67 +72,66 @@ Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/
 
 {% endinfo_block %}
 
-1. In `package.json`, update or add the following dependencies:
+1. In `package.json`, do the following: 
+   1. Update or add the following dependencies:
+        ```json
+        {
+            "dependencies": {
+                "@angular/animations": "~15.0.3",
+                "@angular/cdk": "~15.0.3",
+                "@angular/elements": "~15.0.3",
+                "@angular/forms": "~15.0.3",
+                "@angular/router": "~15.0.3",
+                "@angular/common": "~15.0.3",
+                "@angular/compiler": "~15.0.3",
+                "@angular/core": "~15.0.3",
+                "@angular/platform-browser": "~15.0.3",
+                "@angular/platform-browser-dynamic": "~15.0.3",
+                "rxjs": "~7.5.7",
+                "zone.js": "~0.12.0"
+            },
+            "devDependencies": {
+                "@angular-builders/custom-webpack": "~15.0.0",
+                "@angular-devkit/build-angular": "~15.0.3",
+                "@angular-eslint/builder": "~15.0.0",
+                "@angular-eslint/eslint-plugin": "~15.0.0",
+                "@angular-eslint/eslint-plugin-template": "~15.0.0",
+                "@angular-eslint/schematics": "~15.0.0",
+                "@angular-eslint/template-parser": "~15.0.0",
+                "@angular/cli": "~15.0.3",
+                "@angular/compiler-cli": "~15.0.3",
+                "@angular/language-service": "~15.0.3",
+                "@nrwl/cli": "~15.0.7",
+                "@nrwl/jest": "~15.0.7",
+                "@nrwl/workspace": "~15.0.7",
+                "@types/jest": "~28.1.1",
+                "@typescript-eslint/eslint-plugin": "~5.44.0",
+                "@typescript-eslint/parser": "~5.44.0",
+                "eslint": "~8.28.0",
+                "eslint-plugin-deprecation": "~1.3.3",
+                "jest": "~28.1.3",
+                "jest-environment-jsdom": "~28.1.1",
+                "jest-preset-angular": "~12.2.3",
+                "nx": "~15.0.7",
+                "ts-jest": "~28.0.8",
+                "ts-node": "~10.9.1",
+                "typescript": "~4.8.4"
+            }
+        }
+        ```
 
-```json
-{
-    "dependencies": {
-        "@angular/animations": "~15.0.3",
-        "@angular/cdk": "~15.0.3",
-        "@angular/elements": "~15.0.3",
-        "@angular/forms": "~15.0.3",
-        "@angular/router": "~15.0.3",
-        "@angular/common": "~15.0.3",
-        "@angular/compiler": "~15.0.3",
-        "@angular/core": "~15.0.3",
-        "@angular/platform-browser": "~15.0.3",
-        "@angular/platform-browser-dynamic": "~15.0.3",
-        "rxjs": "~7.5.7",
-        "zone.js": "~0.12.0"
-    },
-    "devDependencies": {
-        "@angular-builders/custom-webpack": "~15.0.0",
-        "@angular-devkit/build-angular": "~15.0.3",
-        "@angular-eslint/builder": "~15.0.0",
-        "@angular-eslint/eslint-plugin": "~15.0.0",
-        "@angular-eslint/eslint-plugin-template": "~15.0.0",
-        "@angular-eslint/schematics": "~15.0.0",
-        "@angular-eslint/template-parser": "~15.0.0",
-        "@angular/cli": "~15.0.3",
-        "@angular/compiler-cli": "~15.0.3",
-        "@angular/language-service": "~15.0.3",
-        "@nrwl/cli": "~15.0.7",
-        "@nrwl/jest": "~15.0.7",
-        "@nrwl/workspace": "~15.0.7",
-        "@types/jest": "~28.1.1",
-        "@typescript-eslint/eslint-plugin": "~5.44.0",
-        "@typescript-eslint/parser": "~5.44.0",
-        "eslint": "~8.28.0",
-        "eslint-plugin-deprecation": "~1.3.3",
-        "jest": "~28.1.3",
-        "jest-environment-jsdom": "~28.1.1",
-        "jest-preset-angular": "~12.2.3",
-        "nx": "~15.0.7",
-        "ts-jest": "~28.0.8",
-        "ts-node": "~10.9.1",
-        "typescript": "~4.8.4"
-    }
-}
-```
+   2. Remove the following dependencies:
+        ```json
+        {
+            "devDependencies": {
+                "@nrwl/tao": "~12.10.1",
+                "codelyzer": "~6.0.0",
+                "typescript-eslint-parser": "~22.0.0"
+            }
+        }
+        ```
 
-2. Remove the following dependencies:
-
-```json
-{
-    "devDependencies": {
-        "@nrwl/tao": "~12.10.1",
-        "codelyzer": "~6.0.0",
-        "typescript-eslint-parser": "~22.0.0"
-    }
-}
-```
-
-3. Update and install package dependencies:
+2. Update and install package dependencies:
 
 ```bash
 rm -rf node_modules
@@ -420,7 +419,6 @@ config.resolve.alias = {
 ```
 
 4. In `package.json`, rename the `mp:lint` script to the `mp:eslint`. 
-
 5. In `tslint.json`, add the `"src/Pyz/Zed/*/Presentation/Components/**"` path to the `linterOptions.exlude` section: 
 
 ```json

@@ -24,13 +24,13 @@ Follow the steps below to install the Inventory Management feature core.
 To start feature integration, overview and install the necessary features:
 
 
-| NAME | VERSION |
-| --- | --- |
+| NAME         | VERSION          |
+|--------------|------------------|
 | Spryker Core | {{site.version}} |
 
-### 1) Install the required modules using Composer
+### 1)Install the required modules using Composer
 
-Run the following command to install the required modules:
+Run the following command to install the required modules:
 
 ```bash
 composer require spryker-feature/inventory-management:"{{site.version}}" --update-with-dependencies
@@ -41,21 +41,23 @@ composer require spryker-feature/inventory-management:"{{site.version}}" --updat
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-|Stock |vendor/spryker/stock |
-|StockDataImport |vendor/spryker/stock-data-import|
-|StockGui |vendor/spryker/stock-gui|
-|StockAddress |vendor/spryker/stock-address|
-|StockAddressDataImport |vendor/spryker/stock-address-data-import|
+| MODULE                       | EXPECTED DIRECTORY                            |
+|------------------------------|-----------------------------------------------|
+| Stock                        | vendor/spryker/stock                          |
+| StockDataImport              | vendor/spryker/stock-data-import              |
+| StockGui                     | vendor/spryker/stock-gui                      |
+| StockAddress                 | vendor/spryker/stock-address                  |
+| StockAddressDataImport       | vendor/spryker/stock-address-data-import      |
+| WarehouseAllocation          | vendor/spryker/warehouse-allocation           |
+| WarehouseAllocationExtension | vendor/spryker/warehouse-allocation-extension |
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+### 2)Set up database schema and transfer objects
 
 Set up database schema and transfer objects:
 
-1.  Adjust the schema definition so `EventTransfer` has the additional columns for the Availability entity:
+1.  Adjust the schema definition so `EventTransfer` has the additional columns for the Availability entity:
 
 
 **src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy\_availability.schema.xml**
@@ -114,6 +116,7 @@ class DataImportConfig extends SprykerDataImportConfig
 3. Generate transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -122,12 +125,14 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| StockTransfer| class| added| src/Generated/Shared/Transfer/StockTransfer.php
-| StockCriteriaFilterTransfer| class| added| src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php|
-| StockResponseTransfer| class| added| src/Generated/Shared/Transfer/StockResponseTransfer.php|
-|StockAddressTransfer| class| added| src/Generated/Shared/Transfer/StockAddressTransfer.php|
+| TRANSFER                    | TYPE  | EVENT | PATH                                                          |
+|-----------------------------|-------|-------|---------------------------------------------------------------|
+| ItemTransfer                | class | added | src/Generated/Shared/Transfer/ItemTransfer.php                |
+| OrderTransfer               | class | added | src/Generated/Shared/Transfer/OrderTransfer.php               |
+| StockTransfer               | class | added | src/Generated/Shared/Transfer/StockTransfer.php               |
+| StockCriteriaFilterTransfer | class | added | src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php |
+| StockResponseTransfer       | class | added | src/Generated/Shared/Transfer/StockResponseTransfer.php       |
+| StockAddressTransfer        | class | added | src/Generated/Shared/Transfer/StockAddressTransfer.php        |
 
 {% endinfo_block %}
 
@@ -136,11 +141,13 @@ Make sure that the following changes have been applied in transfer objects:
 
 Make sure that the following changes have been applied in the database:
 
-| DATABASE ENTITY | TYPE | EVENT |
-| --- | --- | --- |
-|spy_stock_store| table| added|
-|spy_stock.is_active| column| added|
-|spy_stock_address| table| created
+| DATABASE ENTITY                     | TYPE   | EVENT   |
+|-------------------------------------|--------|---------|
+| spy_sales_order_item.warehouse_uuid | column | added   |
+| spy_stock_store                     | table  | created |
+| spy_stock.is_active                 | column | added   |
+| spy_stock.uuid                      | column | added   |
+| spy_stock_address                   | table  | created |
 
 {% endinfo_block %}
 
@@ -148,9 +155,11 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that propel entities have been generated:
 
-| FILE PATH | EXTENDS |
-| --- | --- |
-| src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddress.php | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddress.php |
+| FILE PATH                                                          | EXTENDS                                                                      |
+|--------------------------------------------------------------------|------------------------------------------------------------------------------|
+| src/Orm/Zed/Stock/Persistence/Base/SpyStockStore.php               | Spryker/Zed/Stock/Persistence/Propel/AbstractSpyStockStore.php               |
+| src/Orm/Zed/Stock/Persistence/Base/SpyStockStoreQuery.php          | Spryker/Zed/Stock/Persistence/Propel/AbstractSpyStockStoreQuery.php          |
+| src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddress.php      | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddress.php      |
 | src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddressQuery.php | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddressQuery.php |
 
 {% endinfo_block %}
@@ -162,7 +171,141 @@ Make sure that `SpyAvailabilityTableMap::getBehaviors()` provides mapping for `s
 
 {% endinfo_block %}
 
-### 3) Configure export to Elasticsearch
+### 3) Configure OMS.
+
+Create the OMS sub-process file.
+
+**config/Zed/oms/WarehouseAllocationSubprocess/WarehouseAllocation01.xml**
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="WarehouseAllocation">
+        <states>
+            <state name="warehouse allocated" reserved="true"/>
+        </states>
+
+        <events>
+            <event name="allocate warehouse" onEnter="true" command="WarehouseAllocation/WarehouseAllocate"/>
+        </events>
+    </process>
+</statemachine>
+```
+
+Using the `DummyPayment01.xml` process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
+
+<details open>
+    <summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+    <process name="DummyPayment01" main="true">
+        <transitions>
+            
+            <transition happy="true">
+                <source>new</source>
+                <target>warehouse allocated</target>
+                <event>allocate warehouse</event>
+            </transition>
+    
+        </transitions>
+        
+        <subprocesses>
+            <process>WarehouseAllocation</process>
+        </subprocesses>
+        
+    </process>
+    
+    <process name="WarehouseAllocation" file="WarehouseAllocationSubprocess/WarehouseAllocation01.xml"/>
+
+</statemachine>
+```
+
+
+Enable the following plugins.
+
+| PLUGIN                                          | SPECIFICATION                             | PREREQUISITES | NAMESPACE                                                |
+|-------------------------------------------------|-------------------------------------------|---------------|----------------------------------------------------------|
+| SalesOrderWarehouseAllocationCommandPlugin      | Allocates warehouse for sales order item. | none          | Spryker\Zed\WarehouseAllocation\Communication\Plugin\Oms |
+
+
+**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Oms;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandCollectionInterface;
+use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
+use Spryker\Zed\WarehouseAllocation\Communication\Plugin\Oms\SalesOrderWarehouseAllocationCommandPlugin;
+
+class OmsDependencyProvider extends SprykerOmsDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    protected function extendCommandPlugins(Container $container): Container
+    {
+       $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
+            $commandCollection->add(new SalesOrderWarehouseAllocationCommandPlugin(), 'WarehouseAllocation/WarehouseAllocate');
+
+            return $commandCollection;
+        });
+
+        return $container;
+    }
+}
+```
+
+Using spryker/product-warehouse-allocation-example and spryker/product-offer-warehouse-allocation-example modules as en examples implement order warehouse allocation plugins according to your business requirements and enable them in WarehouseAllocationDependencyProvider.
+
+**src/Pyz/Zed/WarehouseAllocation/WarehouseAllocationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\WarehouseAllocation;
+
+use Spryker\Zed\ProductOfferWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation\ProductOfferSalesOrderWarehouseAllocationPlugin;
+use Spryker\Zed\ProductWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation\ProductSalesOrderWarehouseAllocationPlugin;
+use Spryker\Zed\WarehouseAllocation\WarehouseAllocationDependencyProvider as SprykerWarehouseAllocationDependencyProvider;
+
+class WarehouseAllocationDependencyProvider extends SprykerWarehouseAllocationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\WarehouseAllocationExtension\Dependency\Plugin\SalesOrderWarehouseAllocationPluginInterface>
+     */
+    protected function getSalesOrderWarehouseAllocationPlugins(): array
+    {
+        return [
+            new ProductOfferSalesOrderWarehouseAllocationPlugin(),
+            new ProductSalesOrderWarehouseAllocationPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that after the order is created, order items gained `warehouse allocated` status.
+
+{% endinfo_block %}
+
+### 4)Configure export to Elasticsearch
 
 {% info_block errorBox %}
 
@@ -173,9 +316,9 @@ This section is only related to the integration of the *Add to cart from catalog
 
 Install the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| AvailabilityProductAbstractAddToCartPlugin | Filters out the products that are not available. |  | Spryker\Zed\Availability\Communication\Plugin\ProductPageSearch |
+| PLUGIN                                     | SPECIFICATION                                    | PREREQUISITES | NAMESPACE                                                       |
+|--------------------------------------------|--------------------------------------------------|---------------|-----------------------------------------------------------------|
+| AvailabilityProductAbstractAddToCartPlugin | Filters out the products that are not available. |               | Spryker\Zed\Availability\Communication\Plugin\ProductPageSearch |
 
 
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
@@ -229,10 +372,10 @@ Sony Experts MER000006 Warehouse 1,1
 ```
 
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
-| --- | --- | --- | --- | --- |
-| name | mandatory | string | Warehouse1 | Name of the warehouse. |
- |is_active |mandatory |bool |1 |Defines if the warehouse is active. |
+| Column    | REQUIRED? | Data Type | Data Example | Data Explanation                    |
+|-----------|-----------|-----------|--------------|-------------------------------------|
+| name      | mandatory | string    | Warehouse1   | Name of the warehouse.              |
+| is_active | mandatory | bool      | 1            | Defines if the warehouse is active. |
 
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse_store.csv**
 
@@ -245,10 +388,10 @@ Warehouse2,US
 ```
 
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-| --- | --- | --- | --- | --- |
-| warehouse_name | mandatory | string | Warehouse1 | Name of the warehouse. |
-| store_name | mandatory | string | DE | Name of the store the warehouse will be available in. |
+| COLUMN         | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                      |
+|----------------|-----------|-----------|--------------|-------------------------------------------------------|
+| warehouse_name | mandatory | string    | Warehouse1   | Name of the warehouse.                                |
+| store_name     | mandatory | string    | DE           | Name of the store the warehouse will be available in. |
 
 **data/import/common/common/warehouse_address.csv**
 
@@ -263,18 +406,18 @@ Budget Cameras MER000005 Warehouse 1,Kurfuerstendamm 96,,,89077,Ulm Weststadt,,D
 Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48 41 25,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-| --- | --- | --- | --- | --- |
-| warehouse_name | mandatory | string | Warehouse1 | Warehouse name. |
-| address1 | mandatory | string | Hallesches Ufer 71 | The first line of the warehouse address. |
-| address2 | optional | string | | The second line of the warehouse address. |
-| address3 | optional | string | |The third line of the warehouse address. |
-| zip_code | mandatory | string | 73271 | Zipcode. |
-| city | mandatory | string | Holzmaden | City. |
-| region_name | optional | string | | Region name from the `spy_region` table. |
-| country_iso2_code | mandatory | string | DE | The ISO code of the country. |
-| phone | optional | string | +49 7023 87 33 18 | Landline or any other contact phone. |
-|comment | optional | string | | Any related comment. |
+| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE       | DATA EXPLANATION                          |
+|-------------------|-----------|-----------|--------------------|-------------------------------------------|
+| warehouse_name    | mandatory | string    | Warehouse1         | Warehouse name.                           |
+| address1          | mandatory | string    | Hallesches Ufer 71 | The first line of the warehouse address.  |
+| address2          | optional  | string    |                    | The second line of the warehouse address. |
+| address3          | optional  | string    |                    | The third line of the warehouse address.  |
+| zip_code          | mandatory | string    | 73271              | Zipcode.                                  |
+| city              | mandatory | string    | Holzmaden          | City.                                     |
+| region_name       | optional  | string    |                    | Region name from the `spy_region` table.  |
+| country_iso2_code | mandatory | string    | DE                 | The ISO code of the country.              |
+| phone             | optional  | string    | +49 7023 87 33 18  | Landline or any other contact phone.      |
+| comment           | optional  | string    |                    | Any related comment.                      |
 
 
 {% info_block warningBox “Verification” %}
@@ -307,11 +450,11 @@ Replace `{SPRYKER_STORE}` in the file paths with the desired stores. For example
 
 Add these plugins to the end of the plugins list but before the `ProductOfferStockDataImportPlugin`.
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| StockDataImportPlugin | Imports warehouse data into the database. | None | \Spryker\Zed\StockDataImport\Communication\Plugin |
-| StockStoreDataImportPlugin | Imports data about the relationship between warehouses and stores into the database. | None | \Spryker\Zed\StockDataImport\Communication\Plugin |
-| StockAddressDataImportPlugin | Imports warehouse addresses. | None | Spryker\Zed\StockAddressDataImport\Communication\Plugin\DataImport |
+| PLUGIN                       | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                          |
+|------------------------------|--------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------|
+| StockDataImportPlugin        | Imports warehouse data into the database.                                            | None          | \Spryker\Zed\StockDataImport\Communication\Plugin                  |
+| StockStoreDataImportPlugin   | Imports data about the relationship between warehouses and stores into the database. | None          | \Spryker\Zed\StockDataImport\Communication\Plugin                  |
+| StockAddressDataImportPlugin | Imports warehouse addresses.                                                         | None          | Spryker\Zed\StockAddressDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -434,9 +577,9 @@ vendor/bin/console navigation:build-cache
 2. Configure the stock GUI module with a store form plugin.
 
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| StoreRelationToggleFormTypePlugin | Store relation checklist form based on the existing stores. |  | Spryker\Zed\Store\Communication\Plugin\Form |
+| PLUGIN                            | SPECIFICATION                                               | PREREQUISITES | NAMESPACE                                   |
+|-----------------------------------|-------------------------------------------------------------|---------------|---------------------------------------------|
+| StoreRelationToggleFormTypePlugin | Store relation checklist form based on the existing stores. |               | Spryker\Zed\Store\Communication\Plugin\Form |
 
 
 **src/Pyz/Zed/StockGui/StockGuiDependencyProvider.php**
@@ -471,11 +614,11 @@ Make sure that the navigation for Stock GUI has been successfully generated. Che
 
 Register the following plugins for warehouse address management:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| StockAddressStockPostCreatePlugin | Creates a warehouse address if it's attached to a warehouse create request. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
-| StockAddressStockPostUpdatePlugin | Creates a warehouse address if it's attached to a warehouse update request. <br> Removes an existing warehouse address if it's not attached to a warehouse update request. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
-| StockAddressStockCollectionExpanderPlugin | Expands a warehouse collection with related addresses. |  | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
+| PLUGIN                                    | SPECIFICATION                                                                                                                                                              | PREREQUISITES | NAMESPACE                                           |
+|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------|
+| StockAddressStockPostCreatePlugin         | Creates a warehouse address if it's attached to a warehouse create request.                                                                                                |               | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
+| StockAddressStockPostUpdatePlugin         | Creates a warehouse address if it's attached to a warehouse update request. <br> Removes an existing warehouse address if it's not attached to a warehouse update request. |               | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
+| StockAddressStockCollectionExpanderPlugin | Expands a warehouse collection with related addresses.                                                                                                                     |               | Spryker\Zed\StockAddress\Communication\Plugin\Stock |
 
 <details open><summary markdown='span'>Zed/Stock/StockDependencyProvider.php</summary>
 
@@ -538,7 +681,7 @@ Make sure that the warehouse address management works:
 
 ## Related features
 
-|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-|--- | --- | --- |
-| Inventory Management API | | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html) |
-| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-inventory-management-feature-integration.html)|
+| FEATURE                  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                          |
+|--------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Inventory Management API |                                  | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)                |
+| Alternative Products     |                                  | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-inventory-management-feature-integration.html) |

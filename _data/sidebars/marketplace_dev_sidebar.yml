@@ -5,6 +5,7 @@ entries:
   - product: Marketplace
     nested:
       - title: Setup
+        url: /docs/marketplace/dev/setup/index.html
         include_versions:
         nested:
           - title: System requirements
@@ -253,6 +254,7 @@ entries:
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
       - title: Feature integration guides
+        url: /docs/marketplace/dev/feature-integration-guides/index.html
         nested:
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html

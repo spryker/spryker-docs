@@ -3,7 +3,7 @@ title: Value resolvers
 description: The Spryker SDK has several value resolvers described in this document.
 template: concept-topic-template
 ---
-# Spryker SDK value resolvers
+Spryker SDK value resolvers
 
 The Spryker SDK has the following value resolvers:
 

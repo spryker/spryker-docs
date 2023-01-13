@@ -389,5 +389,9 @@ After execution of the command task will be created in such directories:
 - `extension/Custom/src/Resources/config/task` - for yaml tasks
 - `extension/Custom/src/Task` - for php tasks
 
-You can manually update it if it's needed. Don't forget to increase the task version and run  `spryker-sdk sdk:update:all` to make new updates available.
+You can manually update it if it's needed. Don't forget to increase the task version and run the following to make new updates available.:
+
+  ```shell
+    `spryker-sdk sdk:update:all`
+    ```
 

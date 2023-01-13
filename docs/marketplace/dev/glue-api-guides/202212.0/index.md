@@ -1,6 +1,6 @@
 ---
 title: Glue API guides
-description: Desscribes the Glue API endpoints used when developing in Spryker Marketplace
+description: Describes the Glue API endpoints used when developing in Spryker Marketplace
 last_updated: Jan 13, 2023
 template: concept-topic-template
 ---
@@ -22,4 +22,3 @@ This section provides a collection of articles that explain the Glue API endpoin
 * [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html)
 * [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
 * [Retrieving autocomplete and search suggestions](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-autocomplete-and-search-suggestions.html)
-* [Shopping lists](

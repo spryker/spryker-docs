@@ -174,17 +174,17 @@ export default {
 
    1. Update the `test` section:
 
-    ```json
-    "jestConfig": "frontend/merchant-portal/jest.config.js",
-    // must be
-    "jestConfig": "frontend/merchant-portal/jest.config.ts",
-    ```
+        ```json
+        "jestConfig": "frontend/merchant-portal/jest.config.js",
+        // must be
+        "jestConfig": "frontend/merchant-portal/jest.config.ts",
+        ```
 
-    ```json
-    "outputs": ["coverage/."]
-    // must be
-    "outputs": ["{projectRoot}/coverage"]
-    ```
+        ```json
+        "outputs": ["coverage/."]
+        // must be
+        "outputs": ["{projectRoot}/coverage"]
+        ```
     
    2. Remove the `defaultProject` section.
 

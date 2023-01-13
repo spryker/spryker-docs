@@ -5,7 +5,10 @@ entries:
   - product: Marketplace
     nested:
       - title: Setup
+        url: docs/marketplace/dev/setup/index.html
         include_versions:
+            - "202204.0"
+            - "202212.0"
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
@@ -32,6 +35,7 @@ entries:
             - "202212.0"
 
       - title: Marketplace architecture overview
+        url: /docs/marketplace/dev/architecture-overview/index.html
         nested:
           - title: Marketplace Application composition
             url: /docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
@@ -46,6 +50,7 @@ entries:
             url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
 
       - title: Feature walkthroughs
+        url: /docs/marketplace/dev/feature-walkthroughs/index.html
         nested:
 
           - title: Marketplace Merchant
@@ -230,6 +235,7 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 
           - title: Merchant Portal
+            url: /docs/marketplace/dev/feature-walkthroughs/merchant-portal-feature-walkthrough.html
             nested:
 
               - title: Marketplace Merchant Portal Core
@@ -253,6 +259,7 @@ entries:
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
       - title: Feature integration guides
+        url: docs/marketplace/dev/feature-integration-guides/index.html
         nested:
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html

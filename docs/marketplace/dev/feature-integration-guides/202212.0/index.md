@@ -1,6 +1,6 @@
 ---
 title: Feature integration guides
-description: Describes describes how to integrate Marketplace features
+description: Describes how to integrate Marketplace features
 last_updated: Jan 12, 2023
 template: concept-topic-template
 ---

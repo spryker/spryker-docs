@@ -38,7 +38,7 @@ In the Back Office, you can perform the following actions on product options:
 * assign product option groups to products
 * activate product options to make them visible in the Storefront
 
-See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html) to learn more about how to work with product options in the Back Office.
+See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html) to learn more about how to work with product options in the Back Office.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png)
 
@@ -78,7 +78,7 @@ Currently, the feature has the following functional constraints which are going 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a product option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)  |
+| [Create a product option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html)  |
 | [Manage product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html)  |
 
 {% info_block warningBox "Developer guides" %}

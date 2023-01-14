@@ -40,7 +40,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 We highly recommend you to follow our [Security guidelines](/docs/scos/dev/guidelines/making-your-spryker-shop-secure.html) and ensure all the points are acknowledged and applied.
 
-Double check that you do not have any clear text passwords stored in config files or repositories!
+Double check that you do not have any clear text passwords stored in config files or repositories.
 
 {% endinfo_block %}
 

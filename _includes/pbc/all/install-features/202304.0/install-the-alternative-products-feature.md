@@ -429,6 +429,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
  }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 

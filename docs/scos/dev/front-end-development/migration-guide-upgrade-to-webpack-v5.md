@@ -116,7 +116,7 @@ plugins: [
 ]
 ```
 
-   1. In the `new TerserPlugin({ ... })` minimizer plugin, remove the `cache` property.
+In the `new TerserPlugin({ ... })` minimizer plugin, remove the `cache` property.
 
 4. In `frontend/libs/assets-configurator.js`, make the following changes:
 

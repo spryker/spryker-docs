@@ -273,7 +273,7 @@ The following imported entities are used as alternative products in the Spryker 
 
 {% endinfo_block %}
 
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ProductAlternativeDataImport/data/import/product_alternative.csv**
 
@@ -323,7 +323,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import product-alternative
@@ -432,7 +432,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit any product variant in Zed, you have the **Product Alternatives** tab, and you can add some product SKUs as alternatives.
+Make sure that when you edit any product variant in the Back Office, you have the **Product Alternatives** tab, and you can add some product SKUs as alternatives.
 
 {% endinfo_block %}
 
@@ -505,8 +505,8 @@ Make sure that in the database the configured data are added to the `spy_glossar
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | ProductAlternativeWidget | Displays alternative product. | None |  SprykerShop\Yves\ProductWidget\Widget |
-| PdpProductReplacementForListWidget | Displays list of products for replacement. | None |  SprykerShop\Yves\ProductWidget\Widget |
-| ProductReplacementForListWidget | Displays product for replacement. | None |  SprykerShop\Yves\ProductReplacementForWidget\Widget |
+| PdpProductReplacementForListWidget | Displays a list of products for replacement. | None |  SprykerShop\Yves\ProductWidget\Widget |
+| ProductReplacementForListWidget | Displays a product for replacement. | None |  SprykerShop\Yves\ProductReplacementForWidget\Widget |
 | ProductAlternativeListWidget | Display list of alternative products for the provided product. | None | SprykerShop\Yves\ProductAlternativeWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -551,10 +551,10 @@ Make sure that the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |
-| ProductAlternativeWidget | Assign some alternative products in Zed, and make sure that they are displayed on the detail page of the product to which they were assigned. |
-| ProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page. |
-| PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page. |
-| ProductAlternativeListWidget | Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned. |
+| ProductAlternativeWidget | Assign some alternative products in the Back Office, and make sure that they are displayed on the product details page of the product to which they are assigned. |
+| ProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see the **Replacement for** section on its product details page. |
+| PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see the **Replacement for** section on its product details page. |
+| ProductAlternativeListWidget | Assign some alternative products in the Back Office, and make sure that they are displayed on the product details page of the product to which they are assigned. |
 
 {% endinfo_block %}
 

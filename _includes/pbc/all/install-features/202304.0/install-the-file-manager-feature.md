@@ -1,5 +1,6 @@
 
 
+
 This document describes how to integrate the [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
@@ -14,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Install the required modules:
 
@@ -72,6 +73,7 @@ Adjust the schema definition so entity changes trigger events:
 ```
 
 **src/Pyz/Zed/FileManagerStorage/Persistence/Propel/Schema/spy_file_storage.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\FileManagerStorage\Persistence" package="src.Orm.Zed.FileManagerStorage.Persistence">
@@ -177,7 +179,7 @@ text/csv,0
 
 #### Set up configuration
 
-Add importer configuration:
+1. Add the importer configuration:
 
 **data/import/local/full_EU.yml**
 
@@ -189,7 +191,7 @@ actions:
       source: data/import/common/common/mime_type.csv
 ```
 
-Adjust the data import configuration:
+2. Adjust the data import configuration:
 
 **src/Pyz/Zed/DataImport/DataImportConfig.php**
 
@@ -260,6 +262,8 @@ Make sure that the imported data is added to the `spy_mime_type` table.
 {% endinfo_block %}
 
 ### 5) Set up behavior
+
+To set up bheavior, follow the steps in the subsections below.
 
 #### Set up storage configuration
 
@@ -434,6 +438,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox “Verification” %}
 
-Make sure that when a file data is created, updated or deleted, it is exported or removed from Redis accordingly.
+Make sure that when a file data is created, updated, or deleted, it is exported or removed from Redis accordingly.
 
 {% endinfo_block %}

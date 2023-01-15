@@ -101,7 +101,7 @@ On the **Variants** tab, define product variants:
 
 ### Reference information: Defining product variants
 
-On the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) or [manage](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/edit-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
+On the **Variants** tab, you can see all the existing [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) or [manage](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/edit-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 

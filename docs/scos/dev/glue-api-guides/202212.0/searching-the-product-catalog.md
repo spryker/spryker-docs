@@ -53,7 +53,7 @@ To search by products, send the request:
 | color | Specifies the product color | {% raw %}{{{% endraw %}color{% raw %}}}{% endraw %} |
 | storage_capacity[] | Specifies the storage capacity of a product | {% raw %}{{{% endraw %}storage_capacity{% raw %}}}{% endraw %} |
 | rating[min] | Specifies the minimum rating of a product | {% raw %}{{{% endraw %}rating{% raw %}}}{% endraw %} |
-| category | Specifies the category to search the products in | {% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}<br>For the category node IDs, [retrieve the category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html). |
+| category | Specifies the category to search the products in | {% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}<br>For the category node IDs, [retrieve the category tree](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html). |
 | currency | Sets a currency | {currency{% raw %}}}{% endraw %} |
 | sort | Sorts the search results | For the list of possible values, run the catalog search request and find the list in the `sortParamNames` array.<br>For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
 | page | Sets the number of the search results page from which the results are retrieved | {% raw %}{{{% endraw %}page_number{% raw %}}}{% endraw %} |

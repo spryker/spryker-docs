@@ -40,7 +40,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}//manage-in-the-back-office/product-lists/create-product-lists.html)  |
-| [Edit product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/edit-product-lists.html) |
+| [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/edit-product-lists.html) |
 | [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html) |
 | [Edit merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html) |
 

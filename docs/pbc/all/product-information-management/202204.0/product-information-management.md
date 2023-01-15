@@ -13,7 +13,7 @@ The Product Information Management capability To learn about the
 [Product Approval Process](/docs/pbc/all/product-information-management/{{page.version}}/product-approval-process-feature-overview.html)
 [Product Barcode](/docs/pbc/all/product-information-management/{{page.version}}/product-barcode-feature-overview.html)
 [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html)
-[Product](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview.html)
+[Product](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html)
 [Product Groups](/docs/pbc/all/product-information-management/{{page.version}}/product-groups-feature-overview.html)
 [Product Labels](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html)
 [Product Lists](/docs/pbc/all/product-information-management/{{page.version}}/product-lists-feature-overview.html)

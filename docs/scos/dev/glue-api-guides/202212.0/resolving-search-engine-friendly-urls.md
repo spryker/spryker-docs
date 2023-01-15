@@ -19,7 +19,7 @@ This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resourc
 
 For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see:
 * [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree)
+* [Retrieve a category tree](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html#retrieve-a-category-tree)
 * [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html#retrieve-a-category-node)
 * [Retrieve a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/manage-using-glue-api/retrieve-cms-pages.html)
 

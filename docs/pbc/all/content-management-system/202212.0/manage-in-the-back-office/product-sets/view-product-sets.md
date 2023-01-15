@@ -8,11 +8,11 @@ related:
   - title: Edit product sets
     link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/product-sets/edit-product-sets.html
   - title: Reorder product sets
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/reorder-product-sets.html
+    link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/product-sets/reorder-product-sets.html
   - title: Delete product sets
     link: docs/pbc/all/content-management-system/page.version/manage-in-the-back-office/product-sets/delete-product-sets.html
   - title: Product Sets feature overview
-    link: docs/pbc/all/content-management-system/page.version/product-sets-feature-overview.html
+    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
 To view a product set, do the following:

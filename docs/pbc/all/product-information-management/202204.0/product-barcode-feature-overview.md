@@ -67,4 +67,4 @@ Barcodes are often overlooked as a way to cut costs and save time. A valuable an
 
 | MIGRATION GUIDES|
 |---------|
-| [Migrating from CodeItNow to BarcodeLaminas](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/replace-the-codeitnow-with-the-barcodelaminas-module.html) |
+| [Migrating from CodeItNow to BarcodeLaminas](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/replace-the-codeitnow-with-the-barcodelaminas-module.html) |

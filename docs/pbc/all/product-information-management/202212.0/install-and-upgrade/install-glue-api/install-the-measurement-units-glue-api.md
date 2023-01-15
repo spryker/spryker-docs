@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-measurement-units-feature-integration.html
 related:
   - title: Measurement Units feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/measurement-units-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-measurement-units-feature.html
   - title: Measurement Units feature walkthrough
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
   - title: Retrieve measurement units

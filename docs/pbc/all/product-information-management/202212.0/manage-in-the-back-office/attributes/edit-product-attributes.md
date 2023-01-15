@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-attributes
   - /docs/en/managing-attributes
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/managing-product-attributes.html
-  - /docs/scos/user/back-office-user-guides/202204.0/catalog/attributes/managing-product-attributes.html  
+  - /docs/scos/user/back-office-user-guides/202212.0/catalog/attributes/managing-product-attributes.html  
 related:
   - title: Product Attributes
     link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-attributes-overview.html

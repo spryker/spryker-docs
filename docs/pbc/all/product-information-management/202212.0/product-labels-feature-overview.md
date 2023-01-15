@@ -10,10 +10,10 @@ redirect_from:
   - /docs/product-labels-feature-overview
   - /docs/en/product-labels-feature-overview
   - /docs/scos/user/features/202200.0/product-labels-feature-overview.html
-  - /docs/scos/user/features/202204.0/product-labels-feature-overview.html
+  - /docs/scos/user/features/202212.0/product-labels-feature-overview.html
   - /docs/product-label
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-labels-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202204.0/product-labels-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202212.0/product-labels-feature-walkthrough.html  
 ---
 
 The _Product Label_ feature lets product catalog managers highlight the needed products by adding a special type of information—product labels.
@@ -160,7 +160,7 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES |
 |---|---|---|
-| [Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-labels-feature.html) | [ProductLabel migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html) | [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-product-labels.html) |
+| [Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-labels-feature.html) | [ProductLabel migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html) | [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html) |
 | [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html) | [ProductLabelGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html) |  |
 |  | [ProductLabelSearch migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html |  |
 |  | [ProductLabelStorage migration guide](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelstorage-module.html |  |

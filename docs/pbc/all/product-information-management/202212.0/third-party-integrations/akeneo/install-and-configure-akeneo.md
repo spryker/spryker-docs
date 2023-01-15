@@ -11,10 +11,10 @@ redirect_from:
   - /docs/akeneo-installation-configuration
   - /docs/en/akeneo-installation-configuration
   - /docs/scos/dev/technology-partner-guides/202200.0/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
-  - /docs/scos/user/technology-partners/202204.0/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
+  - /docs/scos/user/technology-partners/202212.0/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
 related:
   - title: Akeneo
-    link: docs/pbc/all/product-information-management/page.version/third-party-integrations/akeneo.html
+    link: docs/pbc/all/product-information-management/page.version/third-party-integrations/akeneo/akeneo.html
 ---
 
 ## Installation

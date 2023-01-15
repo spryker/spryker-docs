@@ -11,11 +11,11 @@ redirect_from:
   - /docs/creating-categories
   - /docs/en/creating-categories
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/creating-categories.html
-  - /docs/scos/user/back-office-user-guides/202204.0/catalog/category/creating-categories.html
+  - /docs/scos/user/back-office-user-guides/202212.0/catalog/category/creating-categories.html
 
 related:
   - title: Assigning Products to Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assign-products-to-categories.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/category/assign-products-to-categories.html
   - title: Category Management feature overview
     link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
 ---

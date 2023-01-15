@@ -52,9 +52,3 @@ The feature has the following functional constraints which are going to be resol
 | [Get a general idea of the Product Sets feature](/docs/pbc/all/content-management-system/{{page.version}}/product-sets-feature-overview.html) |
 | [Create product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html) |
 | [Manage product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html) |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Product Sets feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

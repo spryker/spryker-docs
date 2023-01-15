@@ -977,7 +977,7 @@ To get upselling items for all products in a cart of a registered customer, send
 </details>
 
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
-For the attributes of the included resources, see [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/retrieve-product-labels.html#product-labels-response-attributes)
+For the attributes of the included resources, see [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve upselling products of a guest cart
 

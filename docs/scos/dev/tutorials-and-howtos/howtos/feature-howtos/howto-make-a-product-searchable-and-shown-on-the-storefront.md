@@ -36,7 +36,7 @@ The document describes the flow of making a product searchable and displayed on 
 
 There are a number of conditions that must be fulfilled to make your product searchable and shown on Yves by URL. What is important is to make sure that your product meets the following conditions:
 
-* It is assigned to categories. For information about how to assign products to categories, see the [Category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/assign-products-to-categories.html) section.
+* It is assigned to categories. For information about how to assign products to categories, see the [Category](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/category/assign-products-to-categories.html) section.
 * It is in stock in the warehouse for the current store. To learn how to check products' availability, see the [Availability](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/availability/managing-products-availability.html) section.
 * The product's status is `Active`. To learn how to manage products, including the status change, see the [Products](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-products.html#activating-products) section.
 * It has a price in the current locale. For more details, see the [Products](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-products.html) section.

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

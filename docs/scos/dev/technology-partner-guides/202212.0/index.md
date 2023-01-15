@@ -15,5 +15,3 @@ Technology partners enrich the Spryker Commerce OS with the services you need to
 * [Order management (ERPOMS)](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
 
 * [Payment partners](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/installing-and-configuring-adyen.html)
-
-* [Product information (PIMERP)](/docs/scos/dev/technology-partner-guides/{{page.version}}/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html)

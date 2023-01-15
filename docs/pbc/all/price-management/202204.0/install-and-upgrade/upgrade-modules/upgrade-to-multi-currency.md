@@ -90,7 +90,7 @@ composer update spryker/*
    * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html).
    * **ProductManagement >= 0.9.** — see [Migration Guide - ProductManagement](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html). New forms and views have been added.
    * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html).
-   * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productrelationcollector-module.html).
+   * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/scos/dev/module-migration-guides/migration-guide-productrelationcollector.html).
    * **ProductSetGui >= 2.** — see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html).
    * **Wishlist >= 2.** — see [Migration Guide - Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/upgrade-the-wishlist-module.html).
    * **Search >= 7.0** - see [Migration Guide - Search](/docs/scos/dev/module-migration-guides/migration-guide-search.html).

@@ -21,7 +21,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
   - /docs/product-quantity-restrictions
   - /docs/product-ttl
-  - /docs/scos/user/features/202204.0/product-feature-overview/product-feature-overview.html  
+  - /docs/scos/user/features/202212.0/product-feature-overview/product-feature-overview.html  
 ---
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
@@ -130,4 +130,4 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |  | [Retrieving image sets of abstract products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html) | [File details: product_attribute_key.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html) |
 | [Glue API: Product Image Sets feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html) |  | [Retrieving image sets of concrete products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html) | [File details: product_management_attribute.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html) |
 | [Category Image feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-category-image-feature.html) |  |  | [File details: product_discontinued.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html) |
-| [Product + Cart feature integration](/docs/pbc/all/product-information-management/202204.0/install-and-upgrade/install-features/install-the-product-cart-feature.html) |  |  |  |
+| [Product + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-cart-feature.html) |  |  |  |

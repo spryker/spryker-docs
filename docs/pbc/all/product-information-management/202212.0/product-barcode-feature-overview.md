@@ -11,10 +11,10 @@ redirect_from:
   - /docs/product-barcode-feature-overview
   - /docs/en/product-barcode-feature-overview
   - /docs/scos/user/features/202200.0/product-barcode-feature-overview.html
-  - /docs/scos/user/features/202204.0/product-barcode-feature-overview.html
+  - /docs/scos/user/features/202212.0/product-barcode-feature-overview.html
   - /docs/product-barcode
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-barcode-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202204.0/product-barcode-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202212.0/product-barcode-feature-walkthrough.html
 ---
 
 The *Product Barcode* feature lets you create barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html).

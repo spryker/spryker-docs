@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-sales-units
   - /docs/retrieving-sales-units
   - /docs/en/retrieving-sales-units
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/concrete-products/retrieving-sales-units.html
+  - /docs/scos/dev/glue-api-guides/202212.0/managing-products/concrete-products/retrieving-sales-units.html
 related:
   - title: Retrieving concrete products
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html

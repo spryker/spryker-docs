@@ -11,6 +11,7 @@ redirect_from:
   - /docs/editing-a-product-variant
   - /docs/en/editing-a-product-variant
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/editing-product-variants.html
+  - /docs/scos/user/back-office-user-guides/202212.0/catalog/products/manage-concrete-products/editing-product-variants.html
 related:
   - title: Managing Products
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-products.html

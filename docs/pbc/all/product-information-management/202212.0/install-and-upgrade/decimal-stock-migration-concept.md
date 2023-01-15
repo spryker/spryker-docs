@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/decimal-stock-concept
   - /v4/docs/decimal-stock-concept
   - /v4/docs/en/decimal-stock-concept
+  - /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
 related:
   - title: Packaging Units feature overview
     link: docs/scos/user/features/page.version/packaging-units-feature-overview.html

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/alternative-products-overview
   - /docs/scos/user/features/202200.0/alternative-products-feature-overview.html
   - /docs/alternative-products
-  - /docs/scos/user/features/202204.0/alternative-products-feature-overview.html
+  - /docs/scos/user/features/202212.0/alternative-products-feature-overview.html
 ---
 
 Suggesting product alternatives is a great way to ease the user’s product finding process. Instead of browsing the product catalog, product alternatives let customers jump from one product page to the next until they find a relevant item.

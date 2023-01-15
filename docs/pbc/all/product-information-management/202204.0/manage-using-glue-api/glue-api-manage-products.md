@@ -21,7 +21,7 @@ This section contains the descriptions of the following endpoints used to manage
 
 
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html)
-* [Retrieving related products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-related-products.html)
+* [Retrieving related products](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-related-products.html)
 * [Retrieving alternative products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html)
 * [Retrieving configurable bundle templates](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html)
 * [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-bundled-products.html)

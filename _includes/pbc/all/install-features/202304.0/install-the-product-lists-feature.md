@@ -9,7 +9,7 @@ Follow the steps below to install the Product Lists feature core.
 
 ## Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE| 
 |---|---|---|

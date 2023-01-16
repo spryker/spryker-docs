@@ -1,21 +1,23 @@
 
 
+
+This document describes how to integrate the [Product Labels feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
+
 ## Install feature core
 
-Follow the steps below to install the feature core.
+Follow the steps below to install the Alternative Products feature core.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{site.version}} |
-| cell | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE| 
+|---|---|---|
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
@@ -146,10 +148,6 @@ Ensure that the following changes have been applied by checking your database:
 | spy_product_label_dictionary_storage | table | created |
 | spy_product_abstract_label_storage | table | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Ensure that the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -202,7 +200,7 @@ Set up the following behaviors:
 | ProductLabelDictionaryDeletePublisherPlugin     | Removes all the data of the product label dictionary storage when triggered by the provided product label dictionary events.                                           | None | Spryker\Zed\ProductLabelStorage\Communication\Plugin\Publisher\ProductLabelDictionary |
 | ProductLabelSearchPublisherTriggerPlugin        | Allows publishing or re-publishing product label search data manually.                                                                                                 | None | Spryker\Zed\ProductLabelSearch\Communication\Plugin\Publisher |
 
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -271,15 +269,14 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that:
+Ensure the following:
 
-After creating a product label, you can find the corresponding record in the `spy_product_label_dictionary_storage` table.
-
-After assigning a product label to a product, the corresponding product record contains the assigned label in the `spy_product_abstract_label_storage` table.
+* After creating a product label, you can find the corresponding record in the `spy_product_label_dictionary_storage` table.
+* After assigning a product label to a product, the corresponding product record contains the assigned label in the `spy_product_abstract_label_storage` table.
 
 {% endinfo_block %}
 
-2. Setup re-generate and re-sync features by setting up the following plugins:
+1. Setup regenerate and resync features by setting up the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -414,21 +411,18 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 Ensure that the product label trigger plugin works correctly:
 
-1. Fill `spy_product_label` table with some data.
-2. Run `console publish:trigger-events -r product_label_dictionary` command.
+1. Fill the `spy_product_label` table with some data.
+2. Run the `console publish:trigger-events -r product_label_dictionary` command.
 3. Ensure that the `spy_product_label_dictionary_storage` table is filled with respective data.
 4. Ensure that the storage entries appear in your system with the `kv:product_label_dictionary:store:locale` mask.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Ensure that the product label synchronization plugin works correctly:
 
-1. Fill `spy_product_label_product_abstract` table with some data.
+1. Fill the `spy_product_label_product_abstract` table with some data.
 2. Run the `console publish:trigger-events -r product_abstract_label` command.
 3. Ensure that the `spy_product_abstract_label_storage` table is filled with respective data.
 4. Ensure that storage entries appear in your system with the `kv:product_abstract_label:id_product_abstract` mask.
+
 {% endinfo_block %}
 
 **src/Pyz/Zed/ProductLabel/ProductLabelDependencyProvider.php**
@@ -459,8 +453,11 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 
 Ensure that the product label new works:
 
-1. Create a product and enter `new_from` and `new_to` fields, so that the current date is between the entered ones.
-2. Check that, on the Storefront, the product is displayed with the new product label.
+1. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**. 
+2. To create a product, click **Create a Product**.
+3. In **NEW FROM** and **NEW TO** fields, enter dates so that the current date is between the entered ones.
+4. Clisk **Save**.
+5. On the Storefront, check that the product is displayed with the new product label.
 
 {% endinfo_block %}
 
@@ -470,7 +467,7 @@ Follow the steps to import product label data:
 
 {% info_block infoBox "Info" %}
 
-The following imported entities will be used as product labels in Spryker.
+The following imported entities are used as product labels in Spryker.
 
 {% endinfo_block %}
 
@@ -575,7 +572,8 @@ Overview and install the necessary features before beginning the integration ste
 | Product | {{site.version}} |
 
 ### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
+
+To install the required modules:
 
 ```bash
 composer require "spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
@@ -642,6 +640,6 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Ensure that product labels are displayed on the product details page and catalog page.
+Ensure that product labels are displayed on the product details and catalog pages.
 
 {% endinfo_block %}

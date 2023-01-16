@@ -1,16 +1,21 @@
 
 
-This document describes how to integrate the Product Lists feature into a Spryker project.
+
+This document describes how to integrate the [Product Lists feature](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html) into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Product Lists feature core.
 
 ## Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-|Spryker Core| {{site.version}} |
-| Product | {{site.version}}  |
-| Category Management | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE| 
+|---|---|---|
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Product | {{site.version}}  | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -37,8 +42,6 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ## 2) Set up database schema and transfer objects
-
-Set up database schema and transfer objects:
 
 1. Define the following transfer objects:
 
@@ -102,7 +105,7 @@ Set up database schema and transfer objects:
  </database>
 ```
 
-3. Set up synchronization queue pools so  that non-multistore entities (not store-specific entities) are synchronized among stores:
+3. Set up synchronization queue pools so that non-multistore entities (not store-specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/ProductListStorage/Persistence/Propel/Schema/spy_product_list_storage.schema.xml**
 
@@ -126,7 +129,7 @@ Set up database schema and transfer objects:
  </database>
 ```
 
-4. Run the following commands to apply database changes and generate entity and transfer changes:
+4. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -159,10 +162,6 @@ Make sure that the following changes have been applied in the transfer objects:
 | Customer.companyUserTransfer | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
 | Customer.customerProductListCollection | property | created | src/Generated/Shared/Transfer/CustomerTransfer |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
@@ -172,10 +171,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_product_list_category | table | created |
 | spy_product_abstract_product_list_storage | table |  created |
 | spy_product_concrete_product_list_storage | table | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
 
@@ -191,10 +186,6 @@ Make sure that propel entities have been generated successfully by checking thei
 | src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductAbstractProductListStorageQuery | Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductAbstractProductListStorageQuery |    
 | src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorage | Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductConcreteProductListStorage |
 | src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorageQuery | Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductConcreteProductListStorageQuery |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
 
@@ -221,7 +212,7 @@ product-cart.info.restricted-product.removed,"Unavailable item %sku% was removed
 product-cart.info.restricted-product.removed,"Der nicht verfügbare Artikel% sku% wurde aus Ihrem Einkaufswagen entfernt.",de_DE
 ```
 
-2. Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -229,10 +220,9 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary` table  in the database.
+Make sure that the configured data has been added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
-
 
 ## 4) Configure export to Redis and Elasticsearch
 
@@ -240,7 +230,7 @@ Configure export to Redis and Elasticsearch as follows.
 
 ### Set up event listeners
 
-With this step, you publish tables on change (create, edit, delete) to the `spy_product_abstract_product_list_storage`, `spy_product_concrete_product_list_storage` and synchronize the data to Storage and Search.
+With this step, you publish tables on change (create, edit, or delete) to the `spy_product_abstract_product_list_storage`, `spy_product_concrete_product_list_storage` and synchronize the data to Storage and Search.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -273,7 +263,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a product list is created, updated or deleted, they are exported (or removed) to Redis and Elasticsearch accordingly.
+Make sure that when a product list is created, updated, or deleted, they are exported or removed to Redis and Elasticsearch accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
@@ -342,7 +332,8 @@ Add the following plugins in your project:
 |ProductConcreteProductListPageDataExpanderPlugin|Expands `ProductConcretePageSearchTransfer` with product lists data and returns the modified object.|None|Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch|
 |ProductConcreteProductListPageMapExpanderPlugin|Maps product list data related to concrete products to Elasticsearch document structure.|Product list data should be available. Suggestion: use `ProductConcreteProductListPageDataExpanderPlugin` (see above).|Spryker\Zed\ProductListSearch\Communication\Plugin\ProductPageSearch|
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -412,6 +403,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+</details>
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -445,8 +437,8 @@ Add the following plugins to your project:
 
 | PLUGIN                              | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                       |
 |-------------------------------------|----------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| ProductListSearchPublisherTriggerPlugin | Allows publishing or re-publishing product list search data manually. | None          | Spryker\Zed\ProductListSearch\Communication\Plugin\Publisher |
-| ProductListPublisherTriggerPlugin | Allows publishing or re-publishing product list data manually. | None          | Spryker\Zed\ProductListStorage\Communication\Plugin\Publisher |
+| ProductListSearchPublisherTriggerPlugin | Allows publishing or republishing product list search data manually. | None          | Spryker\Zed\ProductListSearch\Communication\Plugin\Publisher |
+| ProductListPublisherTriggerPlugin | Allows publishing or republishing product list data manually. | None          | Spryker\Zed\ProductListStorage\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -474,13 +466,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-## 5) Import data
-
-Import the following data.
-
-### Import product lists
-
-Import product lists:
+## Import product lists
 
 1. Prepare your data according to your requirements using our demo data:
 
@@ -535,7 +521,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console command to import data:
+
+3. Import data:
 
 ```bash
 console data:import product-list
@@ -568,7 +555,7 @@ pl-008,smartwatches
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | product_list_key | mandatory | string | pl-001 | An existing product list identifier for the assignment. |
-|category_key|mandatory|string|computer|An existing category identifier to be assigned to the product list.|
+|category_key|mandatory|string|computer| An existing category identifier to be assigned to the product list.|
 
 2. Register the following plugin to enable data import:
 
@@ -600,7 +587,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-4. Run the following console command to import data:
+4. Import data:
 
 ```bash
 console data:import product-list-category
@@ -612,13 +599,12 @@ Make sure that the configured data has been added to the `spy_product_list_categ
 
 {% endinfo_block %}
 
-### Import product list concrete product assignments
-
-Import product list concrete product assignments:
+## Import product list concrete product assignments
 
 1. Prepare your data according to your requirements using our demo data:
 
-**vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csv**
+<details>
+<summary markdown='span'>vendor/spryker/product-list-data-import/data/import/product_list_to_concrete_product.csv</summary>
 
 ```yaml
 product_list_key,concrete_sku
@@ -661,6 +647,7 @@ pl-007,161_29533300
 pl-007,177_24867659
 pl-007,177_25913296
 ```
+</details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
@@ -697,7 +684,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-list-product-concrete
@@ -719,11 +706,11 @@ Add the following plugins to your project:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductAbstractRestrictionPlugin | This plugin is responsible for determining if an abstract product is restricted for the current customer or not. | None | Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension |
-|ProductConcreteRestrictionPlugin|This plugin is responsible for determining if a concrete product is restricted for the current customer or not.|None|Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension|
-|ProductViewVariantRestrictionPlugin|This plugin is responsible for filtering out product variants of a product view object.|The product view object should contain all available variant information.<br>Suggestion: use `ProductViewVariantExpanderPlugin`before, to collect variant data.|Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension|
-| ProductAbstractListStorageRestrictionFilterPlugin | The plugin is responsible for filtering abstract product ids based on white and blacklists. | None | Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension |
-| ProductConcreteListStorageRestrictionFilterPlugin| The plugin is responsible for filtering concrete product ids based on white and blacklists. | None | Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension|
+| ProductAbstractRestrictionPlugin | This plugin is responsible for determining whether an abstract product is restricted for the current customer or not. | None | Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension |
+|ProductConcreteRestrictionPlugin|This plugin is responsible for determining whether a concrete product is restricted for the current customer or not.|None|Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension|
+|ProductViewVariantRestrictionPlugin|This plugin is responsible for filtering out product variants of a product view object.|The product view object must contain all available variant information.<br>Suggestion: to collect variant data, use `ProductViewVariantExpanderPlugin` before .|Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension|
+| ProductAbstractListStorageRestrictionFilterPlugin | The plugin is responsible for filtering abstract product IDs based on allowlists and denylists. | None | Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension |
+| ProductConcreteListStorageRestrictionFilterPlugin| The plugin is responsible for filtering concrete product IDs based on white and blacklists. | None | Spryker\Client\ProductListStorage\Plugin\ProductStorageExtension|
 
 **src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
@@ -793,7 +780,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that features which use Redis to read product data (for example, Product Details Page, Product relations, etc. don't show it when a product is restricted for the customer.)
+Make sure that features that use Redis to read product data—for example, the product details page or product relations—don't show it when a product is restricted for the customer.
 
 {% endinfo_block %}
 
@@ -848,12 +835,12 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that no restricted products can be added to a cart and if they were already in a cart, they get removed properly once a product became restricted for the customer.
+Make sure that no restricted products can be added to a cart, and if they were already in the cart, they get removed properly once a product becomes restricted for the customer.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
 
-After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned, and this can be fulfilled by providing owners for product lists.<br>Check out our [Merchant Relationship Product Restrictions integration guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html) that adds this functionality for merchant relationships.
+After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user, who browses the catalog, gets product lists assigned, and this can be fulfilled by providing owners with product lists.<br>Check out our [Merchant Relationship Product Restrictions integration guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html) that adds this functionality for merchant relationships.
 
 {% endinfo_block %}

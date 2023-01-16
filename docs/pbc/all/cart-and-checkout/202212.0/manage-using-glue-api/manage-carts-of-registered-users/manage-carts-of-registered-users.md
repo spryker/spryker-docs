@@ -1744,7 +1744,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | company-users |  isDefault | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 For the attributes of the included resources, see:
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
 * [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
@@ -2934,7 +2934,7 @@ For the attributes of other included resources, see:
 * [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html).
 * [Cart permission groups](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html).
 * [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes).
 
 ## Edit a cart

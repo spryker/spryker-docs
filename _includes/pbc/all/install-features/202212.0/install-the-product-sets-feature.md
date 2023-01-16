@@ -164,7 +164,7 @@ class ProductSetDependencyProvider extends SprykerProductSetDependencyProvider
 
 {% info_block warningBox "Sorting product sets" %}
 
-You can reorder product sets in the Back Office. See [Reorder product sets](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/product-sets/reorder-product-sets.html) for more details.
+You can reorder product sets in the Back Office. See [Reorder product sets](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/product-sets/reorder-product-sets.html) for more details.
 
 {% endinfo_block %}
 

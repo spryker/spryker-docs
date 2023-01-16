@@ -1,5 +1,5 @@
 ---
-  title: Assign product attributes to abstract products
+title: Assign product attributes to abstract products
 description: Learn how to assign product attributes to abstract products in the Back Office
 template: back-office-user-guide-template
 redirect_from:

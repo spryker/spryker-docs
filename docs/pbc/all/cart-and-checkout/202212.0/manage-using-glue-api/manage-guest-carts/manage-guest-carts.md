@@ -1010,7 +1010,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 For the attributes of other included resources, see:
 * [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html)
 * [Retrieving measurement units](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
-* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
 * [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html#measurement-units-response-attributes)
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)

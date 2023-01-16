@@ -20,7 +20,7 @@ related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieving concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-product-options-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-options-glue-api.md -->

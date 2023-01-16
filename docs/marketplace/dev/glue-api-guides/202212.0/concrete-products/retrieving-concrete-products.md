@@ -1127,7 +1127,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 For attributes of the other included resources, see the following:
 
 * [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html)
-* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
+* [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
 * [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-using-glue-api/retrieve-concrete-product-availability.html)
 * [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-concrete-product-prices.html)

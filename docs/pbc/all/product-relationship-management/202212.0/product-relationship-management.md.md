@@ -130,8 +130,9 @@ Stores are defined when creating or editing a product relation in the Back Offic
 | [Create product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html)  |   |
 | [Edit product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/edit-product-relations.html)  |   |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Product Relations feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES|
+|---------|---------|
+|[Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelation migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html) |
+| [Glue API: Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelationStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html) |

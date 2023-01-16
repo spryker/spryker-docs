@@ -3687,6 +3687,7 @@ entries:
     url: /docs/scos/dev/front-end-development/index.html
     nested:
     - title: Zed
+      url: /docs/scos/dev/front-end-development/zed/zed.html
       nested:
       - title: Oryx Builder overview and setup
         url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
@@ -3697,6 +3698,7 @@ entries:
       - title: Oryx for Zed
         url: /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
     - title: Yves
+      url: /docs/scos/dev/front-end-development/yves/yves.html
       nested:
       - title: Yves multi-themes
         url: /docs/scos/dev/front-end-development/yves/yves-multi-themes.html

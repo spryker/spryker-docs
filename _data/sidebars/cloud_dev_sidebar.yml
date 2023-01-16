@@ -95,6 +95,7 @@ entries:
           - title: Add and remove databases of stores
             url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
       - title: Troubleshooting
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting.html
         nested:
           - title: Troubleshooting deployment issues
             url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/troubleshooting-deployment-issues.html

@@ -893,8 +893,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
-        - "202212.0"
       - title: Retrieving alternative products
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-alternative-products.html
         include_versions:
@@ -1204,6 +1202,8 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Retrieve related products
+      url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html      
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
     - title: Retrieving autocomplete and search suggestions

@@ -5,11 +5,8 @@ entries:
   - product: Marketplace
     nested:
       - title: Setup
-        url: docs/marketplace/dev/setup/index.html
-        include_versions:
-            - "202204.0"
-            - "202212.0"
-            
+        url: /docs/marketplace/dev/setup/index.html
+        include_versions:     
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
@@ -260,7 +257,7 @@ entries:
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
       - title: Feature integration guides
-        url: docs/marketplace/dev/feature-integration-guides/index.html
+        url: /docs/marketplace/dev/feature-integration-guides/index.html
         
         nested:
         

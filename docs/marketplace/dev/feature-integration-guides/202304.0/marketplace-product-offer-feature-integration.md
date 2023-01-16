@@ -55,7 +55,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Adjust the schema definition so that entity changes will trigger events:
+Adjust the schema definition so that entity changes trigger events:
 
 **src/Pyz/Zed/ProductOffer/Persistence/Propel/Schema/spy_product_offer.schema.xml**
 
@@ -246,7 +246,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 </details>
 
 #### Set up event listeners
-
+`
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- |----------------------| ----------- | ---------------- |
 | MerchantProductOfferSearchEventSubscriber  | Registers listeners responsible for publishing merchant product offer search to storage. |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
@@ -305,6 +305,8 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 #### Configure message processors
 
+Set up the following plugin:
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------- | -------------- | -------- | ------------ |
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant product offers to sync with Redis storage and marks messages as failed in case of error. |           | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
@@ -338,6 +340,8 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 ```
 
 #### Set up, regenerate, and resync features
+
+Set up the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------- | --------------- | ---------- | ---------------- |
@@ -1000,7 +1004,7 @@ offer418,AT
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ---------------- | ------------ | ------- | ------------- | ------- |
-| product_offer_reference | &check;     | string    | roan-gmbh-und-co-k-g | Product Offer reference, unique identifier per Offer. |
+| product_offer_reference | &check;     | string    | roan-gmbh-und-co-k-g | A product offer reference, unique identifier per Offer. |
 | store_name              | &check;    | string    | DE  | The name of the store.  |
 
 **data/import/common/common/marketplace/product_offer_validity.csv**
@@ -1033,9 +1037,9 @@ offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ |-----------|-----------| ----------- | ---------------- |
-| product_offer_reference | &check;   | string    | offer1       | Unique product offer identifier.             |
+| product_offer_reference | &check;   | string    | offer1       | A unique product offer identifier.             |
 | valid_from              |           | String    | 2020-01-01   | Date since which the product offer is valid. |
-| valid_to                |           | String    | 2020-01-01   | Date till which the product offer is valid.  |
+| valid_to                |           | String    | 2020-01-01   | Date until which the product offer is valid.  |
 
 Register the following plugins to enable data import:
 
@@ -1579,7 +1583,7 @@ Not needed if installed before.
 
 {% info_block warningBox "Verification" %}
 
-Verify that the following modules were installed:
+Verify that the following modules have been installed:
 
 | MODULE                     | EXPECTED DIRECTORY                         |
 |----------------------------|--------------------------------------------|
@@ -1704,7 +1708,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure that the following widgets have been registered:
 
 | MODULE | TEST |
 | ----------------- | ----------------- |

@@ -279,9 +279,8 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 ```
 
 5. In `tsconfig.base.json`, add the following changes: 
-   - In the `compilerOptions` section, change the `target` property .
-   - In the `compilerOptions` section, add the new `useDefineForClassFields` property.
-   - In the `exclude` section, add the `"**/*.test.ts"` file extension.
+   1. In `compilerOptions` section, change the `target` property and add the new `useDefineForClassFields` property.
+   2. In `exclude` section, add the `"**/*.test.ts"` file extension.
 
 ```json
 {

@@ -9,6 +9,7 @@ entries:
         include_versions:
             - "202204.0"
             - "202212.0"
+            
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
@@ -260,7 +261,9 @@ entries:
 
       - title: Feature integration guides
         url: docs/marketplace/dev/feature-integration-guides/index.html
+        
         nested:
+        
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
             include_versions:

@@ -34,7 +34,7 @@ composer require spryker-feature/marketplace-product-offer:"{{page.version}}" --
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
 
 | MODULE                         | EXPECTED DIRECTORY                         |
 |--------------------------------|--------------------------------------------|
@@ -105,7 +105,7 @@ Verify that the following changes have been implemented by checking your databas
 | spy_product_offer_validity                   | table  | created |
 
 
-Make sure that the following changes were applied in transfer objects:
+Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER                                   | TYPE     | EVENT   | PATH                                                                 |
 |--------------------------------------------|----------|---------|----------------------------------------------------------------------|
@@ -337,7 +337,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Set up, re-generate, and re-sync features
+#### Set up, regenerate, and resync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------- | --------------- | ---------- | ---------------- |
@@ -441,10 +441,10 @@ class MerchantProductOfferSearchConfig extends SprykerMerchantProductOfferSearch
 
 Make sure that after setting up the event listeners, the following commands do the following:
 
-1. `console sync:data product_concrete_product_offers` exports data from `spy_product_concrete_product_offers_storage` table to Redis.
-2. `console sync:data product_offer` exports data from `spy_product_offer_storage` table to Redis.
+* `console sync:data product_concrete_product_offers` exports data from `spy_product_concrete_product_offers_storage` table to Redis.
+* `console sync:data product_offer` exports data from `spy_product_offer_storage` table to Redis.
 
-Make sure that when the following entities get updated via the ORM, the corresponding Redis keys have the correct values.
+Make sure that when the following entities get updated through the ORM, the corresponding Redis keys have the correct values.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER | EXAMPLE EXPECTED DATA FRAGMENT |
 | ---------- | ------------------------- | ------------------ |
@@ -1112,11 +1112,11 @@ console data:import product-offer-validity
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the product offer data is attached to Merchants in `spy_product_offer`.
+Make sure the following:
 
-Make sure that the product offer data is attached to Stores in `spy_product_offer_store`.
-
-Make sure that the product offer validity data is correctly imported in `spy_product_offer_validity`.
+* The product offer data is attached to merchants in `spy_product_offer`.
+* The product offer data is attached to stores in `spy_product_offer_store`.
+* The product offer validity data is correctly imported in `spy_product_offer_validity`.
 
 {% endinfo_block %}
 
@@ -1138,7 +1138,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantReferencesProductAbstractsMapExpanderPlugin  | Adds merchant references to product abstract search data.                                                              |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 | DefaultProductOfferReferenceStrategyPlugin           | Sets the default selected product offer in PDP for a concrete product. It selects the first product offer in the list. | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
 | ProductOfferReferenceStrategyPlugin                  | Sets selected product offer in `ProductConcreteTransfer` if one is already selected on PDP.                            | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
-| ProductViewProductOfferExpanderPlugin                | Adds product offer data to `ProductViewTransfer` when a retrieving product.                                            |                                       | Spryker\Client\ProductOfferStorage\Plugin\ProductStorage                         |
+| ProductViewProductOfferExpanderPlugin                | Adds product offer data to `ProductViewTransfer` when retrieving a product.                                            |                                       | Spryker\Client\ProductOfferStorage\Plugin\ProductStorage                         |
 | ProductOfferValidityProductOfferPostCreatePlugin     | Creates product offer validity dates after the product offer is created.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityProductOfferPostUpdatePlugin     | Updates product offer validity dates after the product offer is updated.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityProductOfferExpanderPlugin       | Expands product offer data with validity dates when the product offer is fetched.                                      |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
@@ -1146,7 +1146,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOfferStorageMapperPlugin              | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
 | MerchantProductOfferProductConcretePageMapExpanderPlugin  | Expands the provided `PageMap` transfer object with related merchant references.                                  |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 
-**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
+<details open><summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1189,6 +1189,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
+</details>
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
 
@@ -1246,7 +1247,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1295,7 +1296,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1407,7 +1408,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1508,22 +1509,19 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that a default product offer is given when retrieving product concrete data.
-
-Make sure that validity data is saved when saving a product offer.
-
-Make sure Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
-
-Make sure the Merchant column is in the Product Offers list in `ProductOfferGui`.
-
-Make sure the console command invalidates expired product offers and reactivates product offers that are within their validity dates.
+Make sure the following:
+* A default product offer is given when retrieving product concrete data.
+* Validity data is saved when saving a product offer.
+* Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
+* The Merchant column is in the Product Offers list in `ProductOfferGui`.
+* The console command invalidates expired product offers and reactivates product offers that are within their validity dates.
 
 Make sure that when a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages.
 
 It means the following:
 
-1. If a merchant gets deactivated, `ProductAbstract`s that were on the catalog search only because they had a product offer from that merchant get removed.
-2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
+* If a merchant gets deactivated, `ProductAbstract` products that are on the catalog search only because they have a product offer from that merchant get removed.
+* If a product offer gets created, and the `ProductAbstract` product related to it is not available on catalog search, it gets available.
 
 {% endinfo_block %}
 
@@ -1558,14 +1556,13 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the navigation menu of the Back Office, you can see the **Marketplace->Offers** menu item.
+Make sure that in the navigation menu of the Back Office, you can see the **Marketplace<span aria-label="and then">></span> Offers** menu item.
 
 {% endinfo_block %}
 
-
 ## Install feature frontend
 
-Follow the steps below to install the Marketplace Product Offer feature front end.
+Follow the steps below to install the Marketplace Product Offer feature frontend.
 
 ### Prerequisites
 
@@ -1578,7 +1575,7 @@ To start feature integration, integrate the following features:
 
 ### 1) Install the required modules using Composer
 
-If installed before, not needed.
+Not needed if installed before.
 
 {% info_block warningBox "Verification" %}
 
@@ -1592,7 +1589,7 @@ Verify that the following modules were installed:
 
 {% endinfo_block %}
 
-### 2) Add Translations
+### 2) Add translations
 
 Append glossary according to your configuration:
 
@@ -1712,7 +1709,7 @@ Make sure that the following widgets were registered:
 | MODULE | TEST |
 | ----------------- | ----------------- |
 | MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
-| MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders product offers list after performing a product search.                    |
+| MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders a product offers list after performing a product search.                    |
 
 {% endinfo_block %}
 

@@ -16,6 +16,7 @@ entries:
       - "202212.0"      
     - title: SCOS supported browsers
       url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
+      include_versions:
       - "202204.0"
       - "202212.0"
     - title: Quick installation guides

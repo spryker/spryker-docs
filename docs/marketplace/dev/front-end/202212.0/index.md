@@ -5,7 +5,7 @@ last_updated: Jan 12, 2023
 template: concept-topic-template
 ---
 This section explains how to build and set up the Merchant Portal front-end and add additional frontend functionality. It includes the following articles:
-* [Extending the project](/docs/marketplace/dev/front-end/{{page.version}}/extending-the-project.html)
+* [Extending the project](/docs/marketplace/dev/front-end/{{page.version}}/extending-the-project/index.html)
 * [Table design](/docs/marketplace/dev/front-end/{{page.version}}/table-design.html)
 * [UI components library](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/index.html)
 * [Angular Components](/docs/marketplace/dev/front-end/{{page.version}}/angular-components.html)

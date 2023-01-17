@@ -8,7 +8,7 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
 ---
 
-This document describes how to integrate the Marketplace Product Offer into a Spryker project.
+This document describes how to integrate the [Marketplace Product Offer](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -55,7 +55,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Adjust the schema definition so that entity changes trigger events:
+1. Adjust the schema definition so that entity changes trigger events:
 
 **src/Pyz/Zed/ProductOffer/Persistence/Propel/Schema/spy_product_offer.schema.xml**
 
@@ -84,7 +84,7 @@ Adjust the schema definition so that entity changes trigger events:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes:
+2. Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -103,7 +103,6 @@ Verify that the following changes have been implemented by checking your databas
 | spy_product_concrete_product_offers_storage  | table  | created |
 | spy_product_offer_storage                    | table  | created |
 | spy_product_offer_validity                   | table  | created |
-
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -147,9 +146,9 @@ console translator:generate-cache
 
 ### 4) Configure export to Redis and Elasticsearch
 
-To configure export to Redis and Elasticsearch, take the following steps:
+To configure export to Redis and Elasticsearch, take the steps in the following subsections:
 
-#### Set up publisher plugins:
+#### Set up publisher plugins
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--|--| ----------- | ---------------- |
@@ -161,8 +160,8 @@ To configure export to Redis and Elasticsearch, take the following steps:
 | MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant |
 | ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer |
 | ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore |
-| MerchantProductOfferSearchPublisherTriggerPlugin        | Allows publishing or re-publishing product offer search data manually.                                                                        |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher |
-| ProductOfferPublisherTriggerPlugin                      | Allows publishing or re-publishing product offer data manually.                                                                               |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher |
+| MerchantProductOfferSearchPublisherTriggerPlugin        | Allows publishing or republishing product offer search data manually.                                                                        |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher |
+| ProductOfferPublisherTriggerPlugin                      | Allows publishing or republishing product offer data manually.                                                                               |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -246,7 +245,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 </details>
 
 #### Set up event listeners
-`
+
+Set up the following plugin:
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- |----------------------| ----------- | ---------------- |
 | MerchantProductOfferSearchEventSubscriber  | Registers listeners responsible for publishing merchant product offer search to storage. |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
@@ -276,7 +277,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Register the synchronization queue and synchronization error queue:
+#### Register the synchronization queue and synchronization error queue
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -604,7 +605,7 @@ offer418,112_312526172,MER000002,,1,approved
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------------- | ----------- | -------- | --------- | ------------------ |
-| product_offer_reference | &check;      | string    | offer1        | Product offer reference that will be referenced to this merchant. |
+| product_offer_reference | &check;      | string    | offer1        | Product offer reference that is referenced to this merchant. |
 | concrete_sku            | &check;        | string    | 093_24495843  | Concrete product SKU this product offer is attached to.      |
 | merchant_reference      | &check;        | string    | `MER000002`   | Merchant identifier.                                         |
 | merchant_sku            |        | string    | GS952M00H-Q11 | merchant internal SKU for the product offer.                 |
@@ -1117,7 +1118,6 @@ console data:import product-offer-validity
 {% info_block warningBox "Verification" %}
 
 Make sure the following:
-
 * The product offer data is attached to merchants in `spy_product_offer`.
 * The product offer data is attached to stores in `spy_product_offer_store`.
 * The product offer validity data is correctly imported in `spy_product_offer_validity`.
@@ -1147,7 +1147,7 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferValidityProductOfferPostUpdatePlugin     | Updates product offer validity dates after the product offer is updated.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityProductOfferExpanderPlugin       | Expands product offer data with validity dates when the product offer is fetched.                                      |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityConsole                          | Updates product offers to have the `isActive` flag to be `false` where their validity date is not current anymore.     |                                       | Spryker\Zed\ProductOfferValidity\Communication\Console                           |
-| MerchantProductOfferStorageMapperPlugin              | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
+| MerchantProductOfferStorageMapperPlugin              | Maps the merchant foreign key of the `ProductOffer` transfer object to the merchant ID `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
 | MerchantProductOfferProductConcretePageMapExpanderPlugin  | Expands the provided `PageMap` transfer object with related merchant references.                                  |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 
 <details open><summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
@@ -1579,7 +1579,7 @@ To start feature integration, integrate the following features:
 
 ### 1) Install the required modules using Composer
 
-Not needed if installed before.
+Not needed if installed earlier.
 
 {% info_block warningBox "Verification" %}
 
@@ -1662,7 +1662,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `yves.mysprykershop.com/merchant-product-offer-widget/merchant-product-offers-select` routes is available for `GET` requests.
+Make sure that the `yves.mysprykershop.com/merchant-product-offer-widget/merchant-product-offers-select` routes are available for `GET` requests.
 
 {% endinfo_block %}
 
@@ -1712,7 +1712,7 @@ Make sure that the following widgets have been registered:
 
 | MODULE | TEST |
 | ----------------- | ----------------- |
-| MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
+| MerchantProductOfferWidget       | Go to a product concrete details page that has offers. You cana see that the default offer is selected, and the widget is displayed. |
 | MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders a product offers list after performing a product search.                    |
 
 {% endinfo_block %}

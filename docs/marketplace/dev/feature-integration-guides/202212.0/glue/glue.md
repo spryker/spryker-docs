@@ -35,6 +35,6 @@ This section contains the following Glue API Marketplace feature integration gui
                 
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices-feature-integration.html)
                 
-* [Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-return-management-feature-integration.html)
+* [Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html)
                 
-* [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-lists-feature-integration.html)
+* [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-shopping-lists-feature-integration.html)

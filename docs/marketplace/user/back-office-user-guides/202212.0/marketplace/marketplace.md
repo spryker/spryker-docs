@@ -6,5 +6,5 @@ template: concept-topic-template
 ---
 This section explains how a Marketplace administrator can create and manage merchant records and manage merchant users in the Back Office:
 
-
+* [Merchants](/docs/marketplace/user/back-office-user-guides/202212.0/marketplace/merchants/merchants.html)
 * [Offers](/docs/marketplace/user/back-office-user-guides/202212.0/marketplace/offers/managing-merchant-product-offers.html)

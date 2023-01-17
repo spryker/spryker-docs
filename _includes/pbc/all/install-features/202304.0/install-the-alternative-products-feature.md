@@ -35,7 +35,7 @@ Make sure that the following modules were installed:
 | ProductAlternativeStorage | vendor/spryker/product-alternative-storage |
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database achema and rransfer objects
 
 1. Adjust the schema definition so that entity changes trigger the events.
 

@@ -1,18 +1,18 @@
 ---
-title: Marketplace Product Option feature integration
-last_updated: Jan 16, 2
-Description: This document describes the process how to integrate the Marketplace Product Option feature into a Spryker project.
+title: Marketplace Product Options feature integration
+last_updated: Jan 16, 2023
+Description: This document describes the process how to integrate the Marketplace Product Options feature into a Spryker project.
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Options feature walkthrough
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
 ---
 
-This document describes how to integrate the Marketplace Product Option feature into a Spryker project.
+This document describes how to integrate the [Marketplace Product Options feature](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Product Option feature core.
+Follow the steps below to install the Marketplace Product Options feature core.
 
 ### Prerequisites
 
@@ -26,8 +26,6 @@ To start feature integration, integrate the required features:
 
 
 ### 1) Install the required modules using Composer
-
-1) Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-product-options:"{{page.version}}" --update-with-dependencies
@@ -49,7 +47,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up the database schema and transfer objects
 
-Adjust the schema definition to guarantee unique identifier for each option group:
+1. Adjust the schema definition to guarantee unique identifier for each option group:
 
 **src/Pyz/Zed/DataImport/Persistence/Propel/Schema/spy_product_option.schema.xml**
 
@@ -68,7 +66,7 @@ Adjust the schema definition to guarantee unique identifier for each option grou
 
 ```
 
-Apply database changes and to generate entity and transfer changes:
+2. Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -101,7 +99,7 @@ Make sure that the following changes were applied in transfer objects:
 
 ### 3) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -110,7 +108,7 @@ checkout.item.option.pre.condition.validation.error.exists,"Product option of %n
 checkout.item.option.pre.condition.validation.error.exists,"Produktoption von %name% ist nicht mehr verfügbar.",de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -124,7 +122,7 @@ Make sure that the configured data is added to the `spy_glossary_key` and `spy_g
 
 ### 4) Import data
 
-Prepare your data according to your requirements using the demo data:
+1. Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_product_option_group.csv**
 
@@ -133,7 +131,7 @@ product_option_group_key,merchant_reference,approval_status,merchant_sku
 insurance,MER000001,approved,spr-425453
 ```
 
-Add the `product_option_group_key` column to product_option.csv:
+2. Add the `product_option_group_key` column to `product_option.csv`:
 
 **data/import/common/common/product_option.csv**
 
@@ -147,7 +145,7 @@ ilyakubanov marked this conversation as resolved.
 "001,002,003,004,005,006,007,008,009,010,018,019,020,021,022,023,024,025,026,027,028,029,030,031,032,033,034,035,036,037,038,039,040,041,042,043,044,045,046,047,048,049,050,051,052,053,054,055,056,057,058,059,060,061,062,063,064,065,066,067,068,069,070,071,084,085,086,087,088,089,090,091,092,093,094,095,096,097,098,099,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210",3,Entertainment Electronics,product.option.group.name.gift_wrapping,Gift wrapping,Geschenkverpackung,product.option.gift_wrapping,Gift wrapping,Geschenkverpackung,OP_gift_wrapping,wrapping
 ```
 
-#### Register data importer:
+#### Register data importer
 
 **data/import/local/full_EU.yml**
 
@@ -171,7 +169,7 @@ actions:
 ```
 
 
-Register the following plugin to enable the data import:
+To enable the data import, register the following plugin:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -255,8 +253,8 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOptionListTableQueryCriteriaExpanderPlugin | Extends `QueryCriteriaTransfer` with the merchant product option group criteria for expanding default query running in `ProductOptionListTable`. | None | Spryker\Zed\MerchantProductOptionGui\Communication\Plugin\ProductOptionGui |
 | MerchantProductOptionGroupExpanderPlugin | Expands a product option group data with the related merchant. | None | Spryker\Zed\MerchantProductOption\Communication\Plugin\ProductOption |
 | MerchantProductOptionCollectionFilterPlugin | Filters merchant product option group transfers by approval status and excludes the product options with the not approved merchant groups. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\ProductOptionStorage |
-| MerchantProductOptionGroupWritePublisherPlugin | Retrieves all abstract product IDs using the  merchant product option group IDs from the event transfers. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption |
-| MerchantProductOptionGroupPublisherTriggerPlugin | Allows publishing or re-publishing merchant product option group storage data manually. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher |
+| MerchantProductOptionGroupWritePublisherPlugin | Retrieves all abstract product IDs using the merchant product option group IDs from the event transfers. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption |
+| MerchantProductOptionGroupPublisherTriggerPlugin | Allows publishing or republishing merchant product option group storage data manually. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher |
 
 
 **src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php**
@@ -376,10 +374,11 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure merchants can create product option groups and values in the Merchant Portal.
-Make sure that merchant product option information is shown on product details page when it is approved and active.
-Make sure that merchant product option information is displayed in the cart, checkout, and user account.
-Make sure that merchant product options are a part of the marketplace/merchant order and all totals are calculated correctly.
+Make sure the following:
+* Merchants can create product option groups and values in the Merchant Portal.
+* Merchant product option information is shown on a product details page when it is approved and active.
+* Merchant product option information is displayed in the cart, checkout, and user account.
+* Merchant product options are a part of the marketplace/merchant order, and all totals are calculated correctly.
 
 {% endinfo_block %}
 
@@ -387,5 +386,5 @@ Make sure that merchant product options are a part of the marketplace/merchant o
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Option + Cart | | [Marketplace Product Option + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-cart-feature-integration.html) |
-| Marketplace Product Option + Checkout | | [Marketplace Product Option + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-checkout-feature-integration.html) |
+| Marketplace Product Options + Cart | | [Marketplace Product Options + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-cart-feature-integration.html) |
+| Marketplace Product Options + Checkout | | [Marketplace Product Options + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-checkout-feature-integration.html) |

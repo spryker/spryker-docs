@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Option feature integration
-last_updated: Dec 30, 2022
+last_updated: Jan 16, 2
 Description: This document describes the process how to integrate the Marketplace Product Option feature into a Spryker project.
 template: feature-integration-guide-template
 related:
@@ -9,7 +9,6 @@ related:
 ---
 
 This document describes how to integrate the Marketplace Product Option feature into a Spryker project.
-
 
 ## Install feature core
 

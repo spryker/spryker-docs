@@ -12,7 +12,9 @@ entries:
       url: /docs/scos/dev/system-requirements/system-requirements.html
       include_versions:
       - "202108.0"
-      - "202204.0"
+      - "202204.0"      
+    - title: SCOS supported browsers
+      url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
     - title: Quick installation guides
       url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guides.html
       nested:
@@ -55,31 +57,6 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
       - title: Database access credentials
         url: /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
-    - title: Installing Spryker with Development Virtual Machine
-      url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
-      nested:
-      - title: SCOS supported browsers
-        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
-      - title: Installing on MacOS and Linux
-        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
-      - title: Installing on Windows
-        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
-      - title: Configuring Spryker
-        nested:
-          - title: Configuring Spryker after installing
-            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
-          - title: Configuring database servers
-            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
-          - title: Updating Node.js to the latest version
-            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
-      - title: Configuring debugging
-        nested:
-        - title: Configuring debugging
-          url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
-        - title: Configuring debugging in a DevVM below version 91
-          url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
-    - title: Installing Spryker without Docker
-      url: /docs/scos/dev/setup/installing-spryker-without-docker.html
     - title: Managing SCOS dependencies with Composer
       url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Redis configuration

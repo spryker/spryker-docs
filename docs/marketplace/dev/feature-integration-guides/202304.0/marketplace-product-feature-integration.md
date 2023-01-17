@@ -130,12 +130,12 @@ Install the following plugins:
 
 | PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
 | --------------------- | ------------------- | --------- | -------------------- |
-| Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
-| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract ids to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
-| MerchantProductSearchPublisherTriggerPlugin               | Allows publishing or re-publishing  merchant product search data manually. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
-| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
-| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract ids to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
-| MerchantProductPublisherTriggerPlugin                          | Allows publishing or re-publishing merchant product storage data manually. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher |
+| Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant IDs to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract IDs to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantProductSearchPublisherTriggerPlugin               | Allows publishing or republishing  merchant product search data manually. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
+| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant IDs to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
+| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract IDs to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
+| MerchantProductPublisherTriggerPlugin                          | Allows publishing or republishing merchant product storage data manually. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -297,7 +297,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 Make sure that you can filter products by merchants at `https://zed.de.demo-spryker.com/product-management`.
 
-Make sure that you can see the merchant name at `https://zed.de.demo-spryker.com/product-management/view?id-product-abstract={id-product-abstract}}`. It is applicable only for products that are assigned to some merchant. For details, see [6) Import merchant product data](#6-import-merchant-product-data).
+Make sure that you can see the merchant name at `https://zed.de.demo-spryker.com/product-management/view?id-product-abstract={id-product-abstract}}`. It is applicable only for products that are assigned to some merchant. For details, the [6) Import merchant product data](#6-import-merchant-product-data) step.
 
 {% endinfo_block %}
 

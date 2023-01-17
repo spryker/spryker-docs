@@ -7,3 +7,4 @@ template: concept-topic-template
 
 * [Sales](/docs/marketplace/user/back-office-user-guides/202212.0/sales/sales.html)
 * [Catalog](/docs/marketplace/user/back-office-user-guides/202212.0/catalog/catalog.html)
+* [Marketplace](/docs/marketplace/user/back-office-user-guides/202212.0/marketplace/marketplace.html)

@@ -1171,7 +1171,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 Make sure the following:
 * When a product offer is selected, its price is shown as the current price.
 * Product offer prices are saved when a product concrete and product offer prices are saved.
-* Product offers are sorted by the lowest price first when fetched as a collection with product concrete.
+* Product offers are first sorted by the lowest price when fetched as a collection with product concrete.
 * When a product offer with a volume price is selected, and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
 
 {% endinfo_block %}

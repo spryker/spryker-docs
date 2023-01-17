@@ -656,7 +656,7 @@ console frontend:yves:build
 
 Make sure that for the merchant products, you can see the merchant name on the product details page.
 
-Make sure that when you add a merchant product to the cart, on the cart, page it has the **Sold By** widget displayed.
+Make sure that when you add a merchant product to the cart, it has the **Sold By** widget displayed on the cart page.
 
 {% endinfo_block %}
 

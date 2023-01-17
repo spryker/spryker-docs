@@ -24,8 +24,6 @@ redirect_from:
 related: 
   - title: Install module structure and configuration
     link: docs/scos/dev/setup/install-module-structure-and-configuration.html
-  - title: Installing Spryker without Development Virtual Machine or Docker
-    link: docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
   - title: Managing SCOS dependencies with Composer
     link: docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
   - title: Redis configuration

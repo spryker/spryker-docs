@@ -19,6 +19,7 @@ To start feature integration, integrate the required features:
 ### 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
 composer require spryker-feature/alternative-products: "{{site.version}}" --update-with-dependencies
 ```
@@ -35,7 +36,7 @@ Make sure that the following modules were installed:
 | ProductAlternativeStorage | vendor/spryker/product-alternative-storage |
 {% endinfo_block %}
 
-### 2) Set up database achema and rransfer objects
+### 2) Set up database achema and transfer objects
 
 1. Adjust the schema definition so that entity changes trigger the events.
 

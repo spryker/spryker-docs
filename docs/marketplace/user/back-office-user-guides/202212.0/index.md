@@ -5,4 +5,4 @@ last_updated: Jan 17, 2023
 template: concept-topic-template
 ---
 
-/docs/marketplace/user/back-office-user-guides/202212.0/sales/
+* [Sales](/docs/marketplace/user/back-office-user-guides/202212.0/sales/sales.html)

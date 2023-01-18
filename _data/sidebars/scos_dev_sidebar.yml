@@ -13,7 +13,7 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-      - "202212.0"      
+      - "202212.0"
     - title: SCOS supported browsers
       url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
       include_versions:
@@ -442,7 +442,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
     - title: Promotions and Discounts
       url: /docs/scos/dev/feature-walkthroughs/promotions-discounts-feature-walkthrough.html
       include_versions:
@@ -1183,7 +1182,7 @@ entries:
       - "202009.0"
       - "202108.0"
     - title: Retrieve related products
-      url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html      
+      url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
     - title: Retrieving autocomplete and search suggestions
@@ -1607,6 +1606,12 @@ entries:
         - "202108.0"
       - title: Glue API - Product Relations
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
       - title: Glue API - Product Tax Sets
         url: /docs/scos/dev/feature-integration-guides/glue-api/product-tax-sets-api-feature-integration.html
         include_versions:
@@ -2321,7 +2326,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Product Set
       url: /docs/scos/dev/feature-integration-guides/product-set-feature-integration.html
       include_versions:
@@ -2638,12 +2642,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - RabbitMQ
       url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
-    - title: Migration Guide - ProductRelation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
-    - title: Migration Guide - ProductRelationCollector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationcollector.html
-    - title: Migration Guide - ProductRelationStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html
     - title: Migration Guide - Propel
       url: /docs/scos/dev/module-migration-guides/migration-guide-propel.html
     - title: Migration Guide - Publish and Synchronization
@@ -4162,8 +4160,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: "HowTo: Build your own product relation type"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
       - title: "HowTo: Set up multiple stores"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
       - title: "HowTo: Customize HTTP headers in AJAX request"

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductRelation
+title: Upgrade the ProductRelation module
 description: Use the guide to learn how to update the ProductRelation module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -29,7 +29,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productrelation.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productrelation.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productrelation.html
-  - /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productrelation-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productrelation-module.md -->

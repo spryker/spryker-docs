@@ -45,7 +45,7 @@ Price Range Filter is not supported with the Merchant Relations, that is why thi
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-filter-preferences.html)  |
+| [Manage filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/define-filter-preferences.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

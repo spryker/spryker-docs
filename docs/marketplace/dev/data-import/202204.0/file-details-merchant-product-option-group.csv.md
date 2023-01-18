@@ -4,8 +4,6 @@ last_updated: Feb 26, 2021
 description: This document describes the merchant_product_option_group file to create product options for merchants.
 template: import-file-template
 related:
-  - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
   - title: Marketplace Product Options feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-options-feature-overview.html
 ---

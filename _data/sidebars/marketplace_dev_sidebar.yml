@@ -607,6 +607,19 @@ entries:
                 include_versions:
                 - "202204.0"
 
+
+      - title: Module migration guides
+        nested:
+          - title: MerchantProductOfferDataImport
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductofferdataimport.html
+          - title: MerchantProductOffersRestApi
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductoffersrestapi.html
+          - title: MerchantProductOfferStorage
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductofferstorage.html
+          - title: ProductMerchantPortalGui
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productmerchantportalgui.html
+          - title: ProductOfferPricesRestApi
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html                        
       - title: Glue API guides
         nested:
           - title: REST API Marketplace B2C reference

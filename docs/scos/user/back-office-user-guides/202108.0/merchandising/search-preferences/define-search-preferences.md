@@ -11,11 +11,6 @@ redirect_from:
   - /docs/managing-search-preferences
   - /docs/en/managing-search-preferences
   - /docs/scos/user/back-office-user-guides/202108.0/merchandising/search-and-filters/managing-search-preferences.html
-related:
-  - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
-  - title: Managing Filter Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-filter-preferences.html
 ---
 
 This topic describes how to add product attributes to search and define search preferences.
@@ -26,7 +21,7 @@ This topic describes how to add product attributes to search and define search p
 
 2. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for the search preference that you are going to create.
 
-3. Add the product attribute to a product by [creating a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) or by [editing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html).
+3. Add the product attribute to a product by [creating a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) or by [editing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/editing-abstract-products.html).
 
 4. To start working with filter preferences, go to **Merchandising&nbsp;<span aria-label="and then">></span> Search Preferences**.
 

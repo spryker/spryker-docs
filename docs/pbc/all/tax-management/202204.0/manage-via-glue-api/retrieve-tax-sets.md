@@ -16,21 +16,21 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-tax-sets.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-tax-sets.html
 related:
-  - title: Retrieving abstract products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
+  - title: Retrieve abstract products
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving abstract product prices
     link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
 ---
 
 This endpoint allows retrieving detailed information about tax sets of abstract products.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 ## Retrieve tax sets
 

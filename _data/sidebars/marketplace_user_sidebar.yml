@@ -151,14 +151,14 @@ entries:
           nested:
 
             - title: Availability
-              url: /docs/marketplace/user/back-office-user-guides/202212.0/catalog/availability/availability-reference-information.html
+              url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
               nested:
 
               - title: "Availability: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
 
             - title: Products
-              url: /docs/marketplace/user/back-office-user-guides/202212.0/catalog/products/products.html
+              url: /docs/marketplace/user/back-office-user-guides/catalog/products/products.html
               nested:
 
               - title: Abstract products
@@ -186,7 +186,7 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
 
                 - title: Product Options
-                  url: /docs/marketplace/user/back-office-user-guides/202212.0/catalog/product-options/product-options.html
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/product-options.html
                   nested:
 
                     - title: Creating product options
@@ -217,7 +217,7 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
 
             - title: Orders
-              url: /docs/marketplace/user/back-office-user-guides/202212.0/marketplace/orders/managing-marketplace-orders.html
+              url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
               nested:
 
                 - title: Managing marketplace orders

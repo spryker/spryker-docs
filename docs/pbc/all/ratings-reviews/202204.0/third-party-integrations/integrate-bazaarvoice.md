@@ -68,14 +68,14 @@ $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
 
 ### 3. Add markup to custom templates
 
-The Bazaarvoice PBC takes data of products from Yves pages (for example Product Detail Page).
-To get necessary data from the pages are used schemas from [Schema.org](https://schema.org/).
-By default, the necessary markups is already present in the Yves templates.
+The Bazaarvoice PBC takes data on products from the Storefront pages (for example, Product Detail page).
+To get necessary data from the pages, schemas from [Schema.org](https://schema.org/) are used.
+By default, the necessary markups are already available in the Yves templates.
 
-If you have custom templates or are making your own frontend the markups required for the Bazaarvoice PBC must be added according to the tables below.
+If you have custom templates or make your own frontend, the markups required for the Bazaarvoice PBC must be added according to the tables below.
 
 #### DCC (product catalog collection)
-Core Template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
+Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
 | schema.org property          | Bazaarvoice property |
 |------------------------------|----------------------|
@@ -90,7 +90,7 @@ Core Template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 | product.inProductGroupWithID | family               |
 
 #### DCC (merchant catalog collection)
-Core Template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
 | schema.org property        | Bazaarvoice property |
 |----------------------------|----------------------|
@@ -98,8 +98,8 @@ Core Template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/
 | organization.name          | productName          |
 | organization.logo          | productImageURL      |
 
-#### Tracking Pixel
-Core Templates:
+#### Tracking pixel
+Core templates:
 * `SprykerShop/Yves/PaymentPage/Theme/default/views/payment-success/index.twig`
 * `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
 * `SprykerShop/Yves/MerchantWidget/Theme/default/views/merchant-meta-schema/merchant-meta-schema.twig` (only for Marketplace)
@@ -117,8 +117,8 @@ Core Templates:
 | invoice.orderItem.offers.seller.name       | items.productId      | *                    |
 | invoice.orderItem.offers.seller.identifier | items.name           | *                    |
 
-#### Ratings and Reviews (Product)
-Core Templates:
+#### Ratings and reviews (Product)
+Core templates:
 * `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.twig`
@@ -137,8 +137,8 @@ Example:
 </section>
 ```
 
-#### Ratings and Reviews (Merchant)
-Core Template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+#### Ratings and reviews (Merchant)
+Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
 Example:
 ```html
@@ -149,8 +149,8 @@ Example:
 </section>
 ```
 
-#### Inline Ratings
-Core Templates:
+#### Inline ratings
+Core templates:
 * `SprykerShop/Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/product-review-display/product-review-display.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.twig`

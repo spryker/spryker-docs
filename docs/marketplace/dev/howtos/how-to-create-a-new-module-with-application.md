@@ -1,5 +1,5 @@
 ---
-title: 'HowTo: Create a new Angular module with application'
+title: "HowTo: Create a new Angular module with application"
 last_updated: Jan 17, 2023
 description: This document shows how to create a new Angular module with the application
 template: howto-guide-template

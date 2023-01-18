@@ -29,7 +29,7 @@ redirect_from:
 ---
 | REQUIREMENT | VALUE |
 | ----------------- | ----------------------- |
-| OS                          | <ul><li>Native: Linux</li><li>DevVM: MacOS and Windows</li></ul> |
+| OS                          | Native: Linux |
 | Web Server                                | NginX—preferred. But any webserver which supports PHP will work such as lighttpd, Apache, Cherokee. |
 | Databases                             | Depending on the project, one of the databases: MariaDB >= 10.4—preferred, PostgreSQL >=9.6, or MySQL >=5.7. |
 | PHP                                   | Spryker supports PHP `>=7.4` with the following extensions: `curl`, `json`, `mysql`, `pdo-sqlite`, `sqlite3`, `gd`, `intl`, `mysqli`, `pgsql`, `ssh2`, `gmp`, `mcrypt`, `pdo-mysql`, `readline`, `twig`, `imagick`, `memcache`, `pdo-pgsql`, `redis`, `xml`, `bz2`, `mbstring`. The preferred version is `8.0`. See [Supported Versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html) for details on the supported PHP versions.|

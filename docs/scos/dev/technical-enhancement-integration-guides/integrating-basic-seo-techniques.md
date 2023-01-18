@@ -939,13 +939,7 @@ change the `h2` heading to `h1`  and add the `title title--h2` CSS classes:
 
 Having completed all the steps above, clean the cache to be sure that the twig adjustments are applied properly.
 
-If the project’s environment of the project is *Vagrant*, run:
-
-```bash
-console c:e
-```
-
-If the project’s environment is *Docker*, run:
+Run the following command:
 
 ```bash
 docker/sdk cli console c:e

@@ -21,9 +21,6 @@ redirect_from:
   - /v2/docs/en/ht-build-product-relation
   - /v1/docs/ht-build-product-relation
   - /v1/docs/en/ht-build-product-relation
-related:
-  - title: Product Relations feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
 ---
 
 This tutorial shows how to build your own product relation type.

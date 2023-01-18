@@ -10,7 +10,7 @@ To start feature integration, overview and install the necessary features:
 | NAME | VERSION | REQUIRED  SUB-FEATURE|
 |---|---|---|
 |Spryker Core| {{site.version}} |[Glue Application](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product Relation| {{site.version}} | [Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-relations-feature-integration.html)|
+|Product Relation| {{site.version}} | [Product relations feature integration](/docs/pbc/all/product-relationship-management/{{site.version}}/install-and-upgrade/install-the-product-relations-feature.html)|
 |Cart| {{site.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html) ||
 Product| {{site.version}} |[Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)|
 

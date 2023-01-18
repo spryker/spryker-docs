@@ -1,5 +1,5 @@
 ---
-title: Retrieving related products
+title: "Glue API: Retrieve related products"
 description: The article demonstrates how to find alternatives for discontinued products with the help of Glue API endpoints.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -14,12 +14,12 @@ related:
   - title: Retrieving alternative products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
   - title: Product Relations feature overview
-    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
+    link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 ---
 
-Using the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
+Using the [Product Relations](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).
+Only [abstract](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html).
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 * Retrieve related products of an abstract product.
@@ -31,7 +31,7 @@ In your development, the endpoints can help you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/install-the-product-relations-glue-api.html).
 
 ## Retrieve related items of an abstract product
 

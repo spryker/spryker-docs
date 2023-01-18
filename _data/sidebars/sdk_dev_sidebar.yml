@@ -64,5 +64,11 @@ entries:
           url: /docs/sdk/dev/development-tools/scss-linter.html
         - title: TS linter
           url: /docs/sdk/dev/development-tools/ts-linter.html
+        - title: VCS connector
+          url: /docs/sdk/dev/vcs.html
+      - title: Troubleshooting
+        nested:
+          - title: spryker-sdk command not found
+            url: /docs/sdk/dev/troubleshooting/spryker-sdk-command-not-found.html
 
 

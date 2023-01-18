@@ -13,14 +13,13 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/stocks/stocks.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
-  - /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html
 ---
 
 This document describes the `product_stock.csv` file to configure [Product Stock](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-* [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 * [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-and-export-data/file-details-warehouse.csv.html)
 
 ## Import file parameters

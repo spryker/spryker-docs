@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
 related:
   - title: Retrieving concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
   - title: Retrieving concrete product prices
     link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products

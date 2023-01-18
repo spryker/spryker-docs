@@ -31,15 +31,15 @@ Ensure that the following modules have been installed:
 
 | MODULE                     | EXPECTED DIRECTORY                           |
 |----------------------------|----------------------------------------------|
+| MessengerExtension         | vendor/spryker/messenger-extension           |
+| SecurityGui                | vendor/spryker/security-gui                  |
+| SecurityOauthUser          | vendor/sprkyer/security-oauth-user           |
 | Translator                 | vendor/spryker/translator                    |
 | UserLocale                 | vendor/spryker/user-locale                   |
 | UserLocaleGui              | vendor/spryker/user-locale-gui               |
-| MessengerExtension         | vendor/spryker/messenger-extension           |
-| SecurityGui                | vendor/spryker/security-gui                  |
 | UserPasswordReset          | vendor/spryker/user-password-reset           |
 | UserPasswordResetExtension | vendor/spryker/user-password-reset-extension |
 | UserPasswordResetMail      | vendor/spryker/user-password-reset-mail      |
-| SecurityOauthUser          | vendor/sprkyer/security-oauth-user           |
 
 Ensure that the following modules have been removed:
 
@@ -72,16 +72,16 @@ Ensure the following transfers have been created:
 
 | TRANSFER                        | TYPE      | EVENT   | PATH                                                          |
 |---------------------------------|-----------|---------|---------------------------------------------------------------|
-| UserTransfer.fkLocale           | attribute | created | src/Generated/Shared/Transfer/UserTransfer`                   |
-| UserTransfer.localName          | attribute | created | src/Generated/Shared/Transfer/UserTransfer`                   |
-| UserTransfer.username           | attribute | created | src/Generated/Shared/Transfer/UserTransfer`                   |
-| UserTransfer.password           | attribute | created | src/Generated/Shared/Transfer/UserTransfer`                   |
-| UserTransfer.lastLogin          | attribute | created | src/Generated/Shared/Transfer/UserTransfer`                   |
-| MessageTransfer                 | class     | created | src/Generated/Shared/Transfer/MessageTransfer`                |
-| TranslationTransfer             | class     | created | src/Generated/Shared/Transfer/TranslationTransfer`            |
-| KeyTranslationTransfer          | class     | created | src/Generated/Shared/Transfer/KeyTranslationTransfer`         |
+| UserTransfer.fkLocale           | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
+| UserTransfer.localName          | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
+| UserTransfer.username           | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
+| UserTransfer.password           | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
+| UserTransfer.lastLogin          | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
+| MessageTransfer                 | class     | created | src/Generated/Shared/Transfer/MessageTransfer                 |
+| TranslationTransfer             | class     | created | src/Generated/Shared/Transfer/TranslationTransfer             |
+| KeyTranslationTransfer          | class     | created | src/Generated/Shared/Transfer/KeyTranslationTransfer          |
 | OauthAuthenticationLinkTransfer | class     | created | src/Generated/Shared/Transfer/OauthAuthenticationLinkTransfer |
-| ResourceOwnerTransfer           | class     | created | src/Generated/Shared/Transfer/ResourceOwnerTransfer`          |
+| ResourceOwnerTransfer           | class     | created | src/Generated/Shared/Transfer/ResourceOwnerTransfer           |
 | ResourceOwnerRequestTransfer    | class     | created | src/Generated/Shared/Transfer/ResourceOwnerRequestTransfer    |
 | ResourceOwnerResponseTransfer   | class     | created | src/Generated/Shared/Transfer/ResourceOwnerResponseTransfer   |
 
@@ -180,7 +180,7 @@ After finishing the entire integration, ensure the following:
 
 ### Configure navigation
 
-Add the `StrageGui` section to `navigation.xml`:
+Add the `StorageGui` section to `navigation.xml`:
 
 **config/Zed/navigation.xml**
 
@@ -247,7 +247,7 @@ use Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlu
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getApplicationPlugins(): array
     {
@@ -273,7 +273,7 @@ use Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security\OauthUserSecurit
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface[]
+     * @return array<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
      */
     protected function getSecurityPlugins(): array
     {
@@ -304,7 +304,7 @@ use Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset\Mai
 class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\UserPasswordResetExtension\Dependency\Plugin\UserPasswordResetRequestHandlerPluginInterface[]
+     * @return array<\Spryker\Zed\UserPasswordResetExtension\Dependency\Plugin\UserPasswordResetRequestHandlerPluginInterface>
      */
     public function getUserPasswordResetRequestHandlerPlugins(): array
     {
@@ -388,7 +388,7 @@ use Spryker\Zed\Translator\Communication\Plugin\TranslatorInstallerPlugin;
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface[]
+     * @return array<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
      */
     public function getInstallerPlugins()
     {
@@ -425,7 +425,7 @@ use Spryker\Zed\Translator\Communication\Plugin\Messenger\TranslationPlugin;
 class MessengerDependencyProvider extends SprykerMessengerDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MessengerExtension\Dependency\Plugin\TranslationPluginInterface[]
+     * @return array<\Spryker\Zed\MessengerExtension\Dependency\Plugin\TranslationPluginInterface>
      */
     protected function getTranslationPlugins(): array
     {
@@ -451,7 +451,7 @@ use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface[]
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
      */
     protected function getTwigPlugins(): array
     {
@@ -511,7 +511,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 {
 
 	/**
-     * @return \Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface>
      */
     protected function getUserFormExpanderPlugins(): array
     {
@@ -522,7 +522,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 
 	/**
-     * @return \Spryker\Zed\UserExtension\Dependency\Plugin\UserPreSavePluginInterface[]
+     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserPreSavePluginInterface>
      */
     protected function getUserPreSavePlugins(): array
     {
@@ -532,9 +532,9 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     }
 
 	/**
-     * @return \Spryker\Zed\UserExtension\Dependency\Plugin\UserTransferExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserExpanderPluginInterface>
      */
-    protected function getUserTransferExpanderPlugins(): array
+    protected function getUserExpanderPlugins(): array
     {
         return [
             new LocaleUserExpanderPlugin(),
@@ -577,7 +577,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 	/**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return array<\Symfony\Component\Console\Command\Command>
      */
      protected function getConsoleCommands(Container $container)
      {

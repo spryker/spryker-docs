@@ -37,17 +37,7 @@ The implementation described in this document is exemplary and may require addit
 
 3. In `​Pyz\Client\Permission\PermissionDependencyProvider.php`, remove or comment `​PlaceOrderWithAmountUpToPermissionPlugin()`​.
 
-4. DevVM-based instance: Sync code changes:
-   ```bash
-   vagrant halt && vagrant up
-   ```
-{% info_block warningBox "Warning" %}
-
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
-
-{% endinfo_block %}
-
-5. In the `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`:
+4. In the `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`:
 
 <details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 
@@ -152,7 +142,7 @@ We will soon deprecate the DevVM and stop supporting it. Therefore, we highly re
 ```
 </details>
 
-6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote)` with the following:
+5. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote)` with the following:
 ```twig
 enable: data.isPlaceableOrder
 and can('SeeOrderPlaceSubmitPermissionPlugin')

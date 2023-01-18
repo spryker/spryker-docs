@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/category-filter-feature-integration
 related:
   - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
 ---
 
 ## Prerequisites

@@ -15,7 +15,7 @@ The *Special product types* import category contains the data related to the spe
 
 In the [Product Options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) section, you can find all information about the data imports required to manage product options in your online store.
 
-In the [Gift Cards](/docs/pbc/all/gift-cards/import-and-export-data/import-of-gift-cards.html) section, you wan import the data necessary to manage gift cards information in your online store.
+In the [Gift Cards](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/import-of-gift-cards.html) section, you can import the data necessary to manage gift cards information in your online store.
 
 In the [Configurable Product data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/configurable-product-data-import.html) section, you can find the details of the file for importing the configuration of [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html).
 
@@ -25,8 +25,8 @@ The order in which the files are imported is *very strict*. Execute the followin
 
 1. [Product Option](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html)
 2. [Product Option Price](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html)
-3. [Gift Card Abstract Configuration](/docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html)
-4. [Gift Card Concrete Configuration](/docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html)
+3. [Gift Card Abstract Configuration](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html)
+4. [Gift Card Concrete Configuration](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html)
 
 
 {% endinfo_block %}

@@ -15,80 +15,79 @@ For the manifest, make sure to follow these conditions:
 
 ```json
 {
-  "name": "App name",
-  "provider": "App provider",
-  "descriptionShort": "App short description",
-  "description": "App long description",
-  "url": "https://www.app-url.com",
-  "isAvailable": true,
-  "businessModels": [
-    "B2B",
-    "B2C"
-  ],
-  "categories": [
-    "PAYMENT"
-  ],
-  "pages": {
-    "Overview": [
-      {
-        "title": "Advantages",
-        "type": "list",
-        "data": [
-          "Advantage 1",
-          "Advantage 2"
-        ]
-      },
-      {
-		"title": "Features",
-		"type": "list",
-		"data": [
-		  "Feature 1",
-		  "Feature 2"
-		]
-	  }
-    ]},
-  "assets": [
+    "name": "App name",
+    "provider": "App provider",
+    "descriptionShort": "App short description",
+    "description": "App long description",
+    "url": "https://www.app-url.com",
+    "isAvailable": true,
+    "business_models": [
+        "B2B",
+        "B2C"
+    ],
+    "categories": [
+        "PAYMENT"
+    ],
+    "pages":
     {
-      "type": "icon",
-      "url": "/assets/images/app_name/logo.svg"
+        "Overview": [
+        {
+            "title": "Advantages",
+            "type": "list",
+            "data": [
+                "Advantage 1",
+                "Advantage 2"
+            ]
+        },
+        {
+            "title": "Features",
+            "type": "list",
+            "data": [
+                "Feature 1",
+                "Feature 2"
+            ]
+        }]
+    },
+    "assets": [
+    {
+        "type": "icon",
+        "url": "/assets/images/app_name/logo.svg"
     },
     {
-      "type": "image",
-      "url": "/assets/images/app_name/gallery/app_picture_1.jpeg"
+        "type": "image",
+        "url": "/assets/images/app_name/gallery/app_picture_1.jpeg"
     },
     {
-      "type": "image",
-      "url": "/assets/images/app_name/gallery/app_picture_1.png"
-    }
-  ],
-  "labels": [
-    "Gold Partner"
-  ],
-  "resources": [
+        "type": "image",
+        "url": "/assets/images/app_name/gallery/app_picture_1.png"
+    }],
+    "labels": [
+        "Gold Partner"
+    ],
+    "resources": [
     {
-      "title": "User Guide",
-      "url": "https://link-to-user-guide.com",
-      "type": "internal-documentation"
+        "title": "User Guide",
+        "url": "https://link-to-user-guide.com",
+        "type": "internal-documentation"
     }
     {
-      "title": "Homepage",
-      "url": "https://www.app-name.com/DE-de",
-      "type": "homepage"
-    }
-  ]
+        "title": "Homepage",
+        "url": "https://www.app-name.com/DE-de",
+        "type": "homepage"
+    }]
 }
 ```
 </details>
 
 ## Manifest file parts
 
-|Name   |Description   |Example   |
+|NAME   |DESCRIPTION   |EXAMPLE   |
 |---|---|---|
 |name   |The app's name.   |"name": "Payone"   |
 |provider   |App provider's name (not visible on AppCatalog).   |"provider": "Payone"   |
 |descriptionShort   |Short description displayed on the application tile in the application catalog page and at the top of the application detail page.   |"descriptionShort": "A single payment platform to accept payments anywhere on any device."   |
 |description   |Full description of the app. New line symbols and HTML tags are not allowed.   |"description": "BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments."   |
-|url   |URL to a homepage of the application provider (not visible in the AppCatalog).   |"url": "https://www.payone.com"   |
+|url   |URL to a homepage of the application provider (not visible in the AppCatalog).   |"url": "https://www.payone.com/DE-en"   |
 |isAvailable   |Shows if the application is currently available. Possible values:<br><ul><li>false—the application is not available, it’s not possible to connect and configure it.</li><li>true—the application is available, it’s possible to connect, configure, and use it.</li></ul>   |"isAvailable": true   |
 |businessModels   |An array of suite types that are compatible with the application. Possible values:<ul><li>B2C</li><li>B2B</li><li>B2C_MARKETPLACE</li><li>B2B_MARKETPLACE</li></ul>|See *businessModels example* under this table.   |
 |categories   |An array of categories that the application belongs to. Possible values:<ul><li>BI_ANALYTICS</li><li>CUSTOMER</li><li>LOYALTY</li><li>PAYMENT</li><li>PRODUCT_INFORMATION_SYSTEM</li><li>SEARCH</li><li>USER_GENERATED_CONTENT</li></ul>   |See *categories example* under this table.   |
@@ -101,8 +100,8 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>businessModels example</summary>
 
-```yml
-"businessModels": [
+```json
+"business_models": [
   "B2B",
   "B2C"
 ]
@@ -112,7 +111,7 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>categories example</summary>
 
-```yml
+```json
 "categories": [
   "PAYMENT"
 ]
@@ -122,43 +121,48 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>pages example</summary>
 
-```yml
-"pages": {
-  "Overview": [
+```json
+{
+    ...
+    "pages": 
     {
-      "title": "Advantages",
-      "type": "list",
-      "data": [
-        "One solution, one partner, one contract. Simple & efficient. Technical processing and financial services from a single source.",
-        "International payment processing. Access to international and local payment methods.",
-        "Automatic debtor management. Effective accounting support through transaction allocation and reconciliation.",
-        "Credit entries independent of payment type. Fast returns management. With automated refunds.",
-        "Short time to market thanks to plug'n pay 1-click checkout and seamless integration. For an increasing conversion rate."
-      ]
-    },
-    {
-	  "title": "Available Payment Methods (Credit Card)",
-	  "type": "list",
-	  "data": [
-	    "Authorization",
-	    "Preauthorization and Capture",
-	    "3DS",
-	    "PCI DSS Compliance via SAQ A"
-	  ]
-	},
-	{
-	  "title": "Available Payment Methods (PayPal)",
-	  "type": "text",
-	  "data": "Preauthorization and Capture"
-	}
-]}
+        "Overview": [
+        {
+            "title": "Advantages",
+            "type": "list",
+            "data": [
+                "One solution, one partner, one contract. Simple & efficient. Technical processing and financial services from a single source.",
+                "International payment processing. Access to international and local payment methods.",
+                "Automatic debtor management. Effective accounting support through transaction allocation and reconciliation.",
+                "Credit entries independent of payment type. Fast returns management. With automated refunds.",
+                "Short time to market thanks to plug'n pay 1-click checkout and seamless integration. For an increasing conversion rate."
+            ]
+        },
+        {
+            "title": "Available Payment Methods (Credit Card)",
+            "type": "list",
+            "data": [
+                "Authorization",
+                "Preauthorization and Capture",
+                "3DS",
+                "PCI DSS Compliance via SAQ A"
+            ]
+        },
+        {
+            "title": "Available Payment Methods (PayPal)",
+            "type": "text",
+            "data": "Preauthorization and Capture"
+        }]
+    }
+    ...
+}
 ```
 </details>
 
 <details>
 <summary>assets example</summary>
 
-```yml
+```json
 "assets": [
   {
     "type": "icon",
@@ -179,7 +183,7 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>labels example</summary>
 
-```yml
+```json
 "labels": [
   "Gold Partner"
 ]
@@ -189,7 +193,7 @@ For the manifest, make sure to follow these conditions:
 <details>
 <summary>resources example</summary>
 
-```yml
+```json
 "resources": [
   {
     "title": "User Guide",
@@ -199,7 +203,7 @@ For the manifest, make sure to follow these conditions:
   },
   {
     "title": "Homepage",
-    "url": "https://www.payone.com/DE-de",
+    "url": "https://www.payone.com/DE-en",
     "type": "homepage"
   }
 ]

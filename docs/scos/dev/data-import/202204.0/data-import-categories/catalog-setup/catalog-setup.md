@@ -23,14 +23,14 @@ This section helps you import the necessary product-related data to be able to s
 
 * [Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/categories.html)
 * [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html)
-* [Pricing](/docs/pbc/all/price-management/import-and-export-data/import-of-prices.html)
+* [Pricing](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/import-of-prices.html)
 * [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html)
 
 Within the [Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/categories.html) section, you can find all information about the data imports required to set up categories that can be used in your online store as well as whether they are active and searchable in the menu.
 
 The [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html) section helps you import all data defining the products' properties such as the abstract products, the concrete products, product images, and any type of related attributes which describe the products' properties—for example, their specifications, colors, and sizes.
 
-In the [Pricing](/docs/pbc/all/price-management/import-and-export-data/import-of-prices.html) section, you can import the data necessary to set up prices for all the products you want to sell in your online store, including advanced pricing such as scheduled prices—for example, for special sales campaigns like Black Friday.
+In the [Pricing](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/import-of-prices.html) section, you will be able to import the data necessary to set up prices for all the products you would like to sell in your online store, including advanced pricing such as scheduled prices (e.g., for special sales campaigns like Black Friday).
 
 In the [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html) section, we describe the data import containing the number of product units stored in your warehouses as well as any type of products and services which are never out of stock—for example, software downloads.
 

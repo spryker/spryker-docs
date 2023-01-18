@@ -68,8 +68,6 @@ Based on their structure and use, all components are divided into the following 
 * *Templates*. Templates can be viewed as combinations of components composed according to a specific graphic layout. They are used to define a visual schema for a set of pages. Typically, pages with a common template have the same structure and share most of the content with the exception of a small portion of page-specific or widget-specific information that changes from page to page. Thus, a template serves as a backbone that defines a set of shared components and the overall layout. Examples of templates are the main site layout or the checkout layout.
 * *Views*. This is the highest point in the frontend hierarchy. A view is a template filled with specific content for use in a specific case. It represents a specific page or widget. Views are the only components that can be called by the backend directly which means that they also serve as a connection point between the backend and frontend. On the backend side, views are always connected to controllers.
 
-For more details about the component model that inspired Spryker Frontend, see [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/).
-
 ## BEM methodology
 
 The styling of Spryker Shop UI components is based upon BEM methodology. It is applied on the **SASS** layer of the shop UI. For a detailed specification and recommended practices, see [CSS with BEM](https://en.bem.info/methodology/css/). For BEM conventions, see the *Naming Conventions* section.
@@ -247,7 +245,7 @@ Templates are `.twig` files containing a structure of a page or widget. It defin
 
 The main templates in *ShopUi* are the following:
 
-* `page-blank`. It efines a blank page. It does not contain any html in the `<body>` tag. This template defines all basic assets for the frontend, such as the `<head>` content (meta info, styles, high priority scripts and page title), as well as the bottom part of the `<body>` content (vendor and application scripts).
+* `page-blank`. It defines a blank page. It does not contain any html in the `<body>` tag. This template defines all basic assets for the frontend, such as the `<head>` content (meta info, styles, high priority scripts and page title), as well as the bottom part of the `<body>` content (vendor and application scripts).
 * `page-layout-main`. It extends the page-blank template and defines the main layout for every single page in Spryker Suite. This template contains the header, footer, and sidebars, but does not predefine the content of the page. This part is left blank to be defined by specific views.
 
 ## Components
@@ -257,24 +255,24 @@ Every component is a self-contained entity that implements a certain functional 
 The following conventions are applied to components:
 * Every component, template or view is always contained in a folder with the same name.
 * Atoms, molecules, and organisms are always placed in the `components` folder of the module they belong to.
-* Templates are always stored in folder templates.
-* Views are always stored in folder called views.
+* Templates are always stored in the `templates` folder.
+* Views are always stored in the `views` folder.
 * Every component extends a model defined in `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/models/component.twig`.
 
 ### Component loading
 
-For a component to be used by the shop application, it needs to be compiled by Webpack and provide a function to register it in the DOM. Thus, when DOM is loaded, the application checks which of the registered components are present there and mounts only those that are available at `DomContentLoaded`. For each component that is being mounted, Webpack calls the chunk related to a component and loads the code and assets. As soon as all components have finished mounting, the application calls the `app.ready` event indicating that each component has finished loading and ready to use.
+For a component to be used by the shop application, it needs to be compiled by Webpack and provide a function to register it in the DOM. Thus, when DOM is loaded, the application checks which of the registered components are present there and mounts only those that are available at `DomContentLoaded`. For each component that is being mounted, Webpack calls the chunk related to a component and loads the code and assets. As soon as all components have finished mounting, the application calls the `app.ready` event, indicating that each component has finished loading and is ready to use.
 Mounting of components is asynchronous, which means that several components can be loaded at the same time, reducing the overall load time.
 
 ### Component structure
 
 A typical component folder consists of the following files:
 
-* `index.ts`. It pecifies the component entry point for Webpack. This file is necessary to locate the component styles and Typescript code.
+* `index.ts`. It specifies the component entry point for Webpack. This file is necessary to locate the component styles and Typescript code.
 * `component-name.ts`. It specifies the behavior for the component in Typescript.
 * `component-name.scss`. It contains the SCSS style for the component, wrapped into a mixin.<br>Note: If a component contains the `style.scss` file, this file only declares a mixin.
 * `style.scss`. It imports the style when `component-name.scss` contains only mixin declaration.
-* `component-name.twig`. It efines a template for the component layout.
+* `component-name.twig`. It defines a template for the component layout.
 
 The above structure contains a fully featured component, with styles and Typescript that defines the component behavior. Depending on what you are trying to achieve, you can have a component that includes both styles and behavior, or any of these separately. In addition to this, you can even create a component that has neither styles, nor behavior. In the latter case, the component contains a template only consisting of a `.twig` file.
 *Views* and *templates* always consist of a `.twig` file only.
@@ -298,8 +296,8 @@ When defining a component template with Twig, you need to use the following defa
 
   * `name` (required). It specifies the component name. This name is also used as the main class name for the component; therefore, the HTML element and modifiers have this name as the base.
   * `jsName` (optional): It is a Javascript name of the component. By convention, whenever Javascript behavior is added to a component, the DOM addressing for elements must be performed using dedicated classnames starting with the `-js` prefix. This prevents confusion in who-does-what: a classname starting with `js-` has no style attached to it, but only Javascript behaviour. On the other hand, any classname that does not start with `js-` is a pure style. If `jsName` is not defined explicitly, it is created automatically by prefing `js-` to the component name.
-  * `tag` (optional). It specifies the HTML tag name for the component. Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore, a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. To create a component with custom behavior defined in Javascript, Web Component specification, specify a custom tag name. If tag name is not specified, `div`is used by default.
-  * `data`. It is the variable defining the data contract for the component. This variable is used the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value is used if an attribute value is not set explicitly or by context.
+  * `tag` (optional). It specifies the HTML tag name for the component. Every component is defined in the DOM as an HTML class with its dedicated tag name. Therefore, a tag name must be specified. You can use either a standard HTML5 tag name (for example, `p` or `td`) or have a custom element tag name in order to attach Javascript behavior. To create a component with custom behavior defined in Javascript, Web Component specification, specify a custom tag name. If tag name is not specified, `div` is used by default.
+  * `data`. This variable is used to define the data contract for the component. The contract consists of the attributes required for the component to function properly. The attributes provided by this variable can be either required or optional. Required attributes must always be defined whenever a component is used, while optional ones can be left undefined. Nevertheless, by convention, attributes cannot have their value undefined. For this reason, if you define an optional attribute in your contract, you must set a default value for it. The default value is used if an attribute value is not set explicitly or by context.
 
 Whenever possible, use primitive types—for example, strings or numbers. Avoid complex objects as a change in the object might lead to a broken component outside the contract itself.
 
@@ -402,7 +400,7 @@ The string is used internally to resolve the component location within the provi
 
 It returns a string in the following format: `data-qa="qa values here"`.
 
-**`unction qa_($qaName: string, $qaValues: string[] = []): string`**
+**`function qa_($qaName: string, $qaValues: string[] = []): string`**
 
 It returns a string in the following format: `data-qa-name="qa values here"`.
 
@@ -450,7 +448,7 @@ A typical `component-name.scss` file looks as follows:
 When defining styles for a component, you can include the global mixins, variables and styles as defined in the `ShopUi` module. They are exposed to every component by default. Also, you can use the styles and mixins of every built-in component, because they are exposed transparently to the project level—for example:
 
 ```scss
-@include shop-ui-side-drawer('.new-existing-component-side-drawer') { //Create component style based on mixin of a core component
+@include shop-ui-side-drawer('.new-existing-component-side-drawer') { // Create component style based on mixin of a core component
     color: $setting-color-alt; // Use system-wide variables
 
     &__overlay {

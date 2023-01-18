@@ -106,11 +106,11 @@ Below you will find the list of the new/updated documentation released as part o
  </details>
 
 
-* [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
+* [Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/scheduled-prices-feature-overview.html)
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Scheduled Prices Feature Overview](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
+[Scheduled Prices Feature Overview](/docs/pbc/all/price-management/{{site.version}}/scheduled-prices-feature-overview.html)
 
 </details>
 <details>
@@ -122,14 +122,14 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Migration guides</summary>
 
-* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html)
+* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html)
 
 </details>
 <details>
 <summary markdown='span'>HowTo</summary>
 
-[Schedule Cron Job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
+[Schedule Cron Job for Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
 
 </details>
 
@@ -142,19 +142,19 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [CMS Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
+* [CMS Templates & Slots](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html )
+[CMS Templates & Slots Feature Overview](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html )
 
 </details>
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[CMS Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html)
+[Install the CMS feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-feature.html)
 
 </details>
 
@@ -162,18 +162,10 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Migration guides</summary>
 
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
-* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html)
-* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockwidget.html)
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-2-to-version-3)
+* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulestorage.html)
+* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulewidget.html)
 
-
-</details>
-
-<details>
-<summary markdown='span'>Back Office user guides</summary>
-
-* [Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
-* [Managing Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
 
 </details>
 
@@ -185,12 +177,12 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-* [Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
+* [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/approval-process-feature-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Approval Process Feature Overview](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
+[Approval Process Feature Overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/approval-process-feature-overview.html)
 
 </details>
 
@@ -206,7 +198,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Shop User guide</summary>
 
-[Shop Guide - Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
+[Shop Guide - Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/approval-process-feature-overview.html)
 
 
 </details>
@@ -332,7 +324,7 @@ Below you will find the list of the new/updated documentation released as part o
  * Warehouses
     * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-warehouses.html)
     * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html)
-    * [Warehouses: Reference Information](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html)
+    * [Warehouses: Reference Information](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
     * [Stores](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/stores.html)
 
 #### HowTos:
@@ -343,7 +335,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 #### Other documentation:
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
-* [Inventory](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html)
+* [Inventory](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)
 

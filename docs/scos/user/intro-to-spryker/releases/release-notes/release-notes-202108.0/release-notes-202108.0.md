@@ -174,7 +174,7 @@ If you use content banners and content product abstracts for your CMS page repre
 
 #### Documentation
 
-[Retrieving CMS pages](/docs/scos/dev/glue-api-guides/202108.0/retrieving-cms-pages.html)
+[Retrieve CMS pages](/docs/scos/dev/glue-api-guides/202108.0/retrieving-cms-pages.html)
 
 ### Agent Assist APIs
 
@@ -232,7 +232,7 @@ With this release, the existing checkout-data, checkout, and orders endpoints su
 
 #### Documentation
 
-* [Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
+* [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/submit-checkout-data.html)
 * [Check out purchases](/docs/scos/dev/glue-api-guides/202108.0/checking-out/checking-out-purchases.html)
 * [Retrieving orders](/docs/scos/dev/glue-api-guides/202108.0/retrieving-orders.html)
 
@@ -242,7 +242,7 @@ You can now use the customers’ saved account addresses and retrieve them toget
 
 #### Documentation
 
-[Submit checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)
+[Submit checkout data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/submit-checkout-data.html)
 
 ### Double opt-in API
 

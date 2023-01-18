@@ -742,7 +742,7 @@ A list of images assigned to a configurable bundle template.  |
 For the attributes of other included resources, see:
 
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieving concrete product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html)
+* [Retrieving concrete product prices](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-concrete-product-prices.html)
 * [Retrieving concrete product image sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
 
 ## Possible errors
@@ -753,11 +753,11 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 You can use the configurable bundle resource in the following way:
 
-* [Add a configurable bundle to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
-* [Change the quantity of the configurable bundles in a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
-* [Remove a configurable bundle from a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
-* [Add a configurable bundle to a registered user’s cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-users-cart)
-* [Change the quantity of the configurable bundles in a registered user’s cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
-* [Remove a configurable bundle from a registered user’s cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
-* [Checking our purchases with configurable bundles](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html)
+* [Add a configurable bundle to a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-a-configurable-bundle-to-a-guest-cart)
+* [Change the quantity of the configurable bundles in a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
+* [Remove a configurable bundle from a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
+* [Add a configurable bundle to a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-a-configurable-bundle-to-a-registered-users-cart)
+* [Change the quantity of the configurable bundles in a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
+* [Remove a configurable bundle from a registered user’s cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
+* [Checking our purchases with configurable bundles](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/check-out-purchases.html)
 * [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)

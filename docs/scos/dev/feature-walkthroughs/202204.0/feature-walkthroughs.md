@@ -22,14 +22,6 @@ The [Agent Assist](/docs/scos/dev/feature-walkthroughs/{{page.version}}/agent-as
 
 The [Alternative Products](/docs/scos/dev/feature-walkthroughs/{{page.version}}/alternative-products-feature-walkthrough.html) feature lets you define alternative products for products that are discontinued or out of stock.
 
-## Approval Process
-
-The [Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/approval-process-feature-walkthrough.html) feature enables managers to control purchases requested by their employees.
-
-### Resource Sharing
-
-The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spyker Commerce OS. For each entity, you must use an additional connector-module. For example, to share a cart through a URL, Resource Sharing must be combined with Persistent Cart Sharing.
-
 ## Catalog
 
 The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) feature lets you build and organize products to meet your and your customer’s demands, primarily to make sure everyone can quickly find what they are looking for.
@@ -80,7 +72,7 @@ The [Content Items](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content
 
 ### Content item types: module relations
 
-[This document](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) describes each content item type and the module relations used for them.
+[This document](/docs/pbc/all/content-management-system/{{page.version}}/domain-model-and-relationships/content-item-types-module-relations.html) describes each content item type and the module relations used for them.
 
 ## Customer Access
 
@@ -104,10 +96,6 @@ The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-man
 
 The [AvailabilityStorage module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by Publish and Synchronize.
 
-## Mailing & Notifications
-
-The [Mailing & Notifications ](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mailing-and-notifications-feature-walkthrough.html)feature lets you manage newsletters and notifications.
-
 ## Measurement Units
 
 The [Measurement Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/measurement-units-feature-walkthrough.html) feature lets you sell products by any unit of measure defined by in the Back Office.
@@ -129,13 +117,9 @@ The [Merchant Product Restrictions](/docs/scos/dev/feature-walkthroughs/{{page.v
 
 [On this page](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html), you can find commonly encountered cases of product restrictions behavior.
 
-## Navigation
-
-The [Navigation](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-feature-walkthrough.html) feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.
-
 ### Navigation module: reference information
 
-The [Navigation module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-module-reference-information.html) manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.
+The [Navigation module](/docs/pbc/all/content-management-system/{{page.version}}/extend-and-customize/navigation-module-reference-information.html) manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.
 
 ## Non-splittable Products
 
@@ -168,7 +152,7 @@ The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-fea
 
 ### PriceProduct module details: reference information
 
-This document describes technical details of the [PriceProduct](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
+This document describes technical details of the [PriceProduct](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
 ## Product
 
@@ -226,25 +210,6 @@ The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-se
 
 The [Reclamations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reclamations-feature-walkthrough.html) feature lets Back Office users handle order claims issued by customers.
 
-## Refunds
-
-The [Refunds](/docs/scos/dev/feature-walkthroughs/{{page.version}}/refunds-feature-walkthrough.html) feature lets you issue refunds on orders.
-
-## Reorder
-
-The [Reorder](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reorder-feature-walkthrough.html) feature lets customers repeat their previous orders in one click.
-
-## Resource Sharing
-
-The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spryker Commerce OS. For each entity, you must use an additional connector-module. For example, to share a cart through a URL, Resource Sharing should be combined with Persistent Cart Sharing.
-
-## Return Management
-
-The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) feature lets you create and manage returns for a sales order.
-
-## Search
-
-The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
 
 ## Spryker Core Back Office
 
@@ -252,8 +217,8 @@ The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.versio
 
 ## Tax
 
-The [Tax](/docs/pbc/all/tax-management/tax-management.html) feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
+The [Tax](/docs/pbc/all/tax-management/{{site.version}}/tax-management.html) feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
 ### Tax module: reference information
 
-The [Tax module](/docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or a shipment.
+The [Tax module](/docs/pbc/all/tax-management/{{site.version}}/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or a shipment.

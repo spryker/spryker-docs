@@ -1,12 +1,12 @@
 ---
 title: PHP 8.0 as the minimum version for all Spryker projects
-description: On the 18th of November 2022, Spryker will release a new version of its Demo Shops requiring PHP 8.0 as the minimum version.
-last_updated: November 14, 2022
+description: End of November 2022, Spryker will release a new version of its Demo Shops requiring PHP 8.0 as the minimum version.
+last_updated: November 22, 2022
 template: concept-topic-template
 ---
 
 
-On the 18th of November 2022, Spryker will release a new version of its Demo Shops, which will require PHP 8.0 as their minimum PHP version. PHP 7.4 will no longer be supported. Spryker's new module releases will only be compatible with PHP version 8.0 or later. See [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html) for details about the supported PHP versions.
+End of November 2022, Spryker will release a new version of its Demo Shops, which will require PHP 8.0 as their minimum PHP version. PHP 7.4 will no longer be supported. Spryker's new module releases will only be compatible with PHP version 8.0 or later. See [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html) for details about the supported PHP versions.
 
 ## Impacts
 
@@ -16,24 +16,26 @@ Backwards compatibility remains unaffected. If your project followed our recomme
 
 To migrate your project to the 8.0 version of PHP, follow these steps:
 
-1. Update your modules manually in `composer.json`.
+1. Change the PHP version in `composer.json`:
+
+`config.platform.php => 8.0.12`
+
+2. Update your modules manually in `composer.json`.
 Use the major lock `^` or the minor lock `~` if you have changes on the project level for respective module constraints.
 
-```php
-spryker/cms-block-gui => 2.8.0
-codeception/codeception => 4.1.24
-codeception/lib-innerbrowser => 1.3.3
-codeception/module-phpbrowser => 1.0.1
-psalm/phar => 4.3.1
-roave/better-reflection => 5.0.0
-spryker-sdk/benchmark => 0.2.2
-spryker-sdk/spryk => 0.3.4
-spryker-sdk/spryk-gui => 0.2.2
 ```
-
-2. Change the PHP version in `composer.json`:
-
-`config.platform.php => 8.0`
+spryker/cms-block-gui => ^2.8.0
+codeception/codeception => ^4.1.24
+codeception/lib-innerbrowser => ^1.3.4
+codeception/module-phpbrowser => ^1.0.2
+spryker-sdk/benchmark => ^0.2.2
+spryker-sdk/spryk => ^0.3.4
+```
+If needed, replace `roave/better-reflection` with its successor
+```
+ondrejmirtes/better-reflection => ^6.4.0
+```
+Remove `spryker-sdk/spryk-gui` as this is deprecated.
 
 3. Make sure there are no project-specific changes in the following repositories, and remove them from your `composer.json`:
 
@@ -55,11 +57,10 @@ If you have project-specific changes in these repositories, consider either givi
 4. Execute the following command:
 
 ```bash
-composer update roave/better-reflection spryker-sdk/spryk
-spryker-sdk/spryk-gui spryker/cms-block-gui spryker-sdk/benchmark
-codeception/lib-innerbrowser codeception/module-phpbrowser psalm/phar
-spryker-sdk/benchmark phpbench/phpbench jetbrains/phpstorm-stubs psalm/phar
-phpbench/dom
+composer update spryker-sdk/spryk spryker/cms-block-gui spryker-sdk/benchmark
+codeception/lib-innerbrowser codeception/module-phpbrowser spryker-sdk/benchmark
+phpbench/phpbench jetbrains/phpstorm-stubs phpbench/dom
 ```
+or manually verify those are up to date.
 
 5. Run your end-to-end tests and make sure that the changes have not impacted your business functionalities.

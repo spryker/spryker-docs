@@ -1,21 +1,25 @@
 
 This document describes how to integrate the [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
 
+
+This document describes how to integrate the [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
+
 ## Install feature core
 
-Follow the steps below to install the feature core.
+Follow the steps below to install the Alternative Products feature core.
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
-|---|---|
-| Product | {{site.version}} | [Product feature ingetration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+| NAME | VERSION |INTEGRATION GUIDE |
+|---|---|---|
+| Product | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
+Install the required modules:
 ```bash
 composer require spryker-feature/alternative-products: "{{site.version}}" --update-with-dependencies
 ```
@@ -30,11 +34,12 @@ Make sure that the following modules were installed:
 | ProductAlternativeDataImport | vendor/spryker/product-alternative-data-import |
 | ProductAlternativeGui | vendor/spryker/product-alternative-gui |
 | ProductAlternativeStorage | vendor/spryker/product-alternative-storage |
+
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
 
-Adjust the schema definition so that entity changes trigger the events.
+Adjust the schema definition, so that entity changes trigger the events.
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 |---|---|
@@ -131,7 +136,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 {% info_block infoBox "Info" %}
 
-This step publishes tables on change (creates, edits, deletes to `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronizes the data to Storage.)
+This step publishes tables on change—create, edit, delete to `spy_product_alternative_storage` and `spy_product_replacement_for_storage` and synchronize the data to Storage.
 
 {% endinfo_block %}
 
@@ -230,7 +235,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block infoBox "Info" %}
 
-The following imported entities will be used as alternative products in the Spryker OS.
+The following imported entities are used as alternative products in the Spryker OS.
 
 {% endinfo_block %}
 
@@ -393,24 +398,26 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit any product variant in Zed you have "Product Alternatives" tab, and you can add some product SKU's as alternatives.
+Make sure that when you edit any product variant in Zed, you have the **Product Alternatives** tab, and you can add some product SKUs as alternatives.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
+Follow the steps below to install the Alternative Products feature frontend.
+
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features:
 
 | NAME | VERSION |
 |---|---|
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Product | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/alternative-products: "^{{site.version}}" --update-with-dependencies
@@ -445,7 +452,7 @@ product_alternative_widget.show_all,Show all,en_US
 product_alternative_widget.show_all,Zeige alles,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -498,7 +505,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -510,17 +517,11 @@ Make sure that the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |
-| ProductAlternativeWidget | Assign some alternative products in Zed, and make sure that they are displayed on the detail page of the product to which they were assigned. |
-| ProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page. |
-| PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page. |
+| ProductAlternativeWidget | Assign some alternative products in Zed, and make sure that they are displayed on the product's detail page (PDP) to which they were assigned. |
+| ProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see the **Replacement for** section on its product detail page. |
+| PdpProductReplacementForListWidget | Make that after you've assigned some product as an alternative for another you can see the **Replacement for** section on its product detail page. |
 | ProductAlternativeListWidget | Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned. |
 
-{% endinfo_block %}
-
-
-{% info_block infoBox "Store relation" %}
-
-If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
-
+If you integrate the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 {% endinfo_block %}

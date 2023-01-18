@@ -13,12 +13,14 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/afterpay/installing-and-configuring-afterpay.html
 related:
   - title: Afterpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay.html
+    link: docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html
+  - title: Integrating Afterpay  
+    link: docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/afterpay/integrating-afterpay.html
 ---
 
 {% info_block errorBox %}
 
-Currently, AfterPay does not work correctly with [gift cards](/docs/pbc/all/gift-cards/gift-cards.html) AfterPay. We will update the document after resolving the conflict.
+Currently, AfterPay does not work correctly with [gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) AfterPay. We will update the document after resolving the conflict.
 
 {% endinfo_block %}
 

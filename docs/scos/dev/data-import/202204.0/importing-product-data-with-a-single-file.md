@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/importing-product-data-with-a-single-file
 ---
 
-Besides importing product-related data with multiple CSV files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), or [product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html), you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful in the following cases:
+Besides importing product-related data with multiple CSV files, like [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html), and [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-product-price.csv.html), you can use a single product data import file, which lets you import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful in the following cases:
 
-* You have different environments—for example, production and staging—ßand you need to populate them all with the product data.
-* You frequently import product data.
-* You want to provide more autonomy to employees dealing with the administration of the products.
+* If you have different environments—for example, production and staging—ßand you need to populate them all with the product data.
+* If you frequently import product data.
+* If you want to provide more autonomy to employees dealing with the administration of the products.
 
 {% info_block warningBox "Prerequisites" %}
 
@@ -77,8 +77,8 @@ If you need to import other product data as well—for example, prices or images
 | --- | --- |
 | <ul><li>product_group.group_key</li><li>product_group.position</li></ul> | [File details: product_group.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) |
 |<ul><li>product_image.image_set_name</li><li>product_image.external_url_large</li><li>product_image.external_url_small</li><li>product_image.locale</li><li>product_image.sort_order</li><li>product_image.product_image_key</li><li>product_image.product_image_set_key</li></ul> | [File details: product_image.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html) |
-| <ul><li>product_price.price_type</li><li>product_price.store</li><li>product_price.currency</li><li>product_price.value_net</li><li>product_price.value_gross</li><li>product_price.price_data.volume_prices</li></ul> | [File details: product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html) |
-| <ul><li>product_stock.name</li><li>product_stock.quantity</li><li>product_stock.is_never_out_of_stock</li><li>product_stock.is_bundle</li></ul> | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html) |
+| <ul><li>product_price.price_type</li><li>product_price.store</li><li>product_price.currency</li><li>product_price.value_net</li><li>product_price.value_gross</li><li>product_price.price_data.volume_prices</li></ul> | [File details: product_price.csv](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-product-price.csv.html) |
+| <ul><li>product_stock.name</li><li>product_stock.quantity</li><li>product_stock.is_never_out_of_stock</li><li>product_stock.is_bundle</li></ul> | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-and-export-data/file-details-product-stock.csv.html) |
 
 <a name="specific-fields"></a>
 

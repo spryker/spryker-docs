@@ -70,7 +70,7 @@ Set up database schema and transfer objects:
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           name="zed"
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
-          namespace="OrmZedProductBundleStoragePersistence" package="src.Orm.Zed.ProductBundleStorage.Persistence">
+          namespace="Orm\Zed\ProductBundleStorage\Persistence" package="src.Orm.Zed.ProductBundleStorage.Persistence">
 
     <table name="spy_product_bundle_storage">
         <behavior name="synchronization">
@@ -294,4 +294,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/scos/user/technology-partners/{{site.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html) |
+| Product Bundles + Punchout GUI |  | [Eco: Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partner-guides/{{site.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html) |

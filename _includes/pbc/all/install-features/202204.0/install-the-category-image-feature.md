@@ -1,21 +1,24 @@
 
 
+
+This document describes how to integrate the Category Image feature into a Spryker project.
+
 ## Install feature core
 
-Follow the steps below to install the feature core.
+Follow the steps below to install the Category Image feature core.
 
 ### Prerequisites
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION | 
-| --- | --- |
-| Category | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE|
+| --- | --- | --- |
+| Category | {{site.version}} | |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
-Istall the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
@@ -70,7 +73,7 @@ Adjust the schema definition so entity changes will trigger events.
     </database>
 ```
 
-Set up synchronization queue pools so that non-multistore entities (not store specific entities) are synchronized among stores:
+Set up synchronization queue pools so that non-multistore entities (not store-specific entities) are synchronized among stores:
 
 **src/Pyz/Zed/CategoryImageStorage/Persistence/Propel/Schema/spy_category_image_storage.schema.xml**
 
@@ -225,7 +228,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox “Verification” %}
 
-Make sure that when a category image is created, updated or deleted, it is exported or removed from Redis accordingly.
+Make sure that when a category image is created, updated, or deleted, it is exported or removed from Redis accordingly.
 
 {% endinfo_block %}
 
@@ -257,7 +260,7 @@ Make sure that when a category image is created, updated or deleted, it is expor
 
 {% info_block infoBox %}
 
-In this step, category template is configured to display category images.
+In this step, the category template is configured to display category images.
 
 {% endinfo_block %}
 
@@ -400,10 +403,10 @@ Follow the steps below to install the Category Image feature frontend.
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME | VERSION |
-| --- | --- |
-| Category | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE|
+| --- | --- | --- |
+| Category | {{site.version}} | |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 

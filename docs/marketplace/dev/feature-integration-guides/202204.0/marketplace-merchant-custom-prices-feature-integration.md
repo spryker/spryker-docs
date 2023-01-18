@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 
 | NAME    | VERSION    | INTEGRATION GUIDE    |
 |----------------|------------------|-------------------|
-| Merchant Custom Prices                         | {{page.version}} | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)                                    |
+| Merchant Custom Prices                         | {{page.version}} | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)                                    |
 | Marketplace Merchant Portal Product Management | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer

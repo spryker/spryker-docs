@@ -1,19 +1,24 @@
 This document describes how to integrate the [Product Labels](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-labels-feature-integration.html) feature into a Spryker project.
 
+
+This document describes how to integrate the Alternative Products + Product Label feature into a Spryker project.
+
 ## Install feature core
 
-Follow the steps below to install the feature core.
+Follow the steps below to install the Alternative Products + Product Labels feature core.
 
 ### Prerequisites
 
-Please review and install the necessary features before beginning the integration.
+To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
-|---|---|
-|Alternative Products| {{site.version}} |  |
-|Product Label| {{site.version}} | |
+| NAME | VERSION | INTEGRATION GUIDE|
+|---|---|---|
+|Alternative Products| {{site.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-feature-integration.html)|
+|Product Labels| {{site.version}} | [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-labels-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
+
+Install the required modules:
 
 ```yaml
 composer require spryker/product-alternative-product-label-connector:"^1.0.0" --update-with-dependencies
@@ -60,10 +65,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-Run the following console command to:
-
-* Execute registered installer plugins
-* Install the infrastructural data
+Execute registered installer plugins and install the infrastructural data:
 
 ```bash
 console setup:init-db
@@ -75,9 +77,7 @@ Make sure that the configured infrastructural alternative product label has been
 
 {% endinfo_block %}
 
-### 3) Set up behavior
-
-#### Setup alternative products labels workflow
+### 3) Setup alternative products labels' workflow
 
 Enable the following behavior types by registering the plugins:
 
@@ -149,7 +149,6 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure the following:
-
 - When you add product alternatives, it adds the corresponding label to the product.
 - When you remove product alternatives, it removes the corresponding label from the product.
 

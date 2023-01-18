@@ -112,12 +112,7 @@ The following list illustrates the order followed to run the data importers, and
   67. cms-slot
   68. cms-slot-block
 
-7. [Miscellaneous Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/miscellaneous/miscellaneous.html) import
-
-  1. comment
-  2. mime-type
-
-8. B2B data import
+**7. B2B data import**
 
 *  **B2B Company**
 

@@ -3,6 +3,7 @@ title: SCOS supported browsers
 description: This document lists browsers which the Spryker Commerce OS supports.
 last_updated: Jun 8, 2022
 template: howto-guide-template
+redirect_from: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
 ---
 
 The Spryker Commerce OS supports the following browsers for all frontend-related projects and products—[B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html):

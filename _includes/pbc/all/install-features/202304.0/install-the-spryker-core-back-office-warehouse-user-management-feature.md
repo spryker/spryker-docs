@@ -10,46 +10,10 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME                      | VERSION          |
 |---------------------------|------------------|
-| Spryker Core API          | {{site.version}} |
 | Spryker Core Back Office  | {{site.version}} |
 | Warehouse User Management | {{site.version}} |
 
-## 1) Install the required modules using Composer
-
-Install the required modules:
-
-```bash
-composer install spryker/user-backend-api:"^0.1.0" --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules have been installed:
-
-| MODULE                  | EXPECTED DIRECTORY                        |
-|-------------------------|-------------------------------------------|
-| UserBackendApi          | vendor/spryker/user-backend-api           |
-
-{% endinfo_block %}
-
-## 2) Set up transfer objects
-
-Generate transfers:
-```bash
-vendor/bin/console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Ensure that the following changes have occurred in transfer objects:
-
-| TRANSFER                               | TYPE  | EVENT   | PATH                                              |
-|----------------------------------------|-------|---------|---------------------------------------------------|
-| UsersRestAttributes                    | class | created | src/Generated/Shared/Transfer/UsersRestAttributes |
-
-{% endinfo_block %}
-
-## 3) Set up behavior
+## 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

@@ -11,9 +11,9 @@ This document describes how to create a new Angular module with the application.
 
 You may want to create a new Angular module for a few reasons:
 
-- Create new Angular and Web components on the project level
-- Extend existing core an Angular module on the project level
-- Override an existing core Angular module on the project level
+- Create new Angular and Web components on the project level.
+- Extend existing core an Angular module on the project level.
+- Override an existing core Angular module on the project level.
 
 ## 1) Create an Angular module scaffolding structure
 

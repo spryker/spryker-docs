@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting
+title: ## `spryker-sdk` command not found.
 description: Troubleshooting for the Spryker SDK document.
 template: concept-topic-template
 ---

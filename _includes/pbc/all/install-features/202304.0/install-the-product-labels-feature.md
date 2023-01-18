@@ -23,7 +23,7 @@ Install the required modules:
 composer require spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
 
@@ -266,6 +266,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -493,7 +494,7 @@ NEW,1,1,0,template:tag,,,New,Neu,,2
 | valid_from | Yes | string | 2020-01-01 |  Defines the date on which the product label starts to be displayed. |
 | valid_to | Yes | string | 2020-02-02 |  Defines the date on which the product label stops to be displayed.  |
 | name.en_US | Yes | string | name | Name of the product label for a specific locale. |
-| product_abstract_skus | Yes | string | “001,002,003“ | List of product SKUs to which the product label is added. |
+| product_abstract_skus | Yes | string | "001,002,003" | List of product SKUs to which the product label is added. |
 | priority | Yes | integer | 3 |  Defines the product label position among other product labels on the product details page and the product abstract cart. |
 
 **data/import/product_label_store.csv**

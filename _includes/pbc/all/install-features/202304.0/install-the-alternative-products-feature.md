@@ -297,7 +297,7 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 |  alternative_product_concrete_sku |  | string | 420565 | SKU of the concrete alternative product. |
 |  alternative_product_abstract_sku |  | string | M1000785 | SKU of the abstract alternative product. |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
@@ -324,7 +324,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-2. Import data:
+3. Import data:
 
 ```bash
 console data:import product-alternative

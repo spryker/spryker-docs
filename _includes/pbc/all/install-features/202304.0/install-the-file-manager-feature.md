@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [File Manager feature](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -436,7 +436,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that when a file data is created, updated, or deleted, it is exported or removed from Redis accordingly.
 

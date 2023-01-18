@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Category Image feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html)) into a Spryker project.
+This document describes how to integrate the [Category Image feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -263,7 +263,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that when a category image is created, updated or deleted, it is exported or removed from Redis accordingly.
 
@@ -305,7 +305,7 @@ In this step, category template is configured to display category images.
 
 **data/import/category_template.csv**
 
-```csv
+```
 template_name,template_path
 "Sub Categories grid","@CatalogPage/views/sub-categories-grid/sub-categories-grid.twig"
 ```
@@ -321,7 +321,7 @@ template_name,template_path
 console data:import:category-template
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that in the database the configured data is added to the `spy_category_template` table.
 
@@ -426,7 +426,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 
 </details>
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that category image handling is integrated successfully by going to Zed and creating, editing, and deleting categories with images.
 
@@ -440,15 +440,14 @@ Follow the steps below to install the Alternative Products feature frontend.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE| 
+| NAME | VERSION | INTEGRATION GUIDE | 
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 | Category | {{site.version}} | |
-
 
 ### 1) Install the required modules using Composer
 
-Istall the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies

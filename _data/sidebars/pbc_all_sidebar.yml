@@ -373,7 +373,7 @@ entries:
           - title: Navigation feature overview
             url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
           - title: File Manager feature overview
-            url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
+            url: /docs/pbc/all/content-management-system/file-manager-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/configurable-bundle-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

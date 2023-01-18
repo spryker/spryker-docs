@@ -903,6 +903,8 @@ entries:
                 url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
       - title: Product Relationship Management
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
+        include_versions:
+        - "202212.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -931,7 +933,7 @@ entries:
           - title: "Glue API: Retrieve related products"
             url: /docs/pbc/all/product-relationship-management/glue-api-retrieve-related-products.html
           - title: Build your own product relation type
-            url: /docs/pbc/all/product-relationship-management/build-your-own-product-relation-type.html            
+            url: /docs/pbc/all/product-relationship-management/build-your-own-product-relation-type.html
           - title: "Product Relations: module relations"
             url: /docs/pbc/all/product-relationship-management/product-relations-module-relations.html
       - title: Ratings and Reviews

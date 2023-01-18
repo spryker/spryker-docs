@@ -9,7 +9,7 @@ To start feature integration, overview, and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product | {{site.version}} | [Glue API: Products feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Product | {{site.version}} | [Glue API: Products feature integration - ongoing](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
 | Price | {{site.version}} | [Prices feature integration - ongoing](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)|
 
 ## 1) Install the required modules using Composer

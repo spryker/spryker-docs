@@ -18,6 +18,7 @@ entries:
             include_versions:
             - "202204.0"
             - "202212.0"
+            - "202212.0"
 
           - title: Marketplace supported browsers
             url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html
@@ -53,12 +54,14 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
+            - "202212.0"
 
           - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             include_versions:
             - "202108.0"
             - "202204.0"
+            - "202212.0"
             nested:
               - title: Product Offer in the Back Office
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html
@@ -341,7 +344,6 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
             include_versions:
               - "202204.0"
-              - "202212.0"
 
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
@@ -649,6 +651,7 @@ entries:
                 - "202108.0"
                 - "202204.0"
                 - "202212.0"
+                - "202212.0"
 
               - title: "Glue API: Marketplace Product Offer Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
@@ -691,6 +694,19 @@ entries:
                 - "202204.0"
                 - "202212.0"
 
+
+      - title: Module migration guides
+        nested:
+          - title: MerchantProductOfferDataImport
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductofferdataimport.html
+          - title: MerchantProductOffersRestApi
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductoffersrestapi.html
+          - title: MerchantProductOfferStorage
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-merchantproductofferstorage.html
+          - title: ProductMerchantPortalGui
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productmerchantportalgui.html
+          - title: ProductOfferPricesRestApi
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html                        
       - title: Glue API guides
         nested:
           - title: REST API Marketplace B2C reference
@@ -1237,7 +1253,6 @@ entries:
                 url: /docs/marketplace/dev/front-end/table-design/table-configuration.html
                 include_versions:
                  - "202204.0"
-                 - "202212.0"
 
           - title: "UI components library"
             include_versions:

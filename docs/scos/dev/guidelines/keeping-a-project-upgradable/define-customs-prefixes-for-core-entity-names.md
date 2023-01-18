@@ -6,6 +6,8 @@ template: howto-guide-template
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+  - title: Upgrader tool overview
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
   - title: Run the evaluator tool
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
 ---

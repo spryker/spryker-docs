@@ -10,10 +10,9 @@ redirect_from:
   - /docs/file-details-product-pricecsv
   - /docs/en/file-details-product-pricecsv
   - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
-  - /docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html
 ---
 
-This document contains the content of the `product_price.csv` file to configure [prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
+This article contains content of the `product_price.csv` file to configure [prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -41,8 +40,8 @@ data:import:product-price
 
 
 
-* [product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-* [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
+* [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 * *stores.php* configuration file of the Demo Shop PHP project
 
 ## Import template file and content example

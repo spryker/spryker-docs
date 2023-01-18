@@ -15,7 +15,9 @@ redirect_from:
   - /docs/scos/dev/the-docker-sdk/201907.0/configuring-services.html
   - /docs/scos/dev/the-docker-sdk/202005.0/configuring-services.html
   - /docs/scos/dev/installation/spryker-in-docker/configuration/services.html
-  - /docs/scos/dev/the-docker-sdk/202204.0/configuring-services.html  
+  - /docs/scos/dev/the-docker-sdk/202204.0/configuring-services.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
 related:
   - title: Deploy File Reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html

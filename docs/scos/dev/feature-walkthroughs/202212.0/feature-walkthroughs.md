@@ -19,10 +19,6 @@ This section contains a collection of walkthroughs for the features found within
 The [Comments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/comments-feature-walkthrough.html) feature lets you add multiple comments to any entity. The feature can be integrated into any page or entity of the online shop.
 
 
-## Measurement Units
-
-The [Measurement Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/measurement-units-feature-walkthrough.html) feature lets you sell products by any unit of measure defined by in the Back Office.
-
 ## Merchant
 
 The [Merchant](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-feature-walkthrough.html) feature provides the core functionality for the SCOS B2B and Marketplace with the basic create-read-update operations over the Merchant entity. You cannot delete a merchant but only deactivate them.
@@ -43,10 +39,6 @@ The [Merchant Product Restrictions](/docs/scos/dev/feature-walkthroughs/{{page.v
 ### Navigation module: reference information
 
 The [Navigation module](/docs/pbc/all/content-management-system/{{page.version}}/extend-and-customize/navigation-module-reference-information.html) manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.
-
-## Non-splittable Products
-
-The [Non-splittable Products](/docs/scos/dev/feature-walkthroughs/{{page.version}}/non-splittable-products-feature-walkthrough.html) feature lets you control if items bought in quantities greater than 1 are grouped in the cart or processed as separate items.
 
 ## Order Management
 

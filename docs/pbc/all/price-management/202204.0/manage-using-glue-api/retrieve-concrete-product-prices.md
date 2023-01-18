@@ -17,13 +17,13 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
 related:
   - title: Retrieving concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
   - title: Retrieve concrete product availability
     link: docs/pbc/all/warehouse-management-system/page.version/manage-using-glue-api/retrieve-concrete-product-availability.html
   - title: Retrieving image sets of concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
   - title: Retrieving sales units
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
 ---
 
 This endpoint allows retrieving prices of concrete products.
@@ -32,7 +32,7 @@ This endpoint allows retrieving prices of concrete products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Prices Glue API](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-price-glue-api.html)
 
 ## Retrieve prices of a concrete product

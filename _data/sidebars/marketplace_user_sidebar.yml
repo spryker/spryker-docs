@@ -130,9 +130,11 @@ entries:
 
         
       - title: Back Office user guides
+        url: /docs/marketplace/user/back-office-user-guides/index.html
         nested:
 
         - title: Sales
+          url: /docs/marketplace/user/back-office-user-guides/sales/sales.html
           nested:
 
             - title: Managing marketplace returns
@@ -145,19 +147,22 @@ entries:
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-returns.html
 
         - title: Catalog
-
+          url: /docs/marketplace/user/back-office-user-guides/catalog/catalog.html
           nested:
 
             - title: Availability
+              url: /docs/marketplace/user/back-office-user-guides/202212.0/catalog/availability/availability-reference-information.html
               nested:
 
               - title: "Availability: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
 
             - title: Products
+              url: /docs/marketplace/user/back-office-user-guides/202212.0/catalog/products/products.html
               nested:
 
               - title: Abstract products
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/abstract-products.html
                 nested:
 
                 - title: Creating abstract products
@@ -167,31 +172,35 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html
 
               - title: Concrete products
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
                 nested:
 
                 - title: Creating product variants
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
 
               - title: Managing products
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
                 nested:
 
                 - title: Managing products
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
 
-        - title: Product Options
-          nested:
+                - title: Product Options
+                  url: /docs/marketplace/user/back-office-user-guides/202212.0/catalog/product-options/product-options.html
+                   nested:
 
-            - title: Creating product options
-              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
+                    - title: Creating product options
+                      url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
 
-            - title: Managing product options
-              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
+                    - title: Managing product options
+                      url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
 
         - title: Marketplace
-
+          url: /docs/marketplace/user/back-office-user-guides/marketplace/marketplace.html
           nested:
 
             - title: Merchants
+              url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/merchants.html
               nested:
 
                 - title: Managing merchants
@@ -201,12 +210,14 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
 
             - title: Offers
+              url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
               nested:
 
                 - title: Managing marketplace product offers
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
 
             - title: Orders
+              url: /docs/marketplace/user/back-office-user-guides/202212.0/marketplace/orders/managing-marketplace-orders.html
               nested:
 
                 - title: Managing marketplace orders

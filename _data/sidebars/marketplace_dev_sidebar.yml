@@ -1516,10 +1516,10 @@ entries:
           - title: "How-To: Upgrade Spryker instance to the Marketplace"
             url: /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
 
-          - title: "How-To: Create a new module with application"
-            url: /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html
+          - title: "How-To: Create a new Angular module with application"
+            url: /docs/marketplace/dev/howtos/how-to-create-a-new-angular-module-with-application.html
 
-          - title: 'How-To: Split products by stores'
+          - title: "How-To: Split products by stores"
             url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
 
           - title: "How-To: Extend Merchant Portal dashboard"

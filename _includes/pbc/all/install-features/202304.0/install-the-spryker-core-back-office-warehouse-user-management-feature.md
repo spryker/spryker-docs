@@ -8,18 +8,18 @@ Follow the steps below to install the Picking App feature API.
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                      | VERSION          |
-|---------------------------|------------------|
-| Spryker Core Back Office  | {{site.version}} |
-| Warehouse User Management | {{site.version}} |
+| NAME  | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Spryker Core Back Office  | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
+| Warehouse User Management | {{site.version}} | |
 
 ## 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                  | SPECIFICATION                                                                             | PREREQUISITES | NAMESPACE                                                   |
-|---------------------------------------------------------|-------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| UserByWarehouseUserAssignmentResourceRelationshipPlugin | Adds the `users` resource as a relationship to the `warehouse-user-assignments` resource. |               | Spryker\Glue\UserBackendApi\Plugin\GlueJsonApiConvention    |
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE  |
+|---|---|---|---|
+| UserByWarehouseUserAssignmentResourceRelationshipPlugin | Adds the `users` resource as a relationship to the `warehouse-user-assignments` resource. |  | Spryker\Glue\UserBackendApi\Plugin\GlueJsonApiConvention |
 
 
 **src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**

@@ -271,6 +271,8 @@ algolia:
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
   max_record_size: 20000
   indices:
+    - name: 'pbc_all'
+      title: 'Packaged Business Capabilities'
     - name: 'scos_user'
       title: 'SCOS User'
     - name: 'scos_dev'
@@ -285,8 +287,6 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'pbc_all'
-      title: 'Packaged Business Capabilities'
     - name: 'paas_plus_dev'
       title: 'PaaS+'
 sass:

@@ -12,14 +12,13 @@ The current feature integration guide adds the following functionalities:
 
 Ensure that the related features are installed:
 
-| NAME                                                                                                             | VERSION          |
-|------------------------------------------------------------------------------------------------------------------|------------------|
-| [Spryker Core](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) | {{site.version}} |
-
+| NAME   | VERSION | INTEGRATE GUIDE |
+| --- | --- | --- | 
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) | 
 
 ## 1) Install the required modules using Composer
 
-Install the required modules:
+1. Install the required modules:
 
 ```bash
 composer require spryker-feature/spryker-core-back-office:"{{site.version}}" --update-with-dependencies
@@ -49,8 +48,9 @@ Ensure that the following modules have been removed:
 | AuthMailConnector          | vendor/spryker/auth-mail-connector           |
 | AuthMailConnectorExtension | vendor/spryker/auth-mail-connector-extension |
 
+{% endinfo_block %}
 
-If these modules have not been removed, remove them:
+2. If these modules have not been removed, remove them:
 
 ```bash
 composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-connector-extension
@@ -118,7 +118,7 @@ $config[TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS] = [
 
 // >> BACKOFFICE
 
-// ACL: Allow or disallow of URLs for Zed GUI for ALL users
+// ACL: Allow or disallow URLs for Zed GUI for ALL users
 $config[AclConstants::ACL_DEFAULT_RULES] = [
     [
         'bundle' => 'security-gui',
@@ -173,14 +173,14 @@ class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
 
 After finishing the entire integration, ensure the following:
 * Entries without a translation for a language with a configured fallback are translated into the fallback language.
-* Translation cache is stored under the configured directory.
+* The translation cache is stored under the configured directory.
 * Translations are found based on the configured file path pattern.
 
 {% endinfo_block %}
 
 ### Configure navigation
 
-Add the `StorageGui` section to `navigation.xml`:
+1. Add the `StorageGui` section to `navigation.xml`:
 
 **config/Zed/navigation.xml**
 
@@ -204,7 +204,7 @@ Add the `StorageGui` section to `navigation.xml`:
 </config>
 ```
 
-Execute the following command:
+2. Execute the following command:
 
 ```bash
 console navigation:build-cache
@@ -212,7 +212,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the Back Office, you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
+Make sure that, in the Back Office, you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
 
 {% endinfo_block %}
 
@@ -221,8 +221,6 @@ Make sure that in the Back Office, you can select **Maintenance&nbsp;<span aria-
 Set up the following behaviors.
 
 ### Set up admin user login to the Back Office
-
-Set up admin user login to the Back Office:
 
 1. Activate the following security plugins:
 
@@ -254,7 +252,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 		return [
 			new SecurityApplicationPlugin(),
 
-			// web profiler plugin should be after security plugin.
+			// web profiler plugin should be after the security plugin.
 			new WebProfilerApplicationPlugin(),
 		];
     }
@@ -464,7 +462,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the `trans` and `transChoice` Twig filters are working and using translations from the configured translation files.
+Ensure that the `trans` and `transChoice` Twig filters work and use translations from the configured translation files.
 
 {% endinfo_block %}
 
@@ -496,7 +494,8 @@ Ensure that the locale of the Back Office matches the locale of a logged-in user
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/User/UserDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -542,6 +541,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     }
 }
 ```
+<details>
 
 {% info_block warningBox "Verification" %}
 
@@ -554,7 +554,7 @@ Ensure that you've enabled the plugins:
 
 ### Set up console commands for cache
 
-Set up the following console commands:
+1. Set up the following console commands:
 
 | COMMAND                         | SPECIFICATION                        | PREREQUISITES | NAMESPACE                                    |
 |---------------------------------|--------------------------------------|-----------------|----------------------------------------------|
@@ -591,7 +591,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-Regenerate translation cache:
+2. Regenerate translation cache:
 
 ```bash
 console translator:clean-cache

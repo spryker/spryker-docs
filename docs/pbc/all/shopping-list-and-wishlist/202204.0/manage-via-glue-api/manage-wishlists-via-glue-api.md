@@ -29,8 +29,8 @@ The Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/sh
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
 * [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/integrate-the-wishlist-glue-api.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
 
 ## Create a wishlist
 
@@ -443,8 +443,8 @@ To retrieve all wishlists of a customer, send the request:
 
 For attributes of the included resources, see:
 * [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-wishlist-items-via-glue-api.html#wishlist-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a product label](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve a wishlist
 
@@ -760,8 +760,8 @@ To retrieve wishlist items, send the request:
 
 For attributes of the included resources, see:
 * [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-wishlist-items-via-glue-api.html#wishlist-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a product label](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Edit a wishlist
 

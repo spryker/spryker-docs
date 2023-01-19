@@ -28,8 +28,6 @@ related:
     link: docs/scos/dev/setup/install-module-structure-and-configuration.html
   - title: Installing Spryker with custom set of modules
     link: docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
-  - title: Installing Spryker without Development Virtual Machine or Docker
-    link: docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
   - title: Redis configuration
     link: docs/scos/dev/setup/redis-configuration.html
 ---

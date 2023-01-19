@@ -17,13 +17,9 @@ redirect_from:
   - /docs/scos/user/technology-partners/202200.0/technology-partners.html
 ---
 
-In this section, you will find information about our Technology Partner Integration solutions. Keep in mind that this list refers only to our existing integrations. For a complete list of the Spryker technology partners, see [Technology Partners](https://spryker.com/technology-partners/).
+In this section you will find information about our Technology Partner Integration solutions.
 
-{% info_block infoBox "Info" %}
-
-If you use Spryker Cloud, you can connect applications from our [App Composition Platform overview](https://docs.spryker.com/docs/acp/user/intro-to-acp/acp-overview.html) without any development effort.
-
-{% endinfo_block %}
+Visit [Technology Partners](https://spryker.com/technology-partners/) for a complete list of our partners.
 
 ##  Hosting Providers
 
@@ -126,10 +122,3 @@ If you use Spryker Cloud, you can connect applications from our [App Composition
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
 * [ratenkauf by easyCredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit.html)
 * [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
-
- ## Product Information (PIM/ERP)
-
-* [Akeneo](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/akeneo.html)
-* [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
-<!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/contentserv.html)-->
-<!--* [Tradebyte](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)-->

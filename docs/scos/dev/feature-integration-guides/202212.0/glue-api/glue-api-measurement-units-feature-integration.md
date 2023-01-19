@@ -13,15 +13,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-measurement-units-feature-integration.html
 related:
   - title: Measurement Units feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/measurement-units-feature-integration.html
-  - title: Measurement Units feature walkthrough
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-measurement-units-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-measurement-units-feature.html
   - title: Retrieving measurement units
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-measurement-units.html
   - title: Retrieving abstract products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieving concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-measurement-units-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-measurement-units-glue-api.md -->

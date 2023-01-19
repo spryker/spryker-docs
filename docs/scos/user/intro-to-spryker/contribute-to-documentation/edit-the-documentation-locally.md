@@ -17,7 +17,7 @@ This document describes how to you can edit documents on your machine and submit
 
 -
 
-At this point, you are most likely to know which document you want to edit. To find the document on your machine, you need to look up its path in the URL. Open the document on our website and check the path starting from `/docs/`. For example, the URL of the document you are reading is `https://docs.spryker.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html`. The path of this document on your machine is `docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md`. The path is relative to where you chose to store the repository.
+At this point, you are most likely to know which document you want to edit. To find the document on your machine, you need to look up its path in the URL. Open the document on our website and check the path starting from `/docs/`. For
 
 -
 asdsdaf

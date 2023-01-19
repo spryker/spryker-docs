@@ -17,7 +17,7 @@ This document describes how to you can edit documents on your machine and submit
 
 -
 
-At this point, you are most likely to know which document you want to edit. To find the document on your machine, you need to look up its path in the URL. Open the document on our website and check the path starting from `/docs/`. For
+At this point, you are most likely to know which document you want to edit. To find the document on your machine, you need to look up its path in the URL. Open the document on our website and check the path starting from `/docs/`. Forsdafdasf
 
 -
 asdsdaf

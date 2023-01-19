@@ -541,7 +541,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     }
 }
 ```
-<details>
+</details>
 
 {% info_block warningBox "Verification" %}
 

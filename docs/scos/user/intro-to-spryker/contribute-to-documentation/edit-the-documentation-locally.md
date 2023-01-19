@@ -21,20 +21,6 @@ At this point, you are most likely to know which document you want to edit. To f
 
 -
 
-## Edit documents
-
-1. Open the document you want to edit in an editor.
-2. Add the needed changes.
-    You'd help us a lot by following [Markdown syntax](/docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html) and [general rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html), but it's completely optional. We are grateful for your contribution in any form.
-3. Save the edited document.
-4. In GitHub Desktop, double-check your changes in the **Changes** tab.
-5. Optional: Below the list of edit files, enter the name and description of your changes.
-6. To add your changes to the branch, click **Commit to {BRANCH_NAME}**.
-7. To publish the changes on GitHub, click **Push origin**.
-    If you are editing in several sessions, it is good practice to commit and push after each session. If something happens to the changes on your machine, they will be safe on GitHub, and you will be able to keep working on them.
-
-## Submit changes for publishing
-
 -
 1. To prepare the changes to be published on the documentation website, click **Create Pull Request**.
     This opens the **Open a pull request** page with prefilled name and description.

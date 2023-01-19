@@ -81,16 +81,15 @@ There are two commands for Spryk Console: `SprykDumpConsole` and `SprykRunConsol
 
 | COMMAND      | DESCRIPTION |
 | ----------- | ----------- |
-| vendor/bin/console spryk-dump      | Lists top level Spryks       |
-| vendor/bin/spryk-dump {SPRYK NAME} | Lists all options available for a specific Spryk |
-| vendor/bin/spryk-dump --level=all | Lists all available Spryks |
-| vendor/bin/console spryk-run   | Runs all Spryks in your project        |
-| vendor/bin/console spryk-run {SPRYK NAME}  | Executes a single specific Spryk      |
-| vendor/bin/spryk-build | Reflects changes in Spryk arguments and generates a new cache for them |
+| vendor/bin/console spryk:dump      | Lists top level Spryks       |
+| vendor/bin/console spryk:dump {SPRYK NAME} | Lists all options available for a specific Spryk |
+| vendor/bin/console spryk:dump --level=all | Lists all available Spryks |
+| vendor/bin/console spryk:run {SPRYK NAME}  | Executes a single specific Spryk      |
+| vendor/bin/console spryk:build | Reflects changes in Spryk arguments and generates a new cache for them |
 
 </div>
 
-When you run a Spryk, the console asks you to provide all the needed arguments to build the Spryk. You can print all possible arguments to the console by using the `--{argument name}={argument value}` key.
+When you run a Spryk, the console asks you to provide all the needed arguments to build the Spryk, providing default value when possible.
 
 ### SprykGUI
 
@@ -99,6 +98,11 @@ This is a Graphical User Interface (GUI) built inside the Back Office applicatio
 ```bash
 composer require --dev spryker-sdk/spryk-gui
 ```
+{% info_block infoBox "Info" %}
+
+We recommend installing it as a development dependency, since changes of the code on production environment should not be allowed, and could potentially lead to a non working application.
+
+{% endinfo_block %}
 
 Once SprykGUI is installed, you can navigate to it through the Back Office. There you can find the list of all the available definitions, and after you have clicked on one of them, the form where you can enter the arguments appears.
 

@@ -1,3 +1,6 @@
+
+
+
 This document describes how to integrate the Warehouse User Management feature into a Spryker project.
 
 ## Install feature core
@@ -6,24 +9,21 @@ Follow the steps below to install the Warehouse User Management feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features and Glue APIs:
+To start feature integration, integrate the required features:
 
-| NAME                     | VERSION          |
-|--------------------------|------------------|
-| Spryker Core             | {{site.version}} |
-| Spryker Core Back Office | {{site.version}} |
-| Inventory Management     | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Spryker Core             | {{site.version}} | | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |  |
+| Spryker Core Back Office  | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
+| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/warehouse-user-management: "{{site.version}}" --update-with-dependencies
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -33,19 +33,18 @@ Make sure that the following modules have been installed:
 | WarehouseUserBackendApi | vendor/spryker/warehouse-user-backend-api |
 | WarehouseUserGui        | vendor/spryker/warehouse-user-gui         |
 
----
+{% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply the database changes and generate entity and transfer changes:
+Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied by checking your database:
 
@@ -82,11 +81,11 @@ Make sure that the following changes have been triggered in transfer objects:
 | UserCriteria.withExpanders                      | property | deprecated | src/Generated/Shared/Transfer/UserCriteria                                    |
 | StockCriteriaFilter.idStock                     | property | deprecated | src/Generated/Shared/Transfer/StockCriteriaFilter                             |
 
----
+{% endinfo_block %}
 
 ### 3) Set up configuration
 
-Adjust the protected paths configuration if you want to make `warehouse-user-assignments` resource protected:
+If you want to make `warehouse-user-assignments` resource protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -116,8 +115,6 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 ### 4) Add translations
 
-Add translations as follows:
-
 1. Append glossary according to your configuration:
 
 ```csv
@@ -139,7 +136,7 @@ warehouse_user_assignment.validation.warehouse_user_assignment_already_exists,La
 console data:import glossary
 ```
 
-3. Add Zed translations
+3. Add Zed translations:
 
 Generate a new translation cache for Zed:
 
@@ -147,17 +144,20 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
----
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables:
 
-Go to **Back Office > Users > Users > Assign Warehouses** and make sure that the **Warehouse User Assignment** table is translatable. 
-You can switch the language in the **Back Office > Users > Users > Edit > Interface language**. 
+1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
+2. For a user of your choice, click **Assign Warehouses**.
+3. Make sure that the **Warehouse User Assignment** table is translatable. 
+
+To switch the language, follow these steps:
+1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
+2. For a user of your choice, click **Edit**. The **Edit User: `USER_NAME`** page opens. `USER_NAME` stands for the name of the user whose profile you edit.
+3. From **INTERFACE LANGUAGE**, select another laguage.
 
 {% endinfo_block %}
-
----
 
 ### 5) Set up behavior
 
@@ -165,8 +165,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                               | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                   |
 |------------------------------------------------------|--------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| WarehouseUserLoginRestrictionPlugin                  | Restricts access to back office for warehouse users.         |               | Spryker\Zed\WarehouseUser\Communication\Plugin\SecurityGui  |
-| WarehouseUserAssignmentUserTableActionExpanderPlugin | Expands the User table with the assign warehouses button.    |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User      |
+| WarehouseUserLoginRestrictionPlugin                  | Restricts access to the Back office for warehouse users.         |               | Spryker\Zed\WarehouseUser\Communication\Plugin\SecurityGui  |
+| WarehouseUserAssignmentUserTableActionExpanderPlugin | Expands the **User** table with the **Assign Warehouses** button.    |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User      |
 | WarehouseUserAssignmentUserFormExpanderPlugin        | Expands the User form with the `is_warehouse_user` checkbox. |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User      |
 | WarehouseUserAssignmentsResourcePlugin               | Registers the `warehouse-user-assignments` resource.         |               | Spryker\Glue\WarehouseUserBackendApi\Plugin\GlueApplication |
 
@@ -234,14 +234,15 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 ---
 {% info_block warningBox "Verification" %}
 
-Ensure that the plugins works correctly:
+Ensure that the plugins work correctly:
 
-1. Navigate to **Back Office > Users > Users**, create a new user or edit existing one.
-2. Make sure that User form contains checkbox with label "This user is a warehouse user".
-3. Check the checkbox and submit the form.
-4. Make sure that user have "Assign Warehouses" button in User table.
-5. Logout from the Back Office and try to log in as Warehouse User.
-6. Make sure that Warehouse User is unable to login to Backoffice.
+1. In the Back Office, navigate to **Users&nbsp;<span aria-label="and then">></span> Users**.
+2. Create a new user or edit an existing one.
+3. Make sure that User form contains the checkbox with the **This user is a warehouse user** label.
+4. Select the checkbox and submit the form.
+5. Make sure that for the given user, in the **User** table, the **Assign Warehouses** button is displayed.
+6. Logout from the Back Office and try to log in as warehouse user.
+7. Make sure that the warehouse user is unable to login back to the Back Office.
 
 {% endinfo_block %}
 
@@ -281,38 +282,38 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 1. Make sure that you can send the following requests:
 
-* `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments`
-* `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
-* `POST https://glue-backend.mysprykershop.com/warehouse-user-assignments`
+   * `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments`
+   * `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
+   * `POST https://glue-backend.mysprykershop.com/warehouse-user-assignments`
 
-```json
-{
-    "data": {
-        "type": "warehouse-user-assignments",
-        "attributes": {
-            "userUuid": {% raw %}{{{% endraw %}user-uuid{% raw %}}}{% endraw %},
-            "warehouse": {
-                "uuid": {% raw %}{{{% endraw %}warehouse-uuid{% raw %}}}{% endraw %}
-            },
-            "isActive": true
+        ```json
+        {
+            "data": {
+                "type": "warehouse-user-assignments",
+                "attributes": {
+                    "userUuid": {% raw %}{{{% endraw %}user-uuid{% raw %}}}{% endraw %},
+                    "warehouse": {
+                        "uuid": {% raw %}{{{% endraw %}warehouse-uuid{% raw %}}}{% endraw %}
+                    },
+                    "isActive": true
+                }
+            }
         }
-    }
-}
-```
+        ```
 
-* `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
+   * `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
 
-```json
-{
-    "data" : {
-        "type" : "warehouse-user-assignments",
-        "attributes" : {
-          "isActive": true
+        ```json
+        {
+            "data" : {
+                "type" : "warehouse-user-assignments",
+                "attributes" : {
+                "isActive": true
+                }
+            }
         }
-    }
-}
-```
+        ```
 
-* `DELETE https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`.
+   * `DELETE https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`.
 
 {% endinfo_block %}

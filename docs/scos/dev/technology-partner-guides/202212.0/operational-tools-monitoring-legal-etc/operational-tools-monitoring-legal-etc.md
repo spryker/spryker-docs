@@ -7,8 +7,9 @@ template: concept-topic-template
 
 This section contains the following guides for developing in collaboration with technology partners on Spryker Commerce OS:  
 
-* [Installing and configuring New Relic with Vagrant](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic-with-vagrant.html)
+* [Installing and configuring New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html)
+* [Configuring New Relic logging](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html)
 
 * [Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/loggly/loggly.html)
 
-* [Installing and configuring Tideways with Vagrant](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html)
+* [Installing and configuring Tideways](/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html)

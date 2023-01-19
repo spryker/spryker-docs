@@ -11,7 +11,7 @@ To start feature integration, integrate the required features and Glue APIs:
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core Back Office  | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
-| Warehouse User Management | {{site.version}} | |
+| Warehouse User Management | {{site.version}} | [Install the Warehouse Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html)|
 
 ## 1) Set up behavior
 

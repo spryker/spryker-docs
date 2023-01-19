@@ -3,6 +3,7 @@ title: Spryks
 description: The Spryk code generator is a tool developed to ease the process of generating pieces of code on core and project level.
 last_updated: Jun 30, 2022
 template: concept-topic-template
+keywords: AddModule
 originalLink: https://documentation.spryker.com/2021080/docs/spryk
 originalArticleId: 75d7b12b-6bf1-4ace-a09d-37033947d5e5
 redirect_from:

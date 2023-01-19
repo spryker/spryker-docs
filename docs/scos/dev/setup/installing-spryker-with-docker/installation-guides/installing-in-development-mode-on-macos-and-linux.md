@@ -20,6 +20,7 @@ redirect_from:
   - /2021080/docs/en/installation-guide-development-mode
   - /docs/installation-guide-development-mode
   - /docs/en/installation-guide-development-mode
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
 related: 
   - title: Database access credentials
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html

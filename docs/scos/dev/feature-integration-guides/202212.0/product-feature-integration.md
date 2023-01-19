@@ -16,11 +16,11 @@ related:
   - title: Glue API - Product feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-feature-integration.html
   - title: Glue API - Product Image Sets feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-image-sets-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html
   - title: Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Product Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-lists-feature.html
   - title: Prices feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
   - title: Merchant Product Restrictions feature integration
@@ -28,11 +28,11 @@ related:
   - title: Product Images + Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
   - title: Product + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-order-management-feature.html
   - title: Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Product overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 {% include pbc/all/install-features/202212.0/install-the-product-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-feature.md -->

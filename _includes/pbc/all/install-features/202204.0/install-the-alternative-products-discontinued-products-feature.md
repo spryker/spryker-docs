@@ -81,6 +81,6 @@ Make sure that you can see alternatives for products that are marked as **discon
 
 {% info_block infoBox "Store relation" %}
 
-If you integrate the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 {% endinfo_block %}

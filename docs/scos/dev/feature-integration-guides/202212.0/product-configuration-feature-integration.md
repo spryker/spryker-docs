@@ -5,7 +5,7 @@ template: feature-integration-guide-template
 last_updated: Nov 23, 2022
 related:
   - title: Glue API - Product Configuration feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-configuration-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html
   - title: Configurable Product feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
 ---

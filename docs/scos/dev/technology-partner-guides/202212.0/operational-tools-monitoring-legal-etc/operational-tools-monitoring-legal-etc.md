@@ -1,5 +1,5 @@
 ---
-title: Operational tools, monitoring,legal, etc. 
+title: Operational tools, monitoring, legal, etc.
 description: Guides for developers working with Spryker technology partners
 last_updated: Jan 12, 2023
 template: concept-topic-template

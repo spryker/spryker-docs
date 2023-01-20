@@ -10,5 +10,4 @@ This section contains the following guides for developing in collaboration with 
 * [Installing and configuring New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html)
 * [Configuring New Relic logging](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html)
 * [Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/loggly/loggly.html)
-
 * [Installing and configuring Tideways](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html)

@@ -17,8 +17,6 @@ redirect_from:
   - /v4/docs/en/search-migration-concept
 ---
 
-## Background
-
 Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider.  It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker’s search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
 
 Refactoring of the Spryker’s search sub-system has two main goals:

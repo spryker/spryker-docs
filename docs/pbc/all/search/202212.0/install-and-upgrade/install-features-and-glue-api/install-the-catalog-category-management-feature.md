@@ -1,5 +1,5 @@
 ---
-title: Catalog + Category Management feature integration
+title: Install the Catalog + Category Management feature
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-category-management-feature-integration
@@ -13,11 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/catalog-category-management-feature-integration.html
-related:
-  - title: Catalog feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
-  - title: Category Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/catalog-category-management-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-catalog-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-catalog-category-management-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-catalog-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-catalog-category-management-feature.md -->

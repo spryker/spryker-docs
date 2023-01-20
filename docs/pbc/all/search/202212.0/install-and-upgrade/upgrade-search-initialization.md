@@ -1,6 +1,6 @@
 ---
-title: Integrating search initialization enhancement
-description: Search initialization improvement introduces two separate commands for the build and data initialization processes.
+title: Upgrade search initialization
+description: Search initialization upgrade introduces two separate commands for the build and data initialization processes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-initialization-improvement
@@ -19,9 +19,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/search-initialization-improvement.html
 ---
 
-## General information
-
-Previously, the `vendor/bin/console setup:search` command invoked the `build` and `data initialization` processes. Running both processes simultaneously in a read-only file system results into the`build` process failing as the codebase is already baked into images. That's why the command has has been split into two commands for each of the processes which allows running them separately. You can find the commands below:
+Previously, the `vendor/bin/console setup:search` command invoked the `build` and `data initialization` processes. Running both processes simultaneously in a read-only file system results into the `build` process failing as the codebase is already baked into images. That's why the command has has been split into two commands for each of the processes which allows running them separately. You can find the commands below:
 
 **console search:create-indexes**
 
@@ -31,11 +29,11 @@ Previously, the `vendor/bin/console setup:search` command invoked the `build` an
 
 >Generates IndexMap PHP files that are used by the whole application.
 
-## Integration
+To upgrade search initialization, see the following sections.
 
-### 1) Install the required modules using Composer
+## 1. Install the required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/search:"^8.9.0"
@@ -51,9 +49,9 @@ Make sure that the following module has been installed:
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+## 2. Set up behavior
 
-Enable the console commands provided by the `Search`module:
+Enable the console commands provided by the `Search` module:
 
 **Pyz/Zed/Console/ConsoleDependencyProvider**
 

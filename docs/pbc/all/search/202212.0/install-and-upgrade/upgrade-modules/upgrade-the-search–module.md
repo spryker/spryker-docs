@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Search
+title: Upgrade the Search module
 description: Use the guide to learn how to update the Search module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

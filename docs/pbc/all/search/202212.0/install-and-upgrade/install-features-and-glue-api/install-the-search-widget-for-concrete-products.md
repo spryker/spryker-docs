@@ -1,5 +1,5 @@
 ---
-title: Search Widget for Concrete Products feature integration
+title: Install the Search Widget for Concrete Products feature
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-widget-for-concrete-products-integration

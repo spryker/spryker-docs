@@ -13,7 +13,7 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-      - "202212.0"      
+      - "202212.0"
     - title: SCOS supported browsers
       url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
       include_versions:
@@ -949,7 +949,6 @@ entries:
           - "202009.0"
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Managing gift cards of guest users
           url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
           include_versions:
@@ -1183,7 +1182,7 @@ entries:
       - "202009.0"
       - "202108.0"
     - title: Retrieve related products
-      url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html      
+      url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
     - title: Retrieving autocomplete and search suggestions

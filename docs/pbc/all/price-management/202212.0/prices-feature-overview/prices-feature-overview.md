@@ -61,7 +61,8 @@ The price can have a gross or net value which can be used based on a price mode 
 
 {% info_block infoBox %}
 
-If you choose to allow customers to view both net and gross prices for a product, it’s important to understand how Spryker calculates gross price for a product across tax regions, to ensure your store displays the intended price these customers.  
+It’s important to understand how Spryker calculates gross price for a product across tax regions, to ensure your store displays the intended price to customers. If a customer chooses to buy the product in a tax region different than the tax region the customer is residing in, Spryker calculates the new region’s tax based on the product's _gross_ price in the customer's residing region’s rather than the product's _net_ price. Therefore, product prices will be different depending on whether gross or net is enabled on the storefront. Here's a simple example of price calculation across tax regions:
+VAT in country A is 20%.
 
 {% endinfo_block %}
 

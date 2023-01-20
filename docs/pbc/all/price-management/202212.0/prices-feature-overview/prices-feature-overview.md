@@ -57,7 +57,15 @@ Prices are stored as an integer, in the smallest unit of a currency. For example
 
 Each price is assigned to a price type, like DEFAULT or ORIGINAL price. For a price type, there can be *one* to *n* product prices defined. Price type entity is used to differentiate between use cases. For example, you can have DEFAULT and ORIGINAL types to use for sale pricing.
 
-The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example. Price also has currency and store assigned to it.
+The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example. 
+
+{% info_block infoBox %}
+
+If you choose to allow customers to view both net and gross prices for a product, it’s important to understand how Spryker calculates gross price for a product across tax regions, to ensure your store displays the intended price these customers.  
+
+{% endinfo_block %}
+
+Price also has currency and store assigned to it.
 ![Price calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_calculation.png)
 
 ## Price retrieving logic

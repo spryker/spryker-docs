@@ -131,10 +131,14 @@ entries:
         
       - title: Back Office user guides
         url: /docs/marketplace/user/back-office-user-guides/index.html
+        include_versions:
+          - "202212.0"
         nested:
 
         - title: Sales
           url: /docs/marketplace/user/back-office-user-guides/sales/sales.html
+          include_versions:
+          - "202212.0"
           nested:
 
             - title: Managing marketplace returns
@@ -199,6 +203,8 @@ entries:
 
         - title: Marketplace
           url: /docs/marketplace/user/back-office-user-guides/marketplace/marketplace.html
+          include_versions:
+          - "202212.0"
           nested:
 
             - title: Merchants

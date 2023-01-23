@@ -135,10 +135,7 @@ The default search option in Back Office data tables searches for anything that 
 
 Search by columns can be used on all backoffice data tables which extend the `AbstractTable` class.
 
-Searchable fields are `case sensitive`, use exact comparisons, and the following search patterns can be used:
-
-- if MySQL connection is selected, then `<%s%s = BINARY %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
-- if PostgreSQL connection is selected, then `<%s%s = %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
+Searchable fields are `case sensitive` and use exact comparisons by concrete column.
 
 It is possible to enable it on a per-table basis, by setting `setSearchableColumns` on the table configuration.
 The search fields appear under each column that was set as searchable.

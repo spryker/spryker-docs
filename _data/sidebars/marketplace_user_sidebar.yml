@@ -148,6 +148,8 @@ entries:
 
         - title: Catalog
           url: /docs/marketplace/user/back-office-user-guides/catalog/catalog.html
+          include_versions:
+          - "202212.0"
           nested:
 
             - title: Availability

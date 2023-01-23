@@ -2,7 +2,7 @@
 
 ## Upgrading from version 1.* to version 2.*
 
-For BC reasons, the initial version of this module had dependencies to the`spryker/new-relic` and `spryker/new-relic-api` modules.
+For BC reasons, the initial version of this module had dependencies to the `spryker/new-relic` and `spryker/new-relic-api` modules.
 
 In this version, we have removed this hard dependency. If you still want to use New Relic as a monitoring service you can use the `spryker-eco/new-relic` module by running the command:
 
@@ -66,13 +66,17 @@ public function getEventSubscriber(Container $container)
 If you want to record deployments, add the following code to your local configuration:
 
 ```php
-$config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEWRELIC_API_KEY] = 'YOUR_API_KEY';
+$config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_API_KEY] = 'YOUR_API_KEY';
 $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_DEPLOYMENT_API_URL] = 'https://api.newrelic.com/v2/applications/%s/deployments.json';
 $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY] = [
 	'store1'    => '12345',
 	'store2'    => '12346',
 	...
 ];
+```
+In case you don't want to track separate applications, please use the following value and skip NEW_RELIC_APPLICATION_ID_ARRAY:
+```php
+$config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_DEPLOYMENT_API_URL] = 'https://api.newrelic.com/deployments.json';
 ```
 
 For more details, see [Performance Monitoring - New Relic](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/new-relic.html).

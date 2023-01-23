@@ -1537,3 +1537,5 @@ entries:
 
           - title: "Migration guide - Upgrade to Angular v15"
             url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v15.html
+            include_versions:
+            - "202304.0"

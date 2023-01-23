@@ -40,6 +40,8 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 We highly recommend you to follow our [Security guidelines](/docs/scos/dev/guidelines/making-your-spryker-shop-secure.html) and ensure all the points are acknowledged and applied.
 
+Double check that you do not have any clear text passwords stored in config files or repositories.
+
 {% endinfo_block %}
 
 ## Four weeks before go-live
@@ -57,19 +59,19 @@ Only delegate the DNS after creating a migration plan. After you delegate the DN
 
 If you do not delegate DNS to Spryker, and you want to use a subdomain for your Storefront, decide how to deal with the customers reaching your shop using the root domain. In our example, `www.spryker.com` is the subdomain, and `spryker.com` is the root domain. We can't provide you with an IP to point the DNS name to because Spryker PaaS works only with DNS names for its endpoints. You also can't set a `CNAME` for a root domain. This means that you need to find a way to redirect your visitors by another endpoint.
 
-## Three weeks before go-live
+### Deployment preparation and configurations
 
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
 - *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but do not want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you do not delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
-## Two weeks before go-live
+### Data preparation and communication
 
 - *Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
 - *Let us know your go-live plan*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hyper care phase we provide before and after your go-live.
 
-## One week before go-live
+### Last checks
 
 - *Double-check the go-live date*. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to how the DNS system works, any DNS changes take time to take effect.
 

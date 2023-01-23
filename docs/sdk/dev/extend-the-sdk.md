@@ -5,6 +5,7 @@ template: howto-guide-template
 redirect_from:
     - /docs/sdk/dev/extending-the-sdk.html
 ---
+# SDK development
 
 The SDK offers different extension points to enable third parties to contribute to the SDK without modifying it.
 
@@ -20,12 +21,12 @@ To extend the SDK, follow these steps.
 
 A *task* is the execution of a very specific function. For example, executing an external tool through a CLI call is a task.
 
-There are two possibilities to define a new task: one based on YAML for simple task definitions, and one based on
-implementations via PHP and Symfony services for specialized purposes.
+There are two possibilities when it comes to defining a new task: having it be based on YAML for simple task definitions, or
+an implementation via PHP and Symfony services for specialized purposes.
 
 ### Implementation via YAML definition
 
-YAML-based tasks need to fulfill a defined structure so you can execute them from the SDK.
+YAML based tasks need to fulfill a defined structure so you can execute them from the SDK.
 The command defined in the YAML definition can have [placeholders](#implement-placeholders) that you need to define in the placeholder section. Each placeholder needs to map to one [value resolver](#add-a-value-resolver).
 
 Add the definition for your task in `<path>/Task/<name>.yaml`:
@@ -38,10 +39,10 @@ help: string|null #e.g: Fix codestyle violations, lorem ipsum, etc.
 stage: string #e.g.: build
 command: string #e.g.: php %project_dir%/vendor/bin/phpcs -f --standard=%project_dir%/vendor/spryker/code-sniffer/Spryker/ruleset.xml %module_dir%
 type: string #e.g.: local_cli
-version: string #e.g.:   1.0.0
+version: string #e.g.: 1.0.0
 placeholders:
 - name: string #e.g.: %project_dir%
-  value_resolver: string #e.g.: PROJECT_DIR, mapping to a value resolver with id PROJECT_DIR or  a FQCN
+  value_resolver: string #e.g.: PROJECT_DIR, mapping to a value resolver with id PROJECT_DIR or a FQCN
   optional: bool
 ```
 
@@ -53,13 +54,13 @@ You can add the tasks located in `extension/<your extension name>/Task` to the S
 
 ### Implementation via a PHP class
 
-In case when a task is more than just a call to an existing tool, you can implement the task as a PHP class and register the task using the Symfony service tagging feature.
+If a task is more than just a call to an existing tool, you can implement the task as a PHP class and register it using the Symfony service tagging feature.
 This requires you to make the task a part of the Symfony bundle. To achieve this, follow these steps:
 
-1. Create a Symfony bundle.<br> 
-Refer to [official Symfony documentation](https://symfony.com/doc/current/bundles.html) for details on how to do that.
+1. Create a Symfony bundle.<br>
+Refer to the [official Symfony documentation](https://symfony.com/doc/current/bundles.html) for details on how to do that.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox Info %}
 
 The bundle has to use the [Spryker SDK Contracts](https://github.com/spryker-sdk/sdk-contracts) via Composer.
 
@@ -108,7 +109,7 @@ class YourTask implements TaskInterface
 ```
 
 3. Implement the command.<br>
-While the task definition serves as a general description of the task and maps placeholders to value resolvers, a *command* serves as a function that is executed along with the resolved placeholders.
+While a task definition serves as a general description of the task and maps placeholders to value resolvers, a *command* serves as a function that is executed along with the resolved placeholders.
 
 Implement the command as shown in the example:
 
@@ -162,13 +163,13 @@ class YourCommand implements ExecutableCommandInterface
 
 4. Implement placeholders.<br>
 Placeholders are resolved at runtime by using a specified value resolver.
-A placeholder needs a specific name that is not used anywhere in the command the placeholder is used for.
+A placeholder needs a specific name that is not used anywhere else in the command the placeholder is used for.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox Info %}
 
 You can append `%` and suffix the placeholder, which makes the placeholder easier to recognize in a command.
 
-You can reference the used value resolver by its ID or by the fully qualified class name (FQCN), whereas the FQCN is preferred.
+You can reference the used value resolver by its ID or the fully qualified class name (FQCN). The FQCN is the preferred option.
 
 {% endinfo_block %}
 
@@ -209,15 +210,15 @@ services:
 
 6. Register your bundle.
 
-If your bundle does not have dependencies that differ from the Spryker SDK, you don't need to register the bundle. Instead, place it into the `extension` directory that is part of your SDK installation.
+If your bundle does not have dependencies that differ from the Spryker SDK, you don't need to register the bundle. Instead, place it into the `extension` directory that is a part of your SDK installation.
 
 For more complex bundles that require additional dependencies, follow the guidelines in [Building a flavored Spryker SDK](/docs/sdk/dev/building-flavored-spryker-sdks.html).
 
 ## 2. Add a value resolver
 
-Most placeholders need a solution to resolve their values during runtime. This can be reading some settings and assembling a value based on the settings content, or any solution that turns a placeholder into a resolved value. 
+Most placeholders need a solution to resolve their values during runtime. This can be reading some settings and assembling a value based on the settings content, or any solution that turns a placeholder into a resolved value.
 
-{% info_block warningBox "" %}
+{% info_block warningBox %}
 
 Make sure to unify value resolvers and always use the same name for a value.
 
@@ -290,7 +291,7 @@ class YourValueResolver implements ValueResolverInterface
 }
 ```
 
-You can define a value resolver as a Symfony service, for example, to be able to inject services into it. If the value resolver is not defined as a service, it is instantiated by its FQCN.
+You can define a value resolver as a Symfony service, for example to be able to inject services into it. If the value resolver is not defined as a service, it is instantiated by its FQCN.
 
 Example of defining a value resolver as a Symfony service:
 
@@ -303,18 +304,18 @@ services:
 
 ## 3. Add a setting
 
-A bundle can add more settings that value resolvers can use to create a persistent behavior.
+A bundle can add more settings that value resolvers can then use to create a persistent behavior.
 You can define settings in the `settings.yaml` file and add them to the SDK by calling
 `spryker-sdk setting:set setting_dirs <path to your settings>`:
 
 ```yaml
 settings:
   - path: string #e.g.: some_setting
-    initialization_description: string #will be used when a user is asked to provide the setting value
+    initialization_description: string #Will be used when a user is asked to provide the setting value
     strategy: string #merge or overwrite, where merge will add the value to the list and overwrite will replace it
-    init: bool #if true, the user should be asked for the setting value when `spryker-sdk sdk:init:sdk` or `spryker-sdk sdk:init:project` is called
-    type: string #use array for lists of values or any scalar type (string|integer|float|boolean)
-    is_project: boolean #if true, the setting is persisted across projects and initialized during `spryker-sdk sdk:init:sdk` or per project and initialized with `spryker-sdk sdk:init:project`
+    init: bool #if true, the user should be asked for the setting value when `spryker-sdk sdk:init:sdk` or `spryker-sdk sdk:init:project` is called.
+    type: string #Use array for lists of values or any scalar type (string|integer|float|boolean)
+    is_project: boolean #If true, the setting is persisted across projects and initialized during `spryker-sdk sdk:init:sdk` or per project and initialized with `spryker-sdk sdk:init:project`
     values: array|string|integer|float|boolean #serve as default values for initialization
 ```
 
@@ -370,3 +371,27 @@ Optionally, you can overwrite the existing command runners with a more suitable 
   local_cli_command_runner:
     class: <YourNamespace>\CommandRunners\BetterLocalCliRunner
 ```
+
+## 5. Generate a task by a CLI command
+
+It might be useful to generate a task by using a CLI command as follows:
+
+```shell
+# generate yaml task
+spryker-sdk sdk:generate:task
+spryker-sdk sdk:generate:task task-format=yaml
+
+# generate php task
+spryker-sdk sdk:generate:task task-format=php
+```
+
+After execution of the command task will be created in such directories:
+- `extension/Custom/src/Resources/config/task` - for yaml tasks
+- `extension/Custom/src/Task` - for php tasks
+
+You can manually update it if it's needed. Don't forget to increase the task version and run the following to make new updates available.:
+
+  ```shell
+    `spryker-sdk sdk:update:all`
+    ```
+

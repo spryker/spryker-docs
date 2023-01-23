@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Category Management](/docs/scos/user/features/{{site.version}}/category-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/category-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

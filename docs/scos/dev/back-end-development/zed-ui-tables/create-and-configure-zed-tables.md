@@ -1,7 +1,7 @@
 ---
 title: Create and configure Zed tables
 description: This document helps you get started on working with tables.
-last_updated: Oct 13, 2021
+last_updated: Jan 02, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
 originalArticleId: e8fc8c5a-88fa-41f8-8d2b-de028e7c4165
@@ -127,6 +127,25 @@ You can also configure the default sort direction (for the initial rendering of 
 
 $config->setDefaultSortDirection(
     \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
+```
+
+### Configure strict search
+
+The default search option in Back Office data tables searches for anything that contains the specified sub strings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables due to indexes not being used.
+
+In order to solve the performance issues, strict search mode has been introduced and can be used on all backoffice data tables which extend the `AbstractTable` class.
+
+Strict search is `case sensitive`, uses exact comparisons, and the following search patterns can be used:
+
+if MySql connection is selected, then `<%s%s = BINARY %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
+if PostgreSql connection is selected, then `<%s%s = %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
+
+It is possible to enable it on a per table basis, by setting `isStrictSearch` to true on the table configuration:
+
+```php
+<?php
+
+$config->setIsStrictSearch(true);
 ```
 
 ## 3. Prepare the data

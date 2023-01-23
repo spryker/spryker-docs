@@ -1478,15 +1478,15 @@ To retrieve general information about an abstract product, send the request:
 
 For the attributes of other included resources, see:
 
-* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)
+* [Retrieve image sets of an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html)
 * [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-availability.html)
 * [Retrieve prices of an abstract product](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
-* [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)
+* [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html)
 * [Retrieve tax sets](/docs/pbc/all/tax-management/{{page.version}}/manage-via-glue-api/retrieve-tax-sets.html)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
+* [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 * [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html#retrieve-product-reviews)
-*  [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
+*  [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 *  [Retrieve merchant information](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 

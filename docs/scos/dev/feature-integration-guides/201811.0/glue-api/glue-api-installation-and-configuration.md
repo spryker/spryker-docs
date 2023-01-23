@@ -309,17 +309,6 @@ ip glue.de.project-name.local
 ```
 After performing this change, you should be able to access `https://glue.mysprykershop.com` with a 404 error and JSON response indicating that resource is not found.
 
-If you are running your project in the Spryker VM, you also need to make changes to the Vagrant file of the virtual machine. To do so:
-
-1. Open file `~/.vagrant.d/boxes/devvm[version]/0/virtualbox/include/_Vagrantfile`, where _[version]_ is the VM version. On Windows, you can find the `.vagrant.d` folder in your user profile folder.
-2. Find the following line:
-```yaml
-HOSTS.push [ "www#{host_suffix}.#{store}.#{domain}", "zed#{host_suffix}.#{store}.#{domain}",]
-```
-3. Change it as follows:
-```bash
-HOSTS.push [ "www#{host_suffix}.#{store}.#{domain}", "glue#{host_suffix}.#{store}.#{domain}", "zed#{host_suffix}.#{store}.#{domain}",]
-```
 **3. Set correct OAuth key permissions**
 
 If you are using the OAuth module for user authentication, change permissions for the OAuth keys:

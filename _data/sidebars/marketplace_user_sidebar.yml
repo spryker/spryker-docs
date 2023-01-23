@@ -67,6 +67,8 @@ entries:
           url: /docs/marketplace/user/features/marketplace-merchant-custom-prices-feature-overview.html
           include_versions:
           - "202204.0"
+          - "202212.0"
+          - "202212.0"
           
         - title: Marketplace Product
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
@@ -75,6 +77,7 @@ entries:
           url: /docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html
           include_versions:       
           - "202204.0"
+          - "202212.0"
         
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html

@@ -1185,8 +1185,18 @@ entries:
       url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
+      include_versions:
+      - "202009.0"
+      - "201907.0"
+      - "202108.0"
+      - "202204.0"
     - title: Retrieving autocomplete and search suggestions
       url: /docs/scos/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
+      include_versions:
+      - "202009.0"
+      - "201907.0"
+      - "202108.0"
+      - "202204.0"
     - title: Retrieving orders
       url: /docs/scos/dev/glue-api-guides/retrieving-orders.html
       include_versions:
@@ -2468,7 +2478,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Shared Carts
       url: /docs/scos/dev/feature-integration-guides/shared-carts-feature-integration.html
     - title: Shipment
@@ -2559,8 +2568,6 @@ entries:
     - title: Glue API
       url: /docs/scos/dev/module-migration-guides/glue-api/about-glue-api-migration-guides.html
       nested:
-      - title: Migration Guide - CatalogSearchRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
       - title: Migration Guide - CompanyUserAuthRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
       - title: Migration Guide - CompanyUsersRestApi
@@ -2665,8 +2672,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html
     - title: Migration Guide - SalesSplit
       url: /docs/scos/dev/module-migration-guides/migration-guide-salessplit.html
-    - title: Migration Guide - Search
-      url: /docs/scos/dev/module-migration-guides/migration-guide-search.html
     - title: Migration Guide - Security
       url: /docs/scos/dev/module-migration-guides/migration-guide-security.html
     - title: Migration Guide - Session
@@ -3080,7 +3085,6 @@ entries:
             - "202009.0"
             - "202108.0"
             - "202204.0"
-            - "202212.0"
           - title: File details - product_discontinued.csv
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
             include_versions:
@@ -3104,7 +3108,6 @@ entries:
             - "202009.0"
             - "202108.0"
             - "202204.0"
-            - "202212.0"
           - title: File details - product_quantity.csv
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
             include_versions:
@@ -3531,20 +3534,6 @@ entries:
         nested:
         - title: Standard filters - backend and frontend technical details
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
-        - title: Search
-          nested:
-          - title: Facet filter overview and configuration
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
-          - title: Configure search features
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
-          - title: Configure Elasticsearch
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
-          - title: Configure a search query
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
-          - title: Configure Search for multi-currency
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
-          - title: Expand search data
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
         - title: Transfer data between Yves and Zed
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
         - title: Define the module dependencies - Dependency Provider
@@ -3725,8 +3714,6 @@ entries:
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
-    - title: Search migration concept
-      url: /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Split delivery migration concept
@@ -4007,8 +3994,6 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html
     - title: Queue worker signal handling
       url: /docs/scos/dev/technical-enhancement-integration-guides/configuring-queue-worker-signal-handling.html
-    - title: Search initialization enhancement
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-search-initialization-enhancement.html
     - title: Separate endpoint bootstraps
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html
     - title: Symfony 5
@@ -4075,15 +4060,8 @@ entries:
       nested:
       - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html
-      - title: "Tutorial: Integrating any search engine into a project"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-integrating-any-search-engine-into-a-project.html
       - title: "Tutorial: different stores, different logic - landing pages - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages-spryker-commerce-os.html
-      - title: "Tutorial: Content and search - attribute-cart-based catalog personalization Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-attribute-cart-based-catalog-personalization-spryker-commerce-os/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
-        nested:
-        - title: "Tutorial: Boosting cart based search"
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-attribute-cart-based-catalog-personalization-spryker-commerce-os/tutorial-boosting-cart-based-search.html
       - title: "Tutorial: Hello world - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-hello-world-spryker-commerce-os.html
       - title: "Tutorial: Architectural Walkthrough - Spryker Commerce OS"
@@ -4787,31 +4765,6 @@ entries:
       url: /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
       url: /docs/scos/dev/best-practices/coding-best-practices.html
-    - title: Search best practices
-      url: /docs/scos/dev/best-practices/search-best-practices/search-best-practices.html
-      nested:
-      - title: Full-text search
-        url: /docs/scos/dev/best-practices/search-best-practices/full-text-search.html
-      - title: Other best practices
-        url: /docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
-      - title: Data-driven ranking
-        url: /docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
-      - title: Generic faceted search
-        url: /docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
-      - title: Precise search by super attributes
-        url: /docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
-      - title: Simple spelling suggestions
-        url: /docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
-      - title: Usage-driven schema and document structure
-        url: /docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
-      - title: Multi-term auto completion
-        url: /docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
-      - title: Naive product centric approach
-        url: /docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
-      - title: On-site search
-        url: /docs/scos/dev/best-practices/search-best-practices/on-site-search.html
-      - title: Personalization - Dynamic pricing
-        url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
     - title: State machine cookbook
       url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
       nested:

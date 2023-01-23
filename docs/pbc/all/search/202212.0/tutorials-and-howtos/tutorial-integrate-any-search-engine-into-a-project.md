@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Integrating any search engine into a project"
+title: "Tutorial: Integrate any search engine into a project"
 description: Learn how to integrate any external search engine instead of the default Elasticsearch.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -217,7 +217,7 @@ class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
 
 The `isApplicable` method in the preceding template validates that the request is supposed to be processed in this adapter—in this example, by FACT-Finder.
 
-Make sure that all events affecting FACT-Finder-related product data are triggered with this type. For this purpose, the following change is required in `Pyz/Zed/ProductPageSearch/Persistence/Propel/Schema/spy_product_page_search.schema.xml`: 
+Make sure that all events affecting FACT-Finder-related product data are triggered with this type. For this purpose, the following change is required in `Pyz/Zed/ProductPageSearch/Persistence/Propel/Schema/spy_product_page_search.schema.xml`:
 
 ```xml
 <?xml version="1.0"?>

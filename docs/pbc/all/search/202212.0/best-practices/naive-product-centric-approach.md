@@ -24,29 +24,29 @@ redirect_from:
   - /v1/docs/en/naive-product-centric-approach
 related:
   - title: Data-driven ranking
-    link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+    link: docs/pbc/all/search/page.version/best-practices/data-driven-ranking.html
   - title: Full-text search
-    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+    link: docs/pbc/all/search/page.version/best-practices/full-text-search.html
   - title: Generic faceted search
-    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+    link: docs/pbc/all/search/page.version/best-practices/generic-faceted-search.html
   - title: Precise search by super attributes
-    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+    link: docs/pbc/all/search/page.version/best-practices/precise-search-by-super-attributes.html
   - title: On-site search
-    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+    link: docs/pbc/all/search/page.version/best-practices/on-site-search.html
   - title: Other best practices
-    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+    link: docs/pbc/all/search/page.version/best-practices/other-best-practices.html
   - title: Multi-term autocompletion
-    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+    link: docs/pbc/all/search/page.version/best-practices/multi-term-auto-completion.html
   - title: Simple spelling suggestions
-    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+    link: docs/pbc/all/search/page.version/best-practices/simple-spelling-suggestions.html
   - title: Personalization - dynamic pricing
-    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
+    link: docs/pbc/all/search/page.version/best-practices/personalization-dynamic-pricing.html
   - title: Usage-driven schema and document structure
-    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
+    link: docs/pbc/all/search/page.version/best-practices/usage-driven-schema-and-document-structure.html
 ---
 
 Finding products on e-commerce website can be tricky, even when you know exactly what you are looking for. Throughout this document, we will assume a customer wants to buy a hammer that weighs 2kg. A product that would meet his needs might be this "Fäustel" by Fortis:
-![Product-centric approach](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Naive+Product+Centric+Approach/product-detail.png) 
+![Product-centric approach](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Naive+Product+Centric+Approach/product-detail.png)
 
 This is (most of) the search-relevant information that is known in the backend of Contorion about the product above:
 

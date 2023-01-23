@@ -1,5 +1,5 @@
 ---
-title: Searching the product catalog
+title: Search the product catalog
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
 last_updated: Jul 29, 2021
 template: glue-api-storefront-guide-template

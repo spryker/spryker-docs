@@ -24,25 +24,25 @@ redirect_from:
   - /v1/docs/en/personalization-dymanic-pricing
 related:
   - title: Data-driven ranking
-    link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+    link: docs/pbc/all/search/page.version/best-practices/data-driven-ranking.html
   - title: Full-text search
-    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+    link: docs/pbc/all/search/page.version/best-practices/full-text-search.html
   - title: Generic faceted search
-    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+    link: docs/pbc/all/search/page.version/best-practices/generic-faceted-search.html
   - title: Precise search by super attributes
-    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+    link: docs/pbc/all/search/page.version/best-practices/precise-search-by-super-attributes.html
   - title: On-site search
-    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+    link: docs/pbc/all/search/page.version/best-practices/on-site-search.html
   - title: Other best practices
-    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+    link: docs/pbc/all/search/page.version/best-practices/other-best-practices.html
   - title: Multi-term autocompletion
-    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+    link: docs/pbc/all/search/page.version/best-practices/multi-term-auto-completion.html
   - title: Simple spelling suggestions
-    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+    link: docs/pbc/all/search/page.version/best-practices/simple-spelling-suggestions.html
   - title: Naive product centric approach
-    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+    link: docs/pbc/all/search/page.version/best-practices/naive-product-centric-approach.html
   - title: Usage-driven schema and document structure
-    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
+    link: docs/pbc/all/search/page.version/best-practices/usage-driven-schema-and-document-structure.html
 ---
 
 Especially in businesses with a B2B focus, customers expect to get discounts after they have been using the service/website for a longer period of time. The search infrastructure should be able to handle such use cases and customers should be able to see their own discounted prices while browsing the catalog. Luckily, Elasticsearch enables us to extend basic filtering, aggregation and fetching functionalities with scripts that are executed within the document context and can be used instead of fixed document values.

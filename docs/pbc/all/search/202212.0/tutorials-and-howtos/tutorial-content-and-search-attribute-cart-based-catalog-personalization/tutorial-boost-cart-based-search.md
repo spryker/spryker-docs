@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Boosting cart-based search"
+title: "Tutorial: Boost cart-based search"
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -42,9 +42,9 @@ To solve this task, you will work in the client layer of the `Catalog` module lo
 ## Step-by-step solution
 
 1. If you trace the execution flow of the search starting from `Pyz\Yves\Catalog\Controller\CatalogController`, you can find a `CatalogClient`. The client uses a stack of plugins which implements `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface`. It is needed to create a new plugin, which modifies your search queries accordingly.
-2. Implement `Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface` and replace `SortedCategoryQueryExpanderPlugin` with your new plugin in `Pyz\Client\Catalog\CatalogDependencyProvider::createCatalogSearchQueryExpanderPlugins()`. 
+2. Implement `Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface` and replace `SortedCategoryQueryExpanderPlugin` with your new plugin in `Pyz\Client\Catalog\CatalogDependencyProvider::createCatalogSearchQueryExpanderPlugins()`.
 3. Name the new plugin `Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander\CartBoostQueryExpanderPlugin`. The final version of the plugin can be found [here](#plugin).
-4. Use the [`function_score` query modifier function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html), which lets you modify the scoring of the filtered results. Because Elasticsearch lets you combine multiple queries using [different strategies](https://www.elastic.co/guide/en/elasticsearch/reference/current/compound-queries.html) and filtering is needed in the catalog, the [bool query strategy](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html) is used by the `Search` module to build the base query (see `Pyz\Client\Catalog\Plugin\Elasticsearch\Query\CatalogSearchQueryPlugin`). It means that you need to extend the boolean query with your custom scoring function. 
+4. Use the [`function_score` query modifier function](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html), which lets you modify the scoring of the filtered results. Because Elasticsearch lets you combine multiple queries using [different strategies](https://www.elastic.co/guide/en/elasticsearch/reference/current/compound-queries.html) and filtering is needed in the catalog, the [bool query strategy](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html) is used by the `Search` module to build the base query (see `Pyz\Client\Catalog\Plugin\Elasticsearch\Query\CatalogSearchQueryPlugin`). It means that you need to extend the boolean query with your custom scoring function.
 5. Check the plugin for a type of incoming query. After this, you can safely extend it when the instance of `BoolQuery` is passed.
 6. To get the content of the cart, you can use `Spryker\Client\Cart\CartClientInterface::getQuote()`. The client must be added as a dependency to `CatalogDependencyProvider` and provided to `CartBoostQueryExpanderPlugin` through the client factory, like this:
 
@@ -221,6 +221,6 @@ class CartBoostQueryExpanderPlugin extends AbstractPlugin implements QueryExpand
 ### Testing
 
 To test the results, follow these steps:
-1. Go to a category having products of different colors—for example, *Cameras & Camcoders*. 
-2. Add any red product to your cart and return to the catalog page. 
+1. Go to a category having products of different colors—for example, *Cameras & Camcoders*.
+2. Add any red product to your cart and return to the catalog page.
 The order of products must be changed accordingly, and you must see red products first.

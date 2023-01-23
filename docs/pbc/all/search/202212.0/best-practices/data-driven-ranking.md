@@ -22,28 +22,29 @@ redirect_from:
   - /v2/docs/en/data-driven-ranking  
   - /v1/docs/data-driven-ranking
   - /v1/docs/en/data-driven-ranking
+  - /docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
 related:
   - title: Full-text search
-    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+    link: docs/pbc/all/search/page.version/best-practices/full-text-search.html
   - title: Generic faceted search
-    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+    link: docs/pbc/all/search/page.version/best-practices/generic-faceted-search.html
   - title: Precise search by super attributes
-    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+    link: docs/pbc/all/search/page.version/best-practices/precise-search-by-super-attributes.html
   - title: On-site search
-    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+    link: docs/pbc/all/search/page.version/best-practices/on-site-search.html
   - title: Other best practices
-    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+    link: docs/pbc/all/search/page.version/best-practices/other-best-practices.html
   - title: Multi-term autocompletion
-    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+    link: docs/pbc/all/search/page.version/best-practices/multi-term-auto-completion.html
   - title: Simple spelling suggestions
-    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+    link: docs/pbc/all/search/page.version/best-practices/simple-spelling-suggestions.html
   - title: Naive product centric approach
-    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+    link: docs/pbc/all/search/page.version/best-practices/naive-product-centric-approach.html
   - title: Personalization - dynamic pricing
-    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
+    link: docs/pbc/all/search/page.version/best-practices/personalization-dynamic-pricing.html
   - title: Usage-driven schema and document structure
-    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
-  
+    link: docs/pbc/all/search/page.version/best-practices/usage-driven-schema-and-document-structure.html
+
 ---
 
 When a query returns hundreds or thousands of results, the most relevant to the user products must be at the top of the search result page. Getting this right leads to a higher conversion probability and increases customer happiness. Implementing proper data-driven ranking, however, is usually very tricky because there might be large numbers of heuristics, which define what a good search result for a certain query is.
@@ -143,17 +144,17 @@ To combine scores in such expressions, we normalize them between 0 and 1 and try
 
 So to find good normalization functions, look at the distribution of some measures across all products. This is the distribution of the number of sold items per product at Contortion (numbers are only up to the end of 2014 due to data sensitivity):
 
-![Computation of score top_seller](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-top-seller-computation.png) 
+![Computation of score top_seller](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-top-seller-computation.png)
 
 Out of the products sold at all, most were sold only once or twice, while only very few products were sold more than 10 times. For the top_seller score to be meaningful, it is less important whether the product sold 500 or 50 times but rather whether it sold 10 times or once. The *atan(x - avg(X)) / (π / 2)* score formula reflects this: it returns 0.5 for the average number of sold items across all products and has most of its dynamics around that average. A second example is the distribution of the expected margin across products (again with data up to the end of 2014):
 
-![Computation of score expected_margin](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-expected-margin-computation.png) 
+![Computation of score expected_margin](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-expected-margin-computation.png)
 
 For such "Gaussian-looking" distributions, we also use functions that put the average at 0.5 and that have most of their dynamics within the standard deviation of the distribution: *0.5 + atan((x - avg(X)) / stdev(X)) / π*.
 
 The last example is the expected delivery time in hours:
 
-![Computation of score delivery_speed](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-delivery-speed-computation.png) 
+![Computation of score delivery_speed](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Data-Driven+Ranking/score-delivery-speed-computation.png)
 
 Here our stakeholders made a conscious decision to define 48 hours as the neutral case (a score of 0.5) and everything after 60 hours as "bad": *0.5 - atan((x - 48) / 12) / π*.
 

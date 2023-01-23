@@ -131,22 +131,38 @@ $config->setDefaultSortDirection(
 
 ### Configure strict search
 
-The default search option in Back Office data tables searches for anything that contains the specified sub strings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables due to indexes not being used.
+The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables due to indexes not being used.
 
-In order to solve the performance issues, strict search mode has been introduced and can be used on all backoffice data tables which extend the `AbstractTable` class.
+In order to solve the performance issues, a strict search mode has been introduced and can be used on all backoffice data tables which extend the `AbstractTable` class.
 
 Strict search is `case sensitive`, uses exact comparisons, and the following search patterns can be used:
 
-if MySql connection is selected, then `<%s%s = BINARY %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
-if PostgreSql connection is selected, then `<%s%s = %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
+- if MySQL connection is selected, then `<%s%s = BINARY %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
+- if PostgreSQL connection is selected, then `<%s%s = %s>` will be used instead of `<LOWER(%s%s) LIKE %s>`
 
-It is possible to enable it on a per table basis, by setting `isStrictSearch` to true on the table configuration:
+It is possible to enable it on a per-table basis, by setting `setSearchableColumns` on the table configuration.
+The search fields appear under each column that was set as searchable.
+This provides flexibility to enable/disable strict search fields only for needed columns:
 
 ```php
 <?php
 
-$config->setIsStrictSearch(true);
+$config->setSearchableColumns([
+    static::COL_ID_SALES_ORDER => SpySalesOrderTableMap::COL_ID_SALES_ORDER,
+    static::COL_FIRST_NAME => SpySalesOrderTableMap::COL_FIRST_NAME,
+    static::COL_EMAIL => SpySalesOrderTableMap::COL_EMAIL,
+    static::COL_ORDER_REFERENCE => SpySalesOrderTableMap::COL_ORDER_REFERENCE,
+]);
 ```
+
+Strict search inits once searchable columns are enabled and the searchable terms are passed.
+In case two or more searchable columns are filled the searchable condition is getting stricter 
+with the `AND` operator and searching for the results via all those fields.
+
+We recommend using a strict search for tables with large numbers of rows. 
+Measurable performance checks show the execution time got faster. 
+For example, getting the results using a strict search for tables with ~200k rows 
+increased from 6400ms to 3900ms. 
 
 ## 3. Prepare the data
 

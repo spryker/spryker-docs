@@ -21,8 +21,6 @@ use Spryker\Zed\Monitoring\MonitoringConfig as BaseMonitoringConfig;
 class MonitoringConfig extends BaseMonitoringConfig
 {
     /**
-     * @api
-     *
      * @return array<string>
      */
     public function getGroupedByArgumentTransactions(): array
@@ -34,11 +32,22 @@ class MonitoringConfig extends BaseMonitoringConfig
 
 3. In `Pyz\Zed\Monitoring\Business\MonitoringBusinessFactory`, enable `FirstArgumentMonitoringConsoleTransactionNamingStrategy` to be used for transaction naming.
 ```php
-public function getMonitoringTransactionNamingStrategies(): array
+    /**
+     * @return array<\Spryker\Zed\Monitoring\Business\MonitoringTransactionNamingStrategy\MonitoringTransactionNamingStrategyInterface>
+     */
+    public function getMonitoringTransactionNamingStrategies(): array
     {
         return [
-            return new FirstArgumentMonitoringConsoleTransactionNamingStrategy($this->getConfig()->getGroupedByArgumentTransactions());
+            $this->createFirstArgumentMonitoringConsoleTransactionNamingStrategy(),
         ];
+    }
+
+    /**
+     * @return \Spryker\Zed\Monitoring\Business\MonitoringTransactionNamingStrategy\MonitoringTransactionNamingStrategyInterface
+     */
+    public function createFirstArgumentMonitoringConsoleTransactionNamingStrategy(): MonitoringTransactionNamingStrategyInterface
+    {
+        return new FirstArgumentMonitoringConsoleTransactionNamingStrategy($this->getConfig()->getGroupedByArgumentTransactions());
     }
 ```
 

@@ -186,6 +186,8 @@ entries:
 
               - title: Managing products
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
+                include_versions:
+                - "202212.0"
                 nested:
 
                 - title: Managing products

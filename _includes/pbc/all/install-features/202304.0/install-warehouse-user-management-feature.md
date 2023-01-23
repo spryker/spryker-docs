@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core             | {{site.version}} | | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |  |
+| Spryker Core             | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |  |
 | Spryker Core Back Office  | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
 | Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
@@ -155,13 +155,13 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 To switch the language, follow these steps:
 1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 2. For a user of your choice, click **Edit**. The **Edit User: `USER_NAME`** page opens. `USER_NAME` stands for the name of the user whose profile you edit.
-3. From **INTERFACE LANGUAGE**, select another laguage.
+3. From **INTERFACE LANGUAGE**, select another language.
 
 {% endinfo_block %}
 
 ### 5) Set up behavior
 
-Enable the following behaviors by registering the plugins:
+1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                               | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                   |
 |------------------------------------------------------|--------------------------------------------------------------|---------------|-------------------------------------------------------------|
@@ -238,15 +238,15 @@ Ensure that the plugins work correctly:
 
 1. In the Back Office, navigate to **Users&nbsp;<span aria-label="and then">></span> Users**.
 2. Create a new user or edit an existing one.
-3. Make sure that User form contains the checkbox with the **This user is a warehouse user** label.
+3. Make sure that the user form has the **This user is a warehouse user** checkbox.
 4. Select the checkbox and submit the form.
 5. Make sure that for the given user, in the **User** table, the **Assign Warehouses** button is displayed.
-6. Logout from the Back Office and try to log in as warehouse user.
-7. Make sure that the warehouse user is unable to login back to the Back Office.
+6. Log out from the Back Office and try to log in as a warehouse user.
+7. Make sure that the warehouse user can't log in back to the Back Office.
 
 {% endinfo_block %}
 
-Enable the Backend API by registering the plugin:
+2. Enable the Backend API by registering the plugin:
 
 | PLUGIN                                               | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                   |
 |------------------------------------------------------|--------------------------------------------------------------|---------------|-------------------------------------------------------------|

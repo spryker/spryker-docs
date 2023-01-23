@@ -1,3 +1,6 @@
+
+
+
 {% info_block errorBox %}
 
 This feature integration guide expects the basic feature to be in place.
@@ -406,8 +409,8 @@ console setup:init-db
 {% info_block warningBox "Verification" %}
 
 Ensure that the command has done the following:
-* Cleaned the previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
-* Generated translation cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
+* Cleaned the previous translation cache in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
+* Generated translation cache files like `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php` and `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php.meta` in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
 
 {% endinfo_block %}
 
@@ -602,6 +605,6 @@ console translator:generate-cache
 
 Ensure that the command has done the following:
 * Cleaned the previous translation cache in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
-* Generated translator cache files like `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php` and `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php.meta` in the translation folder, which is `data/[YOUR_STORE}/cache/Zed/translation` by default.
+* Generated translator cache files like `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php` and `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php.meta` in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
 
 {% endinfo_block %}

@@ -55,20 +55,28 @@ Double check that you do not have any clear text passwords stored in config file
 
 ### DNS setup
 
-You can add a CNAME record to the DNS Name that corresponds to the DNS name of the load balancer of your environment to make your application accessible to the ourside world. You can get the load balancer information from our support team. Generally, the DNS setup will have these steps:
-- You add the endpoint you want to use in the appropriate deploy.yml file and sent this deploy.yml file to us using a support case, mentioning that you have added a new endpoint that you want to set up for DNS configuration
-- We terraform this endpoint and will send you back DNS entries for TLS verification (so that we can issue TLS certificates for your site)
-- You set these entires in your DNS management and let us know when done
-- Terraforming can then be completed and you will receive the CNAME DNS records that you can then set in your DNS managemenet to point your DNS names to the newly created endpoints.
-- After this is completed your application should be accessible via the new endpoints.
-Please note that this process can take a full week to complete, due to DNS propagation and the terraform work that needs to be done. To avoid double work, please make sure the endpoint selection is final and tested.
+You can add an ANAME record to the DNS Name that corresponds to the DNS name of the load balancer of your environment to make your application accessible to the outside world. You can get the load balancer information from our support team. Generally, the DNS setup has these steps:
+- You add the endpoint you want to use in the appropriate `deploy.yml` file and send it to us using a support case, mentioning that you have added a new endpoint that you want to set up for DNS configuration.
+- We terraform this endpoint and send you back DNS entries for TLS verification (so that we can issue TLS certificates for your site).
+- You set these entries in your DNS management and let us know when you are done.
+- Terraforming can then be completed, and you receive the ANAME DNS records that you can then set in your DNS management to point your DNS names to the newly created endpoints.
+- After this is completed, your application gets accessible through the new endpoints.
 
-If you want to use a root domain for your application (e.g. spryker.com) you will need to use an IP address instead of the loadbalancer DNS name, as this is required for an ARECORD. Please let our team know in this case, so they can provide you with an IP instead of the loadbalancer address. Please do not set loadbalancer IP addresses as an ARECORD. The IP addresses are subject to rotation.
+{% info_block infoBox "Info" %}
 
-Please note that we do not normally support full delegation of your DNS to us and therefore do not suggest that you change your domains NS records to ours.
+This process can take a full week to complete due to DNS propagation and the terraform work that needs to be done. To avoid double work, ensure the endpoint selection is final and tested.
 
+{% endinfo_block %}
 
-### Deployment preparation and configurations
+To use a root domain for your application (for example, spryker.com), use an IP address instead of the load balancer DNS name, as this is required for an ARECORD. In this case, let our team know so they can provide you with an IP instead of the load balancer address. Do not set load balancer IP addresses as an ARECORD. The IP addresses are subject to rotation.
+
+{% info_block infoBox "Info" %}
+
+We do not normally support full delegation of your DNS to us and therefore do not suggest that you change your domain’s NS records to ours.
+
+{% endinfo_block %}
+
+# Deployment preparation and configurations
 
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.

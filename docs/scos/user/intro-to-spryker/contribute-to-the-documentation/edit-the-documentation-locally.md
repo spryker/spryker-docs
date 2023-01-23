@@ -1,3 +1,11 @@
+---
+title: Edit the documentation locally
+description: Learn how edit the documentation on your machine.
+last_updated: Jan 23, 2023
+template: howto-guide-template
+---
+
+
 This document describes how to you can edit documents on your machine and submit your changes directly to our repository.
 
 ## Prerequisites

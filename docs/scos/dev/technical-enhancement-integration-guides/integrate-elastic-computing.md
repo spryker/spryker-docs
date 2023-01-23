@@ -1,7 +1,7 @@
 ---
 title: Integrate elastic computing
 description: Learn how to integrate elastic computing.
-last_updated: May 16, 2022
+last_updated: Jan 23, 2023
 template: concept-topic-template
 ---
 

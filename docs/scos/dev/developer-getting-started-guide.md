@@ -89,34 +89,7 @@ When you use Docker and not the Development Virtual Machine (also called DevVM),
 * `config/install/development.yml`
 * `config_default-development_*.php`
 
-### Install Spryker with the Development Virtual Machine
-
-The Spryker Commerce OS offers a Virtual Machine, which includes all of the prerequisites needed to run Spryker. It provides a full-featured development environment, which helps you customize Spryker based on your project’s requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant and can be used to install Spryker on any operating system.
-
-{% info_block warningBox "DevVM is deprecated" %}
-
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](#install-spryker-with-docker).
-
-{% endinfo_block %}
-
-We offer a number of installation guides that may suit your needs:
-
-| OPERATION SYSTEMS | B2B SHOP OR B2C SHOP |
-| --- | --- |
-| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html) |
-| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html) |
-
-### Independent installation
-
-Alternatively, you can install Spryker without the Docker images. See [Installing Spryker without Docker](/docs/scos/dev/setup/installing-spryker-without-docker.html) for details.
-
-{% info_block warningBox %}
-
-Following your installation, make sure to check out [Post-Installation steps and additional info](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html) for tips on fine-tuning Spryker.
-
-{% endinfo_block %}
-
-### Adjust the `readme.md` file
+#### Adjust the `readme.md` file
 
 Once your project has been installed, you need to adjust the `readme.md` file in the following ways:
 
@@ -266,7 +239,6 @@ It is safe to disable cache indexing for the following files:
 Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following: 
 
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Configuring debugging in DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html)
 
 {% info_block infoBox %}
 
@@ -287,10 +259,3 @@ As a developer, the Spryker structure is the first thing you need to know to ext
 * The project directory
 * The OS directories-->
 
-<!---## Step 5: The Development Virtual Machine
-
-Get to know the parts of the Spryker Development Virtual Machine with which we ship the Spryker Commerce OS so that you have a pre-configured and ready-to-go stack.
-
-* What is the Spryker DevVM (Development Virtual Machine) and why do we need it?
-* Main Structure
-* Technology Stack: Linux distribution, PHP, Postgres, MySQL, ES, Redis, Queue, Jenkins-->

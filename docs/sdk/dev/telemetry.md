@@ -3,6 +3,7 @@ title: Telemetry
 description: Learn about the Spryker SDK telemetry configuration. 
 template: howto-guide-template
 ---
+# Telemetry
 
 All the configuration related to telemetry resides in `config/packages/telemetry.yaml`:
 
@@ -30,10 +31,10 @@ parameters:
 ```
 
 ## Events
-To implement custom events or extend the current ones, you must implement the following interfaces:
+To implement custom events or extend current ones, you must implement the following interfaces:
 
 `SprykerSdk\SdkContracts\Entity\Telemetry\TelemetryEventInterface` - generic event data.
-`SprykerSdk\SdkContracts\Entity\Telemetry\TelemetryEventPayloadInterface` - event-specific data.
+`SprykerSdk\SdkContracts\Entity\Telemetry\TelemetryEventPayloadInterface` - event specific data.
 `SprykerSdk\SdkContracts\Entity\Telemetry\TelemetryEventMetadataInterface` - event metadata.
 
 ## Event transport
@@ -42,13 +43,22 @@ This interface uses `SprykerSdk\Sdk\Core\Application\Dependency\Service\Telemetr
 To implement the custom sender, you need to implement this interface and make sure to throw `SprykerSdk\Sdk\Core\Application\Exception\TelemetryServerUnreachableException` when the destination server is unreachable.
 
 ## Task console event collecting
-Only task commands are collected. This behavior is implemented by listening to the generic console events. 
+Only task commands are collected. This behavior is implemented by listening to the generic console events.
 All the event listeners reside in `SprykerSdk\Sdk\Infrastructure\Event\Telemetry\TelemetryConsoleEventListener`.
 To filter the appropriate events, `\SprykerSdk\Sdk\Infrastructure\Event\Telemetry\TelemetryConsoleEventValidatorInterface` is used.
 
 ## Metadata
 Project settings `developer_email` and `developer_github_account` are used for user identification.
-The project `composer.json` is used to populate the project name. All this data is sent in the event metadata.
+The project `composer.json` is used to populate the project name. All this data is sent in the event's metadata.
 
 ## How to disable telemetry
 By default, telemetry is enabled. To disable it, set `TELEMETRY_ENABLED=false` in the `env` variable or update the `.env` file.
+
+## Using in CI
+To run SDK in a CI, it must be executed with the `SDK_CI_EXECUTION=1` env variable and with a `-n` (non-interactive) flag.
+Example:
+
+```shell
+SDK_CI_EXECUTION=1 spryker-sdk sdk:init:sdk -n
+```
+

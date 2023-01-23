@@ -17,7 +17,7 @@ related:
   - title: Edit slots in configurable bundle templates
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
   - title: Configurable Bundle feature overview
-    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/configurable-bundle-feature-overview.html
 ---
 
 To create a configurable bundle template, follow the steps:

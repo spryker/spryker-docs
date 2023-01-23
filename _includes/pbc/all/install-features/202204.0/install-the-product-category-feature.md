@@ -700,8 +700,8 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
-| Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
-| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html) |
-| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/catalog-category-management-feature-integration.html) |
+| Category Management Feature | ✓ | [Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Product Management Feature | ✓ | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html) |
+| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html) |
 | CMS + Category Management  | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html) |

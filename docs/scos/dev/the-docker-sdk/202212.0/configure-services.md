@@ -581,6 +581,38 @@ With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin(
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
 
+### Tracking deployments
+
+In order to notify New Relic about new deployments, please include console command `\SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole` into `\Pyz\Zed\Console\ConsoleDependencyProvider` as follows:
+```php
+namespace Pyz\Zed\Console;
+
+...
+use SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole;
+...
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+...
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+	    ....
+            new RecordDeploymentConsole(),
+        ];
+	....
+        return $commands;
+    }
+....
+}
+
+```
+
+From now on it will be also possible to use the record deployment functionality built-in in the console command, as follows:
+
+```bash
+vendor/bin/console newrelic:record-deployment
+```
 
 
 ## Webdriver

@@ -181,7 +181,7 @@ This migration is applied only once and is registered in the `propel_migration t
 
 {% info_block warningBox "Warning" %}
 
-Functionality is available only with [Spryker Core](/docs/scos/dev/feature-integration-guides/202304.0/spryker-core-feature-integration.html) `202304.0` or higher.
+Functionality is available only with Spryker Core feature `202304.0` or higher.
 
 {% endinfo_block %}
 

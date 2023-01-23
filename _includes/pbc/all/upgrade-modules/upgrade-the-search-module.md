@@ -128,13 +128,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 
 With this version of the Search module we have migrated to Elasticsearch 5.6. Please read the [Elasticsearch Breaking Changes in 5.0](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/breaking-changes-5.0.html) official documentation to adjust your custom implementation accordingly.
 
-Your development environment needs to be updated with Elasticsearch 5.6.x. In case you are using the Spryker DevVM, you can download the latest release that provides the necessary services.
-
-{% info_block warningBox "Warning" %}
-
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
-
-{% endinfo_block %}
+Your development environment needs to be updated with Elasticsearch 5.6.x.
 
 **Elasticsearch 5 related breaking change highlights**
 

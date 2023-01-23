@@ -1,5 +1,5 @@
 ---
-title: Modules and layers
+title: Modules and Application Layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
 last_updated: Jun 16, 2021
 template: concept-topic-template

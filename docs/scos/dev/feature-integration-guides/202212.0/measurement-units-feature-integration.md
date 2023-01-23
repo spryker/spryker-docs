@@ -21,8 +21,6 @@ redirect_from:
 related:
   - title: Glue API - Measurement Units feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-measurement-units-feature-integration.html
-  - title: Measurement Units feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/measurement-units-feature-walkthrough.html
 ---
 
 ## Install feature core

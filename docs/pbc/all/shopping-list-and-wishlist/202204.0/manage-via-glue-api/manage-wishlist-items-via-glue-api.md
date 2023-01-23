@@ -20,7 +20,7 @@ This endpoint allows you to add and remove items from wishlists.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Wishlist API Feature Integration](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/integrate-the-wishlist-glue-api.html)
-* [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-configuration-feature-integration.html)
+* [Glue API - Product Configuration feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html)
 
 ## Add an item to a wishlist
 

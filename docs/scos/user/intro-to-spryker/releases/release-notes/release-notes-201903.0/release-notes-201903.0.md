@@ -120,7 +120,7 @@ With this release, Spryker introduces a new code generator called Spryk. It help
 ### Product Relations
 The Spryker Glue REST API now includes endpoints for retrieving lists of related products. Endpoints are available for every type of relation working with the corresponding business logic.
 
-**Documentation**: [Retrieving Related Products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-related-products.html).
+**Documentation**: [Retrieving Related Products](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieve-related-products.html).
 
 ### Navigation
 Every navigation node and its structure are retrievable via the navigation API endpoint.
@@ -186,5 +186,3 @@ Out-of-the-box the following payment methods are included:
 In addition to the existing Arvato RSS integration, Spryker has added the AfterPay payment method of Arvato, further extending the overall payment integrations of the Spryker Ecosystem. This invoice payment method includes a risk check of the potential uncertainty behind specific purchases and lowers the overall risk of fraud; used by default for the companies.
 
 **Documentation**: [AfterPay](/docs/scos/user/technology-partners/201903.0/payment-partners/afterpay.html).
-
-Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

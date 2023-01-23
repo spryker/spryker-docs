@@ -20,7 +20,7 @@ composer require spryker/product-tax-sets-rest-api:"^2.0.0" --update-with-depend
 
 Make sure that the following module has been installed:
 
-| MODULE | EXPECTED DIRECTORY 
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | `ProductTaxSetsRestApi` | `vendor/spryker/product-tax-sets-rest-api` |  
 </div></section>

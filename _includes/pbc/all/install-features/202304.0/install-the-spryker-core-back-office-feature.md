@@ -59,8 +59,6 @@ Ensure that the following modules have been removed:
 composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-connector-extension
 ```
 
-{% endinfo_block %}
-
 ## 2) Set up transfer objects
 
 Generate transfers:

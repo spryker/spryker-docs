@@ -122,7 +122,7 @@ Debug mode is configured with the following:
 
 To sum up, the main points to keep the data secure are the following:
 
-* Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) in your team.
+* Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf) in your team.
 * Check the presence of security-related HTTP headers.
 * Check cookie settings.
 * Configure TLS.

@@ -33,10 +33,10 @@ Automated Emails regarding order status, shipping or transactions are just a few
 
 The following links provide additional information about the Mail module, plugins, and procedures:
 
-*  `MailTypePlugin` creation and  registration—[HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html)
+*  `MailTypeBuilderPlugin` creation and  registration—[HowTo - Create and Register a MailTypeBuilderPlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-type-builder-plugin.html)
 *  `MailProviderPlugin` general overview and the registration procedure—[HowTo - Create and Register a Mail Provider](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html)
 *  Tutorial that helps to understand the procedure for sending an email—[Tutorial - Sending a Mail](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html).
-
+* The following guide describes how to install and set up `SymfonyMailer` [Mailing and Notifications integration guide](docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)
 
 {% info_block warningBox "Developer guides" %}
 

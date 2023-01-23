@@ -10,7 +10,7 @@ redirect_from:
   - /v1/docs/en/discontinuing-a-product
 related:
   - title: Creating an Abstract Product
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - title: Creating and Managing Product Bundles
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-product-bundles.html
   - title: Creating Product Variants

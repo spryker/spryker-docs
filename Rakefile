@@ -44,6 +44,7 @@ commonOptions = {
     /www.phpunit.de\/[\.\w\-\/\?]+/,
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,
+    /php.net\/[\.\w\-\/\?]+/,
     /atom.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
@@ -107,7 +108,7 @@ task :check_mp_dev do
     /docs\/pbc\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/sdk\/.+/,
-    /docs\/marketplace\/\w+\/[\w-]+\/202212\.0\/.+/
+    /docs\/marketplace\/\w+\/[\w-]+\/202204\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -121,6 +122,7 @@ task :check_mp_user do
     /docs\/paas-plus\/.+/,
     /docs\/acp\/.+/,
     /docs\/marketplace\/dev\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/pbc\/.+/,
     /docs\/sdk\/.+/
   ]
@@ -145,7 +147,7 @@ task :check_scos_dev do
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202212\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -168,7 +170,7 @@ task :check_scos_user do
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202212\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -196,7 +198,8 @@ task :check_pbc do
     /docs\/cloud\/.+/,
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
-    /docs\/paas-plus\/.+/
+    /docs\/paas-plus\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/
 
   ]
   HTMLProofer.check_directory("./_site", options).run

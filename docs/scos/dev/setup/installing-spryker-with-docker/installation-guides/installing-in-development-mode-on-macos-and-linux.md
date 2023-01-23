@@ -20,6 +20,7 @@ redirect_from:
   - /2021080/docs/en/installation-guide-development-mode
   - /docs/installation-guide-development-mode
   - /docs/en/installation-guide-development-mode
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
 related: 
   - title: Database access credentials
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
@@ -49,13 +50,13 @@ To install Docker prerequisites, follow one of the guides:
     * Clone the B2C repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p2 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0 --single-branch ./b2b-demo-shop
     ```
 
 4. Depending on the repository you've cloned, navigate into the cloned folder:

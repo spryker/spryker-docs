@@ -583,7 +583,7 @@ With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin(
 
 ### Tracking deployments
 
-In order to notify New Relic about new deployments, please include console command `\SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole` into `\Pyz\Zed\Console\ConsoleDependencyProvider` as follows:
+To notify New Relic about new deployments, include the console command `\SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole` in `\Pyz\Zed\Console\ConsoleDependencyProvider` as follows:
 ```php
 namespace Pyz\Zed\Console;
 
@@ -608,12 +608,11 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```
 
-From now on it will be also possible to use the record deployment functionality built-in in the console command, as follows:
+From now on you can use the record deployment functionality built-in in the console command, as follows:
 
 ```bash
 vendor/bin/console newrelic:record-deployment
 ```
-
 
 ## Webdriver
 

@@ -4,7 +4,7 @@
 
 For BC reasons, the initial version of this module had dependencies to the `spryker/new-relic` and `spryker/new-relic-api` modules.
 
-In this version, we have removed this hard dependency. If you still want to use New Relic as a monitoring service you can use the `spryker-eco/new-relic` module by running the command:
+In this version, we have removed this hard dependency. If you still want to use New Relic as a monitoring service you can use the `spryker-eco/new-relic` module:
 
 ```bash
 composer require spryker-eco/new-relic
@@ -12,7 +12,7 @@ composer require spryker-eco/new-relic
 
 This will download the New Relic monitoring extension.
 
-To enable the New Relic monitoring extension, add it to  `MonitoringDependencyProvider` in your project:
+To enable the New Relic monitoring extension, add it to `MonitoringDependencyProvider` in your project:
 
 ```php
 <?php
@@ -35,7 +35,7 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 }
 ```
 
-Meanwhile, if you want to log a console command,  modify the `src/Pyz/Zed/Console/ConsoleDependencyProvider.php` file.
+Meanwhile, if you want to log a console command, modify the `src/Pyz/Zed/Console/ConsoleDependencyProvider.php` file:
 
 ```php
 protected function getConsoleCommands(Container $container)
@@ -74,7 +74,8 @@ $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY]
 	...
 ];
 ```
-In case you don't want to track separate applications, please use the following value and skip NEW_RELIC_APPLICATION_ID_ARRAY:
+
+If you don't want to track separate applications, use the following value and skip `NEW_RELIC_APPLICATION_ID_ARRAY`:
 ```php
 $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_DEPLOYMENT_API_URL] = 'https://api.newrelic.com/deployments.json';
 ```

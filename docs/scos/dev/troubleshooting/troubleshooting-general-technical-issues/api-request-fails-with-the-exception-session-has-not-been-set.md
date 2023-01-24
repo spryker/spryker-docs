@@ -1,7 +1,7 @@
 ---
 title: 'API request fails with the exception: Session has not been set'
 description: Learn how to resolve the issue with an exception that session has not been set.
-last_updated: Sep 6, 2022
+last_updated: Jan 24, 2023
 template: troubleshooting-guide-template
 ---
 

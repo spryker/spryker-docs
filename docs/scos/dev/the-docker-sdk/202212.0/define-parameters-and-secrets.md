@@ -65,4 +65,4 @@ Now you can launch the application with the defined parameters. To check all the
 
 ## Define parameter and secret values in SCCOS
 
-To define parameter and secret values in a Spryker Cloud Commerce OS environment, follow [Define parameters and secretes in SCCOS environments](/docs/cloud/dev/spryker-cloud-commerce-os/define-parameters-and-secrets-in-sccos-environments.html).
+To define parameter and secret values in a Spryker Cloud Commerce OS environment, follow [Define parameters and secretes in SCCOS environments](/docs/cloud/dev/spryker-cloud-commerce-os/define-parameter-and-secret-values-in-sccos-environments.html).

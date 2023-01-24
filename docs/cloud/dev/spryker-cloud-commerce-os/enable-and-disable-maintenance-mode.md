@@ -4,7 +4,7 @@ description: Learn how to deploy maintenance pages for Spryker applications.
 template: howto-guide-template
 ---
 
-Maintenance mode is used many cases, such as deploying a new application version or fixing an unexpected error. To automate the process, we created dedicated pipelines for enabling and disabling maintenance mode. The following sections describe how to run maintenance mode pipelines.
+Maintenance mode is used many cases, like deploying a new application version or fixing an unexpected error. To automate the process, we created dedicated pipelines for enabling and disabling maintenance mode. The following sections describe how to run maintenance mode pipelines.
 
 ## Prerequisites
 

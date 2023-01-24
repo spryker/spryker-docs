@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/naive-product-centric-approach  
   - /v1/docs/naive-product-centric-approach
   - /v1/docs/en/naive-product-centric-approach
+  - /docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/page.version/best-practices/data-driven-ranking.html

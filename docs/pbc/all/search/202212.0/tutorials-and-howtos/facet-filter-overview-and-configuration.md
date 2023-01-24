@@ -22,17 +22,18 @@ redirect_from:
   - /v2/docs/en/t-working-filter-facets
   - /v1/docs/t-working-filter-facets
   - /v1/docs/en/t-working-filter-facets
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 related:
   - title: Configure Elasticsearch
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-elasticsearch.html
   - title: Configure search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-search-for-multi-currency.html
   - title: Configure search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-search-featureshtml
   - title: Configure a search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+    link: docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-a-search-query.html
   - title: Expand search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/expand-search-data.html
 ---
 
 A search engine facilitates better navigation, allowing customers to quickly locate desired products.

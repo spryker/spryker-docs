@@ -22,13 +22,13 @@ redirect_from:
   - /v2/docs/en/ht-extend-inuse-core
   - /v1/docs/ht-extend-inuse-core
   - /v1/docs/en/ht-extend-inuse-core
-  - /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
-  - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
+  - /docs/scos/dev/back-end-development/extend-spryker/extending-a-core-module-that-is-used-by-another.html
+  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
 related:
   - title: Extend the core
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
+    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - title: Extend the Spryker Core functionality
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
+    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
 ---
 
 This document describes how to extend a core module that is used by another core module.

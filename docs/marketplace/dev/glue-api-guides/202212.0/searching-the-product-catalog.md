@@ -4,7 +4,7 @@ description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving autocomplete and search suggestions
-    link: docs/marketplace/dev/glue-api-guides/page.version/retrieving-autocomplete-and-search-suggestions.html
+    link: docs/pbc/all/search/page.version/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.

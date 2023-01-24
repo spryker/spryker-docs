@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/tutorial-integrating-any-search-engine
   - /v6/docs/tutorial-integrating-any-search-engine
   - /v6/docs/en/tutorial-integrating-any-search-engine
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-integrating-any-search-engine-into-a-project.html
 ---
 
 In a Spryker-based project, you can use any external search provider instead of the default Elasticsearch. This tutorial shows how to replace the default Elasticsearch with any other search engine.
@@ -22,7 +23,7 @@ Every search engine comes along with its own functionalities and search approach
 
 This tutorial shows how to integrate the FACT-Finder (PHP) search platform. A system integrator development team can use this guide to integrate other platforms, taking into account the differences between the target search platform.
 
-The integration is following the concept described in [Search Migration Concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
+The integration is following the concept described in [Search Migration Concept](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/search-migration-concept.html).
 
 ## Challenge solving highlights
 

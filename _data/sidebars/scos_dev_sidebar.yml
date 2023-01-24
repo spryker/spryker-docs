@@ -3616,20 +3616,20 @@ entries:
     - title: Extending Spryker
       nested:
       - title: Development strategies
-        url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html
+        url: /docs/scos/dev/back-end-development/extend-spryker/development-strategies.html
         nested:
         - title: Project modules
           nested:
           - title: Add a new module
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
+            url: /docs/scos/dev/back-end-development/extend-spryker/create-modules.html
         - title: Spryker OS module customization
           nested:
           - title: Extend a core module that is used by another
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+            url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
           - title: Extend the core
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
+            url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
           - title: Extend the Spryker Core functionality
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
+            url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
       - title: Create and configure Zed tables

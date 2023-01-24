@@ -7,7 +7,7 @@ related:
     link: docs/marketplace/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
-In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API lets you retrieve autocomplete suggestions for products, categories, and CMS pages. The feature lets developers predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-search-the-product-catalog.html), Glue API lets you retrieve autocomplete suggestions for products, categories, and CMS pages. The feature lets developers predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 

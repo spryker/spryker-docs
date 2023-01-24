@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/full-text-search  
   - /v1/docs/full-text-search
   - /v1/docs/en/full-text-search
+  - /docs/scos/dev/best-practices/search-best-practices/full-text-search.html#text-analysis
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/page.version/best-practices/data-driven-ranking.html
@@ -47,7 +48,7 @@ related:
 
 _Full-text search_ is a feature where a user enters arbitrary text into a search field and then gets documents relevant to that query. It is normally combined with faceted navigation. In the following example, a user searches for "hammer" and then further filters for hammer weights of 2000 grams and prices between 10€ and 50€:
 
-![Full-text search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/fulltext-search.png) 
+![Full-text search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/fulltext-search.png)
 
 Although some tweaking is necessary, Elasticsearch does a great job in running full-text queries fast (it's one of the most important features of the underlying Lucene engine). On the other hand, more work is required to get text relevance right and to make sure that the first returned query results are the ones that are most relevant for the user.
 
@@ -59,7 +60,7 @@ Analyzers are composed of a single tokenizer and zero or more token filters. A t
 
 The following picture shows a text analysis process that works well for tool-related text in German:
 
-![Text analysis](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/text-analysis.png) 
+![Text analysis](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/text-analysis.png)
 
 The exact steps and their order differ for different business models and applications (there is no "free lunch" here) so this requires some experimentation before getting it right.
 

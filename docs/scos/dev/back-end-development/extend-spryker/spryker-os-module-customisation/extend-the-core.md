@@ -24,13 +24,13 @@ redirect_from:
   - /v2/docs/en/core-extension
   - /v1/docs/core-extension
   - /v1/docs/en/core-extension
-  - /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
-  - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+  - /docs/scos/dev/back-end-development/extend-spryker/extending-the-core.html
+  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extending-the-core.html
 related:
   - title: Extend the Spryker Core functionality
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
+    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
   - title: Extend a core module that is used by another
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
 ---
 
 We offer several ways like plugins to hook into the core's behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method that is deep in the core.

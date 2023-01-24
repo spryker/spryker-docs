@@ -53,24 +53,25 @@ redirect_from:
   - /v2/docs/search-40
   - /v2/docs/en/search-40
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
 related:
   - title: Configure search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-search-for-multi-currency.html
   - title: Configure the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-search-featureshtml
   - title: Configure the search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+    link: docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-a-search-query.html
   - title: Expand search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/expand-search-data.html
   - title: Facet filter overview and configuration
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
 Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you get to store in it.
 
 Because the used data structure is static, you need to define it in advance. The definitions of the indexes and mappings are written in JSON. You can find it in the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html).
 
-The content of the configuration files must follow the conventions listed in the [Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) document of the official Elasticsearch documentation. 
+The content of the configuration files must follow the conventions listed in the [Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) document of the official Elasticsearch documentation.
 
 {% info_block infoBox "Note" %}
 
@@ -89,7 +90,7 @@ To disable the default mapping installation, override the core configuration def
 Each configured store has its index, which is installed automatically. An index name consists of the following parts:
 * An optional prefix, which is defined by the `SearchElasticsearchConstants::INDEX_PREFIX` configuration option.
 * A store name.
-* A configuration file name. 
+* A configuration file name.
 
 Index name components are delimited with an underscore—for example, `spryker_de_page`.
 

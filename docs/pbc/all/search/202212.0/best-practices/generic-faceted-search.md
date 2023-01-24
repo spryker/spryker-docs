@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/generic-faceted-search  
   - /v1/docs/generic-faceted-search
   - /v1/docs/en/generic-faceted-search
+  - /docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/page.version/best-practices/data-driven-ranking.html
@@ -49,7 +50,7 @@ Faceted search—sometimes also called faceted navigation—lets users navigate 
 
 The main idea behind faceted search is to present the attributes of the documents of the previous search result as filters, which can be used by the user to narrow down search results. In the following example, a user clicked through the category tree to the "Hammer" category and then further filtered the results for documents with a hammer weight of 2000 grams and in a price range of 10€ to 50€. 19 documents were found, and the filter bar on the left lists those attributes that are contained in the search result along with a count of how many documents have the attribute (facet counts):
 
-![Faceted search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Generic+Faceted+Search/faceted-search.png) 
+![Faceted search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Generic+Faceted+Search/faceted-search.png)
 
 To support faceted search, Elasticsearch offers a simple but powerful concept of aggregations. One of the nice features of aggregations is that they can be nested. In other words, you can define top-level aggregations that create "buckets" of documents and other aggregations that are executed inside those buckets on a subset of documents. The concept of aggregations is in general similar to the SQL `GROUP_BY` command (but much more powerful). Nested aggregations are analogous to SQL grouping but with multiple column names in the GROUP BY part of the query.
 
@@ -252,6 +253,6 @@ The aggregation of numeric facets uses the keyword "`stats`" instead of "`terms`
 }
 ```
 
-Sometimes e-commerce websites support specific facet behavior that let users select multiple values of the same facet on the frontend—for example, using a checkbox. To see how to implement a query that supports this feature while using described facet document structure, see [Elasticsearch - generic facets structure - calculating aggregations combined with filters](http://stackoverflow.com/questions/41369749) on Stack Overflow. 
+Sometimes e-commerce websites support specific facet behavior that let users select multiple values of the same facet on the frontend—for example, using a checkbox. To see how to implement a query that supports this feature while using described facet document structure, see [Elasticsearch - generic facets structure - calculating aggregations combined with filters](http://stackoverflow.com/questions/41369749) on Stack Overflow.
 
 With this approach to faceted navigation, you can render search result pages with a single Elasticsearch query, and you don't need to know the list of available facets at query time. The additional effort in document preparation and query building immediately pays off because the solution automatically scales to thousands of facets.

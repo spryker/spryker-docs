@@ -24,7 +24,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-product.html
 related:
   - title: Extend the core
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
+    link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - title: About the Persistence layer
     link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
   - title: Using translations

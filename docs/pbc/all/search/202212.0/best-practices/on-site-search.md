@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/search-design-patterns  
   - /v1/docs/search-design-patterns
   - /v1/docs/en/search-design-patterns
+  - /docs/scos/dev/best-practices/search-best-practices/on-site-search.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/page.version/best-practices/data-driven-ranking.html

@@ -13,20 +13,20 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-search-preferences.html
 related:
   - title: Edit search preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-preferences/edit-search-preferences.html
+    link: docs/pbc/all/search/page.version/manage-in-the-back-office/edit-search-preferences.html
   - title: Managing Category Filters
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
   - title: Managing Filter Preferences
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/filter-preferences/define-filter-preferences.html
   - title: Search feature overview
-    link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
+    link: docs/pbc/all/search/page.version/search.html
 ---
 
 This topic describes how to add product attributes to search and define search preferences.
 
 ## Prerequisites
 
-1. If you are new to the **Search preferences** section, you might want to start with [Best practices: Promote products with search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html).
+1. If you are new to the **Search preferences** section, you might want to start with [Best practices: Promote products with search preferences](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html).
 
 2. [Create a product attribute](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html) for the search preference that you are going to create.
 

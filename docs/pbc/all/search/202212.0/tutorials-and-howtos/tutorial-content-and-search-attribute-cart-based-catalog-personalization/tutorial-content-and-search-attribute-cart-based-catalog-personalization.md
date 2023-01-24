@@ -20,9 +20,10 @@ redirect_from:
   - /v2/docs/en/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/en/t-content-search-attribute-cart-based-catalog-personalization
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-attribute-cart-based-catalog-personalization-spryker-commerce-os/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
 related:
   - title: Search feature overview
-    link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
+    link: docs/pbc/all/search/page.version/search
 ---
 
 This tutorial shows how to boost and personalize the catalog using the color attribute of a product when it is added to the cart.
@@ -247,7 +248,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 </details>
 
-1. Get the `CartClient` dependency using `CatalogFactory`. 
+1. Get the `CartClient` dependency using `CatalogFactory`.
 2. Extend the `CatalogFactory` of the catalog client in `src/Pyz/Client/Catalog` and get `CartClient`.
 
 ```php

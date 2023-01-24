@@ -23,22 +23,23 @@ redirect_from:
   - /v1/docs/configuring-the-search-features
   - /v1/docs/en/configuring-the-search-features
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
 related:
   - title: Configure Elasticsearch
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-elasticsearch
   - title: Configure search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-search-for-multi-currency.html
   - title: Configure a search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+    link: docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-a-search-query.html
   - title: Expand search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/expand-search-data.html
   - title: Facet filter overview and configuration
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
 This document explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the `Search` module.
 
-This configuration is only relevant if you enable the three query expanders and the result formatters. For details, see [Configure a search query](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html) 
+This configuration is only relevant if you enable the three query expanders and the result formatters. For details, see [Configure a search query](/docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-a-search-query.html)
 
 To build configuration for the search features, provide implementation for `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface`:
 

@@ -33,18 +33,19 @@ redirect_from:
   - /v2/docs/search-query
   - /v2/docs/en/search-query
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-  - 
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+  -
 related:
   - title: Configure Elasticsearch
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+    link: docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-elasticsearch.html
   - title: Configure search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-search-for-multi-currency.html
   - title: Configure search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/configure-search-featureshtml
   - title: Expand search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/expand-search-data.html
   - title: Facet filter overview and configuration
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
+    link: docs/pbc/all/search/page.version/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
 Once you have all the necessary data in Elasticsearch, you can display it on Yves.
@@ -67,7 +68,7 @@ The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuer
 
 {% endinfo_block %}
 
-Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that is later used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
+Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that is later used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/search-migration-concept.html).
 
 
 <details>
@@ -249,7 +250,7 @@ To display only active records in search results, use `\Spryker\Client\SearchEla
 
 #### Filter by "is active" within a given date range
 
-To display only records which are active within a given date range, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveInDateRangeQueryExpanderPlugin`. Add this plugin to expander plugin stack—for example, `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`. 
+To display only records which are active within a given date range, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveInDateRangeQueryExpanderPlugin`. Add this plugin to expander plugin stack—for example, `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`.
 
 You also must export `active-from` and `active-to` by your search collector. The value is any valid Elasticsearch Date datatype value. For more information, see [Elasticsearch reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/date.html#date).
 
@@ -257,7 +258,7 @@ You also must export `active-from` and `active-to` by your search collector. The
 
 The *Faceted navigation and filtering* feature lets you refilter search results by specific criteria. The filters are commonly displayed on the left side of the catalog page.
 
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](/docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-search-featureshtml). Use this plugin to get the necessary data for the faceted navigation of your search results.
 
 {% info_block warningBox "Note" %}
 
@@ -314,7 +315,7 @@ Autocompletion adds the functionality to predict the rest of the word or search 
 
 {% info_block infoBox "Autocompletion preparations" %}
 
-To enable autocompletion when the user types, add some analyzers to the full-text search fields. Without this, the standard analyzer of Elasticsearch only provides suggestions after each completed word. The solution to providing mid-word suggestions is to add an [edge ngram filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-edgengram-tokenfilter.html) to the fields in which you are searching. To add this behavior to the `page` index, add the following settings to your `src/Pyz/Shared/Search/Schema/page.json` file. 
+To enable autocompletion when the user types, add some analyzers to the full-text search fields. Without this, the standard analyzer of Elasticsearch only provides suggestions after each completed word. The solution to providing mid-word suggestions is to add an [edge ngram filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-edgengram-tokenfilter.html) to the fields in which you are searching. To add this behavior to the `page` index, add the following settings to your `src/Pyz/Shared/Search/Schema/page.json` file.
 
 Keep in mind that for existing indexes, changing the analyzers is not possible, so you need to set it up from the ground.
 

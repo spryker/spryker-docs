@@ -1437,6 +1437,33 @@ entries:
                 url: /docs/pbc/all/search/manage-in-the-back-office/define-search-preferences.html
               - title: Edit search preferences
                 url: /docs/pbc/all/search/manage-in-the-back-office/edit-search-preferences.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve autocomplete and search suggestions
+                url: /docs/pbc/all/search/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
+              - title: Search the product catalog
+                url: /docs/pbc/all/search/manage-using-glue-api/glue-api-search-the-product-catalog.html
+          - title: Tutorials and Howtos
+            nested:
+              - title: "Tutorial: Content and search - attribute-cart-based catalog personalization"
+                url: /docs/pbc/all/search/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
+                nested:
+                  - title: "Tutorial: Boost cart-based search"
+                    url: /docs/pbc/all/search/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-boost-cart-based-search.html
+              - title: Configure a search query
+                url: /docs/pbc/all/search/tutorials-and-howtos/configure-a-search-query.html
+              - title: Configure Elasticsearch
+                url: /docs/pbc/all/search/tutorials-and-howtos/configure-elasticsearch.html
+              - title: Configure search features
+                url: /docs/pbc/all/search/tutorials-and-howtos/configure-search-features.html
+              - title: Configure search for multi-currency
+                url: /docs/pbc/all/search/tutorials-and-howtos/configure-search-for-multi-currency.html
+              - title: Expand search data
+                url: /docs/pbc/all/search/tutorials-and-howtos/expand-search-data.html
+              - title: Facet filter overview and configuration
+                url: /docs/pbc/all/search/tutorials-and-howtos/facet-filter-overview-and-configuration.html
+              - title: "Tutorial: Integrate any search engine into a project"
+                url: /docs/pbc/all/search/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html                                                                                                
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

@@ -151,7 +151,7 @@ docker/sdk testing
   2. Trigger all *publish* events:
 
   ```bash
-  console publish:trigger-events
+  vendor/bin/console publish:trigger-events
   ```
 
   3. Run the *queue worker*:

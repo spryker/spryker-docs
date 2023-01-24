@@ -1077,7 +1077,7 @@ entries:
                   - title: ProductSetPageSearch
                     url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html
                   - title: Search
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-search-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html
               - title: Search migration concept
                 url: /docs/pbc/all/search/install-and-upgrade/search-migration-concept.html
               - title: Upgrade search initialization

@@ -18,4 +18,4 @@ To learn more about the feature and to find out how end users use it, see [Searc
 
 | GLUE API GUIDES |
 |---|
-| [Retrieving autocomplete and search suggestions](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-autocomplete-and-search-suggestions.html) |
+| [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) |

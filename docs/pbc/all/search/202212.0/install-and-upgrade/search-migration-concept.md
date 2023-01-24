@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/en/search-migration-concept
   - /v4/docs/search-migration-concept
   - /v4/docs/en/search-migration-concept
+  - /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
 ---
 
 Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider.  It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker’s search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
@@ -194,7 +195,7 @@ The Search migration effort implies an upgrade of the following modules:
 * [Console](/docs/scos/dev/module-migration-guides/migration-guide-console.html)
 * [CmsPageSearch](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html#upgrading-from-version-21-to-version-22)
 * [Catalog](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html#upgrading-from-version-55-to-version-56)
-* [ProductPageSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)
+* [ProductPageSearch](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html#upgrading-from-version-311-to-version-312)
 * [ProductReviewSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html#upgrading-from-version-13-to-version-14)
 * [ProductLabelSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html#upgrading-from-version-12-to-version-13)
 * [ProductSetPageSearch](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html#upgrading-from-version-13-to-version-14)

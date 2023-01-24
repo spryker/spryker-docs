@@ -2,6 +2,8 @@
 title: Edit search preferences
 description: Learn how to edit search preferences in the Back Office
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202212.0/merchandising/search-preferences/edit-search-preferences.html
 related:
   - title: Define search preferences
     link: docs/pbc/all/search/page.version/manage-in-the-back-office/define-search-preferences.html

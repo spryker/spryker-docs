@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-product-search-attributecsv
   - /docs/file-details-product-search-attributecsv
   - /docs/en/file-details-product-search-attributecsv
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html
 ---
 
 This document describes the `product_search_attribute.csv` file to configure Product Search Attribute information in your Spryker Demo Shop.

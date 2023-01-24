@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/search-widget-for-concrete-products-integration
   - /docs/search-widget-for-concrete-products-integration
   - /docs/en/search-widget-for-concrete-products-integration
+  - /docs/scos/dev/feature-integration-guides/202212.0/search-widget-for-concrete-products-feature-integration.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-search-widget-for-concrete-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-search-widget-for-concrete-products-feature.md -->

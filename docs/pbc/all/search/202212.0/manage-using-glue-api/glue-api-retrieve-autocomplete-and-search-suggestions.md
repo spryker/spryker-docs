@@ -11,6 +11,7 @@ redirect_from:
   - /docs/retrieving-autocomplete-and-search-suggestions
   - /docs/en/retrieving-autocomplete-and-search-suggestions
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-autocomplete-and-search-suggestions.html
+  - /docs/scos/dev/glue-api-guides/202212.0/retrieving-autocomplete-and-search-suggestions.html
 related:
   - title: Searching the product catalog
     link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
@@ -22,7 +23,7 @@ In your development, this resource can help you to enhance the customer experien
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-catalog-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
 
 ## Retrieve a search suggestion
 

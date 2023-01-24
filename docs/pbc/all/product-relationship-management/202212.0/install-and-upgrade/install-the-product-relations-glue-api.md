@@ -1,5 +1,5 @@
 ---
-title: Glue API - Product Relations feature integration
+title: Install the Product Relations Glue API
 description: This guide will navigate you through the process of installing and configuring the Product Relations feature in Spryker OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -14,11 +14,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-relations-feature-integration.html
 related:
   - title: Product Relations feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-relations-feature-integration.html
-  - title: Product Relations feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
+    link: docs/pbc/all/product-relationship-management/site.version/install-and-upgrade/install-the-product-relations-feature.html
   - title: Retrieving related products
-    link: docs/scos/dev/glue-api-guides/page.version/retrieve-related-products.html
+    link: docs/pbc/all/product-relationship-management/page.version/glue-api-retrieve-related-products.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-product-relations-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-product-relations-glue-api.md -->

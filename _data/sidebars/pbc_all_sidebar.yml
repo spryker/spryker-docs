@@ -1388,6 +1388,43 @@ entries:
             url: /docs/pbc/all/return-management/build-a-return-management-process-best-practices.html
           - title: "HowTo: Set number of days for a return policy"
             url: /docs/pbc/all/return-management/howto-set-number-of-days-for-a-return-policy.html
+      - title: Search
+        url: /docs/pbc/all/search/search.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install feature and Glue API
+                nested:
+                  - title: Install the Catalog + Category Management feature
+                    url: /docs/pbc/all/search/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html
+                  - title: Install the Catalog + Order Management feature
+                    url: /docs/pbc/all/search/install-and-upgrade/install-features-and-glue-api/install-the-catalog-order-management-feature.html
+                  - title: Install the Search Widget for Concrete Products feature
+                    url: /docs/pbc/all/search/install-and-upgrade/install-features-and-glue-api/install-the-search-widget-for-concrete-products.html
+                  - title: Install the Catalog Glue API
+                    url: /docs/pbc/all/search/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Catalog
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: CatalogSearchRestApi
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: CategoryPageSearch
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: CmsPageSearch
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: ProductLabelSearch
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: ProductListSearch
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: ProductPageSearch
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: ProductReviewSearch
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: ProductSetPageSearch
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: Search
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

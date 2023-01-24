@@ -28,7 +28,7 @@ The order in which the files are imported is **very strict**. For this reason, t
 2. [Discount Store](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount-store.csv.html)
 3. [Discount Voucher](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount-voucher.csv.html)
 4. [Product Group](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html)
-5. [Product Relation](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-relation.csv.html)
+5. [Product Relation](/docs/pbc/all/product-relationship-management/{{page.version}}/file-details-product-relation.csv.html)
 6. [Product Review](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)
 7. [Product Label](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html)
 8. [Product Set](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)

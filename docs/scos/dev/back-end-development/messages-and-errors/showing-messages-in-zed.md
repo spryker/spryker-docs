@@ -1,6 +1,6 @@
 ---
 title: Showing messages in Zed
-description: This article describes how to show a message in the Zed GUI.
+description: This document describes how to show a message in the Zed GUI.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/flash-messenger
@@ -29,10 +29,9 @@ related:
     link: docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
 ---
 
-This article describes how to show a message in the Zed GUI.
+This document describes how to show a message in the Zed GUI.
 
-In the controller you can use these shortcut methods to show a user message in the GUI. The messages will be translated later when they are rendered.
-
+In the controller, you can use these shortcut methods to show a user message in the GUI. The messages are translated later when they are rendered.
 
 ```php
 <?php
@@ -49,10 +48,35 @@ class IndexController extends AbstractController
 }
 ```
 
-## Show Message from Zed’s Business Layer
-To show a message from a model, declare this dependency in the module’s dependency provider:
+## Show message from Zed's Business layer
+To show a message from a model, follow these steps:
+1. Declare this dependency in the module's dependency provider:
 
-Now, you can access it from the business factory and inject it to your model:
+```php
+class MyBundleDependencyProvider extends AbstractBundleDependencyProvider
+{
+    /**
+     * @var string
+     */
+    public const FACADE_MESSENGER = 'messages';
+    
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    public function provideBusinessLayerDependencies(Container $container)
+    {
+        $container->set(static::FACADE_MESSENGER, function (Container $container) {
+            return $container->getLocator()->messenger()->facade();
+        });
+
+        return $container;
+    }
+}
+```
+
+2. You can access it from the business factory and inject it into your model:
 
 ```php
 <?php
@@ -67,12 +91,12 @@ class MyBundleBusinessFactory extends AbstractBusinessFactory
  
     protected function getFlashMessengerFacade()
     {
-        return $this->getProvidedDependency(GlossaryDependencyProvider::FACADE_FLASH_MESSENGER);
+        return $this->getProvidedDependency(MyBundleDependencyProvider::FACADE_MESSENGER);
     }
 }
 ```
 
-And finally, use it in your model:
+3. Use it in your model:
 
 ```php
 <?php

@@ -41,17 +41,17 @@ related:
     link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
-*SCSS linter* allows you to find and fix code style mistakes. It helps a team to follow the same standards and make code more readable.
+*SCSS linter* allows you to find and fix code style mistakes. It helps a team follow the same standards and make code more readable.
 
-To analyze and fix the existing SCSS files, [Stylelint](https://stylelint.io/) is used.
+To analyze and fix existing SCSS files, [Stylelint](https://stylelint.io/) is used.
 
 ## Installation
 
-For details on how to install the SCSS linter for your project, see the [SCSS linter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html).
+For details about how to install the SCSS Linter for your project, see the [SCSS linter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html).
 
-## Using SCSS linter
+## Using SCSS Linter
 
-To execute the SCSS linter, do the following:
+To execute the SCSS Linter, do the following:
 
 1. Install the Node modules:
 
@@ -59,7 +59,7 @@ To execute the SCSS linter, do the following:
 npm ci
 ```
 
-2. Execute the SCSS linter in:
+2. Execute the SCSS Linter in:
 
 * validation mode:
 
@@ -73,37 +73,37 @@ npm run yves:stylelint
 npm run yves:stylelint:fix
 ```
 
-## SCSS linter config
+## SCSS Linter config
 
 The config for Stylelint resides in the [@spryker/frontend-config.stylelint](https://www.npmjs.com/package/@spryker/frontend-config.stylelint) module.
 
-To redefine the path for the config file, adjust `/frontend/libs/stylelint.js`  and use other rules for the SCSS linter.
+To redefine the path for the config file, adjust `/frontend/libs/stylelint.js`  and use other rules for the SCSS Linter.
 
 ```js
 configFile: `${globalSettings.context}/node_modules/@spryker/frontend-config.stylelint/.stylelintrc.json`,
 ```
 
-Also, the SCSS linter uses the ignore file `/.stylelintignore` that includes directories and files where the SCSS linter shouldn’t be executed.
+The SCSS Linter also uses the ignore file `/.stylelintignore` that includes directories and files where the SCSS linter shouldn’t be executed.
 
 {% info_block infoBox %}
 
-SCSS linter rules related to formatting aren’t included in the [stylelint config](https://www.npmjs.com/package/@spryker/frontend-config.stylelint) to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
+SCSS Linter rules related to formatting aren’t included in the [stylelint config](https://www.npmjs.com/package/@spryker/frontend-config.stylelint) to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
 
 {% endinfo_block %}
 
 ## CI checks and the pre-commit hook
 
-The SCSS linter is integrated into:
+The SCSS Linter is integrated into:
 
 * Pre-commit hooks
-The function that executes the SCSS linter before the commit resides in `/.githook`:
+The function that executes the SCSS Linter before the commit resides in `/.githook`:
 
 ```
 - GitHook\Command\FileCommand\PreCommit\StyleLintCommand
 ```
 
 * Travis
-Command to run the SCSS linter is integrated into `.travis.yml`
+Command to run the SCSS Linter is integrated into `.travis.yml`
 
 ```
 - node ./frontend/libs/stylelint
@@ -111,12 +111,12 @@ Command to run the SCSS linter is integrated into `.travis.yml`
 
 {% info_block warningBox "Important" %}
 
-If you commit without the pre-commit hooks, you should run the SCSS linter manually to avoid issues with Travis.
+If you commit without the pre-commit hooks, you should run the SCSS Linter manually to avoid issues with Travis.
 
 {% endinfo_block %}
 
 {% info_block infoBox %}
 
-Pre-commit hooks are integrated only in the Shop Suite and are not integrated in B2B and B2C Demo Shops.
+Pre-commit hooks are integrated only into the Shop Suite and are not integrated in the B2B and B2C Demo Shops.
 
 {% endinfo_block %}

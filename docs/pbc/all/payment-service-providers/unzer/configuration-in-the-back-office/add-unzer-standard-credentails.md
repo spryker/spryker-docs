@@ -3,6 +3,8 @@ title: Add Unzer standard credentials
 last_updated: Aug 11, 2022
 description: This document shows how to add Unzer standard credentials
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
 ---
 
 This document shows how to add Unzer standard credentials.

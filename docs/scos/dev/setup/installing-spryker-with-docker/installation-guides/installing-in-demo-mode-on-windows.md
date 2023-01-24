@@ -37,13 +37,13 @@ Follow the steps to install Spryker in Demo Mode:
     * Clone the B2C repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p2 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0 --single-branch ./b2b-demo-shop
     ```
 
 5. Depending on the cloned repository, navigate into the cloned folder:
@@ -84,22 +84,16 @@ sudo usermod -aG docker $USER
 docker/sdk bootstrap
 ```
 
-{% info_block warningBox "Bootstrap" %}
+{% info_block infoBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after the following takes place:
 
-* Docker SDK version update;
+* Docker SDK version update.
 * Deploy file update.
 
 {% endinfo_block %}
 
-9. Once the job finishes, build and start the instance:
-
-```shell
-docker/sdk up
-```
-
-10. Update the `hosts` file:
+9. Update the `hosts` file:
     1. Open the Start menu.
     2. In the search field, enter `Notepad`.
     3. Right-click *Notepad* and select **Run as administrator**.
@@ -111,7 +105,10 @@ docker/sdk up
     8. Add the following line into the file:
 
     ```text
-    127.0.0.1   backend-api.at.spryker.local backend-api.de.spryker.local backend-api.us.spryker.local backend-gateway.at.spryker.local backend-gateway.de.spryker.local backend-gateway.us.spryker.local backoffice.at.spryker.local backoffice.de.spryker.local backoffice.us.spryker.local glue.at.spryker.local glue.de.spryker.local glue.us.spryker.local mail.spryker.local queue.spryker.local scheduler.spryker.local spryker.local swagger.spryker.local yves.at.spryker.local yves.de.spryker.local yves.us.spryker.local
+    127.0.0.1   spryker.local mail.spryker.local queue.spryker.local scheduler.spryker.local swagger.spryker.local
+    127.0.0.1   backend-api.at.spryker.local backend-api.de.spryker.local backend-api.us.spryker.local backend-gateway.at.spryker.local backend-gateway.de.spryker.local backend-gateway.us.spryker.local
+    127.0.0.1   backoffice.at.spryker.local backoffice.de.spryker.local backoffice.us.spryker.local
+    127.0.0.1   glue.at.spryker.local glue.de.spryker.local glue.us.spryker.local yves.at.spryker.local yves.de.spryker.local yves.us.spryker.local
     ```
 
     {% info_block infoBox %}
@@ -120,11 +117,16 @@ docker/sdk up
 
     {% endinfo_block %}
 
-    9. Select **File** > **Save**.
+    9. Select **File > Save**.
     10. Close the file.
 
+10. Once the job finishes, build and start the instance:
 
-{% info_block warningBox %}
+```shell
+docker/sdk up
+```
+
+{% info_block infoBox %}
 
 Depending on the hardware performance, the first project launch can take up to 20 minutes.
 

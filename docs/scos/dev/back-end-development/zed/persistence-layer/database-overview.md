@@ -1,6 +1,6 @@
 ---
 title: Database overview
-description: In this article, you will get an overview of the database in the ORM directory.
+description: This document overviews the database in the ORM directory.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-overview
@@ -40,15 +40,15 @@ related:
 
 ## ORM Directory
 
-The ORM directory contains two folders: Propel and Zed.
+The `Orm` directory contains two folders: `Propel` and `Zed`.
 
-The **src/Orm/Propel** is for:
+The `src/Orm/Propel` folder is for the following:
 
-* Configuration in Propel format (generated `propel.json` - don’t touch).
-* Copy of merged schema files (don’t touch).
-* Migration files (can be on gitignore or can be committed, the decision is made on the project level. We usually recommend to use gitignore, however Propel documentation says: *"On a project using version control, it is important to commit the migration classes to the code repository. That way, other developers checking out the project will just have to run the same migrations to get a database in a similar state".*
+* Configuration in Propel format (generated `propel.json`—don't touch it).
+* Copy of merged schema files (don't touch).
+* Migration files (can be in `.gitignore` or can be committed; the decision is made on the project level. We recommend using `.gitignore`; however Propel documentation says that "On a project using version control, it is important to commit the migration classes to the code repository. That way, other developers checking out the project just have to run the same migrations to get a database in a similar state".
 
-**src/Orm/Zed** is for:
+The `src/Orm/Zed` folder is for the following:
 
-* Entities and query-objects which can be adopted in projects. They inherit from the same core-level files. This way we can release methods like `preSave()` as well as allow to adopt them in project-level.
-* There are also Base and Map files that are propel-internals (don’t touch).
+* Entities and the query are objects which can be adopted in projects. They inherit from the same core-level files. This way, we can release methods like `preSave()` as well as allow adopting them on the project level.
+* There are also Base and Map files that are propel-internals (don't touch them).

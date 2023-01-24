@@ -13,8 +13,8 @@ This endpoint allows managing marketplace shopping list items.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
+* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-shopping-lists-feature-integration.html)
 
 ## Add items to a shopping list
@@ -33,7 +33,7 @@ To add items to a shopping list, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
@@ -121,7 +121,7 @@ To add items to a shopping list, send the request:
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | ✓ | Quantity of the product to add. |
-| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
+| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 | productOfferReference | String |   | Unique identifier of the product offer. |
 
 ### Response
@@ -270,7 +270,7 @@ To add items to a shopping list, send the request:
 | productOfferReference | String | Unique identifier of the product offer.   |
 | merchantReference | String | Unique identifier of the merchant.   |
 
-For the attributes of the included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+For the attributes of the included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
 ## Change item quantity in a shopping list
 
@@ -283,13 +283,13 @@ To change the item quantity in a shopping list, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to update item quantity in. |
-| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to change the quantity of. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
+| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to change the quantity of. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-shopping-lists-via-glue-api.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -369,7 +369,7 @@ To change the item quantity in a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- |--- |
-| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
+| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 | quantity | Integer | ✓ | New quantity of the product. |
 
 ### Response
@@ -505,7 +505,7 @@ To change the item quantity in a shopping list, send the request:
 </details>
 
 For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
-For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+For the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
 ## Remove an item from a shopping list
 
@@ -518,13 +518,13 @@ To remove an item from a shopping list, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to delete an item from. |
-| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
+| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-shopping-lists-via-glue-api.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample:
 
@@ -540,7 +540,7 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
-| 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
+| 400 | Provided access token is not an [access token of a сompany user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html). |
 | 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID is not specified. |
 | 1502 | Shopping list item is not specified. |

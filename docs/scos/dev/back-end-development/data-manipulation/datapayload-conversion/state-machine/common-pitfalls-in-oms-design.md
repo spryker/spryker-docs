@@ -1,6 +1,6 @@
 ---
 title: Common pitfalls in OMS design
-description: This article explains the common pitfalls in OMS design in the Spryker Commerce OS.
+description: This document explains the common pitfalls in OMS design in the Spryker Commerce OS.
 last_updated: Jan 13, 2022
 template: howto-guide-template
 related:
@@ -10,8 +10,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
   - title: State machine console commands
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
-  - title: Creating an Order Management System - Spryker Commerce OS
-    link: docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
+  - title: Create an Order Management System - Spryker Commerce OS
+    link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---
 
 
@@ -19,7 +19,7 @@ Implementing OMS processes can be challenging when they are complex, or requirem
 
 In some cases, OMS works incorrectly. In most cases, a *correct* flow can be run successfully, but the first run of a wrong path might reveal a problem. In other cases, there might be known limitations that can lead to incorrect transitions. There can also be cases that are valid but should be rewritten into a better readable process. If you discover more edge cases, please send those to our [support team](https://spryker.force.com/support/s/).
 
-This article describes the most common issues with OMS design and how you can fix them.
+This document describes the most common issues with OMS design and how you can fix them.
 
 ## More than one onEnter event from one state
 
@@ -27,7 +27,7 @@ This article describes the most common issues with OMS design and how you can fi
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1.png)
 
-**Reason**: This behavior will never be supported because there should always be only one state after an event execution.
+**Reason**: This behavior is not supported because there must always be only one state after an event execution.
 
 **Solution**: If you have different commands, you can chain those:
 
@@ -66,7 +66,7 @@ In the OMS drawing, you will see the last *read* event definition, but during th
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-2.png)
 
-**Reason**: Function `OmsConfig:getInitialStatus` has only one return value, so it’s impossible to start from another “initial” state.
+**Reason**: Function `OmsConfig:getInitialStatus` has only one return value, so it's impossible to start from another "initial" state.
 
 **Solution**: In most cases, this is a mistake, and the transition between some states is missing. Adding transition makes the process correct. For example, adding transition `payment done` → `shipped` with the `ship` event brings the whole process to a correct state.
 
@@ -74,7 +74,7 @@ In the OMS drawing, you will see the last *read* event definition, but during th
 
 {% info_block infoBox "Info" %}
 
-It’s possible to change order items' state via a manual call, and this way, use the states without inbound transitions. On the one hand, this helps not to overwhelm the process with 10+ transitions to a cancellation process. On the other hand, though, this makes the process definition incomplete and, thus, this approach is not recommended.
+You can change order items' states through a manual call, and this way, use the states without inbound transitions. On the one hand, this helps not to overwhelm the process with 10+ transitions to a cancellation process. On the other hand, though, this makes the process definition incomplete and, thus, this approach is not recommended.
 
 {% endinfo_block %}
 
@@ -99,7 +99,7 @@ Process/Process.php:198)
 
 ## More than one transition with the same events and without condition
 
-**Issue**: It’s impossible to guess which transition is expected, so the first one read is executed.
+**Issue**: It's impossible to guess which transition is expected, so the first one read is executed.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-5.png)
 
@@ -158,15 +158,15 @@ The unused state could have a missing transition.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-10.png)
 
-Event will not appear as manual unless the previous command execution fails with an exception.
+Event does not appear as manual unless the previous command execution fails with an exception.
 
-**Solution:** Create separate transitions: one with `onEnter` command, the other with `manual` command.
+**Solution:** Create separate transitions: one with the `onEnter` command, the other with the `manual` command.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-10-fixed.png)
 
 {% info_block infoBox "Tip" %}
 
-Keeping both `onEnter` and `manual` command could only be used for backup for the failed automated execution of the `onEnter` command with a manual event.
+Keeping both `onEnter` and `manual` commands can only be used for backup for the failed automated execution of the `onEnter` command with a manual event.
 
 {% endinfo_block %}
 

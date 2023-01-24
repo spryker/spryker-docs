@@ -18,11 +18,7 @@ redirect_from:
   - /v4/docs/en/split-delivery-concept
 related:
   - title: CRUD Scheduled Prices migration concept
-    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
-  - title: Decimal Stock migration concept
-    link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
-  - title: Float Stock for Products
-    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
+    link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Migrating from Twig v1 to Twig v3
     link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
   - title: Silex Replacement migration concept
@@ -63,7 +59,7 @@ console transfer:generate
 
 4. Follow individual migration guides of the modules listed below:
 
-* [Shipment](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html#upgrading-from-version-6-to-version-7)
+* [Shipment](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipment-module.html#upgrading-from-version-6-to-version-7)
 * [CustomerPage](/docs/scos/dev/module-migration-guides/migration-guide-customerpage.html#upgrading-from-version-1-to-version-200)
 
 The following table lists the modules affected by the Split Delivery update:
@@ -71,12 +67,12 @@ The following table lists the modules affected by the Split Delivery update:
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
 | `spryker/sales` | 11.0.0 | [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html#upgrading-from-version-10-to-version-1100) |
-| `spryker/shipment` | 7.0.0 | [Migration Guide - Shipment](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html#upgrading-from-version-6-to-version-7) |
-| `spryker-shop/checkout-page` | 3.0.0 | [Migration Guide - CheckoutPage](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html#upgrading-from-version-2-to-version-3) |
+| `spryker/shipment` | 7.0.0 | [Migration Guide - Shipment](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipment-module.html#upgrading-from-version-6-to-version-7) |
+| `spryker-shop/checkout-page` | 3.0.0 | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html#upgrading-from-version-2-to-version-3) |
 | `spryker-shop/customer-page` | 2.0.0 | [Migration Guide - CustomerPage](/docs/scos/dev/module-migration-guides/migration-guide-customerpage.html#upgrading-from-version-1-to-version-200) |
-| `spryker/checkout-rest-api` | 2.0.0 | [Migration Guide - CheckoutRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html#upgrading-from-version-1-to-version-200) |
+| `spryker/checkout-rest-api` | 2.0.0 | [Upgrade the CheckoutRestApi module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html#upgrading-from-version-1-to-version-200) |
 | `spryker/manual-order-entry-gui` | 0.8.0 | [Migration Guide - ManualOrderEntryGui](/docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html#upgrading-from-version-07-to-version-080) |
-| `spryker/shipment-cart-connector` | 2.0.0 | [Migration Guide - ShipmentCartConnector](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcartconnector-module.html#upgrading-from-version-10-to-version-200) |
-| `spryker/shipment-checkout-connector` | 2.0.0 | [Migration Guide - ShipmentCheckoutConnector](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcheckoutconnector-module.html#upgrading-from-version-10-to-version-200) |
-| `spryker/shipment-discount-connector` | 4.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html#upgrading-from-version-30-version-to-400) |
+| `spryker/shipment-cart-connector` | 2.0.0 | [Migration Guide - ShipmentCartConnector](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipmentcartconnector-module.html#upgrading-from-version-10-to-version-200) |
+| `spryker/shipment-checkout-connector` | 2.0.0 | [Migration Guide - ShipmentCheckoutConnector](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipmentcheckoutconnector-module.html#upgrading-from-version-10-to-version-200) |
+| `spryker/shipment-discount-connector` | 4.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html#upgrading-from-version-30-version-to-400) |
 | `spryker/orders-rest-api` | 4.0.0 | [Migration Guide - OrdersRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html#upgrading-from-version-30-to-version-400) |

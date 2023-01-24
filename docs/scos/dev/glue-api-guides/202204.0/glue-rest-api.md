@@ -44,7 +44,7 @@ It delivers a full customer experience from browsing the catalog to placing an o
 
 {% info_block infoBox %}
 
-[Install and run!](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html)
+[Install and run!](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html)
 
 {% endinfo_block %}
 

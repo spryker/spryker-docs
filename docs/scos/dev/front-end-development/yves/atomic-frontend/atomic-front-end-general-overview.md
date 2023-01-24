@@ -68,8 +68,6 @@ Based on their structure and use, all components are divided into the following 
 * *Templates*. Templates can be viewed as combinations of components composed according to a specific graphic layout. They are used to define a visual schema for a set of pages. Typically, pages with a common template have the same structure and share most of the content with the exception of a small portion of page-specific or widget-specific information that changes from page to page. Thus, a template serves as a backbone that defines a set of shared components and the overall layout. Examples of templates are the main site layout or the checkout layout.
 * *Views*. This is the highest point in the frontend hierarchy. A view is a template filled with specific content for use in a specific case. It represents a specific page or widget. Views are the only components that can be called by the backend directly which means that they also serve as a connection point between the backend and frontend. On the backend side, views are always connected to controllers.
 
-For more details about the component model that inspired Spryker Frontend, see [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/).
-
 ## BEM methodology
 
 The styling of Spryker Shop UI components is based upon BEM methodology. It is applied on the **SASS** layer of the shop UI. For a detailed specification and recommended practices, see [CSS with BEM](https://en.bem.info/methodology/css/). For BEM conventions, see the *Naming Conventions* section.
@@ -142,16 +140,16 @@ The application is implemented by module ShopUI. It is located in the following 
 
 Components, styles, and templates are loaded from the following folders:
 
-* `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default`—on the global level.
-* `src/Pyz/Yves/ShopUi/Theme/default`—on the project level.
+* `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default`— on the Spryker core level.
+* `src/Pyz/Yves/ShopUi/Theme/default`— on the project level.
 
 {% info_block infoBox %}
 
-The project-level implementation has a higher priority and is loaded after the global implementation.
+The project-level implementation has a higher priority and applied on top of Spryker Core functionality.
 
 {% endinfo_block %}
 
-The structure of the default folder is as follows (both on the global and project level):
+The structure of the default folder is as follows (both on the core and project level):
 
 * `components`, `/atoms`, `/molecules`, `/organisms`. These are folders for low-level components. Each component must be placed in its own folder.
 * `models`. It contains the Twig models used in the frontend.
@@ -202,16 +200,16 @@ The SASS layer is responsible for styling the frontend UI. It contains the style
 
 Depending on their location and function, SASS styles are divided into four types:
 * *Basic Styles*. They comprise the most basic styles used everywhere. Typical examples include HTML reset, grid layouts, or animations. Such styles are loaded by Webpack at the very beginning of application bootstrapping and can be easily overridden at the component level. They are located in the following files:
-  * `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/basic.scss` on the global level.
+  * `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/basic.scss` on the Spryker core level.
   * `src/Pyz/Yves/ShopUi/Theme/default/styles/basic.scss` on the project level.
 
     You can find default basic styles in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/basics` folder.
 
 * *Component styles*. These are the styles of each specific component. These styles are defined for each component separately in its own SCSS file. Such styles are loaded after the basic styles, thus they can override them. Depending on where a component is located, the visibility of its styles is different. Mixins that define styles of core components located in the vendor folder are visible everywhere and shared across the whole application. Mixins of project components located in the `src/Pyz` folder are not shared and are visible only within the component itself by default.
 * *Util Styles*. This group includes utility styles for the Shop UI—for example, the spacing system, text helpers, float-right, float-left, or is-hidden implementations. Such styles are typically used to modify or even override the default layout or behavior of the components whenever necessary. For example, *is-hidden* implementations can be used to hide elements that are usually visible. For this reason, such styles must not be overridden by any other styles. Because of this, they are loaded at the very end of application bootstrap, when all other styles are loaded. Utility styles are located in the following files:
-  * `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/util.scss`—on the global level.
+  * `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/util.scss`— on the Spryker core level.
   * `src/Pyz/Yves/ShopUi/Theme/default/styles/util.scss`—on the project level. You can find default util styles in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/util`.
-* *Shared Styles*. It is the place to put global SASS variables, functions and mixins. Such style files are loaded automatically before loading each style file, and thus available in any style file in the project. The global implementation is located in the following file: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/shared.scss`. You can provide your global SASS components in the following file:  `src/Pyz/Yves/ShopUi/Theme/default/style/shared.scss`.
+* *Shared Styles*. It is the place to put global SASS variables, functions and mixins. Such style files are loaded automatically before loading each style file, and thus available in any style file in the project. The Spryker core implementation is located in the following file: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/shared.scss`. You can provide your global SASS components in the following file:  `src/Pyz/Yves/ShopUi/Theme/default/style/shared.scss`.
 
 By default, global styles are imported from the settings and helpers folders. Any imports can be overridden directly in your `shared.scss` file. The folders contain the following:
 * `settings`. It contains only variables, organized by topic.
@@ -463,7 +461,7 @@ A component can also contain a `style.scss` file that imports the component styl
 
 {% info_block warningBox %}
 
-The use of a `style.scss` file is required for global components only, project-level components may ignore it.
+The use of a `style.scss` file is required for Spryker core components only, project-level components may ignore it.
 
 {% endinfo_block %}
 
@@ -487,7 +485,7 @@ export default class ComponentName extends Component {
 }
 ```
 
-The preceding example extend the default Component model defined in the ShopUi application. However, you can extend from any component both on the global and on the project level. In this case, your new component inherits the logic and behavior of the component it is derived from. The following example shows a component inherited from the default side-drawer component of Spryker Shop:
+The preceding example extend the default Component model defined in the ShopUi application. However, you can extend from any component both on the Spryker core and on the project level. In this case, your new component inherits the logic and behavior of the component it is derived from. The following example shows a component inherited from the default side-drawer component of Spryker Shop:
 
 ```ts
 // Import class SideDrawer

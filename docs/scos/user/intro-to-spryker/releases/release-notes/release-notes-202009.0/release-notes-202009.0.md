@@ -249,9 +249,9 @@ The necessary logic has been added to the checkout endpoints to secure the purch
 
 ### Swagger Documentation Generator Contains “Includes” by Endpoint
 In order to make it easier for API consumers to understand the content of those endpoints following the compound documents section of the JSONAPI specification, in this release, we have introduced improvements that will allow you to have upfront information by endpoint about the primary resources that can be included in the response. This can be useful not only for a basic understanding of the endpoints but also for automation purposes.
-
+ 
 #### Documentation
-[Resource Relationships](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html#describe-resource-relationships)
+[Resource Relationships](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html#describe-resource-relationships)
 
 ## Technical Enhancements
 ### Raise Modules Code Quality to PHPStan Level 5+

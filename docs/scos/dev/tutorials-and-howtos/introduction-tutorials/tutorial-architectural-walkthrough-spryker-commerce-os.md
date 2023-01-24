@@ -392,7 +392,7 @@ To build a client, follow these steps:
     }									
     ```					
 
-3. To provide the `ZedRequest Client` to your `HelloSpryker Client`, inside the `HelloSpryker` module, add the `HelloSprykerDependencyProvider` class.
+5. To provide the `ZedRequest Client` to your `HelloSpryker Client`, inside the `HelloSpryker` module, add the `HelloSprykerDependencyProvider` class.
 
 {% info_block infoBox "Info" %}
 
@@ -461,7 +461,7 @@ protected function getZedRequestClient()
 
 Now, you have all the objects you need and the client is ready to call Zed.
 
-4. Add a method to the stub to call Zed and pass the transfer object as a pay load like this:
+6. Add a method to the stub to call Zed and pass the transfer object as a pay load like this:
 
 ```php
 /**
@@ -481,12 +481,14 @@ public function reverseString(HelloSprykerTransfer $helloSprykerTransfer)
 {% info_block infoBox "Info" %}
 
 This method calls the Zed module `HelloSpryker`.
-<br>The first parameter in the `call()` method is the endpoint of the request, which is divided into three main sections: `moduleName/controllerName/ActionName`. Here, you call `HelloSpryker`, `GatewayController`, and `ReverseStringAction`.
-<br>By convention, clients send requests to `GatewayControllers`. The second parameter is the payload of the request, which is always a transfer object, any transfer object.
+
+The first parameter in the `call()` method is the endpoint of the request, which is divided into three main sections: `moduleName/controllerName/ActionName`. Here, you call `HelloSpryker`, `GatewayController`, and `ReverseStringAction`.
+
+By convention, clients send requests to `GatewayControllers`. The second parameter is the payload of the request, which is always a transfer object, any transfer object.
 
 {% endinfo_block %}
 
-5. In `HelloSprykerClient`, add a client method  to call the `reverseString()` method in the stub.
+6. In `HelloSprykerClient`, add a client method  to call the `reverseString()` method in the stub.
 
 ```php
 /**
@@ -527,7 +529,7 @@ class GatewayController extends AbstractGatewayController
 }																															
 ```
 
-1. To reverse the string, In Yves, from `IndexController`, call the client.
+2. To reverse the string, In Yves, from `IndexController`, call the client.
 
 ```php					
 /**
@@ -543,7 +545,13 @@ public function indexAction(Request $request)
     $helloSprykerTransfer = $this->getClient()
 	    ->reverseString($helloSprykerTransfer);
 
-    return ['reversedString' => $helloSprykerTransfer->getReversedString()];
+    $data = ['reversedString' => $helloSprykerTransfer->getReversedString()];
+
+    return $this->view(
+        $data,
+        [],
+        '@HelloSpryker/views/index/index.twig'
+    );
 }			
 ```
 
@@ -589,8 +597,8 @@ Open the database and check if the `HelloSpryker` table is there.
 
 {% endinfo_block %}
 
-1. Write the reversed string into the database. 
-2. In the `Business` layer, modify your model to do so after reversing the string:
+6. Write the reversed string into the database. 
+7. In the `Business` layer, modify your model to do so after reversing the string:
 
 ```php
 /**
@@ -606,7 +614,7 @@ protected function saveReversedString(HelloSprykerTransfer $helloSprykerTransfer
 }
 ```					
 
-5. To read from the database, Spryker provides a concept called `QueryContainer`. It's the place where you create query objects to get data from the database. Inside the `Persistence` directory, create `HelloSprykerPersistenceFactory` and `HelloSprykerQueryContainer`:
+8. To read from the database, Spryker provides a concept called `QueryContainer`. It's the place where you create query objects to get data from the database. Inside the `Persistence` directory, create `HelloSprykerPersistenceFactory` and `HelloSprykerQueryContainer`:
 
 ```php
 namespace Pyz\Zed\HelloSpryker\Persistence;
@@ -660,7 +668,7 @@ class HelloSprykerQueryContainer extends AbstractQueryContainer implements Hello
 }																																
 ```
 
-1. Let `IndexController` in Zed read from the database:
+9. Let `IndexController` in Zed read from the database:
 
     1. Add a facade method with a model to read and from the database in the `Business` layer.
     2. Call the model `StringReader`. 
@@ -677,7 +685,7 @@ class HelloSprykerQueryContainer extends AbstractQueryContainer implements Hello
     }						
     ```
 
-    2. Inject `readString()method` as follows:
+    5. Inject `readString()method` as follows:
 
     ```php
     /**
@@ -698,7 +706,7 @@ class HelloSprykerQueryContainer extends AbstractQueryContainer implements Hello
     }							
     ```
 
-2. To see `!rekyrpS olleH`, go to `https://zed.mysprykershop.com/hello-spryker`.
+10. To see `!rekyrpS olleH`, go to `https://zed.mysprykershop.com/hello-spryker`.
 
 ### 6. Extra task: `HelloSpryker` module dependency with `StringReverser`
 
@@ -714,8 +722,8 @@ Bild a business later inside `StringReverser` with a facade and a model to rever
 
 {% endinfo_block %}
 
-1. In the `HelloSpryker` module, create a dependency provider class called `HelloSprykerDependencyProvider`.
-2. Provide the business layer dependency to `HelloSpryker` and internally use the `StringReverser` facade to provide the string reversing functionality. `HelloSprykerDependencyProvider` looks like this:
+3. In the `HelloSpryker` module, create a dependency provider class called `HelloSprykerDependencyProvider`.
+4. Provide the business layer dependency to `HelloSpryker` and internally use the `StringReverser` facade to provide the string reversing functionality. `HelloSprykerDependencyProvider` looks like this:
 
 ```php
 namespace Pyz\Zed\HelloSpryker;
@@ -755,7 +763,7 @@ class HelloSprykerDependencyProvider extends AbstractBundleDependencyProvider
 }																	
 ```
 
-1. Inject the dependency using `HelloSprykerBusinessFactory`.
+5. Inject the dependency using `HelloSprykerBusinessFactory`.
 
 ```php
 /**
@@ -767,6 +775,5 @@ protected function getStringReverserFacade()
 }						
 ```
 
-1. To reverse the string, use `StringReverserFacade` instead of using the logic directly inside the `HelloSpryker` module.
-
-2. To see `!rekyrpS olleH`, go to `https://zed.mysprykershop.com/hello-spryker` and `https://mysprykershop.com/hello-spryker`.
+6. To reverse the string, use `StringReverserFacade` instead of using the logic directly inside the `HelloSpryker` module.
+7. To see `!rekyrpS olleH`, go to `https://zed.mysprykershop.com/hello-spryker` and `https://mysprykershop.com/hello-spryker`.

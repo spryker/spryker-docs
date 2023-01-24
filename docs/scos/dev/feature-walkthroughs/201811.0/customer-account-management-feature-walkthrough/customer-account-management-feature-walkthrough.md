@@ -3,6 +3,8 @@ title: Customer Account Management feature walkthrough
 last_updated: Aug 13, 2021
 description: The Customer Account Management feature enables a wide range of management options for customer accounts and additional functionalities
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/201907.0/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
 ---
 
 The _Customer Account Management_ feature enables a wide range of management options for customer accounts and additional functionalities.

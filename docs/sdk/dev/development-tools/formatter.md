@@ -41,17 +41,17 @@ related:
     link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
-*Formatter* allows you to find and fix code style mistakes and keep the code more readable.
+*Formatter* allows you to find and fix code style mistakes and keep your code more readable.
 
 To format files, [Prettier](https://prettier.io/) is used.
 
 ## Installation
 
-For details on how to install Formatter for your project, see [Formatter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html).
+For details about how to install Formatter for your project, see the [Formatter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html).
 
-## Using formatter
+## Using Formatter
 
-To execute the formatter, do the following:
+To execute the Formatter, do the following:
 
 1. Install the Node modules:
 
@@ -95,7 +95,7 @@ formatter: [
 
 {% info_block infoBox %}
 
-Twig is **not validated** by Prettier. The existing [twig plugin](https://github.com/trivago/prettier-plugin-twig-melody) can't work with widgets and attributes.
+Twig is **not validated** by Prettier. The existing [Twig plugin](https://github.com/trivago/prettier-plugin-twig-melody) can't work with widgets and attributes.
 
 {% endinfo_block %}
 
@@ -116,13 +116,13 @@ The Prettier formatter uses the ignore file `/.prettierignore` that includes dir
 The Formatter is integrated into:
 
 * Pre-commit hooks.
-The function that executes formatter before the commit resides in `/.githook`
+The function that executes Formatter before the commit resides in `/.githook`
 
 ```
 - GitHook\Command\FileCommand\PreCommit\FrontendFormatterCommand
 ```
 * Travis.
-Command to run the formatter is integrated into `.travis.yml`
+The command to run the Formatter is integrated into `.travis.yml`
 
 ```
 - node ./frontend/libs/formatter
@@ -130,7 +130,7 @@ Command to run the formatter is integrated into `.travis.yml`
 
 {% info_block warningBox "Important" %}
 
-If you commit without the pre-commit hooks, you should run the formatter manually to avoid issues with Travis.
+If you commit without the pre-commit hooks, you should run the Formatter manually to avoid issues with Travis.
 
 {% endinfo_block %}
 

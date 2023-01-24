@@ -11,7 +11,9 @@ redirect_from:
   - /docs/prices-per-merchant-relation-integration
   - /docs/en/prices-per-merchant-relation-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/prices-per-merchant-relation-feature-integration.html
-
+related:
+  - title: MErchant Custom Prices feature overview
+    link: docs/pbc/all/price-management/page.version/merchant-custom-prices-feature-overview.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-prices-per-merchant-relation-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-prices-per-merchant-relation-feature.md -->

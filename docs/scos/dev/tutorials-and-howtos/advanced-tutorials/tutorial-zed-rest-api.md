@@ -22,18 +22,16 @@ redirect_from:
   - /v1/docs/t-zed-rest-api
   - /v1/docs/en/t-zed-rest-api
 related:
-  - title: About Facade
+  - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
-  - title: Creating, using, and extending the transfer objects
-    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
-  - title: Adding a New Module
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+  - title: Create, use, and extend the transfer objects
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
+  - title: Add a new module
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
   - title: Controllers and Actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
 
 ---
-
-<!--used to be: http://spryker.github.io/challenge/zed-restapi/-->
 
 Spryker-based shop exposes module business logic through a simple API in Zed. The API is self-documented and can be easily explored for each module.
 
@@ -44,9 +42,9 @@ This tutorial describes how to:
 
 ## Preparation
 
-As a basis for solution, we will use an idea of exposing facade methods through HTTP. Each module provides a stateless public interface, which operates either by using scalar types or transfer objects. We can dynamically examine this API using PHP Reflection and expose it through a Zed controller. This will require to be authorized in Zed, which is fine for a demo challenge, as a bonus challenge one might implement a separate authentication for the API endpoint.
+As a basis for solution, we use an idea of exposing facade methods through HTTP. Each module provides a stateless public interface, which operates either by using scalar types or transfer objects. We can dynamically examine this API using PHP Reflection and expose it through a Zed controller. This requires to be authorized in Zed, which is fine for a demo challenge, as a bonus challenge one might implement a separate authentication for the API endpoint.
 
-Transfer objects can de-serialized from JSON, this will simplify a transport layer.
+Transfer objects can be deserialized from JSON; this simplifies a transport layer.
 
 {% info_block errorBox %}
 
@@ -58,8 +56,8 @@ It is advised to recap the following topics before starting the challenge:
 
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
-* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html)
-* ["Tutorial: Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)
+* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
+* ["Tutorial: Add a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html)
 * [Controllers in Zed](/docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}

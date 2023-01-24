@@ -46,7 +46,7 @@ Make sure that the following modules have been installed:
 | `ProductRelationGui` | `vendor/spryker/product-relation-gui` |
 | `ProductRelationDataImport` | `vendor/spryker/product-relation-data-import` |
 | `ProductRelationStorage` | `vendor/spryker/product-relation-storage` |
-| `ProductRelationWidget` | `vendor/spryker/product-relation-widget` |
+| `ProductRelationWidget` | `vendor/spryker-shop/product-relation-widget` |
 
 {% endinfo_block %}
 	
@@ -378,7 +378,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 4. Run the following console commands to import data:
 ```bash
-console data:import:product:relation
+console data:import:product-relation
 console data:import:product-relation-store
 ```
 

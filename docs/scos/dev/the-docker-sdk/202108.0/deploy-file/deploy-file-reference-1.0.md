@@ -203,7 +203,7 @@ Affects the included deploy file that it follows in an array of included deploy 
 
 Defines the configuration of the import:
 
-* `{import_name}: template:` — defines the deploy file to be included into a build  as part of this import.
+* `{import_name}: template:`—defines the deploy file to be included into a build  as part of this import.
 * `{import_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml

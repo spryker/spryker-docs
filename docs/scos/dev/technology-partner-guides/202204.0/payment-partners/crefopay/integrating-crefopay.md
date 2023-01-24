@@ -20,7 +20,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-payment-methods.html
   - title: CrefoPay capture and refund Processes
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay — Enabling B2B payments
+  - title: CrefoPay—Enabling B2B payments
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
   - title: CrefoPay callbacks
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-callbacks.html
@@ -635,12 +635,12 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\Router;
- 
+
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 use SprykerEco\Yves\CrefoPay\Plugin\Router\CrefoPayRouteProviderPlugin;
- 
+
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
@@ -829,3 +829,12 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     }
 }
 ```
+
+{% info_block warningBox "Note" %}
+
+If an additional validation for input fields that are filled by a customer is needed, we recommend creating a plugin that implements `\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface`.
+The plugin must be added to the `Pyz\Zed\Checkout\CheckoutDependencyProvider::getCheckoutPreConditions()` method.
+
+For more details, see [Checkout process review and implementation](/docs/pbc/all/cart-and-checkout/{{site.version}}/extend-and-customize/checkout-process-review-and-implementation.html).
+
+{% endinfo_block %}

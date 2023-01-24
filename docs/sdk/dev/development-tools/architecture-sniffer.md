@@ -1,6 +1,6 @@
 ---
-title: Architecture sniffer
-description: Use Architecture Sniffer to assert a certain quality of Spryker architecture for both core and project
+title: Architecture Sniffer
+description: Use Architecture Sniffer to ensure the quality of Spryker architecture for both core and project
 last_updated: Nov 11, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/architecture-sniffer
@@ -52,7 +52,7 @@ related:
     link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
-We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to assert a certain quality of Spryker architecture for both core and project.
+We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to ensure the quality of Spryker architecture for both core and project.
 
 ## Running the tool
 
@@ -86,4 +86,4 @@ See the [Architecture Sniffer documentation](https://github.com/spryker/architec
 
 ## Conventions and guidelines
 
-If you have a running Demoshop, go to Architecture rules in Zed backend to get an overview of all currently implemented rules.
+If you have a running Demoshop, go to Architecture rules in the Zed backend to get an overview of all currently implemented rules.

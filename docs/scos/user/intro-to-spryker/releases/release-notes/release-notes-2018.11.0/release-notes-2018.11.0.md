@@ -26,7 +26,7 @@ related:
   - title: Security Release Notes 2018.11.0
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - title: Shopping Cart
     link: docs/scos/user/features/page.version/cart-feature-overview/cart-feature-overview.html
   - title: Reorder feature overview
@@ -168,7 +168,7 @@ Easily set a minimum order value for any of your products where either the custo
 You can easily manage gross and net prices per product, country, and currency. Please note that you cannot mix Net and Gross prices in the same shopping cart.
 ![Net and gross price](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image14.png)
 
-**Documentation**: [Net &amp; Gross Prices](/docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html)
+**Documentation**: [Net &amp; Gross Prices](/docs/pbc/all/price-management/{{site.version}}/extend-and-customize/configuration-of-price-modes-and-types.html)
 
 ### Volume Prices
 
@@ -192,7 +192,7 @@ The shop owner can set up a price per merchant/business unit combination.
 With the Agent Assist feature, you may enable your employees to help your customers with true efficiency, all while operating the same storefront interface. No more confusing backend UI. Agent Assist allows your employees to log-in to the storefront using a particular URL, search for a customer to assist and pick them up to do business on their behalf. A feature flag in the session allows for versatile customizations of the storefront functionality during an agent assist session. This feature may also be used as a point of sale solution in physical retail stores.
 ![Agent assist](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image3.png)
 
-**Documentation**: [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
+**Documentation**: [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html)
 
 ### Add Concrete Product to Existing Abstract Product
 

@@ -25,13 +25,13 @@ redirect_from:
   - /docs/scos/dev/back-end-development/202108.0/console-commandsconsole-commands-in-spryker.html
   - /docs/scos/dev/back-end-development/202204.0/console-commandsconsole-commands-in-spryker.html
 related:
-  - title: Getting the list of console commands and available options
+  - title: Get the list of console commands and available options
     link: docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
-  - title: Implementing a new console command
+  - title: Implement a new console command
     link: docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
 ---
 
-The [list of console commands](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into four categories: collector commands, order management system commands, setup commands, and frontend-related commands. This document provides details on each of the commands.
+The [list of console commands](/docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into four categories: collector commands, order management system commands, setup commands, and frontend-related commands. This document provides details about each of the commands.
 
 ## Collector commands
 
@@ -158,7 +158,7 @@ setup:propel
   setup:propel:config:convert
   ```
 
-  2. Create the database if it doesn’t exist yet, based on the configuration set in the previous step:
+  2. Create the database if it doesn't exist yet, based on the configuration set in the previous step:
 
   ```bash
   setup:propel:database:create

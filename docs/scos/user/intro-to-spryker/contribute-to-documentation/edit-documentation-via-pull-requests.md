@@ -6,6 +6,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
 related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html

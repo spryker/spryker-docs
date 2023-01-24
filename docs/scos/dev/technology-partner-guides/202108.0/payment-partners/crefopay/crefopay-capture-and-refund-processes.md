@@ -20,7 +20,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/installing-and-configuring-crefopay.html
   - title: CrefoPay callbacks
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-callbacks.html
-  - title: CrefoPay — Enabling B2B payments
+  - title: CrefoPay—Enabling B2B payments
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
   - title: CrefoPay payment methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-payment-methods.html

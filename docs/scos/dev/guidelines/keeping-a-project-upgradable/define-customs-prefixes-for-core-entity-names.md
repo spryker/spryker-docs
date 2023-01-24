@@ -20,10 +20,10 @@ When solving upgradability issues, you can use the `Pyz` prefix to make your ent
 2. Define `Pyz` and needed custom prefixes. For example, define `Zyp` as a custom prefix:
 
 ```yaml
-upgrader:
+evaluator:
   prefixes:
     - Pyz
     - Zyp
 ```
 
-Now the evaluator will not consider entities prefixed with `Zyp` as not unique.
+Now the evaluator considers entities prefixed with `Zyp` as unique.

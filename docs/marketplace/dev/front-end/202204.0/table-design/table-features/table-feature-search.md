@@ -94,7 +94,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Table Feature Search:
+The following example represents interfaces for the Table Feature Search:
 
 ```ts
 export interface TableSearchConfig extends TableFeatureConfig {

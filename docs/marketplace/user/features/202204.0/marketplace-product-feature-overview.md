@@ -46,7 +46,7 @@ The marketplace product is also displayed with the **Sold By** field defining th
 
 ### Marketplace product on the Quick Order page
 
-On the **Quick Order** page, customers can add products to cart by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only products of those merchants are available for selection when they enter **SKU or Name** of the product. Buyers who select the **All Merchants** option can add products from all merchants. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick Add to Cart feature, see [Quick Add to Cart feature overview](/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html)
+On the **Quick Order** page, customers can add products to cart by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only products of those merchants are available for selection when they enter **SKU or Name** of the product. Buyers who select the **All Merchants** option can add products from all merchants. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick Add to Cart feature, see [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/quick-add-to-cart-feature-overview.html)
 
 ![quick-order-from-quick-order-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-order-from-quick-order-page.gif)
 
@@ -64,7 +64,7 @@ Note that the drop-down with merchants is not visible until the product is selec
 
 ### Marketplace product on the shopping list page
 
-On the **Shopping list** page, a customer can add marketplace products to the existing or new shopping list by entering a product's name or SKU in the **Quick Add** section and selecting the desired option. If there are several merchants selling the selected item, a drop-down with available merchants appears. Then, the customer selects a preferable merchant, enters the quantity, and adds the product or offer to the shopping list. 
+On the **Shopping list** page, a customer can add marketplace products to the existing or new shopping list by entering a product's name or SKU in the **Quick Add** section and selecting the desired option. If there are several merchants selling the selected item, a drop-down with available merchants appears. Then, the customer selects a preferable merchant, enters the quantity, and adds the product or offer to the shopping list.
 
 {% info_block warningBox "" %}
 

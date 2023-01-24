@@ -1,5 +1,5 @@
 ---
-title: Registering a new Service
+title: Registering a new service
 description: Service is a Spryker application layer shared by the Client application layer, the Zed application layer, and Yves application layer.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,21 +24,20 @@ redirect_from:
   - /v1/docs/en/service
 ---
 
-Service is a Spryker application layer shared by the Client application layer, the Zed application layer, and Yves application layer. This service layer provides the ability to register a service once and have it applied to both layers. Usage is focused on level details (infrastructure layer). For example: encoding, text processing, and sanitization. Currently, there are already few `Util` bundles providing services (UtilText, UtilEncoding, etc.).
+A *service* is a Spryker application layer shared by the Client, Zed, and Yves application layers. This service layer provides the ability to register a service once and have it applied to both layers. Usage is focused on level details (infrastructure layer)—for example, encoding, text processing, and sanitization. Currently, there are already a few `Util` bundles providing services (UtilText and UtilEncoding).
 
-## How to use a Service
+## How to use a service
 
-To support best practices, any services shared between bundles and applications (Yves, Zed, Client) that do not resolve high-level business processes should be moved to services. Services can be accessed with the locator: `$container->getLocator()->utilEncoding()->service()`.
+To support best practices, any services shared between bundles and applications (Yves, Zed, Client) that do not resolve high-level business processes are moved to services. You can access services with the locator: `$container->getLocator()->utilEncoding()->service()`.
 
 ### Service structure
 
-When creating a new service, follow this file structure:
-Under a newly-created module.
+When creating a new service, under a newly-created module, follow this file structure:
 
-* src/Spryker/Service/ - root directory.
-* src/Spryker/Service/DemoService.php - main locatable service class. Should extend Spryker\Service\Kernel\AbstractService.
-* src/Spryker/Service/DemoServiceFactory.php - service factory class. Should extend Spryker\Service\Kernel\AbstractServiceFactory.
-* src/Spryker/Service/DemoDependencyProvider - service dependency provider. Should extend Spryker\Service\Kernel\AbstractBundleDependencyProvider.
+* `src/Spryker/Service/`: Root directory.
+* `src/Spryker/Service/DemoService.php`: Main locatable service class. Should extend `Spryker/Service/Kernel/AbstractService`.
+* `src/Spryker/Service/DemoServiceFactory.php`: Service factory class. Should extend `Spryker/Service/Kernel/AbstractServiceFactory`.
+* `src/Spryker/Service/DemoDependencyProvider`: Service dependency provider. Extends `Spryker/Service/Kernel/AbstractBundleDependencyProvider`.
 
 **Sample service class**:
 
@@ -71,4 +70,7 @@ class UtilEncodingService extends AbstractService implements UtilEncodingService
 ?>
 ```
 
-* After creating all mentioned files, run `vendor/bin/console dev:ide:generate-service-auto-completion` to have the service visible by our locator autocomplete.
+* After creating all mentioned files, make the service visible by the locator autocompletion:
+```bash
+vendor/bin/console dev:ide:generate-service-auto-completion
+```

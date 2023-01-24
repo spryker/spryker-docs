@@ -1,6 +1,6 @@
 ---
 title: URL
-description: The URL module handles dynamic URLs for entities that appear on the front-end (Yves)
+description: The URL module handles dynamic URLs for entities that appear on the frontend (Yves)
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/url
@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/url
 ---
 
-The URL module handles dynamic URLs for entities that appear on the front-end (Yves). At the moment, Spryker core provides URL handling for products, CMS pages, categories and URL redirects.
+The URL module handles dynamic URLs for entities that appear on the frontend (Yves). At the moment, Spryker core provides URL handling for products, CMS pages, categories and URL redirects.
 
 The URLs are stored in one database table and each is unique. Spryker OS avoids multiple URLs heading to a single entity, as it leads to a poor SEO support. Only one URL should be active for a single entity, other URLs should be set as URL redirects.
 
@@ -32,7 +32,7 @@ In the Spryker Demo Shop, URLs are exported to the key-value storage (Redis) wit
 
 The `reference_key` contains the key of the entity that was also stored in the key-value storage. The data read from the reference key is exactly the data that will be provided to the controller to handle the request at the end. The `type` is required to determine which controller handles the request (along with the data from the reference key).
 
-The example below shows the value stored under the `kv:de.en_us.url./en/imprint` key which will match the [/en/imprint](http://zed.mysprykershop.com/en/imprint) URL in a Demo Shop.
+The following example shows the value stored under the `kv:de.en_us.url./en/imprint` key which will match the [/en/imprint](http://zed.mysprykershop.com/en/imprint) URL in a Demo Shop.
 
 ```js
 {

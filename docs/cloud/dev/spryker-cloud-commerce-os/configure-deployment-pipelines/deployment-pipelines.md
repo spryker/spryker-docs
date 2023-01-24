@@ -8,7 +8,14 @@ redirect_from:
   - /docs/deployment-pipelines
   - /docs/en/deployment-pipelines
   - /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html
 ---
+
+{% info_block infoBox "Data Import during Deployments" %}
+
+For performance and stability reasons, remove all heavy data ingestion or processing operations from deployment steps/install recipes. Use a Jenkins job instead and start these operations after the deployment is finished.
+
+{% endinfo_block %}
 
 Spryker Cloud Commerce OS(SCCOS) provides automated CI/CD(Continuous Integration/Continuous Deployment) Pipelines based on the following AWS Code Suite services:
 
@@ -25,6 +32,8 @@ There are two deployment pipelines: normal and destructive.
 _Normal deploy_ is a pipeline that includes all the stages of a complete CI/CD flow. You can set it to run automatically on version control system updates. The `install` stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. Use it for production deployments.
 
 _Destructive deploy_ is a pipeline that includes all the stages of a complete CI/CD flow. You can set it to run automatically on version control system updates. The `install` stage of this pipeline resets all the data in applications. Use it for initial or non-production deployments.
+
+{Deploy name and description} 
 
 ## Deployment stages
 

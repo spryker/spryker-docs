@@ -13,6 +13,12 @@ Each section contains reference information. Make sure to review it before you s
 
 To add Unzer marketplace credentials, take the steps in the following sections.
 
+{% info_block infoBox "Note" %}
+
+All merchants allowed to sell their products in your stores must have Unzer credentials in the Back Office. Otherwise, your customers cannot buy their products; they will not be able to start the checkout process.
+
+{% endinfo_block %}
+
 ## Add Unzer merketplace credentials
 
 1. Add Unzer credentials:
@@ -75,8 +81,6 @@ The following table describes the attributes you select and enter when adding Un
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| NAME | Name of the external merchant Unzer credentials. |
-| CREDENTIALS TYPE | Type of the credentials:<ul><li>*Marketplace (main channel)*—the credentials type for the marketplace with multiple merchants.</li><li>*Standard*—the credentials type for a basic store without merchants. </li></ul> |
 | UNZER PUBLIC KEY | Unique public key which Unzer provides to each external merchant to accept payments. The key is store-specific. |
 | UNZER PRIVATE KEY | Unique private key which Unzer provides to each external merchant to accept payments. The key is store-specific. |
 | MERCHANT REFERENCE | Merchant ID on the Spryker side. |

@@ -308,7 +308,7 @@ use Spryker\Yves\StepEngine\Dependency\Form\SubFormInterface;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Form\SubFormPluginInterface;
 
 /**
- * @method \SprykerEco\Yves\Unzer\UnzerFactory getFactory()
+ * @method \Pyz\Yves\Unzer\UnzerFactory getFactory()
  * @method \SprykerEco\Yves\Unzer\UnzerConfig getConfig()
  */
 class UnzerPayPalSubFormPlugin extends AbstractPlugin implements SubFormPluginInterface
@@ -414,7 +414,7 @@ class UnzerFactory extends EcoUnzerFactory
      */
     public function createPayPalSubForm(): SubFormInterface
     {
-        return new PayPalSubForm();
+        return new PayPalSubform();
     }
 
     /**
@@ -500,9 +500,11 @@ class PayPalPaymentProcessor implements UnzerChargeablePaymentProcessorInterface
     /**
      * @param \SprykerEco\Zed\Unzer\Business\ApiAdapter\UnzerAuthorizeAdapterInterface $unzerAuthorizeAdapter
      * @param \SprykerEco\Zed\Unzer\Business\ApiAdapter\UnzerPaymentAdapterInterface $unzerPaymentAdapter
+     * @param \SprykerEco\Zed\Unzer\Business\ApiAdapter\UnzerPaymentResourceAdapterInterface $unzerPaymentResourceAdapter
      * @param \SprykerEco\Zed\Unzer\Business\Payment\Processor\Charge\UnzerChargeProcessorInterface $unzerChargeProcessor
      * @param \SprykerEco\Zed\Unzer\Business\Payment\Processor\Refund\UnzerRefundProcessorInterface $unzerRefundProcessor
      * @param \SprykerEco\Zed\Unzer\Business\Payment\Processor\PreparePayment\UnzerPreparePaymentProcessorInterface $unzerPreparePaymentProcessor
+     * @param \SprykerEco\Zed\Unzer\Business\Checkout\Mapper\UnzerCheckoutMapperInterface $unzerCheckoutMapper
      */
     public function __construct(
         UnzerAuthorizeAdapterInterface $unzerAuthorizeAdapter,
@@ -523,6 +525,9 @@ class PayPalPaymentProcessor implements UnzerChargeablePaymentProcessorInterface
     }
 
     /**
+     * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
+     * @param array<int> $salesOrderItemIds
+     *
      * @return void
      */
     public function processCharge(OrderTransfer $orderTransfer, array $salesOrderItemIds): void
@@ -582,7 +587,7 @@ class PayPalPaymentProcessor implements UnzerChargeablePaymentProcessorInterface
 
 11. To introduce new methods on the `Zed` layer, override `UnzerBusinessFactory`:
 
-<details><summary markdown='span'>src/Pyz/Zed/Unzer/Business/Payment/Processor/PayPalPaymentProcessor.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Unzer/Business/UnzerBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -618,6 +623,9 @@ class UnzerBusinessFactory extends EcoUnzerBusinessFactory
         ]);
     }
 
+    /**
+     * @return \SprykerEco\Zed\Unzer\Business\Payment\Processor\UnzerPaymentProcessorInterface
+     */
     public function createPayPalPaymentProcessor(): UnzerPaymentProcessorInterface
     {
         return new PayPalPaymentProcessor(
@@ -636,8 +644,8 @@ class UnzerBusinessFactory extends EcoUnzerBusinessFactory
 </details>
 
 12. To add PayPal to authorizable payment methods, override `UnzerConfig`:
+<details><summary markdown='span'>src/Pyz/Zed/Unzer/UnzerConfig.php</summary>
 
-**src/Pyz/Zed/Unzer/UnzerConfig.php**
 ```php
 <?php
 
@@ -663,6 +671,7 @@ class UnzerConfig extends EcoUnzerConfig
     ];
 }
 ```
+</details>
 
 ## Implemented payment method on the Storefront
 
@@ -697,8 +706,6 @@ The following is an example of how the implemented payment method Unzer looks on
 ![storefront-5](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-5.jpeg)
 
 </details>
-
-
 
 ## Triggering shipment states in the Back Office
 

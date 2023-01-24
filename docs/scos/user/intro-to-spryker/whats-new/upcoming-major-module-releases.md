@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/upcoming-major-module-releases
   - /v6/docs/upcoming-major-module-releases
   - /v6/docs/en/upcoming-major-module-releases
+  - /docs/marketplace/user/intro-to-spryker-marketplace/upcoming-major-module-releases.html
 ---
 
 {% info_block infoBox "Info" %}
@@ -24,12 +25,8 @@ To learn about Marketplace-related upcoming major releases, see [Marketplace upc
 
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |
 | --- | --- | --- |
-| [Search](https://github.com/spryker/search) | Q4 2021 | Getting rid of the ElasticSearch 5.6 support, which is end-of-life with no security fixes. It’s a consequence of the ElasticSearch 7 support. |
-| [Locale](https://github.com/spryker/locale) | Q1 2022 | Adding relation between the Locale and Store objects. |
-| [Currency](https://github.com/spryker/currency) | Q1 2022 | Adding relation between the Currency and Store objects. |
-| [Country](https://github.com/spryker/country) | Q1 2022 | Adding relation between the Country and Store objects. |
-| [Wishlist](https://github.com/spryker/wishlist) | Q2 2022 | Adding wishlist UUID and wishlist item UUID to use it as the main identifier. Changing customer foreign key relation to reference. |
-| [WishlistsRestApi](https://github.com/spryker/wishlists-rest-api) | Q2 2022 | Using wishlist item UUID as `wishlist_item_id` for requests. |
-| [WishlistPage](https://github.com/spryker-shop/wishlist-page) | Q2 2022 | Using wishlist UUID and wishlist item UUID as the main identifier. |
-| [WishlistWidget](https://github.com/spryker-shop/wishlist-widget) | Q2 2022 | Using wishlist UUID and wishlist item UUID as the main identifier. |
+| [Locale](https://github.com/spryker/locale) | Q1 2023 | Adding relation between the Locale and Store objects. |
+| [Currency](https://github.com/spryker/currency) | Q1 2023 | Adding relation between the Currency and Store objects. |
+| [Country](https://github.com/spryker/country) | Q1 2023 | Adding relation between the Country and Store objects. |
+| [ShopUi](https://github.com/spryker-shop/shop-ui) | Q4 2022 | New UI and UX improvements. |
 

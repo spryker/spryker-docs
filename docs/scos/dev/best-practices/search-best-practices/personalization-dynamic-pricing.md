@@ -72,4 +72,4 @@ In this example, we have a script with two customer-based parameters: fixed pric
 }
 ```
 
-As a result, customers see personalized prices. In a similar way, it’s possible to build filters and price facets based on dynamically calculated prices.
+As a result, customers see personalized prices. In a similar way, it's possible to build filters and price facets based on dynamically calculated prices.

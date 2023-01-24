@@ -1,6 +1,6 @@
 ---
 title: Handling errors with ErrorHandler
-description: The Spryker Commerce OS uses a dedicated error handling mechanism to collect detailed error related information. The ErrorHandler handles notices, warnings and other types of minor issues usually not thrown as exceptions as strict as more serious errors.
+description: The Spryker Commerce OS uses a dedicated error handling mechanism to collect detailed error-Wrelated information. The ErrorHandler handles notices, warnings and other types of minor issues usually not thrown as exceptions as strict as more serious errors.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/error-handler
@@ -37,29 +37,29 @@ We use whoops for error rendering on the Zed side. For more information, check t
 
 {% endinfo_block %}
 
-Errors in CLI are exposed differently than errors displayed in the web interface. In the front-end application, you receive a formatted error page. In CLI, you get in-depth details regarding the exception and a proper stack trace. In this article, we will show how to manage and configure the way errors are rendered.
+Errors in CLI are exposed differently than errors displayed in the web interface. In the frontend application, you receive a formatted error page. In CLI, you get in-depth details regarding the exception and a proper stack trace. This document shows how to manage and configure the way errors are rendered.
 
 {% info_block warningBox "PrettyErrorHandler" %}
 
-Do not enable the PrettyErrorHandler in production-like environments. If an exception occurs and the PrettyErrorHandler is enabled, sensitive data will be shown!
+Do not enable the PrettyErrorHandler in production-like environments. If an exception occurs and the PrettyErrorHandler is enabled, sensitive data is not displayed.
 
-Always double check `\Spryker\Shared\ErrorHandler\ErrorHandlerConfig::isPrettyErrorHandlerEnabled()` is returns false in production environments.
+Always double check that `\Spryker\Shared\ErrorHandler\ErrorHandlerConfig::isPrettyErrorHandlerEnabled()` is returns false in production environments.
 
 {% endinfo_block %}
 
 ## Configuration
 
-The [ErrorHandler module](https://github.com/spryker/error-handler) has a rich list of configuration options for controlling the ErrorHandler’s behavior. Check the detailed list, including specifications, in the module’s [ErrorHandlerConstants file](https://github.com/spryker/error-handler/blob/c1884be8035b42ea89a12cbfc69b2d4a68e34d82/src/Spryker/Shared/ErrorHandler/ErrorHandlerConstants.php).
+The [ErrorHandler module](https://github.com/spryker/error-handler) has a rich list of configuration options for controlling the ErrorHandler's behavior. Check the detailed list, including specifications, in the module's [ErrorHandlerConstants file](https://github.com/spryker/error-handler/blob/c1884be8035b42ea89a12cbfc69b2d4a68e34d82/src/Spryker/Shared/ErrorHandler/ErrorHandlerConstants.php).
 
 ## ErrorRenderer
 
-You can change the ErrorRenderer error output to suit the environment you work on (development or production).
+You can change the ErrorRenderer error output to suit the environment you work in (development or production).
 
 Change the renderer in your configuration files as follows:
 
 * To change the renderer, use the `ErrorHandlerConstants::ErrorRenderer` constant.
 * To display a formatted HTML page in production environments, use `WebErrorHtmlRenderer`.
-* To display exception details in a development environment, use `WebExceptionErrorRenderer`. This displays the relevant developer messages and the exception’s stack trace.
+* To display exception details in a development environment, use `WebExceptionErrorRenderer`. This displays the relevant developer messages and the exception's stack trace.
 
 The following example shows how to change the error renderer for a development environment:
 
@@ -79,9 +79,9 @@ To change the path to another file, use the `ErrorHandlerConstants::ZED_ERROR_PA
 
 ## Exception message sanitizing
 
-Starting from ErrorHandler version [2.5.0](https://github.com/spryker/error-handler/releases/tag/2.5.0), it is possible to sanitize exception messages. 
+Starting from ErrorHandler version [2.5.0](https://github.com/spryker/error-handler/releases/tag/2.5.0), you can sanitize exception messages. 
 
-Usually, sensitive data is not used in exception messages. However, in some special cases, data is seen as sensitive data, and for these cases, it is possible to manipulate exception messages.
+Usually, sensitive data is not used in exception messages. However, in some special cases, data is seen as sensitive data, and for these cases, you can manipulate exception messages.
 
 All exception messages are handled in the `\Spryker\Shared\ErrorHandler\ErrorHandler::handleException()` method. These messages can be manipulated through the `\Spryker\Service\UtilSanitize\UtilSanitizeServiceInterface::sanitizeString()` method.
 
@@ -107,7 +107,7 @@ The `SERVER_BASE_PATH` config defaults to the DevVM internal `/data/shop/develop
 
 {% info_block infoBox %}
 
-In the example above, the connection was done to the PHPStorm IDE. The same method should work with other IDEs, although in some cases, `AS_AJAX` config may be needed.
+In the preceding example, the connection was done to the PHPStorm IDE. The same method must work with other IDEs. Although, in some cases, `AS_AJAX` config may be needed.
 
 {% endinfo_block %}
 
@@ -132,14 +132,14 @@ line=$(echo "${arg}" | sed -r 's/.*file=.*&line=(.*)/\1/')
 /locale/path/to/PhpStorm/bin/phpstorm.sh --line "${line}" "${file}"
 ```
 
-Replace `/locale/path/to/PhpStorm/bin/phpstorm.sh` with your IDE’s local path and make this script executable. Save this script as `phpstorm-url-handler` and execute:
+Replace `/locale/path/to/PhpStorm/bin/phpstorm.sh` with your IDE's local path and make this script executable. Save this script as `phpstorm-url-handler` and execute the following:
 
 ```bash
 chmod +X phpstorm-url-handler
 cp phpstorm-url-handler /usr/local/bin/phpstorm-url-handler
 ```
 
-Make this available on your local machine by running
+Make this available on your local machine:
 
 ```bash
 phpstorm-url-handler
@@ -147,4 +147,4 @@ phpstorm-url-handler
 
 The final step is to enable the protocol in your local browser.
 
-For example, in Firefox, if the protocol is unknown, you need to enable the `phpstorm://` protocol via `about:config`. To enable the PHPStorm protocol, add a new boolean value for `network.protocol-handler.expose.phpstorm` and keep the default value `false`.
+For example, in Firefox, if the protocol is unknown, you need to enable the `phpstorm://` protocol using `about:config`. To enable the PHPStorm protocol, add a new boolean value for `network.protocol-handler.expose.phpstorm` and keep the default value `false`.

@@ -32,11 +32,11 @@ related:
     link: docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
 ---
 
-According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility(BC) breaking changes in the Public API. This document declares what public and private APIs are.
+According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility (BC) breaking changes in the Public API. This document declares what public and private APIs are.
 
 ## Public API
 
-In the Spryker Commerce OS’s core, the following is the public API:
+In the Spryker Commerce OS's core, the following is the public API:
 
 * Public methods in these locatable classes:
     * [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
@@ -49,15 +49,15 @@ In the Spryker Commerce OS’s core, the following is the public API:
     * Plugins
 
 * Other classes:
-    * module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
+    * Module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
     * Controllers
     * Twig functions
     * [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)
     * Public constants that define environment configuration in [Constant Interfaces](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
 * [Database](/docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html)
 * Search
-* [Storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html)
-* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html)
+* [Storage](/docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html)
+* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
 * Dependencies to open source components
 * Glossary keys
 * Software design
@@ -66,9 +66,9 @@ In the Spryker Commerce OS’s core, the following is the public API:
 
 ### BC breaking changes
 
-There are several classes and files which are part of the public API, but not every change in the file  causes a BC break. In general, there is a BC break whenever an existing contract is changed. A contract is what the user of the API expects. This includes the signature of methods as well as the expected behavior. For this reason, we have added an ApiDoc to the most used APIs like facades and plugin interfaces.
+There are several classes and files which are part of the public API, but not every change in the file causes a BC break. In general, there is a BC break whenever an existing contract is changed. A contract is what the user of the API expects. This includes the signature of methods as well as the expected behavior. For this reason, we have added an ApiDoc to the most used APIs like facades and plugin interfaces.
 
-We always try to avoid BC breaking changes and reduce the effort needed to upgrade a module to a new version. There are several ways to add functionality to APIs without a BC break. So it is possible to add new methods and even parameters to the existing methods as long as they are optional.
+We always try to avoid breaking changes of BC and reduce the effort needed to upgrade a module to a new version. There are several ways to add functionality to APIs without a BC break. So you can add new methods and even parameters to the existing methods as long as they are optional.
 
 
 ## Private API

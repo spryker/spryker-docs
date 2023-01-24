@@ -15,4 +15,4 @@ To learn more about the feature and to find out how end users use it, see [Gift 
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | 
 |---|---|
-| [Gift Cards feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html) | CheckoutPage migration guide | 
+| [Gift Cards feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html) | Upgrade the CheckoutPage module | 

@@ -20,6 +20,7 @@ redirect_from:
   - /2021080/docs/en/installation-guide-development-mode
   - /docs/installation-guide-development-mode
   - /docs/en/installation-guide-development-mode
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
 related: 
   - title: Database access credentials
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
@@ -49,13 +50,13 @@ To install Docker prerequisites, follow one of the guides:
     * Clone the B2C repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p2 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0 --single-branch ./b2b-demo-shop
     ```
 
 4. Depending on the repository you've cloned, navigate into the cloned folder:
@@ -117,7 +118,7 @@ docker/sdk up
 
 {% info_block warningBox %}
 
-Depending on the hardware performance, the first project launch can take up to 20 minutes.
+Depending on the hardware performance, the first project launch can take up to **20 minutes**.
 
 {% endinfo_block %}
 
@@ -125,11 +126,13 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
-{% info_block infoBox "RabbitMQ UI credentials" %}
+### Back-Office
 
-To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`.
+The default credentials to access the back-office are located inside this file `/src/Pyz/Zed/User/UserConfig.php`
 
-{% endinfo_block %}
+### RabbitMQ
+
+To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 ## Getting the list of useful commands
 

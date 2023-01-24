@@ -53,10 +53,8 @@ Environment configuration is changeable per environment, but the constant and it
 interface ModuleNameConstants
 {
   public const EXAMPLE_KEY = 'MODULE_NAME:EXAMPLE_KEY';
-}				
+}
 ```
-
-
 
 ### Module configuration
 
@@ -93,10 +91,7 @@ class ModuleNameConfig extends AbstractBundleConfig
      return $this->get(ModuleNameConstants::EXAMPLE_KEY);
   }
 }
-}				
 ```
-
-
 
 ### Module constants
 
@@ -110,7 +105,7 @@ Module constants are not meant to be extended or changed, neither their value or
 class ModuleNameConfig extends AbstractBundleConfig
 {
   public const UNCHANGEABLE_CONTENT = 'my unchangable value';
-}				
+}
 ```
 
 {% info_block warningBox %}

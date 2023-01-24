@@ -85,9 +85,8 @@ Add new users to your project and assign user permissions. Two roles are availab
 
 Connect Git repositories to your projects in Spryker CI.
 
-![Switch repository](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/switch-a-repo.mp4)
+<iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/switch-a-repo.mp4" frameborder="0" allowfullscreen></iframe>
 
-<!-- For detailed instructions, see [Connect Git repositories -->
 
 ### 2.5. Push and have fun!
 

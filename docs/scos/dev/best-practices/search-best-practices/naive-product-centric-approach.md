@@ -45,7 +45,7 @@ related:
     link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
-Finding products on e-commerce website can be tricky, even when you know exactly what you are looking for. Throughout this document, we will assume a customer wants to buy a hammer that weighs 2kg. A product that would meet his needs might be this “Fäustel” by Fortis:
+Finding products on e-commerce website can be tricky, even when you know exactly what you are looking for. Throughout this document, we will assume a customer wants to buy a hammer that weighs 2kg. A product that would meet his needs might be this "Fäustel" by Fortis:
 ![Product-centric approach](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Naive+Product+Centric+Approach/product-detail.png) 
 
 This is (most of) the search-relevant information that is known in the backend of Contorion about the product above:
@@ -70,10 +70,10 @@ This is (most of) the search-relevant information that is known in the backend o
 }
 ```
 
-Many tutorials recommend storing such documents “as is” into Elasticsearch, and the ease of doing so is indeed one of the core strengths of the platform. However, this approach has at least three quite serious drawbacks:
+Many tutorials recommend storing such documents "as is" into Elasticsearch, and the ease of doing so is indeed one of the core strengths of the platform. However, this approach has at least three quite serious drawbacks:
 
-1. Elasticsearch queries need to “know” and explicitly list all the attributes that they want to use. For example a full-text search query would need to list all relevant text fields, a faceted search would need to list all possible filters.
-2. Different usages of the same attribute require different handling, e.g. the category name “Hammer” needs to be indexed unaltered for filtering and completion, but fully analyzed for full-text search purpose.
-3. The existence of “semantic” fields such as hammer_weight makes it hard to extend the product catalog: Whenever new product attributes are created, the Elasticsearch mapping needs to be extended.
+1. Elasticsearch queries need to "know" and explicitly list all the attributes that they want to use. For example a full-text search query would need to list all relevant text fields, a faceted search would need to list all possible filters.
+2. Different usages of the same attribute require different handling—for example, the category name "Hammer" needs to be indexed unaltered for filtering and completion, but fully analyzed for full-text search purpose.
+3. The existence of "semantic" fields such as hammer_weight makes it hard to extend the product catalog: Whenever new product attributes are created, the Elasticsearch mapping needs to be extended.
 
-The result is a huge complexity in query generation and schema management and this typically leads to situations where the full potential of available data is not used: full text search will operate only on some fields, and faceted navigation on others etc.
+The result is a huge complexity in query generation and schema management and this typically leads to situations where the full potential of available data is not used: full-text search will operate only on some fields, and faceted navigation on others.

@@ -738,8 +738,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {% raw %}{%{% endraw %} define data = {
     ...
     customForms: {
-        'Payone/credit_card': ['credit-card', 'payone'],
-        'Payone/instant_online_transfer': ['instant-online-transfer', 'payone'],
         'Unzer/views/marketplace-credit-card/marketplace-credit-card': ['marketplace-credit-card', 'unzer'],
         'Unzer/views/credit-card/credit-card': ['credit-card', 'unzer'],
         'Unzer/views/marketplace-sofort': ['marketplace-sofort', 'unzer'],

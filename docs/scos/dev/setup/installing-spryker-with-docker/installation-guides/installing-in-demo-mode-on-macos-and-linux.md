@@ -1,7 +1,7 @@
 ---
 title: Installing in Demo mode on MacOS and Linux
 description: Learn how to install Spryker in Demo mode on MacOS and Linux.
-last_updated: Oct 21, 2021
+last_updated: Jul 5, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-macos-and-linux
 originalArticleId: 3b78ae4c-d2a3-4dfa-87e1-7d0c4096ee22
@@ -48,13 +48,13 @@ To install Docker prerequisites, follow one of the guides:
     * Clone the B2C repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p2 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0 --single-branch ./b2b-demo-shop
     ```
 4. Depending on the cloned repository, navigate into the cloned folder:
 
@@ -108,40 +108,31 @@ docker/sdk up
 
 3. Update the `hosts` file:
 
-```bash
-echo "127.0.0.1 zed.de.spryker.local yves.de.spryker.local glue.de.spryker.local zed.at.spryker.local yves.at.spryker.local glue.at.spryker.local zed.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local backoffice.de.spryker.local" | sudo tee -a /etc/hosts
-```
+Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
 {% info_block infoBox %}
 
-If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+To get the list of the instructions, you can run `docker/sdk install` after `bootstrap`.
 
 {% endinfo_block %}
 
 {% info_block warningBox %}
 
-Depending on the hardware performance, the first project launch can take up to 20 minutes.
+Depending on the hardware performance, the first project launch can take up to *20 minutes*.
 
 {% endinfo_block %}
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the following endpoints.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
-| APPLICATION | ENDPOINTS |
-| --- | --- |
-| The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
-| the Back Office | backoffice.de.spryker.local, backoffice.at.spryker.local, backoffice.us.spryker.local |
-| Glue API | glue.de.spryker.local, glue.at.spryker.local, glue.us.spryker.local |
-| Jenkins (scheduler) | scheduler.spryker.local |
-| RabbitMQ UI (queue manager) | queue.spryker.local |
-| Mailhog UI (email catcher) | mail.spryker.local |
+### Back-Office
 
-{% info_block infoBox "RabbitMQ UI credentials" %}
+The default credentials to access the Back Office are located inside `/src/Pyz/Zed/User/UserConfig.php`.
 
-To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
+### RabbitMQ
 
-{% endinfo_block %}
+To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. For information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 ## Getting the list of useful commands
 

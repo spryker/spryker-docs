@@ -31,17 +31,13 @@ related:
     link: docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
 
-Spryker OS is modular and follows the rules of semantic versioning. Every BC-breaking change of module [API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html) is considered a major release. But what happens to non-API? Spryker leverages the ability to change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
+Spryker OS is modular and follows the rules of semantic versioning. Every _backward compatibility_ (BC) breaking change of module [API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html) is considered a major release. However, what happens to non-API? Spryker can change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
 
-When you customize Spryker modules by changing their behavior on project level, even minor changes could potentially cause migration efforts. To avoid such cases and keep project updates safe and predictable, a project should use `~` (tilde) composer constraint instead of `^` (caret) for the customized modules.
+When you customize Spryker modules by changing their behavior on the project level, even minor changes could potentially cause migration efforts. To avoid such cases and keep project updates safe and predictable, a project should use _~_ (tilde) composer constraint instead of _^_ (caret) for the customized modules.
 
-To easily detect the extended core modules and to update composer.json constraints from using `^` to use `~`, Spryker provides the Composer Constrainer tool `vendor/bin/console code:constraint:modules`. The tool suggests required changes in `composer.json`.
+To easily detect the extended core modules and to update `composer.json` constraints from using `^` to `~`, Spryker provides the Composer Constrainer tool `vendor/bin/console code:constraint:modules`. The tool suggests required changes in `composer.json`.Similarly, you can check non-Spryker package usage as well. If some classes of non-Spryker vendors were used on a project level, you may also validate corresponding packages to be locked to a minor version.
 
-Pretty much in the same way you can check non Spryker package usages as well. In case if some classes of non Spryker vendor were used on a project level - you may also validate corresponding packages to be locked to minor version.
-
-## Installing the Composer constrainer
-
-To install the tool, do the following:
+## Install the Composer constrainer
 
 1. Require the `ComposerConstainer` module:
 
@@ -49,19 +45,17 @@ To install the tool, do the following:
 composer require --dev spryker-sdk/composer-constrainer
 ```
 
-This is a development only "require-dev" module. Make sure you include it as such.
+This is a development-only "require-dev" module. Make sure you include it as such.
 
 2. Add the console command `SprykerSdk\Zed\ComposerConstrainer\Communication\Console\ComposerConstraintConsole` to your `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()` inside `if ($this->getConfig()->isDevelopmentConsoleCommandsEnabled()) {` to enable it only in the development mode.
 
-3. Run the following command:
+3. Generate transfers:
 
 ```bash
 console transfer:generate
 ```
 
-## Using the Composer constrainer
-
-To use the Composer Constrainer tool:
+## Use the Composer constrainer
 
 1. Run the command:
 
@@ -69,7 +63,7 @@ To use the Composer Constrainer tool:
 vendor/bin/console code:constraint:modules -d
 ```
 
-This command makes no changes in the composer.json. The return code of this command is either 0 (success) or 1 (error, some constraints need to be changed). This is the recommended hook for your CI system. Full version of `-d` option is also available as `--dry-run`.
+This command makes no changes in the composer.json. The return code of this command is either 0 (success) or 1 (error, some constraints need to be changed). This is the recommended hook for your CI system. The full version of the `-d` option is also available as `--dry-run`.
 
 2. Run the command:
 
@@ -77,7 +71,7 @@ This command makes no changes in the composer.json. The return code of this comm
 vendor/bin/console code:constraint:modules -dw
 ```
 
-This command validates not only Spryker packages, but any other vendors packages as well. Full version of `-w` option is also available as `--with-foreign`.
+This command validates not only Spryker packages but any other vendor packages as well. The full version of the `-w` option is also available as `--with-foreign`.
 
 3. Run the command:
 
@@ -85,7 +79,7 @@ This command validates not only Spryker packages, but any other vendors packages
 vendor/bin/console code:constraint:modules
 ```
 
-This command changes the project's composer.json. Make sure you dry run the command before applying the changes with this command.
+This command changes the project's `composer.json`. Make sure you dry run the command before applying the changes with this command.
 
 4. Run the command:
 
@@ -93,5 +87,5 @@ This command changes the project's composer.json. Make sure you dry run the comm
 vendor/bin/console code:constraint:modules -w
 ```
 
-This command changes the project's composer.json with consideration of any usage of vendor packages.
+This command changes the project's `composer.json` with consideration of any usage of vendor packages.
 

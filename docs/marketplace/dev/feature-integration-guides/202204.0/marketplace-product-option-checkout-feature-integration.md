@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Marketplace Product Option | {{page.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-feature-integration.html) |
-| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 
 ### 1) Set up behavior
 

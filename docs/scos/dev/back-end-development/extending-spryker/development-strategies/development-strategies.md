@@ -1,29 +1,29 @@
 ---
 title: Development strategies
-description: This instruction describes the strategies a project team can take while building a Spryker-based project.
+description: Development strategies that you can use when building a Spryker project.
 last_updated: Jan 28, 2022
 template: concept-topic-template
 ---
 
-Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy even the most complex project business requirements.
+Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy the most complex project business requirements.
 
-In the project development, the team is free to decide what approach to use. Spryker recommends considering *Configuration*, *Plug and Play*, and *Project modules* first to get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features, and keep the system up to date.
+To get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features, and keep the system up to date, we recommend the following development strategies in the order provided:
+1. Configuration
+2. Plug and Play
+3. Project modules
 
-Before proceeding to the strategies definition, check out the following table of the Spryker OS update support to make the best decision about the customization strategy.
+
+The following table briefly describes all the available strategies and how they affect a project's upgraddability. For full description of the strategies, see the following sections.
 
 | DEVELOPMENT STRATEGY | SPRYKER OS UPDATE SUPPORT |
 | --- | --- |
 | Configuration | High, you can safely take minor and patch releases. |
 | Plug and play | High, you can safely take minor and patch releases. |
 | Project modules | High, you can safely take minor and patch releases. |
-| Spryker OS module customization | Reduced, manual check is needed for every update. |
-| Spryker OS module replacement | No support. |
+| Module customization | Reduced, manual check is needed for every update. |
+| Module replacement | No support. |
 
-## Development strategies
-
-Consider the following development strategies.
-
-### Configuration
+## Configuration development strategy
 
 Spryker provides an extensive configuration capability using `DependencyProviders` and Configuration.
 
@@ -44,7 +44,7 @@ In your project, you don't calculate a refundable amount inside Spryker OS, so y
 
 Spryker OS support: High, you can safely take minor and patch releases.
 
-### Plug and play
+## Plug and play development strategy
 
 When existing OOTB functionality is not enough, we need to consider building our Plugins for existing plugin stacks in separate Project modules.
 
@@ -56,9 +56,11 @@ In your project, you don't store prices in Spryker OS, but in an external system
 
 {% endinfo_block %}
 
+If an extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+
 Spryker OS support: High, you can safely take minor and patch releases.
 
-### Project modules
+## Project modules development strategy
 
 When the Spryker OS does not provide certain functionality, domain object, or concept, create a new Project module where you implement new business requirements.
 
@@ -72,14 +74,14 @@ In your project, you want to introduce product Label groups. In this case, you n
 
 Spryker OS support: High, you can safely take minor and patch releases.
 
-### Spryker OS module customization
+## Module customization development strategy
 
 When specific OOTB Spryker behavior doesn't fit Project requirements, you can enable the full power of available for your codebase by extending existing business modules.
 
 {% info_block infoBox "Let us know which extension point is missing, so we can add it in the core" %}
 
 Register missing extension points in [Aha ideas](https://spryker.ideas.aha.io/).
- 
+
 {% endinfo_block %}
 
 As it's quite a substantial change, we need to go deeper and not only extend OOTB Spryker behaviors but also change them, some of the non-API changes become dangerous. That's why a module constraint to a specific minor version is required (using *~* instead of *^*).
@@ -94,7 +96,7 @@ In your project, the `Order` entity must not be hydrated during the buying proce
 
 Spryker OS support: Reduced, manual check is needed for every update.
 
-### Spryker OS module replacement
+## Module replacement development strategy
 
 When an existing Spryker module provides functionality that doesn't fit the Project conceptually, there is a possibility to replace a Spryker module completely using the "composer replace" feature.
 

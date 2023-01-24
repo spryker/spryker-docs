@@ -43,11 +43,11 @@ related:
     link: docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
 ---
 
-Zed's persistence layer is the owner of the schema, entities and queries. This layer knows the database structure and holds the connection to it.
+Zed's `Persistence` layer is the owner of the schema, entities, and queries. This layer knows the database structure and holds the connection to it.
 
 ## Integrated technologies
 
-Propel	Fast and simple ORM Framework MySQL or PostgreSQL. Both databases are supported.
+Propel Fast and simple ORM Framework MySQL or PostgreSQL. Both databases are supported.
 
 ## Persistence layer elements:
 

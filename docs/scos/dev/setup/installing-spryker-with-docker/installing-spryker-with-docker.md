@@ -20,6 +20,9 @@ redirect_from:
   - /2021080/docs/en/getting-started-with-docker
   - /docs/getting-started-with-docker
   - /docs/en/getting-started-with-docker
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
+  - /docs/scos/dev/setup/installing-spryker-without-docker.html
+  - /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
 related:
   - title: Installing Docker prerequisites on Linux
     link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html
@@ -31,15 +34,15 @@ related:
     link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
-This section is a comprehensive introduction to running Spryker in Docker containers.
+This section is a comprehensive introduction to running Spryker in Docker containers locally.
 
-Spryker provides a standardized and customizable way to bootstrap applications and prepare development and production environments using the [Docker SDK tool](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
+Spryker provides a standardized and customizable way to bootstrap applications and prepare development environments using the [Docker SDK tool](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 
-The following checklists guide you through the necessary steps to manage your Spryker installation using the Docker SDK.
+To install Spryker with Docker locally, follow the steps.
 
 ## Prerequisites
 
-Before you install Spryker with Docker, review the installation prerequisites for your operating system:
+Review the installation prerequisites for your operating system:
 
 * [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
 * [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
@@ -48,7 +51,7 @@ Before you install Spryker with Docker, review the installation prerequisites fo
 
 ## Installation
 
-There are several ways to configure a Docker-based instance of Spryker. See [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to learn about them in detail.
+There are several ways to install a Docker-based instance of Spryker. For more details about them, see [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html).
 
 If you've already selected an installation mode, follow one of the guides below:
 
@@ -57,8 +60,6 @@ If you've already selected an installation mode, follow one of the guides below:
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html)
-
 
 ## Configuration
 

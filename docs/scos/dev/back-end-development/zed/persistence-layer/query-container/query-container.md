@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/query-container
   - /v1/docs/en/query-container
 related: 
-  - title: Implementing a query container
+  - title: Implement a query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
   - title: Using a query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
@@ -31,20 +31,21 @@ related:
 
 {% info_block infoBox "When to use query containers" %}
 
-Don't use query containers to cross module boundaries, as this increases modules coupling. However, you can use them behind [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) as query aggregations.
-Previously, query containers were used to cross module borders (via dependency providers), which led to higher module coupling and leaking of persistence layer from one domain object to another, and therefore, to higher maintenance efforts and lower code reusability. This approach has been deprecated now, so we don't recommend using query containers like this in your project development.
+Don't use query containers to cross module boundaries, as this increases module coupling. However, you can use them behind [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) as query aggregations.
+
+Previously, query containers were used to cross-module borders (using dependency providers), which led to higher module coupling and leaking of the `Persistence` layer from one domain object to another, and therefore, to higher maintenance efforts and lower code reusability. This approach is deprecated, so we don't recommend using query containers like this in your project development.
 
 {% endinfo_block %}
 
 A query container holds all the database queries of the current module.
 
-Each module has exactly one query container, which also acts as an entry point to the persistence layer. Internally, it uses [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) and returns unterminated queries.
+Each module has exactly one query container, which also acts as an entry point to the `Persistence` layer. Internally, it uses [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) and returns unterminated queries.
 
-As you can see in the following example, the query container consists of `query-methods` which gets [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) from the [factory](/docs/scos/dev/back-end-development/factory/factory.html), adds some filters or joins and returns the unterminated query object.
+As you can see in the following example, the query container consists of `query-methods`. It gets [query objects](/docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html) from the [factory](/docs/scos/dev/back-end-development/factory/factory.html), adds some filters or joins, and returns the unterminated query object.
 
-Unterminated queries should be avoided in the Application Layers above Persistence. Consider using the [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) patterns to decouple persistence and ORM implementation details.
+ Avoid unterminated queries in the Application layers above `Persistence`. To decouple persistence and ORM implementation details, consider using the [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) patterns.
 
-Unterminated means you don't execute the query with `find()`, `findOne()` or `count()`.
+Unterminated means you don't execute the query with `find()`, `findOne()`, or `count()`.
 
 ```php
 use Spryker\Zed\Kernel\Persistence\AbstractQueryContainer;
@@ -66,13 +67,13 @@ class MyBundleQueryContainer extends AbstractQueryContainer implements MyBundleQ
 
 ## Related Spryks
 
-You might use the following definitions to generate the related code:
+To generate the related code, you can use the following definitions:
 
-* `vendor/bin/console spryk:run AddZedPersistencePropelAbstractQuery` - Add Zed Persistence Propel Abstract Query
+* `vendor/bin/console spryk:run AddZedPersistencePropelAbstractQuery`: Add Zed Persistence Propel Abstract Query
 
-See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.
+For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).
 
 ## Next steps
 
-* See [Using a Query Container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html) for information on how to use the Query Containers.
-* If you need to implement your own Query Container, see [Implementing a Query Container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html).
+* For information about using the query containers, see [Using a qauery container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html).
+* If you need to implement your own Query Container, see [Implement a query container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implement-a-query-container.html).

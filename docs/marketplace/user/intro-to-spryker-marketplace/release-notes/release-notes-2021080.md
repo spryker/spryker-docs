@@ -159,7 +159,7 @@ Documentation:
 * [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{site.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Retrieving Marketplaceorders](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-marketplace-orders.html)
 * [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{site.version}}/managing-the-returns.html)
-* [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlist-items-via-glue-api.html)
+* [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-wishlist-items-via-glue-api.html)
 * [Search the product catalog](/docs/marketplace/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)
 * [Retrieving autocomplete and search suggestions](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-autocomplete-and-search-suggestions.html)
 

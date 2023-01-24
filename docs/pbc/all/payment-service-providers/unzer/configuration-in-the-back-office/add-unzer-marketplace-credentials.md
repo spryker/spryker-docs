@@ -13,6 +13,12 @@ Each section contains reference information. Make sure to review it before you s
 
 To add Unzer marketplace credentials, take the steps in the following sections.
 
+{% info_block infoBox "Note" %}
+
+All merchants allowed to sell their products in your stores must have Unzer credentials in the Back Office. Otherwise, your customers cannot buy their products; they will not be able to start the checkout process.
+
+{% endinfo_block %}
+
 ## Add Unzer merketplace credentials
 
 1. Add Unzer credentials:

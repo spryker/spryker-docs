@@ -4,87 +4,152 @@ entries:
     nested:
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
+        include_versions:
+        - "202204.0"
         nested:
           - title: What's changed
             url: /docs/pbc/all/carrier-management/whats-changed-in-carrier-management.html
+            include_versions:
+            - "202204.0"
           - title: Install and upgrade
             nested:
               - title: Integrate the Shipment feature
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
+                include_versions:
+                - "202204.0"
               - title: Integrate the Shipment + Approval Process feature
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
+                include_versions:
+                - "202204.0"
               - title: Integrate the Shipment + Cart feature
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-cart-feature.html
+                include_versions:
+                - "202204.0"
               - title: Integrate the Shipment Glue API
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html
+                include_versions:
+                - "202204.0"
+                - "202212.0"
               - title: Upgrade the Shipment module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
+                include_versions:
+                - "202204.0"
               - title: Upgrade the ShipmentCartConnector module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcartconnector-module.html
+                include_versions:
+                - "202204.0"
               - title: Upgrade the ShipmentCheckoutConnector module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcheckoutconnector-module.html
+                include_versions:
+                - "202204.0"
               - title: Upgrade the ShipmentDiscountConnector module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html
+                include_versions:
+                - "202204.0"
               - title: Upgrade the ShipmentGui module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentgui-module.html
+                include_versions:
+                - "202204.0"
           - title: Manage in the Back Office
             nested:
               - title: Add carrier companies
                 url: /docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html
+                include_versions:
+                - "202204.0"
               - title: Add delivery methods
                 url: /docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html
+                include_versions:
+                - "202204.0"
               - title: Edit delivery methods
                 url: /docs/pbc/all/carrier-management/manage-in-the-back-office/edit-delivery-methods.html
+                include_versions:
+                - "202204.0"
           - title: Manage via Glue API
             nested:
               - title: Retrieve shipments and shipment methods when submitting checkout data
                 url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
+                include_versions:
+                - "202204.0"
               - title: Retrieve shipments when checking out purchases
                 url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
+                include_versions:
+                - "202204.0"
               - title: Retrieve shipments in orders
                 url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-in-orders.html
+                include_versions:
+                - "202204.0"
           - title: Import and export data
             url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
             nested:
               - title: File details - shipment.csv
                 url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html
+                include_versions:
+                - "202204.0"
               - title: File details - shipment_method_store.csv
                 url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment-method-store.csv.html
+                include_versions:
+                - "202204.0"
               - title: File details - shipment_price.csv
                 url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment-price.csv.html
+                include_versions:
+                - "202204.0"
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Add a new shipment method"
                 url: /docs/pbc/all/carrier-management/tutorials-and-howtos/howto-add-a-new-shipment-method.html
+                include_versions:
+                - "202204.0"
               - title: "HowTo: Add a new shipment method 2.0"
                 url: /docs/pbc/all/carrier-management/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html
+                include_versions:
+                - "202204.0"
           - title: Domain model and relationships
             nested:
               - title: "Shipment method entities in the database: reference information"
                 url: /docs/pbc/all/carrier-management/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html
+                include_versions:
+                - "202204.0"
           - title: Extend and customize
             nested:
               - title: "Shipment method plugins: reference information"
                 url: /docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html
+                include_versions:
+                - "202204.0"
           - title: Third-party integrations
             nested:
               - title: Seven Senders
                 url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders.html
+                include_versions:
+                - "202204.0"
                 nested:
                   - title: Install and configure
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/install-and-configure-seven-senders.html
+                    include_versions:
+                    - "202204.0"
                   - title: Integrate
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/integrate-seven-senders.html
+                    include_versions:
+                    - "202204.0"
                   - title: API requests
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-api-requests.html
+                    include_versions:
+                    - "202204.0"
                   - title: Mappers
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-mappers.html
+                    include_versions:
+                    - "202204.0"
                   - title: Persistence layer
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-persistance-layer.html
+                    include_versions:
+                    - "202204.0"
               - title: Paazl
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paazl.html
+                include_versions:
+                - "202204.0"
               - title: Paqato
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paqato.html
+                include_versions:
+                - "202204.0"
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:
@@ -114,10 +179,20 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/multi-step-checkout-overview.html
               - title: Order thresholds overview
                 url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/order-thresholds-overview.html
+          - title: Approval Process feature overview
+            url: /docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html
+          - title: Comments feature overview
+            url: /docs/pbc/all/cart-and-checkout/comments-feature-overview.html
+          - title: Non-splittable Products feature overview
+            url: /docs/pbc/all/cart-and-checkout/non-splittable-products-feature-overview.html
+          - title: Resource Sharing feature overview
+            url: /docs/pbc/all/cart-and-checkout/resource-sharing-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features
                 nested:
+                  - title: Approval Process
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-approval-process-feature.html
                   - title: Cart + Agent Assist
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
                   - title: Cart
@@ -134,7 +209,13 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html
                   - title: Checkout + Quotation Process
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
-                  - title: Checkout Workflow
+                  - title: Comments
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-feature.html
+                  - title: Comments + Order Management
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-order-management-feature.html
+                  - title: Comments
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html
+                  - title: Multiple Carts + Reorder
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html
                   - title: Multiple Carts
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-comments-feature.html
@@ -155,15 +236,15 @@ entries:
                   - title: Quick Add to Cart
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html
                   - title: Quick Add to Cart + Measurement Units
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-resource-sharing-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html
                   - title: Quick Add to Cart + Non-splittable Products
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
                   - title: Quick Add to Cart + Packaging Units
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html
                   - title: Quick Add to Cart + Shopping Lists
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html
                   - title: Resource Sharing
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-resource-sharing-feature.html
                   - title: Shared Carts
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
               - title: Install Glue API
@@ -182,21 +263,21 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html
               - title: Upgrade modules
                 nested:
-                  - title: Upgrade the Cart module
+                  - title: Cart
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
-                  - title: Upgrade the CartExtension module
+                  - title: CartExtension
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html
-                  - title: Upgrade the CartPage module
+                  - title: CartPage
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html
-                  - title: Upgrade the CartsRestApi module
+                  - title: CartsRestApi
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartsrestapi-module.html
-                  - title: Upgrade the CartVariant module
+                  - title: CartVariant
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html
-                  - title: Upgrade the Checkout module
+                  - title: Checkout
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html
-                  - title: Upgrade the CheckoutPage module
+                  - title: CheckoutPage
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
-                  - title: Upgrade the CheckoutRestApi module
+                  - title: CheckoutRestApi
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
           - title: Extend and customize
             nested:
@@ -214,6 +295,10 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-steps.html
           - title: Import and export data
             nested:
+              - title: File details - comment.csv
+                url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-comment.csv.html
+              - title: File details - product_quantity.csv
+                url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-product-quantity.csv.html
               - title: File details - sales_order_threshold.csv
                 url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-sales-order-threshold.csv.html
           - title: Manage in the Back Office
@@ -255,27 +340,285 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
           - title: Domain model and relationships
             nested:
-              - title: Checkout feature entity diagram
-                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/checkout-feature-entity-diagram.html
-              - title: "Persistent Cart Sharing: module relations"
+              - title: "Approval Process feature: module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/approval-process-feature-module-relations.html
+              - title: "Checkout feature: module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/checkout-feature-module-relations.html
+              - title: "Comments feature: Module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/comments-feature-module-relations.html
+              - title: "Persistent Cart Sharing feature: module relations"
                 url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/persistent-cart-sharing-feature-module-relations.html
-              - title: Quick Add to Cart feature entity diagram
-                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/quick-add-to-cart-feature-entity-diagram.html
-      - title: Digital Asset Management
-        url: /docs/pbc/all/digital-asset-management/digital-asset-management.html
+              - title: "Quick Add to Cart feature: Module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html
+      - title: Content Management System
+        url: /docs/pbc/all/content-management-system/content-management-system.html
         nested:
-          - title: Import and export data
+          - title: What's changed
+            url: /docs/pbc/all/content-management-system/whats-changed-in-cms.html
+          - title: CMS feature overview
+            url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-feature-overview.html
             nested:
-              - title: File details - mime_type.csv
-                url: /docs/pbc/all/digital-asset-management/import-and-export-data/file-details-mime-type.csv.html
+              - title: CMS Pages
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html
+              - title: CMS blocks
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html
+              - title: Templates and Slots
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html
+              - title: CMS pages in search results
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-in-search-results-overview.html
+              - title: Email as a CMS block
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html
+          - title: Content items feature overview
+            url: /docs/pbc/all/content-management-system/content-items-feature-overview.html
+          - title: Navigation feature overview
+            url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
+          - title: File Manager feature overview
+            url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: CMS
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-feature.html
+                  - title: CMS + Catalog
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-catalog-feature.html
+                  - title: CMS + Category Management
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-category-management-feature.html
+                  - title: CMS + Product Lists + Catalog
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
+                  - title: Content Items
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-content-items-feature.html
+                  - title: Navigation
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-navigation-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: CMS
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
+                  - title: Content Items
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html
+                  - title: Navigation
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Cms
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-module.html
+                  - title: CmsBlock
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
+                  - title: CmsBlockCategoryConnector
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html
+                  - title: CmsBlockCollector
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcollector-module.html
+                  - title: CmsBlockGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html
+                  - title: CmsBlockStorage
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockstorage-module.html
+                  - title: CmsBlockWidget
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockwidget-module.html
+                  - title: CmsCollector
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html
+                  - title: CmsGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsgui-module.html
+                  - title: CmsPageSearch
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
+                  - title: CmsStorage
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsstorage-module.html
+                  - title: Content
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html
+                  - title: ContentBanner
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html
+                  - title: ContentBannerGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html
+                  - title: ContentBannersRestApi
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentbannersrestapi-module.html
+                  - title: ContentFileGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentfilegui-module.html
+                  - title: ContentFileWidget
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentfilewidget-module.html
+                  - title: ContentGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentgui-module.html
+                  - title: ContentStorage
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html
+                  - title: FileManager
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html
+                  - title: FileManagerStorage
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerstorage-module.html
+                  - title: FileManagerWidget
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerwidget-module.html
+                  - title: Navigation
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigation-module.html
+                  - title: NavigationGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
+                  - title: NavigationsRestApi
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
+              - title: Category CMS blocks
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-category-cms-blocks.html
+              - title: Product CMS blocks
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-product-cms-blocks.html
+              - title: Content widget
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-the-content-widget.html
+              - title: Multi-store CMS blocks
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-multi-store-cms-blocks.html
+              - title: Navigation module
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-the-navigation-module.html
+          - title: Import and export data
+            url: /docs/pbc/all/content-management-system/import-and-export-data/cms-data-import.html
+            nested:
+              - title: cms_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
+              - title: cms_block.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block.csv.html
+              - title: cms_block_store.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block-store.csv.html
+              - title: cms_block_category_position.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block-category-postion.csv.html
+              - title: cms_block_category.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block-category.csv.html
+              - title: content_banner.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-banner.csv.html
+              - title: content_product_abstract_list.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-product-abstract-list.csv.html
+              - title: content_product_set.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-product-set.csv.html
+              - title: cms_page.csv.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-page.csv.html
+              - title: cms_page_store.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-page-store.csv.html
+              - title: cms_slot_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot-template.csv.html
+              - title: cms_slot.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot.csv.html
+              - title: cms_slot_block.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot-block.csv.html
+              - title: mime_type.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-mime-type.csv.html
+              - title: navigation.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation.csv.html
+              - title: navigation_node.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation-node.csv.html
+              - title: content_navigation.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-navigation.csv.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve abstract product list content items
+                url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
+              - title: Retrieve banner content items
+                url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-banner-content-items.html
+              - title: Retrieve CMS pages
+                url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-cms-pages.html
+              - title: Retrieve navigation trees
+                url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-navigation-trees.html
           - title: Manage in the Back Office
             nested:
-              - title: Add and edit MIME types
-                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
+              - title: "Best practices: Add content to the Storefront pages using templates and slots"
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
+              - title: Navigation
+                nested:
+                  - title: Create navigation elements
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/create-navigation-elements.html
+                  - title: Create navigation nodes
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/create-navigation-nodes.html
+                  - title: Duplicate navigation elements
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
+                  - title: Edit navigation elements
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/edit-navigation-elements.html
+                  - title: Edit navigation nodes
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/edit-navigation-nodes.html
+                  - title: Delete navigation nodes
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/navigation/delete-navigation-nodes.html
+              - title: Content items
+                nested:
+                  - title: Create abstract product list content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html
+                  - title: Create banner content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-banner-content-items.html
+                  - title: Create file list content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-file-list-content-items.html
+                  - title: Create navigation content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-navigation-content-items.html
+                  - title: Create product set content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-product-set-content-items.html
+                  - title: Edit content items
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/edit-content-items.html
+              - title: Blocks
+                nested:
+                  - title: Create CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-cms-blocks.html
+                  - title: Create category CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-category-cms-blocks.html
+                  - title: Create email CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-email-cms-blocks.html
+                  - title: Create product CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/create-product-cms-blocks.html
+                  - title: Edit CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/edit-cms-blocks.html
+                  - title: Add content items to CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
+                  - title: Edit placeholders in CMS blocks
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
+              - title: Pages
+                nested:
+                  - title: Create CMS pages
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/create-cms-pages.html
+                  - title: Edit CMS pages
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/edit-cms-pages.html
+                  - title: Add content items to CMS pages
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
+                  - title: Manage CMS page versions
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-page-versions.html
+                  - title: Manage CMS pages
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/pages/manage-cms-pages.html
+              - title: Manage slots
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-slots.html
+              - title: Redirects
+                nested:
+                  - title: Create CMS redirects
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/redirects/create-cms-redirects.html
+                  - title: Manage CMS redirects
+                    url: /docs/pbc/all/content-management-system/manage-in-the-back-office/redirects/manage-cms-redirects.html
               - title: Manage file list
-                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-file-list.html
               - title: Manage file tree
-                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/manage-file-tree.html
+              - title: Add and edit MIME types
+                url: /docs/pbc/all/content-management-system/manage-in-the-back-office/add-and-edit-mime-types.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Create a custom content item"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-create-a-custom-content-item.html
+              - title: "HowTo: Create a visibility condition for CMS Blocks"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
+              - title: "HowTo: Create CMS templates"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-create-cms-templates.html
+              - title: "HowTo: Define positions of category CMS blocks"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
+              - title: "HowTo: Use blocks"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-use-blocks.html
+              - title: "Tutorial: CMS"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/tutorial-cms.html
+              - title: "Tutorial: Content and search - personalized catalog pages"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
+          - title: Third-party integrations
+            nested:
+              - title: Censhare
+                url: /docs/pbc/all/content-management-system/third-party-integrations/censhare.html
+              - title: Coremedia
+                url: /docs/pbc/all/content-management-system/third-party-integrations/coremedia.html
+              - title: E-Spirit
+                url: /docs/pbc/all/content-management-system/third-party-integrations/e-spirit.html
+              - title: Magnolia
+                url: /docs/pbc/all/content-management-system/third-party-integrations/magnolia.html
+              - title: Styla
+                url: /docs/pbc/all/content-management-system/third-party-integrations/styla.html
+          - title: Extend and customize
+            nested:
+              - title: "CMS extension points: reference information"
+                url: /docs/pbc/all/content-management-system/extend-and-customize/cms-extension-points-reference-information.html
+              - title: "Navigation module: reference information"
+                url: /docs/pbc/all/content-management-system/extend-and-customize/navigation-module-reference-information.html
+          - title: Domain model and relationships
+            nested:
+              - title: "Content item types: module relations"
+                url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -343,6 +686,17 @@ entries:
             nested:
               - title: "HowTo: Create discounts based on shipment"
                 url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+      - title: Emails
+        url: /docs/pbc/all/emails/emails.html
+        nested:
+          - title: "HowTo: Create and register a MailTypePlugin"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mailtypeplugin.html
+          - title: "HowTo: Create and register a mail provider"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mail-provider.html
+          - title: "HowTo: Create and register a MailTypeBuilderPlugin"
+            url: /docs/pbc/all/emails/howto-create-and-register-a-mail-type-builder-plugin.html
+          - title: "Tutorial: Sending a mail"
+            url: /docs/pbc/all/emails/tutorial-sending-an-email.html
       - title: Gift Cards
         url: /docs/pbc/all/gift-cards/gift-cards.html
         nested:
@@ -369,6 +723,51 @@ entries:
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html
               - title: Retrieve gift cards in guest carts
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
+      - title: Identity Access Management
+        url: /docs/pbc/all/identity-access-management/identity-access-management.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install the Spryker Core Back Office feature
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-the-spryker-core-back-office-feature.html
+              - title: Install the Customer Access Glue API
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-the-customer-access-glue-api.html
+              - title: Install the Customer Account Management Glue API
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-the-customer-account-management-glue-api.html
+              - title: Install Microsoft Azure Active Directory
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-microsoft-azure-active-directory.html
+          - title: Log into the Back Office
+            url: /docs/pbc/all/identity-access-management/log-into-the-back-office.html
+          - title: Manage using Glue API
+            nested:
+              - title: Authentication and authorization
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authentication-and-authorization.html
+              - title: Security and authentication
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-security-and-authentication.html
+              - title: Create customers
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-create-customers.html
+              - title: Confirm customer registration
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-confirm-customer-registration.html
+              - title: Manage customer passwords
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-passwords.html
+              - title: Authenticate as a customer
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
+              - title: Manage customer authentication tokens via OAuth 2.0
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
+              - title: Manage customer authentication tokens
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
+              - title: Authenticating as a company user
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
+              - title: Manage company user authentication tokens
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
+              - title: Authenticate as an agent assist
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
+              - title: Managing agent assist authentication tokens
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
+              - title: Delete expired refresh tokens
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html
+          - title: Configure basic .htaccess authentication
+            url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
@@ -502,6 +901,390 @@ entries:
                 url: /docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
               - title: "PriceProduct module details: reference information"
                 url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
+      - title: Product Information Management
+        url: /docs/pbc/all/product-information-management/product-information-management.html
+        nested:
+          - title: Product
+            url: /docs/pbc/all/product-information-management/product-feature-overview/product-feature-overview.html
+            nested:
+              - title: Product Attributes
+                url: /docs/pbc/all/product-information-management/product-feature-overview/product-attributes-overview.html
+              - title: Discontinued Products
+                url: /docs/pbc/all/product-information-management/product-feature-overview/discontinued-products-overview.html
+              - title: Product Images
+                url: /docs/pbc/all/product-information-management/product-feature-overview/product-images-overview.html
+              - title: Timed Product Availability
+                url: /docs/pbc/all/product-information-management/product-feature-overview/timed-product-availability-overview.html
+              - title: Search widget for concrete products
+                url: /docs/pbc/all/product-information-management/product-feature-overview/search-widget-for-concrete-products-overview.html
+          - title: Alternative Products
+            url: /docs/pbc/all/product-information-management/alternative-products-feature-overview.html
+          - title: Catalog
+            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
+          - title: Category Management
+            url: /docs/pbc/all/product-information-management/category-management-feature-overview.html
+          - title: Configurable Bundle
+            url: /docs/pbc/all/product-information-management/configurable-bundle-feature-overview.html
+          - title: Measurement Units
+            url: /docs/pbc/all/product-information-management/measurement-units-feature-overview.html
+          - title: Packaging Units
+            url: /docs/pbc/all/product-information-management/packaging-units-feature-overview.html
+          - title: Product Approval Process
+            url: /docs/pbc/all/product-information-management/product-approval-process-feature-overview.html
+          - title: Product Barcode
+            url: /docs/pbc/all/product-information-management/product-barcode-feature-overview.html
+          - title: Product Bundles
+            url: /docs/pbc/all/product-information-management/product-bundles-feature-overview.html
+          - title: Product Groups
+            url: /docs/pbc/all/product-information-management/product-groups-feature-overview.html
+          - title: Product Labels
+            url: /docs/pbc/all/product-information-management/product-labels-feature-overview.html
+          - title: Product Lists
+            url: /docs/pbc/all/product-information-management/product-lists-feature-overview.html
+          - title: Product Options
+            url: /docs/pbc/all/product-information-management/product-options-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Alternative Products + Discontinued Products
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
+                  - title: Alternative Products
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-feature.html
+                  - title: Alternative Products + Inventory Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
+                  - title: Alternative Products + Product Label
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-product-label-feature.html
+                  - title: Alternative Products + Wishlist
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
+                  - title: Approval Process + Shipment
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-approval-process-shipment-feature.html
+                  - title: Catalog + Category Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html
+                  - title: Catalog + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-catalog-order-management-feature.html
+                  - title: Category Filters
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-filters-feature.html
+                  - title: Category Image
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-image-feature.html
+                  - title: Category Management + CMS
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-cms-feature.html
+                  - title: Category Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-feature.html
+                  - title: Category Management + Promotions and Discounts
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-management-promotions-and-discounts-feature.html
+                  - title: Configurable Bundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
+                  - title: Configurable Bundle + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html
+                  - title: Discontinued Products + Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
+                  - title: Measurement Units
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-measurement-units-feature.html
+                  - title: Measurement Units + Quick Add to Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
+                  - title: Packaging Units
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-packaging-units-feature.html
+                  - title: Product Approval Process
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
+                  - title: Product Bundles + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
+                  - title: Product Bundles
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-bundles-feature.html
+                  - title: Product Bundles + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html
+                  - title: Product Bundles + Return Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html
+                  - title: Product + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-cart-feature.html
+                  - title: Product + Category
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-category-feature.html
+                  - title: Product Configuration
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-configuration-feature.html
+                  - title: Product
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-feature.html
+                  - title: Product Group + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-group-cart-feature.html
+                  - title: Product Group + Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
+                  - title: Product Group + Product Rating and Reviews
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-group-product-rating-and-reviews-feature.html
+                  - title: Product Groups
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-groups-feature.html
+                  - title: Product Images + Configurable Bundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
+                  - title: Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-labels-feature.html
+                  - title: Product labels + Promotions and Discounts
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-labels-promotions-and-discounts-feature.html
+                  - title: Product Lists + Catalog
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
+                  - title: Product Lists
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-lists-feature.html
+                  - title: Product Options + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html
+                  - title: Product + Order Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-order-management-feature.html
+                  - title: Product Sets
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-sets-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Alternative Products
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
+                  - title: Catalog
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-catalog-glue-api.html
+                  - title: Category Management
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html
+                  - title: Configurable Bundle + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html
+                  - title: Configurable Bundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
+                  - title: Configurable Bundle + Product
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
+                  - title: Measurement Units
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
+                  - title: Product Bundle + Cart
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
+                  - title: Product Bundles
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html
+                  - title: Product Configuration
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html
+                  - title: Product
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-glue-api.html
+                  - title: Product Image Sets
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html
+                  - title: Product Labels
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
+                  - title: Product Options
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Catalog
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                  - title: Category
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-category-module.html
+                  - title: Category Template Migration Console
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-category-template-migration-console-module.html
+                  - title: CategoryGui
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorygui-module.html
+                  - title: CategoryPageSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
+                  - title: CategoryStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorystorage-module.html
+                  - title: ConfigurableBundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundle-module.html
+                  - title: ConfigurableBundleStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundlestorage-module.html
+                  - title: MerchantRelationshipProductListGui
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html
+                  - title: Product
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
+                  - title: ProductAvailabilitiesRestApi
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html
+                  - title: ProductBundle
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
+                  - title: ProductCategoryFilterGui
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productcategoryfiltergui-module.html
+                  - title: ProductCategoryStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productcategorystorage-module.html
+                  - title: ProductConfiguration
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguration-module.html
+                  - title: ProductConfigurationsPriceProductVolumesRestApi
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.html
+                  - title: ProductConfigurationsRestApi
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationsrestapi-module.html
+                  - title: ProductConfigurationStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationstorage-module.html
+                  - title: ProductConfigurationWidget
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationwidget-module.html
+                  - title: ProductConfiguratorGatewayPage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguratorgatewaypage-module.html
+                  - title: ProductDetailPage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productdetailpage-module.html
+                  - title: ProductDiscountConnector
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productdiscountconnector-module.html
+                  - title: ProductLabel
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
+                  - title: ProductLabelDiscountConnector
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabeldiscountconnector-module.html
+                  - title: ProductLabelGUI
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
+                  - title: ProductLabelSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html
+                  - title: ProductLabelStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabelstorage-module.html
+                  - title: ProductListGui
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html
+                  - title: ProductListSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlistsearch-module.html
+                  - title: ProductManagement
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
+                  - title: ProductMeasurementUnit
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunit-module.html
+                  - title: ProductMeasurementUnitWidget
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunitwidget-module.html
+                  - title: ProductNew
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productnew-module.html
+                  - title: ProductOption
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html
+                  - title: ProductOptionCartConnector
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html
+                  - title: ProductOptionDiscountConnector
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.html
+                  - title: ProductOptionExporter
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productoptionexporter-module.html
+                  - title: ProductPackagingUnit
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html
+                  - title: ProductPackagingUnitDataImport
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitdataimport-module.html
+                  - title: ProductPackagingUnitStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html
+                  - title: ProductPackagingUnitWidget
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html
+                  - title: ProductPageSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html
+                  - title: ProductQuantity
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantity-module.html
+                  - title: ProductQuantityDataImport
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantitydataimport-module.html
+                  - title: ProductQuantityStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantitystorage-module.html
+                  - title: ProductRelationStorage
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productrelationstorage-module.html
+                  - title: ProductReviewSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html
+                  - title: ProductSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsearch-module.html
+                  - title: ProductSearchWidget
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html
+                  - title: ProductSetPageSearch
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html
+                  - title: ProductValidity
+                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
+              - title: Decimal Stock migration concept
+                url: /docs/pbc/all/product-information-management/install-and-upgrade/decimal-stock-migration-concept.html
+              - title: Float stock for products migration concept
+                url: /docs/pbc/all/product-information-management/install-and-upgrade/float-stock-for-products-migration-concept.html
+              - title: Replace the CodeItNow module with the BarcodeLaminas module
+                url: /docs/pbc/all/product-information-management/install-and-upgrade/replace-the-codeitnow-with-the-barcodelaminas-module.html
+          - title: Import and export data
+            url: /docs/pbc/all/product-information-management/import-and-export-data/import-product-catalog-data.html
+            nested:
+              - title: Import product data with a single file
+                url: /docs/pbc/all/product-information-management/import-and-export-data/import-product-data-with-a-single-file.html
+              - title: Categories data import
+                url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/categories-data-import.html
+                nested:
+                  - title: category_template.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/file-details-category-template.csv.html
+                  - title: category.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/file-details-category.csv.html
+                  - title: category_store.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/categories-data-import/file-details-category-store.csv.html
+              - title:  Products data import
+                url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/products-data-import.html
+                nested:
+                  - title: product_attribute_key.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html
+                  - title: product_management_attribute.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html
+                  - title: product_abstract.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-abstract.csv.html
+                  - title: product_abstract_store.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html
+                  - title: product_concrete.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-concrete.csv.html
+                  - title: product_image.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-image.csv.html
+                  - title: product_abstract_approval_status.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/products-data-import/file-details-product-abstract-approval-status.csv.html
+              - title: Product options data import
+                url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/product-options-data-import.html
+                nested:
+                  - title: product_option.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/file-details-product-option.csv.html
+                  - title: product_option_price.csv
+                    url: /docs/pbc/all/product-information-management/import-and-export-data/product-options/file-details-product-option-price.csv.html
+              - title: product_alternative.csv
+                url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-alternative.csv.html
+              - title: product_concrete_pre_configuration.csv
+                url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html
+              - title: product_discontinued.csv
+                url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-discontinued.csv.html
+              - title: product_group.csv
+                url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-group.csv.html
+              - title: product_label_store.csv
+                url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-label-store.csv.html
+              - title: product_label.csv
+                url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-label.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Attributes
+                nested:
+                  - title: Create product attributes
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/attributes/create-product-attributes.html
+                  - title: Edit product attributes
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/attributes/edit-product-attributes.html
+              - title: Products
+                nested:
+                  - title: "Creating service offerings: best practices"
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/create-service-offerings-best-practices.html
+                  - title: Manage abstract products and product bundles
+                    nested:
+                      - title: Create abstract products and product bundles
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
+                      - title: Edit abstract products and product bundles
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
+                      - title: Assign product attributes to abstract products
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
+                  - title: Manage product variants
+                    nested:
+                      - title: Create product variants
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
+                      - title: Edit product variants
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
+                      - title: Assign product attributes to product variants
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html
+                      - title: Add product alternatives
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
+                      - title: Discontinue products
+                        url: /docs/pbc/all/product-information-management/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
+              - title: Product labels
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/create-product-labels.html
+                  - title: Edit
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/edit-product-labels.html
+                  - title: View
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-labels/view-product-labels.html
+              - title: Product lists
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-lists/create-product-lists.html
+                  - title: Edit
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-lists/edit-product-lists.html
+              - title: Product options
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-options/create-product-options.html
+                  - title: Edit
+                    url: /docs/pbc/all/product-information-management/manage-in-the-back-office/product-options/edit-product-options.html
+          - title: Manage using Glue API
+            url: /docs/pbc/all/product-information-management/manage-using-glue-api/glue-api-manage-products.html
+            nested:
+              - title: Abstract products
+                nested:
+                  - title: Retrieve abstract products
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+                  - title: Retrieve image sets of abstract products
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+              - title: Categories
+                nested:
+                  - title: Retrieve category nodes
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
+                  - title: Retrieve category trees
+                    url: /docs/pbc/all/product-information-management/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
+              - title:
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:
@@ -514,7 +1297,7 @@ entries:
               - title: Install the Product Rating and Reviews + Product Group feature
                 url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html
               - title: Install the Product Rating and Reviews Glue API
-                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
           - title: Import and export data
             nested:
               - title: File details- product_review.csv
@@ -578,6 +1361,33 @@ entries:
                     url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
           - title: Module relations
             url: /docs/pbc/all/request-for-quote/quotation-process-module-relations.html
+          - title: Use cases
+            url: /docs/pbc/all/request-for-quote/use-cases-request-for-quote-processes.html
+      - title: Return Management
+        url: /docs/pbc/all/return-management/return-management.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install the Return Management feature
+                url: /docs/pbc/all/return-management/install-and-upgrade/install-the-return-management-feature.html
+              - title: Install the Return Management Glue API
+                url: /docs/pbc/all/return-management/install-and-upgrade/install-the-return-management-glue-api.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Change the state of order items in returns
+                url: /docs/pbc/all/return-management/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
+              - title: Manage returns
+                url: /docs/pbc/all/return-management/manage-in-the-back-office/manage-returns.html
+          - title: Manage using Glue API
+            nested:
+              - title: Manage returns
+                url: /docs/pbc/all/return-management/manage-using-glue-api/glue-api-manage-returns.html
+              - title: Retrieve return reasons
+                url: /docs/pbc/all/return-management/manage-using-glue-api/glue-api-retrieve-return-reasons.html
+          - title: "Build a return management process: Best practices"
+            url: /docs/pbc/all/return-management/build-a-return-management-process-best-practices.html
+          - title: "HowTo: Set number of days for a return policy"
+            url: /docs/pbc/all/return-management/howto-set-number-of-days-for-a-return-policy.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -622,6 +1432,8 @@ entries:
             nested:
               - title: Manage shopping lists
                 url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
+              - title: Manage shopping list items
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
@@ -676,6 +1488,57 @@ entries:
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html
               - title: Integrate Avalara Tax + Shipment
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
+      - title: User Management
+        url: /docs/pbc/all/user-management/user-management.html
+        nested:
+          - title: Agent Assist feature overview
+            url: /docs/pbc/all/user-management/agent-assist-feature-overview.html
+          - title: User and rights overview
+            url: /docs/pbc/all/user-management/user-and-rights-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install the ACL feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-acl-feature.html
+              - title: Install the Agent Assist feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-feature.html
+              - title: Install the Agent Assist + Cart feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-cart-feature.html
+              - title: Install the Agent Assist + Shopping List feature
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
+              - title: Install the Agent Assist Glue API
+                url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html
+          - title: Manage in the Back Office
+            nested:
+              - title: "Best practices: Manage users and their permissions with roles and groups"
+                url: /docs/pbc/all/user-management/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
+              - title: Manage user roles
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-roles/create-user-roles.html
+                  - title: Edit
+                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
+              - title: Manage user groups
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-groups/create-user-groups.html
+                  - title: Edit
+                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
+              - title: Manage users
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/create-users.html
+                  - title: Edit
+                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/edit-users.html
+                  - title: Assign and deassign customers
+                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
+                  - title: Delete
+                    url: /docs/pbc/all/user-management/manage-in-the-back-office/manage-users/delete-users.html
+          - title: Manage using Glue API
+            nested:
+              - title: Search by customers as an agent assist
+                url: /docs/pbc/all/user-management/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+              - title: Impersonate customers as an agent assist
+                url: /docs/pbc/all/user-management/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
         nested:

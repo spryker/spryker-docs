@@ -100,7 +100,7 @@ You can attach the following attributes to a transition:
 | condition | Allows adding PHP coding that double checks whether this transition can be fired or not. The condition is evaluated when the defined event has been fired. | `condition="PackageName/ClassName"` |
 
 ### Conditions
-A transition can be conditioned: the state machine can move from one state to another if a certain condition associated with that transition is being satisfied. This can be modeled in the XML file that describes the process, as in the example below:
+A transition can be conditioned: the state machine can move from one state to another if a certain condition associated with that transition is being satisfied. This can be modeled in the XML file that describes the process, as in the following example:
 
 ```xml
 <transition condition="Oms/PaymentIsCompleted">
@@ -413,7 +413,7 @@ A process can be split into multiple subprocesses, and each relates to a single 
 There are several reasons for introducing subprocesses when modeling a state machine process:
 
 * The flow of the process is easier to follow.
-* If more than one process needs to be defined (for example, orders that are paid before delivery and orders that are paid on delivery), then the common parts of the processes can be extracted into subprocesses and reused.
+* If more than one process needs to be defined—for example, orders that are paid before delivery and orders that are paid on delivery—then the common parts of the processes can be extracted into subprocesses and reused.
 
 To introduce a subprocess in the main process, specify its name under the subprocesses tag, as in the following example:
 

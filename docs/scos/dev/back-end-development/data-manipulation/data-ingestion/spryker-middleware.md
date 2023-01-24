@@ -335,7 +335,7 @@ public function provideBusinessLayerDependencies(Container $container)
 {
    $container = parent::provideBusinessLayerDependencies($container);
    $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-       $commandCollection->add(new TriggerOrderExportProcessCommand(), 'Order/Export);
+       $commandCollection->add(new TriggerOrderExportProcessCommand(), 'Order/Export');
 
        return $commandCollection;
    });
@@ -355,7 +355,7 @@ By default, Middleware supports two strategies:
 
 | STRATEGY | DESCRIPTION |
 | --- | --- |
-| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy skips the keys which are mentioned in the mapper configuration from the payload. |
+| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy skips the keys which are not mentioned in the mapper configuration from the payload. |
 | SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_COPY_UNKNOWN | This strategy copies keys with values which are not mentioned in the mapper configuration from the payload. |
 
 There are five ways to set mapper rules:
@@ -442,7 +442,7 @@ $payload = [
 				'delivery' => [ //DynamicArrayMapRule
 						'delivery',
 						'dynamicItemMap' => [
-							'&locale; => 'is_allowed',
+							'locale' => 'is_allowed',
 						],
 					],
 				'delivery' => [ //ArrayMapRule
@@ -656,7 +656,7 @@ Use the following format to define translation rules:
 
 To create your own translator function, extend `SprykerMiddleware\Zed\Process\Business\Translator\TranslatorFunction\AbstractTranslatorFunction` and implement the `translate()` method.
 
-After that, you are ready to create the validator plugin. You need to extend `SprykerMiddleware\Zed\Process\Communication\Plugin\TranslatorFunction\AbstractGenericTranslatorFunctionPlugin`, implement the `getName()` and `getTranslatorFunctionClassName()` methods, and use this plugin in the `SprykerMiddleware\Zed\Process\ProcessDependencyProvider::getTranslatorFunctionStack()` method.
+After that, you are ready to create the translator plugin. You need to extend `SprykerMiddleware\Zed\Process\Communication\Plugin\TranslatorFunction\AbstractGenericTranslatorFunctionPlugin`, implement the `getName()` and `getTranslatorFunctionClassName()` methods, and use this plugin in the `SprykerMiddleware\Zed\Process\ProcessDependencyProvider::getTranslatorFunctionStack()` method.
 
 Check out an example of the following dictionary:
 

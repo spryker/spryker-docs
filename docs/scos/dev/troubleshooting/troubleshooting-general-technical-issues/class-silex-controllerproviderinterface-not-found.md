@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/class-silexcontrollerproviderinterface-not-found
   - /v6/docs/class-silexcontrollerproviderinterface-not-found
   - /v6/docs/en/class-silexcontrollerproviderinterface-not-found
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-front-end.html
 related:
   - title: A command fails with a `Killed` message
     link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/a-command-fails-with-a-killed-message.html

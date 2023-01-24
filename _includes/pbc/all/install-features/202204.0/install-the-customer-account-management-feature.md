@@ -425,7 +425,7 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 
 {% info_block warningBox "Verification" %}
 
-Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) for details.
+Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) for details.
 
 {% endinfo_block %}
 
@@ -851,5 +851,5 @@ Ensure that when you try to access your account without confirming the registrat
 ## Related features
 | NAME | INTEGRATION GUIDE |
 | --- | --- |
-| Customer API	 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Customer API	 | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-order-management-feature-integration.html)  |

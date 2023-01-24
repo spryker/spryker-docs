@@ -373,7 +373,7 @@ To achieve this, in `spy_product_page_search.schema.xml`, change the schema for 
 
 To load and map data properly, you might have to adjust data loaders, expanders, and mappers in `ProductPageSearchDependencyProvider`, both for product abstract and product concrete.
 
-AFter completing these steps, the search engine is integrated into your project.
+After completing these steps, the search engine is integrated into your project.
 
 ## Using search service provider in Glue API
 

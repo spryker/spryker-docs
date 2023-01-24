@@ -1,6 +1,6 @@
 ---
 title: Implement invoice payment
-description: his document describes the steps to consider implementing the invoice payment method without integrating with a third-party payment service provider.
+description: This document describes the steps to consider implementing the invoice payment method without integrating with a third-party payment service provider.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-invoice-payment
@@ -42,12 +42,12 @@ If this is your first time creating a new module, see [Tutorial: Add a new modul
 
 {% info_block infoBox "Implementation order" %}
 
-The order of the implementation steps does not matter; however, ensure to complete all the steps.
+The order of the implementation steps does not matter; however, be sure to complete all the steps.
 
 {% endinfo_block %}
 
-* [Implement invoice payment in frontend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html)
-* [Integrate invoice payment into checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html)
-* [Implement invoice payment  in backend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html)
-* [Implement invoice payment in shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html)
-* [Test the invoice payment implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html)
+1. [Implement invoice payment in frontend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html).
+2. [Integrate invoice payment into checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html).
+3. [Implement invoice payment in backend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html).
+4. [Implement invoice payment in shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html).
+5. [Test the invoice payment implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html).

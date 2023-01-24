@@ -10,7 +10,7 @@ redirect_from:
   - /v5/docs/en/abstract-and-concrete-products
 related:
   - title: Creating an Abstract Product
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - title: Editing an Abstract Product
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/editing-abstract-products.html
   - title: Creating Product Variants
@@ -32,4 +32,4 @@ Let's start learning how the products are created by reviewing a real-life examp
 
 You have a new product in your store. The new product is a Smartphone that goes in three colors: red, green, and orange. Those colors are product variants.
 
-So first you create an abstract product. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
+So first you create an abstract product. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).

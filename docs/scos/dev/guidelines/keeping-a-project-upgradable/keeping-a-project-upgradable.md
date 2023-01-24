@@ -58,7 +58,7 @@ If one or more checks fail, Evaluator returns errors per check.
 
 ```bash
 ...
-PrivateApi:MethodIsOverwritten Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
+PrivateApi:MethodIsOverridden Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
 ------------------------------ ----------------------------------------------------------------------------------------------------
 ...
 Total messages: 1

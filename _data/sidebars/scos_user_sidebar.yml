@@ -202,6 +202,13 @@ entries:
       - "202108.0"
     - title: Cart
       url: /docs/scos/user/features/cart-feature-overview/cart-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Cart Notes
         url: /docs/scos/user/features/cart-feature-overview/cart-notes-overview.html
@@ -216,6 +223,13 @@ entries:
         - "202212.0"
     - title: Multiple Carts
       url: /docs/scos/user/features/multiple-carts-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Catalog
       url: /docs/scos/user/features/catalog-feature-overview.html
       include_versions:
@@ -652,6 +666,14 @@ entries:
       - "202108.0"
     - title: Product Relations
       url: /docs/scos/user/features/product-relations-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Product Sets
       url: /docs/scos/user/features/product-sets-feature-overview.html
       include_versions:
@@ -797,6 +819,13 @@ entries:
       - "202108.0"
     - title: Shopping Lists
       url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Shopping list widget
         url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-list-widget-overview.html
@@ -839,6 +868,13 @@ entries:
       - "202108.0"
     - title: Wishlist
       url: /docs/scos/user/features/wishlist-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Sample Suite and Custom Suite
       include_versions:
       - "201811.0"
@@ -958,6 +994,7 @@ entries:
     - "202009.0"
     - "202108.0"
     - "202204.0"
+    - "202212.0"
     nested:
     - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
@@ -2235,25 +2272,21 @@ entries:
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Create product relations
           url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/create-product-relations.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Edit product relations
           url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/edit-product-relations.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: View product relations
           url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/view-product-relations.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Creating product relations
           url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/creating-product-relations.html
           include_versions:

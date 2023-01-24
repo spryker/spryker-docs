@@ -67,7 +67,7 @@ VAT in country A, the store's tax region, is 20%. The net price of a product is 
 
 However, your customer chooses to buy the same product from country B while still in the store that falls under country A tax rates.
 
-VAT in country B is 10%. Tax for the new region is calculated based on the product's _gross_ price in the store's region. In country B, the customer still sees gross price of 120. However, the net price is 108 (calculated by determining a tax of 12, because 12 is 10% of 120, and subtracting 12 from 120).
+VAT in country B is 10%. Tax for the new region is calculated based on the product's _gross_ price in the store's region. In country B, the customer still sees gross price of 120. However, the net price shown is 108 (calculated by determining a tax of 12, because 12 is 10% of 120, and subtracting 12 from 120).
 
 {% endinfo_block %}
 

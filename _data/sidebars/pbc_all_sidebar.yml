@@ -1408,23 +1408,35 @@ entries:
                   - title: Catalog
                     url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
                   - title: CatalogSearchRestApi
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi–module-module.html
                   - title: CategoryPageSearch
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
                   - title: CmsPageSearch
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
                   - title: ProductLabelSearch
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html
                   - title: ProductListSearch
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-productlistsearch-module.html
                   - title: ProductPageSearch
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html
                   - title: ProductReviewSearch
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html
                   - title: ProductSetPageSearch
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html
                   - title: Search
-                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
+                    url: /docs/pbc/all/search/install-and-upgrade/upgrade-modules/upgrade-the-search-module.html
+              - title: Search migration concept
+                url: /docs/pbc/all/search/install-and-upgrade/search-migration-concept.html
+              - title: Upgrade search initialization
+                url: /docs/pbc/all/search/install-and-upgrade/upgrade-search-initialization.html
+          - title: Manage in the Back Office
+            nested:
+              - title: "Best practices: Promote products with search preferences"
+                url: /docs/pbc/all/search/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html
+              - title: Define search preferences
+                url: /docs/pbc/all/search/manage-in-the-back-office/define-search-preferences.html
+              - title: Edit search preferences
+                url: /docs/pbc/all/search/manage-in-the-back-office/edit-search-preferences.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

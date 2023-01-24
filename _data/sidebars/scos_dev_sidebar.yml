@@ -4838,6 +4838,8 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-frontend.html
       - title: A command fails with a `Killed` message
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/a-command-fails-with-a-killed-message.html
+      - title: 'API request fails with the exception: Session has not been set'
+        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/api-request-fails-with-the-exception-session-has-not-been-set.html
       - title: Composer version 2 compatibility issues
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html
       - title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ

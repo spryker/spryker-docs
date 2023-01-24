@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/tutorial-architecture-walkthrough-scos
   - /v1/docs/tutorial-architecture-walkthrough-scos
   - /v1/docs/en/tutorial-architecture-walkthrough-scos
+  - /tutorials/introduction/tutorial-architecture-walkthrough-scos.htm
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html

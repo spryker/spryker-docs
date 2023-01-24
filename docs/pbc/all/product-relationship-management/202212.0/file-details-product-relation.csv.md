@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-relationcsv
 ---
 
-This document describes the `product_relation.csv` file to configure [Product Relation](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_relation.csv` file to configure [Product Relation](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -34,7 +34,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 ## Import template file and content example
 

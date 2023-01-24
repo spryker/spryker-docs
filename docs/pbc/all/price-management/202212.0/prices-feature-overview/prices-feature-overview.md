@@ -59,10 +59,15 @@ Each price is assigned to a price type, like DEFAULT or ORIGINAL price. For a pr
 
 The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example. 
 
-{% info_block infoBox %}
+{% info_block Net and Gross Prices Across Tax Regions %}
 
-It’s important to understand how Spryker calculates gross price for a product across tax regions, to ensure your store displays the intended price to customers. If a customer chooses to buy the product in a tax region different than the tax region the customer is residing in, Spryker calculates the new region’s tax based on the product's _gross_ price in the customer's residing region’s rather than the product's _net_ price. Therefore, product prices will be different depending on whether gross or net is enabled on the storefront. Here's a simple example of price calculation across tax regions:
-VAT in country A is 20%.
+It’s important to understand how Spryker calculates gross price for a product across tax regions, to ensure your store displays the intended price to customers. If a customer chooses to buy the product in a tax region different than the store's tax region, Spryker calculates the new region’s tax based on the product's _gross_ price in the store, rather than the product's _net_ price. Therefore, product prices will be different depending on whether gross or net is enabled on the storefront. Here's a simple example of price calculation across tax regions:
+
+VAT in country A, the store's tax region, is 20%. The net price of a product is 100. In country A the gross price is 120. The customer sees price 100 in net mode and price 120 in gross mode.
+
+However, your customer chooses to buy the same product from country B while still in the store that falls under country A tax rates.
+
+VAT in country B is 10%. Tax for the new region is calculated based on the product's _gross_ price in the store's region. In country B, the customer still sees gross price of 120. However, the net price is 108 (calculated by determining a tax of 12, because 12 is 10% of 120, and subtracting 12 from 120).
 
 {% endinfo_block %}
 

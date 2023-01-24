@@ -365,8 +365,6 @@ Ensure that the plugins work correctly:
    
 {% endinfo_block %}
 
-{% info_block warningBox "Verification" %}
-
 
 ### 6) Set up cron job
 

@@ -10,6 +10,4 @@ This section contains the following best practices guidelines and recommendation
 
 * [Coding best practices](/docs/scos/dev/best-practices/coding-best-practices.html) describes a few common PHP coding problems and recommended solutions.
 
-* [Search best practices](/docs/pbc/all/search/{{page.version}}/best-practices/search-best-practices.html) explains how to optimize your on-site search experience.
-
 * [State machine cookbook](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html) so you can implement complex processes and business workflows quickly and efficiently.

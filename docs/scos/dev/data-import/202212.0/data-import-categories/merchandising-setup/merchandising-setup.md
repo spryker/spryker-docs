@@ -32,7 +32,7 @@ The order in which the files are imported is **very strict**. For this reason, t
 6. [Product Review](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)
 7. [Product Label](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html)
 8. [Product Set](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)
-9. [Product Search Attribute Map](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute-map.csv.html)
+9. [Product Search Attribute Map](/docs/pbc/all/search/{{page.version}}/import-data/file-details-product-search-attribute-map.csv.html)
 10. [Product Search Attribute](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html)
 11. [Discount Amount](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount-amount.csv.html)
 12. [Product Discontinued](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html)

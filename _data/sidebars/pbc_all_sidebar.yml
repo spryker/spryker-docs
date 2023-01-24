@@ -1041,6 +1041,8 @@ entries:
             url: /docs/pbc/all/return-management/howto-set-number-of-days-for-a-return-policy.html
       - title: Search
         url: /docs/pbc/all/search/search.html
+        include_versions:
+        - "202212.0"
         nested:
           - title: Install and upgrade
             nested:

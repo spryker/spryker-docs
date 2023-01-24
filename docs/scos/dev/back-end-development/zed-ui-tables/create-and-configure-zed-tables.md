@@ -133,7 +133,7 @@ $config->setDefaultSortDirection(
 
 The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables due to indexes not being used.
 
-Search by columns can be used on all backoffice data tables which extend the `AbstractTable` class.
+Search by columns can be used on all Back Office data tables which extend the `AbstractTable` class.
 
 Searchable fields are `case sensitive` and use exact comparisons by concrete column.
 
@@ -158,8 +158,8 @@ with the `AND` operator and searching for the results via all those fields.
 
 We recommend using search by columns for tables with large numbers of rows. 
 Measurable performance checks show the execution time got faster. 
-For example, getting the results using search by columns for tables with ~200k rows 
-increased from 0,031s to 0,003s. 
+For example, getting the results using search by columns for tables with ~200k rows improved speed from 0,031s to 0,003s. 
+
 
 ## 3. Prepare the data
 

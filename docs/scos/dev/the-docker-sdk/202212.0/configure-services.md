@@ -611,8 +611,10 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 From now on you can use the record deployment functionality built-in in the console command, as follows:
 
 ```bash
-vendor/bin/console newrelic:record-deployment
+vendor/bin/console newrelic:record-deployment <AppName>
 ```
+where `AppName` corresponds to the preconfigured in NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY.
+For more details, see [Migration guide - Monitoring](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
 
 ## Webdriver
 

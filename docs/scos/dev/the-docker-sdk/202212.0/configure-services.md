@@ -581,7 +581,7 @@ With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin(
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
 
-### Tracking deployments
+### Track deployments
 
 To notify New Relic about new deployments, include the console command `\SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole` in `\Pyz\Zed\Console\ConsoleDependencyProvider` as follows:
 ```php

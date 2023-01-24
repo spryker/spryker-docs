@@ -5,6 +5,8 @@ last_updated: Jan 12, 2023
 template: module-migration-guide-template
 ---
 
+**Commit to *`BRANCH_NAME`***
+
 ## Upgrading Webpack from version 4.* to version 5.*
 
 This document provides instructions for upgrading Webpack to version 5 in your Spryker project.

@@ -49,7 +49,6 @@ Make sure that the following modules have been installed:
 | StockAddress                 | vendor/spryker/stock-address                  |
 | StockAddressDataImport       | vendor/spryker/stock-address-data-import      |
 | WarehouseAllocation          | vendor/spryker/warehouse-allocation           |
-| WarehouseAllocationExtension | vendor/spryker/warehouse-allocation-extension |
 
 {% endinfo_block %}
 
@@ -125,14 +124,18 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                    | TYPE  | EVENT | PATH                                                          |
-|-----------------------------|-------|-------|---------------------------------------------------------------|
-| ItemTransfer                | class | added | src/Generated/Shared/Transfer/ItemTransfer.php                |
-| OrderTransfer               | class | added | src/Generated/Shared/Transfer/OrderTransfer.php               |
-| StockTransfer               | class | added | src/Generated/Shared/Transfer/StockTransfer.php               |
-| StockCriteriaFilterTransfer | class | added | src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php |
-| StockResponseTransfer       | class | added | src/Generated/Shared/Transfer/StockResponseTransfer.php       |
-| StockAddressTransfer        | class | added | src/Generated/Shared/Transfer/StockAddressTransfer.php        |
+| TRANSFER                              | TYPE  | EVENT | PATH                                                                      |
+|---------------------------------------|-------|-------|---------------------------------------------------------------------------|
+| ItemTransfer                          | class | added | src/Generated/Shared/Transfer/ItemTransfer.php                            |
+| OrderTransfer                         | class | added | src/Generated/Shared/Transfer/OrderTransfer.php                           |
+| StockTransfer                         | class | added | src/Generated/Shared/Transfer/StockTransfer.php                           |
+| StockCriteriaFilterTransfer           | class | added | src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php             |
+| StockResponseTransfer                 | class | added | src/Generated/Shared/Transfer/StockResponseTransfer.php                   |
+| StockAddressTransfer                  | class | added | src/Generated/Shared/Transfer/StockAddressTransfer.php                    |
+| WarehouseAllocationTransfer           | class | added | src/Generated/Shared/Transfer/WarehouseAllocationTransfer.php             |
+| WarehouseAllocationCriteriaTransfer   | class | added | src/Generated/Shared/Transfer/WarehouseAllocationCriteriaTransfer.php     |
+| WarehouseAllocationConditionsTransfer | class | added | src/Generated/Shared/Transfer/WarehouseAllocationConditionsTransfer.php   |
+| WarehouseAllocationCollectionTransfer | class | added | src/Generated/Shared/Transfer/WarehouseAllocationCollectionTransfer.php   |
 
 {% endinfo_block %}
 
@@ -141,13 +144,15 @@ Make sure that the following changes have been applied in transfer objects:
 
 Make sure that the following changes have been applied in the database:
 
-| DATABASE ENTITY                     | TYPE   | EVENT   |
-|-------------------------------------|--------|---------|
-| spy_sales_order_item.warehouse_uuid | column | added   |
-| spy_stock_store                     | table  | created |
-| spy_stock.is_active                 | column | added   |
-| spy_stock.uuid                      | column | added   |
-| spy_stock_address                   | table  | created |
+| DATABASE ENTITY                                | TYPE    | EVENT    |
+|------------------------------------------------|---------|----------|
+| spy_stock_store                                | table   | created  |
+| spy_stock.is_active                            | column  | added    |
+| spy_stock.uuid                                 | column  | added    |
+| spy_stock_address                              | table   | created  |
+| spy_warehouse_allocation                       | table   | created  |
+| spy_warehouse_allocation.fk_warehouse          | column  | added    |
+| spy_warehouse_allocation.sales_order_item_uuid | column  | added    |
 
 {% endinfo_block %}
 
@@ -155,12 +160,14 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that propel entities have been generated:
 
-| FILE PATH                                                          | EXTENDS                                                                      |
-|--------------------------------------------------------------------|------------------------------------------------------------------------------|
-| src/Orm/Zed/Stock/Persistence/Base/SpyStockStore.php               | Spryker/Zed/Stock/Persistence/Propel/AbstractSpyStockStore.php               |
-| src/Orm/Zed/Stock/Persistence/Base/SpyStockStoreQuery.php          | Spryker/Zed/Stock/Persistence/Propel/AbstractSpyStockStoreQuery.php          |
-| src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddress.php      | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddress.php      |
-| src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddressQuery.php | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddressQuery.php |
+| FILE PATH                                                                        | EXTENDS                                                                                    |
+|----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| src/Orm/Zed/Stock/Persistence/Base/SpyStockStore.php                             | Spryker/Zed/Stock/Persistence/Propel/AbstractSpyStockStore.php                             |
+| src/Orm/Zed/Stock/Persistence/Base/SpyStockStoreQuery.php                        | Spryker/Zed/Stock/Persistence/Propel/AbstractSpyStockStoreQuery.php                        |
+| src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddress.php                    | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddress.php                    |
+| src/Orm/Zed/StockAddress/Persistence/Base/SpyStockAddressQuery.php               | Spryker/Zed/StockAddress/Persistence/Propel/AbstractSpyStockAddressQuery.php               |
+| src/Orm/Zed/WarehouseAllocation/Persistence/Base/SpyWarehouseAllocation.php      | Spryker/Zed/WarehouseAllocation/Persistence/Propel/AbstractSpyWarehouseAllocation.php      |
+| src/Orm/Zed/WarehouseAllocation/Persistence/Base/SpyWarehouseAllocationQuery.php | Spryker/Zed/WarehouseAllocation/Persistence/Propel/AbstractSpyWarehouseAllocationQuery.php |
 
 {% endinfo_block %}
 
@@ -200,7 +207,7 @@ Create the OMS sub-process file.
 Using the `DummyPayment01.xml` process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
 
 <details open>
-    <summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
+    <summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -271,34 +278,6 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 }
 ```
 
-Using spryker/product-warehouse-allocation-example and spryker/product-offer-warehouse-allocation-example modules as en examples implement order warehouse allocation plugins according to your business requirements and enable them in WarehouseAllocationDependencyProvider.
-
-**src/Pyz/Zed/WarehouseAllocation/WarehouseAllocationDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\WarehouseAllocation;
-
-use Spryker\Zed\ProductOfferWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation\ProductOfferSalesOrderWarehouseAllocationPlugin;
-use Spryker\Zed\ProductWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation\ProductSalesOrderWarehouseAllocationPlugin;
-use Spryker\Zed\WarehouseAllocation\WarehouseAllocationDependencyProvider as SprykerWarehouseAllocationDependencyProvider;
-
-class WarehouseAllocationDependencyProvider extends SprykerWarehouseAllocationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\WarehouseAllocationExtension\Dependency\Plugin\SalesOrderWarehouseAllocationPluginInterface>
-     */
-    protected function getSalesOrderWarehouseAllocationPlugins(): array
-    {
-        return [
-            new ProductOfferSalesOrderWarehouseAllocationPlugin(),
-            new ProductSalesOrderWarehouseAllocationPlugin(),
-        ];
-    }
-}
-```
-
 {% info_block warningBox "Verification" %}
 
 Make sure that after the order is created, order items gained `warehouse allocated` status.
@@ -350,7 +329,7 @@ Make sure that only abstract products with a single concrete product have the `a
 
 {% endinfo_block %}
 
-### 4) Import data
+### 5) Import data
 
 Import warehouses and warehouse address data:
 
@@ -676,6 +655,102 @@ Make sure that the warehouse address management works:
 *   Import a warehouse address using a data import functionality.
 
 *   Check if the imported warehouse address exists in the `spy_stock_address` database table.
+
+{% endinfo_block %}
+
+
+## Install an example of product and product offer warehouse allocation.
+
+Follow the steps below to install an examples for product and product offer warehouse allocations.
+
+### Prerequisites
+
+Overview and install the necessary features before beginning the integration step:
+
+| NAME                 | VERSION          |
+|----------------------|------------------|
+| Inventory Management | {{site.version}} |
+
+### 1)Install the required modules using Composer
+
+Run the following command to install the required modules:
+
+```bash
+composer require spryker/product-warehouse-allocation-example:"dev-master" --update-with-dependencies
+composer require spryker/product-offer-warehouse-allocation-example:"dev-master" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE                                 | EXPECTED DIRECTORY                                         |
+|----------------------------------------|------------------------------------------------------------|
+| ProductWarehouseAllocationExample      | vendor/spryker/product-warehouse-allocation-example        |
+| ProductOfferWarehouseAllocationExample | vendor/spryker/product-offer-warehouse-allocation-example  |
+
+### 2)Set up transfer objects
+
+Generate transfer objects:
+
+```bash
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied in transfer objects:
+
+| TRANSFER                              | TYPE  | EVENT | PATH                                                                    |
+|---------------------------------------|-------|-------|-------------------------------------------------------------------------|
+| ProductOfferTransfer                  | class | added | src/Generated/Shared/Transfer/ProductOfferTransfer.php                  |
+| ProductOfferStockTransfer             | class | added | src/Generated/Shared/Transfer/ProductOfferStockTransfer.php             |
+| ProductOfferWarehouseCriteriaTransfer | class | added | src/Generated/Shared/Transfer/ProductOfferWarehouseCriteriaTransfer.php |
+| ProductWarehouseCriteriaTransfer      | class | added | src/Generated/Shared/Transfer/ProductWarehouseCriteriaTransfer.php      |
+| StockProductTransfer                  | class | added | src/Generated/Shared/Transfer/StockProductTransfer.php                  |
+| StoreRelationTransfer                 | class | added | src/Generated/Shared/Transfer/StoreRelationTransfer.php                 |
+| StoreTransfer                         | class | added | src/Generated/Shared/Transfer/StoreTransfer.php                         |
+
+{% endinfo_block %}
+
+### 3) Set up Behavior
+
+Enable the following behaviors by registering the plugins:
+
+| Plugin                                            | Specification                                              | Prerequisites | Namespace                                                                                     |
+|---------------------------------------------------|------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------|
+| `ProductSalesOrderWarehouseAllocationPlugin`      | Associates warehouses to a sales order product item.       | None          | `Spryker\Zed\ProductWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation`      |
+| `ProductOfferSalesOrderWarehouseAllocationPlugin` | Associates warehouses to a sales order product offer item. | None          | `Spryker\Zed\ProductOfferWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation` |
+
+**src/Pyz/Zed/WarehouseAllocation/WarehouseAllocationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\WarehouseAllocation;
+
+use Spryker\Zed\ProductOfferWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation\ProductOfferSalesOrderWarehouseAllocationPlugin;
+use Spryker\Zed\ProductWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation\ProductSalesOrderWarehouseAllocationPlugin;
+use Spryker\Zed\WarehouseAllocation\WarehouseAllocationDependencyProvider as SprykerWarehouseAllocationDependencyProvider;
+
+class WarehouseAllocationDependencyProvider extends SprykerWarehouseAllocationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\WarehouseAllocationExtension\Dependency\Plugin\SalesOrderWarehouseAllocationPluginInterface>
+     */
+    protected function getSalesOrderWarehouseAllocationPlugins(): array
+    {
+        return [
+            new ProductOfferSalesOrderWarehouseAllocationPlugin(),
+            new ProductSalesOrderWarehouseAllocationPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that after the order is created, the new row in `warehouse_alllocation` table is created with appropriate `warehouseId` for the product and product offer in the order accordingly.
 
 {% endinfo_block %}
 

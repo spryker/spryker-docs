@@ -148,11 +148,8 @@ Make sure that the following changes have been applied in the database:
 |------------------------------------------------|---------|----------|
 | spy_stock_store                                | table   | created  |
 | spy_stock.is_active                            | column  | added    |
-| spy_stock.uuid                                 | column  | added    |
 | spy_stock_address                              | table   | created  |
 | spy_warehouse_allocation                       | table   | created  |
-| spy_warehouse_allocation.fk_warehouse          | column  | added    |
-| spy_warehouse_allocation.sales_order_item_uuid | column  | added    |
 
 {% endinfo_block %}
 
@@ -238,6 +235,7 @@ Using the `DummyPayment01.xml` process as an example, adjust your OMS state-mach
 </statemachine>
 ```
 
+### 4) Set up behavior.
 
 Enable the following plugins.
 

@@ -11,11 +11,11 @@ Follow the steps below to install the Warehouse User Management feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
-| --- | --- | --- |
-| Spryker Core             | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |  |
-| Spryker Core Back Office  | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
-| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| NAME                     | VERSION          | INTEGRATION GUIDE                                                                                                                                                                         |
+|--------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core             | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                                                      |  |
+| Spryker Core Back Office | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html)                              |
+| Inventory Management     | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -27,11 +27,11 @@ composer require spryker-feature/warehouse-user-management: "{{site.version}}" -
 
 Make sure that the following modules have been installed:
 
-| MODULE                  | EXPECTED DIRECTORY                        |
-|-------------------------|-------------------------------------------|
-| WarehouseUser           | vendor/spryker/warehouse-user             |
-| WarehouseUserBackendApi | vendor/spryker/warehouse-user-backend-api |
-| WarehouseUserGui        | vendor/spryker/warehouse-user-gui         |
+| MODULE                   | EXPECTED DIRECTORY                        |
+|--------------------------|-------------------------------------------|
+| WarehouseUser            | vendor/spryker/warehouse-user             |
+| WarehouseUserGui         | vendor/spryker/warehouse-user-gui         |
+| WarehouseUsersBackendApi | vendor/spryker/warehouse-user-backend-api |
 
 {% endinfo_block %}
 
@@ -85,7 +85,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 3) Set up configuration
 
-If you want to make `warehouse-user-assignments` resource protected, adjust the protected paths configuration:
+Optional: To make `warehouse-user-assignments` resource protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -146,11 +146,13 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables:
+1. Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
-1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
-2. For a user of your choice, click **Assign Warehouses**.
-3. Make sure that the **Warehouse User Assignment** table is translatable. 
+2. Make sure that translations cache is built successfully in Back Office:
+
+   a. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
+   b. For a user of your choice, click **Assign Warehouses**.
+   c. Make sure that the **Warehouse User Assignment** table is translatable. 
 
 To switch the language, follow these steps:
 1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
@@ -168,7 +170,7 @@ To switch the language, follow these steps:
 | WarehouseUserLoginRestrictionPlugin                  | Restricts access to the Back office for warehouse users.         |               | Spryker\Zed\WarehouseUser\Communication\Plugin\SecurityGui  |
 | WarehouseUserAssignmentUserTableActionExpanderPlugin | Expands the **User** table with the **Assign Warehouses** button.    |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User      |
 | WarehouseUserAssignmentUserFormExpanderPlugin        | Expands the User form with the `is_warehouse_user` checkbox. |               | Spryker\Zed\WarehouseUserGui\Communication\Plugin\User      |
-| WarehouseUserAssignmentsResourcePlugin               | Registers the `warehouse-user-assignments` resource.         |               | Spryker\Glue\WarehouseUserBackendApi\Plugin\GlueApplication |
+| WarehouseUserAssignmentsResourcePlugin               | Registers the `warehouse-user-assignments` resource.         |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication |
 
 **src/Pyz/Zed/SecurityGui/SecurityGuiDependencyProvider.php**
 
@@ -231,7 +233,6 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 ```
 
----
 {% info_block warningBox "Verification" %}
 
 Ensure that the plugins work correctly:
@@ -250,7 +251,7 @@ Ensure that the plugins work correctly:
 
 | PLUGIN                                               | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                   |
 |------------------------------------------------------|--------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| WarehouseUserAssignmentsResourcePlugin               | Registers the `warehouse-user-assignments` resource.         |               | Spryker\Glue\WarehouseUserBackendApi\Plugin\GlueApplication |
+| WarehouseUserAssignmentsResourcePlugin               | Registers the `warehouse-user-assignments` resource.         |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication |
 
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
@@ -261,7 +262,7 @@ Ensure that the plugins work correctly:
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\WarehouseUserBackendApi\Plugin\GlueApplication\WarehouseUserAssignmentsResourcePlugin;
+use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication\WarehouseUserAssignmentsResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {

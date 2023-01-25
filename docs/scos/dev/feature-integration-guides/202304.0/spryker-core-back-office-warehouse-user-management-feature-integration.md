@@ -1,6 +1,7 @@
 ---
 title: Install the Spryker Core Back Office + Warehouse User Management feature
 description: Learn how to integrate the Spryker Core Back Office + Warehouse User Management feature into a Spryker project.
+last_updated: Jan 25, 2023
 
 template: feature-integration-guide-template
 ---

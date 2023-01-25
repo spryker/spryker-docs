@@ -8,18 +8,18 @@ Follow the steps below to install the Picking App feature API.
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME  | VERSION | INTEGRATION GUIDE |
-| --- | --- | --- |
-| Spryker Core Back Office  | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
-| Warehouse User Management | {{site.version}} | [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html)|
+| NAME                      | VERSION          | INTEGRATION GUIDE                                                                                                                                              |
+|---------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core Back Office  | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html)   |
+| Warehouse User Management | {{site.version}} | [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html) |
 
 ## 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE  |
-|---|---|---|---|
-| UserByWarehouseUserAssignmentResourceRelationshipPlugin | Adds the `users` resource as a relationship to the `warehouse-user-assignments` resource. |  | Spryker\Glue\UserBackendApi\Plugin\GlueJsonApiConvention |
+| PLUGIN                                                  | SPECIFICATION                                                                             | PREREQUISITES | NAMESPACE                                                 |
+|---------------------------------------------------------|-------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------|
+| UserByWarehouseUserAssignmentResourceRelationshipPlugin | Adds the `users` resource as a relationship to the `warehouse-user-assignments` resource. |               | Spryker\Glue\UsersBackendApi\Plugin\GlueJsonApiConvention |
 
 
 **src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
@@ -31,8 +31,8 @@ namespace Pyz\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector;
 
 use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
 use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
-use Spryker\Glue\UserBackendApi\Plugin\GlueJsonApiConvention\UserByWarehouseUserAssignmentResourceRelationshipPlugin;
-use Spryker\Glue\WarehouseUserBackendApi\WarehouseUserBackendApiConfig;
+use Spryker\Glue\UsersBackendApi\Plugin\GlueJsonApiConvention\UserByWarehouseUserAssignmentResourceRelationshipPlugin;
+use Spryker\Glue\WarehouseUsersBackendApi\WarehouseUsersBackendApiConfig;
 
 class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
 {
@@ -45,7 +45,7 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
         ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
     ): ResourceRelationshipCollectionInterface {
         $resourceRelationshipCollection->addRelationship(
-            WarehouseUserBackendApiConfig::RESOURCE_TYPE_WAREHOUSE_USER_ASSIGNMENTS,
+            WarehouseUsersBackendApiConfig::RESOURCE_TYPE_WAREHOUSE_USER_ASSIGNMENTS,
             new UserByWarehouseUserAssignmentResourceRelationshipPlugin(),
         );
 

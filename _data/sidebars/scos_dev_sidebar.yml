@@ -13,7 +13,7 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-      - "202212.0"      
+      - "202212.0"
     - title: SCOS supported browsers
       url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
       include_versions:
@@ -442,7 +442,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
     - title: Promotions and Discounts
       url: /docs/scos/dev/feature-walkthroughs/promotions-discounts-feature-walkthrough.html
       include_versions:
@@ -566,6 +565,13 @@ entries:
         - "202212.0"
     - title: Shopping Lists
       url: /docs/scos/dev/feature-walkthroughs/shopping-lists-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Spryker Core
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
       nested:
@@ -589,6 +595,13 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-module-reference-information.html
     - title: Wishlist
       url: /docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
   - title: Glue API guides
     url: /docs/scos/dev/glue-api-guides/index.html
     nested:
@@ -887,7 +900,6 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Managing availability notifications
         include_versions:
         - "202108.0"
@@ -1111,8 +1123,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
-      - "202212.0"
       nested:
       - title: Managing shopping lists
         url: /docs/scos/dev/glue-api-guides/managing-shopping-lists/managing-shopping-lists.html
@@ -1126,6 +1136,10 @@ entries:
         - "202009.0"
         - "202108.0"
     - title: Managing wishlists
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Managing wishlists
         url: /docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html
@@ -1183,7 +1197,7 @@ entries:
       - "202009.0"
       - "202108.0"
     - title: Retrieve related products
-      url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html      
+      url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
     - title: Retrieving autocomplete and search suggestions
@@ -1607,6 +1621,12 @@ entries:
         - "202108.0"
       - title: Glue API - Product Relations
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
       - title: Glue API - Product Tax Sets
         url: /docs/scos/dev/feature-integration-guides/glue-api/product-tax-sets-api-feature-integration.html
         include_versions:
@@ -1945,7 +1965,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Configurable Bundle + Order Management
       url: /docs/scos/dev/feature-integration-guides/configurable-bundle-order-management-feature-integration.html
       include_versions:
@@ -2026,6 +2045,14 @@ entries:
       - "202108.0"
     - title: Enabling the Content Widget
       url: /docs/scos/dev/feature-integration-guides/enabling-the-content-widget.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Gift Cards
       url: /docs/scos/dev/feature-integration-guides/gift-cards-feature-integration.html
       include_versions:
@@ -2120,10 +2147,34 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html
     - title: Multiple Carts
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Multiple Carts + Quick Order
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-quick-order-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Multiple Carts + Reorder
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-reorder-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Navigation
       url: /docs/scos/dev/feature-integration-guides/navigation-feature-integration.html
       include_versions:
@@ -2139,6 +2190,14 @@ entries:
       - "202212.0"
     - title: Packaging Units
       url: /docs/scos/dev/feature-integration-guides/packaging-units-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Payments
       url: /docs/scos/dev/feature-integration-guides/payments-feature-integration.html
       include_versions:
@@ -2312,7 +2371,6 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       - "202108.0"
     - title: Product Relations
       url: /docs/scos/dev/feature-integration-guides/product-relations-feature-integration.html
@@ -2321,7 +2379,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Product Set
       url: /docs/scos/dev/feature-integration-guides/product-set-feature-integration.html
       include_versions:
@@ -2353,6 +2410,14 @@ entries:
       - "202212.0"
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"      
     - title: Quick Add to Cart + Discontinued Products
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-discontinued-products-feature-integration.html
       include_versions:
@@ -2638,12 +2703,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - RabbitMQ
       url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
-    - title: Migration Guide - ProductRelation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
-    - title: Migration Guide - ProductRelationCollector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationcollector.html
-    - title: Migration Guide - ProductRelationStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html
     - title: Migration Guide - Propel
       url: /docs/scos/dev/module-migration-guides/migration-guide-propel.html
     - title: Migration Guide - Publish and Synchronization
@@ -3097,7 +3156,6 @@ entries:
             - "202009.0"
             - "202108.0"
             - "202204.0"
-            - "202212.0"
           - title: File details - product_search_attribute.csv
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html
             include_versions:
@@ -3723,6 +3781,8 @@ entries:
       url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
+    - title: Migration guide - Upgrade to Webpack v5
+      url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:
@@ -4162,8 +4222,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: "HowTo: Build your own product relation type"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
       - title: "HowTo: Set up multiple stores"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
@@ -4838,6 +4896,8 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-frontend.html
       - title: A command fails with a `Killed` message
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/a-command-fails-with-a-killed-message.html
+      - title: 'API request fails with the exception: Session has not been set'
+        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/api-request-fails-with-the-exception-session-has-not-been-set.html
       - title: Composer version 2 compatibility issues
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html
       - title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ

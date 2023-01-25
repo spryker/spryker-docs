@@ -1,5 +1,5 @@
 ---
-title: Product Relations feature integration
+title: Install the Product Relations feature
 description: Integrate the Product Relations feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -12,12 +12,10 @@ redirect_from:
   - /docs/en/product-relations-feature-integration
 related:
   - title: Glue API - Product Relations feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-relations-feature-integration.html
+    link: docs/pbc/all/product-relationship-management/page.version/install-and-upgrade/install-the-product-relations-glue-api.html
   - title: Spryker Core feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/spryker-core-feature-integration.html
   - title: Glue API - Spryker Core feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
-  - title: Product Relations feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-product-relations-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-relations-feature.md -->

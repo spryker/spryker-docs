@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/managing-product-relations.html
 related:
   - title: Create product relations
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/create-product-relations.html
+    link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/create-product-relations.html
   - title: Edit product relations
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/edit-product-relations.html
+    link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/edit-product-relations.html
   - title: Product Relations feature overview
-    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
+    link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 ---
 
 

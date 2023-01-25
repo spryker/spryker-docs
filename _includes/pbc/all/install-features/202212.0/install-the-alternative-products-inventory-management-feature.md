@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-|Alternative Products|{{site.version}}| [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-alternative-products-feature.html)
+|Alternative Products|{{site.version}}| [Install the Alternative Products feature](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-alternative-products-feature.html)
 |Inventory Management|{{site.version}}| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html)
 
 ### 1) Set up behavior

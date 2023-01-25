@@ -4,7 +4,7 @@ description: Learn how to promote products using product relations
 template: back-office-user-guide-template
 related:
   - title: Product Relations feature overview
-    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
+    link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 ---
 
 This best practices guide describes how to promote products by configuring product relations.

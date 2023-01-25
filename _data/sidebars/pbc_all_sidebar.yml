@@ -497,6 +497,8 @@ entries:
                 url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation-node.csv.html
               - title: content_navigation.csv
                 url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-navigation.csv.html
+              - title: product_set.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-product-set.csv.html
           - title: Manage using Glue API
             nested:
               - title: Retrieve abstract product list content items

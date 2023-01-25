@@ -2426,7 +2426,7 @@ entries:
       - "202001.0"
       - "202005.0"
       - "202009.0"
-      - "202108.0"      
+      - "202108.0"
     - title: Quick Add to Cart + Discontinued Products
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-discontinued-products-feature-integration.html
       include_versions:
@@ -3094,7 +3094,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Product merchandising
           url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html
@@ -4340,7 +4339,7 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"         
+          - "202204.0"
           nested:
             - title: Installing and configuring New Relic
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html

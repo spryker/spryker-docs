@@ -147,12 +147,10 @@ console translator:generate-cache
 {% info_block warningBox "Verification" %}
 
 1. Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
-
 2. Make sure that translations cache is built successfully in Back Office:
-
-   a. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
-   b. For a user of your choice, click **Assign Warehouses**.
-   c. Make sure that the **Warehouse User Assignment** table is translatable. 
+   1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
+   2. For a user of your choice, click **Assign Warehouses**.
+   3. Make sure that the **Warehouse User Assignment** table is translatable. 
 
 To switch the language, follow these steps:
 1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.

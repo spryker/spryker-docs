@@ -34,7 +34,7 @@ The file must have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
+This file has the following dependency: [product_attribute_key.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html)
 
 ## Additional information
 

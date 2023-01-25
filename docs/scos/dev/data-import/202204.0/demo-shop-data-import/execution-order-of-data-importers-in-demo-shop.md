@@ -39,7 +39,7 @@ The following list illustrates the order followed to run the data importers, and
   11. payment-method
   12. payment-method-store
 
-2. [Catalog setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/catalog-setup.html) data import: Catalog Setup category includes Categories, Products, Pricing, and Stocks subcategories.
+2. [Catalog Setup](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/import-product-catalog-data.html) data import - Catalog Setup category includes sub-categories: Categories, Products, Pricing, Stocks
 
   13. category-template
   14. category
@@ -54,24 +54,7 @@ The following list illustrates the order followed to run the data importers, and
   23. product-stock
 
 
-3. [Special Product Types Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/special-product-types-import-category.html) data import—Special Product Types category includes subcategories: Product Options, Measurements, Product Bundles, Gift Cards
-
-  24. product-option
-  25. product-option-price
-  26. gift-card-abstract-configuration
-  27. gift-card-concrete-configuration
-  28. product-packaging-unit-type
-  29. product-packaging-unit
-  30. product-measurement-unit
-  31. product-measurement-base-unit
-  32. product-measurement-sales-unit
-  33. product-measurement-sales-unit-store
-  34. configurable-bundle-template
-  35. configurable-bundle-template-slot
-  36. configurable-bundle-template-image
-
-
-4. [Merchandising Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/merchandising-setup.html) data import
+3. [Merchandising Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/merchandising-setup.html) data import
 
   37. discount
   38. discount-store
@@ -91,12 +74,12 @@ The following list illustrates the order followed to run the data importers, and
   52. product-list-category
   53. product-list-product-concrete
 
-5. [Navigation Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/navigation-setup.html) data import
+4. [Navigation Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/navigation-setup.html) data import
 
   54. navigation
   55. navigation-node
 
-6. [Content Management Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/content-management.html) data import
+5. [Content Management Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/content-management.html) data import
 
   56. cms-template
   57. cms-block
@@ -112,7 +95,7 @@ The following list illustrates the order followed to run the data importers, and
   67. cms-slot
   68. cms-slot-block
 
-**7. B2B data import**
+**6. B2B data import**
 
 *  **B2B Company**
 

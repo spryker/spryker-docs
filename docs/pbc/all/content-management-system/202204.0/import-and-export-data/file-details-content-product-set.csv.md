@@ -18,7 +18,7 @@ This document describes the `content_product_set.csv` file to configure [Content
 
 ## Import file dependencies
 
-This file has the following dependency: [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html).
+This file has the following dependency: [product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-product-set.csv.html).
 
 ## Import file parameters
 

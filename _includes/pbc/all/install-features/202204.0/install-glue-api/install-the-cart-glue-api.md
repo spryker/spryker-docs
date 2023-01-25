@@ -7,10 +7,10 @@ This document describes how to integrate the [Cart](/docs/pbc/all/cart-and-check
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                   | VERSION          | INTEGRATION GUIDE                                                                                                                                                |
-|------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Glue API: Product      | {{site.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)          |
+| NAME   | VERSION | INTEGRATION GUIDE     |
+| ------------------- | ------ | ------------------------ |
+| Glue API: Spryker Core | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Product      | {{site.version}}  | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
 | Cart                   | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)                                             |
 
 
@@ -39,9 +39,9 @@ Ensure that the following modules have been installed:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate 
-console propel:install 
-console transfer:generate 
+console transfer:generate
+console propel:install
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -99,7 +99,7 @@ Ensure that, in the `spy_quote` table, the `uuid` field is populated for all the
 ```sql
 SELECT COUNT(*) FROM spy_quote WHERE uuid IS NULL;
 ```
-The result is `0 records`. 
+The result is `0 records`.
 
 {% endinfo_block %}
 
@@ -110,7 +110,7 @@ Activate the following plugin:
 | PLUGIN                                   | SPECIFICATION                                                                                                                                            | PREREQUISITES | NAMESPACE                                  |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------|
 | AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource. |               | Spryker\Glue\CartsRestApi\Plugin\Validator |
- 
+
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -216,7 +216,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-There are two cart behavior strategies: single cart and multicart. Unlike the single cart behavior, the multicart one lets you create more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the following table, wire only one plugin into the respective provider. 
+There are two cart behavior strategies: single cart and multicart. Unlike the single cart behavior, the multicart one lets you create more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the following table, wire only one plugin into the respective provider.
 
 {% endinfo_block %}
 
@@ -295,7 +295,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 {% info_block warningBox "Verification" %}
- 
+
 Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
 1. [Create one or more carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart).

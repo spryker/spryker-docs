@@ -31,7 +31,7 @@ To accommodate business requirements, there can be various price types. For exam
 
 ## Product types and price inheritance
 
-Back Office users can set prices for both [abstract products and product variants](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
+Back Office users can set prices for both [abstract products and product variants](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
 
 On the Storefront, when customers browse catalog and search pages, they see abstract product prices.
 
@@ -71,10 +71,10 @@ The following diagram summarizes the logic for retrieving the price for a produc
 
 | OVERVIEWS | BACK OFFICE USER GUIDES |
 |---| - |
-| [Volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html) | [Define prices when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
-| | [Edit prices of an abstract product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle)   |
-| | [Define prices when creating a concrete product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/creating-product-variants.html)  |
-| | [Edit prices of a concrete product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/editing-product-variants.html)   |
+| [Volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html) | [Define prices when creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
+| | [Edit prices of an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle)   |
+| | [Define prices when creating a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html)  |
+| | [Edit prices of a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html)   |
 
 ## Related Developer articles
 

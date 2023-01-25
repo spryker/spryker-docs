@@ -103,7 +103,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
     public function getProtectedPaths(): array
     {
         return [
-            '/push-notification-subscription' => [
+            '/push-notification-subscriptions' => [
                 'isRegularExpression' => false,
             ],
         ];

@@ -112,6 +112,6 @@ For more details on how Publish & Sync works, see [Publish and Synchronization](
 
 ## Where to go from here?
 
-* To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html).
+* To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html).
 * To know more about the building blocks of Spryker, see [Programming Concepts](/docs/scos/dev/architecture/programming-concepts.html).
 

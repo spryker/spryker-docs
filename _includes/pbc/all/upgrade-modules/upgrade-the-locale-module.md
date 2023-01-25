@@ -152,7 +152,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-***Integrate store dependency provider**
+**Integrate store dependency provider**
 
 
 `src/Pyz/Zed/Store/StoreDependencyProvider.php`

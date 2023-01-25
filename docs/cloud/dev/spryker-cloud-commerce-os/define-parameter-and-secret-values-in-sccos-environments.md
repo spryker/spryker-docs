@@ -3,6 +3,8 @@ title: Define parameter and secret values in SCCOS environments
 description: Learn how to define parameter values in the Parameter Store.
 last_updated: Jan 23, 2023
 template: howto-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
 ---
 
 Parameters are used for multiple purposes, like storing mail server details or providing Composer authentication details to the build and deploy process securely.

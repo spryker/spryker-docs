@@ -29,7 +29,7 @@ environment-configuration:
 | - | - |
 | name | Unique identifier of a secret or parameter. You will use it when defining its value in `.env.docker.local`. |
 | grant | Users' permissions. `limited` provides read while `public` provides read and write permissions. The default one is `limited`. |
-| bucket | Defines what the secret or parameter is used for. Acceptable values are `app`, `scheduler`, `pipeline`, and `common`. `common` is the default value. Common secrets and parameters can be used by all the buckets. |
+| bucket | Defines what the secret or parameter is used for. Acceptable value is `app`. In future, we will enable variables to be injected into other components. |
 | default | Default parameter value. Accepts string, number, and json values. |
 
 2. Bootstrap the declared parameters:

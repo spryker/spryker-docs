@@ -11,6 +11,7 @@ redirect_from:
   - /docs/customer-access-feature-overview
   - /docs/en/customer-access-feature-overview
   - /docs/scos/user/features/202200.0/customer-access-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202212.0/customer-access-feature-walkthrough.html
 ---
 
 _Customer Access_ lets store administrators define whether certain information is visible to logged-out users.
@@ -55,8 +56,9 @@ Even if the **Add to Cart** button is available, an unauthenticated customer is 
 |---|
 | [Manage customer access](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-customer-access.html) |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Customer Access feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-access-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
+|---------|---------|---------|
+| [Customer access feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-access-feature-integration.html) | [Retrieving protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html)  | [Managing customer access to Glue API resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html) |
+| [Glue API Customer access feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) | | |

@@ -79,10 +79,13 @@ When customers pay with PayPal, a shop owner can do the following:
 
 The Payone app requires the following Spryker modules:
 
-* `spryker/message-broker: ^1.0.0`
-* `spryker/message-broker-aws: ^1.0.0`
-* `spryker/payment: ^5.9.0`
+* `spryker/message-broker: ^1.3.0`
+* `spryker/message-broker-aws: ^1.3.2`
+* `spryker/payment: ^5.10.0`
 * `spryker/sales: ^11.32.0`
 * `spryker/sales-return: ^1.4.0`
-* `spryker-shop/checkout-page: ^3.20.0`
-* `spryker-shop/payment-page: ^1.0.0`
+* `spryker-shop/checkout-page: ^3.21.0`
+* `spryker-shop/payment-page: ^1.2.0`
+* `spryker/oms: ^11.21.0`
+* `spryker/sales-payment: ^1.2.0`
+* `spryker/sales-oms: ^0.1.1`

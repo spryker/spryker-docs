@@ -251,7 +251,7 @@ When in a production environment, Zed must be configured to use a VPN, basic acc
 As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 
 * [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
-* [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
+* [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html): to learn about layers and how various functionality is encapsulated in modules.
 * [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
 * [Technology stack](/docs/scos/dev/architecture/technology-stack.html): to learn about the technologies we use.
 

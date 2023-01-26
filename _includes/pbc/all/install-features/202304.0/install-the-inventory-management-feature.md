@@ -235,53 +235,6 @@ Using the `DummyPayment01.xml` process as an example, adjust your OMS state-mach
 </statemachine>
 ```
 
-### 4) Set up behavior.
-
-Enable the following plugins.
-
-| PLUGIN                                          | SPECIFICATION                             | PREREQUISITES | NAMESPACE                                                |
-|-------------------------------------------------|-------------------------------------------|---------------|----------------------------------------------------------|
-| SalesOrderWarehouseAllocationCommandPlugin      | Allocates warehouse for sales order item. | none          | Spryker\Zed\WarehouseAllocation\Communication\Plugin\Oms |
-
-
-**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Oms;
-
-use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandCollectionInterface;
-use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
-use Spryker\Zed\WarehouseAllocation\Communication\Plugin\Oms\SalesOrderWarehouseAllocationCommandPlugin;
-
-class OmsDependencyProvider extends SprykerOmsDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    protected function extendCommandPlugins(Container $container): Container
-    {
-       $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-            $commandCollection->add(new SalesOrderWarehouseAllocationCommandPlugin(), 'WarehouseAllocation/WarehouseAllocate');
-
-            return $commandCollection;
-        });
-
-        return $container;
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that after the order is created, order items gained `warehouse allocated` status.
-
-{% endinfo_block %}
-
 ### 4)Configure export to Elasticsearch
 
 {% info_block errorBox %}
@@ -541,7 +494,7 @@ Make sure that warehouse and warehouse address data have been added to the `spy_
 
 {% endinfo_block %}
 
-### 5) Set up behavior 
+### 6) Set up behavior
 
 Set up behavior:
 
@@ -589,7 +542,7 @@ Make sure that the navigation for Stock GUI has been successfully generated. Che
 {% endinfo_block %}
 
 
-Register the following plugins for warehouse address management:
+3. Register the following plugins for warehouse address management:
 
 | PLUGIN                                    | SPECIFICATION                                                                                                                                                              | PREREQUISITES | NAMESPACE                                           |
 |-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------|
@@ -653,6 +606,52 @@ Make sure that the warehouse address management works:
 *   Import a warehouse address using a data import functionality.
 
 *   Check if the imported warehouse address exists in the `spy_stock_address` database table.
+
+{% endinfo_block %}
+
+
+4. Register the following plugins for warehouse allocation:
+
+| PLUGIN                                          | SPECIFICATION                             | PREREQUISITES | NAMESPACE                                                |
+|-------------------------------------------------|-------------------------------------------|---------------|----------------------------------------------------------|
+| SalesOrderWarehouseAllocationCommandPlugin      | Allocates warehouse for sales order item. | none          | Spryker\Zed\WarehouseAllocation\Communication\Plugin\Oms |
+
+
+**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Oms;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandCollectionInterface;
+use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
+use Spryker\Zed\WarehouseAllocation\Communication\Plugin\Oms\SalesOrderWarehouseAllocationCommandPlugin;
+
+class OmsDependencyProvider extends SprykerOmsDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    protected function extendCommandPlugins(Container $container): Container
+    {
+       $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
+            $commandCollection->add(new SalesOrderWarehouseAllocationCommandPlugin(), 'WarehouseAllocation/WarehouseAllocate');
+
+            return $commandCollection;
+        });
+
+        return $container;
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that after the order is created, order items gained `warehouse allocated` status.
 
 {% endinfo_block %}
 
@@ -758,3 +757,4 @@ Make sure that after the order is created, the new row in `warehouse_alllocation
 |--------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Inventory Management API |                                  | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)                |
 | Alternative Products     |                                  | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-inventory-management-feature-integration.html) |
+| Order Management         |                                  | [Order Management + Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-and-inventory-management-feature-integration.html)               |

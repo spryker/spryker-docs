@@ -88,4 +88,3 @@ The Payone app requires the following Spryker modules:
 * `spryker-shop/payment-page: ^1.2.0`
 * `spryker/oms: ^11.21.0`
 * `spryker/sales-payment: ^1.2.0`
-* `spryker/sales-oms: ^0.1.1`

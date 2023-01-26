@@ -1,5 +1,5 @@
 ---
-title: Modules and layers
+title: Modules and application layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -27,6 +27,7 @@ redirect_from:
   - /2021080/docs/modularity-and-shop-suite
   - /2021080/docs/en/modularity-and-shop-suite
   - /module_guide/overview.htm
+  - /docs/scos/dev/architecture/modules-and-layers.html
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html
@@ -74,7 +75,7 @@ On the _Presentation_ layer, the view-related content is implemented. To get the
 ## Next steps
 
 * To learn about the building blocks of Spryker, see [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html).
-* To learn about Application layers, see [Concept overview](/docs/scos/dev/architecture/conceptual-overview.html).
+* To learn about application layers, see [Concept overview](/docs/scos/dev/architecture/conceptual-overview.html).
 * To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).
 * To learn about the layered architecture pattern, see [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
 * To learn about packaging principles, see [Packaging principles](http://principles-wiki.net/collections:robert_c._martin_s_principle_collection).

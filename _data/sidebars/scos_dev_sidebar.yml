@@ -4724,8 +4724,8 @@ entries:
       url: /docs/scos/dev/architecture/technology-stack.html
     - title: Conceptual overview
       url: /docs/scos/dev/architecture/conceptual-overview.html
-    - title: Modules and layers
-      url: /docs/scos/dev/architecture/modules-and-layers.html
+    - title: Modules and application layers
+      url: /docs/scos/dev/architecture/modules-and-application-layers.html
     - title: Module API
       nested:
       - title: Using ~ Composer Constraint for Customized Modules

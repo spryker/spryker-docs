@@ -18,6 +18,11 @@ The BazaarVoice app requires the following Spryker modules:
 * `spryker-shop/product-detail-page: ^3.17.0`
 * `spryker-shop/product-category-widget: ^1.6.0`
 * `spryker-shop/shop-ui: ^1.62.0`
+* `spryker-shop/checkout-page: ^3.23.0`
+* `spryker-shop/merchant-page: ^1.1.0`
+* `spryker-shop/merchant-profile-widget: ^1.1.0`
+* `spryker-shop/merchant-widget: ^1.3.0`
+* `spryker-shop/payment-page: ^1.3.0`
 
 ## Integrate Bazaarvoice
 

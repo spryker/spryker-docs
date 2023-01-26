@@ -121,7 +121,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 	}
 }
 ```
-<details>
+</details>
 
 {% info_block warningBox “Verification” %}
 

@@ -390,6 +390,8 @@ entries:
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-content-items-feature.html
                   - title: Navigation
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-navigation-feature.html
+                  - title: Product Sets
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-product-sets-feature.html
               - title: Install Glue API
                 nested:
                   - title: CMS

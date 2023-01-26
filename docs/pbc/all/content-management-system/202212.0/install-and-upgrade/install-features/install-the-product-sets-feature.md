@@ -19,4 +19,4 @@ related:
     link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-sets-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-sets-feature.md -->

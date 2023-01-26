@@ -121,6 +121,12 @@ To configure export to Redis, take the steps in the following section:
 
 #### Set up event listeners
 
+{% info_block infoBox %}
+
+In this step, you enable publishing of table changes - create, edit, delete to `spy_product_concrete_product_offer_price_storage` and synchronization of data to Storage.
+
+{% endinfo_block %}
+
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | PriceProductOfferStorageEventSubscriber | Registers listeners that are responsible for publishing Product Offer Prices to storage. |   | Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Event\Subscriber |

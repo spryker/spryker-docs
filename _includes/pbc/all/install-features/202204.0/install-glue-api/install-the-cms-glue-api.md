@@ -174,7 +174,7 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Ensure the following:
-* The `cms-pages` resource is available by sending the request:`GET https://glue.mysprykershop.com/cms-pages`.
+* The `cms-pages` resource is available by sending the request: `GET https://glue.mysprykershop.com/cms-pages`.
 * The `content-product-abstract-lists` resource is available by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists/{% raw %}{{{% endraw %}abstract_product_list_key{% raw %}}}{% endraw %}`.
 
 * The `abstract-products` resource is available with `content-product-abstract-lists` as a parent by sending the request: `GET https://glue.mysprykershop.com/content-product-abstract-lists/{% raw %}{{{% endraw %}abstract_product_list_key{% raw %}}}{% endraw %}/abstract-product`.

@@ -75,7 +75,7 @@ For the manifest, make sure to follow these conditions:
         "url": "https://www.app-name.com/DE-de",
         "type": "homepage"
     }],
-    "messages": {
+    "dialogs": {
         "foo": {
             "type": "confirmacion",
             "title": "bar",
@@ -222,10 +222,10 @@ For the manifest, make sure to follow these conditions:
 </details>
 
 <details>
-<summary>messages example</summary>
+<summary>dialogs example</summary>
 
 ```json
-"messages": {
+"dialogs": {
     "foo": {
         "type": "confirmacion",
         "title": "bar",

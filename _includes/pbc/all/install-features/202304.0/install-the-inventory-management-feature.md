@@ -631,9 +631,9 @@ Follow the steps below to install an example for product and product offer wareh
 
 To start integration, integrate the required features:
 
-| NAME                 | VERSION          |
-|----------------------|------------------|
-| Inventory Management | {{site.version}} |
+| NAME         | VERSION          | INTEGRATION GUIDE |
+|--------------|------------------|------------------|
+| Inventory Management | {{site.version}} |[Inventory Mamagement feature integration](#install-feature-core) |
 
 ### 1) Install the required modules using Composer
 
@@ -651,7 +651,7 @@ Make sure that the following modules have been installed:
 | ProductWarehouseAllocationExample      | vendor/spryker/product-warehouse-allocation-example        |
 | ProductOfferWarehouseAllocationExample | vendor/spryker/product-offer-warehouse-allocation-example  |
 
-### 2)Set up transfer objects
+### 2) Set up transfer objects
 
 Generate transfer objects:
 

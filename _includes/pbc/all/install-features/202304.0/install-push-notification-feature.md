@@ -349,19 +349,284 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 Ensure that the plugins work correctly:
 
-1. In order to test the functionality, you will need to download our demo application.
-2. Clone demo application: GitHub - https://github.com/ievgen-malykhin/web-push-php-example
-3. Generate the VAPID keys by using the online generator https://vapidkeys.com/.
-3. Open the file located at the `/src/app.js` and replace the `applicationServerKey` variable value with your VAPID public key.
-4. Find the `getToken()` method at the `/src/app.js` and replace the credentials with the user that works in your system.
-4. Install the dependencies of a demo project by running the `composer install` command.
-5. Run the local http server with the demo app by executing following console command `php -S localhost:8000 router.php`.
-6. Follow the steps written in the integration guide to enable the feature in the system.
-7. Enable the push notification by clicking the button on the page.
-8. Create the push notification by adding it manually to the `spy_push_notification` database table, use the same group and notification provider that is used by the subscription.
-9. Run the following console command to send the push notification `docker/sdk console send-push-notifications`.
-10. Depending on the OS, the notification will be displayed to you with content that was filled into the `spy_push_notification.payload` database field.
-11. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to date from the previous year and run the following console command to remove the outdated subscriptions `delete-expired-push-notification-subscriptions`.
+1. In order to test the functionality, you will need to create a simple single page demo application.
+2. Generate the VAPID keys by using the online generator https://vapidkeys.com/.
+3. Create a directory for demo application: `mkdir push_notification_spa`.
+4. Create following files inside `push_notification_spa` directory:
+** .../push_notification_spa/index.html **
+
+```html
+<html>
+    <body>
+        <h1>Web Push sandbox</h1>
+        <button id="push-button">Enable browser notifications</button>
+        <button id="subscription-button">Create Push notification subscription</button>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
+```
+
+** .../push_notification_spa/app.js **
+
+```js
+document.addEventListener('DOMContentLoaded', () => {
+  const applicationServerKey = '';
+  let isPushEnabled = false;
+
+  const pushButton = document.querySelector('#push-button');
+  if (!pushButton) {
+    return;
+  }
+
+  pushButton.addEventListener('click', function () {
+    if (isPushEnabled) {
+      disablePush();
+    } else {
+      enablePush();
+    }
+  });
+
+  const subscriptionButton = document.querySelector('#subscription-button');
+  if (!subscriptionButton) {
+    return;
+  }
+
+  navigator.serviceWorker.register('serviceWorker.js').then(
+      () => {
+        console.log('[SW] Service worker has been registered');
+      },
+      e => {
+        console.error('[SW] Service worker registration failed', e);
+        changePushButtonState('incompatible');
+      }
+  );
+
+  subscriptionButton.addEventListener('click', async function () {
+    let serviceWorkerRegistration = await navigator.serviceWorker.ready;
+    let subscription = await serviceWorkerRegistration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: urlBase64ToUint8Array(applicationServerKey),
+    })
+
+    push_sendSubscriptionToServer(subscription); // pass subscription here
+  });
+
+
+  if (!('serviceWorker' in navigator)) {
+    console.warn('Service workers are not supported by this browser');
+    changePushButtonState('incompatible');
+    return;
+  }
+
+  if (!('PushManager' in window)) {
+    console.warn('Push notifications are not supported by this browser');
+    changePushButtonState('incompatible');
+    return;
+  }
+
+  if (!('showNotification' in ServiceWorkerRegistration.prototype)) {
+    console.warn('Notifications are not supported by this browser');
+    changePushButtonState('incompatible');
+    return;
+  }
+
+  // Check the current Notification permission.
+  // If its denied, the button should appear as such, until the user changes the permission manually
+  if (Notification.permission === 'denied') {
+    console.warn('Notifications are denied by the user');
+    changePushButtonState('incompatible');
+  }
+
+  function changePushButtonState(state) {
+    switch (state) {
+      case 'enabled':
+        pushButton.disabled = false;
+        pushButton.textContent = 'Disable Push notifications';
+        isPushEnabled = true;
+        break;
+      case 'disabled':
+        pushButton.disabled = false;
+        pushButton.textContent = 'Enable Push notifications';
+        isPushEnabled = false;
+        break;
+      case 'computing':
+        pushButton.disabled = true;
+        pushButton.textContent = 'Loading...';
+        break;
+      case 'incompatible':
+        pushButton.disabled = true;
+        pushButton.textContent = 'Push notifications are not compatible with this browser';
+        break;
+      default:
+        console.error('Unhandled push button state', state);
+        break;
+    }
+  }
+
+  function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+    const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+
+    for (let i = 0; i < rawData.length; ++i) {
+      outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+  }
+
+  function checkNotificationPermission() {
+    return new Promise((resolve, reject) => {
+      if (Notification.permission === 'denied') {
+        return reject(new Error('Push messages are blocked.'));
+      }
+
+      if (Notification.permission === 'granted') {
+        return resolve();
+      }
+
+      if (Notification.permission === 'default') {
+        return Notification.requestPermission().then(result => {
+          if (result !== 'granted') {
+            reject(new Error('Bad permission result'));
+          } else {
+            resolve();
+          }
+        });
+      }
+
+      return reject(new Error('Unknown permission'));
+    });
+  }
+
+  function enablePush() {
+    changePushButtonState('computing');
+    checkNotificationPermission()
+        .then(() => navigator.serviceWorker.ready)
+        .then(serviceWorkerRegistration =>
+            serviceWorkerRegistration.pushManager.subscribe({
+              userVisibleOnly: true,
+              applicationServerKey: urlBase64ToUint8Array(applicationServerKey),
+            })
+        )
+        .then(subscription => {
+          console.info('Browser notifications are activated!');
+          changePushButtonState('enabled')
+        })
+        .then(subscription => subscription && changePushButtonState('enabled')) // update your UI
+        .catch(e => {
+          if (Notification.permission === 'denied') {
+            console.warn('Notifications are denied by the user.');
+            changePushButtonState('incompatible');
+          } else {
+            console.error('Impossible to subscribe to push notifications', e);
+            changePushButtonState('disabled');
+          }
+        });
+  }
+
+  function disablePush() {
+    changePushButtonState('computing');
+
+    // To unsubscribe from push messaging, you need to get the subscription object
+    navigator.serviceWorker.ready
+        .then(serviceWorkerRegistration => serviceWorkerRegistration.pushManager.getSubscription())
+        .then(subscription => {
+          changePushButtonState('disabled');
+        })
+        .then(subscription => subscription.unsubscribe())
+        .then(() => changePushButtonState('disabled'))
+        .catch(e => {
+          // We failed to unsubscribe, this can lead to
+          // an unusual state, so  it may be best to remove
+          // the users data from your data store and
+          // inform the user that you have done so
+          console.error('Error when unsubscribing the user', e);
+          changePushButtonState('disabled');
+        });
+  }
+
+  async function getToken() {
+    const response = await fetch('http://glue-backend.de.spryker.local/token', {
+      method: "POST",
+      body: JSON.stringify({
+        grantType: "password",
+        username: "",
+        password: ""
+      }),
+    });
+
+    return response.json()
+  }
+
+  async function push_sendSubscriptionToServer(subscription) {
+    const tokenScos = await getToken();
+    const accessToken = tokenScos[0].access_token;
+    const key = subscription.getKey('p256dh');
+    const token = subscription.getKey('auth');
+
+    return fetch('http://glue-backend.de.spryker.local/push-notification-subscriptions', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/vnd.api+json'
+      },
+      body: JSON.stringify({
+        data: {
+          type: "push-notification-subscriptions",
+          attributes: {
+            providerName: "web-push-php",
+            group: {
+              name: "warehouse",
+              identifier: 1234
+            },
+            'payload': {
+              endpoint: subscription.endpoint,
+              publicKey: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(key))) : null,
+              authToken: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(token))) : null,
+            }
+          }
+        }
+      }),
+    }).then(() => subscription);
+  }
+});
+```
+
+** .../push_notification_spa/serviceWorker.js **
+```js
+self.addEventListener('push', function (event) {
+    if (!(self.Notification && self.Notification.permission === 'granted')) {
+        return;
+    }
+
+    const sendNotification = body => {
+        const title = "Web Push example";
+
+        return self.registration.showNotification(title, {
+            body,
+        });
+    };
+
+    if (event.data) {
+        const message = event.data.text();
+        event.waitUntil(sendNotification(message));
+    }
+});
+```
+
+5. Setup credentials:
+   - Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your VAPID public key.
+   - Find the `getToken()` method at the `.../push_notification_spa/app.js` and replace the credentials with the user that works in your system. 
+6. Run the local http server with the demo app by executing following console command `php -S localhost:8000`.
+7. Follow the steps written in the integration guide to enable the feature in the system.
+8. Enable the push notification by clicking the button on the page.
+9. Create the push notification by adding it manually to the `spy_push_notification` database table, use the same group and notification provider that is used by the subscription.
+10. Run the following console command to send the push notification `docker/sdk console send-push-notifications`.
+11. Depending on the OS, the notification will be displayed to you with content that was filled into the `spy_push_notification.payload` database field.
+12. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to date from the previous year and run the following console command to remove the outdated subscriptions `delete-expired-push-notification-subscriptions`.
    
 {% endinfo_block %}
 

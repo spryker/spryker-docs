@@ -39,4 +39,3 @@ To learn about Marketplace-related upcoming major releases, see [Marketplace upc
 | [UserMerchantPortalGui](https://github.com/spryker/user-merchant-portal-gui) | Q1 2023 | Updating Angular to version 15. |
 | [ZedUi](https://github.com/spryker/zed-ui) | Q1 2023 | Updating Angular to version 15. |
 | [ShopUi](https://github.com/spryker-shop/shop-ui) | Q4 2022 | New UI and UX improvements. |
-

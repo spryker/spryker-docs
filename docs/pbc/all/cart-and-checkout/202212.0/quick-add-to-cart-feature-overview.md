@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/quick-add-to-cart-feature-overview
   - /docs/scos/user/features/202200.0/quick-add-to-cart-feature-overview.html
   - /docs/scos/user/features/202212.0/quick-add-to-cart-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html
 ---
 
 Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing the product's SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. With this being done, the customer either adds the items to the cart or proceeds directly to checkout.
@@ -36,7 +37,7 @@ To view how to create a quick order, see [Quick Order on the Storefront](#quick-
 <!--- ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png)
 --->
 
-As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/scos/user/features/{{site.version}}/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
+As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/pbc/all/product-information-management/{{site.version}}/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
 
 {% info_block errorBox %}
 

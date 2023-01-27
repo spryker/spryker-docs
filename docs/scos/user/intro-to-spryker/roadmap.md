@@ -2,6 +2,8 @@
 title: Roadmap
 description: The roadmap outlines the vision, direction, priorities, and progress of Spryker over time.
 template: concept-topic-template
+redirect_from:
+  – /docs/marketplace
 last_updated: August 21, 2022
 ---
 

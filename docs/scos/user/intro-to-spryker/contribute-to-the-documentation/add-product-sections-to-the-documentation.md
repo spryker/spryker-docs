@@ -21,7 +21,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
 ---
 
-When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product: user and developer. In this document, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
+When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product: user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
 
 To add a new product, follow these steps.
 

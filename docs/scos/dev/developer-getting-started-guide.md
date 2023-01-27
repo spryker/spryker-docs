@@ -46,6 +46,7 @@ redirect_from:
   - /2021080/docs/en/installation-guide-b2c
   - /docs/installation-guide-b2c
   - /docs/en/installation-guide-b2c
+  - /dev-getting-started.htm
 ---
 
 This document guides you into getting started with the Spryker Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access our [Spryker Community Slack group](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
@@ -251,7 +252,7 @@ When in a production environment, Zed must be configured to use a VPN, basic acc
 As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 
 * [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
-* [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
+* [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html): to learn about layers and how various functionality is encapsulated in modules.
 * [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
 * [Technology stack](/docs/scos/dev/architecture/technology-stack.html): to learn about the technologies we use.
 

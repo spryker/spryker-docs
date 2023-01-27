@@ -82,9 +82,9 @@ Example:
 
 {% info_block warningBox "Warning" %}
 
-Make sure to fulfill the requirements:
+Make sure to fulfill the requirements: 
 
-- `{drop-down toggle button}` in `<summary>{drop-down toggle button}</summary>` should not undergo any kind of formatting. For example, `<summary>`code.php`</summary>` or `<summary><var>code.php</var></summary>`. Otherwise, the code snippet will be corrupted.
+- `{drop-down toggle button}` in `<summary>{drop-down toggle button}</summary>` should not undergo any kind of formatting. For example, `<summary>`code.php`</summary>` or `<summary><var>code.php</var></summary>`. Otherwise, the code snippet will be corrupted. 
 - Put a blank row between `<summary>{drop-down toggle button}</summary>` and _```{programming language}_. This will ensure that the code snippet is displayed correctly on the documentation website.
 
 {% endinfo_block %}
@@ -252,7 +252,7 @@ When a table column contains only code snippets, do the following:
 
 1. Remove the column with the code snippet from the table entirely.
 2. Below the table, paste all the code snippets in the following format:
-
+   
 ```md
 <details><summary>{removed column header name}:{entity name}</summary>
 
@@ -336,7 +336,7 @@ Published table:
 ```
 </details>
 
-### Mixed content
+### Mixed content 
 
 If you have a table column with cells containing both code snippets and supported content, do the following:
 
@@ -354,7 +354,7 @@ Published table:
 
 | FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |
 | --- | --- | --- | --- |
-| `model` | Resolves a model path and returns a string in the following format: `{% raw %}@ShopUi/models/{modelName}.twig{% endraw %}`. | `{% raw %}function model($modelName: string){% endraw %}`: string `{% raw %}$modelName{% endraw %}` - model name (required). | `{% raw %}{% extends model('component') %}{% endraw %}` |
+| `model` | Resolves a model path and returns a string in the following format: `{% raw %}@ShopUi/models/{modelName}.twig{% endraw %}`. | `{% raw %}function model($modelName: string){% endraw %}`: string `{% raw %}$modelName{% endraw %}` - model name (required). | `{% raw %}{% extends model('component') %}{% endraw %}` | 
 | `define` | This function is used for: creating a default object that can be changed from an incoming context and defining tags used to pass properties and contract for a specific component. | | See **Usage Example: define** below. |
 | `qa` | Returns a string in the following format: `{% raw %}data-qa="qa values here"{% endraw %}` | `{% raw %}function qa($qaValues: string[] = []): string{% endraw %}` | `{% raw %}{{ qa('submit-button') }}{% endraw %}` |
 
@@ -373,7 +373,7 @@ Published table:
 
 ## Anchors
 
-You don’t have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check [step 2](#step-2) of this section to learn about important aspects of linking to anchors.
+You don’t have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check [step 2](#step-2) of this section to learn about important aspects of linking to anchors. 
 
 Follow these steps to create an anchor and link to it:
 
@@ -404,7 +404,7 @@ To integrate GLUE API in your project, you need to:
 * [Install GLUE](#install-glue)
 * [Enable GLUE](#enable-glue)
 
-1. Install GLUE  <a name="install-glue"></a>
+1. Install GLUE  <a name="install-glue"></a> 
 2. Enable GLUE <a name="enable-glue"></a>
 ```
 
@@ -424,8 +424,8 @@ You can also set video’s width and height. For example:
 
 `{% raw %}{% wistia eiw5ev4gv2 960 720 %}{% endraw %}`
 
-where
-960 - is the video’s width
+where 
+960 - is the video’s width 
 720 - is the video’s height
 
 ## Adding other videos
@@ -444,11 +444,11 @@ To add a link to a video in the .mp4 format that originates not from Wistia, add
 To embed PDF files, use the following code:
 
 ```html
-<embed src="http://example.com/the.pdf" width="500" height="375"
+<embed src="http://example.com/the.pdf" width="500" height="375" 
  type="application/pdf">
 ```
 
-where `http://example.com/the.pdf` is the link to your .pdf file.
+where `http://example.com/the.pdf` is the link to your .pdf file. 
 
 
 ## Glossary

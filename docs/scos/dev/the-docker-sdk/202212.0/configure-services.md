@@ -498,7 +498,7 @@ image:
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
 
-![screenshot](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/configure-services.md/new-relic-apms.png)
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRPsydm6Ds2eRmKS_lMRNjBnqhBLsvtN_ul_R1EMO7Z4pj74Mbpw3kMdAnjH6gIwLt9cvOqLcI=w1920-h919)
 
 
 {% info_block infoBox %}
@@ -579,9 +579,42 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 
 With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin()` being returned with the `getMonitoringExtensions()` function, the Monitoring class includes New Relic. Now applications are displayed as separate APMs, and an appropriate endpoint or class is displayed with each transaction.
 
-![screenshot](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/configure-services.md/new-relic-transactions.png)
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
 
+### Track deployments
 
+To notify New Relic about new deployments, include the console command `\SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole` in `\Pyz\Zed\Console\ConsoleDependencyProvider` as follows:
+```php
+namespace Pyz\Zed\Console;
+
+...
+use SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole;
+...
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+...
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+	    ....
+            new RecordDeploymentConsole(),
+        ];
+	....
+        return $commands;
+    }
+....
+}
+
+```
+
+From now on you can use the record deployment functionality built-in in the console command, as follows:
+
+```bash
+vendor/bin/console newrelic:record-deployment <AppName>
+```
+where `AppName` corresponds to the preconfigured in NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY.
+For more details, see [Migration guide - Monitoring](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
 
 ## Webdriver
 

@@ -1,6 +1,7 @@
 ---
 title: Preparation for going live
 description: This instruction explains how to prepare a Spryker project for going live.
+last_updated: Jan 23, 2023
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/preparation-for-going-live
 originalArticleId: 738903ac-4167-47ed-93c8-b225c8041582
@@ -53,25 +54,42 @@ Double check that you do not have any clear text passwords stored in config file
 - *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker PaaS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
 - Optional: *Delegate DNS*. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
 
-### DNS delegation
+### DNS setup
 
-Only delegate the DNS after creating a migration plan. After you delegate the DNS, we handle the DNS configuration on our side. This lets us configure and verify everything without the need for action on your side. To set up DNS records, you need to contact us. If there are DNS records in your current zone, before delegating, send us your current zone file to set all the records on our side.
+You can add an ANAME record to the DNS Name that corresponds to the DNS name of the load balancer of your environment to make your application accessible to the outside world. You can get the load balancer information from our support team. Generally, the DNS setup has these steps:
+- You add the endpoint you want to use in the appropriate `deploy.yml` file and send it to us using a support case, mentioning that you have added a new endpoint that you want to set up for DNS configuration.
+- We terraform this endpoint and send you back DNS entries for TLS verification (so that we can issue TLS certificates for your site).
+- You set these entries in your DNS management and let us know when you are done.
+- Terraforming can then be completed, and you receive the ANAME DNS records that you can then set in your DNS management to point your DNS names to the newly created endpoints.
+- After this is completed, your application gets accessible through the new endpoints.
 
-If you do not delegate DNS to Spryker, and you want to use a subdomain for your Storefront, decide how to deal with the customers reaching your shop using the root domain. In our example, `www.spryker.com` is the subdomain, and `spryker.com` is the root domain. We can't provide you with an IP to point the DNS name to because Spryker PaaS works only with DNS names for its endpoints. You also can't set a `CNAME` for a root domain. This means that you need to find a way to redirect your visitors by another endpoint.
+{% info_block infoBox "Info" %}
 
-## Three weeks before go-live
+This process can take a full week to complete due to DNS propagation and the terraform work that needs to be done. To avoid double work, ensure the endpoint selection is final and tested.
+
+{% endinfo_block %}
+
+To use a root domain for your application (for example, spryker.com), use an IP address instead of the load balancer DNS name, as this is required for an ARECORD. In this case, let our team know so they can provide you with an IP instead of the load balancer address. Do not set load balancer IP addresses as an ARECORD. The IP addresses are subject to rotation.
+
+{% info_block infoBox "Info" %}
+
+We do not normally support full delegation of your DNS to us and therefore do not suggest that you change your domain’s NS records to ours.
+
+{% endinfo_block %}
+
+# Deployment preparation and configurations
 
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
 - *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but do not want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you do not delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
-## Two weeks before go-live
+### Data preparation and communication
 
 - *Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
 - *Let us know your go-live plan*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hyper care phase we provide before and after your go-live.
 
-## One week before go-live
+### Last checks
 
 - *Double-check the go-live date*. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to how the DNS system works, any DNS changes take time to take effect.
 

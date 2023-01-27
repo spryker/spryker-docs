@@ -1,6 +1,6 @@
 ---
 title: Catalog
-description: Explains working with abstract and concrete products and the Availability section in Back Office
+description: Explains working with abstract and concrete products and the Availability section in the Back Office
 last_updated: Jan 17, 2023
 template: concept-topic-template
 ---

@@ -9,7 +9,7 @@ The following features integration guide expects the basic feature to be in plac
 
 The current feature integration guide adds the following functionality:
 
-* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
+* [Warehouse User Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 * [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html)
 
 {% endinfo_block %}

@@ -246,6 +246,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Set up event listeners
 
+{% info_block infoBox %}
+
+In this step, you enable publishing of `spy_merchant` and `spy_product_offer` changes (create, update and delete) to `spy_product_abstract_page_search` and `spy_product_concrete_page_search` and synchronization of data to Search.
+
+{% endinfo_block %}
+
 Set up the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

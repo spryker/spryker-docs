@@ -463,13 +463,11 @@ console data:import stock-address
 
 {% info_block warningBox "Verification" %}
 
-Make sure that warehouse and warehouse address data have been added to the `spy_stock`, `spy_stock_store and spy_stock_address` tables.
+Make sure that warehouse and warehouse address data have been added to the `spy_stock`, `spy_stock_store` and `spy_stock_address` tables.
 
 {% endinfo_block %}
 
 ### 6) Set up behavior
-
-Set up behavior:
 
 1. Build a navigation cache:
 
@@ -650,6 +648,8 @@ Make sure that the following modules have been installed:
 |----------------------------------------|------------------------------------------------------------|
 | ProductWarehouseAllocationExample      | vendor/spryker/product-warehouse-allocation-example        |
 | ProductOfferWarehouseAllocationExample | vendor/spryker/product-offer-warehouse-allocation-example  |
+
+{% endinfo_block %}
 
 ### 2) Set up transfer objects
 

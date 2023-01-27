@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/sending-an-email
   - /v6/docs/sending-an-email
   - /v6/docs/en/sending-an-email
-  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email
 ---
 
 The following example represents a real-world scenario: `CustomerRegistration`.

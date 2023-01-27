@@ -471,7 +471,7 @@ Make sure that warehouse and warehouse address data have been added to the `spy_
 
 Set up behavior:
 
-1.  Build a navigation cache:
+1. Build a navigation cache:
 
 ```bash
 vendor/bin/console navigation:build-cache
@@ -571,9 +571,9 @@ class StockDependencyProvider extends SprykerStockDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that the warehouse address management works:
-* In the Back Office, create a warehouse.
-* Import a warehouse address using a data import functionality.
-* Check if the imported warehouse address exists in the `spy_stock_address` database table.
+1. In the Back Office, create a warehouse.
+2. Import a warehouse address using a data import functionality.
+3. Check if the imported warehouse address exists in the `spy_stock_address` database table.
 
 {% endinfo_block %}
 

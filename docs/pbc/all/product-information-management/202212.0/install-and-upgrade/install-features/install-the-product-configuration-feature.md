@@ -4,6 +4,7 @@ description: Learn how to integrate the Product Configuration feature into a Spr
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/product-configuration-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-configuration-feature-integration.htm
 related:
     - title: Glue API - Product Configuration feature integration
       link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html

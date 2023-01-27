@@ -7,7 +7,7 @@ This document describes how to ingrate the [Inventory Management](/docs/pbc/all/
 The following feature integration guide expects the basic feature to be in place.
 
 The current feature integration guide adds the following functionality:
-* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
+* [Warehouse User Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 * [Add to cart from catalog page](/docs/scos/user/features/{{site.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
 * [Warehouse address](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address)
 

@@ -7,13 +7,11 @@ This document describes how to ingrate the [Inventory Management](/docs/pbc/all/
 The following feature integration guide expects the basic feature to be in place.
 
 The current feature integration guide adds the following functionality:
-
 * [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 * [Add to cart from catalog page](/docs/scos/user/features/{{site.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
 * [Warehouse address](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
-
 
 ## Install feature core
 
@@ -21,23 +19,19 @@ Follow the steps below to install the Inventory Management feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
+| NAME         | VERSION          | INTEGRATION GUIDE |
+|--------------|------------------|------------------|
+| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
 
-| NAME         | VERSION          |
-|--------------|------------------|
-| Spryker Core | {{site.version}} |
-
-### 1)Install the required modules using Composer
-
-Run the following command to install the required modules:
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/inventory-management:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-
 
 Make sure that the following modules have been installed:
 
@@ -52,12 +46,9 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2)Set up database schema and transfer objects
+### 2) Set up database schema and transfer objects
 
-Set up database schema and transfer objects:
-
-1.  Adjust the schema definition so `EventTransfer` has the additional columns for the Availability entity:
-
+1. Adjust the schema definition so `EventTransfer` has the additional columns for the Availability entity:
 
 **src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy\_availability.schema.xml**
 
@@ -137,11 +128,6 @@ Make sure that the following changes have been applied in transfer objects:
 | WarehouseAllocationConditionsTransfer | class | added | src/Generated/Shared/Transfer/WarehouseAllocationConditionsTransfer.php   |
 | WarehouseAllocationCollectionTransfer | class | added | src/Generated/Shared/Transfer/WarehouseAllocationCollectionTransfer.php   |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-
 Make sure that the following changes have been applied in the database:
 
 | DATABASE ENTITY                                | TYPE    | EVENT    |
@@ -150,10 +136,6 @@ Make sure that the following changes have been applied in the database:
 | spy_stock.is_active                            | column  | added    |
 | spy_stock_address                              | table   | created  |
 | spy_warehouse_allocation                       | table   | created  |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that propel entities have been generated:
 
@@ -166,18 +148,13 @@ Make sure that propel entities have been generated:
 | src/Orm/Zed/WarehouseAllocation/Persistence/Base/SpyWarehouseAllocation.php      | Spryker/Zed/WarehouseAllocation/Persistence/Propel/AbstractSpyWarehouseAllocation.php      |
 | src/Orm/Zed/WarehouseAllocation/Persistence/Base/SpyWarehouseAllocationQuery.php | Spryker/Zed/WarehouseAllocation/Persistence/Propel/AbstractSpyWarehouseAllocationQuery.php |
 
-{% endinfo_block %}
-
-
-{% info_block warningBox "Verification" %}
-
 Make sure that `SpyAvailabilityTableMap::getBehaviors()` provides mapping for `spy_availability_is_never_out_of_stock`, `spy_availability_quantity`, and `spy_availability_sku`.
 
 {% endinfo_block %}
 
-### 3) Configure OMS.
+### 3) Configure OMS
 
-Create the OMS sub-process file.
+1. Create the OMS subprocess file:
 
 **config/Zed/oms/WarehouseAllocationSubprocess/WarehouseAllocation01.xml**
 
@@ -201,10 +178,9 @@ Create the OMS sub-process file.
 </statemachine>
 ```
 
-Using the `DummyPayment01.xml` process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
+2. Using the `DummyPayment01.xml` process as an example, adjust your OMS state machine configuration according to your project's requirements.
 
-<details open>
-    <summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
+**config/Zed/oms/DummyPayment01.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -235,14 +211,13 @@ Using the `DummyPayment01.xml` process as an example, adjust your OMS state-mach
 </statemachine>
 ```
 
-### 4)Configure export to Elasticsearch
+### 4) Configure export to Elasticsearch
 
 {% info_block errorBox %}
 
 This section is only related to the integration of the *Add to cart from catalog page* functionality.
 
 {% endinfo_block %}
-
 
 Install the following plugins:
 
@@ -252,6 +227,7 @@ Install the following plugins:
 
 
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+
 ```php
 <?php
 
@@ -280,11 +256,9 @@ Make sure that only abstract products with a single concrete product have the `a
 
 {% endinfo_block %}
 
-### 5) Import data
+### 5) Import warehouses and warehouse address data
 
-Import warehouses and warehouse address data:
-
-1.  Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse.csv**
 
@@ -302,7 +276,7 @@ Sony Experts MER000006 Warehouse 1,1
 ```
 
 
-| Column    | REQUIRED? | Data Type | Data Example | Data Explanation                    |
+| COLUMN    | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                    |
 |-----------|-----------|-----------|--------------|-------------------------------------|
 | name      | mandatory | string    | Warehouse1   | Name of the warehouse.              |
 | is_active | mandatory | bool      | 1            | Defines if the warehouse is active. |
@@ -352,17 +326,16 @@ Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48
 
 {% info_block warningBox “Verification” %}
 
-Make sure that:
-
-1.  The .csv files have an empty line in the end.
-2.  For each `warehouse_name` entry in `warehouse_address.csv`, there is a respective `name` entry in the `warehouse.csv`.
+Make sure the following:
+* The CSV files have an empty line at the end.
+* Each `warehouse_name` entry in `warehouse_address.csv` has a respective `name` entry in the `warehouse.csv`.
 
 {% endinfo_block %}
 
-2. Update the following import action files with the following action:
-    * `data/import/common/commerce_setup_import_config_{SPRYKER_STORE}.yml`
-    * `data/import/local/full\_{SPRYKER\_STORE}.yml`
-    * `data/import/production/full\_{SPRYKER\_STORE}.yml`
+1. Update the following import action files with the following action:
+   * `data/import/common/commerce_setup_import_config_{SPRYKER_STORE}.yml`
+   * `data/import/local/full\_{SPRYKER\_STORE}.yml`
+   * `data/import/production/full\_{SPRYKER\_STORE}.yml`
 
 ```yaml
   - data_entity: stock-address
@@ -371,14 +344,14 @@ Make sure that:
 
 {% info_block infoBox %}
 
-Replace `{SPRYKER_STORE}` in the file paths with the desired stores. For example, `EU`, `US`, or `AT`.
+Replace `{SPRYKER_STORE}` in the file paths with the desired stores—for example, `EU`, `US`, or `AT`.
 
 {% endinfo_block %}
 
 
-3. Register the following plugins to enable data import:
+1. Register the following plugins to enable data import:
 
-Add these plugins to the end of the plugins list but before the `ProductOfferStockDataImportPlugin`.
+Add these plugins to the end of the plugins list but before `ProductOfferStockDataImportPlugin`.
 
 | PLUGIN                       | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                          |
 |------------------------------|--------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------|
@@ -414,7 +387,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-4. In `Pyz\Zed\DataImport\Business\DataImportBusinessFactory::getImporter()`, move the existing product stock importer after the call of the `addDataImporterPlugins()`:
+4. In `Pyz\Zed\DataImport\Business\DataImportBusinessFactory::getImporter()`, move the existing product stock importer after the call of `addDataImporterPlugins()`:
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -537,10 +510,9 @@ class StockGuiDependencyProvider extends SprykerStockGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the navigation for Stock GUI has been successfully generated. Check that, in the navigation menu of the Back office, the **Administration** menu with the **Warehouses** submenu is displayed.
+Make sure that the navigation for Stock GUI has been successfully generated. Check that, in the navigation menu of the Back Office, the **Administration** menu with the **Warehouses** submenu is displayed.
 
 {% endinfo_block %}
-
 
 3. Register the following plugins for warehouse address management:
 
@@ -596,19 +568,14 @@ class StockDependencyProvider extends SprykerStockDependencyProvider
 ```
 </details>
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the warehouse address management works:
-
-*   In the Back Office, create a warehouse.
-
-*   Import a warehouse address using a data import functionality.
-
-*   Check if the imported warehouse address exists in the `spy_stock_address` database table.
+* In the Back Office, create a warehouse.
+* Import a warehouse address using a data import functionality.
+* Check if the imported warehouse address exists in the `spy_stock_address` database table.
 
 {% endinfo_block %}
-
 
 4. Register the following plugins for warehouse allocation:
 
@@ -651,26 +618,24 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that after the order is created, order items gained `warehouse allocated` status.
+Make sure that after the order is created, order items gain the `warehouse allocated` status.
 
 {% endinfo_block %}
 
 
-## Install an example of product and product offer warehouse allocation.
+## Install an example of product and product offer warehouse allocation
 
-Follow the steps below to install an examples for product and product offer warehouse allocations.
+Follow the steps below to install an example for product and product offer warehouse allocations.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step:
+To start integration, integrate the required features:
 
 | NAME                 | VERSION          |
 |----------------------|------------------|
 | Inventory Management | {{site.version}} |
 
-### 1)Install the required modules using Composer
-
-Run the following command to install the required modules:
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker/product-warehouse-allocation-example:"dev-master" --update-with-dependencies
@@ -710,11 +675,11 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up Behavior
+### 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-| Plugin                                            | Specification                                              | Prerequisites | Namespace                                                                                     |
+| PLUGIN                                            | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                                     |
 |---------------------------------------------------|------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------|
 | `ProductSalesOrderWarehouseAllocationPlugin`      | Associates warehouses to a sales order product item.       | None          | `Spryker\Zed\ProductWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation`      |
 | `ProductOfferSalesOrderWarehouseAllocationPlugin` | Associates warehouses to a sales order product offer item. | None          | `Spryker\Zed\ProductOfferWarehouseAllocationExample\Communication\Plugin\WarehouseAllocation` |
@@ -747,7 +712,7 @@ class WarehouseAllocationDependencyProvider extends SprykerWarehouseAllocationDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that after the order is created, the new row in `warehouse_alllocation` table is created with appropriate `warehouseId` for the product and product offer in the order accordingly.
+Make sure that after the order is created, the new row in the `warehouse_allocation` table is created with the appropriate `warehouseId` for the product and product offer in the order accordingly.
 
 {% endinfo_block %}
 

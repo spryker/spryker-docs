@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cart.html
   - /module_migration_guides/mg-cart.htm
   - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-cart.html  
+  - /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-cart-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cart-module.md -->

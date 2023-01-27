@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/howto-set-number-of-days-for-a-return-policy
   - /v5/docs/en/howto-set-number-of-days-for-a-return-policy
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
 ---
 
 To define a period within which an item can be returned, in `Pyz\Zed\SalesReturn\SalesReturnConfig`, redefine the config by adding the following:

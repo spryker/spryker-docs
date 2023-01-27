@@ -15,7 +15,9 @@ redirect_from:
   - /docs/scos/dev/the-docker-sdk/201907.0/configuring-services.html
   - /docs/scos/dev/the-docker-sdk/202005.0/configuring-services.html
   - /docs/scos/dev/installation/spryker-in-docker/configuration/services.html
-  - /docs/scos/dev/the-docker-sdk/202204.0/configuring-services.html  
+  - /docs/scos/dev/the-docker-sdk/202204.0/configuring-services.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
 related:
   - title: Deploy File Reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
@@ -579,7 +581,40 @@ With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin(
 
 ![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTs7PzBBgaotIid707cuXeru3hc5L6PZv9a_zQAyDMhp2FWKiCSTc2kmqHCaLVsBtjIcoUVYKY=w1920-h919)
 
+### Track deployments
 
+To notify New Relic about new deployments, include the console command `\SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole` in `\Pyz\Zed\Console\ConsoleDependencyProvider` as follows:
+```php
+namespace Pyz\Zed\Console;
+
+...
+use SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole;
+...
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+...
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+	    ....
+            new RecordDeploymentConsole(),
+        ];
+	....
+        return $commands;
+    }
+....
+}
+
+```
+
+From now on you can use the record deployment functionality built-in in the console command, as follows:
+
+```bash
+vendor/bin/console newrelic:record-deployment <AppName>
+```
+where `AppName` corresponds to the preconfigured in NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY.
+For more details, see [Migration guide - Monitoring](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
 
 ## Webdriver
 

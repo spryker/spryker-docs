@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/merchant-custom-prices-feature-overview
   - /docs/scos/user/features/202200.0/merchant-custom-prices-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/merchant-custom-prices-feature-walkthrough.html
+  - /docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html
 related:
   - title: HowTo - Manage business unit specific prices via data import
     link: docs/pbc/all/price-management/page.version/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
@@ -87,7 +88,7 @@ console price-product-merchant-relationship:delete [-m X] . X = MR ID
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Set prices per merchant relations when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
+| [Set prices per merchant relations when creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
 
 ## Related Developer articles
 

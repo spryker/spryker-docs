@@ -19,7 +19,7 @@ This document describes the `product_stock.csv` file to configure [Product Stock
 
 ## Import file dependencies
 
-* [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 * [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-and-export-data/file-details-warehouse.csv.html)
 
 ## Import file parameters

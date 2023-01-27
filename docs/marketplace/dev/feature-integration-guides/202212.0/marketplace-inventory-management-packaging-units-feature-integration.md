@@ -3,11 +3,6 @@ title: Marketplace Inventory Management + Packaging Units feature integration
 last_updated: Sep 07, 2021
 description: This document describes the process how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Inventory Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
-  - title: Packaging Unit feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/packaging-units-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.

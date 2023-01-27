@@ -24,14 +24,14 @@ This endpoint allows you to manage guest cart items.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Measurement Units feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
-* [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
-* [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
-* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
-* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
-* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
+* [Glue API: Product options feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+* [Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+* [Glue API: Product Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
+* [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html)
+* [Glue API: Configurable Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+* [Glue API: Configurable Bundle + Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
 
 
 ## Add items to a guest cart
@@ -323,7 +323,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/user/features/{{site.version}}/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/pbc/all/product-information-management/{{site.version}}/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -2630,12 +2630,12 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of other included resources, see the following:
-* [Threshold attributes](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#threshold-attributes).
+* [Threshold attributes](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#threshold-attributes).
 * [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#guest-cart-response-attributes)
 * [Gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
-* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
-*  [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-bundled-products.html#bundled-products-response-attributes)
+* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
+*  [Retrieving bundled products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-bundled-products.html#bundled-products-response-attributes)
 
 ## Add a configurable bundle to a guest cart
 
@@ -2685,7 +2685,7 @@ To add a configurable bundle to a guest cart, send the request:
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | Number of the configurable bundles to add. |
 | templateUuid | 	
-String | &check; | The unique ID of the [Configurable Bundle Template](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
+String | &check; | The unique ID of the [Configurable Bundle Template](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |

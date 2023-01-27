@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 | NAME         | VERSION          | INTEGRATION GUIDE |
 |--------------|------------------|------------------|
 | Order Management     | {{site.version}} |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)|
-| Warehouse User Management | {{site.version}} | [nstall the Warehouse User Management feature](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.md)|
+| Warehouse User Management | {{site.version}} | [Install the Warehouse User Management feature](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.md)|
 
 
 ### 1) Set up behavior

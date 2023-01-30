@@ -17,6 +17,7 @@ redirect_from:
   - /docs/cart-rules-discounts
   - /docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html
   - /docs/scos/user/features/202212.0/promotions-discounts-feature-overview.html  
+  - /docs/pbc/all/discount-management/discount-management.html
 ---
 
 The *Discount Management* capability lets shop owners provide free value to their customers by discounting the percentage or fixed sum of an order's subtotal, or an item's price on predefined conditions.

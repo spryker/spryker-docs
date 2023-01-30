@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/deleting-expired-refresh-tokens
   - /docs/deleting-expired-refresh-tokens
   - /docs/en/deleting-expired-refresh-tokens
+  - /docs/scos/dev/glue-api-guides/202204.0/deleting-expired-refresh-tokens.html
 related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html

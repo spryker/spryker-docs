@@ -12,9 +12,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-customer-account-management-feature-integration.html
 related:
   - title: Customer Account Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-feature-integration.html
-  - title: Customer Account Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
+    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Confirming customer registration

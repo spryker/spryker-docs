@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/customer-account-management-feature-integration.html
 related:
   - title: Customer Account Management + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
+    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
   - title: Glue API - Customer Account Management feature integration
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
   - title: Customer Account Management feature walkthrough

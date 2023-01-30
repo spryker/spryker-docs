@@ -111,7 +111,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-We have to add the configuration that defines the VAPID keys that are used by the push notification:
+2. Add the configuration defining the *Voluntary Application Server Identity (VAPID)* keys, which are used by the push notification:
 
 | CONFIGURATION                                          | SPECIFICATION                                                                   | NAMESPACE                                 |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|
@@ -142,16 +142,15 @@ image:
 ```
 
 VAPID, which stands for Voluntary Application Server Identity, is a new way to send and receive website push
-notifications.
-Your VAPID keys allow you to send web push campaigns without having to send them through a service like Firebase Cloud
+Your VAPID keys let you send web push campaigns without having to send them through a service like Firebase Cloud
 Messaging (or FCM).
 
-To generate VAPID keys we can use:
+To generate VAPID keys, you can use the following tools:
 
-- https://vapidkeys.com/ - an online tool to generate a keys.
-- https://www.npmjs.com/package//web-push - a Node.js package that can generate the VAPID keys.
+- https://vapidkeys.com/—an online tool to generate keys.
+- https://www.npmjs.com/package//web-push—a Node.js package that can generate VAPID keys.
 
-Example of the command to generate the VAPID keys by using the `web-push` Node.js library:
+An example of the command to generate VAPID keys by using the `web-push` Node.js library:
 
 Run the following console command `web-push generate-vapid-keys --json`.
 
@@ -272,7 +271,9 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 
 Ensure that the installer plugin work correctly:
 
-1. Run the following console command to execute install plugins `docker/sdk console setup:init-db`.
+1. Execute install plugins 
+```bash
+docker/sdk console setup:init-db`
 2. Check that the `web-push-php` push notification provider exists in the `spy_push_notification_provider` database
    table.
 
@@ -349,11 +350,11 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 Ensure that the plugins work correctly:
 
-1. In order to test the functionality, you will need to create a simple single page demo application.
-2. Generate the VAPID keys by using the online generator https://vapidkeys.com/.
+1. To test the functionality, create a simple single-page demo application.
+2. Generate VAPID keys by using the online generator https://vapidkeys.com/.
 3. Create a directory for demo application: `mkdir push_notification_spa`.
-4. Create following files inside `push_notification_spa` directory:
-** .../push_notification_spa/index.html **
+4. Create following files inside the `push_notification_spa` directory:
+**.../push_notification_spa/index.html**
 
 ```html
 <html>
@@ -366,7 +367,7 @@ Ensure that the plugins work correctly:
 </html>
 ```
 
-** .../push_notification_spa/app.js **
+**.../push_notification_spa/app.js**
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
@@ -595,7 +596,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-** .../push_notification_spa/serviceWorker.js **
+**.../push_notification_spa/serviceWorker.js
 ```js
 self.addEventListener('push', function (event) {
     if (!(self.Notification && self.Notification.permission === 'granted')) {
@@ -618,22 +619,29 @@ self.addEventListener('push', function (event) {
 ```
 
 5. Setup credentials:
-   - Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your VAPID public key.
-   - Find the `getToken()` method at the `.../push_notification_spa/app.js` and replace the credentials with the user that works in your system. 
-6. Run the local http server with the demo app by executing following console command `php -S localhost:8000`.
-7. Follow the steps written in the integration guide to enable the feature in the system.
+   1. Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your VAPID public key.
+   2. In `.../push_notification_spa/app.js`, find the `getToken()` method and replace the credentials with the user that works in your system. 
+6. Run the local HTTP server with the demo app:
+```bash
+php -S localhost:8000
+7. To enable the feature in the system, follow the steps written in the integration guide.
 8. Enable the push notification by clicking the button on the page.
-9. Create the push notification by adding it manually to the `spy_push_notification` database table, use the same group and notification provider that is used by the subscription.
-10. Run the following console command to send the push notification `docker/sdk console send-push-notifications`.
+9. Create the push notification by adding it manually to the `spy_push_notification` database table. Use the same group and notification provider that is used by the subscription.
+10. Send the push notification:
+```bash
+docker/sdk console send-push-notifications
 11. Depending on the OS, the notification will be displayed to you with content that was filled into the `spy_push_notification.payload` database field.
-12. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to date from the previous year and run the following console command to remove the outdated subscriptions `delete-expired-push-notification-subscriptions`.
+12. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to the previous year date.
+13. Remove the outdated subscriptions:
+```bash
+delete-expired-push-notification-subscriptions
    
 {% endinfo_block %}
 
 
 ### 6) Set up cron job
 
-Enable the `send-push-notifications` and `delete-expired-push-notification-subscriptions` console commands in the
+In the cron-job list, enable the `send-push-notifications` and `delete-expired-push-notification-subscriptions` console commands:
 cron-job list:
 
 **config/Zed/cronjobs/jobs.php**

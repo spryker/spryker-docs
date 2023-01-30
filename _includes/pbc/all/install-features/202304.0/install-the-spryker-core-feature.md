@@ -17,7 +17,6 @@ Follow the steps below to install the Spryker Core feature core.
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
 
 ```bash
 composer require "spryker-feature/spryker-core":"{{site.version}}" --update-with-dependencies
@@ -53,7 +52,7 @@ Add the configuration to your project:
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
 | SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME	 | Redis session lifetime | Spryker\Shared\SecuritySystemUser |
-|SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS | Default credentials for Yves accessing Zed | Spryker\Shared\SecuritySystemUser |
+|SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS | Default credentials for Yves accessing Zed. | Spryker\Shared\SecuritySystemUser |
 
 {% info_block errorBox "Security measures" %}
 
@@ -102,7 +101,7 @@ use Spryker\Shared\Vault\VaultConstants;
 $config[VaultConstants::ENCRYPTION_KEY] = "ADJUST THIS ENCRYPTION KEY TO SECURE ONE"
 ```
 
-Example
+Example:
 
 ```php
 $secret = "actual_secret";
@@ -184,7 +183,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = 0;
 
 {% info_block warningBox "Note" %}
 
-All the values in the examples above should be replaced with the real ones used in the corresponding environment.
+All the values in the preceding examples must be replaced with the real ones used in the corresponding environment.
 
 {% endinfo_block %}
 
@@ -278,7 +277,7 @@ $config[SessionFileConstants::ZED_SESSION_FILE_PATH] = session_save_path();
 
 {% info_block warningBox "Note" %}
 
-All the values in the examples above should be replaced with the real ones used in the corresponding environment.
+All the values in the preceding examples must be replaced with the real ones used in the corresponding environment.
 
 {% endinfo_block %}
 
@@ -297,9 +296,9 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_PASSWORD] = false;
 $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_DATABASE] = 7;
 ```
 
-Configure the blocking settings for the entity types you want to be blocking. You can set separate settings for a customer (default) and agent. `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` are used as default, so if you use other entity types (like an agent) and do not provide this setting, the defaults will get applied.
+Configure the blocking settings for the entity types you want to be blocking. You can set separate settings for a customer (default) and agent. `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` are used as default, so if you use other entity types (like an agent) and do not provide this setting, the defaults get applied.
 
-`SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL` controls the period of time during which the `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` will be counted. In case the number is exceeded, the account will be locked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds.
+`SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL` controls the period of time during which the `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` will be counted. In case the number is exceeded, the account gets locked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds.
 
 Define your setting in your environment configuration files:
 
@@ -317,7 +316,7 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_AGENT_BLOCKING_NUMBER_OF_ATTE
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes, generate entity, and transfer changes:
+Apply database changes, generate entity, and transfer changes:
 
 ```bash
 console propel:install
@@ -332,10 +331,8 @@ Make sure that the following changes have been applied by checking your database
 | --- | --- | --- |
 | spy_vault_deposit | table | created |
 
-{% endinfo_block %}
 
 
-{% info_block warningBox "Verificaiton" %}
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -356,7 +353,6 @@ Make sure that the following changes have been applied by checking your database
 
 ### 4) Set up behavior
 
-Set up behavior as follows:
 
 1. Install the following plugins with modules:
 
@@ -658,7 +654,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the front end of the Spryker Core feature.
 

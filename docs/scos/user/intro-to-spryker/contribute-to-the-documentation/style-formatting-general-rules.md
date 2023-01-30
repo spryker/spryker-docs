@@ -22,6 +22,12 @@ related:
 
 This document describes the structure, main style, syntax and formatting rules of the [Spryker documents](https://github.com/spryker/spryker-docs).
 
+{% info_block infoBox "Info" %}
+
+Please note that Spryker documentation is written in US English.
+
+{% endinfo_block %}
+
 ## Directory structure
 
 The main directory for holding all the documents is [docs](https://github.com/spryker/spryker-docs/tree/master/docs) at the root of the project. The second layer is *product* directories: [marketplace](https://github.com/spryker/spryker-docs/tree/master/docs/marketplace), [scos](https://github.com/spryker/spryker-docs/tree/master/docs/scos), [cloud](https://github.com/spryker/spryker-docs/tree/master/docs/cloud), etc. Under each *product* directory, there are *realm* directories: [user](https://github.com/spryker/spryker-docs/tree/master/docs/scos/user) and [dev](https://github.com/spryker/spryker-docs/tree/master/docs/scos/dev). Each of these directories contains category directories with optional sub-categories. Category or sub-category directories contain documents. Some categories are versioned to reflect differences for various releases, so each version of the sub-category is located in a separate folder, for example, see [Features](https://github.com/spryker/spryker-docs/tree/master/docs/scos/user/features). For more details on versioning pages, see [Working with versions](#working-with-versions).

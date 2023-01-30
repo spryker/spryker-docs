@@ -320,7 +320,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```
 
-4. Enable the Backend API by registering the plugin:
+4. To enable the Backend API, register the plugin:
 
 | PLUGIN                                     | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                       |
 |--------------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------|

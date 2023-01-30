@@ -644,7 +644,7 @@ docker/sdk console send-push-notifications
 
 11. Depending on the OS, the notification is displayed with content from the `spy_push_notification.payload` database field.
 12. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to the previous year's date.
-13.  Remove the outdated subscriptions:
+13. Remove the outdated subscriptions:
 ```bash
 delete-expired-push-notification-subscriptions
 ```

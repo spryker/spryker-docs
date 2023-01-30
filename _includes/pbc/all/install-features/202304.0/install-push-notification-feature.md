@@ -141,7 +141,7 @@ image:
     SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY: 'Your private key.'
 ```
 
-VAPID, which stands for Voluntary Application Server Identity, is a new way to send and receive website push
+VAPID is a new way to send and receive website push notifications.
 Your VAPID keys let you send web push campaigns without having to send them through a service like Firebase Cloud
 Messaging (or FCM).
 

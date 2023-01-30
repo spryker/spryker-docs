@@ -181,7 +181,7 @@ This migration is applied only once and is registered in the `propel_migration t
 
 {% info_block warningBox "Warning" %}
 
-Functionality is available only with Spryker Core feature `202304.0` or higher.
+Functionality is available only with versions later than `202212.0`.
 
 {% endinfo_block %}
 

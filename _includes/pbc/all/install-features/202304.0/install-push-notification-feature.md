@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Push notification feature into a Spryker project.
+This document describes how to integrate the Push Notification feature into a Spryker project.
 
 ## Install feature core
 

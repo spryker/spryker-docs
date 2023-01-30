@@ -283,7 +283,7 @@ All the values in the preceding examples must be replaced with the real ones use
 
 {% endinfo_block %}
 
-#### Configuration for SecurityBlocker
+#### Configure SecurityBlocker
 
 `SecurityBlocker` stores blocked accounts' information in Redis. Thus, it needs connection information. You can get it in the environment configuration of your project:
 

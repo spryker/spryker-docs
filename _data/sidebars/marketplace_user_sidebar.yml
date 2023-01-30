@@ -130,7 +130,7 @@ entries:
 
         
       - title: Back Office user guides
-        url: /docs/marketplace/user/back-office-user-guides/index.html
+        url: /docs/marketplace/user/back-office-user-guides/back-office-user-guides.html
         include_versions:
           - "202212.0"
         nested:

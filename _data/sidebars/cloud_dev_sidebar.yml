@@ -7,7 +7,7 @@ entries:
       - title: Environments overview
         url: /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
       - title: Access
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/access//index.html
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/access/access.html
         nested:
           - title: Accessing AWS Management Console
             url: /docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html
@@ -41,14 +41,14 @@ entries:
       - title: Starting asynchronous commands
         url: /docs/cloud/dev/spryker-cloud-commerce-os/starting-asynchronous-commands.html
       - title: Monitoring
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/index.html
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/monitoring.html
         nested:
           - title: Performance and availability monitoring via New Relic
             url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/performance-and-availability-monitoring-via-new-relic.html
           - title: Customize AWS CloudWatch dashboards
             url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/customize-aws-cloudwatch-dashboards.html
       - title: Security
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/security/index.html
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/security/security.html
         nested:
           - title: Checking ECR image scan results
             url: /docs/cloud/dev/spryker-cloud-commerce-os/security/checking-ecr-image-scan-results.html
@@ -57,7 +57,7 @@ entries:
           - title: Web Application Firewall (WAF)
             url: /docs/cloud/dev/spryker-cloud-commerce-os/security/web-application-firewall-waf.html
       - title: Configure deployment pipelines
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/index.html
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configure-deployment-pipelines.html
         nested:
           - title: Deployment pipelines
             url: /docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html

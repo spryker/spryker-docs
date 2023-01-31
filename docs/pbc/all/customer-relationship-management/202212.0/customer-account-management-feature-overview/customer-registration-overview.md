@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/customer-registration-overview
   - /docs/customer-registration-overview
   - /docs/en/customer-registration-overview
+  - /docs/scos/user/features/202212.0/customer-account-management-feature-overview/customer-registration-overview.html
 ---
 
 In Spryker, customer registration is done by double opt-in. A double opt-in occurs when a user signs up, and an email with a registration confirmation link is sent to them. After they click the verification link, their account is activated, and they can start using the online store as registered customers.
@@ -47,7 +48,7 @@ After checkout registration, the cart created by a customer as a guest user is c
 
 A Back Office user can register a customer by entering customer account details. The verification email is sent to the email address specified by the Back Office user. Until the customer verifies their account using the link in the email, in the Back Office, the status of their account remains `Unverified`. Once they click the link, the status changes to `Verified`.
 
-To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html).
+To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/create-customers.html).
 
 ### Registration using Glue API
 
@@ -71,7 +72,7 @@ A developer can register a customer by importing their customer account details.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)  |
+| [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/create-customers.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

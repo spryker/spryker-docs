@@ -11,6 +11,7 @@ redirect_from:
   - /docs/customer-account-management
   - /docs/en/customer-account-management
   - /docs/scos/user/features/202200.0/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+  - /docs/scos/user/features/202212.0/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 The *Customer Account Management* feature enables a wide range of management options for customer accounts, as well as additional functionalities.
@@ -34,14 +35,20 @@ Also, it lets you manage customer access, request a password change, or change i
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Customer Account](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-accounts-overview.html)  |
-| [Get a general idea of Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html)   |
-| [Get a general idea of Customer Login](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)  |
-| [Get a general idea of Customer Groups](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)   |
-| [Get a general idea of Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)  |
+| [Get a general idea of Customer Account](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-accounts-overview.html)  |
+| [Get a general idea of Customer Registration](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html)   |
+| [Get a general idea of Customer Login](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)  |
+| [Get a general idea of Customer Groups](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)   |
+| [Get a general idea of Password Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
+|---|---|---|---|---|
+| [Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-feature.html) | [CompanyUser migration guide](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html) | [Authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) | [File details: customer.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-customer.csv.html) | [Reference information: Customer module overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html)|
+| [Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-company-account-feature.html) |  | [Confirming customer registration](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html) |  | |
+| [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |  | [Managing customer addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html) |  |  |
+| [Glue API: Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html) |  | [Managing customer authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html) |  |  |
+| [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |  | [Managing customer authentication tokens via OAuth 2.0](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html) |  |  |
+| [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |  | [Managing customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html) |  |  |
+|  |  | [Managing customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html) |  |  |

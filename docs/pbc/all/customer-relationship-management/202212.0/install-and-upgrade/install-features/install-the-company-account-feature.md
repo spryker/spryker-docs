@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/company-account-feature-integration.html
 related:
   - title: Glue API - Company Account feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-company-account-feature-integration.html
+    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
   - title: Company Account + Order Management feature integration
     link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
 ---

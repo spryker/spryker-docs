@@ -88,7 +88,7 @@ If you are authenticating as a newly created customer, make sure to verify your 
 
 {% info_block warningBox %}
 
-Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Customer Login feature overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html).
+Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Customer Login feature overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html).
 
 {% endinfo_block %}
 

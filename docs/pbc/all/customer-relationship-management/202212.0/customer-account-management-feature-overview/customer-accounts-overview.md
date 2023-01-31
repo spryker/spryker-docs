@@ -17,6 +17,7 @@ redirect_from:
   - /2021080/docs/en/order-history-reference-information
   - /docs/order-history-reference-information
   - /docs/en/order-history-reference-information
+  - /docs/scos/user/features/202212.0/customer-account-management-feature-overview/customer-accounts-overview.html
 ---
 
 A *customer account* contains the following customer information about the Storefront:
@@ -39,7 +40,7 @@ There are slight differences in customer accounts' information for the B2B and B
 | Shopping Carts | &check; |  |
 | Wishlist |  | &check; |
 
-For details about how customer accounts can be created, see [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html).
+For details about how customer accounts can be created, see [Customer Registration overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html).
 
 
 Customers manage their accounts directly on the Storefront. If a customer updates an account, the data is synchronized, and the Back Office user sees the updated information in the Back Office&nbsp;<span aria-label="and then">></span> **Customers&nbsp;<span aria-label="and then">></span> Customers** section. The exceptions are newsletter subscriptions and password changes: this information is not stored in the Back Office.
@@ -64,8 +65,8 @@ A Back Office user can do the following:
 * Check the last orders of a customer in the shop.
 
 For details, see the following:
-* [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)
-* [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)
+* [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/create-customers.html)
+* [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-notes-to-customers.html)
 
 ## Customer account on the Storefront
 A customer can perform the following actions on the Storefront:
@@ -102,12 +103,12 @@ A customer can perform the following actions on the Storefront:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)  |
-| [Edit customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customers.html)  |
-| [View customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/view-customers.html)  |
-| [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)  |
-| [Add customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html)  |
-| [Edit customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customer-addresses.html)  |
+| [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/create-customers.html)  |
+| [Edit customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/edit-customers.html)  |
+| [View customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/view-customers.html)  |
+| [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-notes-to-customers.html)  |
+| [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-customer-addresses.html)  |
+| [Edit customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/edit-customer-addresses.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

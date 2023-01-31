@@ -1,5 +1,5 @@
 ---
-title: File details - customer.csv
+title: "File details: customer.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-customercsv
@@ -14,17 +14,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-customer.csv.html
 ---
 
-This document describes the `customer.csv` file to configure [Customer](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.
-
-To import the file, run:
-
-```bash
-data:import:customer
-```
+This document describes the `customer.csv` file to configure [Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -41,16 +33,15 @@ The file should have the following parameters:
 | password |  | String |  | Customer’s password. |
 | registered |  | Date |  | Customer’s date of registration. |
 
-
-## Import file dependencies
-
-This file has no dependencies.
-
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [customer.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+customer.csv) | Exemplary import file with headers only. |
 | [customer.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/customer.csv) | Exemplary import file with Demo Shop data. |
+
+## Import command
+
+```bash
+data:import:customer
+```

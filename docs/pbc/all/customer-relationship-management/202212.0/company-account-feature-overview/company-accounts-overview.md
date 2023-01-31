@@ -11,6 +11,7 @@ redirect_from:
   - /docs/company-accounts-overview
   - /docs/en/company-accounts-overview
   - /docs/scos/user/features/202200.0/company-account-feature-overview/company-accounts-overview.html
+  - /docs/scos/user/features/202212.0/company-account-feature-overview/company-accounts-overview.html
 ---
 
 *Company accounts* let you build an organizational structure for your B2B business.
@@ -104,7 +105,7 @@ Company users can perform the following actions on the Storefront:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage companies](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html) |
+| [Manage companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/manage-companies.html) |
 
 
 {% info_block warningBox "Developer guides" %}
@@ -114,4 +115,4 @@ Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/fe
 {% endinfo_block %}
 
 ## See next
-[Business Units overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html)
+[Business Units overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html)

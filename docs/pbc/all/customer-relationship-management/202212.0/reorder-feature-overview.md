@@ -24,4 +24,4 @@ One of the biggest factors that influences customer loyalty and persuades them t
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
-| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html) | CustomerReorderWidget migration guide](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html)  |
+| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html) | CustomerReorderWidget migration guide](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html)  |

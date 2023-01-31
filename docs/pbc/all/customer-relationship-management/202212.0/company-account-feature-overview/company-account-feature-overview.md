@@ -12,6 +12,9 @@ redirect_from:
   - /docs/company-account
   - /docs/en/company-account
   - /docs/scos/user/features/202200.0/company-account-feature-overview/company-account-feature-overview.html
+  - /docs/scos/user/features/202212.0/company-account-feature-overview/company-account-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202212.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html
 ---
 
 A B2B business model implies bilateral commercial relations between businesses, so a company is the top figure of every B2B marketplace. Each company has a specific organizational structure with its divisions (units) and employee roles. At some point or another, a B2B business owner would need separate accounts for employees to constrain or extend rights in regards to products, orders, and confidential information.
@@ -37,14 +40,20 @@ Setting up company structure:
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Get a general idea of Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html)  |
-|  [Get a general idea of Business Units](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html)  |
-|  [Get a general idea of Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)  |
-|  [Get a general idea of company user roles and permissions](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
+|  [Get a general idea of Company Accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html)  |
+|  [Get a general idea of Business Units](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html)  |
+|  [Get a general idea of Business on Behalf](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)  |
+|  [Get a general idea of company user roles and permissions](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
 
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+|---------|---------|---------|---------|---------|
+| [Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-company-account-feature.html)| [CompanyUser migration guide](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html)  | [Retrieving companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html) |[ HowTo - Generate a token for login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html)  | [Customer Login by Token reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html) |
+| [Glue API: Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) | [BusinessOnBehalfDataImport migration guide](/docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html)  | [Retrieving business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)  |   |   |
+|   |   | [Retrieving business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html) |   |   |
+|   |   | [Retrieving company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html)  |   |   |
+|   |   | [Retrieving company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)  |   |   |
+|   |   | [Authenticating as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)  |   |   |
+|   |   | [Managing company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)  |   |   |

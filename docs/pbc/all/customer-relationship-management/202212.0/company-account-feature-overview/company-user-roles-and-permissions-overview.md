@@ -15,6 +15,7 @@ redirect_from:
   - /docs/company-roles-reference-information
   - /docs/en/company-roles-reference-information
   - /docs/scos/user/features/202200.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+  - /docs/scos/user/features/202212.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 Usually, employees within a company have different roles (for example, purchasing, administration, supervision). These roles are related to company users and are referred to as **Company Roles**. A role can be default (the **is_default** option), which means that it is used for all new users automatically.
@@ -151,10 +152,10 @@ Every company role includes a set of permissions that can be enabled/disabled ac
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html) |
-| [Edit company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/edit-company-roles.html) |
-| [Create company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html) |
-| [Edit company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/edit-company-users.html) |
+| [Create company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-roles/create-company-roles.html) |
+| [Edit company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-roles/edit-company-roles.html) |
+| [Create company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-users/create-company-users.html) |
+| [Edit company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-users/edit-company-users.html) |
 
 
 
@@ -166,4 +167,4 @@ Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/fe
 
 ## See next
 
-[Business on Behalf overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)
+[Business on Behalf overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)

@@ -76,13 +76,13 @@ For the manifest, make sure to follow these conditions:
         "type": "homepage"
     }],
     "dialogs": {
-        "foo": {
-            "type": "confirmacion",
-            "title": "bar",
-            "content": "baz",
+        "onSave": {
+            "type": "confirmation",
+            "title": "Confirmation dialog title",
+            "content": "Confirmation dialog content",
             "buttons": {
-                "ok": "qux",
-                "cancel": "quux"
+                "ok": "Save",
+                "cancel": "Cancel"
             }
         }
     }
@@ -106,7 +106,7 @@ For the manifest, make sure to follow these conditions:
 | assets           | An array of objects represented as application assets. Each object has the following keys:<ul><li>type—type of the asset. Possible values:<ul><li>icon—displayed on the application tile and on top of the application detail page.</li><li>image—displayed in a carousel on the application detail page.</li><li>video—displayed in a carousel on the application detail page. Allows only videos hosted on https://wistia.com.</li></ul><li>url—a relative path to the asset. Possible extensions:<ul><li>jpeg</li><li>png</li><li>svg</li><li>url to a video hosted on https://wistia.com</li></ul></ul>                                                                                                            | See *assets example* under this table.                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | labels           | An array of strings. Displays label icons on the application detail page according to the label. Possible values:<ul><li>Silver Partner</li><li>Gold Partner</li><li>New</li><li>Popular</li><li>Free Trial</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | See *labels example* under this table.                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | resources        | An array of objects represented as application resources (links, documents). The resource object has the following keys:<ul><li>title—name of the resource</li><li>url—full URL to the resource</li>type—type of the resource. Optional. The type affects a displayed icon. Possible values:<ul><li>internal-documentation</li><li>homepage</li><li>user-documentation</li><li>developer-documentation</li><li>release-notes</li></ul><li>fileType—type of the resource file (in case if the url leads to a file and if `type=internal-documentation`). Optional. The files are displayed directly in the AppCatalog, without redirecting to another page. Possible values:<ul><li>pdf</li><li>markdown</li></ul></ul> | See *resources example* under this table.                                                                                                                                                                                                                                                                                                                                                                                                               |
-| dialogs          | Optional. An array of objects represented as application dialogs. Dialog `key` has to be a `string` and represents an `event` happening in App Catalog. The dialog value is an `object` and has following keys: <ul><li>`type` - Mandatory. Dialog type. Possible values: <ul><li>`confirmation`</li></ul></li><li>`title` - Mandatory. Dialog title.</li><li>`content` - Mandatory. Dialog content.</li><li>`buttons` - Mandatory. Collection of buttons. Button `key` and `value` has to be a `string`, and keys `ok` and `cancel` have to be defined.</li></ul>                                                                                                                                                     | See *dialog example* under this table.                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| dialogs          | Optional. An object represented as application dialogs. Each property (key) represents an event happening in App Catalog. There are two events supported - `onSave` and `onDisconnect`. Each value is an object and has following keys: <ul><li>`type` - Mandatory. Dialog type. Possible values: <ul><li>`confirmation`</li></ul></li><li>`title` - Mandatory. Dialog title.</li><li>`content` - Mandatory. Dialog content.</li><li>`buttons` - Mandatory. An object represented as dialog buttons. Buttons property (key) and value has to be a string. Any button can be defined, but there are two mandatory ones - `ok` and `cancel`.</li></ul>                                                                   | See *dialog example* under this table.                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 <details>
 <summary>businessModels example</summary>
@@ -226,14 +226,13 @@ For the manifest, make sure to follow these conditions:
 
 ```json
 "dialogs": {
-    "foo": {
-        "type": "confirmacion",
-        "title": "bar",
-        "content": "baz",
+    "onSave": {
+        "type": "confirmation",
+        "title": "Confirmation dialog title",
+        "content": "Confirmation dialog content",
         "buttons": {
-            "ok": "qux",
-            "cancel": "quux",
-            "fred": "thud"
+            "ok": "Save",
+            "cancel": "Cancel"
         }
     }
 }

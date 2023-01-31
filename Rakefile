@@ -46,8 +46,9 @@ commonOptions = {
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,
     /php.net\/[\.\w\-\/\?]+/,
     /atom.io\/[\.\w\-\/\?]+/,
-    /www.acunetix.com\/[\.\w\-\/\?]+/
-    
+    /www.acunetix.com\/[\.\w\-\/\?]+/,
+    /gcc.gnu.org\/[\.\w\-\/\?]+/
+
   ],
   :file_ignore => [],
   :typhoeus => {

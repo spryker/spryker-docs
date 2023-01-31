@@ -16,7 +16,7 @@ We divided the preparation into approximate timeframes, and you can adjust them 
 
 ## Eight weeks before go-live
 
-## Eight weeks until five weeks before go-live: compatibility checklist
+## Eight weeks before go-live
 
 Review this preparatory checklist before initiating your go-live plan.  
 You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you do the following:

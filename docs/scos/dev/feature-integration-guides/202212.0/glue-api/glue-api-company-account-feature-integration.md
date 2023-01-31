@@ -13,9 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-company-account-feature-integration.html
 related:
   - title: Company Account feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/company-account-feature-integration.html
-  - title: Company Account feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/company-account-feature-walkthrough/company-account-feature-walkthrough.html
+    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-company-account-feature.html
   - title: "Glue API: Authenticating as a company user"
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
   - title: Managing company user authentication tokens

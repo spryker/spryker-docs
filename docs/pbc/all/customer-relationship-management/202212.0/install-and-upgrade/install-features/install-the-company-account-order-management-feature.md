@@ -11,10 +11,6 @@ redirect_from:
   - /docs/company-account-order-management-feature-integration
   - /docs/en/company-account-order-management-feature-integration
 related:
-    - title: Company Account feature walkthrough
-      link: docs/scos/dev/feature-walkthroughs/page.version/company-account-feature-walkthrough/company-account-feature-walkthrough.html
-    - title: Order Management feature walkthrough
-      link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
     - title: Company Account
       link: docs/scos/user/features/page.version/company-account-feature-overview/company-account-feature-overview.html
 ---

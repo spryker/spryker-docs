@@ -30,7 +30,7 @@ You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you
 - Use the option to [test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
 - Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
 
-
+Five weeks before go-live: migration plan (if applicable)
 If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
 
 If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.

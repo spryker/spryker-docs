@@ -45,7 +45,10 @@ commonOptions = {
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,
     /php.net\/[\.\w\-\/\?]+/,
-    /atom.io\/[\.\w\-\/\?]+/
+    /atom.io\/[\.\w\-\/\?]+/,
+    /www.acunetix.com\/[\.\w\-\/\?]+/,
+    /gcc.gnu.org\/[\.\w\-\/\?]+/
+
   ],
   :file_ignore => [],
   :typhoeus => {

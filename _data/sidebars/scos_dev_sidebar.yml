@@ -4049,26 +4049,6 @@ entries:
       url: /docs/scos/dev/sdk/cronjob-scheduling.html
     - title: Importer
       url: /docs/scos/dev/sdk/data-import.html
-    - title: Development tools
-      nested:
-      - title: Architecture sniffer
-        url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-      - title: Code sniffer
-        url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
-      - title: PHPStan
-        url: /docs/scos/dev/sdk/development-tools/phpstan.html
-      - title: Tooling config file
-        url: /docs/scos/dev/sdk/development-tools/tooling-config-file.html
-      - title: Static security checker
-        url: /docs/scos/dev/sdk/development-tools/static-security-checker.html
-      - title: TS linter
-        url: /docs/scos/dev/sdk/development-tools/ts-linter.html
-      - title: Formatter
-        url: /docs/scos/dev/sdk/development-tools/formatter.html
-      - title: SCSS linter
-        url: /docs/scos/dev/sdk/development-tools/scss-linter.html
-      - title: Performance audit tool - Benchmark
-        url: /docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
     - title: Twig and TwigExtension
       url: /docs/scos/dev/sdk/twig-and-twigextension.html
     - title: Code generator

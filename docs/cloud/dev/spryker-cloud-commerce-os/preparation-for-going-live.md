@@ -14,7 +14,6 @@ This document describes how to prepare a Spryker project for going live on Spryk
 
 We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all the following tasks are completed one week before going live.
 
-## Eight weeks before go-live
 
 ## Eight weeks before go-live
 

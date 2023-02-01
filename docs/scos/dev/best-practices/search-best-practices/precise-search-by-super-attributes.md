@@ -37,7 +37,7 @@ related:
 
 ## Task to achieve
 
-Imagine a shop selling a laptop (abstract product) with 16/32Gb RAM and i5/i7 CPU options. One day there are only TWO models in stock: *16Gb + i5* and *32Gb + i7*.
+Imagine a shop selling a laptop (abstract product) with 16/32Gb RAM and i5/i7 CPU options. One day there are only two models in stock: *16Gb + i5* and *32Gb + i7*.
 
 Selecting in the search *RAM: 16Gb + CPU: i7* shows you this abstract product in the catalog/search, while none of it's concretes match the requirements.
 

@@ -2,9 +2,11 @@
 
 ## Install feature core
 
+This document describes how to integrate the Cart + Non-splittable Products into a Spryker project.
+
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Follow the steps below to install the {Feature Name} feature core.
 
 | NAME | VERSION |
 | --- | --- |
@@ -50,6 +52,6 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Once you are done with this step, add any Product with the quantity restrictions (Min Qty, Max Qty, Qty Interval to the Cart and try choosing its quantity outside the min-max range or such a quantity that does not correspond to Qty Interval. Then make sure the quantity you have chosen has been adjusted according to its restriction, and the corresponding message has been displayed.)
+Once you are done with this step, add any product with the quantity restrictions (Min Qty, Max Qty, Qty Interval to the cart and try choosing its quantity outside the min-max range or such a quantity that does not correspond to Qty Interval. Then make sure the quantity you have chosen has been adjusted according to its restriction, and the corresponding message has been displayed.)
 
 {% endinfo_block %}

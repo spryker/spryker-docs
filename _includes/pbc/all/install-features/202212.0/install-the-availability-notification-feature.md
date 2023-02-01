@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Availability Notification](/docs/pbc/all/warehouse-management-system/202212.0/availability-notification-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Availability Notification](/docs/pbc/all/warehouse-management-system/{{site.version}}/availability-notification-feature-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -13,8 +13,8 @@ To start feature integration, integrate the required features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Mailing and Notifications | {{site.version}} |[Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/202212.0/mailing-and-notifications-feature-integration.html)|
-| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/202212.0/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Mailing and Notifications | {{site.version}} |[Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
+| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Product      | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)           |
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
@@ -301,8 +301,8 @@ To start feature integration, integrate the required feature:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Mailing and Notifications | {{site.version}} |[Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/202212.0/mailing-and-notifications-feature-integration.html)|
-| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/202212.0/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Mailing and Notifications | {{site.version}} |[Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
+| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Product      | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)           |
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 

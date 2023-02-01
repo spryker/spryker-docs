@@ -141,7 +141,7 @@ image:
   tag: spryker/php:8.1
   environment:
     SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PUBLIC_KEY: 'Your public key.'
-    SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_`VAPID`_PRIVATE_KEY: 'Your private key.'
+    SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY: 'Your private key.'
 ```
 
 VAPID is a new way to send and receive website push notifications. Your `VAPID` keys let you send web push campaigns without sending them through a service like Firebase Cloud Messaging (FCM).

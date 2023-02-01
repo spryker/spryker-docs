@@ -297,7 +297,7 @@ Follow the steps below to install the Availability Notification feature frontend
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+To start feature integration, integrate the required feature:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |

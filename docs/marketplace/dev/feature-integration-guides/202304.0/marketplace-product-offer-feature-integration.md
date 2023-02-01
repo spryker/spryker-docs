@@ -252,7 +252,7 @@ In this step, you enable publishing of `spy_merchant` and `spy_product_offer` ch
 
 {% endinfo_block %}
 
-Set up the following plugin:
+Set up the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- |----------------------| ----------- | ---------------- |

@@ -53,15 +53,9 @@ You can do the administration work on the Bazaarvoice reviews from the [Bazaarvo
 
 To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist. 
 
+To do that, do one of the following:
+- either change the `deploy.yml` file as follows: 
 
-To do that, change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
-
-Update `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, then this step can be ignored.
-```php
-$config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
-```
-
-Or update `deploy.yml` file (which is used for your project domain):
 ```yml
 image:
   environment:
@@ -74,17 +68,22 @@ image:
     }'
 ```
 
+- or update the `config/Shared/config_default.php` file:
+
+```php
+$config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
+```
+
+Alternatively, you can update the `deploy.yml` file (which is used for your project domain):
+
+
 ### 3. Add markup to custom templates
 
 The Bazaarvoice app takes data on products from the Storefront pages (for example, Product Detail page, Catalog page).
 To get necessary data from the pages, schemas from [Schema.org](https://schema.org/) are used.
 By default, the necessary markups are already available in the Yves templates.
 
-{% info_block infoBox "Note" %}
-
-If you have custom Yves templates or make your own frontend, the markups required for the Bazaarvoice app must be added according to the tables below.
-
-{% endinfo_block %}
+If you have custom Yves templates or make your own frontend, add the markups required for the Bazaarvoice app according to the tables below.
 
 #### DCC (dynamic catalog collection) for products
 Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
@@ -102,7 +101,12 @@ Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 | product.inProductGroupWithID | family               |
 
 #### DCC for merchants
-Note: Merchants doesn't have their own entities in Bazaarvoice service, so the product with specific ID (merchant reference) are used instead.
+
+{% info_block infoBox "Note" %}
+
+Since merchants don't have own entities in the Bazaarvoice service, products with specific IDs, or merchant references, are used instead.
+
+{% endinfo_block %}
 
 Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
@@ -227,7 +231,8 @@ Example:
 </section>
 ```
 
-### 4. Message Broker configuration
+### 4. Configure Message Broker
+
 Add the following configuration to `config/Shared/common/config_default.php`:
 ```php
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
@@ -247,8 +252,10 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     'reviews' => 'http',
 ];
 ```
-#### Message Handler
-The following plugin must be added to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+#### Add Message Handler
+
+Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+
 ```php
  /**
   * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
@@ -262,11 +269,13 @@ The following plugin must be added to `src/Pyz/Zed/MessageBroker/MessageBrokerDe
  }
 ```
 #### Receive messages
+
 To receive messages from the channel there is the console command:
 
 ```console message-broker:consume```
 
-So the command must be executed periodically, Jenkins can be configured in `config/Zed/cronjobs/jenkins.php`
+Since this command must be executed periodically, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
+
 ```php
 $jobs[] = [
     'name' => 'message-broker-consume-channels',

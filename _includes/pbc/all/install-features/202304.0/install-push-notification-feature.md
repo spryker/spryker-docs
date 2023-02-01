@@ -637,15 +637,15 @@ php -S localhost:8000
 7. Integrate the `Push Notification` feature by following the current guide.
 8. Enable the push notification by clicking the `Enable browser notifications` button on the page.
 9. Create a push notification subscription by clicking the `Create Push notification subscription` button on the page.
-9. Create the push notification by adding it manually to the `spy_push_notification` database table. Use the same group and notification provider that is used by the subscription.
-10. Send the push notification by running the following console command:
+10. Create the push notification by adding it manually to the `spy_push_notification` database table. Use the same group and notification provider that is used by the subscription.
+11. Send the push notification by running the following console command:
 ```bash
 docker/sdk console send-push-notifications
 ```
 
-11. Depending on the OS, the notification is displayed with content from the `spy_push_notification.payload` database field.
-12. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to the previous year's date.
-13. Remove the outdated subscriptions:
+12. Depending on the OS, the notification is displayed with content from the `spy_push_notification.payload` database field.
+13. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to the previous year's date.
+14. Remove the outdated subscriptions:
 ```bash
 docker/sdk console delete-expired-push-notification-subscriptions
 ```

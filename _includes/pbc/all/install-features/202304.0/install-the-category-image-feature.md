@@ -273,7 +273,7 @@ Make sure that when a category image is created, updated or deleted, it is expor
 | --- | --- | --- |
 | Redis | Category Image | `kv:category_image:en_us:1` |
 
-**Example expected data fragment**
+**An example example of expected data fragment**
 
 ```json
 {

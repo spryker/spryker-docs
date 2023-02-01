@@ -277,7 +277,7 @@ Ensure that the installer plugin works correctly:
 
 1. Execute install plugins: 
 ```bash
-docker/sdk console setup:init-db`
+docker/sdk console setup:init-db
 ```
 
 2. Check that the `web-push-php` push notification provider exists in the `spy_push_notification_provider` database table.

@@ -189,7 +189,6 @@ Example:
 Core templates:
 * `SprykerShop/Yves/PaymentPage/Theme/default/views/payment-success/index.twig`
 * `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
-* `SprykerShop/Yves/MerchantWidget/Theme/default/views/merchant-meta-schema/merchant-meta-schema.twig` (only for Marketplace)
 
 Example:
 ```html

@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-shipment-feature-integration.html  
+  - /docs/pbc/all/carrier-management/202212.0/install-and-upgrade/integrate-the-shipment-glue-api.html
 related:
   - title: Shipment feature integration
     link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/integrate-the-shipment-feature.html

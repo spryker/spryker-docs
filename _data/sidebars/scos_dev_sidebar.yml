@@ -1068,41 +1068,6 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
-    - title: Managing returns
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
-      - "202212.0"
-      nested:
-      - title: Managing the returns
-        url: /docs/scos/dev/glue-api-guides/managing-returns/managing-the-returns.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving return reasons
-        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-reasons.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Retrieving returnable items
-        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-returnable-items.html
-        include_versions:
-        - "202005.0"
-      - title: retrieving the returned items
-        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-the-returned-items.html
-        include_versions:
-        - "202005.0"
-      - title: Retrieving return management information
-        url: /docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-management-information.html
-        include_versions:
-        - "202005.0"
-      - title: Creating a return
-        url: /docs/scos/dev/glue-api-guides/managing-returns/creating-a-return.html
-        include_versions:
-        - "202005.0"
     - title: Retrieving categories
       include_versions:
       - "202005.0"
@@ -4101,26 +4066,6 @@ entries:
       url: /docs/scos/dev/sdk/cronjob-scheduling.html
     - title: Importer
       url: /docs/scos/dev/sdk/data-import.html
-    - title: Development tools
-      nested:
-      - title: Architecture sniffer
-        url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-      - title: Code sniffer
-        url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
-      - title: PHPStan
-        url: /docs/scos/dev/sdk/development-tools/phpstan.html
-      - title: Tooling config file
-        url: /docs/scos/dev/sdk/development-tools/tooling-config-file.html
-      - title: Static security checker
-        url: /docs/scos/dev/sdk/development-tools/static-security-checker.html
-      - title: TS linter
-        url: /docs/scos/dev/sdk/development-tools/ts-linter.html
-      - title: Formatter
-        url: /docs/scos/dev/sdk/development-tools/formatter.html
-      - title: SCSS linter
-        url: /docs/scos/dev/sdk/development-tools/scss-linter.html
-      - title: Performance audit tool - Benchmark
-        url: /docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
     - title: Twig and TwigExtension
       url: /docs/scos/dev/sdk/twig-and-twigextension.html
     - title: Code generator
@@ -4742,8 +4687,8 @@ entries:
       url: /docs/scos/dev/architecture/technology-stack.html
     - title: Conceptual overview
       url: /docs/scos/dev/architecture/conceptual-overview.html
-    - title: Modules and layers
-      url: /docs/scos/dev/architecture/modules-and-layers.html
+    - title: Modules and application layers
+      url: /docs/scos/dev/architecture/modules-and-application-layers.html
     - title: Module API
       nested:
       - title: Using ~ Composer Constraint for Customized Modules

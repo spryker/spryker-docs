@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/avalara-tax-integration
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-integration.html
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara.html
+  - /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

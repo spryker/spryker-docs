@@ -363,6 +363,9 @@ Ensure that the plugins work correctly:
 
 ```html
 <html>
+   <head>
+      <title>Web Push sandbox</title>
+   </head>
     <body>
         <h1>Web Push sandbox</h1>
         <button id="push-button">Enable browser notifications</button>
@@ -635,8 +638,8 @@ php -S localhost:8000
 ```
 
 7. Integrate the Push Notification feature by following the current guide.
-8. To enable the push notification, on the page, click the **Enable browser notifications** button.
-9. To create a push notification subscription, on the page, click the **Create Push notification subscription** button.
+8. To enable the push notification, on the `Web Push sandbox` page, click the **Enable browser notifications** button.
+9. To create a push notification subscription, on the `Web Push sandbox` page, click the **Create Push notification subscription** button.
 10. Create the push notification by adding it manually to the `spy_push_notification` database table. Use the same group and notification provider that is used by the subscription.
 11. Send the push notification by running the following console command:
 ```bash

@@ -1,21 +1,21 @@
 
 
+This document describes how to integrate the Cart + Non-splittable Products feature into a Spryker project.
+
 ## Install feature core
 
-This document describes how to integrate the Cart + Non-splittable Products into a Spryker project.
+Follow the steps below to install the Cart + Non-splittable Products feature core.
 
 ### Prerequisites
 
-Follow the steps below to install the {Feature Name} feature core.
+To start feature integration, integrate the required features:
 
 | NAME | VERSION |
 | --- | --- |
 | Cart | {{site.version}} |
 | Non-splittable Products |{{site.version}} |
 
-### 1) Set up behavior
-
-#### Adjust concrete product quantity
+### 1) Adjust concrete product quantity
 
 Add the following plugins to your project:
 

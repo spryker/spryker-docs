@@ -56,7 +56,7 @@ Search is done in two steps:
 1. In the **product concrete index**, search is performed by super attributes and matching product abstract IDs are displayed.
 2. Those from the main index for product abstracts are retrieved.
 
-#### Implementation plan
+#### Implementation
 
 1. Extend `ProductConcretePageSearchTransfer` with new field *attributes*, where desired attributes would be stored as an array of string values:
 

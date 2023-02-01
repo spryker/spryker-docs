@@ -74,14 +74,10 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-- Make sure that `CatalogClient::catalogSearch()` returns category nodes under the `categoryTreeFilter` index.
-- Make sure that the search query has a sort parameter.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that you can find categories using the global search on the Storefront.
+Make sure the folloing:
+- `CatalogClient::catalogSearch()` returns category nodes under the `categoryTreeFilter` index.
+- The search query has a sort parameter.
+- You can find categories using the global search on the Storefront.
 
 {% endinfo_block %}
 
@@ -92,5 +88,5 @@ Integrate the following related features:
 
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ------------- | ---------------- | -------------------- |
-| Catalog             |      ✓     | |
-| Category Management |      ✓     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Catalog             |      &check;     | |
+| Category Management |      &check;     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |

@@ -114,12 +114,12 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-2. Add the configuration defining *Voluntary Application Server Identity (VAPID)* keys, which are used by the push notification:
+2. Add the configuration defining *Voluntary Application Server Identity (`VAPID`)* keys, which are used by the push notification:
 
 | CONFIGURATION                                          | SPECIFICATION                                                                   | NAMESPACE                                 |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|
-| PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides VAPID public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
-| PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides VAPID private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides `VAPID` public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides `VAPID` private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
 
 **config/Shared/config_default.php**
 
@@ -141,16 +141,16 @@ image:
   tag: spryker/php:8.1
   environment:
     SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PUBLIC_KEY: 'Your public key.'
-    SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY: 'Your private key.'
+    SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_`VAPID`_PRIVATE_KEY: 'Your private key.'
 ```
 
-VAPID is a new way to send and receive website push notifications. Your VAPID keys let you send web push campaigns without sending them through a service like Firebase Cloud Messaging (FCM).
+VAPID is a new way to send and receive website push notifications. Your `VAPID` keys let you send web push campaigns without sending them through a service like Firebase Cloud Messaging (FCM).
 
-To generate VAPID keys, you can use the following tools:
+To generate `VAPID` keys, you can use the following tools:
 - https://vapidkeys.com/—an online tool to generate keys.
-- https://www.npmjs.com/package//web-push—a Node.js package that can generate VAPID keys.
+- https://www.npmjs.com/package//web-push—a Node.js package that can generate `VAPID` keys.
 
-The following example command generates VAPID keys by using the `web-push` Node.js library:
+The following example command generates `VAPID` keys by using the `web-push` Node.js library:
 
 ```bash
 web-push generate-vapid-keys --json
@@ -289,7 +289,7 @@ docker/sdk console setup:init-db
 | PLUGIN                                           | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                          |
 |--------------------------------------------------|------------------------------------------------------------------|---------------|----------------------------------------------------|
 | SendPushNotificationConsole                      | Sends notifications in an async way.                             |               | Spryker\Zed\PushNotification\Communication\Console |
-| DeleteExpiredPushNotificationSubscriptionConsole | Delete expired push notification subscriptions from Persistence. |               | Spryker\Zed\PushNotification\Communication\Console |
+| DeleteExpiredPushNotificationSubscriptionConsole | Delete expired push notification subscriptions from `Persistence`. |               | Spryker\Zed\PushNotification\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -355,7 +355,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 Ensure that the plugins work correctly:
 1. To test the functionality, create a simple single-page demo application.
-2. Generate VAPID keys through the online generator https://vapidkeys.com/.
+2. Generate `VAPID` keys through the online generator https://vapidkeys.com/.
 3. Create a directory for the demo application: `mkdir push_notification_spa`.
 4. In the `push_notification_spa` directory, create the following files:
 
@@ -627,17 +627,18 @@ self.addEventListener('push', function (event) {
 ```
 
 5. Setup credentials:
-   1. Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your VAPID public key.
+   1. Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your `VAPID` public key.
    2. In `.../push_notification_spa/app.js`, find the `getToken()` method and replace the credentials with the user that works in your system. 
 6. Run the local HTTP server with the demo app:
 ```bash
 php -S localhost:8000
 ```
 
-7. To enable the feature in the system, follow the steps written in the integration guide.
-8. Enable the push notification by clicking the button on the page.
+7. Integrate the `Push Notification` feature by following the current guide.
+8. Enable the push notification by clicking the `Enable browser notifications` button on the page.
+9. Create a push notification subscription by clicking the `Create Push notification subscription` button on the page.
 9. Create the push notification by adding it manually to the `spy_push_notification` database table. Use the same group and notification provider that is used by the subscription.
-10. Send the push notification:
+10. Send the push notification by running the following console command:
 ```bash
 docker/sdk console send-push-notifications
 ```
@@ -646,7 +647,7 @@ docker/sdk console send-push-notifications
 12. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to the previous year's date.
 13. Remove the outdated subscriptions:
 ```bash
-delete-expired-push-notification-subscriptions
+docker/sdk console delete-expired-push-notification-subscriptions
 ```
 
 {% endinfo_block %}
@@ -693,6 +694,6 @@ $jobs[] = [
 {% info_block warningBox "Verification" %}
 
 1. Make sure that push notifications have been correctly sent by checking the `spy_push_notification.notification_sent` database table field has to be equal to `TRUE` in case of a successful send.
-2. Make sure that outdated push notification subscriptionв are removed by checking the `spy_push_notification_subscription` database table. Сreate the push notification subscription record with `spy_push_notification_subscription.expired_at` with last year's date.
+2. Make sure that outdated push notification subscriptions are removed by checking the `spy_push_notification_subscription` database table. Create the push notification subscription record with `spy_push_notification_subscription.expired_at` with last year's date.
 
 {% endinfo_block %}

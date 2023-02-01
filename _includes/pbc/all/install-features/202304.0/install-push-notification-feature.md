@@ -87,7 +87,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 3) Set up configuration
 
-1. If you want to make `push-notification-subscriptions` resource protected, adjust the protected paths configuration:
+1. To make the `push-notification-subscriptions` resource protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 

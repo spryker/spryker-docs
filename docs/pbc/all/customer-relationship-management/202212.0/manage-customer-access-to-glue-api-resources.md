@@ -1,5 +1,5 @@
 ---
-title: Manage customer access to Glue API resourcesdocs
+title: Manage customer access to Glue API resources
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-access-to-glue-api-resources
@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/en/managing-customer-access-to-api-resources
   - /v4/docs/managing-customer-access-to-api-resources
   - /v4/docs/en/managing-customer-access-to-api-resources
+  - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
 related:
   - title: Authentication and Authorization
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html

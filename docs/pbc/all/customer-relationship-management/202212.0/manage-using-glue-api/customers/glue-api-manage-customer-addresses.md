@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customer-addresses.html
+  - /docs/scos/dev/glue-api-guides/202212.0/managing-customers/managing-customer-addresses.html
 related:
   - title: Managing Wishlists
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-wishlists-via-glue-api.html

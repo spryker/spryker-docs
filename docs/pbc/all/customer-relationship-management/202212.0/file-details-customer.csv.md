@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-customer.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-customer.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-customer.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-customer.csv.html
 ---
 
 This document describes the `customer.csv` file to configure [Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.

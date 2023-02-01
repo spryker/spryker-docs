@@ -23,6 +23,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/companyusersrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/companyusersrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/glue-api/companyusersrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/glue-api/migration-guide-companyusersrestapi.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-companyusersrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-companyusersrestapi-module.md -->

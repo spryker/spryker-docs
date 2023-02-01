@@ -23,6 +23,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/companyuserauthrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/companyuserauthrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/glue-api/migration-guide-companyuserauthrestapi.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-companyuserauthrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-companyuserauthrestapi-module.md -->

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/managing-company-units
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-units.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
+  - /docs/scos/user/back-office-user-guides/202212.0/customer/company-account/managing-company-units.html
 related:
   - title: Business Units overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html

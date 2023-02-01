@@ -619,6 +619,60 @@ entries:
             nested:
               - title: "Content item types: module relations"
                 url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
+      - title: Customer Relationship Management
+        url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Company Account
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-company-account-feature.html
+                  - title: Company Account + Order Management
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
+                  - title: Customer Access
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-access-feature.html
+                  - title: Customer Account Management + Agent Assist
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html
+                  - title: Customer Account Management
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
+                  - title: Customer Account Management + Order Management
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Company Account
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+                  - title: Customer Account Management
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: CompanyBusinessUnit
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companybusinessunit-module.html
+                  - title: CompanyUser
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html
+                  - title: CompanyUserAuthRestApi
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyuserauthrestapi-module.html
+                  - title: CompanyUsersRestApi
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyusersrestapi-module.html
+                  - title: Customer
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customer-module.html
+                  - title: CustomerPage
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html
+                  - title: CustomerReorderWidget
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html
+          - title: Company Account feature overview
+            url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-account-feature-overview.html
+            nested:
+              - title: Business on Behalf overview
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-on-behalf-overview.html
+              - title: Business Units overview
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-units-overview.html
+              - title: Company Accounts overview
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-accounts-overview.html
+              - title: Business on Behalf overview
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-on-behalf-overview.html
+              - title: Business on Behalf overview
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-on-behalf-overview.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-companyuser.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-companyuser.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-companyuser.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-companyuser.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-companyuser-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-companyuser-module.md -->

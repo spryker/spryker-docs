@@ -11,6 +11,7 @@ redirect_from:
   - /docs/customer-access-feature-overview
   - /docs/en/customer-access-feature-overview
   - /docs/scos/user/features/202200.0/customer-access-feature-overview.html
+  - /docs/scos/user/features/202212.0/customer-access-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/customer-access-feature-walkthrough.html
 ---
 

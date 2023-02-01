@@ -663,16 +663,29 @@ entries:
           - title: Company Account feature overview
             url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-account-feature-overview.html
             nested:
-              - title: Business on Behalf overview
+              - title: Business on Behalf
                 url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-on-behalf-overview.html
-              - title: Business Units overview
+              - title: Business Units
                 url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-units-overview.html
-              - title: Company Accounts overview
+              - title: Company Accounts
                 url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-accounts-overview.html
-              - title: Business on Behalf overview
-                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-on-behalf-overview.html
-              - title: Business on Behalf overview
-                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-on-behalf-overview.html
+              - title: Company user roles and permissions
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+              - title: Customer Login by Token
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/customer-login-by-token-overview.html
+          - title: Customer Account Management
+            url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+            nested:
+              - title: Customer Accounts
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-accounts-overview.html
+              - title: Customer Groups
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-groups-overview.html
+              - title: Customer Login
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-login-overview.html
+              - title: Customer Registration
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-registration-overview.html
+              - title: Password Management
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/password-management.html                                                                
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

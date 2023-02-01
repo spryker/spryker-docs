@@ -7,17 +7,17 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 related:
   - title: Build the documentation site
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
   - title: Adding product sections to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
   - title: Edit documentation via pull requests
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
   - title: Report documentation issues
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
   - title: Review pull requests
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html
 ---
 
 We use Markdown to write the Spryker documentation. This document contains the Markdown syntax of the page elements used on the Spryker documentation website, specifically:

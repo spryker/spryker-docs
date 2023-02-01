@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/201903.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/201907.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/202005.0/logging-in-to-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/202204.0/logging-in-to-the-back-office.html
 ---
 
 To be able to use the Back Office, you have to log in to it. You can log in via:

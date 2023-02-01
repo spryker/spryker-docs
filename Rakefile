@@ -45,7 +45,10 @@ commonOptions = {
     /rpm.newrelic.com\/[\.\w\-\/\?]+/,
     /martin-loetzsch.de\/[\.\w\-\/\?]+/,
     /php.net\/[\.\w\-\/\?]+/,
-    /atom.io\/[\.\w\-\/\?]+/
+    /atom.io\/[\.\w\-\/\?]+/,
+    /www.acunetix.com\/[\.\w\-\/\?]+/,
+    /gcc.gnu.org\/[\.\w\-\/\?]+/
+
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -108,7 +111,8 @@ task :check_mp_dev do
     /docs\/pbc\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/sdk\/.+/,
-    /docs\/marketplace\/\w+\/[\w-]+\/202204\.0\/.+/
+    /docs\/marketplace\/\w+\/[\w-]+\/202204\.0\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202304\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -124,7 +128,8 @@ task :check_mp_user do
     /docs\/marketplace\/dev\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/pbc\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/sdk\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202304\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -147,7 +152,8 @@ task :check_scos_dev do
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202304\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -170,7 +176,8 @@ task :check_scos_user do
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202304\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -199,8 +206,8 @@ task :check_pbc do
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/paas-plus\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/
-
+    /docs\/pbc\/\w+\/[\w-]+\/202212\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202304\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

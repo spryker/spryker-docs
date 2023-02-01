@@ -7,7 +7,8 @@ originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-featur
 originalArticleId: 85a7c630-a6ef-465f-80fd-176d1c5e0937
 redirect_from:
   - /docs/scos/user/features/202212.0/shared-carts-feature-overview.html  
-  - /docs/scos/dev/feature-walkthroughs/202212.0/shared-carts-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202212.0/shared-carts-feature-walkthrough.html
+  - /docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html 
 ---
 
 *Shopping Cart* is a part of the online shop where the record of the items a buyer has "picked up" from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications or add extra items if needed, and purchase the products.

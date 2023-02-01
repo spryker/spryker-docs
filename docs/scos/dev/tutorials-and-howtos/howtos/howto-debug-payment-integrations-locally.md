@@ -25,9 +25,9 @@ ssl:
 3. Install and start up NGROK to receive the public URL:
 
 ```
-./ngrok http -host-header=rewrite your.application.base.urll:443
+./ngrok http --host-header=rewrite YOUR.APPLICATION_BASE.TLD:443
 //Example:
-./ngrok http -host-header=rewrite yves.de.spryker.local:443
+./ngrok http --host-header=rewrite yves.de.spryker.local:443
 //forwarding your requests like this let you keep most of your URL configuration as is. If your base url differs from the example, make sure to update the command to match.
 ```
 

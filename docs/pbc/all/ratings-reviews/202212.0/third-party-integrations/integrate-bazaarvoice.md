@@ -54,7 +54,7 @@ You can do the administration work on the Bazaarvoice reviews from the [Bazaarvo
 To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist. 
 
 To do that, do one of the following:
-- either change the `deploy.yml` file as follows: 
+- change the `deploy.yml` file: 
 
 ```yml
 image:
@@ -68,14 +68,11 @@ image:
     }'
 ```
 
-- or update the `config/Shared/config_default.php` file:
+- update the `config/Shared/config_default.php` file:
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
 ```
-
-Alternatively, you can update the `deploy.yml` file (which is used for your project domain):
-
 
 ### 3. Add markup to custom templates
 
@@ -108,7 +105,8 @@ Since merchants don't have own entities in the Bazaarvoice service, products wit
 
 {% endinfo_block %}
 
-Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+Core template:
+`SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
 | schema.org property        | Bazaarvoice property |
 |----------------------------|----------------------|
@@ -155,7 +153,8 @@ Example:
 ```
 
 #### Ratings and reviews (for Merchant)
-Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+Core template:
+`SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
 Example:
 ```html
@@ -270,7 +269,7 @@ Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyPr
 ```
 #### Receive messages
 
-To receive messages from the channel there is the console command:
+To receive messages from the channel, the following command is used:
 
 ```console message-broker:consume```
 

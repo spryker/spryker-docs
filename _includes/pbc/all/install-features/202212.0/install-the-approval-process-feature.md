@@ -5,7 +5,7 @@ This document describes how to integrate the [Approval Proces feature](/docs/pbc
 
 ## Install feature core
 
-Follow the steps below to install the {Feature Name} feature core.
+Follow the steps below to install the Approval Proces feature core.
 
 ### Prerequisites
 
@@ -85,10 +85,6 @@ Make sure that the following changes have been applied by checking your database
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_quote_approval | table | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -371,7 +367,7 @@ Check that the customer without `PlaceOrderPermission` can't proceed to checkout
 
 ## Install feature frontend
 
-Follow the steps below to install the {Feature Name} feature frontend.
+Follow the steps below to install the Approval Proces feature frontend.
 
 ### Prerequisites
 

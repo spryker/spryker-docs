@@ -15,13 +15,13 @@ You can configure the data processing services and the visual representation of 
 
 The UserCentrics app requires the following Spryker modules:
 
-* `spryker/asset: ^1.2.0`
+* `spryker/asset: ^1.3.0`
 * `spryker/asset-storage: ^1.1.0`
-* `spryker/message-broker: ^1.0.0`
-* `spryker/message-broker-aws: ^1.0.0`
-* `spryker/message-broker-extension: ^1.0.0`
+* `spryker/message-broker: ^1.3.0`
+* `spryker/message-broker-aws: ^1.3.2`
+* `spryker/message-broker-extension: ^1.1.0`
 * `spryker-shop/asset-widget: ^1.0.0`
-* `spryker-shop/shop-ui: ^1.59.0`
+* `spryker-shop/shop-ui: ^1.62.0`
 
 ## Integration
 

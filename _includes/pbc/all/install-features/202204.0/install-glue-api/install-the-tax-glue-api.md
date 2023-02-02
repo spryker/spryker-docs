@@ -20,7 +20,7 @@ composer require spryker/product-tax-sets-rest-api:"^2.0.0" --update-with-depend
 
 Make sure that the following module has been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | `ProductTaxSetsRestApi` | `vendor/spryker/product-tax-sets-rest-api` |  
 </div></section>
@@ -46,7 +46,7 @@ Make sure that the following changes have been applied by checking your database
 <section contenteditable="false" class="warningBox"><div class="content">
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | `RestProductTaxRateTransfer` | class | created | `src/Generated/Shared/Transfer/RestProductTaxRateTransfer` |
 | `RestProductTaxSetsAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestProductTaxSetsAttributesTransfer` |
@@ -71,7 +71,7 @@ Make sure that the `uuid` field is populated for all records in the `spy_tax_set
 #### Enable resource and relationship
 Activate the following plugin:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `ProductTaxSetsResourceRoutePlugin` | Registers the `product-tax` resource. | None | `Spryker\Glue\ProductTaxSetsRestApi\Plugin\GlueApplication` |
 | `ProductTaxSetByProductAbstractSkuResourceRelationshipPlugin` | Adds the `product-tax-sets` resource as a relationship to the `abstract-product` resource. |  None | `Spryker\Glue\ProductTaxSetsRestApi\Plugin\GlueApplication` |

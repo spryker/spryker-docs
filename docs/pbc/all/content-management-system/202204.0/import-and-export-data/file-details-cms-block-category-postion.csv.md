@@ -1,5 +1,5 @@
 ---
-title: File details - cms_block_category_position.csv
+title: "File details: cms_block_category_position.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-category-postioncsv
@@ -16,16 +16,11 @@ This document describes the `cms_block_category_position.csv` file to configure 
 
 ## Import file parameters
 
-
-
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | cms_block_category_position_name | &check; | String |  |Name of the CMS block category position.  |
 
-
 ## Import template file and content example
-
-
 
 | FILE | DESCRIPTION |
 | --- | --- |

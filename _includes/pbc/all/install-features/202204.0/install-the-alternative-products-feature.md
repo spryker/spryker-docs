@@ -1,4 +1,5 @@
 
+This document describes how to integrate the [Alternative Products](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
 
 
 This document describes how to integrate the [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
@@ -36,7 +37,7 @@ Make sure that the following modules were installed:
 
 {% endinfo_block %}
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
 
 Adjust the schema definition, so that entity changes trigger the events.
 
@@ -135,7 +136,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 {% info_block infoBox "Info" %}
 
-This step publishes tables on change—create, edit, delete to `spy_product_alternative_storage` and `spy_product_replacement_for_storage`  and synchronize the data to Storage.
+This step publishes tables on change—create, edit, delete to `spy_product_alternative_storage` and `spy_product_replacement_for_storage` and synchronize the data to Storage.
 
 {% endinfo_block %}
 

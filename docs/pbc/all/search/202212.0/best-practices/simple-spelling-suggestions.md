@@ -68,7 +68,7 @@ Suggestion terms are then indexed by splitting them by whitespace and lowercasin
 }
 ```
 
-At query time, a suggest part is added to every query. It will try to return the closest tokens (based on edit distance) for all terms that were not matched in the query. For tokens that match at least one document, no suggestions are going to be calculated. In case you have doubts about the quality of the suggestion_terms, it's possible to fetch several suggestions per term from Elasticsearch and then use some heuristics in the backend to select one that exhibits a good combination of distance score and term frequency.
+At query time, a `suggest` part is added to every query. It tries to return the closest tokens (based on edit distance) for all terms that were not matched in the query. For tokens that match at least one document, no suggestions are going to be calculated. In case you have doubts about the quality of `suggestion_terms`, you can fetch several suggestions per term from Elasticsearch and then use some heuristics in the backend to select one that exhibits a good combination of distance score and term frequency.
 
 ```php
 "suggest": {

@@ -4,9 +4,7 @@ Follow the steps below to install the Agent Assist feature API.
 
 ## Prerequisites
 
-
 To start the feature integration, overview and install the necessary features:
-
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
@@ -14,9 +12,6 @@ To start the feature integration, overview and install the necessary features:
 | Customer Account Management + Agent Assist | {{site.version}} | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-agent-assist-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
-
-
-Run the following command to install the required modules:
 
 ```bash
 composer require spryker/agent-auth-rest-api:"^1.0.0" --update-with-dependencies
@@ -32,10 +27,7 @@ Ensure that the following module has been installed:
 
 {% endinfo_block %}
 
-## 2) Set up transfer objects
-
-
-Run the following command to generate transfer changes:
+## 2) Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -43,9 +35,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-
 Ensure that the following changes have been applied in the transfer objects:
-
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -70,12 +60,9 @@ Ensure that the following changes have been applied in the transfer objects:
 
 {% endinfo_block %}
 
-
 ## 3) Set up behavior
 
-
 Activate the following plugins:
-
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -87,8 +74,7 @@ Activate the following plugins:
 | AgentCustomerImpersonationAccessTokensResourceRoutePlugin | Provides the `/agent-customer-impersonation-access-tokens` resource route. | The Customer impersonation grant type must be configured. See the [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) for details. | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 | AgentCustomerSearchResourceRoutePlugin | Provides the `/agent-customer-search` resource route. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 
-
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
@@ -155,15 +141,15 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that:
+Ensure the following:
 
-*   Invalid agent access tokens passed in the `X-Agent-Authorization` header are rejected with the 401 error code.
+* Invalid agent access tokens passed in the `X-Agent-Authorization` header are rejected with the 401 error code.
 
-*   The `X-Agent-Authorization` header is required for `/agent-customer-impersonation-access-tokens` and `/agent-customer-search` resources. Requests without the header return the 401 error code.
+* The `X-Agent-Authorization` header is required for `/agent-customer-impersonation-access-tokens` and `/agent-customer-search` resources. Requests without the header return the 401 error code.
 
-*   When a valid agent access token is provided via the `X-Agent-Authorization`, the `RestRequest` object in Glue controllers populates `restUser.idAgent` with the current agent identifier.
+* When a valid agent access token is provided through `X-Agent-Authorization`, the `RestRequest` object in Glue controllers populates `restUser.idAgent` with the current agent identifier.
 
-*   The following resources are available:   
+* The following resources are available:   
 
 | RESOURCE | REQUEST TO CHECK |
 | --- | --- |
@@ -203,7 +189,6 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 Ensure that, when `Authorization` and `X-Agent-Authorization` headers are sent, `RestRequest.restUser` is populated with Customer and Agent information.
 
 {% endinfo_block %}
-
 
 ## Related features
 

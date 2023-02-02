@@ -45,9 +45,9 @@ related:
     link: docs/pbc/all/search/page.version/best-practices/personalization-dynamic-pricing.html
 ---
 
-Both the schema and the query generator should not need to know that there is such a thing as as the weight of a hammer. We will argue for a document structure and schema design that is not built around the original data but around the usage of attributes in search operations.
+Both the schema and the query generator should not need to know that there is such a thing as the weight of a hammer. We will argue for a document structure and schema design that is not built around the original data but around the usage of attributes in search operations.
 
-At Contorion, this is how we send the same product as in the above example to Elasticsearch (don't worry, we will explain the details later):
+At Contorion, this is how we send the same product as in the preceding example to Elasticsearch (don't worry, we will explain the details later):
 
 ```js
 {
@@ -195,20 +195,20 @@ At Contorion, this is how we send the same product as in the above example to El
 }
 ```
 
-That's a lot of redundant information! For example the manufacturer, hammer_weight and name attributes are repeated in five top-level fields. But these attributes are used very differently in various search operations which require different analyzers and query strategies:
+That's a lot of redundant information! For example, the manufacturer, `hammer_weight` and name attributes are repeated in five top-level fields. However, these attributes are used very differently in various search operations, which require different analyzers and query strategies:
 
-* Search result rendering: The field search_result_data contains all the information that is returned as a result of a query for rendering a search result page or completion popup
-* Full-text search: The fields search_data/full_text and search_data/full_text_boosted contain all text content for which the product should be found in a full-text search
-* Faceted navigation: search_data/string_facet and search_data/number_facet contain all attributes for which search results should be grouped and filtered
-* Completion: completion_terms contains terms that should be shown as a completion as the user types a query
-* Spell checking: suggestion_terms contains terms that might be suggested as an alternative spelling when a user makes a typo
-* Static sorting: number_sort and string_sort are used for sorting by name or price
-* Dynamic result ranking: scores contains numeric indicators of user relevancy, past performance and product quality
-* Category navigation: category contains information about the position of a product in a category tree/graph
+* _Search result rendering_: the field `search_result_data` contains all the information that is returned as a result of a query for rendering a search result page or completion popup.
+* _Full-text search_: the fields `search_data/full_text` and `search_data/full_text_boosted` contain all text content the product is found for in a full-text search.
+* _Faceted navigation_: `search_data/string_facet` and `search_data/number_facet` contain all attributes the search results should be grouped and filtered for.
+* _Completion_: `completion_terms` contains terms that are shown as a completion as the user types a query.
+* _Spell checking_: `suggestion_terms` contains terms that might be suggested as an alternative spelling when a user makes a typo.
+* _Static sorting_: `number_sort` and `string_sort` are used for sorting by name or price.
+* _Dynamic result ranking_: scores contains numeric indicators of user relevancy, past performance and product quality.
+* _Category navigation_: category contains information about the position of a product in a category tree/graph.
 
 ## Complete schema
 
-For reference, this is the complete schema (mapping) that we currently use to index pages at contorion (again, we will explain most of the details later):
+For reference, this is the complete schema (mapping) that we currently use to index pages at contorion:
 
 ```js
 {

@@ -1,6 +1,6 @@
 ---
-title: Personalization - dynamic pricing
-description: This article describes how to personalize pricing.
+title: "Personalization: dynamic pricing"
+description: This document describes how to personalize pricing.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/personalization-dymanic-pricing
@@ -45,7 +45,7 @@ related:
     link: docs/pbc/all/search/page.version/best-practices/usage-driven-schema-and-document-structure.html
 ---
 
-Especially in businesses with a B2B focus, customers expect to get discounts after they have been using the service/website for a longer period of time. The search infrastructure should be able to handle such use cases and customers should be able to see their own discounted prices while browsing the catalog. Luckily, Elasticsearch enables us to extend basic filtering, aggregation and fetching functionalities with scripts that are executed within the document context and can be used instead of fixed document values.
+Especially in businesses with a B2B focus, customers expect to get discounts after they have been using the service/website for a longer period of time. The search infrastructure should be able to handle such use cases, and customers should be able to see their own discounted prices while browsing the catalog. Luckily, Elasticsearch lets you extend basic filtering, aggregation, and fetching functionalities with scripts that are executed within the document context and can be used instead of fixed document values.
 
 In this example, we have a script with two customer-based parameters: fixed prices (one per product ID) and category discount levels. These parameters are passed to the Elasticsearch query only for logged-in customers with granted discounts.
 
@@ -72,4 +72,4 @@ In this example, we have a script with two customer-based parameters: fixed pric
 }
 ```
 
-As a result, customers see personalized prices. In a similar way, it's possible to build filters and price facets based on dynamically calculated prices.
+As a result, customers see personalized prices. Similarly, you can build filters and price facets based on dynamically calculated prices.

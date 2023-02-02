@@ -1276,7 +1276,6 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Create customers
           url: /docs/scos/user/back-office-user-guides/customer/customers/create-customers.html
@@ -1294,12 +1293,10 @@ entries:
         url: /docs/scos/user/back-office-user-guides/customer/manage-customer-access.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Manage customer groups
         url: /docs/scos/user/back-office-user-guides/customer/manage-customer-groups.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Customer, customer access, customer groups
         include_versions:
         - "201811.0"
@@ -1364,12 +1361,10 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Company units
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
           - title: Create company units
             url: /docs/scos/user/back-office-user-guides/customer/company-units/create-company-units.html
@@ -1379,7 +1374,6 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
           - title: Create company unit addresses
             url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/create-company-unit-addresses.html
@@ -1389,7 +1383,6 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
           - title: Create company roles
             url: /docs/scos/user/back-office-user-guides/customer/company-roles/create-company-roles.html
@@ -1399,7 +1392,6 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
           - title: Create company users
             url: /docs/scos/user/back-office-user-guides/customer/company-users/create-company-users.html

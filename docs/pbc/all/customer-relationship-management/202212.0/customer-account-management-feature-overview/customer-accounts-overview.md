@@ -109,9 +109,3 @@ A customer can perform the following actions on the Storefront:
 | [Add notes to customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-notes-to-customers.html)  |
 | [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-customer-addresses.html)  |
 | [Edit customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/edit-customer-addresses.html)  |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

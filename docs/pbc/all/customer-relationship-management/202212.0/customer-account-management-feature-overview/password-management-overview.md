@@ -33,9 +33,3 @@ On the Storefront, it is mandatory to enter a password when creating a customer 
 | [Get a general idea of Customer Login](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)  |
 | [Get a general idea of Customer Groups](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)   |
 | [Get a general idea of Password Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)  |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

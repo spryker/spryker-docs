@@ -73,9 +73,3 @@ A developer can register a customer by importing their customer account details.
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create customers](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/create-customers.html)  |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

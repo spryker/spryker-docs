@@ -4,11 +4,6 @@ last_updated: Jul 06, 2021
 description: This document describes the process how to integrate Marketplace Shipment + Customer feature into your project
 tags:
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Shipment feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
-  - title: Customer Account Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shipment + Customer feature into a Spryker project.

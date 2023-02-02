@@ -224,6 +224,7 @@ versioned_categories:
     all:
       - cart-and-checkout
       - content-management-system
+      - customer-relationship-management
       - discount-management
       - gift-cards
       - identity-access-management

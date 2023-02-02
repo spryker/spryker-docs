@@ -685,7 +685,25 @@ entries:
               - title: Customer Registration
                 url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-registration-overview.html
               - title: Password Management
-                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/password-management.html                                                                
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/password-management.html
+          - title: Customer Access feature overview
+            url: /docs/pbc/all/customer-relationship-management/customer-access-feature-overview.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Customers
+                nested:
+                  - title: Create
+                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/create-customers.html
+                  - title: Edit
+                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customers.html
+                  - title: View
+                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/view-customers.html
+                  - title: Add notes to customers
+                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-notes-to-customers.html
+                  - title: Add customer addresses
+                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-customer-addresses.html
+                  - title: Edit customer addresses
+                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customer-addresses.html                                                                                                    
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

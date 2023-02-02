@@ -30,9 +30,7 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
-## 2) Set up transfer objects
-
-Generate transfer changes:
+## 2) Generate transfer changes:
 
 ```bash
 console transfer:generate

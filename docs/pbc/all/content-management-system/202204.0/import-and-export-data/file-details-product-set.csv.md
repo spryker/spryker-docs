@@ -1,5 +1,5 @@
 ---
-title: File details - product_set.csv
+title: "File details: product_set.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-setcsv
@@ -25,7 +25,7 @@ data:import:product-set
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ The file should have the following parameters:
 | image_small.1.2 |  | String |  | Small image of the second product of the product set.  |
 | image_large.1.2 |  | String |  | Large image of the second product of the product set. |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import file dependencies
 
@@ -52,7 +52,7 @@ This file has the following dependency: [product_abstract.csv](/docs/pbc/all/pro
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

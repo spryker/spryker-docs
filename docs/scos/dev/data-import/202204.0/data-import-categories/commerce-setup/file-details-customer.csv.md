@@ -1,5 +1,5 @@
 ---
-title: File details - customer.csv
+title: "File details: customer.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-customercsv
@@ -24,22 +24,22 @@ data:import:customer
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | customer_reference | &check; | String |  Must be unique and end with a number. | Reference of the Customer. |
 | locale_name |  | String |  | Locale name. |
-| phone |  | String |  | Customer’s phone number. |
-| email | &check; | String | Must be unique. | Customer’s e-mail. |
+| phone |  | String |  | Customer's phone number. |
+| email | &check; | String | Must be unique. | Customer's e-mail. |
 | salutation | &check; | String | Values must be:<ul><li>Mr</li><li>Mrs</li><li>Dr, or </li><li>Ms</li></ul> | The value must be within the list of values predefined in the `spyCustomerTableMap.php` file. | Used salutation. |
-| first_name | &check; | String |   | Customer’s first name. |
-| last_name | &check; | String |   | Customer’s last name. |
-| company |  | String |   | Customer’s Company |
-| gender | &check; | String |  Values must be:<ul><li>Male, or </li><li>Female</li></ul> | Customer’s gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
-| date_of_birth |  | Date |   | Customer’s date of birth. |
-| password |  | String |  | Customer’s password. |
-| registered |  | Date |  | Customer’s date of registration. |
+| first_name | &check; | String |   | Customer's first name. |
+| last_name | &check; | String |   | Customer's last name. |
+| company |  | String |   | Customer's Company |
+| gender | &check; | String |  Values must be:<ul><li>Male, or </li><li>Female</li></ul> | Customer's gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
+| date_of_birth |  | Date |   | Customer's date of birth. |
+| password |  | String |  | Customer's password. |
+| registered |  | Date |  | Customer's date of registration. |
 
 
 ## Import file dependencies
@@ -48,7 +48,7 @@ This file has no dependencies.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

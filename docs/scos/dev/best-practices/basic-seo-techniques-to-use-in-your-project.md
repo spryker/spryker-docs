@@ -62,6 +62,7 @@ Here is an example of the [Schema.org](https://schema.org/) microdata implementa
 ```
 
 The `itemscope` element in an HTML tag encloses information about the item. The `itemscope` specifies that the HTML contained in the tag is about a particular item. To specify the type of the item, we use the itemtype attribute right after the `itemscope`. For example, on the following Spryker Product details page, the `itemtype` attribute specifies that the item contained in the tag has the Product type, as defined in the [schema.org](https://schema.org/) type hierarchy. Item types are provided as URLs, in our case `http://schema.org/Product`. To label properties of items, we use the itemprop attribute:
+
 <details open>
 <summary markdown='span'>Name, image, and product wrapper</summary>
 
@@ -91,4 +92,4 @@ The `itemscope` element in an HTML tag encloses information about the item. The 
  </details>
 
 ## Applying the basic SEO techniques in your project
-For details on how to apply the basic SEO techniques in your project, see [Basic SEO techniques integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html).
+For details about applying the basic SEO techniques in your project, see [Basic SEO techniques integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html).

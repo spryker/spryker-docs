@@ -690,7 +690,7 @@ entries:
             url: /docs/pbc/all/customer-relationship-management/customer-access-feature-overview.html
           - title: Manage in the Back Office
             nested:
-              - title: Customers
+              - title: Manage customers
                 nested:
                   - title: Create
                     url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/create-customers.html
@@ -703,7 +703,24 @@ entries:
                   - title: Add customer addresses
                     url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-customer-addresses.html
                   - title: Edit customer addresses
-                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customer-addresses.html                                                                                                    
+                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customer-addresses.html
+              - title: Manage customer access
+                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-customer-access.html
+              - title: Manage customer groups
+                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-customer-groups.html
+              - title: Manage companies
+                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-companies.html         
+              - title: Manage company units
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-units/create-company-units.html
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-units/edit-company-units.html
+              - title: Manage company unit addresses
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html
+
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

@@ -84,7 +84,7 @@ vendor/bin/console transfer:generate
 </details>
 
 7. Make sure the new Zed user interface assets are built:
-```
+```shell
 npm run zed
 ```
 

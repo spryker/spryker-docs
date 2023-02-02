@@ -1,5 +1,5 @@
 ---
-title: File details - cms_page_store.csv
+title: "File details: cms_page_store.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-page-storecsv
@@ -16,20 +16,15 @@ This document describes the `cms_page_store.csv` file to configure CMS Page Stor
 
 ## Import file dependencies
 
-
 * [cms_page.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-page.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
-
 ## Import file parameters
-
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | page_key | &check; | String | Must be unique. | Unique identifier of the page. |
 | store_name | &check; | String |  | Store name identifier. |
-
-
 
 ## Import template file and content example
 

@@ -27,7 +27,7 @@ Overview and install the necessary features before beginning the integration.
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker-feature/customer-account-management: "{{site.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
@@ -623,7 +623,7 @@ Ensure that:
 {% endinfo_block %}
 
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Customer Account Management feature front end.
 

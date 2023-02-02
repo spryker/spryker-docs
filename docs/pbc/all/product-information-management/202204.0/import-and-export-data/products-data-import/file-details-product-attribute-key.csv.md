@@ -1,5 +1,5 @@
 ---
-title: File details - product_attribute_key.csv
+title: "File details: product_attribute_key.csv"
 last_updated: Jul 7, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-attribute-keycsv
@@ -20,7 +20,7 @@ This document describes the `product_attribute_key.csv` file to configure [Produ
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | attribute_key | &check;  | String | Must be unique. | Product attribute key name. |
-| is_super |  | Boolean | If empty it will be imported as *False* (0).<br>False = 0 = It is not a super attribute.<br>True = 1 = It is a super attribute. | Indicates whether it is a super attribute or not.  |
+| is_super |  | Boolean | If empty it is imported as *False* (0).<br>False = 0 = It is not a super attribute.<br>True = 1 = It is a super attribute. | Indicates whether it is a super attribute or not.  |
 
 
 ## Import template file and content example

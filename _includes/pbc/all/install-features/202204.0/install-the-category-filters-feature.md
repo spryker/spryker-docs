@@ -82,7 +82,6 @@ vendor/bin/console transfer:generate
     }
 ```
 
-
 7. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build Zed
 for older versions) for that.
 8. Update Zed's navigation cache to show the new items for the Product Category Filter management user interface:

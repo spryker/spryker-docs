@@ -68,7 +68,7 @@ Ensure that the following changes have been triggered in transfer objects:
 | RestPromotionalItemsAttributes.skus | property | created | src/Generated/Shared/Transfer/RestPromotionalItemsAttributesTransfer       |
 | ProductView.promotionItem           | property | created | src/Generated/Shared/Transfer/ProductViewTransfer                          |
 
-Ensure that the **ABSTRACT PRODUCT SKU(S)** field is displayed and that it accepts a comma-separated list:
+Ensure that the **ABSTRACT PRODUCT SKU(S)** field is displayed and it accepts a comma-separated list:
 1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount** and select **Create new discount**. 
 2. On the **Create new discount** page, in the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
 3. Ensure that the **ABSTRACT PRODUCT SKU(S)** field appears. Add to it a comma-separated list of abstract product SKUs.
@@ -122,7 +122,7 @@ Set up the following behaviors:
 
 | PLUGIN                                                      | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                                                                            |
 |-------------------------------------------------------------|----------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------|
-| DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin | Adds discount promotion form name postfix to the Add To Cart form.   | None          | SprykerShop\Yves\DiscountPromotionWidget\Plugin\CartPage\DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin |
+| DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin | Adds discount promotion form name postfix to the **Add To Cart** form.   | None          | SprykerShop\Yves\DiscountPromotionWidget\Plugin\CartPage\DiscountPromotionAddToCartFormWidgetParameterExpanderPlugin |
 
 **src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 

@@ -38,7 +38,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up the database schema
 
-Apply database changes and to generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -136,8 +136,6 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies

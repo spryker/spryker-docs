@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/product-image-sets-rest-api:"^1.0.3" --update-with-dependencies

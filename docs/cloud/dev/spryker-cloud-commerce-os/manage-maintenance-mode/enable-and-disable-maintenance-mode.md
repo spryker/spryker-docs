@@ -13,17 +13,17 @@ When you enable maintenance mode, the landing pages of your applications, like t
 ## Enable maintenance mode
 
 1. In the AWS Management Console, go to **Services** > **CodePipeline**.
-2. On the **Pipelines** pane, click **Maintenance_Enable_{{ENVIRONMENT_NAME}}**.
+2. On the **Pipelines** pane, click **Maintenance_Enable_{ENVIRONMENT_NAME}**.
 3. On the pipeline's page, click **Release change**.
 
-    The deployment time depends on the application's complexity. Once the deployment is finished, Storefront and Back Office visitors will see the maintenance page. To get access to the frontend applications in maintenance mode, you can allowlist the needed IP addresses. For instructions, see [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html).
+    The deployment time depends on the application's complexity. Once the deployment is finished, Storefront and Back Office visitors should see the maintenance page. To get access to the frontend applications in maintenance mode, you can allowlist the needed IP addresses. For instructions, see [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html).
 
 ![Maintenance mode enable pipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/enable-and-disable-maintenance-mode.md/maintenance-enable-pipeline.png)
 
 ## Disable maintenance mode
 
 1. In the AWS Management Console, go to **Services** > **CodePipeline**.
-2. On the **Pipelines** pane, click **Maintenance_Disable_{{ENVIRONMENT_NAME}}**.
+2. On the **Pipelines** pane, click **Maintenance_Disable_{ENVIRONMENT_NAME}**.
 3. On the pipeline's page, click **Release change**.
 
     The deployment time depends on the application's complexity. Once the deployment is finished, Storefront and Back Office visitors will be able to access the application.

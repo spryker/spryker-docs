@@ -1,5 +1,5 @@
 ---
-title: File details - product_concrete.csv
+title: "File details: product_concrete.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-concretecsv
@@ -39,16 +39,16 @@ This file has the following dependency: [ product_abstract.csv](/docs/pbc/all/pr
 | is_searchable.{ANY_LOCALE_NAME}<br>Example value: *is_searchable.en_US*|  | Integer |  | Indicates if the product is searchable in the specified locale (US for our example). |
 | icecat_license |  | String |  | Icecat product catalogue license code. |
 | bundled |  | String | | Products SKUs separated by comas, that are part of the bundle. |
-| is_quantity_splittable |  | Boolean |If it is empty, will be *False*.<br>False = 0<br>True = 1 | To be considered a new product until this presented date. |
+| is_quantity_splittable |  | Boolean |If empty, than *False*.<br>False = 0<br>True = 1 | To be considered a new product until this presented date. |
 
 
-** ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+** ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 ** NUMBER: Any number of  the attribute-value column pair can be added
 
 
 ## Recommendations and other information
 
-Every concrete product is linked to an abstract one via the `abstract_sku` field.
+Every concrete product is linked to an abstract one through the `abstract_sku` field.
 
 ## Import template file and content example
 

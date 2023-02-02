@@ -1,5 +1,5 @@
 ---
-title: File details - cms_slot_block.csv
+title: "File details: cms_slot_block.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-slot-blockcsv
@@ -17,17 +17,10 @@ This document describes the `cms_slot_block.csv` file to configure [CMS Slot Blo
 
 ## Import file dependencies
 
-
-
 * [cms_slot.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-slot.csv.html)
 * [cms_block.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-block.csv.html)
 
-
-
-
 ## Import file parameters
-
-
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -43,18 +36,12 @@ This document describes the `cms_slot_block.csv` file to configure [CMS Slot Blo
 | conditions.cms_page.all |  | String |  | Conditions for all CMS pages. |
 | conditions.cms_page.page_key |  | String |  | Conditions for Page key identifiers and CMS pages. |
 
-
-
-
 ## Import template file and content example
-
-
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_slot_block.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_slot_block.csv) | Exemplary import file with headers only. |
 | [cms_slot_block.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_slot_block.csv) | Exemplary import file with Demo Shop data. |
-
 
 ## Import file command
 

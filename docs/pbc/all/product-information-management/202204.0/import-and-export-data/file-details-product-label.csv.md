@@ -1,5 +1,5 @@
 ---
-title: File details - product_label.csv
+title: "File details: product_label.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-labelcsv
@@ -32,7 +32,7 @@ This document describes the `product_label.csv` file to configure [Product Label
 | name.{ANY_LOCALE_NAME}*<br>Example value: *name.en_US* |  | String |  | Name of the label, in the available locale (US for our example). |
 | product_abstract_skus |  | String |  | List of comma-separated product abstract SKUs.  |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import template file and content example
 

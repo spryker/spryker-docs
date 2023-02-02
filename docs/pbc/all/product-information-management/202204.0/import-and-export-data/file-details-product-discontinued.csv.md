@@ -1,5 +1,5 @@
 ---
-title: File details - product_discontinued.csv
+title: "File details: product_discontinued.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-discontinuedcsv
@@ -26,9 +26,7 @@ This document describes the `product_discontinued.csv` file to configure [Discon
 | sku_concrete | &check; | String |N/A* | SKU of the concrete discontinued product. |
 | note.{ANY_LOCALE_NAME}*<br>Example value: *note.en_US* |  | String |N/A | Note translated into the specified locale (US for our example).  |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
-
-
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import template file and content example
 

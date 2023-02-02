@@ -4,6 +4,7 @@ description: Find out how you can integrate Bazaarvoice into your Spryker shop
 template: howto-guide-template 
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
+---
 
 ## Prerequisites
 

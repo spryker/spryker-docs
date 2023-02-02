@@ -1190,7 +1190,7 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To make sure that you've integrated category image handling successfully, check that, in the Back Office, you can manage category images when creating and editing categories.
+To make sure that you've integrated category image handling successfully, check that you can manage category images when creating and editing categories in the Back Office.
 
 Make sure you've integrated category store assignments successfully by checking that you can manage store relations when creating and editing categories in the Back Office.
 
@@ -1198,7 +1198,7 @@ Make sure you've integrated category store assignments successfully by checking 
 
 ## Install feature frontend
 
-Follow the steps below to install the Category Management feature front end.
+Follow the steps below to install the Category Management feature frontend.
 
 ### Prerequisites
 

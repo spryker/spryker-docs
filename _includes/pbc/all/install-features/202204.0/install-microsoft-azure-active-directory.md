@@ -64,9 +64,7 @@ $config[OauthAzureConstants::PATH_AUTHORIZE] = '/oauth2/v2.0/authorize';
 $config[OauthAzureConstants::PATH_TOKEN] = '/oauth2/v2.0/token';
 ```
 
-### 3) Set up transfer objects
-
-Generate transfer changes:
+### 3) Generate transfer changes
 
 ```bash
 console transfer:generate

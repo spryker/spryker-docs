@@ -3,6 +3,8 @@ title: Release notes 202212.0
 description: Release notes for the Spryker Marketplace release 202212.0
 template: concept-topic-template
 last_updated: Dec 14, 2022
+redirect_from:
+  - /docs/marketplace/user/intro-to-spryker-marketplace/release-notes-202212.0/release-notes-202212.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new Marketplace features and enhancements.

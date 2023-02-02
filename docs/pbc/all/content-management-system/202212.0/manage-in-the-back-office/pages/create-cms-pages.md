@@ -11,6 +11,7 @@ redirect_from:
   - /docs/creating-a-cms-page
   - /docs/en/creating-a-cms-page
   - /docs/scos/user/back-office-user-guides/202200.0/content/pages/creating-cms-pages.html
+  - /docs/scos/user/back-office-user-guides/202204.0/content/pages/creating-cms-pages.html
 related:
   - title: CMS Page overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

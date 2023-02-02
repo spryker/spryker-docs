@@ -759,6 +759,22 @@ docker:
 
 ***
 
+### docker: maintenance: whitelist: ips:
+
+Defines the IPs from which the application in the maintenance mode can be accessed.
+
+```yaml
+version: 1.0
+
+docker:
+    maintenance:
+        enabled: true
+        whitelist:
+          ips:
+              - {IP_ADDRESS}
+              - {IP_ADDRESS}
+ ```
+
 ### docker: logs:
 
 * `docker: logs: path:` defines the path to the directory with Docker logs. This variable is optional. If not specified, the default value applies: `path: '/var/log/spryker`.

@@ -31,7 +31,7 @@ The machine can be in one of a finite number of states, and it can be only in on
 
 {% info_block infoBox %}
 
-State machines can model problems that involve performing a predetermined sequence of actions that depend on a sequence of events—for example, the order is being shipped if the payment is successful.
+State machines can model problems that involve performing a predetermined sequence of actions that depend on a sequence of events—for example, the order is shipped if the payment is successful.
 
 {% endinfo_block %}
 
@@ -110,7 +110,7 @@ A transition can be conditioned: the state machine can move from one state to an
 </transition>
 ```
 
-The mapping between the string that identifies the condition in the XML file and the actual implementation of the condition is done in the `OmsDependencyProvider`, in the `getConditionPlugins` method:
+The mapping between the string that identifies the condition in the XML file and the actual implementation of the condition is done in `OmsDependencyProvider`, in the `getConditionPlugins` method:
 
 ```php
 <?php
@@ -180,7 +180,7 @@ The use case is when you want to wait for something—for example, *wait in this
 </transition>
 ```
 
-#### Transition representation:
+#### Transition representation
 ![Transition representation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-transition-representation.png)
 
 For performance reasons, it is not recommended to create scenarios where a lot of items wait. This check is executed every minute and can be time-consuming.
@@ -209,7 +209,7 @@ This is how an event is defined:
 
 **OnEnter events**
 
-A special type of event is the **OnEnter** event. If this event is attached to a transition, the state machine automatically executes it when the current state is the same as the source state of the transition. By using the `OnEnter` events, you can model a chain of commands that you want to get executed because the state machine always looks if there is another thing to do after any transition that gets executed.
+A special type of event is the `OnEnter` event. If this event is attached to a transition, the state machine automatically executes it when the current state is the same as the source state of the transition. By using the `OnEnter` events, you can model a chain of commands that you want to get executed because the state machine always looks if there is another thing to do after any transition that gets executed.
 
 For example, after the payment is successfully submitted, you want to start the export process automatically. To achieve this, you can define a transition between the `Paid` and `Exported` states with an `OnEnter` event attached to it. This means that after the payment is registered, the order is ready to be prepared for shipping.
 ![OnEnter Events](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/State+Machine+Cookbook/State+Machine+Cookbook+-+Part+I+-+State+Machine+Fundamentals/state-machine-onenter-events.png)
@@ -246,14 +246,14 @@ You can also set the date and time when the timeout is started. For details, see
 
 #### Invoking an event
 
-Events can be triggered via:
+Events can be triggered through the following:
 
 * timeout automatically
 * onEnter
 * facade calls
 * oms:check-conditions
 
-**Events triggered via timeout**
+**Events triggered through timeout**
 
 An event associated with a transition can have a timeout interval set. When that timeout interval passes, the order is transitioned to the target state.
 
@@ -293,9 +293,9 @@ If an event has the `onEnter` attribute set to `True`, it is automatically trigg
 </events>
 ```
 
-In the example above, after an order is paid, the invoice is automatically created (when the state machine reaches the state `paid`, it fires the `create invoice` event that runs the `Oms/CreateInvoice` command and transitions it to the `invoice created` state).
+In the preceding example, after an order is paid, the invoice is automatically created (when the state machine reaches the state `paid`, it fires the `create invoice` event that runs the `Oms/CreateInvoice` command and transitions it to the `invoice created` state).
 
-**Events Triggered via Facade Calls**
+**Events triggered through facade calls**
 
 The Order Management System facade contains several methods that allow triggering an event:
 
@@ -308,7 +308,6 @@ The Order Management System facade contains several methods that allow triggerin
 This is typically used if an external event is raised.
 
 Examples of external events are as follows:
-
 * An asynchronous payment response.
 * A fulfillment message from the ERP.
 
@@ -355,7 +354,7 @@ protected function getCommandPlugins(Container $container)
 }
 ```
 
-In the example above, `Oms/SendPaymentRequest` is mapped to `Plugin/Oms/Command/SendPaymentRequest`.
+In the preceding example, `Oms/SendPaymentRequest` is mapped to `Plugin/Oms/Command/SendPaymentRequest`.
 
 #### Implementing a command
 
@@ -394,7 +393,7 @@ For example, when submitting a new order, if the payment is made, the shipment s
 Basically, a state machine can be described as a directed connected graph. It has a single starting state and a final state. The graphs that model the state machines are being defined in XML files that are placed under the `config/Zed/oms` folder. The XML file contains the definition of the OMS process, but in order to have a valid and functional state machine to what's configured in the XML files, the following items must be implemented:
 * Implement the defined commands.
 * Implement the defined conditions.
-* Trigger events via API calls.
+* Trigger events through API calls.
 
 #### Starting a process
 

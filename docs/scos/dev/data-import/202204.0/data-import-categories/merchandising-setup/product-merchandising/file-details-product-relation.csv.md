@@ -1,5 +1,5 @@
 ---
-title: File details - product_relation.csv
+title: "File details: product_relation.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-relationcsv
@@ -21,7 +21,7 @@ data:import:product-relation
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ The file should have the following parameters:
 | rule |  | String |  | Query which defines the relation between the product and the other products. |
 | product_relation_key | &check; | String |  | Key that is used to assign store relations. |
 | is_active |  | Integer |  | Defines if the product relation is active. |
-| is_rebuild_scheduled |  | Integer |  | Defines if the list of related products should be regularly updated by running a cronjob. |
+| is_rebuild_scheduled |  | Integer |  | Defines if the list of related products must be regularly updated by running a cronjob. |
 
 ## Import file dependencies
 
@@ -38,7 +38,7 @@ This file has the following dependency: [product_abstract.csv](/docs/pbc/all/pro
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

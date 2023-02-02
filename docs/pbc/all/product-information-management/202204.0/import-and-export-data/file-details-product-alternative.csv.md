@@ -1,5 +1,5 @@
 ---
-title: File details - product_alternative.csv
+title: "File details: product_alternative.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-alternativecsv
@@ -32,9 +32,7 @@ This document describes the `product_alternative.csv` file to configure [Alterna
 
 ## Additional information
 
-It does not exist by default on the project level. You can create it to override the CSV file from module:
-
-* `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`
+It does not exist by default on the project level. It can be created in order to override the CSV file from the module: `vendor/spryker/product-alternative-data-import/data/import/product_alternative.csv`.
 
 ## Import template file and content example
 

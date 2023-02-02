@@ -1,12 +1,12 @@
 ---
 title: "File details: product_abstract_approval_status.csv"
-description: This document contains content of the product_approval_status_default.csv file to configure products approval information on your Spryker Demo Shop.
+description: This document contains content of the product_approval_status_default.csv file to configure products approval information about your Spryker Demo Shop.
 template: data-import-template
 redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/products/file-details-product-abstract-approval-status.csv.html
 ---
 
-This document contains content of the `product_approval_status_default.csv` file to configure products approval information on your Spryker Demo Shop.
+This document contains content of the `product_approval_status_default.csv` file to configure products approval information about your Spryker Demo Shop.
 
 ## Import file dependencies
 

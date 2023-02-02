@@ -15,6 +15,8 @@ entries:
         - title: Release notes 202212.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
           nested:
+          - title: Patch releases 202212.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.html
           - title: Security release notes 202212.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
         - title: Release notes 202211.0

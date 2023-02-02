@@ -1,5 +1,5 @@
 ---
-title: "File details - cms_page.csv"
+title: "File details: cms_page.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-pagecsv
@@ -22,8 +22,6 @@ This file has the following dependency: [cms_template.csv](/docs/pbc/all/content
 
 ## Import file parameters
 
-
-
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | template_name | &check; | String | | Name of the page template. |
@@ -39,13 +37,9 @@ This file has the following dependency: [cms_template.csv](/docs/pbc/all/content
 | placeholder.title.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.title.en_US* |  | String |  | Page placeholder to the title, translated into the specified locale (US for our example). |
 | placeholder.content.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.content.en_US* |  | String |  | Page placeholder to the content, translated into the specified locale (US for our example). |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
-
-
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 ## Import template file and content example
-
-
 
 | FILE | DESCRIPTION |
 | --- | --- |

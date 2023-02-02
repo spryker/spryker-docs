@@ -1,5 +1,5 @@
 ---
-title: About Data Import Categories
+title: About data import categories
 last_updated: Aug 10, 2022
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-data-import-categories
@@ -12,7 +12,7 @@ redirect_from:
 ---
 
 Each functional entity (category) has its own set of data importers. To import data for these categories, you have to run their data importers containing the CSV files with data.
-This section provides details about data importers' Demo Shop group categories and their correspondent CSV files. Here you can find information about all the CSV file fields and dependencies, as well as examples and templates of the CSV files.
+This section provides details about data importers' Demo Shop group categories and their correspondent CSV files. Here, you can find information about all the CSV file fields and dependencies, as well as examples and templates of the CSV files.
 For details about building your import files, choose the Demo Shop category you want to import data for and follow the information contained therein:
 
 * [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html): to set up the multi-store environment, glossary, warehouses, tax levels, shipping, and payment methods.

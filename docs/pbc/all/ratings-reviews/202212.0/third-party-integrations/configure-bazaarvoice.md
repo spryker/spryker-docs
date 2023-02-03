@@ -15,6 +15,16 @@ To configure Bazaarvoice, follow these steps:
 1. In your store's Back Office, go to **Apps > Catalog**.
 2. Click **Bazaarvoice**. This takes you to the Bazaarvoice app details page.
 3. Click **Configure**.
+
+ADD BV-CONFIG-PAGE PICTURE HERE
+
+|| Field || Where can you get this information in Bazaarvoice Portal ||
+| Client name || This is the instance's name you want to connect to Spryker. You can find your [list of instances here](https://portal.bazaarvoice.com/configurations/sitemanager/clientselector). |
+| Site ID | The Site ID can be found in [this page](https://config.portal.bazaarvoice.com/siteManager). Select the Site ID that match the deployment zone you want to connect to your Spryker project. |
+| API Key | Select one of your API keys that are visible on [this page](https://portal.bazaarvoice.com/developer-tools/api-keys). If your account does not contains any API key, please watch the video below that will walk you through the API key creation process. |
+
+ADD BV-API-KEY-CREATION VIDEO HERE
+
 4. In **Settings > Select Services**, select the services that you need:
    - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
    <!---- QUESTIONS & ANSWERS:--> 

@@ -459,22 +459,22 @@ entries:
             - "202204.0"
             - "202212.0"
 
-          - title: Marketplace Product Option feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-option-feature-integration.html
+          - title: Marketplace Product Options feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-options-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
             - "202212.0"
 
-          - title: Marketplace Product Option + Cart feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-option-cart-feature-integration.html
+          - title: Marketplace Product Options + Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-options-cart-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
             - "202212.0"
 
-          - title: Marketplace Product Option + Checkout feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-option-checkout-feature-integration.html
+          - title: Marketplace Product Options + Checkout feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-options-checkout-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
@@ -545,7 +545,7 @@ entries:
             - "202204.0"
             - "202212.0"
 
-          - title: Merchant Portal - Marketplace Product Option Management feature integration
+          - title: Merchant Portal - Marketplace Product OptionsManagement feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-option-management-feature-integration.html
             include_versions:
             - "202108.0"

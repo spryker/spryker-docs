@@ -17,16 +17,16 @@ redirect_from:
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
 ---
 
-The *File Manager* feature lets you upload and manage your assets (media files) effectively. You can:
-* Upload and delete files in bulk
-* Add and delete files manually via the Back Office
-* Maintain multiple versions of individual files
-* Drag and drop to create and update your assets’ file structure
-* Manage files from a list view
+The *File Manager* feature lets you upload and manage your assets (media files) effectively. You can do the following:
+* Upload and delete files in bulk.
+* Add and delete files manually through the Back Office.
+* Maintain multiple versions of individual files.
+* Drag and drop to create and update your assets’ file structure.
+* Manage files from a list view.
 
 A Back Office user can upload files then add them to CMS pages and blocks to display on the Storefront.
 
-Apart from images, you can add many different types of assets to your project, including but not limited to:
+Apart from images, you can add many different types of assets to your project, including but not limited to the following ones:
 * Presentations
 * PDF documents
 * Graphics

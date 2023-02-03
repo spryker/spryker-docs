@@ -16,19 +16,24 @@ To configure Bazaarvoice, follow these steps:
 2. Click **Bazaarvoice**. This takes you to the Bazaarvoice app details page.
 3. Click **Configure**.
 
-ADD BV-CONFIG-PAGE PICTURE HERE
+![bv-configuration-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice/bv-config-page.png)
 
-|| Field || Where can you get this information in Bazaarvoice Portal ||
-| Client name || This is the instance's name you want to connect to Spryker. You can find your [list of instances here](https://portal.bazaarvoice.com/configurations/sitemanager/clientselector). |
-| Site ID | The Site ID can be found in [this page](https://config.portal.bazaarvoice.com/siteManager). Select the Site ID that match the deployment zone you want to connect to your Spryker project. |
-| API Key | Select one of your API keys that are visible on [this page](https://portal.bazaarvoice.com/developer-tools/api-keys). If your account does not contains any API key, please watch the video below that will walk you through the API key creation process. |
+| Field   |      Where can you get this information in the Bazaarvoice Portal      |
+|----------|:-------------:|
+| Client name | This is the instance's name you want to connect to Spryker. You can find your list of instances [here](https://portal.bazaarvoice.com/configurations/sitemanager/clientselector).|
+| Site ID | The Site ID can be found on [this page](https://config.portal.bazaarvoice.com/siteManager). Select the Site ID that matches the deployment zone you want to connect to your Spryker project.   |
+| API Key | Select one of your API keys from [this page](https://portal.bazaarvoice.com/developer-tools/api-keys). If your account does not contain any API key, watch the video below for the details on how to create one. |
 
-ADD BV-API-KEY-CREATION VIDEO HERE
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice/bv-api-key-creation-process.mov" type="video/mp4">
+  </video>
+</figure>
 
-4. In **Settings > Select Services**, select the services that you need:
+1. In **Settings > Select Services**, select the services that you need:
    - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
    <!---- QUESTIONS & ANSWERS:--> 
    - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
    - Bazaarvoice PIXEL: Adds a single tracking pixel to your shopping cart page and product details page. It lets Bazaarvoice track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
 
-5. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings** > **Store**, select the stores.
+2. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings** > **Store**, select the stores.

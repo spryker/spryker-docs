@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/setting-up-a-self-signed-ssl-certificate
   - 6/docs/setting-up-a-self-signed-ssl-certificate
   - 6/docs/en/setting-up-a-self-signed-ssl-certificate
+  - /v3/docs/en/ht-use-self-signed-ssl-certificates
 related:
   - title: Configuring Spryker after installing with Docker
     link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html

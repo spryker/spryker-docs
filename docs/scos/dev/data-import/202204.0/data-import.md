@@ -4,7 +4,7 @@ description:  Import data from other systems into your Spryker Commerce OS proje
 last_updated: Sep 7, 2022
 template: concept-topic-template
 ---
-Spryker’s customers need to import data from other systems into their Spryker Commerce OS project. The _Data import_ section holds all the needed information for that. For details, see the following documents:
+Spryker's customers need to import data from other systems into their Spryker Commerce OS project. The _Data import_ section holds all the needed information for that. For details, see the following documents:
 * [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)
 * [Demo Shop data import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/importing-demo-shop-data.html)
 * [Data import categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html)

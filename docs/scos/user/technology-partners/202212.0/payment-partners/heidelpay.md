@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay
   - /docs/heidelpay
   - /docs/en/heidelpay
+  - /industry_partners/payment/heidelpay/heidelpay.htm
 ---
 
 ## Partner Information

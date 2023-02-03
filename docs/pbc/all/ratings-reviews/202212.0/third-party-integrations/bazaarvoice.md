@@ -8,6 +8,8 @@ redirect_from:
    - docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html  
 ---
 
+ADD BV-HERO PICTURE HERE
+
 The [Bazaarvoice](https://www.bazaarvoice.com/?ref=spryker-documentation) app lets you collect and add user-generated content (UGC) to your product pages. 
 
 The Bazaarvoice service offers the following UGC: 

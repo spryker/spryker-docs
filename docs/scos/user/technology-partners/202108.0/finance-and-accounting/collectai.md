@@ -17,7 +17,7 @@ related:
 
 ## Partner Information
 
-[ABOUT COLLECTAI](https://www.collect.ai/de/)
+[ABOUT COLLECTAI](https://www.collect.ai/)
 
 Digital accounts receivable management based on AI collection services
 

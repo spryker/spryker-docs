@@ -24,7 +24,11 @@ This document describes how to you can edit documents on your machine and submit
 5. Click **Clone**.
     This clones the repository to your machine. When finished, you can see the current state of the repository on your machine. The **Current Branch** is **master**.
 
-![Clone Spryker docs repo](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Clone+Spryker+docs+repo.mp4)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Clone+Spryker+docs+repo.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Create and publish a branch
 
@@ -36,7 +40,11 @@ This document describes how to you can edit documents on your machine and submit
     This changes the **Current Branch** to the branch name you've entered. The branch exists only on your machine.
 4. To add the branch to our repository on GitHub, click **Publish branch**.
 
-![Switch and publish branch](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Switch+and+publish+branch.mp4)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Switch+and+publish+branch.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Find the documents you want to edit on your machine
@@ -55,7 +63,13 @@ At this point, you are most likely to know which document you want to edit. To f
 7. To publish the changes on GitHub, click **Push origin**.
     If you are editing in several sessions, it is good practice to commit and push after each session. If something happens to the changes on your machine, they will be safe on GitHub, and you will be able to keep working on them.
 
-![Comit and push](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Commit+and+push.mp4)    
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Commit+and+push.mp4" type="video/mp4">
+  </video>
+</figure>    
+
 
 ## Submit changes for publishing
 
@@ -66,6 +80,12 @@ At this point, you are most likely to know which document you want to edit. To f
 4. Click **Create pull request**.
     This refreshes the page and displays the created pull request. The status is **Open**.
 
-![Create a pull request](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Create+a+pull+request.mp4)    
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Create+a+pull+request.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 That's it. We'll take it from here. During the review, we may post comments for your changes. Notifications about comments and PR status changes will be sent to the email address of your GitHub account. After the pull request is merged, the changes will appear on the website.     

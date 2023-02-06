@@ -55,7 +55,7 @@ class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInte
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended: Give the method a unique name and copy it to the factory to fetch the business models. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
@@ -118,7 +118,7 @@ class PyzCustomerReader extends SprykerCustomerReader implements CustomerReaderI
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
@@ -152,7 +152,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended: Copy the form to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
@@ -169,7 +169,7 @@ class PyzCustomerAccessForm extends AbstractType
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ## PrivateApi:Extension: Business model
@@ -201,7 +201,7 @@ PrivateApi:Extension Please avoid extension of the PrivateApi Spryker\Zed\Custom
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended: Copy the form to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
@@ -217,7 +217,7 @@ class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ## PrivateApi:Extension: Bridge
@@ -286,7 +286,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended: Copy the method to the project level and give it a unique name. In the example, we add `Pyz` to its name, but you can use any other approach. For example, you can prefix them with your project name.
@@ -308,7 +308,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
@@ -350,7 +350,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager
 
 ### Example of resolving the error  
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
@@ -394,7 +394,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
@@ -436,7 +436,7 @@ class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
@@ -496,7 +496,7 @@ class CustomerAccessBusinessFactory extends SprykerCustomerAccessBusinessFactory
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
@@ -539,7 +539,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
@@ -574,7 +574,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
@@ -618,7 +618,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended: On the project level, create an entity manager with the methods from the core level.
@@ -688,7 +688,7 @@ class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
@@ -755,7 +755,7 @@ class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ---
@@ -797,7 +797,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 
 ### Example of resolving the error
 
-Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that let you take updates safely.
+Recommended: Apply the [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that let you take updates safely.
     If the extension point is missing, register it in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
 
 Not recommended:
@@ -851,5 +851,5 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned. As soon as the extension point in core is released, refactor the code using the recommended [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.

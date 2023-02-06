@@ -1,5 +1,5 @@
 ---
-title: File details - category_template.csv
+title: "File details: category_template.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-templatecsv
@@ -22,7 +22,7 @@ This document describes the `category_template.csv` file to configure category t
 | PARAMETER | REQUIRED | TYPE |  REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | template_name | &check; | String |   | Name of the category template. |
-| template_path | &check; | String |   | Must be a valid path to a twig file and it is a unique field, for example, the file cannot have more than one line with the same template path. | Path of the category template. |
+| template_path | &check; | String |   | Must be a valid path to a twig file and it is a unique field—for example, the file cannot have more than one line with the same template path. | Path of the category template. |
 
 
 ## Import template file and content example

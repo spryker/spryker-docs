@@ -4,7 +4,7 @@ description: guides for integrating technical enhancement tools with Spryker SCO
 template: concept-topic-template
 ---
 
-This section contains a collection of integration guides for tools that enhance the Spryker Commerce OS: 
+This section contains a collection of integration guides for tools that enhance the Spryker Commerce OS:
 * [Integrate development tools](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html)
 * [Authorization Enabler](/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html)
 * [Basic SEO techniques](/docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html)
@@ -23,12 +23,7 @@ This section contains a collection of integration guides for tools that enhance 
 * [Multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html)
 * [Propel clean command](/docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html)
 * [Queue worker signal handling](/docs/scos/dev/technical-enhancement-integration-guides/configuring-queue-worker-signal-handling.html)
-* [Search initialization enhancement](/docs/scos/dev/technical-enhancement-integration-guides/integrating-search-initialization-enhancement.html)
+* [Search initialization enhancement](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/upgrade-search-initialization.html)
 * [Separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html)
 * [Symfony 5](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html)
-* [Arm architecture (M1 chip)](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html) 
-
-
-
-
-
+* [Arm architecture (M1 chip)](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html)

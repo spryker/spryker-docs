@@ -28,7 +28,7 @@ This section contains overviews and instructions for back-end developing on the 
 
 * [Data manipulation](/docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html)
 
-* [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html)
+* [Extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html)
 
 * [Zed UI tables](/docs/scos/dev/back-end-development/zed-ui-tables/zed-ui-tables.html)
 

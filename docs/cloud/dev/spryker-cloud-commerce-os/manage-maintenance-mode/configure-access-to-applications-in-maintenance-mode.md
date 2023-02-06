@@ -4,7 +4,7 @@ description: Learn how to configure access to Spryker applications in maintenanc
 template: howto-guide-template
 ---
 
-When you [enable maintenance mode](/_drafts/maintenance-mode/enable-and-disable-maintenance-mode.html) for an application, visitors see a maintenance page and can't access the application. To enable access to an application in maintenance mode, you can allowlist IP addresses as follows.
+When you [enable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html) for an application, visitors see a maintenance page and can't access the application. To enable access to an application in maintenance mode, you can allowlist IP addresses as follows.
 
 ## Define gateway IP addresses
 
@@ -45,7 +45,7 @@ groups:
             ...
 ```
 
-For more information about the deploy file configuration, see [groups: applications:](/docs/scos/dev/the-docker-sdk/{{page.version}}deploy-file/deploy-file-reference-1.0.md#groups-applications).
+For more information about the deploy file configuration, see [groups: applications:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#groups-applications).
 
 
 ## Define allowlisted IP addresses
@@ -64,6 +64,13 @@ docker:
               - 192.0.2.1
  ```
 
-Now you can access the applications from the `192.158.1.38` and `192.0.2.1` IP addresses.
+For more information about the deploy file configuration, see [docker: maintenance: whitelist: ips:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#docker-maintenance-whitelist-ips).
 
-For more information about the deploy file configuration, see [docker: maintenance: whitelist: ips:](/docs/scos/dev/the-docker-sdk/{{page.version}}deploy-file/deploy-file-reference-1.0.md#docker-maintenance-whitelist-ips).
+
+## Deploy the changes
+
+Deploy the application with the updated configuration by following one of the following docs:
+  * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
+  * [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
+
+Now you can access the applications from the `192.158.1.38` and `192.0.2.1` IP addresses.

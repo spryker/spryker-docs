@@ -2371,6 +2371,10 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Push Notification
+      url: /docs/scos/dev/feature-integration-guides/install-push-notification-feature.html
+      include_versions:
+      - "202304.0"
     - title: Queue Data Import
       url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
       include_versions:

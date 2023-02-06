@@ -1,6 +1,6 @@
 ---
 title: Glue API guides
-description: guides for developers working with the Spryker Glue API
+description: Guides for developers working with the Spryker Glue API
 template: concept-topic-template
 redirect_from:
   - /docs/scoc/dev/glue-api-guides/202204.0/index.html

@@ -603,7 +603,7 @@ entries:
       - "202009.0"
       - "202108.0"
   - title: Glue API guides
-    url: /docs/scos/dev/glue-api-guides/index.html
+    url: /docs/scos/dev/glue-api-guides/glue-api-guides.html
     nested:
     - title: Glue REST API
       url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
@@ -3369,7 +3369,7 @@ entries:
       - "202204.0"
       - "202212.0"
   - title: Data export
-    url: /docs/scos/dev/data-export/index.html
+    url: /docs/scos/dev/data-export/data-export.html
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3377,7 +3377,7 @@ entries:
     - "202204.0"
     nested:
     - title: Exporting data
-      url: /docs/scos/dev/data-export/index.html
+      url: /docs/scos/dev/data-export/data-export.html
       include_versions:
       - "202005.0"
       - "202009.0"
@@ -3393,7 +3393,7 @@ entries:
       - "202204.0"
       - "202212.0"
   - title: Back-end development
-    url: /docs/scos/dev/back-end-development/index.html
+    url: /docs/scos/dev/back-end-development/back-end-development.html
     nested:
     - title: Client
       url: /docs/scos/dev/back-end-development/client/client.html
@@ -3674,7 +3674,7 @@ entries:
       - title: "Inject dependencies within factories: Container globals"
         url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
-    url: /docs/scos/dev/front-end-development/index.html
+    url: /docs/scos/dev/front-end-development/front-end-development.html
     nested:
     - title: Zed
       url: /docs/scos/dev/front-end-development/zed/zed.html
@@ -3970,7 +3970,7 @@ entries:
       include_versions:
       - "201811.0"
   - title: Technical enhancement integration guides
-    url: /docs/scos/dev/technical-enhancement-integration-guides/index.html
+    url: /docs/scos/dev/technical-enhancement-integration-guides/technical-enhancement-integration-guides.html
     nested:
     - title: Integrate development tools
       nested:
@@ -4027,7 +4027,7 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: SDK
-    url: /docs/scos/dev/sdk/index.html
+    url: /docs/scos/dev/sdk/sdk.html
     nested:
     - title: Development Virtual Machine, Docker Containers & Console
       url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
@@ -4184,7 +4184,7 @@ entries:
       - title: "HowTo: Allow Zed CSS/JS on a project"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
   - title: Technology partner guides
-    url: /docs/scos/dev/technology-partner-guides/index.html
+    url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     nested:
     - title: Hosting providers
       nested:
@@ -4686,7 +4686,7 @@ entries:
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Guidelines
-    url: /docs/scos/dev/guidelines/index.html
+    url: /docs/scos/dev/guidelines/guidelines.html
     nested:
     - title: Coding guidelines
       url: /docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html
@@ -4767,7 +4767,7 @@ entries:
     - title: Security guidelines
       url: /docs/scos/dev/guidelines/security-guidelines.html
   - title: Best practices
-    url: /docs/scos/dev/best-practices/index.html
+    url: /docs/scos/dev/best-practices/best-practices.html
     nested:
     - title: Basic SEO techniques to use in your project
       url: /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html

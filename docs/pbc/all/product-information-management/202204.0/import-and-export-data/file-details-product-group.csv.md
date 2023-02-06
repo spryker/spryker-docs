@@ -1,5 +1,5 @@
 ---
-title: File details - product_group.csv
+title: "File details: product_group.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-groupcsv
@@ -28,8 +28,6 @@ This document describes the `product_group.csv` file to configure [Product Group
 | group_key | &check; | String | Must be unique. | Product group identifier. |
 | abstract_sku | &check; | String |  | SKU of the abstract product. |
 | position |  | Integer |  | The position of the product within that group. |
-
-
 
 ## Import template file and content example
 

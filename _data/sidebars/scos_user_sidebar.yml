@@ -2646,7 +2646,7 @@ entries:
           - "202108.0"
           - "202204.0"
           - "202212.0"
-        - title: Create merchant relations
+        - title: Edit merchant relations
           url: /docs/scos/user/back-office-user-guides/marketplace/merchant-relations/edit-merchant-relations.html
           include_versions:
           - "202108.0"

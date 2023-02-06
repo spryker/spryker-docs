@@ -31,7 +31,7 @@ This document shows how to set up communication between Yves and Zed and display
 
 {% info_block warningBox "Prerequisites" %}
 
-You need a module for which you set up communication between Yves and Zed. To add the module, see [Add a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html).
+You need a module for which you set up communication between Yves and Zed. To add the module, see [Add a new module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html).
 
 {% endinfo_block %}
 

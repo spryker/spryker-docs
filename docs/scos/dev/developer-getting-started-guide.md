@@ -65,7 +65,7 @@ Both Demo Shops can also be expanded with separate [features](/docs/scos/user/fe
 
 ### Install Spryker with Docker
 
-When installing Spryker, we recommend starting with a Docker SDK environment. It features a lightweight environment that is closer to production implementation. This option includes Docker and related tools to build and run containers that match your requirements. 
+When installing Spryker, we recommend starting with a Docker SDK environment. It features a lightweight environment that is closer to production implementation. This option includes Docker and related tools to build and run containers that match your requirements.
 
 To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
@@ -121,7 +121,7 @@ We recommend running this command weekly to ensure you have the latest fixes. We
 
 {% endinfo_block %}
 
-* To update a particular module: `composer update "spryker/module-name"`. 
+* To update a particular module: `composer update "spryker/module-name"`.
 
 {% info_block infoBox %}
 
@@ -141,7 +141,7 @@ The next step to take once installation has finished and modules set up, you nee
 2. Configure your environment:
     * [Database](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
     * [Redis](/docs/scos/dev/setup/redis-configuration.html)
-    <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html)-->
+    <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
     * [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
 3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
@@ -165,7 +165,7 @@ This step depends on the store setup you came up with during your configuring. F
 
 ### Data import clean-up
 
-Located in the `data/import` folder, you may find additional files related to these other stores. As with cleaning up stores, you must define the stores you intend to use and remove unused files of the rest. 
+Located in the `data/import` folder, you may find additional files related to these other stores. As with cleaning up stores, you must define the stores you intend to use and remove unused files of the rest.
 
 {% info_block infoBox "Info" %}
 
@@ -238,7 +238,7 @@ It is safe to disable cache indexing for the following files:
 
 ## 7. Configure debugging
 
-Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following: 
+Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
 
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 
@@ -260,4 +260,3 @@ As a developer, the Spryker structure is the first thing you need to know to ext
 <!---* Introduction to navigating the folder structure, main concepts and namespacing.
 * The project directory
 * The OS directories-->
-

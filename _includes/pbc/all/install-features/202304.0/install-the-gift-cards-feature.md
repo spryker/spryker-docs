@@ -951,10 +951,11 @@ Add the following plugins to your project:
 | GiftCardBalanceValueProviderPlugin | Calculates the remaining balance of a gift card based on its usage history and returns its value. | - |Spryker\Zed\GiftCardBalance\Communication\Plugin |
 | BalanceTransactionLogPaymentSaverPlugin |Logs a gift card payment transaction.  | - | Spryker\Zed\GiftCardBalance\Communication\Plugin |
 | BalanceCheckerApplicabilityPlugin |  Calculates the remaining balance of a gift card based on its usage history and checks if the balance is positive.|-  | Spryker\Zed\GiftCardBalance\Communication\Plugin |
-| SendEmailToGiftCardUser | Sends usage email notification to the user of the gift card. | - |Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout  |
+| SendEmailToGiftCardUser | Sends usage email notification to the user of the gift card. | - |Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout |
 |GiftCardUsageMailTypePlugin | Provides a mail type for sending gift card usage information emails. | - |  Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Mail|
 |PriceToPayPaymentMethodFilterPlugin | Filters available payment methods based on the price-to-pay value of the quote. | - |Spryker\Zed\Nopayment\Communication\Plugin\Payment |
 | GiftCardPaymentMethodFilterPlugin | Filters blacklisted payment methods in case the quote contains a gift card to be purchased. |-  | Spryker\Zed\GiftCard\Communication\Plugin |
+| GiftCardPaymentMapKeyBuilderStrategyPlugin | Returns payment map key based on `PaymentTransfer.paymentProvider`, `PaymentTransfer.paymentMethod` and `PaymentTransfer.giftCard.idGiftCard`. |-  | Spryker\Zed\GiftCard\Communication\Plugin\SalesPayment |
 
 **src/Pyz/Client/CartCode/CartCodeDependencyProvider.php**
 
@@ -1142,6 +1143,7 @@ class SalesPaymentDependencyProvider extends SprykerSalesPaymentDependencyProvid
 
 Make sure that:
 * You can activate a gift card using its generated code.
+* You can activate more than one gift cards at the same time using its generated codes.
 * You can't activate a gift card the balance of which has been depleted.
 * During the checkout process, payment method selection is skipped in case the gift card covers the grand total.
 * Having made a successful purchase with the help of a gift card, you receive a gift card balance notification e-mail.

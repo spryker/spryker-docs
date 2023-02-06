@@ -545,8 +545,8 @@ entries:
             - "202204.0"
             - "202212.0"
 
-          - title: Merchant Portal - Marketplace Product OptionsManagement feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-option-management-feature-integration.html
+          - title: Merchant Portal - Marketplace Product Options Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-options-management-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"

@@ -24,7 +24,7 @@ This operation has some dependencies, as data importers execution follows certai
 
 The list below illustrates the order followed to run the data importers, and import the: Commerce shop configuration setup data, product catalog data, and other content.
 
-1. [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html) data import
+1. Commerce:
 
   1. store
   2. currency
@@ -39,7 +39,7 @@ The list below illustrates the order followed to run the data importers, and imp
   11. payment-method
   12. payment-method-store
 
-2. [Catalog Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/catalog-setup.html) data import - Catalog Setup category includes sub-categories: Categories, Products, Pricing, Stocks
+2. Catalog:
 
   1. category-template
   2. category
@@ -54,7 +54,7 @@ The list below illustrates the order followed to run the data importers, and imp
   11. product-stock
 
 
-3. [Special Product Types Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/special-product-types-import-category.html) data import - Special Product Types category includes sub-categories: Product Options, Measurements, Product Bundles, Gift Cards
+3. Special Products:
 
   1. product-option
   2. product-option-price
@@ -71,7 +71,7 @@ The list below illustrates the order followed to run the data importers, and imp
   13. configurable-bundle-template-image
 
 
-4. [Merchandising Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/merchandising-setup.html) data import
+4. Merchandising:
 
   1. discount
   2. discount-store
@@ -91,12 +91,12 @@ The list below illustrates the order followed to run the data importers, and imp
   16. product-list-category
   17. product-list-product-concrete
 
-5. [Navigation Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/navigation-setup.html) data import
+5. Navigation:
 
   1. navigation
   2. navigation-node
 
-6. [Content Management Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/content-management.html) data import
+6. Content Management:
 
   1. cms-template
   2. cms-block
@@ -112,9 +112,9 @@ The list below illustrates the order followed to run the data importers, and imp
   12. cms-slot
   13. cms-slot-block
 
-**7. B2B data import**
+7. B2B data import:
 
-*  **B2B Company**
+*  B2B Company:
 
   1. company
   2. company-business-unit
@@ -129,7 +129,7 @@ The list below illustrates the order followed to run the data importers, and imp
   11. company-business-unit-address
   12. company-user-on-behalf
 
-*  **B2B Merchant**
+*  B2B Merchant:
 
   1. merchant
   2. merchant-profile
@@ -147,14 +147,14 @@ The list below illustrates the order followed to run the data importers, and imp
   14. merchant-relationship-product-list
   15. product-price-merchant-relationship
 
-* **B2B Shopping List**
+* B2B Shopping List:
 
   1. shopping-list
   2. shopping-list-item
   3. shopping-list-company-user
   4. shopping-list-company-business-unit
 
-* **B2B Miscellaneous**
+* B2B Miscellaneous:
 
   1. multi-cart
   2. shared-cart

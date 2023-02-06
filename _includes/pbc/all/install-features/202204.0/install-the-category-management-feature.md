@@ -1190,7 +1190,7 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To make sure that you've integrated category image handling successfully, check that, in the Back Office, you can manage category images when creating and editing categories.
+To make sure that you've integrated category image handling successfully, check that you can manage category images when creating and editing categories in the Back Office.
 
 Make sure you've integrated category store assignments successfully by checking that you can manage store relations when creating and editing categories in the Back Office.
 
@@ -1198,7 +1198,7 @@ Make sure you've integrated category store assignments successfully by checking 
 
 ## Install feature frontend
 
-Follow the steps below to install the Category Management feature front end.
+Follow the steps below to install the Category Management feature frontend.
 
 ### Prerequisites
 
@@ -1314,5 +1314,5 @@ Integrate the following related features:
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
 | GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html) |
-| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html) |
-| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|
+| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html) |
+| CMS + Category Management | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)|

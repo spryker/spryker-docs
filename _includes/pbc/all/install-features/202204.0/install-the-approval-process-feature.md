@@ -20,8 +20,6 @@ To start feature integration, review and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/approval-process:"{{site.version}}" --update-with-dependencies
 ```
@@ -389,8 +387,6 @@ To start feature integration, review and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/approval-process: "{{site.version}}" --update-with-dependencies
 ```
@@ -407,7 +403,7 @@ Make sure that the following module is installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -448,7 +444,7 @@ quote_approval_widget.cart.success_message.canceled,"Request from %first_name% %
 quote_approval_widget.cart.success_message.canceled,"Anfrage von %first_name% %last_name% wurde erfolgreich abgebrochen",de_DE
 ```
 
-Import the glossary data:
+2. Import the glossary data:
 
 ```bash
 console data:import glossary

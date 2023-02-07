@@ -8,88 +8,78 @@ template: howto-guide-template
 
 To install Spryker on Mac OS or Linux, follow these steps:
 
-
-
 ## System requirements
 
 | REQUIREMENT | VALUE OR VERSION |
 | --- | --- |
 | Docker | 18.09.1 or higher |
-| Docker Compose | 1.28 or 1.29 |  
+| Docker Compose | 1.28 or 1.29 |
 | vCPU | 4 or more |
 | RAM  | 4GB or more |
 | Swap  | 2GB or more |
+
+## MacOS: Install or update Mutagen and Mutagen Compose
+
+```bash
+brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start
+```
+
 
 ## 1. Clone the Demo Shop of your choice
 
 - B2B Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-shop.git -b {{site.version}} --single-branch ./b2b-demo-shop
+git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop && \
+cd b2b-demo-shop && \
+git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
+docker/sdk bootstrap deploy.dev.yml
 ```
 
 - B2C Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-shop.git -b {{site.version}} --single-branch ./b2c-demo-shop
+git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p1 --single-branch ./b2c-demo-shop && \
+cd b2c-demo-shop && \
+git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
+docker/sdk bootstrap deploy.dev.yml
 ```
 
 - B2B Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{site.version}} --single-branch ./b2b-demo-marketplace
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-demo-marketplace && \
+cd b2b-demo-marketplace && \
+git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
+docker/sdk bootstrap deploy.dev.yml
 ```
 
 - B2C Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b {{site.version}} --single-branch ./b2c-demo-marketplace
-```
-
-## 2. Go to the folder you've cloned
-
-```shell
-cd {DEMO_SHOP_FOLDER}
-```
-
-## 3. Clone the Docker SDK
-
-```shell
-git clone https://github.com/spryker/docker-sdk.git --single-branch docker
-```
-
-## 4. Bootstrap the local Docker environment
-
-1. Run the following command:
-
-```shell
+git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-demo-marketplace && \
+cd b2b-demo-marketplace && \
+git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
 ```
 
-{% info_block infoBox "Info" %}
 
-If you do not need to build Spryker with development tools and file synchronization, run the following command:
 
-```shell
-docker/sdk bootstrap
-```
-This mode is better suited to showcase Spryker features.
+## 2. Update the hosts file
 
-{% endinfo_block %}
+Update the hosts file using the command provided in the output of the previous step.
 
-2. Update the host file `/etc/hosts` with the command that the `docker/sdk bootstrap` command displays.
-
-## 5. Build and start your local instance
+## 5. Build and start a local instance
 
 ```shell
 docker/sdk up
 ```
 
-## 6. Open your new Spryker project in the browser
+You should be able to access your project using the following endpoints:
 
 * Storefront: `yves.de.spryker.local`
 * Back Office: `backoffice.de.spryker.local`
-* Frontend API: `glue-storefront.de.spryker.local` and its schema `swagger.spryker.local`
+
 
 {% info_block infoBox "Info" %}
 
@@ -97,6 +87,4 @@ If you see `.de.` in your URL, it means that this application is store-specific.
 
 {% endinfo_block %}
 
-If you need more details about the installation, see the detailed installation guides:
-- [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
-- [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
+For detailed installation instructions, start with [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).

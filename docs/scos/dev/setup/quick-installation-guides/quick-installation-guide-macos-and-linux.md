@@ -4,41 +4,55 @@ description: Get started with Spryker using Docker on Mac OS and Linux
 last_updated: Sep 8, 2022
 template: howto-guide-template
 ---
+
+
 To install Spryker on Mac OS or Linux, follow these steps:
+
+
+
+## System requirements
+
+| REQUIREMENT | VALUE OR VERSION |
+| --- | --- |
+| Docker | 18.09.1 or higher |
+| Docker Compose | 1.28 or 1.29 |  
+| vCPU | 4 or more |
+| RAM  | 4GB or more |
+| Swap  | 2GB or more |
 
 ## 1. Clone the Demo Shop of your choice
 
 - B2B Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop
+git clone https://github.com/spryker-shop/b2b-demo-shop.git -b {{site.version}} --single-branch ./b2b-demo-shop
 ```
 
 - B2C Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p1 --single-branch ./b2c-demo-shop
+git clone https://github.com/spryker-shop/b2c-demo-shop.git -b {{site.version}} --single-branch ./b2c-demo-shop
 ```
 
 - B2B Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-demo-marketplace
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{site.version}} --single-branch ./b2b-demo-marketplace
 ```
 
 - B2C Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-demo-marketplace
+git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b {{site.version}} --single-branch ./b2c-demo-marketplace
 ```
 
-## 2. Go to the newly created folder
+## 2. Go to the folder you've cloned
 
 ```shell
-cd <new-folder-name>
+cd {DEMO_SHOP_FOLDER}
 ```
 
-## 3. Clone the Docker SDK repository into the same folder
+## 3. Clone the Docker SDK
 
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker

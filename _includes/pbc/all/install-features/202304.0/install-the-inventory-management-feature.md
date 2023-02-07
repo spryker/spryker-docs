@@ -332,7 +332,7 @@ Make sure the following:
 
 {% endinfo_block %}
 
-1. Update the following import action files with the following action:
+2. Update the following import action files with the following action:
    * `data/import/common/commerce_setup_import_config_{SPRYKER_STORE}.yml`
    * `data/import/local/full\_{SPRYKER\_STORE}.yml`
    * `data/import/production/full\_{SPRYKER\_STORE}.yml`
@@ -349,7 +349,7 @@ Replace `{SPRYKER_STORE}` in the file paths with the desired stores—for exampl
 {% endinfo_block %}
 
 
-1. Register the following plugins to enable data import:
+3. Register the following plugins to enable data import:
 
 Add these plugins to the end of the plugins list but before `ProductOfferStockDataImportPlugin`.
 
@@ -621,8 +621,9 @@ Make sure that after the order is created, order items gain the `warehouse alloc
 {% endinfo_block %}
 
 
-## This section describes an example of how to implement and integrate the warehouse allocation process for product and product offer order items and how this process work.
+## Implement and integrate the warehouse allocation process for product and product offer order items
 This section describes an example of how to implement and integrate the warehouse allocation process for product and product offer order items and how this process work.
+
 Follow the steps below to install an example for product and product offer warehouse allocations.
 
 ### Prerequisites

@@ -9,8 +9,8 @@ The following features integration guide expects the basic feature to be in plac
 
 The current feature integration guide adds the following functionality:
 
-* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 * [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html)
+* [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
 
 {% endinfo_block %}
 
@@ -22,10 +22,10 @@ Follow the steps below to install the Order Management + Inventory Management fe
 
 To start feature integration, integrate the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE |
-|--------------|------------------|------------------|
-| Order Management     | {{site.version}} |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)|
-| Warehouse Management | {{site.version}} | [Install the Warehouse User Management feature](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.md)|
+| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                       |
+|--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Order Management     | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)            |
+| Inventory Management | {{site.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-inventory-management-feature.md) |
 
 
 ### 1) Set up behavior

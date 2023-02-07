@@ -7,7 +7,7 @@ This document describes how to ingrate the [Inventory Management](/docs/pbc/all/
 The following feature integration guide expects the basic feature to be in place.
 
 The current feature integration guide adds the following functionality:
-* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
+* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#warehouse-management)
 * [Add to cart from catalog page](/docs/scos/user/features/{{site.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
 * [Warehouse address](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
@@ -621,7 +621,7 @@ Make sure that after the order is created, order items gain the `warehouse alloc
 {% endinfo_block %}
 
 
-## Install an example of product and product offer warehouse allocation
+## This section describes an example of how to implement and integrate the warehouse allocation process for product and product offer order items and how this process work.
 
 Follow the steps below to install an example for product and product offer warehouse allocations.
 

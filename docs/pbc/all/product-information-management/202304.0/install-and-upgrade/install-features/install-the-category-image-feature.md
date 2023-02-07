@@ -1,5 +1,5 @@
 ---
-title: Category Image feature integration
+title: Install the Category Image feature
 description: The guide walks you through the process of installing the Category Image feature in your project.
 last_updated: Jan 17, 2023
 template: feature-integration-guide-template

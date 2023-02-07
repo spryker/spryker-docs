@@ -1,6 +1,6 @@
 ---
-title: Product Labels feature integration
-description: This guide provides step-by-step instruction on integrating
+title: Install the Product Labels feature
+description: This guide provides step-by-step instruction about the isntallation of the Product Lables feature
 last_updated: Jan 10, 2023
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-labels-feature-integration

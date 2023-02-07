@@ -370,10 +370,10 @@ entries:
                 url: /docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html
           - title: Content items feature overview
             url: /docs/pbc/all/content-management-system/content-items-feature-overview.html
-          - title: Navigation feature overview
-            url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
           - title: File Manager feature overview
             url: /docs/pbc/all/content-management-system/file-manager-feature-overview.html
+          - title: Navigation feature overview
+            url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -388,6 +388,10 @@ entries:
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
                   - title: Content Items
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-content-items-feature.html
+                  - title: File Manager
+                    url: docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-file-manager-feature.md
+                    include_versions:
+                    - "202304.0"
                   - title: Navigation
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-navigation-feature.html
               - title: Install Glue API

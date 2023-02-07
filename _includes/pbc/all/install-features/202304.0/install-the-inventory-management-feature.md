@@ -622,7 +622,7 @@ Make sure that after the order is created, order items gain the `warehouse alloc
 
 
 ## This section describes an example of how to implement and integrate the warehouse allocation process for product and product offer order items and how this process work.
-
+This section describes an example of how to implement and integrate the warehouse allocation process for product and product offer order items and how this process work.
 Follow the steps below to install an example for product and product offer warehouse allocations.
 
 ### Prerequisites

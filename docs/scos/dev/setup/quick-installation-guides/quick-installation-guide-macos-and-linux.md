@@ -65,11 +65,11 @@ docker/sdk bootstrap deploy.dev.yml
 
 
 
-## 2. Update the hosts file
+## 2. Update the hosts
 
 Update the hosts file using the command provided in the output of the previous step.
 
-## 5. Build and start a local instance
+## 3. Build and start the instance
 
 ```shell
 docker/sdk up

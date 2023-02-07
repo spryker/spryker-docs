@@ -16,6 +16,7 @@ redirect_from:
   - /docs/scos/user/features/202212.0/product-rating-and-reviews-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-rating-reviews-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/product-rating-reviews-feature-walkthrough.html
+  - /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
 ---
 
 Drive sales by including user reviews and ratings. Reviews and ratings are a proven sign of trust; they allow brands to receive valuable and moderate feedback in the Administration Interface. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings.

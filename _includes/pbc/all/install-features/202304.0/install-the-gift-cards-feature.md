@@ -1,13 +1,18 @@
 
 
+This document describes how to integrate the [Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Gift Cards feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
+
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
 | Spryker Core | {{site.version}} |
 | Cart | {{site.version}} |
 |Product  | {{site.version}} |
@@ -19,7 +24,7 @@ To start feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
@@ -172,17 +177,17 @@ class SalesConfig extends SprykerSalesConfig
 
 {% info_block warningBox "Verification" %}
 
-Once you've finished Setup Behaviour step, make sure that:
-* NoPayment01 statemachine is activated successfully.
-* When using a gift card to cover an entire order, the configured order state machine (e.g. "Nopayment01" is used.
+Once you've finished the Setup Behaviour step, make sure the following:
+* The NoPayment01 statemachine is activated successfully.
+* When using a gift card to cover an entire order, the configured order state machine is used—for example, *Nopayment01*.
 * You can't use blacklisted payment methods when using a gift card.
-* In the order detail page in Back office, you see the gift cards used in the order.
+* In the Back office, in the order details page, you see the gift cards used in the order.
 
 {% endinfo_block %}
 
 ### 3) Set up database schema
 
-Run the following commands to apply database changes and to generate entity and transfer changes:
+Apply database changes and to generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -203,10 +208,6 @@ Verify the following changes have been applied by checking your database:
 | spy_payment_gift_card | table | created |
 | spy_gift_card_balance_log | table | created |
 | spy_sales_order_item_gift_card | table | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
 
@@ -239,7 +240,7 @@ Make sure that propel entities have been generated successfully by checking thei
 
 The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on project level.
 
-You can find an exemplary implementation [here](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a)(only Console and DataImport module changes are relevant). The following data import examples are based on this implementation.
+You can find an exemplary implementation on [Git Hub](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a) in the `suit` repository (only `Console` and `DataImport` module changes are relevant). The following data import examples are based on this implementation.
 
  {% endinfo_block %}
 
@@ -266,7 +267,7 @@ sku,value
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| sku | mandatory | string| 1234 | SKU reference of an abstract gift card product. |
+| sku | mandatory | string| 1234 | An SKU reference of an abstract gift card product. |
 | value | mandatory | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
 
 ```bash
@@ -284,11 +285,11 @@ Make sure to have imported abstract and concrete gift card configuration into yo
 
 {% info_block infoBox "Info" %}
 
-In this step, you will create a shipment method called "NoShipment". The name of the shipment method has to match the value of `\Spryker\Shared\Shipment\ShipmentConfig::SHIPMENT_METHOD_NAME_NO_SHIPMENT` constant.
+In this step, you create a shipment method called *NoShipment*. The name of the shipment method has to match the value of `\Spryker\Shared\Shipment\ShipmentConfig::SHIPMENT_METHOD_NAME_NO_SHIPMENT` constant.
 
 {% endinfo_block %}
 
-Taking into account project customizations, extend shipment method data importer as shown below:
+1. Taking into account project customizations, extend shipment method data importer as shown below:
 
 **data/import/shipment.csv**
 
@@ -297,7 +298,7 @@ shipment_method_key,name,carrier,taxSetName
 spryker_no_shipment,NoShipment,NoShipment,Tax Exempt
 ```
 
-Taking into account project customizations, extend your shipment price data importer as shown below:
+2. Taking into account project customizations, extend your shipment price data importer as shown below:
 
 **data/import/shipment_price.csv**
 
@@ -306,7 +307,7 @@ shipment_method_key,store,currency,value_net,value_gross
 spryker_no_shipment,DE,EUR,0,0
 ```
 
-Run the following command(s) to apply changes:
+3. Apply changes:
 
 ```bash
 console data:import:shipment
@@ -315,7 +316,7 @@ console data:import:shipment-price
 
 {% info_block warningBox "Verification" %}
 
-Make sure that a shipment method with "NoShipment" name exists in your `spy_shipment_method` and `spy_shipment_method_price` database tables.
+Make sure that a shipment method with the `NoShipment` name exists in your `spy_shipment_method` and `spy_shipment_method_price` database tables.
 
 {% endinfo_block %}
 
@@ -323,8 +324,8 @@ Make sure that a shipment method with "NoShipment" name exists in your `spy_ship
 
 {% info_block infoBox "Info" %}
 
-To be able to represent and display gift cards as products in your shop, you need to import some data into your database depending on your project configuration and needs. The following list contains the points which can be used to get the idea of what gift card related data you might want to use:
-* **Product Attribute Key** to create a gift card "value" super attribute that defines gift card variants.
+To represent and display gift cards as products in your shop, you need to import some data into your database depending on your project configuration and needs. The following list contains the points that can be used to get the idea of what gift card related data you might want to use:
+* **Product Attribute Key** to create a gift card `value` super attribute that defines gift card variants.
 * **Abstract Product** that represents gift cards in your catalog.
 * **Abstract Product Store Relation** to manage store-specific gift cards.
 * **Concrete Product** that represents gift cards with a specific price value.
@@ -341,11 +342,11 @@ To be able to represent and display gift cards as products in your shop, you nee
 
 {% info_block infoBox "Info" %}
 
-In this step, you will customize your Order State Machine to purchase gift cards. The process should distinguish gift card order items and ship them by sending an email to the customer. Below, you can see an example of how DummyPayment state machine is defined.
+In this step, you can customize your order state machine to purchase gift cards. The process distinguishes gift card order items and ship them by sending an email to the customer. The following example shows how the `DummyPayment` state machine is defined.
 
 {% endinfo_block %}
 
-DummyPayment Order State Machine Example:
+`DummyPayment` order state machine example:
 
 **config/Zed/oms/DummyPayment01.xml**
 
@@ -555,17 +556,17 @@ DummyPayment Order State Machine Example:
 </statemachine>
 ```
 
-![Nopayment ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg)
+![Nopayment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg)
 
 ### Prepare order state machines: Gift Card usage process
 
 {% info_block infoBox "Info" %}
 
-In this step, you should customize your Order State Machine to place orders with 0 price to pay (by using gift cards). The process should skip payment-related steps as there is nothing for the customer to pay any more. Below you can see the example of how NoPayment state machine is defined.
+In this step, you customize your order state machine to place orders with 0 price to pay (by using gift cards). The process skips payment-related steps because there is nothing for the customer to pay any more. The following example shows how NoPayment state machine is defined.
 
 {% endinfo_block %}
 
-NoPayment Order State Machine Example:
+NoPayment order state machine Example:
 
 **config/Zed/oms/Nopayment01.xml**
 
@@ -650,7 +651,7 @@ NoPayment Order State Machine Example:
 
 {% info_block infoBox "Info" %}
 
-In this step, you'll enable gift card purchasing in your project.
+In this step, you enable gift card purchasing in your project.
 
 {% endinfo_block %}
 
@@ -925,13 +926,13 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
+Make sure the following:
 * You can put a configured gift card product to cart and purchase it.
-* The gift card item shouldn't have any discounts applied.
-* During the checkout process, shipment method selection should be optional if there is only a gift card in cart.
-* The GiftCart/ShipGiftCard OMS command was invoked and customer received an email with the generated gift card code once the order is placed.
+* The gift card item doesn't have any discounts applied.
+* During the checkout process, shipment method selection is optional if there is only a gift card in the cart.
+* The `GiftCart/ShipGiftCard` OMS command is invoked and customer receives an email with the generated gift card code once the order is placed.
 
-Note: You need to complete Feature Frontend integration before you can verify these points.
+Note that you need to complete the feature [frontend integration]() before you can verify these points.
 
 {% endinfo_block %}
 
@@ -939,7 +940,7 @@ Note: You need to complete Feature Frontend integration before you can verify th
 
 {% info_block infoBox "Info" %}
 
-In this step, you'll enable purchasing with existing gift cards in your project.
+In this step, you enable purchasing with existing gift cards in your project.
 
 {% endinfo_block %}
 
@@ -1148,7 +1149,7 @@ Make sure that:
 * During the checkout process, payment method selection is skipped in case the gift card covers the grand total.
 * Having made a successful purchase with the help of a gift card, you receive a gift card balance notification e-mail.
 
-Note: You need to complete Feature Frontend integration before you can verify these points.
+Note that you need to complete the following feature frontend integration step before you can verify these points.
 
 {% endinfo_block %}
 
@@ -1165,8 +1166,6 @@ To start feature integration, overview and install the necessary features:
 | Checkout | {{site.version}} |
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
@@ -1205,13 +1204,13 @@ $config[KernelConstants::DEPENDENCY_INJECTOR_YVES] = [
 
 {% info_block warningBox "Verification" %}
 
-Make sure to have "nopayment" payment method successfully selected when you cover an entire order with a gift card.
+Make sure to have the nopayment payment method successfully selected when you cover an entire order with a gift card.
 
 {% endinfo_block %}
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -1244,7 +1243,7 @@ cart.code.enter-code,Gutscheincode/Geschenkgutscheincode eingeben,de_DE
 cart.code.enter-code,Enter voucher/gift card code,en_US
 ```
 
-Run the following command(s) to apply glossary keys:
+2. Apply glossary keys:
 
 ```bash
 console data:import:glossary
@@ -1258,7 +1257,7 @@ Make sure that in the database, the configured data has been added to the `spy_g
 
 ### 3) Set up widgets
 
-Register the following global widget(s):
+Register the following global widget:
 
 | WIDGET | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
@@ -1298,7 +1297,7 @@ Make sure that the widget is displayed on the Cart page and the Summary page of 
 
 #### Route List
 
-Register the following route provider plugins:
+Register the following route provider plugin:
 
 | PROVIDER | NAMESPACE |
 | --- | --- |

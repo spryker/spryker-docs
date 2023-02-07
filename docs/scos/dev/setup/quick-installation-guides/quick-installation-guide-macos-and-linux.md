@@ -5,20 +5,15 @@ last_updated: Sep 8, 2022
 template: howto-guide-template
 ---
 
+This document describes how to quickly install Spryker on MacOS or Linux in Development mode. If you are installing Spryker for the first time or need detailed instructions, we recommend starting with [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).
 
 To install Spryker on Mac OS or Linux, follow these steps:
 
-## System requirements
+## Prerequisites
 
-| REQUIREMENT | VALUE OR VERSION |
-| --- | --- |
-| Docker | 18.09.1 or higher |
-| Docker Compose | 1.28 or 1.29 |
-| vCPU | 4 or more |
-| RAM  | 4GB or more |
-| Swap  | 2GB or more |
+* Install [Docker](https://www.docker.com/).
 
-## MacOS: Install or update Mutagen and Mutagen Compose
+* MacOS: Install or update Mutagen and Mutagen Compose:
 
 ```bash
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start
@@ -63,8 +58,6 @@ git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
 ```
 
-
-
 ## 2. Update the hosts
 
 Update the hosts file using the command provided in the output of the previous step.
@@ -83,7 +76,7 @@ You should be able to access your project using the following endpoints:
 
 {% info_block infoBox "Info" %}
 
-If you see `.de.` in your URL, it means that this application is store-specific. By default, Spryker comes with three stores: *de*, *at*, and *us*.
+If you see `.de.` in your URL, the application is store-specific. By default, Spryker comes with three stores: *de*, *at*, and *us*.
 
 {% endinfo_block %}
 

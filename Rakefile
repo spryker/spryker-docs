@@ -47,7 +47,8 @@ commonOptions = {
     /php.net\/[\.\w\-\/\?]+/,
     /atom.io\/[\.\w\-\/\?]+/,
     /www.acunetix.com\/[\.\w\-\/\?]+/,
-    /gcc.gnu.org\/[\.\w\-\/\?]+/
+    /gcc.gnu.org\/[\.\w\-\/\?]+/,
+    /www.collect.ai\/[\.\w\-\/\?]+/
 
   ],
   :file_ignore => [],

@@ -243,6 +243,11 @@ Here is how these parts are integrated in the application tile:
 
 ![application-tile](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-manifest/app-tile.png)
 
+Here is how `dialogs` are integrated in the application detail page using an example of `onSave` dialog.
+
+
+![dialogs-onSave](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-manifest/app-dialogs.png)
+
 Here is how these parts are integrated on the application detail page:
 
 ![application-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-manifest/app-details-page.png)

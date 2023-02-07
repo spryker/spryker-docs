@@ -37,7 +37,7 @@ This instruction explains how to contribute to the Spryker documentation by crea
 For information about the structure of the Spryker documentation, as well as style and formatting rules, see [Style, syntax, formatting, and general rules](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html).
 
 
-Note that contributions to Spryker documentation can be accepted only in US English.
+Note that Spryker documentation is written in US English.
 
 
 {% endinfo_block %}

@@ -24,7 +24,7 @@ This document describes the structure, main style, syntax and formatting rules o
 
 {% info_block infoBox "Info" %}
 
-Please note that Spryker documentation is written in US English.
+Note that Spryker documentation is written in US English.
 
 {% endinfo_block %}
 

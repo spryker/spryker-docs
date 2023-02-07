@@ -5,7 +5,7 @@ entries:
   - product: Marketplace
     nested:
       - title: Setup
-        url: /docs/marketplace/dev/setup/index.html
+        url: /docs/marketplace/dev/setup/setup.html
         include_versions:     
         nested:
           - title: System requirements
@@ -34,7 +34,7 @@ entries:
             - "202212.0"
 
       - title: Marketplace architecture overview
-        url: /docs/marketplace/dev/architecture-overview/index.html
+        url: /docs/marketplace/dev/architecture-overview/architecture-overview.html
         nested:
           - title: Marketplace Application composition
             url: /docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
@@ -49,7 +49,7 @@ entries:
             url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
 
       - title: Feature walkthroughs
-        url: /docs/marketplace/dev/feature-walkthroughs/index.html
+        url: /docs/marketplace/dev/feature-walkthroughs/feature-walkthroughs.html
         nested:
 
           - title: Marketplace Merchant
@@ -260,7 +260,7 @@ entries:
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
       - title: Feature integration guides
-        url: /docs/marketplace/dev/feature-integration-guides/index.html
+        url: /docs/marketplace/dev/feature-integration-guides/feature-integration-guides.html
         
         nested:
         
@@ -716,7 +716,7 @@ entries:
           - title: ProductOfferPricesRestApi
             url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html                        
       - title: Glue API guides
-        url: /docs/marketplace/dev/glue-api-guides/index.html
+        url: /docs/marketplace/dev/glue-api-guides/glue-api-guides.html
         nested:
           - title: REST API Marketplace B2C reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
@@ -1092,7 +1092,7 @@ entries:
             - "202212.0"
 
       - title: Front-end
-        url: /docs/marketplace/dev/front-end/index.html
+        url: /docs/marketplace/dev/front-end/front-end.html
         include_versions:
         nested:
 
@@ -1526,7 +1526,7 @@ entries:
             - "202212.0"
 
       - title: HowTos
-        url: /docs/marketplace/dev/howtos/index.html
+        url: /docs/marketplace/dev/howtos/howtos.html
         nested:
 
           - title: "How-To: Upgrade Spryker instance to the Marketplace"
@@ -1560,7 +1560,7 @@ entries:
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
 
       - title: Technical enhancement guides
-        url: /docs/marketplace/dev/technical-enhancement/index.html
+        url: /docs/marketplace/dev/technical-enhancement/technical-enhancement.html
         nested:
 
           - title: "Migration guide - Upgrade to Angular v12"

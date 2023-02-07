@@ -1,13 +1,9 @@
 ---
-title: Define parameter and secret values
+title: Define parameter and secret values in SCCOS environments
 description: Learn how to define parameter values in the Parameter Store.
-last_updated: Nov 2, 2022
+last_updated: Jan 23, 2023
 template: howto-guide-template
-originalLink: https://cloud.spryker.com/docs/managing-parameters-in-the-parameter-store
-originalArticleId: 2047c84c-bd7b-4bce-9203-08945367ad46
 redirect_from:
-  - /docs/managing-parameters-in-the-parameter-store
-  - /docs/en/managing-parameters-in-the-parameter-store
   - /docs/cloud/dev/spryker-cloud-commerce-os/managing-parameters-in-the-parameter-store.html
 ---
 

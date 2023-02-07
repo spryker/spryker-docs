@@ -621,6 +621,8 @@ entries:
                 url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
       - title: Customer Relationship Management
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
+        include_versions:
+          - "202212.0"
         nested:
           - title: Install and upgrade
             nested:

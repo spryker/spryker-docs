@@ -3,6 +3,9 @@ title: Configuration process flow of configurable products
 last_updated: Jun 2, 2022
 description: This document shows the configuration process of the configurable product.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202212.0/configurable-product-feature-walkthrough/configuration-process-flow-of-configurable-product.html
+
 ---
 
 The configuration process of a configurable product consists of eight phases illustrated in the following flow chart:

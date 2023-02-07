@@ -709,7 +709,7 @@ entries:
               - title: Manage customer groups
                 url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-customer-groups.html
               - title: Manage companies
-                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-companies.html         
+                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-companies.html
               - title: Manage company units
                 nested:
                   - title: Create
@@ -720,7 +720,36 @@ entries:
                 nested:
                   - title: Create
                     url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html
-
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html
+              - title: Manage company roles
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-roles/create-company-roles.html
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-roles/edit-company-roles.html
+              - title: Manage company users
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-users/create-company-users.html
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-users/edit-company-users.html
+          - title: Manage using Glue API
+            nested:
+              - title: Company account
+                nested:
+                  - title: Retrieve company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
+                  - title: Retrieve company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
+                  - title: Retrieve company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
+                  - title: Retrieve company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
+                  - title: Retrieve company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
+                  - title: Retrieve company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

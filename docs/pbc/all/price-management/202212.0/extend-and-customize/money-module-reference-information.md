@@ -5,6 +5,7 @@ description: Spryker Commerce OS handles all monetary values as integer and prov
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/prices-feature-walkthrough/money-module-reference-information.html
+  - /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
 ---
 
 {% info_block infoBox "Money" %}

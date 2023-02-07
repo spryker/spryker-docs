@@ -316,7 +316,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-{% include pbc/all/glue-api-guides/retrieve-customer-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-customer-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202204.0/retrieve-customer-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-customer-carts-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

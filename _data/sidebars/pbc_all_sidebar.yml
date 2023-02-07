@@ -757,8 +757,8 @@ entries:
                 nested:
                   - title: Manage customer addresses
                     url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
-                  - title: Manage customer orders
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customer-orders.html
+                  - title: Retrieve customer orders
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
               - title: Manage customer access to Glue API resources
                 url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
           - title: Domain model and relationships

@@ -1,5 +1,5 @@
 ---
-title: Managing customers
+title: "Glue API: Manage customers"
 description: Learn how to manage customers via Glue API.
 last_updated: Jun 18, 2021
 template: glue-api-storefront-guide-template

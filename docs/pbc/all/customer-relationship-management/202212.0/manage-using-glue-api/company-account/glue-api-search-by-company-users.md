@@ -1,5 +1,5 @@
 ---
-title: Searching by company users
+title: "Glue API: Search by company users"
 description: Learn how to search by company users via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

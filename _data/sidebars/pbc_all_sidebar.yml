@@ -687,7 +687,7 @@ entries:
               - title: Customer Registration
                 url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-registration-overview.html
               - title: Password Management
-                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/password-management.html
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/password-management-overview.html
           - title: Customer Access feature overview
             url: /docs/pbc/all/customer-relationship-management/customer-access-feature-overview.html
           - title: Manage in the Back Office
@@ -695,17 +695,17 @@ entries:
               - title: Manage customers
                 nested:
                   - title: Create
-                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/create-customers.html
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/create-customers.html
                   - title: Edit
-                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customers.html
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customers.html
                   - title: View
-                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/view-customers.html
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/view-customers.html
                   - title: Add notes to customers
-                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-notes-to-customers.html
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-notes-to-customers.html
                   - title: Add customer addresses
-                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-customer-addresses.html
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-customer-addresses.html
                   - title: Edit customer addresses
-                    url: docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customer-addresses.html
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customer-addresses.html
               - title: Manage customer access
                 url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-customer-access.html
               - title: Manage customer groups
@@ -740,18 +740,34 @@ entries:
             nested:
               - title: Company account
                 nested:
+                  - title: Search by company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
                   - title: Retrieve company users
                     url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
-                  - title: Retrieve company users
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
-                  - title: Retrieve company users
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
-                  - title: Retrieve company users
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
-                  - title: Retrieve company users
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
-                  - title: Retrieve company users
-                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
+                  - title: Retrieve companies
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
+                  - title: Retrieve business units
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
+                  - title: Retrieve company roles
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
+                  - title: Retrieve business unit addresses
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
+              - title: Customers
+                url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customers.html
+                nested:
+                  - title: Manage customer addresses
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
+                  - title: Manage customer orders
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customer-orders.html
+              - title: Domain model and relationships
+                nested:
+                  - title: "Company account: module relations"
+                    url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/company-account-module-relations.html
+                  - title: "Customer Login by Token: reference information"
+                    url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-login-by-token-reference-information.html
+                  - title: "Customer module overview: reference information"
+                    url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-module-overview-reference-information.html
+              - title:
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

@@ -1,5 +1,5 @@
 ---
-title: Retrieving customer orders
+title: "Glue API: Retrieve customer orders"
 description: This endpoint allows retrieving a customer's orders.
 last_updated: Jul 12, 2021
 template: glue-api-storefront-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Retrieving business units
+title: "Glue API: Retrieve business units"
 description: Learn how to retrieve business units via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Retrieving company roles
+title: "Glue API: Retrieve company roles"
 description: Learn how to retrieve company roles via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

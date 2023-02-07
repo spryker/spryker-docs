@@ -1,5 +1,5 @@
 ---
-title: Retrieving companies
+title: "Glue API: Retrieve companies"
 description: Learn how to retrieve company information via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

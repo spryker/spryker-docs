@@ -759,15 +759,18 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
                   - title: Manage customer orders
                     url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customer-orders.html
-              - title: Domain model and relationships
-                nested:
-                  - title: "Company account: module relations"
-                    url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/company-account-module-relations.html
-                  - title: "Customer Login by Token: reference information"
-                    url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-login-by-token-reference-information.html
-                  - title: "Customer module overview: reference information"
-                    url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-module-overview-reference-information.html
-              - title:
+              - title: Manage customer access to Glue API resources
+                url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
+          - title: Domain model and relationships
+            nested:
+              - title: "Company account: module relations"
+                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/company-account-module-relations.html
+              - title: "Customer Login by Token: reference information"
+                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-login-by-token-reference-information.html
+              - title: "Customer module overview: reference information"
+                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-module-overview-reference-information.html
+          - title: "File details: customer.csv"
+            url: /docs/pbc/all/customer-relationship-management/file-details-customer.csv.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

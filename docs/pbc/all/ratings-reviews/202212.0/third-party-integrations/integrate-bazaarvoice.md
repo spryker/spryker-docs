@@ -287,4 +287,4 @@ $jobs[] = [
 ];
 ```
 ## Next steps
-[Configure the Bazzarevoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) for your store.
+[Configure the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) for your store.

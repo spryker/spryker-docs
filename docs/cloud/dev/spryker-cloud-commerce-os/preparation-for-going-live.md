@@ -76,7 +76,7 @@ We do not normally support full delegation of your DNS to us and therefore do no
 
 {% endinfo_block %}
 
-# Deployment preparation and configurations
+### Deployment preparation and configurations
 
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.

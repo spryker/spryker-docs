@@ -25,8 +25,8 @@ For the refunded items, you can use the default OMS states to be displayed on th
 |---|
 | [View refunds](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/refunds/viewing-refunds.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Refunds feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/refunds-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| MIGRATION GUIDES | TUTORIALS AND HOWTOS |
+|---------|---------|
+| [Refund migration guide](/docs/scos/dev/module-migration-guides/migration-guide-refund.html) | [Refund process management](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/refund-process-management.html) |

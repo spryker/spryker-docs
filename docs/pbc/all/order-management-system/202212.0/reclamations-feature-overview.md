@@ -44,8 +44,8 @@ In the Back Office in the order list, a Back Office user doesn't have the functi
 | [View reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/viewing-reclamations.html)  |
 | [Changing the state of order items in reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Reclamations feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reclamations-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  |
+|---------|
+|[Reclamations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/reclamations-feature-integration.html)|

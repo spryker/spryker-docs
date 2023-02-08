@@ -5,6 +5,7 @@ description: This document provides the technical details of the PriceProduct mo
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
+  - /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
 ---
 
 This document describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html#upgrading-from-version-1-to-version-2) of the module.

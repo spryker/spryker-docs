@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/minubo
   - /docs/minubo
   - /docs/en/minubo
+  - /industry_partners/performance/minubo.htm
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

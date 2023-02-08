@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/managing-guest-carts
   - /docs/managing-guest-carts
   - /docs/en/managing-guest-carts
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/guest-carts/managing-guest-carts.html  
   - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/guest-carts/managing-guest-carts.html
+  - /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html
 related:
   - title: Manage guest cart items
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html
@@ -19,20 +19,20 @@ related:
     link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/manage-gift-cards-of-guest-users.html
 ---
 
-This endpoint allows to manage guest carts.
+This endpoint lets you manage guest carts.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
-* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
-* [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-labels-feature-integration.html)
+* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [Glue API: Product options feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+* [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
 
 ## Create a guest cart
 
-To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
+To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
 
 ## Retrieve a guest cart
 
@@ -51,7 +51,7 @@ Guest users have one guest cart by default. If you already have a guest cart, yo
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}*** | The unique ID of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 
@@ -65,7 +65,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | The guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.|
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.|
 
 | PATH PARAMETER | DESCRIPTION | Possible values |
 | --- | --- | --- |
@@ -992,44 +992,60 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| product-options | optionGroupName | String | The name of the group to which the option belongs. |
-| product-options | sku | String | The SKU of the product option. |
-| product-options | optionName | String | The product option's name. |
-| product-options | price | Integer | The product option's price in cents. |
-| product-options | currencyIsoCode | String | The ISO 4217 code of the currency in which the product option price is specified. |
-| vouchers, cart-rules | displayName | String | The discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | The amount of the provided discount. |
-| vouchers, cart-rules | code | String | The code of the discount. |
-| vouchers, cart-rules | discountType | String | The type of the discount. |
-| vouchers, cart-rules  | isExclusive | Boolean | If true, this discount is exclusive. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
+| product-options | optionGroupName | String | Name of the group to which the option belongs. |
+| product-options | sku | String | SKU of the product option. |
+| product-options | optionName | String | Product option name. |
+| product-options | price | Integer | Product option price in cents. |
+| product-options | currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
+| vouchers, cart-rules | displayName | String | Discount name displayed on the Storefront. |
+| vouchers, cart-rules | amount | Integer | Amount of the provided discount. |
+| vouchers, cart-rules | code | String | Discount code. |
+| vouchers, cart-rules | discountType | String | Discount type. |
+| vouchers, cart-rules  | isExclusive | Boolean | Discount exclusivity. |
+| vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
+| vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 
 For the attributes of other included resources, see:
-* [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html)
-* [Retrieving measurement units](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
-* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
-* [Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
-* [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html#measurement-units-response-attributes)
-* [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
+* [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html)
+* [Retrieving measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
+* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
+* [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html#measurement-units-response-attributes)
+* [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Assign a guest cart to a registered customer
 
-Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
+Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart can be automatically assigned to their account.
 
-To assign a guest cart to a customer, merge the carts, include the unique ID associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, for example, merge the carts, include the unique identifier associated with the customer in the `X-Anonymous-Customer-Unique-Id` header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one. Adjust the configuration constant to create a cart for the newly authenticated customer while merging the guest cart with the customer cart:
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/multiple-carts-feature-overview.html) environment:
+**src/Pyz/Zed/CartsRestApi/CartsRestApiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CartsRestApi;
+
+use Spryker\Zed\CartsRestApi\CartsRestApiConfig as SprykerCartsRestApiConfig;
+
+class CartsRestApiConfig extends SprykerCartsRestApiConfig
+{
+    protected const IS_QUOTE_CREATION_WHILE_QUOTE_MERGING_ENABLED = true;
+}
+```
+
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.html) environment:
 
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
-The workflow is displayed in the diagram below:
-![Assign cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png)
+The workflow is displayed in the following diagram:
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-08-01T11:03:23.652Z\&quot; agent=\&quot;5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\&quot; etag=\&quot;QnmmQ9E2tNcSC_Frfojm\&quot; version=\&quot;20.2.2\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;C5RBs43oDa-KdzZeNtuy\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 
-Below, you can see an example workflow for converting a guest cart into a regular cart:
+The following is an exemplary workflow of converting a guest cart into a regular cart:
 
 1. The customer adds items to a guest cart.
 
@@ -1052,7 +1068,7 @@ Request sample:
 
 | HEADER KEY | HEADER VALUE | DESCRIPTION |
 | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | guest-user-001 | A guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
+| X-Anonymous-Customer-Unique-Id | guest-user-001 | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
 
 **Response sample**
 
@@ -1088,7 +1104,7 @@ Request sample:
 
 | HEADER KEY | HEADER VALUE | DESCRIPTION |
 | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | guest-user-001 | A Guest user's unique ID. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| X-Anonymous-Customer-Unique-Id | guest-user-001 | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
 **Response sample**
 
@@ -1117,7 +1133,7 @@ Request sample:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
+| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 In the **multi-cart** environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
 
@@ -1143,7 +1159,7 @@ In the **multi-cart** environment, the guest cart has been converted to a regu
 }
 ```
 
-In a **single cart** environment, items from the guest cart have been added to the user's own cart.
+In a *single cart* environment, items from the guest cart have been added to the user's own cart.
 
 **Response body**
 
@@ -1194,4 +1210,4 @@ In a **single cart** environment, items from the guest cart have been added to
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

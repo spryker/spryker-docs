@@ -282,7 +282,7 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure the following works correctly:
 * The request doesn't succeed for users without permission.
 * The user can see only the allowed menu links.
 * The `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.

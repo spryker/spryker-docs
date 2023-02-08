@@ -139,18 +139,16 @@ entries:
     - title: Contribute to the documentation
       url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html
       nested:
-      - title: Build the documentation site
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
       - title: Edit the documentation via pull requests
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
       - title: Edit the documentation locally
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
+      - title: Add and edit diagrams
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html
       - title: Report documentation issues
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
-      - title: Style, formatting, and general rules
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html
-      - title: Markdown syntax
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
+      - title: Build the documentation site
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
       - title: Review pull requests
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/review-pull-requests.html
       - title: Add product sections to the documentation
@@ -2646,7 +2644,7 @@ entries:
           - "202108.0"
           - "202204.0"
           - "202212.0"
-        - title: Create merchant relations
+        - title: Edit merchant relations
           url: /docs/scos/user/back-office-user-guides/marketplace/merchant-relations/edit-merchant-relations.html
           include_versions:
           - "202108.0"

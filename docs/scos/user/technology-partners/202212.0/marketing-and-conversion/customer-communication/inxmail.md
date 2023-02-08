@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/inxmail
   - /docs/inxmail
   - /docs/en/inxmail
+  - /industry_partners/performance/inxmail.htm
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

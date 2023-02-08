@@ -1,5 +1,5 @@
 ---
-title: File details - product_search_attribute_map.csv
+title: "File details: product_search_attribute_map.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-search-attribute-mapcsv
@@ -21,7 +21,7 @@ data:import:product-search-attribute-map
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ This file maps the product attributes that are imported in the `product_attribut
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

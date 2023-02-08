@@ -1,5 +1,5 @@
 ---
-title: Product Relations- module relations
+title: "Product Relations: module relations"
 description: Module relations of the product relations.
 template: feature-walkthrough-template
 ---

@@ -6,25 +6,20 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-session.html
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
-  - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic��with–vagrant.html
-
 ---
 
-{% info_block infoBox "New Relic installation in Docker based projects" %}
+{% info_block warningBox "Warning" %}
 
-For installation instructions in Docker based projects, see [Configuring New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#configuring-new-relic)
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). For installation instructions in Docker-based projects, see [Configure New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html#new-relic)
 
 {% endinfo_block %}
 
 To install and configure New Relic, do the following.
 
-
 ## Configure New Relic
 
 1. [Create a New Relic account](https://newrelic.com/signup).  
-2. Install the New Relic PHP extension in your virtual machine as described in [New Relic setup instructions](https://rpm.newrelic.com/accounts/1131235/applications/setup).
-
-
+2. In your virtual machine, install the New Relic PHP extension as described in [New Relic setup instructions](https://rpm.newrelic.com/accounts/1131235/applications/setup).
 
 ## Install New Relic
 

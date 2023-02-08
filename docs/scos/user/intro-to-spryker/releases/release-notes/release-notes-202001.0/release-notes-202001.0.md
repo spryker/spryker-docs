@@ -15,6 +15,11 @@ redirect_from:
   - /v4/docs/en/release-notes-2020010
   - /v6/docs/release-notes-2020010
   - /v6/docs/en/release-notes-2020010
+related:
+  - title: Security Release Notes 202001.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-release-notes-202001.0.html
+  - title: Known Issues 202001.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/known-issues-202001.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in January of 2020.
@@ -152,7 +157,7 @@ Ratings and reviews are critical for the customer’s purchase decision. Shop ow
 With this API, you will be able to display a product with its different options each of them with its own price, product option group, and tax set, to display the item in the cart or guest cart with the selected option and to make use of those through the checkout process.
 
 #### Documentation
-[Product Options API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
+[Product Options API](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
 
 ### Improved Navigation URLs
 
@@ -203,7 +208,7 @@ With this release, Spryker enabled support for **Elasticsearch 6**, while leavin
 Even though Elasticsearch is one of the most powerful search engines available, sometimes its functionalities can not satisfy the most extreme requirements. That’s why from now on Search module supports pluggable search engines. This way, project integrations with Fact Finder, Sphinx, or any other search engine is available and supported by the Spryker infrastructure.
 
 #### Documentation:
-[Search Migration Guides](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html)
+[Search Migration Guides](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/search-migration-concept.html)
 
 ### By-pass KV-storage
 Separated Backend and Frontend in Spryker communicate over denormalized distributed datasets with underlying Publish & Synchronize mechanism. This powerful data distribution infrastructure emits data to Storage and Search and enables Frontends’ consumers to reach data without hitting relational DB with the increased performance. Though in some cases (typically B2B), amounts of data are large, and Storage (Redis by default) growth is not justified, especially when a number of customers and RPM is not high.
@@ -213,7 +218,7 @@ With this release Publish & Synchronize enables direct access to denormalized da
 To get most of this feature, we recommend to set up master-slave replication and point the Storage to the slave instance, avoiding additional load on the master instance.
 
 #### Documentation
-[HowTo - Disable Key-value Storage and use the Database Instead](/docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html)
+[HowTo: Disable Key-value Storage and use the Database Instead](/docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html)
 
 ### Spryker Application
 In the previous release, our infrastructure provided **Spryker Application** Instead of deprecated Silex. Spryker Application is served with Application Plugins, which should be used instead of Silex Service Providers. This release completes the migration by providing last missing Application Plugins: security, router, validation, messenger, propel, event dispatcher.
@@ -234,7 +239,7 @@ The **Queue manager** functionality is extended with the command that makes queu
 
 #### Documentation:
 
-[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
+[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html#queue)
 
 ### Search Initialization Improvement
 To improve usability, the `vendor/bin/console setup:search` command which has been generating two processes, was split into two commands:
@@ -242,10 +247,8 @@ To improve usability, the `vendor/bin/console setup:search` command which has be
     * `console search:setup:index-map`
 
 #### Documentation
-[Search Initialization Improvement](/docs/scos/dev/technical-enhancement-integration-guides/integrating-search-initialization-enhancement.html)
+[Search Initialization Improvement](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/upgrade-search-initialization.html)
 
 ### PHP Update
 PHP continuously develops and gets more exciting features. Also, old versions get deprecated, such as PHP7.1, which lost support by the end of 2019. From now on, Spryker modules will require **>=PHP7.2**. Please make sure your project doesn’t rely on deprecated technology and applies required infrastructural upgrades.
 While PHP7.2 is a minimum required version, we recommend looking at 7.3 and 7.4 as 7.2 is close to EOL. Such technology upgrades could require additional project refactoring, so please include them in your planning. For more information on the PHP versions see [here](https://www.php.net/supported-versions.php).
-
-Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

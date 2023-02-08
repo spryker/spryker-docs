@@ -24,7 +24,7 @@ _Merchant Portal_ is the management interface where merchants do all administrat
 * Register and edit merchant profile
 * Review their shop’s performance
 
-![Merchant portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-portal-dashboard.png)
+![Merchant Portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-portal-dashboard.png)
 
 Documentation:
 * [Merchant Portal overview](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/logging-in-to-the-merchant-portal.html)
@@ -159,9 +159,9 @@ Documentation:
 * [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{site.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Retrieving Marketplaceorders](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-marketplace-orders.html)
 * [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{site.version}}/managing-the-returns.html)
-* [Managing wishlist items](/docs/marketplace/dev/glue-api-guides/{{site.version}}/wishlists/managing-wishlist-items.html)
+* [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-wishlist-items-via-glue-api.html)
 * [Search the product catalog](/docs/marketplace/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)
-* [Retrieving autocomplete and search suggestions](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-autocomplete-and-search-suggestions.html)
+* [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html)
 
 ## Data exchange
 

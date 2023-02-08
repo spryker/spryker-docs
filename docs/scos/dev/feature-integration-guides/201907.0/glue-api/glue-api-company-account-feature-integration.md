@@ -22,7 +22,7 @@ related:
 The following feature integration guide expects the basic feature to be in place.<br>The current feature integration Guide only adds the Company Account REST API functionality.
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start the feature integration, overview and install the necessary features:
 

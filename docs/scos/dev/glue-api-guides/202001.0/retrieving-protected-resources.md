@@ -17,7 +17,7 @@ related:
     link: docs/scos/user/features/page.version/customer-access-feature-overview.html
 ---
 
-Shop owners can decide which resources are available to unauthenticated customers, and which of them they are not  allowed to view. In Spryker frontend, this is done via the [Managing Customer Access](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-access.html) Feature. On the REST API side, the capability is supported by the **Customer Access API**. The API allows protecting resources from access by unauthorized customers and also provides an endpoint that returns a list of resources protected from unauthenticated access.
+Shop owners can decide which resources are available to unauthenticated customers, and which of them they are not  allowed to view. In Spryker Frontend, this is done via the [Managing Customer Access](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-access.html) Feature. On the REST API side, the capability is supported by the **Customer Access API**. The API allows protecting resources from access by unauthorized customers and also provides an endpoint that returns a list of resources protected from unauthenticated access.
 
 {% info_block warningBox "Note" %}
 

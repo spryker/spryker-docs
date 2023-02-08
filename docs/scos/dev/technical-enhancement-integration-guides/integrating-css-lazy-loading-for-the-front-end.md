@@ -1,7 +1,7 @@
 ---
-title: Integrating CSS lazy loading for the front end
+title: Integrating CSS lazy loading for the frontend
 description: This guide provides step-by-step instruction on how to use the frontend CSS lazy load feature.
-last_updated: Jun 16, 2021
+last_updated: Aug 31, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/frontend-css-lazy-load
 originalArticleId: 050361ae-ad26-41b9-8fe8-297f665ad93f
@@ -15,15 +15,15 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/frontend-css-lazy-load.html
 ---
 
-To implement [CSS lazy loading for front end](/docs/scos/dev/front-end-development/yves/frontend-assets-building-and-loading.html#page-critical-path-layout), do the following:
+To implement [CSS lazy loading for frontend](/docs/scos/dev/front-end-development/yves/frontend-assets-building-and-loading.html#page-critical-path-layout), do the following:
 
-1. Update the `ShopUi` module to 1.44.0 version, and also update the spryker-shop/shop dependencies for the `CatalogPage`, `HomePage` and `ProductDetailPage` modules by running:
+1. Update the `ShopUi` module to version 1.44.0, and  update the `spryker-shop/shop` dependencies for the `CatalogPage`, `HomePage`, and `ProductDetailPage` modules:
 
 ```bash
 COMPOSER_MEMORY_LIMIT=-1 composer update spryker-shop/shop-application spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/home-page spryker-shop/product-detail-page --with-dependencies
 ```
 
-2. Add `"@jsdevtools/file-path-filter": "~3.0.2"`, into the `package.json` file to the `devDependencies` section and run:
+2. Add `"@jsdevtools/file-path-filter": "~3.0.2"`, into the `package.json` file to the `devDependencies` section and run the following:
 
 ```bash
 npm install
@@ -31,77 +31,77 @@ npm install
 
 3. Make the following adjustments to the `frontend/settings.js` file:
 
-* Define `criticalPatterns`:
+   * Define `criticalPatterns`:
 
-```js
-...
-// array of patterns for the critical components
-const criticalPatterns = [
-    '**/ShopUi/**',
-    '**/CatalogPage/**',
-    '**/HomePage/**',
-    '**/ProductDetailPage/**'
-];
-...
-```
+    ```js
+    ...
+    // array of patterns for the critical components
+    const criticalPatterns = [
+        '**/ShopUi/**',
+        '**/CatalogPage/**',
+        '**/HomePage/**',
+        '**/ProductDetailPage/**'
+    ];
+    ...
+    ```
 
-* Add `criticalPatterns` to the returned settings object:
+   * Add `criticalPatterns` to the returned settings object:
 
-```js
-...
-// return settings
-    return {
-        name,
-        namespaceConfig,
-        theme,
-        paths,
-        urls,
-        imageOptimizationOptions,
-        criticalPatterns,
-...   
-```
+    ```js
+    ...
+    // return settings
+        return {
+            name,
+            namespaceConfig,
+            theme,
+            paths,
+            urls,
+            imageOptimizationOptions,
+            criticalPatterns,
+    ...   
+    ```
 
-* Extend the definition of the setting for the frontend builder with the following style entry point patterns for components `stylesEntryPoints`:
+   * Extend the definition of the setting for the frontend builder with the following style entry point patterns for components `stylesEntryPoints`:
 
-```js
-...
-// define settings for suite-frontend-builder finder
-  find: {
-      // entry point patterns (components)
-      componentEntryPoints: {
-          ...
-      },
+   ```js
+   ...
+   // define settings for suite-frontend-builder finder
+     find: {
+         // entry point patterns (components)
+         componentEntryPoints: {
+             ...
+         },
 
-      // style  entry point patterns (components)
-      stylesEntryPoints: {
-          core: {
-              // absolute dirs in which look for
-              dirs: [
-                  join(globalSettings.context, paths.core),
-              ],
-              // files/dirs patterns
-              patterns: [`**/Theme/${namespaceConfig.defaultTheme}/**/style.scss`],
-          },
-          nonCore: {
-              // absolute dirs in which look for
-              dirs: [
-                  join(globalSettings.context, paths.eco),
-                  join(globalSettings.context, paths.project),
-              ],
-              // files/dirs patterns
-              patterns: [
-                  `**/Theme/${namespaceConfig.defaultTheme}/components/**/*.scss`,
-                  `**/Theme/${namespaceConfig.defaultTheme}/templates/**/*.scss`,
-                  `**/Theme/${namespaceConfig.defaultTheme}/views/**/*.scss`,
-              ],
-          },
-      },
-...
-```
+         // style  entry point patterns (components)
+         stylesEntryPoints: {
+             core: {
+                 // absolute dirs in which look for
+                 dirs: [
+                     join(globalSettings.context, paths.core),
+                 ],
+                 // files/dirs patterns
+                 patterns: [`**/Theme/${namespaceConfig.defaultTheme}/**/style.scss`],
+             },
+             nonCore: {
+                 // absolute dirs in which look for
+                 dirs: [
+                     join(globalSettings.context, paths.eco),
+                     join(globalSettings.context, paths.project),
+                 ],
+                 // files/dirs patterns
+                 patterns: [
+                     `**/Theme/${namespaceConfig.defaultTheme}/components/**/*.scss`,
+                     `**/Theme/${namespaceConfig.defaultTheme}/templates/**/*.scss`,
+                     `**/Theme/${namespaceConfig.defaultTheme}/views/**/*.scss`,
+                 ],
+             },
+         },
+   ...
+   ```
 
-4. Update the `frontend/libs/finder.js` file with the following cod:
+4. Update the `frontend/libs/finder.js` file with the following code:
 
-    1. Add `mergeEntryPoints` function:
+    1. Add the `mergeEntryPoints` function:
 
     ```js
     ...
@@ -116,7 +116,7 @@ const criticalPatterns = [
     ...
     ```
 
-    2. Update `findEntryPoints` function using the `mergeEntryPoints` as described above:
+    2. Update the `findEntryPoints` function using the `mergeEntryPoints` as described in the previous step:
 
     ```js
     ...
@@ -162,7 +162,7 @@ const criticalPatterns = [
     const filePathFilter = require("@jsdevtools/file-path-filter");
     ```
 
-    2. Add the `findStyleEntryPoints` to the import from the Finder module:
+    2. Add `findStyleEntryPoints` to the import from the `Finder` module:
 
     ```js
     ...
@@ -211,7 +211,6 @@ const criticalPatterns = [
     ...
     entry: {
         'vendor': vendorTs,
-        'es6-polyfill': es6PolyfillTs,
         'app': [
             appTs,
             ...componentEntryPoints,
@@ -258,7 +257,6 @@ const criticalPatterns = [
 {% raw %}{%{% endraw %} extends template('page-blank', '@SprykerShop:ShopUi') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block template {% raw %}%}{% endraw %}
-    {% raw %}{%{% endraw %} set isNewFrontendBuildSupported = true {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} set isCssLazyLoadSupported = true {% raw %}%}{% endraw %}
 
     {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
@@ -267,7 +265,7 @@ const criticalPatterns = [
 
 {% info_block infoBox "Info" %}
 
-Make sure your styles from `node_modules` included in `.scss` files (not in `index.ts`). For example:
+Make sure your styles from `node_modules` are included in `.scss` files (not in `index.ts`). For example:
 
 `molecules/slick-carousel/slick-carousel.scss`:
 
@@ -280,4 +278,7 @@ Make sure your styles from `node_modules` included in `.scss` files (not in `ind
 
 {% endinfo_block %}
 
-8. Run `npm run yves` to rebuild the frontend with the new settings.
+8. Rebuild the frontend with the new settings:
+```bash
+npm run yves
+```

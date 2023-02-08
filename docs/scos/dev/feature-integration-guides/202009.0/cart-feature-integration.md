@@ -57,7 +57,7 @@ Make sure that above keys and corresponding translations are present in the `spy
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.

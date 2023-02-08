@@ -532,7 +532,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 Before removing company user, all records from DB table `spy_quote_company_user` related to company user must be removed.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

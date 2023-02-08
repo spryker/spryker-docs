@@ -259,7 +259,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 {% endinfo_block %}
 
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Overview and install the necessary features before beginning the integration step.
 

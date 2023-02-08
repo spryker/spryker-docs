@@ -23,6 +23,11 @@ redirect_from:
   - /v6/docs/about-documentation
   - /v6/docs/en/about-documentation
   - /docs/scos/user/intro-to-spryker/about-spryker.html
+related:
+  - title: Contributing to documentation
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
+  - title: What's new
+    link: docs/scos/user/intro-to-spryker/whats-new/whats-new.html
 ---
 
 Spryker Documentation is a central hub for knowledge and information about the [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#what-is-the-spryker-commerce-os). It details the aspects involved with setting up and using Spryker for your project.
@@ -32,10 +37,11 @@ We try to organize our documentation in such a way that it would be easy to find
 * [Split documentation](#documentation-breakdown) into documentation for specific target groups and tasks they want to accomplish.
 * Separate feature documentation into articles for various [personas](#personas): Developer, Back-Office User, and Shop User.
 * Version documentation according to the [product releases](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). To select a version for a specific product release, choose the version in the green dropdown on the right of each article.
-*	Use [tags](#tags) to distinct documentation by product versions and help you understand whether the documentation refers to B2B or B2C features.
+* Use [tags](#tags) to distinct documentation by product versions and help you understand whether the documentation refers to B2B or B2C features.
 <!--* Use [In-App assistant](#inapp) to allow finding documentation faster.-->
 
-## Documentation Breakdown
+## Documentation breakdown
+
 The Spryker documentation is broken into the following sections:
 **[About](/docs/scos/user/intro-to-spryker/intro-to-spryker.html)**: Is for people who are thinking about adopting the Spryker Commerce OS. Here you will find all the information you need to help you make your decision. This section also contains the Spryker release notes, documentation updates, and news.
 **[Features](/docs/scos/user/features/{{site.version}}/features.html)**: Contains descriptions of all Spryker features categorized into Capabilities. Feature overview pages contain a list of tasks and articles relevant for Developers, Back Office Users, and Shop Users. See [Personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas) for more information about these target groups.
@@ -46,6 +52,7 @@ The Spryker documentation is broken into the following sections:
 **[Tutorials and HowTos](/docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html)**: Contains step-by-step instructions on how to perform all types of technical tasks with the Spryker Commerce OS. This section is meant for developers.
 
 ## Personas
+
 In our documentation, we refer to the following personas:
 
 * Developer
@@ -127,7 +134,7 @@ The table below shows what specific roles each persona includes and what each ro
 </td>
         </tr>
              <tr>
-            <td>Marketplace Administrator</td>
+            <td>Marketplace administrator</td>
             <td>A marketplace operator is a company that offers a platform (online marketplace) to other third parties (merchants: retailers or wholesalers). An online marketplace is a type of e-commerce site where products are delivered and fulfilled by multiple merchants, whereas customer transactions are processed by the marketplace operator. The marketplace operator can have own physical or digital inventory (Amazon, Zalando, Apple) but it is not a must (Ebay, Idealo)</td>
         </tr>
                              <tr>
@@ -151,6 +158,7 @@ The table below shows what specific roles each persona includes and what each ro
 </table>
 
 ## Tags
+
 Tags help you to easier find documentation which is relevant for you. Tags are displayed on the right of the article, under the Table of Contents.
 We use the following tags:
 
@@ -170,9 +178,11 @@ You can filter out the documents by specific product versions. For this, select 
 ## Feedback
 
 ### Sending your Feedback
+
 We are striving to improve our documentation, make it easier for you to find the necessary articles, and provide you with all the information you need. You can help us with that by sending your comments and suggestions to [documentation@spryker.com](mailto:documentation@spryker.com)
 
 ### Rating Articles
+
 Your feedback is very important and much valued! Let us know what you think by clicking **Yes** or **No** for **Was this article helpful?** at the end of every article.
 
 ## Contributing to the Documentation
@@ -188,17 +198,20 @@ To report issues and fix documentation, you need a [GitHub account](https://gith
 ### Reporting Issues
 
 To report a documentation issue, do the following:
-1.	On an article page, click **Edit or Report** under the title of the article.
-2.	In the Spryker documentation GitHub repository, click **Issues** tab.
-3.	Click **New issue** on the right.
-4.	Fill in the required information and click **Submit issue**.
+
+1. On an article page, click **Edit or Report** under the title of the article.
+2. In the Spryker documentation GitHub repository, click **Issues** tab.
+3. Click **New issue** on the right.
+4. Fill in the required information and click **Submit issue**.
 
 ### Editing Documentation
+
 To edit a page directly on GitHub:
-1.	In the right upper corner, select the latest version of documentation. In the drop-down menu, it is always the last one.
-2.	Open the article you want to edit.
-3.	On the article page, click **Edit or Report** under the title of the article.
-4.	Fork the repository to suggest changes.
+
+1. In the right upper corner, select the latest version of documentation. In the drop-down menu, it is always the last one.
+2. Open the article you want to edit.
+3. On the article page, click **Edit or Report** under the title of the article.
+4. Fork the repository to suggest changes.
 
 {% info_block infoBox %}
 
@@ -206,7 +219,7 @@ You need to fork the repository only the first time you edit the Spryker documen
 
 {% endinfo_block %}
 
-3.	Click **Edit this file** in the top right menu and make the changes.  
+3. Click **Edit this file** in the top right menu and make the changes.  
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker+Documentation/edit+button.png)
 
 {% info_block infoBox %}
@@ -215,9 +228,9 @@ Spryker documentation is written using Markdown. If you don’t know Markdown ye
 
 {% endinfo_block %}
 
-4.	Once done, write a message explaining what you changed and click  **Propose file change**. You will see a a diff of your changes compared to the current version of the master branch.
-5.	Click **Create pull request**.
-6.	Click **Create pull request** again to confirm the creation.
+4. Once done, write a message explaining what you changed and click  **Propose file change**. You will see a a diff of your changes compared to the current version of the master branch.
+5. Click **Create pull request**.
+6. Click **Create pull request** again to confirm the creation.
 
 That’s it! Your pull request has been created. Our Documentation team will review it, and once approved, your changes will be merged and available on the documentation website.
 

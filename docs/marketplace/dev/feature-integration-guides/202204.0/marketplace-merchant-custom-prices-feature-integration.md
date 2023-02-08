@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 
 | NAME    | VERSION    | INTEGRATION GUIDE    |
 |----------------|------------------|-------------------|
-| Merchant Custom Prices                         | {{page.version}} | [Merchant Custom Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)                                    |
+| Merchant Custom Prices                         | {{page.version}} | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)                                    |
 | Marketplace Merchant Portal Product Management | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
@@ -32,7 +32,7 @@ composer require spryker-feature/marketplace-merchant-custom-prices:"{{page.vers
 ```
 
 {% info_block warningBox "Verification" %}
-    
+
 Make sure that the following modules were installed:
 
 | MODULE     | EXPECTED DIRECTORY       |
@@ -79,7 +79,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN     | SPECIFICATION     | PREREQUISITES | NAMESPACE  |
 |-----------------|-----------------|---------------|------------------|
 | MerchantRelationshipPreBuildPriceProductGroupKeyPlugin                   | Extends the logic for the Price Product group key generation. |               | Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProduct                                           |
-| MerchantRelationshipVolumePriceProductValidatorPlugin                    | Validates volume prices.                                   |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\PriceProduct                | 
+| MerchantRelationshipVolumePriceProductValidatorPlugin                    | Validates volume prices.                                   |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\PriceProduct                |
 | MerchantRelationshipPriceProductCollectionDeletePlugin                   | Removes price product merchant relationships.              |               | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct                                 |
 | MerchantRelationshipPriceProductTableFilterPlugin                        | Filters price product transfers.                           |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
 | MerchantRelationshipPriceProductAbstractTableConfigurationExpanderPlugin | Expands price product abstract table configuration.        |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
@@ -233,5 +233,48 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 Make sure that you see the validation error while attempting to set or create the customer price for the volume price.
 
 Make sure that you can delete the customer price.
+
+{% endinfo_block %}
+
+
+### 5) Filter out product offer prices
+
+{% info_block warningBox %}
+
+This option is only available if you have the [Marketplace Product Offer feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) installed.
+
+{% endinfo_block %}
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                                   | SPECIFICATION                     | PREREQUISITES | NAMESPACE                                                                      |
+|--------------------------------------------------------------------------|-----------------------------------|---------------|--------------------------------------------------------------------------------|
+| PriceProductOfferPriceProductTableFilterPlugin (Optional)                | Maps merchant relationship data.  |               | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductMerchantPortalGui |
+
+```php
+namespace Pyz\Zed\ProductMerchantPortalGui;
+
+use Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductMerchantPortalGui\PriceProductOfferPriceProductTableFilterPlugin;
+use Spryker\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider as SprykerProductMerchantPortalGuiDependencyProvider;
+
+class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductTableFilterPluginInterface>
+     */
+    protected function getPriceProductTableFilterPlugins(): array
+    {
+        return [
+            new PriceProductOfferPriceProductTableFilterPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Log in to the Merchant Portal with a merchant that has at least one merchant relationship and product offer.
+2. Open any product that has a product offer.
+3. Make sure that the Prices table does not contain product offer prices for both abstract and concrete products.
 
 {% endinfo_block %}

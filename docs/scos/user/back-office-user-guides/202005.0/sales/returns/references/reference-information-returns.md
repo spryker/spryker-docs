@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202005.0/sales/returns/references/returns-reference-information.html
 related:
   - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
   - title: Return Item States- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/return-item-states-reference-information.html
   - title: Managing Returns

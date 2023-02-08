@@ -1,5 +1,5 @@
 ---
-title: Scheduled Prices feature integration
+title: Integrate the Scheduled prices feature
 description: Learn how to integrate the Scheduled prices feature into your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

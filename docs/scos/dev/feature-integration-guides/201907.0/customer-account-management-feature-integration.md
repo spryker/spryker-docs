@@ -14,7 +14,7 @@ redirect_from:
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds **Redirect support for Customer login functionality**.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

@@ -1,7 +1,7 @@
 ---
 title: Integrating Heidelpay
 description: This article contains information on integrating the Heidelpay module into the Spryker Commerce OS.
-last_updated: Jun 16, 2021
+last_updated: August 2, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-integration-scos
 originalArticleId: 05ad4c88-a849-4d74-bdb3-898ab0b4e74a
@@ -34,7 +34,7 @@ related:
 
 {% info_block errorBox %}
 
-Heidelpay is not compatible with [gift cards](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html). We are working on a solution.
+Heidelpay is not compatible with [gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html). We are working on a solution.
 
 {% endinfo_block %}
 
@@ -201,85 +201,99 @@ eco: {
 ```twig
  ...
 
+{% raw %}{%{% endraw %} define data = {
+    backUrl: _view.previousStepUrl,
+    forms: {
+        payment: _view.paymentForm,
+    },
+    title: 'checkout.step.payment.title' | trans,
+    customForms: {
+        'heidelpay/sofort': ['sofort', 'heidelpay'],
+        'heidelpay/credit-card-secure': ['credit-card-secure', 'heidelpay'],
+    },
+} {% raw %}%}{% endraw %}
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} embed molecule('form') with {
- class: 'box',
- data: {
- form: data.forms.payment,
- options: {
- attr: {
- id: 'payment-form'
- }
- },
- submit: {
- enable: true,
- text: 'checkout.step.summary' | trans
- },
- cancel: {
- enable: true,
- url: data.backUrl,
- text: 'general.back.button' | trans
- }
- }
- } only {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} set paymentProviderIndex = loop.index {% raw %}%}{% endraw %}
- <h5>{% raw %}{{{% endraw %} ('checkout.payment.provider.' ~ name) | trans {% raw %}}}{% endraw %}</h5>
- <ul class="list spacing-y">
- {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
- <li class="list__item spacing-y clear">
- {% raw %}{%{% endraw %} embed molecule('form') with {
- data: {
- form: data.form[data.form.paymentSelection[key].vars.value],
- enableStart: false,
- enableEnd: false
- },
- embed: {
- index: loop.index ~ '-' ~ paymentProviderIndex,
- toggler: data.form.paymentSelection[key]
- }
- } only {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} set paymentProviderIndex = (loop.index0) {% raw %}%}{% endraw %}
- <h5>{% raw %}{{{% endraw %} ('checkout.payment.provider.' ~ name) | trans {% raw %}}}{% endraw %}</h5>
- <ul class="list spacing-y">
- {% raw %}{%{% endraw %} if choices is iterable {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
- <li class="list__item spacing-y clear">
- {% raw %}{%{% endraw %} include molecule('payment-method', 'CheckoutPage') with {
- data: {
- form: data.form[data.form.paymentSelection[key].vars.value],
- index: loop.index ~ '-' ~ paymentProviderIndex,
- toggler: data.form.paymentSelection[key],
- }
- } only {% raw %}%}{% endraw %}
- </li>
- {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
- <li class="list__item spacing-y clear">
- {% raw %}{%{% endraw %} include molecule('payment-method', 'CheckoutPage') with {
- data: {
- form: data.form[data.form.paymentSelection[paymentProviderIndex].vars.value],
- index: loop.index ~ '-' ~ paymentProviderIndex,
- toggler: data.form.paymentSelection[paymentProviderIndex],
- parentFormId: data.options.attr.id
- }
- } only {% raw %}%}{% endraw %}
- </li>
- {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
- </ul>
- {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
- </li>
- {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
- </ul>
- {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} embed molecule('form') with {
+        class: 'box',
+        data: {
+            form: data.forms.payment,
+            options: {
+                attr: {
+                    id: 'payment-form',
+                },
+            },
+            submit: {
+                enable: true,
+                isSingleClickEnforcerEnabled: false,
+                text: 'checkout.step.summary' | trans,
+                class: 'button button--success js-payone-credit-card__submit',
+            },
+            cancel: {
+                enable: true,
+                url: data.backUrl,
+                text: 'general.back.button' | trans,
+            },
+        },
+        embed: {
+            customForms: data.customForms,
+        },
+    } only {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} block errors {% raw %}%}{% endraw %}
+            {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+            {% raw %}{{{% endraw %} form_errors(data.form.paymentSelection) {% raw %}}}{% endraw %}
+        {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+
+        {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices %}
+                {% raw %}{%{% endraw %} set paymentProviderIndex = loop.index0 {% raw %}%}{% endraw %}
+                <h5>{% raw %}{{{% endraw %} name | trans {% raw %}}}{% endraw %}</h5>
+                <ul>
+                    {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
+                        <li class="list__item spacing-y clear">
+                            {% raw %}{%{% endraw %} embed molecule('form') with {
+                                data: {
+                                    form: data.form[data.form.paymentSelection[key].vars.name],
+                                    enableStart: false,
+                                    enableEnd: false,
+                                },
+                                embed: {
+                                    customForms: embed.customForms,
+                                    index: loop.index ~ '-' ~ paymentProviderIndex,
+                                    toggler: data.form.paymentSelection[key],
+                                },
+                            } only {% raw %}%}{% endraw %}
+                                {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
+                                    {% raw %}{{{% endraw %} form_row(embed.toggler, {
+                                        required: false,
+                                        component: molecule('toggler-radio'),
+                                        attributes: {
+                                            'target-class-name': 'js-payment-method-' ~ embed.index,
+                                        }
+                                    }) {% raw %}}}{% endraw %}
+                                    <div class="col col--sm-12 is-hidden js-payment-method-{{embed.index}}">
+                                        <div class="col col--sm-12 col--md-6">
+                                            {% raw %}{%{% endraw %} if embed.customForms[data.form.vars.template_path] is not defined {% raw %}%}{% endraw %}
+                                                {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+                                            {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
+                                                {% raw %}{%{% endraw %} set viewName = embed.customForms[data.form.vars.template_path] | first {% raw %}%}{% endraw %}
+                                                {% raw %}{%{% endraw %} set moduleName = embed.customForms[data.form.vars.template_path] | last {% raw %}%}{% endraw %}
+                                                {% raw %}{%{% endraw %} include view(viewName, moduleName) ignore missing with {
+                                                    form: data.form.parent
+                                                } only %}
+                                            {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+                                        </div>
+                                    </div>
+                                {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+                            {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
+                        </li>
+                    {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+                </ul>
+            {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+
 ```
 
 **src/Pyz/Yves/Twig/TwigConfig.php**

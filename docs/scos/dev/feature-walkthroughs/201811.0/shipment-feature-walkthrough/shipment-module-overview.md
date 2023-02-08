@@ -52,7 +52,7 @@ Additional behaviors can be attached to a shipment method from the Back Office:
 For each glossary key linked to a shipment carrier or methods, the corresponding entry for each locale configured in the application must be added to the glossary keys.
 {% endinfo_block %}
 
-For more information about the shipment method plugins, see [Shipment Methods Plugins](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html).
+For more information about the shipment method plugins, see [Shipment Methods Plugins](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html).
 
 ## Discounts Based on Shipment
 

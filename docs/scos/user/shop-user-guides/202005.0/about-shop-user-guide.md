@@ -15,4 +15,4 @@ In this section you will find the instructions and guidelines on working with De
 
 Our main goal is to make user's interaction as simple, intuitive and efficient as possible. It has been proven that easy and understandable interface dramatically impacts the performance and leads to bigger sales.
 
-Be sure to also check out the [video tutorials](/docs/scos/user/intro-to-spryker/spryker-videos.html) for additional information.
+Be sure to also check out [Spryker Academy](/docs/scos/user/intro-to-spryker/videos-and-webinars/spryker-academy.html) for additional training meterials.

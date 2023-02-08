@@ -74,7 +74,7 @@ Make sure that the following changes in transfer objects have been applied:
 
 </div></section>
  
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.

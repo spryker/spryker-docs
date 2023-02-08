@@ -12,7 +12,7 @@ To learn more about the feature and to find out how end users use it, see [Navig
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
+| INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|
 | [Navigation feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/navigation-feature-integration.html) | [Retrieving navigation trees](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-navigation-trees.html) | [File details: navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) | [Navigation module: Reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-module-reference-information.html) |
 | [Glue API: Navigation feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html) |  | [File details: navigation_node.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation-node.csv.html) | |

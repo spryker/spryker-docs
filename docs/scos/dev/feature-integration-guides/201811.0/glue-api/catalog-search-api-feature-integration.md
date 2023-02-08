@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/(/docs/scos/dev/feature-integration-guides/201811.0/glue-api/catalog-search-api-feature-integration.html)
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/ht-setup-spryker-with-mysql
   - /v1/docs/ht-setup-spryker-with-mysql
   - /v1/docs/en/ht-setup-spryker-with-mysql
+related:
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
 ---
 
 Spryker supports connecting to the MySQL database. To install a demo shop with this database, follow the instructions to adjust the configuration.
@@ -32,7 +35,7 @@ Spryker works only with MySQL version 5.7 or higher.
 
 ## Adjust Spryker to run with MySQL
 
-To run the Spryker Demoshop with MySQL, adjust some parts in your configs:
+To run the Spryker Demoshop with MySQL, adjust the following parts in your configs:
 
 1. In `config/Shared/config_default.php`, modify the database configuration:
 

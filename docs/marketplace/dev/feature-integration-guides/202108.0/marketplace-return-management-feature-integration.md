@@ -415,7 +415,7 @@ console data:import glossary
 {% info_block warningBox "Verification" %}
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the configured data has been added to the `spy_glossary` table.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -466,7 +466,7 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesReturnExtension\Dependency\Plugin\ReturnExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesReturnExtension\Dependency\Plugin\ReturnExpanderPluginInterface>
      */
     protected function getReturnExpanderPlugins(): array
     {
@@ -478,16 +478,6 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 ```
 
 </details>
-
-{% info_block warningBox "Verification" %}
-
-<!--Describe how a developer can check they have completed the step correctly.-->
-
-1. To verify `MerchantReturnPreCreatePlugin` make sure that when you create return for merchant order items, row in `spy_sales_return` that identifies the new return has `spy_sales_return.merchant_reference` field populated.
-2. To verify `MerchantReturnCreateRequestValidatorPlugin` make sure, that you can't create return for items from different merchants.
-3. To verify `MerchantReturnExpanderPlugin` make sure that you can see merchant order references on return detail page.
-
-{% endinfo_block %}
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/AbstractTriggerOmsEventCommandPlugin.php</summary>
@@ -900,7 +890,17 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that when you create and process return for merchant order items, it's statuses synced between state machines in the following way:
+1. To verify `MerchantReturnPreCreatePlugin`, make sure that when you create a return for merchant order items, the row in `spy_sales_return`, which identifies the new return, has the `spy_sales_return.merchant_reference` field populated.
+2. To verify `MerchantReturnCreateRequestValidatorPlugin`, make sure that you can't create a return for items from different merchants.
+3. To verify `MerchantReturnExpanderPlugin`, make sure that you can see merchant order references on the return details page.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+<!--Describe how a developer can check they have completed the step correctly.-->
+
+Make sure that when you create and process a return for merchant order items, its statuses are synced between state machines in the following way:
 
 | Marketplace SM     | Default Merchant SM     | Main Merchant SM
 | -------- | ------------------- | ---------- |
@@ -928,7 +928,7 @@ use Spryker\Zed\SalesReturnGui\SalesReturnGuiDependencyProvider as SprykerSalesR
 class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesReturnGuiExtension\Dependency\Plugin\ReturnCreateTemplatePluginInterface[]
+     * @return array<\Spryker\Zed\SalesReturnGuiExtension\Dependency\Plugin\ReturnCreateTemplatePluginInterface>
      */
     protected function getReturnCreateTemplatePlugins(): array
     {
@@ -1014,7 +1014,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the menu item **Returns** in the **Marketplace** section and **My Returns** in the **Sales** section.
+Make sure that in the navigation menu of the Back Office, you can see the menu item **Returns** in the **Marketplace** section and **My Returns** in the **Sales** section.
 
 {% endinfo_block %}
 
@@ -1067,7 +1067,7 @@ use SprykerShop\Yves\MerchantSalesReturnWidget\Widget\MerchantSalesReturnCreateF
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {
@@ -1076,7 +1076,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
         ];
     }
     /**
-     * @return \SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface[]
+     * @return array<\SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface>
      */
     protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
     {

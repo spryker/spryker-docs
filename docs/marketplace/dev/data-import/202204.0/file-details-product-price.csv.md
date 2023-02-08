@@ -14,7 +14,7 @@ related:
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
 
-This document contains content of the **product_price.csv** file to configure [prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
+This document contains content of the **product_price.csv** file to configure [prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -43,8 +43,8 @@ These are the header fields to be included in the CSV file:
 
 This file has the following dependencies:
 
-- [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-- [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 - `stores.php` configuration file of the Demo Shop PHP project
 
 ## Template File & Content Example

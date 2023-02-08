@@ -384,7 +384,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 Make sure that no  empty guest cart will be saved to the database in customer login.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.

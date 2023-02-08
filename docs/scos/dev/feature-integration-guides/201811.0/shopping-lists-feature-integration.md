@@ -835,7 +835,7 @@ Here you can find a list of integration guides for related features.
 | Shopping Lists Product Options	|2018-10	  |N/A  |-->
 
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.

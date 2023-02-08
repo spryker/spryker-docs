@@ -422,7 +422,7 @@ class SalesOrderThresholdGuiDependencyProvider extends SprykerSalesOrderThreshol
 Make sure that:<ul><li>After the _&lt;add to cart&gt;_ action, when the global threshold is set and NOT met by quote subtotal, QuoteTransfer.expenses[] has an item with threshold expense type.</li><li>After the_ &lt;add to cart&gt;_ action, when the global threshold is set and met by quote subtotal, QuoteTransfer.expenses[] does not have an item with threshold expense type.</li><li>After the _&lt;add to cart&gt;_ action, when the global threshold is set and the amount of threshold is not met, a message related to the threshold is shown on the **Cart** page.</li><li>When the hard threshold is set globally, you cannot place an order if its subtotal does NOT meet the threshold.</li><li>When the soft threshold is set globally and order subtotal does not meet the threshold, the order can be placed and the threshold expenses will be saved to the `spy_sales_expense` database table.</li><li>When the soft threshold with fixed or flexible fee is set globally and order subtotal does not meet the threshold, the threshold fee will be added to an order.</li><li>**Edit global threshold** page in back office has support for hard threshold, soft threshold with a message, soft threshold with a fixed fee, and soft threshold with a flexible fee.</li></ul>
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please review and install the necessary features before beginning the integration step.
 

@@ -13,22 +13,21 @@ redirect_from:
   - /docs/scos/user/features/202200.0/payments-feature-overview.html
 ---
 
-The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)), one or multiple payment methods during the checkout process. Most orders are paid with a single payment method but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
+The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)), one, or multiple payment methods during the checkout process. Most orders are paid with a single payment method, but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
 
-With different payment gateways, like Amazon Pay, PayPal and BS Payone, you can adapt to your customers' needs and define the availability of payment methods based on customer preferences and country-specific regulations.
+With different payment gateways, like Amazon Pay, PayPal, and BS Payone, you can adapt to your customers' needs and define the availability of payment methods based on customer preferences and country-specific regulations.
 
-To make it possible, your customers to select a payment method during the checkout, you should fulfill the following conditions:
+So that your customers can select a payment method during the checkout, you must fulfill the following conditions:
+* Make the payment method active.
+* Assign the payment method to specific stores.
 
-* Make it active.
-* Assign to specific stores.
+These settings can be configured in the Back Office.
 
-This can be configured in the Back Office.
-
-The Spryker Commerce OS offers integrations with several payment providers that can be used in the checkout and order management. Easily define the availability of a provider based on customer preferences and local regulations and specify the order the providers are displayed in during checkout.
+The Spryker Commerce OS offers integrations with several payment providers that can be used in checkout and order management. You can easily define the availability of a provider based on customer preferences and local regulations and specify the order in which the providers are displayed during checkout.
 
 ## Payment providers
 
-The Spryker Commerce OS supports integration of the following payment providers, which are our official partners:
+The Spryker Commerce OS supports the integration of the following payment providers, which are our official partners:
 
 * [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen.html)
 * [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
@@ -49,22 +48,22 @@ The Spryker Commerce OS supports integration of the following payment providers,
 
 ## Dummy payment
 
-By default, Spryker provides the [DummyPayment](https://github.com/spryker/dummy-payment) module, which has Credit Card and Invoice payments implemented. You can use these implemented payment methods, or refer to the DummyPayment modulewhen implementing additional payment methods in your project.
-For details about how a new payment method is implemeted, see the articles on [how to implement the Direct Debit payment method](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these articles, you can implement other payment methods for your projects.
+By default, Spryker provides the [DummyPayment](https://github.com/spryker/dummy-payment) module, which has credit card and invoice payments implemented. You can use these implemented payment methods or refer to the DummyPayment module when implementing additional payment methods in your project.
+For details about implementing a new payment method, see [how to implement the Direct Debit payment method](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these documents, you can implement other payment methods for your projects.
 
 ## Payment methods in the Back Office
 
-In the Back Office, you can view all payment methods available in the shop application, make a payment method active (visible) or inactive (invisible) in the Payment step of the checkout process. In addition, you can define stores in which a payment method will be displayed. If changed, the payment methods will be updated in the checkout as well.
+In the Back Office, you can view all payment methods available in the shop application and make a payment method active (visible) or inactive (invisible) in the **Payment** step of the checkout process. In addition, you can define stores in which a payment method is displayed. If changed, the payment methods are updated in the checkout as well.
 
 {% info_block warningBox "Note" %}
 
-Keep in mind that prior to managing payment methods in the Back Office, first, you need to create them by [importing payment methods data using a .CSV file](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html).
+Before managing payment methods in the Back Office, you need to create them by [importing payment methods data using a .CSV file](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html).
 
 {% endinfo_block %}
 
 ![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Payment/Payment+Methods+Overview/payment-methods-list.png)
 
-To learn more on how to make a payment method available during the checkout and assign it to different store, see [Edit payment methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/edit-payment-methods.html).
+To learn more on how to make a payment method available during the checkout and assign it to a different store, see [Edit payment methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/edit-payment-methods.html).
 
 <!-- Managing Payment Methods in the Back Office
 

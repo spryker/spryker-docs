@@ -410,7 +410,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 Make sure that when you edit any product variant in Zed you have "Product Alternatives" tab, and you can add some product SKU's as alternatives.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

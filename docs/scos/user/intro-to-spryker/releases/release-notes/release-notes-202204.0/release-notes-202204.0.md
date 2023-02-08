@@ -18,7 +18,7 @@ Inside the cart and checkout endpoints, we have added information about the mini
 
 #### Documentation
 
-[Order Threshold feature overview](/docs/scos/user/features/202108.0/checkout-feature-overview/order-thresholds-overview.html)
+[Order Threshold feature overview](/docs/scos/user/features/202204.0/checkout-feature-overview/order-thresholds-overview.html)
 
 ### Discount management
 
@@ -37,7 +37,7 @@ For cases when several non-exclusive discounts apply to a customer’s cart, a B
 
 #### Documentation
 
-[Discount priority](/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html#discount-priority)
+[Discount priority](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html#discount-priority)
 
 ### Category-based discounts
 
@@ -47,7 +47,7 @@ We have added `category` to the list of fields for discount conditions and calcu
 
 #### Documentation
 
-[Decision rule](/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html#decision-rule)
+[Decision rule](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html#decision-rule)
 
 ### Time-defined discount validity
 
@@ -57,7 +57,7 @@ Discount validity now supports HH:MM time in addition to dates. For example, a v
 
 #### Documentation
 
-[Discount validity interval](/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html#discount-validity-interval)
+[Discount validity interval](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html#discount-validity-interval)
 
 ### Strikethrough prices on promotional products
 
@@ -67,7 +67,7 @@ When the **Cart** page shows eligible promotional products, these products now s
 
 #### Documentation
 
-[Promotions & Discounts feature overview](/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html)
+[Promotions & Discounts feature overview](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html)
 
 
 ### Multiple abstract products within a promotional product discount
@@ -78,7 +78,7 @@ Promotional product discounts can now designate more than one abstract SKU as th
 
 
 #### Documentation
-[Promotional product](/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html#promotional-product)
+[Promotional product](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html#promotional-product)
 
 
 ### Storefront
@@ -136,7 +136,8 @@ Users can now export the data from the tables of the Back Office or the Merchant
 The developers, in their turn, can enable a business user to export a table view by assigning an exporting functionality (for example, plugin or trait) to a Table Query container or Repository.
 
 #### Documentation
-[Creating and configuring Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html)
+
+[Create and configure Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html)
 
 ## PHP compatibility window
 

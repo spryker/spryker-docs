@@ -232,7 +232,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 <br>
 </details>
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

@@ -22,49 +22,57 @@ redirect_from:
   - /v2/docs/en/publish-and-synchronization
   - /v1/docs/publish-and-synchronization
   - /v1/docs/en/publish-and-synchronization
+related:
+  - title: Implement Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+  - title: Handle data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+  - title: Adding publish events
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+  - title: Implement event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+  - title: Implement synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+  - title: Debug listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
+  - title: Publish and Synchronize and multi-store shop systems
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+  - title: Publish and Synchronize repeated export
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+  - title: Synchronization behavior - enabling multiple mappings
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-To access data rapidly, a client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. The client does not have direct access to the [SQL database](/docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html) used by the back end. To keep the client data sources always up to date, all the changes made on the back end should be propagated to the front-end data sources. To do this, Spryker implements a two-step process, called Publish and Synchronize:
+To access data rapidly, a client (Shop App) uses a key-value storage, *Redis*, and a search engine, *Elasticsearch*, as data sources. The client does not have direct access to the [SQL database](/docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html) used by the back end. To keep the client data sources always up to date, all the changes made on the back end should be propagated to the frontend data sources. To do this, Spryker implements a two-step process, called Publish and Synchronize:
 
-1.  Publish:
-
-    1.  An event that describes a change is generated.
-
-    2.  All the data related to the change is collected.
-
-    3.  The data is published in the form suitable for the client.
-
-2.  Synchronize:
-
-    1.  The data is synchronized(synced) to Redis and Elasticsearch.
+1. Publish:
+   1. An event that describes a change is generated.
+   2. All the data related to the change is collected.
+   3. The data is published in the form suitable for the client.
+2. Synchronize:
+   1. The data is synchronized(synced) to Redis and Elasticsearch.
 
 
 The advantages of the approach are as follows:
 
-*   High performance and fast (semi-real-time) sync. By default, changes are synced every second.
-
-*   Possibility to stack and optimize SQL queries while publishing data .
-
-*   Possibility to trigger updates automatically by manipulating Propel Entities and without triggering the sync manually.
-
-*   Easy data transformation into the format that can be consumed by a front-end application.
-
-*   Updates can be done incrementally without doing full exports.
-
-*   Data is always available in the SQL database, even if Redis or Elasticsearch storage is corrupted or outdated. You can re-sync it at any time.
-
-*   Data can be localized and target a particular store.
+* High performance and fast (semi-real-time) sync. By default, changes are synced every second.
+* Possibility to stack and optimize SQL queries while publishing data.
+* Possibility to trigger updates automatically by manipulating Propel Entities and without triggering the sync manually.
+* Easy data transformation into the format that can be consumed by a frontend application.
+* Updates can be done incrementally without doing full exports.
+* Data is always available in the SQL database, even if Redis or Elasticsearch storage is corrupted or outdated. You can re-sync it at any time.
+* Data can be localized and target a particular store.
 
 
 Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html) to learn more.
 
-The process relies heavily on Propel Behaviors. Propel Behaviors are used to trigger actions automatically on updating the database. This way, you don’t need to trigger any step of the process manually in code. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
+The process relies heavily on Propel Behaviors. Propel Behaviors are used to trigger actions automatically on updating the database. This way, you don't need to trigger any step of the process manually in code. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
 
-### Triggering the publish process
+### Triggering the Publish process
 
 There are 2 ways to start the Publish process:
 
-1.  Trigger the publish event manually using the [Event Facade](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html):
+1. Trigger the publish event manually using the [Event Facade](/docs/scos/dev/back-end-development/data-manipulation/event/add-events.html):
 
 ```php
 $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));
@@ -91,19 +99,15 @@ Publish and Synchronize Process schema:
 ### Publish
 
 On triggering the publish process, an event or events are posted to a queue. Each event message posted to the queue contains the following information on the event that triggered it:
-
-*   Event name
-
-*   ID
-
-*   Names of the corresponding publisher and transfer classes
-
-*   The list of modified columns
-
-*   The foreign keys used to backtrack the updated Propel entities
+* Event name
+* ID
+* Names of the corresponding publisher and transfer classes
+* The list of modified columns
+* The foreign keys used to backtrack the updated Propel entities
 
 
-However, it will not contain the actual data that has changed. Find an example below:
+However, it will not contain the actual data that has changed. See the following example:
+
 ```json
 {
 	"listenerClassName":"Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Event\\Listener\\UrlStorageListener",
@@ -130,9 +134,9 @@ However, it will not contain the actual data that has changed. Find an example b
 
 Each event is consumed by a publisher plugin mapped to it. The number of events depends on how many publisher plugins are configured for a specific update. For example, when the last product item is sold, its availability status should be changed to _not available_. The availability status of the product bundle it belongs to should be changed as well. Two publishers are required for this purpose: for product availability and product bundle availability. This results into two events posted into the queue.
 
-To consume an event, the queue adapter calls the publisher plugin specified in the `listenerClassName` field of the event message. The publisher is a plugin class implemented in one of the modules. It queries the data affected by an event and transforms it into the format suitable for the front-end data storage (Redis or Elasticsearch).
+To consume an event, the queue adapter calls the publisher plugin specified in the `listenerClassName` field of the event message. The publisher is a plugin class implemented in one of the modules. It queries the data affected by an event and transforms it into the format suitable for a frontend data storage (Redis or Elasticsearch).
 
-The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast sync. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
+The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast sync. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
 
 ### Synchronize
 

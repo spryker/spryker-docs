@@ -402,7 +402,7 @@ Make sure that category image handling is integrated successfully by going to Ze
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.

@@ -1231,7 +1231,7 @@ Make sure you’ve integrated category store assignments successfully by checkin
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 To install the Category Management feature front end, follow the steps below.
 

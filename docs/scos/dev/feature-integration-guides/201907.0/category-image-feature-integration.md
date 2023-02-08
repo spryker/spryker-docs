@@ -380,7 +380,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 Make sure that category image handling is integrated successfully by going to Zed and creating, editing, and deleting categories with images.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.

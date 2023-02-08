@@ -10,7 +10,7 @@ redirect_from:
   - /v5/docs/en/cms-block-widget-integration
 ---
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

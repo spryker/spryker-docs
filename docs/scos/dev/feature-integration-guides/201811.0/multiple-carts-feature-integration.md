@@ -404,7 +404,7 @@ Here you can find a list of related feature integration guides.
 | Multiple Carts Quick Add to Cart | 2018.11 | [Multiple Carts + Quick Add to Cart feature integration](multiple-carts-quick-order-feature-integration-2018) |
 | Multiple Carts Reorder | 2018.11 | [Multiple Carts + Reorder feature integration](multiple-carts-reorder-feature-integration-2018) | -->
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

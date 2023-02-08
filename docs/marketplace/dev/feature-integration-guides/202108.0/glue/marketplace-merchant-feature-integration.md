@@ -99,7 +99,7 @@ use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantsResourceRouteP
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {
@@ -126,11 +126,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             OrdersRestApiConfig::RESOURCE_ORDERS,
             new MerchantsByOrderResourceRelationshipPlugin()
         );
-        
-        $resourceRelationshipCollection->addRelationship(
-            MerchantProductOffersRestApiConfig::RESOURCE_PRODUCT_OFFERS,
-            new MerchantByMerchantReferenceResourceRelationshipPlugin()
-        );
 
         return $resourceRelationshipCollection;
     }
@@ -149,7 +144,7 @@ use Spryker\Glue\MerchantsRestApi\Plugin\UrlsRestApi\MerchantRestUrlResolverAttr
 class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\UrlsRestApiExtension\Dependency\Plugin\RestUrlResolverAttributesTransferProviderPluginInterface[]
+     * @return array<\Spryker\Glue\UrlsRestApiExtension\Dependency\Plugin\RestUrlResolverAttributesTransferProviderPluginInterface>
      */
     protected function getRestUrlResolverAttributesTransferProviderPlugins(): array
     {
@@ -171,7 +166,5 @@ Make sure that the `MerchantAddressesResourceRoutePlugin` plugin is set up by se
 Make sure that the `MerchantAddressByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/merchants/{% raw %}{{merchantReference}}{% endraw %}?include=merchant-addresses`. The response should include the `merchant-addresses` resource along with the merchants.
 
 Make sure that after sending the request `GET https://glue.mysprykershop.com/url-resolver?url={% raw %}{{merchantUrl}{% endraw %}`, the merchant entity type and ID is returned in response.
-
-Make sure that by sending the request `GET https://glue.mysprykershop.com/orders?include=merchant`, merchant attributes are returned in response.
 
 {% endinfo_block %}

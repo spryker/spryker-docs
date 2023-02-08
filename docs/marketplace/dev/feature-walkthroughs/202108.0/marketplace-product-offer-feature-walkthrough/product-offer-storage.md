@@ -8,7 +8,7 @@ Product Offer and data related to it is cached to enhance performance.
 
 {% info_block infoBox "" %}
 
-For details about how to use and configure Redis as a key-value storage, see [Using and configuring Redis as a key-value storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html).
+For details about how to use and configure Redis as a key-value storage, see [Using and configuring Redis as a key-value storage](/docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html).
 
 {% endinfo_block %}
 

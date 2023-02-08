@@ -14,7 +14,7 @@ redirect_from:
 The following feature integration Guide expects the basic feature to be in place. The current feature integration Guide only adds the **Orders Rest API** functionality.
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install all these necessary features:
 

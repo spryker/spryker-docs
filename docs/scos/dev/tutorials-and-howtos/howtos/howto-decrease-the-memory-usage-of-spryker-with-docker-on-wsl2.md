@@ -42,4 +42,4 @@ processors=2 # Sets the number of CPU cores WSL2 is allowed to use to 2.
 
 ![refresh-lxssmanager-service](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+decrease+the+memory+usage+of+Spryker+with+Docker+on+WSL2/refresh-lxssmanager-service.png)
 
-Now, the VMmem memory usage does not exceed the specified limit.
+After these steps, the VMmem memory usage does not exceed the specified limit.

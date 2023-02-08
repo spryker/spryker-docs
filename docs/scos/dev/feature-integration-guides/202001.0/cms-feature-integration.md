@@ -1250,7 +1250,7 @@ Make sure that:
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 

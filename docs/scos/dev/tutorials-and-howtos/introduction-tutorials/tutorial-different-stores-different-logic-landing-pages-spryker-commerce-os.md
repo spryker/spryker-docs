@@ -23,6 +23,9 @@ redirect_from:
   - /v1/docs/t-different-stores-different-logic-landing-pages
   - /v1/docs/en/t-different-stores-different-logic-landing-pages
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-sores-different-logic-landing-pages-spryker-commerce-os.html
+related:
+  - title: "HowTo: Set up multiple stores"
+    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html 
 ---
 
 {% info_block infoBox %}
@@ -33,11 +36,11 @@ This tutorial is also available on the Spryker Training website. For more inform
 
 ## Challenge description
 
-Spryker supports a possibility of having multi-stores. Not just that, it also supports having different logic for different stores in a very elegant and simple way.
+Spryker lets you have multi-stores and different logic for different stores in a very elegant and simple way.
 
 Just extend the functionality for a specific store and postfix the module name with your store name.
 
-In this task, you simply implement different home pages for the Backend Office for different stores.
+This tutorial shows how to implement different home pages for the Backend Office for different stores.
 
 {% info_block infoBox %}
 
@@ -47,10 +50,10 @@ You can use the same steps for any other logic in the shop.
 
 ## Extend the DE store
 
-Override the current home page. There is a set of steps you need to follow in order to override the current homepage:
+Override the current home page. There is a set of steps you need to follow to override the current homepage:
 
-1. In the `Communication` layer of the Application module in Zed in `src/Pyz/Zed`, add the `Controller` directory.
-2. Inside the `Controller` directory, extend the `IndexController` to return just a string when calling the `indexAction()`.
+1. In the `Communication` layer of the `Application` module, in Zed, in `src/Pyz/Zed`, add the `Controller` directory.
+2. Inside `Controller`, extend `IndexController` to return just a string when calling `indexAction()`.
 
 ```php
 namespace Pyz\Zed\Application\Communication\Controller;
@@ -81,21 +84,21 @@ Add a new store and a new home page for it.
 $stores['DEMO'] = $stores['DE'];
 ```
 
-2. Create a `config_default_DEMO.php` and a `config_default_development_DEMO.php`. You can copy other config files.
+2. Create `config_default_DEMO.php` and `config_default_development_DEMO.php`. You can copy other config files.
 3. Add a new Zed module to `src/Pyz/Zed` and call it `ApplicationDEMO`. This naming is a convention in Spryker.
 
 {% info_block infoBox %}
 
-To extend the logic for a specific shop, the module name should be `$moduleName$shopName`.
+To extend the logic for a specific shop, the module name must be `$moduleName$shopName`.
 
 {% endinfo_block %}
 
-4. Inside the new module, add a **Communication** layer directory and a **Controller** directory inside.
+4. Inside the new module, add a `Communication` layer directory with a `Controller` directory inside.
 5. Add a new `IndexController` for the DEMO store.
 
 {% info_block infoBox %}
 
-The main difference between the `IndexController` in step 1 and this controller is the namespace, and of course the output.
+The main difference between `IndexController` in step 1 and this controller is the namespace and the output.
 
 {% endinfo_block %}
 
@@ -116,18 +119,21 @@ class IndexController extends AbstractController
 }
 ```
 
-6. The shop is ready to support both landing pages for both stores. Now, modify the virtual machine to redirect you to the right store. For this, change the store in _Nginx_ config for zed:
+1. The shop is ready to support both landing pages for both stores. Modify the virtual machine to redirect you to the right store. For this, change the store in the `nginx` config for Zed:
 
-    1. Copy `nginx` config for DE store with a new name `sudo cp /etc/nginx/sites-available/DE_development_zed /etc/nginx/sites-available/DEMO_development_zed`.
+    1. Copy the `nginx` config for DE store with a new name `sudo cp /etc/nginx/sites-available/DE_development_zed /etc/nginx/sites-available/DEMO_development_zed`.
     2. Open the config file `sudo vim /etc/nginx/sites-available/DEMO_development_zed`.
     3. Change `$application_store` to `DEMO`.
-    4. Change the `server_name` to `~^zed\\.demo\\..+\\.local$`.
-    5. If you use devVM, add a new host to `/etc/hosts` with ip VM.
+    4. Change `server_name` to `~^zed\\.demo\\..+\\.local$`.
+    5. If you use dev VM, add a new host to `/etc/hosts` with IP VM.
     6. Save the changes.
 
-7. Restart _Nginx_ by running `sudo /etc/init.d/nginx restart`.
-8. Finally, run `console data:import:store`. This command will create a store record in our `spy_store database` table.
+2. Restart Nginx by running `sudo /etc/init.d/nginx restart`.
+3. Create a store record in your `spy_store database` table:
+```bash
+console data:import:store
+```
 
-Check the Backend Office (`https://zed.mysprykershop.com/`) again to see the new message for the DEMO store.
+To see the new message for the DEMO store, heck the Backend Office (`https://zed.mysprykershop.com/`) again.
 
 <!-- Last review date: Jul 18, 2018 by Hussam Hebbo, Anastasija Datsun -->

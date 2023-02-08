@@ -19,7 +19,7 @@ One of the main ways of transferring data from Zed to Yves is the *Publish & Syn
 
 Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This document describes how to do that.
 
-## Why you may need to skip synchronization
+## Why to skip synchronization
 
 Publish and Synchronize creates expected data duplication: the same data is stored both in the database and key-value storage. In high-load scenarios, like B2C, where there is usually a large number of customers, such data duplication is necessary to ensure performance when processing requests. In B2B, where there is normally a huge amount of data and a smaller number of customers, the duplication penalty is not justified.
 
@@ -47,9 +47,7 @@ There are two limitations of using the database as storage on Yves compared to t
 
 Out of the box, the `StorageDatabase` module can work with two RDBS vendors—MySQL or MariaDB and PostgreSQL. However, you can add support for any other database by providing the implementation for `Spryker\Client\StorageDatabaseExtension\Storage\Reader\StorageReaderInterface` as described in the following sections.
 
-## Installation
-
-Install the required modules:
+## Install the required modules
 
 ```bash
 composer require spryker/storage:3.8.0 spryker/storage-database
@@ -225,7 +223,7 @@ class StorageDatabaseConfig extends SprykerStorageDatabaseConfig
 
 The top-level key here, `product_concrete`, is the resource key prefix. Any table name fragment entries (prefix, name, suffix) can be omitted. In this case, a fragment is set to its default value according to the rules described above.
 
-## Enabling the storage database
+## Enable the storage database
 
 Adjust the Storage module's dependency provider:
 
@@ -252,7 +250,7 @@ class StorageDependencyProvider extends SprykerStorageDependencyProvider
 }
 ```
 
-## Selecting a storage engine
+## Select a storage engine
 
 Out of the box, Spryker can interact with storage databases provided by two vendors: *PostgresSQL* and *MySQL*. To use PostgresSQL as the storage database engine, add the following dependency provider to the project:
 

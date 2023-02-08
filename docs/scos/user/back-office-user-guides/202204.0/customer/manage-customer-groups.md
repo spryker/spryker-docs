@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
 related:
-  - title: Customer Accounts
-    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+  - title: Customer Groups overview
+    link: docs/scos/user/features/202204.0/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
-This article describes how to create customer groups in the Back Office. By default, customer groups are only used when [defining discount conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html#define-on-what-conditions-the-discount-can-be-applied). A developer can configure customer groups to be used in other parts of the Back Office.
+This article describes how to create customer groups in the Back Office. By default, customer groups are only used when [defining discount conditions](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html#define-on-what-conditions-the-discount-can-be-applied). A developer can configure customer groups to be used in other parts of the Back Office.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Review the [reference information](#reference-information-manage-customer-groups
 2. On the **Add a customer group**, page, enter a **NAME**.
 3. Optional: Enter a **DESCRIPTION**.
 4. Click the **Customers** tab.
-5. On the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.    
+5. On the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.
 6. Click **Save**.
     This opens the **Customer Groups** page with a success message displayed. The group is displayed in the list.
 
@@ -42,8 +42,8 @@ Review the [reference information](#reference-information-manage-customer-groups
 2. On the **Edit customer group** page, enter the **NAME**.
 3. Update the **DESCRIPTION**.
 4. Click the **Customers** tab.
-5. On the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.   
-6. On the **Assigned customers** subtab, clear the checkboxes next to the customers you want to remove from the group.   
+5. On the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.
+6. On the **Assigned customers** subtab, clear the checkboxes next to the customers you want to remove from the group.
 7.  Click **Save**.
     This opens the **View customer group** page with a success message displayed.
 

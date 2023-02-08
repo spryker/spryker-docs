@@ -12,10 +12,10 @@ related:
   - title: Managing Guest Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing Carts of Registered Users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/page.version/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -68,16 +68,16 @@ On a project level, install the following plugins:
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\CartsRestApi;
- 
+
 use Spryker\Zed\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
 use Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\QuoteCreatorPluginInterface;
 use Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin;
- 
+
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
 	/**
@@ -90,31 +90,23 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 }
 ```
 
-<br>
 </details>
 
-{% info_block warningBox "your title goes here" %}
-Make sure that the following endpoints are available:<ul><li>https://glue.mysprykershop.commmmmm/carts</lihttps://glue.mysprykershop.comomomomomom/guest-carts</li></ul>
+{% info_block warningBox "Verification" %}
+
+Make sure that the following endpoints are available:
+* `https://glue.mysprykershop.com/carts`
+* `https://glue.mysprykershop.com/guest-carts`
+
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
 Make sure that it is possible to create more than one cart.
+
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-Make sure that after creating several carts, a response from https://glue.mysprykershop.commmmmm/carts GET request contains data about all created carts.
+Make sure that after creating several carts, a response from the `GET https://glue.mysprykershop.com/carts` request contains data about all created carts.
 {% endinfo_block %}
-
-<!-- links to:
-Managing Guest Carts
-Managing Carts of Registered Users
-
-Spryker Core feature integration
-Multiple Carts feature integration
-Cart feature integration -->
-
-*Last review date: Aug 02, 2019*
-
-<!--Tihran Voitov, Yuliia Boiko-->

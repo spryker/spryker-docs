@@ -42,7 +42,6 @@ To deploy a specific application version, copy the version of the respective Git
 
 
 ## 2. Define the version to deploy
-To define the application version to deploy:
 
 1. In the AWS Management Console, go to **Services** > **Systems Manager** > **Application Management** > **[Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/)**.
 
@@ -66,7 +65,6 @@ Enter *latest* if you want to deploy the last built application version. You can
 
 
 ## 3. Run a deployment pipeline
-To run a pipeline:
 
 1. In the AWS Management Console, go to **Services** > **[CodePipeline](https://eu-central-1.console.aws.amazon.com/codesuite/codepipeline/pipelines)**.
 

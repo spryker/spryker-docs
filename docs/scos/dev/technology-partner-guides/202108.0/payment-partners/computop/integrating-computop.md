@@ -540,7 +540,8 @@ class StepFactory extends SprykerStepFactory
             $this->getConfig()->getEscapeRoute(),
             $this->getFlashMessenger(),
             $this->getCalculationClient(),
-            $this->getCheckoutPaymentStepEnterPreCheckPlugins()
+            $this->getCheckoutPaymentStepEnterPreCheckPlugins(),
+            $this->createPaymentMethodKeyExtractor(),
         );
     }
 

@@ -1467,7 +1467,7 @@ Make sure that when you chose the supplier for transferred cart in ERP, and redi
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

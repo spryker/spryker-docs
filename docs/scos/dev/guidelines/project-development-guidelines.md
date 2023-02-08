@@ -14,11 +14,18 @@ redirect_from:
   - /v6/docs/en/project-development-guidelines
   - /v5/docs/project-development-guidelines
   - /v5/docs/en/project-development-guidelines
+related:
+  - title: Data Processing Guidelines
+    link: docs/scos/dev/guidelines/data-processing-guidelines.html
+  - title: Making your Spryker shop secure
+    link: docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+  - title: Module configuration convention
+    link: docs/scos/dev/guidelines/module-configuration-convention.html
 ---
 
 Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy  complex business requirements.
 
-There are different strategies developers can use to develop projects. Before starting developing, choose a [development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) that meets your requirements. To get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date, we recommend the following approaches:
+There are different strategies developers can use to develop projects. Before starting developing, choose a [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that meets your requirements. To get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date, we recommend the following approaches:
 - Configuration
 - Plug and play
 - Project modules

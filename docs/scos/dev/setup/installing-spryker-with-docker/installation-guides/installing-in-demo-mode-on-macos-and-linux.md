@@ -1,7 +1,7 @@
 ---
 title: Installing in Demo mode on MacOS and Linux
 description: Learn how to install Spryker in Demo mode on MacOS and Linux.
-last_updated: Oct 21, 2021
+last_updated: Jul 5, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-macos-and-linux
 originalArticleId: 3b78ae4c-d2a3-4dfa-87e1-7d0c4096ee22
@@ -18,7 +18,17 @@ redirect_from:
   - /v4/docs/en/installation-guide-demo-mode
   - /v3/docs/spryker-in-docker-dev-mode-201907
   - /v3/docs/en/spryker-in-docker-dev-mode-201907
+related: 
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
+
+{% info_block infoBox "Info" %}
+
+Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following the steps from the [Switch to ARM architecture](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html) technical enhancement guide.
+
+{% endinfo_block %}
+
 
 This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on MacOS and Linux.
 
@@ -38,13 +48,13 @@ To install Docker prerequisites, follow one of the guides:
     * Clone the B2C repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p1 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0 --single-branch ./b2b-demo-shop
     ```
 4. Depending on the cloned repository, navigate into the cloned folder:
 
@@ -72,121 +82,6 @@ Make sure that you are in the correct folder by running the `pwd` command.
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-## Optional: Switch to ARM architecture
-
-Follow the steps in this section if you are installing on a device with an ARM chip, like Apple M1. Otherwise, [configure and start the instance](#configure-and-start-the-instance).
-
-### Update Sass
-
-Replace x86 based Sass with an ARM based one:
-
-1. In `package.json`, remove `node-sass` dependencies.
-2. Add `sass` and `sass-loader` dependencies:
-
-```json
-...
-"sass": "~1.32.13",
-"sass-loader": "~10.2.0",
-...
-```
-
-3. Update `@spryker/oryx-for-zed`:
-
-```json
-...
-"@spryker/oryx-for-zed": "~2.11.5",
-...
-```
-
-4. In `frontend/configs/development.js`, add configuration for `saas-loader`:
-```js
-loader: 'sass-loader',
-options: {
-   implementation: require('sass'),
-}
-```
-
-5. Enter the Docker SDK CLI:
-
-```bash
-docker/sdk cli
-```
-
-6. Update `package-lock.json` and install dependencies based on your package manager:
-    * npm:
-    ```bash
-    npm install
-    ```
-    * yarn:
-    ```bash
-    yarn install
-    ```
-7. Rebuild Yves:
-
-```bash
-npm run yves
-```
-
-8. Rebuild Zed:
-
-```bash
-npm run zed
-```
-
-
-### Update RabbitMQ and Jenkins services
-
-In the deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
-
-```yaml
-services:
-...
-    broker:
-        engine: rabbitmq
-        version: '3.9'
-        api:
-            username: 'spryker'
-            password: 'secret'
-        endpoints:
-            queue.spryker.local:
-            localhost:5672:
-                protocol: tcp
-...
-        scheduler:
-        engine: jenkins
-        version: '2.324'
-        endpoints:
-            scheduler.spryker.local:
-...
-```
-
-
-### Enable Jenkins CSRF protection
-
-
-1. In the deploy file, enable the usage of the CSRF variable:
-
-```yaml
-...
-services:
-  scheduler:
-    csrf-protection-enabled: true
-...
-```    
-
-2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable:
-
-```php
-...
-$config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
-    SchedulerConfig::SCHEDULER_JENKINS => [
-        SchedulerJenkinsConfig::SCHEDULER_JENKINS_CSRF_ENABLED => (bool)getenv('SPRYKER_JENKINS_CSRF_PROTECTION_ENABLED'),
-    ],
-];
-...
-```
-
-
 ## Configure and start the instance
 
 
@@ -213,40 +108,31 @@ docker/sdk up
 
 3. Update the `hosts` file:
 
-```bash
-echo "127.0.0.1 zed.de.spryker.local yves.de.spryker.local glue.de.spryker.local zed.at.spryker.local yves.at.spryker.local glue.at.spryker.local zed.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local backoffice.de.spryker.local" | sudo tee -a /etc/hosts
-```
+Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
 {% info_block infoBox %}
 
-If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+To get the list of the instructions, you can run `docker/sdk install` after `bootstrap`.
 
 {% endinfo_block %}
 
 {% info_block warningBox %}
 
-Depending on the hardware performance, the first project launch can take up to 20 minutes.
+Depending on the hardware performance, the first project launch can take up to *20 minutes*.
 
 {% endinfo_block %}
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the following endpoints.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
-| APPLICATION | ENDPOINTS |
-| --- | --- |
-| The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
-| the Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
-| Glue API | glue.de.spryker.local, glue.at.spryker.local, glue.us.spryker.local |
-| Jenkins (scheduler) | scheduler.spryker.local |
-| RabbitMQ UI (queue manager) | queue.spryker.local |
-| Mailhog UI (email catcher) | mail.spryker.local |
+### Back-Office
 
-{% info_block infoBox "RabbitMQ UI credentials" %}
+The default credentials to access the Back Office are located inside `/src/Pyz/Zed/User/UserConfig.php`.
 
-To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
+### RabbitMQ
 
-{% endinfo_block %}
+To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. For information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 ## Getting the list of useful commands
 
@@ -257,6 +143,6 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 * [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html)
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
+* [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
 * [Setting up a self-signed SSL certificate](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Adjusting Jenkins for a Docker environment](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html)

@@ -3,11 +3,6 @@ title: Marketplace Shipment + Checkout feature integration
 description: This document describes the process how to integrate Marketplace Shipment + Checkout feature into your project
 last_updated: Jul 05, 2021
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Shipment feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
-  - title: Checkout feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shipment + Checkout feature into a Spryker project.
@@ -23,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | -----------|
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
-| Checkout | {{page.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) |
+| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 
 ### 1) Set up behavior
 
@@ -47,7 +42,7 @@ use Spryker\Yves\MerchantShipment\Plugin\CheckoutPage\MerchantShipmentCheckoutPa
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\StepEngine\CheckoutPageStepEnginePreRenderPluginInterface[]
+     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\StepEngine\CheckoutPageStepEnginePreRenderPluginInterface>
      */
     protected function getCheckoutPageStepEnginePreRenderPlugins(): array
     {

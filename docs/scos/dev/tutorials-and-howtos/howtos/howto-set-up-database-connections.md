@@ -21,6 +21,9 @@ redirect_from:
   - /v2/docs/en/ht-setup-database-connections
   - /v1/docs/ht-setup-database-connections
   - /v1/docs/en/ht-setup-database-connections
+related:
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
 ---
 
 Spryker provides flexible database connection configuration.
@@ -29,7 +32,7 @@ Spryker provides flexible database connection configuration.
 
 The most probable use case and the Zed DB connection are good examples.
 
-For this, the open environment config file (for example, `APP_DIR/config/Shared/config_default-development_DE.php`) and add the following parameters:
+For this, open the environment config file (for example, `APP_DIR/config/Shared/config_default-development_DE.php`) and add the following parameters:
 
 ```php
 $config[PropelConstants::ZED_DB_USERNAME] = 'username';
@@ -40,7 +43,7 @@ $config[PropelConstants::ZED_DB_PORT] = 3306;
 $config[PropelConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE_MYSQL];
 ```
 
-By default, Spryker provides configuration for a single connection (two zed and default, but with the same configuration). The configuration you can find in `APP_DIR/config/Shared/config_propel.php` can look like the following:
+By default, Spryker provides configuration for a single connection (two Zed and default, but with the same configuration). The configuration that you can find in `APP_DIR/config/Shared/config_propel.php` can look like the following:
 
 ```php
 $engine = $config[PropelConstants::ZED_DB_ENGINE];
@@ -50,7 +53,7 @@ $config[PropelConstants::PROPEL]['database']['connections']['zed'] = $connection
 
 ## Multiple connections
 
-Custom case which lets a project have more than one connections to different DBs. To define a new connection find a Propel configuration `APP_DIR/config/Shared/config_propel.php` and add the following (example for Postgres):
+Custom case which lets a project have more than one connections to different DBs. To define a new connection find a Propel configuration `APP_DIR/config/Shared/config_propel.php` and add the following (an example for Postgres):
 
 ```php
 $config[PropelConstants::PROPEL]['database']['connections']['additional_db_connection'] = [

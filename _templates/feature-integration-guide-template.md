@@ -190,7 +190,7 @@ console data:import glossary
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the configured data has been added to the `spy_glossary` table.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 ---
 
@@ -394,7 +394,7 @@ Enable the following behaviors by registering the plugins:
 
 ---
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the {Feature Name} feature front end.
 
@@ -449,7 +449,7 @@ console data:import glossary
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the configured data has been added to the `spy_glossary` table.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 ---
 

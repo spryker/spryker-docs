@@ -419,7 +419,7 @@ Make sure that when you edit any product variant in Zed you have "Product Altern
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

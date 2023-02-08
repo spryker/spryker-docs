@@ -23,14 +23,14 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
-| Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  |
+| Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/integrate-the-shopping-lists-feature.html)  |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shopping-lists:"{{page.version}}" --update-with-dependencies 
+composer require spryker-feature/marketplace-shopping-lists:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -47,7 +47,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Generate transfer changes: 
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -102,7 +102,7 @@ Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
-```csv
+```
 shopping_list.pre.check.product_offer,Product Offer is not found.,en_US
 shopping_list.pre.check.product_offer,Produktangebot wurde nicht gefunden.,de_DE
 shopping_list.pre.check.product_offer.approved,Product Offer is not approved.,en_US
@@ -187,7 +187,7 @@ Prepare import data according to your requirements using demo data:
 
 **data/import/common/common/marketplace/product_offer_shopping_list_item.csv**
 
-```csv
+```
 shopping_list_item_key,product_offer_reference
 shopping-list-item-key-38,offer2
 shopping-list-item-key-39,offer402
@@ -255,7 +255,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     * @var string
     */
     protected const COMMAND_SEPARATOR = ':';
-        
+
     /**
     * @param \Spryker\Zed\Kernel\Container $container
     *
@@ -266,7 +266,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [                
                 new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ProductOfferShoppingListDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHOPPING_LIST_ITEM),
             ];
-            
+
         return $commands;
     }
 }
@@ -391,7 +391,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
             new ProductOfferShoppingListItemMapperPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Client\ShoppingListExtension\Dependency\Plugin\ShoppingListItemToItemMapperPluginInterface>
      */
@@ -462,7 +462,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
             new MerchantProductAddItemPreCheckPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ShoppingListItemCollectionExpanderPluginInterface>
      */
@@ -473,7 +473,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
             new MerchantProductShoppingListItemCollectionExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ItemToShoppingListItemMapperPluginInterface>
      */
@@ -483,7 +483,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
             new ProductOfferItemToShoppingListItemMapperPlugin(),
         ];
     }
-    
+
      /**
      * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ShoppingListItemBulkPostSavePluginInterface>
      */
@@ -519,5 +519,5 @@ Make sure that the following plugins were registered:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  |
+| Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/integrate-the-shopping-lists-feature.html)  |
 | Glue API: Marketplace Shopping Lists feature integration | {{page.version}} |  <!---[Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-lists-feature-integration.html)-->  |

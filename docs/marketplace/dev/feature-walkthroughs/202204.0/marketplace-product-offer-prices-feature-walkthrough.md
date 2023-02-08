@@ -12,7 +12,7 @@ Price types (for example,gross price, net price) are assigned to each price, and
 
 A new price type can be added by importing price data. The price type in the CSV file will be added or updated.
 
-To learn more details about prices import file, see: [File details: product_price.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html)
+To learn more details about prices import file, see: [File details: product_price.csv](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-product-price.csv.html)
 
 Depending on the price mode selected by a customer in Storefront, the price can have gross or net value. You can run your shop in both modes as well as select net mode for business customers, for example.
 
@@ -22,7 +22,7 @@ To support product offer prices, a *PriceProductOffer* database table has been a
 
 In addition, product offers support volume prices. Merchants can now enter volume prices for product offers, and customers will see the corresponding price on their Storefront based on the quantity they have chosen. The volume prices for product offers work the same as the volume prices for products.
 
-To learn more about prices and volume prices, see: [Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
+To learn more about prices and volume prices, see: [Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html)
 
 {% info_block warningBox "User documentation" %}
 
@@ -63,7 +63,7 @@ The following schema illustrates the Marketplace Product Offer Prices domain mod
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
 | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)          | [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html)          | [File details: price-product-offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html)           |
 |[Glue API: Marketplace Product Offer Prices integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)           |           |           |

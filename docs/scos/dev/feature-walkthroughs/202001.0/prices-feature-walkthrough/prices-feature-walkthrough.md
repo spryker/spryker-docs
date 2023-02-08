@@ -15,5 +15,5 @@ To learn more about the feature and to find out how end users use it, see [Price
 
 | INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|
-| [Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html) |  | [HowTo - Handle twenty five million prices in Spryker Commerce OS](/docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html) | [Money module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/money-module-reference-information.html) |
+| [Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html) |  | [HowTo: Handle twenty five million prices in Spryker Commerce OS](/docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html) | [Money module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/money-module-reference-information.html) |
 | [Glue API: Product Price feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html) |  |  |  |  |

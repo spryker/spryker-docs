@@ -876,7 +876,7 @@ Go to the Zed UI Sales overview and check the order.
 - Verify if the correct amount is displayed per sales order item.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

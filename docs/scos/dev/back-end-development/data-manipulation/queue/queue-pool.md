@@ -1,5 +1,5 @@
 ---
-title: Queue Pool
+title: Queue pool
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue-pool
@@ -21,11 +21,15 @@ redirect_from:
   - /v2/docs/en/queue-pool
   - /v1/docs/queue-pool
   - /v1/docs/en/queue-pool
+related:
+  - title: Queue
+    link: docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
 ---
 
 Queue pool is designed to allow P&S ([Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html)) messages to be sent to several queues.
 
 ## Configuration
+
 Queue pools are defined with unique names in `config/Shared/stores.php`
 
 ```php
@@ -46,8 +50,11 @@ Queue pools are defined with unique names in `config/Shared/stores.php`
 ];
 ...
 ```
-## Sending Messages
+
+## Sending messages
+
 Messages must be prepared for sending to queue pools. You can do it by setting the `QueuePool` property for the `QueueSendMessageTransfer`.
+
 ```php
 <?php
 ...
@@ -57,6 +64,5 @@ $queueSendTransfer = new QueueSendMessageTransfer();
     $queueClient->sendMessage('mail', $queueSendTransfer);
 ...
 ```
-In this example, the message is configured to be sent to mail queue in DE and US store queues.
 
-<!--Last review date: Apr 25, 2019 by by Ehsan Zanjani, Andrii Tserkovnyi-->
+In this example, the message is configured to be sent to mail queue in DE and US store queues.

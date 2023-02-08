@@ -19,6 +19,13 @@ redirect_from:
   - /v3/docs/docker-install-prerequisites-macos-201907
   - /v3/docs/en/docker-install-prerequisites-macos-201907
   - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html
+related:
+  - title: Installing Docker prerequisites on Linux
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html
+  - title: Installing Docker prerequisites on Windows with WSL1
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
+  - title: Installing Docker prerequisites on Windows with WSL2
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
 This document describes the prerequisites for installing Spryker in Docker on MacOS.
@@ -41,7 +48,7 @@ Review the system and software requirements in the table and configure them usin
 
 Follow the steps to install and configure the required software:
 
-1. Download and install [Docker Desktop (Mac)](https://desktop.docker.com/mac/stable/amd64/Docker.dmg).
+1. Download and install [Docker Desktop (Mac)](https://docs.docker.com/desktop/mac/install/).
 
 2. Accept the privilege escalation request "Docker Desktop needs privileged access.".
 
@@ -86,4 +93,3 @@ If you've already selected an installation mode, follow one of the guides below:
 * [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html)

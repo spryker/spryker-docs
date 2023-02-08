@@ -13,6 +13,6 @@ To learn more about the feature and to find out how end users use it, see [Resou
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |
+|INSTALLATION GUIDES  |
 |---------|
 | [Resource Sharing feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/resource-sharing-feature-integration.html) |

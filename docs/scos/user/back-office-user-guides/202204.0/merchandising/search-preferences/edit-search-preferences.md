@@ -2,6 +2,11 @@
 title: Edit search preferences
 description: Learn how to edit search preferences in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Define search preferences
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-preferences/define-search-preferences.html
+  - title: Search feature overview
+    link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
 ---
 
 This document describes how to edit search preferences for product attributes in the Back Office.
@@ -33,7 +38,7 @@ This section describes attributes you see and enter when editing search preferen
 
 ### ATTRIBUTE KEY
 
-A [product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) to which the search preferences are assigned. The values of the product attribute are used to search products by. For example, the `color` attribute is added to search. One of the values of the attribute is `green`. When a customer searches for `green`, the search returns all the products with this attribute value assigned.
+A [product attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html) to which the search preferences are assigned. The values of the product attribute are used to search products by. For example, the `color` attribute is added to search. One of the values of the attribute is `green`. When a customer searches for `green`, the search returns all the products with this attribute value assigned.
 
 ### FULL TEXT
 
@@ -41,7 +46,7 @@ Defines if all words in search terms are searched. The results that match all th
 
 For example, **FULL TEXT** is enabled for the following attribute key-value pairs:
 
-| Key | Value|
+| KEY | VALUE|
 | - | - |
 | focus_adjustment | Auto/Manual |
 | flash | Manual |

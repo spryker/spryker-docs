@@ -3,9 +3,6 @@ title: Marketplace Product Option feature integration
 last_updated: Jul 28, 2021
 Description: This document describes the process how to integrate the Marketplace Product Option feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Option feature into a Spryker project.
@@ -44,7 +41,6 @@ Make sure the following modules have been installed:
 | MerchantProductOptionDataImport | vendor/spryker/merchant-product-option-data-import |
 | MerchantProductOptionGui | vendor/spryker/merchant-product-option-gui |
 | MerchantProductOptionStorage | vendor/spryker/merchant-product-option-storage |
-| MerchantProductOptionExtension | vendor/spryker/merchant-product-option-extension |
 
 {% endinfo_block %}
 
@@ -103,7 +99,7 @@ Make sure that the following changes were applied in transfer objects:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
 checkout.item.option.pre.condition.validation.error.exists,"Product option of %name% is not available anymore.",en_US
@@ -118,7 +114,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
@@ -128,11 +124,24 @@ Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_product_option_group.csv**
 
-```csv
+```
 product_option_group_key,merchant_reference,approval_status,merchant_sku
 insurance,MER000001,approved,spr-425453
 ```
 
+Add the `product_option_group_key` column to product_option.csv:
+
+**data/import/common/common/product_option.csv**
+
+```
+abstract_product_skus,option_group_id,tax_set_name,group_name_translation_key,group_name.en_US,group_name.de_DE,option_name_translation_key,option_name.en_US,option_name.de_DE,sku,product_option_group_key
+ilyakubanov marked this conversation as resolved.
+"012,013,014,015,016,017,018,019,020,021,022,023,024,025,026,027,028,029,030,031,032,033,034,035,036,037,038,039,040,041,042,043,044,045,046,047,048,049,050,051,052,053,054,055,056,057,058,059,060,061,062,063,064,065,066,067,068,069,070,071,072,073,074,075,076,077,078,079,080,081,082,083,084,085,086,087,088,089,090,091,092,093,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,200,201,202,203,204,205",1,Entertainment Electronics,product.option.group.name.warranty,Warranty,Garantie,product.option.warranty_1,One (1) year limited warranty,Ein (1) Jahr begrenzte Garantie,OP_1_year_warranty,warranty
+,1,Entertainment Electronics,product.option.group.name.warranty,Warranty,Garantie,product.option.warranty_2,Two (2) year limited warranty,Zwei (2) Jahre begrenzte Garantie,OP_2_year_warranty,warranty
+,1,Entertainment Electronics,product.option.group.name.warranty,Warranty,Garantie,product.option.warranty_3,Three (3) year limited warranty,Drei (3) Jahre begrenzte Garantie,OP_3_year_warranty,warranty
+"001,002,003,004,005,006,007,008,009,010,011,012,024,025,026,027,028,029,030,031,032,033,034,035,036,037,038,039,040,041,042,043,044,045,046,047,048,049,050,051,052,053,054,055,056,057,058,059,060,061,062,063,064,065,066,067,068,069,070,083,084,085,086,087,088,089,090,091,092,093,094,095,096,097,098,099,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214",2,Entertainment Electronics,product.option.group.name.insurance,Insurance,Versicherungsschutz,product.option.insurance,Two (2) year insurance coverage,Zwei (2) Jahre Versicherungsschutz,OP_insurance,insurance
+"001,002,003,004,005,006,007,008,009,010,018,019,020,021,022,023,024,025,026,027,028,029,030,031,032,033,034,035,036,037,038,039,040,041,042,043,044,045,046,047,048,049,050,051,052,053,054,055,056,057,058,059,060,061,062,063,064,065,066,067,068,069,070,071,084,085,086,087,088,089,090,091,092,093,094,095,096,097,098,099,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210",3,Entertainment Electronics,product.option.group.name.gift_wrapping,Gift wrapping,Geschenkverpackung,product.option.gift_wrapping,Gift wrapping,Geschenkverpackung,OP_gift_wrapping,wrapping
+```
 
 #### Register data importer:
 
@@ -188,6 +197,38 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+Modify `ProductOptionWriterStep`:
+
+**src/Pyz/Zed/DataImport/Business/Model/ProductOption/ProductOptionWriterStep.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport\Business\Model\ProductOption;
+
+use Pyz\Zed\DataImport\Business\Model\Tax\TaxSetNameToIdTaxSetStep;
+use Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface;
+use Spryker\Zed\DataImport\Business\Model\DataImportStep\PublishAwareStep;
+
+class ProductOptionWriterStep extends PublishAwareStep implements DataImportStepInterface
+{
+    ...
+    public function execute(DataSetInterface $dataSet)
+    {
+        $productOptionGroupEntity = SpyProductOptionGroupQuery::create()
+            ->filterByName($dataSet[self::KEY_GROUP_NAME_TRANSLATION_KEY])
+            ->filterByKey($dataSet[self::KEY_PRODUCT_OPTION_GROUP_KEY])
+            ->findOneOrCreate();
+        $productOptionGroupEntity
+            ->setName($dataSet[static::KEY_OPTION_NAME_TRANSLATION_KEY])
+            ->setActive($this->isActive($dataSet, $productOptionGroupEntity))
+            ->setFkTaxSet($dataSet[TaxSetNameToIdTaxSetStep::KEY_TARGET])
+            ->save();
+        ...
+    }
+}
+```
+
 Import data:
 
 ```bash
@@ -228,7 +269,7 @@ use Spryker\Zed\ProductOption\ProductOptionDependencyProvider as SprykerProductO
 class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOptionGuiExtension\Dependency\Plugin\ProductOptionListActionViewDataExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOptionGuiExtension\Dependency\Plugin\ProductOptionListActionViewDataExpanderPluginInterface>
      */
     protected function getProductOptionListActionViewDataExpanderPlugins(): array
     {
@@ -238,7 +279,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     }
 
     /**
-     * @return \Spryker\Zed\ProductOptionGuiExtension\Dependency\Plugin\ProductOptionListTableQueryCriteriaExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOptionGuiExtension\Dependency\Plugin\ProductOptionListTableQueryCriteriaExpanderPluginInterface>
      */
     protected function getProductOptionListTableQueryCriteriaExpanderPlugins(): array
     {
@@ -248,7 +289,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     }
 
     /**
-     * @return \Spryker\Zed\ProductOptionExtension\Dependency\Plugin\ProductOptionGroupExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOptionExtension\Dependency\Plugin\ProductOptionGroupExpanderPluginInterface>
      */
     protected function getProductOptionGroupExpanderPlugins(): array
     {
@@ -272,7 +313,7 @@ use Spryker\Zed\ProductOptionStorage\ProductOptionStorageDependencyProvider as S
 class ProductOptionStorageDependencyProvider extends SprykerProductOptionStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOptionStorageExtension\Dependency\Plugin\ProductOptionCollectionFilterPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOptionStorageExtension\Dependency\Plugin\ProductOptionCollectionFilterPluginInterface>
      */
     protected function getProductOptionCollectionFilterPlugins(): array
     {
@@ -306,7 +347,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
     protected function getMerchantProductOptionStoragePlugins(): array
     {
@@ -320,8 +361,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure merchants can create product option groups and values in the Merchant Portal.
-Make sure that merchant product option information is shown on product details page, when it is approved and active.
-Make sure that merchant product option information is displayed in the cart, checkout and in the user account.
+Make sure that merchant product option information is shown on product details page when it is approved and active.
+Make sure that merchant product option information is displayed in the cart, checkout, and user account.
 Make sure that merchant product options are a part of the marketplace/merchant order and all totals are calculated correctly.
 
 {% endinfo_block %}

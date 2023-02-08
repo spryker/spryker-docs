@@ -6,11 +6,17 @@ redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
 ---
 
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
+
 The `spryker-eco/tideways` module provides a `TidewaysMonitoringExtensionPlugin` to send monitoring information to the tideways service.
 
 {% info_block infoBox "New Relic installation in Docker based projects" %}
 
-For installation instructions in Docker based projects, see [Configuring Tideways](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#configuring-tideways)
+For installation instructions in Docker based projects, see [Configuring Tideways](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html#configure-tideways)
 
 {% endinfo_block %}
 

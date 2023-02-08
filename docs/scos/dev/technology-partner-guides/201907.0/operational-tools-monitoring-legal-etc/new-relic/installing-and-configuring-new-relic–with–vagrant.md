@@ -1,6 +1,8 @@
 ---
 title: Installing and configuring New Relic with Vagrant
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/technology-partner-guides/201907.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with-vagrant.html
 related:
   - title: Migration Guide - Session
     link: docs/scos/dev/module-migration-guides/migration-guide-session.html

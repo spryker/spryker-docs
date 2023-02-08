@@ -1,4 +1,4 @@
-version: "202204.0"
+version: "202212.0"
 
 repository: spryker/spryker-docs
 
@@ -116,6 +116,17 @@ defaults:
       sidebar: "scos_user_sidebar"
       role: "user"
   -
+     scope:
+       path: "docs/sdk"
+     values:
+       product: "sdk"
+  -
+     scope:
+       path: "docs/sdk/dev"
+     values:
+       sidebar: "sdk_dev_sidebar"
+       role: "dev"
+  -
     scope:
       path: "docs/cloud"
     values:
@@ -125,28 +136,6 @@ defaults:
       path: "docs/cloud/dev"
     values:
       sidebar: "cloud_dev_sidebar"
-      role: "dev"
-  -
-    scope:
-      path: "docs/fes"
-    values:
-      product: "frontend-enablement-service"
-  -
-    scope:
-      path: "docs/fes/dev"
-    values:
-      sidebar: "fes_dev_sidebar"
-      role: "dev"
-  -
-    scope:
-      path: "docs/paas-plus"
-    values:
-      product: "platform-as-a-service-plus"
-  -
-    scope:
-      path: "docs/paas-plus/dev"
-    values:
-      sidebar: "paas_plus_dev_sidebar"
       role: "dev"
   -
     scope:
@@ -161,17 +150,6 @@ defaults:
       role: "user"
   -
      scope:
-       path: "docs/fes"
-     values:
-       product: "frontend-enablement-service"
-  -
-     scope:
-       path: "docs/fes/dev"
-     values:
-       sidebar: "fes_dev_sidebar"
-       role: "dev"
-  -
-     scope:
        path: "docs/paas-plus"
      values:
        product: "platform-as-a-service-plus"
@@ -181,6 +159,18 @@ defaults:
      values:
        sidebar: "paas_plus_dev_sidebar"
        role: "dev"
+  -
+     scope:
+       path: "docs/pbc"
+     values:
+       product: "pbc"
+  -
+    scope:
+      path: "docs/pbc/all"
+    values:
+      sidebar: "pbc_all_sidebar"
+      role: "all"
+
 
 versions:
   '201811.0': '201811.0'
@@ -191,6 +181,8 @@ versions:
   '202009.0': '202009.0'
   '202108.0': '202108.0'
   '202204.0': '202204.0'
+  '202212.0': '202212.0'
+  '202304.0': 'Upcoming release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -206,6 +198,9 @@ versioned_categories:
       - data-import
       - data-export
       - legacy-demoshop
+      - front-end
+      - setup
+      - technical-enhancement
   scos:
     user:
       - features
@@ -224,6 +219,29 @@ versioned_categories:
       - legacy-demoshop
       - technology-partner-guides
       - devops-migration-guides
+      - system-requirements
+  pbc:
+    all:
+      - cart-and-checkout
+      - content-management-system
+      - discount-management
+      - gift-cards
+      - identity-access-management
+      - user-management
+      - return-management
+      - emails
+      - carrier-management
+      - price-management
+      - ratings-reviews
+      - request-for-quote
+      - search
+      - shopping-list-and-wishlist
+      - tax-management
+      - warehouse-management-system
+      - product-information-management
+      - product-relationship-management
+
+
 
 # these are defaults used for the front matter for these file types
 
@@ -233,9 +251,10 @@ sidebars:
   - cloud_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
+  - sdk_dev_sidebar
   - acp_user_sidebar
-  - fes_dev_sidebar
   - paas_plus_dev_sidebar
+  - pbc_all_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -254,6 +273,8 @@ algolia:
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
   max_record_size: 20000
   indices:
+    - name: 'pbc_all'
+      title: 'Packaged Business Capabilities'
     - name: 'scos_user'
       title: 'SCOS User'
     - name: 'scos_dev'
@@ -262,15 +283,14 @@ algolia:
       title: 'Marketplace User'
     - name: 'marketplace_dev'
       title: 'Marketplace Developer'
+    - name: 'sdk_dev'
+      title: 'SDK Developer'
     - name: 'cloud_dev'
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'fes_dev'
-      title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'
-      title: 'Platform as a Service Plus Developer'
-
+      title: 'PaaS+'
 sass:
     sass_dir: css
     style: compressed

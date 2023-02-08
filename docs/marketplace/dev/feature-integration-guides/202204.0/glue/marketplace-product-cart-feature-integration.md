@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 
 | NAME        | VERSION | INTEGRATION GUIDE |
 | ----------- | ------- | ------------------|
-| Cart API | {{page.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
+| Cart API | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
 | Marketplace Product API | {{page.version}} | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html) |
 
 
@@ -46,7 +46,7 @@ use Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi\MerchantProductCart
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface[]
+     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface>
      */
     protected function getCartItemExpanderPlugins(): array
     {

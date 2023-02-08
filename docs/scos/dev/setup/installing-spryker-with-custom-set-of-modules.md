@@ -1,5 +1,5 @@
 ---
-title: Installing Spryker with Custom Set of Modules
+title: Installing Spryker with custom set of modules
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installation-guide-chose-modules
@@ -21,6 +21,13 @@ redirect_from:
   - /v2/docs/en/installation-guide-chose-modules
   - /v1/docs/installation-guide-chose-modules
   - /v1/docs/en/installation-guide-chose-modules
+related: 
+  - title: Install module structure and configuration
+    link: docs/scos/dev/setup/install-module-structure-and-configuration.html
+  - title: Managing SCOS dependencies with Composer
+    link: docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
+  - title: Redis configuration
+    link: docs/scos/dev/setup/redis-configuration.html
 ---
 
 Spryker allows you to change the modules included in a project at your will. You can add, remove, upgrade etc the modules a project consists of or even build a unique set of modules that suits specifically your needs. To do so:

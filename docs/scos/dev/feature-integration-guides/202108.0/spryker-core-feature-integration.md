@@ -674,7 +674,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the front end of the Spryker Core feature.
 

@@ -46,7 +46,7 @@ When you create the collector, make sure its resource type is called the same as
 
 ## Prepare the database
 
-1. Extend the `spy_url` table with a new foreign-key to your entity table. Follow the existing naming convention for such columns. Prefix the name with `fk_resource_` and end with the name of the new entity—for example, `fk_resource_my_entity`.
+1. Extend the `spy_url` table with a new foreign key to your entity table. Follow the existing naming convention for such columns. Prefix the name with `fk_resource_` and end with the name of the new entity—for example, `fk_resource_my_entity`.
 
 2. The propel schema XML file must appear as follows:
 
@@ -82,7 +82,7 @@ The name of the new property must match the name of the newly added database col
 
 {% endinfo_block %}
 
-The transfer definition xml must appear as follows:
+The transfer definition XML must appear as follows:
 
 **Pyz/Shared/MyBundle/Transfer/my_bundle.transfer.xml**
 
@@ -152,7 +152,7 @@ The `\Spryker\Zed\Url\Business\UrlFacade::createUrl()` method persists a new URL
 
 To set up the frontend, in Yves, create a `Controller` class and make sure it is discoverable to the responsible router.
 
-In the Spryker Legacy Demoshop, a basic infrastructure is provided that automatically collects the new *`my_entity`* resource types to the key-value storage (Redis) and the `\Pyz\Yves\Collector\Plugin\Router\StorageRouter` matches URLs that are stored there.
+In the Spryker Legacy Demoshop, basic infrastructure is provided that automatically collects the new *`my_entity`* resource types to the key-value storage (Redis), and the `\Pyz\Yves\Collector\Plugin\Router\StorageRouter` matches URLs that are stored there.
 
 This router gets a stack of `\Pyz\Yves\Collector\Creator\ResourceCreatorInterface` which handles the URL resource linked to the matching URLs.
 
@@ -164,7 +164,7 @@ If there is no `ResourceCreator` registered for the *`my_entity`* resource type,
 
 {% endinfo_block %}
 
-To create an instance of `ResourceCreatorInterface` that provides information to a controller to handle URLs for your custom entity and register the `ResourceCreator` in the `StorageRouter`, follow this example:
+To create an instance of `ResourceCreatorInterface` that provides information to a controller to handle URLs for your custom entity and register `ResourceCreator` in the `StorageRouter`, follow this example:
 
 **Code sample**
 
@@ -242,7 +242,7 @@ class MyEntityResourceCreator extends AbstractResourceCreator
 
 </details>
 
-3. Create a simple factory and a plugin to provide the `ResourceCreator` to the `Collector` module. Use plugins to communicate between module in Yves.
+3. Create a simple factory and a plugin to provide the `ResourceCreator` to the `Collector` module. Use plugins to communicate between modules in Yves.
 
 **Code sample**
 
@@ -292,7 +292,7 @@ class MyEntityResourceCreatorPlugin extends AbstractPlugin
 }
 ```
 
-4. In `\Pyz\Yves\Collector\CollectorDependencyProvider` provide the plugin to the Collector module:
+4. In `\Pyz\Yves\Collector\CollectorDependencyProvider`, provide the plugin to the `Collector` module:
 
 ```php
 <?php
@@ -329,7 +329,7 @@ class CollectorDependencyProvider extends AbstractBundleDependencyProvider
 }
 ```
 
-5. Finally in `\Pyz\Yves\Collector\CollectorFactory` add the plugin to the `ResourceCreator` stack that the `StorageRouter` will use for matching resources.
+1. In `\Pyz\Yves\Collector\CollectorFactory` add the plugin to the `ResourceCreator` stack, which `StorageRouter` uses for matching resources.
 
 **Code sample**
 

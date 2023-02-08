@@ -30,7 +30,7 @@ The following schema illustrates relations  in the Quick Order feature:
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
+| INSTALLATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
 | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html) | ProductPackagingUnitStorage migration guide | [Configuring separators and default number of row](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/configuring-separators-and-default-number-rows.html) |
 | [Quick Add to Cart + Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-shopping-lists-feature-integration.html) | ProductPageSearch migration guide |  |

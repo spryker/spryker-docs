@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Shopp
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |
+|INSTALLATION GUIDES  |
 |---------|---------|
 | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  |
 | [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)  |

@@ -3,9 +3,6 @@ title: Merchant Switcher + Wishlist feature integration
 last_updated: Oct 08, 2021
 description: This document describes the process how to integrate the Merchant Switcher + Wishlist feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Wishlist feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/wishlist-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Switcher + Wishlist feature into a Spryker project.
@@ -43,7 +40,7 @@ use Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist\SingleMerchantWis
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
  /**
-  * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistReloadItemsPluginInterface[]
+  * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistReloadItemsPluginInterface>
   */
  protected function getWishlistReloadItemsPlugins(): array
  {
@@ -53,7 +50,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
  }
 
  /**
-  * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemsValidatorPluginInterface[]
+  * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemsValidatorPluginInterface>
   */
  protected function getWishlistItemsValidatorPlugins(): array
  {

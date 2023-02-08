@@ -18,6 +18,11 @@ redirect_from:
   - v4/docs/en/additional-devops-guidelines
   - /v3/docs/additional-devops-information-201907
   - /v3/docs/en/additional-devops-information-201907
+related:
+  - title: Configuring Spryker after installing with Docker
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html
+  - title: Setting up a self-signed SSL certificate
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
 ---
 
 

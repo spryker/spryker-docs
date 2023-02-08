@@ -105,7 +105,7 @@ Make sure that the following changes have occurred in transfer objects:
 |---|---|---|---|
 | MerchantProfileAddress | class | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
 | MerchantProfileCollection | class | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
-| MerchantProfileCriteriaFilter | class | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaFilterTransfer |
+| MerchantProfileCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaTransfer |
 | MerchantProfileGlossaryAttributeValues | class | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
 | MerchantProfileLocalizedGlossaryAttributes | class | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
 | MerchantSearch | class | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
@@ -147,7 +147,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 
-<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -163,7 +163,7 @@ use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileMer
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface>
      */
     protected function getMerchantPostCreatePlugins(): array
     {
@@ -173,7 +173,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostUpdatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostUpdatePluginInterface>
      */
     protected function getMerchantPostUpdatePlugins(): array
     {
@@ -184,7 +184,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface>
      */
     protected function getMerchantExpanderPlugins(): array
     {
@@ -201,10 +201,9 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 Make sure that:
 
-* When you create a merchant using `MerchantFacade::updateMerchant()`, its profile also gets created.
+* When you create a merchant using `MerchantFacade::createMerchant()`, its profile also gets created.
 * When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
 * When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
-* When you deactivate a merchant in the *Merchants* section of the Back Office, its merchant users are deactivated in the *Users* section.
 
 {% endinfo_block %}
 
@@ -226,7 +225,7 @@ use Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui\MerchantUserVie
 class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantFormExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantFormExpanderPluginInterface>
      */
     protected function getMerchantFormExpanderPlugins(): array
     {
@@ -236,7 +235,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantFormTabExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantFormTabExpanderPluginInterface>
      */
     protected function getMerchantFormTabsExpanderPlugins(): array
     {
@@ -249,7 +248,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantUpdateFormViewExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantUpdateFormViewExpanderPluginInterface>
      */
     protected function getMerchantUpdateFormViewExpanderPlugins(): array
     {
@@ -334,7 +333,7 @@ use Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\Merchant
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
    /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
     protected function getPublisherPlugins(): array
     {
@@ -344,7 +343,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface[]
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
      */
     protected function getPublisherTriggerPlugins(): array
     {
@@ -356,6 +355,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 2. Register synchronization and synchronization error queues:
+
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 ```php
 <?php
@@ -396,6 +397,8 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 |---|---|---|---|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
+**src/Pyz/Zed/MerchantStorage/MerchantStorageConfig.php**
+
 ```php
 <?php
 
@@ -416,6 +419,8 @@ class MerchantStorageConfig extends BaseMerchantStorageConfig
 }
 ```
 
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
+
 ```php
 <?php
 
@@ -431,7 +436,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface[]
+     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
     protected function getProcessorMessagePlugins(Container $container)
     {
@@ -448,6 +453,8 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 |---|---|---|---|
 | MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
 
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -459,7 +466,7 @@ use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSync
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface[]
+     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */
     protected function getSynchronizationDataPlugins(): array
     {
@@ -496,7 +503,7 @@ use Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\Merchant\MerchantD
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
    /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
     protected function getPublisherPlugins(): array
     {
@@ -555,7 +562,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface[]
+     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
     protected function getProcessorMessagePlugins(Container $container)
     {
@@ -585,7 +592,7 @@ use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSync
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface[]
+     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */
     protected function getSynchronizationDataPlugins(): array
     {
@@ -617,6 +624,87 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
+}
+```
+
+6. Set up result formatters:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|---|---|---|---|
+| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.    | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
+
+**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\MerchantSearch;
+
+use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
+use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter\MerchantSearchResultFormatterPlugin;
+
+class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>
+     */
+    protected function getMerchantSearchResultFormatterPlugins(): array
+    {
+        return [
+            new MerchantSearchResultFormatterPlugin(),
+        ];
+    }
+}
+```
+
+7. Set up query expanders:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|----|----|----|----|
+| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
+| StoreQueryExpanderPlugin | Allows searching to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
+
+**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\MerchantSearch;
+
+use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
+use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query\PaginatedMerchantSearchQueryExpanderPlugin;
+use Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin;
+
+class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
+     */
+    protected function getMerchantSearchQueryExpanderPlugins(): array
+    {
+        return [
+            new PaginatedMerchantSearchQueryExpanderPlugin(),
+            new StoreQueryExpanderPlugin(),
+        ];
+    }
+}
+```
+8. Add the `merchant` resource to the supported search sources:
+
+**src/Pyz/Shared/SearchElasticsearch/SearchElasticsearchConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\SearchElasticsearch;
+
+use Spryker\Shared\SearchElasticsearch\SearchElasticsearchConfig as SprykerSearchElasticsearchConfig;
+
+class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
+{
+    protected const SUPPORTED_SOURCE_IDENTIFIERS = [
+        'merchant',
+    ];
 }
 ```
 
@@ -820,81 +908,6 @@ Make sure that when merchant entities are created or updated through ORM, they a
  ```
  </details>
 
-6. Set up result formatters:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.    | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
-
-```php
-<?php
-
-namespace Pyz\Client\MerchantSearch;
-
-use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
-use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter\MerchantSearchResultFormatterPlugin;
-
-class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
-{
-    /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface[]
-     */
-    protected function getMerchantSearchResultFormatterPlugins(): array
-    {
-        return [
-            new MerchantSearchResultFormatterPlugin(),
-        ];
-    }
-}
-```
-
-7. Set up query expanders:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|----|----|----|----|
-| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
-| StoreQueryExpanderPlugin | Allows searching to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
-
-```php
-<?php
-
-namespace Pyz\Client\MerchantSearch;
-
-use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
-use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query\PaginatedMerchantSearchQueryExpanderPlugin;
-use Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin;
-
-class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
-{
-    /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
-     */
-    protected function getMerchantSearchQueryExpanderPlugins(): array
-    {
-        return [
-            new PaginatedMerchantSearchQueryExpanderPlugin(),
-            new StoreQueryExpanderPlugin(),
-        ];
-    }
-}
-```
-8. Add the `merchant` resource to the supported search sources:
-
-```php
-<?php
-
-namespace Pyz\Shared\SearchElasticsearch;
-
-use Spryker\Shared\SearchElasticsearch\SearchElasticsearchConfig as SprykerSearchElasticsearchConfig;
-
-class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
-{
-    protected const SUPPORTED_SOURCE_IDENTIFIERS = [
-        'merchant',
-    ];
-}
-```
-
 ### 7) Import data
 
 To import data:
@@ -904,7 +917,7 @@ To import data:
 <details>
 <summary markdown='span'>/data/import/common/common/marketplace/merchant_profile.csv</summary>
 
-```csv
+```
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number
 MER000001,E-Commerce Manager,Mr,Harald,Schmidt,+49 30 208498350,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-logo.png,info@spryker.com,+49 30 234567891,Spryker is the main merchant at the Demo Marketplace.,Spryker ist der Haupthändler auf dem Demo-Marktplatz.,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,1-3 days,1-3 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.","<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>","<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Vertreten durch<br>Geschäftsführer: Alexander Graf, Boris Lokschin<br>Registergericht: Hamburg<br>Registernummer: HRB 134310<br></p>",Spryker Systems GmbH values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Spryker Systems GmbH.,1,+49 30 234567800
 MER000002,Country Manager DE,Ms,Martha,Farmer,+31 123 345 678,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-logo.png,hi@video-king.nl,+31 123 345 777,"Video King is a premium provider of video equipment. In business since 2010, we understand the needs of video professionals and enthusiasts and offer a wide variety of products with competitive prices. ","Video King ist ein Premium-Anbieter von Videogeräten. Wir sind seit 2010 im Geschäft, verstehen die Bedürfnisse von Videoprofis und -enthusiasten und bieten eine große Auswahl an Produkten zu wettbewerbsfähigen Preisen an. ",https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Video King<br><br>Gilzeweg 24<br>4854SG Bavel<br>NL <br><br>Phone: +31 123 45 6789<br>Email: hi@video-king.nl<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Amsterdam<br>Register Number: 1234.4567<br></p>,<p>Video King<br><br>Gilzeweg 24<br>4854SG Bavel<br>NL<br><br>Telefon: +31 123 45 6789<br>Email: hi@video-king.nl<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Amsterdam<br>Registernummer: 1234.4567<br></p>,Video King values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Video King.,1,+31 123 345 733
@@ -952,7 +965,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 
 **/data/import/common/common/marketplace/merchant_profile_address.csv**
 
-```csv
+```
 merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code,longitude,latitude
 MER000001,DE,DEU,Julie-Wolfthorn-Straße,1,,Berlin,10115,52.534105,13.384458
 MER000002,NL,,Gilzeweg,24,,Bavel,4854SG,51.558107,4.838470
@@ -1020,7 +1033,7 @@ To import merchant user data, perform the following steps:
 
 **/data/import/common/common/marketplace/merchant_user.csv**
 
-```csv
+```
 merchant_reference,username
 MER000006,michele@sony-experts.com
 ```
@@ -1158,7 +1171,7 @@ class DataImportConfig extends SprykerDataImportConfig
     public const IMPORT_TYPE_MERCHANT_USER = 'merchant-user';
 
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getFullImportTypes(): array
     {
@@ -1228,6 +1241,14 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 
         return $dataImporter;
     }
+
+    /**
+     * @return \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface
+     */
+    public function getMerchantUserFacade(): MerchantUserFacadeInterface
+    {
+        return $this->getProvidedDependency(DataImportDependencyProvider::FACADE_MERCHANT_USER);
+    }
 }
 ```
 
@@ -1241,6 +1262,10 @@ version: 0
 actions:
   - data_entity: merchant-user
     source: data/import/common/common/merchant_user.csv
+  - data_entity: merchant-profile
+    source: data/import/common/common/marketplace/merchant_profile.csv
+  - data_entity: merchant-profile-address
+    source: data/import/common/common/marketplace/merchant_profile_address.csv
  ```
 
 6. Import data.
@@ -1317,7 +1342,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
@@ -1342,7 +1367,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {
@@ -1363,9 +1388,9 @@ console frontend:yves:build
 
 Make sure that the following widgets were registered:
 
-| MODULE | TEST |
-| ----------------- | ----------------- |
-| SoldByMerchantWidget | Go through the checkout process with an offer, and you will see the sold by text and merchant data throughout the checkout process. |
+| MODULE               | TEST                                                                                                                |
+|----------------------|---------------------------------------------------------------------------------------------------------------------|
+| SoldByMerchantWidget | Open product detail page, and you will see the sold by merchant text. (May require Marketplace Product integration) |
 
 {% endinfo_block %}
 
@@ -1393,7 +1418,7 @@ use SprykerShop\Yves\StorageRouter\StorageRouterDependencyProvider as SprykerSho
 class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\StorageRouterExtension\Dependency\Plugin\ResourceCreatorPluginInterface[]
+     * @return array<\SprykerShop\Yves\StorageRouterExtension\Dependency\Plugin\ResourceCreatorPluginInterface>
      */
     protected function getResourceCreatorPlugins(): array
     {
@@ -1417,7 +1442,7 @@ use Spryker\Client\UrlStorage\UrlStorageDependencyProvider as SprykerUrlDependen
 class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 {
     /**
-     * @return \Spryker\Client\UrlStorage\Dependency\Plugin\UrlStorageResourceMapperPluginInterface[]
+     * @return array<\Spryker\Client\UrlStorage\Dependency\Plugin\UrlStorageResourceMapperPluginInterface>
      */
     protected function getUrlStorageResourceMapperPlugins()
     {

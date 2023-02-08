@@ -126,7 +126,7 @@ Add an item with a product option to a shopping list, make sure that the corresp
 Make sure that when creating a cart from a shopping list, the product options are transferred to cart. The other way around should also work, having a cart with an item with product options in it, when creating a shopping list out of should contain the selected product options.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please review and install the necessary features before beginning the integration step.
 |Name|Version|

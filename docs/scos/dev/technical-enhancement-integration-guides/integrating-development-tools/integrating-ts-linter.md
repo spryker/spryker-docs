@@ -13,6 +13,15 @@ redirect_from:
   - /v6/docs/ts-linter-integration-guide
   - /v6/docs/en/ts-linter-integration-guide
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/ts-linter-integration-guide.html
+related: 
+  - title: Integrating Formatter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+  - title: Integrating SCSS linter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
+  - title: Integrating Web Profiler for Zed
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+  - title: Integrating Web Profiler Widget for Yves
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
 ---
 
 Follow the steps below to integrate [TS linter](/docs/scos/dev/sdk/development-tools/ts-linter.html) into your project.

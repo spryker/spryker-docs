@@ -1,5 +1,5 @@
 ---
-title: Executing Tests
+title: Executing tests
 description: Lean what commands you can use to execute your tests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -15,6 +15,29 @@ redirect_from:
   - /v5/docs/executing-tests
   - /v5/docs/en/executing-tests
   - /docs/scos/dev/guidelines/testing/executing-tests.html
+related:
+  - title: Available test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+  - title: Code coverage
+    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+  - title: Data builders
+    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+  - title: Publish and Synchronization testing
+    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+  - title: Setting up tests
+    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+  - title: Test framework
+    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+  - title: Test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+  - title: Testify
+    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+  - title: Testing best practices
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+  - title: Testing concepts
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+  - title: Testing console commands
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
 There are many ways to execute the [tests](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html). You can do a full run of all tests, or you can narrow it down to only execute a specific test method.

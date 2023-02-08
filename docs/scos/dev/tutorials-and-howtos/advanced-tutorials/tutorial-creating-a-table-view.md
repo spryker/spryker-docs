@@ -30,7 +30,7 @@ This tutorial explains how to retrieve data from the database and render it in a
 
 ## Prerequisites
 
-You have created a new [module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
+You have created a new [module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html).
 
 ## Create a table
 
@@ -53,16 +53,16 @@ class ProductTable extends AbstractTable
     /**
      * @var \Orm\Zed\Product\Persistence\SpyProductQuery
      */
-    protected $spyProductPropelQuery;
+    protected $spyProductQuery;
 
     /**
      * ProductTable constructor.
      *
-     * @param \Orm\Zed\Product\Persistence\SpyProductQuery $spyProductPropelQuery
+     * @param \Orm\Zed\Product\Persistence\SpyProductQuery $spyProductQuery
      */
-    public function __construct(SpyProductQuery $spyProductPropelQuery)
+    public function __construct(SpyProductQuery $spyProductQuery)
     {
-        $this->spyProductPropelQuery = $spyProductPropelQuery;
+        $this->spyProductQuery = $spyProductQuery;
     }
 
     /**
@@ -87,7 +87,7 @@ class ProductTable extends AbstractTable
      */
     protected function prepareData(TableConfiguration $config): array
     {
-        $queryResult = $this->runQuery($this->spyProductPropelQuery, $config);
+        $queryResult = $this->runQuery($this->spyProductQuery, $config);
 
         $results = [];
         foreach ($queryResult as $resultItem) {
@@ -122,13 +122,13 @@ class HelloWorldCommunicationFactory extends AbstractCommunicationFactory
      */
     public function createProductTable(): ProductTable
     {
-        return new ProductTable($this->createProductPropelQuery());
+        return new ProductTable($this->createProductQuery());
     }
 
     /**
      * @return \Orm\Zed\Product\Persistence\SpyProductQuery
      */
-    public function createProductPropelQuery(): SpyProductQuery
+    public function createProductQuery(): SpyProductQuery
     {
         return SpyProductQuery::create();
     }
@@ -210,7 +210,7 @@ Add the products variable to `Pyz/Zed/HelloWorld/Presentation/Index/index.twig` 
 Run the command:
 
 ```bash
-vendor/bin/console router:cache:warm-up
+vendor/bin/console router:cache:warm-up:backoffice
 ```
 
 This is all! To see the table you created, go to `https://zed.mysprykershop.com/hello-world`. You will be able to see the products listed in the table.

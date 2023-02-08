@@ -8,13 +8,12 @@ originalArticleId: b97e760e-9445-4fe6-a799-158a6247f8c4
 redirect_from:
   - /v5/docs/exporting-data
   - /v5/docs/en/exporting-data
+  - /docs/scos/dev/data-export/202005.0/yml-export-configuration-file
 related:
   - title: Sales Data Export feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
   - title: Data Export Orders .csv Files Format
     link: docs/scos/dev/data-export/page.version/data-export-orders-.csv-files-format.html
-redirect_from:
-  - /docs/scos/dev/data-export/202005.0/yml-export-configuration-file
 ---
 
 {% info_block warningBox "BETA version" %}

@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-category:"^0.2.0" spryker/merchant-category-data-import:"^0.2.0" spryker/merchant-category-search:"^0.1.0"  --update-with-dependencies
+composer require spryker-feature/merchant-category:"{{page.version}}"  --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -101,6 +101,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | -------------- | ----------- | ------ | ------------- |
+| CategoryWritePublisherPlugin |  |  | Spryker\Zed\MerchantCategory\Communication\Plugin\Publisher\Category |
 | MerchantCategoryMerchantExpanderPlugin | Expands MerchantTransfer with categories.  |   | Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant |
 | MerchantCategoryMerchantSearchDataExpanderPlugin | Expands merchant search data with merchant category keys. |  | Spryker\Zed\MerchantCategorySearch\Communication\Plugin\MerchantSearch |
 | MerchantCategoryWritePublisherPlugin | Updates merchant categories in search based on category events. |  | Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\MerchantCategory |
@@ -119,7 +120,7 @@ use Spryker\Zed\MerchantCategory\Communication\Plugin\RemoveMerchantCategoryRela
 class CategoryDependencyProvider extends SprykerDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Category\Dependency\Plugin\CategoryRelationDeletePluginInterface[]|\Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryRelationDeletePluginInterface[]
+     * @return array<\Spryker\Zed\Category\Dependency\Plugin\CategoryRelationDeletePluginInterface>|array<\Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryRelationDeletePluginInterface>
      */
     protected function getRelationDeletePluginStack(): array
     {
@@ -153,7 +154,7 @@ use Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant\MerchantCategoryM
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface>
      */
     protected function getMerchantExpanderPlugins(): array
     {
@@ -183,7 +184,7 @@ use Spryker\Zed\MerchantSearch\MerchantSearchDependencyProvider as SprykerMercha
 class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantSearchExtension\Dependency\Plugin\MerchantSearchDataExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantSearchExtension\Dependency\Plugin\MerchantSearchDataExpanderPluginInterface>
      */
     protected function getMerchantSearchDataExpanderPlugins(): array
     {
@@ -238,7 +239,8 @@ Prepare your data according to your requirements using the following format:
 **data/import/common/common/marketplace/merchant_category.csv**
 
 ```yaml
-category_key,merchant_reference 2
+category_key,merchant_reference
+demoshop,MER000001
 ```
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -271,6 +273,26 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         ];
     }
 }
+```
+
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-category
+    source: data/import/common/common/marketplace/merchant_category.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-category
+    source: data/import/common/common/marketplace/merchant_category.csv
 ```
 
 Import data:
@@ -319,7 +341,7 @@ use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMer
 class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
 {
     /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
     protected function getMerchantSearchQueryExpanderPlugins(): array
     {

@@ -16,7 +16,7 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

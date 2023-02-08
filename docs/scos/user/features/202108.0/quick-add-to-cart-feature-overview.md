@@ -130,9 +130,3 @@ Using the Quick Order feature on the Storefront, company users can:
 
 The following figure shows how to perform these actions:
 ![create-quick-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/create-quick-order.gif)
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Quick Add to Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

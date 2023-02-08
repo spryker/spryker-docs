@@ -1,6 +1,6 @@
 ---
 title: Zed overview
-description: Zed is one of the application layers of the Spryker Commerce OS, providing the back office/backend functionality.
+description: Zed is one of the application layers of the Spryker Commerce OS, providing the Back Office and backend functionality
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/zed-overview
@@ -38,18 +38,20 @@ redirect_from:
   - /v1/docs/en/about-zed
   - /v1/docs/zed
   - /v1/docs/en/zed
+related: 
+  - title: Add navigation in the Back Office
+    link: docs/scos/dev/back-end-development/zed/add-navigation-in-the-back-office.html
 ---
 
-Zed is one of the application layers of the Spryker Commerce OS, providing the backoffice/backend functionality.
+Zed is one of the application layers of the Spryker Commerce OS, providing the Back Office and backend functionality.
 
 {% info_block infoBox %}
 
-See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) to learn more about the Spryker applications and their layers.
+To learn more about the Spryker applications and their layers, see [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 
 {% endinfo_block %}
 
 Zed is divided into three parts:
-
-* Business layer, containing the entire business logic;
-* Persistence layer, responsible for the database structure, connections to it, for example, for the data persistence;
-* Communication layer, enabling the connection to the external providers.
+* The [Business](/docs/scos/dev/back-end-development/zed/business-layer/business-layer.html) layer: Contains the entire business logic.
+* The [Persistence](/docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html) layer: Responsible for the database structure and connections to it—for example, for the data persistence.
+* The [Communication](/docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html) layer: Enables the connection to the external providers.

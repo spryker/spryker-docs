@@ -14,7 +14,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/managing-carts.html
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/acl: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/acl:"{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -79,7 +79,6 @@ Make sure that the following changes have been applied in transfer objects:
 |   AclEntitySegment | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer |
 |   AclEntitySegmentRequest | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer |
 |   AclEntityRuleRequest | object | Created | src/Generated/Shared/Transfer/AclEntityRuleRequestTransfer |
-|   AclEntityRule | object | Created | src/Generated/Shared/Transfer/AclEntityRuleTransfer |
 |   AclEntityRuleCollection | object | Created | src/Generated/Shared/Transfer/AclEntityRuleCollectionTransfer |
 |   AclEntitySegmentResponse | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentResponseTransfer |
 |   AclEntitySegmentCriteria | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentCriteriaTransfer |
@@ -99,7 +98,7 @@ Make sure that the following changes have been applied in transfer objects:
 |   Rules | object | Created | src/Generated/Shared/Transfer/Transfer |
 |   User | object | Created | src/Generated/Shared/Transfer/UserTransfer |
 |   NavigationItem | object | Created | src/Generated/Shared/Transfer/NavigationItemTransfer |
-|   NavigationItemCollection | object | Created | src/Generated/Shared/Transfer/Transfer |
+|   NavigationItemCollection | object | Created | src/Generated/Shared/Transfer/NavigationItemCollectionTransfer |
 
 {% endinfo_block %}
 
@@ -120,10 +119,17 @@ Enable the following behaviors by registering the plugins:
 **src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\EventDispatcher;
+
+use Spryker\Zed\Acl\Communication\Plugin\EventDispatcher\AccessControlEventDispatcherPlugin;
+use Spryker\Zed\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
+
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
-    * @return \Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface[]
+    * @return array<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
     */
     protected function getEventDispatcherPlugins(): array
     {
@@ -137,10 +143,17 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 **src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\ZedNavigation;
+
+use Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin;
+use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavigationDependencyProvider;
+
 class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface[]
+     * @return array<\Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface>
      */
     protected function getNavigationItemCollectionFilterPlugins(): array
     {
@@ -154,10 +167,17 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\Installer;
+
+use Spryker\Zed\Acl\Communication\Plugin\AclInstallerPlugin;
+use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface[]
+     * @return array<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
      */
     public function getInstallerPlugins()
     {
@@ -171,7 +191,15 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 **src/Pyz/Zed/User/UserDependencyProvider.php**
 
 ```php
-class InstallerDependencyProvider extends SprykerUserDependencyProvider
+<?php
+
+namespace Pyz\Zed\User;
+
+use Spryker\Zed\Acl\Communication\Plugin\GroupPlugin;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\User\UserDependencyProvider as SprykerUserDependencyProvider;
+
+class UserDependencyProvider extends SprykerUserDependencyProvider
 {
     /**
      * @param \Spryker\Zed\Kernel\Container $container
@@ -192,10 +220,18 @@ class InstallerDependencyProvider extends SprykerUserDependencyProvider
 **src/Pyz/Zed/Acl/AclDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\Acl;
+
+use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
+use Spryker\Zed\AclEntity\Communication\Plugin\Acl\AclEntityAclRolePostSavePlugin;
+use Spryker\Zed\AclEntity\Communication\Plugin\Acl\AclRulesAclRolesExpanderPlugin;
+
 class AclDependencyProvider extends SprykerAclDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclRolesExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\AclExtension\Dependency\Plugin\AclRolesExpanderPluginInterface>
      */
     protected function getAclRolesExpanderPlugins(): array
     {
@@ -205,7 +241,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclRolePostSavePluginInterface[]
+     * @return array<\Spryker\Zed\AclExtension\Dependency\Plugin\AclRolePostSavePluginInterface>
      */
     protected function getAclRolePostSavePlugins(): array
     {
@@ -221,10 +257,17 @@ Use the following example if you want to enable ACL Entity for the whole Applica
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\MerchantPortalApplication;
+
+use Spryker\Zed\AclEntity\Communication\Plugin\Application\AclEntityApplicationPlugin;
+use Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyProvider as SprykerMerchantPortalApplicationDependencyProvider;
+
 class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
 {
    /**
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getMerchantPortalApplicationPlugins(): array
     {
@@ -251,7 +294,7 @@ Make sure that the user can see only the allowed menu links.
 
 Make sure that `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
 
-Make sure that current User transfer contains appropriate Acl groups inside.
+Make sure that you can edit user's ACL groups on User edit page in Back Office.
 
 Make sure that `AclEntityRule` is created in `spy_acl_entity_rule` when the `RoleTransfer` is saved and contains `AclEntityRules`.
 

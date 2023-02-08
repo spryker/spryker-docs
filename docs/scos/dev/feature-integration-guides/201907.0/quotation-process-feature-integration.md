@@ -382,7 +382,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 Make sure that when you make lock reset for a cart, quote request associated with it removed.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:

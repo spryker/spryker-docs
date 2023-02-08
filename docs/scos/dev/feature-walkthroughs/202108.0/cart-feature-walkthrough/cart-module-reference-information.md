@@ -21,11 +21,11 @@ When an operation is invoked, `CartClient` makes an HTTP request to Zed Cart mod
 
 The Cart module in Zed has a cart operation class that handles cart operation requests. Each operation does the following:
 
-* **Expand cart items** — augment cart items with additional data (prices, product details, ProductOptions, …)
+* **Expand cart items**—augment cart items with additional data (prices, product details, ProductOptions, …)
 * **Persisting**—storage provider stores items into the database, merges items if same item was added, by default it uses a NonPersistentProvider.
-* **Item grouping** — cart uses the item grouper to group items in the cart using a specially crafted group key, which is provided by cart Expander (e.g.: a list containing the same item coming from different merchants should be split into separate groups and shipped separately).
-* **Log operation message** — Cart writes to messenger messages which should be returned to Yves (for example: validation messages, success, failure messages).
-* **Cart recalculation** — happens for each operation in cart recalculation. Cart amounts are reset and recalculated with new added items.
+* **Item grouping**—cart uses the item grouper to group items in the cart using a specially crafted group key, which is provided by cart Expander (e.g.: a list containing the same item coming from different merchants should be split into separate groups and shipped separately).
+* **Log operation message**—Cart writes to messenger messages which should be returned to Yves (for example: validation messages, success, failure messages).
+* **Cart recalculation**—happens for each operation in cart recalculation. Cart amounts are reset and recalculated with new added items.
 
 ## Cart persistence providers
 

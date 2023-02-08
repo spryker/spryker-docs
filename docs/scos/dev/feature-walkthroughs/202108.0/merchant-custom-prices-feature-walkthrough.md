@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Merch
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES | MIGRATION GUIDES |
+|INSTALLATION GUIDES | MIGRATION GUIDES |
 |---------|---------|
-| [Merchant custom prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)  | PriceProduct migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html) |
+| [Merchant custom prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)  | PriceProduct migration guide](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) |
 | [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) |   |

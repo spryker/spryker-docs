@@ -16,7 +16,7 @@ redirect_from:
 
 The table below provides details on Categories data importers, their purpose, .csv files, dependencies, and other details. Each data importer contains links to .csv files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
-| Data Importer | Purpose | Console Command| File(s) | Dependencies |
+| Data Importer | Purpose | Console Command| FILES | Dependencies |
 | --- | --- | --- | --- |--- |
 | **Category**   | Imports information about product categories definition. |`data:import:category` | [category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html)| [category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html)|
 | **Category Template**   | Imports information relative to product category templates. |`data:import:category-template` |[category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html) |None|

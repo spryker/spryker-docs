@@ -1153,7 +1153,7 @@ Run the following command to enable Javascript and CSS changes for Zed:
 console frontend:zed:build
 ```
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

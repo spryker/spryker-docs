@@ -1,6 +1,6 @@
 ---
 title: Merchant User concept
-description: Merchant User in Merchant portal.
+description: Merchant User in Merchant Portal.
 template: concept-topic-template
 ---
 
@@ -32,7 +32,7 @@ The following diagram illustrates merchant user relations:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
 | | |[File details: merchant_user.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-user.csv.html) |[Merchant users overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)|
 | | | |[Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|

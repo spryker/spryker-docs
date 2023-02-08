@@ -12,6 +12,19 @@ redirect_from:
   - /docs/en/mutagen-error
   - /v6/docs/mutagen-error
   - /v6/docs/en/mutagen-error
+related:
+  - title: 413 Request Entity Too Large
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html
+  - title: An application is not reachable via http
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/an-application-is-not-reachable-via-http.html
+  - title: MacOS and Windows - file synchronization issues in Development mode
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
+  - title: Mutagen synchronization issue
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html
+  - title: Nginx welcome page
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
+  - title: Port is already occupied on host
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
 ---
 
 ## Description

@@ -1,6 +1,6 @@
 ---
-title: Data Export Orders .csv Files Format
-description: The article explains the format of the orders.csv, order-items.csv, order-expenses.csv export files
+title: Data Export orders CSV files format
+description: The document explains the format of the orders.csv, order-items.csv, order-expenses.csv export files
 last_updated: Jun 16, 2021
 template: data-export-template
 originalLink: https://documentation.spryker.com/2021080/docs/data-export-orders-csv-files-format
@@ -11,23 +11,23 @@ redirect_from:
   - /docs/data-export-orders-csv-files-format
   - /docs/en/data-export-orders-csv-files-format
 related:
-  - title: Exporting Data
+  - title: Exporting data
     link: docs/scos/dev/data-export/page.version/data-export.html
   - title: Sales Data Export feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
 ---
 
-This article contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
+This document holds the content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
 
-*     orders.csv
-*     order-items.csv
-*     order-expenses.csv
+* orders.csv
+* order-items.csv
+* order-expenses.csv
 
 ## Orders
 
-These are the header fields included in the order.csv file:
+These are the header fields included in the `order.csv` file:
 
-| Default sequence | .csv column header name | Mandatory | Type | Other requirements / Comments | Description |
+| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | MANDATORY | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | 1 | order_reference | Yes | String | Unique | Order reference identifier. |
 | 2 | customer_reference | No | String |  | Customer reference identifier. |
@@ -77,7 +77,7 @@ These are the header fields included in the order.csv file:
 These are the header fields included in the order_items.csv file:
 
 
-| Default sequence | .csv column header name | Mandatory | Type | Other requirements / Comments | Description |
+| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | MANDATORY | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | 1 | order_reference | Yes | String |  | Order reference identifier. |
 | 2 | order_item_reference | No | String | Unique | Order item reference identifier. |
@@ -142,7 +142,7 @@ These are the header fields included in the order_items.csv file:
 
 ##  Order Expenses
 
-| Default sequence | .csv column header name | Mandatory | Type | Other requirements / Comments | Description |
+| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | MANDATORY | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | 1 | order_reference | Yes | String |  | Order reference identifier. |
 | 2 | order_shipment_id | No | Number |  |Order shipment identification. |

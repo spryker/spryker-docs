@@ -55,6 +55,7 @@ See [release-history](https://api.release.spryker.com/release-history) for lates
 It also comes with an RSS feed.
 
 ## Mailing lists
+
 We recommend that you subscribe to our release newsletter and security updates mailing lists so that we can let you know about new features and be immediately informed of any security updates that you need to know about.
 
 To join our release notes mailing list, subscribe here:

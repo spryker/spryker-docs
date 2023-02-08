@@ -132,7 +132,7 @@ Make sure that the following plugins were registered:
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

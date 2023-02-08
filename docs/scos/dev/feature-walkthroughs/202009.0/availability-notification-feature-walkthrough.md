@@ -29,7 +29,7 @@ The following scheme illustrates relations between Availability, `AvailabilityNo
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | GLUE API GUIDES  |
+|INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
 | [Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/availability-notification-feature-integration.html)  |  |
 |  |   |

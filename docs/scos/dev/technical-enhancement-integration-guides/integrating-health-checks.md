@@ -17,9 +17,6 @@ redirect_from:
   - /v4/docs/health-checks
   - /v4/docs/en/health-checks
   - /docs/scos/dev/technical-enhancements/health-checks.html
-related:
-  - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
 ## General information
@@ -42,7 +39,9 @@ By default, all the application endpoints are closed for security reasons. You c
 To enable the endpoints, add the following to `/config/Shared/config_default.php`:
 
 ```php
-Spryker\Shared\HealthCheck\HealthCheckConstants;$config[HealthCheckConstants::HEALTH_CHECK_ENABLED] = true;
+use Spryker\Shared\HealthCheck\HealthCheckConstants;
+
+$config[HealthCheckConstants::HEALTH_CHECK_ENABLED] = true;
 ```
 
 ## Running Application Health Checks

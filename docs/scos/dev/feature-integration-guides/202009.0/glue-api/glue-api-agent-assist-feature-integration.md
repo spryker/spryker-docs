@@ -23,7 +23,7 @@ To start the feature integration, overview and install the necessary features:
 | Spryker Core | master | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Customer Account Management + Agent Assist | master | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |
 
-## 1) Install the required modules using composer
+## 1) Install the required modules using Composer
 
 
 Run the following command to install the required modules:

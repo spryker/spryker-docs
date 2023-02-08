@@ -22,7 +22,7 @@ With the shared setup, stores share a single codebase and databases per region. 
 
 ### Shared setup: When to use
 
-We recommend this setup for simple shops that have two to three stores that don't
+We recommend this setup for simple shops that have two to three stores that follow the same business logic and have insignificant differences.
 
 ### Shared setup: Advantages
 
@@ -63,4 +63,4 @@ With the separated setup, store share the same codebase but have dedicated datab
 
 ### Separated setup: Integration
 
-New projects are shipped with a separated setup by default. If your project is still on a shared setup, [integrate multi-database logic](/docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html).
+New projects are shipped with a shared setup by default. To switch to a separated setup, reach out to your sales representative.

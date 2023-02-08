@@ -547,7 +547,7 @@ To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` was set u
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

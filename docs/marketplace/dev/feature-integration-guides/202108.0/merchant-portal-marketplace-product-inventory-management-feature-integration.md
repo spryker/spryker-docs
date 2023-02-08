@@ -60,7 +60,7 @@ use Spryker\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvi
 class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\ProductConcreteTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\ProductConcreteTableExpanderPluginInterface>
      */
     protected function getProductConcreteTableExpanderPlugins(): array
     {

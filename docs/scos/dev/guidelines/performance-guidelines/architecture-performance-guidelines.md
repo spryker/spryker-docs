@@ -3,6 +3,11 @@ title: Architecture performance guidelines
 description: Learn about the bad and best architecture practices which can affect the performance of applications in the very end servers
 last_updated: Nov 26, 2021
 template: concept-topic-template
+related:
+  - title: General performance guidelines
+    link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+  - title: Frontend performance guidelines
+    link: docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
 ---
 
 Performance shows the response of a system to carrying out certain actions for a certain period. Performance is an important quality attribute in each application architecture that can impact user experience behavior and business revenues. Therefore, we highly recommend following the best practices and avoiding performance drawbacks in the architecture design.

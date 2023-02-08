@@ -72,3 +72,9 @@ Generate a new translation cache for Zed:
 ```bash
 console translator:generate-cache
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can create a new product in the Merchant Portal and observe it after creation in the product data table.
+
+{% endinfo_block %}

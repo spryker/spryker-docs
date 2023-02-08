@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Multi
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |
+|INSTALLATION GUIDES  |
 |---------|
 | [Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html)  |
 | [Multiple carts + Quick Order feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-quick-order-feature-integration.html)  |

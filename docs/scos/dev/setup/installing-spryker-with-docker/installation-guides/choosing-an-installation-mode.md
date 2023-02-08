@@ -23,6 +23,9 @@ redirect_from:
   - /v3/docs/getting-started-with-docker-201907
   - /v3/docs/en/getting-started-with-docker-201907
   - /docs/scos/dev/installation/spryker-in-docker/installation-guides/modes-overview.html
+related:
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
 
@@ -31,7 +34,6 @@ In this section, you can find installation guides for Spryker in Docker. Current
 * Install Spryker in Development mode.
 * Install Spryker in Demo mode.
 * Integrate Docker into an exiting project.
-* Generate Docker images and assets for a production environment.
 
 ## What installation mode do I choose?
 
@@ -47,9 +49,7 @@ To check out Spryker features and how Spryker works in general, go with the Demo
 
 If you are already running a Spryker project with another solution like Vagrant, and you want to switch to Docker, see [Integrating the Docker SDK into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html).
 
-To launch a live Spryker project based on Docker, see [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html).
-
-Find more details about each mode below.
+Find more details about each mode in the following sections.
 
 ## Development mode
 
@@ -100,12 +100,6 @@ See one of the following guides to install Spryker in Demo mode:
 If you are already running a Spryker project based on Development Virtual Machine or any other solution, you can convert it into a Docker based project.
 Learn how to convert a project into a Docker based instance in [Integrating the Docker SDK into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html).
 
-## Running production
-
-Currently, there is no installation guide for deploying Spryker in Docker in a production environment. But you can generate the images suitable for a production environment and the archives with assets for each application—Yves, BackOffice(Zed), Backend-Gateway, GlueStorefront(Glue), GlueBackend, and MerchantPortal.
-
-Learn how to generate Docker images and assets for a production environment in [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html).
-
 ## Next steps
 
 Once you've selected and installation mode, follow one of the guides below:
@@ -115,4 +109,3 @@ Once you've selected and installation mode, follow one of the guides below:
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html)

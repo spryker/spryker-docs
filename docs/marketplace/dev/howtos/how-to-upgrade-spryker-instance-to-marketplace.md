@@ -31,18 +31,16 @@ Implement the features and functionality of the Marketplace by following the int
 
 Follow feature integration guides from the table that provides functionality for MerchantPortal Application.
 
-| FEATURE | DESCRIPTION |
-| --- | --- |
-| [Marketplace Merchant Portal Core](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html) | Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as security login. |
-| [Marketplace Merchant Portal Product Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-marketplace-product-feature-integration.html) | Merchants can manage their products in the Merchant Portal. |
-| [Marketplace Merchant Portal Product Offer Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) | Merchants can manage their product offers in the Merchant Portal. |
-| [Marketplace Merchant Portal Product Option Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-marketplace-product-option-management-feature-integration.html) | Extends the order items with related product options in the Merchant Portal. |
-| [Marketplace Merchant Portal Order Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-marketplace-order-management-feature-integration.html) | Allows merchants to manage their orders in the Merchant Portal. |
-| [ACL](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/acl-feature-integration.html) | Allows managing access to HTTP endpoints and Persistence entities. |
+| FEATURE                                                                                                                                                                                                  | DESCRIPTION                                                                                                                             |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| [Marketplace Merchant Portal Core](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html)                                          | Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as security login. |
+| [Marketplace Merchant Portal Product Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-marketplace-product-feature-integration.html)                         | Merchants can manage their products in the Merchant Portal.                                                                             |
+| [Marketplace Merchant Portal Product Offer Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)  | Merchants can manage their product offers in the Merchant Portal.                                                                       |
+| [Marketplace Merchant Portal Product Option Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-marketplace-product-option-management-feature-integration.html)        | Extends the order items with related product options in the Merchant Portal.                                                            |
+| [Marketplace Merchant Portal Order Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-marketplace-order-management-feature-integration.html)                  | Allows merchants to manage their orders in the Merchant Portal.                                                                         |
+| [ACL](/docs/pbc/all/user-management/{{site.version}}/install-and-upgrade/install-the-acl-feature.html)                                                                                                    | Allows managing access to HTTP endpoints and Persistence entities.                                                                      |
 
 ## 3) Build app
 
 Please rebuild your app in order to apply all the changes regarding database entities, data imports, search engine indexes, UI assets.
-Depending on the virtualization solution you use, use the following recommendations:
-- [Docker based instance build](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html)
-- [Vagrant based instance build](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html)
+Depending on the virtualization solution you use, use the recommendations in [Docker based instance build](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).

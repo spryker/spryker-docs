@@ -408,7 +408,7 @@ Make sure that when you make lock reset for a cart, quote request associated wit
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

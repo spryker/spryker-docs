@@ -1,10 +1,18 @@
 ---
-title: Upgradability tool overview
+title: Upgrader tool overview
 description: Functionalities of the upgradability tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
+related:
+  - title: Keeping a project upgradable
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+  - title: Run the evaluator tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
+  - title: Define custom prefixes for core entity names
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---
-
 
 
 The upgrader tool is a utility that automatically updates a Spryker project’s modules and libraries to the latest versions.
@@ -89,4 +97,4 @@ For example, if at step 6, due to incorrect authentication details, the upgrader
 
 ## Next steps
 
-[Running the upgrader tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html)
+[Running the upgrader tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html)

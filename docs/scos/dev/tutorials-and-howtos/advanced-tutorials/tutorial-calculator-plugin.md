@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/t-calculator-plugin
   - /v1/docs/t-calculator-plugin
   - /v1/docs/en/t-calculator-plugin
+related:
+  - title: Calculation 3.0
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/calculation-3-0.html
 ---
 
 <!-- used to be: http://spryker.github.io/tutorials/zed/calculator-plugin/
@@ -34,6 +37,7 @@ Requirement: display the tax amount per item.
 You can get the tax amount from `grandTotal`. For this, add a new calculator to the existing stack for the module:
 
 1. First, there are some data structure changes that you need to make. Modify the `ItemTransfer` object by adding two new properties:
+
   * `unitTaxAmount`—for a single item.
   * `sumTaxAmount`—tax amount for the sum of items.
 

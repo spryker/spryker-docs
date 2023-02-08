@@ -4,7 +4,9 @@ description: Learn how to switch Docker based projects to ARM architecture.
 template: howto-guide-template
 ---
 
-This document describes how to switch Docker based projects to ARM architecture. This lets you run Spryker projects on M1 based Apple devices.
+This document explains how to install Spryker in Docker on a device with an ARM chip using demo shops versions 202108.0 or earlier.
+
+The steps below should be followed after you have completed the *Clone a Demo Shop and the Docker SDK* section in the installation guides for [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) and [demo](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) modes.
 
 To switch to ARM architecture, follow the steps:
 
@@ -30,7 +32,7 @@ Replace x86 based Sass with an ARM based one:
 ...
 ```
 
-4. In `frontend/configs/development.js`, add configuration for `saas-loader`:
+4. In `frontend/configs/development.js`, add the implementation of `options` for `saas-loader`:
 ```js
 loader: 'sass-loader',
 options: {
@@ -118,7 +120,4 @@ $config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
 ...
 ```
 
-
-
-
-Now your project supports ARM architecture and you can run it on M1 based Apple devices.
+Once done, you can proceed with *Configure and start the instance* section of the installation guides.

@@ -62,4 +62,4 @@ Are you a developer? See [Marketplace Inventory Management feature walkthrough](
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
-| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) <!--- UPDATE LINK--> |
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | |[Create warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html) | [Edit warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html) |

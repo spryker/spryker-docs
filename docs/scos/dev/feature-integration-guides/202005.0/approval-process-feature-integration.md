@@ -377,7 +377,7 @@ Check that the customer without PlaceOrderPermission cannot proceed to checkout.
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

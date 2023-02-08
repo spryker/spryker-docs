@@ -1,6 +1,6 @@
 ---
 title: Code buckets
-description: Code buckets enable projects to define, implement, and execute different business logics based on different HTTP or console requests.
+description: Code buckets let projects define, implement, and execute different business logics based on different HTTP or console requests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-buckets
@@ -12,38 +12,43 @@ redirect_from:
   - /docs/en/code-buckets
   - /v6/docs/code-buckets
   - /v6/docs/en/code-buckets
+related:
+  - title: Conceptual overview
+    link: docs/scos/dev/architecture/conceptual-overview.html
+  - title: Programming concepts
+    link: docs/scos/dev/architecture/programming-concepts.html
+  - title: Technology stack
+    link: docs/scos/dev/architecture/technology-stack.html
+  - title: Modules and layers
+    link: docs/scos/dev/architecture/modules-and-layers.html
 ---
 
 
-*Code buckets* define multiple slices of source code that can be executed in runtime. This enables projects to define, implement, and execute different business logics based on different HTTP or console requests.
+*Code buckets* define multiple slices of source code that can be executed in runtime. This lets projects define, implement, and execute different business logics based on different HTTP or console requests.
 
 For example, a project can have multiple checkout processes, each having a different number of steps. The regular checkout consists of three steps, but in one of the countries, because of some business reasons, the checkout requires four steps.
 
-The example above is the most typical case to use code buckets. However, you can use them for other types of business reasons, even for the back-end A/B testing.
+The example above is the most typical case to use code buckets. However, you can use them for other types of business reasons, even for backend A/B testing.
 
 Since the number of code buckets in a project is unlimited, you can use them for multiple purposes.
 
 ## Multi-layered code inheritance with code buckets
 
-Multi-layered code inheritance in Spryker allows projects to extend and customize core implementations.
+Multi-layered code inheritance in Spryker lets projects extend and customize core implementations.
 
 Code inheritance consists of the following layers:
 
 * Core code: the base level located in `vendor/spryker/`.
-    
-  * *Default* code bucket on the project level. It’s inherited from the core and located in `src/`. The source code on the project level, which is not explicitly part of a code bucket, is considered to be part of the default code bucket.
-    
-  * *Custom* code bucket on the project level. It’s inherited from the project level or the core level, or from both. All the source code related to a custom business logic is located here.
+  * *Default* code bucket on the project level. It's inherited from the core and located in `src/`. The source code on the project level, which is not explicitly part of a code bucket, is considered to be part of the default code bucket.
+  * *Custom* code bucket on the project level. It's inherited from the project level or the core level, or from both. All the source code related to a custom business logic is located here.
     
 ![Code bucket inheritance](https://confluence-connect.gliffy.net/embed/image/bc410fba-1311-446a-90b2-9b8830ee8ebc.png?utm_medium=live&utm_source=custom)
 
-The inheritance concept applies on a per module basis. You can define a different code bucket for each module. When multiple modules implement the same code bucket, they are used accordingly during runtime. It’s also possible to implement multiple code buckets of the same module. For example,
+The inheritance concept applies on a per module basis. You can define a different code bucket for each module. When multiple modules implement the same code bucket, they are used accordingly during runtime. Also, you can implement multiple code buckets of the same module—for example:
 
-* `Checkout`: default implementation
-    
-* `CheckoutFOO`: *FOO* code bucket implementation
-    
-* `CheckoutBAR` *BAR* code bucket implementation
+* `Checkout`: default implementation.
+* `CheckoutFOO`: *FOO* code bucket implementation.
+* `CheckoutBAR` *BAR* code bucket implementation.
     
 
 The inheritance concept consists of two parts: *physical* and *logical* inheritance.
@@ -52,7 +57,7 @@ The inheritance concept consists of two parts: *physical* and *logical* inherita
 
 *Physical inheritance* ensures that, on the code level, the class inheritance is set up correctly. Resolvable classes on the project level should extend their corresponding resolvable classes from lower levels. Physical inheritance is used when a lower-level implementation needs to be reused or extended.
 
-The following class diagram shows an example of physical inheritance. On the project level, `CheckoutFacade` from the `Checkout` module extends the `CheckoutFacade` of the `Checkout` module from the core. Also, on the project level, `CheckoutFacade` from the *EXCLUSIVE* code bucket in the `CheckoutEXCLUSIVE` module extends the `CheckoutFacade` from the default code bucket.
+The following class diagram shows an example of physical inheritance. On the project level, `CheckoutFacade` from the `Checkout` module extends the `CheckoutFacade` of the `Checkout` module from the core. Also, on the project level, `CheckoutFacade` from the *EXCLUSIVE* code bucket in the `CheckoutEXCLUSIVE` module extends `CheckoutFacade` from the default code bucket.
 
 ![Physical inheritance with code buckets](https://confluence-connect.gliffy.net/embed/image/054031ac-bbbb-4f2a-9bdd-36f3c0bbcdd4.png?utm_medium=live&utm_source=custom)
 
@@ -66,7 +71,7 @@ The inheritance starts on the top level and, if a resolvable PHP class is not fo
 
 {% info_block infoBox %}
 
-If you customize the core code in your project by extending a resolvable class from the core, and your project namespaces are configured properly, because of the namespace precedence and the class resolving system, the project code is automatically wired and executed when necessary. Learn more about extending the core in [Core extension](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html).
+If you customize the core code in your project by extending a resolvable class from the core, and your project namespaces are configured properly, because of the namespace precedence and the class resolving system, the project code is automatically wired and executed when necessary. Learn more about extending the core in [Core extension](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html).
 
 {% endinfo_block %}
 
@@ -93,7 +98,7 @@ Only these types of classes are resolved automatically. To resolve another type 
 
 The `SPRYKER_CODE_BUCKET` environment variable defines which code bucket an HTTP or console request is executed under.
 
-Environment parameters for HTTP requests are usually handled by DevOps Engineers. With different domains set up for different code buckets, they make sure that the environment variable is passed according to the requirements. From the code bucket execution perspective, the domain doesn’t matter. So, the web server can also pass different code buckets based on the client’s location or the given time.
+Environment parameters for HTTP requests are usually handled by DevOps Engineers. With different domains set up for different code buckets, they make sure that the environment variable is passed according to the requirements. From the code bucket execution perspective, the domain doesn't matter. So, the web server can also pass different code buckets based on the client's location or the given time.
 
 ![Code bucket HTTP request](https://confluence-connect.gliffy.net/embed/image/9bf6683f-3e0d-48e8-bc27-f4a9332cb9f7.png?utm_medium=live&utm_source=custom)
 
@@ -104,7 +109,7 @@ SPRYKER_CODE_BUCKET=FOO vendor/bin/console name:of:command
 
 ## Defining code buckets of a project
 
-Since the PHP code owns the code bucket implementations, it is necessary to validate the value of the `SPRYKER_CODE_BUCKET` environment variable.
+Since the PHP code owns the code bucket implementations, you must validate the value of the `SPRYKER_CODE_BUCKET` environment variable.
 
 You can define the code buckets of a project in `src/SprykerConfig/CodeBucketConfig.php`:
 
@@ -167,7 +172,7 @@ To learn more about configuration management, see [Configuration management](/do
 
 Before we introduced the Code Bucket concept, the Store concept had fulfilled multiple purposes in multi-store environments. One of the purposes was to provide the code base for multiple business logics. We invented code buckets to decouple this responsibility from stores. Another reason for introducing code buckets is that multiple stores often need to use the same business logic. With code buckets, stores and business logic implementations are not bound, and the three of them can be used in any combination.
 
-From a project’s perspective, the implementation of the two solutions is very similar. In both cases, modules are suffixed to separate the code of different business logics. In case of a store, the suffix is the name of the store that derives from the `APPLICATION_STORE` environment variable. In case of a code bucket, the suffix is the name of the code bucket that derives from the `SPRYKER_CODE_BUCKET` environment variable.
+From a project's perspective, the implementation of the two solutions is very similar. In both cases, modules are suffixed to separate the code of different business logics. In case of a store, the suffix is the name of the store that derives from the `APPLICATION_STORE` environment variable. In case of a code bucket, the suffix is the name of the code bucket that derives from the `SPRYKER_CODE_BUCKET` environment variable.
 
 If you decide to sync code buckets and stores, for simplicity, you can skip passing the `SPRYKER_CODE_BUCKET` environment variable for all the requests. To use code buckets but keep a business logic consistent with store names, you can use the following:
 

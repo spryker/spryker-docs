@@ -302,7 +302,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 Check that a customer without the `PlaceOrderPermission` permission is not able to proceed to the checkout.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

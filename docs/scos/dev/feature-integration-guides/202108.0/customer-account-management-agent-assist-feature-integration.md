@@ -27,7 +27,7 @@ To start the feature integration, overview and install the necessary features:
 | Agent Assist | {{page.version}} | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
 
 
-## 1) Install the required modules using composer
+## 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 

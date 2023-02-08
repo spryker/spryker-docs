@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/ht-case-sensitive-file-system-mac
 ---
 
-By default, Mac OS uses a case-insensitive file system to support compatibility with applications (for example, Photoshop) provided for the operating system. The file system itself is capable of working in a case-sensitive mode. There are a number of options on how to change case sensitivity:
+By default, Mac OS uses a case-insensitive file system to support compatibility with applications (for example, Photoshop) provided for the operating system. The file system itself is capable of working in a case-sensitive mode. There are three options on how to change case sensitivity:
 1. Repartition the entire hard drive with case sensitivity turned on.
 2. Create a new partition and re-format only this new partition with the case-sensitive file system.
 3. Create a disk image, format that image with the case-sensitive file system, and mount this disk image.
@@ -38,14 +38,14 @@ You can use Mac OS' Disk Utility application to create a disk image. You create 
 1. Open **Disk Utility** by opening Spotlight (<kbd>Cmd + Space</kbd>) and entering `disk utility`.
 2. Select **File&nbsp;<span aria-label="and then">></span> New Image&nbsp;<span aria-label="and then">></span> Blank Image**.
 3. Enter a file name for the disk image—for example, `case-sensitive-file-system`.
-4. Select the place where to store the image—for example, your home folder.
-5. Enter a name for the image—for example, `workspace`. This name is shown in Finder once the image is mounted. We recommend having matching names for the mountpoint and disk image name. This way, Finder displays it nicely. For your local setup, use workspace as the image's name and mount-point.
+4. Select the place to store the image—for example, your home folder.
+5. Enter a name for the image—for example, `workspace`. This name is shown in Finder when the image is mounted.<br>We recommend having matching names for the mount point and disk image name. This way, Finder displays it nicely. For your local setup, use workspace as the image's name and mount-point.
 6. Enter a decent value for the size so the image can accommodate all your projects—for example, `100GB`.
 7. Select the format: **Mac OS Extended** (Case-sensitive, Journaled).
 8. You can leave encryption and partitions as is.
-9. Select the image format: **Sparse** (Note: Sometimes, changing the image format resets the setting for image size).
+9. Select the image format: **Sparse**. Note that sometimes, changing the image format resets the setting for image size.
 
-The resulting dialog should look as follows:
+The resulting dialog looks as follows:
 ![Case sensitive file system](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Handle+Case+Sensitive+File-System/case+sensitive+system.png)
 
 After the disk has been created, you can see it being mounted in Finder already.
@@ -54,7 +54,7 @@ After the disk has been created, you can see it being mounted in Finder already.
 
 You can copy all existing projects to the newly created box. If it is not mounted, double-click the disk image file in Finder. After copying all your projects, you can replace your current project directory with the mount-point for the disk image so that you don't have to adjust any paths you already set up. For details, see the following section.
 
-## Automatically mount the disk image at boot
+## mount the disk image at boot automatically 
 
 To avoid manually mounting the disk image every time you restart your system, create a Launch Agent that can take care of this.
 

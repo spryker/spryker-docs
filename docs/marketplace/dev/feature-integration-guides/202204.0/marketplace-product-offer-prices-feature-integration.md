@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Prices | {{page.version}} |[Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html) |
+| Prices | {{page.version}} |[Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html) |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 
 
@@ -195,7 +195,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface[]
+     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
     protected function getProcessorMessagePlugins(Container $container)
     {
@@ -235,7 +235,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
     protected function getPriceProductOfferStoragePlugins(): array
     {
@@ -265,7 +265,7 @@ use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSync
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface[]
+     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */
     protected function getSynchronizationDataPlugins(): array
     {
@@ -399,7 +399,7 @@ Prepare your data according to your requirements using the demo data:
 
 <details><summary markdown='span'>data/import/common/common/marketplace/price_product_offer.csv</summary>
 
-```csv
+```
 product_offer_reference,price_type,store,currency,value_net,value_gross,price_data.volume_prices
 offer2,DEFAULT,DE,EUR,8144,10160,"[{""quantity"":5,""net_price"":6050,""gross_price"":7065}, {""quantity"":10,""net_price"":5045,""gross_price"":6058}, {""quantity"":20,""net_price"":4040,""gross_price"":5052}]"
 offer2,DEFAULT,DE,CHF,10866,13184,
@@ -789,6 +789,28 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: price-product-offer
+    source: data/import/common/DE/price_product_offer.csv
+  - data_entity: price-product-offer
+    source: data/import/common/AT/price_product_offer.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: price-product-offer
+    source: data/import/common/US/price_product_offer.csv
+```
+
 Import data:
 
 ```bash
@@ -841,7 +863,7 @@ use Spryker\Zed\ProductOffer\ProductOfferDependencyProvider as SprykerProductOff
 class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostCreatePluginInterface>
      */
     protected function getProductOfferPostCreatePlugins(): array
     {
@@ -851,7 +873,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostUpdatePluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostUpdatePluginInterface>
      */
     protected function getProductOfferPostUpdatePlugins(): array
     {
@@ -861,7 +883,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferExpanderPluginInterface>
      */
     protected function getProductOfferExpanderPlugins(): array
     {
@@ -893,7 +915,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     /**
      * {@inheritDoc}
      *
-     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceDimensionQueryCriteriaPluginInterface[]
+     * @return array<\Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceDimensionQueryCriteriaPluginInterface>
      */
     protected function getPriceDimensionQueryCriteriaPlugins(): array
     {
@@ -903,7 +925,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceDimensionConcreteSaverPluginInterface[]
+     * @return array<\Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceDimensionConcreteSaverPluginInterface>
      */
     protected function getPriceDimensionConcreteSaverPlugins(): array
     {
@@ -913,7 +935,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 
     /**
-     * @return \Spryker\Service\PriceProductExtension\Dependency\Plugin\PriceProductDimensionExpanderStrategyPluginInterface[]
+     * @return array<\Spryker\Service\PriceProductExtension\Dependency\Plugin\PriceProductDimensionExpanderStrategyPluginInterface>
      */
     protected function getPriceProductDimensionExpanderStrategyPlugins(): array
     {
@@ -923,7 +945,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface[]
+     * @return array<\Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface>
      */
     protected function getPriceProductValidatorPlugins(): array
     {
@@ -950,7 +972,7 @@ use Spryker\Client\PriceProductStorage\PriceProductStorageDependencyProvider as 
 class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductStoragePriceDimensionPluginInterface[]
+     * @return array<\Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductStoragePriceDimensionPluginInterface>
      */
     public function getPriceDimensionStorageReaderPlugins(): array
     {
@@ -960,7 +982,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
     }
 
     /**
-     * @return \Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductFilterExpanderPluginInterface[]
+     * @return array<\Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductFilterExpanderPluginInterface>
      */
     protected function getPriceProductFilterExpanderPlugins(): array
     {
@@ -1014,7 +1036,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 namespace Pyz\Service\PriceProduct;
 
 use Spryker\Service\Pri123ceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
-use Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct\PriceProductOfferPriceProductFilterPlugin;
+use Spryker\Service\PriceProductOffer\Plugin\PriceProduct\PriceProductOfferPriceProductFilterPlugin;
 use Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer\PriceProductOfferVolumeFilterPlugin;
 
 class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
@@ -1022,7 +1044,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     /**
      * {@inheritDoc}
      *
-     * @return \Spryker\Service\PriceProductExtension\Dependency\Plugin\PriceProductFilterPluginInterface[]
+     * @return array<\Spryker\Service\PriceProductExtension\Dependency\Plugin\PriceProductFilterPluginInterface>
      */
     protected function getPriceProductDecisionPlugins(): array
     {
@@ -1035,7 +1057,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Client/PriceProductOffer/PriceProductOfferDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/PriceProductOffer/PriceProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1050,7 +1072,7 @@ use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\P
 class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExtractorPluginInterface[]
+     * @return array<\Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExtractorPluginInterface>
      */
     protected function getPriceProductOfferExtractorPlugins(): array
     {
@@ -1060,7 +1082,7 @@ class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDepend
     }
 
     /**
-     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExpanderPluginInterface>
      */
     protected function getPriceProductOfferExpanderPlugins(): array
     {
@@ -1070,7 +1092,7 @@ class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDepend
     }
 
     /**
-     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferValidatorPluginInterface[]
+     * @return array<\Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferValidatorPluginInterface>
      */
     protected function getPriceProductOfferValidatorPlugins(): array
     {
@@ -1096,7 +1118,7 @@ use Spryker\Client\PriceProductOfferVolume\Plugin\PriceProductOfferStorage\Price
 class PriceProductOfferStorageDependencyProvider extends SprykerPriceProductOfferStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Client\PriceProductOfferStorageExtension\Dependency\Plugin\PriceProductOfferStoragePriceExtractorPluginInterface[]
+     * @return array<\Spryker\Client\PriceProductOfferStorageExtension\Dependency\Plugin\PriceProductOfferStoragePriceExtractorPluginInterface>
      */
     protected function getPriceProductOfferStoragePriceExtractorPlugins(): array
     {
@@ -1120,7 +1142,7 @@ use Spryker\Zed\ProductOfferGui\ProductOfferGuiDependencyProvider as SprykerProd
 class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface>
      */
     public function getProductOfferViewSectionPlugins(): array
     {

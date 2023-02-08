@@ -417,7 +417,7 @@ To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole`
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

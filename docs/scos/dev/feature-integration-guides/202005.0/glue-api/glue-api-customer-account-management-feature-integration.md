@@ -220,7 +220,7 @@ $jobs[] = [
 
 {% info_block infoBox "Note" %}
 
-For information on how to protect resources, refer to [Security and Authentication](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html).
+For information on how to protect resources, refer to [Security and Authentication](/docs/scos/dev/system-requirements/{{page.version}}/system-requirements.html).
 
 {% endinfo_block %}
 

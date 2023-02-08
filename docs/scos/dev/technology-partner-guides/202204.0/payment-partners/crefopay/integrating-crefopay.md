@@ -1,7 +1,7 @@
 ---
 title: Integrating CrefoPay
-description: This article provides instructions on integrating CrefoPay into the Spryker Commerce OS.
-last_updated: Jun 16, 2021
+description: This document shows how to integrate CrefoPay into the Spryker Commerce OS.
+last_updated: Aug 10, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-integration
 originalArticleId: ce1c7803-e0a5-493f-94a6-0f602616e987
@@ -20,7 +20,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-payment-methods.html
   - title: CrefoPay capture and refund Processes
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay — Enabling B2B payments
+  - title: CrefoPay—Enabling B2B payments
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
   - title: CrefoPay callbacks
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-callbacks.html
@@ -28,17 +28,17 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-notifications.html
 ---
 
-This article provides step-by-step instructions on integrating the CrefoPay system into your project.
+This document shows how to integrate the CrefoPay system into your project.
 
 ## Prerequisites
 
-Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html).
+Before integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html).
 
-## Integrating CrefoPay into Your Project
+## Integrating CrefoPay into your project
 
 To integrate CrefoPay, do the following:
 
-1. Add shipment step plugin, payment subform plugins and payment method handlers:
+1. Add shipment step plugin, payment subform plugins, and payment method handlers:
 
 <details>
 <summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
@@ -84,7 +84,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
      *
      * @return \Spryker\Yves\Kernel\Container
      */
-    public function provideDependencies(Container $container)
+    public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
         $container = $this->extendShipmentHandlerPluginCollection($container);
@@ -159,11 +159,77 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
         return $container;
     }
 }
+...
+
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    protected function extendShipmentHandlerPluginCollection(Container $container): Container
+    {
+        $container->extend(static::PLUGIN_SHIPMENT_HANDLER, function (StepHandlerPluginCollection $shipmentHandlerPlugins) {
+            $shipmentHandlerPlugins->add(new CrefoPayQuoteExpanderPlugin(), static::PLUGIN_CREFO_PAY_SHIPMENT_STEP);
+
+            return $shipmentHandlerPlugins;
+        });
+
+        return $container;
+    }
+
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    protected function extendSubFormPluginCollection(Container $container): Container
+    {
+        $container->extend(static::PAYMENT_SUB_FORMS, function (SubFormPluginCollection $paymentSubFormPluginCollection) {
+            $paymentSubFormPluginCollection->add(new CrefoPayBillSubFormPlugin());
+            $paymentSubFormPluginCollection->add(new CrefoPayCashOnDeliverySubFormPlugin());
+            $paymentSubFormPluginCollection->add(new CrefoPayDirectDebitSubFormPlugin());
+            $paymentSubFormPluginCollection->add(new CrefoPayPayPalSubFormPlugin());
+            $paymentSubFormPluginCollection->add(new CrefoPayPrepaidSubFormPlugin());
+            $paymentSubFormPluginCollection->add(new CrefoPaySofortSubFormPlugin());
+            $paymentSubFormPluginCollection->add(new CrefoPayCreditCardSubFormPlugin());
+            $paymentSubFormPluginCollection->add(new CrefoPayCreditCard3DSubFormPlugin());
+
+            return $paymentSubFormPluginCollection;
+        });
+
+        return $container;
+    }
+
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    protected function extendPaymentMethodHandler(Container $container): Container
+    {
+        $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $paymentMethodHandlerCollection) {
+            $paymentMethodHandlerCollection->add(new NopaymentHandlerPlugin(), NopaymentConfig::PAYMENT_PROVIDER_NAME);
+            $paymentMethodHandlerCollection->add(new CrefoPayPaymentExpanderPlugin(), CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL);
+            $paymentMethodHandlerCollection->add(new CrefoPayPaymentExpanderPlugin(), CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_CASH_ON_DELIVERY);
+            $paymentMethodHandlerCollection->add(new CrefoPayPaymentExpanderPlugin(), CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_DIRECT_DEBIT);
+            $paymentMethodHandlerCollection->add(new CrefoPayPaymentExpanderPlugin(), CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_PAY_PAL);
+            $paymentMethodHandlerCollection->add(new CrefoPayPaymentExpanderPlugin(), CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_PREPAID);
+            $paymentMethodHandlerCollection->add(new CrefoPayPaymentExpanderPlugin(), CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_SOFORT);
+            $paymentMethodHandlerCollection->add(new CrefoPayPaymentExpanderPlugin(), CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_CREDIT_CARD);
+            $paymentMethodHandlerCollection->add(new CrefoPayPaymentExpanderPlugin(), CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_CREDIT_CARD_3D);
+
+            return $paymentMethodHandlerCollection;
+        });
+
+        return $container;
+    }
+}
+
 ```
 
 </details>
 
-2. Extend `ShipmentStep` to add payment methods filtering logic:
+2. Extend `ShipmentStep` with the filtering logic for payment methods:
 
 **\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep**
 
@@ -196,7 +262,7 @@ class ShipmentStep extends SprykerShopShipmentStep
 }
 ```
 
-3. Extend `StepFactory` for the project-level `ShipmentStep` usage:
+3. Extend `StepFactory` to be used by project-level `ShipmentStep`:
 
 **\Pyz\Yves\CheckoutPage\Process\StepFactory**
 
@@ -206,39 +272,14 @@ class ShipmentStep extends SprykerShopShipmentStep
 namespace Pyz\Yves\CheckoutPage\Process;
 
 use Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep;
-use Spryker\Yves\StepEngine\Process\StepCollection;
-use SprykerShop\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
+use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 use SprykerShop\Yves\CheckoutPage\Process\StepFactory as SprykerShopStepFactory;
-use SprykerShop\Yves\HomePage\Plugin\Provider\HomePageControllerProvider;
 
 /**
  * @method \SprykerShop\Yves\CheckoutPage\CheckoutPageConfig getConfig()
  */
 class StepFactory extends SprykerShopStepFactory
 {
-    /**
-     * @return \Spryker\Yves\StepEngine\Process\StepCollectionInterface
-     */
-    public function createStepCollection()
-    {
-        $stepCollection = new StepCollection(
-            $this->getUrlGenerator(),
-            CheckoutPageControllerProvider::CHECKOUT_ERROR
-        );
-
-        $stepCollection
-            ->addStep($this->createEntryStep())
-            ->addStep($this->createCustomerStep())
-            ->addStep($this->createAddressStep())
-            ->addStep($this->createShipmentStep())
-            ->addStep($this->createPaymentStep())
-            ->addStep($this->createSummaryStep())
-            ->addStep($this->createPlaceOrderStep())
-            ->addStep($this->createSuccessStep());
-
-        return $stepCollection;
-    }
-
     /**
      * @return \SprykerShop\Yves\CheckoutPage\Process\Steps\ShipmentStep
      */
@@ -247,14 +288,17 @@ class StepFactory extends SprykerShopStepFactory
         return new ShipmentStep(
             $this->getCalculationClient(),
             $this->getShipmentPlugins(),
-            CheckoutPageControllerProvider::CHECKOUT_SHIPMENT,
-            HomePageControllerProvider::ROUTE_HOME
+            $this->createShipmentStepPostConditionChecker(),
+            $this->createGiftCardItemsChecker(),
+            CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_SHIPMENT,
+            $this->getConfig()->getEscapeRoute(),
+            $this->getCheckoutShipmentStepEnterPreCheckPlugins()
         );
     }
 }
 ```
 
-4. Extend `CheckoutPageFactory` for the project-level `StepFactory` usage:
+4. Extend `CheckoutPageFactory` to be used by the project-level `StepFactory`:
 
 **\Pyz\Yves\CheckoutPage\CheckoutPageFactory**
 
@@ -283,58 +327,32 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 }
 ```
 
-5. Extend checkout page layout to add `jQuery`:
+5. Extend the checkout page layout to add `jQuery`:
 
 **Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig**
 
-```php
-{% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
-
-{% raw %}{%{% endraw %} define data = {
-    breadcrumbs: _view.stepBreadcrumbs.breadcrumbs | default([])
-} {% raw %}%}{% endraw %}
+```twig
+{% raw %}{%{% endraw %} extends template('page-layout-checkout', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block headScripts {% raw %}%}{% endraw %}
     {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 
-{% raw %}{%{% endraw %} block sidebar {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
-
-{% raw %}{%{% endraw %} block header {% raw %}%}{% endraw %}
-    {% raw %}{%{% endraw %} include organism('header') with {
-        data: {
-            showSearchForm: false,
-            showNavigation: false
-        }
-    } only {% raw %}%}{% endraw %}
-{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
-
-{% raw %}{%{% endraw %} block breadcrumbs {% raw %}%}{% endraw %}
-    {% raw %}{%{% endraw %} include view('cart-checkout-breadcrumb', 'CheckoutWidget') with {
-        data: {
-            isCartPage: false,
-            checkoutBreadcrumbs: data.breadcrumbs
-        }
-    } only {% raw %}%}{% endraw %}
-{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
-
-{% raw %}{%{% endraw %} block footer {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-6. Extend payment twig to add CrefoPay payment methods:
+6. Extend payment Twig with CrefoPay payment methods:
 
-**Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
+**Demo Shop template extension (a B2C theme example)**
 
-```php
-{% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
+<details>
+<summary markdown='span'>Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+
+```twig
+{% raw %}{%{% endraw %} extends view('payment', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define data = {
-    backUrl: _view.previousStepUrl,
-    forms: {
-        payment: _view.paymentForm
-    },
-    title: 'checkout.step.payment.title' | trans,
     customForms: {
         'crefoPay/bill': ['bill', 'crefoPay'],
         'crefoPay/cash-on-delivery': ['cash-on-delivery', 'crefoPay'],
@@ -344,7 +362,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
         'crefoPay/sofort': ['sofort', 'crefoPay'],
         'crefoPay/credit-card': ['credit-card', 'crefoPay'],
         'crefoPay/credit-card-3d': ['credit-card-3d', 'crefoPay']
-    }
+    },
 } {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
@@ -352,125 +370,296 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
         class: 'js-crefopay-payment-form__script-loader',
         attributes: {
             src: 'https://libs.crefopay.de/3.0/secure-fields.js'
-        }
+        },
     } only {% raw %}%}{% endraw %}
 
     {% raw %}{%{% endraw %} include atom('crefopay-checkbox-helper', 'CrefoPay') with {
         attributes: {
-            'trigger-selector': '.toggler-radio',
-            'payment-container-selector': '.js-crefopay-payment',
+            'trigger-selector': '.toggler-radio__input',
+            'payment-container-selector': '.js-payment-method-crefoPay',
             'target-selector': '.radio__input',
             'custom-attribute-name': 'data-crefopay',
             'custom-attribute-value': 'paymentMethod',
-            'joint-container-selector': '.form'
-        }
+        },
     } only {% raw %}%}{% endraw %}
 
     {% raw %}{%{% endraw %} embed molecule('form') with {
-        class: 'box',
+        modifiers: ['checkout-actions', 'checkout-form-elements'],
         data: {
             form: data.forms.payment,
-            options: {
-                attr: {
-                    id: 'payment-form'
-                }
-            },
             submit: {
                 enable: true,
-                text: 'checkout.step.summary' | trans
+                text: 'checkout.step.summary' | trans,
+                class: 'form__action--checkout button  button--large button--expand',
             },
             cancel: {
                 enable: true,
                 url: data.backUrl,
-                text: 'general.back.button' | trans
+                text: 'general.back.button' | trans,
+                class: 'form__action--checkout button button--hollow button--expand',
             },
-            customForms: data.customForms
-        }
+            options: {
+                attr: {
+                    novalidate: 'novalidate',
+                    id: 'payment-form',
+                }
+            },
+        },
+        embed: {
+            customForms: data.customForms,
+        },
     } only {% raw %}%}{% endraw %}
         {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
             {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices {% raw %}%}{% endraw %}
                 {% raw %}{%{% endraw %} set paymentProviderIndex = loop.index0 {% raw %}%}{% endraw %}
-                <h5>{% raw %}{{{% endraw %} ('checkout.payment.provider.' ~ name) | trans {% raw %}}}{% endraw %}</h5>
-                <ul class="js-crefopay-payment">
-                    {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
-                        <li class="list__item spacing-y clear">
-                            {% raw %}{%{% endraw %} embed molecule('form') with {
-                                data: {
-                                    form: data.form[data.form.paymentSelection[key].vars.value],
-                                    enableStart: false,
-                                    enableEnd: false,
-                                    customForms: data.customForms
+
+                <div class="js-payment-method-{% raw %}{{{% endraw %} name {% raw %}}}{% endraw %}">
+                    {% raw %}{%{% endraw %} embed molecule('list-switches') with {
+                        modifiers: ['register-type', 'layout-width', 'one-column'],
+                        data: {
+                            form: data.form.paymentSelection,
+                            choices: choices,
+                            rowAttrClass: 'toggler-radio--with-bg',
+                            targetClassName: 'js-payment-method-',
+                            providerIndex: paymentProviderIndex,
+                        },
+                    } only {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} block item {% raw %}%}{% endraw %}
+                            {% raw %}{%{% endraw %} set fullIndex = loop.index ~ '-' ~ data.providerIndex {% raw %}%}{% endraw %}
+
+                            {% raw %}{{{% endraw %} form_row(data.form[key], {
+                                label: data.form[key].vars.label,
+                                required: false,
+                                component: data.targetClassName ? molecule('toggler-radio'),
+                                rowAttr: {
+                                    class: data.rowAttrClass,
                                 },
-                                embed: {
-                                    index: loop.index ~ '-' ~ paymentProviderIndex,
-                                    toggler: data.form.paymentSelection[key]
-                                }
-                            } only {% raw %}%}{% endraw %}
-                                {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
-                                    {% raw %}{{{% endraw %} form_row(embed.toggler, {
-                                        required: false,
-                                        component: molecule('toggler-radio'),
-                                        attributes: {
-                                            'target-selector': '.js-payment-method-' ~ embed.index,
-                                            'class-to-toggle': 'is-hidden'
-                                        }
-                                    }) {% raw %}}}{% endraw %}
-                                    <div class="col col--sm-12 is-hidden js-payment-method-{% raw %}{{{% endraw %}embed.index{% raw %}}}{% endraw %}">
-                                        <div class="col col--sm-12 col--md-6">
-                                            {% raw %}{%{% endraw %} if data.customForms[data.form.vars.template_path] is not defined {% raw %}%}{% endraw %}
-                                                {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
-                                            {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
-                                                {% raw %}{%{% endraw %} set viewName = data.customForms[data.form.vars.template_path] | first {% raw %}%}{% endraw %}
-                                                {% raw %}{%{% endraw %} set moduleName = data.customForms[data.form.vars.template_path] | last {% raw %}%}{% endraw %}
-                                                {% raw %}{%{% endraw %} include view(viewName, moduleName) ignore missing with {
-                                                    form: data.form.parent
-                                                } only {% raw %}%}{% endraw %}
-                                            {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
-                                        </div>
-                                    </div>
-                                {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
-                            {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
-                        </li>
+                                attributes: {
+                                    'target-class-name': data.targetClassName ? data.targetClassName ~ fullIndex,
+                                    checked: choice.value == data.providerIndex,
+                                    'target-payment-form-class-name': 'js-payment-method-' ~ loop.index ~ '-' ~ data.providerIndex,
+                                },
+                            }) {% raw %}}}{% endraw %}
+
+                            {% raw %}{%{% endraw %} if key == 0 {% raw %}%}{% endraw %}
+                                <div class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img-wrap">
+                                    <img class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img" src="{% raw %}{{{% endraw %} publicPath('images/logo-visa.png') {% raw %}}}{% endraw %}" alt="Visa">
+                                    <img class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img" src="{% raw %}{{{% endraw %} publicPath('images/logo-mastercard.png') {% raw %}}}{% endraw %}" alt="Mastercard">
+                                </div>
+                            {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+                    {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
+
+                    {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} embed molecule('form') with {
+                            class: 'spacing-bottom spacing-bottom--bigger',
+                            modifiers: ['grid-indent', 'checkout-form-elements'],
+                            data: {
+                                form: data.form[data.form.paymentSelection[key].vars.value],
+                                enableStart: false,
+                                enableEnd: false,
+                                layout: {
+                                    'card_number': 'col col--sm-12 col--lg-6',
+                                    'name_on_card': 'col col--sm-12 col--lg-6',
+                                    'card_expires_month': 'col col--sm-12 col--md-6 col--lg-3 col--bottom',
+                                    'card_expires_year': 'col col--sm-12 col--md-6 col--lg-3 col--bottom',
+                                    'card_security_code': 'col col--sm-12 col--lg-6 col--bottom',
+                                },
+                            },
+                            embed: {
+                                name: name,
+                                customForms: embed.customForms,
+                                index: loop.index ~ '-' ~ paymentProviderIndex,
+                                toggler: data.form.paymentSelection[key],
+                            },
+                        } only {% raw %}%}{% endraw %}
+                            {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
+                                <div class="js-payment-method-{% raw %}{{{% endraw %} embed.index {% raw %}}}{% endraw %} js-payment-form-{% raw %}{{{% endraw %} embed.name {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} if embed.index != '1-0' {% raw %}%}{% endraw %} is-hidden{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
+                                    <h2 class="title title--primary">{% raw %}{{{% endraw %} embed.toggler.vars.label | trans {% raw %}}}{% endraw %}</h2>
+
+                                    {% raw %}{%{% endraw %} if embed.customForms[data.form.vars.template_path] is not defined {% raw %}%}{% endraw %}
+                                        {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+                                    {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
+                                        {% raw %}{%{% endraw %} set viewName = embed.customForms[data.form.vars.template_path] | first {% raw %}%}{% endraw %}
+                                        {% raw %}{%{% endraw %} set moduleName = embed.customForms[data.form.vars.template_path] | last {% raw %}%}{% endraw %}
+                                        {% raw %}{%{% endraw %} include view(viewName, moduleName) ignore missing with {
+                                            form: data.form.parent,
+                                        } only {% raw %}%}{% endraw %}
+                                    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+                                </div>
+                            {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
                     {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
-                </ul>
+                </div>
             {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
         {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+
 ```
 
-7. Add controller provider:
+</details>
 
-**\Pyz\Yves\ShopApplication\YvesBootstrap**
+7. In the project root, add an alias for the `CrefoPay` module to `tsconfig.json`:
+
+**tsconfig.json:**
+
+```json
+{
+    "compilerOptions": {
+        ...
+        "paths": {
+            ...
+            "SprykerEcoCrefoPay/*": [
+                "./vendor/spryker-eco/crefo-pay/src/SprykerEco/Yves/CrefoPay/Theme/default/*"
+            ]
+        }
+    },
+    ...
+}
+```
+
+8. Extend the `crefopay-checkbox-helper` atom of the `CrefoPay` module:
+
+**\Pyz\Yves\CrefoPay\Theme\default\components\atoms\crefopay-checkbox-helper\crefopay-checkbox-helper.ts**
+
+```ts
+import SprykerEcoCrefopayCheckboxHelper from 'SprykerEcoCrefoPay/components/atoms/crefopay-checkbox-helper/crefopay-checkbox-helper';
+
+export default class CrefopayCheckboxHelper extends SprykerEcoCrefopayCheckboxHelper {
+
+    protected readyCallback(): void {}
+
+    protected init(): void {
+        super.readyCallback();
+    }
+
+    protected checkCheckbox(checkboxTrigger: EventTarget): void {
+        const targetFormContainerClassName = this.getTargetPaymentFormClassName(<HTMLElement>checkboxTrigger);
+        const formContainer = <HTMLElement>this.paymentForm.getElementsByClassName(targetFormContainerClassName)[0];
+        const checkbox: HTMLInputElement = formContainer.querySelector(this.targetSelector);
+
+        checkbox.checked = true;
+    }
+
+    protected getTargetPaymentFormClassName(element: HTMLElement): string {
+        return element.getAttribute('target-payment-form-class-name');
+    }
+}
+
+```
+
+9. Add an entry point for the extended `crefopay-checkbox-helper` atom:
+
+**\Pyz\Yves\CrefoPay\Theme\default\components\atoms\crefopay-checkbox-helper\index.ts**
+
+```ts
+import register from 'ShopUi/app/registry';
+export default register('crefopay-checkbox-helper', () => import(/* webpackMode: "lazy" */'./crefopay-checkbox-helper'));
+```
+
+10. Override layout of the `crefopay-payment-form` molecule:
+
+<details>
+<summary markdown='span'>\Pyz\Yves\CrefoPay\Theme\default\components\molecule\crefopay-payment-form\crefopay-payment-form.twig</summary>
+
+```twig
+{% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
+
+{% raw %}{%{% endraw %} define config = {
+    name: 'crefopay-payment-form',
+    tag: 'crefopay-payment-form',
+} {% raw %}%}{% endraw %}
+
+{% raw %}{%{% endraw %} define data = {
+    paymentMethodSubForm: required,
+    shopPublicKey: required,
+    orderId: required,
+    fields: [],
+    endpointUrl: required,
+    placeholders: required
+} {% raw %}%}{% endraw %}
+
+{% raw %}{%{% endraw %} set crefoPayConfig = {
+    url: data.endpointUrl,
+    placeholders: {
+        accountHolder: data.placeholders.accountHolder,
+        number: data.placeholders.number,
+        cvv: data.placeholders.cvv
+    }
+} {% raw %}%}{% endraw %}
+
+{% raw %}{%{% endraw %} define attributes = {
+    'shop-public-key': data.shopPublicKey,
+    'order-id': data.orderId,
+    'crefo-pay-config': crefoPayConfig | json_encode(),
+    'payment-form-selector': '#payment-form',
+    'class-to-toggle': 'is-hidden',
+    'payment-container-selector': '.form',
+    'payment-toggler-selector': '[class*="js-payment-form-crefoPay"]',
+    'toggle-class-to-check': 'is-hidden'
+} {% raw %}%}{% endraw %}
+
+{% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} macro crefopayField(name, attribute, blockName) {% raw %}%}{% endraw %}
+        <div class="spacing-y">
+            <label class="label label--required">{% raw %}{{{% endraw %} name {% raw %}}}{% endraw %}</label>
+            <div class="{% raw %}{{{% endraw %} blockName {% raw %}}}{% endraw %}__input-container" data-crefopay-placeholder="{% raw %}{{{% endraw %} attribute {% raw %}}}{% endraw %}"></div>
+        </div>
+    {% raw %}{%{% endraw %} endmacro {% raw %}%}{% endraw %}
+
+    {% raw %}{%{% endraw %} block requestForm {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} import _self as macros {% raw %}%}{% endraw %}
+
+        <div class="is-hidden">
+            {% raw %}{{{% endraw %} form_widget(data.paymentMethodSubForm) {% raw %}}}{% endraw %}
+        </div>
+
+        {% raw %}{%{% endraw %} for field in data.fields {% raw %}%}{% endraw %}
+            {% raw %}{{{% endraw %} macros.crefopayField(field.name, field.attribute, config.name) {% raw %}}}{% endraw %}
+        {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+
+        <div class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__error {% raw %}{{{% endraw %} config.jsName {% raw %}}}{% endraw %}__error spacing-y is-hidden">
+            {% raw %}{{{% endraw %} 'crefopay.required_notification' | trans {% raw %}}}{% endraw %}
+        </div>
+    {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+
+```
+
+</details>
+
+11. Add a route provider plugin:
+
+**\Pyz\Yves\Router\RouterDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Yves\ShopApplication;
+namespace Pyz\Yves\Router;
 
-use SprykerEco\Yves\CrefoPay\Plugin\Provider\CrefoPayControllerProvider;
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerEco\Yves\CrefoPay\Plugin\Router\CrefoPayRouteProviderPlugin;
 
-class YvesBootstrap extends SprykerYvesBootstrap
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @param bool|null $isSsl
-     *
-     * @return \SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider[]
+     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
      */
-    protected function getControllerProviderStack($isSsl)
+    protected function getRouteProvider(): array
     {
         return [
             ...
-            new CrefoPayControllerProvider($isSsl),
+            new CrefoPayRouteProviderPlugin(),
         ];
     }
 }
 ```
 
-8. Add checkout plugins:
+12. Add checkout plugins:
 
-**\Pyz\Zed\Checkout\CheckoutDependencyProvider**
-
+<details>
+<summary markdown='span'>\Pyz\Zed\Checkout\CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -514,9 +703,12 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-9. Add OMS commands and conditions:
+</details>
 
-**\Pyz\Zed\Oms\OmsDependencyProvider**
+13. Add OMS commands and conditions:
+
+<details>
+<summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -609,9 +801,11 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 }
 ```
 
-10. Extend `PaymentDependencyProvider` to add payment method filter plugin:
+</details>
 
-**\Pyz\Zed\Payment\PaymentDependencyProvider**
+14. Extend `PaymentDependencyProvider` with a plugin for filtering payment methods:
+
+**Pyz\Zed\Payment\PaymentDependencyProvider.php**
 
 ```php
 <?php
@@ -629,9 +823,18 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     protected function getPaymentMethodFilterPlugins()
     {
         return [
-            ...
+			...
             new CrefoPayPaymentMethodFilterPlugin(),
         ];
     }
 }
 ```
+
+{% info_block warningBox "Note" %}
+
+If an additional validation for input fields that are filled by a customer is needed, we recommend creating a plugin that implements `\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface`.
+The plugin must be added to the `Pyz\Zed\Checkout\CheckoutDependencyProvider::getCheckoutPreConditions()` method.
+
+For more details, see [Checkout process review and implementation](/docs/pbc/all/cart-and-checkout/{{site.version}}/extend-and-customize/checkout-process-review-and-implementation.html).
+
+{% endinfo_block %}

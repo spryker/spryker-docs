@@ -20,6 +20,11 @@ redirect_from:
   - /v3/docs/en/application
   - /v2/docs/application
   - /v2/docs/en/application
+related:
+  - title: Silex replacement
+    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
+  - title: Container
+    link: docs/scos/dev/migration-concepts/silex-replacement/container.html
 ---
 
 Previously, we had used Silex service providers to implement Symfony components and bootstrap the application. Since Silex had been abandoned, we refactored it out.

@@ -17,16 +17,14 @@ redirect_from:
   - /docs/scos/user/features/202200.0/product-relations-feature-overview.html
 ---
 
-The _Product Relations_ feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.
-
-For example, you can:
+The _Product Relations_ feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes:
 * Promote products in cart.
 * Recommend product alternatives.
 * Display comparable or additional products to the product a customer is viewing.
 
 Product relations are established only between abstract products. An abstract product can have multiple product relations.
 
-To learn how a Back Office user can create a product relation, see [Creating a Product Relation](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html).
+To learn how a Back Office user can create a product relation, see [Creating a product relation](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html).
 
 A developer can import<!-- link to new import page --> product relations.
 
@@ -34,11 +32,11 @@ A developer can import<!-- link to new import page --> product relations.
 
 A product relation type defines how a product relation is displayed on Storefront. The following product relation types are shipped with the feature: Related products and Upselling.
 
-With Related products, [related products](#product-types-in-product-relations) are displayed on the product details page of the [product owing the relation](#product-types-in-product-relations).
+With Related products, [related products](#product-types-in-product-relations) are displayed on the product details page of the [product owning the relation](#product-types-in-product-relations).
 
 ![Related products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/related-products.gif)
 
-With Upselling, when the product owing the relation is added to cart, related products are displayed on the **Cart** page.
+With Upselling, when the product owing the relation is added to the cart, related products are displayed on the **Cart** page.
 
 ![Upselling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/Upselling.gif)
 
@@ -56,7 +54,7 @@ On the Storefront, the related products are displayed on the product details pag
 
 ## Related product rules
 
-A related product rule is a condition that should be fulfilled by a product to be automatically added to related products of a product relation. The rules are defined as queries which are built using the Query Builder in the Back Office.
+A related product rule is a condition that must be fulfilled by a product to be automatically added to related products of a product relation. The rules are defined as queries, which are built using the Query Builder in the Back Office.
 
 A product relation can have one or more rules. Example:
 
@@ -65,21 +63,21 @@ A product relation can have one or more rules. Example:
 | Brand | equal | Sony |
 | Category | equal | Cameras |
 
-In this example, only the products that belong to the *Cameras* category and *Sony* brand are added to related products.
+In this example, only the products that belong to the *Cameras* category and the *Sony* brand are added to related products.
 
-You can combine the rules using *AND* and *OR* combination operators. When several rules are combined with the AND operator, all of them should be fulfilled for a product to be added to related products. When several rules are combined with the OR operator, at least one of them should be fulfilled for the product to be added to related products.
+You can combine the rules using *AND* and *OR* combination operators. When several rules are combined with the AND operator, all of them must be fulfilled for a product to be added to related products. When several rules are combined with the OR operator, at least one of them must be fulfilled for the product to be added to related products.
 
-In the following example, for a product to be added to related products, it should belong to both the *Sony* brand and the *Cameras* category.
+In the following example, for a product to be added to related products, it must belong to both the *Sony* brand and *Cameras* category.
 
 ![And combination operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/and-combination-operator.png)
 
-In the following example, for a product to be added to related products, it should belong to at least the *Sony* brand or the *Cameras* category.
+In the following example, for a product to be added to related products, it must belong to at least the *Sony* brand or *Cameras* category.
 
 ![Or combination operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/or-combination-operator.png)
 
 {% info_block infoBox "Info" %}
 
-When rules are combined by the OR operator, they do not exclude each other. If a product fulfills both such rules, it is still added to related products. In the previous example, a product should fulfill at least one of the rules to be added to related products. However, fulfilling both of them still adds it to related products.
+When rules are combined by the OR operator, they do not exclude each other. If a product fulfills both such rules, it is still added to related products. In the previous example, a product must fulfill at least one of the rules to be added to related products. However, fulfilling both of them still adds it to related products.
 
 {% endinfo_block %}
 
@@ -93,7 +91,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a pr
 
 ![Rule group hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group-hierarchy.png)
 
-When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a product is evaluated against the rules on the previous screenshot.
+When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a product is evaluated against the rules from the previous screenshot.
 
 <details><summary markdown='span'>Product evaluation diagram</summary>
 
@@ -105,7 +103,7 @@ When a product is evaluated on a level that has a rule and a rule group, the rul
 
 After you save a product relation, the products that fulfill the defined rules are added to related products. If you want to keep the list of related products up to date with the changes in your product catalog that may happen in the future, you can set the product relation to be updated regularly.
 
-If selected, the product catalog is automatically evaluated against the defined rules on a regular basis. By default, the list of related products is updated every day at 02:30 GMT.  If, at some point, one or more related products no longer fulfill the rules, they are removed from related products. If there are new products fulfilling the rules, they are added to related products.
+If selected, the product catalog is automatically evaluated against the defined rules on a regular basis. By default, the list of related products is updated every day at 02:30 GMT. At some point, if one or more related products no longer fulfill the rules, they are removed from related products. If there are new products fulfilling the rules, they are added to related products.
 
 If you do not select this option, the product catalog is evaluated against the defined rules only at the stage of product relation creation.
 
@@ -130,7 +128,7 @@ Stores are defined when creating or editing a product relation in the Back Offic
 |---|
 | [Get a general idea of the Product Relations feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html)  |   |
 | [Create product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html)  |   |
-| [Manage product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html)  |   |
+| [Edit product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/edit-product-relations.html)  |   |
 
 {% info_block warningBox "Developer guides" %}
 

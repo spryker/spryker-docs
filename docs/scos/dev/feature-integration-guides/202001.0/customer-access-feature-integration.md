@@ -364,7 +364,7 @@ Make sure that everything works fine (checks should be done for not logged-in cu
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

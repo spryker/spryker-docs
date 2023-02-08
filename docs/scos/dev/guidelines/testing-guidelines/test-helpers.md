@@ -1,5 +1,5 @@
 ---
-title: Test Helpers
+title: Test helpers
 description: Learn about the test helpers, how you can enable them, use, and create your own.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -15,6 +15,29 @@ redirect_from:
   - /v5/docs/test-helper
   - /v5/docs/en/test-helper
   - /docs/scos/dev/guidelines/testing/test-helpers.html
+related:
+  - title: Available test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+  - title: Code coverage
+    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+  - title: Data builders
+    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+  - title: Executing tests
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+  - title: Publish and Synchronization testing
+    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+  - title: Setting up tests
+    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+  - title: Test framework
+    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+  - title: Testify
+    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+  - title: Testing best practices
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+  - title: Testing concepts
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+  - title: Testing console commands
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
 [Codeception](https://codeception.com) provides so-called modules, which are *helpers* used for building your tests. These helpers allow you to hook into the lifecycle of tests and get handy methods available wherever the helper is enabled. Codeception and Spryker provide a lot of ready to use helpers. Checkout [Available Test Helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html) for information on some of them.
@@ -35,7 +58,7 @@ Example:
 suites:
     SuiteName:
         path: path/to/tests
-        class_name: Module{Layer}Tester
+        actor: Module{Layer}Tester
         modules:
             enabled:
                 - \SprykerTest\Shared\Testify\Helper\ConfigHelper

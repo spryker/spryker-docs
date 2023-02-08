@@ -30,7 +30,7 @@ Our exemplary Marketplace state machine provides the following states:
 * Delivered
 * Closed
 
-To learn more about states, see [State Machine Fundamentals](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html).
+To learn more about states, see [State Machine Fundamentals](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html).
 
 {% info_block warningBox "Note" %}
 

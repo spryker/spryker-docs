@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/glue-promotions-discounts-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

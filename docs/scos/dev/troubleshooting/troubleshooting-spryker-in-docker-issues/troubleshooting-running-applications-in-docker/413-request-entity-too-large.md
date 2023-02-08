@@ -12,6 +12,20 @@ redirect_from:
   - /docs/en/413-request-entity-too-large
   - /v6/docs/413-request-entity-too-large
   - /v6/docs/en/413-request-entity-too-large
+related:
+  - title: An application is not reachable via http
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/an-application-is-not-reachable-via-http.html
+  - title: MacOS and Windows - file synchronization issues in Development mode
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
+  - title: Mutagen error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html
+  - title: Mutagen synchronization issue
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html
+  - title: Nginx welcome page
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
+  - title: Port is already occupied on host
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
+
 ---
 
 ## Description

@@ -84,7 +84,9 @@ Adjust the schema definition so entity changes will trigger events:
 Generate entity and transfer changes:
 
 ```bash
-console transfer:generate console propel:install console transfer:generate
+console transfer:generate
+console propel:install 
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -126,7 +128,9 @@ This step publishes change events to `spy_merchant_opening_hours_storage` and sy
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | -------------- | ------------- | ------------- |
-| MerchantOpeningHoursWritePublisherPlugin | Registers publisher that are responsible for publishing merchant opening hours entity changes to storage. |   | Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Event\Subscriber |
+| MerchantOpeningHoursDateScheduleWritePublisherPlugin |  |   | Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours |
+| MerchantOpeningHoursWeekdayScheduleWritePublisherPlugin |  |   | Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours |
+| MerchantOpeningHoursWritePublisherPlugin | Registers publisher that are responsible for publishing merchant opening hours entity changes to storage. |   | Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours |
 
 **src/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -135,6 +139,9 @@ This step publishes change events to `spy_merchant_opening_hours_storage` and sy
 
 namespace Pyz\Zed\Publisher;
 
+use Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours\MerchantOpeningHoursDateScheduleWritePublisherPlugin;
+use Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours\MerchantOpeningHoursWeekdayScheduleWritePublisherPlugin;
+use Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours\MerchantOpeningHoursWritePublisherPlugin;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -146,6 +153,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return [
             new MerchantOpeningHoursWritePublisherPlugin(),
+            new MerchantOpeningHoursWeekdayScheduleWritePublisherPlugin(),
+            new MerchantOpeningHoursDateScheduleWritePublisherPlugin(),
         ];
     }
 }
@@ -174,7 +183,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface[]
+     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
     protected function getProcessorMessagePlugins(Container $container)
     {
@@ -231,7 +240,7 @@ use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSync
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface[]
+     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */
     protected function getSynchronizationDataPlugins(): array
     {
@@ -325,13 +334,13 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
    ],
    "date_schedule":[
       {
-         "date":"2020-01-01",
+         "date":"2022-01-01",
          "time_from":null,
          "time_to":null,
          "note":"merchant_weekday_schedule.new_year"
       },
       {
-         "date":"2021-12-31",
+         "date":"2023-12-31",
          "time_from":"10:00:00.000000",
          "time_to":"17:00:00.000000",
          "note":""
@@ -350,81 +359,81 @@ Prepare your data according to your requirements using the demo data:
 <details>
 <summary markdown='span'>data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv</summary>
 
-```csv
+```
 merchant_reference,date,time_from,time_to,note_glossary_key
-MER000001,2020-01-01,,,merchant_weekday_schedule.new_year
-MER000001,2020-04-10,,,merchant_weekday_schedule.good_friday
-MER000001,2020-04-12,,,merchant_weekday_schedule.easter_sunday
-MER000001,2020-04-13,,,merchant_weekday_schedule.easter_monday
-MER000001,2020-05-01,,,merchant_weekday_schedule.may_day
-MER000001,2020-05-21,,,merchant_weekday_schedule.ascension_of_christ
-MER000001,2020-05-31,,,merchant_weekday_schedule.whit_sunday
-MER000001,2020-06-01,,,merchant_weekday_schedule.whit_monday
-MER000001,2020-06-11,,,merchant_weekday_schedule.corpus_christi
-MER000001,2020-10-03,,,merchant_weekday_schedule.day_of_german_unity
-MER000001,2020-11-01,,,merchant_weekday_schedule.all_saints_day
-MER000001,2020-12-25,,,merchant_weekday_schedule.1st_christmas_day
-MER000001,2020-12-26,,,merchant_weekday_schedule.2nd_christmas_day
-MER000001,2021-11-28,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening
-MER000001,2021-12-31,10:00:00,17:00:00,
-MER000002,2020-01-01,,,merchant_weekday_schedule.new_year
-MER000002,2020-04-10,,,merchant_weekday_schedule.good_friday
-MER000002,2020-04-12,,,merchant_weekday_schedule.easter_sunday
-MER000002,2020-04-13,,,merchant_weekday_schedule.easter_monday
-MER000002,2020-05-01,,,merchant_weekday_schedule.may_day
-MER000002,2020-05-21,,,merchant_weekday_schedule.ascension_of_christ
-MER000002,2020-05-31,,,merchant_weekday_schedule.whit_sunday
-MER000002,2020-06-01,,,merchant_weekday_schedule.whit_monday
-MER000002,2020-06-11,,,merchant_weekday_schedule.corpus_christi
-MER000002,2020-10-03,,,merchant_weekday_schedule.day_of_german_unity
-MER000002,2020-11-01,,,merchant_weekday_schedule.all_saints_day
-MER000002,2020-12-25,,,merchant_weekday_schedule.1st_christmas_day
-MER000002,2020-12-26,,,merchant_weekday_schedule.2nd_christmas_day
-MER000006,2020-01-01,,,merchant_weekday_schedule.new_year
-MER000006,2020-04-10,,,merchant_weekday_schedule.good_friday
-MER000006,2020-04-12,,,merchant_weekday_schedule.easter_sunday
-MER000006,2020-04-13,,,merchant_weekday_schedule.easter_monday
-MER000006,2020-05-01,,,merchant_weekday_schedule.may_day
-MER000006,2020-05-21,,,merchant_weekday_schedule.ascension_of_christ
-MER000006,2020-05-31,,,merchant_weekday_schedule.whit_sunday
-MER000006,2020-06-01,,,merchant_weekday_schedule.whit_monday
-MER000006,2020-06-11,,,merchant_weekday_schedule.corpus_christi
-MER000006,2020-10-03,,,merchant_weekday_schedule.day_of_german_unity
-MER000006,2020-11-01,,,merchant_weekday_schedule.all_saints_day
-MER000006,2020-12-25,,,merchant_weekday_schedule.1st_christmas_day
-MER000006,2020-12-26,,,merchant_weekday_schedule.2nd_christmas_day
-MER000006,2021-11-28,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening
-MER000006,2021-12-31,10:00:00,17:00:00,
-MER000005,2020-01-01,,,merchant_weekday_schedule.new_year
-MER000005,2020-04-10,,,merchant_weekday_schedule.good_friday
-MER000005,2020-04-12,,,merchant_weekday_schedule.easter_sunday
-MER000005,2020-04-13,,,merchant_weekday_schedule.easter_monday
-MER000005,2020-05-01,,,merchant_weekday_schedule.may_day
-MER000005,2020-05-21,,,merchant_weekday_schedule.ascension_of_christ
-MER000005,2020-05-31,,,merchant_weekday_schedule.whit_sunday
-MER000005,2020-06-01,,,merchant_weekday_schedule.whit_monday
-MER000005,2020-06-11,,,merchant_weekday_schedule.corpus_christi
-MER000005,2020-10-03,,,merchant_weekday_schedule.day_of_german_unity
-MER000005,2020-11-01,,,merchant_weekday_schedule.all_saints_day
-MER000005,2020-12-25,,,merchant_weekday_schedule.1st_christmas_day
-MER000005,2020-12-26,,,merchant_weekday_schedule.2nd_christmas_day
-MER000005,2021-11-28,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening
-MER000005,2021-12-31,10:00:00,13:00:00,
-MER000005,2021-12-31,14:00:00,17:00:00,
+MER000001,2022-01-01,,,merchant_weekday_schedule.new_year
+MER000001,2022-04-09,,,merchant_weekday_schedule.good_friday
+MER000001,2022-04-17,,,merchant_weekday_schedule.easter_sunday
+MER000001,2022-04-18,,,merchant_weekday_schedule.easter_monday
+MER000001,2022-05-01,,,merchant_weekday_schedule.may_day
+MER000001,2022-05-26,,,merchant_weekday_schedule.ascension_of_christ
+MER000001,2022-06-05,,,merchant_weekday_schedule.whit_sunday
+MER000001,2022-06-06,,,merchant_weekday_schedule.whit_monday
+MER000001,2022-06-16,,,merchant_weekday_schedule.corpus_christi
+MER000001,2022-10-03,,,merchant_weekday_schedule.day_of_german_unity
+MER000001,2022-11-01,,,merchant_weekday_schedule.all_saints_day
+MER000001,2022-12-25,,,merchant_weekday_schedule.1st_christmas_day
+MER000001,2022-12-26,,,merchant_weekday_schedule.2nd_christmas_day
+MER000001,2023-11-27,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening
+MER000001,2023-12-31,10:00:00,17:00:00,
+MER000002,2022-01-01,,,merchant_weekday_schedule.new_year
+MER000002,2022-04-09,,,merchant_weekday_schedule.good_friday
+MER000002,2022-04-17,,,merchant_weekday_schedule.easter_sunday
+MER000002,2022-04-18,,,merchant_weekday_schedule.easter_monday
+MER000002,2022-05-01,,,merchant_weekday_schedule.may_day
+MER000002,2022-05-26,,,merchant_weekday_schedule.ascension_of_christ
+MER000002,2022-06-05,,,merchant_weekday_schedule.whit_sunday
+MER000002,2022-06-06,,,merchant_weekday_schedule.whit_monday
+MER000002,2022-06-16,,,merchant_weekday_schedule.corpus_christi
+MER000002,2022-10-03,,,merchant_weekday_schedule.day_of_german_unity
+MER000002,2022-11-01,,,merchant_weekday_schedule.all_saints_day
+MER000002,2022-12-25,,,merchant_weekday_schedule.1st_christmas_day
+MER000002,2022-12-26,,,merchant_weekday_schedule.2nd_christmas_day
+MER000006,2022-01-01,,,merchant_weekday_schedule.new_year
+MER000006,2022-04-09,,,merchant_weekday_schedule.good_friday
+MER000006,2022-04-17,,,merchant_weekday_schedule.easter_sunday
+MER000006,2022-04-18,,,merchant_weekday_schedule.easter_monday
+MER000006,2022-05-01,,,merchant_weekday_schedule.may_day
+MER000006,2022-05-26,,,merchant_weekday_schedule.ascension_of_christ
+MER000006,2022-06-05,,,merchant_weekday_schedule.whit_sunday
+MER000006,2022-06-06,,,merchant_weekday_schedule.whit_monday
+MER000006,2022-06-16,,,merchant_weekday_schedule.corpus_christi
+MER000006,2022-10-03,,,merchant_weekday_schedule.day_of_german_unity
+MER000006,2022-11-01,,,merchant_weekday_schedule.all_saints_day
+MER000006,2022-12-25,,,merchant_weekday_schedule.1st_christmas_day
+MER000006,2022-12-26,,,merchant_weekday_schedule.2nd_christmas_day
+MER000006,2023-11-27,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening
+MER000006,2023-12-31,10:00:00,17:00:00,
+MER000005,2022-01-01,,,merchant_weekday_schedule.new_year
+MER000005,2022-04-09,,,merchant_weekday_schedule.good_friday
+MER000005,2022-04-17,,,merchant_weekday_schedule.easter_sunday
+MER000005,2022-04-18,,,merchant_weekday_schedule.easter_monday
+MER000005,2022-05-01,,,merchant_weekday_schedule.may_day
+MER000005,2022-05-26,,,merchant_weekday_schedule.ascension_of_christ
+MER000005,2022-06-05,,,merchant_weekday_schedule.whit_sunday
+MER000005,2022-06-06,,,merchant_weekday_schedule.whit_monday
+MER000005,2022-06-16,,,merchant_weekday_schedule.corpus_christi
+MER000005,2022-10-03,,,merchant_weekday_schedule.day_of_german_unity
+MER000005,2022-11-01,,,merchant_weekday_schedule.all_saints_day
+MER000005,2022-12-25,,,merchant_weekday_schedule.1st_christmas_day
+MER000005,2022-12-26,,,merchant_weekday_schedule.2nd_christmas_day
+MER000005,2023-11-27,13:00:00,18:00:00,merchant_weekday_schedule.sunday_opening
+MER000005,2023-12-31,10:00:00,13:00:00,
+MER000005,2023-12-31,14:00:00,17:00:00,
 ```
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------- | -------------- | --------- | ------------ | ---------------------- |
 | merchant_reference | &check;  | string | MER000005  | Merchant identifier.  |
-| date | &check; | string    | 2020-01-01  | Date with special opening hours  |
+| date | &check; | string    | 2022-01-01  | Date with special opening hours  |
 | time_from  |  | string    | 10:00:00  | Time start when the merchant is open on this special date. Empty means open ended |
 | time_to  |   | string | 13:00:00  | Time end when the merchant is open on this special date. Empty means open ended |
 | note  |   | string | merchant_weekday_schedule.day_of_german_unity | Glossary key to show a note next to special opening hours  |
 
 **data/import/common/common/marketplace/merchant_open_hours_week_day_schedule.csv**
 
-```csv
+```
 merchant_reference,week_day_key,time_from,time_to
 MER000001,MONDAY,7:00:00,13:00:00
 MER000001,MONDAY,14:00:00,20:00:00
@@ -497,6 +506,30 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-opening-hours-date-schedule
+    source: data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv
+  - data_entity: merchant-opening-hours-weekday-schedule
+    source: data/import/common/common/marketplace/merchant_open_hours_week_day_schedule.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-opening-hours-date-schedule
+    source: data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv
+  - data_entity: merchant-opening-hours-weekday-schedule
+    source: data/import/common/common/marketplace/merchant_open_hours_week_day_schedule.csv
+```
+
 Import data:
 
 ```bash
@@ -541,9 +574,37 @@ Verify if the following modules were installed:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
+merchant_weekday_schedule.new_year,New Year's Day,en_US
+merchant_weekday_schedule.new_year,Neujahrstag,de_DE
+merchant_weekday_schedule.good_friday,Good Friday,en_US
+merchant_weekday_schedule.good_friday,Karfreitag,de_DE
+merchant_weekday_schedule.easter_sunday,Easter Sunday,en_US
+merchant_weekday_schedule.easter_sunday,Ostersonntag,de_DE
+merchant_weekday_schedule.easter_monday,Easter Monday,en_US
+merchant_weekday_schedule.easter_monday,Ostermontag,de_DE
+merchant_weekday_schedule.may_day,May Day,en_US
+merchant_weekday_schedule.may_day,Maifeiertag,de_DE
+merchant_weekday_schedule.ascension_of_christ,Ascension of Christ,en_US
+merchant_weekday_schedule.ascension_of_christ,Christi Himmelfahrt,de_DE
+merchant_weekday_schedule.whit_sunday,Whit Sunday,en_US
+merchant_weekday_schedule.whit_sunday,Pfingstsonntag,de_DE
+merchant_weekday_schedule.whit_monday,Whit Monday,en_US
+merchant_weekday_schedule.whit_monday,Pfingstmontag,de_DE
+merchant_weekday_schedule.corpus_christi,Corpus Christi,en_US
+merchant_weekday_schedule.corpus_christi,Fronleichnam,de_DE
+merchant_weekday_schedule.day_of_german_unity,Day of German unity,en_US
+merchant_weekday_schedule.day_of_german_unity,Tag der Deutschen Einheit,de_DE
+merchant_weekday_schedule.all_saints_day,All Saints' Day,en_US
+merchant_weekday_schedule.all_saints_day,Allerheiligen,de_DE
+merchant_weekday_schedule.1st_christmas_day,1st Christmas day,en_US
+merchant_weekday_schedule.1st_christmas_day,1. Weihnachtstag,de_DE
+merchant_weekday_schedule.2nd_christmas_day,2nd Christmas day,en_US
+merchant_weekday_schedule.2nd_christmas_day,2. Weihnachtstag,de_DE
+merchant_weekday_schedule.sunday_opening,Sunday Opening,en_US
+merchant_weekday_schedule.sunday_opening,Verkaufsoffener Sonntag,de_DE
 merchant_opening_hours.opening_hours_title,Opening Hours,en_US 
 merchant_opening_hours.opening_hours_title,Öffnungszeiten,de_DE 
 merchant_opening_hours.special_opening_hours_title,Special Opening Hours,en_US 
@@ -601,7 +662,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {

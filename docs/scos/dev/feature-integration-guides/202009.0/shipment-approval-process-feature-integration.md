@@ -141,7 +141,7 @@ Make sure that shipment is saved with the quote in the `spy_quote` table after s
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

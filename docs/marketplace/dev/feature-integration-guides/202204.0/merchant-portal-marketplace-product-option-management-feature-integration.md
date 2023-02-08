@@ -1,21 +1,18 @@
 ---
-title: Merchant Portal - Marketplace Product Option Management feature integration
-description: This document describes the process how to integrate the Merchant Portal—Marketplace Product Option Management feature into a Spryker project.
+title: Merchant Portal - Marketplace Product Option Management integration
+description: This document describes the process how to integrate the Merchant Portal — Marketplace Product Option Management into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
 ---
 
-This document describes how to integrate the Merchant Portal—Marketplace Product Option Management feature into a Spryker project.
+This document describes how to integrate the Merchant Portal — Marketplace Product Option Management into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Merchant Portal—Marketplace Product Option Management feature core.
+Follow the steps below to install the Merchant Portal — Marketplace Product Option Management core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+To start integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
@@ -70,7 +67,7 @@ use Spryker\Zed\SalesMerchantPortalGui\SalesMerchantPortalGuiDependencyProvider 
 class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\ProductConcreteTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\ProductConcreteTableExpanderPluginInterface>
      */
     protected function getProductConcreteTableExpanderPlugins(): array
     {

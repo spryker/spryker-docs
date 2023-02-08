@@ -84,7 +84,7 @@ The following table illustrates the logic according to which the product offer 
 | Store where the product offer is added    | x    | &check;    | &check;    |
 | Is product offer visible?                 | no   | yes  | no   |
 
-Merchants can define product offer stores in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer store](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store.csv.html).
+Merchants can define product offer stores in the Merchant Portal when they create [product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html), or [import the product offer store](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store.csv.html).
 
 ## Product offers on the Storefront
 

@@ -29,6 +29,17 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/zed-api/zed-api-crud-functionality.html
   - /docs/scos/dev/sdk/202009.0/zed-api/zed-api-crud-functionality.html
   - /docs/scos/dev/sdk/202108.0/zed-api/zed-api-crud-functionality.html
+related:
+  - title: Zed API (Beta)
+    link: docs/scos/dev/sdk/zed-api/zed-api-beta.html
+  - title: Zed API configuration
+    link: docs/scos/dev/sdk/zed-api/zed-api-configuration.html
+  - title: Zed API resources
+    link: docs/scos/dev/sdk/zed-api/zed-api-resources.html
+  - title: Zed API processor stack
+    link: docs/scos/dev/sdk/zed-api/zed-api-processor-stack.html
+  - title: Zed API project implementation
+    link: docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
 ---
 
 ## Filtering

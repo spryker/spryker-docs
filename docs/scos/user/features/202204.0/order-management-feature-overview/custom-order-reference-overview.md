@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/custom-order-reference-overview
 ---
 
-*Custom Order Reference* helps you to control purchases and link the internal orders to external systems from your company using your external order reference. With the feature in place, you can add a custom order reference, such as an invoice, to the order on Yves.
+*Custom Order Reference* helps you control purchases and link the internal orders to external systems from your company using your external order reference. With the feature in place, you can add a custom order reference, such as an invoice, to the order on Yves.
 
 {% info_block infoBox "Info" %}
 
@@ -48,12 +48,12 @@ When working with the order in the Back Office, you, as a Back Office user, can 
 
 ![zed-custom-order-ref-new](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Custom+Order+Reference/zed-change-custom-order-reference.gif)
 
-## Custom Order Reference with the RFQ, approval process, and share cart via a link
+## Custom Order Reference with the RFQ, approval process, and share cart by a link
 If you submit a [quote request](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) and then convert it to the shopping cart, the cart gets locked. However, you still can add and update the customer order reference for the locked cart.
 
-In the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
+In the [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/approval-process-feature-overview.html) scenarios, both an approver and buyer can add or edit the custom order reference during the checkout.
 
-When [sharing a cart via a link with external users](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart via a link with internal users](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
+When [sharing a cart by a link with external users](/docs/pbc/all/cart-and-checkout/{{site.version}}/persistent-cart-sharing-feature-overview.html), they can only view the custom order reference. However, when [sharing a cart by a link with internal users](/docs/pbc/all/cart-and-checkout/{{site.version}}/persistent-cart-sharing-feature-overview.html), they can update the custom order reference for the shopping cart with the read-only and full-access permissions.
 
 
 ## Current constraints

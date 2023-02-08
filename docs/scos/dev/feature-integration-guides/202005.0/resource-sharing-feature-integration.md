@@ -70,7 +70,7 @@ Make sure that the following changes in transfer objects have been applied:
 
 {% endinfo_block %}
  
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

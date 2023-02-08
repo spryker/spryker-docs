@@ -22,17 +22,27 @@ redirect_from:
   - /v2/docs/en/about-the-architecture-guide
   - /v1/docs/about-the-architecture-guide
   - /v1/docs/en/about-the-architecture-guide
+related:
+  - title: Conceptual overview
+    link: docs/scos/dev/architecture/conceptual-overview.html
+  - title: Programming concepts
+    link: docs/scos/dev/architecture/programming-concepts.html
+  - title: Technology stack
+    link: docs/scos/dev/architecture/technology-stack.html
+  - title: Modules and layers
+    link: docs/scos/dev/architecture/modules-and-layers.html
+  - title: Code buckets
+    link: docs/scos/dev/architecture/code-buckets.html
 ---
 
-One of the main tasks of a commerce platform is the possibility to customize, extend and integrate it with external services, such as payment providers, order processors and the like. To provide clear path for the Spryker Commerce OS development and extension, its architecture is based on strict modularity and separation. These principles are strongly supported by the OS architecture. This architecture guide will help you understand how they are implemented on different levels.
+One of the main tasks of a commerce platform is the possibility to customize, extend, and integrate it with external services, such as payment providers, order processors, and the like. To provide a clear path for the Spryker Commerce OS development and extension, its architecture is based on strict modularity and separation. These principles are strongly supported by the OS architecture. This architecture guide helps you understand how they are implemented on different levels.
 
-If you want to learn:
+In this section, you can learn the following topics:
 
-* the Spryker architecture and concepts,
-* what technologies we use,
-* what applications the Spryker Commerce OS is composed of,
-* how we enable development of high-performance applications and their scalability, etc.
+* The Spryker architecture and concepts.
+* What technologies we use.
+* What applications the Spryker Commerce OS is composed of.
+* How we enable the development of high-performance applications and their scalability.
 
-you are in the right place. 
-This guide is especially useful for developers, architects and integrators dealing with the Spryker Commerce OS.
+Also, this guide is especially useful for developers, architects, and integrators dealing with the Spryker Commerce OS.
 

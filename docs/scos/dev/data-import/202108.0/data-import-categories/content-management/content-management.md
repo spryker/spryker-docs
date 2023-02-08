@@ -15,7 +15,7 @@ The **Content Management** category contains data required to create and manage 
 
 The table below provides details on Content Management data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
-| DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
+| DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILES | DEPENDENCIES |
 | --- | --- | --- | --- |--- |
 | CMS Template   | Imports information about CMS templates. |`data:import:cms-template` |[ cms_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-template.csv.html)|None |
 | CMS Slot Template  | Imports information about the CMS slot templates. |`data:import:cms-slot-template` | [cms_slot_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-slot-template.csv.html)| None|

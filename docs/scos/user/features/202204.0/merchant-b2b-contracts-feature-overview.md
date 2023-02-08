@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/201811.0/merchant-b2b-contracts/merchant-b2b-contracts.html
 ---
 
-In the B2B partnership, which is usually based on contracts, the selling company is also referred to as a merchant and the buyer is often represented by a business unit of a buying company. In Spryker B2B shop system, the merchant relation entity is used to connect merchants and buyers together.
+In the B2B partnership, which is usually based on contracts, the selling company is also referred to as a merchant, and the buyer is often represented by a business unit of a buying company. In the Spryker B2B shop system, the merchant relation entity is used to connect merchants and buyers together.
 
 There are three key figures: marketplace owner, merchant, and buyer.
 

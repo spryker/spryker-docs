@@ -175,7 +175,7 @@ Make sure that if you are logged in, you can see the *Custom Order Reference* se
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.

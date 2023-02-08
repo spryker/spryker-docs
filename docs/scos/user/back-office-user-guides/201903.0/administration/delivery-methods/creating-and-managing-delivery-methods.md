@@ -32,7 +32,7 @@ A delivery method is described by :
 
 {% info_block errorBox "Important" %}
 
-Each shipment method has its own specificity, so these three aspects must be configured (this is done through [plugins](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html).
+Each shipment method has its own specificity, so these three aspects must be configured (this is done through [plugins](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html).
 
 {% endinfo_block %}
 

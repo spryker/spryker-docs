@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES | GLUE API GUIDES  |
+|INSTALLATION GUIDES | GLUE API GUIDES  |
 |---------|---------|
 | [Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-rating-and-reviews-feature-integration.html) | [Managing product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html)  |
 |[Glue API: Product rating & reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)   |   |

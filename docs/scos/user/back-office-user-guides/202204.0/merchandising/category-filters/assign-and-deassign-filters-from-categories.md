@@ -12,10 +12,14 @@ redirect_from:
   - /docs/en/managing-category-filters
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-category-filters.html
 related:
+  - title: Reorder category filters
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/category-filters/reorder-category-filters.html
   - title: Managing Search Preferences
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
   - title: Managing Filter Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-filter-preferences.html
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/filter-preferences/define-filter-preferences.html
+  - title: Category filters overview
+    link: docs/scos/user/features/page.version/search-feature-overview/category-filters-overview.html
 ---
 
 This topic describes how to assign and deassign filters from categories in the Back Office.

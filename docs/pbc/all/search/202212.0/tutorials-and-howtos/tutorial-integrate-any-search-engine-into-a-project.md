@@ -21,7 +21,7 @@ In a Spryker-based project, you can use any external search provider instead of 
 
 Every search engine comes along with its own functionalities and search approaches. However, in most search platforms, the integration of search and search suggestions is similar.
 
-This tutorial shows how to integrate the FACT-Finder (PHP) search platform. A system integrator development team can use this guide to integrate other platforms, taking into account the differences between the target search platform.
+This tutorial shows how to integrate the FACT-Finder (PHP) search platform as an example. A system integrator development team can use this guide to integrate other platforms, taking into account the differences between the target search platform and the one used here.
 
 The integration is following the concept described in [Search Migration Concept](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/search-migration-concept.html).
 
@@ -243,10 +243,10 @@ Make sure that all events affecting FACT-Finder-related product data are trigger
 
 #### 3. Request data from FACT-Finder
 
-Implement method search in the adapter plugin.
-Your search function receives `FactFinderQuery` with `FFSearchQueryTransfer` in it as the first argument.
+Implement the method search in the adapter plugin.
+Your search function receives `FactFinderQuery`, with `FFSearchQueryTransfer` in it as the first argument.
 
-Prepare proper request to a FACT-Finder based on these parameters.
+Prepare a proper request to a FACT-Finder based on these parameters.
 
 If you need specific `$resultFormatters` or `$requestParameters`, use the arrays proposed in the adapter plugin.
 
@@ -256,7 +256,7 @@ The general idea behind the mapping of the response is to make sure you can disp
 
 The FACT-Finder module provides a response in `FactFinderSdkSearchResponse`, but Spryker provides the complete rendering of the search results and search suggestions based on the response from the default search provider, which is Elasticsearch.
 
-It means that in order to use the FACT-Finder response, you have to comply with the response structure produced there. This will be changed in the future, but for now, you have to implement mapping to the similar response Elasticsearch modules provides.
+In order to use the FACT-Finder response, you have to comply with the response structure produced there. This will be changed in the future, but for now, you have to implement mapping to the similar response that is provided by Spryker's Elasticsearch modules.
 You have to respond with an object, supporting an array-based or `get`-based index—for example, creating a JSON object or a transfer object.
 
 <details><summary markdown='span'>Code sample of a response from the search provider:</summary>

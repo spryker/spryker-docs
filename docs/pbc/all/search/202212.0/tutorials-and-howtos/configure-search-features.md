@@ -37,9 +37,9 @@ related:
     link: docs/pbc/all/search/page.version/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
-This document explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the `Search` module.
+This document explains how to configure faceted navigation, filters, pagination, and sorting, which are the most critical features provided by the `Search` module. 
 
-This configuration is only relevant if you enable the three query expanders and the result formatters. For details, see [Configure a search query](/docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-a-search-query.html)
+This configuration is only relevant if you enable the three available query expanders and the result formatters. For details, see [Configure a search query](/docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-a-search-query.html)
 
 To build configuration for the search features, provide implementation for `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface`:
 
@@ -81,7 +81,7 @@ First, add the code that configures your facet filters.
 
 The goal is to create `FacetConfigTransfer` instances with some data and set it as a property of `$searchConfigurationTransfer`.
 
-Let's assume that previously in your `PageMapInterface`you mapped an integer facet called "price" with some data (note the use of `addIntegerFacet()` in the previous example). So now you want to add a price range filter for that data.
+Let's assume that previously in your `PageMapInterface` you mapped an integer facet called "price" with some data (note the use of `addIntegerFacet()` in the previous example). You now want to add a price range filter for that data.
 
 <details>
 <summary markdown='span'>Plugin\SearchElasticsearch</summary>
@@ -131,13 +131,13 @@ use Generated\Shared\Transfer\SearchConfigurationTransfer;
 
 You can create and add as many `FacetConfigTransfers` as you need. Let's analyze this transfer's options:
 
-* `setName()`: *Required* field; the name of the target data to filter by.
-* `setParameterName()`: *Required* field; the name that is used in the request when the filter is used.
-* `setFieldName()`: *Required* field; the name of the field of the page mapping type where the target data is stored.
-* `setType()`: *Required* field; the type of the facet. Currently available options: "enumeration", "bool", "range", "price_range", "category".
-* `setIsMultiValued()`: *Optional* field; if set to *true*, multiple values can be filtered with logical OR comparison.
-* `setSize()`: *Optional* field; the maximum number of filter options to be returned (`0` means unlimited). Elasticsearch returns 10 options by default.
-* `setValueTransformer()`: *Optional* field; to provide a value transformer plugin by defining the Fully Qualified Name of the plugin. This plugin should implement `\Spryker\Client\SearchExtension\Dependency\Plugin\FacetSearchResultValueTransformerPluginInterface`. It's used to transform each filter value from their stored values (for example, IDs) to something readable (representing name) for users.
+* `setName()`: *Required* field. the name of the target data to filter by.
+* `setParameterName()`: *Required* field. the name that is used in the request when the filter is used.
+* `setFieldName()`: *Required* field. the name of the field of the page mapping type where the target data is stored.
+* `setType()`: *Required* field. the type of the facet. Currently available options: "enumeration", "bool", "range", "price_range", "category".
+* `setIsMultiValued()`: *Optional* field. if set to *true*, multiple values can be filtered with logical OR comparison.
+* `setSize()`: *Optional* field. the maximum number of filter options to be returned (`0` means unlimited). Elasticsearch returns 10 options by default.
+* `setValueTransformer()`: *Optional* field. to provide a value transformer plugin by defining the Fully Qualified Name of the plugin. This plugin should implement `\Spryker\Client\SearchExtension\Dependency\Plugin\FacetSearchResultValueTransformerPluginInterface`. It's used to transform each filter value from their stored values (for example, IDs) to something readable (representing name) for users.
 * The next method you implement is the`buildSortConfig()`, where you configure your sorting options. Let's assume you want to sort by name and price, and you've already added them when implementing `PageMapInterface` (check the use of `addStringSort()` and `addIntegerSort()` in the example above).
 
 <details>

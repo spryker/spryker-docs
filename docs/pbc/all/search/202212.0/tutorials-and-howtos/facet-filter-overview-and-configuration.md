@@ -116,7 +116,7 @@ A facet search is executed using the category facet with the provided category n
 
 ## Configure facet filters
 
-The category facet is a special case and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category detail page is requested.
+The category facet is a special case, and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category's detail page is requested.
 
 Other than that, the `CatalogClient` operation can handle requests that contain other facet filters.
 
@@ -160,7 +160,7 @@ The search attributes are configured in `CatalogDependencyProvider`.
     }
 ```
 
-Adding the price attribute to the configuration as an active facet lets you filter the products on the value of this attribute.
+Adding the price attribute to the configuration as an active facet lets you filter the products by the value of this attribute.
 
 The `https://mysprykershop.com/en/computers/notebooks?price=0-300` request performs a search using the category and price facets. It returns the products under the notebooks category with a price range between 0 and 300.
 

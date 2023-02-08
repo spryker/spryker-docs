@@ -1,6 +1,6 @@
 ---
-title: 'Quick installation guide: Mac OS and Linux'
-description: Get started with Spryker using Docker on Mac OS and Linux
+title: "Quickstart guide: Install Spryker on MacOS and Linux"
+description: Get started with Spryker on MacOS and Linux
 last_updated: Sep 8, 2022
 template: howto-guide-template
 ---

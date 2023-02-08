@@ -252,7 +252,7 @@ Go to the Back Office, **Maintenance** menu, and click **Sync permissions**.
 
 {% info_block warningBox "Verification" %}
 
-Check the following: 
+Check that the following happens:
 * The customer, with the `RequestQuoteApprovalPermission` permission, can request approval.
 * The customer, with the `ApproveQuotePermission` permission, can approve the request.
 * The customer, with the `PlaceOrderPermissionPlugin` permission, can place an order from the quote with the approved request for approval.

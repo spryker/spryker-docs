@@ -1,5 +1,5 @@
 ---
-title: Adding and removing custom order references
+title: Add and remove custom order references
 description: Learn how to add and remove custom order references in the Back Office
 template: back-office-user-guide-template
 related:

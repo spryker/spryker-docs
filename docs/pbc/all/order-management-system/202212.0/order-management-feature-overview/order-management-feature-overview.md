@@ -27,17 +27,22 @@ B2B customers usually purchase large volumes of products selecting specific meas
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
-|---|
-| [Get a general idea of Custom Order Reference](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/custom-order-reference-module-relations.html)   |
-| [Get a general idea of Invoice Generation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/invoice-generation-overview.html)   |
-| [Get a general idea of Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   |
-| [Get a general idea of Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   |
-| [Get a general idea of Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)   |
-| [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)   |
+| OVERVIEWS | BACK OFFICE GUIDE |
+|---| - |
+| [Invoice Generation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/invoice-generation-overview.html)  |  [Change the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html) | |
+| [Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   | | 
+| [Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   | |
+| [Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)   | |
 
-{% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
+## Related Developer articles
 
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+|---|---|---|---|---|
+| [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) | [Split delivery migration concept](/docs/scos/dev/migration-concepts/split-delivery-migration-concept.html) | [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html) | [HowTo: Disable split delivery in Yves interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) | [Sales module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) |
+| [Quick Order + Non-splittable Products feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html) | [Upgrade the ManualOrderEntryGui module](/docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html) |  | [HowTo: Emailing invoices using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html) | [Custom order reference- module relations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/custom-order-reference-module-relations.html) |
+| [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |  |  |  |  |
+|[ Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) |  |  |  |  |
+| [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |  |  |  |  |
+| [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |  |  |  |  |
+| [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html) |  |  |  |  |

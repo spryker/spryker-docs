@@ -3,6 +3,8 @@ title: Upgrader tool overview
 description: Functionalities of the upgradability tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html

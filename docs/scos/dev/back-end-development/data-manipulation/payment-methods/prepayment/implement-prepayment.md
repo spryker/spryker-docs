@@ -29,7 +29,7 @@ This document describes the steps that you need to consider to implement the pre
 
 This HowTo section shows how to add a new module called `PaymentMethods`.
 
-If this is your first time creating a new module, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html).
+If this is your first time creating a new module, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html).
 
 {% info_block infoBox "Implementation order" %}
 

@@ -40,6 +40,8 @@ Make sure that the following modules have been installed:
 | StorageRedis | vendor/spryker/storage-redis |
 | SecuritySystemUser | vendor/spryker/security-system-user |
 | SecurityBlocker | vendor/spryker/security-blocker |
+| SecurityBlockerExtension | vendor/spryker/security-blocker-extension |
+| SecurityBlockerStorefrontCustomer | vendor/spryker/security-storefront-customer |
 
 {% endinfo_block %}
 
@@ -298,22 +300,14 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_PASSWORD] = false;
 $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_DATABASE] = 7;
 ```
 
-Configure the blocking settings for the entity types you want to be blocking. You can set separate settings for a customer (default) and an agent. `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` are used as default, so if you use other entity types (like an agent) and do not provide this setting, the defaults get applied.
-
-`SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL` controls the period of time during which `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` is counted. If the number is exceeded, the account gets locked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds.
-
-Define your setting in your environment configuration files:
+Add environment configuration for customer security:
 
 **config/Shared/config_default.php**
 
 ```php
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL] = 600;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR] = 300;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS] = 10;
-
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_AGENT_BLOCKING_TTL] = 600;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_AGENT_BLOCK_FOR] = 360;
-$config[SecurityBlockerConstants::SECURITY_BLOCKER_AGENT_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL] = 900;
+$config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
 ```
 
 ### 3) Set up database schema and transfer objects
@@ -333,19 +327,19 @@ Make sure that the following changes have been applied by checking your database
 | --- | --- | --- |
 | spy_vault_deposit | table | created |
 
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| SpyVaultDepositEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyVaultDepositEntityTransfer |
-| VaultDepositTransfer | class | created | src/Generated/Shared/Transfer/VaultDepositTransfer |
-| RedisConfigurationTransfer | class | created | src/Generated/Shared/Transfer/RedisConfigurationTransfer |
-| RedisCredentialsTransfer | class | created | src/Generated/Shared/Transfer/RedisCredentialsTransfer |
-| UserTransfer | class | created | src/Generated/Shared/Transfer/UserTransfer |
-| MessageTransfer | class | created | src/Generated/Shared/Transfer/MessageTransfer |
-| GroupCriteriaTransfer | class | created | src/Generated/Shared/Transfer/GroupCriteriaTransfer |
-| GroupTransfer | class | created | src/Generated/Shared/Transfer/GroupTransfer |
-| UserCriteriaTransfer | class | created | src/Generated/Shared/Transfer/UserCriteriaTransfer |
-| SecurityCheckAuthContextTransfer | class | created | src/Generated/Shared/Transfer/SecurityCheckAuthContextTransfer |
-| SecurityCheckAuthResponseTransfer | class | createdl | src/Generated/Shared/Transfer/SecurityCheckAuthResponseTransfer |
+| TRANSFER | TYPE | EVENT | PATH                                                                       |
+| --- | --- | --- |----------------------------------------------------------------------------|
+| SpyVaultDepositEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyVaultDepositEntityTransfer                |
+| VaultDepositTransfer | class | created | src/Generated/Shared/Transfer/VaultDepositTransfer                         |
+| RedisConfigurationTransfer | class | created | src/Generated/Shared/Transfer/RedisConfigurationTransfer                   |
+| RedisCredentialsTransfer | class | created | src/Generated/Shared/Transfer/RedisCredentialsTransfer                     |
+| UserTransfer | class | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| MessageTransfer | class | created | src/Generated/Shared/Transfer/MessageTransfer                              |
+| GroupCriteriaTransfer | class | created | src/Generated/Shared/Transfer/GroupCriteriaTransfer                        |
+| GroupTransfer | class | created | src/Generated/Shared/Transfer/GroupTransfer                                |
+| UserCriteriaTransfer | class | created | src/Generated/Shared/Transfer/UserCriteriaTransfer                         |
+| SecurityCheckAuthContextTransfer | class | created | src/Generated/Shared/Transfer/SecurityCheckAuthContextTransfer             |
+| SecurityCheckAuthResponseTransfer | class | createdl | src/Generated/Shared/Transfer/SecurityCheckAuthResponseTransfer            |
 | SecurityBlockerConfigurationSettingsTransfer | class | created | src/Generated/Shared/Transfer/SecurityBlockerConfigurationSettingsTransfer |
 
 {% endinfo_block %}
@@ -354,15 +348,16 @@ Make sure that the following changes have been applied by checking your database
 
 1. Install the following plugins with modules:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| SecurityApplicationPlugin | Extends Zed global container with required services for security functionality. | None | Spryker\Zed\Security\Communication\Plugin\Application |
-| SessionHandlerFileProviderPlugin | Provides a file-based session handler implementation for Zed sessions. | None | Spryker\Zed\SessionFile\Communication\Plugin\Session |
-| SessionHandlerRedisLockingProviderPlugin | Provides a Redis-based session handler implementation with session locking for Zed sessions. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session |
-| SessionHandlerRedisProviderPlugin	 | Provides a Redis-based session handler implementation for Zed sessions. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session |
-| StorageRedisPlugin | Provides a Redis-based storage implementation. | None | Spryker\Client\StorageRedis\Plugin |
-| SystemUserSecurityPlugin | Sets security firewalls (rules, handlers) for system users (Yves access to Zed). | None | Spryker\Zed\SecurityGui\Communication\Plugin\Security |
-| ZedSessionRedisLockReleaserPlugin | Removes session lock from Redis by session id for Zed sessions. It's used when removing previously created locks by running the ```session:lock:remove``` console command. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE                                                                |
+| --- | --- | --- |--------------------------------------------------------------------------|
+| SecurityApplicationPlugin | Extends Zed global container with required services for security functionality. | None | Spryker\Zed\Security\Communication\Plugin\Application                    |
+| SessionHandlerFileProviderPlugin | Provides a file-based session handler implementation for Zed sessions. | None | Spryker\Zed\SessionFile\Communication\Plugin\Session                     |
+| SessionHandlerRedisLockingProviderPlugin | Provides a Redis-based session handler implementation with session locking for Zed sessions. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
+| SessionHandlerRedisProviderPlugin	 | Provides a Redis-based session handler implementation for Zed sessions. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
+| StorageRedisPlugin | Provides a Redis-based storage implementation. | None | Spryker\Client\StorageRedis\Plugin                                       |
+| SystemUserSecurityPlugin | Sets security firewalls (rules, handlers) for system users (Yves access to Zed). | None | Spryker\Zed\SecurityGui\Communication\Plugin\Security                    |
+| ZedSessionRedisLockReleaserPlugin | Removes session lock from Redis by session id for Zed sessions. It's used when removing previously created locks by running the ```session:lock:remove``` console command. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
+| CustomerSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with customer user settings. | None | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin |
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
@@ -472,6 +467,31 @@ class StorageDependencyProvider extends SprykerStorageDependencyProvider
     }
 }
 ```
+
+**src/Pyz/Client/SecurityBlocker/SecurityBlockerDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\SecurityBlocker;
+
+use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProviderAlias;
+use Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin;
+
+class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProviderAlias
+{
+    /**
+     * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerConfigurationSettingsExpanderPluginInterface>
+     */
+    protected function getSecurityBlockerConfigurationSettingsExpanderPlugins(): array
+    {
+        return [
+            new CustomerSecurityBlockerConfigurationSettingsExpanderPlugin(),
+        ];
+    }
+}
+```
+
 
 {% info_block warningBox "Verification" %}
 

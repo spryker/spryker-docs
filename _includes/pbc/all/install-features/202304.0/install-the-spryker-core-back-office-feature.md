@@ -31,17 +31,19 @@ composer require spryker-feature/spryker-core-back-office:"{{site.version}}" --u
 
 Ensure that the following modules have been installed:
 
-| MODULE                     | EXPECTED DIRECTORY                           |
-|----------------------------|----------------------------------------------|
-| MessengerExtension         | vendor/spryker/messenger-extension           |
-| SecurityGui                | vendor/spryker/security-gui                  |
-| SecurityOauthUser          | vendor/sprkyer/security-oauth-user           |
-| Translator                 | vendor/spryker/translator                    |
-| UserLocale                 | vendor/spryker/user-locale                   |
-| UserLocaleGui              | vendor/spryker/user-locale-gui               |
-| UserPasswordReset          | vendor/spryker/user-password-reset           |
-| UserPasswordResetExtension | vendor/spryker/user-password-reset-extension |
-| UserPasswordResetMail      | vendor/spryker/user-password-reset-mail      |
+| MODULE                       | EXPECTED DIRECTORY                             |
+|------------------------------|------------------------------------------------|
+| MessengerExtension           | vendor/spryker/messenger-extension             |
+| SecurityGui                  | vendor/spryker/security-gui                    |
+| SecurityOauthUser            | vendor/sprkyer/security-oauth-user             |
+| Translator                   | vendor/spryker/translator                      |
+| UserLocale                   | vendor/spryker/user-locale                     |
+| UserLocaleGui                | vendor/spryker/user-locale-gui                 |
+| UserPasswordReset            | vendor/spryker/user-password-reset             |
+| UserPasswordResetExtension   | vendor/spryker/user-password-reset-extension   |
+| UserPasswordResetMail        | vendor/spryker/user-password-reset-mail        |
+| SecurityBlockerBackoffice    | vendor/spryker/security-blocker-backoffice     |
+| SecurityBlockerBackofficeGui | vendor/spryker/security-blocker-backoffice-gui |
 
 Ensure that the following modules have been removed:
 
@@ -71,20 +73,24 @@ console transfer:generate
 
 Ensure the following transfers have been created:
 
-| TRANSFER                        | TYPE      | EVENT   | PATH                                                          |
-|---------------------------------|-----------|---------|---------------------------------------------------------------|
-| UserTransfer.fkLocale           | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
-| UserTransfer.localName          | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
-| UserTransfer.username           | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
-| UserTransfer.password           | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
-| UserTransfer.lastLogin          | attribute | created | src/Generated/Shared/Transfer/UserTransfer                    |
-| MessageTransfer                 | class     | created | src/Generated/Shared/Transfer/MessageTransfer                 |
-| TranslationTransfer             | class     | created | src/Generated/Shared/Transfer/TranslationTransfer             |
-| KeyTranslationTransfer          | class     | created | src/Generated/Shared/Transfer/KeyTranslationTransfer          |
-| OauthAuthenticationLinkTransfer | class     | created | src/Generated/Shared/Transfer/OauthAuthenticationLinkTransfer |
-| ResourceOwnerTransfer           | class     | created | src/Generated/Shared/Transfer/ResourceOwnerTransfer           |
-| ResourceOwnerRequestTransfer    | class     | created | src/Generated/Shared/Transfer/ResourceOwnerRequestTransfer    |
-| ResourceOwnerResponseTransfer   | class     | created | src/Generated/Shared/Transfer/ResourceOwnerResponseTransfer   |
+| TRANSFER                             | TYPE      | EVENT   | PATH                                                                       |
+|--------------------------------------|-----------|---------|----------------------------------------------------------------------------|
+| UserTransfer.fkLocale                | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| UserTransfer.localName               | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| UserTransfer.username                | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| UserTransfer.password                | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| UserTransfer.lastLogin               | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| MessageTransfer                      | class     | created | src/Generated/Shared/Transfer/MessageTransfer                              |
+| TranslationTransfer                  | class     | created | src/Generated/Shared/Transfer/TranslationTransfer                          |
+| KeyTranslationTransfer               | class     | created | src/Generated/Shared/Transfer/KeyTranslationTransfer                       |
+| OauthAuthenticationLinkTransfer      | class     | created | src/Generated/Shared/Transfer/OauthAuthenticationLinkTransfer              |
+| ResourceOwnerTransfer                | class     | created | src/Generated/Shared/Transfer/ResourceOwnerTransfer                        |
+| ResourceOwnerRequestTransfer         | class     | created | src/Generated/Shared/Transfer/ResourceOwnerRequestTransfer                 |
+| ResourceOwnerResponseTransfer        | class     | created | src/Generated/Shared/Transfer/ResourceOwnerResponseTransfer                |
+| SecurityBlockerConfigurationSettings | class     | created | src/Generated/Shared/Transfer/SecurityBlockerConfigurationSettingsTransfer |
+| SecurityCheckAuthResponse            | class     | created | src/Generated/Shared/Transfer/SecurityCheckAuthResponseTransfer            |
+| SecurityCheckAuthContext             | class     | created | src/Generated/Shared/Transfer/SecurityCheckAuthContextTransfer             |
+| Locale                               | class     | created | src/Generated/Shared/Transfer/LocaleTransfer                               |
 
 {% endinfo_block %}
 
@@ -92,12 +98,15 @@ Ensure the following transfers have been created:
 
 Add the following configuration to your project:
 
-| CONFIGURATION                                           | SPECIFICATION                                                                                                                | NAMESPACE                 |
-|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES   | Fallback locales that are used if there is no translation for a selected locale.                                             | Spryker\Shared\Translator |
-| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY    | Absolute path to a translation cache directory. For example, `/var/www/data/DE/cache/Zed/translation`.                       | Spryker\Shared\Translator |
-| TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS | Paths to project level translations. You can use a global pattern that specifies sets of filenames with wildcard characters. | Spryker\Shared\Translator |
-| AclConstants::ACL_DEFAULT_RULES                         | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                 | Spryker\Shared\Acl        |
+| CONFIGURATION                                                                   | SPECIFICATION                                                                                                                                         | NAMESPACE                                |
+|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
+| TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES                           | Fallback locales that are used if there is no translation for a selected locale.                                                                      | Spryker\Shared\Translator                |
+| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY                            | Absolute path to a translation cache directory. For example, `/var/www/data/DE/cache/Zed/translation`.                                                | Spryker\Shared\Translator                |
+| TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS                         | Paths to project level translations. You can use a global pattern that specifies sets of filenames with wildcard characters.                          | Spryker\Shared\Translator                |
+| AclConstants::ACL_DEFAULT_RULES                                                 | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                                          | Spryker\Shared\Acl                       |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration, the period when number of unsuccessful tries will be counted for backoffice user.                                    | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the backoffice user is blocked if the number of attempts is exceeded for backoffice.            | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a backoffice user can make during the `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerBackoffice |
 
 **config/Shared/config_default.php**
 
@@ -134,6 +143,12 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
         'type' => 'allow',
     ],
 ];
+
+// Security Blocker BackOffice user
+$config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL] = 900;
+$config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+
 ```
 
 ### Set up an authentication strategy
@@ -225,14 +240,16 @@ Set up the following behaviors.
 
 1. Activate the following security plugins:
 
-| PLUGIN                                    | SPECIFICATION                                                                               | PREREQUISITES                                                                                                             | NAMESPACE                                                                |
-|-------------------------------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| SecurityApplicationPlugin                 | Extends the Zed global container with the services required for the Security functionality. | If there is `WebProfilerApplicationPlugin` in `ApplicationDependencyProvider`, put `SecurityApplicationPlugin` before it. | Spryker\Zed\Security\Communication\Plugin\Application                    |  
-| UserSessionHandlerSecurityPlugin          | Sets an authenticated user to the session.                                                  | None                                                                                                                      | Spryker\Zed\User\Communication\Plugin\Securiy                            |
-| UserSecurityPlugin                        | Sets security firewalls, such as rules and handlers, for the Back Office users.             | None                                                                                                                      | Spryker\Zed\SecurityGui\Communication\Plugin\Security                    |
-| UserPasswordResetMailTypePlugin           | Adds a new email type, which is used by `MailUserPasswordResetRequestHandlerPlugin`.        | None                                                                                                                      | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail              |
-| MailUserPasswordResetRequestHandlerPlugin | Sends a password reset email on a user request.                                             | Mail module must be configured. <br>`UserPasswordResetMailTypePlugin` is enabled.                                         | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset |
-| OauthUserSecurityPlugin                   | Sets security firewalls, such as rules and handlers, for Oauth users.                       | None                                                                                                                      | \Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security             |
+| PLUGIN                                                           | SPECIFICATION                                                                                                   | PREREQUISITES                                                                                                             | NAMESPACE                                                                       |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| SecurityApplicationPlugin                                        | Extends the Zed global container with the services required for the Security functionality.                     | If there is `WebProfilerApplicationPlugin` in `ApplicationDependencyProvider`, put `SecurityApplicationPlugin` before it. | Spryker\Zed\Security\Communication\Plugin\Application                           |  
+| UserSessionHandlerSecurityPlugin                                 | Sets an authenticated user to the session.                                                                      | None                                                                                                                      | Spryker\Zed\User\Communication\Plugin\Securiy                                   |
+| UserSecurityPlugin                                               | Sets security firewalls, such as rules and handlers, for the Back Office users.                                 | None                                                                                                                      | Spryker\Zed\SecurityGui\Communication\Plugin\Security                           |
+| UserPasswordResetMailTypePlugin                                  | Adds a new email type, which is used by `MailUserPasswordResetRequestHandlerPlugin`.                            | None                                                                                                                      | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail                     |
+| MailUserPasswordResetRequestHandlerPlugin                        | Sends a password reset email on a user request.                                                                 | Mail module must be configured. <br>`UserPasswordResetMailTypePlugin` is enabled.                                         | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset        |
+| OauthUserSecurityPlugin                                          | Sets security firewalls, such as rules and handlers, for Oauth users.                                           | None                                                                                                                      | \Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security                    |
+| BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with Backoffice user security configuration.                    | None                                                                                                                      | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker                |
+| SecurityBlockerBackofficeUserEventDispatcherPlugin               | Adds a listener to log the failed Backoffice login attempts. Denies user access in case of exceeding the limit. | None                                                                                                                      | \Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher  |
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 ```php
@@ -280,6 +297,54 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 		    new UserSessionHandlerSecurityPlugin(),
             new UserSecurityPlugin(),
 			new OauthUserSecurityPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Client/SecurityBlocker/SecurityBlockerDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\SecurityBlocker;
+
+use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProviderAlias;
+use Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker\BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin;
+
+class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProviderAlias
+{
+    /**
+     * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerConfigurationSettingsExpanderPluginInterface>
+     */
+    protected function getSecurityBlockerConfigurationSettingsExpanderPlugins(): array
+    {
+        return [
+            new BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\EventDispatcher;
+
+use Spryker\Zed\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
+use Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher\SecurityBlockerBackofficeUserEventDispatcherPlugin;
+
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
+     */
+    protected function getEventDispatcherPlugins(): array
+    {
+        return [
+            new SecurityBlockerBackofficeUserEventDispatcherPlugin(),
         ];
     }
 }
@@ -552,6 +617,17 @@ Ensure that you've enabled the plugins:
 3. On the **Create new User** page, check that the **Interface language*** field exists.
 
 {% endinfo_block %}
+
+3. Add translations
+
+Append glossary according to your configuration:
+
+data/import/common/common/glossary.csv
+
+```yaml
+security_blocker_backoffice_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
+security_blocker_backoffice_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
+```
 
 ### Set up console commands for cache
 

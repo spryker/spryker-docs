@@ -3,6 +3,7 @@ title: Create modules
 description: When a new concept needs to be defined, a new module needs to be added on the project side to encapsulate that concept. The new module needs to follow the same folder structure and conventions as the ones in Core.
 last_updated: Jun 16, 2021
 template: howto-guide-template
+keywords: Module, Spryker module, custom module
 originalLink: https://documentation.spryker.com/2021080/docs/t-add-new-bundle
 originalArticleId: c6eb6a48-4626-41ae-add8-a425bce184f5
 redirect_from:
@@ -24,7 +25,7 @@ redirect_from:
   - /v1/docs/en/t-add-new-bundle
   - /docs/scos/dev/back-end-development/extend-spryker/adding-a-new-module.html
   - /docs/scos/dev/back-end-development/extend-spryker/project-modules/adding-a-new-module.html
-  - /docs/scos/dev/back-end-development/extend-spryker/create-modules.html
+  - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
 ---
 
 {% info_block infoBox %}

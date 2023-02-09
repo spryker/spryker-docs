@@ -130,6 +130,8 @@ entries:
       url: /docs/scos/user/intro-to-spryker/b2b-suite.html
     - title: Master Suite
       url: /docs/scos/user/intro-to-spryker/master-suite.html
+    - title: Supported browsers
+      url: /docs/scos/user/intro-to-spryker/supported-browsers.html
     - title: Spryker release process
       url: /docs/scos/user/intro-to-spryker/spryker-release-process.html
     - title: MVP project structuring

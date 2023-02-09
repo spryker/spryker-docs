@@ -18,7 +18,6 @@ entries:
       url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
       include_versions:
       - "202204.0"
-      - "202212.0"
     - title: "Quickstart guides: Install Spryker"
       url: /docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:

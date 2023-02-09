@@ -1,15 +1,20 @@
 
 
+
+This document describes how to integrate the Alternative Products + Discontinued Products into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Alternative Products + Discontinued Products feature core.
 
 ### Prerequisites
 
 Please review and install the necessary features before beginning the integration.
 
-| NAME | VERSION |
-| --- | --- |
-| Alternative Products | {{site.version}} |
-| Discontinued Products | {{site.version}} |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| Alternative Products | {{site.version}} | [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-alternative-products-feature.html#install-feature-core) |
+| Discontinued Products | {{site.version}} |  |
 
 ### 1) Set up behavior
 

@@ -1,19 +1,18 @@
 ---
-title: Marketplace Product Option feature integration
+title: Marketplace Product Options feature integration
 last_updated: Jul 28, 2021
-Description: This document describes the process how to integrate the Marketplace Product Option feature into a Spryker project.
+Description: This document describes the process how to integrate the Marketplace Product Options feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202204.0/marketplace-product-option-feature-integration.html
 ---
 
-This document describes how to integrate the Marketplace Product Option feature into a Spryker project.
+This document describes how to integrate the Marketplace Product Options feature into a Spryker project.
 
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Product Option feature core.
+Follow the steps below to install the Marketplace Product Options feature core.
 
 ### Prerequisites
 
@@ -374,5 +373,5 @@ Make sure that merchant product options are a part of the marketplace/merchant o
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Option + Cart | | [Marketplace Product Option + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-cart-feature-integration.html) |
-| Marketplace Product Option + Checkout | | [Marketplace Product Option + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-checkout-feature-integration.html) |
+| Marketplace Product Options + Cart | | [Marketplace Product Options + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-cart-feature-integration.html) |
+| Marketplace Product Options + Checkout | | [Marketplace Product Options + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-checkout-feature-integration.html) |

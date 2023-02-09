@@ -1,21 +1,24 @@
 
 
+
+This document describes how to integrate the [Availability Notification](/docs/pbc/all/warehouse-management-system/{{site.version}}/availability-notification-feature-overview.html) into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Availability Notification feature core.
 
 ### Prerequisites
 
-Ensure that the related features are installed:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Mailing and Notifications | {{site.version}} |
-| Inventory Management | {{site.version}} |
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| Mailing and Notifications | {{site.version}} |[Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
+| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Product      | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)           |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
@@ -33,7 +36,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Apply database changes, generate entities and transfer changes:
+Apply database changes, generate entities, and transfer changes:
 
 ```bash
 console propel:install
@@ -48,20 +51,12 @@ Make sure that the following changes have been implemented in your database:
 | --- | --- | --- |
 | spy_availability_notification_subscription | table | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
 
 | CLASS PATH | EXTENDS |
 | --- | --- |
 | src/Orm/Zed/AvailabilityNotification/Persistence/SpyAvailabilityNotificationSubscription.php | Spryker\Zed\AvailabilityNotification\Persistence\Propel\AbstractSpyAvailabilityNotificationSubscription |
 | src/Orm/Zed/AvailabilityNotification/Persistence/SpyAvailabilityNotificationSubscriptionQuery.php | Spryker\Zed\AvailabilityNotification\Persistence\Propel\AbstractSpyAvailabilityNotificationSubscriptionQuery |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been implemented in transfer objects:
 
@@ -78,6 +73,8 @@ Make sure that the following changes have been implemented in transfer objects:
 {% endinfo_block %}
 
 ### 3) Set up behavior
+
+Enable the following behaviors by registering the plugins:
 
 #### Listening to the availability_notification event
 
@@ -185,11 +182,11 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AvailabilityNotificationSubscriptionMailTypePlugin`, `AvailabilityNotificationUnsubscribedMailTypePlugin` and `AvailabilityNotificationMailTypePlugin` are working:
+Verify that `AvailabilityNotificationSubscriptionMailTypePlugin`, `AvailabilityNotificationUnsubscribedMailTypePlugin`, and `AvailabilityNotificationMailTypePlugin` are working:
 1. Add a new product.
-2. On YVES, as a customer, subscribe to its availability notifications.
+2. On the Storefront, as a customer, subscribe to its availability notifications.
 3. Switch the availability status of the product several times.
-4. Check your mailbox for the emails about the product's status being switched to available and unavailable.
+4. Check your mailbox for emails about the product's status being switched to available and unavailable.
 
 {% endinfo_block %}
 
@@ -202,7 +199,8 @@ Add the following plugins to your project:
 | AvailabilityNotificationAnonymizerPlugin | Anonymizes customer data during customer anonymization. |  |  Spryker\Zed\AvailabilityNotification\Communication\Plugin\CustomerAnonymizer |
 | AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin | Expands `CustomerTransfer` with availability notification subscriptions data. |  | Spryker\Zed\AvailabilityNotification\Communication\Plugin\Customer |
 
-**src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/Customer/CustomerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -243,23 +241,20 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
  }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
 To verify that `AvailabilityNotificationAnonymizerPlugin` is working:
 1. Add a new product.
-2. On Yves, as a company user, subscribe to its availability notifications.
+2. On the Storefront, as a company user, subscribe to its availability notifications.
 3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.</li><li>Delete this user.
 4. Check that the line is deleted from the `spy_availability_notification_subscription` table.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` is working:
 1. Add a new product.
-2. On Yves, as a company user, subscribe to its availability notifications.
-3. On Yves, go to account overview > *Newsletters*.
+2. On the Storefront, as a company user, subscribe to its availability notifications.
+3. On the Storefront, go to account overview > *Newsletters*.
 4. Check that you are subscribed to the product's availability notifications.
 
 {% endinfo_block %}
@@ -268,7 +263,7 @@ To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlug
 
 {% info_block infoBox %}
 
-You can control whether `AvailabilityNotificationFacade::subscribe()` throws an exception \Spryker\Zed\Product\Business\Exception\MissingProductException (if SKU does not exist in the database) or not. You can do it via the `AvailabilityNotificationConfig::AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` config setting. If set to `false` (by default), then the exception is thrown. If set to `true`, then the exception is not thrown, but `AvailabilityNotificationFacade::subscribe()` returns the instance of `AvailabilityNotificationSubscriptionResponseTransfer::$isSuccess = true`.
+You can control whether `AvailabilityNotificationFacade::subscribe()` throws an exception `\Spryker\Zed\Product\Business\Exception\MissingProductException` (if SKU does not exist in the database) or not. You can do it through the `AvailabilityNotificationConfig::AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` config setting. If set to `false` (by default), then the exception is thrown. If set to `true`, then the exception is not thrown, but `AvailabilityNotificationFacade::subscribe()` returns the instance of `AvailabilityNotificationSubscriptionResponseTransfer::$isSuccess = true`.
 
 {% endinfo_block %}
 
@@ -289,30 +284,29 @@ class AvailabilityNotificationConfig extends SprykerAvailabilityNotificationConf
 
 {% info_block warningBox “Verification” %}
 
-
 We recommend setting `AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` to true. 
-Make sure that you are not catching the mentioned above exception somewhere in your Pyz code but use check of `$availabilityNotificationSubscriptionResponseTransfer->getIsSuccess()`.
+Make sure that don't catch the previously mentioned exception somewhere in your Pyz code but use the check of `$availabilityNotificationSubscriptionResponseTransfer->getIsSuccess()`.
 
 The config setting exists for BC reasons only.
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
+
+Follow the steps below to install the Availability Notification feature frontend.
 
 ### Prerequisites
 
-Ensure that the related features are installed:
+To start feature integration, integrate the required feature:
 
-| NAME | VERSION |
-| --- | --- |
-| Mailing & Notifications | {{site.version}} |
-| Inventory Management | {{site.version}} |
-| Product | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| Mailing and Notifications | {{site.version}} |[Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
+| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Product      | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)           |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
@@ -390,7 +384,7 @@ Make sure that, in the database, the configured data is added to the `spy_glossa
 
 ### 3) Enable controllers
 
-Register the following controller providers in Yves application:
+Register the following controller providers in the Yves application:
 
 | PROVIDER | NAMESPACE | ENABLE CONTROLLER | CONTROLLER SPECIFICATION |
 | --- | --- | --- | --- |
@@ -434,8 +428,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following URLs are available on Yves:
-
+Make sure that the following URLs are available on the Storefront:
 - `http://mysprykershop.com/availability-notification/unsubscribe-by-key/{32 characters key}`
 - `http://mysprykershop.com/en/availability-notification/unsubscribe-by-key/{32 characters key}`
 - `http://mysprykershop.com/de/availability-notification/unsubscribe-by-key/{32 characters key}`
@@ -482,7 +475,7 @@ Enable Javascript and CSS changes:
 console frontend:yves:build
 ```
 
-In case you have a custom template, put `AvailabilityNotificationSubscriptionWidget` to your `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig` file:
+If you have a custom template, put `AvailabilityNotificationSubscriptionWidget` to your `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig` file:
 
 ```twig
 ...
@@ -497,6 +490,6 @@ In case you have a custom template, put `AvailabilityNotificationSubscriptionWid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the availability subscription form is present on the *product details* page. To do this, find a concrete product that is out of stock and visit its product details page.
+Make sure that the availability subscription form is present on the product details page. To do this, find a concrete product that is out of stock and visit its product details page.
 
 {% endinfo_block %}

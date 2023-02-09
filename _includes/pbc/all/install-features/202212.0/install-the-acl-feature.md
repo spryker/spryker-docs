@@ -1,3 +1,6 @@
+
+
+
 This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
 
 ## Install feature core
@@ -273,26 +276,19 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 
 ### 5) Install the database data for ACL
 
-Run the following command:
-
 ```bash
 console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the request doesn't succeed for users without permission.
-
-Make sure that the user can see only the allowed menu links.
-
-Make sure that `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
-
-Make sure that you can edit user's ACL groups on User edit page in Back Office.
-
-Make sure that `AclEntityRule` is created in `spy_acl_entity_rule` when the `RoleTransfer` is saved and contains `AclEntityRules`.
-
-Make sure that `RolesTransfer` contains needed `AclEntityRules`.
-
-Ensure the user who is not supposed to have access to an entity or endpoint does not have it.
+Make sure the following works correctly:
+* The request doesn't succeed for users without permission.
+* The user can see only the allowed menu links.
+* The `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
+* You can edit user's ACL groups on User edit page in Back Office.
+* `AclEntityRule` is created in `spy_acl_entity_rule` when the `RoleTransfer` is saved and contains `AclEntityRules`.
+* `RolesTransfer` contains needed `AclEntityRules`.
+* The user who is not supposed to have access to an entity or endpoint does not have it.
 
 {% endinfo_block %}

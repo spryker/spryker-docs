@@ -70,10 +70,20 @@ Update the hosts file using the command provided in the output of the previous s
 docker/sdk up
 ```
 
-You can now access your project using the following endpoints:
+Default demo shop configuration includes 3x stores *de*, *at*, and *us*.
 
+You can now access your project applications using the following endpoints:
+1. German Store
 * Storefront: `yves.de.spryker.local`
 * Back Office: `backoffice.de.spryker.local`
+
+2. Austrian Store
+* Storefront: `yves.at.spryker.local`
+* Back Office: `backoffice.at.spryker.local`
+
+3. USA Store
+* Storefront: `yves.us.spryker.local`
+* Back Office: `backoffice.us.spryker.local`
 
 
 {% info_block infoBox "Info" %}
@@ -81,5 +91,3 @@ You can now access your project using the following endpoints:
 If you see `.de.` in your URL, the application is store-specific. By default, Spryker comes with three stores: *de*, *at*, and *us*.
 
 {% endinfo_block %}
-
-For detailed installation instructions, start with [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).

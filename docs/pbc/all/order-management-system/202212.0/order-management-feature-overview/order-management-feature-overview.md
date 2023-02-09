@@ -35,8 +35,8 @@ B2B customers usually purchase large volumes of products selecting specific meas
 | [Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   | [Create returns](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-returns.html) |
 | [Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   | [Create shipments](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-shipments.html) |
 | [Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)   | [Edit billing addresses in orders](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html) |
-| | [Create shipments](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-shipments.html) |
-| | [Create shipments](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-shipments.html) |
+| | [Edit shipments](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/edit-shipments.html) |
+| | [View returns of an order](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/view-returns-of-an-order.html) |
 
 
 ## Related Developer articles

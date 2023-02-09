@@ -1,5 +1,5 @@
 ---
-title: Viewing returns of an order
+title: View returns of an order
 description: Learn how to view returns of an order in the Back Office
 template: back-office-user-guide-template
 related:

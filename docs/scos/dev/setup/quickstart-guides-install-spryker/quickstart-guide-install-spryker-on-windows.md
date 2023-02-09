@@ -1,7 +1,7 @@
 ---
 title: "Quickstart guide: Install Spryker on Windows"
 description: Get started with Spryker using Docker on Windows
-last_updated: Sep 8, 2022
+last_updated: Feb 03, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-windows.html
@@ -12,6 +12,8 @@ This document describes how to quickly install Spryker on Windows in Development
 To install Spryker on Windows, follow these steps:
 
 ## Prerequisites
+
+Install the following applications:
 
 * [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?ref=spryker-documentation)
 * [Docker](https://www.docker.com/)
@@ -68,7 +70,7 @@ Update `C:\Windows\System32\drivers\etc\hosts` using the instructions provided i
 docker/sdk up
 ```
 
-You should be able to access your project using the following endpoints:
+You can now access your project using the following endpoints:
 
 * Storefront: `yves.de.spryker.local`
 * Back Office: `backoffice.de.spryker.local`

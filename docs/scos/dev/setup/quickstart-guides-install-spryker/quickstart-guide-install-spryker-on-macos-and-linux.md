@@ -70,7 +70,7 @@ Update the hosts file using the command provided in the output of the previous s
 docker/sdk up
 ```
 
-Default demo shop configuration includes 3x stores *de*, *at*, and *us*.
+Default demo shop configuration includes the stores *de*, *at*, and *us*.
 
 You can now access your project applications using the following endpoints:
 1. German Store

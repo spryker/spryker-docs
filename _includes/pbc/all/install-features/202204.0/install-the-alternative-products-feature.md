@@ -168,7 +168,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-#### Set up regenerate and resync features
+#### Set up, regenerate, and resync features
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|

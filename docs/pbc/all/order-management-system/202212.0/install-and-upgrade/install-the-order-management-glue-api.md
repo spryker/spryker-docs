@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-order-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-order-management-feature-integration.html
 related:
   - title: Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/order-management-feature-integration.html

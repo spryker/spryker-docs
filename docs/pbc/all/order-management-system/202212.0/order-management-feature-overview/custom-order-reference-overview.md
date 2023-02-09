@@ -65,9 +65,3 @@ If you added a custom order reference to the cart, submitted a request for quote
 |BACK OFFICE USER GUIDES|
 |---|
 | [Adding and removing custom order references](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/adding-and-removing-custom-order-references.html) |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
-
-{% endinfo_block %}

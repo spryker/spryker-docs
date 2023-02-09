@@ -20,6 +20,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-manualorderentrygui.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-manualorderentrygui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-manualorderentrygui.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html
 related:
   - title: Migration guide - Shipment
     link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/upgrade-the-shipment-module.html

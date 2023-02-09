@@ -62,9 +62,3 @@ Keep in mind that bundled product always has a 0-tax rate. However, all of the b
 |BACK OFFICE USER GUIDES|
 |---|
 | [Trigger invoice generation in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)  |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
-
-{% endinfo_block %}

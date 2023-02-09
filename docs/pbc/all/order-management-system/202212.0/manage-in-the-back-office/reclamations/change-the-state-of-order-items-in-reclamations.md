@@ -1,5 +1,5 @@
 ---
-title: Changing the state of order items in reclamations
+title: Change the state of order items in reclamations
 description: Learn how to change the state of order items in reclamations in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template

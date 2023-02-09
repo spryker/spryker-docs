@@ -45,15 +45,3 @@ For non-splittable order items, a Back Office user sees just one product per non
 Both non-splittable and splittable order items can be refunded in the Back Office. However, unlike splittable orders, you can't refund orders with unsplittable items partially - only the whole order can be refunded, irrespective of its quantity. There are 2 prices in the `ItemTransfer` which are in balance: `RefundableAmount` and `CanceledAmount`. The refundable amount is calculated by the formula:
 
 `refundable amount: sumPriceToPayAggregation - canceledAmount`
-
-## Related Business User articles
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Get a general idea of the Splittable Order Items feature](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)  |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
-
-{% endinfo_block %}

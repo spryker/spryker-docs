@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/shipment-cart-feature-integration.html
 related:
   - title: Shipment feature integration
-    link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/integrate-the-shipment-feature.html
+    link: docs/pbc/all/carrier-management/page.version/install-and-upgrade/install-the-shipment-feature.html
 ---
 
 {% include pbc/all/install-features/202212.0/install-the-shipment-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-shipment-cart-feature.md -->

@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/split-delivery-concept
   - /v4/docs/split-delivery-concept
   - /v4/docs/en/split-delivery-concept
+  - /docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
 related:
   - title: CRUD Scheduled Prices migration concept
     link: docs/pbc/all/price-management/page.version/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html

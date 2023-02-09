@@ -1,5 +1,5 @@
 ---
-title: Creating shipments
+title: Create shipments
 description: Learn how to create shipments for orders in the Back Office.
 last_updated: Jun 23, 2021
 template: back-office-user-guide-template

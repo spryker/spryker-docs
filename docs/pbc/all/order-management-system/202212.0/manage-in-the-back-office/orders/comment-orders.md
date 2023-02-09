@@ -1,5 +1,5 @@
 ---
-title: Commenting orders
+title: Comment orders
 description: Learn how to comment orders in the Back Office
 template: back-office-user-guide-template
 related:

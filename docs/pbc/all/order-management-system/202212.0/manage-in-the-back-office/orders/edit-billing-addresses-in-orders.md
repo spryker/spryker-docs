@@ -1,5 +1,5 @@
 ---
-title: Editing billing addresses in orders
+title: Edit billing addresses in orders
 description: Learn how to edit order billing addresses in the Back Office
 template: back-office-user-guide-template
 related:

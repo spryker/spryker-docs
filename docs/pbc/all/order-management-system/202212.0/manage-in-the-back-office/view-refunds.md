@@ -1,5 +1,5 @@
 ---
-title: Viewing refunds
+title: View refunds
 description: Learn how to view refunds in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template

@@ -27,12 +27,16 @@ B2B customers usually purchase large volumes of products selecting specific meas
 
 ## Related Business User articles
 
-| OVERVIEWS | BACK OFFICE GUIDE |
+| OVERVIEWS | BACK OFFICE GUIDES |
 |---| - |
+| [Custom Order Reference](/docs/pbc/all/order-management-system/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html) | [Add and remove custom order references](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html) |
 | [Invoice Generation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/invoice-generation-overview.html)  |  [Change the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html) | |
-| [Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   | | 
-| [Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   | |
-| [Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)   | |
+| [OMS (Order management system) matrix](/docs/pbc/all/order-management-system/{{page.version}}/order-management-feature-overview/oms-order-management-system-matrix.html) | [Comment orders](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/comment-orders.html) |
+| [Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   | [Create returns](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-returns.html) |
+| [Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   | [Create shipments](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-shipments.html) |
+| [Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)   | [Edit billing addresses in orders](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html) |
+| | [Create shipments](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-shipments.html) |
+| | [Create shipments](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-shipments.html) |
 
 
 ## Related Developer articles

@@ -8,6 +8,7 @@ indicators:
   - ':'
 exceptions:
   - Azure
+  - Back Office
   - CLI
   - Code
   - Cosmos
@@ -21,9 +22,11 @@ exceptions:
   - Marketplace
   - MongoDB
   - REPL
+  - Spryker
   - Studio
   - TypeScript
   - URLs
   - Visual
   - VS
   - Windows
+  - Zed

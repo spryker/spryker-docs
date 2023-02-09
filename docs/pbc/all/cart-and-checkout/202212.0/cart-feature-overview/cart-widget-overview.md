@@ -12,7 +12,7 @@ redirect_from:
 The shopping cart is a part of the online shop where the record of the items a buyer has "picked up" from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications, add extra items if needed, and purchase the products. Many B2B customers use multiple shopping carts to cover different purchasing purposes. With the Shopping Cart widget, they can access their shopping carts from any place in the online shop with just one click.
 
 For customers' convenience and ease of use, the shopping cart widget is placed in the very header of the webshop. When a customer puts the cursor on the **Carts** icon, a drop-down list with all their shopping carts is displayed.
-
+Zed
 For each shopping cart, the following details are provided:
 * Shopping cart name
 * Number of items added to cart

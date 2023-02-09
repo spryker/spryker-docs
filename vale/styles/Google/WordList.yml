@@ -6,14 +6,21 @@ ignorecase: false
 action:
   name: replace
 swap:
+  '(?:Back\s|Back-|back\s|back-)end': backend
   '(?:API Console|dev|developer) key': API key
   '(?:cell ?phone|smart ?phone)': phone|mobile phone
   '(?:dev|developer|APIs) console': API console
   '(?:e-mail|Email|E-mail)': email
   '(?:file ?path|path ?name)': path
+  '(?:Front\s|Front-|front\s|front-)end': frontend
+  "(?:It|it)'s impossible": you can't
+  '(?:It|it) is impossible': you can't
   '(?:kill|terminate|abort)': stop|exit|cancel|end
   '(?:OAuth ?2|Oauth)': OAuth 2.0
   '(?:ok|Okay)': OK|okay
+  "(?:It|it)'s possible": you can
+  '(?:It|it) is possible': you can
+  '(?:P|p)ros': advantages
   '(?:WiFi|wifi)': Wi-Fi
   '[\.]+apk': APK
   '3\-D': 3D
@@ -25,6 +32,7 @@ swap:
   action bar: app bar
   admin: administrator
   Ajax: AJAX
+  aka: also known as
   Android device: Android-powered device
   android: Android
   API explorer: APIs Explorer
@@ -33,24 +41,32 @@ swap:
   authN: authentication
   authZ: authorization
   autoupdate: automatically update
+  blacklist: denylist
   cellular data: mobile data
   cellular network: mobile network
   chapter: documents|pages|sections
   check box: checkbox
-  check: select
   CLI: command-line tool
   click on: click|click in
   Cloud: Google Cloud Platform|GCP
   Container Engine: Kubernetes Engine
+  cons: disadvantages
   content type: media type
   curated roles: predefined roles
   data are: data is
+  data set: dataset
+  datasource: data source
+  data store: datastore
   Developers Console: Google API Console|API Console
+  deselect: clear
   disabled?: turn off|off
+  dropdown: drop-down
   ephemeral IP address: ephemeral external IP address
+  end point: endpoint
   fewer data: less data
   file name: filename
   firewalls: firewall rules
+  for instance: for example|such as
   functionality: capability|feature
   Google account: Google Account
   Google accounts: Google Accounts
@@ -60,10 +76,11 @@ swap:
   in order to: to
   ingest: import|load
   k8s: Kubernetes
+  key/value pair|key value pair: key-value pair
   long press: touch & hold
   network IP address: internal IP address
   omnibox: address bar
-  open-source: open source
+  open-source|opensource: open source
   overview screen: recents screen
   regex: regular expression
   SHA1: SHA-1|HAS-SHA1

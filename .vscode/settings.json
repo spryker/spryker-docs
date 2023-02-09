@@ -19,5 +19,7 @@
   "grammarly.config.documentDialect": "american",
   "grammarly.config.suggestions.OxfordComma": true,
   "editor.renderWhitespace": "all",
-  "commentTranslate.targetLanguage": "uk"
+  "commentTranslate.targetLanguage": "uk",
+  "vale.valeCLI.path": "vale",
+  "vale.valeCLI.config": "/Users/vadym.sachenko/Spryker/GitHub/spryker-docs/.vale.ini"
 }

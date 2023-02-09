@@ -3,6 +3,8 @@ title: "Quickstart guide: Install Spryker on Windows"
 description: Get started with Spryker using Docker on Windows
 last_updated: Sep 8, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-windows.html
 ---
 
 This document describes how to quickly install Spryker on Windows in Development mode. If you are installing Spryker for the first time or need detailed instructions, we recommend starting with [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart guide: Install Spryker on MacOS and Linux"
 description: Get started with Spryker on MacOS and Linux
-last_updated: Sep 8, 2022
+last_updated: Feb 3, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-macos-and-linux.html
@@ -70,7 +70,7 @@ Update the hosts file using the command provided in the output of the previous s
 docker/sdk up
 ```
 
-You should be able to access your project using the following endpoints:
+You can now access your project using the following endpoints:
 
 * Storefront: `yves.de.spryker.local`
 * Back Office: `backoffice.de.spryker.local`

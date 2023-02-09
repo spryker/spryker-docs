@@ -1,6 +1,6 @@
 ---
 title: "HowTo: Create and register a MailTypePlugin"
-description: Use the guide to create and register the  MailTypePlugin in the Mail module.
+description: Guide to create and register MailTypePlugin in the Mail module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-mail-create-mailtype-plugin
@@ -30,9 +30,7 @@ This document shows how to create and register a mail provider you want to use.
 
 `MailType` is a class used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypePlugin` within the `Mail` module, which sends out the emails, and implement `MailTypePluginInterface`. Then, in the `build()` method, set up your email.
 
-`MailType` is a class used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypePlugin` within the `Mail` module, which sends out the emails, and implement `MailTypePluginInterface`. Then, in the `build()` method, set up your email.
-
-Within the `build()` method, you have access to the `MailBuilderInterface`, which makes it easy to enrich the `MailTransfer` with the information needed to send out the emails. You also have access to the `MailTransfer` itself through the `MailBuilderInterface`. This one, for example, is used to get the recipient information from a given transfer object.
+Within the `build()` method, you have access to the `MailBuilderInterface`, which makes it easy to enrich the `MailTransfer` with the information needed to send out the emails. You also have access to the `MailTransfer` itself through the `MailBuilderInterface`. This component is used to get the recipient's information from a given transfer object.
 
 In most cases, you can add a specific transfer to the `MailTransfer`—for example, a `CustomerTransfer` when a customer registers. This transfer object is available in your `MailType` through the `MailTransfer`.
 
@@ -80,7 +78,7 @@ class YourMailTypePlugin extends AbstractPlugin implements MailTypePluginInterfa
 
 ## Register the `MailTypePlugin`
 
-To add your `MailType` to the `MailTypeCollection`, add it to your `MailDependencyProvider`:
+To add a `MailType` to the `MailTypeCollection`, add it to your `MailDependencyProvider`:
 
 ```php
 <?php

@@ -1,21 +1,18 @@
 ---
-title: Marketplace Product Option + Cart feature integration
+title: Marketplace Product Options + Cart feature integration
 last_updated: Jul 28, 2021
-Description: This document describes the process how to integrate the Marketplace Product Option feature into a Spryker project.
+Description: This document describes the process how to integrate the Marketplace Product Options + Cart feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
-  - title: Marketplace Cart feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202108.0/marketplace-product-option-cart-feature-integration.html
 ---
 
-This document describes how to integrate the Marketplace Product Option + Cart feature into a Spryker project.
+This document describes how to integrate the Marketplace Product Options + Cart feature into a Spryker project.
 
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Product Option + Cart feature core.
+Follow the steps below to install the Marketplace Product Options + Cart feature core.
 
 ### Prerequisites
 
@@ -23,8 +20,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
-| Marketplace Product Option | {{page.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-feature-integration.html) |
-| Cart | {{page.version}}   | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)
+| Marketplace Product Options| {{page.version}}      | [Marketplace Product Options feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html) |
+| Cart | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)
 
 ### 1) Set up behavior
 

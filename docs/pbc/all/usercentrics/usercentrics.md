@@ -47,3 +47,4 @@ To be GDPR compliant, you have to inject the Usercentrics cookies consent dialog
 Having separate CMS pages outside of the Spryker store requires additional configuration in the external CMS and has to be done independently of the Spryker SCCOS.
 
 {% endinfo_block %}
+

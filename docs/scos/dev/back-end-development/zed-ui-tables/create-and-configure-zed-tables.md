@@ -1,7 +1,7 @@
 ---
 title: Create and configure Zed tables
 description: This document helps you get started on working with tables.
-last_updated: Oct 13, 2021
+last_updated: Jan 02, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
 originalArticleId: e8fc8c5a-88fa-41f8-8d2b-de028e7c4165
@@ -128,6 +128,38 @@ You can also configure the default sort direction (for the initial rendering of 
 $config->setDefaultSortDirection(
     \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
 ```
+
+### Configure search by columns
+
+The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables due to indexes not being used.
+
+Search by columns can be used on all Back Office data tables which extend the `AbstractTable` class.
+
+Searchable fields are `case sensitive` and use exact comparisons by concrete column.
+
+It is possible to enable it on a per-table basis, by setting `setSearchableColumns` on the table configuration.
+The search fields appear under each column that was set as searchable.
+This provides flexibility to enable/disable search fields only for needed columns:
+
+```php
+<?php
+
+$config->setSearchableColumns([
+    static::COL_ID_SALES_ORDER => SpySalesOrderTableMap::COL_ID_SALES_ORDER,
+    static::COL_FIRST_NAME => SpySalesOrderTableMap::COL_FIRST_NAME,
+    static::COL_EMAIL => SpySalesOrderTableMap::COL_EMAIL,
+    static::COL_ORDER_REFERENCE => SpySalesOrderTableMap::COL_ORDER_REFERENCE,
+]);
+```
+
+Search by columns initiates once searchable columns are enabled and the searchable terms are passed.
+In case two or more searchable columns are filled the searchable condition is getting stricter 
+with the `AND` operator and searching for the results via all those fields.
+
+We recommend using search by columns for tables with large numbers of rows. 
+Measurable performance checks show the execution time got faster. 
+For example, getting the results using search by columns for tables with ~200k rows improved speed from 0,031s to 0,003s. 
+
 
 ## 3. Prepare the data
 

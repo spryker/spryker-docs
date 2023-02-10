@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/installing-in-development-mode-on-windows
   - /v6/docs/installing-in-development-mode-on-windows
   - /v6/docs/en/installing-in-development-mode-on-windows
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
 related: 
   - title: Database access credentials
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
@@ -50,13 +51,13 @@ Follow the steps to install Spryker in Development mode:
     * Clone the B2C repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p2 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0 --single-branch ./b2b-demo-shop
     ```
 
 5. Depending on the repository you've cloned, navigate into the cloned folder:

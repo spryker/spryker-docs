@@ -16,11 +16,11 @@ To start feature integration, overview and install the necessary features:
 | FEATURE | VERSION | INTEGRATION GUIDE  |
 | --- | --- |--- |
 | Spryker Core	 | {{site.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Shopping Lists	 | {{site.version}} |[Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html) |
+| Shopping Lists	 | {{site.version}} |[Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/integrate-the-shopping-lists-feature.html) |
 
 ## 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/shopping-lists-rest-api:"^1.0.0" --update-with-dependencies

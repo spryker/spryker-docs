@@ -19,9 +19,9 @@ A task can define a list of commands and files for each of the lifecycle events 
 
 There are the following event types:
 
-- *Initialized*: Emitted when the task is initialized inside a project for the first time. This is the right event to create a task-specific configuration and initialize the tool.  
-- *Updated*: Emitted when the SDK was updated and the task version has changed, so the task can update configurations and tools it needs to run.
-- *Removed*: Emitted after the task was removed from the SDK. You can use this event to perform cleanups of the task, like removing configuration files.
+- *Initialized*: Emitted when a task is initialized inside a project for the first time. This is the right event to create a task-specific configuration and initialize the tool.  
+- *Updated*: Emitted when the SDK was updated and a task version has changed, so the task can update configurations and tools it needs to run.
+- *Removed*: Emitted after a task was removed from the SDK. You can use this event to perform cleanups of the task, like removing configuration files.
 
 ## Adding events to task created via YAML files
 

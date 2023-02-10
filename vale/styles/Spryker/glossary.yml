@@ -7,4 +7,5 @@ action:
   name: replace
 swap:
   - zed: Zed
+  - yves: Yves
 

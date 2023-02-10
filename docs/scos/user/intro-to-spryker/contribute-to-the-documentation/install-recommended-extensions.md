@@ -26,9 +26,9 @@ We have a list of recommended VS Code extensions that help improve the quality o
 ## Install an extension
 
 To install an extension, follow these steps:
-In the sidebar menu, click Extensions
-In the search line of the Extensions menu, enter a needed extension's name.
-Find the extension in the search results list and click install.
+1. In the sidebar menu, click Extensions
+2. In the search line of the Extensions menu, enter a needed extension's name.
+3. Find the extension in the search results list and click install.
 
 Some extensions, like Vale, need configuration before you can use them. 
 The following sections describe how to configure it.
@@ -41,7 +41,9 @@ The following sections describe how to configure it.
    2. For **Vale › Vale CLI: Min Alert Level**, select **inherited**.
    3. For **Vale › Vale CLI: Path**, enter `vale`.
 3. On the **Workspace** tab, enter and select the same values as in step 2.
-4. Relaunch VS Code to make sure settings are applied.
+4. Relaunch VS Code to make sure settings have been applied.
+
+If you now open any markdown (MD) file 
 
 
 

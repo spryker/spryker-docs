@@ -1062,11 +1062,17 @@ entries:
         nested:
           - title: Algolia
             url: /docs/pbc/all/search/algolia.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: Integrate Algolia
                 url: /docs/pbc/all/search/integrate-algolia.html
+                include_versions:
+                - "202212.0"
               - title: Disconnect Algolia
                 url: /docs/pbc/all/search/disconnect-algolia.html
+                include_versions:
+                - "202212.0"
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

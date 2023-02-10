@@ -1,6 +1,7 @@
 ---
 title: Algolia
 description: Algolia empowers Builders with Search and Recommendation services to create world-class digital experiences.
+template: howto-guide-template
 ---
 
 Spryker is shipped with [Elasticsearch]((https://www.elastic.co/elasticsearch/)) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/).

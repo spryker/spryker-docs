@@ -209,10 +209,10 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 namespace Pyz\Client\SecurityBlocker;
 
-use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProviderAlias;
+use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProvider;
 use Spryker\Client\SecurityBlockerMerchantPortal\Plugin\SecurityBlocker\MerchantPortalUserSecurityBlockerConfigurationSettingsExpanderPlugin;
 
-class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProviderAlias
+class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProvider
 {
     /**
      * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerConfigurationSettingsExpanderPluginInterface>

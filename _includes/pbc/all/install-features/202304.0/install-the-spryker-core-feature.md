@@ -28,20 +28,20 @@ composer require "spryker-feature/spryker-core":"{{site.version}}" --update-with
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| UtilEncryption | vendor/spryker/util-encryption |
-| Vault | vendor/spryker/vault |
-| SessionExtension | vendor/spryker/session-extension |
-| SessionRedis | vendor/spryker/session-redis |
-| SessionFile | vendor/spryker/session-redis |
-| StoreGui | vendor/spryker/store-gui |
-| StorageExtension | vendor/spryker/storage-extension |
-| StorageRedis | vendor/spryker/storage-redis |
-| SecuritySystemUser | vendor/spryker/security-system-user |
-| SecurityBlocker | vendor/spryker/security-blocker |
-| SecurityBlockerExtension | vendor/spryker/security-blocker-extension |
-| SecurityBlockerStorefrontCustomer | vendor/spryker/security-storefront-customer |
+| MODULE | EXPECTED DIRECTORY                                  |
+| --- |-----------------------------------------------------|
+| UtilEncryption | vendor/spryker/util-encryption                      |
+| Vault | vendor/spryker/vault                                |
+| SessionExtension | vendor/spryker/session-extension                    |
+| SessionRedis | vendor/spryker/session-redis                        |
+| SessionFile | vendor/spryker/session-redis                        |
+| StoreGui | vendor/spryker/store-gui                            |
+| StorageExtension | vendor/spryker/storage-extension                    |
+| StorageRedis | vendor/spryker/storage-redis                        |
+| SecuritySystemUser | vendor/spryker/security-system-user                 |
+| SecurityBlocker | vendor/spryker/security-blocker                     |
+| SecurityBlockerExtension | vendor/spryker/security-blocker-extension           |
+| SecurityBlockerStorefrontCustomer | vendor/spryker/security-blocker-storefront-customer |
 
 {% endinfo_block %}
 
@@ -475,10 +475,10 @@ class StorageDependencyProvider extends SprykerStorageDependencyProvider
 
 namespace Pyz\Client\SecurityBlocker;
 
-use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProviderAlias;
+use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProvider;
 use Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin;
 
-class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProviderAlias
+class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProvider
 {
     /**
      * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerConfigurationSettingsExpanderPluginInterface>

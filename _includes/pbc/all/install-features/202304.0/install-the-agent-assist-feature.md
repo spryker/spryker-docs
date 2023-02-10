@@ -199,6 +199,20 @@ Make sure that when the login form for the agent is submitted, the URL it uses c
 
 {% endinfo_block %}
 
+Make sure to use environment variables in `config-default.php`:
+
+**config/Shared/config_default.php**
+
+```php
+<?php
+// other code
+
+// >>> Security Blocker Storefront Agent
+$config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL] = 900;
+$config[SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+```
+
 ### 3) Add translations
 
 1. Append the glossary according to your configuration:
@@ -328,10 +342,10 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 namespace Pyz\Client\SecurityBlocker;
 
-use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProviderAlias;
+use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProvider;
 use Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker\AgentSecurityBlockerConfigurationSettingsExpanderPlugin;
 
-class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProviderAlias
+class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProvider
 {
     /**
      * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerConfigurationSettingsExpanderPluginInterface>

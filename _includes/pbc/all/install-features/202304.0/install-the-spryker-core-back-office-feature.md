@@ -73,24 +73,24 @@ console transfer:generate
 
 Ensure the following transfers have been created:
 
-| TRANSFER                             | TYPE      | EVENT   | PATH                                                                       |
-|--------------------------------------|-----------|---------|----------------------------------------------------------------------------|
-| UserTransfer.fkLocale                | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
-| UserTransfer.localName               | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
-| UserTransfer.username                | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
-| UserTransfer.password                | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
-| UserTransfer.lastLogin               | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
-| MessageTransfer                      | class     | created | src/Generated/Shared/Transfer/MessageTransfer                              |
-| TranslationTransfer                  | class     | created | src/Generated/Shared/Transfer/TranslationTransfer                          |
-| KeyTranslationTransfer               | class     | created | src/Generated/Shared/Transfer/KeyTranslationTransfer                       |
-| OauthAuthenticationLinkTransfer      | class     | created | src/Generated/Shared/Transfer/OauthAuthenticationLinkTransfer              |
-| ResourceOwnerTransfer                | class     | created | src/Generated/Shared/Transfer/ResourceOwnerTransfer                        |
-| ResourceOwnerRequestTransfer         | class     | created | src/Generated/Shared/Transfer/ResourceOwnerRequestTransfer                 |
-| ResourceOwnerResponseTransfer        | class     | created | src/Generated/Shared/Transfer/ResourceOwnerResponseTransfer                |
-| SecurityBlockerConfigurationSettings | class     | created | src/Generated/Shared/Transfer/SecurityBlockerConfigurationSettingsTransfer |
-| SecurityCheckAuthResponse            | class     | created | src/Generated/Shared/Transfer/SecurityCheckAuthResponseTransfer            |
-| SecurityCheckAuthContext             | class     | created | src/Generated/Shared/Transfer/SecurityCheckAuthContextTransfer             |
-| Locale                               | class     | created | src/Generated/Shared/Transfer/LocaleTransfer                               |
+| TRANSFER                                     | TYPE      | EVENT   | PATH                                                                       |
+|----------------------------------------------|-----------|---------|----------------------------------------------------------------------------|
+| UserTransfer.fkLocale                        | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| UserTransfer.localName                       | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| UserTransfer.username                        | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| UserTransfer.password                        | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| UserTransfer.lastLogin                       | attribute | created | src/Generated/Shared/Transfer/UserTransfer                                 |
+| MessageTransfer                              | class     | created | src/Generated/Shared/Transfer/MessageTransfer                              |
+| TranslationTransfer                          | class     | created | src/Generated/Shared/Transfer/TranslationTransfer                          |
+| KeyTranslationTransfer                       | class     | created | src/Generated/Shared/Transfer/KeyTranslationTransfer                       |
+| OauthAuthenticationLinkTransfer              | class     | created | src/Generated/Shared/Transfer/OauthAuthenticationLinkTransfer              |
+| ResourceOwnerTransfer                        | class     | created | src/Generated/Shared/Transfer/ResourceOwnerTransfer                        |
+| ResourceOwnerRequestTransfer                 | class     | created | src/Generated/Shared/Transfer/ResourceOwnerRequestTransfer                 |
+| ResourceOwnerResponseTransfer                | class     | created | src/Generated/Shared/Transfer/ResourceOwnerResponseTransfer                |
+| SecurityBlockerConfigurationSettingsTransfer | class     | created | src/Generated/Shared/Transfer/SecurityBlockerConfigurationSettingsTransfer |
+| SecurityCheckAuthResponseTransfer            | class     | created | src/Generated/Shared/Transfer/SecurityCheckAuthResponseTransfer            |
+| SecurityCheckAuthContextTransfer             | class     | created | src/Generated/Shared/Transfer/SecurityCheckAuthContextTransfer             |
+| LocaleTransfer                               | class     | created | src/Generated/Shared/Transfer/LocaleTransfer                               |
 
 {% endinfo_block %}
 
@@ -309,10 +309,10 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 namespace Pyz\Client\SecurityBlocker;
 
-use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProviderAlias;
+use Spryker\Client\SecurityBlocker\SecurityBlockerDependencyProvider as SprykerSecurityBlockerDependencyProvider;
 use Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker\BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin;
 
-class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProviderAlias
+class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependencyProvider
 {
     /**
      * @return list<\Spryker\Client\SecurityBlockerExtension\Dependency\Plugin\SecurityBlockerConfigurationSettingsExpanderPluginInterface>

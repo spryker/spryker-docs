@@ -147,6 +147,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
       - title: Add and edit diagrams
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html
+      - title: Install recommended extensions
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/install-recommended-extensions.html
       - title: Report documentation issues
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
       - title: Build the documentation site

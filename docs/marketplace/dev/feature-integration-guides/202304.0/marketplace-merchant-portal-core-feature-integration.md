@@ -563,8 +563,13 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
     'action' => 'index',
     'type' => 'allow',
   ],
-
 ];
+
+// >>> Security Blocker MerchantPortal user
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL] = 900;
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+
 ```
 
 Add a console command for warming up the *Merchant Portal* router cache:
@@ -1281,11 +1286,6 @@ Make sure to use environment variables in `config-default.php`:
 
 $config[PropelConstants::ZED_DB_USERNAME] = getenv('SPRYKER_DB_USERNAME');
 $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
-
-// >>> Security Blocker MerchantPortal user
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS] = 360;
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL] = 900;
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
 
 ```
 

@@ -3,6 +3,7 @@ algolia:
   files_to_exclude:
     - index.md
     - 404.md
+    - 403.md
     - search.md
     - docs/marketplace/user/**/*.md
     - docs/marketplace/dev/**/*.md

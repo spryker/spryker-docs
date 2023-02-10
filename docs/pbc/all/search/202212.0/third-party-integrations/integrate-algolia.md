@@ -41,4 +41,4 @@ The more products you have, the longer you have to wait until Algolia finishes t
 The index is now populated with data from your store:
 ![algolia-index-data](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-index-data.png)
 
-For details on the created index data, see [Indexes](/docs/pbc/all/search/algolia.html#indexes).
+For details on the created index data, see [Indexes](/docs/pbc/all/search/{{page.version}}/third-party-integrations/algolia.html#indexes).

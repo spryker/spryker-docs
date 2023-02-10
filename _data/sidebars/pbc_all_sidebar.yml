@@ -1061,16 +1061,16 @@ entries:
       - title: Search
         nested:
           - title: Algolia
-            url: /docs/pbc/all/search/algolia.html
+            url: /docs/pbc/all/search/third-party-integrations/algolia.html
             include_versions:
             - "202212.0"
             nested:
               - title: Integrate Algolia
-                url: /docs/pbc/all/search/integrate-algolia.html
+                url: /docs/pbc/all/search/third-party-integrations/integrate-algolia.html
                 include_versions:
                 - "202212.0"
               - title: Disconnect Algolia
-                url: /docs/pbc/all/search/disconnect-algolia.html
+                url: /docs/pbc/all/search/third-party-integrations/disconnect-algolia.html
                 include_versions:
                 - "202212.0"
       - title: Shopping List and Wishlist

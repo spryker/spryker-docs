@@ -14,7 +14,7 @@ Algolia searches by product ratings as well. However, product ratings are repres
 
 {% endinfo_block %}
 
-To use Algolia as your search engine, you need an account with Algolia. For details about Algolia integration, see [Integrate Algolia](/docs/pbc/all/search/integrate-algolia.html).
+To use Algolia as your search engine, you need an account with Algolia. For details about Algolia integration, see [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/third-party-integrations/integrate-algolia.html).
 
 ## Searchable attributes
 

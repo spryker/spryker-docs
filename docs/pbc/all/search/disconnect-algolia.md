@@ -3,9 +3,9 @@ title: Disconnect Algolia
 description: Find out how you can disconnect Algolia from your Spryker shop
 template: howto-guide-template
 ---
-Disconnecting the Algolia app immediately and permanently deletes all the existing Algolia [index](/docs/pbc/all/search/algolia.html#indexes) and restores the default [Elasticsearch](https://www.elastic.co/elasticsearch/) search engine for your store.
+Disconnecting the Algolia app immediately and permanently deletes all the existing Algolia [indexes](/docs/pbc/all/search/algolia.html#indexes) and restores the default [Elasticsearch](https://www.elastic.co/elasticsearch/) search engine for your store.
 
-To disconnect the Algolia app from your store, do the following
+To disconnect the Algolia app from your store, do the following:
 
 1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**. 
 2. Click **Algolia**.

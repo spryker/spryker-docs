@@ -6,6 +6,7 @@ guide only adds the following functionalities:
 * Shipment Back Office UI
 * Delivery method per store
 * Shipment data import
+* Sales order item extension
 
 {% endinfo_block %}
 

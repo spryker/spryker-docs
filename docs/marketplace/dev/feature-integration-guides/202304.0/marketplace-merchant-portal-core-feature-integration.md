@@ -549,29 +549,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-Open access to the Merchant Portal login page by default:
-
-**config/Shared/config_default.php**
-
-```php
-<?php
-
-$config[AclConstants::ACL_DEFAULT_RULES][] = [
-  [
-    'bundle' => 'security-merchant-portal-gui',
-    'controller' => 'login',
-    'action' => 'index',
-    'type' => 'allow',
-  ],
-];
-
-// >>> Security Blocker MerchantPortal user
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS] = 360;
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL] = 900;
-$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
-
-```
-
 Add a console command for warming up the *Merchant Portal* router cache:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -612,7 +589,49 @@ sections:
         command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
 ```
 
-### 4) Set up transfer objects
+### 4) Set up configuration
+
+Set up the following configuration.
+
+#### Configure Acl
+
+Open access to the Merchant Portal login page by default:
+
+**config/Shared/config_default.php**
+
+```php
+<?php
+
+$config[AclConstants::ACL_DEFAULT_RULES][] = [
+  [
+    'bundle' => 'security-merchant-portal-gui',
+    'controller' => 'login',
+    'action' => 'index',
+    'type' => 'allow',
+  ],
+];
+
+```
+
+#### Configure SecurityBlocker
+
+Add environment configuration for merchant portal user security:
+
+| CONFIGURATION                                                                            | SPECIFICATION                                                                                                                                                       | NAMESPACE                                    |
+|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS           | Specifies the TTL period for which a merchant portal user is blocked if the number of attempts is exceeded.                                                         | Spryker\Shared\SecurityBlockerMerchantPortal |
+| SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL                | Specifies the TTL period in seconds when the number of unsuccessful tries to log in will be counted for a merchant portal user.                                     | Spryker\Shared\SecurityBlockerMerchantPortal |
+| SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies the number of failed login attempts a merchant portal user can make during the `SECURITY_BLOCKER_MERCHANT_PORTAL:BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerMerchantPortal |
+
+**config/Shared/config_default.php**
+
+```php
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCK_FOR_SECONDS] = 360;
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TTL] = 900;
+$config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+```
+
+### 5) Set up transfer objects
 
 Generate transfer objects:
 

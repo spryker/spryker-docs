@@ -199,7 +199,13 @@ Make sure that when the login form for the agent is submitted, the URL it uses c
 
 {% endinfo_block %}
 
-Make sure to use environment variables in `config-default.php`:
+Add environment configuration for agent security:
+
+| CONFIGURATION                                                              | SPECIFICATION                                                                                                                                     | NAMESPACE                                     |
+|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the agent is blocked if the number of attempts is exceeded for agent.                       | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL                | Specifies the TTL configuration, the period when number of unsuccessful tries will be counted for agent.                                          | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempt an agent can make during the `SECURITY_BLOCKER_STOREFRONT:AGENT_BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerStorefrontAgent |
 
 **config/Shared/config_default.php**
 

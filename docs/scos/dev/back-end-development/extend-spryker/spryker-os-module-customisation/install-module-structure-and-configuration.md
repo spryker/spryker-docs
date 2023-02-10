@@ -12,7 +12,8 @@ redirect_from:
   - /docs/en/install-module-structure-and-configuration
   - /v6/docs/install-module-structure-and-configuration
   - /v6/docs/en/install-module-structure-and-configuration
-related: 
+  - /docs/scos/dev/setup/install-module-structure-and-configuration.html
+related:
   - title: Installing Spryker with custom set of modules
     link: docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
   - title: Managing SCOS dependencies with Composer

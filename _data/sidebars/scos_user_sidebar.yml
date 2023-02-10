@@ -146,9 +146,9 @@ entries:
       - title: Edit the documentation locally
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
       - title: Style, formatting, and general rules
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html
       - title: Markdown syntax
-        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
       - title: Add and edit diagrams
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html
       - title: Report documentation issues

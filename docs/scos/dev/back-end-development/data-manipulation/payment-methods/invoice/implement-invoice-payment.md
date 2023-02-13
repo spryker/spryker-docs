@@ -38,7 +38,7 @@ related:
 
 This document describes the steps to consider implementing the invoice payment method without integrating with a third-party payment service provider.
 
-If this is your first time creating a new module, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html).
+If this is your first time creating a new module, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html).
 
 {% info_block infoBox "Implementation order" %}
 

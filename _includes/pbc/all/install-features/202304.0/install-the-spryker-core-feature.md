@@ -1,6 +1,9 @@
-This document describes how to integrate the Spryker Core feature into a Spryker project.
 
-{% info_block infoBox "Influded features" %}
+
+
+This document describes how to integrate the [Spryker Core feature](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html) into a Spryker project.
+
+{% info_block infoBox "Included features" %}
 
 The following feature integration guide expects the basic feature to be in place.
 The current feature integration guide only adds the following functionalities:
@@ -16,8 +19,6 @@ The current feature integration guide only adds the following functionalities:
 Follow the steps below to install the Spryker Core feature core.
 
 ### 1) Install the required modules using Composer
-
-Run the following command to install the required modules:
 
 ```bash
 composer require "spryker-feature/spryker-core":"{{site.version}}" --update-with-dependencies
@@ -46,14 +47,14 @@ Make sure that the following modules have been installed:
 
 Set up the following configuration.
 
-#### SecuritySystemUser
+#### Set up SecuritySystemUser
 
 Add the configuration to your project:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
 | SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME	 | Redis session lifetime | Spryker\Shared\SecuritySystemUser |
-|SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS | Default credentials for Yves accessing Zed | Spryker\Shared\SecuritySystemUser |
+|SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS | Default credentials for Yves accessing Zed. | Spryker\Shared\SecuritySystemUser |
 
 {% info_block errorBox "Security measures" %}
 
@@ -77,7 +78,7 @@ $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS] = [
 ];
 ```
 
-#### Vault
+#### Set up Vault
 
 Add the configuration to your project:
 
@@ -87,7 +88,7 @@ Add the configuration to your project:
 
 {% info_block errorBox "Security measures" %}
 
-Make sure that the encryption key is secured in your live environment. This key protects all the data stored in the Vault.
+Make sure that the encryption key is secured in your live environment. This key protects all the data stored in Vault.
 
 {% endinfo_block %}
 
@@ -102,7 +103,7 @@ use Spryker\Shared\Vault\VaultConstants;
 $config[VaultConstants::ENCRYPTION_KEY] = "ADJUST THIS ENCRYPTION KEY TO SECURE ONE"
 ```
 
-Example
+Example:
 
 ```php
 $secret = "actual_secret";
@@ -160,7 +161,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = 0;
 
 {% info_block warningBox "Note" %}
 
-All the values in the examples above should be replaced with the real ones used in the corresponding environment.
+All the values in the preceding examples must be replaced with the real ones used in the corresponding environment.
 
 {% endinfo_block %}
 
@@ -184,7 +185,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = 0;
 
 {% info_block warningBox "Note" %}
 
-All the values in the examples above should be replaced with the real ones used in the corresponding environment.
+All the values in the preceding examples must be replaced with the real ones used in the corresponding environment.
 
 {% endinfo_block %}
 
@@ -212,7 +213,7 @@ $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
 
 {% info_block warningBox "Note" %}
 
-SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING and SessionRedisConfig::SESSION_HANDLER_REDIS can be used as values for SessionConstants::ZED_SESSION_SAVE_HANDLER.
+`SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING` and `SessionRedisConfig::SESSION_HANDLER_REDIS` can be used as values for `SessionConstants::ZED_SESSION_SAVE_HANDLER`.
 
 {% endinfo_block %}
 
@@ -258,7 +259,7 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD] = false;
 $config[SessionRedisConstants::ZED_SESSION_REDIS_DATABASE] = 2;
 ```
 
-If you're using the file system as session storage, extend your project with the following configuration:
+If you use the file system as session storage, extend your project with the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -278,13 +279,13 @@ $config[SessionFileConstants::ZED_SESSION_FILE_PATH] = session_save_path();
 
 {% info_block warningBox "Note" %}
 
-All the values in the examples above should be replaced with the real ones used in the corresponding environment.
+All the values in the preceding examples must be replaced with the real ones used in the corresponding environment.
 
 {% endinfo_block %}
 
-#### Configuration for SecurityBlocker
+#### Configure SecurityBlocker
 
-SecurityBlocker stores the blocked accounts information in Redis. Thus, it needs the connection information to be provided. You can do it in the environment configuration of your project:
+`SecurityBlocker` stores blocked accounts' information in Redis. Thus, it needs connection information. You can get it in the environment configuration of your project:
 
 **config/Shared/config_default.php**
 
@@ -297,9 +298,9 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_PASSWORD] = false;
 $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_DATABASE] = 7;
 ```
 
-Configure the blocking settings for the entity types you want to be blocking. You can set separate settings for a customer (default) and agent. `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` are used as default, so if you use other entity types (like an agent) and do not provide this setting, the defaults will get applied.
+Configure the blocking settings for the entity types you want to be blocking. You can set separate settings for a customer (default) and an agent. `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`, `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` are used as default, so if you use other entity types (like an agent) and do not provide this setting, the defaults get applied.
 
-`SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL` controls the period of time during which the `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` will be counted. In case the number is exceeded, the account will be locked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds.
+`SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_TTL` controls the period of time during which `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS` is counted. If the number is exceeded, the account gets locked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds.
 
 Define your setting in your environment configuration files:
 
@@ -317,25 +318,20 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_AGENT_BLOCKING_NUMBER_OF_ATTE
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes, generate entity, and transfer changes:
+Apply database changes, generate entity, and transfer changes:
 
 ```bash
 console propel:install
 console transfer:generate
 ```
 
-{% info_block warningBox "Verificaiton" %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
 | spy_vault_deposit | table | created |
-
-{% endinfo_block %}
-
-
-{% info_block warningBox "Verificaiton" %}
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -355,8 +351,6 @@ Make sure that the following changes have been applied by checking your database
 {% endinfo_block %}
 
 ### 4) Set up behavior
-
-Set up behavior as follows:
 
 1. Install the following plugins with modules:
 
@@ -525,11 +519,11 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` are activated, check if the `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` console commands exist.
+To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` are activated, check whether the `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` console commands exist.
 
 {% endinfo_block %}
 
-3. Run the following command to build the navigation cache:
+3. Build the navigation cache:
 
 ```bash
 vendor/bin/console navigation:build-cache
@@ -537,17 +531,16 @@ vendor/bin/console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the navigation for Store GUI is successfully generated by checking that, in the Back Office, the Administration menu item is present in the side bar and it has the Stores sub-item.
+Make sure that the navigation for Store GUI is successfully generated by checking that, in the Back Office, the **Administration** menu item is present in the sidebar, and it has the Stores sub-item.
 
 {% endinfo_block %}
 
 ### 5) Set up Publish and Synchronize
 
-Follow the steps to set up Publish and Synchronize:
-
 1. Update `RabbitMqConfig`:
 
-**Pyz/Client/RabbitMq/RabbitMqConfig.php**
+<details>
+<summary markdown='span'>Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
 
 ```php
 <?php
@@ -596,6 +589,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
+</details>
 
 2. Add `PublisherTriggerEventsConsole` to `ConsoleDependencyProvider`:
 
@@ -628,7 +622,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-3.  Add `PublisherSubscriber` to `EventDependencyProvider`:
+1. Add `PublisherSubscriber` to `EventDependencyProvider`:
 
 **src/Pyz/Zed/Event/EventDependencyProvidder.php**
 
@@ -658,13 +652,11 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the front end of the Spryker Core feature.
+Follow the steps below to install the Spryker Core feature frontend.
 
 ### 1) Install the required modules using Composer
-
-Run the following command to install the required modules:
 
 ```bash
 composer require "spryker-feature/spryker-core": "{{site.version}}"
@@ -732,7 +724,6 @@ This configuration is used exclusively. In other words, you can't use any other 
 
 {% endinfo_block %}
 
-
 * In case of a single-instance Redis setup, extend your project with the following configuration:
 
 **config/Share/config_default.php**
@@ -779,9 +770,9 @@ All the values in the examples above should be replaced with the real ones used 
 
 {% endinfo_block %}
 
-#### SecurityBlocker
+#### Set up SecurityBlocker
 
-Let SecurityBlocker know the locale is used in the login check path:
+Let `SecurityBlocker` know the locale is used in the login check path:
 
 **src/Pyz/Yves/SecurityBlockerPage/SecurityBlockerPageConfig.php**
 
@@ -814,13 +805,13 @@ class SecurityBlockerPageConfig extends SprykerSecurityBlockerPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the login form for the customer or agent is submitted, the URL it uses contains a locale code. For example, `/de/login_check` would be the default value for the customer and `/de/agent/login_check` for the agent.
+Make sure that when the login form for the customer or agent is submitted, the URL it uses contains a locale code. For example, `/de/login_check` is the default value for the customer, and `/de/agent/login_check` for the agent.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
 
-Note that all of the locale-related configs in `CustomerPage`, `AgentPage`, and `SecurityBlockerPage` are deprecated and in future releases, only locale-specific URLs are going to be used.
+Note that all of the locale-related configs in `CustomerPage`, `AgentPage`, and `SecurityBlockerPage` are deprecated, and in future releases, only locale-specific URLs are going to be used.
 
 {% endinfo_block %}
 
@@ -839,7 +830,7 @@ security_blocker_page.error.account_blocked,"Too many log in attempts from your 
 security_blocker_page.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
 
-2. Run the following command(s) to add the glossary keys:
+2. Add the glossary keys:
 
 ```bash
 console data:import:glossary
@@ -955,8 +946,8 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 {% info_block warningBox "Validation" %}
 
-Make sure the `SecurityBlockerCustomerEventDispatcherPlugin` is activated correctly by attempting to sign in with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts you get the `429 Too many requests` error.
+Make sure the `SecurityBlockerCustomerEventDispatcherPlugin` is activated correctly by attempting to sign in with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account is blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts you get the `429 Too many requests` error.
 
-Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentEventDispatcherPlugin`. The agent should get the blocking configuration specific for agents if you specified the agent-specific settings in step 2 of the feature core integration.
+Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentEventDispatcherPlugin`. The agent gets the blocking configuration specific for agents if you specified the agent-specific settings in step 2 of the feature core integration.
 
 {% endinfo_block %}

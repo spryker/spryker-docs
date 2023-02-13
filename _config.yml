@@ -234,10 +234,12 @@ versioned_categories:
       - price-management
       - ratings-reviews
       - request-for-quote
+      - search
       - shopping-list-and-wishlist
       - tax-management
       - warehouse-management-system
       - product-information-management
+      - product-relationship-management
 
 
 

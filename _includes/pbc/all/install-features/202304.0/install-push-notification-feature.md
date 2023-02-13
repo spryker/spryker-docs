@@ -1,4 +1,7 @@
-This document describes how to integrate the Push notification feature into a Spryker project.
+
+
+
+This document describes how to integrate the Push Notification feature into a Spryker project.
 
 ## Install feature core
 
@@ -86,7 +89,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 3) Set up configuration
 
-If you want to make `push-notification-subscriptions` resource protected, adjust the protected paths configuration:
+1. To make the `push-notification-subscriptions` resource protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -113,13 +116,13 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-We have to add the configuration that defines the VAPID keys that are used by the push notification:
+2. Add the configuration defining *Voluntary Application Server Identity (`VAPID`)* keys, which are used by the push notification:
 
 | CONFIGURATION                                          | SPECIFICATION                                                                   | NAMESPACE                                 |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|
-| PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides VAPID public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
-| PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides VAPID private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
-| PushNotificationWebPushPhpConstants::VAPID_SUBJECT     | Provides VAPID subject. Used for authentication to send push notifications.     | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides `VAPID` public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides `VAPID` private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_SUBJECT     | Provides `VAPID` subject. Used for authentication to send push notifications.     | Spryker\Shared\PushNotificationWebPushPhp |
 
 **config/Shared/config_default.php**
 
@@ -134,7 +137,7 @@ $config[PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY] = getenv('SPRYKE
 $config[PushNotificationWebPushPhpConstants::VAPID_SUJECT] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT');
 ```
 
-Then we have to add the VAPID keys to your **deploy.*.yml**.
+3. Add the VAPID keys to your **deploy.*.yml**:
 
 ```yml
 
@@ -146,19 +149,17 @@ image:
     SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT: 'https://your.subject'
 ```
 
-VAPID, which stands for Voluntary Application Server Identity, is a new way to send and receive website push
-notifications.
-Your VAPID keys allow you to send web push campaigns without having to send them through a service like Firebase Cloud
-Messaging (or FCM).
+VAPID is a new way to send and receive website push notifications. Your `VAPID` keys let you send web push campaigns without sending them through a service like Firebase Cloud Messaging (FCM).
 
-To generate VAPID keys we can use:
+To generate `VAPID` keys, you can use the following tools:
+- https://vapidkeys.com/—an online tool to generate keys.
+- https://www.npmjs.com/package//web-push—a Node.js package that can generate `VAPID` keys.
 
-- https://vapidkeys.com/ - an online tool to generate a keys.
-- https://www.npmjs.com/package//web-push - a Node.js package that can generate the VAPID keys.
+The following example command generates `VAPID` keys by using the `web-push` Node.js library:
 
-Example of the command to generate the VAPID keys by using the `web-push` Node.js library:
-
-Run the following console command `web-push generate-vapid-keys --json`.
+```bash
+web-push generate-vapid-keys --json
+```
 
 ### 4) Add translations
 
@@ -197,7 +198,8 @@ console data:import glossary
 | PushNotificationWebPushPhpPayloadLengthPushNotificationValidatorPlugin | Validates the push notification payload.              |               | Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\PushNotification |
 | PushNotificationWebPushPhpPushNotificationSenderPlugin                 | Sends push notification collection.                   |               | Spryker\Zed\PushNotificationWebPushPhp\Communication\Plugin\PushNotification |
 
-**src/Pyz/Zed/PushNotification/PushNotificationDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/PushNotification/PushNotificationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -243,6 +245,7 @@ class PushNotificationDependencyProvider extends SprykerPushNotificationDependen
 }
 
 ```
+</details>
 
 2. Enable the following installer plugins:
 
@@ -277,11 +280,14 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the installer plugin work correctly:
+Ensure that the installer plugin works correctly:
 
-1. Run the following console command to execute install plugins `docker/sdk console setup:init-db`.
-2. Check that the `web-push-php` push notification provider exists in the `spy_push_notification_provider` database
-   table.
+1. Execute install plugins: 
+```bash
+docker/sdk console setup:init-db
+```
+
+2. Check that the `web-push-php` push notification provider exists in the `spy_push_notification_provider` database table.
 
 {% endinfo_block %}
 
@@ -290,7 +296,7 @@ Ensure that the installer plugin work correctly:
 | PLUGIN                                           | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                          |
 |--------------------------------------------------|------------------------------------------------------------------|---------------|----------------------------------------------------|
 | SendPushNotificationConsole                      | Sends notifications in an async way.                             |               | Spryker\Zed\PushNotification\Communication\Console |
-| DeleteExpiredPushNotificationSubscriptionConsole | Delete expired push notification subscriptions from Persistence. |               | Spryker\Zed\PushNotification\Communication\Console |
+| DeleteExpiredPushNotificationSubscriptionConsole | Delete expired push notification subscriptions from `Persistence`. |               | Spryker\Zed\PushNotification\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -321,7 +327,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```
 
-4. Enable the Backend API by registering the plugin:
+4. To enable the Backend API, register the plugin:
 
 | PLUGIN                                     | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                       |
 |--------------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------|
@@ -351,19 +357,22 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 }
 
 ```
----
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the plugins work correctly:
+1. To test the functionality, create a simple single-page demo application.
+2. Generate `VAPID` keys through the online generator https://vapidkeys.com/.
+3. Create a directory for the demo application: `mkdir push_notification_spa`.
+4. In the `push_notification_spa` directory, create the following files:
 
-1. In order to test the functionality, you will need to create a simple single page demo application.
-2. Generate the VAPID keys by using the online generator https://vapidkeys.com/.
-3. Create a directory for demo application: `mkdir push_notification_spa`.
-4. Create following files inside `push_notification_spa` directory:
-** .../push_notification_spa/index.html **
+**.../push_notification_spa/index.html**
 
 ```html
 <html>
+   <head>
+      <title>Web Push sandbox</title>
+   </head>
     <body>
         <h1>Web Push sandbox</h1>
         <button id="push-button">Enable browser notifications</button>
@@ -373,7 +382,8 @@ Ensure that the plugins work correctly:
 </html>
 ```
 
-** .../push_notification_spa/app.js **
+<details open>
+<summary markdown='span'>.../push_notification_spa/app.js</summary>
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
@@ -438,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Check the current Notification permission.
-  // If its denied, the button should appear as such, until the user changes the permission manually
+  // If its denied, the button should appear as such until the user changes the permission manually
   if (Notification.permission === 'denied') {
     console.warn('Notifications are denied by the user');
     changePushButtonState('incompatible');
@@ -601,8 +611,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 ```
+</details>
 
-** .../push_notification_spa/serviceWorker.js **
+**.../push_notification_spa/serviceWorker.js**
+
 ```js
 self.addEventListener('push', function (event) {
     if (!(self.Notification && self.Notification.permission === 'granted')) {
@@ -625,23 +637,35 @@ self.addEventListener('push', function (event) {
 ```
 
 5. Setup credentials:
-   - Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your VAPID public key.
-   - Find the `getToken()` method at the `.../push_notification_spa/app.js` and replace the credentials with the user that works in your system. 
-6. Run the local http server with the demo app by executing following console command `php -S localhost:8000`.
-7. Follow the steps written in the integration guide to enable the feature in the system.
-8. Enable the push notification by clicking the button on the page.
-9. Create the push notification by adding it manually to the `spy_push_notification` database table, use the same group and notification provider that is used by the subscription.
-10. Run the following console command to send the push notification `docker/sdk console send-push-notifications`.
-11. Depending on the OS, the notification will be displayed to you with content that was filled into the `spy_push_notification.payload` database field.
-12. Change the subscription expiration date `spy_push_notification_subscription.expired_at` to date from the previous year and run the following console command to remove the outdated subscriptions `delete-expired-push-notification-subscriptions`.
-   
+   1. Open `.../push_notification_spa/app.js` and replace the `applicationServerKey` variable value with your `VAPID` public key.
+   2. In `.../push_notification_spa/app.js`, find the `getToken()` method and replace the credentials with the user that works in your system. 
+6. Run the local HTTP server with the demo app:
+```bash
+php -S localhost:8000
+```
+
+7. Integrate the Push Notification feature by following the current guide.
+8. To enable the push notification, on the **Web Push sandbox** page, click the **Enable browser notifications** button.
+9. To create a push notification subscription, on the **Web Push sandbox** page, click the **Create Push notification subscription** button.
+10. Create the push notification by adding it manually to the `spy_push_notification` database table. Use the same group and notification provider that is used by the subscription.
+11. Send the push notification by running the following console command:
+```bash
+docker/sdk console send-push-notifications
+```
+
+12. Depending on the OS, the notification is displayed with content from the `spy_push_notification.payload` database field.
+13. Change the `spy_push_notification_subscription.expired_at` subscription expiration date to the previous year's date.
+14. Remove the outdated subscriptions:
+```bash
+docker/sdk console delete-expired-push-notification-subscriptions
+```
+
 {% endinfo_block %}
 
 
-### 6) Set up cron job
+### 6) Set up a cron job
 
-Enable the `send-push-notifications` and `delete-expired-push-notification-subscriptions` console commands in the
-cron-job list:
+In the cron-job list, enable the `send-push-notifications` and `delete-expired-push-notification-subscriptions` console commands:
 
 **config/Zed/cronjobs/jobs.php**
 
@@ -651,7 +675,7 @@ cron-job list:
 /**
  * Notes:
  *
- * - jobs[]['name'] must not contains spaces or any other characters, that have to be urlencode()'d
+ * - jobs[]['name'] must not contain spaces or any other characters that have to be urlencode()'d
  * - jobs[]['role'] default value is 'admin'
  */
 
@@ -680,6 +704,6 @@ $jobs[] = [
 {% info_block warningBox "Verification" %}
 
 1. Make sure that push notifications have been correctly sent by checking the `spy_push_notification_subscription_delivery_log` database table. This table should contain a record for each unique combination of push notification and push notification subscription.
-2. Make sure that outdated push notification subscription are removed by checking the `spy_push_notification_subscription` database table, create the push notification subscription record with `spy_push_notification_subscription.expired_at` with last year's date.
+2. Make sure that outdated push notification subscriptions are removed by checking the `spy_push_notification_subscription` database table. Create the push notification subscription record with `spy_push_notification_subscription.expired_at` with last year's date.
 
 {% endinfo_block %}

@@ -75,7 +75,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Packaging units](/docs/pbc/all/product-information-management/{{site.version}}/packaging-units-feature-overview.html)
 - [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/alternative-products-feature-overview.html)
 - [Product Groups](/docs/pbc/all/product-information-management/{{site.version}}/product-groups-feature-overview.html)
-- [Product Relations](/docs/scos/user/features/{{site.version}}/product-relations-feature-overview.html)
+- [Product Relations](/docs/pbc/all/product-relationship-management/{{site.version}}/product-relationship-management.html)
 - [Product Sets](/docs/pbc/all/content-management-system/{{site.version}}/product-sets-feature-overview.html)
 - [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/product-options-feature-overview.html)
 - [Product Barcode](/docs/pbc/all/product-information-management/{{site.version}}/product-barcode-feature-overview.html)
@@ -88,7 +88,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
 - [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/category-management-feature-overview.html)
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
-- [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
+- [Search](/docs/pbc/all/search/{{site.version}}/search.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
 
 <br>

@@ -66,7 +66,7 @@ Using smaller chunk sizes for export and storage sync in RabbitMQ might also hel
 
 ```
 $config[SynchronizationConstants::EXPORT_MESSAGE_CHUNK_SIZE] = 200;
-$config[SynchronizationConstants::DEFAULT_SYNC_STORAGE_MESSAGE_CHUNK_SIZE] = 200;
+$config[SynchronizationConstants::DEFAULT_SYNC_STORAGE_QUEUE_MESSAGE_CHUNK_SIZE] = 200;
 $config[SynchronizationConstants::DEFAULT_SYNC_SEARCH_QUEUE_MESSAGE_CHUNK_SIZE] = 200;
 $config[EventConstants::EVENT_CHUNK] = 200;
 ```

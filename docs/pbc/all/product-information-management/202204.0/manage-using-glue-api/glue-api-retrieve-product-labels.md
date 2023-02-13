@@ -86,8 +86,8 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 * [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
 * [Retrieve registered user's carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts)
 * [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-a-registered-users-cart)
-* [Retrieve wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-wishlists-via-glue-api.html#retrieve-wishlists)
-* [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-wishlists-via-glue-api.html#retrieve-a-wishlist)
+* [Retrieve wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-wishlists.html#retrieve-wishlists)
+* [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-wishlists.html#retrieve-a-wishlist)
 
 ## Possible errors
 

@@ -1253,13 +1253,13 @@ entries:
           - title: Manage using Glue API
             nested:
               - title: Shopping lists
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/glue-api-manage-shopping-lists.html
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-shopping-lists.html
               - title: Shopping list items
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/glue-api-manage-shopping-list-items.html
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-shopping-list-items.html
               - title: Wishlists
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/glue-api-manage-wishlists.html
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-wishlists.html
               - title: Wishlist items
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/glue-api-manage-wishlist-items.html
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-wishlist-items.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

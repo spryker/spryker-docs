@@ -15,11 +15,11 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-shopping-lists/managing-shopping-list-items.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-shopping-lists/managing-shopping-list-items.html
   - /docs/scos/dev/glue-api-guides/202212.0/managing-shopping-lists/managing-shopping-list-items.html
-  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/manage-using-glue-api/glue-api-manage-shopping-list-items.html
 
 related:
   - title: Managing shopping lists
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-using-glue-api/glue-api-manage-shopping-lists.html
   - title: Shopping Lists feature overview
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
@@ -346,7 +346,7 @@ To change item quantity in a shopping list, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to update item quantity in. |
-| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to change the quantity of. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-shopping-lists-via-glue-api.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-shopping-lists-via-glue-api.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
+| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to change the quantity of. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
 
@@ -643,7 +643,7 @@ To remove an item from a shopping list, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to delete an item from. |
-| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-shopping-lists-via-glue-api.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-via-glue-api/manage-shopping-lists-via-glue-api.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
+| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
 

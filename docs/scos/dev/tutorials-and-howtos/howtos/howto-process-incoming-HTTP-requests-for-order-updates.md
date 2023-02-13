@@ -34,7 +34,11 @@ When the application receives an incoming request, it stores the context and res
 
 Spryker application OOTB has oms:check-condition worker. It can be used to process requests and run application logic. The worker strongly depends on a State Machine graph. “oms:check-condition” job moves order items through the OMS graph and runs OMS plugins (commands, conditions, timeouts). It means the processing logic must be represented in OMS. The additional restriction is the OMS plugins cannot trigger OMS events for the same order. Also, better to avoid creating new Order items because it contradicts the OMS philosophy and may lead to hidden pitfalls.
 
+{% info_block infoBox "Info" %}
+
 **Important point:** An incoming request handler must store not only the event context but also trigger an OMS event. It is necessary to pass control to oms:check-condition worker. If the event must affect several orders then the handler must trigger OMS event for each order.
+
+{% endinfo_block %}
 
 **Pros**
 
@@ -53,11 +57,13 @@ Spryker application OOTB has oms:check-condition worker. It can be used to proce
 
 The incoming request handler should validate a Request structure, save it in some Storage and then trigger an OMS event. E.g. “start processing”. OMS will stop order items in the next state. On the next tick, “oms:check-condition” worker will move them forward and run subsequent commands and logic.
 
-Request handler logic diagram and OMS representation
+![Incoming request handling and passing control to the worker](docs/scos/dev/drafts-dev/Incoming request handling and passing control to the worker.png)
 
-TODO: add diagrams
+{% info_block warningBox "Warning" %}
 
 **Potential pitfall:** The worker can process the requests only when an order is in a specific OMS state. If OMS cannot apply “start processing” event to any item then it returns an error. It means that the event can’t be processed right now. The request handler should decide what to do: store it for further processing, ignore it, or return an error response to the caller.
+
+{% endinfo_block %}
 
 Another way to check the order items' status is to check the current state of all items in the Database (spy_sales_order_item_state). It can be useful in some cases. This way can be a bit faster but prone to the issue of a concurrent request and not recommended.
 
@@ -84,9 +90,7 @@ The Jenkins worker listens to the Storage. When an event appears, the worker sta
 
 If the worker works with OMS then it can be like this:
 
-Worker logical diagram and OMS representation
-
-TODO: add diagrams
+![Processing with a dedicated Jenkins worker](docs/scos/dev/drafts-dev/Processing with a dedicated Jenkins worker.png)
 
 ## Conclusion
 

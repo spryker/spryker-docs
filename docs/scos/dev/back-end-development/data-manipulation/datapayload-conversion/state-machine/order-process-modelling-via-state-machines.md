@@ -55,7 +55,7 @@ The `StateMachine` module provides a generic implementation for state machines (
 
 {% info_block warningBox %}
 
-If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/oms-order-management-system-matrix.html).
+If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/pbc/all/order-management-system/{{site.version}}/order-management-feature-overview/oms-order-management-system-matrix.html).
 
 {% endinfo_block %}
 

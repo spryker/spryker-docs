@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Disable split delivery in Yves interface"
+title: Disable split delivery on the Storefront
 description: Use the guide to learn how to disable Split Delivery during checkout in your project.
 last_updated: Jun 16, 2021
 template: howto-guide-template

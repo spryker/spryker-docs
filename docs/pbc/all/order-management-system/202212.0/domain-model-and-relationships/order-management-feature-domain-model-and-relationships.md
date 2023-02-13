@@ -1,5 +1,5 @@
 ---
-title: Order Management feature domain model and relationships
+title: "Order Management feature: Domain model and relationships"
 last_updated: Aug 18, 2021
 description: The Order Management feature adds a collection of functionalities that let you see the quantity of the order items, their status, and how long they exist.
 template: concept-topic-template

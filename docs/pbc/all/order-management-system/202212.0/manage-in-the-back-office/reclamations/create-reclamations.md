@@ -10,10 +10,10 @@ related:
   - title: Changing the state of order items in reclamations
     link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
   - title: Reclamations feature overview
-    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/reclamations-feature-overview.html
 ---
 
-To create [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office, follow the steps:
+To create [order reclamations](/docs/pbc/all/order-management-system/{{page.version}}/reclamations-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 2. On the **Orders** page, next to the order you want to create a reclamation for, click **Claim**.

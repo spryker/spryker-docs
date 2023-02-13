@@ -11,7 +11,7 @@ related:
   - title: Viewing reclamations
     link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/viewing-reclamations.html
   - title: Reclamations feature overview
-    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/reclamations-feature-overview.html
 ---
 
 This document describes how to change the state of order items in reclamations. Each reclamation is linked to the order it was created from. When you change the state of an order in a reclamation, you change it in the linked order.

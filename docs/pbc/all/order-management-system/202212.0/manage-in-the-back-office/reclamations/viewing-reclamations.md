@@ -18,10 +18,10 @@ related:
   - title: Changing the state of order items in reclamations
     link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
   - title: Reclamations Feature Overview
-    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/reclamations-feature-overview.html
 ---
 
-This document describes how to view [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office.
+This document describes how to view [order reclamations](/docs/pbc/all/order-management-system/{{page.version}}/reclamations-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 

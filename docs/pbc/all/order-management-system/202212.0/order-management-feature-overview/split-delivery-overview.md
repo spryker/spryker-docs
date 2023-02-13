@@ -63,7 +63,7 @@ The Split Delivery is not compatible with the Gift Cards feature. If you want to
 
 ### Limitation for payment service providers
 
-Most of payment service providers (PSP) support a single delivery address for a given order, while Split Delivery lets your customers add multiple shipments to the same order. In this case, you need to modify the configuration of the online store to let your customers deliver order items to different addresses. For information about how to do that, see [HowTo: Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html).
+Most of payment service providers (PSP) support a single delivery address for a given order, while Split Delivery lets your customers add multiple shipments to the same order. In this case, you need to modify the configuration of the online store to let your customers deliver order items to different addresses. For information about how to do that, see [HowTo: Disable Split Delivery in Yves Interface](/docs/pbc/all/order-management-system/{{page.version}}/disable-split-delivery-on-the-storefront.html).
 
 <!--
 ### Product bundles

@@ -3,6 +3,8 @@ title: Change the state of order items in reclamations
 description: Learn how to change the state of order items in reclamations in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202212.0/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
 related:
   - title: Creating reclamations
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-reclamations.html

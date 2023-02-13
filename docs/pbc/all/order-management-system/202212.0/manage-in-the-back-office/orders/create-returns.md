@@ -2,6 +2,8 @@
 title: Create returns
 description: Learn how to create returns in the Back Office
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202212.0/sales/orders/creating-returns.html
 related:
   - title: Viewing returns of an order
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html

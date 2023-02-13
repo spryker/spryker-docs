@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-order-shipments
   - /docs/en/managing-order-shipments
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/managing-order-shipments.html
+  - /docs/scos/user/back-office-user-guides/202212.0/sales/orders/creating-shipments.html
 related:
   - title: Editing shipments
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/editing-shipments.html

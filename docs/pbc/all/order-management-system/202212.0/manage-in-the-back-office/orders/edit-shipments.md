@@ -2,6 +2,8 @@
 title: Editing shipments
 description: Learn how to edit shipments in the Back Office
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202212.0/sales/orders/editing-shipments.html
 related:
   - title: Creating shipments
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-shipments.html

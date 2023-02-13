@@ -28,7 +28,7 @@ Register in our [Slack community](https://spryker.com/support/).
 
 ## Process for sharing the secrets
 
-Stick to the following process when sharing secrets with the Spryker Support Team:
+Stick to the following process when sharing secrets with the Spryker Support Team. Pleae note that having an active related case is a reprequesite to sharing a secret with the team. 
 
 1. Create a secret message by navigating to [One-Time Secret](https://onetimesecret.com/) and inserting your secret there. Make sure to configure a passphrase for your secret.
 
@@ -38,6 +38,6 @@ Do not include information on what the secret content is for. For example, if yo
 
 {% endinfo_block %}
 
-2. Send the created link to your secret to our Support Team. If you already opened a case, you can include it in the email response. If you have not yet created a case, you can do so by the [Spryker Support portal](https://support.spryker.com/). Here you can include a description of where and how the secrets should be used. Also, make sure to include your name in Slack.
-
-We will name a Support or DevOps representative that will contact you and ask for the passphrase for your link as soon as it is needed. Always check that the person contacting you for the phrase is the one that we named. The secrets in the link are not stored or saved (unless you share secrets that should be configured in the AWS parameter store).
+2. Add the secret link in the "Link Passphrase" Field located in the Case Details. Create a comment on the case, that the team should retrieve the secret link.
+3. The Team will retrieve the link and then clear the field and provide a comment
+4. Add the passphrase to the link in the same - now empty - field.

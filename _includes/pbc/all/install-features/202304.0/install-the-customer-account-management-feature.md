@@ -45,7 +45,6 @@ Ensure that the following modules have been installed:
 | CustomerNote            | vendor/spryker/customer-note                 |
 | CustomerNoteGui         | vendor/spryker/customer-note-gui             |
 | CustomerStorage         | vendor/spryker/customer-storage              |
-| CustomerValidationPage  | vendor/spryker-shop/customer-validation-page |
 | Oauth                   | vendor/spryker/oauth                         |
 | OauthCryptography       | vendor/spryker/oauth-cryptography            |
 | OauthCustomerConnector  | vendor/spryker/oauth-customer-connector      |
@@ -74,7 +73,7 @@ $config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = 'client-identifier';
 $config[OauthConstants::OAUTH_CLIENT_SECRET] = 'client-secret';
 ```
 
-2. Register publish and synchronization queue:
+2. Adjust RabbitMq module configuration:
 
 ```php
 <?php
@@ -243,13 +242,29 @@ The following table describes the settings:
 | CustomerConfig::MAX_LENGTH_CUSTOMER_PASSWORD                            | Defines password maximum length.                                                                                                                                          |
 | CustomerConfig::MIN_LENGTH_CUSTOMER_PASSWORD                            | Defines password minimum length.                                                                                                                                          |
 
-### 3) Set up transfer objects
+### 3) Set up database schema and transfer objects
 
-Apply database changes and generate entity and transfer changes:
+**src/Pyz/Zed/Customer/Persistence/Propel/Schema/spy_customer.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Customer\Persistence" package="src.Orm.Zed.Customer.Persistence">
+
+    <table name="spy_customer">
+        <behavior name="event">
+            <parameter name="spy_customer_anonymized_at" column="anonymized_at"/>
+            <parameter name="spy_customer_password" column="password"/>
+        </behavior>
+    </table>
+</database>
+```
+
+Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
 console propel:install
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -300,28 +315,30 @@ Ensure that the following changes have been applied in the transfer objects:
 
 1. Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                         | SPECIFICATION                                                                                                                                                                                                | PREREQUISITES | NAMESPACE                                                            |
-|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| CustomerOauthUserProviderPlugin                                | Provides a customer OAuth user.                                                                                                                                                                              | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin              |
-| CustomerOauthScopeProviderPlugin                               | Provides a list of customer scopes.                                                                                                                                                                          | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin              |		
-| CustomerImpersonationOauthUserProviderPlugin                   | Authenticates a customer by the customer reference.                                                                                                                                                          | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth        |		
-| CustomerImpersonationOauthScopeProviderPlugin                  | Returns the customer impersonation scopes.                                                                                                                                                                   | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth        |		
-| CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin | Provides configuration of `customer_impersonation` grant type.                                                                                                                                               | None          | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth        |
-| OauthExpiredRefreshTokenRemoverPlugin                          | Removes expired refresh tokens by the provided criteria transfer.                                                                                                                                            | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |
-| OauthRefreshTokenCheckerPlugin                                 | Checks if refresh token has been revoked.                                                                                                                                                                    | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |
-| OauthRefreshTokenReaderPlugin                                  | Finds a refresh token by the provided criteria transfer.                                                                                                                                                     | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |		
-| OauthRefreshTokenRevokerPlugin                                 | Revokes a refresh token.                                                                                                                                                                                     | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |		
-| OauthRefreshTokenPersistencePlugin                             | Persists a refresh token.                                                                                                                                                                                    | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |
-| OauthRefreshTokensReaderPlugin                                 | Retrieves refresh tokens by the provided criteria.                                                                                                                                                           | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |
-| OauthRefreshTokensRevokerPlugin                                | Revokes all refresh tokens.                                                                                                                                                                                  | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |		
-| CustomerPasswordResetConsole                                   | Generates password restoration keys and sends a password reset email to the customers without a password. Sends a password reset email to all the customers if the corresponding command option is provided. | None          | Spryker\Zed\Customer\Communication\Console                           |
-| CustomerPasswordSetConsole                                     | Sends the password reset email to all the customers with the empty password value in the database.                                                                                                           | None          | Spryker\Zed\Customer\Communication\Console                           |		
-| CustomerRegistrationConfirmationMailTypePlugin                 | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled.                                                                                                     | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                       |
-| ValidateInvalidatedCustomerAccessTokenValidatorPlugin          | Validates provided access token if the customer is not anonymized and the password hasn't been changed after a token creation.                                                                               | None          | Spryker\Client\OauthCustomerValidation\Plugin\Oauth                  |
-| CustomerInvalidatedWritePublisherPlugin                        | Used in case if customer was invalidated or customer's password was changed and publishes customer data to storage based on customer publish event.                                                          | None          | Spryker\Zed\CustomerStorage\Communication\Plugin\Publisher\Customer  |
-| EventQueueMessageProcessorPlugin                               | Used for processing invalidated customers within queue.                                                                                                                                                      | None          | Spryker\Zed\Event\Communication\Plugin\Queue                         |
-| SynchronizationStorageQueueMessageProcessorPlugin              | Registration of new queue message processor.                                                                                                                                                                 | None          | Spryker\Zed\Synchronization\Communication\Plugin\Queue               |
-| CustomerInvalidatedStorageSynchronizationDataPlugin            | Allows synchronizing the whole storage table content into Storage.                                                                                                                                           | None          | Spryker\Zed\CustomerStorage\Communication\Plugin\Synchronization     |
+| PLUGIN                                                         | SPECIFICATION                                                                                                                                                                                                | PREREQUISITES                                      | NAMESPACE                                                            |
+|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------------------------|
+| CustomerOauthUserProviderPlugin                                | Provides a customer OAuth user.                                                                                                                                                                              | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin              |
+| CustomerOauthScopeProviderPlugin                               | Provides a list of customer scopes.                                                                                                                                                                          | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin              |		
+| CustomerImpersonationOauthUserProviderPlugin                   | Authenticates a customer by the customer reference.                                                                                                                                                          | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth        |		
+| CustomerImpersonationOauthScopeProviderPlugin                  | Returns the customer impersonation scopes.                                                                                                                                                                   | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth        |		
+| CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin | Provides configuration of `customer_impersonation` grant type.                                                                                                                                               | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth        |
+| OauthExpiredRefreshTokenRemoverPlugin                          | Removes expired refresh tokens by the provided criteria transfer.                                                                                                                                            | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |
+| OauthRefreshTokenCheckerPlugin                                 | Checks if refresh token has been revoked.                                                                                                                                                                    | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |
+| OauthRefreshTokenReaderPlugin                                  | Finds a refresh token by the provided criteria transfer.                                                                                                                                                     | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |		
+| OauthRefreshTokenRevokerPlugin                                 | Revokes a refresh token.                                                                                                                                                                                     | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |		
+| OauthRefreshTokenPersistencePlugin                             | Persists a refresh token.                                                                                                                                                                                    | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |
+| OauthRefreshTokensReaderPlugin                                 | Retrieves refresh tokens by the provided criteria.                                                                                                                                                           | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |
+| OauthRefreshTokensRevokerPlugin                                | Revokes all refresh tokens.                                                                                                                                                                                  | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                   |		
+| CustomerPasswordResetConsole                                   | Generates password restoration keys and sends a password reset email to the customers without a password. Sends a password reset email to all the customers if the corresponding command option is provided. | None                                               | Spryker\Zed\Customer\Communication\Console                           |
+| CustomerPasswordSetConsole                                     | Sends the password reset email to all the customers with the empty password value in the database.                                                                                                           | None                                               | Spryker\Zed\Customer\Communication\Console                           |		
+| CustomerRegistrationConfirmationMailTypePlugin                 | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled.                                                                                                     | None                                               | Spryker\Zed\Customer\Communication\Plugin\Mail                       |
+| *** ValidateInvalidatedCustomerAccessTokenValidatorPlugin      | Validates provided access token if the customer is not anonymized and the password hasn't been changed after a token creation.                                                                               | None                                               | Spryker\Client\OauthCustomerValidation\Plugin\Oauth                  |
+| *** CustomerInvalidatedWritePublisherPlugin                    | Used in case if customer was invalidated or customer's password was changed and publishes customer data to storage based on customer publish event.                                                          | None                                               | Spryker\Zed\CustomerStorage\Communication\Plugin\Publisher\Customer  |
+| *** EventQueueMessageProcessorPlugin                           | Used for processing invalidated customers within queue.                                                                                                                                                      | None                                               | Spryker\Zed\Event\Communication\Plugin\Queue                         |
+| *** SynchronizationStorageQueueMessageProcessorPlugin              | Registration of new queue message processor.                                                                                                                                                                 | None                                               | Spryker\Zed\Synchronization\Communication\Plugin\Queue               |
+| *** CustomerInvalidatedStorageSynchronizationDataPlugin            | Allows synchronizing the whole storage table content into Storage.                                                                                                                                           | None                                               | Spryker\Zed\CustomerStorage\Communication\Plugin\Synchronization     |
+| *** DeleteExpiredCustomerInvalidatedRecordsConsole             |                                                                                                                                                                                                              | None                                                                                                                                                                                                         | Spryker\Zed\CustomerStorage\Communication\Console  |
+
 
 <details open>
   <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
@@ -504,6 +521,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 </details>
+
+Register new queue message processor:
 
 <details open>
   <summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
@@ -814,6 +833,7 @@ Ensure that the following modules were installed:
 | MODULE                        | EXPECTED DIRECTORY                                   |
 |-------------------------------|------------------------------------------------------|
 | CustomerPage                  | vendor/spryker-shop/customer-page                    |
+| CustomerValidationPage        | vendor/spryker-shop/customer-validation-page         |
 | SessionCustomerValidationPage | vendor/spryker-shop/session-customer-validation-page |
 
 
@@ -976,16 +996,17 @@ Ensure the following:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                           | SPECIFICATION                                                                                | PREREQUISITES                    | NAMESPACE                                                      |
-|--------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------------------|----------------------------------------------------------------|
-| RedirectUriCustomerRedirectStrategyPlugin        | Redirects a customer who has just logged in to the `redirectURI` provided in parameters.     | None                             | SprykerShop\Yves\CustomerPage\Plugin\CustomerPage              |
-| CustomerConfirmationUserCheckerApplicationPlugin | Adds a service that checks if a customer confirmed the registration before authorizing them. | None                             | SprykerShop\Yves\CustomerPage\Plugin\Application               |
-| SaveCustomerSessionSecurityPlugin                | Extends security builder event dispatcher with save customer session listener.               | None                             | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security |
-| ValidateCustomerSessionSecurityPlugin            | Extends security service with customer session validator listener.                           | None                             | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security |
-| RedisCustomerSessionSaverPlugin                  | Saves customer's session data to Redis storage.                                              | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage |
-| RedisCustomerSessionValidatorPlugin              | Validates customer's session data in Redis storage.                                          | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage |
-| FileCustomerSessionSaverPlugin                   | Saves customer's session data to a file.                                                     | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage  |
-| FileCustomerSessionValidatorPlugin               | Validates customer's session data in a file.                                                 | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage  |
+| PLUGIN                                                          | SPECIFICATION                                                                                | PREREQUISITES                     | NAMESPACE                                                       |
+|-----------------------------------------------------------------|----------------------------------------------------------------------------------------------|-----------------------------------|-----------------------------------------------------------------|
+| RedirectUriCustomerRedirectStrategyPlugin                       | Redirects a customer who has just logged in to the `redirectURI` provided in parameters.     | None                              | SprykerShop\Yves\CustomerPage\Plugin\CustomerPage               |
+| CustomerConfirmationUserCheckerApplicationPlugin                | Adds a service that checks if a customer confirmed the registration before authorizing them. | None                              | SprykerShop\Yves\CustomerPage\Plugin\Application                |
+| SaveCustomerSessionSecurityPlugin                               | Extends security builder event dispatcher with save customer session listener.               | None                              | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security  |
+| ValidateCustomerSessionSecurityPlugin                           | Extends security service with customer session validator listener.                           | None                              | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security  |
+| *** LogoutInvalidatedCustomerFilterControllerEventHandlerPlugin |                                                                                              | None                              | SprykerShop\Yves\CustomerValidationPage\Plugin\ShopApplication  |
+| RedisCustomerSessionSaverPlugin                                 | Saves customer's session data to Redis storage.                                              | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
+| RedisCustomerSessionValidatorPlugin                             | Validates customer's session data in Redis storage.                                          | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
+| FileCustomerSessionSaverPlugin                                  | Saves customer's session data to a file.                                                     | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
+| FileCustomerSessionValidatorPlugin                              | Validates customer's session data in a file.                                                 | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 

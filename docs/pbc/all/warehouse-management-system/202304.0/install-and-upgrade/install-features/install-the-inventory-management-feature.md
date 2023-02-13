@@ -1,6 +1,6 @@
 ---
-title: Inventory Management feature integration
-description: Integrate the Inventory Management feature into your project
+title: Install the Inventory Management feature
+description: Install the Inventory Management feature in your project
 template: feature-integration-guide-template
 last_updated: Feb 8, 2023
 ---

@@ -1,14 +1,18 @@
 ---
 title: How to process incoming HTTP requests from external ERP services for order updates
+description: How to process incoming HTTP requests from external ERP services for order updates
+template: howto-guide-template
 ---
 
-# Problem statement
+# How to process incoming HTTP requests from external ERP services for order updates 
+
+## Problem statement
 
 Spryker Applications should receive information about Orders from external systems. It can be done in very different ways. This document suggests possible solutions for processing incoming HTTP requests, describes their Advantages and Disadvantages and highlights pitfalls. The essence of such requests can be various (request from User’s browser, push-notification from a delivery company, butch update request from ERP system, etc.), like a solution for them.
 
-# Suggested solutions
+## Suggested solutions
 
-## Synchronous handling of incoming requests
+### Synchronous handling of incoming requests
 
 The most popular and evident way of processing incoming requests is the synchronous way. This solution means keeping an active HTTP connection till the Application process the request and returns a response.
 
@@ -22,11 +26,11 @@ The most popular and evident way of processing incoming requests is the synchron
 * Heavy operations require scale hardware for the application in general which can lead to extra costs
 * Retry mechanism should be implemented on a Caller-side
 
-## Asynchronous incoming request handling
+### Asynchronous incoming request handling
 
 When the application receives an incoming request, it stores the context and responds successful HTTP code. In this case, the application takes the whole responsibility on its side for handling this request. Different types of workers and storage engines and their combinations can affect quality attributes in various ways.
 
-### Processing with oms:check-condition worker
+#### Processing with oms:check-condition worker
 
 Spryker application OOTB has oms:check-condition worker. It can be used to process requests and run application logic. The worker strongly depends on a State Machine graph. “oms:check-condition” job moves order items through the OMS graph and runs OMS plugins (commands, conditions, timeouts). It means the processing logic must be represented in OMS. The additional restriction is the OMS plugins cannot trigger OMS events for the same order. Also, better to avoid creating new Order items because it contradicts the OMS philosophy and may lead to hidden pitfalls.
 
@@ -45,7 +49,7 @@ Spryker application OOTB has oms:check-condition worker. It can be used to proce
 * Cannot trigger OMS events for the same Order
 * Extra OMS elements may make the graph more complex to understand and maintain
 
-#### Incoming request handling and passing control to the worker
+##### Incoming request handling and passing control to the worker
 
 The incoming request handler should validate a Request structure, save it in some Storage and then trigger an OMS event. E.g. “start processing”. OMS will stop order items in the next state. On the next tick, “oms:check-condition” worker will move them forward and run subsequent commands and logic.
 
@@ -57,7 +61,7 @@ TODO: add diagrams
 
 Another way to check the order items' status is to check the current state of all items in the Database (spy_sales_order_item_state). It can be useful in some cases. This way can be a bit faster but prone to the issue of a concurrent request and not recommended.
 
-### Processing with a dedicated Jenkins worker
+#### Processing with a dedicated Jenkins worker
 
 The Jenkins worker listens to the Storage. When an event appears, the worker starts to process it. It is a high-level logic. Depending on requirements, the worker logic can be very different and cover quality attributes differently.
 
@@ -84,7 +88,7 @@ Worker logical diagram and OMS representation
 
 TODO: add diagrams
 
-# Conclusion
+## Conclusion
 
 If the processing logic is simple and fast, or the caller can handle errors and retry, then the synchronous processing solution is better.
 
@@ -92,7 +96,7 @@ If the process may take a long time or is sensitive to errors (no retry, potenti
 
 In other cases, implement a dedicated worker to process the requests asynchronously.
 
-# Solutions quality attributes comparison table
+## Solutions quality attributes comparison table
 
 :white_check_mark: Good or Bonus.
 
@@ -113,7 +117,7 @@ In other cases, implement a dedicated worker to process the requests asynchronou
 | Scaleability                                          | :white_check_mark:                                                                                                                                                                                                                                                       | :white_check_mark: Static scaling of OMS check-condition job                                                                                                                           | :white_check_mark: Static scaling of Jenkins job                                                                                                                                                                                        |
 | Upgradability                                         | :white_check_mark:                                                                                                                                                                                                                                                       | :white_check_mark:                                                                                                                                                                     | :white_check_mark: No upgradability issues due to no OOTB functionality usage                                                                                                                                                           |
 
-# Storage engines quality attributes comparison table
+## Storage engines quality attributes comparison table
 
 | Quality attribute                                     | DB Storage                                                                          | RabbitMQ Storage                                                      | Redis                                                  |
 |-------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------|

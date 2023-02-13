@@ -1,6 +1,6 @@
 ---
-title: Install the Order Management and Inventory Management feature
-description: Install the Order Management and Inventory Management features in your project
+title: Install the Order Management + Inventory Management feature
+description: Install the Order Management + Inventory Management feature in your project
 template: feature-integration-guide-template
 last_updated: Feb 8, 2023
 ---

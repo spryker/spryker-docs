@@ -1231,7 +1231,7 @@ entries:
                   - title: Inventory Management Glue API
                     url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html
                   - title: Order Management + Inventory Management
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-order-management-and-inventory-management-feature.html
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-order-management-inventory-management-feature.html
                     include-versions:
                     - "202304.0"
               - title: Upgrade modules

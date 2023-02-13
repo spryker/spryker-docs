@@ -113,20 +113,9 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
     public function getProtectedPaths(): array
     {
         return [
-            '/\/picking-lists(?:\/[^\/]+)?\/?$/' => [
-                'isRegularExpression' => true,
-                'methods' => [
-                    'get',
-                    'getCollection',
-                    'patch',
-                ],
-            ],
-            '/\/picking-lists/[^\/]+/picking-list-items(?:\/[^\/]+)?$' => [
-                'isRegularExpression' => true,
-                'methods' => [
-                    'patch',
-                ],
-            ],
+            '/\/picking-lists.*/' => [
+                 'isRegularExpression' => true,
+             ],
         ];
     }
 }

@@ -284,7 +284,7 @@ Make sure that:
 
 * The defined picking list strategies are applied correctly by finding them in the `spy_stock` database table.
 
-{% info_block infoBox %}
+{% endinfo_block %}
 
 ### 4) Add translations
 

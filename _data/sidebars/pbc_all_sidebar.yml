@@ -1315,12 +1315,16 @@ entries:
                 url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
               - title: Upgrade the Wishlist module
                 url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.html
-          - title: Manage via Glue API
+          - title: Manage using Glue API
             nested:
-              - title: Manage shopping lists
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
-              - title: Manage shopping list items
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html
+              - title: Shopping lists
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/glue-api-manage-shopping-lists.html
+              - title: Shopping list items
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/glue-api-manage-shopping-list-items.html
+              - title: Wishlists
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/glue-api-manage-wishlists.html
+              - title: Wishlist items
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/glue-api-manage-wishlist-items.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

@@ -1,5 +1,5 @@
 ---
-title: Manage wishlists via Glue API
+title: "Glue API: Manage wishlists"
 description: Create, update and delete wishlists via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-wishlists
   - /docs/en/managing-wishlists
   - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
-  - /docs/scos/dev/glue-api-guides/202212.0/managing-wishlists/managing-wishlists.html  
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-wishlists/managing-wishlists.html  
 related:
   - title: Managing wishlist items
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlist-items.html
@@ -29,8 +29,8 @@ The Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/sh
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
 * [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/integrate-the-wishlist-glue-api.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
 
 ## Create a wishlist
 

@@ -1,5 +1,5 @@
 ---
-title: Manage shopping lists via Glue API
+title: "Glue API: Manage shopping lists"
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-lists

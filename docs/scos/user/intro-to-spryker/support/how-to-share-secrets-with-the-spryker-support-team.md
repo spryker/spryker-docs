@@ -28,7 +28,7 @@ Register in our [Slack community](https://spryker.com/support/).
 
 ## Process for sharing the secrets
 
-Stick to the following process when sharing secrets with the Spryker Support Team. Pleae note that having an active related case is a reprequesite to sharing a secret with the team. 
+Stick to the following process when sharing secrets with the Spryker Support Team. Please note that having an active related case is a prerequesite to sharing a secret with the team. 
 
 1. Create a secret message by navigating to [One-Time Secret](https://onetimesecret.com/) and inserting your secret there. Make sure to configure a passphrase for your secret.
 

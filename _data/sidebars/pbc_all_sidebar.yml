@@ -1066,6 +1066,8 @@ entries:
               - "202212.0"
             - title: Integrate Algolia
               url: /docs/pbc/all/search/third-party-integrations/integrate-algolia.html
+            - title: Configure Algolia
+              url: /docs/pbc/all/search/third-party-integrations/configure-algolia.html
               include_versions:
               - "202212.0"
             - title: Disconnect Algolia

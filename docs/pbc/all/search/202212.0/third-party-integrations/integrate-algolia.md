@@ -1,44 +1,29 @@
 ---
 title: Integrate Algolia
-description: Integrate Algolia in your Spryker shop
+description: Find out how you can integrate Algolia into your Spryker shop
 template: howto-guide-template
 ---
 
-To start using Algolia for your shop, you need an account with Algolia. You can create the account at the [Algolia website](https://www.algolia.com).
+## Prerequisites
 
-To integrate the Algolia app, do the following:
+The Algolia app requires the following Spryker modules:
 
-1. In your store's Back Office, go to **Apps**.
-2. Click **Algolia**. This takes you the Algolia app details page.
-3. In the top right corner of the Algolia app details page, click **Connect app**. The message saying that application connection pending is displayed.
-4. Log in to the [Algolia website](https://www.algolia.com).
-5. On the Algolia website, go to **Settings -> Team and Access -> API keys**:
-![algolia-keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-keys.png)
-6. Copy the following keys:
-    - Application ID
-    - Search-Only API Key
-    - Admin API Key
-7. Go back to your store's Back Office, to the Algolia app details page.
-8. In the top right corner of the Algolia app details page, click **Configure**.
-9. In the **Configure** pane, populate the _APPLICATION ID_, _SEARCH-ONLY API KEY_, and _ADMIN API KEY_ fields with the values from step 6.
-![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
-10. Click **Save**.
+* `spryker/merchant-product-offer: "^1.5.0"` (Marketplace only)
+* `spryker/merchant-product-offer-data-import: "^1.1.0"` (Marketplace only)
+* `spryker/message-broker-aws: "^1.3.1"`
+* `spryker/price-product: "^4.37.0"`
+* `spryker/price-product-offer-data-import: "^0.7.1"` (Marketplace only)
+* `spryker/product: "^6.29.0"`
+* `spryker/product-category: "^4.17.0"`
+* `spryker/product-extension: "^1.4.0"`
+* `spryker/product-image: "^3.13.0"`
+* `spryker/product-offer: "^1.4.0"` (Marketplace only)
+* `spryker/product-review: "^2.9.0"`
+* `spryker/store: "^1.16.0"`
 
-<figure class="video_container">
-    <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-integration.mp4" type="video/mp4">
-  </video>
-</figure>
+### 1. TBD by the devs
 
-The Algolia app is now integrated to your store and starts exporting your product data automatically. Wait for a few minutes and go back to the Algolia website, to the **Overview -> Search -> Index** page. 
+TBD
 
-{% info_block infoBox "Info" %}
-
-The more products you have, the longer you have to wait until Algolia finishes the export. The average export speed is around 100 products per minute.
-
-{% endinfo_block %}
-
-The index is now populated with data from your store:
-![algolia-index-data](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-index-data.png)
-
-For details on the created index data, see [Indexes](/docs/pbc/all/search/{{page.version}}/third-party-integrations/algolia.html#indexes).
+## Next steps
+[Configure the Algolia app](/docs/pbc/all/search/{{site.version}}/third-party-integrations/configure-algolia.html) for your store.

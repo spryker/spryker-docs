@@ -4,6 +4,8 @@ description: Algolia empowers Builders with Search and Recommendation services t
 template: howto-guide-template
 ---
 
+ADD HERE THE ALGOLIA-HERO PICTURE
+
 Spryker is shipped with [Elasticsearch]((https://www.elastic.co/elasticsearch/)) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/).
 
 The Algolia search engine stands out due to its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store. 

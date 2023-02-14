@@ -59,7 +59,7 @@ In our documentation, we refer to the following personas:
 * Back Office User
 * Shop User
 
-We also use these personas to categorize articles related to individual features. See [Business on Behalf feature summary page](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/business-on-behalf-overview.html) for example.
+We also use these personas to categorize articles related to individual features. See [Business on Behalf feature summary page](/docs/pbc/all/customer-relationship-management/{{site.version}}/company-account-feature-overview/business-on-behalf-overview.html) for example.
 The table below shows what specific roles each persona includes and what each role is up to:
 
 <table>

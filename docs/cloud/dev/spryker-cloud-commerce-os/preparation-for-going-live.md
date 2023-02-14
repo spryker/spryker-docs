@@ -52,7 +52,7 @@ Double check that you do not have any clear text passwords stored in config file
 
 {% info_block warningBox "Data import" %}
 
-You must start working with data of realistic size and quality as early as possible. At this point, you must be importing data regularly to all your environments. We recommend working with the same import data across all your environments. This significantly simplifies troublehshootingand helps you estimate import performance leading up to your go live and heling us with environment sizing considerations. We expect all our customers to follow this advice.
+You must start working with data of realistic size and quality as early as possible. At this point, you must be importing data regularly to all your environments. We recommend working with the same import data across all your environments. This significantly simplifies troubleshooting and helps you estimate import performance, leading up to your go-live and helping us with environment sizing considerations. We expect all our customers to follow this advice.
 
 {% endinfo_block %}
 
@@ -61,9 +61,11 @@ You must start working with data of realistic size and quality as early as possi
 
 {% info_block warningBox "Email quota restrictions" %}
 
-PaaS Email service has the following quotas. Reach out to Spryker Support if these are not sufficient to support your use case:
+PaaS email service has the following quotas:
 * Daily sending limit: 50.000 emails.
 * Sending limit messages or seconds: 14.
+
+Reach out to [Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-support.html) if these are not sufficient to support your use case.
 
 {% endinfo_block %}
 

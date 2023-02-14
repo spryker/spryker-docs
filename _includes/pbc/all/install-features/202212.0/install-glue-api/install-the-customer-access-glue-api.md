@@ -16,7 +16,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html) |
-| Customer Access | {{site.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-access-feature-integration.html) |
+| Customer Access | {{site.version}} | [Feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/install-and-upgrade/install-features/install-the-customer-access-feature.html) |
 
 ### 1) Install the required modules using Composer
 

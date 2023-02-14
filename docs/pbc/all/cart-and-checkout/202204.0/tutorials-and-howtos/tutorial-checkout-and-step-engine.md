@@ -24,10 +24,8 @@ redirect_from:
   - /v1/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-checkout-and-step-engine-spryker-commerce-os.html
 related:
-  - title: Checkout steps
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
   - title: "Step engine: Workflow overview"
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 
 {% info_block infoBox %}

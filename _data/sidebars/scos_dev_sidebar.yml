@@ -331,6 +331,10 @@ entries:
       - "202108.0"
     - title: Order Management
       url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: "Sales module: reference information"
         url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/sales-module-reference-information.html
@@ -1517,7 +1521,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Payments
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html
         include_versions:
@@ -1930,7 +1933,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Configurable Bundle
       url: /docs/scos/dev/feature-integration-guides/configurable-bundle-feature-integration.html
       include_versions:
@@ -1987,7 +1989,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Custom Order Reference
       url: /docs/scos/dev/feature-integration-guides/custom-order-reference-feature-integration.html
       include_versions:
@@ -2161,7 +2162,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Packaging Units
       url: /docs/scos/dev/feature-integration-guides/packaging-units-feature-integration.html
       include_versions:
@@ -2475,7 +2475,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Resource Sharing
       url: /docs/scos/dev/feature-integration-guides/resource-sharing-feature-integration.html
       include_versions:
@@ -2606,8 +2605,6 @@ entries:
         url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
       - title: Migration Guide - CompanyUsersRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/companyusersrestapi-migration-guide.html
-      - title: Migration Guide - OrdersRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html
     - title: Migration Guide - API Module
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
     - title: Migration guide - Auth module to SecurityGui module
@@ -2650,8 +2647,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-http.html
     - title: Migration Guide - Locale
       url: /docs/scos/dev/module-migration-guides/migration-guide-locale.html
-    - title: Migration Guide - ManualOrderEntryGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html
     - title: Migration Guide - Merchant
       url: /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
     - title: Migration guide - MerchantGui
@@ -2686,8 +2681,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-quickorder.html
     - title: Migration Guide - QuickOrderPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html
-    - title: Migration Guide - Refund
-      url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html
     - title: Migration Guide - Router
       url: /docs/scos/dev/module-migration-guides/migration-guide-router.html
     - title: Migration Guide - Sales
@@ -3721,8 +3714,6 @@ entries:
     nested:
     - title: Migrating from Twig v1 to Twig v3
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
-    - title: Split delivery migration concept
-      url: /docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
     - title: Silex Replacement
       url: /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
       nested:

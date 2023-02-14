@@ -8,12 +8,6 @@ Spryker is shipped with [Elasticsearch]((https://www.elastic.co/elasticsearch/))
 
 The Algolia search engine stands out due to its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store. 
 
-{% info_block infoBox "Product ratings" %}
-
-Algolia searches by product ratings as well. However, product ratings are represented in product attributes in the Algolia search results.
-
-{% endinfo_block %}
-
 To use Algolia as your search engine, you need an account with Algolia. For details about Algolia integration, see [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/third-party-integrations/integrate-algolia.html).
 
 ## Searchable attributes

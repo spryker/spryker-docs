@@ -4,7 +4,7 @@ This document describes how to integrate the [Customer Account Management](/docs
 
 {% info_block errorBox "Included features" %}
 
-The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds:
+The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the following functionalities:
 * Redirect support for Customer login functionality.
 * Password set and reset console commands for customers.
 * Double opt-in for customer registration.
@@ -27,8 +27,6 @@ To start feature integration, integrate the required features:
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/customer-account-management: "{{site.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
@@ -139,7 +137,7 @@ Ensure that the double opt-in is enabled by registering a new customer and recei
 
 {% endinfo_block %}
 
-4. Optional: to control the customer account confirmation link sent in the registration confirmation email, use `CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL`. Note that the value must contain the `%s` placeholder the actual customer's token value is inserted to. You can set the configuration in the environment config:
+4. Optional: To control the customer account confirmation link sent in the registration confirmation email, use `CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL`. Note that the value must contain the `%s` placeholder that the actual customer's token value is inserted to. You can set the configuration in the environment config:
 
 **config/Shared/config_default.php**
 
@@ -238,7 +236,7 @@ The following table describes the settings:
 | CustomerConfig::getCustomerPasswordCharacterSet()                       | Provides regular expression for character set password validation.                                                                                                        |
 | CustomerConfig::getCustomerPasswordDenyList()                           | A common list of insecure, invalid passwords. These will be rejected immediately.                                                                                         |
 | CustomerConfig::getCustomerPasswordSequenceLimit()                      | Provides a limit for character repeating if defined.                                                                                                                      
- Example: Limit=4 forbids using "aaaa" in the password but allows "aaa". |
+ Example: `Limit=4` forbids using "aaaa" in the password but allows "aaa". |
 | CustomerConfig::MAX_LENGTH_CUSTOMER_PASSWORD                            | Defines password maximum length.                                                                                                                                          |
 | CustomerConfig::MIN_LENGTH_CUSTOMER_PASSWORD                            | Defines password minimum length.                                                                                                                                          |
 
@@ -259,7 +257,7 @@ The following table describes the settings:
 </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -341,7 +339,7 @@ Ensure that the following changes have been applied in the transfer objects:
 
 
 <details open>
-  <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -470,8 +468,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 ```
 </details>
 
-<details open>
-  <summary markdown='span'>src/Pyz/Client/Oauth/OauthDependencyProvider.php</summary>
+**src/Pyz/Client/Oauth/OauthDependencyProvider.php**
 
 ```php
 <?php
@@ -494,10 +491,8 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
-</details>
 
-<details open>
-  <summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
 <?php
@@ -520,12 +515,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
-</details>
 
 Register new queue message processor:
 
-<details open>
-  <summary markdown='span'>src/Pyz/Zed/Queue/QueueDependencyProvider.php</summary>
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
 ```php
 <?php
@@ -554,10 +547,8 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
-</details>
 
-<details open>
-  <summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
 ```php
 <?php
@@ -580,10 +571,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     }
 }
 ```
-</details>
 
-<details open>
-  <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -613,7 +602,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -714,7 +702,7 @@ Ensure that the customer confirmation email is sent to the newly registered cust
 
 {% endinfo_block %}
 
-1. Enable Jenkins check for finding / deleting expired refresh tokens and invalidated customers:
+1. Enable Jenkins check for finding and deleting expired refresh tokens and invalidated customers:
 
 **config/Zed/cronjobs/jenkins.php**
 
@@ -752,9 +740,11 @@ $jobs[] = [
 ```
 
 ### 5) Import data
+
 Import the following data.
 
 #### Add infrastructural data
+
 Add infrastructural data as follows:
 
 1. Install the following plugins:
@@ -809,11 +799,11 @@ Ensure the following:
 
 ## Install feature frontend
 
-Follow the steps below to install the [Customer Account Management]([Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)) feature frontend.
+Follow the steps below to install the Customer Account Management feature frontend.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration.
+To start feature integration, integrate the required feature:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|

@@ -1184,7 +1184,6 @@ entries:
       - "201907.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Reference information - GlueApplication errors
       url: /docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html
       include_versions:

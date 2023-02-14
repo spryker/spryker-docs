@@ -4,152 +4,87 @@ entries:
     nested:
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
-        include_versions:
-        - "202204.0"
         nested:
           - title: What's changed
             url: /docs/pbc/all/carrier-management/whats-changed-in-carrier-management.html
-            include_versions:
-            - "202204.0"
           - title: Install and upgrade
             nested:
               - title: Integrate the Shipment feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-feature.html
-                include_versions:
-                - "202204.0"
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
               - title: Integrate the Shipment + Approval Process feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-approval-process-feature.html
-                include_versions:
-                - "202204.0"
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
               - title: Integrate the Shipment + Cart feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-cart-feature.html
-                include_versions:
-                - "202204.0"
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-cart-feature.html
               - title: Integrate the Shipment Glue API
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-glue-api.html
-                include_versions:
-                - "202204.0"
-                - "202212.0"
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html
               - title: Upgrade the Shipment module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
-                include_versions:
-                - "202204.0"
               - title: Upgrade the ShipmentCartConnector module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcartconnector-module.html
-                include_versions:
-                - "202204.0"
               - title: Upgrade the ShipmentCheckoutConnector module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcheckoutconnector-module.html
-                include_versions:
-                - "202204.0"
               - title: Upgrade the ShipmentDiscountConnector module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html
-                include_versions:
-                - "202204.0"
               - title: Upgrade the ShipmentGui module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentgui-module.html
-                include_versions:
-                - "202204.0"
           - title: Manage in the Back Office
             nested:
               - title: Add carrier companies
                 url: /docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html
-                include_versions:
-                - "202204.0"
               - title: Add delivery methods
                 url: /docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html
-                include_versions:
-                - "202204.0"
               - title: Edit delivery methods
                 url: /docs/pbc/all/carrier-management/manage-in-the-back-office/edit-delivery-methods.html
-                include_versions:
-                - "202204.0"
           - title: Manage via Glue API
             nested:
               - title: Retrieve shipments and shipment methods when submitting checkout data
                 url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
-                include_versions:
-                - "202204.0"
               - title: Retrieve shipments when checking out purchases
                 url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
-                include_versions:
-                - "202204.0"
               - title: Retrieve shipments in orders
                 url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-in-orders.html
-                include_versions:
-                - "202204.0"
           - title: Import and export data
             url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
             nested:
               - title: File details - shipment.csv
                 url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html
-                include_versions:
-                - "202204.0"
               - title: File details - shipment_method_store.csv
                 url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment-method-store.csv.html
-                include_versions:
-                - "202204.0"
               - title: File details - shipment_price.csv
                 url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment-price.csv.html
-                include_versions:
-                - "202204.0"
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Add a new shipment method"
                 url: /docs/pbc/all/carrier-management/tutorials-and-howtos/howto-add-a-new-shipment-method.html
-                include_versions:
-                - "202204.0"
               - title: "HowTo: Add a new shipment method 2.0"
                 url: /docs/pbc/all/carrier-management/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html
-                include_versions:
-                - "202204.0"
           - title: Domain model and relationships
             nested:
               - title: "Shipment method entities in the database: reference information"
                 url: /docs/pbc/all/carrier-management/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html
-                include_versions:
-                - "202204.0"
           - title: Extend and customize
             nested:
               - title: "Shipment method plugins: reference information"
                 url: /docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html
-                include_versions:
-                - "202204.0"
           - title: Third-party integrations
             nested:
               - title: Seven Senders
                 url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders.html
-                include_versions:
-                - "202204.0"
                 nested:
                   - title: Install and configure
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/install-and-configure-seven-senders.html
-                    include_versions:
-                    - "202204.0"
                   - title: Integrate
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/integrate-seven-senders.html
-                    include_versions:
-                    - "202204.0"
                   - title: API requests
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-api-requests.html
-                    include_versions:
-                    - "202204.0"
                   - title: Mappers
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-mappers.html
-                    include_versions:
-                    - "202204.0"
                   - title: Persistence layer
                     url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-persistance-layer.html
-                    include_versions:
-                    - "202204.0"
               - title: Paazl
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paazl.html
-                include_versions:
-                - "202204.0"
               - title: Paqato
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paqato.html
-                include_versions:
-                - "202204.0"
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:
@@ -1149,6 +1084,20 @@ entries:
                 url: /docs/pbc/all/search/tutorials-and-howtos/facet-filter-overview-and-configuration.html
               - title: "Tutorial: Integrate any search engine into a project"
                 url: /docs/pbc/all/search/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html
+          - title: Third-party integrations
+            nested:
+            - title: Algolia
+              url: /docs/pbc/all/search/third-party-integrations/algolia.html
+              include_versions:
+              - "202212.0"
+            - title: Integrate Algolia
+              url: /docs/pbc/all/search/third-party-integrations/integrate-algolia.html
+              include_versions:
+              - "202212.0"
+            - title: Disconnect Algolia
+              url: /docs/pbc/all/search/third-party-integrations/disconnect-algolia.html
+              include_versions:
+              - "202212.0"
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

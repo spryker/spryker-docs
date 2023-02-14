@@ -1213,9 +1213,9 @@ To retrieve detailed information on an order, send the request:
 ```    
 </details>
 
-{% include pbc/all/glue-api-guides/retrieve-an-order-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-order-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202204.0/retrieve-an-order-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-an-order-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/retrieve-an-order-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-order-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202204.0/retrieve-an-order-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-an-order-response-attributes-of-included-resources.md -->
 
 ## Possible errors
 

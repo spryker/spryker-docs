@@ -206,7 +206,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202212.0/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/manage-guest-carts-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

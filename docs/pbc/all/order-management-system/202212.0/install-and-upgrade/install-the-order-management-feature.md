@@ -18,14 +18,12 @@ related:
   - title: Comments + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html
   - title: Glue API - Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-order-management-feature-integration.html
+    link: docs/pbc/all/order-management-system/page.version/install-and-upgrade/install-the-order-management-glue-api.html
   - title: Company Account + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
   - title: Product + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
   - title: Customer Account Management + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
-  - title: Order Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-order-management-feature.md -->

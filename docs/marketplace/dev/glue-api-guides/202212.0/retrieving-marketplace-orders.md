@@ -19,7 +19,7 @@ The **Marketplace Order Management API** lets you retrieve all orders made by a 
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
+For detailed information about the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-the-order-management-glue-api.html)
 
 ## Retrieve all orders
 

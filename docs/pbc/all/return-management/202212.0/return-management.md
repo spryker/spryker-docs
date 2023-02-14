@@ -18,7 +18,7 @@ redirect_from:
 
 The *Return Management* capability lets you create and manage returns for a sales order.
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html).
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-returns.html).
 
 {% info_block warningBox "Note" %}
 
@@ -79,7 +79,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). For details about the return states, see [Return items states](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html).
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-returns.html). For details about the return states, see [Return items states](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html).
 
 {% info_block infoBox "Info" %}
 
@@ -93,7 +93,7 @@ The following figure shows how to create a return, view its details and print a 
 
 ## Return Management in the Back Office
 
-A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html).
+A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html).
 
 {% info_block infoBox "Return management process" %}
 
@@ -131,7 +131,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create returns in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html)  |
+| [Create returns in the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-returns.html)  |
 | [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/{{page.version}}/manage-in-the-back-office/manage-returns.html)  |
 | [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/build-a-return-management-process-best-practices.html)  |
 
@@ -142,7 +142,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 | [Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/howto-set-number-of-days-for-a-return-policy.html) |
 | [Configurable Bundle + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-order-management-feature-integration.html) |  |  |
 | [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
-| [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |  |  |
+| [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-the-order-management-feature.html) |  |  |
 | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |  |  |
 | [Product Bundles + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-order-management-feature-integration.html) |  |  |
 | [Product Bundles + Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-return-management-feature-integration.html) |  |  |

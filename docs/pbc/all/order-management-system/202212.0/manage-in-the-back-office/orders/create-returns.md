@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/sales/orders/creating-returns.html
 related:
   - title: Viewing returns of an order
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html
+    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/orders/view-returns-of-an-order.html
   - title: Changing the state of order items in returns
     link: docs/pbc/all/return-management/page.version/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
 ---
@@ -17,7 +17,7 @@ If a sales order item is [returnable](/docs/pbc/all/return-management/{{page.ver
 
 ## Prerequisites
 
-You can create returns for the items that are in **Exported** or **Delivered** states only. To learn how to change item states, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html).
+You can create returns for the items that are in **Exported** or **Delivered** states only. To learn how to change item states, see [Changing the state of order items](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
 
 To start managing orders, go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 
@@ -48,7 +48,7 @@ This section describes the attributes you see when creating a return.
 | Order reference | Unique identifier of the order for which you are creating a return. Click to go to the order's page where you can view and edit it. |
 | Fulfilled by merchant | Name of the merchant the item belongs to. Click to go to merchant's page where you can view and edit their information. |
 | Merchant Order Reference | Unique identifier of the merchant order. |
-| Product | All the items in the order. For returning, you can only select the items that are in **Exported** or **Delivered** state. To learn how to change item states, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html). |
+| Product | All the items in the order. For returning, you can only select the items that are in **Exported** or **Delivered** state. To learn how to change item states, see [Changing the state of order items](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/change-the-state-of-order-items.html). |
 | Quantity | Product quantity in the order. |
 | Price | Product price in the order. |
 | Total | Total amount paid for the item. |

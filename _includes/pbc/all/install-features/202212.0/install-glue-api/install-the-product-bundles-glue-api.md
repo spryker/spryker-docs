@@ -11,7 +11,7 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product Bundles| {{site.version}}| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-bundles-feature-integration.html)|
-| Order Management| {{site.version}}| [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html)|
+| Order Management| {{site.version}}| [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{site.version}}/install-and-upgrade/install-the-order-management-glue-api.html)|
 
 ## 1) Install the required modules using Composer
 

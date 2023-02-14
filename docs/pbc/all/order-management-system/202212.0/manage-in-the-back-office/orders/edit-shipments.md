@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/sales/orders/editing-shipments.html
 related:
   - title: Creating shipments
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-shipments.html
+    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/orders/create-shipments.html
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---

@@ -16,7 +16,7 @@ To start feature integration, integrate the required features:
 | Spryker Core         | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                 |
 | Product              | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html)                           |
 | Cart                 | {{site.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                                 |
-| Order Management     | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)         |
+| Order Management     | {{site.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{site.version}}/install-and-upgrade/install-the-order-management-feature.html)         |
 | Checkout             | {{site.version}} | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)                         |
 | Prices               | {{site.version}} | [Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
 | Inventory Management | {{site.version}} | [Inventory management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html) |

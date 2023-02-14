@@ -48,4 +48,4 @@ In the Back Office in the order list, a Back Office user doesn't have the functi
 
 | INSTALLATION GUIDES  |
 |---------|
-|[Reclamations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/reclamations-feature-integration.html)|
+|[Reclamations feature integration](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-the-reclamations-feature.html)|

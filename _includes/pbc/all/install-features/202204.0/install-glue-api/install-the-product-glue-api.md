@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 
 ## 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/products-rest-api:"^2.11.0" spryker/product-image-sets-rest-api:"^1.0.3" spryker/product-prices-rest-api:"^1.1.0" spryker/product-tax-sets-rest-api:"^2.1.2" spryker/products-categories-resource-relationship:"^1.0.0" spryker/product-attributes-rest-api:"^1.0.0" --update-with-dependencies

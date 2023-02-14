@@ -208,7 +208,7 @@ With this release, Spryker enabled support for **Elasticsearch 6**, while leavin
 Even though Elasticsearch is one of the most powerful search engines available, sometimes its functionalities can not satisfy the most extreme requirements. That’s why from now on Search module supports pluggable search engines. This way, project integrations with Fact Finder, Sphinx, or any other search engine is available and supported by the Spryker infrastructure.
 
 #### Documentation:
-[Search Migration Guides](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html)
+[Search Migration Guides](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/search-migration-concept.html)
 
 ### By-pass KV-storage
 Separated Backend and Frontend in Spryker communicate over denormalized distributed datasets with underlying Publish & Synchronize mechanism. This powerful data distribution infrastructure emits data to Storage and Search and enables Frontends’ consumers to reach data without hitting relational DB with the increased performance. Though in some cases (typically B2B), amounts of data are large, and Storage (Redis by default) growth is not justified, especially when a number of customers and RPM is not high.
@@ -247,7 +247,7 @@ To improve usability, the `vendor/bin/console setup:search` command which has be
     * `console search:setup:index-map`
 
 #### Documentation
-[Search Initialization Improvement](/docs/scos/dev/technical-enhancement-integration-guides/integrating-search-initialization-enhancement.html)
+[Search Initialization Improvement](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/upgrade-search-initialization.html)
 
 ### PHP Update
 PHP continuously develops and gets more exciting features. Also, old versions get deprecated, such as PHP7.1, which lost support by the end of 2019. From now on, Spryker modules will require **>=PHP7.2**. Please make sure your project doesn’t rely on deprecated technology and applies required infrastructural upgrades.

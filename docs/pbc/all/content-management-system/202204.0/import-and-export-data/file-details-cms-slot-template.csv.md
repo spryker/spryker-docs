@@ -1,5 +1,5 @@
 ---
-title: File details - cms_slot_template.csv
+title: "File details: cms_slot_template.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-slot-templatecsv
@@ -15,25 +15,17 @@ redirect_from:
 
 This document describes the `cms_slot_template.csv` file to configure  [CMS Slot Template](/docs/pbc/all/content-management-system/{{page.version}}/tutorials-and-howtos/howto-create-cms-templates.html#template-with-slots) information in your Spryker Demo Shop.
 
-
-
 ## Import file parameters
-
-
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | template_path | &check;  | String |Must be a valid path to a twig template. | Path to the Twig file template. |
-| name |  &check;  | String | Human-readable. | Alphabetical identifier of the slot. It will be shown in the Back Office. |
-| description |    | String |  | Description of the slot. It will be shown in the Back Office. |
-
-
-
-
+| name |  &check;  | String | Human-readable. | Alphabetical identifier of the slot. It is shown in the Back Office. |
+| description |    | String |  | Description of the slot. It is shown in the Back Office. |
 
 ## Import template file and content example
 
-
+Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |

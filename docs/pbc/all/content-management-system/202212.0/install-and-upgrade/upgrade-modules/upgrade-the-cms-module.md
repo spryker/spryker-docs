@@ -1,5 +1,5 @@
 ---
-title: Upgrade the Cms modudle
+title: Upgrade the Cms module
 description: Use the guide to update versions to the newer ones of the CMS module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,5 +30,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms.html
   - /module_migration_guides/mg-cms.htm
+  - /docs/pbc/all/content-management-system/202005.0/install-and-upgrade/upgrade-modules/upgrade-the-cms-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cms-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cms-module.md -->

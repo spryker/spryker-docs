@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/confirming-customer-registration
   - /docs/confirming-customer-registration
   - /docs/en/confirming-customer-registration
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-customers/confirming-customer-registration.html
 ---
 
 After a customer has been created (to create a customer, see [Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html)), the registration must be confirmed. This endpoint allows you to do that by sending a confirmation code received by email.

@@ -1,5 +1,5 @@
 ---
-title: File details - category.csv
+title: "File details: category.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-categorycsv
@@ -25,7 +25,7 @@ This document describes the `category.csv` file to configure [categories](/docs/
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| category_key | &check; | String | Unique. This value can set as `parent_category_key` for the lines below, allowing multi-level relations | Category key identifier. |
+| category_key | &check; | String | Unique. This value can set as `parent_category_key` for the following lines, allowing multi-level relations | Category key identifier. |
 | parent_category_key | &check; | String | Must have an existing value if the category is not the "root" category.| Parent category key identifier. |
 | name.{ANY_LOCALE_NAME}*<br>Example value: *name.de_DE* | &check; | String | Unique. Name of categories in available locations. The set of these fields depends on available locations in some projects. | Category name in the specified location (DE for our example). |
 | meta_title.{ANY_LOCALE_NAME}<br>Example value: *meta_title.de_DE*  |  | String |  | Title in the specified location (DE for our example). |
@@ -43,7 +43,7 @@ This document describes the `category.csv` file to configure [categories](/docs/
 
 {% info_block infoBox "Info" %}
 
-*ANY_LOCALE_NAME: Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files. For the fields below, it could be replaced by 2 sets of fields: one for *de_DE* and another for *en_US*
+*ANY_LOCALE_NAME: Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files. For the following fields, it can be replaced by two sets of fields: one for *de_DE* and another for *en_US*.
 
 {% endinfo_block %}
 

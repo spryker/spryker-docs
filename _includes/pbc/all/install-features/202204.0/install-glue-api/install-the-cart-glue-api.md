@@ -16,7 +16,7 @@ To start feature integration, integrate the required features and Glue APIs:
 
 ### 1) Install the required modules using Composer
 
-Install the required module:
+Install the required modules:
 
 ```bash
 composer require spryker/carts-rest-api:"^5.22.0" --update-with-dependencies

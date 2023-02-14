@@ -8,15 +8,21 @@ template: howto-guide-template
 
 The BazaarVoice app requires the following Spryker modules:
 
-* `spryker/asset: ^1.2.0`
+* `spryker/asset: ^1.3.0`
 * `spryker/asset-storage: ^1.1.0`
-* `spryker/message-broker: ^1.0.0`
-* `spryker/message-broker-aws: ^1.0.0`
-* `spryker/message-broker-extension: ^1.0.0`
+* `spryker/message-broker: ^1.3.0`
+* `spryker/message-broker-aws: ^1.3.2`
+* `spryker/message-broker-extension: ^1.1.0`
 * `spryker-shop/asset-widget: ^1.0.0`
+* `spryker-shop/cart-page: ^3.32.0`
 * `spryker-shop/product-detail-page: ^3.17.0`
 * `spryker-shop/product-category-widget: ^1.6.0`
-* `spryker-shop/shop-ui: ^1.59.0`
+* `spryker-shop/shop-ui: ^1.62.0`
+* `spryker-shop/checkout-page: ^3.23.0`
+* `spryker-shop/merchant-page: ^1.1.0` (Marketplace only)
+* `spryker-shop/merchant-profile-widget: ^1.1.0` (Marketplace only)
+* `spryker-shop/merchant-widget: ^1.3.0` (Marketplace only)
+* `spryker-shop/payment-page: ^1.3.0`
 
 ## Integrate Bazaarvoice
 

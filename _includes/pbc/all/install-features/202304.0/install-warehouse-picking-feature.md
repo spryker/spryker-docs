@@ -411,7 +411,7 @@ For the demo purpose, we propose the example of the multi-shipment picking strat
 
 namespace Pyz\Zed\PickingList;
 
-use Spryker\Zed\PickingListMultiShipmentPickingStrategyExample\Communication\Plugin\MultiShipmentPickingListGeneratorStrategyPlugin;
+use Spryker\Zed\PickingListMultiShipmentPickingStrategyExample\Communication\Plugin\PickingList\MultiShipmentPickingListGeneratorStrategyPlugin;;
 use Spryker\Zed\PickingList\PickingListDependencyProvider as SprykerPickingListDependencyProvider;
 
 class PickingListDependencyProvider extends SprykerPickingListDependencyProvider

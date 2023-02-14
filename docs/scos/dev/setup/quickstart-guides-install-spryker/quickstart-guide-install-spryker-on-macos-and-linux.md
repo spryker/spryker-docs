@@ -62,7 +62,13 @@ docker/sdk bootstrap deploy.dev.yml
 
 ## 2. Update the hosts
 
-Update the hosts file using the command provided in the output of the previous step.
+Update the hosts file using the command provided in the output of the previous step. It should be similar to the following:
+
+```bash
+Please, run the following commands in order to prepare the environment:
+
+sudo bash -c "echo '127.0.0.1 backend-api.de.spryker.local backend-gateway.de.spryker.local backoffice.de.spryker.local glue.de.spryker.local mail.spryker.local queue.spryker.local redis-commander.spryker.local scheduler.spryker.local spryker.local swagger.spryker.local yves.de.spryker.local yves.us.spryker.local' >> /etc/hosts"
+```
 
 ## 3. Build and start the instance
 
@@ -70,24 +76,7 @@ Update the hosts file using the command provided in the output of the previous s
 docker/sdk up
 ```
 
-Default demo shop configuration includes the stores *de*, *at*, and *us*.
-
-You can now access your project applications using the following endpoints:
-1. German Store
-* Storefront: `yves.de.spryker.local`
-* Back Office: `backoffice.de.spryker.local`
-
-2. Austrian Store
-* Storefront: `yves.at.spryker.local`
-* Back Office: `backoffice.at.spryker.local`
-
-3. USA Store
-* Storefront: `yves.us.spryker.local`
-* Back Office: `backoffice.us.spryker.local`
+The project is now running. For the full list of the project's endpoints, see `http://spryker.local`.
 
 
-{% info_block infoBox "Info" %}
-
-If you see `.de.` in your URL, the application is store-specific. By default, Spryker comes with three stores: *de*, *at*, and *us*.
-
-{% endinfo_block %}
+For detailed installation instructions, start with [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).

@@ -34,9 +34,9 @@ redirect_from:
   - /v5/docs/en/step-engine
 related:
   - title: "Step engine: Use case scenario"
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
+    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
   - title: "Step engine: Use case scenario"
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
+    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
 ---
 
 To define a multi-step process using the StepEngine feature, you need to implement the following interfaces:

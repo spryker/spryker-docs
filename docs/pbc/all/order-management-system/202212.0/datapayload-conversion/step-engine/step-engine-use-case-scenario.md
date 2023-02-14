@@ -24,9 +24,9 @@ redirect_from:
   - /v1/docs/en/step-engine-use-case-scenario
 related:
   - title: "Step engine: Workflow overview"
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/step-engine/step-engine-workflow-overview.html
   - title: "Step engine: Use case scenario"
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
+    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
 ---
 
 The following example represents the checkout process configuration, containing two steps: an entry step and a success step.

@@ -25,9 +25,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
 related:
   - title: "Step engine: Use case scenario"
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
+    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
   - title: "Step engine: Workflow overview"
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 
 This document shows how to step up breadcrumb navigation for a step collection.
@@ -98,7 +98,7 @@ class MyStep extends AbstractBaseStep implements StepWithBreadcrumbInterface
 
 </details>
 
-2. Once `StepWithBreadcrumbInterface` is implemented in all the necessary steps, generate the breadcrumb data. 
+2. Once `StepWithBreadcrumbInterface` is implemented in all the necessary steps, generate the breadcrumb data.
 
 You can instantiate `\Spryker\Yves\StepEngine\Process\StepEngine` together with optional `\Spryker\Yves\StepEngine\Process\StepBreadcrumbGenerator`. This provides the `stepBreadcrumb` variable with an instance of `\Generated\Shared\Transfer\StepBreadcrumbsTransfer` for all the templates handled by the step engine. The `StepBreadcrumbsTransfer` object stores all necessary data to display the breadcrumb in a template.
 

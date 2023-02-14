@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-orders.html
 related:
   - title: Retrieving orders
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
+    link: docs/pbc/all/order-management-system/page.version/glue-api-retrieve-orders.html
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
@@ -52,7 +52,7 @@ To retrieve a customer’s orders, send the request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all orders made by a customer through the **/orders** endpoint. For details, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html#retrieve-all-orders).
+Alternatively, you can retrieve all orders made by a customer through the **/orders** endpoint. For details, see [Retrieving orders](/docs/pbc/all/order-management-system/{{page.version}}/glue-api-retrieve-orders.html#retrieve-all-orders).
 
 {% endinfo_block %}
 

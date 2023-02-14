@@ -7,9 +7,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
 related:
   - title: Creating reclamations
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-reclamations.html
+    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/reclamations/create-reclamations.html
   - title: Viewing reclamations
-    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/viewing-reclamations.html
+    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/reclamations/view-reclamations.html
   - title: Reclamations feature overview
     link: docs/pbc/all/order-management-system/page.version/reclamations-feature-overview.html
 ---

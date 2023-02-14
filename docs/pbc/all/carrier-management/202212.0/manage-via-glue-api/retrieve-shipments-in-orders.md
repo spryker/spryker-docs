@@ -5,7 +5,7 @@ last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve shipments in orders. For full information about the endpoint, see [Retrieve orders](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html)
+This document describes how to retrieve shipments in orders. For full information about the endpoint, see [Retrieve orders](/docs/pbc/all/order-management-system/{{site.version}}/glue-api-retrieve-orders.html)
 
 ## Installation
 
@@ -25,7 +25,7 @@ To retrieve detailed information about an order, send the following request:
 
 | PATH PARAMETER     | DESCRIPTON                                                   |
 | ------------------ | -------------------- |
-| ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | The unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html#retrieve-all-orders) to get it. |
+| ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | The unique identifier of an order. [Retrieve all orders](/docs/pbc/all/order-management-system/{{site.version}}/glue-api-retrieve-orders.html#retrieve-all-orders) to get it. |
 
 ### Request
 

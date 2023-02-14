@@ -542,7 +542,7 @@ To retrieve detailed information about an order, send the request:
 
 | PATH PARAMETER | DESCRIPTION     |
 | ------------------ | ------------------------------ |
-| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html) to get it. |
+| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/pbc/all/order-management-system/{{page.version}}/glue-api-retrieve-orders.html) to get it. |
 
 ### Request
 

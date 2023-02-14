@@ -16,7 +16,7 @@ related:
   - title: Creating reclamations
     link: docs/scos/user/back-office-user-guides/202204.0/sales/orders/creating-reclamations.html
   - title: Changing the state of order items in reclamations
-    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
+    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
   - title: Reclamations Feature Overview
     link: docs/pbc/all/order-management-system/page.version/reclamations-feature-overview.html
 ---

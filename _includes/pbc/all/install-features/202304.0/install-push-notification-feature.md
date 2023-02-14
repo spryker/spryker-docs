@@ -122,7 +122,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 |--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|
 | PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides `VAPID` public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
 | PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides `VAPID` private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
-| PushNotificationWebPushPhpConstants::VAPID_SUBJECT     | Provides `VAPID` subject. Used for authentication to send push notifications.     | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_SUBJECT     | Provides the `VAPID` subject. Used for authentication to send push notifications.     | Spryker\Shared\PushNotificationWebPushPhp |
 
 **config/Shared/config_default.php**
 

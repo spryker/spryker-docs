@@ -64,11 +64,7 @@ docker/sdk bootstrap deploy.dev.yml
 
 Update `C:\Windows\System32\drivers\etc\hosts` using the instructions provided in the output of the previous step. The instructions should be similar to the following:
 
-```bash
-Please, run the following commands in order to prepare the environment:
-
-sudo bash -c "echo '127.0.0.1 backend-api.de.spryker.local backend-gateway.de.spryker.local backoffice.de.spryker.local glue.de.spryker.local mail.spryker.local queue.spryker.local redis-commander.spryker.local scheduler.spryker.local spryker.local swagger.spryker.local yves.de.spryker.local yves.us.spryker.local' >> /etc/hosts"
-```
+![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
 
 ## 3. Build and start the instance
 

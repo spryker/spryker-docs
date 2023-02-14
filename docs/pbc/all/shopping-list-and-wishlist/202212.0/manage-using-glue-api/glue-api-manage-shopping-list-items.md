@@ -29,8 +29,8 @@ This endpoint lets you manage shopping list items.
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see these integration guides:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 
 ## Add items to a shopping list
 
@@ -48,7 +48,7 @@ To add items to a shopping list, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value. |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value. |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -149,7 +149,7 @@ To add items to a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
+| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
 | quantity | Integer | &check; | Quantity of the product to add. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
@@ -158,9 +158,9 @@ To add items to a shopping list, send the request:
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
 
-For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
-For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -331,9 +331,9 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 | productConfigurationInstance.quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | Product quantity available in the store. |
 
-For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
-For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ## Change item quantity in a shopping list
 
@@ -346,13 +346,13 @@ To change item quantity in a shopping list, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to update item quantity in. |
-| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to change the quantity of. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
+| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to change the quantity of. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -462,9 +462,9 @@ To change item quantity in a shopping list, send the request:
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
 
-For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
-For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -620,7 +620,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 | productOfferReference | String | &check; | Unique identifier of the product offer. |
 | merchantReference| String | &check; | Unique identifier of the merchant. |
 | quantity | Integer | &check; | Updated quantity of the product. |
-| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
+| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
@@ -628,9 +628,9 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
 
-For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 
-For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ## Remove an item from a shopping list
 
@@ -643,13 +643,13 @@ To remove an item from a shopping list, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list to delete an item from. |
-| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
+| ***{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a shopping list item to remove. To get it, [Retrieve shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-shopping-lists), or [Retrieve a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-using-glue-api/glue-api-manage-shopping-lists.html#retrieve-a-shopping-list) with the `shopping-list-items` included. |
 
 ### Request
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: remove an item from a shopping list
 
@@ -665,11 +665,11 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
-| 400 | Provided access token is not an [access token of a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html). |
+| 400 | Provided access token is not an [access token of a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html). |
 | 901 | Shop list name or item name is not specified or too long.<br>OR<br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID or item is not specified. |
 | 1503 | Specified shopping list is not found. |
 | 1504 | Specified shopping list item is not found. |
 | 1508 | Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

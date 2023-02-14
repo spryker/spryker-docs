@@ -864,6 +864,25 @@ entries:
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         nested:
+          - title: Order Management feature overview
+            url: /docs/pbc/all/order-management-system/order-management-feature-overview/order-management-feature-overview.html
+            nested:
+              - title: Invoice generation
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/invoice-generation-overview.html
+              - title: Order cancellation
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/order-cancellation-overview.html
+              - title: Splittable order items
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/splittable-order-items-overview.html
+              - title: Split delivery
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/split-delivery-overview.html
+              - title: OMS (Order management system) matrix
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/oms-order-management-system-matrix.html
+              - title: Custom order reference
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/custom-order-reference-overview.html
+          - title: Reclamations feature overview
+            url: /docs/pbc/all/order-management-system/reclamations-feature-overview.html
+          - title: Refunds feature overview
+            url: /docs/pbc/all/order-management-system/refunds-feature-overview.html
           - title: DataPayload Conversion
           nested:
             - title: Refund process management

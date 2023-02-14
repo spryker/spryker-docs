@@ -30,7 +30,7 @@ related:
   - title: Migrating from Twig v1 to Twig v3
     link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
   - title: Split Delivery migration concept
-    link: docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
+    link: docs/pbc/all/order-management-system/page.version/install-and-upgrade/split-delivery-migration-concept.html
   - title: Silex Replacement migration concept
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
@@ -95,7 +95,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/checkout | 5.0.0 | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html) |
 | spryker/discount | 8.0.0 | [Migration Guide - Discount](/docs/pbc/all/discount-management/{{site.version}}/install-and-upgrade/upgrade-the-discount-module.html) |
 | spryker/discount-promotion | 2.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/{{site.version}}/install-and-upgrade/upgrade-the-discountpromotion-module.html) |
-| spryker/manual-order-entry-gui | 0.6.0 | [Migration Guide - ManualOrderEntryGui](/docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html) |
+| spryker/manual-order-entry-gui | 0.6.0 | [Migration Guide - ManualOrderEntryGui](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/upgrade-the-manualorderentrygui-module.html) |
 | spryker/offer | 0.2.0 | [Migration Guide - Offer](/docs/scos/dev/module-migration-guides/migration-guide-offer.html) |
 | spryker/offer-gui | 0.2.0 | [Migration Guide - OfferGui](/docs/scos/dev/module-migration-guides/migration-guide-offergui.html) |
 | spryker/oms | 9.0.0 | [Migration Guide - Oms](/docs/scos/dev/module-migration-guides/migration-guide-oms.html) |

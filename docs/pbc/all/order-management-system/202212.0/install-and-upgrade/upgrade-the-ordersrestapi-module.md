@@ -20,7 +20,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-ordersrestapi.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-ordersrestapi.html
   - /docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html
-  - /module_migration_guides/glue_api/ordersrestapi-migration-guide.htm
+  - /module_migration_guides/glue_api/ordersrestapi-migration-guide.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md -->

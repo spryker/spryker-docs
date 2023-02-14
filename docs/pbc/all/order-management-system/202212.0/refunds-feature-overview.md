@@ -29,4 +29,4 @@ For the refunded items, you can use the default OMS states to be displayed on th
 
 | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Refund migration guide](/docs/scos/dev/module-migration-guides/migration-guide-refund.html) | [Refund process management](/docs/pbc/all/order-management-system/{{page.version}}/refund-process-management.html) |
+| [Refund migration guide](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/upgrade-the-refund-module.html) | [Refund process management](/docs/pbc/all/order-management-system/{{page.version}}/refund-process-management.html) |

@@ -20,7 +20,7 @@ related:
   - title: Refunds feature overview
     link: docs/pbc/all/order-management-system/page.version/refunds-feature-overview.html
   - title: Migration Guide - Refund
-    link: docs/scos/dev/module-migration-guides/migration-guide-refund.html
+    link: docs/pbc/all/order-management-system/page.verison/install-and-upgrade/upgrade-the-refund-module.html
 ---
 
 {% info_block infoBox %}

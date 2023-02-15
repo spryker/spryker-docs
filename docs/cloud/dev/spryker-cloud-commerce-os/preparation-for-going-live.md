@@ -21,6 +21,7 @@ Review this preparatory checklist before initiating your go-live plan.
 You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you do the following:
 
 - Upgrade your project's code to match the latest demoshop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
+- Make sure you have updated spryker/twig to at least version 3.15.2 as this version has important stability improvements over version 3.15.1
 - Migrate the project's database to MariaDB if you are not already using it.
 - Split up your project's Zed endpoints as outlined in the [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) guide.
 - Verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).

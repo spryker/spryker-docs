@@ -28,19 +28,27 @@ If you are using AWS RDS, follow by link [Create and restore database backups](/
 
 ### 2. Suspend P&S.
 
-In order to reduce the risks of data synchronization errors, you can suspend data synchronization through P&S.
-Make sure there are not too many messages in the RabbitMQ.
-Then suspend `queue:worker:start` command.
-If you use Jenkins to run, you can stop the following commands by disabling the project. `XXX__queue-worker-start`.  `XXX`  - is the store name.
+**In order to reduce the risks of data synchronization errors, you can suspend data synchronization through P&S.**
+
+1. Enable **maintenance mode** by using command: 
+```bash
+vendor/bin/console maintenance mode
+```
+Or if you are using AWS infrastructure please check documentation [Enable and disable maintenance mode](docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
+
+2. Make sure there are not too many messages in the RabbitMQ. Wait for the messages to be processed.
+
+3. Suspend P&S and cronjob scheduler use command: 
+```bash
+vendor/bin/console scheduler:suspend
+```
 
 
-### 3. Database. 
-
-#### 3.1 Cleaning data in related database tables. 
+### 3. Database. Cleaning dataф and configration in related database tables.
 
 The number of tables that use relation with the `spy_store` table may depend on the use of the functionality and depends on the installed modules.
 
-The list of available tables that may contain a foreign key relationship:
+The list of available tables with data that may contain a foreign key relationship:
 - `spy_price_product_store`
 - `spy_asset_store`
 - `spy_availability_abstract`
@@ -71,19 +79,13 @@ The list of available tables that may contain a foreign key relationship:
 - `spy_touch_search`
 - `spy_touch_storage`
 
-### 3.2 Deleting relations in configuration tables
-
 Store has new configuration tables that were used for dynamic store:
 - `spy_locale_store`
 - `spy_currency_store`
 - `spy_country_store`
 
-Please delete all records related to the store.
-
-
-### 3.3 Clearing data in other project tables.
-
-Also, you may have other related tables used in the project, don't forget to check them and delete data from them.
+Please delete all records related to the store. Also, you may have other related tables used in the project, don't forget to check them and delete data from them.
+After removing all related data from all tables, you can remove the row with **store** data from the table `spy_store`. 
  
 ### 4. Cleaning data in the key-value storage engine.
 
@@ -91,6 +93,11 @@ Data is stored with keys that contain the name store. If you use Redis as a key-
 The key name follows this format: `kv:{store}:{locale}:{resource-type}:{key}`.
 
 `XXX` - name of the store will be used as an example.
+
+{% info_block infoBox %}
+Please note that the structure of data storage on the project can be organized differently, taking into account its features.
+Below is a list of keys, taking into account the default configuration out of the box.
+{% endinfo_block %}
 
 Data stored in Redis that should be deleted includes the following:
 - Stock information: 
@@ -119,7 +126,10 @@ Data stored in Redis that should be deleted includes the following:
 - Merchant: 
     - `kv:merchant:xxx:*`
     - `kv:price_product_abstract_merchant_relationship:xxx:*`
-- Adjust `kv:store_list:` and delete store name XXX values in stores. `{"stores":["AT","DE","XXX"],"_timestamp":111111111111}` 
+- Adjust `kv:store_list:` and delete store name XXX values in stores. 
+```json
+{"stores":["AT","DE","XXX"],"_timestamp":111111111111}
+``` 
 - Delete key `kv:store:xxx` with value about store. 
 
 
@@ -140,12 +150,20 @@ The following indexes are available in the standard configuration (example: `xxx
 - `spryker_xxx_product-review`.
 - `spryker_xxx_return_reason`.
 
-### 6. Start P&S 
+### 6. Resume P&S
 
-Please, resume P&S.
-If you use Jenkins to run command, you can enable the following commands by enable the project in Jenkins. 
-For example: `XXX__queue-worker-start`.  `XXX`  - is the store name.
+Follow these steps to restore normal operation:
 
+1. Restart the cronjob scheduler. Through command execution. 
+Run:  
+```bash
+vendor/bin/console scheduler:resume
+``` 
+2. Also disable maintenance mode by running the command 
+Run: 
+```bash
+vendor/bin/console maintenance:disable
+``` 
 
 
 ## Checklists 

@@ -14,25 +14,14 @@ redirect_from:
 
 This document describes the `order-status.csv` file to configure the update of the regular order status information in your Spryker shop.
 
-To import the file, run:
-
-```bash
-order-oms:status-import order-status
-```
-
 ## Import file parameters
 
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|
 | Order_reference |   |  Must be unique. | Identifier of the order in the system. |
 | order_item_reference | &check; | String | Must be unique. | Identifier of the  item in the order. |
 | order_item_event_oms | &check; | String |  OMS events depend on the  [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html) configured. | Desired order item state. Only this parameter is updated in the database |
-
-## Import file dependencies
-
-The file has no dependencies.
 
 ## Additional information
 
@@ -42,9 +31,13 @@ When the order item status is updated by importing the CSV file, the correspondi
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
-
 | FILE | DESCRIPTION |
 | --- | --- |
 | [template_order-status.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/template_order-status.csv) | Import file template with headers only. |
 | [order-status.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/order-status.csv)| Example of the import file with Demo Shop data. |
+
+## Import command
+
+```bash
+order-oms:status-import order-status
+```

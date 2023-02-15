@@ -17,7 +17,7 @@ To start feature integration, overview and install the necessary features:
 | Shipment                  | {{site.version}}  | [Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-the-shipment-feature.html) |
 | Glue API: Checkout         | {{site.version}}  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 | Glue API: Glue Application      | {{site.version}}  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Glue API: Order Management | {{site.version}}  | [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{site.version}}/install-and-upgrade/install-the-order-management-glue-api.html) |
+| Glue API: Order Management | {{site.version}}  | [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{site.version}}/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
 
 ### 1) Install the required modules using Composer
 

@@ -19,7 +19,7 @@ To start the feature integration, overview and install the necessary features:
 | Glue API: Customer Account Management | {{site.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Glue API: Glue Application            | {{site.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | UUID Generation Console               | {{site.version}}  |  |
-| Glue API: Shipment                    | {{site.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-the-shipment-glue-api.html) |
+| Glue API: Shipment                    | {{site.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html) |
 | Glue API: Checkout                    | {{site.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 
 ## 1) Install the required modules using Composer

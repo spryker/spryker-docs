@@ -883,6 +883,76 @@ entries:
             url: /docs/pbc/all/order-management-system/reclamations-feature-overview.html
           - title: Refunds feature overview
             url: /docs/pbc/all/order-management-system/refunds-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Order Management
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-order-management-feature.html
+                  - title: Reclamations
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-reclamations-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Checkout
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
+                  - title: Order Management
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html
+                  - title: Shipment
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: ManualOrderEntryGui
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html
+                  - title: OrdersRestApi
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
+                  - title: Refund
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
+              - title: Split delivery migration concept
+                url: /docs/pbc/all/order-management-system/install-and-upgrade/split-delivery-migration-concept.html
+          - title: Import order statuses
+            url: /docs/pbc/all/order-management-system/file-details-order-status.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Orders
+                nested:
+                  - title: Change the state of order items
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/change-the-state-of-order-items.html
+                  - title: Create reclamations
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/create-reclamations.html
+                  - title: Commente orders
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/comment-orders.html
+                  - title: Create returns
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/create-returns.html
+                  - title: Edit billing addresses in orders
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html
+                  - title: Add and remove custom order references
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/add-and-removing-custom-order-references.html
+                  - title: Edit shipments
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/edit-shipments.html
+                  - title: View returns of an order
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/view-returns-of-an-order.html
+              - title: Reclamations
+                nested:
+                  - title: Create reclamations
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/reclamations/create-reclamations.html
+                  - title: Changing the state of order items in reclamations
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
+                  - title: View reclamations
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/reclamations/view-reclamations.html
+              - title: View refunds
+                url: /docs/pbc/all/order-management-system/manage-in-the-back-office/view-refunds.html
+              - title: View the order matrix
+                url: /docs/pbc/all/order-management-system/manage-in-the-back-office/view-the-order-matrix.html
+          - title: "Glue API: Retrieve orders"
+            url: /docs/pbc/all/order-management-system/glue-api-retrieve-orders.html
+          - title: Domain model and relationsips
+            nested:
+              - title: "Custom Order Reference: module relations"
+                url: /docs/pbc/all/order-management-system/domain-model-and-relationships/custom-order-reference-module-relations.html
+              - title: "Order Management feature: Domain model and relationships"
+                url: /docs/pbc/all/order-management-system/domain-model-and-relationships/order-management-feature-domain-model-and-relationships.html
+              - title: "Sales module: reference information"
+                url: /docs/pbc/all/order-management-system/domain-model-and-relationships/sales-module-reference-information.html
           - title: DataPayload Conversion
           nested:
             - title: Refund process management
@@ -906,6 +976,12 @@ entries:
                 url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
                 - title: Workflow overview
                 url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+          - title: Third-party integrations
+            nested:
+              - title: NEKOM CC GmbH
+                url: /docs/pbc/all/order-management-system/third-party-integrations/nekom-cc-gmbh.html
+              - title: Tradebyte
+                url: /docs/pbc/all/order-management-system/third-party-integrations/tradebyte.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:

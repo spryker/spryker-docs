@@ -169,7 +169,7 @@ Here is an example of a timeout processor in an event definition:
 
 In this example, `OmsTimeout/Initiation` is the name of the plugin which is executed to set the starting point of the timeout.
 
-In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/pbc/all/order-management-system/{{site.version}}/install-and-upgrade/install-the-order-management-feature.html) plugin starts the timeout immediately, from the current time:
+In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/pbc/all/order-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-order-management-feature.html) plugin starts the timeout immediately, from the current time:
 
 <details>
 

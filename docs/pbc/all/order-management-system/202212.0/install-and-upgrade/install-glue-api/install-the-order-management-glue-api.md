@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-order-management-feature-integration.html
 related:
   - title: Order Management feature integration
-    link: docs/pbc/all/order-management-system/page.version/install-and-upgrade/install-the-order-management-feature.html
+    link: docs/pbc/all/order-management-system/page.version/install-and-upgrade/install-features/install-the-order-management-feature.html
   - title: Retrieving orders
     link: docs/pbc/all/order-management-system/page.version/glue-api-retrieve-orders.html
   - title: Retrieving customer orders

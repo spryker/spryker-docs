@@ -703,7 +703,7 @@ $jobs[] = [
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that push notifications have been correctly sent by checking the `spy_push_notification_subscription_delivery_log` database table. This table should contain a record for each unique combination of push notification and push notification subscription.
+1. Make sure that push notifications have been correctly sent by checking the `spy_push_notification_subscription_delivery_log` database table. This table contains a record for each unique combination of push notification and push notification subscription.
 2. Make sure that outdated push notification subscriptions are removed by checking the `spy_push_notification_subscription` database table. Create the push notification subscription record with `spy_push_notification_subscription.expired_at` with last year's date.
 
 {% endinfo_block %}

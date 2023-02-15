@@ -4,9 +4,25 @@ description: Learn how you can integrate the Payone app into your Spryker shop
 template: howto-guide-template
 ---
 
+## Prerequisites
+
+The Payone app requires the following Spryker modules:
+
+* `spryker/message-broker: ^1.3.0`
+* `spryker/message-broker-aws: ^1.3.2`
+* `spryker/payment: ^5.10.0`
+* `spryker/sales: ^11.32.0`
+* `spryker/sales-return: ^1.4.0`
+* `spryker-shop/checkout-page: ^3.21.0`
+* `spryker-shop/payment-page: ^1.2.0`
+* `spryker/oms: ^11.21.0`
+* `spryker/sales-payment: ^1.2.0`
+
+## Integrate Payone
+
 To integrate Payone, follow these steps.
 
-## 1. Connect Payone
+### 1. Connect Payone
 
 1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
 2. Click **Payone**.
@@ -21,7 +37,7 @@ To integrate Payone, follow these steps.
 
    {% endinfo_block %}
 
-## 2. Configure Payone
+### 2. Configure Payone
 
 1. Go to your store's Back Office, to the Payone app details page.
 2. In the top right corner of the Payone app details page, click **Configure**.
@@ -40,7 +56,7 @@ To integrate Payone, follow these steps.
 If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. The payment methods you've selected in step 8, appear in **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
 ![payone-credit-card](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-credit-card.png).
 
-## 3. Add Payone domain to your allowlist
+### 3. Add Payone domain to your allowlist
 
 To enable Payone to redirect your customers to their 3D Secure page and later to your success page, you must add the ACP domain inside your **Content Security Policy** allowlist. To do that, change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
 

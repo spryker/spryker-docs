@@ -12,18 +12,16 @@ To start feature integration, integrate the required features:
 
 | NAME   | VERSION | INTEGRATE GUIDE |
 | --- | --- | --- | 
-| Spryker Core | 202212.0| [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/202212.0/spryker-core-feature-integration.html) | 
-| Cart | 202212.0 |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/install-features/install-the-cart-feature.html)|
-|Product  | 202212.0 |[Product feature integration](/docs/pbc/all/product-information-management/202212.0/install-and-upgrade/install-features/install-the-product-feature.html)|
-|Payments  | 202212.0 |[Payments feature integration](/docs/scos/dev/feature-integration-guides/202212.0/payments-feature-integration.html)|
-| Shipment | 202212.0 |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/202212.0/install-and-upgrade/integrate-the-shipment-feature.html)|
-| Order Management | 202212.0 |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/202212.0/order-management-feature-integration.html)|
-| Mailing &amp; Notifications | 202212.0 |[Mailing &amp; Notifications feature integration](/docs/scos/dev/feature-integration-guides/202212.0/mailing-and-notifications-feature-integration.html)|
-| Promotions &amp; Discounts | 202212.0 |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/202212.0/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html)|
+| Spryker Core | {{site.version}}| [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) | 
+| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)|
+|Product  | {{site.version}} |[Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html)|
+|Payments  | {{site.version}} |[Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/payments-feature-integration.html)|
+| Shipment | {{site.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html)|
+| Order Management | {{site.version}} |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)|
+| Mailing &amp; Notifications | {{site.version}} |[Mailing &amp; Notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
+| Promotions &amp; Discounts | {{site.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html)|
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s):
 
 ```bash
 composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
@@ -45,7 +43,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up the Gift Card purchase process
 
-Extend your project with the following configuration.
+Extend your project with the following configuration:
 
 **src/Pyz/Zed/GiftCard/GiftCardConfig.php**
 
@@ -81,7 +79,7 @@ When you finish the [Setup Behaviour](#install-the-required-modules-using-compos
 
 ### 3) Set up the Gift Card usage process
 
-Extend your project with the following configuration.
+Extend your project with the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -176,7 +174,7 @@ class SalesConfig extends SprykerSalesConfig
 When you finish the [Setup Behaviour](#install-the-required-modules-using-composer) step, make sure the following:
 * The `NoPayment01` state machine is activated successfully.
 * When using a gift card to cover an entire order, the configured order state machine is used—for example, `Nopayment01`.
-* You can't use denylisted payment methods when using a gift card.
+* You can't use denied payment methods when using a gift card.
 * In the Back office, on the order details page, you see the gift cards used in the order.
 
 {% endinfo_block %}
@@ -234,7 +232,7 @@ Make sure that propel entities have been generated successfully by checking thei
 
 The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on the project level.
 
-You can find an exemplary implementation on [Git Hub](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a) in the `suit` repository (only `Console` and `DataImport` module changes are relevant). The following data import examples are based on this implementation.
+You can find an exemplary implementation on [GitHub](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a) in the `suit` repository (only `Console` and `DataImport` module changes are relevant). The following data import examples are based on this implementation.
 
  {% endinfo_block %}
 
@@ -283,7 +281,7 @@ In this step, you create a shipment method called `NoShipment`. The name of the 
 
 {% endinfo_block %}
 
-1. Taking into account project customizations, extend shipment method data importer as shown below:
+1. Taking into account project customizations, extend shipment method data importer as follows:
 
 **data/import/shipment.csv**
 
@@ -292,7 +290,7 @@ shipment_method_key,name,carrier,taxSetName
 spryker_no_shipment,NoShipment,NoShipment,Tax Exempt
 ```
 
-2. Taking into account project customizations, extend your shipment price data importer as shown below:
+2. Taking into account project customizations, extend your shipment price data importer as follows:
 
 **data/import/shipment_price.csv**
 
@@ -561,9 +559,9 @@ In this step, you customize your order state machine to place orders with zero p
 
 {% endinfo_block %}
 
-NoPayment order state machine Example:
+The `NoPayment` order state machine example:
 
-**config/Zed/oms/Nopayment01.xml**
+<details><summary markdown='span'>config/Zed/oms/Nopayment01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -639,6 +637,7 @@ NoPayment order state machine Example:
 
 </statemachine>
 ```
+</details>
 
 ![Nopayment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg)
 
@@ -923,13 +922,13 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure the following happens:
 * You can add a configured gift card product to the cart and purchase it.
 * The gift card item doesn't have any discounts applied.
 * During the checkout process, shipment method selection is optional if there is only a gift card in the cart.
 * The GiftCart/ShipGiftCard OMS command is invoked, and the customer receives an email with the generated gift card code once the order is placed.
 
-Before you can verify these points, you need to complete the [feature frontend integration](#install-feature-frontend).
+Before verifying these points, you must complete the [feature frontend integration](#install-feature-frontend).
 
 {% endinfo_block %}
 
@@ -1140,14 +1139,14 @@ class SalesPaymentDependencyProvider extends SprykerSalesPaymentDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure the following happens:
 * You can activate a gift card using its generated code.
 * You can activate more than one gift card simultaneously using its generated codes.
-* You can't activate a gift card the balance of which has been depleted.
+* You can't activate a gift card, the balance of which has been depleted.
 * During the checkout process, payment method selection is skipped in case the gift card covers the grand total.
 * Having made a successful purchase with the help of a gift card, you receive a gift card balance notification e-mail.
 
-Before you can verify these points, you need to complete the [feature frontend integration](#install-feature-frontend).
+Before verifying these points, you must complete the [feature frontend integration](#install-feature-frontend).
 
 {% endinfo_block %}
 
@@ -1289,7 +1288,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the widget is displayed on the **Cart** page and the **Summary** page of the checkout process.
+Make sure that the widget is displayed on the **Cart** and **Summary** pages of the checkout process.
 
 {% endinfo_block %}
 

@@ -1415,8 +1415,6 @@ entries:
                     url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-feature.html
                   - title: Inventory Management + Alternative Products
                     url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
-                  - title: Order Management + Inventory Management
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-order-management-inventory-management-feature.html
                   - title: Availability Notification Glue API
                     url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
                   - title: Inventory Management Glue API

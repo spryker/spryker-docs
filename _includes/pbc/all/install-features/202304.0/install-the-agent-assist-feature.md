@@ -130,8 +130,8 @@ Ensure that the following plugins have been registered:
 
 | MODULE                             | TEST                                                                                                                                                                                                                                                                                                                                                                                           |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a user, select **Edit**.  <br>3. Ensure that the **THIS USER IS AN AGENT** checkbox.exists.                                                                                                                                                                                                                                      |
-| UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Ensure that the **Agent** column.exists.                                                                                                                                                                                                                                                                                                  |
+| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a user, select **Edit**.  <br>3. Ensure that the **THIS USER IS AN AGENT** checkbox exists.                                                                                                                                                                                                                                      |
+| UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Ensure that the **Agent** column exists.                                                                                                                                                                                                                                                                                                  |
 | UserAgentTableDataExpanderPlugin   | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a non-agent user, select **Edit**. <br>3. Select the **THIS USER IS AN AGENT** checkbox. <br>4. Click **Update**. This takes you to the **USERS LIST** page with the message about the successful update displayed. <br>5. Ensure that in the **AGENT** column, next to the user you've updated, the **Agent** tag is displayed. |
 
 {% endinfo_block %}
@@ -193,16 +193,16 @@ class AgentPageConfig extends SprykerAgentPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code—for example, `/de/agent/login_check` is the default value for the agent.
+Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code—for example, `/de/agent/login_check` is the default value for an agent.
 
 {% endinfo_block %}
 
-Add environment configuration for agent security:
+Add environment configuration for the agent security:
 
 | CONFIGURATION                                                              | SPECIFICATION                                                                                                                                     | NAMESPACE                                     |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the agent is blocked if the number of attempts is exceeded for agent.                       | Spryker\Shared\SecurityBlockerStorefrontAgent |
-| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for agent.                                          | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the agent is blocked if the number of attempts is exceeded for an agent.                       | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for an agent.                                          | Spryker\Shared\SecurityBlockerStorefrontAgent |
 | SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempt an agent can make during the `SECURITY_BLOCKER_STOREFRONT:AGENT_BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerStorefrontAgent |
 
 **config/Shared/config_default.php**
@@ -312,7 +312,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | DESCRIPTION                                                                                               | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| AgentPageSecurityPlugin                                 | Registers security firewalls, access rules, impersonate rules, login and logout handlers for Agent users. | None          | SprykerShop\Yves\AgentPage\Plugin\Security                           |
+| AgentPageSecurityPlugin                                 | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. | None          | SprykerShop\Yves\AgentPage\Plugin\Security                           |
 | AgentSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent settings.                                      | None          | Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker |
 
 **src/Pyz/Yves/Security/SecurityDependencyProvider.php**
@@ -366,7 +366,7 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 {% info_block warningBox "Verification" %}
 
 1. Open `https://mysprykershop.com/agent/login`.
-2. Ensure that the login form is displayed and that only a user with an agent role can log in.
+2. Ensure that the login form is displayed and that only a user with the agent role can log in.
 3. Go to `https://mysprykershop.com/agent/overview`.
 4. Ensure that only the user with the agent role can access the page.
 5. Ensure that the agent can log out.

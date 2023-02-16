@@ -1112,7 +1112,6 @@ entries:
         url: /docs/scos/user/back-office-user-guides/sales/view-the-order-matrix.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Order matrix
         include_versions:
         - "201811.0"
@@ -3004,7 +3003,7 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"        
+        - "202204.0"
       - title: NEKOM CC GmbH
         url: /docs/scos/user/technology-partners/order-management-erpoms/nekom-cc-gmbh.html
         include_versions:

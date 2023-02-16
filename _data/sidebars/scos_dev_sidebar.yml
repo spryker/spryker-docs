@@ -2674,10 +2674,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-propel.html
     - title: Migration Guide - Publish and Synchronization
       url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
-    - title: Migration Guide - QuickOrder
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quickorder.html
-    - title: Migration Guide - QuickOrderPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html
     - title: Migration Guide - Router
       url: /docs/scos/dev/module-migration-guides/migration-guide-router.html
     - title: Migration Guide - Sales
@@ -2867,7 +2863,6 @@ entries:
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
       - title: Catalog setup
         url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/catalog-setup.html
         include_versions:
@@ -2875,7 +2870,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Products
           url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/products.html

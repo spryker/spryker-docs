@@ -7,6 +7,13 @@ template: concept-topic-template
 
 The *Push Notifications* lets users subscribe to the web push notifications, which are sent from the server to all registered subscriptions.
 
+{% info_block infoBox "Note" %}
+
+The feature can be integrated into the non-Srpyker customer applciation only. Spryker features do not support push notifications.
+
+{% endinfo_block %}
+
+
 ## Subscribing to notifications
 
 There are two tasks that enable the feature. The first lets the user subscribe to the web push notifications. For this,the site page needs a service-worker with which the user is registered on the server, and received messages are processed. The service-worker is downloaded in the background to the user's platform, which lets it be executed outside of the site page's context.

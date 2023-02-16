@@ -37,8 +37,8 @@ Review the system and software requirements in the table.
 
 | REQUIREMENT | VALUE OR VERSION | ADDITIONAL DETAILS |
 | --- | --- | --- |
-| Windows | 10 64bit | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
-| BIOS Virtualization | Enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager** → **Performance** tab.  For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
+| Windows | 10 or 11 (64bit) | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
+| BIOS Virtualization | Enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager&nbsp;<span aria-label="and then">></span> Performance** tab. For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
 | CPU SLAT-capable feature | Enabled |SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 1.28 or 1.29 |  

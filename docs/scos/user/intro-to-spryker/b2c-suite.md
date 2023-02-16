@@ -33,8 +33,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/persistent-cart-sharing-feature-overview.html)
 - [Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/scheduled-prices-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
-- [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
-- [Customer Access](/docs/scos/user/features/{{site.version}}/customer-access-feature-overview.html)
+- [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
+- [Customer Access](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-access-feature-overview.html)
 - [Order Management](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html)
 - [Refunds](/docs/scos/user/features/{{site.version}}/refunds-feature-overview.html)
 - [Reclamations](/docs/scos/user/features/{{site.version}}/reclamations-feature-overview.html)
@@ -48,7 +48,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 - [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/wishlist-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
-- [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
+- [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 - [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html)
 - [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
@@ -72,7 +72,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
 - [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/category-management-feature-overview.html)
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
-- [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
+- [Search](/docs/pbc/all/search/{{site.version}}/search.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
 
 <br>

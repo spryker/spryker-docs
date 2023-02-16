@@ -52,7 +52,7 @@ The Demo Shop was built using and demonstrates the use of the endpoints and reso
 
 | API | REFERENCE DOCUMENTS |
 | --- | --- |
-| Search API | [Catalog search](/docs/scos/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-autocomplete-and-search-suggestions.html) |
+| Search API | [Catalog search](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-search-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) |
 | Category API | [Retrieving category trees](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html) |
 | Product API | [Retrieving abstract products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)<br>[Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html) |
 | Product Availability API | [Retrieve abstract product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-using-glue-api/retrieve-abstract-product-availability.html)<br>[Retrieve concrete product availability](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) |
@@ -65,7 +65,7 @@ The Demo Shop was built using and demonstrates the use of the endpoints and reso
 | Cart API | [Guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html)<br>[Carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html) |
 | Checkout API | [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/check-out/check-out-purchases.html) |
 | Order History API | [Retrieving customer's order history](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html) |
-| Wishlist API | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-via-glue-api/manage-wishlists-via-glue-api.html) |
+| Wishlist API | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-using-glue-api/glue-api-manage-wishlists.html) |
 | Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-store-configuration.html) |
 
 ## Running the example application

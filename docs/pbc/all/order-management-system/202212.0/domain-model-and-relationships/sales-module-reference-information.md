@@ -3,6 +3,8 @@ title: "Sales module: reference information"
 last_updated: Aug 18, 2021
 description: The Sales module provides order management functionality obtained through the ZED UI that renders orders with details and the Client API to get customer orders
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202212.0/order-management-feature-walkthrough/sales-module-reference-information.html
 ---
 
 The Sales module provides the order management functionality. The functionality is obtained through the ZED UI that renders orders with orders details and the Client API to get customer orders.

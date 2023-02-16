@@ -4739,13 +4739,6 @@ entries:
       url: /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
       url: /docs/scos/dev/best-practices/coding-best-practices.html
-    - title: State machine cookbook
-      url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
-      nested:
-      - title: State machine fundamentals
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
-      - title: Build a state machine
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
   - title: Troubleshooting
     url: /docs/scos/dev/troubleshooting/troubleshooting.html
     nested:

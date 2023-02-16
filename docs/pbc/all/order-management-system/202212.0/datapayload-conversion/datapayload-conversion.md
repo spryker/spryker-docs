@@ -2,6 +2,8 @@
 title: DataPayload Conversion
 description: about DataPayload conversion
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/datapayload-conversion.html
 ---
 
 This section explains DataPayload conversion in the Spryker SCOS:

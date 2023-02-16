@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/multi-language-setup
   - /v4/docs/multi-language-setup
   - /v4/docs/en/multi-language-setup
+  - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
 ---
 
 All textual elements can be created in various languages to support content creation for multiple language setups—for example, for your international stores.

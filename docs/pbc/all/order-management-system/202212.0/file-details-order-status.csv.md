@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/file-details-order-statuscsv
   - /docs/file-details-order-statuscsv
   - /docs/en/file-details-order-statuscsv
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-order-status.csv.html
 ---
 
 This document describes the `order-status.csv` file to configure the update of the regular order status information in your Spryker shop.

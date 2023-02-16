@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/refund-process-management
   - /v4/docs/refund-process-management
   - /v4/docs/en/refund-process-management
+  - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/refund-process-management.html
 related:
   - title: Refunds feature overview
     link: docs/pbc/all/order-management-system/page.version/refunds-feature-overview.html

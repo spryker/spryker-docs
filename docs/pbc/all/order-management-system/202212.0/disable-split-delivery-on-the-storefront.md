@@ -17,6 +17,7 @@ redirect_from:
   - /v4/docs/ht-disable-split-delivery-in-yves-interface
   - /v4/docs/en/ht-disable-split-delivery-in-yves-interface
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html
 related:
   - title: Split Delivery overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/split-delivery-overview.html

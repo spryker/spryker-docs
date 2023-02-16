@@ -36,7 +36,7 @@ This endpoint allows refreshing a company user access token or revoking a refres
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Refresh a company user authentication token
 

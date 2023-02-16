@@ -685,9 +685,9 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/add-items-to-a-registered-users-cart-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/add-items-to-a-registered-users-cart-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202204.0/add-items-to-a-registered-users-cart-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/add-items-to-a-registered-users-cart-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202204.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
 
 For the attributes of the other included resources, see the docs:
 

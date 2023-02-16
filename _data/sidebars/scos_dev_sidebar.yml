@@ -18,14 +18,13 @@ entries:
       url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
       include_versions:
       - "202204.0"
-      - "202212.0"
-    - title: Quick installation guides
-      url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guides.html
+    - title: "Quickstart guides: Install Spryker"
+      url: /docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
-      - title: 'Quick installation guide: Mac OS and Linux'
-        url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-macos-and-linux.html
-      - title: 'Quick installation guide: Windows'
-        url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-windows.html
+      - title: "Quickstart guide: Install Spryker on MacOS and Linux"
+        url: /docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
+      - title: "Quickstart guide: Install Spryker on Windows"
+        url: /docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:
@@ -65,8 +64,6 @@ entries:
       url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Redis configuration
       url: /docs/scos/dev/setup/redis-configuration.html
-    - title: Install module structure and configuration
-      url: /docs/scos/dev/setup/install-module-structure-and-configuration.html
   - title: Feature walkthroughs
     url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
     nested:
@@ -218,6 +215,9 @@ entries:
       - "202204.0"
     - title: Customer Account Management
       url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: "Customer module overview: reference information"
         url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
@@ -718,7 +718,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       nested:
       - title: Searching by company users
         url: /docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html
@@ -781,7 +780,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Managing company user authentication tokens
         url: /docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html
         include_versions:
@@ -1973,6 +1971,7 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
+      - "202304.0"
     - title: Customer Account Management + Agent Assist
       url: /docs/scos/dev/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html
       include_versions:
@@ -3657,6 +3656,8 @@ entries:
             url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
           - title: Extend the Spryker Core functionality
             url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
+          - title: Install module structure and configuration
+            url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
     - title: Zed UI tables
       nested:
       - title: Create and configure Zed tables

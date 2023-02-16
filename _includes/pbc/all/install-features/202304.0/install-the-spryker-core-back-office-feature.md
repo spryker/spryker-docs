@@ -101,12 +101,12 @@ Add the following configuration to your project:
 | CONFIGURATION                                                                   | SPECIFICATION                                                                                                                                         | NAMESPACE                                |
 |---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
 | TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES                           | Fallback locales that are used if there is no translation for a selected locale.                                                                      | Spryker\Shared\Translator                |
-| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY                            | Absolute path to a translation cache directory. For example, `/var/www/data/DE/cache/Zed/translation`.                                                | Spryker\Shared\Translator                |
+| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY                            | An bsolute path to a translation cache directory—for example, `/var/www/data/DE/cache/Zed/translation`.                                                | Spryker\Shared\Translator                |
 | TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS                         | Paths to project level translations. You can use a global pattern that specifies sets of filenames with wildcard characters.                          | Spryker\Shared\Translator                |
 | AclConstants::ACL_DEFAULT_RULES                                                 | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                                          | Spryker\Shared\Acl                       |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration, the period when number of unsuccessful tries will be counted for backoffice user.                                    | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the backoffice user is blocked if the number of attempts is exceeded for backoffice.            | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a backoffice user can make during the `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for a Back Office user.                                    | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the Back Office user is blocked if the number of attempts is exceeded for the Back Office.            | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a Back Office user can make during the `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerBackoffice |
 
 **config/Shared/config_default.php**
 
@@ -126,7 +126,7 @@ $config[TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS] = [
     APPLICATION_ROOT_DIR . '/data/translation/Zed/*/[a-z][a-z]_[A-Z][A-Z].csv',
 ];
 
-// >> BACKOFFICE
+// >> BACK OFFICE
 
 // ACL: Allow or disallow URLs for Zed GUI for ALL users
 $config[AclConstants::ACL_DEFAULT_RULES] = [
@@ -144,7 +144,7 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
     ],
 ];
 
-// Security Blocker BackOffice user
+// Security Blocker Back Office user
 $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL] = 900;
 $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS] = 360;
 $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
@@ -228,7 +228,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the Back Office, you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
+In the Back Office, make sure you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
 
 {% endinfo_block %}
 
@@ -248,7 +248,7 @@ Set up the following behaviors.
 | UserPasswordResetMailTypePlugin                                  | Adds a new email type, which is used by `MailUserPasswordResetRequestHandlerPlugin`.                            | None                                                                                                                      | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail                     |
 | MailUserPasswordResetRequestHandlerPlugin                        | Sends a password reset email on a user request.                                                                 | Mail module must be configured. <br>`UserPasswordResetMailTypePlugin` is enabled.                                         | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset        |
 | OauthUserSecurityPlugin                                          | Sets security firewalls, such as rules and handlers, for Oauth users.                                           | None                                                                                                                      | \Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security                    |
-| BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with Backoffice user security configuration.                    | None                                                                                                                      | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker                |
+| BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with Back Office user security configuration.                    | None                                                                                                                      | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker                |
 | SecurityBlockerBackofficeUserEventDispatcherPlugin               | Adds a listener to log the failed Backoffice login attempts. Denies user access in case of exceeding the limit. | None                                                                                                                      | \Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher  |
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
@@ -419,7 +419,7 @@ console twig:cache:warmer
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following:
+Ensure the following takes place:
 * You can open the Back Office login page or any page which requires authentication.
 * On the Back Office login page, the **Forgot password?** button redirects you to the password reset form.
 * You receive a password reset email to the email address you submitted the password reset form with.
@@ -438,7 +438,7 @@ Ensure the following:
 | UserLocaleLocalePlugin        | Provides locale of the logged-in user as current locale.                             | Enable `\Spryker\Zed\Locale\Communication\Plugin\Application\LocaleApplicationPlugin` that sets the locale of the application based on the provided locale plugin. | Spryker\Zed\UserLocale\Communication\Plugin\Locale    |
 | AssignUserLocalePreSavePlugin | Expands `UserTransfer` before saving it with a locale ID and name.                   | None                                                                                                                                                               | Spryker\Zed\UserLocale\Communication\Plugin\User      |
 | LocaleUserExpanderPlugin      | Expands `UserTransfer` with a locale ID and name after reading it from the database. | None                                                                                                                                                               | Spryker\Zed\UserLocale\Communication\Plugin\User      |
-| UserLocaleFormExpanderPlugin  | Expands the Edit user profile form with a locale field.                              | None                                                                                                                                                               | Spryker\Zed\UserLocaleGui\Communication\Plugin        |
+| UserLocaleFormExpanderPlugin  | Expands the **Edit Users** page with a locale field.                              | None                                                                                                                                                               | Spryker\Zed\UserLocaleGui\Communication\Plugin        |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 ```php
@@ -613,7 +613,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 Ensure that you've enabled the plugins:
 1. In the Back Office, select **Users&nbsp;<span aria-label="and then">></span> Users**.
-2. Select **Add New User**.
+2. Click **Add New User**.
 3. On the **Create new User** page, check that the **Interface language*** field exists.
 
 {% endinfo_block %}

@@ -10,13 +10,13 @@ entries:
           - title: Install and upgrade
             nested:
               - title: Integrate the Shipment feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-feature.html
               - title: Integrate the Shipment + Approval Process feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-approval-process-feature.html
               - title: Integrate the Shipment + Cart feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-cart-feature.html
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-cart-feature.html
               - title: Integrate the Shipment Glue API
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-glue-api.html
               - title: Upgrade the Shipment module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
               - title: Upgrade the ShipmentCartConnector module

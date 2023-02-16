@@ -8,7 +8,7 @@ template: howto-guide-template
 
 ## Problem statement
 
-Spryker Applications should receive information about Orders from external systems. It can be done in very different ways. This document suggests possible solutions for processing incoming HTTP requests, describes their Advantages and Disadvantages and highlights pitfalls. The essence of such requests can be various (request from User’s browser, push-notification from a delivery company, butch update request from ERP system, etc.), like a solution for them.
+Spryker Applications can receive information about Orders from external systems. It can be done in very different ways. This document suggests possible solutions for processing incoming HTTP requests, describes their Advantages and Disadvantages and highlights pitfalls. The essence of such requests can be various (request from User’s browser, push-notification from a delivery company, butch update request from ERP system, etc.), like a solution for them.
 
 ## Suggested solutions
 
@@ -32,7 +32,7 @@ When the application receives an incoming request, it stores the context and res
 
 #### Processing with oms:check-condition worker
 
-Spryker application OOTB has oms:check-condition worker. It can be used to process requests and run application logic. The worker strongly depends on a State Machine graph. “oms:check-condition” job moves order items through the OMS graph and runs OMS plugins (commands, conditions, timeouts). It means the processing logic must be represented in OMS. The additional restriction is the OMS plugins cannot trigger OMS events for the same order. Also, better to avoid creating new Order items because it contradicts the OMS philosophy and may lead to hidden pitfalls.
+Spryker application OOTB has oms:check-condition worker. It can be used to process requests and run application logic. The worker strongly depends on a State Machine graph. “oms:check-condition” job moves order items through the OMS graph and runs OMS plugins (commands, conditions, timeouts). It means the processing logic must be represented in OMS. The additional restriction is the OMS plugins cannot trigger OMS events for the same order.
 
 {% info_block infoBox "Info" %}
 
@@ -55,7 +55,7 @@ Spryker application OOTB has oms:check-condition worker. It can be used to proce
 
 ##### Incoming request handling and passing control to the worker
 
-The incoming request handler should validate a Request structure, save it in some Storage and then trigger an OMS event. E.g. “start processing”. OMS will stop order items in the next state. On the next tick, “oms:check-condition” worker will move them forward and run subsequent commands and logic.
+The incoming request handler should validate a Request structure, save it in some Storage and then trigger an OMS event. E.g. “start processing”. OMS will stop order items in the next state. On the next run, “oms:check-condition” worker will move them forward and run subsequent commands and logic.
 
 ![Incoming request handling and passing control to the worker](docs/scos/dev/drafts-dev/Incoming request handling and passing control to the worker.png)
 
@@ -65,7 +65,7 @@ The incoming request handler should validate a Request structure, save it in som
 
 {% endinfo_block %}
 
-Another way to check the order items' status is to check the current state of all items in the Database (spy_sales_order_item_state). It can be useful in some cases. This way can be a bit faster but prone to the issue of a concurrent request and not recommended.
+Trigger OMS event and checking if it affected some items or not is one possible way to understand that order _was_ in a proper state. Another way to check the order items' status is to check the current state of all items in the Database (spy_sales_order_item_state). It can be useful in some cases. This way can be a bit faster but prone to the issue of a concurrent request and not recommended.
 
 #### Processing with a dedicated Jenkins worker
 

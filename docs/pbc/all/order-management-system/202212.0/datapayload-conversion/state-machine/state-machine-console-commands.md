@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/state-machine-cronjob
   - /v1/docs/state-machine-cronjob
   - /v1/docs/en/state-machine-cronjob
+  - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html  
 related:
   - title: Order management system multi-thread
     link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/state-machine/order-management-system-multi-thread.html
@@ -42,7 +43,7 @@ State machine event trigger sequence diagram
 
 A low level sequence diagram of what happens when trigger method is being invoked.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data-Payload+Conversion/Stata+Machine/state_machine_event_trigger_sequence.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data-Payload+Conversion/Stata+Machine/state_machine_event_trigger_sequence.png)
 
 ## State Machine Handler Interface
 

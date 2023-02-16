@@ -863,6 +863,8 @@ entries:
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
+        include_versions:
+          - "202212.0"
         nested:
           - title: Order Management feature overview
             url: /docs/pbc/all/order-management-system/order-management-feature-overview/order-management-feature-overview.html

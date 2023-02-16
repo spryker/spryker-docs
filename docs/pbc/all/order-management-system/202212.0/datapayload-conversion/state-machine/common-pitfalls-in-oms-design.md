@@ -3,6 +3,8 @@ title: Common pitfalls in OMS design
 description: This document explains the common pitfalls in OMS design in the Spryker Commerce OS.
 last_updated: Jan 13, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
 related:
   - title: Order management system multi-thread
     link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/state-machine/order-management-system-multi-thread.html
@@ -37,7 +39,7 @@ If you have the same commands, then one of the commands could get a condition:
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-solution-2.png)
 
- 
+
 
 ## Defining states with names
 
@@ -55,7 +57,7 @@ If you have the same commands, then one of the commands could get a condition:
 
 In the OMS drawing, you will see the last *read* event definition, but during the execution, any might be defined.
 
-**Solutions:** 
+**Solutions:**
 
 - Rename one of the events.
 - Keep only one event. We recommend having reusable events in the main process rather than using those from some sub-processes.
@@ -88,7 +90,7 @@ When placing an order, this issue entails an error like this one:
 
 ```php
 Exception - Unknown state: new in "/data/vendor/spryker/oms/src/Spryker/Zed/Oms/
-Business/Process/Process.php::198" {"exception":"[object] (Exception(code: 0): 
+Business/Process/Process.php::198" {"exception":"[object] (Exception(code: 0):
 Unknown state: new at /data/vendor/spryker/oms/src/Spryker/Zed/Oms/Business/
 Process/Process.php:198)
 ```
@@ -169,4 +171,3 @@ Event does not appear as manual unless the previous command execution fails with
 Keeping both `onEnter` and `manual` commands can only be used for backup for the failed automated execution of the `onEnter` command with a manual event.
 
 {% endinfo_block %}
-

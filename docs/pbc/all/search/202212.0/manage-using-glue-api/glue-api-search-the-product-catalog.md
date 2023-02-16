@@ -46,8 +46,8 @@ To search by products, send the request:
 | --- | --- | --- |
 | include | Adds resource relationships to the request | abstract-products|
 | q | Restricts the returned items to the values of the provided parameters | <ul><li>{% raw %}{{{% endraw %}null{% raw %}}}{% endraw %} (empty)</li><li>{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}abstract_product_name{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}product_attribute{% raw %}}}{% endraw %} (for example, brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul>|
-| price[min] | Restricts the returned items to products with prices matching or above the provided value | {% raw %}{{{% endraw %}minimum_price{% raw %}}}{% endraw %} |
-| price[max] | Restricts the returned items to products with prices matching or below the provided value | {% raw %}{{{% endraw %}maximum_price{% raw %}}}{% endraw %} |
+| price[min] | Restricts the returned items to products with prices matching or above the provided value. `price[min]=10` equals to 1000 cents or 10 monetary units | {% raw %}{{{% endraw %}minimum_price{% raw %}}}{% endraw %} |
+| price[max] | Restricts the returned items to products with prices matching or below the provided value. `price[max]=10` equals to 1000 cents or 10 monetary units | {% raw %}{{{% endraw %}maximum_price{% raw %}}}{% endraw %} |
 | brand | Specifies the product brand | {% raw %}{{{% endraw %}brand_name{% raw %}}}{% endraw %} |
 | label | Specifies the product label | {% raw %}{{{% endraw %}label{% raw %}}}{% endraw %} |
 | weight | Specifies the product weight | {% raw %}{{{% endraw %}weight{% raw %}}}{% endraw %} |

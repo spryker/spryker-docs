@@ -8,7 +8,7 @@ Follow the steps below to install the Agent Assist feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                                               |
 |--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -16,9 +16,7 @@ To start feature integration, overview and install the necessary features:
 | Product      | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 | Cart         | {{site.version}} | [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html)                                  |
 
-### 1) Install the required modules using composer
-
-Install the required modules:
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
@@ -74,9 +72,9 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                        | DESCRIPTION                                                                                               | PREREQUISITES                                            | NAMESPACE                                               |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------------------------------------------------|
-| UserAgentFormExpanderPlugin                                                   | Adds the *is an agent* checkbox to the Zed User form.                                                     | None                                                     | Spryker\Zed\AgentGui\Communication\Plugin               |
-| UserAgentTableConfigExpanderPlugin                                            | Adds the *is an agent* column to the Zed Users table.                                                     | None                                                     | Spryker\Zed\AgentGui\Communication\Plugin               |
-| UserAgentTableDataExpanderPlugin                                              | Fills the *is an agent* column in the Zed Users table.                                                    | Expects the *is an agent* checkbox in the Zed User form. | Spryker\Zed\AgentGui\Communication\Plugin               |
+| UserAgentFormExpanderPlugin                                                   | In the Back Office, adds the **THIS USER IN AS AN AGENT** checkbox to the **Create new User** and **Edit User** pages.                                                     | None                                                     | Spryker\Zed\AgentGui\Communication\Plugin               |
+| UserAgentTableConfigExpanderPlugin                                            | In te Back Office, adds the **AGENT** column to the **USERS LIST** table.                                                     | None                                                     | Spryker\Zed\AgentGui\Communication\Plugin               |
+| UserAgentTableDataExpanderPlugin                                              | In the Back Office, in the **USERS LIST** table, fills the **AGENT** column.                                                    | Expects the **THIS USER IN AS AN AGENT** checkbox on the **Create new User** and **Edit User** pages of the Back Office. | Spryker\Zed\AgentGui\Communication\Plugin               |
 
 <details><summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
 
@@ -132,9 +130,9 @@ Ensure that the following plugins have been registered:
 
 | MODULE                             | TEST                                                                                                                                                                                                                                                                                                                                                                                           |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users > Users**. <br>2. Next to a user, select **Edit**  <br>3. Ensure that the **This user is an agent** checkbox.exists.                                                                                                                                                                                                                                      |
-| UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users > Users**. <br>2. Ensure that the **Agent** column.exists.                                                                                                                                                                                                                                                                                                  |
-| UserAgentTableDataExpanderPlugin   | 1. In the Back Office, go to **Users > Users**. <br>2. Next to a non-agent user, select **Edit**. <br>3. Select the **This user is an agent** checkbox. <br>4. Select **Update**. This takes you to the *Users List* page with the message about the successful update displayed. <br>5. Ensure that in the **Agent** column, next to the user you've updated, the **Agent** tag is displayed. |
+| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a user, select **Edit**.  <br>3. Ensure that the **THIS USER IS AN AGENT** checkbox.exists.                                                                                                                                                                                                                                      |
+| UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Ensure that the **Agent** column.exists.                                                                                                                                                                                                                                                                                                  |
+| UserAgentTableDataExpanderPlugin   | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a non-agent user, select **Edit**. <br>3. Select the **THIS USER IS AN AGENT** checkbox. <br>4. Click **Update**. This takes you to the **USERS LIST** page with the message about the successful update displayed. <br>5. Ensure that in the **AGENT** column, next to the user you've updated, the **Agent** tag is displayed. |
 
 {% endinfo_block %}
 
@@ -144,11 +142,11 @@ Follow the steps below to install the feature frontend.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME         | VERSION          |
-|--------------|------------------|
-| Spryker Core | {{site.version}} |
+| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                                               |
+|--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                                            |
 
 ### 1) Install the required modules using Composer
 
@@ -170,7 +168,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-By default, in Spryker, posting a login form (where SecurityBlocker makes its check and blocks agents who made too many failed login attempts) is locale-independent. So, to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
+By default, in Spryker, posting a login form (where `SecurityBlocker` makes its check and blocks agents who made too many failed login attempts) is locale-independent. So, to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
 
 **src/Pyz/Yves/AgentPage/AgentPageConfig.php**
 
@@ -195,7 +193,7 @@ class AgentPageConfig extends SprykerAgentPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code. For example, `/de/agent/login_check` is the default value for the agent.
+Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code—for example, `/de/agent/login_check` is the default value for the agent.
 
 {% endinfo_block %}
 
@@ -204,7 +202,7 @@ Add environment configuration for agent security:
 | CONFIGURATION                                                              | SPECIFICATION                                                                                                                                     | NAMESPACE                                     |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the agent is blocked if the number of attempts is exceeded for agent.                       | Spryker\Shared\SecurityBlockerStorefrontAgent |
-| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL                | Specifies the TTL configuration, the period when number of unsuccessful tries will be counted for agent.                                          | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for agent.                                          | Spryker\Shared\SecurityBlockerStorefrontAgent |
 | SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempt an agent can make during the `SECURITY_BLOCKER_STOREFRONT:AGENT_BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerStorefrontAgent |
 
 **config/Shared/config_default.php**
@@ -369,7 +367,7 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 
 1. Open `https://mysprykershop.com/agent/login`.
 2. Ensure that the login form is displayed and that only a user with an agent role can log in.
-3. Go to `https://mysprykershop.com/agent/overview`
+3. Go to `https://mysprykershop.com/agent/overview`.
 4. Ensure that only the user with the agent role can access the page.
 5. Ensure that the agent can log out.
 

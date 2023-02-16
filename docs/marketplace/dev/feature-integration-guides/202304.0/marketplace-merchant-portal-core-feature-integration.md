@@ -27,8 +27,6 @@ To start feature integration, integrate the required features:
 
 ###  1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
 ```
@@ -276,7 +274,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that merchant users or users whose Acl Group does not have Back Office allowed Acl Group Reference cannot log in to the Back Office.
+Ensure that merchant users or users whose Acl Group does not have *Back Office allowed Acl Group Reference* cannot log in to the Back Office.
 
 {% endinfo_block %}
 
@@ -686,7 +684,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 5) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 data/import/common/common/glossary.csv
 
@@ -695,7 +693,7 @@ security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in atte
 security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
 
-Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -708,9 +706,9 @@ Follow the steps below to install the Merchant Portal Core feature frontend.
 ### Prerequisites
 
 Environment requirements:
-- NPM v6 (higher versions have problems with workspace)
+- NPM v6 (higher versions have problems with the workspace)
 - NodeJs v12-14
-- Yarn v2 (or latest Yarn v1)
+- Yarn v2 (or the latest Yarn v1)
 
 Spryker requirements:
 
@@ -723,8 +721,6 @@ To start builder integration, check versions of Spryker packages:
 | Product Relation (optional) | >= 2.4.3  |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/dashboard-merchant-portal-gui:"^1.4.0" --update-with-dependencies
@@ -754,13 +750,14 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Build navigation cache
+### 3) Build the navigation cache
 
 Execute the following command:
 
 ```bash
 console navigation:build-cache
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that Merchant Portal has the **Dashboard** menu.
@@ -770,7 +767,7 @@ Make sure that Merchant Portal has the **Dashboard** menu.
 
 ### 4) Set up Marketplace builder configs
 
-Add the following files to the root folder:
+1. Add the following files to the root folder:
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/angular.json
@@ -778,7 +775,7 @@ wget -O nx.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/nx.js
 wget -O .browserslistrc https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/.browserslistrc
 ```
 
-Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
+2. Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`):
 
 ```bash
 mv tsconfig.json tsconfig.base.json
@@ -786,7 +783,7 @@ wget -O tsconfig.yves.json https://raw.githubusercontent.com/spryker-shop/suite/
 wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tsconfig.mp.json
 ```
 
-Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
+3. Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
 Add the `tslint.mp.json` file:
 
@@ -794,19 +791,19 @@ Add the `tslint.mp.json` file:
 wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tslint.mp.json
 ```
 
-Install npm dependencies:
+4. Install npm dependencies:
 
 ```bash
 npm i rxjs@~7.4.0 zone.js@~0.11.4 @webcomponents/custom-elements@~1.3.1 @webcomponents/webcomponents-platform@~1.0.1 @webcomponents/webcomponentsjs@~2.4.0
 ```
 
-Install npm dev dependencies:
+5. Install npm dev dependencies:
 
 ```bash
 npm i -D @angular-builders/custom-webpack@~12.1.3 @angular-devkit/build-angular@~12.2.16 @angular/cli@~12.2.16 @angular/common@~12.2.16 @angular/compiler@~12.2.16 @angular/compiler-cli@~12.2.16 @angular/core@~12.2.16 @angular/language-service@~12.2.16 @angular/platform-browser@~12.2.16 @angular/platform-browser-dynamic@~12.2.16 @babel/plugin-proposal-class-properties@~7.10.4 @babel/plugin-transform-runtime@~7.10.5 @babel/preset-typescript@~7.10.4 @jsdevtools/file-path-filter@~3.0.2 @nrwl/cli@~12.10.1 @nrwl/jest@~12.10.1 @nrwl/tao@~12.10.1 @nrwl/workspace@~12.10.1 @spryker/oryx-for-zed@~2.11.3 @types/jest@~27.0.2 @types/node@~14.14.33 @types/webpack@~4.41.17 jest@~27.2.3 jest-preset-angular@~9.0.3 node-sass@~4.14.1 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~27.0.5 ts-node@~9.1.1 tslib@~2.0.0 typescript@~4.2.4
 ```
 
-Update `package.json` with the following fields:
+6. Update `package.json` with the following fields:
 
 **package.json**
 
@@ -838,7 +835,7 @@ Update `package.json` with the following fields:
 }
 ```
 
-For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
+7. For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to the updated `tsconfig`:
 
 **frontend/settings.js**
 
@@ -852,7 +849,7 @@ const globalSettings = {
 };
 ```
 
-Add a `.yarnrc.yml` file:
+8. Add the `.yarnrc.yml` file:
 
 **.yarnrc.yml**
 
@@ -868,7 +865,7 @@ plugins:
 yarnPath: .yarn/releases/yarn-2.3.3.js
 ```
 
-Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`:
+9. Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`:
 
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
@@ -877,17 +874,17 @@ wget -O .yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs https://raw.githubus
 wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/.yarn/releases/yarn-2.3.3.js
 ```
 
-Run commands from the root of the project:
+10. Run commands from the root of the project:
 
 ```bash
 npm i -g yarn @angular/cli@12.2.16
 ```
 
-Run `yarn -v` to check if the yarn has been installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
+11. Run `yarn -v` to check if the yarn has been installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
 
 `ng --version` should show Angular CLI: 12.2.16 version.
 
-Install project dependencies:
+12. Install project dependencies:
 
 ```bash
 yarn install
@@ -899,7 +896,7 @@ If you're getting `Missing write access to node_modules/mp-profile`, delete this
 
 {% endinfo_block %}
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
+13. Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
 
 ### 5) Install Marketplace builder
 
@@ -950,7 +947,7 @@ export default async (
 };
 ```
 
-### 6) Add files for the Merchant Portal entry point:
+### 6) Add files for the Merchant Portal entry point
 
 **public/MerchantPortal/index.php**
 
@@ -1019,7 +1016,7 @@ $bootstrap
 
 /**
  * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See the LICENSE file.
  */
 
 if (file_exists(__DIR__ . '/maintenance.marker')) {
@@ -1322,7 +1319,6 @@ Make sure the following pages do not open: `https://your-merchant-portal.domain/
 
 Add new modules to installer rules:
 
-
 **src/Pyz/Zed/Acl/AclConfig.php**
 
 ```php
@@ -1372,7 +1368,7 @@ Make sure that after executing `console setup:init-db`, the `user-merchant-porta
 
 ### 5) Update navigation
 
-Add the `My Account` and `Logout` sections to `navigation-secondary.xml`:
+1. Add the `My Account` and `Logout` sections to `navigation-secondary.xml`:
 
 **config/Zed/navigation-secondary.xml**
 
@@ -1397,7 +1393,8 @@ Add the `My Account` and `Logout` sections to `navigation-secondary.xml`:
 </config>
 ```
 
-Execute the following command:
+2. Execute the following command
+
 ```bash
 console navigation:build-cache
 ```

@@ -1,5 +1,5 @@
 ---
-title: Spryker Core Back Office feature integration
+title: Install the Spryker Core Back Office feature
 description: Learn how to integrate the Spryker Core Back Office feature into a Spryker project.
 last_updated: Feb 8, 2023
 template: feature-integration-guide-template
@@ -16,10 +16,9 @@ redirect_from:
   - /docs/en/back-office-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/spryker-core-back-office-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/spryker-core-back-office-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/spryker-core-back-office-feature-integration.html
 related:
     - title: Spryker Core Back Office feature walkthrough
       link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-spryker-core-back-office-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-spryker-core-back-office-feature.md -->
+{% include pbc/all/install-features/202304.0/install-the-spryker-core-back-office-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-spryker-core-back-office-feature.md -->

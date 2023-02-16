@@ -16,7 +16,7 @@ The _Product Restrictions_ feature lets merchants define the products that are a
 
 In terms of the [Merchant concept](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html), a *merchant* is the one who sells products on a marketplace and can set prices.
 
-Product Restrictions from a merchant to a buyer give merchants [another layer](/docs/scos/user/features/{{page.version}}/customer-access-feature-overview.html) of control over the information a customer can see in the shop application. Based on product restrictions, you can do the following actions:
+Product Restrictions from a merchant to a buyer give merchants [another layer](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-access-feature-overview.html) of control over the information a customer can see in the shop application. Based on product restrictions, you can do the following actions:
 
 * Create a list of products.
 * Hide the product information for the products (pricing, appearance in the search/filters).

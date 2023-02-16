@@ -678,7 +678,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 
-{% include pbc/all/glue-api-guides/add-items-to-a-guest-cart-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/add-items-to-a-guest-cart-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202212.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md -->
 
 
 

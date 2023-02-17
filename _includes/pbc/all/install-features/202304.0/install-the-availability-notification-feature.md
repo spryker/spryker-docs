@@ -113,7 +113,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AvailabilityNotificationSubscriber` is working:
+To verify that `AvailabilityNotificationSubscriber` is working, follow these steps:
 
 1. Add a new product and make it unavailable.
 2. As a customer, subscribe to its availability notifications on Yves.

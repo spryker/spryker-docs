@@ -37,7 +37,7 @@ Also, we offer the demo multi-shipment picking strategy. To use it, install the 
 composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.1.0" --update-with-dependencies
 ```
 
-Make sure that the following module have been installed:
+Make sure that the following module has been installed:
 
 | MODULE                                         | EXPECTED DIRECTORY                                                  |
 |------------------------------------------------|---------------------------------------------------------------------|
@@ -183,7 +183,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 </details>
 
 3. Then, add the `DummyPicking` subprocess to the `DummyPayment01` process as an example.
-Consider OMS configuration using `DummyPayment01` process as an example:
+Consider OMS configuration using the `DummyPayment01` process as an example:
 
 **config/Zed/oms/DummyPayment01.xml**
 
@@ -342,7 +342,7 @@ console data:import glossary
 | GeneratePickingListsCommandByOrderPlugin       | Generates the picking lists based on warehouse strategy.                                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
 | IsPickingFinishedConditionPlugin               | Checks if all picking lists are finished for the given sales order item.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
 | IsPickingListGenerationFinishedConditionPlugin | Checks if picking lists generation is finished for the given sales order item.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
-| IsPickingStartedConditionPlugin                | Checks if picking of at least one picking list is started for the given sales order item. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+| IsPickingStartedConditionPlugin                | Checks if picking at least one picking list is started for the given sales order item. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
 
 **\Pyz\Zed\Oms\OmsDependencyProvider.php**
 
@@ -481,7 +481,7 @@ To get a single pick list for a warehouse user:
 
 * `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
 
-To start a pick up operation by a warehouse user:
+To start a pickup operation by a warehouse user:
 
 * `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
 

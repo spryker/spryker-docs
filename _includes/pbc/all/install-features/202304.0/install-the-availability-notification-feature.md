@@ -456,7 +456,7 @@ If you have any other languages configured, the corresponding links must be avai
 
 ### 4) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | WIDGET                                     | DESCRIPTION                                                  | NAMESPACE                                              |
 |--------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------|
@@ -486,13 +486,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
 ```
 
-If you have a custom template, put `AvailabilityNotificationSubscriptionWidget` to your `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig` file:
+3. If you have a custom template, put `AvailabilityNotificationSubscriptionWidget` to your `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig` file:
 
 ```twig
 ...

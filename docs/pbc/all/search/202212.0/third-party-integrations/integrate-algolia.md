@@ -26,4 +26,5 @@ The Algolia app requires the following Spryker modules:
 TBD
 
 ## Next steps
+
 [Configure the Algolia app](/docs/pbc/all/search/{{site.version}}/third-party-integrations/configure-algolia.html) for your store.

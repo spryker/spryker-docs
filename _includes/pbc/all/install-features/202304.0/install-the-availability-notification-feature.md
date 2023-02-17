@@ -256,7 +256,7 @@ To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlug
 
 {% info_block infoBox %}
 
-You can define stores to Yves hosts mapping. This allows generating correct URLs (e.g. unsubscription URL) for multi-store setup.
+You can define stores to Yves hosts mapping. This allows generating correct URLs (e.g. unsubscription URL) for multi-store setup when product availability is shared between 2 or more stores.
 
 {% endinfo_block %}
 

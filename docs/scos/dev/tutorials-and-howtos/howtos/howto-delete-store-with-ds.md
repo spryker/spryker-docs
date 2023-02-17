@@ -44,7 +44,7 @@ vendor/bin/console scheduler:suspend
 ```
 
 
-### 3. Database. Cleaning dataф and configration in related database tables.
+### 3. Database. Cleaning data and configration in related database tables.
 
 The number of tables that use relation with the `spy_store` table may depend on the use of the functionality and depends on the installed modules.
 

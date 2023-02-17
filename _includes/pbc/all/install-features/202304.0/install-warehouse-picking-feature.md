@@ -31,7 +31,7 @@ Make sure that the following modules have been installed:
 | PickingListExtension   | vendor/spryker/picking-list-extension    |
 | PickingListsBackendApi | vendor/spryker/picking-lists-backend-api |
 
-Also, we offer the demo multi-shipment picking strategy, in order to use it install the following module:
+Also, we offer the demo multi-shipment picking strategy. To use it, install the following module:
 
 ```bash
 composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.1.0" --update-with-dependencies
@@ -121,11 +121,10 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-2. Configure OMS
+2. To configure OMS, add the `DummyPicking` subprocess that describes the warehouse picking in the system:
 
-First of all, add the `DummyPicking` sub-process that describes the warehouse picking in the system.
-
-**config/Zed/oms/DummySubprocess/DummyPicking.xml**
+<details>
+<summary markdown='span'>config/Zed/oms/DummySubprocess/DummyPicking.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -181,9 +180,10 @@ First of all, add the `DummyPicking` sub-process that describes the warehouse pi
 </statemachine>
 
 ```
+</details>
 
-As a seconds step add the `DummyPicking` sub-process to the `DummyPayment01` process as an example.
-Consider OMS configuration using `DummyPayment01` process as an example.
+3. Then, add the `DummyPicking` subprocess to the `DummyPayment01` process as an example.
+Consider OMS configuration using `DummyPayment01` process as an example:
 
 **config/Zed/oms/DummyPayment01.xml**
 
@@ -231,10 +231,12 @@ Consider OMS configuration using `DummyPayment01` process as an example.
 </statemachine>
 ```
 
+
 {% info_block warningBox "Verification" %}
 
-* Go to your demo store administration panel and navigate to the OMS section, you will find the process `DummyPayment01`, click on it to see the diagram.
-* Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
+1. Go to your demo store administration panel and navigate to the OMS section.
+2. To see the diagram, find and click on the `DummyPayment01` process.
+3. Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
 {% endinfo_block %}
 
@@ -251,7 +253,7 @@ Warehouse2,1,multi-shipment
 Warehouse3,0,multi-shipment
 ```
 
-In case you are using the marketplace setup:
+If you use the marketplace setup, use this:
 
 **data/import/common/common/marketplace/warehouse.csv**
 
@@ -266,9 +268,9 @@ Budget Cameras MER000005 Warehouse 1,1,multi-shipment
 Sony Experts MER000006 Warehouse 1,1,multi-shipment
 ```
 
-| Column                | REQUIRED? | Data Type | Data Example   | Data Explanation                                                     |
+| COLUMN                | REQUIRED? | DATA TYPE | DATA EXAMPLE   | DATA EXPLANATION                                                     |
 |-----------------------|-----------|-----------|----------------|----------------------------------------------------------------------|
-| name                  | mandatory | string    | Warehouse1     | Name of the warehouse.                                               |
+| name                  | mandatory | string    | Warehouse1     | The name of the warehouse.                                               |
 | is_active             | mandatory | bool      | 1              | Defines if the warehouse is active.                                  |
 | picking_list_strategy | optional  | string    | multi-shipment | Defines the picking generation strategy used for the given warehouse |
 
@@ -280,9 +282,7 @@ console data:import stock
 
 {% info_block warningBox “Verification” %}
 
-Make sure that:
-
-* The defined picking list strategies are applied correctly by finding them in the `spy_stock` database table.
+To make sure the defined picking list strategies are applied correctly, find them in the `spy_stock` database table.
 
 {% endinfo_block %}
 
@@ -428,7 +428,7 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 }
 ```
 
-4. To enable the Backend API, register the plugins:
+3. To enable the Backend API, register the plugins:
 
 | PLUGIN                                | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------|----------------------------------------------|---------------|----------------------------------------------------------------------|
@@ -464,12 +464,12 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-As a prerequisite, we have to pass the following steps:
+As a prerequisite, pass the following steps:
 
-* Attach a back office user to any warehouse you have in the system (use the [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html) guide).
+* Attach a Back Office user to any warehouse you have in the system. For this, use the [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html) guide.
 * Place an order in the system so that the product is in the warehouse where you added the user in the previous step.
 * Obtain the access token of the warehouse user.
-* Use the warehouse user access token as the request header `Authorization: Bearer {{your access token}}`.
+* Use the warehouse user access token as the request header: `Authorization: Bearer {{your access token}}`.
 
 Make sure that you can send the following requests:
 

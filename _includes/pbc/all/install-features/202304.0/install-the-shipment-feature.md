@@ -1,4 +1,7 @@
-**{% info_block errorBox %}
+
+
+
+{% info_block errorBox %}
 
 The following feature integration guide expects the basic feature to be in place.<br>The current feature integration
 guide only adds the following functionalities:
@@ -12,17 +15,18 @@ guide only adds the following functionalities:
 
 ## Install feature core
 
+Follow the steps below to install the Shipment feature core.
+
 ### Prerequisites
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME         | VERSION          |
-|--------------|------------------|
-| Spryker Core | {{site.version}} |
+
+| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
+|--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |  |
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/shipment:"{{site.version}}" --update-with-dependencies
@@ -42,7 +46,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -56,10 +60,6 @@ Make sure that the following changes have been applied by checking your database
 | DATABASE ENTITY           | TYPE  | EVENT   |
 |---------------------------|-------|---------|
 | spy_shipment_method_store | table | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -75,17 +75,15 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Import data
-
-#### Import shipment methods
+### 3) Import shipment methods
 
 {% info_block infoBox "Info" %}
 
-The following imported entities will be used as shipment methods in Spryker OS.
+The following imported entities are used as shipment methods in Spryker OS.
 
 {% endinfo_block %}
 
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import**
 
@@ -152,7 +150,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Enable the behaviors by registering the console commands:
+2. Enable the behaviors by registering the console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -186,7 +184,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import:shipment
@@ -203,7 +201,7 @@ and `spy_shipment_method_store` tables in the database.
 
 ### 4) Set up behavior
 
-Configure the data import to use your data on the project level.
+1. Configure the data import to use your data on the project level:
 
 **src/Pyz/Zed/ShipmentDataImport/ShipmentDataImportConfig**
 
@@ -235,7 +233,7 @@ class ShipmentDataImportConfig extends SprykerShipmentDataImportConfig
 }
 ```
 
-Configure shipment GUI module with money and store plugins.
+2. Configure shipment GUI module with money and store plugins:
 
 | PLUGIN                            | SPECIFICATION                                                                                              | PREREQUISITES | NAMESPACE                                             |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
@@ -280,18 +278,11 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
+Make sure you can complete the following actions in the Back Office:
 
-* You can see the list of shipment methods in the **Back Office > Administration >  Shipments > Delivery Methods**
-  section.
-* You can see information about the shipment method in the **Back Office > Administration >  Shipments > Delivery
-  Methods > View** section.
-* You can create the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > Create**
-  section.
-* You can edit the shipment method in the **Back Office > Administration >  Shipments > Delivery Methods > Edit**
-  section.
-* You can delete the shipment method in the **Back Office > Administration > Shipments > Delivery Methods > Delete**
-  section.
+1. Navigate to **Administration&nbsp;<span aria-label="and then">></span> Shipments&nbsp;<span aria-label="and then">></span> Delivery Methods**. The **Delivery Methods** page opens.
+2. Check that, in the **DELIVERY METHODS** table, the list of shipment methods is displayed.
+3. Check that for any shipment method of your choice, in the **Actions** column, you can click **View**, **Edit**, and **Delete** to complete a respective action.
 
 {% endinfo_block %}
 
@@ -317,7 +308,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 }
 ```
 
-Configure the sales order item shipment expander plugins:
+3. Configure the sales order item shipment expander plugins:
 
 | PLUGIN                          | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                                                       |
 |---------------------------------|----------------------------------------------|---------------|---------------------------------------------------------------------------------|

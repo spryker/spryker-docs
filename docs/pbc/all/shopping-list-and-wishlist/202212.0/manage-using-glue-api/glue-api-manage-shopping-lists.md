@@ -10,7 +10,6 @@ redirect_from:
   - /docs/managing-shopping-lists
   - /docs/en/managing-shopping-lists
   - /docs/scos/dev/glue-api-guides/202212.0/managing-shopping-lists/managing-shopping-lists.html
-  - /docs/pbc/all/shopping-list-and-wishlist/202212.0/manage-using-glue-api/glue-api-manage-shopping-lists.html
 related:
     - title: Glue API - Shopping Lists feature integration
       link: docs/pbc/all/shopping-list-and-wishlist/page.version/install-and-upgrade/integrate-the-shopping-lists-glue-api.html

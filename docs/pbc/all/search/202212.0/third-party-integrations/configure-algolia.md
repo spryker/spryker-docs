@@ -42,3 +42,38 @@ The index is now populated with data from your store:
 ![algolia-index-data](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-index-data.png)
 
 For details on the created index data, see [Indexes](/docs/pbc/all/search/{{page.version}}/third-party-integrations/algolia.html#indexes).
+
+#### (Optional) Adjust Algolia configuration to your needs
+
+Default Algolia app configuration mimics default Spryker search configuration. However, you may want to adjust some of those settings to your needs.
+
+##### Adjusting searchable attributes
+
+Algolia **Searchable attributes** configuration determines which attributes will be used for to find results while searching with a search query.
+
+Default fields for searchable attributes are:
+- `sku`
+- `name`
+- `description`
+- `keywords`
+
+To edit searchable attributes list open Algolia indices list, find all primary indices and open "Searchable attributes" section on index settings page. Edit searchable attributes list and click "Review and save settings". Check "Copy these settings to other indices and/or replicas" checkbox in the modal window that opened and click "Save settings".
+
+##### Adjusting facets list
+
+Algolia **Facets** configuration determines which attributes will be used for search faceting.
+
+Default attributes for faceting are:
+- `attributes.brand`
+- `attributes.color`
+- `attributes.storage_capacity`
+- `attributes.weight`
+- `category`
+- `label`
+- `prices`
+- `rating`
+
+Attribute `prices` is an object with nested fields so Algolia is creating facets for each nested field values effectively settings up faceting for all currencies and pricing modes present in product entities.
+
+To add new attributes for faceting, find all primary indices and open "Facets" section on index settings page. Edit list of attributes for faceting and click "Review and save settings". Check "Copy these settings to other indices and/or replicas" checkbox in the modal window that opened and click "Save settings".
+

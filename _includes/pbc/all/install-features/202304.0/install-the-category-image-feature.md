@@ -18,8 +18,6 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
 ```
@@ -141,7 +139,7 @@ Make sure that the following changes have been implemented in transfer objects:
 
 ### 3) Configure export to Redis
 
-To configure export to Redis, follow steps in the subsections below.
+To configure export to Redis, follow steps in the subsections.
 
 #### Set up event listeners
 
@@ -265,7 +263,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a category image is created, updated or deleted, it is exported or removed from Redis accordingly.
+Make sure that when a category image is created, updated, or deleted, it is exported or removed from Redis accordingly.
 
 {% endinfo_block %}
 
@@ -273,7 +271,7 @@ Make sure that when a category image is created, updated or deleted, it is expor
 | --- | --- | --- |
 | Redis | Category Image | `kv:category_image:en_us:1` |
 
-**An example example of expected data fragment**
+**An example of expected data fragment**
 
 ```json
 {
@@ -297,7 +295,7 @@ Make sure that when a category image is created, updated or deleted, it is expor
 
 {% info_block infoBox %}
 
-In this step, category template is configured to display category images.
+In this step, the category template is configured to display category images.
 
 {% endinfo_block %}
 
@@ -423,7 +421,6 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -446,8 +443,6 @@ To start feature integration, integrate the required features:
 | Category | {{site.version}} | |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies

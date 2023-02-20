@@ -24,7 +24,7 @@ composer require spryker-feature/alternative-products: "{{site.version}}" --upda
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -34,7 +34,7 @@ Make sure that the following modules were installed:
 | ProductAlternativeStorage | vendor/spryker/product-alternative-storage |
 {% endinfo_block %}
 
-### 2) Set up database achema and transfer objects
+### 2) Set up database schema and transfer objects
 
 1. Adjust the schema definition so that entity changes trigger the events.
 
@@ -545,7 +545,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure that the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |
@@ -558,6 +558,6 @@ Make sure that the following widgets were registered:
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [`product_label_store.csv`](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [`product_label_store.csv`](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 {% endinfo_block %}

@@ -13,13 +13,13 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Category | {{site.version}} | |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Category | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -400,13 +400,13 @@ To start feature integration, integrate the required features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Category | {{site.version}} | |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Category | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

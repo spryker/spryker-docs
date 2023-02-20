@@ -226,7 +226,7 @@ Configure export to Redis and Elasticsearch as follows.
 
 ### Set up event listeners
 
-With this step, you publish tables on change (create, edit, or delete) to the `spy_product_abstract_product_list_storage`, `spy_product_concrete_product_list_storage` and synchronize the data to Storage and Search.
+With this step, you publish tables on change (create, edit, or delete) to `spy_product_abstract_product_list_storage` and `spy_product_concrete_product_list_storage` and synchronize the data to Storage and Search.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -583,7 +583,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-4. Import data:
+3. Import data:
 
 ```bash
 console data:import product-list-category

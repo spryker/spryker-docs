@@ -260,11 +260,6 @@ Add following to `src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php`:
 ```php
 <?php
 
-/**
- * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
-
 namespace Pyz\Client\SearchHttp;
 
 use Spryker\Client\Catalog\Plugin\ConfigTransferBuilder\CategoryFacetConfigTransferBuilderPlugin;
@@ -348,7 +343,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 }
 ```
 
-#### Zed: Message Broker Dependencies
+#### Zed: Message Broker Configuration
 
 Add following to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
@@ -567,11 +562,6 @@ Add following to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
 
 ```php
 <?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
 
 namespace Pyz\Zed\SearchHttp;
 

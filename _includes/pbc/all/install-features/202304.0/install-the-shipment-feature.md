@@ -282,7 +282,7 @@ Make sure you can complete the following actions in the Back Office:
 
 1. Navigate to **Administration&nbsp;<span aria-label="and then">></span> Shipments&nbsp;<span aria-label="and then">></span> Delivery Methods**. The **Delivery Methods** page opens.
 2. Check that, in the **DELIVERY METHODS** table, the list of shipment methods is displayed.
-3. Check that for any shipment method of your choice, in the **Actions** column, you can click **View**, **Edit**, and **Delete** to complete a respective action.
+3. Check that, for any shipment method of your choice, in the **Actions** column, you can click **View**, **Edit**, and **Delete** to complete a respective action.
 
 {% endinfo_block %}
 

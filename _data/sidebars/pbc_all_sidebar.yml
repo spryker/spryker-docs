@@ -893,6 +893,8 @@ entries:
                     url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-order-management-feature.html
                   - title: Reclamations
                     url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-reclamations-feature.html
+                  - title: Quick Add to Cart + Non-splittable Products
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
               - title: Install Glue API
                 nested:
                   - title: Checkout
@@ -986,7 +988,7 @@ entries:
           - title: Disable split delivery on the Storefront
             url: /docs/pbc/all/order-management-system/disable-split-delivery-on-the-storefront.html
           - title: Email invoices using BCC
-            url: /docs/pbc/all/order-management-system/email-invoices-using-bcc.html            
+            url: /docs/pbc/all/order-management-system/email-invoices-using-bcc.html
 
           - title: Third-party integrations
             nested:

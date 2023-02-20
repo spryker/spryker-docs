@@ -505,7 +505,7 @@ To get a single picking list item for a particular picking list, send the reques
 
 * `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
 
-To pick the picking list items, the endpoint works in a bulk mode, send the request:
+To pick the picking list items, send the following request. The endpoint works in a bulk mode:
 
 * `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
 

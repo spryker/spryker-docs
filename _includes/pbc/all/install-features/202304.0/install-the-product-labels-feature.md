@@ -264,7 +264,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that following happens:
+Ensure that following is true:
 * After creating a product label, you can find the corresponding record in the `spy_product_label_dictionary_storage` table.
 * After assigning a product label to a product, the corresponding product record contains the assigned label in the `spy_product_abstract_label_storage` table.
 
@@ -449,7 +449,7 @@ Ensure that the product label new works:
 
 1. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**. 
 2. To create a product, click **Create a Product**.
-3. In **NEW FROM** and **NEW TO** fields, enter dates so that the current date is between the entered ones.
+3. In the **NEW FROM** and **NEW TO** fields, enter dates so that the current date is between the entered ones.
 4. Clisk **Save**.
 5. On the Storefront, check that the product is displayed with the new product label.
 

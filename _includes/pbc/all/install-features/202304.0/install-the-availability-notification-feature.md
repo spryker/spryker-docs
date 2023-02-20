@@ -116,7 +116,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 To verify that `AvailabilityNotificationSubscriber` is working, follow these steps:
 
 1. Add a new product and make it unavailable.
-2. As a customer, subscribe to its availability notifications on Yves.
+2. As a customer, subscribe to its availability notifications on the Storefront.
 3. Make the product available.
 4. Check your mailbox for the email about the product's availability.
 
@@ -241,8 +241,9 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 To verify that `AvailabilityNotificationAnonymizerPlugin` works:
 1. Add a new product.
 2. On the Storefront, as a company user, subscribe to its availability notifications.
-3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.</li><li>Delete this user.
-4. Check that the line is deleted from the `spy_availability_notification_subscription` table.
+3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.
+4. Delete the company user that is subscribed to the product's availability.
+5. Check that the line is deleted from the `spy_availability_notification_subscription` table.
 
 To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` works:
 1. Add a new product.

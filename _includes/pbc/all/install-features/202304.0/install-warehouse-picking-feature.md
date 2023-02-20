@@ -31,13 +31,13 @@ Make sure that the following modules have been installed:
 | PickingListExtension   | vendor/spryker/picking-list-extension    |
 | PickingListsBackendApi | vendor/spryker/picking-lists-backend-api |
 
-Also, we offer the demo multi-shipment picking strategy. To use it, install the following module:
+Also, we offer the demo multi-shipment picking strategy, in order to use it install the following module:
 
 ```bash
 composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.1.0" --update-with-dependencies
 ```
 
-Make sure that the following module has been installed:
+Make sure that the following module have been installed:
 
 | MODULE                                         | EXPECTED DIRECTORY                                                  |
 |------------------------------------------------|---------------------------------------------------------------------|
@@ -94,7 +94,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 3) Set up configuration
 
-1. To make the `picking-lists` and `picking-list-items` resources protected, adjust the protected paths configuration:
+1. To make the `picking-lists` and `picking-list-items` resources protected, adjust the protected paths' configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -121,10 +121,11 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-2. To configure OMS, add the `DummyPicking` subprocess that describes the warehouse picking in the system:
+2. Configure OMS
 
-<details>
-<summary markdown='span'>config/Zed/oms/DummySubprocess/DummyPicking.xml</summary>
+First of all, add the `DummyPicking` sub-process that describes the warehouse picking in the system.
+
+**config/Zed/oms/DummySubprocess/DummyPicking.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -180,10 +181,9 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 </statemachine>
 
 ```
-</details>
 
-3. Then, add the `DummyPicking` subprocess to the `DummyPayment01` process as an example.
-Consider OMS configuration using the `DummyPayment01` process as an example:
+As a seconds step add the `DummyPicking` sub-process to the `DummyPayment01` process as an example.
+Consider OMS configuration using `DummyPayment01` process as an example.
 
 **config/Zed/oms/DummyPayment01.xml**
 
@@ -231,12 +231,11 @@ Consider OMS configuration using the `DummyPayment01` process as an example:
 </statemachine>
 ```
 
-
 {% info_block warningBox "Verification" %}
 
-1. Go to your demo store administration panel and navigate to the OMS section.
-2. To see the diagram, find and click on the `DummyPayment01` process.
-3. Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
+Make sure that the OMS transition diagram shows expected transitions:
+* In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**, you will find the process `DummyPayment01`, click on it to see the diagram.
+* Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
 {% endinfo_block %}
 
@@ -253,7 +252,7 @@ Warehouse2,1,multi-shipment
 Warehouse3,0,multi-shipment
 ```
 
-If you use the marketplace setup, use this:
+In case you are using the marketplace setup:
 
 **data/import/common/common/marketplace/warehouse.csv**
 
@@ -268,9 +267,9 @@ Budget Cameras MER000005 Warehouse 1,1,multi-shipment
 Sony Experts MER000006 Warehouse 1,1,multi-shipment
 ```
 
-| COLUMN                | REQUIRED? | DATA TYPE | DATA EXAMPLE   | DATA EXPLANATION                                                     |
+| Column                | REQUIRED? | Data Type | Data Example   | Data Explanation                                                     |
 |-----------------------|-----------|-----------|----------------|----------------------------------------------------------------------|
-| name                  | mandatory | string    | Warehouse1     | The name of the warehouse.                                               |
+| name                  | mandatory | string    | Warehouse1     | Name of the warehouse.                                               |
 | is_active             | mandatory | bool      | 1              | Defines if the warehouse is active.                                  |
 | picking_list_strategy | optional  | string    | multi-shipment | Defines the picking generation strategy used for the given warehouse |
 
@@ -282,7 +281,9 @@ console data:import stock
 
 {% info_block warningBox “Verification” %}
 
-To make sure the defined picking list strategies are applied correctly, find them in the `spy_stock` database table.
+Make sure that:
+
+* The defined picking list strategies are applied correctly by finding them in the `spy_stock` database table.
 
 {% endinfo_block %}
 
@@ -342,7 +343,7 @@ console data:import glossary
 | GeneratePickingListsCommandByOrderPlugin       | Generates the picking lists based on warehouse strategy.                                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
 | IsPickingFinishedConditionPlugin               | Checks if all picking lists are finished for the given sales order item.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
 | IsPickingListGenerationFinishedConditionPlugin | Checks if picking lists generation is finished for the given sales order item.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
-| IsPickingStartedConditionPlugin                | Checks if picking at least one picking list is started for the given sales order item. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+| IsPickingStartedConditionPlugin                | Checks if picking of at least one picking list is started for the given sales order item. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
 
 **\Pyz\Zed\Oms\OmsDependencyProvider.php**
 
@@ -428,7 +429,7 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 }
 ```
 
-3. To enable the Backend API, register the plugins:
+4. To enable the Backend API, register the plugins:
 
 | PLUGIN                                | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------|----------------------------------------------|---------------|----------------------------------------------------------------------|
@@ -464,24 +465,24 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-As a prerequisite, pass the following steps:
+As a prerequisite, we have to pass the following steps:
 
-* Attach a Back Office user to any warehouse you have in the system. For this, use the [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html) guide.
-* Place an order in the system so that the product is in the warehouse where you added the user in the previous step.
-* Obtain the access token of the warehouse user.
-* Use the warehouse user access token as the request header: `Authorization: Bearer {{your access token}}`.
+1. Attach a back office user to any warehouse you have in the system (use the [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html) guide).
+2. Place an order in the system so that the product is in the warehouse where you added the user in the previous step.
+3. Obtain the access token of the warehouse user.
+4. Use the warehouse user access token as the request header `Authorization: Bearer {{your access token}}`.
 
 Make sure that you can send the following requests:
 
-To get a collection of available picking lists for a warehouse user:
+To get a collection of available picking lists for a warehouse user, send the request:
 
 * `GET https://glue-backend.mysprykershop.com/picking-lists`
 
-To get a single pick list for a warehouse user:
+To get a single picking list for a warehouse user, send the request:
 
 * `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
 
-To start a pickup operation by a warehouse user:
+To start a pick up operation by a warehouse user, send the request:
 
 * `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
 
@@ -496,15 +497,15 @@ To start a pickup operation by a warehouse user:
      }
      ```
 
-To get a collection of the pick list items for a particular pick list:
+To get a collection of the picking list items for a particular picking list, send the request:
 
 * `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`
 
-To get a single pick list item for a particular pick list:
+To get a single picking list item for a particular picking list, send the request:
 
 * `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
 
-To pick the picking list items, the endpoint works in a bulk mode:
+To pick the picking list items, the endpoint works in a bulk mode, send the request:
 
 * `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
 

@@ -18,8 +18,6 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/alternative-products: "{{site.version}}" --update-with-dependencies
 ```
@@ -452,8 +450,6 @@ To start feature integration, integrate the required features:
 | Product | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/alternative-products: "^{{site.version}}" --update-with-dependencies

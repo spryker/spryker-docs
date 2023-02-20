@@ -17,8 +17,6 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
 ```
@@ -38,8 +36,6 @@ Ensure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
-
-Set up database schema and transfer objects as follows:
 
 1. For entity changes to trigger events, adjust the schema definition:
 
@@ -185,8 +181,6 @@ Ensure that the following changes have been triggered in transfer objects:
 
 ### 3) Set up behavior
 
-Set up the following behaviors:
-
 1. Set up publishers:
 
 | PLUGIN                                          | SPECIFICATION                                                                                                                                                          | PREREQUISITES | NAMESPACE |
@@ -270,14 +264,13 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following:
-
+Ensure that following happens:
 * After creating a product label, you can find the corresponding record in the `spy_product_label_dictionary_storage` table.
 * After assigning a product label to a product, the corresponding product record contains the assigned label in the `spy_product_abstract_label_storage` table.
 
 {% endinfo_block %}
 
-1. Setup regenerate and resync features by setting up the following plugins:
+2. Set up, regenerate, and resync features by setting up the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -464,8 +457,6 @@ Ensure that the product label new works:
 
 ### 4) Import data
 
-Follow the steps to import product label data:
-
 {% info_block infoBox "Info" %}
 
 The following imported entities are used as product labels in Spryker.
@@ -561,20 +552,18 @@ Ensure that the configured data has been added to the `spy_product_label` and  `
 
 ## Install feature frontend
 
-Follow the steps below to install the feature front end.
+Follow the steps below to install the feature frontend.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{site.version}} |
-| Product | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE| 
+|---|---|---|
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Product | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html)|
 
 ### 1) Install the required modules using Composer
-
-To install the required modules:
 
 ```bash
 composer require "spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
@@ -590,8 +579,6 @@ Ensure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up widgets
-
-Set up widgets as follows:
 
 1. Register the following plugins to enable widgets:
 

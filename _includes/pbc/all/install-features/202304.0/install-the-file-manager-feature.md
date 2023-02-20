@@ -17,8 +17,6 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/file-manager:"{{site.version}}" --update-with-dependencies
 ```
@@ -38,7 +36,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up the database schema
 
-Adjust the schema definition so entity changes trigger events:
+1. Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/FileManager/Persistence/Propel/Schema/spy_file_manager.schema.xml**
 
@@ -86,7 +84,7 @@ Adjust the schema definition so entity changes trigger events:
 </database>
 ```
 
-Apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -149,7 +147,7 @@ Ensure the following transfers have been created:
 
 ## 3) Set up the configuration
 
-Add the following configuration to your project:
+3. Add the following configuration to your project:
 
 | CONFIGURATION                                  | SPECIFICATION         | NAMESPACE                     |
 |------------------------------------------------|-----------------------|-------------------------------|
@@ -168,7 +166,7 @@ $config[FileManagerGuiConstants::DEFAULT_FILE_MAX_SIZE] = '10M';
 
 ### 4) Import data
 
-Prepare import data according to your requirements using demo data:
+repare import data according to your requirements using demo data:
 
 **data/import/common/common/mime_type.csv**
 
@@ -261,11 +259,7 @@ Make sure that the imported data is added to the `spy_mime_type` table.
 
 {% endinfo_block %}
 
-### 5) Set up behavior
-
-To set up bheavior, follow the steps in the subsections below.
-
-#### Set up storage configuration
+### 5) Set up storage configuration
 
 **src/Pyz/Zed/FileManagerStorage/FileManagerStorageConfig.php**
 
@@ -325,7 +319,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-#### Set up the following behaviors
+### 6) Set up the following behaviors
 
 | PLUGIN                                            | DESCRIPTION                                                                                                        | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|

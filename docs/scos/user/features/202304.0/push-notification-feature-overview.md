@@ -32,7 +32,7 @@ The following sequence diagram shows how sending and receiving push notification
 
 1. A user opens a page that wants to send push notifications. The website installs a service worker, which is permanently saved by the browser and used later to display push notifications.
 2. The website displays an authorization prompt to the user.
-3. If the user accepts to receive push notifications, the browser contacts its own push service—for example, Mozilla Push Service or Google Firebase Cloud Messaging (FCM)—to create a new mailbox, a secret URL called an endpoint. Anyone who knows that URL can send push notifications to that browser.
+3. If the user accepts to receive push notifications, the browser contacts its own push service—for example, Mozilla Push Service or Google Firebase Cloud Messaging (FCM)—to create a new mailbox, a secret URL called an endpoint. Anyone who knows this URL can send push notifications to that browser.
 4. The browser gives the endpoint to the web page through a Javascript callback, and the endpoint is sent to the Spryker Cloud Commerce Operation System (SCCOS) application server for storage.
 5. To send a notification, the SCCOS application server contacts the browser push service with an HTTP POST request. The request URL is the endpoint of the recipient. The browser is constantly connected to its own push service and fetches new notifications.
 6. The service worker is activated by the push message and is responsible for displaying the web notifications to the user.

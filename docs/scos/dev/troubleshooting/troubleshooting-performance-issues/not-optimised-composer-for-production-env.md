@@ -3,7 +3,8 @@ title: Not optimised composer for Production env
 description: Not optimised composer for Production env
 template: troubleshooting-guide-template
 ---
-
+Coming soon
+<!---
 ## Problem
 
 All pages are slow on Production.
@@ -56,3 +57,4 @@ Pretty impressive for only following the performance guidelines.
 
 
 Of course, everything comes with its own price, so please check trades-offs on the official website - [Autoloader optimization - Composer](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-1-class-map-generation)
+--->

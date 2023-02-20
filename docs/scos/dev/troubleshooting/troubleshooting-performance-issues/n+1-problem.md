@@ -4,6 +4,9 @@ description: N+1 problem
 template: troubleshooting-guide-template
 ---
 
+Coming soon
+<!---
+Link in C:\Dev\spryker-docs\docs\scos\dev\troubleshooting\troubleshooting-performance-issues\external-calls-several-calls-to-zed.md
 ## N+1 problem
 
 Some actions, parts of website or all website is slow.
@@ -71,3 +74,4 @@ Case: add to cart in B2B store
 - Order by “calls“ and/or “time“
 TODO: Add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3682566948/N+1+Problem
 - Optimise calls and do ideally 1 instead of N calls.
+--->

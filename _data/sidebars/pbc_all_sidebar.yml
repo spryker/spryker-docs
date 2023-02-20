@@ -1086,6 +1086,15 @@ entries:
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
                   - title: PriceProductVolumeGui
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
+          - title: Import and export data
+            url: /docs/pbc/all/price-management/import-and-export-data/import-of-prices.html
+            nested:
+              - title: currency.csv
+                url: /docs/pbc/all/price-management/import-and-export-data/file-details-currency.csv.html
+              - title: product_price_schedule.csv
+                url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html
+              - title: product_price.csv
+                url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html                                
           - title: Manage in the Back Office
             nested:
               - title: Create scheduled prices

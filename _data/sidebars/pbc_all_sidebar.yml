@@ -919,8 +919,6 @@ entries:
                 nested:
                   - title: Change the state of order items
                     url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/change-the-state-of-order-items.html
-                  - title: Create reclamations
-                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/create-reclamations.html
                   - title: Commente orders
                     url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/comment-orders.html
                   - title: Create returns
@@ -928,7 +926,7 @@ entries:
                   - title: Edit billing addresses in orders
                     url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html
                   - title: Add and remove custom order references
-                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/add-and-removing-custom-order-references.html
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html
                   - title: Edit shipments
                     url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/edit-shipments.html
                   - title: View returns of an order
@@ -1094,7 +1092,7 @@ entries:
               - title: product_price_schedule.csv
                 url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html
               - title: product_price.csv
-                url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html                                
+                url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html
           - title: Manage in the Back Office
             nested:
               - title: Create scheduled prices

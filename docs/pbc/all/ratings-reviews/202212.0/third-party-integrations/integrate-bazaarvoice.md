@@ -31,23 +31,7 @@ The BazaarVoice app requires the following Spryker modules:
 
 To integrate Bazaarvoice, follow these steps:
 
-### 1. Connect Bazaarvoice
-
-1. In your store's Back Office, go to **Apps > Catalog**.
-2. Click **Bazaarvoice**.
-3. In the top right corner of the Bazaarvoice app details page, click **Connect app**.
-4. In the top right corner of the Bazaarvoice app details page, click **Configure**.
-5. In the **Configure** pane, enter the credentials you received from Bazaarvoice.
-
-That's it. You have integrated the Bazaarvoice app into your store. It usually takes Bazaarvoice a few days to process your product feed. Therefore, you should see the external ratings and reviews from Bazaarvoice in about 2-3 days after you integrated the app.
-
-{% info_block infoBox "Info" %}
-
-You can do the administration work on the Bazaarvoice reviews from the [Bazaarvoice portal](https://portal.bazaarvoice.com/signin?ref=spryker-documentation). For example, you can approve individual reviews. See [Workbench overview](https://knowledge.bazaarvoice.com/wp-content/brandedge-pro-wb/en_US/basics/workbench_overview.html#log-in-to-workbench?ref=spryker-documentation) for details on how you can manage reviews from the Bazaarvoice portal.
-
-{% endinfo_block %}
-
-### 2. Add Bazaarvoice domain to your allowlist
+### 1. Add Bazaarvoice domain to your allowlist
 
 To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist. 
 
@@ -72,7 +56,7 @@ image:
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
 ```
 
-### 3. Add markup to custom templates
+### 2. Add markup to custom templates
 
 The Bazaarvoice app takes data on products from the Storefront pages (for example, Product Detail page, Catalog page).
 To get necessary data from the pages, schemas from [Schema.org](https://schema.org/) are used.
@@ -228,7 +212,7 @@ Example:
 </section>
 ```
 
-### 4. Configure Message Broker
+### 3. Configure Message Broker
 
 Add the following configuration to `config/Shared/common/config_default.php`:
 ```php

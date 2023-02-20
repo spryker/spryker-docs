@@ -238,13 +238,13 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AvailabilityNotificationAnonymizerPlugin` is working:
+To verify that `AvailabilityNotificationAnonymizerPlugin` works:
 1. Add a new product.
 2. On the Storefront, as a company user, subscribe to its availability notifications.
 3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.</li><li>Delete this user.
 4. Check that the line is deleted from the `spy_availability_notification_subscription` table.
 
-To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` is working:
+To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` works:
 1. Add a new product.
 2. On the Storefront, as a company user, subscribe to its availability notifications.
 3. On the Storefront, go to account overview > *Newsletters*.

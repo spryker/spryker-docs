@@ -4092,8 +4092,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
         - title: "HowTo: Implement customer approval process based on a generic state machine"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
-        - title: "HowTo: Emailing invoices using BCC"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
         nested:

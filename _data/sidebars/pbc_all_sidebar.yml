@@ -985,6 +985,9 @@ entries:
               url: /docs/pbc/all/order-management-system/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
           - title: Disable split delivery on the Storefront
             url: /docs/pbc/all/order-management-system/disable-split-delivery-on-the-storefront.html
+          - title: Email invoices using BCC
+            url: /docs/pbc/all/order-management-system/email-invoices-using-bcc.html            
+
           - title: Third-party integrations
             nested:
               - title: NEKOM CC GmbH

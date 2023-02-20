@@ -49,7 +49,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up the database schema and transfer objects
 
-Adjust the schema definition so that entity changes trigger the events:
+1. Adjust the schema definition so that entity changes trigger the events:
 
 **src/Pyz/Zed/MerchantProduct/Persistence/Propel/Schema/spy_merchant_product_abstract.schema.xml**
 
@@ -70,7 +70,7 @@ Adjust the schema definition so that entity changes trigger the events:
 </database>
 ```
 
-Apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -399,7 +399,7 @@ Make sure that data contains `merchant_references` for merchant products in `spy
 
 ### 6) Import merchant product data
 
-Prepare your data according to your requirements using the demo data:
+1. Prepare your data according to your requirements using the demo data:
 
 <details>
 <summary markdown='span'>data/import/common/common/marketplace/merchant_product.csv</summary>
@@ -551,7 +551,7 @@ sku,merchant_reference,is_shared
 | merchant_reference | &check;      | string    | roan-gmbh-und-co-k-g | Merchant identifier.                                         |
 | is_shared          | &check;      | string    | 1                    | Defines if other merchant can create product offers for this merchant product. |
 
-Register the following plugins to enable data import:
+2. Register the following plugins to enable data import:
 
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
 | ------------------ | ----------------- | --------- | -------------------------- |
@@ -598,7 +598,7 @@ actions:
     source: data/import/common/common/marketplace/merchant_product.csv
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import merchant-product
@@ -616,7 +616,7 @@ Follow the steps below to install the Marketplace Product feature frontend.
 
 ### 1) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
 | ----------- | ----------- | ---------- | --------- |
@@ -646,7 +646,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -654,15 +654,15 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that for the merchant products, you can see the merchant name on the product details page.
-
-Make sure that when you add a merchant product to the cart, it has the **Sold By** widget displayed on the cart page.
+Make sure that the following is true:
+* For the merchant products, you can see the merchant name on the product details page.
+* When you add a merchant product to the cart, it has the **Sold By** widget displayed on the cart page.
 
 {% endinfo_block %}
 
 ### 2) Add Yves translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -675,7 +675,7 @@ product.filter.merchant_name,Merchant,en_US
 product.filter.merchant_name,Händler,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary

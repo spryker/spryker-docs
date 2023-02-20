@@ -26,7 +26,6 @@ To start feature integration, integrate the required features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-product-offer:"{{page.version}}" --update-with-dependencies
@@ -146,7 +145,7 @@ console translator:generate-cache
 
 ### 4) Configure export to Redis and Elasticsearch
 
-To configure export to Redis and Elasticsearch, take the steps in the following subsections:
+To configure export to Redis and Elasticsearch, take the steps in the following subsections.
 
 #### Set up publisher plugins
 
@@ -158,8 +157,8 @@ To configure export to Redis and Elasticsearch, take the steps in the following 
 | ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                         |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer |
 | MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.            |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
 | MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant |
-| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer |
-| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update, and delete product offer events.                                                                |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update, and delete product offer store events.                                                          |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore |
 | MerchantProductOfferSearchPublisherTriggerPlugin        | Allows publishing or republishing product offer search data manually.                                                                        |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher |
 | ProductOfferPublisherTriggerPlugin                      | Allows publishing or republishing product offer data manually.                                                                               |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher |
 
@@ -248,7 +247,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block infoBox %}
 
-In this step, you enable publishing of `spy_merchant` and `spy_product_offer` changes (create, update and delete) to `spy_product_abstract_page_search` and `spy_product_concrete_page_search` and synchronization of data to Search.
+In this step, you enable the publishing of `spy_merchant` and `spy_product_offer` changes (create, update, and delete) to `spy_product_abstract_page_search` and `spy_product_concrete_page_search` and synchronization of data to Search.
 
 {% endinfo_block %}
 
@@ -348,7 +347,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 #### Set up, regenerate, and resync features
 
-Set up the following plugins:
+1. Set up the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------------- | --------------- | ---------- | ---------------- |
@@ -381,7 +380,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-Configure synchronization storage:
+2. Configure synchronization storage:
 
 **src/Pyz/Zed/ProductOfferStorage/ProductOfferStorageConfig.php**
 
@@ -416,7 +415,7 @@ class ProductOfferStorageConfig extends SprykerProductOfferStorageConfig
 }
 ```
 
-Configure synchronization search
+3. Configure synchronization search
 
 **src/Pyz/Zed/MerchantProductOfferSearch/MerchantProductOfferSearchConfig.php**
 
@@ -450,7 +449,7 @@ class MerchantProductOfferSearchConfig extends SprykerMerchantProductOfferSearch
 
 {% info_block warningBox "Verification" %}
 
-Make sure that after setting up the event listeners, the following commands do the following:
+Make sure that after setting up the event listeners, these commands do the following:
 
 * `console sync:data product_concrete_product_offers` exports data from `spy_product_concrete_product_offers_storage` table to Redis.
 * `console sync:data product_offer` exports data from `spy_product_offer_storage` table to Redis.
@@ -466,7 +465,7 @@ Make sure that when the following entities get updated through the ORM, the corr
 
 ### 5) Import data
 
-Prepare your data according to your requirements using the demo data:
+1. Prepare your data according to your requirements using the demo data:
 
 <details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
@@ -1048,7 +1047,7 @@ offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 | valid_from              |           | String    | 2020-01-01   | Date since which the product offer is valid. |
 | valid_to                |           | String    | 2020-01-01   | Date until which the product offer is valid.  |
 
-Register the following plugins to enable data import:
+2. Register the following plugins to enable data import:
 
 | PLUGIN | SPECIFICATION  | PREREQUISITES | NAMESPACE |
 | ------------------ |----------------| ---------- | ---------------------- |
@@ -1113,7 +1112,7 @@ actions:
     source: data/import/common/common/marketplace/product_offer_validity.csv
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import merchant-product-offer
@@ -1123,7 +1122,7 @@ console data:import product-offer-validity
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure the following is true:
 * The product offer data is attached to merchants in `spy_product_offer`.
 * The product offer data is attached to stores in `spy_product_offer_store`.
 * The product offer validity data is correctly imported in `spy_product_offer_validity`.
@@ -1519,17 +1518,14 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure the following is true:
 * A default product offer is given when retrieving product concrete data.
 * Validity data is saved when saving a product offer.
 * Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
 * The Merchant column is in the Product Offers list in `ProductOfferGui`.
 * The console command invalidates expired product offers and reactivates product offers that are within their validity dates.
 
-Make sure that when a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages.
-
-It means the following:
-
+Make sure that when a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages. It means the following:
 * If a merchant gets deactivated, `ProductAbstract` products that are on the catalog search only because they have a product offer from that merchant get removed.
 * If a product offer gets created, and the `ProductAbstract` product related to it is not available on catalog search, it gets available.
 
@@ -1537,7 +1533,7 @@ It means the following:
 
 ### 7) Configure navigation
 
-Add product offers section to marketplace section of `navigation.xml`:
+1. Add product offers section to marketplace section of `navigation.xml`:
 
 **config/Zed/navigation.xml**
 
@@ -1558,7 +1554,7 @@ Add product offers section to marketplace section of `navigation.xml`:
 </config>
 ```
 
-Execute the following command:
+2. Execute the following command:
 
 ```bash
 console navigation:build-cache
@@ -1601,7 +1597,7 @@ Verify that the following modules have been installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -1620,7 +1616,7 @@ merchant_product_offer_widget.merchant_name,Merchant,en_US
 merchant_product_offer_widget.merchant_name,Händler,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -1633,8 +1629,6 @@ Make sure that the configured data is added to the `spy_glossary_key` and `spy_g
 {% endinfo_block %}
 
 ### 3) Enable controllers
-
-Enable controllers as follows:
 
 Register the following route provider on the Storefront:
 
@@ -1718,7 +1712,7 @@ Make sure that the following widgets have been registered:
 
 | MODULE | TEST |
 | ----------------- | ----------------- |
-| MerchantProductOfferWidget       | Go to a product concrete details page that has offers. You cana see that the default offer is selected, and the widget is displayed. |
+| MerchantProductOfferWidget       | Go to a product concrete details page that has offers. You can see that the default offer is selected, and the widget is displayed. |
 | MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders a product offers list after performing a product search.                    |
 
 {% endinfo_block %}

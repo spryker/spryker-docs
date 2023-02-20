@@ -62,7 +62,9 @@ docker/sdk bootstrap deploy.dev.yml
 
 ## 2. Update the hosts
 
-Update `C:\Windows\System32\drivers\etc\hosts` using the instructions provided in the output of the previous step.
+Update `C:\Windows\System32\drivers\etc\hosts` using the instructions provided in the output of the previous step. The instructions should be similar to the following:
+
+![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
 
 ## 3. Build and start the instance
 
@@ -70,16 +72,6 @@ Update `C:\Windows\System32\drivers\etc\hosts` using the instructions provided i
 docker/sdk up
 ```
 
-You can now access your project using the following endpoints:
-
-* Storefront: `yves.de.spryker.local`
-* Back Office: `backoffice.de.spryker.local`
-
-
-{% info_block infoBox "Info" %}
-
-If you see `.de.` in your URL, the application is store-specific. By default, Spryker comes with three stores: *de*, *at*, and *us*.
-
-{% endinfo_block %}
+The project is now running. For the full list of the project's endpoints, see `http://spryker.local`.
 
 For detailed installation instructions, start with [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).

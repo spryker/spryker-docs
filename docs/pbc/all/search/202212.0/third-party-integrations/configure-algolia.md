@@ -65,8 +65,7 @@ To edit searchable attributes list open Algolia indices list, find all primary i
 
 ### Adjusting facets list
 
-ADD HERE THE ALGOLIA-FACETS PICTURE
-
+![algolia-facets](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-facets.png)
 
 Algolia **Facets** configuration determines which attributes will be used for search faceting.
 
@@ -84,7 +83,7 @@ To add new attributes for faceting, find all primary indices and open **Facets**
 
 ### Custom Ranking and Sorting
 
-ADD HERE THE ALGOLIA-RANKING PICTURE
+![algolia-ranking](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-ranking.png)
 
 
 Algolia **Ranking and Sorting** configuration determine which products will be shown before others when customers search your catalog. Spryker creates a **Popularity** index where you can use Product properties as ranking or sorting attributes. Learn more about Custom Ranking and Sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).

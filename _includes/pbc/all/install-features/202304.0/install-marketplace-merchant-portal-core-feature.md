@@ -98,7 +98,7 @@ Set up behavior as follows:
 |---|---| --- |---|
 | MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security    |
 | BooleanToStringTwigPlugin | Adds a new Twig function for converting Boolean to String. |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig |
-| ZedUiNavigationTwigPlugin   Adds a new Twig function for rendering Navigation using web components.      |  | Spryker\Zed\ZedUi\Communication\Plugin  |
+| ZedUiNavigationTwigPlugin | Adds a new Twig function for rendering Navigation using web components.      |  | Spryker\Zed\ZedUi\Communication\Plugin  |
 | GuiTableApplicationPlugin  | Enables GuiTable infrastructure for Zed. |  | Spryker\Zed\GuiTable\Communication\Plugin\Application     |
 | GuiTableConfigurationTwigPlugin    | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component.  |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
 | SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
@@ -217,7 +217,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that merchant users or users whose Acl Group does not have Back Office allowed Acl Group Reference cannot log in to the Back Office.
+Ensure that merchant users are not able to login into the BackOffice dashboard.
 
 {% endinfo_block %}
 
@@ -646,8 +646,8 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
-| MerchantDashboardCard | object | Created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer |
-| MerchantDashboardActionButton | object | Created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
+| MerchantDashboardCard | class | Created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer |
+| MerchantDashboardActionButton | class | Created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
 
 {% endinfo_block %}
 
@@ -1079,7 +1079,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 Each feature/module with a persistent relation to the merchant must expand the ACL configuration. Based on your built-in features, you need to integrate the required plugins:
 
-#### Integrate the following ACL plugins:
+#### Integrate the following ACL rule plugins:
 
 | PLUGIN                                                                             | SPECIFICATION                                                                         | PREREQUISITES | NAMESPACE                                                                                            |
 |------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
@@ -1093,6 +1093,12 @@ Each feature/module with a persistent relation to the merchant must expand the A
 | SecurityMerchantPortalGuiMerchantUserAclRuleExpanderPlugin                         | Adds `security-merchant-portal-gui` to list of `AclRules`.                            | None          | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\AclMerchantPortal                         |
 | UserMerchantPortalGuiMerchantUserAclRuleExpanderPlugin                             | Adds `user-merchant-portal-gui` to list of `AclRules`.                                | None          | Spryker\Zed\UserMerchantPortalGui\Communication\Plugin\AclMerchantPortal                             |
 | MerchantUserMerchantUserAclEntityRuleExpanderPlugin                                | Expands set of `AclEntityRule` transfer objects with merchant user composite data.    | None          | Spryker\Zed\MerchantUser\Communication\Plugin\AclMerchantPortal                                      |
+
+
+#### Integrate the following ACL configuration plugins:
+
+| PLUGIN                                                                             | SPECIFICATION                                                                         | PREREQUISITES | NAMESPACE                                                                                            |
+|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
 | MerchantPortalAclEntityAclEntityConfigurationExpanderPlugin                        | Expands provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\AclEntity\Communication\Plugin\AclMerchantPortal                                         |
 | MerchantPortalAclEntityConfigurationExpanderPlugin                                 | Expands provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\\Communication\Plugin\AclMerchantPortal                                                  |
 | MerchantPortalAvailabilityAclEntityConfigurationExpanderPlugin                     | Expands provided `AclEntityMetadataConfig` transfer object with composite data.       | None          | Spryker\Zed\Availability\Communication\Plugin\AclMerchantPortal                                      |

@@ -92,9 +92,13 @@ Blackfire groups some actions, so after each round of optimization, you will see
 ## Next steps
 
 
-1. Check that you have the latest performance releases.
+1. Check that you have the latest performance releases. Check performance releases under [release notes](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html).
 2. Check that you implemented the [performance recommendations](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
 3. If your problem is still not solved, analyze profiling as follows:
   - Select the longest action under profiling. 
   - Optimize. 
   - Repeat.
+4. Check if your result is still good for future growth. Got to the previous step if needed.
+5. Share your experience: 
+  - Contribute to a public documentation.
+  - Share it with [Spryker Community](https://spryker.com/community/).

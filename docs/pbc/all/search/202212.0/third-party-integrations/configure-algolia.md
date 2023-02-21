@@ -1,6 +1,7 @@
 ---
 title: Configure Algolia
 description: Find out how you can configure Algolia in your Spryker shop
+last_updated: Feb 21 2023
 template: howto-guide-template
 ---
 
@@ -39,6 +40,7 @@ The more products you have, the longer you have to wait until Algolia finishes t
 {% endinfo_block %}
 
 The index is now populated with data from your store:
+
 ![algolia-index-data](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-index-data.png)
 
 For details on the created index data, see [Indexes](/docs/pbc/all/search/{{page.version}}/third-party-integrations/algolia.html#indexes).
@@ -49,7 +51,7 @@ Default Algolia app configuration mimics default Spryker search configuration. H
 
 ### Adjusting searchable attributes
 
-ADD HERE THE ALGOLIA-SEARCHABLE-ATTRIBUTES PICTURE
+![algolia-searchable-attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-searchable-attributes.png)
 
 Algolia **Searchable attributes** configuration determines which attributes will be used for to find results while searching with a search query.
 

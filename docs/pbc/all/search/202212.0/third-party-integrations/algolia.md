@@ -4,7 +4,7 @@ description: Algolia empowers Builders with Search and Recommendation services t
 template: howto-guide-template
 ---
 
-ADD HERE THE ALGOLIA-HERO PICTURE
+![algolia-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/algolia-hero.png)
 
 Spryker is shipped with [Elasticsearch]((https://www.elastic.co/elasticsearch/)) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/).
 
@@ -42,6 +42,7 @@ There are separate indexes for each locale and sorting strategy. With the Algoli
 - By name in descending order
 
 For example, if you have two locales, there will be 10 indexes for your store in Algolia. One for each locale and sorting strategy:
+
 ![algolia-indexes](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/algolia-index.png)
 
 The Algolia index is always kept up to date with product data changes. That means that if a Back Office user added or changed some searchable product attribute such as a description, the change is immediately reflected in the Algolia search results.

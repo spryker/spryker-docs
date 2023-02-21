@@ -248,7 +248,7 @@ To verify that `AvailabilityNotificationAnonymizerPlugin` works:
 To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` works:
 1. Add a new product.
 2. On the Storefront, as a company user, subscribe to its availability notifications.
-3. On the Storefront, go to account overview > *Newsletters*.
+3. On the Storefront, go to account overview&nbsp;<span aria-label="and then">></span> **Newsletters**.
 4. Check that you are subscribed to the product's availability notifications.
 
 {% endinfo_block %}

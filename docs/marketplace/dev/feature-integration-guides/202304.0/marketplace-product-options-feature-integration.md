@@ -47,7 +47,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up the database schema and transfer objects
 
-1. Adjust the schema definition to guarantee unique identifier for each option group:
+1. Adjust the schema definition to guarantee a unique identifier for each option group:
 
 **src/Pyz/Zed/DataImport/Persistence/Propel/Schema/spy_product_option.schema.xml**
 
@@ -169,7 +169,7 @@ actions:
 ```
 
 
-To enable the data import, register the following plugin:
+2. To enable the data import, register the following plugin:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -199,7 +199,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Modify `ProductOptionWriterStep`:
+3. Modify `ProductOptionWriterStep`:
 
 **src/Pyz/Zed/DataImport/Business/Model/ProductOption/ProductOptionWriterStep.php**
 
@@ -231,7 +231,7 @@ class ProductOptionWriterStep extends PublishAwareStep implements DataImportStep
 }
 ```
 
-Import data:
+4. Import data:
 
 ```bash
 console data:import merchant-product-option-group
@@ -257,7 +257,8 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOptionGroupPublisherTriggerPlugin | Allows publishing or republishing merchant product option group storage data manually. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher |
 
 
-**src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -302,6 +303,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     }
 }
 ```
+</details>
 
 **src/Pyz/Zed/ProductOptionStorage/ProductOptionStorageDependencyProvider.php**
 
@@ -327,7 +329,8 @@ class ProductOptionStorageDependencyProvider extends SprykerProductOptionStorage
 }
 ```
 
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -371,14 +374,15 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure the following is true:
 * Merchants can create product option groups and values in the Merchant Portal.
 * Merchant product option information is shown on a product details page when it is approved and active.
 * Merchant product option information is displayed in the cart, checkout, and user account.
-* Merchant product options are a part of the marketplace/merchant order, and all totals are calculated correctly.
+* Merchant product options are a part of the marketplace or merchant order, and all totals are calculated correctly.
 
 {% endinfo_block %}
 

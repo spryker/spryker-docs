@@ -76,7 +76,7 @@ Make sure that the following changes have been implemented in transfer objects:
 
 Enable the following behaviors by registering the plugins.
 
-#### Listening to the availability_notification event
+#### Configure listening to the availability_notification event
 
 Add the following plugin to your project:
 
@@ -122,7 +122,7 @@ Verify that `AvailabilityNotificationSubscriber` works:
 
 {% endinfo_block %}
 
-#### Email handling
+#### Configure email handling
 
 Add the following plugins to your project:
 
@@ -186,7 +186,7 @@ Verify that `AvailabilityNotificationSubscriptionMailTypePlugin`, `AvailabilityN
 
 {% endinfo_block %}
 
-#### Customer behavior
+#### Configure customer behavior
 
 Add the following plugins to your project:
 

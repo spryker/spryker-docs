@@ -215,6 +215,9 @@ entries:
       - "202204.0"
     - title: Customer Account Management
       url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: "Customer module overview: reference information"
         url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
@@ -715,7 +718,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       nested:
       - title: Searching by company users
         url: /docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html
@@ -778,7 +780,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Managing company user authentication tokens
         url: /docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html
         include_versions:
@@ -1970,6 +1971,7 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
+      - "202304.0"
     - title: Customer Account Management + Agent Assist
       url: /docs/scos/dev/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html
       include_versions:
@@ -4721,6 +4723,7 @@ entries:
         - title: Define evaluation rules to ignore
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-evaluation-rules-to-ignore.html
     - title: Performance guidelines
+      url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
       - title: Elastic computing
         nested:
@@ -4830,6 +4833,13 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
       - title: The spy_oms_transition_log table takes up too much space
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
+    - title: Troubleshooting performance issues
+      url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html
+      nested:
+      - title: External calls take a lot of time
+        url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html
+      - title: External calls—several calls to Zed
+        url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-several-calls-to-zed.html
     - title: Troubleshooting Spryker in Vagrant issues
       url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html
       nested:

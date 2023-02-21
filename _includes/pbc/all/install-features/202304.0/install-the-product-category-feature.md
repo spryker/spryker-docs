@@ -148,20 +148,20 @@ Configure tables to be published to the `spy_product_abstract_category_storage`,
 
 1.  Set up publisher plugins:
 
-| PLUGIN                                                 | SPECIFICATION                                                                                 | PRERQUISITES | NAMESPACE                                                                           |
-|--------------------------------------------------------|-----------------------------------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------|
-| CategoryIsActiveAndCategoryKeyWritePublisherPlugin     | Publishes product category data by the `SpyCategory` entity events with modified columns.     |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
-| CategoryStoreDeletePublisherPlugin                     | Publishes product category data by the `CategoryStore` un-publish event.                      |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
-| CategoryStoreWriteForPublishingPublisherPlugin         | Publishes product category data by the `CategoryStore` publish event.                         |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
-| CategoryStoreWritePublisherPlugin                      | Publishes product category data by the`SpyCategoryStore` entity events.                       |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
-| CategoryWritePublisherPlugin                           | Publishes product category data by the `SpyCategory` entity events.                           |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
-| CategoryAttributeNameWritePublisherPlugin              | Publishes product category data by the`SpyCategoryAttribute` entity events.                   |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryAttribute |
-| CategoryAttributeWritePublisherPlugin                  | Publishes product category data by the`SpyCategoryAttribute` entity events.                   |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryAttribute |
-| CategoryNodeWritePublisherPlugin                       | Publishes product category data by the `SpyCategoryNode` entity events with modified columns. |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryNode      |
-| CategoryUrlAndResourceCategorynodeWritePublisherPlugin | Publishes product category data by the `SpyUrl` entity events.                                |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryUrl       |
-| CategoryUrlWritePublisherPlugin                        | Publishes product category data by the `SpyUrl` entity events.                                |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryUrl       |
-| ProductCategoryWriteForPublishingPublisherPlugin       | Publishes product category data by the `ProductCategory` publishing events.                   |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory   |
-| ProductCategoryWritePublisherPlugin                    | Publishes product category data by the`SpyProductCategory` entity events.                     |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory   |
+| PLUGIN                                                 | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                           |
+|--------------------------------------------------------|-----------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------|
+| CategoryIsActiveAndCategoryKeyWritePublisherPlugin     | Publishes product category data by the `SpyCategory` entity events with modified columns.     |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
+| CategoryStoreDeletePublisherPlugin                     | Publishes product category data by the `CategoryStore` un-publish event.                      |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
+| CategoryStoreWriteForPublishingPublisherPlugin         | Publishes product category data by the `CategoryStore` publish event.                         |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
+| CategoryStoreWritePublisherPlugin                      | Publishes product category data by the`SpyCategoryStore` entity events.                       |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
+| CategoryWritePublisherPlugin                           | Publishes product category data by the `SpyCategory` entity events.                           |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\Category          |
+| CategoryAttributeNameWritePublisherPlugin              | Publishes product category data by the`SpyCategoryAttribute` entity events.                   |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryAttribute |
+| CategoryAttributeWritePublisherPlugin                  | Publishes product category data by the`SpyCategoryAttribute` entity events.                   |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryAttribute |
+| CategoryNodeWritePublisherPlugin                       | Publishes product category data by the `SpyCategoryNode` entity events with modified columns. |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryNode      |
+| CategoryUrlAndResourceCategorynodeWritePublisherPlugin | Publishes product category data by the `SpyUrl` entity events.                                |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryUrl       |
+| CategoryUrlWritePublisherPlugin                        | Publishes product category data by the `SpyUrl` entity events.                                |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\CategoryUrl       |
+| ProductCategoryWriteForPublishingPublisherPlugin       | Publishes product category data by the `ProductCategory` publishing events.                   |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory   |
+| ProductCategoryWritePublisherPlugin                    | Publishes product category data by the`SpyProductCategory` entity events.                     |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory   |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -221,9 +221,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 2. Set up event listeners:
 
-| PLUGIN                                      | SPECIFICATION                                                                                       | PRERQUISITES | NAMESPACE                                                                      |
-|---------------------------------------------|-----------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------|
-| ProductCategoryFilterStorageEventSubscriber | Registers listeners that publish category information to the storage when a related entity changes. |              | Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Event\Subscriber |
+| PLUGIN                                      | SPECIFICATION                                                                                       | PREREQUISITES | NAMESPACE                                                                      |
+|---------------------------------------------|-----------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------|
+| ProductCategoryFilterStorageEventSubscriber | Registers listeners that publish category information to the storage when a related entity changes. |               | Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -252,9 +252,9 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 3. Set up trigger plugins:
 
-| PLUGIN                                | SPECIFICATION                                                        | PRERQUISITES | NAMESPACE                                                         |
-|---------------------------------------|----------------------------------------------------------------------|--------------|-------------------------------------------------------------------|
-| ProductCategoryPublisherTriggerPlugin | Retrieves product categories based on the provided limit and offset. |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher |
+| PLUGIN                                | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                                         |
+|---------------------------------------|----------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
+| ProductCategoryPublisherTriggerPlugin | Retrieves product categories based on the provided limit and offset. |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -282,10 +282,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 4. Set up synchronization plugins:
 
-| PLUGIN                                                 | SPECIFICATION                                                                                              | PRERQUISITES | NAMESPACE                                                                     |
-|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------|
-| ProductCategorySynchronizationDataBulkRepositoryPlugin | Retrieves a product abstract category storage collection according to the provided offset, limit, and IDs. |              | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Synchronization       |
-| ProductCategoryFilterSynchronizationDataPlugin         | Retrieves a product category filter storage collection according to the provided offset, limit, and IDs.   |              | Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Synchronization |
+| PLUGIN                                                 | SPECIFICATION                                                                                              | PREREQUISITES | NAMESPACE                                                                     |
+|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
+| ProductCategorySynchronizationDataBulkRepositoryPlugin | Retrieves a product abstract category storage collection according to the provided offset, limit, and IDs. |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Synchronization       |
+| ProductCategoryFilterSynchronizationDataPlugin         | Retrieves a product category filter storage collection according to the provided offset, limit, and IDs.   |               | Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -315,9 +315,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 5. Set up re-generate and re-sync Features
 
-| PLUGIN                                                 | SPECIFICATION                                      | PRERQUISITES | NAMESPACE                                                           |
-|--------------------------------------------------------|----------------------------------------------------|--------------|---------------------------------------------------------------------|
-| ProductCategoryFilterEventResourceQueryContainerPlugin | Allows populating an empty search table with data. |              | Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Event |
+| PLUGIN                                                 | SPECIFICATION                                      | PREREQUISITES | NAMESPACE                                                           |
+|--------------------------------------------------------|----------------------------------------------------|---------------|---------------------------------------------------------------------|
+| ProductCategoryFilterEventResourceQueryContainerPlugin | Allows populating an empty search table with data. |               | Spryker\Zed\ProductCategoryFilterStorage\Communication\Plugin\Event |
 
 **src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php**
 
@@ -445,14 +445,14 @@ Make sure that, when a category product assignment is changed through ORM, it is
 
 Add the following plugins to your project:
 
-| PLUGIN                                                | SPECIFICATION                                                                                                 | PRERQUISITES | NAMESPACE                                                                              |
-|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------|
-| ProductCategoryMapExpanderPlugin                      | Expands PageMapTransfer with category map data.                                                               |              | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
-| ProductCategoryPageDataExpanderPlugin                 | Expands `ProductPageSearchTransfer` with category related data.                                               |              | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
-| ProductCategoryPageDataLoaderPlugin                   | Expands `ProductPayloadTransfer.categories` with product category entities.                                   |              | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
-| ProductCategoryRelationReadPlugin                     | Gets localized products abstract names by category.                                                           |              | Spryker\Zed\ProductCategory\Communication\Plugin\CategoryGui                           |
-| RemoveProductCategoryRelationPlugin                   | Removes relations between category and products.                                                              |              | Spryker\Zed\ProductCategory\Communication\Plugin                                       |
-| ProductUpdateEventTriggerCategoryRelationUpdatePlugin | Triggers product update events for products that are assigned to the given category and its child categories. |              | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
+| PLUGIN                                                | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                                              |
+|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------|
+| ProductCategoryMapExpanderPlugin                      | Expands PageMapTransfer with category map data.                                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
+| ProductCategoryPageDataExpanderPlugin                 | Expands `ProductPageSearchTransfer` with category related data.                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
+| ProductCategoryPageDataLoaderPlugin                   | Expands `ProductPayloadTransfer.categories` with product category entities.                                   |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
+| ProductCategoryRelationReadPlugin                     | Gets localized products abstract names by category.                                                           |               | Spryker\Zed\ProductCategory\Communication\Plugin\CategoryGui                           |
+| RemoveProductCategoryRelationPlugin                   | Removes relations between category and products.                                                              |               | Spryker\Zed\ProductCategory\Communication\Plugin                                       |
+| ProductUpdateEventTriggerCategoryRelationUpdatePlugin | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
 
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 

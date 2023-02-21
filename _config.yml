@@ -1,4 +1,4 @@
-version: "202204.0"
+version: "202212.0"
 
 repository: spryker/spryker-docs
 
@@ -181,7 +181,8 @@ versions:
   '202009.0': '202009.0'
   '202108.0': '202108.0'
   '202204.0': '202204.0'
-  '202212.0': 'Upcoming release'
+  '202212.0': '202212.0'
+  '202304.0': 'Upcoming release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -223,6 +224,7 @@ versioned_categories:
     all:
       - cart-and-checkout
       - content-management-system
+      - customer-relationship-management
       - discount-management
       - gift-cards
       - identity-access-management
@@ -233,9 +235,12 @@ versioned_categories:
       - price-management
       - ratings-reviews
       - request-for-quote
+      - search
       - shopping-list-and-wishlist
       - tax-management
       - warehouse-management-system
+      - product-information-management
+      - product-relationship-management
 
 
 
@@ -269,6 +274,8 @@ algolia:
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
   max_record_size: 20000
   indices:
+    - name: 'pbc_all'
+      title: 'Packaged Business Capabilities'
     - name: 'scos_user'
       title: 'SCOS User'
     - name: 'scos_dev'
@@ -283,8 +290,6 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'pbc_all'
-      title: 'Packaged Business Capabilities'
     - name: 'paas_plus_dev'
       title: 'PaaS+'
 sass:

@@ -1095,7 +1095,7 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Order Management feature front end.
 
@@ -1327,8 +1327,8 @@ Integrate the following related features:
 | Comments + Order Management feature integration              |                                  | [Comments + Order Management feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-comments-order-management-feature.html) |
 | Glue API: Order Management feature integration               |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-order-management-feature-integration.html) |
 | Company Account + Order Management feature integration       |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/company-account-order-management-feature-integration.html) |
-| Product + Order Management feature integration               |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-order-management-feature-integration.html) |
+| Product + Order Management feature integration               |                                  | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
 | Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-order-management-feature-integration.html) |
-| Packaging Units feature integration                  |                                  | [Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/packaging-units-feature-integration.html) |
-| Product + Order Management feature integration                      |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-order-management-feature-integration.html) |
-| Product Options + Order Management feature integration                       |                                  | [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-options-order-management-feature-integration.html) |
+| Packaging Units feature integration                  |                                  | [Packaging Units feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |
+| Product + Order Management feature integration                      |                                  | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
+| Product Options + Order Management feature integration                       |                                  | [Product Options + Order Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |

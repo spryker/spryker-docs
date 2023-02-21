@@ -135,7 +135,7 @@ This step will publish tables on change (create, edit, delete) to the `spy_produ
 Set up the following plugin(s):
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductGroupStorageEventSubscriber | Registers listeners that are responsible to publish product abstract group storage entity changes when a related entity change event occurs. | None | Spryker\Zed\ProductGroupStorage\Communication\Plugin\Event\Subscriber |
 
@@ -253,7 +253,7 @@ Make sure that the configured data has been added to the `spy_product_group` and
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install Product group feature front end.
 
@@ -352,5 +352,5 @@ Make sure that `ProductGroupColorWidget` has been registered:
 | FEATURE | FEATURE INTEGRATION GUIDE |
 | --- | --- |
 | Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-group-product-labels-feature-integration.html) |
-| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-group-product-rating-and-reviews-feature-integration.html) |
+| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-group-product-rating-and-reviews-feature.html) |
 | Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-group-cart-feature-integration.html)  |

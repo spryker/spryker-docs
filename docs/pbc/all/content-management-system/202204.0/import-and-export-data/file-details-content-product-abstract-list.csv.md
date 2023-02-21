@@ -1,5 +1,5 @@
 ---
-title: File details - content_product_abstract_list.csv
+title: "File details: content_product_abstract_list.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-content-product-abstract-listcsv
@@ -18,7 +18,7 @@ This document describes the `content_product_abstract_list.csv` file to configur
 
 ## Import file dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
 
 
 ## Import file parameters
@@ -31,12 +31,10 @@ This file has the following dependency: [product_abstract.csv](/docs/scos/dev/da
 | skus.default | &check; | String |N/A | Default list of product abstract SKUs. |
 | skus.{ANY_LOCALE_NAME}*<br>Example value: *skus.en_US* |  | String | N/A |List of product abstract SKUs, translated into the specified locale (US for our example). |
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 
 ## Import template file and content example
-
-
 
 | FILE | DESCRIPTION |
 | --- | --- |

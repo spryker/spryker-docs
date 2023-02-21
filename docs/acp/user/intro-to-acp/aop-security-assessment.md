@@ -172,7 +172,7 @@ The diagram below demonstrates the security assessment procedure:
 Spryker recommends using the following approved tools and scanners:
 
 - [Burp Suite](https://portswigger.net/burp), [ZAP](https://www.zaproxy.org/), [Netsparker](https://www.netsparker.com/plp/dast/), [Acunetix](https://www.acunetix.com/plp/dast/), [Rapid7](https://www.rapid7.com/) as DAST tools.
-- [Checkmarx](https://checkmarx.com/), [Veracode](https://www.veracode.com/products/binary-static-analysis-sast), [Micro Focus Fortify SCA](https://www.microfocus.com/ru-ru/products/static-code-analysis-sast/overview), [SonarQube](https://www.sonarsource.com/), [Snyk](https://snyk.io/product/snyk-code/), [Kuiwan](https://www.kiuwan.com/code-security-sast/) for static code analysis/code scanner (PHP, JS, Java, Python, Go, Ruby, Scala).
+- [Checkmarx](https://checkmarx.com/), [Veracode](https://www.veracode.com/products/binary-static-analysis-sast), [Micro Focus Fortify SCA](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer), [SonarQube](https://www.sonarsource.com/), [Snyk](https://snyk.io/product/snyk-code/), [Kuiwan](https://www.kiuwan.com/code-security-sast/) for static code analysis/code scanner (PHP, JS, Java, Python, Go, Ruby, Scala).
 
 ## Resources
 

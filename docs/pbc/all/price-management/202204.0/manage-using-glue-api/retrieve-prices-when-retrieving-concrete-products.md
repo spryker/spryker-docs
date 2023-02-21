@@ -5,12 +5,12 @@ last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve prices when retrieving concrete products. To retrieve full information about concrete products, see [Retrieve concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html).
+This document describes how to retrieve prices when retrieving concrete products. To retrieve full information about concrete products, see [Retrieve concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html).
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
-* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Glue API: Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-price-glue-api.html)
 
 
@@ -235,7 +235,7 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="concrete-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202204.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-a-concrete-product-response-attributes.md -->
 
 For the attributes of prices, see [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{site.version}}/manage-using-glue-api/retrieve-concrete-product-prices.html#response).
 

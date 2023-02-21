@@ -15,9 +15,9 @@ redirect_from:
 
 related:
   - title: Managing wishlists
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-wishlists-via-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-using-glue-api/glue-api-manage-wishlists.html
   - title: Managing wishlist items
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-wishlist-items-via-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-using-glue-api/glue-api-manage-wishlist-items.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-wishlist-glue-api.md -->

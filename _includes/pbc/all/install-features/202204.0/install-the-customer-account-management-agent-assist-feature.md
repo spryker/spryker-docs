@@ -17,7 +17,7 @@ To start the feature integration, overview and install the necessary features:
 
 ## 1) Install the required modules using composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/oauth-agent-connector:"^1.0.0" --update-with-dependencies

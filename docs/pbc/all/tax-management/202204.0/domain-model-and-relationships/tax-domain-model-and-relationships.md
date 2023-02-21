@@ -5,6 +5,7 @@ description: "The Tax feature allows you to define taxes for the items you sell.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/tax-feature-walkthrough/tax-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/tax-feature-walkthrough/tax-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/tax-feature-walkthrough/tax-feature-walkthrough.html  
 ---
 

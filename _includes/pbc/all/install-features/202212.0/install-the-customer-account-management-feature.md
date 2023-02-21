@@ -1,6 +1,7 @@
 
 
 This document describes how to integrate the [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
+
 {% info_block errorBox "Included features" %}
 
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds:
@@ -260,7 +261,8 @@ Ensure that the following changes have been applied in the transfer objects:
 | CustomerPasswordSetConsole                                     | Sends the password reset email to all the customers with the empty password value in the database.                                                                                                           | None          | Spryker\Zed\Customer\Communication\Console                    |		
 | CustomerRegistrationConfirmationMailTypePlugin                 | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled.                                                                                                     | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details open>
+  <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -390,7 +392,8 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 </details>
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<details open>
+  <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -512,8 +515,6 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -1001,4 +1002,4 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 | NAME                                           | INTEGRATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-order-management-feature-integration.html) |
+| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/pbc/all/customer-relationship-management/{{site.version}}/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |

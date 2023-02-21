@@ -147,6 +147,8 @@ ilyakubanov marked this conversation as resolved.
 
 #### Register data importer
 
+Add merchant product option group import entities to import configuration for all needed application stores:
+
 **data/import/local/full_EU.yml**
 
 ```yml

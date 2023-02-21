@@ -20,14 +20,6 @@ Your users can search for active concrete products by the following attributes:
 - Name
 - Description
 - Keywords
-- Currency
-- Gross Price
-- Net Price
-- Product Abstract SKU
-- Rating (average approved rating for a respective abstract product)
-- Images
-- Categories
-- Attributes
 
 {% info_block infoBox "Note" %}
 

@@ -10,6 +10,8 @@ redirect_from:
 
 This document describes how to create a protected endpoint for a resource, or a custom-route in storefront and backend API applications.
 
+Please make sure that you have already integrated authorization into your project, see [Authorization protected endpoints integration](https://docs.spryker.com/docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-protected-endpoints-integration.html#install-feature-core).
+
 Let's say you have a module named `ModuleRestApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods.  To create the protected endpoint, follow these steps::
 
 To set up a protected endpoint, follow these steps:
@@ -56,3 +58,4 @@ For backend API, use the appropriate backend-specific class `src/Pyz/Shared/Glue
 2. Try to access `https://glue-storefront.mysprykershop.com/module` without an access token.
 3. Check that the output contains the 403 response with the `Unauthorized request.` message.
 4. Access `https://glue-storefront.mysprykershop.com/module`, with a valid access token.
+

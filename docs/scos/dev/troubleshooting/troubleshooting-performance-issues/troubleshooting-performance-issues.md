@@ -70,7 +70,7 @@ For more details, see the [official New Relic website](https://newrelic.com/blog
 
 To profile with Blacfire, do the following:
 
-1. [Install and configure [Blackfire](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/{{site.version}}configure-services.html#blackfire).
+1. Install and configure [Blackfire](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html#blackfire).
 2. Reproduce the problem in the necessary environment or request it to be reproduced by the customer. For more details on profiling with Blackfire, see the [official Blackfire website](https://blackfire.io/docs/introduction).
 3. Review the profiling:
 - Check the **Reccomendations** section. It shows some possible solutions.

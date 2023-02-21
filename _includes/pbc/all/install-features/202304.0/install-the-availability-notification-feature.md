@@ -74,7 +74,7 @@ Make sure that the following changes have been implemented in transfer objects:
 
 ### 3) Set up behavior
 
-Enable the following behaviors by registering the plugins:
+Enable the following behaviors by registering the plugins.
 
 #### Listening to the availability_notification event
 
@@ -409,7 +409,7 @@ Register the following controller providers in the Yves application:
 
 | PROVIDER                                         | NAMESPACE                                                       | ENABLE CONTROLLER                              | CONTROLLER SPECIFICATION                                                             |
 |--------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------|--------------------------------------------------------------------------------------|
-| AvailabilityNotificationPageControllerProvider   | SprykerShop\Yves\AvailabilityNotificationPage\Plugin\Provider   | AvailabilityNotificationPageController         | Provides the functionality of subscription removal by subscription key.              |
+| AvailabilityNotificationPageControllerProvider   | SprykerShop\Yves\AvailabilityNotificationPage\Plugin\Provider   | AvailabilityNotificationPageController         | Provides the functionality of subscription removal by a subscription key.              |
 | AvailabilityNotificationWidgetControllerProvider | SprykerShop\Yves\AvailabilityNotificationWidget\Plugin\Provider | AvailabilityNotificationSubscriptionController | Provides subscription management functionality for `AvailabilityNotificationWidget`. |
 
 **src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
@@ -447,9 +447,9 @@ class YvesBootstrap extends SprykerYvesBootstrap
 {% info_block warningBox "Verification" %}
 
 Make sure that the following URLs are available on the Storefront:
-- `http://mysprykershop.com/availability-notification/unsubscribe-by-key/{32 characters key}`
-- `http://mysprykershop.com/en/availability-notification/unsubscribe-by-key/{32 characters key}`
-- `http://mysprykershop.com/de/availability-notification/unsubscribe-by-key/{32 characters key}`
+- `https://mysprykershop.com/availability-notification/unsubscribe-by-key/{32 characters key}`
+- `https://mysprykershop.com/en/availability-notification/unsubscribe-by-key/{32 characters key}`
+- `https://mysprykershop.com/de/availability-notification/unsubscribe-by-key/{32 characters key}`
 
 {% endinfo_block %}
 
@@ -461,7 +461,7 @@ If you have any other languages configured, the corresponding links must be avai
 
 | WIDGET                                     | DESCRIPTION                                                  | NAMESPACE                                              |
 |--------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------|
-| AvailabilityNotificationSubscriptionWidget | Renders the subscription form on the *product details* page. | SprykerShop\Yves\AvailabilityNotificationWidget\Widget |
+| AvailabilityNotificationSubscriptionWidget | Renders the subscription form on the product details page. | SprykerShop\Yves\AvailabilityNotificationWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

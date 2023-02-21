@@ -113,7 +113,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AvailabilityNotificationSubscriber` is working, follow these steps:
+Verify that `AvailabilityNotificationSubscriber` works:
 
 1. Add a new product and make it unavailable.
 2. As a customer, subscribe to its availability notifications on the Storefront.
@@ -178,7 +178,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify that `AvailabilityNotificationSubscriptionMailTypePlugin`, `AvailabilityNotificationUnsubscribedMailTypePlugin`, and `AvailabilityNotificationMailTypePlugin` are working:
+Verify that `AvailabilityNotificationSubscriptionMailTypePlugin`, `AvailabilityNotificationUnsubscribedMailTypePlugin`, and `AvailabilityNotificationMailTypePlugin` work:
 1. Add a new product.
 2. On the Storefront, as a customer, subscribe to its availability notifications.
 3. Switch the availability status of the product several times.
@@ -238,14 +238,14 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AvailabilityNotificationAnonymizerPlugin` works:
+Verify that `AvailabilityNotificationAnonymizerPlugin` works:
 1. Add a new product.
 2. On the Storefront, as a company user, subscribe to its availability notifications.
 3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.
 4. Delete the company user that is subscribed to the product's availability.
 5. Check that the line is deleted from the `spy_availability_notification_subscription` table.
 
-To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` works:
+Verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` works:
 1. Add a new product.
 2. On the Storefront, as a company user, subscribe to its availability notifications.
 3. On the Storefront, go to account overview&nbsp;<span aria-label="and then">></span> **Newsletters**.

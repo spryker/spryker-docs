@@ -468,6 +468,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202304.0"
 
           - title: Marketplace Product Options + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-options-cart-feature-integration.html

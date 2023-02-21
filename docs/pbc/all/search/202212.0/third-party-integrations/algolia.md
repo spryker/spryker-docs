@@ -1,6 +1,7 @@
 ---
 title: Algolia
 description: Algolia empowers Builders with Search and Recommendation services to create world-class digital experiences.
+last_updated: Feb 21 2023
 template: howto-guide-template
 ---
 

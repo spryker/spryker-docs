@@ -214,6 +214,8 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
                   - title: CheckoutRestApi
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
+                  - title: QuickOrderPage
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
           - title: Extend and customize
             nested:
               - title: "Calculation 3.0"

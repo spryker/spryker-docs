@@ -2,9 +2,11 @@
 title: Integrate Bazaarvoice
 description: Find out how you can integrate Bazaarvoice into your Spryker shop
 template: howto-guide-template
+last_updated: Feb 22, 2023
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
 ---
+
 
 ## Prerequisites
 
@@ -29,13 +31,12 @@ The BazaarVoice app requires the following Spryker modules:
 
 ## Integrate Bazaarvoice
 
-To integrate Bazaarvoice, follow these steps:
+To integrate Bazaarvoice, follow these steps.
 
-### 1. Add Bazaarvoice domain to your allowlist
+### 1. Add the Bazaarvoice domain to your allowlist
 
-To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist. 
+To enable your customers to leave reviews on your products, add the Bazaarvoice domain to your **Content Security Policy** allowlist in one of the following ways: 
 
-To do that, do one of the following:
 - change the `deploy.yml` file: 
 
 ```yml
@@ -58,13 +59,14 @@ $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
 
 ### 2. Add markup to custom templates
 
-The Bazaarvoice app takes data on products from the Storefront pages (for example, Product Detail page, Catalog page).
+The Bazaarvoice app takes data on products from the Storefront pages—for example, the **Product Details** or **Catalog** page.
 To get necessary data from the pages, schemas from [Schema.org](https://schema.org/) are used.
 By default, the necessary markups are already available in the Yves templates.
 
-If you have custom Yves templates or make your own frontend, add the markups required for the Bazaarvoice app according to the tables below.
+If you have custom Yves templates or make your own frontend, add the markups required for the Bazaarvoice app according to the following tables.
 
-#### DCC (dynamic catalog collection) for products
+#### Dynamic catalog collection (DCC) for products
+
 Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
 | schema.org property          | Bazaarvoice property |
@@ -83,25 +85,25 @@ Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 
 {% info_block infoBox "Note" %}
 
-Since merchants don't have own entities in the Bazaarvoice service, products with specific IDs, or merchant references, are used instead.
+Because merchants don't have their own entities in the Bazaarvoice service, products with specific IDs, or merchant references, are used instead.
 
 {% endinfo_block %}
 
-Core template:
-`SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
-| schema.org property        | Bazaarvoice property |
+| SCHEMA.ORG PROPERTY        | BAZAARVOICE PROPERTY |
 |----------------------------|----------------------|
 | organization.identifier    | productId            |
 | organization.name          | productName          |
 | organization.logo          | productImageURL      |
 
 #### Tracking pixel
+
 Core templates:
 * `SprykerShop/Yves/PaymentPage/Theme/default/views/payment-success/index.twig`
 * `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
 
-| schema.org property                        | Bazaarvoice property | Only for Marketplace |
+| SCHEMA.ORG PROPERTY                        | BAZAARVOICE PROPERTY | ONLY FOR MARKETPLACE |
 |--------------------------------------------|----------------------|----------------------|
 | invoice.email                              | email                |                      |
 | invoice.priceCurrency                      | currency             |                      |
@@ -114,7 +116,8 @@ Core templates:
 | invoice.orderItem.offers.seller.name       | items.productId      | *                    |
 | invoice.orderItem.offers.seller.identifier | items.name           | *                    |
 
-#### Ratings and reviews (for Product)
+#### Ratings and reviews for Product
+
 Core templates:
 * `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`
@@ -134,7 +137,8 @@ Example:
 </section>
 ```
 
-#### Ratings and reviews (for Merchant)
+#### Ratings and reviews for Merchant
+
 Core template:
 `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
@@ -151,6 +155,7 @@ Example:
 ```
 
 #### Inline ratings
+
 Core templates:
 * `SprykerShop/Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/product-review-display/product-review-display.twig`
@@ -171,6 +176,7 @@ Example:
 ```
 
 #### Tracking pixel
+
 Core templates:
 * `SprykerShop/Yves/PaymentPage/Theme/default/views/payment-success/index.twig`
 * `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
@@ -251,11 +257,13 @@ Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyPr
 ```
 #### Receive messages
 
-To receive messages from the channel, the following command is used:
+To receive messages from the channel, use this command:
 
-```console message-broker:consume```
+```bash
+console message-broker:consume
+```
 
-Since this command must be executed periodically, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
+Because this command must be executed periodically, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
 
 ```php
 $jobs[] = [
@@ -267,4 +275,5 @@ $jobs[] = [
 ];
 ```
 ## Next steps
+
 [Configure the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) for your store.

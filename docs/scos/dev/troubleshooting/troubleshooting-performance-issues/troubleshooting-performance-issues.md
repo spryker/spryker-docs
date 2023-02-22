@@ -2,12 +2,13 @@
 title: Troubleshooting performance issues
 description: Learn how you can troubleshoot the most common performance issues
 template: concept-topic-template
+last_updated: Feb 22, 2023
 related:
   - title: Performance guidelines
     link: docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
 ---
 
-This section helps you optimize performance of your website by helping you detect and fix the most common performance troubleshooting issues.
+This section helps you optimize the performance of your website by helping you detect and fix the most common performance troubleshooting issues.
 
 Performance optimization has to start with the analysis or with the profiling.
 
@@ -16,15 +17,15 @@ Performance optimization has to start with the analysis or with the profiling.
 Before you start optimizing performance, make sure the following preconditions are met:
 
 1. You know and understand the problem.
-Example of a poorly defined problem: “Website is slow“.
-Example of a well-defined problem:
+An example of a poorly defined problem: “Website is slow“.
+An example of a well-defined problem:
 “Web site is slow when I place an order with 25 products of the same SKU (SKU=001).
 URL: {URL}
 Credentials: {Instruction on how to get credentials}.”
 
 If you do not have this information, then request additional data from the person who reported the problem.
 
-2. Check profiling.
+2. Check the profiling.
 You are free to choose any profiling tool you want.
 The ones that we prefer are [New Relic](https://docs.newrelic.com/docs/new-relic-solutions/get-started/intro-new-relic/) and [Blackfire](https://blackfire.io/docs/introduction).
 
@@ -49,9 +50,9 @@ For example, if the problem is with “place-order“ with 25 product items, do 
   ![transactions](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions.png)
   2. Select the necessary time period on the top right side.
   ![transactions-time](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transaction-time.png)
-  3. Select the necessary transaction type (for example, “Web“).
+  3. Select the necessary transaction type—for example, **Web**.
   ![trasaction-type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transaction-type.png)
-  4. Select “Sort By“ (for example, “Most time consuming“).
+  4. In **Sort By**, select how you want to sort the items—for example, **Most time consuming**.
   ![transaction-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions-filter.png)
   5. Check if you have the necessary action “place-order“ in the resulting list. Click **See transaction table** if needed.
   ![transaction-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions-list.png)
@@ -73,7 +74,7 @@ To profile with Blacfire, do the following:
 1. Install and configure [Blackfire](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html#blackfire).
 2. Reproduce the problem in the necessary environment or request it to be reproduced by the customer. For more details on profiling with Blackfire, see the [official Blackfire website](https://blackfire.io/docs/introduction).
 3. Review the profiling:
-- Check the **Reccomendations** section. It shows some possible solutions.
+- Check the **Recommendations** section. It shows some possible solutions.
 ![blacfire-recommendations](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/recommendations.png)
 - Check **Callgraph**.
 ![blacfire-callgraph](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/recommendations-callgraph.png)
@@ -92,9 +93,13 @@ Blackfire groups some actions, so after each round of optimization, you will see
 ## Next steps
 
 
-1. Check that you have the latest performance releases.
+1. Check that you have the latest performance releases. Check performance releases under [release notes](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html).
 2. Check that you implemented the [performance recommendations](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
 3. If your problem is still not solved, analyze profiling as follows:
   - Select the longest action under profiling. 
   - Optimize. 
   - Repeat.
+4. Check if your result is still good for future growth. Return to the previous step if needed.
+5. Share your experience: 
+  - Contribute to public documentation.
+  - Share it with [Spryker Community](https://spryker.com/community/).

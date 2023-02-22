@@ -20,7 +20,7 @@ To configure the Bazaarvoice the app, do the followoing:
    You should receive the Bazaarvoice credentials.
 5. Go back to your store's Back Office, to the Bazaarvoice app details page.
 6. In the top right corner of the Bazaarvoice app details page, click **Configure**.
-7. In the **Configure** pane, enter the credentials you received from Bazaarvoice.
+7. In the **Configurations** pane, enter the credentials you received from Bazaarvoice.
 
 ![bv-configuration-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice/bv-config-page.png)
 
@@ -44,15 +44,28 @@ The following video explains how you can create an API key if it is not availabl
   </video>
 </figure>
 
-8. In **Settings > Select Services**, select the services that you need:
+8. In **sFTP Settings** fill out BazaarVoice's SFTP credentials if you want to track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
+
+| Field    |                    Description                     |
+|----------|:--------------------------------------------------:|
+| Username |   The user name to connect on BazaarVoice's sFTP   |
+| Password |   The password to connect on BazaarVoice's sFTP    |
+| Region   | The region where you data is hosted on BazaarVoice |
+
+{% info_block warningBox "Important" %}
+
+If you do not know your credentials or you don't know your region, please reach out to the internal contact that manages your product feed or open a support case with Bazaarvoice.
+
+{% endinfo_block %}
+
+9. In **Settings > Select Services**, select the services that you need:
    - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
    <!---- QUESTIONS & ANSWERS:--> 
    - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
-   - Bazaarvoice PIXEL: Adds a single tracking pixel to your shopping cart page and product details page. It lets Bazaarvoice track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
 
-9. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings** > **Store**, select the stores.
+10. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings** > **Store**, select the stores.
 
-10. Click **Save**.
+11. Click **Save**.
 
 This adds the Bazaarvoice app to your store. It usually takes Bazaarvoice a few days to process your product feed. Therefore, you should see the external ratings and reviews from Bazaarvoice in about 2-3 days after you connected the app.
 

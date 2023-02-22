@@ -12,8 +12,10 @@ The BazaarVoice app requires the following Spryker modules:
 
 * `spryker/asset: ^1.3.0`
 * `spryker/asset-storage: ^1.1.0`
+* `spryker/merchant-profile: ^1.1.0`
 * `spryker/message-broker: ^1.3.0`
 * `spryker/message-broker-aws: ^1.3.2`
+* `spryker/oms: ^11.23.0`
 * `spryker/product-review: ^2.10.0`
 * `spryker/product-review-gui: ^1.5.0`
 * `spryker-shop/asset-widget: ^1.0.0`
@@ -96,24 +98,6 @@ Core template:
 | organization.name          | productName          |
 | organization.logo          | productImageURL      |
 
-#### Tracking pixel
-Core templates:
-* `SprykerShop/Yves/PaymentPage/Theme/default/views/payment-success/index.twig`
-* `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
-
-| schema.org property                        | Bazaarvoice property | Only for Marketplace |
-|--------------------------------------------|----------------------|----------------------|
-| invoice.email                              | email                |                      |
-| invoice.priceCurrency                      | currency             |                      |
-| invoice.identifier                         | orderId              |                      |
-| invoice.total                              | price                |                      |
-| invoice.orderItem.price                    | items.price          |                      |
-| invoice.orderItem.orderQuantity            | items.quantity       |                      |
-| invoice.orderItem.sku                      | items.productId      |                      |
-| invoice.orderItem.name                     | items.name           |                      |
-| invoice.orderItem.offers.seller.name       | items.productId      | *                    |
-| invoice.orderItem.offers.seller.identifier | items.name           | *                    |
-
 #### Ratings and reviews (for Product)
 Core templates:
 * `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
@@ -170,67 +154,33 @@ Example:
 </section>
 ```
 
-#### Tracking pixel
-Core templates:
-* `SprykerShop/Yves/PaymentPage/Theme/default/views/payment-success/index.twig`
-* `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
-
-Example:
-```html
-<section itemscope itemtype="https://schema.org/Invoice">
-   <meta itemprop="identifier" content="{order_reference}">
-   <section itemprop="totalPaymentDue" itemscope itemtype="https://schema.org/PriceSpecification">
-      <meta itemprop="priceCurrency" content="{currency}">
-      <meta itemprop="price" content="{order_grand_total}">
-   </section>
-
-   <section itemprop="referencesOrder" itemscope itemtype="https://schema.org/Order">
-      <section itemprop="orderedItem" itemscope itemtype="https://schema.org/OrderItem">
-         <meta itemprop="orderQuantity" content="{item_quantity}">
-
-         <section itemprop="orderedItem" itemscope itemtype="https://schema.org/Product">
-            <meta itemprop="sku" content="{item_sku}">
-            <meta itemprop="name" content="{item_name}">
-
-            <section itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-               <meta itemprop="priceCurrency" content="{currency}">
-               <meta itemprop="price" content="{item_sub_total}">
-               
-               <!-- SprykerShop/Yves/MerchantWidget/Theme/default/views/merchant-meta-schema/merchant-meta-schema.twig --> 
-               <section itemprop="seller" itemscope itemtype="https://schema.org/Organization">
-                  <meta itemprop="name" content="{merchant_name }}">
-                  <meta itemprop="identifier" content="{merchant_reference }}">
-               </section>
-            </section>
-         </section>
-      </section>
-   </section>
-
-   <section itemscope itemtype="https://schema.org/Person">
-      <meta itemprop="email" content="{customer_email}">
-   </section>
-</section>
-```
-
 ### 3. Configure Message Broker
 
 Add the following configuration to `config/Shared/common/config_default.php`:
 ```php
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+use \Generated\Shared\Transfer\AddReviewsTransfer;
+use \Generated\Shared\Transfer\OrderStatusChangedTransfer;
+use \Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
+
+//...
+
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...,
     AddReviewsTransfer::class => 'reviews',
+    OrderStatusChangedTransfer::class => 'orders'
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...,
     'reviews' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'orders' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...,
     'reviews' => 'http',
+    'orders' => 'http',
 ];
 ```
 #### Add Message Handler
@@ -249,6 +199,7 @@ Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyPr
      ];
  }
 ```
+
 #### Receive messages
 
 To receive messages from the channel, the following command is used:
@@ -266,5 +217,79 @@ $jobs[] = [
     'stores' => $allStores,
 ];
 ```
+
+### 4. Configure OMS
+
+#### Extend command plugins
+
+Add the following plugin to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
+
+```php
+use Spryker\Zed\Oms\Communication\Plugin\Oms\Command\SendOrderStatusChangedMessagePlugin;
+
+// ...
+
+/**
+ * @param \Spryker\Zed\Kernel\Container $container
+ *
+ * @return \Spryker\Zed\Kernel\Container
+ */
+protected function extendCommandPlugins(Container $container): Container
+{
+    $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
+        // ...
+        $commandCollection->add(new SendOrderStatusChangedMessagePlugin(), 'Order/RequestProductReviews');
+    
+        return $commandCollection;
+    });
+ }
+```
+
+#### Add order hydration plugin (Marketplace only)
+
+Add the following plugin to `src/Pyz/Zed/Sales/SalesDependencyProvider.php`:
+
+```php
+use Spryker\Zed\MerchantProfile\Communication\Plugin\Sales\MerchantDataOrderHydratePlugin;
+
+// ...
+
+/**
+ * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
+ */
+protected function getOrderHydrationPlugins(): array
+{
+    return [
+        // ...
+        new MerchantDataOrderHydratePlugin(),
+    ];
+}
+```
+
+#### Update OMS schema (Marketplace only)
+
+Adjust your OMS state-machine configuration to trigger the `Order/RequestProductReviews` command according to your project’s requirements.
+
+Using the `DummyPayment01.xml` process as an example, we used it on `authorize` event:
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
+ 
+    <process name="DummyPayment01" main="true">
+        <!-- ... -->
+        <events>
+            <!-- ... -->
+            <event name="authorize" timeout="1 second" command="Order/RequestProductReviews"/>
+            <!-- ... -->
+        </events>
+    </process>
+    <!-- ... -->
+</statemachine>
+```
+
 ## Next steps
 [Configure the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) for your store.

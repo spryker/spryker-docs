@@ -44,4 +44,4 @@ echo "Current SDK version: $(spryker-sdk --version)"
 To get an overview on the available capabilities of the Spryker SDK please run **spryker-sdk list**.
 
 Any task can be executed by running **spryker-sdk \<task-id\>** from project root folder.
-Using **bin/consolespryker-sdk \<task-id\> -h** will give a description on what options can be passed into the task.
+Using **bin/console spryker-sdk \<task-id\> -h** will give a description on what options can be passed into the task.

@@ -104,7 +104,7 @@ class ProductCategoryFilterStorageConfig extends SprykerProductCategoryFilterSto
 
 ### 3) Set up database schema and transfer objects
 
-1.  Set up synchronization queue pools so the entities without store relations are synchronized among stores:
+1. Set up synchronization queue pools so the entities without store relations are synchronized among stores:
 
 **src/Pyz/Zed/ProductCategoryFilterStorage/Persistence/Propel/Schema/spy_product_category_filter_storage.schema.xml**
 
@@ -144,7 +144,7 @@ Make sure that the following changes have been applied in the database.
 
 Configure tables to be published to the `spy_product_abstract_category_storage` and `spy_product_category_filter_storage` and synchronized to the Storage on create, edit, and delete changes:
 
-1.  Set up publisher plugins:
+1. Set up publisher plugins:
 
 | PLUGIN                                                 | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                           |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------|
@@ -619,9 +619,6 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that, after updating or removing a category in the Back Office, the product assignments are changed respectively.
 

@@ -1,5 +1,5 @@
 ---
-title: Managing transactions log
+title: Manage transactions log
 description: In this section, you can view data being transmitted during the cart transfer in the Punch out protocol.
 last_updated: Jun 24, 2021
 template: back-office-user-guide-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-transactions-log
   - /docs/managing-transactions-log
   - /docs/en/managing-transactions-log
+  - /docs/scos/user/back-office-user-guides/202212.0/punch-out/managing-transactions-log.html
 related:
   - title: Managing punch out connections
     link: docs/pbc/all/punchout/page.version/manage-in-the-back-office/manage-punch-out-connections.html

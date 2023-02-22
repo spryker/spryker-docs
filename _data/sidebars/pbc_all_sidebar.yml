@@ -1029,6 +1029,27 @@ entries:
             url: /docs/pbc/all/product-relationship-management/build-your-own-product-relation-type.html
           - title: "Product Relations: module relations"
             url: /docs/pbc/all/product-relationship-management/product-relations-module-relations.html
+      - title: Punchout
+        url: /docs/pbc/all/punchout/punchout-catalogs.html
+        include_versions:
+        - "202212.0"
+        ntested:
+          - title: Punchout Catalogs overview
+            url: docs/pbc/all/punchout/punchout-catalogs-overview.html
+          - title: Install features
+            nested:
+              - title: Punchout Catalog
+                url: /docs/pbc/all/punchout/install-features/install-the-punchout-catalog-feature.html
+              - title: "Eco: Punchout Catalogs"
+                url: /docs/pbc/all/punchout/install-features/install-the-eco-punchout-catalogs-feature.html
+              - title: "Eco: Punchout Catalogs + Product Bundles"
+                url: /docs/pbc/all/punchout/install-features/install-the-eco-punchout-catalogs-product-bundles-feature.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Manage punch out connections
+                url: /docs/pbc/all/punchout/manage-in-the-back-office/manage-punch-out-connections.html
+              - title: Manage transactions log
+                url: /docs/pbc/all/punchout/manage-in-the-back-office/manage-transactions-log.html                
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:

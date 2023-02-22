@@ -37,7 +37,7 @@ To integrate Bazaarvoice, follow these steps.
 
 To enable your customers to leave reviews on your products, add the Bazaarvoice domain to your **Content Security Policy** allowlist in one of the following ways: 
 
-- change the `deploy.yml` file: 
+- Change the `deploy.yml` file: 
 
 ```yml
 image:
@@ -51,7 +51,7 @@ image:
     }'
 ```
 
-- update the `config/Shared/config_default.php` file:
+- Update the `config/Shared/config_default.php` file:
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';

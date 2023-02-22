@@ -16,7 +16,7 @@ related:
   - title: Managing transactions log
     link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-transactions-log.html
   - title: Punchout Catalogs overview
-    link: docs/scos/user/technology-partners/page.version/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
+    link: docs/pbc/all/punchout/page.version/punchout-catalogs-overview.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.

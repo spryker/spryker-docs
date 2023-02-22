@@ -24,16 +24,16 @@ Your users can search for active concrete products by the following attributes:
 
 {% info_block infoBox "Note" %}
 
-Spryker will group all concrete products that belong to the same abstract product if a search query returns them.
+Spryker groups all concrete products that belong to the same abstract product if a search query returns them.
 
 {% endinfo_block %}
 
 ## Indexes
 
-An index is the place where the data used by Algolia is stored.
+An index is a place where the data used by Algolia is stored.
 
 In case of the Spryker store, the index is a complete list of all active concrete products that can appear in search results.
-There are separate indexes for each locale and sorting strategy. With the Algolia app, the search results in your store can be sorted by:
+There are separate indexes for each locale and sorting strategy. With the Algolia app, the search results in your store can be sorted by the following options:
 
 - Popularity
 - From highest to lowest rating

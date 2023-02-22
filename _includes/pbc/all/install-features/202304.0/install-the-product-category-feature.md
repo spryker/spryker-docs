@@ -8,7 +8,7 @@ Follow the steps below to install the Product + Category feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -17,8 +17,6 @@ To start feature integration, overview and install the necessary features:
 | Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
@@ -110,7 +108,7 @@ class ProductCategoryFilterStorageConfig extends SprykerProductCategoryFilterSto
 
 **src/Pyz/Zed/ProductCategoryFilterStorage/Persistence/Propel/Schema/spy_product_category_filter_storage.schema.xml**
 
-```
+```xml
 <?xml version="1.0"?>
 <database
     xmlns="spryker:schema-01"
@@ -144,7 +142,7 @@ Make sure that the following changes have been applied in the database.
 
 ### 4) Configure export to Redis
 
-Configure tables to be published to the `spy_product_abstract_category_storage`, `spy_product_category_filter_storage` and synchronized to the Storage on create, edit, and delete changes:
+Configure tables to be published to the `spy_product_abstract_category_storage` and `spy_product_category_filter_storage` and synchronized to the Storage on create, edit, and delete changes:
 
 1.  Set up publisher plugins:
 
@@ -163,7 +161,8 @@ Configure tables to be published to the `spy_product_abstract_category_storage`,
 | ProductCategoryWriteForPublishingPublisherPlugin       | Publishes product category data by the `ProductCategory` publishing events.                   |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory   |
 | ProductCategoryWritePublisherPlugin                    | Publishes product category data by the`SpyProductCategory` entity events.                     |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory   |
 
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -218,6 +217,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+</details>
 
 2. Set up event listeners:
 
@@ -313,7 +313,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-5. Set up re-generate and re-sync Features
+5. Set up, regenerate, and resync features:
 
 | PLUGIN                                                 | SPECIFICATION                                      | PREREQUISITES | NAMESPACE                                                           |
 |--------------------------------------------------------|----------------------------------------------------|---------------|---------------------------------------------------------------------|
@@ -345,7 +345,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, when a category product assignment is changed through ORM, it is exported to Redis.
+When a category product assignment is changed through ORM, make sure it is exported to Redis.
 
 | STORAGE TYPE | TARGET ENTITY           | EXAMPLE EXPECTED DATA IDENTIFIER     |
 |--------------|-------------------------|--------------------------------------|
@@ -353,7 +353,7 @@ Make sure that, when a category product assignment is changed through ORM, it is
 | Redis        | ProductCategoryFilter   | product_category_filter:8            |
 
 
-**EXAMPLE EXPECTED DATA GRAGMENT: product_abstract_category:de:de_de:1**
+**An expected data fragment example: `product_abstract_category:de:de_de:1`**
 
 ```json
 {
@@ -376,7 +376,8 @@ Make sure that, when a category product assignment is changed through ORM, it is
 }
 ```
 
-**EXAMPLE EXPECTED DATA GRAGMENT: product_category_filter:8**
+<details open>
+<summary markdown='span'>An expected data fragment example: `product_category_filter:8`</summary>
 
 ```json
 {
@@ -437,6 +438,7 @@ Make sure that, when a category product assignment is changed through ORM, it is
    }
 }
 ```
+<d/etails>
 
 {% endinfo_block %}
 
@@ -454,7 +456,8 @@ Add the following plugins to your project:
 | RemoveProductCategoryRelationPlugin                   | Removes relations between category and products.                                                              |               | Spryker\Zed\ProductCategory\Communication\Plugin                                       |
 | ProductUpdateEventTriggerCategoryRelationUpdatePlugin | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -500,7 +503,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
-
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -570,7 +573,9 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, on the *Delete Category* in the Back Office, the *Products to be de-assigned* column is displayed.
+1. In the Back Office, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Category**.
+2. For any category of your choice, in **Actions**, select **Delete**. 
+3. On the **DELETE CATEGORY: `{CATEGORY_NAME}`** page that opens, make sure the **Products to be de-assigned** field is present. The `{CATEGORY_NAME}` placeholder stands for the name of the category that you select in step 2. 
 
 **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
 
@@ -622,13 +627,13 @@ Make sure that, after updating or removing a category in the Back Office, the pr
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-To install the Category Management feature front end, follow the steps below.
+Follow the steps below to install the Product + Category feature frontend.
 
 ### Prerequisites
 
-Overview and install the following features.
+To start feature integration, integrate the required features:
 
 | NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -638,8 +643,6 @@ Overview and install the following features.
 
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
@@ -661,7 +664,7 @@ Register the following global widgets:
 
 | WIDGET                                 | DESCRIPTION                                                  | NAMESPACE                                     |
 |----------------------------------------|--------------------------------------------------------------|-----------------------------------------------|
-| ProductBreadcrumbsWithCategoriesWidget | Displays category breadcrumbs on the *Product Details* page. | SprykerShop\Yves\ProductCategoryWidget\Widget |
+| ProductBreadcrumbsWithCategoriesWidget | Displays category breadcrumbs on the product details page. | SprykerShop\Yves\ProductCategoryWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -699,8 +702,8 @@ Integrate the following related features:
 
 | FEATURE                       | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                 |
 |-------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Category Management Feature   | ✓                                | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html)                                                |
-| Product Management Feature    | ✓                                | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                        |
+| Category Management Feature   | &check;                                | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html)                                                |
+| Product Management Feature    | &check;                                | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                        |
 | Glue API: Category Management |                                  | [Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-category-management-feature-integration.html)                    |
 | Catalog + Category Management |                                  | [Catalog + Category Management feature integration](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
-| CMS + Category Management     |                                  | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)   |
+| CMS + Category Management     |                                  | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)   |

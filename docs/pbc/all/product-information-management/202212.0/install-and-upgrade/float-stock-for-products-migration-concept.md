@@ -119,7 +119,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/product-quantity | 2.0.0 | [Migration Guide - ProductQuantity](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productquantity-module.html) |
 | spryker/product-quantity-data-import | 2.0.0 | [Migration Guide - ProductQuantityDataImport](/docs/scos/dev/module-migration-guides/migration-guide-productquantitydataimport.html) |
 | spryker/product-quantity-storage | 2.0.0 | [Migration Guide - ProductQuantityStorage](/docs/scos/dev/module-migration-guides/migration-guide-productquantitystorage.html) |
-| spryker/quick-order | 2.0.0 | [Migration Guide - QuickOrder](/docs/scos/dev/module-migration-guides/migration-guide-quickorder.html) |
+| spryker/quick-order | 2.0.0 | [Migration Guide - QuickOrder](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html) |
 | spryker/sales | 9.0.0 | [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html) |
 | spryker/sales-quantity | 2.0.0 | [Migration Guide - SalesQuantity](/docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html) |
 | spryker/sales-split | 4.0.0 | [Migration Guide - SalesSplit](/docs/scos/dev/module-migration-guides/migration-guide-salessplit.html) |

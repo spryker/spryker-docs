@@ -12,9 +12,9 @@ To start feature integration, integrate the required features
 
 | NAME                | VERSION | INTEGRATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | {{site.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Catalog             | {{site.version}}  |  |
-| Category Management | {{site.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Spryker Core        | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Catalog             | {{page.version}}  |  |
+| Category Management | {{page.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 
 ### 1) Set up behavior
 
@@ -90,4 +90,4 @@ Integrate the following related features:
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ------------- | ---------------- | -------------------- |
 | Catalog             |      &check;     | |
-| Category Management |      &check;     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Category Management |      &check;     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |

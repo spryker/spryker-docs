@@ -8,8 +8,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shared Carts | {{site.version}} |
-| Persistent Cart Sharing | {{site.version}} |
+| Shared Carts | {{page.version}} |
+| Persistent Cart Sharing | {{page.version}} |
 
 ### 1) Set up behavior
 
@@ -112,8 +112,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shared Carts | {{site.version}} |
-| Persistent Cart Sharing | {{site.version}} |
+| Shared Carts | {{page.version}} |
+| Persistent Cart Sharing | {{page.version}} |
 
 ## 1) Add translations
 

@@ -1162,8 +1162,6 @@ entries:
                 url: /docs/pbc/all/product-information-management/product-feature-overview/search-widget-for-concrete-products-overview.html
           - title: Alternative Products
             url: /docs/pbc/all/product-information-management/alternative-products-feature-overview.html
-          - title: Catalog
-            url: /docs/pbc/all/product-information-management/catalog-feature-overview.html
           - title: Category Management
             url: /docs/pbc/all/product-information-management/category-management-feature-overview.html
           - title: Configurable Bundle
@@ -1202,10 +1200,6 @@ entries:
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
                   - title: Approval Process + Shipment
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-approval-process-shipment-feature.html
-                  - title: Catalog + Category Management
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html
-                  - title: Catalog + Order Management
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-catalog-order-management-feature.html
                   - title: Category Filters
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-category-filters-feature.html
                   - title: Category Image
@@ -1274,8 +1268,6 @@ entries:
                 nested:
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
-                  - title: Catalog
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-catalog-glue-api.html
                   - title: Category Management
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html
                   - title: Configurable Bundle + Cart
@@ -1302,16 +1294,12 @@ entries:
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html
               - title: Upgrade modules
                 nested:
-                  - title: Catalog
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html
                   - title: Category
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-category-module.html
                   - title: Category Template Migration Console
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-category-template-migration-console-module.html
                   - title: CategoryGui
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorygui-module.html
-                  - title: CategoryPageSearch
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
                   - title: CategoryStorage
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-categorystorage-module.html
                   - title: ConfigurableBundle
@@ -1358,8 +1346,6 @@ entries:
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlabelstorage-module.html
                   - title: ProductListGui
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html
-                  - title: ProductListSearch
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productlistsearch-module.html
                   - title: ProductManagement
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
                   - title: ProductMeasurementUnit

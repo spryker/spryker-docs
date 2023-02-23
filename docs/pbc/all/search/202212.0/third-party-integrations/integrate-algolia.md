@@ -84,7 +84,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 ### Modules configuration and dependencies
 
-#### Client: Catalog dependencies
+####  Configure catalog dependencies in Client
 
 Add the following to `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`:
 

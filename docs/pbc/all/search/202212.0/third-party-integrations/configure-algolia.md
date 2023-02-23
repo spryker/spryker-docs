@@ -24,7 +24,7 @@ To integrate the Algolia app, do the following:
     - Admin API Key
 8. Go back to your store's Back Office, to the Algolia app details page.
 9. In the top right corner of the Algolia app details page, click **Configure**.
-10. In the **Configure** pane, fill in the **APPLICATION ID**, **SEARCH-ONLY API KEY**, and **ADMIN API KEY** fields with the values from step 6.
+10. In the **Configure** pane, fill in the **APPLICATION ID**, **SEARCH-ONLY API KEY**, and **ADMIN API KEY** fields with the values from step 7.
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 

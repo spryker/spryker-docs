@@ -13,7 +13,7 @@ There are two possible causes for this:
 
 * All the P&S events go to an **event** message queue.
 
-TODO: add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3695250025/Slow+P+S
+![an-event-message-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-p-and-s/an-event-message-queue.png)
 
 * Messages that are not used on the project.
 

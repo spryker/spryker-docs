@@ -12,7 +12,7 @@ The BazaarVoice app requires the following Spryker modules:
 
 * `spryker/asset: ^1.3.0`
 * `spryker/asset-storage: ^1.1.0`
-* `spryker/merchant-profile: ^1.1.0`
+* `spryker/merchant-profile: ^1.1.0` (Marketplace only)
 * `spryker/message-broker: ^1.3.0`
 * `spryker/message-broker-aws: ^1.3.2`
 * `spryker/oms: ^11.23.0`
@@ -245,28 +245,7 @@ protected function extendCommandPlugins(Container $container): Container
  }
 ```
 
-#### Add order hydration plugin (Marketplace only)
-
-Add the following plugin to `src/Pyz/Zed/Sales/SalesDependencyProvider.php`:
-
-```php
-use Spryker\Zed\MerchantProfile\Communication\Plugin\Sales\MerchantDataOrderHydratePlugin;
-
-// ...
-
-/**
- * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
- */
-protected function getOrderHydrationPlugins(): array
-{
-    return [
-        // ...
-        new MerchantDataOrderHydratePlugin(),
-    ];
-}
-```
-
-#### Update OMS schema (Marketplace only)
+#### Update OMS schema
 
 Adjust your OMS state-machine configuration to trigger the `Order/RequestProductReviews` command according to your project’s requirements.
 
@@ -289,6 +268,27 @@ Using the `DummyPayment01.xml` process as an example, we used it on `authorize` 
     </process>
     <!-- ... -->
 </statemachine>
+```
+
+#### Add order hydration plugin (Marketplace only)
+
+Add the following plugin to `src/Pyz/Zed/Sales/SalesDependencyProvider.php`:
+
+```php
+use Spryker\Zed\MerchantProfile\Communication\Plugin\Sales\MerchantDataOrderHydratePlugin;
+
+// ...
+
+/**
+ * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
+ */
+protected function getOrderHydrationPlugins(): array
+{
+    return [
+        // ...
+        new MerchantDataOrderHydratePlugin(),
+    ];
+}
 ```
 
 ## Next steps

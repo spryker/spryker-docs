@@ -40,7 +40,7 @@ To start integration, the Algolia app requires the following Spryker modules:
 
 Algolia integration is not a single step. Follow the steps in the sections below to integrate Algolia.
 
-### Shared configs
+### Configure shared configs
 
 Add next config to `config/Shared/common/config_default.php`:
 

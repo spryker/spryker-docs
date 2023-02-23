@@ -1,23 +1,26 @@
 ---
 title: Slow P&S
-description: Slow P&S
+description: P&S is slow on all or some actions.
 template: troubleshooting-guide-template
+last_updated: Feb 23, 2023
 ---
 
 P&S is slow on all or some actions.
 
 ## Cause
 
-1. A possible cause can be that all the P&S events go to an “event“ message queue.
+There are two possible causes for this:
+
+* All the P&S events go to an **event** message queue.
 
 TODO: add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3695250025/Slow+P+S
 
-2. Another possible cause can be messages that are not used on the project.
+* Messages that are not used on the project.
 
 ## Solution
 
 1. [Integrate multi-queue publish structure](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html).
-F.e Publish action, in this case, can look like this:
+The Publish action, in this case, can look like this:
 
 TODO: add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3695250025/Slow+P+S
 

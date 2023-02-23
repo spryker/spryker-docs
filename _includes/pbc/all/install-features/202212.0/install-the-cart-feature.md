@@ -4,7 +4,7 @@
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current feature integration guide only adds the [Add product to cart from the Catalog page](/docs/scos/user/features/{{site.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) functionality.
+The current feature integration guide only adds the [Add product to cart from the Catalog page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) functionality.
 
 {% endinfo_block %}
 
@@ -18,12 +18,12 @@ To start feature integration, integrate the required features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/cart {{site.version}} --update-with-dependencies
+composer require spryker-feature/cart {{page.version}} --update-with-dependencies
 ```
 
 ### 2) Add translations
@@ -61,12 +61,12 @@ To start feature integration, integrate the required features:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/cart {{site.version}} --update-with-dependencies
+composer require spryker-feature/cart {{page.version}} --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

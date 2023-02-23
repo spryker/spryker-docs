@@ -14,8 +14,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Navigation | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Navigation | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 

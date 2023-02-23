@@ -32,7 +32,7 @@ Each payment method must provide the payment amount it shares from the order's g
 
 ## Payment hydration for order
 
-The [Sales](/docs/scos/dev/feature-walkthroughs/{{site.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) module provides plugins to hydrate `OrderTransfer`, which is called when `SalesFacade::getOrderByIdSalesOrder` is invoked.
+The [Sales](/docs/pbc/all/order-management-system/{{site.version}}/domain-model-and-relationships/sales-module-reference-information.html) module provides plugins to hydrate `OrderTransfer`, which is called when `SalesFacade::getOrderByIdSalesOrder` is invoked.
 
 This plugin invokes the payment hydration plugin stack, which must be injected to  `\Spryker\Zed\Payment\PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS`, for example:
 

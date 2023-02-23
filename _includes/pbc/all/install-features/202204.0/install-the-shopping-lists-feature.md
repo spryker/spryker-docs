@@ -10,19 +10,19 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Company Account | {{site.version}} |
-| Customer Account Management | {{site.version}} |
-| Spryker Core | {{site.version}} |
-|Cart | {{site.version}} |
-|Prices | {{site.version}} |
-|Product | {{site.version}} |
+| Company Account | {{page.version}} |
+| Customer Account Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
+|Cart | {{page.version}} |
+|Prices | {{page.version}} |
+|Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shopping-lists:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1005,18 +1005,18 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Company Account | {{site.version}} |
-| Multiple Carts | {{site.version}} |
-| Product | {{site.version}} |
-| Customer Account Management | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Company Account | {{page.version}} |
+| Multiple Carts | {{page.version}} |
+| Product | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shopping-lists:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

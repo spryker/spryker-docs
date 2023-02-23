@@ -4,7 +4,7 @@ description: How to integrate Spryker Code Upgrader into your development proces
 template: concept-topic-template
 ---
 
-When integrating Spryker Code Upgrader into your development process it is important to consider your development process and integrate it correctly, here we would like to briefly explain how Spryker Code Upgrader can be integrated into your Scrum development process and Git flow.
+Spryker Code Upgrader works best when it is strategically integrated into your development process. hen integrating Spryker Code Upgrader into your development process it is important to consider your development process and integrate it correctly, here we would like to briefly explain how Spryker Code Upgrader can be integrated into your Scrum development process and Git flow.
 
 ![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/integrate-spryker-code-upgrader.md/spryker-code-upgrader-integration-diagramm.png)
 

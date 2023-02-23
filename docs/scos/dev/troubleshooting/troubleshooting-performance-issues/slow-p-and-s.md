@@ -22,7 +22,7 @@ TODO: add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/369525
 1. [Integrate multi-queue publish structure](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html).
 The Publish action, in this case, can look like this:
 
-TODO: add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3695250025/Slow+P+S
+![publish-action](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-p-and-s/publish-action.png)
 
 2. Check and disable messages that are not used on the project.
 

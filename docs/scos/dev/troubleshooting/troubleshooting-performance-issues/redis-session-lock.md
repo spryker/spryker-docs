@@ -2,6 +2,7 @@
 title: Redis Session Lock
 description: Redis Session Lock
 template: troubleshooting-guide-template
+last_updated: Feb 23, 2023
 ---
 
 Some actions, parts of the website, or the whole website is slow.
@@ -10,7 +11,7 @@ Some actions, parts of the website, or the whole website is slow.
 
 A possible cause is the pessimistic Redis Session lock.
 
-Example of pessimistic Redis Session lock in New Relic report:
+An example of pessimistic Redis Session lock in New Relic report:
 
 TODO: add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3696165904/Redis+lock
 

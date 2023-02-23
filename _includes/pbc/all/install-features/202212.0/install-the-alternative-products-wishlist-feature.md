@@ -14,8 +14,8 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
-|Alternative Products| {{site.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-feature-integration.html)|
-|Wishlist|{{site.version}}| |
+|Alternative Products| {{page.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)|
+|Wishlist|{{page.version}}| |
 
 ### 1) Add translations
 

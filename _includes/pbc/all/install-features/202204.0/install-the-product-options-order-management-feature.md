@@ -8,9 +8,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product Options | {{site.version}} |
-| Order Management | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Product Options | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up behavior
 

@@ -223,23 +223,25 @@ versioned_categories:
   pbc:
     all:
       - cart-and-checkout
+      - carrier-management
       - content-management-system
+      - customer-relationship-management
       - discount-management
+      - emails
       - gift-cards
       - identity-access-management
-      - user-management
-      - return-management
-      - emails
-      - carrier-management
+      - order-management-system
       - price-management
+      - product-information-management
+      - product-relationship-management
+      - return-management
       - ratings-reviews
       - request-for-quote
       - search
       - shopping-list-and-wishlist
       - tax-management
+      - user-management
       - warehouse-management-system
-      - product-information-management
-      - product-relationship-management
 
 
 

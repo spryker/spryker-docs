@@ -10,13 +10,13 @@ entries:
           - title: Install and upgrade
             nested:
               - title: Integrate the Shipment feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-feature.html
               - title: Integrate the Shipment + Approval Process feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-approval-process-feature.html
               - title: Integrate the Shipment + Cart feature
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-cart-feature.html
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-cart-feature.html
               - title: Integrate the Shipment Glue API
-                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/install-the-shipment-glue-api.html
               - title: Upgrade the Shipment module
                 url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
               - title: Upgrade the ShipmentCartConnector module
@@ -214,6 +214,8 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
                   - title: CheckoutRestApi
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
+                  - title: QuickOrderPage
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
           - title: Extend and customize
             nested:
               - title: "Calculation 3.0"
@@ -305,9 +307,9 @@ entries:
                 url: /docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html
           - title: Content items feature overview
             url: /docs/pbc/all/content-management-system/content-items-feature-overview.html
-          - title: Navigation feature overview
-            url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
           - title: File Manager feature overview
+            url: /docs/pbc/all/content-management-system/file-manager-feature-overview.html
+          - title: Navigation feature overview
             url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
           - title: Install and upgrade
             nested:
@@ -323,6 +325,10 @@ entries:
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
                   - title: Content Items
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-content-items-feature.html
+                  - title: File Manager
+                    url: docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-file-manager-feature.md
+                    include_versions:
+                    - "202304.0"
                   - title: Navigation
                     url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-navigation-feature.html
                   - title: Product Sets
@@ -560,6 +566,158 @@ entries:
             nested:
               - title: "Content item types: module relations"
                 url: /docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html
+      - title: Customer Relationship Management
+        url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
+        include_versions:
+          - "202212.0"
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Company Account
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-company-account-feature.html
+                  - title: Company Account + Order Management
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
+                  - title: Customer Access
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-access-feature.html
+                  - title: Customer Account Management + Agent Assist
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html
+                  - title: Customer Account Management
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
+                  - title: Customer Account Management + Order Management
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Company Account
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+                  - title: Customer Account Management
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: CompanyBusinessUnit
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companybusinessunit-module.html
+                  - title: CompanyUser
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html
+                  - title: CompanyUserAuthRestApi
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyuserauthrestapi-module.html
+                  - title: CompanyUsersRestApi
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-companyusersrestapi-module.html
+                  - title: Customer
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customer-module.html
+                  - title: CustomerPage
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html
+                  - title: CustomerReorderWidget
+                    url: /docs/pbc/all/customer-relationship-management/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html
+          - title: Company Account feature overview
+            url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-account-feature-overview.html
+            nested:
+              - title: Business on Behalf
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-on-behalf-overview.html
+              - title: Business Units
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/business-units-overview.html
+              - title: Company Accounts
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-accounts-overview.html
+              - title: Company user roles and permissions
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+              - title: Customer Login by Token
+                url: /docs/pbc/all/customer-relationship-management/company-account-feature-overview/customer-login-by-token-overview.html
+          - title: Customer Account Management
+            url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+            nested:
+              - title: Customer Accounts
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-accounts-overview.html
+              - title: Customer Groups
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-groups-overview.html
+              - title: Customer Login
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-login-overview.html
+              - title: Customer Registration
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/customer-registration-overview.html
+              - title: Password Management
+                url: /docs/pbc/all/customer-relationship-management/customer-account-management-feature-overview/password-management-overview.html
+          - title: Customer Access feature overview
+            url: /docs/pbc/all/customer-relationship-management/customer-access-feature-overview.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Manage customers
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/create-customers.html
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customers.html
+                  - title: View
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/view-customers.html
+                  - title: Add notes to customers
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-notes-to-customers.html
+                  - title: Add customer addresses
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/add-customer-addresses.html
+                  - title: Edit customer addresses
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/customers/edit-customer-addresses.html
+              - title: Manage customer access
+                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-customer-access.html
+              - title: Manage customer groups
+                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-customer-groups.html
+              - title: Manage companies
+                url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/manage-companies.html
+              - title: Manage company units
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-units/create-company-units.html
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-units/edit-company-units.html
+              - title: Manage company unit addresses
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html
+              - title: Manage company roles
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-roles/create-company-roles.html
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-roles/edit-company-roles.html
+              - title: Manage company users
+                nested:
+                  - title: Create
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-users/create-company-users.html
+                  - title: Edit
+                    url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/company-users/edit-company-users.html
+          - title: Manage using Glue API
+            nested:
+              - title: Company account
+                nested:
+                  - title: Search by company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
+                  - title: Retrieve company users
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
+                  - title: Retrieve companies
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
+                  - title: Retrieve business units
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
+                  - title: Retrieve company roles
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
+                  - title: Retrieve business unit addresses
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
+              - title: Customers
+                url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customers.html
+                nested:
+                  - title: Manage customer addresses
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
+                  - title: Retrieve customer orders
+                    url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
+              - title: Manage customer access to Glue API resources
+                url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
+          - title: Domain model and relationships
+            nested:
+              - title: "Company account: module relations"
+                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/company-account-module-relations.html
+              - title: "Customer Login by Token: reference information"
+                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-login-by-token-reference-information.html
+              - title: "Customer module overview: reference information"
+                url: /docs/pbc/all/customer-relationship-management/domain-model-and-relationships/customer-module-overview-reference-information.html
+          - title: "File details: customer.csv"
+            url: /docs/pbc/all/customer-relationship-management/file-details-customer.csv.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -709,6 +867,141 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html
           - title: Configure basic .htaccess authentication
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
+      - title: Order Management System
+        url: /docs/pbc/all/order-management-system/order-management-system.html
+        include_versions:
+          - "202212.0"
+        nested:
+          - title: Order Management feature overview
+            url: /docs/pbc/all/order-management-system/order-management-feature-overview/order-management-feature-overview.html
+            nested:
+              - title: Invoice generation
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/invoice-generation-overview.html
+              - title: Order cancellation
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/order-cancellation-overview.html
+              - title: Splittable order items
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/splittable-order-items-overview.html
+              - title: Split delivery
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/split-delivery-overview.html
+              - title: OMS (Order management system) matrix
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/oms-order-management-system-matrix.html
+              - title: Custom order reference
+                url: /docs/pbc/all/order-management-system/order-management-feature-overview/custom-order-reference-overview.html
+          - title: Reclamations feature overview
+            url: /docs/pbc/all/order-management-system/reclamations-feature-overview.html
+          - title: Refunds feature overview
+            url: /docs/pbc/all/order-management-system/refunds-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Order Management
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-order-management-feature.html
+                  - title: Reclamations
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-reclamations-feature.html
+                  - title: Quick Add to Cart + Non-splittable Products
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Checkout
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
+                  - title: Order Management
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html
+                  - title: Shipment
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: ManualOrderEntryGui
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html
+                  - title: OrdersRestApi
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
+                  - title: Refund
+                    url: /docs/pbc/all/order-management-system/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
+              - title: Split delivery migration concept
+                url: /docs/pbc/all/order-management-system/install-and-upgrade/split-delivery-migration-concept.html
+          - title: Import order statuses
+            url: /docs/pbc/all/order-management-system/file-details-order-status.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Orders
+                nested:
+                  - title: Change the state of order items
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/change-the-state-of-order-items.html
+                  - title: Commente orders
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/comment-orders.html
+                  - title: Create returns
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/create-returns.html
+                  - title: Edit billing addresses in orders
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html
+                  - title: Add and remove custom order references
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html
+                  - title: Edit shipments
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/edit-shipments.html
+                  - title: View returns of an order
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/orders/view-returns-of-an-order.html
+              - title: Reclamations
+                nested:
+                  - title: Create reclamations
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/reclamations/create-reclamations.html
+                  - title: Changing the state of order items in reclamations
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
+                  - title: View reclamations
+                    url: /docs/pbc/all/order-management-system/manage-in-the-back-office/reclamations/view-reclamations.html
+              - title: View refunds
+                url: /docs/pbc/all/order-management-system/manage-in-the-back-office/view-refunds.html
+              - title: View the order matrix
+                url: /docs/pbc/all/order-management-system/manage-in-the-back-office/view-the-order-matrix.html
+          - title: "Glue API: Retrieve orders"
+            url: /docs/pbc/all/order-management-system/glue-api-retrieve-orders.html
+          - title: Domain model and relationsips
+            nested:
+              - title: "Custom Order Reference: module relations"
+                url: /docs/pbc/all/order-management-system/domain-model-and-relationships/custom-order-reference-module-relations.html
+              - title: "Order Management feature: Domain model and relationships"
+                url: /docs/pbc/all/order-management-system/domain-model-and-relationships/order-management-feature-domain-model-and-relationships.html
+              - title: "Sales module: reference information"
+                url: /docs/pbc/all/order-management-system/domain-model-and-relationships/sales-module-reference-information.html
+          - title: DataPayload Conversion
+            nested:
+            - title: Refund process management
+              url: /docs/pbc/all/order-management-system/datapayload-conversion/refund-process-management.html
+            - title: State machine
+              url: /docs/pbc/all/order-management-system/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
+              nested:
+              - title: State machine console commands
+                url: /docs/pbc/all/order-management-system/datapayload-conversion/state-machine/state-machine-console-commands.html
+              - title: Order management system multi-thread
+                url: /docs/pbc/all/order-management-system/datapayload-conversion/state-machine/order-management-system-multi-thread.html
+              - title: Common pitfalls in OMS design
+                url: /docs/pbc/all/order-management-system/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
+              - title: Multi-language setup
+                url: /docs/pbc/all/order-management-system/datapayload-conversion/multi-language-setup.html
+              - title: Step engine
+                nested:
+                - title: Create a breadcrumb navigation
+                  url: /docs/pbc/all/order-management-system/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
+                - title: Use case scenario
+                  url: /docs/pbc/all/order-management-system/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
+                - title: Workflow overview
+                  url: /docs/pbc/all/order-management-system/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+          - title: State machine cookbook
+            url: /docs/pbc/all/order-management-system/state-machine-cookbook/state-machine-cookbook.html
+            nested:
+            - title: State machine fundamentals
+              url: /docs/pbc/all/order-management-system/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
+            - title: Build a state machine
+              url: /docs/pbc/all/order-management-system/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
+          - title: Disable split delivery on the Storefront
+            url: /docs/pbc/all/order-management-system/disable-split-delivery-on-the-storefront.html
+          - title: Email invoices using BCC
+            url: /docs/pbc/all/order-management-system/email-invoices-using-bcc.html
+
+          - title: Third-party integrations
+            nested:
+              - title: NEKOM CC GmbH
+                url: /docs/pbc/all/order-management-system/third-party-integrations/nekom-cc-gmbh.html
+              - title: Tradebyte
+                url: /docs/pbc/all/order-management-system/third-party-integrations/tradebyte.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
@@ -802,6 +1095,15 @@ entries:
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
                   - title: PriceProductVolumeGui
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
+          - title: Import and export data
+            url: /docs/pbc/all/price-management/import-and-export-data/import-of-prices.html
+            nested:
+              - title: currency.csv
+                url: /docs/pbc/all/price-management/import-and-export-data/file-details-currency.csv.html
+              - title: product_price_schedule.csv
+                url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html
+              - title: product_price.csv
+                url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html
           - title: Manage in the Back Office
             nested:
               - title: Create scheduled prices
@@ -1058,6 +1360,39 @@ entries:
                 url: /docs/pbc/all/search/tutorials-and-howtos/facet-filter-overview-and-configuration.html
               - title: "Tutorial: Integrate any search engine into a project"
                 url: /docs/pbc/all/search/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html
+          - title: Third-party integrations
+            nested:
+            - title: Algolia
+              url: /docs/pbc/all/search/third-party-integrations/algolia.html
+            - title: Integrate Algolia
+              url: /docs/pbc/all/search/third-party-integrations/integrate-algolia.html
+            - title: Disconnect Algolia
+              url: /docs/pbc/all/search/third-party-integrations/disconnect-algolia.html
+          - title: Best practices
+            url: /docs/pbc/all/search/best-practices/search-best-practices.html
+            nested:
+              - title: Data-driven ranking
+                url: /docs/pbc/all/search/best-practices/data-driven-ranking.html
+              - title: Full-text search
+                url: /docs/pbc/all/search/best-practices/full-text-search.html
+              - title: Generic faceted search
+                url: /docs/pbc/all/search/best-practices/generic-faceted-search.html
+              - title: Multi-term autocompletion
+                url: /docs/pbc/all/search/best-practices/multi-term-auto-completion.html
+              - title: Naive product-centric approach
+                url: /docs/pbc/all/search/best-practices/naive-product-centric-approach.html
+              - title: On-site search
+                url: /docs/pbc/all/search/best-practices/on-site-search.html
+              - title: Other best practices
+                url: /docs/pbc/all/search/best-practices/other-best-practices.html
+              - title: "Personalization: dynamic pricing"
+                url: /docs/pbc/all/search/best-practices/personalization-dynamic-pricing.html
+              - title: Precise search by super attributes
+                url: /docs/pbc/all/search/best-practices/precise-search-by-super-attributes.html
+              - title: Simple spelling suggestions
+                url: /docs/pbc/all/search/best-practices/simple-spelling-suggestions.html
+              - title: Usage-driven schema and document structure
+                url: /docs/pbc/all/search/best-practices/usage-driven-schema-and-document-structure.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -1098,12 +1433,16 @@ entries:
                 url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
               - title: Upgrade the Wishlist module
                 url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.html
-          - title: Manage via Glue API
+          - title: Manage using Glue API
             nested:
-              - title: Manage shopping lists
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
-              - title: Manage shopping list items
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html
+              - title: Shopping lists
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-shopping-lists.html
+              - title: Shopping list items
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-shopping-list-items.html
+              - title: Wishlists
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-wishlists.html
+              - title: Wishlist items
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-wishlist-items.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

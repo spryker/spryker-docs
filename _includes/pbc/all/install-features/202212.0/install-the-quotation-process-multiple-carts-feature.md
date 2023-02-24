@@ -7,8 +7,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Quotation Process | {{site.version}} |
-| Multiple Carts | {{site.version}} |
+| Quotation Process | {{page.version}} |
+| Multiple Carts | {{page.version}} |
 
 ### 1) Set up behavior
 

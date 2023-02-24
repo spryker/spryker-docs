@@ -9,13 +9,12 @@ Some actions, parts of the website, or the whole website is slow.
 
 ## Cause
 
-A possible cause is the pessimistic Redis Session lock.
+A possible cause is the pessimistic Redis Session Lock.
 
-An example of a pessimistic Redis Session lock in the New Relic report:
+An example of a pessimistic Redis Session Lock in the New Relic report:
 
 ![pessimistic-redis-session-lock-in-new-relic-report](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock/pessimistic-redis-session-lock-in-new-relic-report.png)
 
 ## Solution
 
 Check performance guidelines: [Architecture performance guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#optimistic-vs-pessimistic-locking)
-

@@ -7,17 +7,17 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core E-commerce | {{site.version}} |
-| Cart| {{site.version}} |
-| Product | {{site.version}}  |
-| Checkout | {{site.version}} |
+| Spryker Core E-commerce | {{page.version}} |
+| Cart| {{page.version}} |
+| Product | {{page.version}}  |
+| Checkout | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/quick-add-to-cart:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/quick-add-to-cart:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox “Verification” %}
@@ -131,10 +131,10 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Spryker Core| {{site.version}} |
-|Cart| {{site.version}} |
-|Product| {{site.version}} |
-|Checkout| {{site.version}} |
+|Spryker Core| {{page.version}} |
+|Cart| {{page.version}} |
+|Product| {{page.version}} |
+|Checkout| {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -357,5 +357,5 @@ Make the following checks at https://mysprykershop.com/quick-order:
 
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE  |
 |---------|--------------|--------------|
-| Marketplace Product + Quick Add to Cart       |              | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-quick-add-to-cart-feature-integration.html)             |
-| Marketplace Product Offer + Quick Add to Cart |              | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html) |
+| Marketplace Product + Quick Add to Cart       |              | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html)             |
+| Marketplace Product Offer + Quick Add to Cart |              | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html) |

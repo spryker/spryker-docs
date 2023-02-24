@@ -13,10 +13,10 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- |  --- |
-| Cms | {{site.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) | 
-| Product Lists | {{site.version}} | [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-lists-feature-integration.html) | 
-| Catalog | {{site.version}} | | 
-| Customer | {{site.version}} | | 
+| Cms | {{page.version}} | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-cms-feature.html) | 
+| Product Lists | {{page.version}} | [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) | 
+| Catalog | {{page.version}} | | 
+| Customer | {{page.version}} | | 
 
 ### 1) Install the required modules using Composer
 

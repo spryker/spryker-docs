@@ -9,5 +9,3 @@ This section contains the following best practices guidelines and recommendation
 * [Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html) to optimize your search functionality.
 
 * [Coding best practices](/docs/scos/dev/best-practices/coding-best-practices.html) describes a few common PHP coding problems and recommended solutions.
-
-* [State machine cookbook](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html) so you can implement complex processes and business workflows quickly and efficiently.

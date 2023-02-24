@@ -438,7 +438,7 @@ When a category product assignment is changed through ORM, make sure it is expor
    }
 }
 ```
-<d/etails>
+</details>
 
 {% endinfo_block %}
 
@@ -575,7 +575,7 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 
 1. In the Back Office, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Category**.
 2. For any category of your choice, in **Actions**, select **Delete**. 
-3. On the **DELETE CATEGORY: `{CATEGORY_NAME}`** page that opens, make sure the **Products to be de-assigned** field is present. The `{CATEGORY_NAME}` placeholder stands for the name of the category that you select in step 2. 
+3. On the **DELETE CATEGORY: `{CATEGORY_NAME}`** page that opens, make sure the **Products to be de-assigned** field is present. The `{CATEGORY_NAME}` placeholder stands for the name of the category that you choose in step 2. 
 
 **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
 

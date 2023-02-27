@@ -506,6 +506,13 @@ entries:
       - "202108.0"
     - title: Order Management
       url: /docs/scos/user/features/order-management-feature-overview/order-management-feature-overview.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Invoice generation
         url: /docs/scos/user/features/order-management-feature-overview/invoice-generation-overview.html
@@ -719,11 +726,26 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Refunds
       url: /docs/scos/user/features/refunds-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Reorder
       url: /docs/scos/user/features/reorder-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Resource Sharing
       url: /docs/scos/user/features/resource-sharing-feature-overview.html
       include_versions:
@@ -1090,7 +1112,6 @@ entries:
         url: /docs/scos/user/back-office-user-guides/sales/view-the-order-matrix.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Order matrix
         include_versions:
         - "201811.0"
@@ -1118,49 +1139,41 @@ entries:
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Creating reclamations
           url: /docs/scos/user/back-office-user-guides/sales/orders/creating-reclamations.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Commenting orders
           url: /docs/scos/user/back-office-user-guides/sales/orders/commenting-orders.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Creating returns
           url: /docs/scos/user/back-office-user-guides/sales/orders/creating-returns.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Editing billing addresses in orders
           url: /docs/scos/user/back-office-user-guides/sales/orders/editing-billing-addresses-in-orders.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Adding and removing custom order references
           url: /docs/scos/user/back-office-user-guides/sales/orders/adding-and-removing-custom-order-references.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Editing shipments
           url: /docs/scos/user/back-office-user-guides/sales/orders/editing-shipments.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Viewing returns of an order
           url: /docs/scos/user/back-office-user-guides/sales/orders/viewing-returns-of-an-order.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Managing orders
           url: /docs/scos/user/back-office-user-guides/sales/orders/managing-orders.html
           include_versions:
@@ -1203,7 +1216,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Viewing reclamations
           url: /docs/scos/user/back-office-user-guides/sales/reclamations/viewing-reclamations.html
@@ -1243,6 +1255,14 @@ entries:
             - "202009.0"
       - title: Refunds
         url: /docs/scos/user/back-office-user-guides/sales/refunds/viewing-refunds.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
       - title: Returns
         include_versions:
         - "202005.0"
@@ -2978,6 +2998,12 @@ entries:
       nested:
       - title: Tradebyte
         url: /docs/scos/user/technology-partners/order-management-erpoms/tradebyte.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
       - title: NEKOM CC GmbH
         url: /docs/scos/user/technology-partners/order-management-erpoms/nekom-cc-gmbh.html
         include_versions:
@@ -2986,7 +3012,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Punchout Catalogs
         url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs.html
         include_versions:

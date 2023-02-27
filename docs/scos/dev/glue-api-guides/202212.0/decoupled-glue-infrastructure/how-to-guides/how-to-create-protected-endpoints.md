@@ -1,7 +1,7 @@
 ---
 title: How to create protected endpoints
 description: Learn how to create the protected endpoint using a resource for the Storefront and backend API applications.
-last_updated: September 30, 2022
+last_updated: Feb 23, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-protected-endpoints.html
@@ -10,11 +10,15 @@ redirect_from:
 
 This document describes how to create a protected endpoint for a resource, or a custom-route in storefront and backend API applications.
 
-Let's say you have a module named `ModuleRestApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods.  To create the protected endpoint, follow these steps::
+## Prerequisites
 
-To set up a protected endpoint, follow these steps:
+Integrate authorization into your project. For details, see [Authorization protected endpoints integration](https://docs.spryker.com/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/decoupled-glue-infrastructure/glue-api-authorization-protected-endpoints-integration.html#install-feature-core).
 
-1. Aadd a route or regular expression for the endpoint to `src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php`:
+## Create protected endpoints
+
+Let's say you have a module named `ModuleRestApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods.  To create the protected endpoint, follow these steps:
+
+1. To `src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php`, add a route or regular expression for the endpoint:
 
 ```php
 <?php
@@ -28,7 +32,7 @@ class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGl
     public function getProtectedPaths(): array
     {
         return [
-            // Route added by fully name and provide access for all
+            // Route added by a full name and provide access for all
             // methods if the token is passed and valid
             '/module' => [
                 'isRegularExpression' => false,
@@ -56,3 +60,4 @@ For backend API, use the appropriate backend-specific class `src/Pyz/Shared/Glue
 2. Try to access `https://glue-storefront.mysprykershop.com/module` without an access token.
 3. Check that the output contains the 403 response with the `Unauthorized request.` message.
 4. Access `https://glue-storefront.mysprykershop.com/module`, with a valid access token.
+

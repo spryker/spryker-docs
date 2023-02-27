@@ -1370,24 +1370,16 @@ entries:
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html
                   - title: ProductPackagingUnitWidget
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html
-                  - title: ProductPageSearch
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html
                   - title: ProductQuantity
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantity-module.html
                   - title: ProductQuantityDataImport
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantitydataimport-module.html
                   - title: ProductQuantityStorage
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productquantitystorage-module.html
-                  - title: ProductRelationStorage
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productrelationstorage-module.html
-                  - title: ProductReviewSearch
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html
                   - title: ProductSearch
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsearch-module.html
                   - title: ProductSearchWidget
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsearchwidget-module.html
-                  - title: ProductSetPageSearch
-                    url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html
                   - title: ProductValidity
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
               - title: Decimal Stock migration concept

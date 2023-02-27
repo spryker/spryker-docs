@@ -14,53 +14,53 @@ There are 2 options for connecting your GitHub repository to Spryker Upgrade Ser
 
 ### Integration through BuddyCI application
 
-1. Go to your workspace in Spryker CI and select the “<strong>Spryker Upgrade Service</strong>“ project on “Projects“ page.
+1. Go to your workspace in Spryker CI and select the **Spryker Upgrade Service** project on **Projects** page.
 
 ![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_projects.png)
 
-2. In “Spryker Upgrade Service“ project click the "<strong>Code</strong>" menu item.
+2. In **Spryker Upgrade Service** project click the **Code** menu item.
 
 ![Spryker CI Code page](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_code_page.png)
 
-3. Select GitHub as a Git hosting provider and click on the "<strong>+</strong>" button in “Add GitHub Integration“ block to add the new integration.
+3. Select GitHub as a Git hosting provider and click on the **+** button in **Add GitHub Integration** block to add the new integration.
 
 ![Spryker CI GitHub](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_code_add.png)
 
-4. In “Organization“ section click on “<strong>+</strong>“ button to add the new organization.
+4. In **Organization** section click on **+** button to add the new organization.
 
 ![Spryker CI GitHub Organization](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_add_repository.png)
 
-5. After that the GitHub website will be opened in new window. Please select the organization you want to add. Please note that you should have administrator rights on the repository you want to connect.
+5. After that the GitHub website will be opened in new window. Select the organization you want to add. You should have administrator rights on the repository you want to connect.
 
 ![GitHub Organization](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_select_organization.png)
 
-6. Select the repository you want to integrate in “<strong>Only select repositories</strong>“ block and after that press “<strong>Authorize & Request</strong>“ button.
+6. Select the repository you want to integrate in **Only select repositories** block and after that press **Authorize & Request** button.
 
 ![GitHub Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_select_repository.png)
 
-7. Enter your GitHub account password to confirm an access.
+7. Enter your GitHub account password to authorize the action.
 
 ![GitHub Confirmation](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_enter_password.png)
 
-8. Click on appeared repository in “Repository“ section to finish the integration.
+8. Click on appeared repository in **Repository** section to finish the integration.
 
 ![Spryker CI GitHub Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_github_repository_selection.png)
 
 ### Integration through access token
 
-1. Go to your workspace in Spryker CI and select the “<strong>Spryker Upgrade Service</strong>“ project on “Projects“ page.
+1. Go to your workspace in Spryker CI and select the **Spryker Upgrade Service** project on **Projects** page.
 
 ![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_projects.png)
 
-2. Click on “<strong>Integrations</strong>“ menu items and click on “<strong>New integration</strong>“.
+2. Click on **Integrations** menu items and click on **New integration**.
 
 ![Spryker CI Integration](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_integration.png)
 
-3. Select the “<strong>GitHub</strong>“ tile on “Git“ tab.
+3. Select the **GitHub** tile on **Git** tab.
 
 ![Spryker CI Integration GitHub](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_integration_github.png)
 
-4. Fill the form for new GitHub integration, select “Personal Access Token“ as an authorization method, fill the form with required information and click "<strong>New integration</strong>" button when you will be ready. More information about how to generate the GitHub personal access token you can find in [GitHub documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+4. Fill the form for new GitHub integration, select **Personal Access Token** as an authorization method, fill the form with required information and click **New integration** button when you will be ready. More information about how to generate the GitHub personal access token you can find in [GitHub documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ![Spryker CI Integration GitHub Form](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_integration_github_form.png)
 
@@ -68,11 +68,11 @@ GitHub personal access token (Fine-grained token) should contain the following r
 
 Permissions for Spryker Upgrade Service:
 
-* <strong>Metadata</strong>: Access: Read-only
+* **Metadata**: Access: Read-only
 
-* <strong>Pull requests</strong>: Access: Read and write - to create the PR with code changes from Spryker Code Upgrader.
+* **Pull requests**: Access: Read and write - to create the PR with code changes from Spryker Code Upgrader.
 
-5. After the new integration in added, select the “<strong>Code</strong>“ menu item, select “GitHub“ as a Git hosting provider and select the repository to finish the connection of the repository to your “Spryker Upgrade Service“ project.
+5. After the new integration in added, select the **Code** menu item, select “GitHub“ as a Git hosting provider and select the repository to finish the connection of the repository to your “Spryker Upgrade Service“ project.
 
 ![Spryker CI GitLab Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_gitlab_repository_selection.png)
 
@@ -82,11 +82,11 @@ There are 2 options for connecting your GitHub repository to Spryker Upgrade Ser
 
 ### Integration through BuddyCI application
 
-1. Go to your Project in Spryker CI and click the "<strong>Code</strong>" tab.
+1. Go to your Project in Spryker CI and click the "**Code**" tab.
 
 ![Spryker CI Code](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_code_page.png)
 
-2. Select the “GitLab“ as the Git hosting provider and click on "<strong>+</strong>" button to add the new integration.
+2. Select the “GitLab“ as the Git hosting provider and click on "**+**" button to add the new integration.
 
 ![Spryker CI Code GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/gitlab_code_add.png)
 
@@ -100,19 +100,19 @@ There are 2 options for connecting your GitHub repository to Spryker Upgrade Ser
 
 ### Integration through access token
 
-1. Go to your workspace in Spryker CI and select the “<strong>Spryker Upgrade Service</strong>“ project on “Projects“ page.
+1. Go to your workspace in Spryker CI and select the **Spryker Upgrade Service** project on “Projects“ page.
 
 ![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_projects.png)
 
-2. Click on “<strong>Integrations</strong>“ menu items and click on “<strong>New integration</strong>“.
+2. Click on **Integrations** menu items and click on **New integration**.
 
 ![Spryker CI Integration](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_integration.png)
 
-3. Select the “<strong>GitLab</strong>“ tile on “Git“ tab.
+3. Select the **GitLab** tile on **Git** tab.
 
 ![Spryker CI Integration GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_integration_gitlab.png)
 
-4. Fill the form for new GitLab integration, select “Personal Access Token“ as an authorization method, fill the form with required information and click "New integration" button when you will be ready. More information about how to generate the GitHub personal access token you can find in [GitLab documentation](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token).
+4. Fill the form for new GitLab integration, select **Personal Access Token** as an authorization method, fill the form with required information and click "New integration" button when you will be ready. More information about how to generate the GitHub personal access token you can find in [GitLab documentation](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token).
 
 ![Spryker CI Integration GitLab Form](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_integration_gitlab_form.png)
 
@@ -120,11 +120,11 @@ GitLab access token should contain the following the following repository permis
 
 Spryker CI:
 
-* <strong>api</strong> - grants complete read and write access to the scoped project API, including the Package Registry
+* **api** - grants complete read and write access to the scoped project API, including the Package Registry
 
 Spryker Upgrade Service:
 
-* <strong>write_repository</strong> - grants read and write access (pull and push) to the repository to allow Spryker Code Upgrader to create the PR with code changes.
+* **write_repository** - grants read and write access (pull and push) to the repository to allow Spryker Code Upgrader to create the PR with code changes.
 
 5. After the new integration in added, select the “Code“ menu item, select “GitLab“ as a Git hosting provider and select the repository to finish the integration.
 

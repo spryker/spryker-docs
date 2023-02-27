@@ -82,9 +82,11 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 ];
 ```
 
-### Modules configuration and dependencies
+### Configure modules and dependencies
 
-####  Configure catalog dependencies in Client
+This section provides modules configurations and necessary dependencies. Follow the steps in the sections below to integrate Algolia. 
+
+#### Configure Catalog dependencies in Client
 
 Add the following to `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`:
 
@@ -183,7 +185,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
-#### Client: RabbitMq configuration
+#### Adjust RabbitMq configuration in Client
 
 Add the following to `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
 
@@ -213,7 +215,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-#### Client: Search dependencies
+#### Configure Search dependencies in Client
 
 Add the following to `src/Pyz/Client/Search/SearchDependencyProvider.php`:
 
@@ -254,7 +256,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 }
 ```
 
-#### Client: SearchHttp dependencies
+#### Configure SearchHttp dependencies in Client
 
 Add the following to `src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php`:
 
@@ -310,7 +312,7 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
 }
 ```
 
-#### Zed: Message Broker Dependencies
+#### Configure MessageBroker dependencies in Zed
 
 Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
 
@@ -344,7 +346,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 }
 ```
 
-#### Zed: Message broker configuration
+#### Adjust MessageBroker configuration in Zed
 
 Add the following to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
@@ -367,7 +369,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-#### Zed: Product configuration
+#### Adjust Product configuration in Zed
 
 Add the following to `src/Pyz/Zed/Product/ProductConfig.php`:
 
@@ -424,7 +426,7 @@ class ProductConfig extends SprykerProductConfig
 }
 ```
 
-#### Zed: Product dependencies
+#### Configure Product dependencies in Zed
 
 Add the following to `src/Pyz/Zed/Product/ProductDependencyProvider.php`:
 
@@ -477,7 +479,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 }
 ```
 
-#### Zed: Queue dependencies
+#### Configure Queue dependencies in Zed
 
 Add the following to `src/Pyz/Zed/Queue/QueueDependencyProvider.php`:
 
@@ -509,7 +511,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-#### Zed: Publisher configuration
+#### Adjust Publisher configuration in Zed
 
 Add the following to `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`:
 
@@ -557,7 +559,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-#### Zed: SearchHttp configuration
+#### Add SearchHttp configuration in Zed
 
 Add the following to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
 
@@ -581,7 +583,7 @@ class SearchHttpConfig extends SprykerSearchHttpConfig
 }
 ```
 
-#### Zed: Synchronization dependencies
+#### Configure Synchronization dependencies in Zed
 
 Add the following to `src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php`:
 
@@ -611,7 +613,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-### Receive messages
+### Console command for receiving messages
 
 Receive messages from the channel:
 

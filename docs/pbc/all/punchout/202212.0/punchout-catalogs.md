@@ -11,6 +11,7 @@ redirect_from:
   - /docs/punchout-catalogs
   - /docs/en/punchout-catalogs
   - /docs/scos/user/technology-partners/201811.0/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
+  - /docs/scos/user/technology-partners/202212.0/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
 ---
 
 Big e-commerce corporations and business enterprises are always searching for a way to simplify their purchasing process and manage their spendings. In most cases, these companies rely on e-procurement systems (ERPs), like [SAP](https://www.sap.com/index.html) or [Ariba](https://www.ariba.com/) that automate many of the procurement processes and manage their purchase cycle. However, in the B2B environment, these buyers also demand access to an e-commerce interface that will interfere with the procurement system for expanding the market.
@@ -23,9 +24,9 @@ Check out this video to get more details on how Punchout works:
 
 ## Related Developer guides
 
-* [Punchout Catalog feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
-* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)
-* [Eco - Punchout Catalogs feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html)
+* [Punchout Catalog feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-punchout-catalog-feature.html)
+* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-eco-punchout-catalogs-product-bundles-feature.html)
+* [Eco - Punchout Catalogs feature integration](/docs/pbc/all/punchout/{{page.version}}/install-and-upgrade/install-the-eco-punchout-catalogs-feature.html)
 
 ## Copyright and Disclaimer
 

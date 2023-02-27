@@ -85,11 +85,6 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 
 * [ChannelPilot Marketplace](/docs/scos/user/technology-partners/{{page.version}}/marketplace-integrations/channelpilot-marketplace.html)
 
-## Order Management (ERP/OMS)
-
-* [Tradebyte](/docs/pbc/all/order-management-system/{{page.version}}/third-party-integrations/tradebyte.html)
-* [Punchout Catalogs](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalogs.html)
-
 ## Operational Tools
 
 <!--* [Common Solutions](/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/common-solutions.html)-->

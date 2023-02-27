@@ -4261,16 +4261,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
-    - title: Order Management (ERPOMS)
-      nested:
-        - title: Punchout Catalogs
-          nested:
-            - title: Punchout Catalog feature integration
-              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
-            - title: Eco - Punchout Catalogs feature integration
-              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
-            - title: Eco - Punchout Catalogs + Product Bundles feature integration
-              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
     - title: Payment partners
       nested:
         - title: Adyen

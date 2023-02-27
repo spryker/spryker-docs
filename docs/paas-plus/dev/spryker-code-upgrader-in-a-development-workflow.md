@@ -6,8 +6,6 @@ template: concept-topic-template
 
 Spryker Code Upgrader works best when it is strategically integrated into your development process. This document describes how to integrate the Upgrader into your Scrum activities and Git flow to streamline and optimize the development workflow.
 
-![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/integrate-spryker-code-upgrader.md/spryker-code-upgrader-integration-diagramm.png)
-
 ## Processing code upgrades with Scrum
 
 When the Upgrader is integrated into your development process, we recommend processing updates during the following scrum activities:
@@ -30,6 +28,8 @@ If there is an open PR, the Upgrader does not create a new one.
 
 
 Following your standard development process, the updates are deployed to a staging environment. After passing all quality processes, the Development branch propagates into your release branch where it gets deployed to production.
+
+![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/integrate-spryker-code-upgrader.md/spryker-code-upgrader-integration-diagramm.png)
 
 ## Development team responsibilities
 

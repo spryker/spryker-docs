@@ -8,9 +8,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Order Management | {{site.version}} |
-| Company Account | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Order Management | {{page.version}} |
+| Company Account | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -313,8 +313,8 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Customer Account Management | {{site.version}} |
-| Company Account | {{site.version}} |
+| Customer Account Management | {{page.version}} |
+| Company Account | {{page.version}} |
 
 
 Append glossary according to your configuration:

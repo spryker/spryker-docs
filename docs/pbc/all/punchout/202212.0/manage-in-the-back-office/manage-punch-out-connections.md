@@ -1,5 +1,5 @@
 ---
-title: Managing punch out connections
+title: Manage punch out connections
 description: The Managing Punch out Connections guide lists steps on how to create, edit, view, activate and deactivate Punch out connections.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
@@ -12,11 +12,12 @@ redirect_from:
   - /docs/en/managing-punch-out-connections
   - /docs/scos/user/back-office-user-guides/201811.0/punch-out/managing-punch-out-connections.html
   - /docs/scos/user/back-office-user-guides/201903.0/punch-out/managing-punch-out-connections.html
+  - /docs/scos/user/back-office-user-guides/202212.0/punch-out/managing-punch-out-connections.html
 related:
   - title: Managing transactions log
     link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-transactions-log.html
   - title: Punchout Catalogs overview
-    link: docs/scos/user/technology-partners/page.version/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
+    link: docs/pbc/all/punchout/page.version/punchout-catalogs-overview.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.

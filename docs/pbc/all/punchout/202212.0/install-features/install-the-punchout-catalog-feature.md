@@ -1,5 +1,5 @@
 ---
-title: Punchout Catalog feature integration
+title: Install the Punchout Catalog feature
 description: Integrate Punchout Catalog into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/201811.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
   - /docs/scos/user/technology-partners/202204.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
   - /docs/scos/dev/technology-partner-guides/202200.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
+  - /docs/scos/dev/technology-partner-guides/202212.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
 ---
 
 ## Install Feature Core

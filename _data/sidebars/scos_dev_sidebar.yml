@@ -3730,6 +3730,7 @@ entries:
     - "202009.0"
     - "202108.0"
     - "202204.0"
+    - "202212.0"
     nested:
     - title: Deploy file
       url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
@@ -4785,7 +4786,7 @@ entries:
       - title: Slow P&S
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-p-and-s.html
     - title: Troubleshooting Spryker in Vagrant issues
-      url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html 
+      url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html
       nested:
       - title: Frontend issues
         nested:

@@ -1564,7 +1564,7 @@ entries:
         url: /docs/pbc/all/punchout/punchout-catalogs.html
         include_versions:
         - "202212.0"
-        ntested:
+        nested:
           - title: Punchout Catalogs overview
             url: docs/pbc/all/punchout/punchout-catalogs-overview.html
           - title: Install features

@@ -123,13 +123,17 @@ Learn about [merchant users](/docs/marketplace/user/features/{{page.version}}/ma
 
 ## Related Business User articles
 
-|FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
+| OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
 |[Merchant users overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)|
 |[Main merchant concept](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT |
+| --- | --- | --- |
+|[Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html) | [File details: merchant.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html) |
+|[Glue API: Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html) | [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) |
+| [Merchant Portal - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-feature-integration.html) | [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address.csv.html) |
+|     | [Resolving the URL of the merchant page](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html) |
+|   |   | [File details: merchant_store.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-store.csv.html)  |

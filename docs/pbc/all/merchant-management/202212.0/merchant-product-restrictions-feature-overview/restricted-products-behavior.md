@@ -5,6 +5,8 @@ description: In this document, you can find commonly encountered cases of produc
 template: concept-topic-template
 ---
 
+<div class="width-100">
+
 On this page, you can find commonly encountered cases of product restrictions behavior.
 <table cellspacing="0">
    <thead>
@@ -225,6 +227,8 @@ On this page, you can find commonly encountered cases of product restrictions be
       </tr>
    </tbody>
 </table>
+
+</div>
 
 {% info_block infoBox "Info" %}
 

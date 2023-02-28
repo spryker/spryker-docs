@@ -1302,7 +1302,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 
         return $dataImporter;
     }
-    
+
     /**
      * @return \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface
      */

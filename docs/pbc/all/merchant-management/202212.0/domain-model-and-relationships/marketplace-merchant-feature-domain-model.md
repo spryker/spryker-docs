@@ -1,18 +1,11 @@
 ---
-title: Marketplace Merchant feature walkthrough
+title: "Marketplace Merchant feature: Domain model"
 description: Merchants are product and service sellers in the Marketplace.
 last_updated: Nov 05, 2021
 template: feature-walkthrough-template
 ---
 
 The *Marketplace Merchant* feature lets you create, read, and update merchants in the Marketplace.
-
-{% info_block warningBox "User documentation" %}
-
-To learn more about the feature and to find out how end users use it, see [Marketplace Merchant feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for business users.
-
-{% endinfo_block %}
-
 
 ## Module dependency graph
 
@@ -46,14 +39,3 @@ The following diagram illustrates the dependencies between the modules for the M
 The following diagram illustrates the domain model of the Marketplace Merchant feature:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/73486462-e9d3-4eb2-93ef-a5cde49cce98.png?utm_medium=live&utm_source=custom)
-
-
-## Related Developer articles
-
-| INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT |
-| --- | --- | --- |
-|[Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html) | [File details: merchant.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html) |
-|[Glue API: Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html) | [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) |
-| [Merchant Portal - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-feature-integration.html) | [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address.csv.html) |
-|     | [Resolving the URL of the merchant page](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html) |
-|   |   | [File details: merchant_store.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-store.csv.html)  |

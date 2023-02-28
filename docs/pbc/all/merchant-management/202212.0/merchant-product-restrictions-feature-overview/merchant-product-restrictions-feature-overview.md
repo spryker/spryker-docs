@@ -44,8 +44,9 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 | [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html) |
 | [Edit merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html) |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Merchant Product Restrictions feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES |
+|---------|
+| [Merchant B2B Contracts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-b2b-contracts-feature-integration.html) |
+| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) |

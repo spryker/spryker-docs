@@ -23,8 +23,9 @@ A merchant has the following:
 
 To display merchant opening hours on the Storefront, you should import the open hours information. For information about how to do that, see [File details: merchant_open_hours_date_schedule.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-open-hours-date-schedule.csv.html) and [File details: merchant_open_hours_week_day_schedule.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-open-hours-week-day-schedule.csv.html).
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Merchant Opening Hours feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/merchant-opening-hours-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
+|---------|---------|---------|
+| [Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-opening-hours-feature-integration.html)    |[Retrieve profile information for a merchant](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#retrieve-a-merchant)        | [File details: merchant_open_hours_week_day_schedule.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-open-hours-week-day-schedule.csv.html)        |
+| [Glue API: Merchant Opening Hours integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/merchant-opening-hours-feature-integration.html)    |[Retrieve merchant opening hours](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-opening-hours.html)         | [File details: merchant_open_hours_date_schedule.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-open-hours-date-schedule.csv.html)        |

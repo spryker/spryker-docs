@@ -10,8 +10,9 @@ For shoppers, it's convenient to find the necessary and relevant merchants and t
 
 To create merchant categories, you should import them. For details, see [File details: merchant_category.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-category.csv.html).
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Merchant Category feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/merchant-category-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | DATA IMPORT |
+|---|---|
+| [Merchant Category feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-category-feature-integration.html)    |[File details: merchant_category.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-category.csv.html)  |
+| [Glue API: Merchant Category integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/merchant-category-feature-integration.html) |  |  

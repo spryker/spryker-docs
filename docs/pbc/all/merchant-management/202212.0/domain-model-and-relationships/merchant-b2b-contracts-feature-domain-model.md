@@ -1,5 +1,5 @@
 ---
-title: Merchant B2B Contracts feature walkthrough
+title: "Merchant B2B Contracts feature: Domain model"
 last_updated: Aug 13, 2021
 description: The Merchant B2B Contracts feature lets you set up contracts between a merchant and B2B customer
 template: concept-topic-template
@@ -22,11 +22,3 @@ The following schema shows relations within the merchant domain:
 ![merchant-b2b-contracts-reations-diagram](https://confluence-connect.gliffy.net/embed/image/9c3eb6cd-8492-4550-a280-e218bd3b974a.png?utm_medium=live&utm_source=custom)
 
 </div>
-
-
-## Related Developer articles
-
-|INSTALLATION GUIDES  |
-|---------|
-| [Merchant B2B Contracts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-b2b-contracts-feature-integration.html)   |
-| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html)  |

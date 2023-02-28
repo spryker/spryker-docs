@@ -1,10 +1,13 @@
 ---
-title: Viewing logs
+title: View logs
 description: How to view the logs of Spryker Code Upgrader
 template: concept-topic-template
 ---
 
-If you want to check the logs of Spryker Code Upgrader, you can open the pipeline “Runs“, click on interested run and you get the page with actions for this run.
+To check the logs of Spryker Code Upgrader, do the following:
+
+1. In Spryker CI, go to **Pipelines**.
+2. Select the **Upgrader** pipeline.  open the pipeline “Runs“, click on interested run and you get the page with actions for this run.
 
 ![Spryker CI Action Logs](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/advanced-configurations/viewing-logs.md/actions_logs.png)
 

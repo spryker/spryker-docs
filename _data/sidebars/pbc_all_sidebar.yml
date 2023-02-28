@@ -1566,7 +1566,7 @@ entries:
         - "202212.0"
         nested:
           - title: Punchout Catalogs overview
-            url: docs/pbc/all/punchout/punchout-catalogs-overview.html
+            url: /docs/pbc/all/punchout/punchout-catalogs-overview.html
           - title: Install features
             nested:
               - title: Punchout Catalog

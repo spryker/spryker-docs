@@ -19,4 +19,4 @@ Spryker CI is shipped with Upgrader pipelines per project.
 
 ## Next steps
 
-[How to connect to Spryker Code Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.html)
+[Spryker Code Upgrader in a development workflow](/docs/paas-plus/dev/spryker-code-upgrader-in-a-development-workflow.html)

@@ -16,13 +16,13 @@ When the Upgrader is integrated into your development process, we recommend proc
 
 This approach lets you break up big upgrades into smaller pieces. Each smaller piece can be processed within a sprint ensuring the continuity of the process.
 
-## Git flow
+## Git flow for code upgrades
 
-The upgrader connects to a selected base branch in your project's repository. For example, a Development branch. Based on the defined schedule, the Upgrader pulls the branch, analyzes the code and creates a pull request with the needed updates. Your development team reviews the branch to merge or close it. For processing the PRs, you can use the process described in [Processing code upgrades with Scrum](#processing-code-upgrades-with-scrum).
+The Upgrader connects to a selected base branch in your project's repository. For example, a Development branch. Based on the defined schedule, the Upgrader pulls the branch, analyzes the code and creates a pull request with the needed updates. Your development team reviews the branch to merge or close it. For processing the PRs, you can use the process described in [Processing code upgrades with Scrum](#processing-code-upgrades-with-scrum).
 
-{% info_block infoBox "Upgrade schedule" %}
+{% info_block infoBox "" %}
 
-If there is an open PR, the Upgrader does not create a new one.
+The Upgrader creates a PR only after a previous PR was merged or closed.
 
 {% endinfo_block %}
 
@@ -33,7 +33,7 @@ Following your standard development process, the updates are deployed to a stagi
 
 ## Development team responsibilities
 
-* [Prepare your project](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/prepare-your-project.html)
+* [Prepare your project](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/prepare-your-project.html).
 
 * [Activate integration](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.html) of Spryker Code Upgrader with your code hosting service
 

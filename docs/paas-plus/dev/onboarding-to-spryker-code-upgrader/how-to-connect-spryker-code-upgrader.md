@@ -14,35 +14,43 @@ There are 2 options for connecting your GitHub repository to Spryker Upgrade Ser
 
 ### Integration through BuddyCI application
 
-1. Go to your workspace in Spryker CI and select the **Spryker Upgrade Service** project on **Projects** page.
+1. In Spryker CI, go to **Projects**.
+2. Select the **Spryker Upgrade Service** project.
 
 ![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_projects.png)
 
-2. In **Spryker Upgrade Service** project click the **Code** menu item.
+3. In the **Spryker Upgrade Service** project, go to **Code**.
 
 ![Spryker CI Code page](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_code_page.png)
 
-3. Select GitHub as a Git hosting provider and click on the **+** button in **Add GitHub Integration** block to add the new integration.
+4. In the **Connect Git repository** pane, for **GIT HOSTING PROVIDER**, select **GitHub**.
+5. For **ADD GIHUB INTEGRATION** select **+**.
 
 ![Spryker CI GitHub](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_code_add.png)
 
-4. In **Organization** section click on **+** button to add the new organization.
+5. For **ORGANIZATION**, click on the field and select **+**.
+    This opens GitHub.
 
 ![Spryker CI GitHub Organization](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_add_repository.png)
 
-5. After that the GitHub website will be opened in new window. Select the organization you want to add. You should have administrator rights on the repository you want to connect.
+5. Select the organization you want to connect.
+    You should have administrator rights in the repository.
 
 ![GitHub Organization](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_select_organization.png)
 
-6. Select the repository you want to integrate in **Only select repositories** block and after that press **Authorize & Request** button.
+6. In the **Authorize & Request** pane, select **Only select repositories**.
+7. For **Select repositories**, select the repository you want to connect.
+8. Click **Authorize & Request**.
 
 ![GitHub Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_select_repository.png)
 
-7. Enter your GitHub account password to authorize the action.
+7. To authorize the action, enter your GitHub account password.
+    This closes the window, and the organization is displayed in the **ORGANIZATION** field.
 
 ![GitHub Confirmation](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/github_enter_password.png)
 
-8. Click on appeared repository in **Repository** section to finish the integration.
+8. For **REPOSITORY**, select the repository you've connected.
+    Now the Upgrader is connected to your project.
 
 ![Spryker CI GitHub Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_github_repository_selection.png)
 

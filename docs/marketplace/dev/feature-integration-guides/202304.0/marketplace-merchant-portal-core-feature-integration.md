@@ -622,9 +622,9 @@ To start builder integration, check versions of Spryker packages:
 
 | NAME | VERSION |
 | --------------------------- | --------- |
-| Discount (optional)         | >= 9.7.4  |
-| Gui (optional)              | >= 3.30.2 |
-| Product Relation (optional) | >= 2.4.3  |
+| Discount (optional)         | 9.7.4 or later  |
+| Gui (optional)              | 3.30.2 or later |
+| Product Relation (optional) | 2.4.3 or later  |
 
 ### 1) Install the required modules using Composer
 

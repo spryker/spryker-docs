@@ -3,9 +3,6 @@ title: "Glue API: Merchant Category feature integration"
 last_updated: Mar 04, 2021
 description: This document describes the process how to integrate the Merchant Category Glue API feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Merchant Category feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-category-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Category Glue API feature into a Spryker project.

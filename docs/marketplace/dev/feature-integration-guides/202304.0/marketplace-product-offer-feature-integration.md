@@ -608,7 +608,7 @@ offer418,112_312526172,MER000002,,1,approved
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------------- | ----------- | -------- | --------- | ------------------ |
 | product_offer_reference | &check;      | string    | offer1        | Product offer reference that is referenced to this merchant. |
 | concrete_sku            | &check;        | string    | 093_24495843  | Concrete product SKU this product offer is attached to.      |
@@ -1008,7 +1008,7 @@ offer418,AT
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ---------------- | ------------ | ------- | ------------- | ------- |
 | product_offer_reference | &check;     | string    | roan-gmbh-und-co-k-g | A product offer reference, unique identifier per Offer. |
 | store_name              | &check;    | string    | DE  | The name of the store.  |
@@ -1041,7 +1041,7 @@ offer94,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ |-----------|-----------| ----------- | ---------------- |
 | product_offer_reference | &check;   | string    | offer1       | A unique product offer identifier.             |
 | valid_from              |           | String    | 2020-01-01   | Date since which the product offer is valid. |

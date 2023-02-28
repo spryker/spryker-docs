@@ -3,9 +3,6 @@ title: "Glue API: Merchant Opening Hours feature integration"
 last_updated: Dec 04, 2020
 description: This document describes how to integrate the Merchant Opening Hours Glue API feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Merchant Opening Hours feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-opening-hours-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Opening Hours Glue API feature into a Spryker project.

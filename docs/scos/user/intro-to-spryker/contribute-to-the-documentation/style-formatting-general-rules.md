@@ -101,7 +101,7 @@ related:
 ---
 ```
 
-| FRONT MATTER PARAMETER | DESCRIPTION   | FORMAT WITH EXPLANATION | EXAMPLE | REQUIRED? |
+| FRONT MATTER PARAMETER | DESCRIPTION   | FORMAT WITH EXPLANATION | EXAMPLE | REQUIRED |
 | ---------------------- | ---------- | -------- | --------- | ---------|
 | title                  | The name of the document.  | Text. Keep in mind, that if you have special characters in title like column or apostrophe, the title should be in single quotes.  |   <ul><li>Creating product lists</li><li>'HowTo: Force HTTPS'</li></ul> | *✓*       |
 | description            | Short description of what this page is about. |  Sentence.   | Learn how to use the front matter.  | *✓*       |

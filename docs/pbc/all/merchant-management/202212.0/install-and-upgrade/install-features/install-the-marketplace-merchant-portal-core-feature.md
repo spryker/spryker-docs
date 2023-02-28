@@ -3,9 +3,6 @@ title: Marketplace Merchant Portal Core feature integration
 last_updated: Aug 31, 2022
 description: Integrate the Merchant Portal Core feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Merchant Portal Core feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Portal Core feature into a Spryker project.

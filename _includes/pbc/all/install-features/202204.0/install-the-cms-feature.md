@@ -790,7 +790,7 @@ cms-page--7,Placeholders Title & Content,1,1,1,/de/ruecknahmegarantie,/en/return
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |template_name |yes |string |static full |Template name. |
 |is_searchable |yes |bool |1 |Flag that defines if entity is searchable. |
@@ -833,7 +833,7 @@ cms-page--7,AT
 cms-page--7,US
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | page_key | mandatory | string | page_5 | Unique page identifier. |
 | store_name | mandatory | string | DE | Unique store identifier. |
@@ -856,7 +856,7 @@ blck-10,CMS block for the footer navigation,Navigation block,@CmsBlock/template/
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |block_key |yes |string |blck-31 |Block key. |
 | block_name| yes|string |10% Discount |Block name. |
@@ -914,7 +914,7 @@ blck-31,AT
 blck-31,US
 ```
 </details>
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |block_key|yes|string|blck-31|Block key.|
 |store_name|yes|string|DE|Store name.|
@@ -931,7 +931,7 @@ Product,"The layout of Slots in the Product Pages, always below Header including
 CMS Page: Placeholders Title and Content + Slot,A CMS Page that includes a Slot as well.,@Cms/templates/placeholders-title-content-slot/placeholders-title-content-slot.twig
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | template_path | yes | string | @HomePage/views/home/home.twig | Unique path to the corresponding Twig file. |
 | name | yes | string | Home Page | Template name used in the Back Office. |
@@ -952,7 +952,7 @@ slt-footer,Footer,"In the store Footer section, On desktop, bottom of the page. 
 slt-mobile-header,Header mobile view,"In the store Header section. On mobile, under the hamburger menu.",SprykerCmsSlotBlock,@ShopUi/templates/page-layout-main/page-layout-main.twig,1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | template_path | mandatory | string | @HomePage/views/home/home.twig | Path to the Twig template to which slot is assigned. |
 | slot_key | mandatory | string | slt-4 |Unique slot identifier. |
@@ -979,7 +979,7 @@ slt-footer,blck-12,3,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | template_path | mandatory | string | @HomePage/views/home/home.twig | Path to the Twig template to which this CMS block to slot assignment belongs. |
 | slot_key | mandatory | string | slt-4 | Unique slot identifier. |

@@ -142,7 +142,7 @@ payment_method_key,payment_method_name,payment_provider_key,payment_provider_nam
 dummyMarketplacePaymentInvoice,Invoice,DummyMarketplacePayment,Dummy Marketplace Payment,1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | payment_method_key | &check; | string | dummyMarketplacePaymentInvoice | Payment method key. |
 | payment_method_name | &check; | string | Invoice | Payment method name. |
@@ -161,7 +161,7 @@ dummyMarketplacePaymentInvoice,AT
 dummyMarketplacePaymentInvoice,US
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | payment_method_key | &check; | string | dummyMarketplacePaymentInvoice | Payment method key. |
 | store | &check; | string | DE | Store identifier. |

@@ -4,25 +4,21 @@ last_updated: Feb 26, 2021
 description: This document describes the merchant_profile.csv file to configure merchant information in your Spryker shop.
 template: import-file-template
 related:
-  - title: Marketplace Merchant feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
   - title: Marketplace Merchant feature overview
     link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
 This document describes the `merchant_profile.csv` file to configure [merchant profile](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
 
-To import the file, run:
 
-```bash
-data:import merchant-profile
-```
+## Import file dependencies
+
+- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
+- [glossary.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Import file parameters
 
-The file should have the following parameters:
-
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | merchant_reference | &check; | String |   |  Unique | Identifier of the merchant in the system. |
 | contact_person_role |   | String |   |   | Role the contact person performs. |
@@ -45,18 +41,18 @@ The file should have the following parameters:
 | longitude |   | String |   |   | This field identifies merchant’s location. |
 | latitude |   | String |   |   | This field identifies merchant’s location. |
 
-## Import file dependencies
 
-The file has the following dependencies:
-
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [glossary.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 |FILE|DESCRIPTION|
 |-|-|
 | [template_merchant_profile.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/template_merchant_profile.csv) | Import file template with headers only. |
 | [merchant_profile.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/merchant_profile.csv) | Example of the import file with Demo Shop data. |
+
+
+## Import command
+
+```bash
+data:import merchant-profile
+```

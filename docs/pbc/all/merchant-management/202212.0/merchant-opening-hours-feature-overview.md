@@ -3,6 +3,8 @@ title: Merchant Opening Hours feature overview
 last_updated: Jul 27, 2021
 description: The Merchant Opening Hours feature lets you define opening hours for a merchant.
 template: concept-topic-template
+redirect_from:
+- /docs/marketplace/user/features/202212.0/merchant-opening-hours-feature-overview.html
 ---
 
 To provide maximum selling activity, merchants can provide their working schedule, by defining the opening hours on weekdays, holidays and exceptional cases.

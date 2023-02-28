@@ -57,7 +57,7 @@ Schematically, the merchant status change flow looks like this:
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, see [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html).
+You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, see [Merchant Category](/docs/pbc/all/merchant-management/{{page.version}}/merchant-opening-hours-feature-overview.html).
 
 ## Merchants on the Storefront
 
@@ -83,7 +83,7 @@ The information for a merchant profile can be defined:
 
 ### Merchant opening hours
 
-To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. For details, see [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{page.version}}/merchant-opening-hours-feature-overview.html).
+To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. For details, see [Merchant Opening Hours feature overview](/docs/pbc/all/merchant-management/{{page.version}}/merchant-opening-hours-feature-overview.html).
 
 ### Merchant links on the Storefront pages
 

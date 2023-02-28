@@ -20,7 +20,7 @@ Fulfilling small orders is not always worthwhile for the business because operat
 
 Per your business requirements, you can also set up a maximum threshold to disallow placing orders above a defined threshold.
 
-In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html) separately.
+In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/merchant-b2b-contracts-feature-overview.html) separately.
 
 With order thresholds, you can do the following:
 

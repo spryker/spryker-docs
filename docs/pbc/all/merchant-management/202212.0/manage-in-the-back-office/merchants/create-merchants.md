@@ -15,7 +15,7 @@ related:
   - title: Edit merchants
     link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants/edit-merchants.html
   - title: Merchants and Merchant Relations feature overview
-    link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
+    link: docs/pbc/all/merchant-management/page.version/merchant-b2b-contracts-feature-overview.html
 ---
 
 This document describes how to create merchants in the Back Office.

@@ -3,9 +3,6 @@ title: Merchant Opening Hours feature integration
 last_updated: Mar 31, 2021
 description: This document describes how to integrate the Merchant Portal Core feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Merchant Opening Hours feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-opening-hours-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Opening Hours feature into a Spryker project.
@@ -87,8 +84,8 @@ Adjust the schema definition so entity changes will trigger events:
 Generate entity and transfer changes:
 
 ```bash
-console transfer:generate 
-console propel:install 
+console transfer:generate
+console propel:install
 console transfer:generate
 ```
 
@@ -426,7 +423,7 @@ MER000005,2023-12-31,14:00:00,17:00:00,
 ```
 </details>
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                                  | DATA EXPLANATION                                                                  |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                                  | DATA EXPLANATION                                                                  |
 |---------------------|-----------|-----------|-----------------------------------------------|-----------------------------------------------------------------------------------|
 | merchant_reference  | &check;   | string    | MER000005                                     | Merchant identifier.                                                              |
 | date                | &check;   | string    | 2022-01-01                                    | Date with special opening hours                                                   |
@@ -472,7 +469,7 @@ MER000005,SATURDAY,8:00:00,19:00:00
 MER000005,SUNDAY,,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ----------- | ---------- | --------- | ------------ | ---------------- |
 | `merchant_reference` | &check; | string | MER000005 | Merchant identifier.  |
 | week_day_key | &check; | `string`  | MONDAY | Day of the week to assign opening hours to a merchant.It is an enum in database with the following values:MONDAYTUESDAYWEDNESDAYTHURSDAYFRIDAYSATURDAYSUNDAY. |
@@ -536,7 +533,7 @@ actions:
 Import data:
 
 ```bash
-console data:import merchant-opening-hours-date-schedule 
+console data:import merchant-opening-hours-date-schedule
 console data:import merchant-opening-hours-weekday-schedule
 ```
 {% info_block warningBox "Verification" %}
@@ -608,27 +605,27 @@ merchant_weekday_schedule.2nd_christmas_day,2nd Christmas day,en_US
 merchant_weekday_schedule.2nd_christmas_day,2. Weihnachtstag,de_DE
 merchant_weekday_schedule.sunday_opening,Sunday Opening,en_US
 merchant_weekday_schedule.sunday_opening,Verkaufsoffener Sonntag,de_DE
-merchant_opening_hours.opening_hours_title,Opening Hours,en_US 
-merchant_opening_hours.opening_hours_title,Öffnungszeiten,de_DE 
-merchant_opening_hours.special_opening_hours_title,Special Opening Hours,en_US 
-merchant_opening_hours.special_opening_hours_title,Besondere Öffnungszeiten,de_DE 
-merchant_opening_hours.public_holidays_title,Public Holidays,en_US 
-merchant_opening_hours.public_holidays_title,Feiertage,de_DE 
-merchant_opening_hours.opening_hours_closed,Closed,en_US 
-merchant_opening_hours.opening_hours_closed,Geschlossen,de_DE 
-merchant_opening_hours.day.title.monday,Monday,en_US 
-merchant_opening_hours.day.title.monday,Montag,de_DE 
-merchant_opening_hours.day.title.tuesday,Tuesday,en_US 
-merchant_opening_hours.day.title.tuesday,Dienstag,de_DE 
-merchant_opening_hours.day.title.wednesday,Wednesday,en_US 
-merchant_opening_hours.day.title.wednesday,Mittwoch,de_DE 
-merchant_opening_hours.day.title.thursday,Thursday,en_US 
-merchant_opening_hours.day.title.thursday,Donnerstag,de_DE 
-merchant_opening_hours.day.title.friday,Friday,en_US 
-merchant_opening_hours.day.title.friday,Freitag,de_DE 
-merchant_opening_hours.day.title.saturday,Saturday,en_US 
-merchant_opening_hours.day.title.saturday,Samstag,de_DE 
-merchant_opening_hours.day.title.sunday,Sunday,en_US 
+merchant_opening_hours.opening_hours_title,Opening Hours,en_US
+merchant_opening_hours.opening_hours_title,Öffnungszeiten,de_DE
+merchant_opening_hours.special_opening_hours_title,Special Opening Hours,en_US
+merchant_opening_hours.special_opening_hours_title,Besondere Öffnungszeiten,de_DE
+merchant_opening_hours.public_holidays_title,Public Holidays,en_US
+merchant_opening_hours.public_holidays_title,Feiertage,de_DE
+merchant_opening_hours.opening_hours_closed,Closed,en_US
+merchant_opening_hours.opening_hours_closed,Geschlossen,de_DE
+merchant_opening_hours.day.title.monday,Monday,en_US
+merchant_opening_hours.day.title.monday,Montag,de_DE
+merchant_opening_hours.day.title.tuesday,Tuesday,en_US
+merchant_opening_hours.day.title.tuesday,Dienstag,de_DE
+merchant_opening_hours.day.title.wednesday,Wednesday,en_US
+merchant_opening_hours.day.title.wednesday,Mittwoch,de_DE
+merchant_opening_hours.day.title.thursday,Thursday,en_US
+merchant_opening_hours.day.title.thursday,Donnerstag,de_DE
+merchant_opening_hours.day.title.friday,Friday,en_US
+merchant_opening_hours.day.title.friday,Freitag,de_DE
+merchant_opening_hours.day.title.saturday,Saturday,en_US
+merchant_opening_hours.day.title.saturday,Samstag,de_DE
+merchant_opening_hours.day.title.sunday,Sunday,en_US
 merchant_opening_hours.day.title.sunday,Sonntag,de_DE
 ```
 

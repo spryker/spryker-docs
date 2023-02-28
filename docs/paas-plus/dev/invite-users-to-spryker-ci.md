@@ -1,20 +1,24 @@
 ---
-title: User Management
-description: Know how to add the people to your workspace in Spryker CI
-template: concept-topic-template
+title: Invite users to Spryker CI
+description: Instructions for inviting users to Spryker CI
+template: howto-guide-template
 ---
 
 To collaborate with a team mate you need to invite them to the workspace and add them to the selected project. The exceptions are admins and the workspace owner who have access to all projects in the workspace.
 
-To invite the teammate, you need to click on “<strong>People</strong>“ tab in your workspace.
+To invite the teammate, do the following:
+
+1. In Spryker CI, go to **People**.
+2. On the **People** page, click **Invite new people**.
 
 ![Spryker CI User Management - Add user](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/advanced-configurations/user-management.md/add_user.png)
 
-On the new “People“ page, click on “<strong>Invite new people</strong>“ button and provide the teammate e-mails to send them the invitation e-mail.
+3. On the **Invite new people** page, enter one or more **EMAILS** to send invites to.
+    If you need to invite more than three users at a time, click **+** to add more email fields.
 
 ![Spryker CI User Management - Invite user](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/advanced-configurations/user-management.md/invite_user.png)
 
-More information about user management and user permissions you can find on [“User management“ Buddy CI documentation](https://buddy.works/docs/collaboration/users/members).
+For more information about user management, see [Members](https://buddy.works/docs/collaboration/users/members) in Buddy CI docs.
 
 ## Support for Spryker CI
 

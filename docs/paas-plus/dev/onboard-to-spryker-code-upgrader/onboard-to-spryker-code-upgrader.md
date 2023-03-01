@@ -4,15 +4,19 @@ description: Get your project ready and start upgrading with Spryker Code Upgrad
 template: concept-topic-template
 ---
 
-Before you start the onboarding to Spryker CI, please make sure that your project is [compliant with a set of pre-requirements](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/prepare-your-project.html) to ensure you fully benefit from all the features.
-
 Onboarding to Spryker CI consists of the following steps.
+
+
+## Prerequisites
+
+[Prepare your project for Spryker Code Upgrader](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
+
 
 ## 1. Get initial access
 
 To get started, provide the email of your SCCOS admin. The admin user will be a super user. They will be able to change repository and invite new users to their workspace.
 
-Once we receive the admin's email address, we will provision and send you an email invitation to your Spryker CI workspace.
+Once we receive the admin's email address, we will provision your Spryker CI workspace and send you an email invitation.
 
 ![Onboarding to Spryker CI](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader.md/onboarding-to-spryker-ci.png)
 
@@ -22,24 +26,27 @@ You receive an email with a one-time invitation token, but your invitation is al
 
 ![Spryker CI invitation](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader.md/spryker-ci-invitation.png)
 
-## 3. View projects inside your workspace
+## 3. View the projects in your workspace
 
 Your workspace contains the Spryker Code Upgrader project.
 
 ![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader.md/projects.png)
 
-## 4.Connect your repositories
+## 4. Connect your repositories
 
-Connect Git repositories to your projects in Spryker CI.
+Connect the Upgrader to your repository using one of the following documents:
 
-Check ["How to connect to Spryker Code Upgrader"](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.html) page for instructions how to connect the repository to the project depending on your Git hosting provider.
+* [Connect to a GitHub repository](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
+* [Connect to a GitLab repository](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
 
 ![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader.md/pipelines.png)
+
+## Next steps
+
+[Run the Upgrader](/docs/paas-plus/dev/run-spryker-code-upgrader.html)
+
 
 ## Support for Spryker CI
 
 * For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
 * To learn more about Buddy, see their [docs](https://buddy.works/docs).
-
-## Next steps
-[Prepare your project](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/prepare-your-project.html)

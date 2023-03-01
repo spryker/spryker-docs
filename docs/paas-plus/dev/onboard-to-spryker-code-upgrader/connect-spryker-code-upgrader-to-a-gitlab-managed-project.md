@@ -67,19 +67,23 @@ GitLab access token should have the following the following repository permissio
 
 ![Spryker CI Integration GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_integration_gitlab.png)
 
-4. Fill the form for new GitLab integration, select **Personal Access Token** as an authorization method, fill the form with required information and click "New integration" button when you will be ready. More information about how to generate the GitHub personal access token you can find in [GitLab documentation](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token).
+7. On the **Add new GitLab integration** page, enter a **NAME**.
+8. Select **SHARING** and **AVAILABILITY** per your requirements.
+9. For **AUTHORIZATION METHOD**, select **Access Token**.
+10. For **ACCESS TOKEN**, enter the GitLab access token.
 
 ![Spryker CI Integration GitLab Form](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_integration_gitlab_form.png)
 
+11. Click **New integration**.
+    This connects the Upgrader to your GitHub organization.
 
 
-5. After the new integration in added, select the “Code“ menu item, select “GitLab“ as a Git hosting provider and select the repository to finish the integration.
+12. To select the needed repository, go to **Code**.
+13. On the **Switch repository or Git hosting provider** page, click the **GitLab** tab.
+14. Select a **REPOSITORY** to connect the Upgrader to.
+    This displays the message about a successful update. Now the Upgrader is connected to the repository.
 
 ![Spryker CI GitLab Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/gitlab_code_select_repository.png)
-
-## Azure Repos, Bitbucket and others
-
-At the moment Spryker Code Upgrader supports only the following Git hosting providers: GitHub, Gitlab. Please [contact support](https://spryker.force.com/support/s/) for more information.
 
 ## Support for Spryker CI
 
@@ -88,4 +92,4 @@ At the moment Spryker Code Upgrader supports only the following Git hosting prov
 
 ## Next steps
 
-[How to run Spryker Code Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-run-spryker-code-upgrader.html)
+[Run Spryker Code Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-run-spryker-code-upgrader.html)

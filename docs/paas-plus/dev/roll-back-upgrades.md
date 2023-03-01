@@ -4,33 +4,15 @@ description: How to revert changes provided by Spryker Code Upgrader
 template: concept-topic-template
 ---
 
-## Spryker Cloud Deployment Pipeline
+To roll back an upgrade, you need to deploy the previous version of the application using the regular deploy process. For instructions, see one of the following documents:
 
-Find out the application version you want to roll back to.
+* [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
+* [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
 
-AWS uses commit hash(application version) as a deployment version. To do a rollback you need to find a desired commit hash.
+## Other deployment pipelines
 
-See ["Check the version to deploy"](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html#check-the-version-to-deploy) article for more details.
+In general, most of the revert strategies apply the same steps. If you are using different deployment pipelines, check the relevant documentation:  
 
-This example explains how to find the version in GitHub. Use appropriate docs if you have another git provider.
-
-## Set the application version.
-
-In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the /spryker-staging/desired_version parameter.
-
-See ["Define the version to deploy"](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html#define-the-version-to-deploy) for more details.
-
-## Run pipeline.
-
-Run a deployment pipeline as described in [Run a deployment pipeline](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html#run-a-deployment-pipeline).
-
-## Other Deployment Pipelines
-
-Please check the relevant documentation if a different deployment pipeline is used, not Spryker Cloud Deployment Pipeline.
-
-In general, most of the revert strategies apply the same steps.
-
-1. Revert the last changes in the release branch to the last stable version. In most cases, Git providers already have a built-in pull request/merge request revert functionality. Alternatively, it can be done manually using the Git tool. Check the links below for more info:
 
 * [Reverting a pull request in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/reverting-a-pull-request).
 
@@ -40,7 +22,6 @@ In general, most of the revert strategies apply the same steps.
 
 * [git reset](https://git-scm.com/docs/git-reset).
 
-2. Trigger the deployment.
 
 ## Support for Spryker CI
 

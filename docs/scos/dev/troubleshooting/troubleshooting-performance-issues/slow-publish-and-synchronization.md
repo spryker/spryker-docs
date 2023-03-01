@@ -7,7 +7,7 @@ redirect_from:
     - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-p-and-s.html
 related:
     - title: Troubleshooting RabbitMQ
-      link: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/troubleshooting-rabbitmq.html
+      link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/troubleshooting-rabbitmq.html
 
 ---
 

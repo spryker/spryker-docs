@@ -4791,10 +4791,16 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html
       - title: External calls—several calls to Zed
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-several-calls-to-zed.html
-      - title: Redis Session lock
+      - title: N+1 problem
+        url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html
+      - title: Not optimized Composer on the production environment
+        url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html
+      - title: Redis session lock
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
       - title: Slow Publish and Synchronizationme
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
+      - title: Technology restrictions
+        url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html
     - title: Troubleshooting Spryker in Vagrant issues
       url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html 
       nested:

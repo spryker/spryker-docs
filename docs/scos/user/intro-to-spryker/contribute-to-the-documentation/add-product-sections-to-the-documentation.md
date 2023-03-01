@@ -22,7 +22,7 @@ related:
 ---
 
 When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product: user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
-
+Yves
 To add a new product, follow these steps.
 
 ## 1. Create a folder for the new project

@@ -1,7 +1,7 @@
 ---
 title: Install recommended extensions
-description: Install recommended extensions to improve the quality of your contributions
-last_updated: Jul 18, 2022
+description: Install recommended VS Code extensions to improve the quality of your contributions
+last_updated: Feb 28, 2023
 template: howto-guide-template
 related:
   - title: Build the documentation site
@@ -18,33 +18,46 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
 ---
 
-We have a list of recommended VS Code extensions that help improve the quality of our documentation as we create or edit it locally:
-* Grammarly: checks grammar, spelling, and plagiarism.
-* Vale: provides customizable spelling, style, and grammar checking.
-* Markdown Shortcuts: adds shortcuts for markdown editing.
+We have a list of recommended VS Code extensions that our team for writing and reviewing documentation:
+* *Grammarly*: Checks your grammar, spelling, and punctuation in real-time as you write.
+* *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
+* *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
 
 ## Install an extension
 
 To install an extension, follow these steps:
-1. In the sidebar menu, click Extensions
-2. In the search line of the Extensions menu, enter a needed extension's name.
-3. Find the extension in the search results list and click install.
+1. In the sidebar pane, click the **Extensions** icon. Alternatively, you can use the shortcut <kbd>Ctrl+Shift+X</kbd> on Windows or <kbd>Cmd+Shift+X</kbd> on Mac.
+2. In the search line of the **EXTENSIONS** menu, enter the extension name you want to install.
+3. Find the extension in the search results list and click **Install**.
 
-Some extensions, like Vale, need configuration before you can use them. 
-The following sections describe how to configure it.
+Some extensions, like Vale, need configuration before you can use them.
 
 ### Configure Vale
 
-1. In the **Extensions** menu, find Vale and open its settings.
-2. On the User tab, do the following:
-   1. For **Vale > Vale CLI: Config**, enter `.vale.ini`.
+Once you've installed Vale, you need to configure it:
+
+1. In the **Extensions** menu, find Vale and open **Extension Settings**.
+2. On the **User** tab, configure the following settings:
+   1. For **Vale > Vale CLI: Config**, enter an absolute path to the `vale.ini` file. The file is located in the root folder of the project—for example, if the project is located in `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/`, then the absolute path is `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/.vale.ini`. The `{USER_NAME}` placeholder stands for your user name. 
    2. For **Vale › Vale CLI: Min Alert Level**, select **inherited**.
-   3. For **Vale › Vale CLI: Path**, enter `vale`.
-3. On the **Workspace** tab, enter and select the same values as in step 2.
+3. On the **Workspace** tab, enter and select the same values as in steps 1 and 2.
 4. Relaunch VS Code to make sure settings have been applied.
 
-If you now open any markdown (MD) file 
+ Now you can use Vale to lint and style-check Markdown files within the project.
 
+#### Vale overview
+
+Vale works by analyzing the text of a file and comparing it to a set of customizable rules, which are located in the `vale/styles` folder. 
+Vale uses the rules to check for issues such as spelling errors, grammar mistakes, and stylistic inconsistencies.
+
+The `vale/styles/Vocab/Base` folder holds the `accept.txt` and `reject.txt` files. 
+These files contain custom words and phrases that must be always accepted or rejected, respectively, during the Vale review process.
+
+When Vale identifies an issue, it highlights the relevant text and displays an inline message that describes the issue and suggests a solution. These messages can include links to external resources or documentation for more information.
+Additionally, Vale displays feedback in the VS Code **PROBLEMS** panel, which provides a list of all the issues found in the file.
+To navigate directly to the relevant line of code in the file and make corrections, you need to click an issue in the **PROBLEMS** panel.
+
+For more information about Vale, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).
 
 
 

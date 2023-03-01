@@ -18,7 +18,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
 ---
 
-We have a list of recommended VS Code extensions that our team for writing and reviewing documentation:
+We have a list of recommended VS Code extensions that our team uses for writing and reviewing documentation:
 * *Grammarly*: Checks your grammar, spelling, and punctuation in real-time as you write.
 * *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
 * *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
@@ -51,7 +51,7 @@ Vale works by analyzing the text of a file and comparing it to a set of customiz
 Vale uses the rules to check for issues such as spelling errors, grammar mistakes, and stylistic inconsistencies.
 
 The `vale/styles/Vocab/Base` folder holds the `accept.txt` and `reject.txt` files. 
-These files contain custom words and phrases that must be always accepted or rejected, respectively, during the Vale review process.
+These files contain custom words and phrases that must always be accepted or rejected, respectively, during the Vale review process.
 
 When Vale identifies an issue, it highlights the relevant text and displays an inline message that describes the issue and suggests a solution. These messages can include links to external resources or documentation for more information.
 Additionally, Vale displays feedback in the VS Code **PROBLEMS** panel, which provides a list of all the issues found in the file.

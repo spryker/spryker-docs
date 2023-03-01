@@ -1,5 +1,5 @@
 ---
-title: Onboarding to Spryker Code Upgrader
+title: Onboard to Spryker Code Upgrader
 description: Get your project ready and start upgrading with Spryker Code Upgrader
 template: concept-topic-template
 ---

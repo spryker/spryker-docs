@@ -1,5 +1,5 @@
 ---
-title: How to revert changes provided by Spryker Code Upgrader
+title: Roll back upgrades
 description: How to revert changes provided by Spryker Code Upgrader
 template: concept-topic-template
 ---

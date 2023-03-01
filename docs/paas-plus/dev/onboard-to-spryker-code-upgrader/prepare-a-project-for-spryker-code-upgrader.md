@@ -1,5 +1,5 @@
 ---
-title: Prepare your project
+title: Prepare a project for Spryker Code Upgrader
 description: Get your project ready to start using Spryker Code Upgrader
 template: concept-topic-template
 ---

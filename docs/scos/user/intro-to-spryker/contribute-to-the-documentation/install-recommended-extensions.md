@@ -54,8 +54,8 @@ The `vale/styles/Vocab/Base` folder holds the `accept.txt` and `reject.txt` file
 These files contain custom words and phrases that must always be accepted or rejected, respectively, during the Vale review process.
 
 When Vale identifies an issue, it highlights the relevant text and displays an inline message that describes the issue and suggests a solution. These messages can include links to external resources or documentation for more information.
-Additionally, Vale displays feedback in the VS Code **PROBLEMS** panel, which provides a list of all the issues found in the file.
-To navigate directly to the relevant line of code in the file and make corrections, you need to click an issue in the **PROBLEMS** panel.
+Additionally, Vale displays feedback in the VS Code **PROBLEMS** pane, which provides a list of all the issues found in the file.
+To navigate directly to the relevant line of code in the file and make corrections, you need to click an issue in the **PROBLEMS** pane.
 
 For more information about Vale, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).
 

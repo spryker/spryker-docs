@@ -1,6 +1,6 @@
 ---
 title: Install recommended extensions
-description: Install recommended VS Code extensions to improve the quality of your contributions
+description: Install recommended VS Code extensions to improve the quality of your contributions.
 last_updated: Feb 28, 2023
 template: howto-guide-template
 related:
@@ -45,6 +45,8 @@ Once you've installed Vale, you need to configure it:
 
  Now you can use Vale to lint and style-check Markdown files within the project.
 
+
+
 #### Vale overview
 
 Vale works by analyzing the text of a file and comparing it to a set of customizable rules, which are located in the `vale/styles` folder. 
@@ -58,7 +60,3 @@ Additionally, Vale displays feedback in the VS Code **PROBLEMS** pane, which pro
 To navigate directly to the relevant line of code in the file and make corrections, you need to click an issue in the **PROBLEMS** pane.
 
 For more information about Vale, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).
-
-
-
-

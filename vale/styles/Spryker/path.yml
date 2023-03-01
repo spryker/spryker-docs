@@ -1,8 +1,0 @@
-extends: substitution
-message: "To specify the path, use '%s' instead of '%s'."
-level: warning
-ignorecase: false
-action:
-  name: replace
-swap:
-  - '[a-zA-Z]+\*\*\s*>\s*\*\*[a-zA-Z]+': '&nbsp;<span aria-label="and then">></span> '

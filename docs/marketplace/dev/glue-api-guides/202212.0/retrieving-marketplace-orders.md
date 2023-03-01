@@ -512,7 +512,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
+| merchantReferences | Array    | Unique identifier of the [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
 | itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -1336,7 +1336,7 @@ To retrieve detailed information about an order, send the request:
 
 | ATTRIBUTE     | TYPE | DESCRIPTION     |
 | ------------------ | -------- | --------------------- |
-| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
+| merchantReferences | Array    | Unique identifier of the [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
 | itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.   |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |

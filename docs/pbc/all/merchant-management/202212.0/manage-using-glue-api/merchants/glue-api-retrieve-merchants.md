@@ -1,12 +1,12 @@
 ---
-title: Retrieving merchants
+title: "Glue API: Retrieve merchants"
 description: Retrieve merchant information via Glue API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving merchant opening hours
     link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-opening-hours.html
   - title: Retrieving merchant addresses
-    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-addresses.html 
+    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-addresses.html
 ---
 
 Merchant is an individual or an organization selling products on the Marketplace. Every merchant has a profile page where the customer can check information like contact information, opening hours, and legal details.
@@ -26,7 +26,7 @@ To retrieve all merchants, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
 
 {% endinfo_block %}
 
@@ -337,7 +337,7 @@ To retrieve a merchant, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
 
 {% endinfo_block %}
 

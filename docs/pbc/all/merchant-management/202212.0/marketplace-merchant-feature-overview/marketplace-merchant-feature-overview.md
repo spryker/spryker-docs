@@ -7,7 +7,7 @@ related:
     link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchants.html
 ---
 
-A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
+A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
@@ -47,7 +47,7 @@ For details about how to change the merchant statuses and activate or deactivate
 
 {% info_block infoBox "Info" %}
 
-Whenever a merchant is denied, all the users (/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) of this merchant get deactivated. Upon re-approval, the merchant users must be manually activated one by one.
+Whenever a merchant is denied, all the users (/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) of this merchant get deactivated. Upon re-approval, the merchant users must be manually activated one by one.
 
 {% endinfo_block %}
 
@@ -119,14 +119,14 @@ If the merchant is not active, their products and offers are not displayed in th
 
 ## Next steps
 
-Learn about [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
+Learn about [merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 ## Related Business User articles
 
 | OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant users overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)|
-|[Main merchant concept](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|
+|[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)|
+|[Main merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|
 
 ## Related Developer articles
 

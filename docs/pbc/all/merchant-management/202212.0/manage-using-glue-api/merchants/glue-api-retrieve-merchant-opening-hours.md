@@ -1,12 +1,12 @@
 ---
-title: Retrieving merchant opening hours
+title: "Glue API: Retrieve merchant opening hours"
 description: Retrieve merchant opening hours via Glue API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving merchants
     link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchants.html
   - title: Retrieving merchant addresses
-    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-addresses.html 
+    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-addresses.html
 ---
 
 This document describes how to retrieve merchant opening hours.
@@ -25,7 +25,7 @@ To retrieve a merchant opening hours, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. You can activate merchants in the Back Office.
+This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overviewew.html#merchant-statuses) merchants. You can activate merchants in the Back Office.
 
 {% endinfo_block %}
 

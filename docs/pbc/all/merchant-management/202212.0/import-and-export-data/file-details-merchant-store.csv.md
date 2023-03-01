@@ -5,7 +5,7 @@ description: This document describes the merchant_store.csv file to configure me
 template: import-file-template
 related:
   - title: Marketplace Merchant feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
 This document describes the `merchant_store.csv` file to configure merchant's stores in your Spryker shop.

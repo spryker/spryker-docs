@@ -5,9 +5,9 @@ description: This document describes how to edit merchant's profile details in t
 template: back-office-user-guide-template
 related:
   - title: Marketplace Merchant feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - title: Merchant users overview
-    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/merchant-users-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace-merchant-feature-overview/merchant-users-overview.html
 ---
 
 This document describes how to edit merchant's profile details in the Merchant Portal.
@@ -16,7 +16,7 @@ This document describes how to edit merchant's profile details in the Merchant P
 
 To start managing a merchant profile, navigate to the **Merchant Portal&nbsp;<span aria-label="and then">></span> Profile**.
 
-This section lets [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) check and update the merchant profile information.
+This section lets [merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) check and update the merchant profile information.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -70,7 +70,7 @@ To edit the merchant's online profile, in the **Online Profile** tab, edit the n
 
 ### Reference information: Editing merchant's online profile
 
-This section describes attributes you see when editing the merchant's online profile on the **Online Profile** tab. This  tab contains the information displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
+This section describes attributes you see when editing the merchant's online profile on the **Online Profile** tab. This  tab contains the information displayed on the [Merchant Profile page on the Storefront](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
 
 #### Store Profile URL
 

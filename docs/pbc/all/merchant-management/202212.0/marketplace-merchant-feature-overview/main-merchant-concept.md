@@ -11,7 +11,7 @@ related:
 
 The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.
 
-Thus, the main merchant acts as a common [marketplace merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
+Thus, the main merchant acts as a common [marketplace merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
 
 ## Main merchant orders and returns
 

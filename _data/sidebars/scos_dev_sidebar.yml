@@ -3730,6 +3730,7 @@ entries:
     - "202009.0"
     - "202108.0"
     - "202204.0"
+    - "202212.0"
     nested:
     - title: Deploy file
       url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
@@ -4261,16 +4262,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
-    - title: Order Management (ERPOMS)
-      nested:
-        - title: Punchout Catalogs
-          nested:
-            - title: Punchout Catalog feature integration
-              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
-            - title: Eco - Punchout Catalogs feature integration
-              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
-            - title: Eco - Punchout Catalogs + Product Bundles feature integration
-              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
     - title: Payment partners
       nested:
         - title: Adyen
@@ -4790,6 +4781,10 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html
       - title: External calls—several calls to Zed
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-several-calls-to-zed.html
+      - title: Redis Session lock
+        url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
+      - title: Slow P&S
+        url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-p-and-s.html
     - title: Troubleshooting Spryker in Vagrant issues
       url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html
       nested:

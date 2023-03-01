@@ -234,6 +234,7 @@ versioned_categories:
       - price-management
       - product-information-management
       - product-relationship-management
+      - punchout      
       - return-management
       - ratings-reviews
       - request-for-quote
@@ -242,7 +243,6 @@ versioned_categories:
       - tax-management
       - user-management
       - warehouse-management-system
-
 
 
 # these are defaults used for the front matter for these file types

@@ -1072,7 +1072,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
       nested:
       - title: Managing punch out connections
         url: /docs/scos/user/back-office-user-guides/punch-out/managing-punch-out-connections.html
@@ -3027,14 +3026,12 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Punchout Catalogs overview
           url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
     - title: Marketplace Integrations
       nested:
       - title: ChannelPilot Marketplace

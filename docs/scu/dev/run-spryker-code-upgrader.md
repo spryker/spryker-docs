@@ -2,6 +2,8 @@
 title: Run Spryker Code Upgrader
 description: Instructions for running Spryker Code Upgrader
 template: concept-topic-template
+redirect_from:
+  - /docs/paas-plus/dev/run-spryker-code-upgrader.html
 ---
 
 This document describes how to manually trigger Spryker Code Upgrader.
@@ -10,8 +12,8 @@ This document describes how to manually trigger Spryker Code Upgrader.
 
 Connect the Upgrader to your project using one of the following guides:
 
-* [Connect Spryker Code Upgrader to a GitHub managed project](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
-* [Connect Spryker Code Upgrader to a GitLab managed project](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
+* [Connect Spryker Code Upgrader to a GitHub managed project](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
+* [Connect Spryker Code Upgrader to a GitLab managed project](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
 
 ## Manually trigger Spryker Code Upgrader
 

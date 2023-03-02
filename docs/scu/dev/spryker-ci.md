@@ -2,6 +2,8 @@
 title: Spryker CI
 description: Spryker CI is a tool for a seamless CI/CD experience
 template: concept-topic-template
+redirect_from:
+  - /docs/paas-plus/dev/spryker-ci.html
 ---
 
 Spryker CI is powered by [Buddy](https://buddy.works/) and provides an intuitive UI for a seamless CI/CD experience. It enables Spryker Code Upgrader to deliver continuous upgrades to your project.
@@ -19,4 +21,4 @@ Spryker CI is shipped with an Upgrader pipeline per project.
 
 ## Next steps
 
-[Spryker Code Upgrader in a development workflow](/docs/paas-plus/dev/spryker-code-upgrader-in-a-development-workflow.html)
+[Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html)

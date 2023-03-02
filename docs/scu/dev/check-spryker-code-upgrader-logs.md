@@ -2,6 +2,8 @@
 title: Check Spryker Code Upgrader logs
 description: Instructions for checking Spryker Code Upgrader logs
 template: howto-guide-template
+redirect_from:
+  - /docs/paas-plus/dev/check-spryker-code-upgrader-logs.html
 ---
 
 To check the logs of Spryker Code Upgrader, do the following:

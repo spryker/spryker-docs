@@ -33,15 +33,15 @@ Following your standard development process, the updates are deployed to a stagi
 
 ## Development team responsibilities
 
-* [Prepare your project](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/prepare-your-project.html).
+* [Prepare your project for the Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/prepare-your-project.html).
 
-* [Activate integration](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.html) of Spryker Code Upgrader with your code hosting service
+* [Connect the Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.html) of Spryker Code Upgrader with your code hosting service.
 
-* Cover customizations with automated tests
+* Cover customizations with automated tests.
 
-* Extend development process with additional guidelines and quality checks
+* Extend development process with additional guidelines and quality checks.
 
-* Regularly process upgrade suggestions
+* Regularly process upgrade suggestions.
 
 ## Next steps
 

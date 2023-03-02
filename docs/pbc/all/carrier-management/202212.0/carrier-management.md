@@ -19,8 +19,6 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
 ---
 
-You should write the doc as follows. It will create a file .md.
-
 The *Carrier Management* capability lets you create and manage carrier companies, and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. You can define delivery price and expected delivery time, tax sets, and the availability of specific delivery methods per each store.
 
 The main concepts regarding shipping are as follows:

@@ -26,7 +26,7 @@ We have a list of recommended VS Code extensions that our team uses for writing 
 ## Install an extension
 
 To install an extension, follow these steps:
-1. In the sidebar pane, click the **Extensions** icon. Alternatively, you can use the shortcut <kbd>Ctrl+Shift+X</kbd> on Windows or <kbd>Cmd+Shift+X</kbd> on Mac.
+1. In the side pane, click the **Extensions** icon. Alternatively, you can use the shortcut <kbd>Ctrl+Shift+X</kbd> on Windows or <kbd>Cmd+Shift+X</kbd> on Mac.
 2. In the search line of the **EXTENSIONS** menu, enter the extension name you want to install.
 3. Find the extension in the search results list and click **Install**.
 

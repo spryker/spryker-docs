@@ -10,8 +10,8 @@ To start feature integration, overview and install the necessary features
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{site.version}} |
-| Product Labels | {{site.version}} |
+| Cart | {{page.version}} |
+| Product Labels | {{page.version}} |
 
 ### Set up behavior
 

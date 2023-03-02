@@ -8,10 +8,10 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Cms | {{site.version}} |
-| Product lists | {{site.version}} |
-| Catalog | {{site.version}} |
-| Customer | {{site.version}} |
+| Cms | {{page.version}} |
+| Product lists | {{page.version}} |
+| Catalog | {{page.version}} |
+| Customer | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 

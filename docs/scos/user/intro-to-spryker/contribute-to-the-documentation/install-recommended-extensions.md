@@ -1,6 +1,6 @@
 ---
 title: Install recommended extensions
-description: Install recommended VS Code extensions to improve the quality of your contributions.
+description: Install recommended VS Code extensions to improve speed and quality quality of your contributions.
 last_updated: Feb 28, 2023
 template: howto-guide-template
 related:
@@ -38,14 +38,12 @@ Once you've installed Vale, you need to configure it:
 
 1. In the **Extensions** menu, find Vale and open **Extension Settings**.
 2. On the **User** tab, configure the following settings:
-   1. For **Vale > Vale CLI: Config**, enter an absolute path to the `vale.ini` file. The file is located in the root folder of the project—for example, if the project is located in `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/`, then the absolute path is `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/.vale.ini`. The `{USER_NAME}` placeholder stands for your user name. 
+   1. For **Vale > Vale CLI: Config**, enter an absolute path to the `vale.ini` file. The file is located in the root folder of the project—for example, if the project is located in `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/`, then the absolute path is `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/.vale.ini`. The `{USER_NAME}` placeholder stands for your user name. If you are using Windows OS, you can enter `${workspaceFolder}/vale.ini`. The `${workspaceFolder}` variable adds the absolute path automatically, so you don't need to enter the path manually.
    2. For **Vale › Vale CLI: Min Alert Level**, select **inherited**.
 3. On the **Workspace** tab, enter and select the same values as in steps 1 and 2.
 4. Relaunch VS Code to make sure settings have been applied.
 
  Now you can use Vale to lint and style-check Markdown files within the project.
-
-
 
 #### Vale overview
 
@@ -59,4 +57,4 @@ When Vale identifies an issue, it highlights the relevant text and displays an i
 Additionally, Vale displays feedback in the VS Code **PROBLEMS** pane, which provides a list of all the issues found in the file.
 To navigate directly to the relevant line of code in the file and make corrections, you need to click an issue in the **PROBLEMS** pane.
 
-For more information about Vale, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).
+For more information about Vale soon, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).

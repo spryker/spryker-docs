@@ -4,6 +4,7 @@ description: Get your project ready and start upgrading with Spryker Code Upgrad
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html
+  - /docs/paas-plus/dev/onboarding-to-paas-plus.html
 ---
 
 Onboarding to Spryker CI consists of the following steps.

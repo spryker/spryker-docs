@@ -8,8 +8,8 @@ redirect_from:
 The Spryker SDK aims to provide a single entry point to accelerate your productivity while working with Spryker. The Spryker SDK provides tools to validate existing code, implement new features with Spryker, and go live with your project.
 
 ## Requirements
-- Ensure auth file is available for composer (https://getcomposer.org/doc/articles/authentication-for-private-packages.md).
-- **Coreutils** should be installed (only for the mac users).
+- Make sure an auth file is available for the [Composer](https://getcomposer.org/doc/articles/authentication-for-private-packages.md).
+- If you're using a MacOS computer, install **Coreutils**.
   ```shell
   brew install coreutils
   ```
@@ -28,7 +28,7 @@ The Spryker SDK aims to provide a single entry point to accelerate your producti
 
 
 ### Installation command
-Install sdk into the current dir
+Install sdk into the current dir.
 ```shell
 PATH_TO_SDK=$(pwd) \
 && curl -fL github.com/spryker-sdk/sdk/releases/latest/download/installer.sh -O \

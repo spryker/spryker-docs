@@ -1,6 +1,6 @@
 ---
-title: Integrate Bazaarvoice
-description: Find out how you can integrate Bazaarvoice into your Spryker shop
+title: Integrate BazaarVoice
+description: Find out how you can integrate BazaarVoice into your Spryker shop
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
@@ -29,13 +29,13 @@ The BazaarVoice app requires the following Spryker modules:
 * `spryker-shop/merchant-widget: ^1.3.0` (Marketplace only)
 * `spryker-shop/payment-page: ^1.3.0`
 
-## Integrate Bazaarvoice
+## Integrate BazaarVoice
 
-To integrate Bazaarvoice, follow these steps:
+To integrate BazaarVoice, follow these steps:
 
-### 1. Add Bazaarvoice domain to your allowlist
+### 1. Add the Bazaarvoice domain to your allowlist
 
-To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist. 
+To enable your customers to leave reviews on your products, you must add the BazaarVoice domain to your **Content Security Policy** allowlist. 
 
 To do that, do one of the following:
 - change the `deploy.yml` file: 
@@ -60,16 +60,16 @@ $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
 
 ### 2. Add markup to custom templates
 
-The Bazaarvoice app takes data on products from the Storefront pages (for example, Product Detail page, Catalog page).
+The BazaarVoice app takes data on products from the Storefront pages (for example, Product Detail page, Catalog page).
 To get necessary data from the pages, schemas from [Schema.org](https://schema.org/) are used.
 By default, the necessary markups are already available in the Yves templates.
 
-If you have custom Yves templates or make your own frontend, add the markups required for the Bazaarvoice app according to the tables below.
+If you have custom Yves templates or make your own frontend, add the markups required for the BazaarVoice app according to the tables below.
 
-#### DCC (dynamic catalog collection) for products
+#### Dynamic catalog collection(DCC) for products
 Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
-| schema.org property          | Bazaarvoice property |
+| schema.org property          | BazaarVoice property |
 |------------------------------|----------------------|
 | product.sku                  | productId            |
 | product.name                 | productName          |
@@ -85,14 +85,14 @@ Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 
 {% info_block infoBox "Note" %}
 
-Since merchants don't have own entities in the Bazaarvoice service, products with specific IDs, or merchant references, are used instead.
+Since merchants don't have own entities in the BazaarVoice service, products with specific IDs, or merchant references, are used instead.
 
 {% endinfo_block %}
 
 Core template:
 `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
-| schema.org property        | Bazaarvoice property |
+| schema.org property        | BazaarVoice property |
 |----------------------------|----------------------|
 | organization.identifier    | productId            |
 | organization.name          | productName          |
@@ -220,7 +220,9 @@ $jobs[] = [
 
 ### 4. Configure OMS
 
-#### Extend command plugins
+To configure OMS, follow these steps:
+
+#### 1. Extend command plugins
 
 Add the following plugin to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
@@ -245,11 +247,11 @@ protected function extendCommandPlugins(Container $container): Container
  }
 ```
 
-#### Update OMS schema
+#### 2. Update OMS schema
 
-Adjust your OMS state-machine configuration to trigger the `Order/RequestProductReviews` command according to your project’s requirements.
+Adjust your OMS state machine configuration to trigger the `Order/RequestProductReviews` command according to your project’s requirements.
 
-Using the `DummyPayment01.xml` process as an example, we used it on `authorize` event:
+Here is an example with the `DummyPayment01.xml` process for the `authorize` event:
 
 ```xml
 <?xml version="1.0"?>
@@ -270,9 +272,9 @@ Using the `DummyPayment01.xml` process as an example, we used it on `authorize` 
 </statemachine>
 ```
 
-#### Add order hydration plugin (Marketplace only)
+#### 3. Add order hydration plugin (Marketplace only)
 
-Add the following plugin to `src/Pyz/Zed/Sales/SalesDependencyProvider.php`:
+For a Marketplace project, add the following plugin to `src/Pyz/Zed/Sales/SalesDependencyProvider.php`:
 
 ```php
 use Spryker\Zed\MerchantProfile\Communication\Plugin\Sales\MerchantDataOrderHydratePlugin;
@@ -292,4 +294,4 @@ protected function getOrderHydrationPlugins(): array
 ```
 
 ## Next steps
-[Configure the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) for your store.
+[Configure the BazaarVoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) for your store.

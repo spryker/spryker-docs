@@ -1064,13 +1064,13 @@ entries:
                 url: /docs/pbc/all/ratings-reviews/tutorials-and-howtos/howto-configure-product-reviews.html
           - title: Third-party integrations
             nested:
-              - title: Bazaarvoice
+              - title: BazaarVoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
-              - title: Integrate Bazaarvoice
+              - title: Integrate BazaarVoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
-              - title: Configure Bazaarvoice
+              - title: Configure BazaarVoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
-              - title: Disconnect Bazaarvoice
+              - title: Disconnect BazaarVoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html

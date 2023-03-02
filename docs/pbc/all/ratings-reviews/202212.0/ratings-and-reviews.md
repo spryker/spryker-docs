@@ -32,7 +32,7 @@ For more details about managing ratings and reviews, check the video:
 | NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
 | --- | --- | --- |
 | Spryker | No | No |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | No | Yes |
+| [BazaarVoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | No | Yes |
 
 ## Current constraints
 
@@ -45,10 +45,10 @@ The feature has the following functional constraints, which are going to be reso
 
 | BACK OFFICE USER GUIDES | THIRD-PARTY INTEGRATIONS |
 | - | - |
-| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html) | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | |
-| [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html) | |
-| [Configure Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) | |
-| [Disconnect Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/disconnect-bazaarvoice.html) | |
+| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html) | [BazaarVoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | |
+| [Integrate BazaarVoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html) | |
+| [Configure BazaarVoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/configure-bazaarvoice.html) | |
+| [Disconnect BazaarVoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/disconnect-bazaarvoice.html) | |
 
 
 ## Related Developer articles

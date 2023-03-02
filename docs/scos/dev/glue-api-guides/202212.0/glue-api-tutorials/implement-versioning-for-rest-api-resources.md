@@ -168,22 +168,24 @@ PHP version:
             ->setMajor(A)
             ->setMinor(B);
 ```
+
 Then use version 
 
-in the header: *Content-Type: application/vnd.api+json; version=A.B*
+In the header: *Content-Type: application/vnd.api+json; version=A.B*
 
-in the path: */vA.B*
+In the path: */vA.B*
 
 PHP version:
 ```php
 (new RestVersionTransfer())
             ->setMajor(A);
 ```
-Then use version 
 
-in the header: *Content-Type: application/vnd.api+json; version=A*
+Then, use version 
 
-in the path: */vA*
+In the header: *Content-Type: application/vnd.api+json; version=A*
+
+In the path: */vA*
 
 There's no fall-back to the latest minor, only exact match of version is used.
 

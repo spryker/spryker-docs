@@ -14,23 +14,23 @@ Onboarding to Spryker CI consists of the following steps.
 
 ## 1. Get initial access
 
-To get started, provide the email of your SCCOS admin. The admin user will be a super user. They will be able to change repository and invite new users to their workspace.
+To get started, provide the email of your SCCOS admin. The admin user will be a super user. They will be able to change repositories and invite new users to their workspace.
 
 Once we receive the admin's email address, we will provision your Spryker CI workspace and send you an email invitation.
 
-![Onboarding to Spryker CI](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader.md/onboarding-to-spryker-ci.png)
+![Onboarding to Spryker CI](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.md/onboarding-to-spryker-ci.png)
 
 ## 2. Go to your workspace
 
 You receive an email with a one-time invitation token, but your invitation is always active when you sign in at [Spryker CI](https://buddy.works/). Create your account and accept the invitation to the workspace.
 
-![Spryker CI invitation](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader.md/spryker-ci-invitation.png)
+![Spryker CI invitation](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.md/spryker-ci-invitation.png)
 
 ## 3. View the projects in your workspace
 
 Your workspace contains the Spryker Code Upgrader project.
 
-![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader.md/projects.png)
+![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.md/projects.png)
 
 ## 4. Connect your repositories
 
@@ -39,7 +39,7 @@ Connect the Upgrader to your repository using one of the following documents:
 * [Connect to a GitHub repository](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
 * [Connect to a GitLab repository](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
 
-![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader.md/pipelines.png)
+![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.md/pipelines.png)
 
 ## Next steps
 

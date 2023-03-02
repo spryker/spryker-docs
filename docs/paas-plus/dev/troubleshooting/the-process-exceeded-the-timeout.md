@@ -1,6 +1,6 @@
 ---
 title: The process exceeded the timeout
-description: Know what to do if you get the timeout error in Spryker Code Upgrader
+description: What to do if you get the timeout error in Spryker Code Upgrader
 template: concept-topic-template
 ---
 

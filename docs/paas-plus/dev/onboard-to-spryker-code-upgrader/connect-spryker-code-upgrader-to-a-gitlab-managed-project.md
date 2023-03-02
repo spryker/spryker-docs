@@ -4,39 +4,41 @@ description: Learn how to connect Spryker Code Upgrader to a GitLab managed proj
 template: howto-guide-template
 ---
 
-There are 2 options for connecting your GitHub repository to Spryker Upgrade Service in Spryker CI: with help of BuddyCI application or with the access token. You can select the option that is the most suitable for you.
+There are two options for connecting Spryker Code Upgrader to your repository: using Spryker CI or an access token.
 
 ## Connect Spryker Code Upgrader using Spryker CI
 
 1. In Spryker CI, go to **Projects**.
 2. On the **Projects** page, select the **Spryker Upgrade Service** project.
 
-![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_projects.png)
+![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_projects.png)
 
 3. Go to **Code**.
 
-![Spryker CI Code](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_code_page.png)
+![Spryker CI Code](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_code_page.png)
 
 4. In the **Connect Git repository** pane, for **GIT HOSTING PROVIDER**, select **GitLab**.
 
 5. For **ADD GITLAB INTEGRATION** select **+**.
     This opens GitLab in a new window.
 
-![Spryker CI Code GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/gitlab_code_add.png)
+![Spryker CI Code GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/gitlab_code_add.png)
 
 6. To authorize Buddy CI to access your account, click **Authorize**.
     Your account should have administrator rights in the repository you want to connect.
 
-![Spryker CI GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spryker_ci_gitlab.png)
+![Spryker CI GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_gitlab.png)
 
 7. For **GROUP**, select the GitLab group the has access to the repository you want to connect.
 
 8. For **REPOSITORY**, select the repository you want to connect.
     This displays a success message. The Upgrader is now connected to your repository.
 
-![Spryker CI GitLab Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/gitlab_code_select_repository.png)
+![Spryker CI GitLab Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/gitlab_code_select_repository.png)
 
 ## Connect Spryker Code Upgrader using GitLab access token
+
+To connect the Upgrader manually using a GitLab access token, follow the steps.
 
 ## Prerequisites
 
@@ -54,25 +56,25 @@ GitLab access token should have the following the following repository permissio
 1. In Spryker CI, go to **Projects**.
 2. On the **Projects** page, select the **Spryker Upgrade Service** project.
 
-![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_projects.png)
+![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_projects.png)
 
 3. Go to **Integrations**.
 4. On the **Integrations** page, click **New integration**.
 
 
-![Spryker CI Integration](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_integration.png)
+![Spryker CI Integration](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_integration.png)
 
 5. On the **New integration** page, click the **Git** tab.
 6. Select **GitLab**.
 
-![Spryker CI Integration GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_integration_gitlab.png)
+![Spryker CI Integration GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_integration_gitlab.png)
 
 7. On the **Add new GitLab integration** page, enter a **NAME**.
 8. Select **SHARING** and **AVAILABILITY** per your requirements.
 9. For **AUTHORIZATION METHOD**, select **Access Token**.
 10. For **ACCESS TOKEN**, enter the GitLab access token.
 
-![Spryker CI Integration GitLab Form](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/spriker_ci_integration_gitlab_form.png)
+![Spryker CI Integration GitLab Form](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_integration_gitlab_form.png)
 
 11. Click **New integration**.
     This connects the Upgrader to your GitHub organization.
@@ -83,7 +85,7 @@ GitLab access token should have the following the following repository permissio
 14. Select a **REPOSITORY** to connect the Upgrader to.
     This displays the message about a successful update. Now the Upgrader is connected to the repository.
 
-![Spryker CI GitLab Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.md/gitlab_code_select_repository.png)
+![Spryker CI GitLab Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/gitlab_code_select_repository.png)
 
 ## Support for Spryker CI
 
@@ -92,4 +94,4 @@ GitLab access token should have the following the following repository permissio
 
 ## Next steps
 
-[Run Spryker Code Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-run-spryker-code-upgrader.html)
+[Run Spryker Code Upgrader](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader/how-to-run-spryker-code-upgrader.html)

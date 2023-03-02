@@ -12,7 +12,7 @@ The Upgrader provides automatic minor and patch updates for the current version 
 
 ## Make your code is compliant with Spryker Quality Gate
 
-Spryker Quality Gate contains code checkers that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it’s highly customized.
+Spryker Quality Gate contains code checkers that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
 
 For instructions on making code compliant with the guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
 

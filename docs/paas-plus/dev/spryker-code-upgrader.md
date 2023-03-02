@@ -4,13 +4,13 @@ description: Spryker Code Upgrader is a key to easy upgrades
 template: concept-topic-template
 ---
 
-Keeping enterprise software up-to-date is a known hurdle. Especially when it comes to sophisticated transactional business models with complex customizations. Current upgrade strategies often require a high investment of time, resources, and money that projects would rather spend on innovation. At the same time, low upgrade frequency comes with reduced access to security and improvements patches and new features.
+Keeping enterprise software up-to-date is a known hurdle, especially when it comes to sophisticated transactional business models with complex customizations. Current upgrade strategies often require a high investment of time, resources, and money that projects would rather spend on innovation. At the same time, low upgrade frequency comes with reduced access to security, improvements, patches, and new features.
 
-Spryker Code Upgrader addresses application upgradability challenges. The Upgrader runs on [Spryker CI](/docs/paas-plus/dev/spryker-ci.html) to provides automated upgrades and code quality checks, and you retain full control of what customizations to make in your application. By reducing upgrade efforts to a minimum, the Upgrader makes it easy to keep up with Spryker’s daily releases.
+The Spryker Code Upgrader addresses the challenges of an application's upgradability. The Upgrader runs on [Spryker CI](/docs/paas-plus/dev/spryker-ci.html) to provide automated upgrades and code quality checks. You retain full control of what customizations to make and apply in your application. By reducing upgrade efforts to a minimum, the Upgrader makes it easy to keep up with Spryker’s daily releases.
 
-![Spryker Code Commerce OS](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/introduction.md/spryker-code-commerce-os.png)
+![Spryker Code Commerce OS](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/spryker-code-upgrader.md/spryker-code-commerce-os.png)
 
-![Spryker Code Upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/introduction.md/spryker-code-upgrader.png)
+![Spryker Code Upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/spryker-code-upgrader.md/spryker-code-upgrader.png)
 
 ## Semi-automated upgrade process
 

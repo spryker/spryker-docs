@@ -11,7 +11,7 @@ Spryker Code Upgrader can be executed only after a previous PR was merged or clo
 
 You have an unprocessed PR from a previous update. Upgrader can't provide a new update until you process these changes.
 
-![Spryker Code Upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/troubleshooting/decline-changes.md/unprocessed-pr-log.png)
+![Spryker Code Upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.md/unprocessed-pr-log.png)
 
 ## Solution
 

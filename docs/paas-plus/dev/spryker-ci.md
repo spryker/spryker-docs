@@ -8,9 +8,9 @@ Spryker CI is powered by [Buddy](https://buddy.works/) and provides an intuitive
 
 ## CI pipeline
 
-Spryker CI is shipped with Upgrader pipelines per project.
+Spryker CI is shipped with an Upgrader pipeline per project.
 
-![Spryker Code Upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-spryker-code-upgrader/spryker-ci.md/spryker-code-upgrader.png)
+![Spryker Code Upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/spryker-ci.md/spryker-code-upgrader.png)
 
 ## Support for Spryker CI
 

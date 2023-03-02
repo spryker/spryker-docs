@@ -4,7 +4,7 @@ description: Instructions for integrating Spryker Code Upgrader into a developme
 template: concept-topic-template
 ---
 
-Spryker Code Upgrader works best when it is strategically integrated into your development process. This document describes how to integrate the Upgrader into your Scrum activities and Git flow to streamline and optimize the development workflow.
+Spryker Code Upgrader works best when it is strategically integrated into your development process. This document describes how to integrate the Upgrader into your Scrum activities and Git flow to help streamline and optimize the development workflow.
 
 ## Processing code upgrades with Scrum
 
@@ -18,7 +18,7 @@ This approach lets you break up big upgrades into smaller pieces. Each smaller p
 
 ## Git flow for code upgrades
 
-The Upgrader connects to a selected base branch in your project's repository. For example, a Development branch. Based on the defined schedule, the Upgrader pulls the branch, analyzes the code and creates a pull request with the needed updates. Your development team reviews the branch to merge or close it. For processing the PRs, you can use the process described in [Processing code upgrades with Scrum](#processing-code-upgrades-with-scrum).
+The Upgrader connects to a selected base branch in your project's repository, like a Development branch. Based on the defined schedule, the Upgrader pulls the branch, analyzes the code and creates a pull request with the needed updates. Your development team reviews the branch to merge or close it. For processing the PRs, you can use the process described in [Processing code upgrades with Scrum](#processing-code-upgrades-with-scrum).
 
 {% info_block infoBox "" %}
 
@@ -29,13 +29,13 @@ The Upgrader creates a PR only after a previous PR was merged or closed.
 
 Following your standard development process, the updates are deployed to a staging environment. After passing all quality processes, the Development branch propagates into your release branch where it gets deployed to production.
 
-![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/integrate-spryker-code-upgrader.md/spryker-code-upgrader-integration-diagramm.png)
+![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/spryker-code-upgrader-in-a-development-workflow.md/spryker-code-upgrader-integration-diagramm.png)
 
 ## Development team responsibilities
 
-* [Prepare your project for the Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/prepare-your-project.html).
+* Prepare your project for the Upgrader.
 
-* [Connect the Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader/how-to-connect-spryker-code-upgrader.html) of Spryker Code Upgrader with your code hosting service.
+* Connect the Upgrader of Spryker Code Upgrader with your code hosting service.
 
 * Cover customizations with automated tests.
 
@@ -45,4 +45,4 @@ Following your standard development process, the updates are deployed to a stagi
 
 ## Next steps
 
-[Onboarding to Spryker Code Upgrader](/docs/paas-plus/dev/onboarding-to-spryker-code-upgrader.html)
+[Onboarding to Spryker Code Upgrader](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)

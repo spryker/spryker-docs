@@ -1,6 +1,6 @@
 ---
 title: "TransportException: Cannot move pack"
-description: How to solve the problem trying to connect the repository to Spryker Code Upgrader project
+description: How to solve the problem of cannot move pack while trying to connect the repository to the Spryker Code Upgrader project
 template: concept-topic-template
 ---
 
@@ -12,7 +12,7 @@ If you are connecting the Upgrader to your repository using an access token, the
 TransportException: Cannot move pack to ...
 ```
 
-![Spryker Code Upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/troubleshooting/repository-connection-error.md/connection-error.png)
+![Spryker Code Upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/troubleshooting/transportexception-cannot-move-pack.md/connection-error.png)
 
 ## Solution
 

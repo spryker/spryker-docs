@@ -7,7 +7,7 @@ entries:
       - title: Spryker CI
         url: /docs/paas-plus/dev/spryker-ci.html
       - title: The Upgrader in a development workflow
-        url: /docs/paas-plus/dev/spryker-code-upgrader-in-a-development-workflow
+        url: /docs/paas-plus/dev/spryker-code-upgrader-in-a-development-workflow.html
       - title: Onboard to the Upgrader
         url: /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html
         nested:

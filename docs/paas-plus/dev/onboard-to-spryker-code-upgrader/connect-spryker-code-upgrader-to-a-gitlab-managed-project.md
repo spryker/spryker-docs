@@ -94,4 +94,4 @@ GitLab access token should have the following the following repository permissio
 
 ## Next steps
 
-[Run Spryker Code Upgrader](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader/how-to-run-spryker-code-upgrader.html)
+[Run Spryker Code Upgrader](/docs/paas-plus/dev/run-spryker-code-upgrader.html)

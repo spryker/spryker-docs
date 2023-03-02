@@ -10,8 +10,8 @@ This document describes how to manually trigger Spryker Code Upgrader.
 
 Connect the Upgrader to your project using one of the following guides:
 
-* [Connect Spryker Code Upgrader to a GitHub managed project](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
-* [Connect Spryker Code Upgrader to a GitLab managed project](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
+* [Connect Spryker Code Upgrader to a GitHub managed project](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
+* [Connect Spryker Code Upgrader to a GitLab managed project](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
 
 ## Manually trigger Spryker Code Upgrader
 
@@ -19,7 +19,7 @@ Connect the Upgrader to your project using one of the following guides:
 2. On the **Projects** page, select **Spryker Code Upgrader**.
     This opens the **Pipelines** page.
 3. Next to the **Upgrader** pipeline, click **Run**.
-    This manually triggers the Upgrader. It analyzes the connected project and creates a PR with updates. 
+    This manually triggers the Upgrader. It analyzes the connected project and creates a PR with updates.
 
 ## Support for Spryker CI
 

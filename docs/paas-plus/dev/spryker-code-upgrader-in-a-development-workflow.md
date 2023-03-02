@@ -12,7 +12,7 @@ When the Upgrader is integrated into your development process, we recommend proc
 
 * Sprint planning: review, prioritize, and select the upgrade suggestions to be installed in the upcoming sprint.
 
-* Sprint execution: review, validate, modify, and merge the upgrades using the [Git flow](#git-flow).
+* Sprint execution: review, validate, modify, and merge the upgrades using the [Git flow](#git-flow-for-code-upgrades).
 
 This approach lets you break up big upgrades into smaller pieces. Each smaller piece can be processed within a sprint ensuring the continuity of the process.
 

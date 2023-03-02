@@ -13,6 +13,12 @@ Each section contains reference information. Make sure to review it before you s
 
 To add Unzer marketplace credentials, take the steps in the following sections.
 
+{% info_block infoBox "Note" %}
+
+All merchants allowed to sell their products in your stores must have Unzer credentials in the Back Office. Otherwise, your customers cannot buy their products; they will not be able to start the checkout process.
+
+{% endinfo_block %}
+
 ## Add Unzer merketplace credentials
 
 1. Add Unzer credentials:
@@ -78,4 +84,4 @@ The following table describes the attributes you select and enter when adding Un
 | UNZER PUBLIC KEY | Unique public key which Unzer provides to each external merchant to accept payments. The key is store-specific. |
 | UNZER PRIVATE KEY | Unique private key which Unzer provides to each external merchant to accept payments. The key is store-specific. |
 | MERCHANT REFERENCE | Merchant ID on the Spryker side. |
-| PARTICIPANT ID | Merchant reference on the Unzer side, which identifies a merchant who receives money when the order is paid and gets the [status](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/changing-the-state-of-order-items.html#reference-information-changing-the-state-of-order-items) `payment completed`. |
+| PARTICIPANT ID | Merchant reference on the Unzer side, which identifies a merchant who receives money when the order is paid and gets the [status](/docs/pbc/all/order-management-system/{{site.version}}/manage-in-the-back-office/orders/change-the-state-of-order-items.html#reference-information-changing-the-state-of-order-items) `payment completed`. |

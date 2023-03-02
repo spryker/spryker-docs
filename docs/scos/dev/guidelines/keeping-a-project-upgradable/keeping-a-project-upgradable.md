@@ -35,7 +35,7 @@ To keep your project upgradable, we recommend using the following development st
 * Plug and play
 * Project modules
 
-For more information about the strategies and how they affect upgradability, see [Development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+For more information about the strategies and how they affect upgradability, see [Development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 
 
 ## 2. Follow development guidelines
@@ -58,7 +58,7 @@ If one or more checks fail, Evaluator returns errors per check.
 
 ```bash
 ...
-PrivateApi:MethodIsOverwritten Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
+PrivateApi:MethodIsOverridden Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
 ------------------------------ ----------------------------------------------------------------------------------------------------
 ...
 Total messages: 1

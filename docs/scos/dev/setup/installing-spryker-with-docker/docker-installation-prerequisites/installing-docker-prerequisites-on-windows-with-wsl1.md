@@ -19,15 +19,15 @@ This document describes the prerequisites for installing Spryker in Docker on Wi
 
 Review the system and software requirements in the table.
 
-| REQUIREMENT | VALUE OR VERSION | ADDITIONAL DETAILS |
-| --- | --- | --- |
-| Windows | 10 64bit | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
-| BIOS Virtualization | Enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager** → **Performance** tab.  For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
-| CPU SLAT-capable feature | Enabled |SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
+| REQUIREMENT | VALUE OR VERSION  | ADDITIONAL DETAILS |
+| --- |-------------------| --- |
+| Windows | 10 or 11 (64bit)  | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
+| BIOS Virtualization | Enabled           | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager&nbsp;<span aria-label="and then">></span> Performance** tab. For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
+| CPU SLAT-capable feature | Enabled           |SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
 | Docker | 18.09.1 or higher |
-| Docker Compose | 1.28 or 1.29 |  
-| RAM  | 4GB or more |
-| Swap  | 2GB or more |
+| Docker Compose | 1.28 or 1.29      |  
+| RAM  | 4GB or more       |
+| Swap  | 2GB or more       |
 
 ## Install and configure the required software with WSL1
 
@@ -189,7 +189,7 @@ sudo gem install docker-sync
 
     a. Open the **Docker for Windows** settings and select **Expose daemon on tcp://localhost:2375 without TLS**.
     b. Run the following command in your WSL shell:
-    
+
     ```bash
     echo "export DOCKER_HOST=tcp://127.0.0.1:2375" >> ~/.bashrc
     ```
@@ -283,4 +283,3 @@ If you've already selected an installation mode, follow one of the guides below:
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html)

@@ -251,7 +251,7 @@ The necessary logic has been added to the checkout endpoints to secure the purch
 In order to make it easier for API consumers to understand the content of those endpoints following the compound documents section of the JSONAPI specification, in this release, we have introduced improvements that will allow you to have upfront information by endpoint about the primary resources that can be included in the response. This can be useful not only for a basic understanding of the endpoints but also for automation purposes.
 
 #### Documentation
-[Resource Relationships](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html#describe-resource-relationships)
+[Resource Relationships](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html#describe-resource-relationships)
 
 ## Technical Enhancements
 ### Raise Modules Code Quality to PHPStan Level 5+
@@ -285,4 +285,4 @@ The order management system (OMS) validates the state of order items in fixed ti
 To avoid the unnecessary checks and load on the OMS, we have added custom Timeout Processors for the OMS, which allow you to specify custom checks for orders within the OMS state machine. Due to the Timeout processors, the checks are executed according to defined parameters in the state machine, such as timeout and frequency of the check.
 
 #### Documentation
-[OMS Timeout Processor](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
+[OMS Timeout Processor](/docs/pbc/all/order-management-system/{{site.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)

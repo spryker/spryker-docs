@@ -12,7 +12,7 @@ This document outlines the threat modeling and security assessment requirements 
 
 ## ACP security
 
-In the context of listings on the ACP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it is important that every app they use with SCCOS offers a satisfactory level of security. 
+In the context of listings on the ACP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it is important that every app they use with SCCOS offers a satisfactory level of security.
 
 ## Security responsibility
 
@@ -20,11 +20,11 @@ The main participants in a transaction related to the ACP are:
 
 1. ACP Owner - Spryker
 2. The Platform - Spryker SCCOS
-3. The Integration Developer - Spryker or Technology Partners 
+3. The Integration Developer - Spryker or Technology Partners
 4. The Integration Consumer - Customer
 5. The Integration Implementor - Solution Partners
 
-All of these participants are responsible for the security of customer data. 
+All of these participants are responsible for the security of customer data.
 
 ## Threat modeling
 
@@ -44,7 +44,7 @@ During threat modeling, the following list of risks and threat libraries sources
 
 {% info_block infoBox "Info" %}
 
-Threat modeling is highly recommended but not mandatory for the apps listed in the ACP catalog. Some Spryker customers ask for threat modeling explicitly in addition to a penetration test. If the partner chooses not to get this done initially, they will need to go through that upon customer request. 
+Threat modeling is highly recommended but not mandatory for the apps listed in the ACP catalog. Some Spryker customers ask for threat modeling explicitly in addition to a penetration test. If the partner chooses not to get this done initially, they will need to go through that upon customer request.
 
 {% endinfo_block %}
 
@@ -58,9 +58,9 @@ Penetration testing is mandatory for all applications in the ACP catalog.
 
 {% endinfo_block %}
 
-Every app that clears the review successfully will be awarded a badge of Security Approval that will be displayed on the listing details. While searching for apps on the catalog, customers will have the ability to filter their results based on the security approval status. 
+Every app that clears the review successfully will be awarded a badge of Security Approval that will be displayed on the listing details. While searching for apps on the catalog, customers will have the ability to filter their results based on the security approval status.
 
-Other apps (those without the approval) could be listed on the catalog, but they will not have the security approval badge. Examples of such apps are template apps, starter apps, code samples, etc. Any unapproved app cannot be distributed commercially, that is, customers cannot be charged for such apps. 
+Other apps (those without the approval) could be listed on the catalog, but they will not have the security approval badge. Examples of such apps are template apps, starter apps, code samples, etc. Any unapproved app cannot be distributed commercially, that is, customers cannot be charged for such apps.
 
 ## Security standards
 
@@ -87,13 +87,13 @@ Test results will be shared in a PDF, Word, or HTML format and will contain the 
 - The type/classification of the vulnerability - (XSS, SQL Injection, CSRF, etc.) according to [OWASP](https://owasp.org/www-community/vulnerabilities/), [CWE](https://cwe.mitre.org/data/definitions/699.html), or [NIST NVD](https://nvd.nist.gov/vuln/).
 - The location of the issue within the code or steps to reproduce the issue (e.g. example of a network request triggering the vulnerability).
 - Recommendation on how to fix or mitigate it.
-As stated earlier, these results will not cover the entire code base. 
+As stated earlier, these results will not cover the entire code base.
 
 ## Testing scope
 
 Wherever the protected data goes, that is in scope. All the processing happening on SCCOS and all integrations where the data is sent out to or brought in from will be in scope for testing.
 
-External integrations will undergo an endpoint assessment in accordance with OWASP Top 10 for Web Application testing. Spryker will not conduct any security assessment of the external system itself or of subsequent integrations from this external system. 
+External integrations will undergo an endpoint assessment in accordance with OWASP Top 10 for Web Application testing. Spryker will not conduct any security assessment of the external system itself or of subsequent integrations from this external system.
 
 {% info_block infoBox "Example" %}
 
@@ -119,7 +119,7 @@ Spryker expects that the following actions are taken by partners and app develop
 - Developers should take the necessary steps to ensure the security of their applications before sending them for assessment.
 - Using the SAST (Static Application Security Testing) and DAST (Dynamic Application Security Testing) tools, they should perform automated scans and fix all issues reported.
 - If the scanner reports issues that developers consider to be false positives, they should provide necessary documentation listing those.
-- Once the scan reports are clean, they should do a full manual review of the code to check for OWASP Top-10 vulnerabilities. 
+- Once the scan reports are clean, they should do a full manual review of the code to check for OWASP Top-10 vulnerabilities.
 
 {% info_block warningBox "Warning" %}
 
@@ -127,7 +127,7 @@ The app developers should not consider Spryker as an outsourced security QA team
 
 {% endinfo_block %}
 
-## Review cost 
+## Review cost
 
 For each app, a review fee of EUR 2500 / USD 3000 will be applicable. This amount is due every time the app goes through a full review cycle (typically annually) and is exclusive of any other fee or revenue share that has been agreed upon between the partner and Spryker.
 The fee covers an initial round of testing and up to two rounds of re-tests in case the application fails to pass the earlier rounds. If more testing is required because the partner wasn't able to address issues with earlier rounds of testing, each additional round will require a fee of EUR 800/USD 1000.
@@ -163,7 +163,7 @@ The diagram below demonstrates the security assessment procedure:
 
 ## Communication channels
 
-- Spryker will create a Slack channel for the app developers to ask questions related to security. Security experts will monitor this channel and respond to the questions. 
+- Spryker will create a Slack channel for the app developers to ask questions related to security. Security experts will monitor this channel and respond to the questions.
 - Communication during individual assessments would be handled through emails.
 - In cases where a discussion is needed to resolve open questions, a call can be set up between the developer and Spryker security experts.
 
@@ -172,7 +172,7 @@ The diagram below demonstrates the security assessment procedure:
 Spryker recommends using the following approved tools and scanners:
 
 - [Burp Suite](https://portswigger.net/burp), [ZAP](https://www.zaproxy.org/), [Netsparker](https://www.netsparker.com/plp/dast/), [Acunetix](https://www.acunetix.com/plp/dast/), [Rapid7](https://www.rapid7.com/) as DAST tools.
-- [Checkmarx](https://checkmarx.com/), [Veracode](https://www.veracode.com/products/binary-static-analysis-sast), [Micro Focus Fortify SCA](https://www.microfocus.com/ru-ru/products/static-code-analysis-sast/overview), [SonarQube](https://www.sonarsource.com/), [Snyk](https://snyk.io/product/snyk-code/), [Kuiwan](https://www.kiuwan.com/code-security-sast/) for static code analysis/code scanner (PHP, JS, Java, Python, Go, Ruby, Scala).
+- [Checkmarx](https://checkmarx.com/), [Veracode](https://www.veracode.com/products/binary-static-analysis-sast), [Micro Focus Fortify SCA](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer), [SonarQube](https://www.sonarsource.com/), [Snyk](https://snyk.io/product/snyk-code/), [Kuiwan](https://www.kiuwan.com/code-security-sast/) for static code analysis/code scanner (PHP, JS, Java, Python, Go, Ruby, Scala).
 
 ## Resources
 
@@ -180,6 +180,5 @@ Security assessment recommendations are created based on the following guides an
 
 - [OWASP Top-10](https://owasp.org/www-project-top-ten/)
 - [OWASP Web Security Testing guide](https://owasp.org/www-project-web-security-testing-guide/)
-- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content.html)
+- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf)
 - [OWASP Security Knowledge Framework](https://owasp.org/www-project-security-knowledge-framework/)
-

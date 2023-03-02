@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/glue-rest-api
   - /docs/scos/dev/glue-api-guides/202200.0/glue-rest-api.html
   - /api/definition-api.htm
+  - /docs/scos/dev/glue-api-guides/202212.0/glue-rest-api.html
 related: 
   - title: Reference information - GlueApplication errors
     link: docs/scos/dev/glue-api-guides/page.version/reference-information-glueapplication-errors.html
@@ -44,7 +45,7 @@ It delivers a full customer experience from browsing the catalog to placing an o
 
 {% info_block infoBox %}
 
-[Install and run!](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html)
+[Install and run!](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html)
 
 {% endinfo_block %}
 

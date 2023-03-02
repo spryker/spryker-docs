@@ -55,11 +55,11 @@ Redis doesn't support locking mechanisms for storage keys out of the box. We pro
 
 ## Concurrent requests
 
-The locking strategy will acquire an exclusive lock on the session as soon as the session data is read. This happens for each request while the application is bootstrapping. Since only one request can hold a lock to the same session at a time, concurrent access to this session will result in subsequent requests waiting to acquire a lock. This might not be desirable for concurrent AJAX requests that don't even require access to session data. To work around that issue it is possible to immediately close a session from a controller using [PHP's session_write_close()](http://php.net/manual/en/function.session-write-close.php). This will immediately close the session and release the lock.
+The locking strategy acquires an exclusive lock on the session as soon as the session data is read. This happens for each request while the application is bootstrapping. Since only one request can hold a lock to the same session at a time, concurrent access to this session results in subsequent requests waiting to acquire a lock. This might not be desirable for concurrent AJAX requests that don't even require access to session data. To work around that issue, you can immediately close a session from a controller using [PHP's session_write_close()](http://php.net/manual/en/function.session-write-close.php). This immediately closes the session and releases the lock.
 
 ## Performance
 
-Checking locks, setting locks, and removing locks requires additional requests to Redis that might have an impact on performance. If performance is crucial and session data integrity violations can be handled, our Redis session handler doesn't lock and doesn't bring the overhead of handling locks. However, we highly recommend using the locking Redis session handler to keep the integrity of session data.
+Checking locks, setting locks, and removing locks require additional requests to Redis that might have an impact on performance. If performance is crucial, and session data integrity violations can be handled, our Redis session handler doesn't lock and doesn't bring the overhead of handling locks. However, we highly recommend using the locking Redis session handler to keep the integrity of session data.
 
 ## Using a cluster
 

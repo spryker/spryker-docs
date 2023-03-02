@@ -24,7 +24,7 @@ To start feature integration, integrate the required features:
 | --------------- | -------- | ------------------ |
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product   | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
+| Product   | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -329,7 +329,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new MerchantMerchantProductPageDataLoaderPlugin(),
         ];
     }
-        
+
     /**
      * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageMapExpanderPluginInterface>
      */

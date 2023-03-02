@@ -50,8 +50,9 @@ These requests are automatically forwarded to our DevOps team. Therefore, make s
 {% info_block infoBox "Info" %}
 
 Allow 3-5 days of processing time for change requests.
-
 If you need changes done at a certain date, include that information in the change request description.
+
+Also, only customers (through the support portal) can request new environments or access to environment monitoring. For contractual reasons, partners can't request these items.
 
 {% endinfo_block %}
 

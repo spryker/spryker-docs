@@ -132,7 +132,7 @@ The checkout process is paramount for your business in any business model. With 
 #### Documentation
 
 * [Check out purchases](/docs/scos/dev/glue-api-guides/202005.0/checking-out/checking-out-purchases.html)
-* [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html)
+* [Retrieving Customer's Order History](/docs/pbc/all/order-management-system/{{site.version}}/glue-api-retrieve-orders.html)
 
 ### Refresh Token API - Create Possibility to Invalidate Refresh Tokens
 
@@ -146,7 +146,7 @@ To enable the maximum level of security for your system, you must be able to inv
 In order to make it easier for API consumers to understand the content of those endpoints following the compound documents section of the JSONAPI specification, in this release, we have introduced improvements that will allow you to have upfront information by endpoint about the **primary resources that can be included in the response**. This can be useful not only for a basic understanding of the endpoints but also for automation purposes.
 
 #### Documentation
-[Resource Relationships](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html#describe-resource-relationships)
+[Resource Relationships](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html#describe-resource-relationships)
 
 ## Technical Enhancements
 

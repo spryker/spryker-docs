@@ -32,4 +32,4 @@ In order to have a correct set, you should:
 **What's next?**
 
 * To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html).
-* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html).
+* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/edit-merchant-relations.html).

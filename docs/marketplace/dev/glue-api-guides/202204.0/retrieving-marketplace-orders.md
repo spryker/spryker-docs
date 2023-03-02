@@ -33,7 +33,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | -------------------------------- |
-| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ---------------- | ---------------------- | ----------------------------- |
@@ -548,7 +548,7 @@ To retrieve detailed information about an order, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------- | ------------ | -------- | ---------------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 
 | String parameter | Description     | Possible values    |
@@ -1430,7 +1430,7 @@ To retrieve detailed information about an order, send the request:
 | items.salesUnit | String| Sales unit to be used for the item amount calculation.|
 | items.amount | String| |
 | items.metadata   | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes   | String  | [Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) of the order item. |
+| items.metadata.superAttributes   | String  | [Attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image     | String  | Product image URL.   |
 
 

@@ -17,10 +17,10 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Retrieving company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
-  - title: Authenticating as a company user
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: "Glue API: Authenticating as a company user"
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
   - title: Managing company user authentication tokens
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/managing-company-user-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Retrieving business units
@@ -28,16 +28,16 @@ related:
   - title: Retrieving business unit addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-addresses.html
   - title: Authenticating as a customer
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
   - title: Merchant Custom Prices feature overview
-    link: docs/scos/user/features/page.version/merchant-custom-prices-feature-overview.html
+    link: docs/pbc/all/price-management/page.version/merchant-custom-prices-feature-overview.html
   - title: Password Management overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
 ---
 
-This endpoint allows [authenticated customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as.
+This endpoint allows [authenticated customers](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html#authenticate-as-a-customer) to search by the company users available to them. Usually, authenticated customers search for a company user which they want to authenticate as.
 
 ## Installation
 
@@ -55,7 +55,7 @@ To retrieve company users of the current authenticated customer, send the reques
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -317,4 +317,4 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
+* [Authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)

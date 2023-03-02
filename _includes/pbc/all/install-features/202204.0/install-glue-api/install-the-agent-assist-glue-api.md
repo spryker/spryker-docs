@@ -8,8 +8,8 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Customer Account Management + Agent Assist | {{site.version}} | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-agent-assist-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Customer Account Management + Agent Assist | {{page.version}} | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -71,7 +71,7 @@ Activate the following plugins:
 | AgentRestUserValidatorPlugin | Checks if the `RestRequest.restUser` is an Agent when an agent-only resource is accessed. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 | AgentAccessTokenRestUserFinderPlugin | Finds the Rest user for the `X-Agent-Authorization` header. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 | AgentAccessTokensResourceRoutePlugin | Provides the `/agent-access-tokens` resource route. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
-| AgentCustomerImpersonationAccessTokensResourceRoutePlugin | Provides the `/agent-customer-impersonation-access-tokens` resource route. | The Customer impersonation grant type must be configured. See the [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) for details. | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
+| AgentCustomerImpersonationAccessTokensResourceRoutePlugin | Provides the `/agent-customer-impersonation-access-tokens` resource route. | The Customer impersonation grant type must be configured. See the [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) for details. | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 | AgentCustomerSearchResourceRoutePlugin | Provides the `/agent-customer-search` resource route. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 
 <details>
@@ -196,5 +196,5 @@ Integrate the following related features:
 
 | FEATURE | INTEGRATION GUIDE |
 | --- | --- |
-| Customer account management | [Customer account management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
-| Customer account management + Agent assist | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-agent-assist-feature-integration.html) |
+| Customer account management | [Customer account management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Customer account management + Agent assist | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |

@@ -13,8 +13,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{site.version}} |
-| Product | {{site.version}} |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 

@@ -27,7 +27,7 @@ related:
     link: docs/scos/dev/migration-concepts/silex-replacement/application.html
 ---
 
-A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the [PSR-11 interface](https://www.php-fig.org/psr/psr-11/).
+A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the PSR-11 interface<!-- ](https://www.php-fig.org/psr/psr-11/) check if it works before restoring-->.
 
 The container is used to add services and allow other application plugins access them. Services are integrations like Twig or Symfony components like Security or Form. To be able to configure or change the services easily, they are added to the applications as a part of [application plugins](/docs/scos/dev/migration-concepts/silex-replacement/application.html).
 

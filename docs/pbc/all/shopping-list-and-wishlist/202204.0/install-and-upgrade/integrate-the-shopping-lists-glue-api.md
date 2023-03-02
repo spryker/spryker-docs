@@ -17,9 +17,9 @@ related:
   - title: Shopping Lists feature integration
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/install-and-upgrade/integrate-the-shopping-lists-feature.html
   - title: Managing shopping lists
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-using-glue-api/glue-api-manage-shopping-lists.html
   - title: Managing shopping list items
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-using-glue-api/glue-api-manage-shopping-list-items.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-shopping-lists-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-shopping-lists-glue-api.md -->

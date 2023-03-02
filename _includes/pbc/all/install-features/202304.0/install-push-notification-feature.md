@@ -13,12 +13,12 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |  |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |  |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/push-notification: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/push-notification: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -47,41 +47,43 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY                    | TYPE  | EVENT   |
-|------------------------------------|-------|---------|
-| spy_push_notification              | table | created |
-| spy_push_notification_subscription | table | created |
-| spy_push_notification_group        | table | created |
-| spy_push_notification_provider     | table | created |
+| DATABASE ENTITY                                 | TYPE  | EVENT   |
+|-------------------------------------------------|-------|---------|
+| spy_push_notification                           | table | created |
+| spy_push_notification_subscription              | table | created |
+| spy_push_notification_group                     | table | created |
+| spy_push_notification_provider                  | table | created |
+| spy_push_notification_subscription_delivery_log | table | created |
 
 Make sure that the following changes have been triggered in transfer objects:
 
-| TRANSFER                                             | TYPE  | EVENT   | PATH                                                                               |
-|------------------------------------------------------|-------|---------|------------------------------------------------------------------------------------|
-| PushNotificationSubscriptionCollectionRequest        | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCollectionRequest        |
-| PushNotificationSubscriptionCollectionResponse       | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCollectionResponse       |
-| PushNotificationSubscriptionCollectionDeleteCriteria | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCollectionDeleteCriteria |
-| PushNotificationSubscriptionCollection               | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCollection               |
-| PushNotificationSubscription                         | class | created | src/Generated/Shared/Transfer/PushNotificationSubscription                         |
-| PushNotificationUser                                 | class | created | src/Generated/Shared/Transfer/PushNotificationUser                                 |
-| PushNotificationCollectionRequest                    | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionRequest                    |
-| PushNotificationCollectionResponse                   | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionResponse                   |
-| PushNotification                                     | class | created | src/Generated/Shared/Transfer/PushNotification                                     |
-| PushNotificationGroup                                | class | created | src/Generated/Shared/Transfer/PushNotificationGroup                                |
-| PushNotificationProviderCriteria                     | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCriteria                     |
-| PushNotificationSubscriptionCriteria                 | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCriteria                 |
-| PushNotificationProviderCollection                   | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollection                   |
-| PushNotificationProviderCollectionRequest            | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionRequest            |
-| PushNotificationProviderCollectionResponse           | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionResponse           |
-| PushNotificationProvider                             | class | created | src/Generated/Shared/Transfer/PushNotificationProvider                             |
-| PushNotificationProviderConditions                   | class | created | src/Generated/Shared/Transfer/PushNotificationProviderConditions                   |
-| PushNotificationSubscriptionConditions               | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionConditions               |
-| ErrorCollection                                      | class | created | src/Generated/Shared/Transfer/ErrorCollection                                      |
-| PushNotificationCollection                           | class | created | src/Generated/Shared/Transfer/PushNotificationCollection                           |
-| PushNotificationCriteria                             | class | created | src/Generated/Shared/Transfer/PushNotificationCriteria                             |
-| PushNotificationConditions                           | class | created | src/Generated/Shared/Transfer/PushNotificationConditions                           |
-| ApiPushNotificationSubscriptionAttributes            | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionAttributes            |
-| ApiPushNotificationGroupAttributes                   | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupAttributes                   |
+| TRANSFER                                             | TYPE  | EVENT   | PATH                                                                                       |
+|------------------------------------------------------|-------|---------|--------------------------------------------------------------------------------------------|
+| PushNotificationSubscriptionCollectionRequest        | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCollectionRequestTransfer        |
+| PushNotificationSubscriptionCollectionResponse       | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCollectionResponseTransfer       |
+| PushNotificationSubscriptionCollectionDeleteCriteria | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCollectionDeleteCriteriaTransfer |
+| PushNotificationSubscriptionCollection               | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCollectionTransfer               |
+| PushNotificationSubscription                         | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionTransfer                         |
+| PushNotificationSubscriptionDeliveryLog              | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionDeliveryLogTransfer              |
+| PushNotificationUser                                 | class | created | src/Generated/Shared/Transfer/PushNotificationUserTransfer                                 |
+| PushNotificationCollectionRequest                    | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionRequestTransfer                    |
+| PushNotificationCollectionResponse                   | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionResponseTransfer                   |
+| PushNotification                                     | class | created | src/Generated/Shared/Transfer/PushNotificationTransfer                                     |
+| PushNotificationGroup                                | class | created | src/Generated/Shared/Transfer/PushNotificationGroupTransfer                                |
+| PushNotificationProviderCriteria                     | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCriteriaTransfer                     |
+| PushNotificationSubscriptionCriteria                 | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionCriteriaTransfer                 |
+| PushNotificationProviderCollection                   | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionTransfer                   |
+| PushNotificationProviderCollectionRequest            | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionRequestTransfer            |
+| PushNotificationProviderCollectionResponse           | class | created | src/Generated/Shared/Transfer/PushNotificationProviderCollectionResponseTransfer           |
+| PushNotificationProvider                             | class | created | src/Generated/Shared/Transfer/PushNotificationProviderTransfer                             |
+| PushNotificationProviderConditions                   | class | created | src/Generated/Shared/Transfer/PushNotificationProviderConditionsTransfer                   |
+| PushNotificationSubscriptionConditions               | class | created | src/Generated/Shared/Transfer/PushNotificationSubscriptionConditionsTransfer               |
+| ErrorCollection                                      | class | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer                                      |
+| PushNotificationCollection                           | class | created | src/Generated/Shared/Transfer/PushNotificationCollectionTransfer                           |
+| PushNotificationCriteria                             | class | created | src/Generated/Shared/Transfer/PushNotificationCriteriaTransfer                             |
+| PushNotificationConditions                           | class | created | src/Generated/Shared/Transfer/PushNotificationConditionsTransfer                           |
+| ApiPushNotificationSubscriptionAttributes            | class | created | src/Generated/Shared/Transfer/ApiPushNotificationSubscriptionAttributesTransfer            |
+| ApiPushNotificationGroupAttributes                   | class | created | src/Generated/Shared/Transfer/ApiPushNotificationGroupAttributesTransfer                   |
 
 {% endinfo_block %}
 
@@ -118,8 +120,9 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 | CONFIGURATION                                          | SPECIFICATION                                                                   | NAMESPACE                                 |
 |--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|
-| PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides `VAPID` public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
-| PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides `VAPID` private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY  | Provides the `VAPID` public key. Used for authentication to send push notifications.  | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY | Provides the `VAPID` private key. Used for authentication to send push notifications. | Spryker\Shared\PushNotificationWebPushPhp |
+| PushNotificationWebPushPhpConstants::VAPID_SUBJECT     | Provides the `VAPID` subject. Used for authentication to send push notifications.     | Spryker\Shared\PushNotificationWebPushPhp |
 
 **config/Shared/config_default.php**
 
@@ -131,6 +134,7 @@ use Spryker\Shared\PushNotificationWebPushPhp\PushNotificationWebPushPhpConstant
 // >>> Push Notification Web Push Php
 $config[PushNotificationWebPushPhpConstants::VAPID_PUBLIC_KEY] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PUBLIC_KEY');
 $config[PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY');
+$config[PushNotificationWebPushPhpConstants::VAPID_SUJECT] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT');
 ```
 
 3. Add the VAPID keys to your **deploy.*.yml**:
@@ -142,6 +146,7 @@ image:
   environment:
     SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PUBLIC_KEY: 'Your public key.'
     SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_PRIVATE_KEY: 'Your private key.'
+    SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT: 'https://your.subject'
 ```
 
 VAPID is a new way to send and receive website push notifications. Your `VAPID` keys let you send web push campaigns without sending them through a service like Firebase Cloud Messaging (FCM).
@@ -169,6 +174,8 @@ push_notification.validation.error.push_notification_provider_already_exists,Pus
 push_notification.validation.error.push_notification_provider_already_exists,Der Anbieter für Push-Benachrichtigungen existiert bereits.,de_DE
 push_notification.validation.error.wrong_group_name,Wrong group name.,en_US
 push_notification.validation.error.wrong_group_name,Falscher Gruppenname.,de_DE
+push_notification.validation.error.push_notification_already_exists,Push notification subscription already exists.,en_US
+push_notification.validation.error.push_notification_already_exists,Das Abonnement für Push-Benachrichtigungen existiert bereits.,de_DE
 push_notification_web_push_php.validation.error.invalid_payload_structure,Invalid payload structure.,en_US
 push_notification_web_push_php.validation.error.invalid_payload_structure,Ungültige Nutzlaststruktur.,de_DE
 push_notification_web_push_php.validation.error.payload_length_exceeded,The maximum payload length exceeded.,en_US
@@ -334,7 +341,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication\PushNotificationSubscriptionResourcePlugin;
+use Spryker\Glue\PushNotificationsBackendApi\Plugin\GlueApplication\PushNotificationSubscriptionsBackendResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
@@ -344,7 +351,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     protected function getResourcePlugins(): array
     {
         return [
-            new PushNotificationSubscriptionResourcePlugin(),
+            new PushNotificationSubscriptionsBackendResourcePlugin(),
         ];
     }
 }
@@ -696,7 +703,7 @@ $jobs[] = [
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that push notifications have been correctly sent by checking the `spy_push_notification.notification_sent` database table field has to be equal to `TRUE` in case of a successful send.
+1. Make sure that push notifications have been correctly sent by checking the `spy_push_notification_subscription_delivery_log` database table. This table contains a record for each unique combination of push notification and push notification subscription.
 2. Make sure that outdated push notification subscriptions are removed by checking the `spy_push_notification_subscription` database table. Create the push notification subscription record with `spy_push_notification_subscription.expired_at` with last year's date.
 
 {% endinfo_block %}

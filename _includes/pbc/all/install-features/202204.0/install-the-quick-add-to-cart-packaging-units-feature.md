@@ -8,8 +8,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Order| {{site.version}} |
-|Packaging Units| {{site.version}} |
+|Quick Order| {{page.version}} |
+|Packaging Units| {{page.version}} |
 
 ### 1) Set up behavior
 

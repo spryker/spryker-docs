@@ -12,8 +12,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{site.version}} |
-| Non-splittable Products |{{site.version}} |
+| Cart | {{page.version}} |
+| Non-splittable Products |{{page.version}} |
 
 ### 1) Adjust concrete product quantity
 

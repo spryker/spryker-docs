@@ -12,16 +12,16 @@ redirect_from:
   - /docs/en/managing-returns
 related:
   - title: Creating returns
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-returns.html
+    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/orders/create-returns.html
   - title: Viewing returns of an order
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html
+    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/orders/view-returns-of-an-order.html
   - title: Changing the state of order items in returns
     link: docs/pbc/all/return-management/page.version/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
   - title: Return Management feature overview
     link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
-This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/pbc/all/return-management/{{page.version}}/return-management.html#return-management-on-the-storefront).
+This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/create-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/pbc/all/return-management/{{page.version}}/return-management.html#return-management-on-the-storefront).
 
 ## Prerequisites
 

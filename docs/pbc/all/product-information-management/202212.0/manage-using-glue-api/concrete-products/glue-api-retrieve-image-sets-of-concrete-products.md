@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Retrieving image sets of concrete products"
+title: "Glue API: Retrieve image sets of concrete products"
 description: Retrieve image sets of concrete products.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

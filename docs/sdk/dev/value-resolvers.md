@@ -36,7 +36,3 @@ Example of a placeholder with the `STATIC` value resolver and with the configura
       type: string # Type of value. Support `string`, `int`, `boolean`, `array`.
       defaultValue: 'json' # The default value. Optional setting.
 ```
-
-
-
-back-end-

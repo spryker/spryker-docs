@@ -14,7 +14,7 @@ redirect_from:
 ---
 
 The following schema shows how the sales order and shipment method entities are modeled in the database:
-front end.
+
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shipment/Shipment+Overview/shipment-database-schema.png)
 
 /docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html

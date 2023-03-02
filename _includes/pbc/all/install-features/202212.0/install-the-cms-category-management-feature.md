@@ -8,7 +8,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | CMS |
 | --- | --- | ---  |
-| Category Management | {{site.version}} | {{site.version}}|
+| Category Management | {{page.version}} | {{page.version}}|
 
 ## 1) Install the required modules using Composer
 

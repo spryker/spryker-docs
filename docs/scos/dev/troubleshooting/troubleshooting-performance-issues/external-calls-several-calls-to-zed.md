@@ -10,9 +10,9 @@ Some actions, parts of the website, or the whole website is slow.
 
 A lot of Zed calls.
 
-Example of more than one Zed call in the Blacfire report:
+Example of more than one Zed call in the Blackfire report:
 ![external-calls-several-calls-to-zed](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-several-calls-to-zed/external-calls-zed.png)
 
 ## Solution
 
-Spryker recommends having as few Zed calls as possible. Ideally, it has to be one only. Optimize to have one call where possible.
+We recommend having as few Zed calls as possible. Ideally, it has to be one only. Optimize to have one call where possible.

@@ -1,46 +1,35 @@
 ---
 title: Technology restrictions
-description: Technology restrictions
+description: Fix the issue with slow actions, parts of the website, or the entire webiste related to technology restrictions.
 template: troubleshooting-guide-template
 ---
-Coming soon
-<!---
-## Technology restrictions
 
-Some actions, parts of website or all website is slow.
+Some actions, parts of the website, or the entire website are slow.
 
 ## Cause
 
-Possible cause is technology restriction.
+A possible cause is technology restriction.
 
 ## Solution
 
-Before using some technology we need to understand all the ups and downsides of it.
+Before using some technology, you need to understand all its advantages and disadvantages.
 
-A beautiful example is Redis. It is fast. But if used in the wrong way can lead to some performance degradation. If we search against “*“ or “Wildkey“ in Redis with big DB we will see: 
+A good example is Redis. It is fast, but if used incorrectly, it can lead to performance degradation. If we search against `*` or `Wildkey` in Redis with a large DB, we get the following results: 
 
-NewRelic(DB): 
+NewRelic—DB: 
 
-TODO: add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3689710362/Technology+restrictions
+![new-relic-db](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions/new-relic-db.png)
 
-NewRelic (Breakdown): 
+NewRelic—Breakdown: 
 
-TODO: add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3689710362/Technology+restrictions
+![new-relic-breakdown](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions/new-relic-breakdown.png)
 
-As we see here the majority of all time takes “Redis keys“. So this is something we would need to optimize!
+As you can see, the *Redis keys* take most of the time. Therefore, they need optimization. You can optimize them by updating your functionality to use exact [keys](https://redis.io/commands/keys/) instead of `*`.
 
-How?
+In the code, this would look similar to this line:
 
-Update your functionality to use exact keys instead of “*“
+```php
+$this->storageClient->getKeys(self::RESOURCE . ':*');
+```
 
-How does it look in the code? Similar to
 
-
-```$this->storageClient->getKeys(self::RESOURCE . ':*');```
-
-More information: [KEYS](https://redis.io/commands/keys/)
-
-What to do?
-
-Learn your technology and check Profiling to guide you! 
---->

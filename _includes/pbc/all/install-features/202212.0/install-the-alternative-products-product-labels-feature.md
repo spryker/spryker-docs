@@ -12,8 +12,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE|
 |---|---|---|
-|Alternative Products| {{site.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-feature-integration.html)|
-|Product Labels| {{site.version}} | [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-labels-feature-integration.html)|
+|Alternative Products| {{page.version}} | [Alternative Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)|
+|Product Labels| {{page.version}} | [Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-labels-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 

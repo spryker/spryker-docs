@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-wishlists/managing-wishlist-items.html
 related:
   - title: Managing wishlists
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-via-glue-api/manage-wishlists-via-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-using-glue-api/glue-api-manage-wishlists.html
 ---
 
 This endpoint lets you add and remove items from wishlists.
@@ -29,7 +29,7 @@ To add an item to a wishlist, send the request:
 
 | PATH PARAMETER   | DESCRIPTION     |
 | --------------- | ---------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-via-glue-api/manage-wishlists-via-glue-api.html#create-a-wishlist) or [retrieve all wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-via-glue-api/manage-wishlists-via-glue-api.html#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 
 ### Request
 
@@ -231,7 +231,7 @@ To delete wishlist item, send the request:
 
 | PATH PARAMETER | DESCRIPTION   |
 | -------------- | -------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-via-glue-api/manage-wishlists-via-glue-api.html#create-a-wishlist) or [retrieve all wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-via-glue-api/manage-wishlists-via-glue-api.html#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 | {% raw %}***{{item_sku}}***{% endraw %}    | Unique identifier of the product to delete.                  |
 
 ### Request

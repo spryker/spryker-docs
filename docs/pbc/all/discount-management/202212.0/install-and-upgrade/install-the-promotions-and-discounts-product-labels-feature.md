@@ -1,6 +1,6 @@
 ---
 title: Install the Promotions & Discounts + Product labels feature
-description: Learn how to integrate Product Labels + Promotions & Discounts feature into a Spryker project.
+description: Learn how to integrate the Product Labels + Promotions & Discounts feature into a Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template  
 ---

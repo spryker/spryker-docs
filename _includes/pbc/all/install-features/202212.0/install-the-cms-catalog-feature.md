@@ -9,8 +9,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Catalog | {{site.version}} |
-| Cms | {{site.version}} |
+| Catalog | {{page.version}} |
+| Cms | {{page.version}} |
 
 ### 1) Set up behavior
 
@@ -195,15 +195,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Catalog | {{site.version}} |
-| Cms | {{site.version}} |
+| Catalog | {{page.version}} |
+| Cms | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/catalog:"{{site.version}}" spryker-feature/cms:"{{site.version}}" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/catalog:"{{page.version}}" spryker-feature/cms:"{{page.version}}" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

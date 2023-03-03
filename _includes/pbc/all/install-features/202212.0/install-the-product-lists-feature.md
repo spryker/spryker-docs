@@ -8,16 +8,16 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core| {{site.version}} |
-| Product | {{site.version}}  |
-| Category Management | {{site.version}} |
+|Spryker Core| {{page.version}} |
+| Product | {{page.version}}  |
+| Category Management | {{page.version}} |
 
 ## 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/product-lists:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product-lists:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -817,6 +817,6 @@ Make sure that no restricted products can be added to a cart and if they were al
 
 {% info_block infoBox "Info" %}
 
-After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned, and this can be fulfilled by providing owners for product lists.<br>Check out our [Merchant Relationship Product Restrictions integration guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html) that adds this functionality for merchant relationships.
+After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user who browses the catalog gets product lists assigned, and this can be fulfilled by providing owners for product lists.<br>Check out our [Merchant Relationship Product Restrictions integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html) that adds this functionality for merchant relationships.
 
 {% endinfo_block %}

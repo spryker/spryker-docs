@@ -9,10 +9,10 @@ This document describes the steps to take to delete a store in Spryker when usin
 
 ## When it might be useful
 
-Occasionally, a store that was created earlier becomes unnecessary. It can be a store that has been used for a brand, product, holiday, marketing promotions, or events аnd ending experiments with no production environment. 
+Occasionally, a store created earlier becomes unnecessary. It may be a store that has been used for a brand, product, holiday, marketing promotions, or events, such as ending experiments with no production environment. 
 
 On the technical side, removing a store helps with:
-1. Increasing the speed of the store and deleting redundant data.
+1. By deleting redundant and no longer used data, which can take a lot of space up on the server, the store's speed is increased. The load on it for the purposes of indexing and searching is also reduced. 
 2. Reducing wasted memory and your storage footprint.
 
 
@@ -23,22 +23,23 @@ On the technical side, removing a store helps with:
 ### 1. Backup Database.
 
 Before starting the process of removing a store, you need to back the store's database up and ensure it is recoverable.
-If you are using AWS RDS, check [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html) for more information. 
+If you are using Amazon Web Services' Relational Database Service (AWS RDS), check [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html) for more information. 
 
 
 ### 2. Suspend P&S.
 
-**In order to reduce the riskof data synchronization errors, you can suspend data synchronization through P&S.**
+**In order to reduce the risk of data synchronization errors, you can suspend data synchronization through P&S.**
 
 1. Enable **maintenance mode** by using command: 
 ```bash
 vendor/bin/console maintenance mode
 ```
-If you are using AWS infrastructure check its relevant documentation [Enable and disable maintenance mode](docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
+If you are using AWS infrastructure, check its relevant documentation on how to [Enable and disable maintenance mode](docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
 
 2. Make sure there aren't too many many messages showing in the RabbitMQ. Wait for the messages to be processed.
 
-3. To suspend P&S and the Cronjob scheduler use this command: 
+3. To suspend P&S and the Cronjob scheduler, use this command: 
+
 ```bash
 vendor/bin/console scheduler:suspend
 ```
@@ -46,7 +47,7 @@ vendor/bin/console scheduler:suspend
 
 ### 3. Database. Cleaning data and configration in related database tables.
 
-The number of tables that use relation with the `spy_store` table may depend on the use of the functionality and depends on the installed modules.
+The number of tables that use relation with the `spy_store` table may depend on the use of the functionality, and on the installed modules.
 
 The list of available tables with data that may contain a foreign key relationship:
 - `spy_price_product_store`

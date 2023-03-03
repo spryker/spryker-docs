@@ -131,7 +131,8 @@ After implementing a specific resource version, you can query the resource speci
 
 **Code sample:**
 
-```php
+**PATCH /customer-restore-password**
+```json
 {
   "data": {
     "type": "customer-restore-password",
@@ -141,11 +142,15 @@ After implementing a specific resource version, you can query the resource speci
 }
 ```
 
-Also, to specify the exact version you need, specify the resource version in the HTTP header of your request:
+If `\Spryker\Glue\GlueApplication\GlueApplicationConfig::getPathVersionResolving` is set to *false*, specify the exact version you need, in the HTTP header of your request:
 
 ```php
 Content-Type: application/vnd.api+json; version=2.0
 ```
+
+If `getPathVersionResolving` is set to *true*, then you have to set some value in `\Pyz\Glue\GlueApplication\GlueApplicationConfig::getPathVersionPrefix`, *"v"* in our examples, and then your resource path should look like this:
+**PATCH /v2.0/customer-restore-password**
+
 
 In the preceding example, version 2.0 is specified. If you repeat the request with such headers, you receive a valid response with resource version 2.0. However, if you specify a non-existent version, for example, 3.0, the request fail.
 
@@ -155,9 +160,40 @@ Content-Type: application/vnd.api+json; version=3.0
 
 In this case, the endpoint responds with the `404 Not Found` error.
 
+Here's a version matching rule-set:
+
+PHP version:
+```php
+(new RestVersionTransfer())
+            ->setMajor(A)
+            ->setMinor(B);
+```
+
+Then use version 
+
+In the header: *Content-Type: application/vnd.api+json; version=A.B*
+
+In the path: */vA.B*
+
+PHP version:
+```php
+(new RestVersionTransfer())
+            ->setMajor(A);
+```
+
+Then, use version 
+
+In the header: *Content-Type: application/vnd.api+json; version=A*
+
+In the path: */vA*
+
+There's no fall-back to the latest minor, only exact match of version is used.
+
 {% info_block infoBox %}
 
 If a version is not specified, the latest available version is returned.
+
+In order to call the the latest version of the resource, do not specify version in the request.
 
 {% endinfo_block %}
 

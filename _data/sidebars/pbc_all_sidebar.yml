@@ -1616,13 +1616,13 @@ entries:
                 url: /docs/pbc/all/ratings-reviews/tutorials-and-howtos/howto-configure-product-reviews.html
           - title: Third-party integrations
             nested:
-              - title: BazaarVoice
+              - title: Bazaarvoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
-              - title: Integrate BazaarVoice
+              - title: Integrate Bazaarvoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
-              - title: Configure BazaarVoice
+              - title: Configure Bazaarvoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
-              - title: Disconnect BazaarVoice
+              - title: Disconnect Bazaarvoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html

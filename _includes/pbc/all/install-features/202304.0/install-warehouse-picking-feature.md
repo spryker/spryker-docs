@@ -252,7 +252,7 @@ Warehouse2,1,multi-shipment
 Warehouse3,0,multi-shipment
 ```
 
-In case you are using the marketplace setup:
+If you are using the marketplace setup:
 
 **data/import/common/common/marketplace/warehouse.csv**
 
@@ -281,9 +281,7 @@ console data:import stock
 
 {% info_block warningBox “Verification” %}
 
-Make sure that:
-
-* The defined picking list strategies are applied correctly by finding them in the `spy_stock` database table.
+Make sure the defined picking list strategies are applied correctly by finding them in the `spy_stock` database table.
 
 {% endinfo_block %}
 
@@ -429,7 +427,7 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 }
 ```
 
-4. To enable the Backend API, register the plugins:
+3. To enable the Backend API, register the plugins:
 
 | PLUGIN                                | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------|----------------------------------------------|---------------|----------------------------------------------------------------------|
@@ -465,26 +463,24 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-As a prerequisite, we have to pass the following steps:
+As a prerequisite, you must take the following steps:
 
-1. Attach a back office user to any warehouse you have in the system (use the [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html) guide).
+1. Attach a Back Office user to any warehouse you have in the system—use the [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html) guide.
 2. Place an order in the system so that the product is in the warehouse where you added the user in the previous step.
 3. Obtain the access token of the warehouse user.
 4. Use the warehouse user access token as the request header `Authorization: Bearer {{your access token}}`.
 
 Make sure that you can send the following requests:
 
-To get a collection of available picking lists for a warehouse user, send the request:
+To get a collection of available picking lists for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists`.
 
-* `GET https://glue-backend.mysprykershop.com/picking-lists`
 
-To get a single picking list for a warehouse user, send the request:
+To get a single picking list for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 
-* `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
 
 To start a pick up operation by a warehouse user, send the request:
 
-* `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
+`PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
 
      ```json
      {

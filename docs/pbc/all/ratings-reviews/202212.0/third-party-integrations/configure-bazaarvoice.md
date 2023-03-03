@@ -12,7 +12,7 @@ After you have [integrated the BazaarVoice app](/docs/pbc/all/ratings-reviews/{{
 
 To configure the BazaarVoice the app, do the followoing:
 
-1. In your store's Back Office, go to **Apps > Catalog**.
+1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
 2. Click **BazaarVoice**.
 3. In the top right corner of the BazaarVoice app details page, click **Connect app**.
    This takes you to the BazaarVoice site with the signup form.
@@ -46,7 +46,7 @@ The following video explains how you can create an API key if it is not availabl
 
 8. Optional: To track whether the products that have more UGC have a higher conversion rate than those without many ratings and reviews, in **sFTP Settings**, fill out the following fields:
 
-| Field    |                    Description                     |
+| FIELD    |                    DESCRIPTION                     |
 |----------|:--------------------------------------------------:|
 | Username |   The user name to connect to BazaarVoice's sFTP.   |
 | Password |   The password to connect to BazaarVoice's sFTP.    |
@@ -60,12 +60,12 @@ If you are unsure of your credentials or the region, reach out to the internal B
 
 ![bv-sftp-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice/bv-sftp-settings.png)
 
-9. In **Settings > Select Services**, select the services that you need:
+9. In **Settings&nbsp;<span aria-label="and then">></span> Select Services**, select the services that you need:
    - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
    <!---- QUESTIONS & ANSWERS:--> 
    - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
 
-10. To configure the stores where you want to turn on the BazaarVoice app, in **Settings** > **Store**, select the stores.
+10. To configure the stores where you want to turn on the BazaarVoice app, in **Settings&nbsp;<span aria-label="and then">></span> Store**, select the stores.
 
 11. Click **Save**.
 

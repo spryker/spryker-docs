@@ -39,7 +39,7 @@ To integrate Bazaarvoice, follow these steps:
 To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist. 
 
 To do that, do one of the following:
-- Change the `deploy.yml` file: 
+1. Change the `deploy.yml` file: 
 
 ```yml
 image:
@@ -53,7 +53,7 @@ image:
     }'
 ```
 
-- Update the `config/Shared/config_default.php` file:
+2. Update the `config/Shared/config_default.php` file:
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
@@ -61,7 +61,7 @@ $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
 
 ### 2. Add markup to custom templates
 
-The Bazaarvoice app takes data on products from the Storefront pages—for example, the product details page, or Catalog page.
+The Bazaarvoice app takes data on products from the Storefront pages—for example, the product details page, or the *Catalog* page.
 To get necessary data from the pages, schemas from [Schema.org](https://schema.org/) are used.
 By default, the necessary markups are already available in the Yves templates.
 

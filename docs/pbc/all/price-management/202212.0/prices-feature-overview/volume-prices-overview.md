@@ -11,6 +11,7 @@ redirect_from:
   - /docs/volume-prices-overview
   - /docs/en/volume-prices-overview
   - /docs/scos/user/features/202212.0/prices-feature-overview/volume-prices-overview.html
+  - /docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html
 ---
 
 In highly competitive markets, the business tactic is made compelling by issuing drastic discounts when buying products in large quantities or volumes.

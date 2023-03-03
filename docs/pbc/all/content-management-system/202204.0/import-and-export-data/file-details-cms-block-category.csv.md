@@ -1,5 +1,5 @@
 ---
-title: File details - cms_block_category.csv
+title: "File details: cms_block_category.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-categorycsv
@@ -27,10 +27,7 @@ This file has the following dependency: [cms_block_category_position.csv](/docs/
 | category_template_name | &check; | String |  | Name of the category template. |
 | cms_block_category_position_name |  | String |  | Name of the CMS block category position. |
 
-
 ## Import template file and content example
-
-
 
 | FILE | DESCRIPTION |
 | --- | --- |

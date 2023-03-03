@@ -17,14 +17,14 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shipment:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -61,7 +61,7 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ShipmentTransfer | class | created | src/Generated/Shared/Transfer/ShipmentTransfer |
 | StoreTransfer | class | created | src/Generated/Shared/Transfer/StoreTransfer |

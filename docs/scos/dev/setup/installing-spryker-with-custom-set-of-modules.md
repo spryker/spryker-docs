@@ -22,8 +22,6 @@ redirect_from:
   - /v1/docs/installation-guide-chose-modules
   - /v1/docs/en/installation-guide-chose-modules
 related: 
-  - title: Install module structure and configuration
-    link: docs/scos/dev/setup/install-module-structure-and-configuration.html
   - title: Managing SCOS dependencies with Composer
     link: docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
   - title: Redis configuration

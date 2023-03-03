@@ -11,7 +11,8 @@ redirect_from:
   - /docs/inventory-management-feature-overview
   - /docs/en/inventory-management-feature-overview
   - /docs/scos/user/features/202200.0/inventory-management-feature-overview.html
-  - /docs/scos/user/features/202212.0/inventory-management-feature-overview.html  
+  - /docs/scos/user/features/202212.0/inventory-management-feature-overview.html
+  - /docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html  
 ---
 
 The *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is a physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details about how to manage them.
@@ -88,7 +89,7 @@ The availability of a product bundle is defined by the availability of each prod
 
 {% endinfo_block %}
 
-In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when the payment fails and the order is canceled, the item is not reserved anymore:
+In the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when the payment fails and the order is canceled, the item is not reserved anymore:
 
 <details open>
 <summary markdown='span'>State machine example</summary>

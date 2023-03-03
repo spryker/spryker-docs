@@ -35,7 +35,7 @@ To keep your project upgradable, we recommend using the following development st
 * Plug and play
 * Project modules
 
-For more information about the strategies and how they affect upgradability, see [Development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
+For more information about the strategies and how they affect upgradability, see [Development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 
 
 ## 2. Follow development guidelines

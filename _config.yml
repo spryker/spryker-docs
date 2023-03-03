@@ -223,23 +223,26 @@ versioned_categories:
   pbc:
     all:
       - cart-and-checkout
+      - carrier-management
       - content-management-system
+      - customer-relationship-management
       - discount-management
+      - emails
       - gift-cards
       - identity-access-management
-      - user-management
-      - return-management
-      - emails
-      - carrier-management
+      - order-management-system
       - price-management
-      - ratings-reviews
-      - request-for-quote
-      - shopping-list-and-wishlist
-      - tax-management
-      - warehouse-management-system
       - product-information-management
       - product-relationship-management
-
+      - punchout      
+      - return-management
+      - ratings-reviews
+      - request-for-quote
+      - search
+      - shopping-list-and-wishlist
+      - tax-management
+      - user-management
+      - warehouse-management-system
 
 
 # these are defaults used for the front matter for these file types

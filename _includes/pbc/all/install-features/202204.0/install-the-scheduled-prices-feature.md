@@ -8,16 +8,16 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Product | {{site.version}} |
-| Price | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Product | {{page.version}} |
+| Price | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
-composer require spryker-feature/scheduled-prices:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/scheduled-prices:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -58,7 +58,7 @@ Make sure that the following changes have been applied by checking your database
 {% info_block warningBox "Verification" %}
 Make sure that the following changes in transfer objects have been applied:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | PriceProductScheduleTransfer | class | created | src/Generated/Shared/Transfer/PriceProductScheduleTransfer |
 | PriceProductScheduleCsvValidationResultTransfer | class | created | src/Generated/Shared/Transfer/PriceProductScheduleCsvValidationResultTransfer |

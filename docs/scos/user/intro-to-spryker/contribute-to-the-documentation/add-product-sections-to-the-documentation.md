@@ -164,7 +164,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
                             ...    
     ```
 
-    2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
+    2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the business user guide of the product. For example:
 
     ```html
                                 <h2 class="card__heading-title">Business User guides</h2>

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/avalara-tax-shipment-feature-integration
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-shipment-feature-integration.html
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara-tax-shipment.html
+  - /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html
@@ -29,7 +30,7 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Shipment | master | [Shipment feature integration guide](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html) |
+| Shipment | master | [Shipment feature integration guide](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-the-shipment-feature.html) |
 | Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{site.version}}/third-party-integrations/integrate-avalara.html) |
 
 ### 1) Install the required modules using Composer

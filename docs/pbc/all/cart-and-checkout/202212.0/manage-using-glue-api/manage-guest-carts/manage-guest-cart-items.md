@@ -2626,7 +2626,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/add-items-to-a-guest-cart-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/add-items-to-a-guest-cart-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202212.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md -->
 
 
 For the attributes of other included resources, see the following:

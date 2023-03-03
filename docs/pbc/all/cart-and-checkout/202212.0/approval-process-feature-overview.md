@@ -6,12 +6,13 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/approval-process-feature-overview
 originalArticleId: 6a13ff93-6cd0-4461-afe9-6c6101991d5e
 redirect_from:  
-  - /docs/scos/user/features/202212.0/approval-process-feature-overview.html  
+  - /docs/scos/user/features/202212.0/approval-process-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html  
 ---
 
 The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
 
-Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
+Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/pbc/all/customer-relationship-management/{{site.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
 
 {% info_block warningBox "Approvals within a business unit" %}
 
@@ -201,4 +202,4 @@ Company users can perform the following actions using the Approval Process featu
 |INSTALLATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|
 | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo: Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
-| [Shipment + Approval Process feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-approval-process-feature.html)  |   |
+| [Shipment + Approval Process feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-the-shipment-approval-process-feature.html)  |   |

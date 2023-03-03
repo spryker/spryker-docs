@@ -1,6 +1,6 @@
 ---
 title: "HowTo: Create and register a MailTypeBuilderPlugin"
-description: Use this guide to create and register the  MailTypeBuilderPlugin in the Mail module.
+description: Guide to create and register MailTypeBuilderPlugin in the Mail module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-mail-create-mailtype-plugin
@@ -25,12 +25,12 @@ redirect_from:
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 ---
 
-`MailTypeBuilderPlugin` is used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypeBuilderPlugin` within the `Mail` module, which sends out the emails, and implement `MailTypeBuilderPluginInterface`.
+The `MailTypeBuilderPlugin` component is used to build the entire `MailTransfer` list through an easy-to-use interface. Create the `MailTypeBuilderPlugin` within the `Mail` module, which sends out the emails, and implement `MailTypeBuilderPluginInterface`.
 Then, in the `build()` method, set up your email.
 
-All `MailTransfers` need to know which mail type has to be used for further internal processing. The mail type has to be a string.
+All `MailTransfers` need to know which mail type is to be used for further internal processing. The mail type also has to be a string.
 
-In most cases, you can add a specific transfer to the `MailTransfer`—for example, a `CustomerTransfer` when a customer registers. This transfer object is available in your `MailTypeBuilderPlugin` through the `MailTransfer`.
+In most cases, you can add a specific transfer to the `MailTransfer`—for example, a `CustomerTransfer` that is used when a customer registers. This transfer object is available in your `MailTypeBuilderPlugin` through `MailTransfer`.
 
 Let’s say you have a module named `FooBar`, where you want to add automated mail sending. To enable that feature, follow these steps:
 
@@ -109,8 +109,8 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-In order to activate the mail functionality, follow these steps:
-1. To verify the mail provider is created and registered, go to [How to create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html).
+In order to activate the mail module's functionality, follow these steps:
+1. To verify the mail provider is created and registered, see [How to create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html).
 2. Create and adjust `MailTransfer`:
 
 ```php
@@ -121,8 +121,8 @@ In order to activate the mail functionality, follow these steps:
 ```
 Call `MailFacade::handleMail($mailTransfer)`.
 
-If everything is set up properly the mail will be sent.
+If everything is set up properly, the email will be sent.
 
-Follow [Tutorial sending an email](/docs/pbc/all/emails/{{site.version}}/tutorial-sending-an-email.html) to get more information.
+See [Tutorial sending an email](/docs/pbc/all/emails/{{site.version}}/tutorial-sending-an-email.html) to get more information.
 
 {% endinfo_block %}

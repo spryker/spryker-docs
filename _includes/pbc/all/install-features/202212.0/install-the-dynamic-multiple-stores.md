@@ -1,9 +1,9 @@
 To integrate Dynamic multistore feature  in your project, you need to:
 
-- [Define the region stores context by domain](#ddd)
+- [Define the region stores context by domain](#define-the-region-stores-context-by-domain)
 - [Integration Dynamic Store feature](#integration-dynamic-store-feature)
-- [Enable Dynamic Store](#enabling-ds)
-- [Delete store](#set-up-behavior)
+- [Deploy file changes and enable dynamic store feature](#deploy-file-changes-and-enable-dynamic-store-feature)
+- [Delete store in database](#delete-store-in-database)
 
 
 ## Define the region stores context by domain
@@ -41,7 +41,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Dynamic multistore | {{site.version}} | [Dynamic multistore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/) |
 
 
-### 2.2 Install the required modules using Composer
+### Install the required modules using Composer
 
 Please note if you don't use some features, you can skip some packages for update.
 
@@ -1082,12 +1082,10 @@ Make sure that the new modules have been installed or updated in the following d
 | ShopUi                      | vendor/spryker-shop/shop-ui/                |
 | ShoppingListPage            | vendor/spryker-shop/shopping-list-page/     |
 | StoreWidget                 | vendor/spryker-shop/store-widget/           |
-|-----------------------------|---------------------------------------------|
 
 {% endinfo_block %}
 
-
-## Set up database schema and transfer objects
+### Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
     
@@ -1126,7 +1124,6 @@ Make sure that the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
  
-
 ### Change configuration 
 
 {% info_block warningBox "Configuration store.php" %}
@@ -1196,15 +1193,7 @@ foreach ($rabbitConnections as $key => $connection) {
 This code allows to set the configuration for queues dynamically. Use environment variables `SPRYKER_CURRENT_REGION` and `APPLICATION_STORE` to set the configuration for queues.
     
 
-
-Same for ci configuration file
-
-
-
-<!-- Describe changes for CI files -->
-
-
-2. Change configuration for Jenkins jobs.
+###  Change configuration for Jenkins jobs.
 
 Delete the variable `$allStores` and its use in the configuration of the jobs through the `stores` parameter.
 
@@ -1264,7 +1253,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 }
 ```
 
-3. Change the configuration of the RabbitMQ queue.
+### Change the configuration of the RabbitMQ queue.
 
 
 The configuration of the RabbitMQ connection is set in the configuration file `config/Shared/config_default.php` and `config/Shared/config_ci.php`.
@@ -1318,7 +1307,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```
 
-4. Change the configuration of the Store module.
+### Change the configuration of the Store module.
 
 ```
 src/Pyz/Client/Store/StoreDependencyProvider.php
@@ -1345,7 +1334,7 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 }
 ```
 
-5. Adjust the configuration of the ZedRequest module. 
+### Adjust the configuration of the ZedRequest module. 
 
 ```
 src/Pyz/Client/ZedRequest/ZedRequestDependencyProvider.php
@@ -1380,7 +1369,7 @@ class ZedRequestDependencyProvider extends SprykerZedRequestDependencyProvider
 
 ```
 
-6. Adjust `GlueApplicationDependencyProvider`.
+### Adjust `GlueApplicationDependencyProvider`.
 
 Remove `SetStoreCurrentLocaleBeforeActionPlugin` plugin from the `getControllerBeforeActionPlugins` method and add `StoreHttpHeaderApplicationPlugin` and `LocaleApplicationPlugin` plugins instead.
 
@@ -1418,14 +1407,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-7.  Adjust `GlueStorefrontApiApplicationDependencyProvider`.
+### Adjust GlueStorefrontApiApplicationDependencyProvider.
 
 Add `StoreHttpHeaderApplicationPlugin` plugin to the `getApplicationPlugins` method.
 
 ```
 src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php
 ```
-
 
 ```php
 <?php
@@ -1449,7 +1437,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 ```
 
-7. Add RouterConfig class.
+### Add RouterConfig class.
 
 Addd the following code to the `RouterConfig` class, use the following code:
 
@@ -1482,7 +1470,7 @@ class RouterConfig extends SprykerRouterConfig
 }
 ```
 
-8. Addjust ShopApplicationDependencyProvider
+### Addjust ShopApplicationDependencyProvider
 
 Add `StoreSwitcherWidget` to the `getGlobalWidgets` method. 
 
@@ -1577,11 +1565,9 @@ class CustomerConfig extends SprykerCustomerConfig
 
 ```
 
-11. Adjust `PublisherDependencyProvider` class.
-
+### Adjust `PublisherDependencyProvider` class.
 
 Add publisher plugins to the `getPublisherPlugins` method.
-
 
 ```
 src/Pyz/Zed/Publisher/PublisherDependencyProvider.php
@@ -1635,9 +1621,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-12.  Enable `SynchronizationStorageQueueMessageProcessorPlugin` in the `QueueDependencyProvider` class.
-
-
+###  Enable `SynchronizationStorageQueueMessageProcessorPlugin` in the `QueueDependencyProvider` class.
 
 
 ```
@@ -1670,7 +1654,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-13. Create class `StoreDependencyProvider`.
+### Create class `StoreDependencyProvider`.
 
 StoreDependencyProvider class is used to register new plugins for the Store module. 
 Add the following code to the `StoreDependencyProvider` class:
@@ -1769,13 +1753,11 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 
 ```
 
-14. Create class `StoreGuiDependencyProvider`.
+### Create class `StoreGuiDependencyProvider`.
 
 The `StoreGuiDependencyProvider` class is used to register new plugins for the StoreGui module. 
 
 Add the following code to the `StoreGuiDependencyProvider` class:
-
-
 
 ```
 src/Pyz/Zed/StoreGui/StoreGuiDependencyProvider.php
@@ -1869,7 +1851,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 }
 ```
 
-15. Create class `StoreStorageConfig`.
+### Create class `StoreStorageConfig`.
 
 ```
 src/Pyz/Zed/StoreStorage/StoreStorageConfig.php
@@ -1925,7 +1907,7 @@ class StoreStorageConfig extends SprykerStoreStorageConfig
 
 ```
 
-16. Add plugin to `StoreGuiDependencyProvider`.
+### Add plugin to StoreGuiDependencyProvider.
 
 
 ```
@@ -1955,7 +1937,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 ```
 
-17. Change CodeBucketConfig class.
+### Change CodeBucketConfig class.
 
 Please, adjust the `CodeBucketConfig` class to your needs. For example, you can replace a new code bucket.
 
@@ -2002,14 +1984,13 @@ class CodeBucketConfig extends AbstractCodeBucketConfig
 
 Due to release new major version of `spryker/locale`, `spryker/currency`, `spryker/country` modules, we need to adjust data import.
 
-
-1. Remove class list: 
+### Remove class list: 
 
 - `src/Pyz/Zed/DataImport/Business/Model/Store/StoreReader.php` 
 - `src/Pyz/Zed/DataImport/Business/Model/Store/StoreWriterStep.php` 
 
 
-2. Adjust `DataImportBusinessFactory` class.
+### Adjust `DataImportBusinessFactory` class.
 
 Remove mthod `createStoreImporter` and in method `getDataImporterByType` remove the following code with case `DataImportConfig::IMPORT_TYPE_STORE`
 
@@ -2024,7 +2005,7 @@ src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php
 ```
 
 
-3. Adjust `ProductStockBulkPdoDataSetWriter::persistAvailability()` method.
+### Adjust `ProductStockBulkPdoDataSetWriter::persistAvailability()` method.
 
 
 ```
@@ -2079,7 +2060,7 @@ to code:
     }
 ```
 
-4. Adjust `ProductStockBulkPdoMariaDbDataSetWriter::persistAvailability()` method.
+### Adjust `ProductStockBulkPdoMariaDbDataSetWriter::persistAvailability()` method.
 
 You need to replace the following code:
 
@@ -2135,7 +2116,7 @@ Replace method `persistAvailability` with the following code:
 
 ```
 
-5. Adjust `ProductStockPropelDataSetWriter::updateAvailability()` and `ProductStockPropelDataSetWriter::getStoreIds()` methods.
+### Adjust `ProductStockPropelDataSetWriter::updateAvailability()` and `ProductStockPropelDataSetWriter::getStoreIds()` methods.
 
 Replace the following code:
 
@@ -2210,7 +2191,7 @@ replace with the following code:
     }
 ```
 
-6. Adjust `DataImportConfig`.
+### Adjust DataImportConfig class.
 
 Replace method `getDefaultYamlConfigPath()` with the following code:
 
@@ -2226,7 +2207,7 @@ Replace method `getDefaultYamlConfigPath()` with the following code:
     }
 ```
 
-7. Add new plugins to `DataImportDependencyProvider`.
+### Add new plugins to `DataImportDependencyProvider`.
 
 ```
 src/Pyz/Zed/DataImport/DataImportDependencyProvider.php
@@ -2257,7 +2238,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-8. Adjust ConsoleDependencyProvider.
+### Adjust ConsoleDependencyProvider.
 
 ```
 src/Pyz/Zed/Console/ConsoleDependencyProvider.php
@@ -2320,7 +2301,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 
-8. Preparing csv files for configure stores, locales, currencies, countries via data import 
+### Preparing csv files for configure stores, locales, currencies, countries via data import 
 
 Example for DE store locales configurations: 
 `data/import/common/DE/locale_store.csv`
@@ -2367,10 +2348,11 @@ vendor/bin/console data:import:currency-store
 vendor/bin/console data:import:country-store
 ```
 
-## Add translations
+### Add translations
 
 Add new translation files for widget labls.
-1. Append glossary according to your configuration:
+
+**1. Append glossary according to your configuration:**
 
 By default, the glossary is located in the following directory:
 
@@ -2385,13 +2367,13 @@ store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE
 ```
 
-2. Add the glossary keys use command:
+**2. Add the glossary keys use command:**
 
 ```bash
 console data:import:glossary
 ```
 
-3. Generate new translation cache:
+**3. Generate new translation cache:**
 
 ```bash
 console translator:generate-cache
@@ -2404,9 +2386,7 @@ Make sure that the configured data has been added to the spy_glossary table in t
 {% endinfo_block %}
 
 
-
-
-## Deploy file changes and enable dynamic store feature. 
+## Deploy file changes and enable dynamic store feature 
 
 Due to chnage ideology of region insted store configuration, you need to change deploy file for enable dynamic store feature.
 
@@ -2533,7 +2513,12 @@ Also you need to change domain name for all endpoints in EU region.
 Please, check `deploy.dev.dynamic-store.yml` file for more details.
 
 
-## Codeception tests suite configuration changes
+## Delete store in database
+
+How to delete store you can find by link [How To: Delete store when using the dynamic store feature](docs/scos/dev/tutorials-and-howtos/howtos/howto-store-delete.html)
+
+
+## Note: Codeception tests suite configuration changes
 
 For correct work tests with dynamic store feature, you need to add the following helper `ContainerHelper` and `StoreDependencyHelper` to the codeception.yml files:
 
@@ -2552,7 +2537,3 @@ suites:
                 - \SprykerTest\Shared\Store\Helper\StoreDependencyHelper
 
 ```
-
-## Delete store in database
-
-How to delete store you can find by link [How To: Delete store when using the dynamic store feature](docs/scos/dev/tutorials-and-howtos/howtos/howto-store-delete.html)

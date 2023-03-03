@@ -234,8 +234,8 @@ Consider OMS configuration using `DummyPayment01` process as an example.
 {% info_block warningBox "Verification" %}
 
 Make sure that the OMS transition diagram shows expected transitions:
-* In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**, you will find the process `DummyPayment01`, click on it to see the diagram.
-* Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
+1. In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**, you will find the process `DummyPayment01`, click on it to see the diagram.
+2. Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
 {% endinfo_block %}
 

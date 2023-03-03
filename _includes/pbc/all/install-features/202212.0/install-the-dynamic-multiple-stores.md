@@ -1369,10 +1369,10 @@ class ZedRequestDependencyProvider extends SprykerZedRequestDependencyProvider
 
 ```
 
-### Adjust `GlueApplicationDependencyProvider`.
+
+### Adjust GlueApplicationDependencyProvider class. 
 
 Remove `SetStoreCurrentLocaleBeforeActionPlugin` plugin from the `getControllerBeforeActionPlugins` method and add `StoreHttpHeaderApplicationPlugin` and `LocaleApplicationPlugin` plugins instead.
-
 
 ```
 src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
@@ -1407,6 +1407,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
+
 ### Adjust GlueStorefrontApiApplicationDependencyProvider.
 
 Add `StoreHttpHeaderApplicationPlugin` plugin to the `getApplicationPlugins` method.
@@ -1436,6 +1437,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 
 ```
+
 
 ### Add RouterConfig class.
 
@@ -1470,6 +1472,7 @@ class RouterConfig extends SprykerRouterConfig
 }
 ```
 
+
 ### Addjust ShopApplicationDependencyProvider
 
 Add `StoreSwitcherWidget` to the `getGlobalWidgets` method. 
@@ -1497,7 +1500,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-9. Adjust ApplicationDependencyProvider. 
+### Adjust ApplicationDependencyProvider. 
 
 Add `CurrencyBackendGatewayApplicationPlugin`, `LocaleBackendGatewayApplicationPlugin`, `StoreBackendGatewayApplicationPlugin`, `RequestBackendGatewayApplicationPlugin` plugins to the `getBackendGatewayApplicationPlugins` method.
 
@@ -1534,7 +1537,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-10.  Add method to `CustomerConfig` class.
+###  Add method to CustomerConfig class.
 
 
 Add the following code to the `CustomerConfig` class, use the following code:
@@ -1565,7 +1568,7 @@ class CustomerConfig extends SprykerCustomerConfig
 
 ```
 
-### Adjust `PublisherDependencyProvider` class.
+### Adjust PublisherDependencyProvider class.
 
 Add publisher plugins to the `getPublisherPlugins` method.
 
@@ -1621,8 +1624,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-###  Enable `SynchronizationStorageQueueMessageProcessorPlugin` in the `QueueDependencyProvider` class.
+###  Enable SynchronizationStorageQueueMessageProcessorPlugin in the QueueDependencyProvider class.
 
+For synchronization storage queue, add the `SynchronizationStorageQueueMessageProcessorPlugin` plugin to the `getProcessorMessagePlugins` method.
 
 ```
 src/Pyz/Zed/Queue/QueueDependencyProvider.php
@@ -1654,9 +1658,10 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-### Create class `StoreDependencyProvider`.
+### Create StoreDependencyProvider class.
 
 StoreDependencyProvider class is used to register new plugins for the Store module. 
+
 Add the following code to the `StoreDependencyProvider` class:
 
 
@@ -1851,7 +1856,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 }
 ```
 
-### Create class `StoreStorageConfig`.
+### Create class StoreStorageConfig.
 
 ```
 src/Pyz/Zed/StoreStorage/StoreStorageConfig.php
@@ -1980,17 +1985,17 @@ class CodeBucketConfig extends AbstractCodeBucketConfig
 
 ```
 
-## Dataimport and console commands.
+### Dataimport and console commands.
 
 Due to release new major version of `spryker/locale`, `spryker/currency`, `spryker/country` modules, we need to adjust data import.
 
-### Remove class list: 
+##### Remove class list: 
 
 - `src/Pyz/Zed/DataImport/Business/Model/Store/StoreReader.php` 
 - `src/Pyz/Zed/DataImport/Business/Model/Store/StoreWriterStep.php` 
 
 
-### Adjust `DataImportBusinessFactory` class.
+### Adjust DataImportBusinessFactory` class.
 
 Remove mthod `createStoreImporter` and in method `getDataImporterByType` remove the following code with case `DataImportConfig::IMPORT_TYPE_STORE`
 

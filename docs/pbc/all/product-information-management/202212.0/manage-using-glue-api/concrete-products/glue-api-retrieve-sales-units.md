@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Retrieving sales units"
+title: "Glue API: Retrieve sales units"
 description: Retrieve sales units of concrete products.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

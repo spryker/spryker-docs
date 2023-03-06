@@ -1,6 +1,6 @@
 ---
 title: Install the Warehouse User Management feature
-description: Learn how to integrate the Warehouse User Management feature into your project
+description: Learn how to install the Warehouse User Management feature in your project
 last_updated: Jan 25, 2023
 template: feature-integration-guide-template
 ---

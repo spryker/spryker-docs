@@ -164,7 +164,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
                             ...    
     ```
 
-    2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
+    2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the business user guide of the product. For example:
 
     ```html
                                 <h2 class="card__heading-title">Business User guides</h2>
@@ -302,7 +302,9 @@ To configure the Algolia search for the product, you need to configure the searc
 
 {% info_block warningBox "Excluding the files you are adding" %}
 
-If you are adding configuration for two roles, you also need to exclude them from indexing each other. In the following examples, this is indicated by `docs/fes/dev/**/*.md` and `docs/fes/dev/**/*.md`.
+If you are adding configuration for two roles, you also need to exclude them from indexing each other. In the following examples, this is indicated by the following entries:
+* `docs/fes/dev/**/*.md`
+* `docs/fes/dev/**/*.md`
 
 {% endinfo_block %}
 

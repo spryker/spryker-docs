@@ -91,8 +91,7 @@ Since merchants don't have their own entities in the Bazaarvoice service, produc
 
 {% endinfo_block %}
 
-Core template:
-`SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
 | SCHEMA.ORG PROPERTY        | BAZAARVOICE PROPERTY |
 |----------------------------|----------------------|
@@ -101,6 +100,7 @@ Core template:
 | organization.logo          | productImageURL      |
 
 #### Ratings and reviews (for Product)
+
 Core templates:
 * `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`

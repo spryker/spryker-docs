@@ -1,5 +1,5 @@
 ---
-title: Install the Warehouse picking feature core
+title: Install the Warehouse picking feature
 description: Learn how to integrate the Warehouse picking feature into your project
 last_updated: Feb 10, 2023
 template: feature-integration-guide-template

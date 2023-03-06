@@ -2,6 +2,8 @@
 title: Invite users to Spryker CI
 description: Instructions for inviting users to Spryker CI
 template: howto-guide-template
+redirect_from:
+  - /docs/paas-plus/dev/invite-users-to-spryker-ci.html
 ---
 
 To collaborate with a teammate, you need to invite them to your workspace and add them to a project. The only exceptions are admins and the workspace owner who have access to all projects in the workspace.

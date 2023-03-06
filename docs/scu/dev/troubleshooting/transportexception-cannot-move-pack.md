@@ -2,6 +2,8 @@
 title: "TransportException: Cannot move pack"
 description: How to solve the problem of cannot move pack while trying to connect the repository to the Spryker Code Upgrader project
 template: concept-topic-template
+redirect_from:
+  - /docs/paas-plus/dev/troubleshooting/transportexception-cannot-move-pack.html
 ---
 
 If you are connecting the Upgrader to your repository using an access token, the token should have the correct rights.
@@ -18,8 +20,8 @@ TransportException: Cannot move pack to ...
 
 1. Double-check the permissions of the access token based on the requirements:
 
-* [GitHub access token requirements](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html#prerequisites)
-* [GitLab access token requirements](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
+* [GitHub access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html#prerequisites)
+* [GitLab access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
 
 2. If the permissions are correct, reconnect the repository.
 

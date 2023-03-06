@@ -41,7 +41,7 @@ We added a new Spryker application to replace Silex and a container to replace P
 
 To avoid forcing an immediate update of the majority of modules, we introduced several small changes, which are backward compatible.
 
-As Silex was an instance of Pimple with all services attached to, we introduced our own _Container_ that implemented the `ContainerInterface` from [PSR-11](https://www.php-fig.org/psr/psr-11/). Additionally, we added a mock class for Pimple that further extended the Container. The mock class allows us to keep using the `\Pimple;` `USE` statement without the `pimple/pimple` package. In this case, we don't have to refactor the code that has Pimple dependencies and all the changes are backward compatible.
+As Silex was an instance of Pimple with all services attached to, we introduced our own _Container_ that implemented the `ContainerInterface` from PSR-11<!--](https://www.php-fig.org/psr/psr-11/) check if it works before restoring -->. Additionally, we added a mock class for Pimple that further extended the Container. The mock class allows us to keep using the `\Pimple;` `USE` statement without the `pimple/pimple` package. In this case, we don't have to refactor the code that has Pimple dependencies and all the changes are backward compatible.
 
 {% info_block warningBox %}
 

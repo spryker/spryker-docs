@@ -5,7 +5,7 @@ This document describes how to integrate the Checkout feature into a Spryker pro
 
 {% info_block warningBox %}
 
-This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html) functionality.
+This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) functionality.
 
 {% endinfo_block %}
 
@@ -20,19 +20,19 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{site.version}} |
-| Checkout |  {{site.version}} |
-| Order Management | {{site.version}}  |
-| Prices | {{site.version}}  |
-| Spryker Core | {{site.version}} |
-| Tax | {{site.version}} |
+| Cart | {{page.version}} |
+| Checkout |  {{page.version}} |
+| Order Management | {{page.version}}  |
+| Prices | {{page.version}}  |
+| Spryker Core | {{page.version}} |
+| Tax | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/order-threshold:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -525,14 +525,14 @@ Overview and install the necessary features before beginning the integration ste
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/order-threshold:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -643,4 +643,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Glue API: Checkout |  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout |  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |

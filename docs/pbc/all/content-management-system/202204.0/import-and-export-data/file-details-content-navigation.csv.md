@@ -1,5 +1,5 @@
 ---
-title: File details - content_navigation.csv
+title: "File details: content_navigation.csv"
 description: Description of the import file of the navigation content item.
 last_updated: Jun 16, 2021
 template: data-import-template
@@ -17,15 +17,11 @@ redirect_from:
 
 This document describes the `content_navigation.csv` file to configure [Content Navigation](/docs/pbc/all/content-management-system/{{page.version}}/navigation-feature-overview.html#navigation-as-content-item) information in your Spryker Demo Shop.
 
-
 ## Import file dependencies
 
  [navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html).
 
-
 ## Import file parameters
-
-
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -37,16 +33,12 @@ This document describes the `content_navigation.csv` file to configure [Content 
 | title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
 
 
-
 ## Import template file and content example
-
-
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [content_navigation.csv Template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_navigation.csv) | Exemplary import file with headers only. |
 | [content_navigation.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_navigation.csv) | Exemplary import file with Demo Shop data. |
-
 
 ## Import file command
 

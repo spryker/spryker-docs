@@ -62,7 +62,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
+| ***{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*** | Customer unique identifier to retrieve orders of. To get it, [retrieve a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [create a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer). |
 
 ### Request
 
@@ -1581,7 +1581,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/retrieve-customer-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-customer-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202204.0/retrieve-customer-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-customer-carts-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
@@ -1611,10 +1611,10 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 For the attributes of the included resources, see:
 
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
 * [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
-* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Possible errors
 

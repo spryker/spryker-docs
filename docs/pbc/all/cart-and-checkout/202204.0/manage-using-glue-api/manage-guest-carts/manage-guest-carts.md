@@ -26,12 +26,12 @@ For detailed information on the modules that provide the API functionality and r
 
 * [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
-* [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Product options feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+* [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
 
 ## Create a guest cart
 
-To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
+To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
 
 ## Retrieve a guest cart
 
@@ -986,7 +986,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202204.0/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/manage-guest-carts-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -1008,11 +1008,11 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 For the attributes of other included resources, see:
 * [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html)
-* [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-measurement-units.html)
-* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve measurement units](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
+* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
-* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
-* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html#measurement-units-response-attributes)
+* [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
 ## Assign a guest cart to a registered customer
 
@@ -1020,7 +1020,7 @@ Guest carts are anonymous as they are not related to any user. If a user registe
 
 To assign a guest cart to a customer, merge the carts, include the unique ID associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.html) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.

@@ -1,10 +1,11 @@
 
 
+
 This page describes the Microsoft Azure Active Directory and how to integrate it into a Spryker project.
 
 ## General information
 
-Azure Active Directory is Microsoft’s multi-tenant, cloud-based directory and identity management service. For an organization, Azure AD helps employees sign up to multiple services and access them anywhere over the cloud with a single set of login credentials.
+Azure Active Directory is Microsoft's multi-tenant, cloud-based directory and identity management service. For an organization, Azure AD helps employees sign up for multiple services and access them anywhere over the cloud with a single set of login credentials.
 
 
 The [SprykerEco.Oauth-Azure](https://github.com/spryker-eco/oauth-azure) enables OAuth 2.0 authentication via Microsoft Azure Active Directory.
@@ -15,21 +16,19 @@ Follow the steps below to integrate Azure Active Directory.
 
 ### Prerequisites
 
-To start the feature integration:
+To start the feature integration, take the following steps:
 
 1. Overview and install the necessary features:
 
-
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core Back Office | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
-
+| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 2. [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
 
 ### 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-eco/oauth-azure:"^1.0.0" --update-with-dependencies
@@ -65,9 +64,7 @@ $config[OauthAzureConstants::PATH_AUTHORIZE] = '/oauth2/v2.0/authorize';
 $config[OauthAzureConstants::PATH_TOKEN] = '/oauth2/v2.0/token';
 ```
 
-### 3) Set up transfer objects
-
-Generate transfer changes:
+### 3) Generate transfer changes
 
 ```bash
 console transfer:generate
@@ -121,7 +118,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure you’ve activated `AzureAuthenticationLinkPlugin` by checking the **Login with Microsoft Azure** button on the Back Office login page.
+Make sure you've activated `AzureAuthenticationLinkPlugin` by checking the **Login with Microsoft Azure** button on the Back Office login page.
 
 {% endinfo_block %}
 
@@ -152,12 +149,10 @@ class SecurityOauthUserDependencyProvider extends SprykerSecurityOauthUserDepend
 {% info_block warningBox "Verification" %}
 
 
-Make sure you’ve activated `AzureOauthUserClientStrategyPlugin`:
+Make sure you've activated `AzureOauthUserClientStrategyPlugin`:
 
 1. On the Back Office login page, select **Login with Microsoft Azure**.
-
 2. Check that you are redirected to the Microsoft Azure authentication page.
-
 3. Check that, after authenticating with Microsoft Azure, you are redirected back and authenticated with the Back Office as a Microsoft Azure Active Directory user.
 
 {% endinfo_block %}

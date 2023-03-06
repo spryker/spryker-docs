@@ -1,5 +1,5 @@
 ---
-title: File details - product_quantity.csv
+title: "File details: product_quantity.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-quantitycsv
@@ -23,7 +23,7 @@ data:import:product-quantity
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -34,11 +34,11 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html).
+This file has the following dependency: [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html).
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+The following table contains the template and an example of the file:
 
 | FILE | DESCRIPTION |
 | --- | --- |

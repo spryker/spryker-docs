@@ -1,6 +1,7 @@
 
 
-This document describes how to integrate the [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
+
 {% info_block errorBox "Included features" %}
 
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds:
@@ -23,14 +24,14 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/customer-account-management: "{{site.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -260,7 +261,8 @@ Ensure that the following changes have been applied in the transfer objects:
 | CustomerPasswordSetConsole                                     | Sends the password reset email to all the customers with the empty password value in the database.                                                                                                           | None          | Spryker\Zed\Customer\Communication\Console                    |		
 | CustomerRegistrationConfirmationMailTypePlugin                 | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled.                                                                                                     | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details open>
+  <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -390,7 +392,8 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 </details>
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<details open>
+  <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -428,7 +431,7 @@ Ensure that the OAuth client has been added to the `spy_oauth_client` table by r
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
 
-Ensure you can obtain the customer OAuth access token with customer credentials or customer reference. For details, see [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+Ensure you can obtain the customer OAuth access token with customer credentials or customer reference. For details, see [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 Ensure that `OauthRefreshTokenRemoverPlugin` is set up correctly:
 1. Run the command:
@@ -512,8 +515,6 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
-
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -608,7 +609,7 @@ Ensure the following:
 
 ## Install feature frontend
 
-Follow the steps below to install the [Customer Account Management]([Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)) feature frontend.
+Follow the steps below to install the [Customer Account Management]([Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)) feature frontend.
 
 ### Prerequisites
 
@@ -616,14 +617,14 @@ Overview and install the necessary features before beginning the integration.
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/customer-account-management: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -1000,5 +1001,5 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 
 | NAME                                           | INTEGRATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-order-management-feature-integration.html) |
+| Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
+| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |

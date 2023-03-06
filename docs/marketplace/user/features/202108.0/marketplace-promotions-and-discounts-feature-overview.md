@@ -46,7 +46,7 @@ Multiple voucher codes can be generated for a single voucher. The code has a **M
 You can enter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-To learn how a product catalog manager can create a voucher in the Back Office, see [Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
+To learn how a product catalog manager can create a voucher in the Back Office, see [Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 
 ## Cart Rule
 
@@ -165,14 +165,14 @@ See examples in the following table.
 | €50 |  Calculator percentage | 10 | €5 | €45 |
 | €50 | Calculator fixed | 10 | €10 | €40 |
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html) or [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Discount exclusiveness
 
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html) or [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png)
 
 ### Exclusive discount

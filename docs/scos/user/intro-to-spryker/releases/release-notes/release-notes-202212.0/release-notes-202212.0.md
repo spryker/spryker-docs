@@ -21,9 +21,9 @@ Configurable Products are useful for items with a range of customizable options.
 
 Customers can access a standalone configurator page and choose from various available product options based on their preferences. Depending on the configuration choices, the product price is adjusted accordingly.
 
-![configurable-product-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-on-the-storefront.gif)
+<iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" frameborder="0" allowfullscreen></iframe>
 
-Configured Products can be saved, accessed, and configured again in carts or from the product details page. Customers can also easily reorder past purchases. Configurable Products can also be part of a [Request For Quote (RFQ)](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) — Spryker's powerful Quotation and Management feature can overwrite all the automatically calculated prices from the Configurable Product tool.
+Configured Products can be saved, accessed, and configured again in carts or from the product details page. Customers can also easily reorder past purchases. Configurable Products can also be part of a [Request For Quote (RFQ)](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html)—Spryker's powerful Quotation and Management feature can overwrite all the automatically calculated prices from the Configurable Product tool.
 
 **Business benefit**: Configurable Products maximize customer satisfaction through product personalization and by providing a robust customer self-service experience. This also adds value to your business by reducing the lead times Sales teams would previously have to dedicate to finalizing product configurations with customers.
 
@@ -75,4 +75,4 @@ It lets your customers always see the accurate price they must pay for the entir
 * Technical prerequisites:
   * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
   * [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
-  * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-glue-api.html)
+  * [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html)

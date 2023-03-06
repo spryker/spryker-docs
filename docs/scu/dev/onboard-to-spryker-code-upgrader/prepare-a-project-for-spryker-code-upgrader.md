@@ -2,6 +2,8 @@
 title: Prepare a project for Spryker Code Upgrader
 description: Get your project ready to start using Spryker Code Upgrader
 template: concept-topic-template
+redirect_from:
+  - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html
 ---
 
 Before you can start managing the upgrades of your project with Spryker Code Upgrader, fulfill the following prerequisites.
@@ -38,4 +40,4 @@ The Upgrader still supports PHP 7.4 to help you upgrade your project. However, m
 
 ## Next steps
 
-[Onboard to Spryker Code Upgrader](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)
+[Onboard to Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)

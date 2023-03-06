@@ -2,6 +2,8 @@
 title: The process exceeded the timeout
 description: What to do if you get the timeout error in Spryker Code Upgrader
 template: concept-topic-template
+redirect_from:
+  - /docs/paas-plus/dev/troubleshooting/the-process-exceeded-the-timeout.html
 ---
 
 If the execution of Spryker Code Upgrader returns a Composer timeout error, make sure that your access token is still valid. It may be expired or have incorrect permissions.
@@ -18,8 +20,8 @@ The process ... exceeded the timeout of ... seconds.
 
 Check that your access token is still active and has correct permissions. For token requirements, see one of the following documents:
 
-* [GitHub access token requirements](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html#prerequisites)
-* [GitLab access token requirements](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
+* [GitHub access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html#prerequisites)
+* [GitLab access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
 
 ## Support for Spryker CI
 

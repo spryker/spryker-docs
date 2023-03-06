@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Product Sets feature](/docs/pbc/all/content-management-system/{{site.version}}/product-sets-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Product Sets feature](/docs/pbc/all/content-management-system/{{page.version}}/product-sets-feature-overview.html) into a Spryker project.
 
 ## Prerequisites
 

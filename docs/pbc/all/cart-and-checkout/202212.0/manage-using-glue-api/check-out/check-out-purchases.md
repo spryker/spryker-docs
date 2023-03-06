@@ -23,7 +23,7 @@ The endpoint also provides information on whether it is necessary to redirect th
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)
-* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html)
+* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-the-shipment-feature.html)
 * [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
 * [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
 * [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
@@ -338,7 +338,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/check-out-purchases-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/check-out-purchases-request-attributes.md -->
+{% include pbc/all/glue-api-guides/202212.0/check-out-purchases-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/check-out-purchases-request-attributes.md -->
 
 
 ### Response
@@ -1203,7 +1203,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/check-out/update-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
 | isExternalRedirect | Boolean | If true, the customer is redirected to an external URL. |
 
-{% include pbc/all/glue-api-guides/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/check-out-puchases-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202212.0/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202212.0/check-out-puchases-response-attributes-of-included-resources.md -->
 
 For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/retrieving-customer-orders.html#retrieve-customers-orders)
 

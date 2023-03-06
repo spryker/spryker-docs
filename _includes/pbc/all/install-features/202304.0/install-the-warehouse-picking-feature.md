@@ -466,9 +466,7 @@ As a prerequisite, you must take the following steps:
 1. Attach a Back Office user to any warehouse you have in the system—use the [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html) guide.
 2. Place an order in the system so that the product is in the warehouse where you added the user in the previous step.
 3. Obtain the access token of the warehouse user.
-4. Use the warehouse user access token as the request header `Authorization: Bearer {{your access token}}`.
-
-{% info_block warningBox "Verification" %}
+4. Use the warehouse user access token as the request header `Authorization: Bearer {{YOUR_ACCESS_TOKEN}}`.
 
 Make sure that you can send the following requests:
 

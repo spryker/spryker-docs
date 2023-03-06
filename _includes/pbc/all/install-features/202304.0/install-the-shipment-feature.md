@@ -308,7 +308,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 }
 ```
 
-3. Configure the sales order item shipment expander plugins:
+4. Configure the sales order item shipment expander plugins:
 
 | PLUGIN                          | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                                                       |
 |---------------------------------|----------------------------------------------|---------------|---------------------------------------------------------------------------------|

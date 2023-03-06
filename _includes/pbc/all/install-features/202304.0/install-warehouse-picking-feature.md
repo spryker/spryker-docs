@@ -31,13 +31,13 @@ Make sure that the following modules have been installed:
 | PickingListExtension   | vendor/spryker/picking-list-extension    |
 | PickingListsBackendApi | vendor/spryker/picking-lists-backend-api |
 
-Also, we offer the demo multi-shipment picking strategy, in order to use it install the following module:
+Also, we offer the demo multi-shipment picking strategy. To use it, install the following module:
 
 ```bash
 composer require spryker/picking-list-multi-shipment-picking-strategy-example: "^0.1.0" --update-with-dependencies
 ```
 
-Make sure that the following module have been installed:
+Make sure that the following module has been installed:
 
 | MODULE                                         | EXPECTED DIRECTORY                                                  |
 |------------------------------------------------|---------------------------------------------------------------------|
@@ -121,9 +121,8 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-2. Configure OMS
-
-First of all, add the `DummyPicking` sub-process that describes the warehouse picking in the system.
+2. Configure OMS:
+   1. Add the `DummyPicking` subprocess that describes the warehouse picking in the system.
 
 **config/Zed/oms/DummySubprocess/DummyPicking.xml**
 
@@ -182,8 +181,7 @@ First of all, add the `DummyPicking` sub-process that describes the warehouse pi
 
 ```
 
-As a seconds step add the `DummyPicking` sub-process to the `DummyPayment01` process as an example.
-Consider OMS configuration using `DummyPayment01` process as an example.
+   1. Add the `DummyPicking` sub-process to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
 
 **config/Zed/oms/DummyPayment01.xml**
 
@@ -233,7 +231,7 @@ Consider OMS configuration using `DummyPayment01` process as an example.
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the OMS transition diagram shows expected transitions:
+Make sure that the OMS transition diagram shows the expected transitions:
 1. In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**, you will find the process `DummyPayment01`, click on it to see the diagram.
 2. Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
@@ -267,7 +265,7 @@ Budget Cameras MER000005 Warehouse 1,1,multi-shipment
 Sony Experts MER000006 Warehouse 1,1,multi-shipment
 ```
 
-| Column                | REQUIRED? | Data Type | Data Example   | Data Explanation                                                     |
+| COLUMN                | REQUIRED? | DATA TYPE | DATA EXAMPLE   | DATA EXPLANATION                                                     |
 |-----------------------|-----------|-----------|----------------|----------------------------------------------------------------------|
 | name                  | mandatory | string    | Warehouse1     | Name of the warehouse.                                               |
 | is_active             | mandatory | bool      | 1              | Defines if the warehouse is active.                                  |
@@ -470,62 +468,59 @@ As a prerequisite, you must take the following steps:
 3. Obtain the access token of the warehouse user.
 4. Use the warehouse user access token as the request header `Authorization: Bearer {{your access token}}`.
 
+{% info_block warningBox "Verification" %}
+
 Make sure that you can send the following requests:
 
-To get a collection of available picking lists for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists`.
+* To get a collection of available picking lists for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists`.
+
+* To get a single picking list for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 
 
-To get a single picking list for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
-
-
-To start a pick up operation by a warehouse user, send the request:
+* To start a pick-up operation for a warehouse user, send the request:
 
 `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
 
-     ```json
-     {
-         "data": {
-             "type": "picking-lists",
-             "attributes": {
-               "action": "startPicking"
-             }
-         }
-     }
-     ```
+```json
+{
+    "data": {
+        "type": "picking-lists",
+        "attributes": {
+        "action": "startPicking"
+        }
+    }
+}
+```
 
-To get a collection of the picking list items for a particular picking list, send the request:
+* To get a collection of the picking list items for a particular picking list, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`.
 
-* `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`
+* To get a single picking list item for a particular picking list, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`.
 
-To get a single picking list item for a particular picking list, send the request:
+* To pick the picking list items, send the following request. The endpoint works in a bulk mode:
 
-* `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
+`PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
 
-To pick the picking list items, send the following request. The endpoint works in a bulk mode:
-
-* `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
-
-     ```json
-     {
-         "data" : [
-         {
-             "id": "{{picking-list-item-uuid1}}",
-             "type" : "picking-list-items",
-             "attributes" : {
-                 "numberOfPicked": "{{number of picked}}",
-                 "numberOfNotPicked": "{{number of not picked}}"
-             }
-          },
-          {
-             "id": "{{picking-list-item-uuid2}}",
-             "type" : "picking-list-items",
-             "attributes" : {
-                 "numberOfPicked": "{{number of picked}}",
-                 "numberOfNotPicked": "{{number of not picked}}"
-             }
-          }
-        ]
-     }
-     ```
+```json
+{
+    "data" : [
+    {
+        "id": "{{picking-list-item-uuid1}}",
+        "type" : "picking-list-items",
+        "attributes" : {
+            "numberOfPicked": "{{number of picked}}",
+            "numberOfNotPicked": "{{number of not picked}}"
+        }
+    },
+    {
+        "id": "{{picking-list-item-uuid2}}",
+        "type" : "picking-list-items",
+        "attributes" : {
+            "numberOfPicked": "{{number of picked}}",
+            "numberOfNotPicked": "{{number of not picked}}"
+        }
+    }
+]
+}
+```
 
 {% endinfo_block %}

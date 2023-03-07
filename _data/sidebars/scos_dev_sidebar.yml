@@ -2564,6 +2564,10 @@ entries:
       - "202108.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
+    - title: Warehouse picking
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
+      include_versions:
+      - "202304.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:

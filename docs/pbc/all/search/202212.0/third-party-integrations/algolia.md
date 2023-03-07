@@ -7,7 +7,7 @@ template: howto-guide-template
 
 ![algolia-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/algolia-hero.png)
 
-Spryker is shipped with [Elasticsearch]((https://www.elastic.co/elasticsearch/)) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/).
+Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/).
 
 The Algolia search engine stands out due to its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store. 
 
@@ -24,7 +24,7 @@ Your users can search for active concrete products by the following attributes:
 
 {% info_block infoBox "Note" %}
 
-Spryker groups all concrete products that belong to the same abstract product if a search query returns them.
+Spryker groups all concrete products that belong to the same abstract product if a search query returns the concrete products.
 
 {% endinfo_block %}
 
@@ -49,6 +49,8 @@ For example, if you have two locales, there will be 10 indexes for your store in
 The Algolia index is always kept up to date with product data changes. That means that if a Back Office user added or changed some searchable product attribute such as a description, the change is immediately reflected in the Algolia search results.
 
 ### How products are stored in Algolia
+
+Here is an example of product data stored in Algolia:
 
 ```json
 {

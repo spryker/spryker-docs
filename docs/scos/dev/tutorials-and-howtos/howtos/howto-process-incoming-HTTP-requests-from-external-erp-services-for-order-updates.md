@@ -116,7 +116,7 @@ The following comparison table illustrates quality attributes of the synchronous
 
 ❌  absent or impossible
 
-## Storage engines quality attributes comparison table
+## Storage engines quality attributes comparison
 
 | Quality attribute                                     | DB Storage                                                                          | RabbitMQ Storage                                                      | Redis                                                  |
 |-------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------|

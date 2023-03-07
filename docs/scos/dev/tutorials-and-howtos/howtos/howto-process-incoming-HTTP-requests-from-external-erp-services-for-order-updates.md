@@ -4,7 +4,7 @@ description: Learn how you can process incoming HTTP requests from external ERP 
 template: howto-guide-template
 ---
 
-Spryker applications can receive information about orders from external systems in a variety of ways. The nature of such requests can vary widely, such as a request from a user's browser, a push notification from a delivery company, or a batch update request from an ERP system. This document suggests possible solutions for processing incoming HTTP requests, describes their advantages and disadvantages, and highlights pitfalls.
+Spryker applications can receive information about orders from external systems in various ways. The nature of such requests can vary widely: it can be a request from a user's browser, a push notification from a delivery company, or a batch update request from an ERP system. This document suggests possible solutions for processing incoming HTTP requests, describes their advantages and disadvantages, and highlights pitfalls.
 
 ## Suggested solutions
 
@@ -12,7 +12,7 @@ You can process incoming requests synchronously and asynchronously.
 
 ### Synchronous handling of incoming requests
 
-The most popular and straightforward way of processing incoming requests is synchronously. This solution involves keeping an active HTTP connection until the application processes the request and returns a response.
+The most popular and straightforward way of processing incoming requests is synchronous. This solution involves keeping an active HTTP connection until the application processes the request and returns a response.
 
 **Pros**
 
@@ -26,11 +26,11 @@ Easy to implement, understand, and maintain.
 
 ### Asynchronous handling of incoming requests
 
-Upon receiving an incoming request, the application stores the context and responds that the request has succeeded. In this case, the application takes the full responsibility for handling this request. Various types of workers and storage engines, and their combinations, can affect quality attributes in different ways.
+Upon receiving an incoming request, the application stores the context and responds that the request has succeeded. In this case, the application takes full responsibility for handling this request. Various types of workers and storage engines, and their combinations, can affect quality attributes in different ways.
 
 #### Processing with the oms:check-condition worker
 
-By default, the Spryker application has the `oms:check-condition` worker that can be used to process requests and run application logic. The worker relies on a state machine graph. The `oms:check-condition` job moves order items through the OMS graph and runs OMS plugins such as Commands, Conditions, and Timeouts. Therefore, the processing logic must be represented in OMS. An additional restriction is that the OMS plugins cannot trigger OMS events for the same order, as they cannot call the `OmsFacade::triggerEvent' methods.
+By default, the Spryker application has the `oms:check-condition` worker that can be used to process requests and run application logic. The worker relies on a state machine graph. The `oms:check-condition` job moves order items through the OMS graph and runs OMS plugins such as Commands, Conditions, and Timeouts. Therefore, the processing logic must be represented in OMS. An additional restriction is that the OMS plugins cannot trigger OMS events for the same order, as they cannot call the `OmsFacade::triggerEvent` methods.
 
 {% info_block infoBox "Info" %}
 
@@ -43,7 +43,7 @@ An incoming request handler must not only store the event context but also trigg
 * The worker is available by default.
 * More transparency with the logic that is represented in OMS.
 * Easy to understand, maintain, and support.
-* Default fault-tolerance and retry logic support.
+* Default fault tolerance and retry logic support.
 
 **Cons**
 
@@ -127,7 +127,7 @@ The following comparison table illustrates quality attributes of the synchronous
 
 ## Conclusion
 
-If the processing logic is simple and fast, or the caller can handle errors and supports the retry logi, then the [synchronous processing solution](#synchronous-handling-of-incoming-requests) is more suitable.
+If the processing logic is simple and fast, or the caller can handle errors and supports the retry logic, then the [synchronous processing solution](#synchronous-handling-of-incoming-requests) is more suitable.
 
 If the process may take a long time or is sensitive to errors—for example, there is no retry logic support, there is a potential loss of data, or unacceptable UX—then we recommend representing the logic in OMS and using the [oms:check-condition worker](#processing-with-the-omscheck-condition-worker) if possible.
 

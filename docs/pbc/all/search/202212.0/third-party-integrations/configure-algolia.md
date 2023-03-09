@@ -4,10 +4,15 @@ description: Find out how you can configure Algolia in your Spryker shop
 last_updated: Feb 21 2023
 template: howto-guide-template
 ---
+Once you have integrated the Algolia app, you can configure it.
+
+## Prerequisites
 
 To start using Algolia for your shop, you need an account with Algolia. You can create the account on the [Algolia website](https://www.algolia.com).
 
-To integrate the Algolia app, do the following:
+## Configure Algolia
+
+To configure Algolia, do the following:
 
 1. In your store's Back Office, go to **Apps**.
 2. In **App Composition Platform Catalog**, click **Algolia**. This takes you to the Algolia app details page.
@@ -28,7 +33,9 @@ To integrate the Algolia app, do the following:
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
 
-11. Click **Save**. The Algolia app is now integrated into your store and starts exporting your product data automatically.
+11. Click **Save**. 
+
+The Algolia app is now added to your store and starts exporting your product data automatically.
 
 {% info_block infoBox "Info" %}
 
@@ -48,9 +55,9 @@ The average export speed is around *100 products per minute*.
 {% info_block warningBox "Verification" %}
 
 Verify that your index is populated with data from your store:
-1. Go back to the Algolia website. 
+1. Go to the Algolia website. 
 2. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**. 
-3. Make sure that the index is now populated with data from your store.
+3. Make sure that the index is populated with data from your store.
 
 {% endinfo_block %}
 
@@ -97,14 +104,14 @@ Default attributes for faceting are as follows:
 - `prices`
 - `rating`
 
-The `prices` attribute is an object with nested fields so Algolia is creating facets for each nested field value effectively settings up faceting for all currencies and pricing modes present in product entities.
+The `prices` attribute is an object with nested fields. Algolia creates facets for each nested field and creates facets for all the currencies and pricing modes available in product entities.
 
 ### Add new attributes for faceting
 
 1. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**. 
 2. Find all primary indices.
 3. On the **Configuration** tab, select **Facets**.
-4. To adjust the **Attributes for faceting** list, add and remove needed attributes. 
+4. To adjust the **Attributes for faceting** list, add and remove attributes. 
 5. Click **Review and save settings**. This opens the **Review and save settings** window.
 6. Enable **Copy these settings to other indices and/or replicas** and click **Save Settings**.
 

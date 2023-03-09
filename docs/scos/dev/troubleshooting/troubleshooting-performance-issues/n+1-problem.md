@@ -34,12 +34,12 @@ For example, suppose there is an order with 42 items. In the [New Relic tool](/d
 
 As you can see in the profiling, we make 42 external calls, which is equal to the number of items in the order.
 
-On Curl response select and request itself we spend 45.70% and 45.49%, so 91.19% of the total time spent on this request.Therefore, optimizing the number of requests should be the priority.
+On `CurlResponse::select` and the request itself we spend 45.70% and 45.49%, so 91.19% of the total time spent on this request.Therefore, optimizing the number of requests should be the priority.
 
 3. Define a strategy to fix the problem. Specifically, you can:
 
 - Make one bulk request.
-- Move request after the `place order` action. For example, one of the OMS steps (but after taking the customer to a success page).
+- Move request after the `place order` action. For example, use one of the OMS transitions (but after taking the customer to a success page).
 
 However, these approaches may not always be applicable. For example, in the cases when:
 

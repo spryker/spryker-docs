@@ -1,7 +1,9 @@
 ---
-title: "How-To: Extend Merchant Portal dashboard"
+title: "HowTo: Extend Merchant Portal dashboard"
 description: This articles provides details how to create new module with application
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html
 ---
 
 This document describes how to extend the Merchant Portal dashboard.

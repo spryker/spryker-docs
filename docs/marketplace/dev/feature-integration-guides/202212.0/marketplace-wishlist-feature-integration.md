@@ -22,7 +22,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core         | {{page.version}}      | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Merchant | {{page.version}}      | [Marketplace Merchant Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Merchant | {{page.version}}      | [Marketplace Merchant Feature Integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-feature.html) |
 | Marketplace Product + Marketplace Product Offer | {{page.version}} | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
 
 
@@ -209,4 +209,3 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 - Make sure that you can move the wishlist with the product offers to a shopping cart and vice versa.
 
 {% endinfo_block %}
-

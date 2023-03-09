@@ -2,13 +2,15 @@
 title: "How-To: Create a new Gui table"
 description: This articles provides details how to create a new Gui table
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/howtos/how-to-create-gui-table.html
 related:
   - title: How to extend an existing Gui table
-    link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/how-to-extend-gui-table.html
   - title: How to create a new Gui table column type
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
   - title: How to create a new Gui table filter type
-    link: docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/how-to-add-new-guitable-filter-type.html
 ---
 
 This document describes how to create a new Gui table in Merchant Portal.
@@ -16,7 +18,7 @@ With this step by step instructions you will create a new Gui table with filters
 
 ## Prerequisites
 
-To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html).
+To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html).
 
 ## 1) Add GuiTable services to dependencies
 

@@ -1,12 +1,14 @@
 ---
-title: "How-To: Create a new Gui table filter type"
+title: "HowTo: Create a new Gui table filter type"
 description: This articles provides details how to create a new Gui table filter type
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 related:
   - title: How to create a new Gui table
-    link: docs/marketplace/dev/howtos/how-to-create-gui-table.html
+    link: docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-create-gui-table.html
   - title: How to extend an existing Gui table
-    link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/how-to-extend-gui-table.html
   - title: How to create a new Gui table column type
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
 ---
@@ -15,7 +17,7 @@ This document describes how to create a new Gui table filter type.
 
 ## Prerequisites
 
-To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html).
+To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html).
 
 
 ## Adjust GuiTableConfigurationBuilder

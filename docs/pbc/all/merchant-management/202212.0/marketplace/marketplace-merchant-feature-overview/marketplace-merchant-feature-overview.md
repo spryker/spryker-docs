@@ -2,16 +2,18 @@
 title: Marketplace Merchant feature overview
 description: This document contains concept information for the Merchants feature in the Spryker Commerce OS.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 related:
   - title: Managing merchants
     link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchants.html
 ---
 
-A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
+A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
-You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html).
+You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant.csv.html).
 
 {% info_block infoBox "Note" %}
 
@@ -47,7 +49,7 @@ For details about how to change the merchant statuses and activate or deactivate
 
 {% info_block infoBox "Info" %}
 
-Whenever a merchant is denied, all the users (/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) of this merchant get deactivated. Upon re-approval, the merchant users must be manually activated one by one.
+Whenever a merchant is denied, all the users (/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) of this merchant get deactivated. Upon re-approval, the merchant users must be manually activated one by one.
 
 {% endinfo_block %}
 
@@ -57,7 +59,7 @@ Schematically, the merchant status change flow looks like this:
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, see [Merchant Category](/docs/pbc/all/merchant-management/{{page.version}}/merchant-opening-hours-feature-overview.html).
+You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, see [Merchant Category](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-opening-hours-feature-overview.html).
 
 ## Merchants on the Storefront
 
@@ -74,7 +76,7 @@ The merchant profile page is available only if the merchant is [Active](#merchan
 The information for a merchant profile can be defined:
 
 * By the Marketplace administrator in the Back Office when [creating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [editing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#editing-merchants).
-* By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address.csv.html).
+* By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-profile-address.csv.html).
 * By the merchant in the Merchant Portal:
 ![Merchant profile page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-profile-page.png)
 
@@ -83,7 +85,7 @@ The information for a merchant profile can be defined:
 
 ### Merchant opening hours
 
-To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. For details, see [Merchant Opening Hours feature overview](/docs/pbc/all/merchant-management/{{page.version}}/merchant-opening-hours-feature-overview.html).
+To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. For details, see [Merchant Opening Hours feature overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-opening-hours-feature-overview.html).
 
 ### Merchant links on the Storefront pages
 
@@ -119,21 +121,21 @@ If the merchant is not active, their products and offers are not displayed in th
 
 ## Next steps
 
-Learn about [merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
+Learn about [merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 ## Related Business User articles
 
 | OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)|
-|[Main merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|
+|[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)|
+|[Main merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 | --- | --- | --- |
-|[Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html) | [File details: merchant.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html) |
-|[Glue API: Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html) | [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) |
-| [Merchant Portal - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-feature-integration.html) | [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address.csv.html) |
-|     | [Resolving the URL of the merchant page](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html) |
-|   |   | [File details: merchant_store.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-store.csv.html)  |
+|[Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-feature.html) |[Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html) | [File details: merchant.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant.csv.html) |
+|[Glue API: Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-glue-api.html) | [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-profile.csv.html) |
+| [Merchant Portal - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-marketplace-merchant-feature.html) | [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-profile-address.csv.html) |
+|     | [Resolving the URL of the merchant page](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-stock.csv.html) |
+|   |   | [File details: merchant_store.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-store.csv.html)  |

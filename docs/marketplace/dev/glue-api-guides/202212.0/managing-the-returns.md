@@ -552,7 +552,7 @@ To retrieve returns, send the Request sample:
 
 For the attributes of the other other included resources, see the following:
 * [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
-* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)
+* [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
 
 ## Retrieve a return
 

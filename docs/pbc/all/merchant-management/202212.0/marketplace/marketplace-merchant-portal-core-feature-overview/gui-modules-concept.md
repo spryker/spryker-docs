@@ -2,9 +2,11 @@
 title: GUI modules concept
 description: Short overview of GUI modules in Merchant Portal.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
 related:
   - title: How to create a new GUI module
-    link: docs/marketplace/dev/howtos/how-to-create-gui-module.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/how-to-create-gui-module.html
 ---
 
 This document provides a short overview of the GUI (graphical user interface) modules in the Merchant Portal.

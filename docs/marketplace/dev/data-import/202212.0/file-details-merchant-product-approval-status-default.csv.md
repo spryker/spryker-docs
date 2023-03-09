@@ -28,7 +28,7 @@ The file must have the following parameters:
 
 ## Import file dependencies
 
-The file has the following dependency: [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html).
+The file has the following dependency: [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/file-details-merchant.csv.html).
 
 ## Import template file and content example
 

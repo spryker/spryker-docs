@@ -2,6 +2,8 @@
 title: Main merchant concept
 description: This document contains concept information for the main merchant in the Spryker Commerce OS.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/main-merchant-concept.html
 related:
   - title: Managing main merchant orders
     link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-orders.html
@@ -11,7 +13,7 @@ related:
 
 The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.
 
-Thus, the main merchant acts as a common [marketplace merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
+Thus, the main merchant acts as a common [marketplace merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
 
 ## Main merchant orders and returns
 

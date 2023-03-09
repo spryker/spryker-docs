@@ -1,8 +1,10 @@
 ---
-title: Merchant Portal - Marketplace Merchant feature integration
+title: Install the Merchant Portal - Marketplace Merchant feature
 last_updated: Jul 05, 2021
 description: This document describes the process how to integrate the Marketplace Merchant into the Spryker  Merchant Portal.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202212.0/merchant-portal-marketplace-merchant-feature-integration.html
 ---
 
 This document describes how to integrate the Merchant Portal - Marketplace Merchant feature into a Spryker project.
@@ -17,8 +19,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE  |
 | -------------------- | ------- | ------------------ |
-| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-feature.html) |
 
 ### 1) Install the required modules using Composer
 

@@ -2,6 +2,8 @@
 title: Marketplace Merchant Portal Core feature overview
 description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as secure login.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
 ---
 
 The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as secure login, GUI tables, and dashboards. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, and debug.
@@ -71,9 +73,9 @@ To learn more about table design, see [Table design](/docs/marketplace/dev/front
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
-| [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)          |          | [File details: merchant_user.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-user.csv.html)           | [GUI modules concept](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html) |
-|        |          |          | [How to create a new GUI module](/docs/pbc/all/merchant-management/{{page.version}}/tutorials-and-howtos/how-to-create-gui-module.html)  |
-|        |          |          | [How to create a new Gui table](/docs/pbc/all/merchant-management/{{page.version}}/tutorials-and-howtos/how-to-create-gui-table.html)  |
-|        |          |          | [How to extend an existing Gui table](/docs/pbc/all/merchant-management/{{page.version}}/tutorials-and-howtos/how-to-extend-gui-table.html)  |
-|        |          |          | [How to create a new Gui table filter type](/docs/pbc/all/merchant-management/{{page.version}}/tutorials-and-howtos/how-to-add-new-guitable-filter-type.html)  |
-|        |          |          | [How to extend Merchant Portal dashboard](/docs/pbc/all/merchant-management/{{page.version}}/tutorials-and-howtos/how-to-extend-merchant-portal-dashboard.html)  |
+| [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html)          |          | [File details: merchant_user.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-user.csv.html)           | [GUI modules concept](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/gui-modules-concept.html) |
+|        |          |          | [How to create a new GUI module](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-create-gui-module.html)  |
+|        |          |          | [How to create a new Gui table](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-create-gui-table.html)  |
+|        |          |          | [How to extend an existing Gui table](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-extend-gui-table.html)  |
+|        |          |          | [How to create a new Gui table filter type](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-add-new-guitable-filter-type.html)  |
+|        |          |          | [How to extend Merchant Portal dashboard](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-extend-merchant-portal-dashboard.html)  |

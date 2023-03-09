@@ -28,7 +28,7 @@ related:
   - title: Product Images + Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
   - title: Merchant Product Restrictions feature overview
-    link: docs/pbc/all/merchant-management/page.version/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
+    link: docs/pbc/all/merchant-management/page.version/regular-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
 ---
 
 {% include pbc/all/install-features/202212.0/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-lists-feature.md -->

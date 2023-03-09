@@ -2,16 +2,18 @@
 title: "How-To: Create a new GUI module"
 description: This articles provides details how to create a new GUI module
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/howtos/how-to-create-gui-module.html
 related:
   - title: GUI modules concept
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-portal-core-feature-overview/gui-modules-concept.html
 ---
 
 This document describes how to create a new GUI module and add it to navigation.
 
 ## Prerequisites
 
-To install the Marketplace Merchant Portal Core feature providing the `ZedUi`, `Navigation` and ACL related modules, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html).
+To install the Marketplace Merchant Portal Core feature providing the `ZedUi`, `Navigation` and ACL related modules, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html).
 
 ## 1) Create a new module
 

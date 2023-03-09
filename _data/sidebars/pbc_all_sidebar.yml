@@ -865,6 +865,17 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html
           - title: Configure basic .htaccess authentication
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
+      - title: Merchant Management
+        url: /docs/pbc/all/merchant-management/merchant-management.html
+        nested:
+          - title: Regular shop
+            nested:
+              - title: Merchant B2B Contracts feature overview
+                url: /docs/pbc/all/merchant-management/regular-shop/merchant-b2b-contracts-feature-overview.html
+              - title: Merchant Product Restrictions feature overview
+                url: 
+                nested:
+                  - title:
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:

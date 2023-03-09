@@ -2,7 +2,9 @@
 title: "Marketplace Merchant feature: Domain model"
 description: Merchants are product and service sellers in the Marketplace.
 last_updated: Nov 05, 2021
-template: feature-walkthrough-template
+template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-merchant-feature-walkthrough.html
 ---
 
 The *Marketplace Merchant* feature lets you create, read, and update merchants in the Marketplace.

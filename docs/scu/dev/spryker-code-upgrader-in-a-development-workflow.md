@@ -2,6 +2,8 @@
 title: Spryker Code Upgrader in a development workflow
 description: Instructions for integrating Spryker Code Upgrader into a development process
 template: concept-topic-template
+redirect_from:
+  - /docs/paas-plus/dev/spryker-code-upgrader-in-a-development-workflow.html
 ---
 
 Spryker Code Upgrader works best when it is strategically integrated into your development process. This document describes how to integrate the Upgrader into your Scrum activities and Git flow to help streamline and optimize the development workflow.
@@ -45,4 +47,4 @@ Following your standard development process, the updates are deployed to a stagi
 
 ## Next steps
 
-[Onboarding to Spryker Code Upgrader](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)
+[Onboarding to Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)

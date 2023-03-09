@@ -6,6 +6,7 @@ last_updated: Mar 3, 2023
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
 ---
+To integrate Bazaarvoice, follow these guidelines.
 
 ## Prerequisites
 

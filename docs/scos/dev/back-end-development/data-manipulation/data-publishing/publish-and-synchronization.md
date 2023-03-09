@@ -70,17 +70,13 @@ The process relies heavily on Propel Behaviors. Propel Behaviors are used to tri
 
 ### Triggering the Publish process
 
-There are 2 ways to start the Publish process:
+There are 2 ways to start the Publish process: Automated and Manual.
 
-1. Trigger the publish event manually using the [Event Facade](/docs/scos/dev/back-end-development/data-manipulation/event/add-events.html):
+#### Automated event emitting
 
-```php
-$this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));
-```
+Any changes done to an entity implementing "event" Prople behaviour will trigger a publish event immediately. CUD operations (create, update, delete) operations are covered by this Propel behavior. So you can expect these 3 types of events on creation, update and deletion of DB entities managed by Propel ORM.
 
-Triggering the publish event manually is preferable when a certain entity passes several stages before becoming available to the customer. A typical use case for this method is content management. In most cases, a page does not become available once you create it. Usually, it exists as a draft to be published later. For example, when a new product is released to the market. In this case, the manual publish is preferable.
-
-2. Manipulate the Propel entities that implement Event Behavior. Any changes done to such an entity in the database trigger the publish event immediately. For example, manipulating an abstract product as follows triggers a _create abstract product_ event:
+Example, saving an abstract product triggers a _create abstract product_ event:
 
 ```php
 $productAbstractEntity = SpyProductAbstractQuery::create()->findOne();
@@ -88,7 +84,19 @@ $productAbstractEntity->setColorCode("#FFFFFF");
 $productAbstractEntity->save();
 ```
 
-Implementing Event Behaviors is recommended to keep the shop app data up to date. For example, behaviors are widely used in the `Availability` module to inform customers whether a certain product is available for purchase.
+Implementing Event Behaviors is a recommended way to your project features to keep the shop app data up to date. For example, behaviors are widely used in the `Availability` module to inform customers whether a certain product is available for purchase.
+
+#### Manual event emitting
+
+Trigger the publish event manually using the [Event Facade](/docs/scos/dev/back-end-development/data-manipulation/event/add-events.html):
+
+```php
+$this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));
+```
+
+Triggering the publish event manually is a suitable approach when an entity passes several stages before becoming available to the customer. A typical use case for this method is content management. In most cases, a page does not become available once you create it. Usually, it exists as a draft to be published later. For example, when a new product is released to the market. In this case, the manual publish is preferable.
+
+
 
 ### How Publish and Synchronize works
 

@@ -585,6 +585,14 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 3. Adjust the server configuration of the application according to the added endpoints.
 
+{% info_block errorBox "Templates" %}
+
+Inform the Spryker Support Team about your intent to add additional endpoints. Your PaaS environment needs to be configured to be compatible with this new setup and you will need to agree with the team on a maintenance window to make this change as it will result in brief service degradation. Please ask for the adjustments to be made by sharing your updated deploy file with the team. Please do so with ample lead time (at least 5 working days prior to the planned change).
+
+{% endinfo_block %}
+
+
+
 ### 9) Update the Docker SDK
 
 1. Update the Docker SDK to version `1.36.1` or higher.

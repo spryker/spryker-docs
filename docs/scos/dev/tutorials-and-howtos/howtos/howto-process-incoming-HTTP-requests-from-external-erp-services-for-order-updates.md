@@ -95,7 +95,7 @@ If the worker works with OMS, the workflow is as follows:
 
 ## Solutions quality attributes comparison
 
-The following comparison table illustrates quality attributes of the synchronous requests handling and asynchronous request handling with the OMS `check-condition` worker and the Jenkins job.
+The following comparison table illustrates the various quality attributes of the synchronous request handling, and asynchronous request handling with the OMS `check-condition` worker and the Jenkins job.
 
 | Quality attribute                                     | Synchronous handling                                                                                                                                                                                                                                                     | OMS check-condition worker                                                                                                                                                             | Jenkins job                                                                                                                                                                                                                             |
 |-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -129,6 +129,6 @@ The following comparison table illustrates quality attributes of the synchronous
 
 If the processing logic is simple and fast, or the caller can handle errors and supports the retry logic, then the [synchronous processing solution](#synchronous-handling-of-incoming-requests) is more suitable.
 
-If the process may take a long time or is sensitive to errors—for example, there is no retry logic support, there is a potential loss of data, or unacceptable UX—then we recommend representing the logic in OMS and using the [oms:check-condition worker](#processing-with-the-omscheck-condition-worker) if possible.
+If the process could take a long time or is sensitive to errors—for example, there is no retry logic support, there is a potential loss of data, or unacceptable UX—then we recommend representing the logic in OMS and using the [oms:check-condition worker](#processing-with-the-omscheck-condition-worker) if possible.
 
 In other cases, we recommend implementing a [dedicated worker](#processing-with-a-dedicated-jenkins-worker) to process the requests asynchronously.

@@ -1106,6 +1106,15 @@ entries:
           - "202005.0"
           - "202009.0"
     - title: Sales
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Order matrix
         url: /docs/scos/user/back-office-user-guides/sales/view-the-order-matrix.html
@@ -1293,7 +1302,15 @@ entries:
             include_versions:
             - "202005.0"
             - "202009.0"
-    - title: Customers
+    - title: Customer
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Customers
         include_versions:
@@ -1458,6 +1475,14 @@ entries:
             - "202005.0"
             - "202009.0"
     - title: Catalog
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Products
         nested:
@@ -1472,20 +1497,45 @@ entries:
           - "202108.0"
           nested:
           - title: Creating abstract products and product bundles
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
           - title: Adding scheduled prices to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-scheduled-prices-to-abstract-products.html
             include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
             - "202009.0"
             - "202108.0"
           - title: Adding volume prices to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202009.0"
+            - "202108.0"
           - title: Assign product attributes to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html
             include_versions:
             - "202108.0"
           - title: Editing abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/editing-abstract-products.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
           - title: Creating and managing product bundles
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-product-bundles.html
             include_versions:
@@ -1498,10 +1548,22 @@ entries:
           - title: Creating product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html
             include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+            - "202009.0"
             - "202108.0"
           - title: Editing product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html
             include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+            - "202009.0"
             - "202108.0"
           - title: Assign product attributes to product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html
@@ -1510,10 +1572,22 @@ entries:
           - title: Adding product alternatives
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/adding-product-alternatives.html
             include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+            - "202009.0"
             - "202108.0"
           - title: Discontinuing products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/discontinuing-products.html
             include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+            - "202009.0"
             - "202108.0"
         - title: Creating service offerings - best practices
           url: /docs/scos/user/back-office-user-guides/catalog/products/creating-service-offerings-best-practices.html
@@ -1820,6 +1894,14 @@ entries:
             - "202005.0"
             - "202009.0"
     - title: Content
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: "Best practices: Adding content to the Storefront pages using templates and slots"
         url: /docs/scos/user/back-office-user-guides/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html
@@ -2227,6 +2309,14 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Product labels
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Create product labels
           url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/create-product-labels.html
@@ -2285,6 +2375,15 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Product relations
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
         nested:
         - title: "Best practices: Promote products with product relations"
           url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/best-practices-promote-products-with-product-relations.html
@@ -2343,6 +2442,14 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Product sets
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Create product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/create-product-sets.html
@@ -2455,14 +2562,22 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: "Best practices: Promote products with search preferences"
           url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
         - title: Define search preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/define-search-preferences.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
         - title: Edit search preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/edit-search-preferences.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
       - title: Filter Preferences
         include_versions:
         - "202108.0"
@@ -2541,6 +2656,13 @@ entries:
             - "202005.0"
             - "202009.0"
     - title: Users
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: "Best practices: Managing users and their permissions with roles and groups"
         include_versions:
@@ -2844,6 +2966,14 @@ entries:
           - "202204.0"
           - "202212.0"
       - title: Tax rates
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing tax rates
           url: /docs/scos/user/back-office-user-guides/administration/tax-rates/managing-tax-rates.html
@@ -2867,6 +2997,14 @@ entries:
             - "202001.0"
             - "202005.0"
       - title: Tax sets
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing tax sets
           url: /docs/scos/user/back-office-user-guides/administration/tax-sets/managing-tax-sets.html

@@ -873,8 +873,30 @@ entries:
               - title: Merchant B2B Contracts feature overview
                 url: /docs/pbc/all/merchant-management/regular-shop/merchant-b2b-contracts-feature-overview.html
               - title: Merchant Product Restrictions feature overview
-                url: 
+                url: /docs/pbc/all/merchant-management/regular-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
                 nested:
+                  - title: Restricted products behavior
+                    url: /docs/pbc/all/merchant-management/regular-shop/merchant-product-restrictions-feature-overview/restricted-products-behavior.html
+              - title: Install and upgrade
+                nested:
+                  - title: Merchant B2B Contracts
+                    url: /docs/pbc/all/merchant-management/regular-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html
+                  - title: Merchant
+                    url: /docs/pbc/all/merchant-management/regular-shop/install-and-upgrade/install-the-merchant-feature.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Create merchants
+                    url: /docs/pbc/all/merchant-management/regular-shop/manage-in-the-back-office/create-merchants.html
+                  - title: Edit merchants
+                    url: /docs/pbc/all/merchant-management/regular-shop/manage-in-the-back-office/edit-merchants.html
+                  - title: Create merchant relations
+                    url: /docs/pbc/all/merchant-management/regular-shop/manage-in-the-back-office/create-merchant-relations.html
+                  - title: Edit merchant relations
+                    url: /docs/pbc/all/merchant-management/regular-shop/manage-in-the-back-office/edit-merchant-relations.html
+              - title: Domain model and relationships
+                nested:
+                  - title: Merchant B2B Contracts
+                    url: /docs/pbc/all/merchant-management/regular-shop/domain-model-and-relationships/merchant-b2b-contracts-feature-domain-model.html
                   - title:
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html

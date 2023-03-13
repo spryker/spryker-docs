@@ -8,3 +8,4 @@ _pdf
 vendor/
 /node_modules
 **/.DS_Store
+.vscode/

@@ -1,0 +1,80 @@
+---
+title: Environment Provisioning
+description: In this article we will explain core concepts that are important to understand before filing an environment provisioning request.
+template: concept-topic-template
+---
+
+Before starting to provision your Spryker PaaS environment we want to take some time to explain to you some information that we need from you to provision your environment quickly and precisely. The environment provisioning is started by creating a case using your support portal access. You can find the support portal [here](https://support.spryker.com). If you do not yet have a support portal access, please request one [here](https://www.surveymonkey.com/r/XYK5R26). 
+Once you are logged in, you can find the form that will create the provisioning request [here](https://support.spryker.com/s/hosting-change-requests/change-request-new-environment).
+
+{% info_block warningBox %}
+Please note that this can only be done via a customer account. Partners will need to work with their respective customers to request an environment.
+{% endinfo_block %}
+
+In the following, we want to explain what information we need from you to start provisioning your environment right away.
+
+# Environment
+Below you can find information on how different attributes of your environment will be used.
+
+## Environment Name
+Project Name, together with Environment type, will constitute your environment name. The environment name is referenced in AWS services endpoints:
+*Redis
+*DB
+*Elasticsearch
+*Deploy files
+*S3 buckets
+*Etc.
+
+## Project Name
+Typically, this is the name of the customer or the name of the project that the customer wants it to be called . Project name can’t be modified once an environment is provisioned. It should not contain special characters or spaces.
+✔ myshop
+X  myshöp, my shop, my-shop, my$shop
+
+## Environment Type:
+[Environment type](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html) refers to the popular naming convention for environment tiers in software development. You can refer to your contract to what environments you are entitled and choose the respective one. 
+E.g.: 
+Lower environments: STAGE, DEV
+Production: PROD-LIKE, PROD
+
+Example:
+For instance, myshop is the customer then “myshop-PROD” is an environment name where “myshop” is the project name and “PROD” is the environment type.
+
+## AWS Region
+AWS region is where customers want their infrastructure resources to be available. For more information about AWS region available options please refer to AWS official [documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html). Please check your contract for the AWS region you are entitled to use. 
+
+# Code Base and Boiler Plates
+In the following we will explain aspects of the code base and boilerplate you are using and its impact on the provisioning task.
+
+## Code Base
+Which Code Base is used? As we offer different business models based on customer requirements, application services related infra setup vary based on the model. It is important to know which model should be used for the respective environment during provisioning. Please note, similar to project names, you cannot switch between these models after the environment is created and switching would mean a complete de-provisioning of your environment. You will not normally be able to carry over any data.
+For example: B2B, B2C, B2B Marketplace, B2C Marketplace
+
+## Repository
+Codebase where the customer's Spryker application code is residing. Spryker supports only GitHub, GitLab and Bitbucket code hosting services. If the customer code base is not ready the Spryker team will provision the environment with the above chosen demoshop model from the most recent release using GitHub.
+GitHub: If the customer is using GitHub, we need a link to the GitHub repository including branch and a valid GitHub token, so code pipelines can access it. Please share GitHub token in secure way as per [Spryker recommendations](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html).
+GitLab & Bitbucket: Connecting GitLab and Bitbucket repositories directly to pipelines is not supported. Therefore, we have to enable codecommit feature during provisioning. It is possible to establish connections with pipelines only after the environment is provisioned. If possible grant GitLab/Bitbucket access to the Spryker engineer working on this request. If not, we will use your deploy file along with the Spryker demo shop during provisioning. In Detail the connection process is explained in [Spryker documentation](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/connecting-a-code-repository.html#connect-a-gitlab-code-repository). 
+{% info_block infoBox "Note" %}
+Note: We will be able to share required credentials mentioned in above documentation only after environment provisioning is complete.
+{% endinfo_block %}
+
+## Deploy File
+
+The Deploy file is a YAML file used by the Docker SDK to build infrastructure for applications. If a customer provides their own repository, a deploy file should be provided. For demo shop deployments Spryker Cloud Ops will prepare the file on their own. A repository usually has multiple deploy files that are relevant for different purposes and environments. Demoshops will have a deploy.dev.yml file that is mostly meant for local development purposes. The naming of these files is important. The naming convention is deploy.((project name + environment type)).yml (Example deploy.myshop-production.yml). See our documentation for [reference](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html). The most relevant deploy file that can be used as reference is [deploy.aws-env-template.yml](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.aws-env-template.yml). Each demo shop repository will have its respective deploy file template. Please adjust this accordingly to your requirements and preferences following the above documentation and share it with Spryker.
+
+# Domains
+In the following we want to get into how you can choose a domain name for your project, which will determine the URL your shop will be available under.
+
+## Domain Name
+Domain name to be set for the environment. If not provided it will be default non-public Spryker domain e.g.:myshop-production.cloud.spryker.toys Domain names can later be changed, but if you already know what domain your application should use, you can specify this domain in your deploy.yml files. During the provisioning process we will provide you with CNAMES and Validation records that you can then set in your DNS management. The validation records will allow us to provision an SSL certificate for you and the CNAME records will point your domain to the public DNS name of the load balancers responsible for your environment, effectively directing visitors to that domain to your Spryker Application
+
+# User Access
+List of customer or partner users that should have access to below:
+*AWS Console access: This access can be used to access environment CloudWatch logs, deployment pipelines, parameter store, S3 buckets. Please provide the email address of users that need access.
+*VPN: This access can be used to access services such as databases, Jenkins, and RabbitMQ. It is usually needed for developers or DevOps personnel. Please provide the email address of users that need access.
+*SSH: This access can be used to access the Bastion Host, and from there, reach other services via port forwarding. This is usually needed in special cases for developers or DevOps personnel. Please provide SSH public key along with email address (to use SSH you will require VPN access)
+*SFTP: This access is required to SFTP bastion host. Please provide SSH public key along with email address (to SFTP it also requires VPN access) 
+
+
+
+
+

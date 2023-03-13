@@ -1017,18 +1017,11 @@ entries:
         - "202005.0"
   - title: Back Office User guides
     url: /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
-    nested:
+    nested: 
     - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
       include_versions:
       - "202108.0"
-    - title: Viewing dashboard
-      url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
-      include_versions:
-      - "202108.0"
-      - "202204.0"
-      - "202212.0"
-      - "202009.0"
     - title: Viewing dashboard
       url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
       nested:
@@ -1214,13 +1207,11 @@ entries:
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Changing the state of order items in reclamations
           url: /docs/scos/user/back-office-user-guides/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Managing reclamations
           url: /docs/scos/user/back-office-user-guides/sales/reclamations/managing-reclamations.html
           include_versions:
@@ -1247,14 +1238,6 @@ entries:
             - "202009.0"
       - title: Refunds
         url: /docs/scos/user/back-office-user-guides/sales/refunds/viewing-refunds.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-        - "202204.0"
       - title: Returns
         include_versions:
         - "202005.0"
@@ -1493,9 +1476,6 @@ entries:
           - title: Adding scheduled prices to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-scheduled-prices-to-abstract-products.html
             include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
             - "202009.0"
             - "202108.0"
           - title: Adding volume prices to abstract products
@@ -1581,12 +1561,12 @@ entries:
           - "202009.0"
           - "202108.0"
           - title: Adding volume prices
-            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/adding-volume-prices.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/adding-volume-prices.html
             include_versions:
             - "202001.0"
             - "202005.0"
           - title: Creating and managing product bundles
-            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/creating-and-managing-product-bundles.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-and-managing-product-bundles.html
             include_versions:
             - "202001.0"
             - "202005.0"
@@ -1839,6 +1819,12 @@ entries:
         - title: Viewing product barcodes
           url: /docs/scos/user/back-office-user-guides/catalog/product-barcodes/viewing-product-barcodes.html
           include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
           - "202108.0"
       - title: Scheduled prices
         include_versions:
@@ -2040,6 +2026,9 @@ entries:
             - "202009.0"
       - title: Pages
         include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -2047,12 +2036,44 @@ entries:
         nested:
         - title: Creating CMS pages
           url: /docs/scos/user/back-office-user-guides/content/pages/creating-cms-pages.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Editing CMS pages
           url: /docs/scos/user/back-office-user-guides/content/pages/editing-cms-pages.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing CMS pages
           url: /docs/scos/user/back-office-user-guides/content/pages/managing-cms-pages.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing CMS page versions
           url: /docs/scos/user/back-office-user-guides/content/pages/managing-cms-page-versions.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: CMS Pages
           url: /docs/scos/user/back-office-user-guides/content/pages/cms-pages.html
           include_versions:
@@ -2101,6 +2122,14 @@ entries:
         nested:
         - title: Managing navigation elements
           url: /docs/scos/user/back-office-user-guides/content/navigation/managing-navigation-elements.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -2154,8 +2183,24 @@ entries:
         nested:
         - title: Creating CMS redirects
           url: /docs/scos/user/back-office-user-guides/content/redirects/creating-cms-redirects.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing CMS redirects
           url: /docs/scos/user/back-office-user-guides/content/redirects/managing-cms-redirects.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -2181,8 +2226,24 @@ entries:
         nested:
         - title: Managing file tree
           url: /docs/scos/user/back-office-user-guides/content/file-manager/managing-file-tree.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing file list
           url: /docs/scos/user/back-office-user-guides/content/file-manager/managing-file-list.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
     - title: Merchandising
       nested:
       - title: Discount

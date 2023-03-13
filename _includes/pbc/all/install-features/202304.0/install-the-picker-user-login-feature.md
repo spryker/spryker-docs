@@ -66,6 +66,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 namespace Pyz\Glue\GlueBackendApiApplication;
 
+use Spryker\Glue\OauthBackendApi\Plugin\GlueBackendApiApplication\UserRequestBuilderPlugin;
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
 use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseRequestBuilderPlugin;
 use Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication\WarehouseRequestValidatorPlugin;
@@ -79,6 +80,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     protected function getRequestBuilderPlugins(): array
     {
         return [
+            new UserRequestBuilderPlugin(),
             new WarehouseRequestBuilderPlugin(),
         ];
     }
@@ -182,32 +184,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
     }
 }
 ```
-
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Installer;
-
-use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
-use Spryker\Zed\OauthWarehouse\Communication\Plugin\Installer\OauthWarehouseInstallerPlugin;
-
-class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface|\Spryker\Zed\InstallerExtension\Dependency\Plugin\InstallerPluginInterface>
-     */
-    public function getInstallerPlugins(): array
-    {
-        return [
-            new OauthWarehouseInstallerPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/Oauth/OauthDependencyProvider.php**
 
 ```php
 <?php

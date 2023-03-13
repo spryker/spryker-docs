@@ -1017,14 +1017,6 @@ entries:
         - "202005.0"
   - title: Back Office User guides
     url: /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
-    include_versions:
-    - "201907.0"
-    - "202001.0"
-    - "202005.0"
-    - "202009.0"
-    - "202108.0"
-    - "202204.0"
-    - "202212.0"
     nested:
     - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
@@ -1039,12 +1031,6 @@ entries:
       - "202009.0"
     - title: Viewing dashboard
       url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
       nested:
       - title: References
         include_versions:
@@ -1080,7 +1066,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Managing transactions log
         url: /docs/scos/user/back-office-user-guides/punch-out/managing-transactions-log.html
         include_versions:
@@ -1090,7 +1075,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: References
         include_versions:
         - "201907.0"

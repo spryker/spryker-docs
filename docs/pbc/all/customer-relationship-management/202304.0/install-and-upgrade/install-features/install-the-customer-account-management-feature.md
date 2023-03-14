@@ -1,5 +1,5 @@
 ---
-title: Customer Account Management feature integration
+title: Install the Customer Account Management feature
 description: The guide walks you through the process of adding Redirect support for Customer login functionality to your project.
 last_updated: Feb 10, 2023
 template: feature-integration-guide-template

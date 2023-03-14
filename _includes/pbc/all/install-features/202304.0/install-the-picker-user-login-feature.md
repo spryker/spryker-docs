@@ -256,8 +256,43 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that you can send the following requests:
-
-    * `POST https://glue-backend.mysprykershop.com/warehouse-tokens`
-
+1. Log in `https://backoffice.mysprykershop.com`.
+2. Go to users overview `https://backoffice.mysprykershop.com/user`.
+3. Click edit user and enable checkbox "THIS USER IS A WAREHOUSE USER" and update it.
+4. In users overview click "Assign Warehouses" for updated user before.
+5. Enable checkbox "ASSIGN" for a warehouse and click save.
+8. Authenticate the user while requesting a token:
+   ```
+   POST /access-tokens HTTP/1.1
+   Host: glue-backend.mysprykershop.com
+   Content-Type: application/vnd.api+json
+   Content-Length: 167
+   {
+      "data": {
+         "type": "access-tokens",
+         "attributes": {
+            "username": "{username}",
+            "password": "{password}"
+         },
+         "links": {
+            "self": "https://glue-backend.mysprykershop.com/access-tokens"
+         }
+      }
+   }
+   ```
+9. Generate a warehouse token with the generated token from previous step:
+   ```
+   POST /warehouse-tokens HTTP/1.1
+   Host: glue-backend.mysprykershop.com
+   Content-Type: application/vnd.api+json
+   Content-Length: 165
+   {
+      "data": {
+         "type": "warehouse-tokens",
+         "links": {
+            "self": "https://glue-backend.mysprykershop.com/warehouse-tokens"
+         }
+      }
+   }
+   ```
 {% endinfo_block %}

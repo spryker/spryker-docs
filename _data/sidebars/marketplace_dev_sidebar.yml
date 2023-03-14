@@ -6,7 +6,7 @@ entries:
     nested:
       - title: Setup
         url: /docs/marketplace/dev/setup/setup.html
-        include_versions:     
+        include_versions:
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
@@ -57,7 +57,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
@@ -231,12 +230,21 @@ entries:
 
           - title: Merchant Category
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
 
           - title: Merchant Opening Hours
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
 
           - title: Merchant Portal
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-portal-feature-walkthrough.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
 
               - title: Marketplace Merchant Portal Core
@@ -261,9 +269,9 @@ entries:
 
       - title: Feature integration guides
         url: /docs/marketplace/dev/feature-integration-guides/feature-integration-guides.html
-        
+
         nested:
-        
+
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
             include_versions:
@@ -718,7 +726,7 @@ entries:
           - title: ProductMerchantPortalGui
             url: /docs/marketplace/dev/module-migration-guides/migration-guide-productmerchantportalgui.html
           - title: ProductOfferPricesRestApi
-            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html                        
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html
       - title: Glue API guides
         url: /docs/marketplace/dev/glue-api-guides/glue-api-guides.html
         nested:
@@ -1541,9 +1549,6 @@ entries:
 
           - title: "How-To: Split products by stores"
             url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
-
-          - title: "How-To: Extend Merchant Portal dashboard"
-            url: /docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html
 
           - title: "How-To: Create a new Gui module"
             url: /docs/marketplace/dev/howtos/how-to-create-gui-module.html

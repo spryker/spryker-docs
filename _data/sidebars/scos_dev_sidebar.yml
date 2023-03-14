@@ -2068,7 +2068,6 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-integration-guides/merchant-b2b-contracts-feature-integration.html
       include_versions:
@@ -2079,7 +2078,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-integration-guides/merchant-custom-prices-feature-integration.html
       include_versions:

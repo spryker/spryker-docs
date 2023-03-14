@@ -316,10 +316,12 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Merchant Portal Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
 
           - title: Marketplace Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-cart-feature-integration.html
@@ -333,14 +335,12 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Opening Hours feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
@@ -621,21 +621,18 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Merchant Opening Hours feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Merchant Category feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Product feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html
@@ -819,21 +816,18 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Retrieving merchant addresses
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Retrieving merchant opening hours
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Product offers
             url: /docs/marketplace/dev/glue-api-guides/product-offers/product-offers.html
@@ -956,56 +950,48 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-profile.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-profile-address.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile-address.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-open-hours-week-day-schedule.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant_open_hours_date_schedule.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-category.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-category.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-stock.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-store.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-store.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-oms-process.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-oms-process.csv.html
@@ -1039,7 +1025,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
@@ -1549,15 +1534,6 @@ entries:
 
           - title: "How-To: Split products by stores"
             url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
-
-          - title: "How-To: Create a new Gui module"
-            url: /docs/marketplace/dev/howtos/how-to-create-gui-module.html
-
-          - title: "How-To: Create a new Gui table"
-            url: /docs/marketplace/dev/howtos/how-to-create-gui-table.html
-
-          - title: "How-To: Extend an existing Gui table"
-            url: /docs/marketplace/dev/howtos/how-to-extend-gui-table.html
 
           - title: "How-To: Create a new Gui table column type"
             url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html

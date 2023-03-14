@@ -5,4 +5,4 @@ last_updated: Jan 24, 2023
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-push-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-push-notification-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-push-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-push-notification-feature.md -->

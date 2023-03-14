@@ -94,7 +94,7 @@ For the manifest, make sure to follow these conditions:
 |pages   |Adds additional content to the application detail page. This part contains an object with a page type and its blocks.<br>Possible page types (object keys):<ul><li>Overview</li><li>Legal</li></ul>Each page can contain no or multiple blocks. Each block should be specified by an object with the following keys:<ul><li>title—header of the block;</li><li>type—the way the data is displayed. Possible values:<ul><li>list<li>text</li></ul><li>data—information that is displayed inside the block. Can be a string, if *type=text*, or an array of strings if *type=list*.</li></ul>   |See *pages example* under this table.   |
 |assets   |An array of objects represented as application assets. Each object has the following keys:<ul><li>type—type of the asset. Possible values:<ul><li>icon—displayed on the application tile and on top of the application detail page.</li><li>image—displayed in a carousel on the application detail page.</li><li>video—displayed in a carousel on the application detail page. Allows only videos hosted on https://wistia.com.</li></ul><li>url—a relative path to the asset. Possible extensions:<ul><li>jpeg</li><li>png</li><li>svg</li><li>url to a video hosted on https://wistia.com</li></ul></ul>   |See *assets example* under this table.   |
 |labels   |An array of strings. Displays label icons on the application detail page according to the label. Possible values:<ul><li>Silver Partner</li><li>Gold Partner</li><li>New</li><li>Popular</li><li>Free Trial</li></ul>   |See *labels example* under this table.   |
-|resources   |An array of objects represented as application resources (links, documents). The resource object has the following keys:<ul><li>title—name of the resource</li><li>url—full URL to the resource</li>type—type of the resource. Optional. The type affects a displayed icon. Possible values:<ul><li>internal-documentation</li><li>homepage</li><li>user-documentation</li><li>developer-documentation</li><li>release-notes</li></ul><li>fileType—type of the resource file (in case if the url leads to a file and if `type=internal-documentation`). Optional. The files are displayed directly in the AppCatalog, without redirecting to another page. Possible values:<ul><li>pdf</li><li>markdown</li></ul></ul>   |See *resources example* under this table.   |
+|resources   |An array of objects represented as application resources (links, documents). The resource object has the following keys:<ul><li>title—name of the resource</li><li>url—full URL to the resource</li>type—type of the resource. Optional. The type affects a displayed icon. Possible values:<ul><li>internal-documentation</li><li>homepage</li><li>user-documentation</li><li>developer-documentation</li><li>release-notes</li></ul><li>fileType—type of the resource file (in case if the url leads to a file and if `type=internal-documentation`). Optional. The files are displayed directly in the AppCatalog, without redirecting to another page. Possible values:<ul><li>pdf</li><li>markdown</li><li>spryker-docs</li></ul></ul>   | See the following example of `resources` under this table.  The `"fileType": "markdown"` is still supported; however, it is recommended to use `spryker-docs` instead. The `url` is a full URL to [Spryker documentation](https://docs.spryker.com).  |
 
 
 <details>
@@ -197,9 +197,9 @@ For the manifest, make sure to follow these conditions:
 "resources": [
   {
     "title": "User Guide",
-    "url": "https://raw.githubusercontent.com/spryker/spryker-docs/aop-docs/docs/acp/user/apps/payone.md",
+    "url": "https://docs.spryker.com/docs/acp/user/intro-to-acp/acp-overview.html",
     "type": "internal-documentation",
-    "fileType": "markdown"
+    "fileType": "spryker-docs"
   },
   {
     "title": "Homepage",

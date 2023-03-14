@@ -8,16 +8,16 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{site.version}} |
-| Persistent Cart | {{site.version}} |
-| Spryker Core | {{site.version}} |
+| Cart | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/multiple-carts: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -436,17 +436,17 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Product | {{site.version}} |
-| Cart | {{site.version}} |
-| Persistent Cart | {{site.version}} |
-| Customer Account Management | {{site.version}} |
+| Product | {{page.version}} |
+| Cart | {{page.version}} |
+| Persistent Cart | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/multiple-carts: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

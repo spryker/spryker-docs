@@ -8,8 +8,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Configurable Bundle  | {{site.version}} |
-| Product Images | {{site.version}} |
+| Configurable Bundle  | {{page.version}} |
+| Product Images | {{page.version}} |
 
 ### 1) Set up database schema and transfer objects
 

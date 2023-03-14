@@ -10,15 +10,15 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| cell | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| cell | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox “Verification” %}
@@ -557,14 +557,14 @@ Overview and install the necessary features before beginning the integration ste
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Product | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require "spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
+composer require "spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

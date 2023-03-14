@@ -41,7 +41,7 @@ Review the system and software requirements in the table.
 | REQUIREMENT | VALUE OR VERSION |
 | --- | --- |
 | Docker | 18.09.1 or higher |
-| Docker Compose | 1.28 or 1.29 |  
+| Docker Compose | 2.0 or higher |  
 | vCPU | 2 or more |
 | RAM  | 4GB or more |
 | Swap  | 2GB or more |
@@ -81,7 +81,7 @@ Signup for Docker Hub is not required.
 5. Install Docker-compose:
 <!-- Updating the doc? Update the docker-compose version to the latest one. See https://github.com/docker/compose/releases -->
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/2.5.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
 6. Apply executable permissions to the binary:

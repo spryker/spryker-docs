@@ -2,25 +2,17 @@
 title: N+1 problem
 description: N+1 problem
 template: troubleshooting-guide-template
+keywords: n1; n one
 ---
 
-Coming soon
-<!---
-Link in C:\Dev\spryker-docs\docs\scos\dev\troubleshooting\troubleshooting-performance-issues\external-calls-several-calls-to-zed.md
-## N+1 problem
+Some actions, parts of the website, or the entire website are slow.
 
-Some actions, parts of website or all website is slow.
+It can be any type of action that is performed for each entity.
+For example, suppose a customer has a cart with 20 items. In this case, we do the following on each item:
+- We make a request to a DB per item.
+- We make an external call per item.
 
-### What is it?
-It is any type of action that is performed per entity.
-
-### Example
-
-The customer has a cart with 20 items in it:
-- We do request to a DB per item.
-- We do an external call per per item.
-
-Cases can vary but the main idea is that we do some action per item.
+Cases may vary, but the main idea is that we perform some action per item.
 
 ## Cause
 
@@ -28,50 +20,44 @@ Repeated action per entity.
 
 ## Solution
 
-Change action from “per entity” to “batch of entities”. 
+Change action from *per entity* to *batch of entities*. 
 
-## N+1 problem (External calls)
+### N+1 problem—external calls in New Relic
 
-### What does it look like in New Relic?
+For example, suppose there is an order with 42 items. In the [New Relic tool](/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html#new-relic), do the following: 
 
-Case: Order is placed with 42 items inside. 
-
-1. Select desired profiling:
-TODO: Add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3682566948/N+1+Problem
+1. Select the desired profiling:
+![new-relic-profiling](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n%2B1-problem/new-relic-profiling.png)
 
 2. Check the details and analyze:
-   TODO: Add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3682566948/N+1+Problem
+![new-relic-analysis](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n%2B1-problem/new-relic-analysis.png)
 
-As we see on the profiling above we do 42 external calls as the number of items in the order.
+As you can see in the profiling, we make 42 external calls, which is equal to the number of items in the order.
 
-On Curl response select and request itself we spend 45.70% and  45.49% so 91.19% of ALL the time spend on this request. So optimizing the number of requests has to be the priority here. 
+On `CurlResponse::select` and the request itself we spend 45.70% and 45.49%, so 91.19% of the total time spent on this request.Therefore, optimizing the number of requests should be the priority.
 
-3. Define a strategy to fix the problem.
-   Simple, reduce the number of calls:
+3. Define a strategy to fix the problem. Specifically, you can:
 
-- do 1 bulk request
-- move request after the “place order“ action. F.e. one of the OMS steps (but after releasing the customer to a success page).
+- Make one bulk request.
+- Move request after the `place order` action. For example, use one of the OMS transitions (but after taking the customer to a success page).
 
-But it is that simple? Not all the time.
+However, these approaches may not always be applicable. For example, in the cases when:
 
-- What if 3rd party system does not support bulk operations?
-- What if we have to do a call exactly during the order placement? 
+- A 3rd party system does not support bulk operations.
+- You have to make a call right during the order placement. 
 
-Well, that is the real challenge where you will need to find your solution. We can only share some most common cases here.
+In the cases like these, you need to develop your solution. Some of the most common recommendations include:  
 
-- It could be contacting 3rd party system to provide you with an integration point for bulk operations.
-- Talk to the business to define where else this action can be performed.
-- Update the loader on the page with some interactive games, so customers in not bored if nothing else can be optimized.
-- Any other action. 
+- Contacting the third-party system to provide you with an integration point for bulk operations.
+- Talking to the business stakeholders to define where else this action can be performed.
+- Updating the loader on the page with some interactive games, so customers are not bored if nothing else can be optimized.
 
-## N+1 problem (DB queries)
+## N+1 problem—DB queries in Blackfire
 
-### What does it look like in Blackfire?
-Case: add to cart in B2B store
+For example, suppose you add products to cart in a B2B store. In the [Blackfire tool](/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html#blackfire), do the following:
 
-- Go to SQL
-  TODO: Add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3682566948/N+1+Problem
-- Order by “calls“ and/or “time“
-TODO: Add image from https://spryker.atlassian.net/wiki/spaces/CORE/pages/3682566948/N+1+Problem
-- Optimise calls and do ideally 1 instead of N calls.
---->
+1. Go to SQL.
+![blackfire-sql](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n%2B1-problem/blackfire-sql.png)
+2. Order by *calls* or by *time*.
+![blackfire-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n%2B1-problem/blackfire-filter.png)
+3. Optimize the calls and, ideally, reduce the number of calls to one.

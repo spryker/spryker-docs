@@ -7,16 +7,16 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}}  |
-| Product Lists | {{site.version}} |
-| Merchant | {{site.version}} |
+| Spryker Core | {{page.version}}  |
+| Product Lists | {{page.version}} |
+| Merchant | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-product-restrictions:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/merchant-product-restrictions:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

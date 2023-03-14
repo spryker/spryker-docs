@@ -19,16 +19,16 @@ To start the feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Content Items | {{site.version}} |
-| CMS | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Content Items | {{page.version}} |
+| CMS | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/navigation:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/navigation:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -211,16 +211,16 @@ To start the feature integration, review, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Content Items | {{site.version}} |
-| CMS | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Content Items | {{page.version}} |
+| CMS | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/navigation:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/navigation:"{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 

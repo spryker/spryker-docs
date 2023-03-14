@@ -12,6 +12,86 @@ redirect_from:
 This document describes new features and enhancements we released for Spryker Cloud Commerce OS.
 
 
+
+## March 2023
+
+### Environment variable management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+Manage environment variables and secrets of your SCOS application yourself through a UI without having to create a support ticket. This allows you to make changes autonomously, controlling the scope of the variables (application, scheduler, or both). You can decide if changes should be applied immediately or as part of the next deployment. New_feature
+
+Benefits:
+Enhanced flexibility and higher autonomy: Users can now change their environment variables on their schedule, allowing them to adapt more easily to changing needs and requirements.
+
+
+### Maintenance mode <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+Enable and disable the maintenance mode of your store using a dedicated pipeline without having to create a support ticket. This feature helps you deploy new versions of your application without disrupting the user experience, allowing you to quickly fix unexpected errors. By automating the process with dedicated pipelines, we have made it easier for you to enable and disable this maintenance mode for Backoffice, Glue, and Yves.* New_feature
+
+Benefits:
+Faster maintenance: The self-service feature allows users to put their service into maintenance mode more quickly, reducing downtime and minimizing disruption.
+
+
+### Deployment optimization for RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+We have introduced deployment step optimization that significantly reduces the pipeline runtime for our Spryker Core Commerce solution. This optimization involves the decoupling of RabbitMQ in the deployment process. Improvement
+
+
+### Platform upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Major platform upgrades. We have completed a series of upgrades to our diverse platform resources. These upgrades include MariaDB, Redis, Jenkins, and its dependencies.
+
+Benefits:
+Improved performance: The upgrades have resulted in increased performance and reliability for our platform.
+Enhanced security: The upgrades include various security enhancements that improve the overall security of our platform.
+
+
+## August 2022
+
+### Destructive pipeline support for Multi Logical DB
+
+
+This feature lets users quickly delete their logical databases and associated resources, such as tables and indexes, in a single pipeline.
+Benefits:
+Improved efficiency: The destructive pipeline support allows users to delete their logical databases and associated resources more quickly and easily, streamlining the process and saving time.
+Enhanced flexibility: Users can now delete their logical databases and associated resources on their schedule, rather than having to coordinate with Spryker Support & Operations team.
+
+
+### Speed up the deployment pipeline
+
+Optimized deployment pipeline image to speed up the build of Jenkins.
+
+
+## April 2022
+
+Multi-Store with Multi Logical DB setup: Previously, it was possible to have only one logical DB in one AWS environment.
+
+Benefits:
+Each store has a dedicated index for ES and its own virtual key-value storage (Redis).
+Shared virtual separated database per store.
+Now it's possible to have the cluster sharing the same or use different database setups.
+One region can now have multiple stores.
+Use code buckets for store customization (logic).
+Improved flexibility allowing to have user themes for different visual “look and feel” per store.
+Optimize environment instances usage and costs.
+Higher flexibility managing URLs (solve uniqueness problem with URLs for different locales with the same language).
+Higher flexibility in managing store configuration, allowing distinct category navigation, product schema details, and users.
+Improved privacy store management - one store has no knowledge about the users of another.
+
+
+
+
+## January 2022
+
+Increased stability of Jenkins deployment: This update addresses several critical issues and bugs, resulting in a more reliable and efficient experience. With this new release, you can expect fewer interruptions, faster deployment times, and improved overall performance.
+
+…
+
+//—----------- Footer —-----------
+
+*Although these features will be available to all Spryker customers, we are introducing them as part of a gradual rollout.
+
+
+
 ## May 2021
 
 **CI/CD Documentation**: updated documentation with CI configuration examples for GitHub Actions, Bitbucket Pipelines, GitLab, and Azure.

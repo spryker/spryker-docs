@@ -1,5 +1,5 @@
 ---
-title: Merchant User concept
+title: Merchant User
 description: Merchant User in Merchant Portal.
 template: concept-topic-template
 redirect_from:

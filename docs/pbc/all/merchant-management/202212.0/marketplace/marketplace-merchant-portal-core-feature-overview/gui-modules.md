@@ -1,5 +1,5 @@
 ---
-title: GUI modules concept
+title: GUI modules
 description: Short overview of GUI modules in Merchant Portal.
 template: concept-topic-template
 redirect_from:

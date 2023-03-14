@@ -1,5 +1,5 @@
 ---
-title: Main merchant concept
+title: Main merchant
 description: This document contains concept information for the main merchant in the Spryker Commerce OS.
 template: concept-topic-template
 redirect_from:

@@ -924,6 +924,48 @@ entries:
               - title: Merchant Category feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-category-feature-overview.html
               - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Marketplace Merchant
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html
+                      - title: Marketplace Merchant Portal Core
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
+                      - title: Merchant Category
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-category-feature.html
+                      - title: Merchant Opening Hours
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-opening-hours-feature.html
+                      - title: Merchant Portal - Marketplace Merchant
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Marketplace Merchant
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
+                      - title: Merchant Category
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
+                      - title: Merchant Opening Hours
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
+          - title: Import data
+            nested:
+              - title: "File details: merchant.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant.csv.html
+              - title: "File details: merchant_profile.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile.csv.html
+              - title: "File details: merchant_profile_address.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile-address.csv.html
+              - title: "File details: merchant_open_hours_week_day_schedule.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-week-day-schedule.csv.html
+              - title: "File details: merchant_open_hours_date_schedule.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-date-schedule.csv.html
+              - title: "File details: merchant_category.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-category.csv.html
+              - title: "File details: merchant_stock.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-stock.csv.html
+              - title: "File details: merchant_store.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-store.csv.html
+              - title: "File details: merchant_user.csv"
+                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-user.csv.html
+
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         include_versions:

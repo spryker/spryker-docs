@@ -24,7 +24,7 @@ Manifest only add the values to configuration files. Manifests DO NOT REMOVE the
 
 ## 1.1. Basic scalar values as return
 
-Manifests fully support 4 scalar types:
+Manifests fully support 4 PHP data types:
 * bool
 * int
 * float (floating-point number)
@@ -89,7 +89,7 @@ class ProductReplacementForWidgetConfig extends SprykerShopProductReplacementFor
 }
 ```
 
-Code example 3.1.5: Method returns int
+Code example 1.1.5: Method returns int
 ```php
 use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
 
@@ -107,7 +107,7 @@ class CustomerConfig extends SprykerCustomerConfig
 
 ### 1.2.1. Indexed array as return
 
-Code example 3.2.1: Method returns indexed array
+Code example 1.2.1: Method returns indexed array
 ```php
 use Spryker\Client\Storage\StorageConfig as SprykerStorageClientConfig;
 
@@ -128,7 +128,7 @@ class StorageConfig extends SprykerStorageClientConfig
 
 ### 1.2.2. Associative array as return
 
-Code example 3.2.2: Method returns associative array
+Code example 1.2.2: Method returns associative array
 ```php
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfigi;
 
@@ -187,7 +187,7 @@ Inside of array merge function call you can use:
 * multidimensional arrays
 * variables
 
-Code example 3.2.4: Method returns associative array (with constants, parent method call and array merging)
+Code example 1.2.4: Method returns associative array (with constants, parent method call and array merging)
 ```php
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Client\MultiCart\MultiCartConfig as SprykerMultiCartConfig;
@@ -207,7 +207,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
 
 Multidimensional arrays (up to 2 levels) are also supported here, but for its usage the wrapped function MUST be used.
 
-Code example 3.2.5: Method returns multidimensional array (with constants, wrap methods call and array merging)
+Code example 1.2.5: Method returns multidimensional array (with constants, wrap methods call and array merging)
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\Event\EventConfig;
@@ -241,7 +241,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ## 1.3. Null as return
 
-Code example 3.1.4: Method returns null
+Code example 1.1.4: Method returns null
 ```php
 use Spryker\Zed\Api\ApiConfig as SprykerApiConfig;
 

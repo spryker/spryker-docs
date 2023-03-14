@@ -22,7 +22,7 @@ This article aims to describe the ways of plugin registration and module configu
 
 To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the article.
 
-{% info_block infoBox "Exceptions" %}
+{% info_block infoBox "" %}
 
 In case when the project uses a way how to change code that is not covered, expected changes will be skipped during the update process.
 

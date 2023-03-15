@@ -10,37 +10,23 @@ To use the Oryx framework, you should be familiar with the following:
 - CSS
 - HTML
 
-Knowledge of Typescript will be a plus but it's not required.
-
 To install Oryx on your local system, you need the following:
 
-- active LTS or maintenance LTS version of [Node.js](https://nodejs.org/)
+- active LTS or maintenance LTS version of [Node.js](https://nodejs.org/) or compatible Javascript runtime
 - npm package manager
-- [Git](https://git-scm.com/) version control system
 
-Also you need to have [Spryker backend](https://docs.spryker.com/docs/scos/dev/setup/setup.html) up and running.
+Also you need to have [Spryker Glue API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/glue-rest-api.html) up and running.
 
 ## Installation
 
-To start working with Oryx you will need a tiny boilerplate project. In this project you will find all the necessary configuration, dependencies and code to start working with Oryx.
+To start working with Oryx you can use the [boilerplate project](https://github.com/spryker/composable-frontend) that we've prepared for you. In this repository you'll will find the minimum dependencies and configuration to install a standard Oryx application.
 
-Clone bootstrap repository:
+There is a list of commands to clone repository, install dependencies and run the application:
 
 ```
 git clone https://github.com/spryker/composable-frontend
-```
-
-To install application you just need to install npm dependencies:
-
-```
+cd composable-frontend
 npm i
-```
-
-## Run application
-
-To run application:
-
-```
 npm run dev
 ```
 
@@ -50,9 +36,9 @@ Follow boilerplate guide for more information - see Boilerplate article.
 
 ## Builders/bundlers
 
-Oryx framework is compatible with every modern frontend builder/bundler, such as rollup, vite, webpack, etc.
-The only limitation it should support [exports](https://nodejs.org/api/packages.html#package-entry-points) entry point in package.json.
+The best choice to start with Oryx framework is Vite, but Oryx is also compatible with every modern frontend builder/bundler, such as rollup, parcel, webpack, etc.
+The build tool must support [exports](https://nodejs.org/api/packages.html#package-entry-points) entry point in package.json as long as Oryx is using it in every package to split logical part of package into sub-packages.
 
 ## Packages
 
-All Oryx framework packages provides their code as ES Modules which is a standard in frontend web development nowadays.
+All Oryx framework packages provides their code as [ES Modules](https://nodejs.org/dist/latest-v13.x/docs/api/esm.html#esm_ecmascript_modules).

@@ -26,17 +26,23 @@ To start working with Oryx you will need a tiny boilerplate project. In this pro
 
 Clone bootstrap repository:
 
-`git clone https://github.com/spryker/composable-frontend`
+```
+git clone https://github.com/spryker/composable-frontend
+```
 
 To install application you just need to install npm dependencies:
 
-```npm i```
+```
+npm i
+```
 
 ## Run application
 
 To run application:
 
-```npm run dev```
+```
+npm run dev
+```
 
 Application will be available on `localhost:3000` by default.
 

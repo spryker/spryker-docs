@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/marketplace/merchant-relations/create-merchant-relations.html
 related:
   - title: Edit merchant relations
-    link: docs/scos/user/back-office-user-guides/page.version/regular-shop/manage-in-the-back-office//edit-merchant-relations.html
+    link: docs/scos/user/back-office-user-guides/page.version/regular-shop/manage-in-the-back-office/edit-merchant-relations.html
   - title: Merchants and Merchant Relations feature overview
     link: docs/pbc/all/merchant-management/page.version/regular-shop/merchant-b2b-contracts-feature-overview.html
 ---
@@ -23,7 +23,7 @@ This document describes how to create merchant relations in the Back Office.
 
 ## Prerequisites
 
-1. [Create a merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office//create-merchants.html).
+1. [Create a merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchants.html).
 2. [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/manage-companies.html).
 3. Optional: [Create a product list](/docs/pbc/all/product-information-management/{{page.version}}//manage-in-the-back-office/product-lists/create-product-lists.html). It's needed to allow or deny a company access to certain products.
 4. Review the [reference information](#reference-information-create-a-merchant-relation) before you start, or look up the necessary information as you go through the process.

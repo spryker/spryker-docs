@@ -869,6 +869,8 @@ entries:
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
       - title: Merchant Management
         url: /docs/pbc/all/merchant-management/merchant-management.html
+        include_versions:
+        - "202212.0"
         nested:
           - title: Regular shop
             nested:
@@ -945,26 +947,35 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
                       - title: Merchant Opening Hours
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
-          - title: Import data
-            nested:
-              - title: "File details: merchant.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant.csv.html
-              - title: "File details: merchant_profile.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile.csv.html
-              - title: "File details: merchant_profile_address.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile-address.csv.html
-              - title: "File details: merchant_open_hours_week_day_schedule.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-week-day-schedule.csv.html
-              - title: "File details: merchant_open_hours_date_schedule.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-date-schedule.csv.html
-              - title: "File details: merchant_category.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-category.csv.html
-              - title: "File details: merchant_stock.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-stock.csv.html
-              - title: "File details: merchant_store.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-store.csv.html
-              - title: "File details: merchant_user.csv"
-                url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-user.csv.html
+              - title: Import data
+                nested:
+                  - title: "File details: merchant.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant.csv.html
+                  - title: "File details: merchant_profile.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile.csv.html
+                  - title: "File details: merchant_profile_address.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile-address.csv.html
+                  - title: "File details: merchant_open_hours_week_day_schedule.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-week-day-schedule.csv.html
+                  - title: "File details: merchant_open_hours_date_schedule.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-date-schedule.csv.html
+                  - title: "File details: merchant_category.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-category.csv.html
+                  - title: "File details: merchant_stock.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-stock.csv.html
+                  - title: "File details: merchant_store.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-store.csv.html
+                  - title: "File details: merchant_user.csv"
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-user.csv.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
+                nested:
+                  - title: Manage merchants
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants.html
+                  - title: Manage merchants users
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users.html
+              - title: Manage using Glue API
+                url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/manage-merchants-using-glue-api.html
 
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html

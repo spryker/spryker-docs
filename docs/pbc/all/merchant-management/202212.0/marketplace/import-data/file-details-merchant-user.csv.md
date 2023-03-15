@@ -10,7 +10,7 @@ related:
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
 ---
 
-This document describes the `merchant-user.csv` file to configure [merchant user](/docs/pbc/all/merchant-management/{{site.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) information in your Spryker shop.
+This document describes the `merchant-user.csv` file to configure [merchant user](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) information in your Spryker shop.
 
 
 ## Import file dependencies

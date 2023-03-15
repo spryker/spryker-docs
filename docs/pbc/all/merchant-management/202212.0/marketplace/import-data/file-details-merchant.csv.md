@@ -13,7 +13,7 @@ redirect_from:
   - /docs/marketplace/dev/data-import/202212.0/file-details-merchant.csv.html
 ---
 
-This document describes the `merchant.csv` file to configure [merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) information in your Spryker shop.
+This document describes the `merchant.csv` file to configure [merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) information in your Spryker shop.
 
 ## Import file dependencies
 

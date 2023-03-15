@@ -28,7 +28,7 @@ _Merchant Portal_ is the management interface where merchants do all administrat
 
 Documentation:
 * [Merchant Portal overview](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/logging-in-to-the-merchant-portal.html)
-* [Merchant users overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
+* [Merchant users overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 ### Merchant Profile
 
@@ -47,7 +47,7 @@ Every reference to a merchant on the Storefront is linked to their merchant prof
 
 ![Merchant profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-profile-page.png)
 
-Documentation: [Marketplace Merchant feature overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
+Documentation: [Marketplace Merchant feature overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
 
 ## Merchant Products and Merchant Product Offers
 

@@ -10,7 +10,7 @@ related:
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
-This document describes the `merchant_profile.csv` file to configure [merchant profile](/docs/pbc/all/merchant-management/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
+This document describes the `merchant_profile.csv` file to configure [merchant profile](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
 
 
 ## Import file dependencies

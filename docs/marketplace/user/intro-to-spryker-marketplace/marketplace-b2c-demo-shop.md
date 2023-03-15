@@ -10,7 +10,7 @@ The Spryker B2C Marketplace Demo Shop is a collection of ready-to-use B2C-Market
 <details>
 <summary markdown='span'>Marketplace B2C feature list</summary>
 
-- [Marketplace Merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
+- [Marketplace Merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
 - [Merchant Category](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html)
 - [Merchant Opening Hours](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html)
 - [Marketplace Product](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html)

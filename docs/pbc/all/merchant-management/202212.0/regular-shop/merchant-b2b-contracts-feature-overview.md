@@ -24,7 +24,7 @@ There are three key figures: marketplace owner, merchant, and buyer.
 
 The business relationships between merchants and buyers are usually based on contracts.
 
-A Back Office user can create merchants and merchant relations. See [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office//create-merchants.html) and [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office//create-merchant-relations.html) to learn how to do that.
+A Back Office user can create merchants and merchant relations. See [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchants.html) and [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchant-relations.html) to learn how to do that.
 
 A developer can also import merchants and merchant relations.
 
@@ -36,10 +36,10 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office//create-merchants.html)  |
-| [Edit merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office//edit-merchants.html)  |
-| [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office//create-merchant-relations.html)  |
-| [Edit merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office//edit-merchant-relations.html)  |
+| [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchants.html)  |
+| [Edit merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/edit-merchants.html)  |
+| [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchant-relations.html)  |
+| [Edit merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/edit-merchant-relations.html)  |
 
 ## Related Developer articles
 

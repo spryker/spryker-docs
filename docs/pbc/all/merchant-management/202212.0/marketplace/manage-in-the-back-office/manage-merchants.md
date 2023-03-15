@@ -1,5 +1,5 @@
 ---
-title: Managing merchants
+title: Manage merchants
 last_updated: Apr 23, 2021
 description: This guide explains how to create and manage merchant records on the Merchants page.
 template: back-office-user-guide-template

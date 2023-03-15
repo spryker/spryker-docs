@@ -39,7 +39,7 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 | [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchants.html)  |
 | [Edit merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/edit-merchants.html)  |
 | [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchant-relations.html)  |
-| [Edit merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/edit-merchant-relations.html)  |
+| [Edit merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/regular-shop/manage-in-the-back-office/edit-merchant-relations.html)  |
 
 ## Related Developer articles
 

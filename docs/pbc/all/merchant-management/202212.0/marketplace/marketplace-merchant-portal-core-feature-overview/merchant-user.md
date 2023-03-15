@@ -36,5 +36,5 @@ The following diagram illustrates merchant user relations:
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
-| | |[File details: merchant_user.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-user.csv.html) |[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)|
+| | |[File details: merchant_user.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-user.csv.html) |[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)|
 | | | |[Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|

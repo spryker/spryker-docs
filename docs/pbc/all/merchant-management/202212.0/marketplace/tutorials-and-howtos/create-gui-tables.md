@@ -1,5 +1,5 @@
 ---
-title: "How-To: Create a new Gui table"
+title: "Create Gui tables"
 description: This articles provides details how to create a new Gui table
 template: howto-guide-template
 redirect_from:

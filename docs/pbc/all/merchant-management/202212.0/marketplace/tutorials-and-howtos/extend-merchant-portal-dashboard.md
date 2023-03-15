@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Extend Merchant Portal dashboard"
+title: "Extend Merchant Portal dashboard"
 description: This articles provides details how to create new module with application
 template: howto-guide-template
 redirect_from:

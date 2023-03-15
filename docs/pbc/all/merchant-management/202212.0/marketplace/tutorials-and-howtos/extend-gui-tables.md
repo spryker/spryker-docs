@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Extend an existing Gui table"
+title: "Extend Gui tables"
 description: This articles provides details how to extend an existing Gui table
 template: howto-guide-template
 redirect_from:

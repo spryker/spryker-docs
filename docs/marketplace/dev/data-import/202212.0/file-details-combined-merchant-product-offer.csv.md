@@ -53,7 +53,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/file-details-merchant.csv.html)
+- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html)
 - `stores.php` configuration file of the demo shop PHP project  
 
 ## Import template file and content example

@@ -934,7 +934,7 @@ entries:
                       - title: Marketplace Merchant Portal Core
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
                       - title: Merchant Category
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-category-feature.html
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-category-feature.html
                       - title: Merchant Opening Hours
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-opening-hours-feature.html
                       - title: Merchant Portal - Marketplace Merchant
@@ -950,23 +950,23 @@ entries:
               - title: Import data
                 nested:
                   - title: "File details: merchant.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant.csv.html
                   - title: "File details: merchant_profile.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-profile.csv.html
                   - title: "File details: merchant_profile_address.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-profile-address.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-profile-address.csv.html
                   - title: "File details: merchant_open_hours_week_day_schedule.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-week-day-schedule.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-open-hours-week-day-schedule.csv.html
                   - title: "File details: merchant_open_hours_date_schedule.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-open-hours-date-schedule.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-open-hours-date-schedule.csv.html
                   - title: "File details: merchant_category.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-category.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-category.csv.html
                   - title: "File details: merchant_stock.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-stock.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-stock.csv.html
                   - title: "File details: merchant_store.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-store.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-store.csv.html
                   - title: "File details: merchant_user.csv"
-                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/file-details-merchant-user.csv.html
+                    url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-user.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 nested:
@@ -976,7 +976,37 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users.html
               - title: Manage using Glue API
                 url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/manage-merchants-using-glue-api.html
-
+                nested:
+                  - title: Retrieve merchants
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html
+                  - title: Retrieve merchant addresses
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
+                  - title: Retrieve merchant opening hours
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
+              - title: Edit merchant profiles
+                url: /docs/pbc/all/merchant-management/marketplace/edit-merchant-profiles.html
+              - title: Tutorials and HowTos
+                nested:
+                  - title: Create GUI modules
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-gui-modules.html
+                  - title: Create Gui table filter types
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-gui-table-filter-types.html
+                  - title: Create Gui tables
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-gui-tables.html
+                  - title: Extend Gui tables
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/extend-gui-tables.html
+                  - title: Extend Merchant Portal dashboard
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/extend-merchant-portal-dashboard.html
+              - title: Domain model and relationships
+                nested:
+                  - title: Marketplace Merchant
+                    url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/marketplace-merchant-feature-domain-model.html
+                  - title: Merchant Category
+                    url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-category-feature-domain-model.html
+                  - title: Merchant
+                    url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-feature-domain-model.html
+                  - title: Merchant Opening Hours
+                    url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-opening-hours-feature-domain-model.html
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         include_versions:

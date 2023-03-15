@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Create a new Gui table filter type"
+title: "Create Gui table filter types"
 description: This articles provides details how to create a new Gui table filter type
 template: howto-guide-template
 redirect_from:

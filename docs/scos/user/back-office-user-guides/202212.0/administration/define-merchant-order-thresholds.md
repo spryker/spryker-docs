@@ -26,7 +26,7 @@ This doc describes how to manage [merchant order thresholds](/docs/pbc/all/cart-
 
 ## Prerequisites
 
-* [Create a merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchants.html).
+* [Create a merchant](/docs/pbc/all/merchant-management/{{page.version}}/regular-shop/manage-in-the-back-office/create-merchants.html).
 * Review the [reference information](#reference-information-define-merchant-order-thresholds) before you start, or look up the necessary information as you go through the process.
 
 To start working with merchant order thresholds, do the following:

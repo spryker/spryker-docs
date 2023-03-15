@@ -9,14 +9,14 @@ related:
   - title: Marketplace Order Management feature overview
     link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
   - title: Main Merchant concept
-    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/main-merchant-concept.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/main-merchant.html
 ---
 
-*My Orders* is a dedicated page for managing the orders that customers completed from the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant-concept.html) (Marketplace owner) within the Marketplace.
+*My Orders* is a dedicated page for managing the orders that customers completed from the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html) (Marketplace owner) within the Marketplace.
 
 ## Prerequisites
 
-To start managing merchant orders for the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My orders**.
+To start managing merchant orders for the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My orders**.
 
 The instructions assume that there is an existing order with the *New* status.
 
@@ -24,14 +24,14 @@ Each section in this article contains reference information. Make sure to review
 
 ## Viewing main merchant orders
 
-To view the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant-concept.html) orders, in the **List of Orders** table, click **View** next to the order you want to check.
+To view the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html) orders, in the **List of Orders** table, click **View** next to the order you want to check.
 This takes you to the **Merchant Order Overview** page.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Sales/main-merchant-order-back-office.png)
 
 ### Reference information: Viewing main merchant orders
 
-This section holds reference information related to viewing the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant-concept.html) orders.
+This section holds reference information related to viewing the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html) orders.
 
 #### Overview of Orders page
 

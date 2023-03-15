@@ -74,8 +74,8 @@ To learn more about table design, see [Table design](/docs/marketplace/dev/front
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
 | [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html)          |          | [File details: merchant_user.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-user.csv.html)           | [GUI modules concept](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/gui-modules-concept.html) |
-|        |          |          | [How to create a new GUI module](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-create-gui-module.html)  |
-|        |          |          | [How to create a new Gui table](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-create-gui-table.html)  |
-|        |          |          | [How to extend an existing Gui table](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-extend-gui-table.html)  |
-|        |          |          | [How to create a new Gui table filter type](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-add-new-guitable-filter-type.html)  |
-|        |          |          | [How to extend Merchant Portal dashboard](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-extend-merchant-portal-dashboard.html)  |
+|        |          |          | [How to create a new GUI module](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/create-gui-modules.html)  |
+|        |          |          | [How to create a new Gui table](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/create-gui-tables.html)  |
+|        |          |          | [How to extend an existing Gui table](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/extend-gui-tables.html)  |
+|        |          |          | [How to create a new Gui table filter type](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/create-gui-table-filter-types.html)  |
+|        |          |          | [How to extend Merchant Portal dashboard](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/extend-merchant-portal-dashboard.html)  |

@@ -18,7 +18,7 @@ related:
 
 ## Prerequisites
 
-To start managing the returns for the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My Returns**.
+To start managing the returns for the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My Returns**.
 
 Each section contains reference information. Make sure to review it before you start or look up the necessary information as you go through the process.
 

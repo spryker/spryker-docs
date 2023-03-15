@@ -6,11 +6,11 @@ redirect_from:
   - /docs/marketplace/dev/howtos/how-to-extend-gui-table.html
 related:
   - title: How to add a new Gui table
-    link: docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-create-gui-table.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/create-gui-tables.html
   - title: How to create a new Gui table column type
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
   - title: How to create a new Gui table filter type
-    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/how-to-add-new-guitable-filter-type.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/create-gui-table-filter-types.html
 ---
 
 This document describes how to extend an existing Gui table in the Merchant Portal.

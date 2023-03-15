@@ -47,7 +47,7 @@ If a [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/m
 
 1. [**Creating a marketplace product**](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html).
 
-2. **Submitting the product for approval.** The [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overviewew.html) submits the request for product approval in the Merchant Portal. The status of the product changes to *Waiting for approval*.
+2. **Submitting the product for approval.** The [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) submits the request for product approval in the Merchant Portal. The status of the product changes to *Waiting for approval*.
 
 3. **Product approval or rejection.** The marketplace administrator can view the products and update their statuses in the Back Office. If a product is approved, the approval status changes to *Approved*. If the marketplace administrator rejects a product, the product gets the *Denied* status.
 

@@ -6,9 +6,9 @@ redirect_from:
   - /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 related:
   - title: How to create a new Gui table
-    link: docs/pbc/all/merchant-management/{{page.version}}/marketplace/tutorials-and-howtos/how-to-create-gui-table.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/create-gui-tables.html
   - title: How to extend an existing Gui table
-    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/how-to-extend-gui-table.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/extend-gui-tables.html
   - title: How to create a new Gui table column type
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
 ---

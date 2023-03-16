@@ -8,11 +8,11 @@ redirect_from:
 
 After you have [integrated the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html), you can configure the following for your store:
 - Bazaarvoice services you need
-- Stores you want the Bazaarvoice UGC to be displayed in
+- Stores you want the Bazaarvoice  user-generated content (UGC) to be displayed in
 
 To configure the Bazaarvoice the app, do the followoing:
 
-1. In your store's Back Office, go to **Apps > Catalog**.
+1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
 2. Click **Bazaarvoice**.
 3. In the top right corner of the Bazaarvoice app details page, click **Connect app**.
    This takes you to the Bazaarvoice site with the signup form.
@@ -20,7 +20,7 @@ To configure the Bazaarvoice the app, do the followoing:
    You should receive the Bazaarvoice credentials.
 5. Go back to your store's Back Office, to the Bazaarvoice app details page.
 6. In the top right corner of the Bazaarvoice app details page, click **Configure**.
-7. In the **Configure** pane, enter the credentials you received from Bazaarvoice.
+7. In the **Configurations** pane, enter the credentials you received from Bazaarvoice.
 
 ![bv-configuration-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice/bv-config-page.png)
 
@@ -44,15 +44,30 @@ The following video explains how you can create an API key if it is not availabl
   </video>
 </figure>
 
-8. In **Settings > Select Services**, select the services that you need:
+8. Optional: To track whether the products that have more UGC have a higher conversion rate than those without many ratings and reviews, in **sFTP Settings**, fill out the following fields:
+
+| FIELD    |                    DESCRIPTION                     |
+|----------|:--------------------------------------------------:|
+| Username |   The user name to connect to Bazaarvoice's sFTP.   |
+| Password |   The password to connect to Bazaarvoice's sFTP.    |
+| Region   | The region where your data is hosted on Bazaarvoice. |
+
+{% info_block warningBox "Credentials and region information" %}
+
+If you are unsure of your credentials or the region, reach out to the internal Bazaarvoice contact that manages your product feed. Alternatively, you can open a support case with [Bazaarvoice](https://support.bazaarvoice.com/).
+
+{% endinfo_block %}
+
+![bv-sftp-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice/bv-sftp-settings.png)
+
+9. In **Settings&nbsp;<span aria-label="and then">></span> Select Services**, select the services that you need:
    - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
    <!---- QUESTIONS & ANSWERS:--> 
    - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
-   - Bazaarvoice PIXEL: Adds a single tracking pixel to your shopping cart page and product details page. It lets Bazaarvoice track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
 
-9. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings** > **Store**, select the stores.
+10. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings&nbsp;<span aria-label="and then">></span> Store**, select the stores.
 
-10. Click **Save**.
+11. Click **Save**.
 
 This adds the Bazaarvoice app to your store. It usually takes Bazaarvoice a few days to process your product feed. Therefore, you should see the external ratings and reviews from Bazaarvoice in about 2-3 days after you connected the app.
 

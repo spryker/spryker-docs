@@ -10,6 +10,13 @@ redirect_from:
   - /docs/en/preparation-for-going-live
 ---
 
+{% info_block warningBox "Do not risk your Go-Live!" %}
+
+The preparation steps listed here are mandatory because they are critical to the success of your go-live. We expect every Spryker customer and partner to complete the list as described below. We can't assist you with problems related to your go-live that are caused by these steps not being completed in time. Ensure that your project plan contains tasks related to the go-live checklist and allows enough time for them to be completed. 
+
+{% endinfo_block %}
+
+
 This document describes how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
 
 We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all the following tasks are completed one week before going live.
@@ -74,7 +81,7 @@ Reach out to [Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-
 
 ### DNS setup
 
-You can add an ANAME record to the DNS Name that corresponds to the DNS name of the load balancer of your environment to make your application accessible to the outside world. You can get the load balancer information from our support team. Generally, the DNS setup has these steps:
+You normally add a CNAME record in your DNS Management for the domains you want to use for your application. This CNAME corresponds to the DNS name of the load balancer of your environment to make your application accessible to the outside world. You can get the load balancer information from our support team. Generally, the DNS setup has these steps:
 - You add the endpoint you want to use in the appropriate `deploy.yml` file and send it to us using a support case, mentioning that you have added a new endpoint that you want to set up for DNS configuration.
 - We terraform this endpoint and send you back DNS entries for TLS verification (so that we can issue TLS certificates for your site).
 - You set these entries in your DNS management and let us know when you are done.

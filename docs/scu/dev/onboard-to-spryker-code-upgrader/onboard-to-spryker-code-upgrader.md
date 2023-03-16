@@ -2,6 +2,9 @@
 title: Onboard to Spryker Code Upgrader
 description: Get your project ready and start upgrading with Spryker Code Upgrader
 template: concept-topic-template
+redirect_from:
+  - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html
+  - /docs/paas-plus/dev/onboarding-to-paas-plus.html
 ---
 
 Onboarding to Spryker CI consists of the following steps.
@@ -9,7 +12,7 @@ Onboarding to Spryker CI consists of the following steps.
 
 ## Prerequisites
 
-[Prepare your project for Spryker Code Upgrader](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
+[Prepare your project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
 
 
 ## 1. Get initial access
@@ -36,14 +39,14 @@ Your workspace contains the Spryker Code Upgrader project.
 
 Connect the Upgrader to your repository using one of the following documents:
 
-* [Connect to a GitHub repository](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
-* [Connect to a GitLab repository](/docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
+* [Connect to a GitHub repository](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
+* [Connect to a GitLab repository](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
 
 ![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.md/pipelines.png)
 
 ## Next steps
 
-[Run the Upgrader](/docs/paas-plus/dev/run-spryker-code-upgrader.html)
+[Run the Upgrader](/docs/scu/dev/run-spryker-code-upgrader.html)
 
 
 ## Support for Spryker CI

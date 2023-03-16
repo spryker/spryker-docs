@@ -147,7 +147,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfigi
 
 ### 1.2.3. Multidimensional array as return
 
-Multidimensional associative arrays are supported up to 2 levels, but for its usage the wrapped functions MUST be used: 
+Multidimensional associative arrays are supported up to 2 levels, but for its usage the wrapped functions **must** be used: 
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\Event\EventConfig;

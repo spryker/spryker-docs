@@ -1,8 +1,11 @@
-This document describes how to integrate the picker user login feature into a Spryker project.
+
+
+
+This document describes how to integrate the Picker User Login feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the picker user login feature core.
+Follow the steps below to install the Picker User Login feature core.
 
 ### Prerequisites
 
@@ -15,7 +18,7 @@ To start feature integration, integrate the required features:
 
 ### 1) Set up configuration
 
-To make `warehouse-tokens` resource protected, adjust the protected paths configuration:
+To make the `warehouse-tokens` resource protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -52,14 +55,16 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 | PLUGIN                                                    | SPECIFICATION                                                                                                                                                                                                      | PREREQUISITES | NAMESPACE                                                                                     |
 |-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------|
 | WarehouseAuthorizationRequestExpanderPlugin               | Expands `AuthorizationRequestTransfer.entity` with `GlueRequestWarehouseTransfer`.                                                                                                                                 |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector  |
-| WarehouseUserRequestValidationPreCheckerPlugin            | Checks if `GlueRequestTransfer` has `GlueRequestWarehouseTransfer` and if true sets `GlueRequestValidationTransfer` as valid.                                                                                      |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\OauthBackendApi                                  |
-| WarehouseTokenAuthorizationStrategyPlugin                 | Checks if if the request identity is valid user and warehouse.                                                                                                                                                     |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Authorization                                 |
+| WarehouseUserRequestValidationPreCheckerPlugin            | Checks if `GlueRequestTransfer` has `GlueRequestWarehouseTransfer`, and if true, sets `GlueRequestValidationTransfer` as valid.                                                                                      |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\OauthBackendApi                                  |
+| WarehouseTokenAuthorizationStrategyPlugin                 | Checks if the request identity is a valid user and warehouse.                                                                                                                                                     |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Authorization                                 |
 | OauthWarehouseInstallerPlugin                             | Installs warehouse OAuth scope data.                                                                                                                                                                               |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Installer                                     |
-| WarehouseOauthUserProviderPlugin                          | Retrieves warehouse user if `OauthUserTransfer.idWarehouse` provided & expands the `OauthUserTransfer` if warehouse user exists.                                                                                   |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                         |
-| WarehouseOauthScopeProviderPlugin                         | Checks whether the grant type is \Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE.                                                                                                           |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                         |
-| WarehouseOauthRequestGrantTypeConfigurationProviderPlugin | Checks whether the requested OAuth grant type equals to \Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE and whether the requested application context equals to GlueBackendApiApplication.  |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                         |
+| WarehouseOauthUserProviderPlugin                          | Retrieves warehouse user if `OauthUserTransfer.idWarehouse` provided and expands `OauthUserTransfer` if warehouse user exists.                                                                                   |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                         |
+| WarehouseOauthScopeProviderPlugin                         | Checks whether the grant type is `\Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE`.                                                                                                           |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                         |
+| WarehouseOauthRequestGrantTypeConfigurationProviderPlugin | Checks whether the requested OAuth grant type equals to `\Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE` and whether the requested application context equals to `GlueBackendApiApplication`.  |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                         |
 
-**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
+
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -208,7 +213,8 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Oauth/OauthDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -256,13 +262,16 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. Log in `https://backoffice.mysprykershop.com`.
-2. Go to users overview `https://backoffice.mysprykershop.com/user`.
-3. Click edit user and enable checkbox "THIS USER IS A WAREHOUSE USER" and update it.
-4. In users overview click "Assign Warehouses" for updated user before.
-5. Enable checkbox "ASSIGN" for a warehouse and click save.
+1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. This opens **USERS LIST**.
+2. For a user of your choice, in **Actions**, click **Edit**.
+3. On the **Edit User: `{USER_NAME}`** page that opens, select **THIS USER IS A WAREHOUSE USER**. The `{USER_NAME}` placeholder stands for the name of the user selected in the previous step.
+4. Click **Update**.
+5. Go back to **USERS LIST**.
+6. For the user edited in step 2, in **Actions**, click **Assign Warehouses**. This opens the **Assign Warehouse to User: `{USER_NAME}`** page. The `{USER_NAME}` placeholder stands for the name of the user you're assigning a warehouse to.
+7. In the **Select warehouses to assign** tab, for a needed warehouse, select **ASSIGN** and click **Save**.
 8. Authenticate the user while requesting a token:
-   ```
+
+   ```json
    POST /access-tokens HTTP/1.1
    Host: glue-backend.mysprykershop.com
    Content-Type: application/vnd.api+json
@@ -271,8 +280,8 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
       "data": {
          "type": "access-tokens",
          "attributes": {
-            "username": "{username}",
-            "password": "{password}"
+            "username": "{USERNAME}",
+            "password": "{PASSWORD}"
          },
          "links": {
             "self": "https://glue-backend.mysprykershop.com/access-tokens"
@@ -280,8 +289,10 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
       }
    }
    ```
-9. Generate a warehouse token with the generated token from previous step:
-   ```
+
+9. Generate a warehouse token with the generated token from the previous step:
+
+   ```json
    POST /warehouse-tokens HTTP/1.1
    Host: glue-backend.mysprykershop.com
    Content-Type: application/vnd.api+json
@@ -295,4 +306,5 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
       }
    }
    ```
+
 {% endinfo_block %}

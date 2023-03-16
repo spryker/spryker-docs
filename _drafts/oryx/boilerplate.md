@@ -14,7 +14,7 @@ Boilerplate refers to the _template_ code that is used to generate an applicatio
 
 In Oryx, we use a few tactics to prevent boilerplate code. These tactics include:
 
-1. Bootstrap the application from npm packages rather than source.
+1. Bootstrap the application from [npm packages](https://www.npmjs.com/org/spryker-oryx) rather than source.
 2. Expose an function to setup the [app orchestrator](./app-orchestrator.md) conveniently.
 3. Provide [presets](./presets.md) for the standard application setup, including the feature sets and UI themes.
 4. Provide the source code in a [public repository](https://github.com/spryker/oryx) to enable developers to read the source code.

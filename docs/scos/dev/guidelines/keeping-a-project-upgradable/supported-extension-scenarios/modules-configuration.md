@@ -20,7 +20,7 @@ Manifests support all scalar types (bool, int, float, string), the compound type
 
 Manifests do not support compound type objects, or callable, iterable and special type resources.
 
-Manifest only add the values to configuration files. Manifests DO NOT REMOVE the values from project configuration. 
+Manifest only add values to configuration files. Manifests **will not remove** values from project configuration. 
 
 ## 1.1. Basic scalar values as return
 

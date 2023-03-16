@@ -126,7 +126,7 @@ class StorageConfig extends SprykerStorageClientConfig
 }
 ```
 
-### 1.2.2. Associative array as return
+### 1.2.2. Associative array as the return
 
 Code example 1.2.2: Method returns associative array
 ```php

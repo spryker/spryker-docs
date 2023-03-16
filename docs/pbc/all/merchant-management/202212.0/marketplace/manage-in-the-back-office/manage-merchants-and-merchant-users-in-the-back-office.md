@@ -9,4 +9,4 @@ redirect_from:
 This section explains how a Marketplace administrator can create and manage merchant records and manage merchant users in the Back Office:
 
 * [Managing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html)
-* [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)
+* [Managing merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html)

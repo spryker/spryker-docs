@@ -11,7 +11,7 @@ related:
 
 {% info_block infoBox "Info" %}
 
-See [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html).
+See [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 
 {% endinfo_block %}
 
@@ -52,7 +52,7 @@ Install the needed packages for the Merchant Portal with dependencies, see the a
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 ### Merchant Portal users
 

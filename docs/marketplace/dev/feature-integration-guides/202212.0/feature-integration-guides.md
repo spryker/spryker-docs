@@ -11,7 +11,7 @@ This section contains the following Marketplace feature integration guides:
 * [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)
 * [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)
 * [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)
-* [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-core-feature.html)
+* [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)
 * [Marketplace Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-cart-feature-integration.html)
 * [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html)
 * [Merchant Switcher + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-customer-account-management-feature-integration.html)

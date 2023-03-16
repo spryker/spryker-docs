@@ -239,4 +239,4 @@ You can not delete merchants, you can only deactivate them.
 
 Once you have the merchant record available in the system, you can proceed with creating a merchant user to log in to the Merchant Portal.
 
-To know how to create those, see the [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html).
+To know how to create those, see the [Managing merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html).

@@ -20,8 +20,8 @@
   "grammarly.config.suggestions.OxfordComma": true,
   "editor.renderWhitespace": "all",
   "commentTranslate.targetLanguage": "uk",
-  "vale.valeCLI.path": "",
-  "vale.valeCLI.config": "/Users/vadym.sachenko/Spryker/GitHub/spryker-docs/.vale.ini",
+  "vale.valeCLI.path": "vale",
+  "vale.valeCLI.config": "${workspaceFolder}/.vale.ini",
   "grammarly.config.suggestions.UnnecessaryEllipses": true,
   "grammarly.config.suggestions.Variety": false
 }

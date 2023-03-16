@@ -1,4 +1,4 @@
-To integrate Dynamic multistore feature  in your project, you need to:
+To integrate Dynamic multistore feature in your project, you need to:
 
 - [Define the region stores context by domain](#define-the-region-stores-context-by-domain)
 - [Integration Dynamic Store feature](#integration-dynamic-store-feature)
@@ -2516,6 +2516,75 @@ New configuration for deploy file use region instead store name for services, en
 Evnironment variable `SPRYKER_DYNAMIC_STORE_MODE` enable dynamic store feature, by default it is disabled.
 Also you need to change domain name for all endpoints in EU region.
 Please, check `deploy.dev.dynamic-store.yml` file for more details.
+
+
+## Data migration 
+
+Data in database migration for dynamic store feature is not required. 
+Propel migration will be executed automatically and added new tables for dynamic store feature and populate new tables with data via data import.
+For correct work of dynamic store feature you need to add new data structure for search and storage engines.
+
+First of all, you need to truncate all data from search and storage engines.
+Next step is run sync:data command for populate new data structure for search and storage engines.
+
+```bash
+vendor/bin/console sync:data
+```
+
+All data will be populated in search and storage engines.
+
+{% info_block warningBox "Verification" %}
+
+
+#### Storage engine
+
+Data is stored with keys that contain the name store, if you use Redis as a key-value store.
+The key name follows this format: `kv:{store}:{locale}:{resource-type}:{key}`.
+
+Note that the key name can be different, depending on the configuration of the project.
+Below is a list of keys, taking into account the default configuration out of the box.
+
+Example list of keys where `xxx` - is a store name: 
+
+- `kv:availability:xxx:*`
+- `kv:price_product_abstract:xxx:*`
+- `kv:price_product_abstract_merchant_relationship:xxx:*`
+- `kv:price_product_concrete:xxx:*`
+- `kv:price_product_concrete_merchant_relationship:xxx:*`
+- `kv:product_abstract:xxx:*`
+- `kv:product_abstract_category:xxx:*`
+- `kv:product_abstract_option:xxx:*`
+- `kv:product_abstract_relation:xxx:*`
+- `kv:product_concrete_measurement_unit:xxx:*`
+- `kv:product_concrete_product_offer_price:xxx:*`
+- `kv:product_concrete_product_offers:xxx:*`
+- `kv:product_label_dictionary:xxx:*`
+- `kv:product_offer:xxx:*`
+- `kv:product_offer_availability:xxx:*`
+- `kv:category_node:xxx:*`
+- `kv:category_tree:at:*`
+- `kv:cms_block:xxx:*`
+- `kv:cms_page:xxx:*`
+- `kv:merchant:xxx:*`
+- `kv:price_product_abstract_merchant_relationship:xxx:*`
+- `kv:store:xxx`
+
+Also appear new keys for dynamic store feature:
+`kv:store_list:` and delete store name XXX values in stores. 
+```json
+{"stores":["AT","DE","XXX"],"_timestamp":111111111111}
+``` 
+
+### Search engine
+
+If you are using Elasticsearch, following indexes are available in the standard configuration (example: `xxx` -  store name): 
+
+- `spryker_xxx_merchant`.
+- `spryker_xxx_page`.
+- `spryker_xxx_product-review`.
+- `spryker_xxx_return_reason`.
+
+{% endinfo_block %} 
 
 
 ## Delete store in database

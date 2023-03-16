@@ -111,6 +111,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }
 }
 ```
+</details>
 
 **src/Pyz/Glue/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorDependencyProvider.php**
 
@@ -259,6 +260,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 

@@ -1,6 +1,6 @@
 ---
 title: "HowTo: Create and register a mail provider"
-description: Use the guide to create and register a mail provider in the Mail module.
+description: Guide to help create and register a mail provider within the Mail module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-create-register-provider-plugin
@@ -32,19 +32,19 @@ related:
 {% info_block infoBox "Info" %}
 
 Spryker lets you send emails via the Symfony mailer component.
-Follow the instructions in this link in order to use it [Mailing and Notifications feature integration guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html).
+In order to use the component, see [Mailing and Notifications feature integration guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html).
 For information on how to you use, see [Mailing and Notifications feature integration guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html).
 {% endinfo_block %}
 
 This guide shows how to create and register a mail provider you want to use.
 
-A mail provider is defined in the provider class. Since each provider behaves differently, the provider class is also different.
+A mail provider is defined in the provider class. Since each provider behaves differently, each provider's class differs from the rest.
 
 ## Create and register a mail provider
 
 1. Create a class that implements `MailProviderPluginInterface`.
 2. In the `Mail` module, register your provider.
-2. To register a provider, add it to `MailProviderCollection` by adding the provider to `MailDependencyProvider`:
+2. To register a provider, add it to `MailProviderCollection` by including the provider in `MailDependencyProvider`:
 
 ```php
 <?php
@@ -67,13 +67,13 @@ public function provideBusinessLayerDependencies(Container $container)
 ...
 ```
 
-By using `$container->extend()`, you get `MailProviderCollectionAddInterface`, where you can add your provider. `MailProviderCollectionAddInterface::addProvider()` takes the provider you want to use as the first argument, and as the second argument, a `MailType` or a list of `MailType` classes, which this provider must use.
+By using `$container->extend()`, you get `MailProviderCollectionAddInterface`, where you can add your provider. `MailProviderCollectionAddInterface::addProvider()` takes the provider you want to use as the first argument, and a `MailType` or a list of `MailType` classes which this provider must use as the second argument.
 
-As you can see in the preceding example, the provider is registered to all `MailType` classes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to handle only a specific `MailType`, use the `MailType` constant from your `MailTypePlugin`—for example, `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. For information about creating and registering a `MailTypePlugin`, see [HowTo: Creating and registering a MailTypePlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html).
+As you can see in the previous example, a provider is registered to all `MailType` classes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to handle only a specific `MailType`, use the `MailType` constant from your `MailTypePlugin`. For example, you can use `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. For information about creating and registering a `MailTypePlugin`, see [HowTo: Creating and registering a MailTypePlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html).
 
 ## Use more than one provider
 
-To send emails through different providers, register more than one provider to the `Mail` module. You can even create a scenario when all marketing emails go through provider A and all others through provider B. In the preceding section, this technique is used to register one provider to all types. The following example demonstrates how to wire up more than one provider:
+To send emails through more than one provider, register each of the desired providers in the `Mail` module. You can even create a scenario where all marketing emails go through provider A, while all other emails go through provider B. In the previous section, this method is used to register one provider to all types. The following example demonstrates how to wire up more than one provider:
 
 ```php
 <?php

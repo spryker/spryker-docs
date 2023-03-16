@@ -1,5 +1,5 @@
 ---
-title: File details- cms_block_store.csv
+title: "File details: cms_block_store.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-storecsv
@@ -13,11 +13,9 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-cms-block-store.csv.html
 ---
 
-This document describes the `cms_block_store.csv` file to configure CMS Block Store information on your Spryker Demo Shop.
-
+This document describes the `cms_block_store.csv` file to configure CMS Block Store information about your Spryker Demo Shop.
 
 ## Import file dependencies
-
 
 * [cms_block.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-block.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
@@ -25,19 +23,12 @@ This document describes the `cms_block_store.csv` file to configure CMS Block St
 
 ## Import file parameters
 
-
-
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | block_key | &check; | String |  | Key identifier of the block.  |
 | store_name | &check; | String |  | Name of the store. |
 
-
-
-
 ## Import template file and content example
-
-
 
 | FILE | DESCRIPTION |
 | --- | --- |

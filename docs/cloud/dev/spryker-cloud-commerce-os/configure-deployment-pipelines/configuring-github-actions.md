@@ -7,6 +7,7 @@ originalArticleId: ad8a174f-1372-4cae-b530-fa77a9cd5479
 redirect_from:
   - /docs/configuring-github-actions
   - /docs/en/configuring-github-actions
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html
 ---
 
 This document describes how to configure continuous integration using GitHub Actions.
@@ -213,7 +214,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
                   sudo apt-get install apache2-utils
             - name: Install docker-compose
               run: |
-                  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                  sudo curl -L "https://github.com/docker/compose/releases/download/2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                   sudo chmod +x /usr/local/bin/docker-compose
             - name: Run docker
               run: |
@@ -308,7 +309,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
                   sudo apt-get install apache2-utils
             - name: Install docker-compose
               run: |
-                  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                  sudo curl -L "https://github.com/docker/compose/releases/download/2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                   sudo chmod +x /usr/local/bin/docker-compose
             - name: Run docker
               run: |
@@ -368,7 +369,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
                   sudo apt-get install apache2-utils
             - name: Install docker-compose
               run: |
-                  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                  sudo curl -L "https://github.com/docker/compose/releases/download/2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                   sudo chmod +x /usr/local/bin/docker-compose
             - name: Run docker
               run: |
@@ -419,7 +420,7 @@ image:
                   sudo apt-get install apache2-utils
             - name: Install docker-compose
               run: |
-                  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+                  sudo curl -L "https://github.com/docker/compose/releases/download/2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                   sudo chmod +x /usr/local/bin/docker-compose
             - name: Run docker
               run: |

@@ -3,9 +3,6 @@ title: Merchant Switcher + Customer Account Management feature integration
 last_updated: Jan 06, 2021
 description: This document describes the process how to integrate the Merchant Switcher + Customer Account Management feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Customer Account Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Switcher + Customer Account Management feature into a Spryker project.
@@ -21,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ------------------ | ----------- | ----------|
 | Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html)|
-| Customer Account Management  | {{page.version}}    | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Customer Account Management  | {{page.version}}    | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 ### 1) Set up the transfer objects
 

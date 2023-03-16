@@ -1,18 +1,22 @@
 
 
-This document describes how to integrate the Catalog + Category Management into a Spryker project.
+This document describes how to integrate the Catalog + Category Management feature into a Spryker project.
 
-## Prerequisites
+## Install feature core
 
-To start the feature integration, overview and install the necessary features:
+Follow the steps below to install the Catalog + Category Management feature core.
+
+### Prerequisites
+
+To start feature integration, integrate the required features 
 
 | NAME                | VERSION | INTEGRATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | {{site.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Catalog             | {{site.version}}  |  |
-| Category Management | {{site.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Spryker Core        | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Catalog             | {{page.version}}  |  |
+| Category Management | {{page.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 
-## 1) Set up behavior
+### 1) Set up behavior
 
 Activate the following plugins:
 
@@ -45,8 +49,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
-
-
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
 ```php
@@ -74,14 +76,10 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-- Make sure that `CatalogClient::catalogSearch()` returns category nodes under the `categoryTreeFilter` index.
-- Make sure that the search query has a sort parameter.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that you can find categories using the global search on the Storefront.
+Make sure the following:
+- `CatalogClient::catalogSearch()` returns category nodes under the `categoryTreeFilter` index.
+- The search query has a sort parameter.
+- You can find categories using the global search on the Storefront.
 
 {% endinfo_block %}
 
@@ -89,8 +87,7 @@ Make sure that you can find categories using the global search on the Storefront
 
 Integrate the following related features:
 
-
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ------------- | ---------------- | -------------------- |
-| Catalog             |      ✓     | |
-| Category Management |      ✓     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Catalog             |      &check;     | |
+| Category Management |      &check;     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |

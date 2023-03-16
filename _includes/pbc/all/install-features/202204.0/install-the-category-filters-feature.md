@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Category Filters](/docs/scos/user/features/{{site.version}}/search-feature-overview/category-filters-overview.html) into a Spryker project.
+This document describes how to integrate the [Category Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/category-filters-overview.html) into a Spryker project.
 
 ## Install feature core
 
@@ -81,7 +81,6 @@ vendor/bin/console transfer:generate
         }
     }
 ```
-
 
 7. Make sure the new Zed user interface assets are built. Run `npm run zed` (or antelope build Zed
 for older versions) for that.

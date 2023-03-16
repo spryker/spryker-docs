@@ -1,5 +1,5 @@
 ---
-title: File details- product_option.csv
+title: "File details: product_option.csv"
 last_updated: Jun 23, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-optioncsv
@@ -29,7 +29,7 @@ This document describes the `product_option.csv` file to configure [product opt
 | option_group_id | &check; | String |If doesn't exist then it will be automatically created.  | Identifier of the Product Option Group. |
 | tax_set_name |  | String || Name of the tax set. |
 | group_name_translation_key|  | String | |  Translation key of the name of the group in different locales.|
-| group_name.{ANY_LOCALE_NAME}<br>Example value: *group_name.en_US* | No | String |Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files. | Name of the group in the specified locale (US for our example). |
+| group_name.{ANY_LOCALE_NAME}<br>Example value: *group_name.en_US* | No | String |Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files. | Name of the group in the specified locale (US for our example). |
 | option_name_translation_key |  | String | | Translation key of the name of the option in different locales. |
 | option_name.{ANY_LOCALE_NAME}<br>Example value: *option_name.en_US |  | String || Name of the option in the specified locale (US for our example).  |
 | sku | | String | | SKU identifier of the product option. |

@@ -13,8 +13,8 @@ To start feature integration, integrate the required features
 
 | NAME | VERSION | INTEGRATION GUIDES|
 | --- | --- | --- |
-| Comments | {{site.version}} | [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-comments-feature.html) |
-| Persistent Cart | {{site.version}} |
+| Comments | {{page.version}} | [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| Persistent Cart | {{page.version}} |
 
 ### 1) Set up behavior
 
@@ -64,8 +64,8 @@ To start feature integration, integrate the required features
 
 | NAME | VERSION | INTEGRATION GUIDES|
 | --- | --- | --- |
-| Comments | {{site.version}} | [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-comments-feature.html) |
-| Cart | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Comments | {{page.version}} | [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)|
 
 ### 1) Set up behavior
 

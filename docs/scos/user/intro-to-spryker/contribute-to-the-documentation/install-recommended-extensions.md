@@ -18,7 +18,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
 ---
 
-We have a list of recommended VS Code extensions that our team uses for writing and reviewing documentation:
+We have a list of recommended VS Code extensions that our team uses for writing and reviewing documents:
 * *Grammarly*: Checks your grammar, spelling, and punctuation in real-time as you write.
 * *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
 * *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
@@ -32,23 +32,10 @@ To install an extension, follow these steps:
 
 Some extensions, like Vale, need configuration before you can use them.
 
-### Configure Vale
-
-Once you've installed Vale, you need to configure it:
-
-1. In the **Extensions** menu, find Vale and open **Extension Settings**.
-2. On the **User** tab, configure the following settings:
-   1. For **Vale > Vale CLI: Config**, enter an absolute path to the `vale.ini` file. The file is located in the root folder of the project—for example, if the project is located in `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/`, then the absolute path is `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/.vale.ini`. The `{USER_NAME}` placeholder stands for your user name. If you are using Windows OS, you can enter `${workspaceFolder}/vale.ini`. The `${workspaceFolder}` variable adds the absolute path automatically, so you don't need to enter the path manually.
-   2. For **Vale › Vale CLI: Min Alert Level**, select **inherited**.
-3. On the **Workspace** tab, enter and select the same values as in steps 1 and 2.
-4. Relaunch VS Code to make sure settings have been applied.
-
- Now you can use Vale to lint and style-check Markdown files within the project.
-
-#### Vale overview
+## Vale overview
 
 Vale works by analyzing the text of a file and comparing it to a set of customizable rules, which are located in the `vale/styles` folder. 
-Vale uses the rules to check for issues such as spelling errors, grammar mistakes, and stylistic inconsistencies.
+Vale uses the rules to check for issues such as spelling, grammar, and stylistic errors.
 
 The `vale/styles/Vocab/Base` folder holds the `accept.txt` and `reject.txt` files. 
 These files contain custom words and phrases that must always be accepted or rejected, respectively, during the Vale review process.
@@ -58,3 +45,20 @@ Additionally, Vale displays feedback in the VS Code **PROBLEMS** pane, which pro
 To navigate directly to the relevant line of code in the file and make corrections, you need to click an issue in the **PROBLEMS** pane.
 
 For more information about Vale soon, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).
+
+### Install Vale
+
+To use the extension, you need to install the Vale linter on your computer. For this, follow the instructions in the [Vale official documentation](https://vale.sh/docs/vale-cli/installation/).
+
+## Configure the Vale extension
+
+Once you've installed Vale and its extension, you need to configure the extension.
+
+1. In the **Extensions** menu, find Vale and open **Extension Settings**.
+2. On the **User** tab, configure the following settings:
+   1. For **Vale > Vale CLI: Config**, enter an absolute path to the `vale.ini` file. The file is located in the root folder of the project—for example, if the project is located in `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/`, then the absolute path is `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/.vale.ini`. The `{USER_NAME}` placeholder stands for your user name. If you are using Windows OS, you can enter `${workspaceFolder}/vale.ini`. The `${workspaceFolder}` variable adds the absolute path automatically, so you don't need to enter the path manually.
+   2. For **Vale › Vale CLI: Min Alert Level**, select **inherited**.
+3. On the **Workspace** tab, enter and select the same values as in steps 1 and 2.
+4. Relaunch VS Code to make sure settings have been applied.
+
+ Now you can use Vale to lint and style-check Markdown files within the project.

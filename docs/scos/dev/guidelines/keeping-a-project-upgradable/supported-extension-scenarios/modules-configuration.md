@@ -177,7 +177,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ### 1.2.4. Merging array
 
-Manifests fully support the possibility of merging the results of calling multiple methods.
+Manifests fully support merging the results of calling multiple methods.
 
 Inside of array merge function call you can use:
 * wrap methods calls

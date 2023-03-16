@@ -1,6 +1,6 @@
 ---
 title: Event subscribers' registration
-description: Event subscribers registration extension scenario
+description: Extension scenario for the registration of event subscribers
 last_updated: Mar 13, 2023
 template: concept-topic-template
 related:

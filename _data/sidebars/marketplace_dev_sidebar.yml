@@ -6,7 +6,7 @@ entries:
     nested:
       - title: Setup
         url: /docs/marketplace/dev/setup/setup.html
-        include_versions:     
+        include_versions:
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
@@ -182,7 +182,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Wishlist
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
@@ -261,9 +260,9 @@ entries:
 
       - title: Feature integration guides
         url: /docs/marketplace/dev/feature-integration-guides/feature-integration-guides.html
-        
+
         nested:
-        
+
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
             include_versions:
@@ -318,7 +317,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
@@ -718,7 +716,7 @@ entries:
           - title: ProductMerchantPortalGui
             url: /docs/marketplace/dev/module-migration-guides/migration-guide-productmerchantportalgui.html
           - title: ProductOfferPricesRestApi
-            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html                        
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html
       - title: Glue API guides
         url: /docs/marketplace/dev/glue-api-guides/glue-api-guides.html
         nested:
@@ -762,20 +760,21 @@ entries:
 
           - title: Сarts of registered users
             url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/carts-of-registered-users.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Managing carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Managing items in carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Content items
             nested:
@@ -788,20 +787,21 @@ entries:
 
           - title: Guest carts
             url: /docs/marketplace/dev/glue-api-guides/guest-carts/guest-carts.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Managing guest carts
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-carts.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
-              - title: Managing items in carts of registered users
+              - title: Managing guest cart items
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Merchants
             url: /docs/marketplace/dev/glue-api-guides/merchants/merchants.html

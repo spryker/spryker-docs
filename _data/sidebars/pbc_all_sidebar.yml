@@ -88,6 +88,29 @@ entries:
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:
+          - title: Marketplace
+            url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-overview.html
+            nested:
+              - title: Install the Marketplace Cart feature
+                url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-marketplace-cart-feature.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Carts of registered users
+                    url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/carts-of-registered-users/carts-of-registered-users.html
+                    nested:
+                      - title: Manage carts of registered users
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html
+                      - title: Manage items in carts of registered users
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html
+                  - title: Guest carts
+                    url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/guest-carts.html
+                    nested:
+                      - title: Manage guest carts
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
+                      - title: Manage guest cart items
+                        url: /docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
+              - title: "Marketplace Cart feature: Module relations"
+                url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-module-relations.html
           - title: What's changed
             url: /docs/pbc/all/cart-and-checkout/whats-changed-in-cart-and-checkout.html
           - title: Cart feature overview

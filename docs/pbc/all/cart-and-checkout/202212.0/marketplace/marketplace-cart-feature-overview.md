@@ -24,8 +24,11 @@ The Marketplace administrator can see the special request in the [order details 
 
 In a situation where the same product variants are added to the cart with different notes, the variants get merged with the same note.
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Marketplace Cart feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-cart-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  |GLUE API GUIDES  |
+|---------|---------|---------|--------|
+| [Marketplace Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-cart-feature-integration.html)          | [Manage carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html)          |
+|  | [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html) |
+|   |  [Manage guest carts](/docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html) |
+|   |  [Manage guest cart items](/docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html) |

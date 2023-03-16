@@ -16,7 +16,7 @@ related:
 
 Manifests support changes in a module's configuration files.
 
-Manifests support all scalar types (bool, int, float, string), compound type array and special type null.
+Manifests support all scalar types (bool, int, float, string), the compound type array and the special type, null.
 
 Manifests do not support compound types object, callable, iterable and special type resource.
 

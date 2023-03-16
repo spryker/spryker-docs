@@ -15,7 +15,7 @@ To install Oryx on your local system, you need the following:
 - active LTS or maintenance LTS version of [Node.js](https://nodejs.org/) or compatible Javascript runtime
 - npm package manager
 
-Also you need to have [Spryker Glue API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/glue-rest-api.html) up and running.
+- A [Spryker storefront API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/glue-rest-api.html) (a public API is provided by default to get you up and running quick)
 
 ## Installation
 

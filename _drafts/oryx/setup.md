@@ -32,7 +32,7 @@ npm run dev
 
 Application will be available on `localhost:3000` by default.
 
-Follow boilerplate guide for more information - see Boilerplate article.
+To better understand how the minimal boilerplate works, you can find more details in the [boilerplate guide](./boilerplate.md).
 
 ## Builders/bundlers
 

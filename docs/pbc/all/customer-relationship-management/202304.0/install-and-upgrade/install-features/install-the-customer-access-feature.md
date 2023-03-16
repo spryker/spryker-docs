@@ -10,11 +10,10 @@ redirect_from:
   - /2021080/docs/en/customer-access-feature-integration
   - /docs/customer-access-feature-integration
   - /docs/en/customer-access-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202212.0/customer-access-feature-integration.html
 related:
   - title: Install the Customer Access Glue API
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-access-glue-api.html
-  - title: Customer Access feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-access-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202304.0/install-the-customer-access-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202304.0/install-the-customer-access-feature.md -->

@@ -25,7 +25,7 @@ Manifest only add values to configuration files. Manifests **will not remove** v
 ## 1.1. Basic scalar values as return
 
 Manifests fully support 4 PHP data types:
-* bool
+* boolean
 * int
 * float (floating-point number)
 * string

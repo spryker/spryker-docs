@@ -24,7 +24,7 @@ Currently, the Upgrader supports GitHub and GitLab. If you want to use a differe
 
 The Upgrader does not evaluate frontend customizations. You can either move to headless or apply frontend upgrades manually.
 
-## Optional: Make your code is compliant with supported extensions scenarios
+## Optional: Ensure your code is compliant with the supported extensions scenarios.
 
 To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the [Spryker Code Upgrader supported extensions scenarios](docs/scos/dev/guidelines/keeping-a-project-upgradable/code-upgrader-supported-extension-scenarios.html).
 

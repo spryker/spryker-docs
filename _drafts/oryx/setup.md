@@ -1,20 +1,13 @@
 # Setup
 
-You can install Oryx on your local environment. The installation typically takes a few mins to be up and running. This guide explains how to set up your environment for Oryx framework development.
+You can install Oryx on your local environment. The installation typically takes a few minutes to be up and running. This guide explains how to set up your environment for Oryx framework development.
 
 ## Prerequisites
-
-To use the Oryx framework, you should be familiar with the following:
-
-- Javascript
-- CSS
-- HTML
 
 To install Oryx on your local system, you need the following:
 
 - [Node.js](https://nodejs.org/) or compatible Javascript runtime
 - npm package manager
-
 - A [Spryker storefront API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/glue-rest-api.html) (a public API is provided by default to get you up and running quick)
 
 ## Installation

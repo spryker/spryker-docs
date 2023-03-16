@@ -41,4 +41,4 @@ The build tool must support [exports](https://nodejs.org/api/packages.html#packa
 
 ## Packages
 
-All Oryx framework packages provides their code as [ES Modules](https://nodejs.org/dist/latest-v13.x/docs/api/esm.html#esm_ecmascript_modules).
+All Oryx framework [packages](https://www.npmjs.com/org/spryker-oryx) provides their code as [ES Modules](https://nodejs.org/dist/latest-v13.x/docs/api/esm.html#esm_ecmascript_modules).

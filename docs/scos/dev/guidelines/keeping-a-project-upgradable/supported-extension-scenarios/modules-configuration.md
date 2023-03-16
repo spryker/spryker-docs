@@ -105,7 +105,7 @@ class CustomerConfig extends SprykerCustomerConfig
 
 ## 1.2. Array as return
 
-### 1.2.1. Indexed array as return
+### 1.2.1. Indexed array as the return
 
 Code example 1.2.1: Method returns indexed array
 ```php

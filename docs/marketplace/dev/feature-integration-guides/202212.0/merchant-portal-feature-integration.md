@@ -391,7 +391,7 @@ Integrate the following related features:
 
 | FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE   |
 |----------|------------------|------------|
-| Merchant Portal - Marketplace Merchant    | [Merchant Portal - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-marketplace-merchant-feature.html)    |
+| Merchant Portal - Marketplace Merchant    | [Merchant Portal - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html)    |
 | Merchant Portal - Marketplace Product   | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)       |
 | Merchant Portal - Marketplace Order Management     |                          | [Merchant Portal - Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)    |
 | Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                           | [Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |

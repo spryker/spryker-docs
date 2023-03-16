@@ -21,7 +21,7 @@ Also you need to have [Spryker Glue API](https://docs.spryker.com/docs/scos/dev/
 
 To start working with Oryx you can use the [boilerplate project](https://github.com/spryker/composable-frontend) that we've prepared for you. In this repository you'll will find the minimum dependencies and configuration to install a standard Oryx application.
 
-There is a list of commands to clone repository, install dependencies and run the application:
+The installation can be done with the following steps. This will install the dependencies and run the application.
 
 ```
 git clone https://github.com/spryker/composable-frontend

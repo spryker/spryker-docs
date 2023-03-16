@@ -68,6 +68,12 @@ Code buckets provide an easy way to execute different business logic in runtime 
 
 1. Define the desired stores in `config/Shared/stores.php`. In the following example, DE and AT stores are defined:
 
+{% info_block warningBox %}
+
+If using Dynamic multi store feature, configuration via `stores.php` is depricated. For more information, see [Integration Guide](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-dynamic-multiple-stores.html).
+
+{% endinfo_block %}
+
 <details><summary markdown='span'>config/Shared/stores.php</summary>
 
 ```php

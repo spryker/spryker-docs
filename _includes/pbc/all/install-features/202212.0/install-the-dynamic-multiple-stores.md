@@ -23,7 +23,7 @@ We recommend making de.spryker.shop a mirror of eu.spryker.shop to preserve the 
 
 To install it, you need to do the following:
 
-{% info_block warningBox "Note" %}
+{% info_block warningBox %}
 
 Spryker Shop Suite contains Dynamic store out of the box. If your project has the latest Shop Suite master merged, you can proceed directly to step <a href="#enabling-ds">2. Enable Dynamic Store</a>.
 
@@ -1126,11 +1126,18 @@ Make sure that the following changes have been applied in transfer objects:
  
 ### Change configuration 
 
-{% info_block warningBox "Configuration store.php" %}
+{% info_block warningBox "Configuration stores.php" %}
 
-Dynamic store allows not to use the configuration in the file `config/Shared/stores.php` where setup configureation for  store's. 
+Before dynamic store was introduced, the configuration for the store was stored in the file `config/Shared/stores.php`. Since the dynamic store is enabled, the configuration for the store is stored in the database, and the file `config/Shared/stores.php` depricated. 
+
+It replaced by the following modules: StoreDataImport, LocaleDataImport, CountryDataImport, CurrencyDataImport modules.
+Also introduced new major modules: Locale, Country, Currency.
 
 {% endinfo_block %}
+
+
+
+
 
 1. Change the default configuration file. 
 Allow configurations for queues to be set dynamically.

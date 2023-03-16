@@ -18,7 +18,7 @@ The Spryker Code Upgrader implements code changes on the project level.
 
 Code changes on the project level can be delivered to a customer's projects through manifest files.
 The manifest files cover a list of the ways code changes can be done.
-This article aims to describe the ways of plugin registration and module configuration that can be covered by manifests.
+This article aims to describe how ro tegister a plugin and configure modules, that can be covered by manifests.
 
 To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the article.
 

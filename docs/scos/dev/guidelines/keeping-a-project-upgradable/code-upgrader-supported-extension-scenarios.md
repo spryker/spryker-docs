@@ -24,7 +24,7 @@ To ensure the successful delivery of Spryker updates, we recommend using the ext
 
 {% info_block infoBox "" %}
 
-In case when the project uses a way how to change code that is not covered, expected changes will be skipped during the update process.
+In case of a project using a method to change code that is not covered, expected changes will be skipped during the update process.
 
 {% endinfo_block %}
 

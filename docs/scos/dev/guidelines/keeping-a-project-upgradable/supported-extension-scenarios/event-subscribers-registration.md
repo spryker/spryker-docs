@@ -16,7 +16,7 @@ related:
 
 Manifests support registering event subscribes only in the dependency provider, a type of code class.
 
-Manifests fully support the registration of event subscribers in collection. Restrictions to the order of the plugins in collection are **not supported**. New plugin will be added to the end of the collection.
+Manifests fully support the registration of event subscribers in the collection. Restrictions to the order of the plugins in collection are **not supported**. New plugin will be added to the end of the collection.
 
 Code example 1.1: Event subscribers registration in collection with parent method call
 ```php

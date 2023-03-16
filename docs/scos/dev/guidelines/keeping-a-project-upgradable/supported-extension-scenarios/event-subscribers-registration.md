@@ -39,7 +39,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Code example 1.2: Event subscriber registration in collection with chain
+Code example 1.2: Event subscriber registration in collection, with a chain of method calls.
 ```php
 use Spryker\Zed\AvailabilityStorage\Communication\Plugin\Event\Subscriber\AvailabilityStorageEventSubscriber;
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;

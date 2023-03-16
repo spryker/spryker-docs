@@ -175,7 +175,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### 1.2.4. Merging array
+### 1.2.4. Merging arrays
 
 Manifests fully support merging the results of calling multiple methods.
 

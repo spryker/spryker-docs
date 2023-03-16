@@ -20,7 +20,7 @@ Code changes on the project level can be delivered to a customer's projects thro
 The manifest files cover a list of the ways code changes can be done.
 This article aims to describe how ro tegister a plugin and configure modules, that can be covered by manifests.
 
-To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the article.
+To ensure the successful delivery of Spryker updates, we recommend using the extension points that are provided in the documentation.
 
 {% info_block infoBox "" %}
 

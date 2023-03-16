@@ -1,5 +1,5 @@
 ---
-title: Spryker Code Upgrader supported extensions scenarios
+title: Spryker Code Upgrader supported extension scenarios
 description: Spryker extensions scenarios covered by Spryker Code Upgrader
 last_updated: Mar 13, 2023
 template: concept-topic-template

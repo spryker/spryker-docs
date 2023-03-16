@@ -99,7 +99,7 @@ Connect users and merchants using Zed UI (Backoffice) or using the next data imp
  sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
 
-In case you don't have merchant user data import integrated, you can find how to do it in the [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-feature.html) guide.
+In case you don't have merchant user data import integrated, you can find how to do it in the [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) guide.
 
 
 **data/import/common/common/marketplace/merchant_user.csv**

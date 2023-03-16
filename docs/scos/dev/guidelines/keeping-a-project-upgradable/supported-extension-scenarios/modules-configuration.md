@@ -14,7 +14,7 @@ related:
 
 ## Introduction
 
-Manifests support changes in module configuration files.
+Manifests support changes in a module's configuration files.
 
 Manifests support all scalar types (bool, int, float, string), compound type array and special type null.
 

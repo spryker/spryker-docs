@@ -20,7 +20,7 @@ Fulfilling small orders is not always worthwhile for the business because operat
 
 Per your business requirements, you can also set up a maximum threshold to disallow placing orders above a defined threshold.
 
-In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/regular-shop/merchant-b2b-contracts-feature-overview.html) separately.
+In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) separately.
 
 With order thresholds, you can do the following:
 
@@ -41,4 +41,4 @@ With order thresholds, you can do the following:
 | INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT |
 |---------|---------|---------|
 | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-checkout-feature.html) | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html)  | [File details: sales_order_threshold.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/import-and-export-data/file-details-sales-order-threshold.csv.html)  |
-| [Merchant feature integration](/docs/pbc/all/merchant-management/{{site.version}}/regular-shop/install-and-upgrade/install-the-merchant-feature.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) |   |
+| [Merchant feature integration](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) |   |

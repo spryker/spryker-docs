@@ -34,11 +34,11 @@ A picture with 2 products of the same SKU added
 
 ![Guest shopping cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/guest-shopping-cart.png)
 
-With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](/docs/pbc/all/merchant-management/{{page.version}}/regular-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
+With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
 
 {% info_block infoBox %}
 
-You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/pbc/all/merchant-management/{{page.version}}/regular-shop/merchant-product-restrictions-feature-overview/restricted-products-behavior.html) page.
+You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/restricted-products-behavior.html) page.
 
 {% endinfo_block %}
 
@@ -57,7 +57,7 @@ In the empty shopping list, the customer can still add products with the help of
 
 In comparison with Shopping Cart, for shopping lists, the quantity that is being added by a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/non-splittable-products-feature-overview.html) the products may have.
 
-The same works for the [product restriction](/docs/pbc/all/merchant-management/{{page.version}}/regular-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html) rules: the shopper can't add blacklisted products to a shopping list. They get "No search results" message in the widget field, and only whitelisted products are suggested in the search results in case of a whitelist.
+The same works for the [product restriction](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html) rules: the shopper can't add blacklisted products to a shopping list. They get "No search results" message in the widget field, and only whitelisted products are suggested in the search results in case of a whitelist.
 
 ## Quick Order page
 

@@ -30,7 +30,7 @@ Manifests fully support 4 PHP data types:
 * float (floating-point number)
 * string
 
-Manifests also support usage of the constants and have built in basic support for constant concatenation.
+Manifests also support the usage of constants and have built in basic support for constant concatenation.
 
 Code example 1.1.1: Method returns string
 ```php

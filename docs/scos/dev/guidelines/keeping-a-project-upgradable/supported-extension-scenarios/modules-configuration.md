@@ -239,7 +239,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-## 1.3. Null as return
+## 1.3. Null as the return
 
 Code example 1.1.4: Method returns null
 ```php

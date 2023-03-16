@@ -14,7 +14,7 @@ related:
 
 ## Introduction
 
-Spryker Code Upgrader implements code changes on the project level
+The Spryker Code Upgrader implements code changes on the project level.
 
 Code changes on the project levels can be delivered to customer projects through the manifest files.
 The manifests cover a list of the ways how the code changes can be done.

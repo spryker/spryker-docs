@@ -168,7 +168,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
      */
     protected function getExpanderPlugins(Container $container): array
 	{
-		return [
+        return [
            new CartItemPricePlugin(),
         ];
     }

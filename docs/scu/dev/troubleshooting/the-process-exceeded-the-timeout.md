@@ -22,6 +22,7 @@ Check that your access token is still active and has correct permissions. For to
 
 * [GitHub access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html#prerequisites)
 * [GitLab access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
+* [Azure access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.html#prerequisites)
 
 ## Support for Spryker CI
 

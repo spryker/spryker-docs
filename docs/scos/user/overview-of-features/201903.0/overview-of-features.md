@@ -17,5 +17,5 @@ Capabilities are high-level descriptions of what a certain facet of Spryker can 
 
 The complete list of the Spryker capabilities and features is available here: 
 
-<embed src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/overview-of-features/051118_spryker_feature-catalog_EN_full_updated.pdf" width="500" height="375" 
+<embed src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/overview-of-features/Feature+catalog_EN_large_MAR19.pdf" width="500" height="375" 
  type="application/pdf">

@@ -161,7 +161,7 @@ use Spryker\Zed\PriceCartConnector\Communication\Plugin\FilterItemsWithoutPriceP
 
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
-	/**
+    /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
      * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
@@ -169,11 +169,11 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     protected function getExpanderPlugins(Container $container): array
 	{
 		return [
-            new CartItemPricePlugin(),
+           new CartItemPricePlugin(),
         ];
     }
 	
-	/**
+    /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
      * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface>
@@ -185,7 +185,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
         ];
     }
 	
-	/**
+    /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
      * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
@@ -197,7 +197,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
         ];
     }
 	
-	 /**
+    /**
      * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\QuoteLockPreResetPluginInterface>
      */
     protected function getQuoteLockPreResetPlugins(): array

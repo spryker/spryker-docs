@@ -171,7 +171,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 		return [
             new CartItemPricePlugin(),
         ];
-	}
+    }
 	
 	/**
      * @param \Spryker\Zed\Kernel\Container $container
@@ -183,7 +183,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
         return [
             new CartItemPricePreCheckPlugin(),
         ];
-	}
+    }
 	
 	/**
      * @param \Spryker\Zed\Kernel\Container $container
@@ -195,7 +195,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
         return [
             new FilterItemsWithoutPricePlugin(),
         ];
-	}
+    }
 	
 	 /**
      * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\QuoteLockPreResetPluginInterface>
@@ -205,7 +205,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
         return [
             new SanitizeSourcePricesQuoteLockPreResetPlugin(),
         ];
-	}
+    }
 }
 ```
 </details>

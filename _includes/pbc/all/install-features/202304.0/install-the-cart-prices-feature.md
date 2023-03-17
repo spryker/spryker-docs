@@ -50,6 +50,9 @@ use Spryker\Zed\PriceCartConnector\PriceCartConnectorConfig as SprykerPriceCartC
 
 class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 {
+    /**
+     * @var string
+     */
     protected const IS_ZERO_PRICE_ENABLED_FOR_CART_ACTIONS = false;
     
     /**
@@ -167,7 +170,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 	{
 		return [
             new CartItemPricePlugin(),
-		];
+        ];
 	}
 	
 	/**
@@ -179,7 +182,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     {
         return [
             new CartItemPricePreCheckPlugin(),
-		];
+        ];
 	}
 	
 	/**
@@ -191,7 +194,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     {
         return [
             new FilterItemsWithoutPricePlugin(),
-		];
+        ];
 	}
 	
 	 /**
@@ -201,7 +204,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     {
         return [
             new SanitizeSourcePricesQuoteLockPreResetPlugin(),
-		];
+        ];
 	}
 }
 ```

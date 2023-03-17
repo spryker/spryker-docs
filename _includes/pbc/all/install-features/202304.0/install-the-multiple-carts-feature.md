@@ -1,10 +1,15 @@
 
 
+
+This document describes how to integrate the [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.md) into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Multiple Carts feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features and Glue APIs:
 
 | NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -14,8 +19,6 @@ To start feature integration, overview and install the necessary features:
 
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
@@ -34,7 +37,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-Configure the quote fields that are allowed for saving in quote collection in customer's session. You can specify nested fields.
+Configure the quote fields that are allowed for saving in quote collection in the customer's session. You can specify nested fields.
 
 **src/Pyz/Client/MultiCart/MultiCartConfig.php**
 
@@ -72,13 +75,13 @@ class MultiCartConfig extends SprykerMultiCartConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that only configured fields are saved in customer's session.
+Make sure that only configured fields are saved in the customer's session.
 
 {% endinfo_block %}
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -86,6 +89,7 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following changes have been applied by checking your database:
 
 | DATABASE ENTITY                          | TYPE   | EVENT   |
@@ -113,16 +117,15 @@ Make sure that the following changes in transfer objects have been applied:
 
 {% endinfo_block %}
 
-### 4) Import data
-
-#### Import multicarts
+### 4) Import multicarts
 
 {% info_block infoBox "Info" %}
 
 The following imported entities will be used as carts in Spryker OS.
 
 {% endinfo_block %}
-Prepare your data according to your requirements using our demo data:
+
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/multi-cart-data-import/data/import/multi_cart.csv**
 
@@ -153,11 +156,11 @@ quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",
 
 | COLUMN             | REQUIRED? | DATA TYPE | DATA EXAMPLE                                                                                                                                   | DATA EXPLANATION                                                   |
 |--------------------|-----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| key                | mandatory | string    | quote-19                                                                                                                                       | Key that will identify the quote to be referred in future imports. |
-| name               | mandatory | string    | >My Cart                                                                                                                                       | Name of the quote.                                                 |
-| customer_reference | mandatory | string    | DE--21                                                                                                                                         | Customer reference of the quote owner.                             |
-| store              | mandatory | string    | DE                                                                                                                                             | Store name that the quote relates to.                              |
-| is_default         | mandatory | int       | 1                                                                                                                                              | Flag to show that the quote is default for the customer.           |
+| key                | mandatory | string    | quote-19                                                                                                                                       | THe key that identifies the quote to be referred in future imports. |
+| name               | mandatory | string    | >My Cart                                                                                                                                       | The name of the quote.                                                 |
+| customer_reference | mandatory | string    | DE--21                                                                                                                                         | The customer reference of the quote owner.                             |
+| store              | mandatory | string    | DE                                                                                                                                             | The store name that the quote relates to.                              |
+| is_default         | mandatory | int       | 1                                                                                                                                              | Thelag to show that the quote is default for the customer.           |
 | quote_data         | mandatory | string    | {""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""} | Quote data params serialized as json.                              |
 
 Register the following plugin to enable data import:
@@ -190,7 +193,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import multi-cart
@@ -218,12 +221,12 @@ Register the following plugins:
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------|
 | AddSuccessMessageAfterQuoteCreatedPlugin       | Adds success message to messenger afterward.                                                                       |                                                                                 | Spryker\Zed\MultiCart\Communication\Plugin |
 | AddDefaultNameBeforeQuoteSavePlugin            | Sets default quote name if quote does not have name.                                                               |                                                                                 | Spryker\Zed\MultiCart\Communication\Plugin |
-| ResolveQuoteNameBeforeQuoteCreatePlugin        | Resolves quote name to make it unique for customer before the quote is saved.                                      | If `AddDefaultNameBeforeQuoteSavePlugin` is used, it should be added afterward. | Spryker\Zed\MultiCart\Communication\Plugin |
+| ResolveQuoteNameBeforeQuoteCreatePlugin        | Resolves quote name to make it unique for customer before the quote is saved.                                      | If `AddDefaultNameBeforeQuoteSavePlugin` is used, it must be added afterward. | Spryker\Zed\MultiCart\Communication\Plugin |
 | DeactivateQuotesBeforeQuoteSavePlugin          | Mark quote as default. Makes SQL request to mark all customers' quotes as not default.                             |                                                                                 | Spryker\Zed\MultiCart\Communication\Plugin |
 | InitDefaultQuoteCustomerQuoteDeleteAfterPlugin | Activates any customer quote, if an active customer quote has been removed.                                        |                                                                                 | Spryker\Zed\MultiCart\Communication\Plugin |
 | NameQuoteTransferExpanderPlugin                | Sets default quote name if quote does not have a name. Default guest quote name is used for guest customer quotes. |                                                                                 | Spryker\Client\MultiCart\Plugin            |
 
-**src/Pyz/Zed/Quote/QuoteDependencyProvider.php**
+<details open><summary markdown='span'>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -284,6 +287,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
     }
 }
 ```
+</details>
 
 **src/Pyz/Client/Quote/QuoteDependencyProvider.php**
 
@@ -314,13 +318,17 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that customer carts have unique names. If a customer creates a cart with a name that has already been used in another cart of the customer, the cart name will be extended with an iterative suffix.
+Make sure that customer carts have unique names. If a customer creates a cart with a name that has already been used in another cart of the customer, the cart name is extended with an iterative suffix.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
 
-For example:<br>If the name 'Shopping cart' already exists, it will be changed to the following:<br>Shopping cart → Shopping cart 1<br>Shopping cart → Shopping cart 2
+Example: 
+
+If the name "Shopping cart" already exists, it is changed to the following:
+* Shopping cart → Shopping cart 1
+* Shopping cart → Shopping cart 2
 
 {% endinfo_block %}
 
@@ -414,7 +422,7 @@ Register the following plugins:
 
 | PLUGIN                                | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES                                                     | NAMESPACE                       |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|---------------------------------|
-| GuestCartSaveCustomerSessionSetPlugin | Executed after the customer has been added to the session. Saves a guest customer quote to the database if it is not empty.Takes an actual customer quote from the database if the guest cart is empty. | Should be added before `GuestCartUpdateCustomerSessionSetPlugin`. | Spryker\Client\MultiCart\Plugin |
+| GuestCartSaveCustomerSessionSetPlugin | Executed after the customer has been added to the session. Saves a guest customer quote to the database if it is not empty. Takes an actual customer quote from the database if the guest cart is empty. | Must be added before `GuestCartUpdateCustomerSessionSetPlugin`. | Spryker\Client\MultiCart\Plugin |
 
 **src/Pyz/Client/Customer/CustomerDependencyProvider.php**
 
@@ -442,15 +450,17 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that no  empty guest cart will be saved to the database in customer login.
+Make sure that an empty guest cart can't be saved to the database in the customer login.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
+Follow the steps below to install the Multiple Carts feature frontend.
+
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features:
 
 
 | NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
@@ -460,8 +470,6 @@ Please overview and install the necessary features before beginning the integrat
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
@@ -476,13 +484,13 @@ Make sure that the following modules have been installed:
 | MultiCartPage   | vendor/spryker-shop/multi-cart-page   |
 | MultiCartWidget | vendor/spryker-shop/multi-cart-widget |
 
-{% endinfo_block %}       
+{% endinfo_block %}
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
-<details open><summary markdown='span'>src/data/import/glossary.csv</summary>
+<details><summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 page.multi_cart.shopping_cart.list.title,Shopping cart,en_US
@@ -588,7 +596,8 @@ multi_cart_widget.cart.was-deleted-before,This cart was already deleted,en_US
 ```
 </details>
 
-Run the following console command to import data:
+2. Import data:
+
 ```bash
 console data:import glossary
 ```
@@ -635,13 +644,13 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by opening the customer cart list page with a logged in customer on, for example, `http://mysprykershop.com/multi-cart/`
+Verify the changes by opening the customer cart list page with a logged-in customer on—for example, `http://mysprykershop.com/multi-cart/`.
 
 {% endinfo_block %}
 
 ### 4) Set up widgets
 
-Register the following global widgets:
+1. Register the following global widgets:
 
 | WIDGET                  | DESCRIPTION                                                  | NAMESPACE                               |
 |-------------------------|--------------------------------------------------------------|-----------------------------------------|
@@ -680,7 +689,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -692,8 +701,8 @@ Make sure that the following widgets have been registered:
 
 | MODULE                  | TEST                                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------------------|
-| AddToMultiCartWidget    | Go to the product detail page. A shopping cart list should be added to the cart form.                      |
-| CartOperationsWidget    | Go to the cart overview page and see a title with the cart name and the Clear all button.                  |
+| AddToMultiCartWidget    | Go to the product detail page. A shopping cart list must be added to the cart form.                      |
+| CartOperationsWidget    | Go to the cart overview page and see a title with the cart name and the **Clear all** button.                  |
 | MiniCartWidget          | Mini-cart with all customer's carts should be in the header.                                               |
 | MultiCartMenuItemWidget | Go to the customer account overview page. A shopping cart link should be in the customer navigation links. |
 

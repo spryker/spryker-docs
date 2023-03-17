@@ -14,6 +14,7 @@ Connect the Upgrader to your project using one of the following guides:
 
 * [Connect Spryker Code Upgrader to a GitHub managed project](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html)
 * [Connect Spryker Code Upgrader to a GitLab managed project](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html)
+* [Connect Spryker Code Upgrader to a Azure managed project](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.html)
 
 ## Manually trigger Spryker Code Upgrader
 

@@ -167,7 +167,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
      * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
      */
     protected function getExpanderPlugins(Container $container): array
-	{
+    {
         return [
            new CartItemPricePlugin(),
         ];

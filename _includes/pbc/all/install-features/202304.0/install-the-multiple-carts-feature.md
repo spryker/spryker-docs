@@ -6,11 +6,12 @@
 
 To start feature integration, overview and install the necessary features:
 
-| NAME            | VERSION          |
-|-----------------|------------------|
-| Cart            | {{page.version}} |
-| Persistent Cart | {{page.version}} |
-| Spryker Core    | {{page.version}} |
+| NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
+|-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)            |
+| Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Persistent Cart | {{page.version}} |                                                                                                                                                 |
+
 
 ### 1) Install the required modules using Composer
 
@@ -95,13 +96,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_quote-unique-name-customer_reference | index  | created |
 
 {% endinfo_block %}
-
-| DATABASE ENTITY                          | TYPE   | EVENT   |
-|------------------------------------------|--------|---------|
-| spy_quote.name                           | column | created |
-| spy_quote.is_default                     | column | created |
-| spy_quote.key                            | column | created |
-| spy_quote-unique-name-customer_reference | index  | created |
 
 {% info_block warningBox "Verification" %}
 
@@ -458,12 +452,12 @@ Make sure that no  empty guest cart will be saved to the database in customer lo
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME                        | VERSION          |
-|-----------------------------|------------------|
-| Product                     | {{page.version}} |
-| Cart                        | {{page.version}} |
-| Persistent Cart             | {{page.version}} |
-| Customer Account Management | {{page.version}} |
+
+| NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
+|-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)            |
+| Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Persistent Cart | {{page.version}} |                                                                                                                                                 |
 
 ### 1) Install the required modules using Composer
 
@@ -477,9 +471,9 @@ composer require spryker-feature/multiple-carts: "{{page.version}}" --update-wit
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| MultiCartPage | vendor/spryker-shop/multi-cart-page |
+| MODULE          | EXPECTED DIRECTORY                    |
+|-----------------|---------------------------------------|
+| MultiCartPage   | vendor/spryker-shop/multi-cart-page   |
 | MultiCartWidget | vendor/spryker-shop/multi-cart-widget |
 
 {% endinfo_block %}       

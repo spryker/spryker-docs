@@ -9,7 +9,7 @@ Follow the steps below to install the Multiple Carts feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features and Glue APIs:
+To start feature integration, integrate the required features:
 
 | NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|

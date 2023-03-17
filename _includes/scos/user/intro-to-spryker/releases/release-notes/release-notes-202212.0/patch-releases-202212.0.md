@@ -21,8 +21,6 @@ The patch release 202212.0-p2 includes the following changes:
 - Updated backoffice GUI base module to allow backoffice tables to have strict search on their columns (check this page [here](https://docs.spryker.com/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html#configure-search-by-columns)).
 - Removed explicit usage of Devvm since it’s a deprecated concept.
 
-[Code Sniffer](/docs/sdk/dev/development-tools/code-sniffer.html) is a powerful tool that helps to keep your code clean and prevent simple mistakes. The Sniffer can find all existing issues and can also auto-fix the majority of them.
-
 ### GitHub release pages:
 
 - [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/releases/tag/202212.0-p2)

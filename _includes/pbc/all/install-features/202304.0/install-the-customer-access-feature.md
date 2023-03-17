@@ -1,18 +1,20 @@
 
 
+This document describes how to integrate the [Customer Access feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/customer-access-feature-overview.md) into a Spryker project.
+
 ## Install Feature Core
 
+Follow the steps below to install the Customer Access feature core.
+ 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME         | VERSION          |
-|--------------|------------------|
-| Spryker Core | {{page.version}} |
+| NAME | VERSION | INTEGRATION GUIDE| 
+|---|---|---|
+| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/customer-access:"{{page.version}}" --update-with-dependencies
@@ -20,7 +22,7 @@ composer require spryker-feature/customer-access:"{{page.version}}" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules are installed:
 
 | MODULE                   | EXPECTED DIRECTORY                        |
 |--------------------------|-------------------------------------------|
@@ -37,7 +39,7 @@ Add your custom project configuration to adjust the module behavior.
 
 {% info_block infoBox "Info" %}
 
-These are going to be the setup content types in your system, so make sure that you cover all types of content you would like hidden from unauthenticated users.
+These are going to be the setup content types in your system, so make sure that you cover all types of content you want to hide from unauthenticated users.
 
 {% endinfo_block %}
 
@@ -71,13 +73,13 @@ class CustomerAccessConfig extends SprykerCustomerAccessConfig
 
 {% info_block infoBox "Info" %}
 
-The verification of this step will happen when you import the infrastructural data related to this feature.
+The verification of this step happens when you import the infrastructural data related to this feature.
 
 {% endinfo_block %}
 
 ### 3) Set up the database schema
 
-Adjust the schema definition so entity changes will trigger events.
+1. Adjust the schema definition so entity changes trigger events.
 
 | AFFECTED ENTITY                     | TRIGGERED EVENTS                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -99,7 +101,7 @@ Adjust the schema definition so entity changes will trigger events.
 
  ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -115,10 +117,6 @@ Make sure that the following changes by checking your database:
 | spy_unauthenticated_customer_access         | table | created |
 | spy_unauthenticated_customer_access_storage | table | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes in transfer objects:
 
 | TRANSFER          | TYPE  | EVENT   | PATH                                                    |
@@ -126,11 +124,7 @@ Make sure that the following changes in transfer objects:
 | CustomerAccess    | class | created | src/Generated/Shared/Transfer/CustomerAccessTransfer    |
 | ContentTypeAccess | class | created | src/Generated/Shared/Transfer/ContentTypeAccessTransfer |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+Make sure that the changes were implemented successfully. To achieve this, trigger the following methods and make sure that the above events have been triggered:
 
 | PATH                                                                        | METHOD NAME                                                                  |
 |-----------------------------------------------------------------------------|------------------------------------------------------------------------------|
@@ -140,7 +134,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 ### 3) Configure export to Redis
 
-This step will publish tables on change (create, edit, delete) to the `spy_unauthenticated_customer_access_storage` and synchronize the data to Storage.
+This step publishes tables on change (create, edit, delete) to the `spy_unauthenticated_customer_access_storage` and synchronizes the data to Storage.
 
 #### Set up event listeners
 
@@ -176,7 +170,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a customer access rule is created, updated or deleted, it is exported (or removed) to Redis.
+Make sure that when a customer access rule is created, updated, or deleted, it is exported (or removed) to Redis.
 
 | TARGET ENTITY                       | EXAMPLE EXPECTED DATA IDENTIFIER   |
 |-------------------------------------|------------------------------------|
@@ -253,7 +247,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that a new publish message is added to the queue when you run console command
+Make sure that a new publish message is added to the queue when you run the console command:
 
 ```bash
 console publish:trigger-events -r unauthenticated_customer_access
@@ -261,7 +255,7 @@ console publish:trigger-events -r unauthenticated_customer_access
 
 {% endinfo_block %}
 
-#### Set up re-sync features
+#### Set up resync features
 
 | PLUGIN                                      | SPECIFICATION                                    | PREREQUISITES | NAMESPACE                                                              |
 |---------------------------------------------|--------------------------------------------------|---------------|------------------------------------------------------------------------|
@@ -291,13 +285,11 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-### 5) Import data
+### 5) Add infrastructural data
 
-#### Add infrastructural data
-
-| PLUGIN                        | SPECIFICATION                     | PREREQUISITES | NAMESPACE                                       |
-|-------------------------------|-----------------------------------|---------------|-------------------------------------------------|
-| CustomerAccessInstallerPlugin | Installs configured content types |               | Spryker\Zed\CustomerAccess\Communication\Plugin |
+| PLUGIN  SPECIFICATION | NAMESPACE |
+|---|---|---|
+| CustomerAccessInstallerPlugin | Installs configured content types | Spryker\Zed\CustomerAccess\Communication\Plugin |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
@@ -323,7 +315,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-Run the following console command to execute registered installer plugins and install infrastructural data:
+Execute registered installer plugins and install infrastructural data:
 
 ```bash
 console setup:init-db
@@ -331,7 +323,7 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all configured content types above are saved in the database table `spy_unauthenticated_customer_access` with the configured content type access.
+Make sure that all configured content types above are saved in the `spy_unauthenticated_customer_access` database table with the configured content type access.
 
 {% endinfo_block %}
 
@@ -348,7 +340,8 @@ Enable the following behaviors by registering the plugins:
 | SeeShoppingListPermissionPlugin       | Provides ability to add item to shopping list on product detail page    |               | Spryker\Client\CustomerAccessPermission\Plugin |
 | CustomerAccessPermissionStoragePlugin | Provides ability to fetch customer access permissions on customer login |               | Spryker\Client\CustomerAccessPermission\Plugin |
 
-**src/Pyz/Client/Permission/PermissionDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Client/Permission/PermissionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -390,32 +383,36 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
     }
 }
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
 
-Make sure that everything works fine (checks should be done for not logged-in customers:
-- `SeePricePermissionPlugin` will show or hide prices at all pages depending on configuration value.
-- `SeeOrderPlaceSubmitPermissionPlugin` will allow or disallow order submitting after going through the checkout process depending on configuration value.
-- `SeeAddToCartPermissionPlugin` is responsible for "Add to Cart" button on PDP. It will be available or not depending on configuration value.
-- `SeeWishlistPermissionPlugin` takes care about "Add to Wishlist" button on PDP. It will be shown or not depending on configuration value.
-- `SeeShoppingListPermissionPlugin` will allow or disallow adding product to shopping list from PDP depending on configuration value.
+Make sure that everything works—checks must be done for not logged-in customers:
+- `SeePricePermissionPlugin` shows or hides prices at all pages depending on configuration value.
+- `SeeOrderPlaceSubmitPermissionPlugin` allows or denies order submitting after going through the checkout process depending on configuration value.
+- `SeeAddToCartPermissionPlugin` is responsible for the **Add to Cart** button on the product details page (PDP). It is available or not depending on the configuration value.
+- `SeeWishlistPermissionPlugin` takes care about the **Add to Wishlist** button on PDP. It is shown or not depending on the configuration value.
+- `SeeShoppingListPermissionPlugin` allows or denies adding a product to a shopping list from PDP depending on the configuration value.
 - `CustomerAccessPermissionStoragePlugin` is responsible for customer permissions retrieving.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
+Follow the steps below to install the Customer Access feature frontend.
+
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+To start feature integration, integrate the required features:
 
-| NAME         | VERSION          |
-|--------------|------------------|
-| Spryker Core | {{page.version}} |
+| NAME | VERSION | INTEGRATION GUIDE| 
+|---|---|---|
+| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+
 
 ### 1) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -424,7 +421,7 @@ customer.access.cannot_see_price,Please login to see the price,en_US
 customer.access.cannot_see_price,Bitte melden Sie sich an um den Preis zu sehen,de_DE
 ```
 
-Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary

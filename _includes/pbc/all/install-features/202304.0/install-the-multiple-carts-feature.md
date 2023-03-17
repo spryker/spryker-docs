@@ -99,10 +99,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_quote.key                            | column | created |
 | spy_quote-unique-name-customer_reference | index  | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes in transfer objects have been applied:
 
 | TRANSFER                                    | TYPE   | EVENT   | PATH                                                               |

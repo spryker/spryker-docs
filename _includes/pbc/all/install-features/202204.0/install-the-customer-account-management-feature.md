@@ -23,14 +23,14 @@ Overview and install the necessary features before beginning the integration.
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- |--- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 
 
 ```bash
-composer require spryker-feature/customer-account-management: "{{site.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -425,7 +425,7 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 
 {% info_block warningBox "Verification" %}
 
-Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) for details.
+Ensure that it is possible to obtain the customer OAuth access token with customer credentials or customer reference. See [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) for details.
 
 {% endinfo_block %}
 
@@ -633,14 +633,14 @@ Overview and install the necessary features before beginning the integration.
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/customer-account-management: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -851,5 +851,5 @@ Ensure that when you try to access your account without confirming the registrat
 ## Related features
 | NAME | INTEGRATION GUIDE |
 | --- | --- |
-| Customer API	 | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-order-management-feature-integration.html)  |
+| Customer API	 | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)  |

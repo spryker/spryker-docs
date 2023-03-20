@@ -390,6 +390,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202304.0"
 
           - title: Marketplace Product + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
@@ -424,6 +425,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202304.0"
 
           - title: Marketplace Product Offer Prices feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html
@@ -431,6 +433,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202304.0"
 
           - title: Marketplace Product Offer + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-cart-feature-integration.html
@@ -465,6 +468,7 @@ entries:
             - "202108.0"
             - "202204.0"
             - "202212.0"
+            - "202304.0"
 
           - title: Marketplace Product Options + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-options-cart-feature-integration.html

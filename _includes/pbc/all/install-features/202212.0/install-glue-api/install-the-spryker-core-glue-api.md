@@ -10,7 +10,7 @@ To start feature integration, integrate the required features:
 
 | NAME | TYPE | VERSION |
 | --- | --- | --- |
-| Spryker Core | Feature | {{site.version}} |
+| Spryker Core | Feature | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -511,7 +511,7 @@ https://glue.mysprykershop.com/url-resolver/?url=/category-url
 
 {% info_block warningBox "Verification" %}
 
-Make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly by attempting to get an access token (see [Authenticating as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.
+Make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly by attempting to get an access token (see [Authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.
 
 Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentRestRequestValidatorPlugin` and `SecurityBlockerAgentControllerAfterActionPlugin`. The agent should get the blocking configuration specific for agents if you specified the agent-specific settings in step 3 of the integration of the feature core. See  [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) for agent access tokens manual.
 

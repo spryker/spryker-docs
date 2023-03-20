@@ -73,7 +73,7 @@ You should now be able to use the Zed API of Product Reviews to approve, reject 
 
 To store an already validated product review, populate a `\Generated\Shared\Transfer\ProductReviewTransfer` transfer object and send it to Zed by calling the `\Spryker\Client\ProductReview\ProductReviewClientInterface::submitCustomerReview` method.
 This action will create a new pending product review in your persistent storage. The saved product review will be exported to Search and Storage after it was approved on Zed UI.
-Make sure that the provided rating value does not exceed [the configured maximum rating](/docs/pbc/all/ratings-reviews/{{site.version}}/tutorials-and-howtos/howto-configure-product-reviews.html#configure-the-maximum-rating) limit.
+Make sure that the provided rating value does not exceed [the configured maximum rating](/docs/pbc/all/ratings-reviews/{{page.version}}/tutorials-and-howtos/howto-configure-product-reviews.html#configure-the-maximum-rating) limit.
 
 Example of how to store a validated customer review:
 

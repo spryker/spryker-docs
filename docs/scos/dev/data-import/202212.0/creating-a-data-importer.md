@@ -149,7 +149,7 @@ We now have everything at hand to wire up the new `DataImport` and run it. To do
  */
 public function createProductImageImporter(DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer)
 {
-    $dataImporter = $this->getCsvDataImporterWriterAwareFromConfig(
+    $dataImporter = $this->getCsvDataImporterFromConfig(
         $this->getConfig()->buildImporterConfigurationByDataImportConfigAction($dataImportConfigurationActionTransfer)
     );
 

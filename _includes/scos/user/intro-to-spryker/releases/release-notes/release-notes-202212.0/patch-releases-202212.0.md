@@ -25,5 +25,5 @@ The patch release 202212.0-p2 includes the following changes:
 
 - [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/releases/tag/202212.0-p2)
 - [B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop/releases/tag/202212.0-p2)
-- [B2C Demo Marketplace](https://github.com/spryker-shop/b2c-demo-marketplace/releases/tag/c)
+- [B2C Demo Marketplace](https://github.com/spryker-shop/b2c-demo-marketplace/releases/tag/202212.0-p2)
 - [B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace/releases/tag/202212.0-p2)

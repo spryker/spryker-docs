@@ -28,7 +28,7 @@ In a situation where the same product variants are added to the cart with differ
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |
 |---------|---------|---------|--------|
-| [Marketplace Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-cart-feature-integration.html)          | [Manage carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html)          |
+| [Marketplace Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/install-the-marketplace-cart-feature.html)          | [Manage carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html)          |
 |  | [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html) |
 |   |  [Manage guest carts](/docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html) |
 |   |  [Manage guest cart items](/docs/pbc/all/cart-and-checkout/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html) |

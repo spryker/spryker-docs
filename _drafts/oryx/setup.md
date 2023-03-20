@@ -1,6 +1,6 @@
 # Setup
 
-You can install Oryx on your local environment. The installation typically takes a few minutes to be up and running. This guide explains how to set up your environment for Oryx framework development.
+This guide explains how to set up your environment for Oryx framework development.
 
 ## Prerequisites
 

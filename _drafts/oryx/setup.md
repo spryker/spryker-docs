@@ -30,7 +30,7 @@ To better understand how the minimal boilerplate works, you can find more detail
 ## Builders/bundlers
 
 The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However,  Oryx is compatible with a wide variety of build tools, such as rollup, parcel, webpack, etc.
-The build tool must support [exports](https://nodejs.org/api/packages.html#package-entry-points) entry point in package.json as long as Oryx is using it in every package to split logical part of package into sub-packages.
+The build tool must [support exporting entry points](https://nodejs.org/api/packages.html#package-entry-points)  in package.json (sicne Oryx uses exports in every package to split logical parts to sub-packages).
 
 ## Packages
 

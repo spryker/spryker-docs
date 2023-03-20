@@ -54,7 +54,34 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the database schema
+### 2) Set up configuration
+
+Add the following configuration:
+
+| CONFIGURATION                        | SPECIFICATION                                                                | NAMESPACE        |
+|--------------------------------------|------------------------------------------------------------------------------|------------------|
+| GuiTableConfig::getDefaultTimezone() | Defines default timezone for formatting `DateTime` data to ISO 8601 format.. | Pyz\Zed\GuiTable |
+
+```php
+<?php
+
+namespace Pyz\Zed\GuiTable;
+
+use Spryker\Zed\GuiTable\GuiTableConfig as SprykerGuiTableConfig;
+
+class GuiTableConfig extends SprykerGuiTableConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getDefaultTimezone(): ?string
+    {
+        return 'UTC';
+    }
+}
+```
+
+### 3) Set up the database schema
 
 **src/Pyz/Zed/Merchant/Persistence/Propel/Schema/spy_merchant.schema.xml**
 
@@ -93,7 +120,7 @@ console propel:install
 console transfer:generate
 ```
 
-### 3) Set up behavior
+### 4) Set up behavior
 
 Set up behavior as follows:
 
@@ -554,7 +581,7 @@ sections:
         command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
 ```
 
-### 4) Set up transfer objects
+### 5) Set up transfer objects
 
 Generate transfer objects:
 

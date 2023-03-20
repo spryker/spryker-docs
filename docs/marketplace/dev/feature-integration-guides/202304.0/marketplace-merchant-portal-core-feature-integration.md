@@ -58,9 +58,11 @@ Make sure that the following modules have been installed:
 
 Add the following configuration:
 
-| CONFIGURATION                        | SPECIFICATION                                                                | NAMESPACE        |
-|--------------------------------------|------------------------------------------------------------------------------|------------------|
-| GuiTableConfig::getDefaultTimezone() | Defines default timezone for formatting `DateTime` data to ISO 8601 format.. | Pyz\Zed\GuiTable |
+| CONFIGURATION                        | SPECIFICATION                                                               | NAMESPACE        |
+|--------------------------------------|-----------------------------------------------------------------------------|------------------|
+| GuiTableConfig::getDefaultTimezone() | Defines default timezone for formatting `DateTime` data to ISO 8601 format. | Pyz\Zed\GuiTable |
+
+**src/Pyz/Zed/GuiTable/GuiTableConfig.php**
 
 ```php
 <?php

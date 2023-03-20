@@ -7,9 +7,10 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201903.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/201907.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/202005.0/guest-carts/managing-guest-carts.html
+  - /docs/marketplace/dev/glue-api-guides/202212.0/guest-carts/managing-guest-carts.html
 related:
   - title: Manage guest cart items
-    link: docs/marketplace/dev/glue-api-guides/page.version/guest-carts/managing-guest-cart-items.html
+    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
 ---
 
 This endpoint lets you manage guest carts.
@@ -1931,7 +1932,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 For the attributes of other included resources, see:
-* [Manage guest cart items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-cart-items.html)
+* [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html)
 * [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 * [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)

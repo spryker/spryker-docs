@@ -4,7 +4,7 @@ description: Retrieve details about guest cart items and learn what else you can
 template: glue-api-storefront-guide-template
 related:
   - title: Managing guest carts
-    link: docs/marketplace/dev/glue-api-guides/page.version/guest-carts/managing-guest-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
 ---
 
 This endpoint lets you manage guest cart items.
@@ -37,7 +37,7 @@ To add items to a guest cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{guest_cart_id}}***{% endraw %} | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| {% raw %}***{{guest_cart_id}}***{% endraw %} | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 
@@ -1739,7 +1739,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 For the attributes of the included resources, see:
-* [Retrieve a guest cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart)
+* [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
 * [Retrieve gift cards of guest users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
 * [Retrieve concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)

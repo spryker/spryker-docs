@@ -1,16 +1,17 @@
 
 
+
+## Install feature core
+
 {% info_block errorBox %}
 
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Cart Prices functionality**.
 
 {% endinfo_block %}
 
-## Install feature core
-
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME                                        | VERSION          | INTEGRATE GUIDE                                                                                                                                                 |
 |---------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -19,8 +20,6 @@ To start feature integration, overview and install the necessary features:
 | Marketplace Product Offer Prices (Optional) | {{site.version}} | [Marketplace Product Offer Prices](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-prices-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker/price-cart-connector:"^6.9.0" --update-with-dependencies
@@ -69,9 +68,9 @@ class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 }
 ```
 
-If `IS_ZERO_PRICE_ENABLED_FOR_CART_ACTIONS=false`, while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Please change the currency or remove product from order.".
+If `IS_ZERO_PRICE_ENABLED_FOR_CART_ACTIONS=false` while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Please change the currency or remove product from order."
 
-The `PriceCartConnectorConfig::getItemFieldsForIdentifier()` allows to set up a list of fields that are used to build items identifiers. Based on generated identifiers, system can recognize duplicate items and perform requests only for unique items.
+The `PriceCartConnectorConfig::getItemFieldsForIdentifier()` lets you set up a list of fields that are used to build item identifiers. Based on generated identifiers, the system can recognize duplicate items and perform requests only for unique items.
 
 {% info_block warningBox "Warning" %}
 
@@ -106,9 +105,7 @@ class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 }
 ```
 
-### 3) Set up transfer objects
-
-Run the following command to generate transfer objects:
+### 3) Generate transfer objects
 
 ```bash
 console transfer:generate
@@ -140,12 +137,12 @@ Register the following plugins:
 
 | PLUGIN                                      | SPECIFICATION                                                                                                  | PREREQUISITES | NAMESPACE                                                |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------|
-| CartItemPricePlugin                         | Adds product prices to item, based on currency, price mode and price type.                                     | None          | Spryker\Zed\PriceCartConnector\Communication\Plugin      |
-| CartItemPricePreCheckPlugin                 | Validates product prices, checks if prices are valid for current currency, price mode, price type combination. | None          | Spryker\Zed\PriceCartConnector\Communication\Plugin      |
+| CartItemPricePlugin                         | Adds product prices to item, based on currency, price mode, and price type.                                     | None          | Spryker\Zed\PriceCartConnector\Communication\Plugin      |
+| CartItemPricePreCheckPlugin                 | Validates product prices, checks if prices are valid for current currency, price mode, and price type combination. | None          | Spryker\Zed\PriceCartConnector\Communication\Plugin      |
 | FilterItemsWithoutPricePlugin               | Removes quote items without price.                                                                             | None          | Spryker\Zed\PriceCartConnector\Communication\Plugin      |
 | SanitizeSourcePricesQuoteLockPreResetPlugin | Sanitizes source prices in quote items.                                                                        | None          | Spryker\Zed\PriceCartConnector\Communication\Plugin\Cart |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php

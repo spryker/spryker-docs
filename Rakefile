@@ -48,9 +48,7 @@ commonOptions = {
     /atom.io\/[\.\w\-\/\?]+/,
     /www.acunetix.com\/[\.\w\-\/\?]+/,
     /gcc.gnu.org\/[\.\w\-\/\?]+/,
-    /www.collect.ai\/[\.\w\-\/\?]+/,
-    /www.heroku.com\/[\.\w\-\/\?]+/,
-    /www.braintreepayments.com\/[\.\w\-\/\?]+/
+    /www.collect.ai\/[\.\w\-\/\?]+/
 
   ],
   :file_ignore => [],

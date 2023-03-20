@@ -1,5 +1,5 @@
 ---
-title: Install recommended extensions
+title: Install recommended VS Code extensions
 description: Install recommended VS Code extensions to improve speed and quality quality of your contributions.
 last_updated: Feb 28, 2023
 template: howto-guide-template
@@ -18,19 +18,18 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
 ---
 
-We have a list of recommended VS Code extensions that our team uses for writing and reviewing documents:
-* *Grammarly*: Checks your grammar, spelling, and punctuation in real-time as you write.
+We recommend the following VS Code extensions for writing and reviewing documents:
+* *Grammarly*: Checks grammar, spelling, and punctuation in real-time as you write.
 * *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
 * *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
 
 ## Install an extension
 
-To install an extension, follow these steps:
 1. In the side pane, click the **Extensions** icon. Alternatively, you can use the shortcut <kbd>Ctrl+Shift+X</kbd> on Windows or <kbd>Cmd+Shift+X</kbd> on Mac.
 2. In the search line of the **EXTENSIONS** menu, enter the extension name you want to install.
 3. Find the extension in the search results list and click **Install**.
 
-Some extensions, like Vale, need configuration before you can use them.
+Some extensions, like Vale, need additional configuration to work. For Vale installation instructions, see the following sections.
 
 ## Vale overview
 
@@ -50,15 +49,15 @@ For more information about Vale soon, see [Vale's official documentation](https:
 
 To use the extension, you need to install the Vale linter on your computer. For this, follow the instructions in the [Vale official documentation](https://vale.sh/docs/vale-cli/installation/).
 
-## Configure the Vale extension
+### Configure Vale in VS code
 
 Once you've installed Vale and its extension, you need to configure the extension.
 
 1. In the **Extensions** menu, find Vale and open **Extension Settings**.
-2. On the **User** tab, configure the following settings:
-   1. For **Vale > Vale CLI: Config**, enter an absolute path to the `vale.ini` file. The file is located in the root folder of the project—for example, if the project is located in `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/`, then the absolute path is `/Users/{USER_NAME}/Spryker/GitHub/spryker-docs/.vale.ini`. The `{USER_NAME}` placeholder stands for your user name. If you are using Windows OS, you can enter `${workspaceFolder}/vale.ini`. The `${workspaceFolder}` variable adds the absolute path automatically, so you don't need to enter the path manually.
-   2. For **Vale › Vale CLI: Min Alert Level**, select **inherited**.
-3. On the **Workspace** tab, enter and select the same values as in steps 1 and 2.
+2. On the **User** tab, for **Vale > Vale CLI: Config**, enter `${workspaceFolder}/.vale.ini`.
+3. For **Vale › Vale CLI: Min Alert Level**, select **inherited**.
+4. For **Vale › Vale CLI: Path**, enter `vale`.
+
 4. Relaunch VS Code to make sure settings have been applied.
 
  Now you can use Vale to lint and style-check Markdown files within the project.

@@ -1,7 +1,7 @@
 ---
 title: Prices feature overview
-description: In the article, you can find the price definition, its types, how the price is inherited and calculated.
-last_updated: Jul 9, 2021
+description: In the document, you can find the price definition, its types, and how the price is inherited and calculated.
+last_updated: Mar 16, 2023
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/prices-overview
 originalArticleId: 003e8985-3230-4498-838b-234a10f1a810
@@ -23,7 +23,7 @@ The *Prices* feature enables Back Office users to set prices for products and ma
 
 ## Price types
 
-To accommodate business requirements, there can be various price types. For example, a *default price* is a product's regular price. An *original price* is typically used to show a product's price before a discount was applied. The original price is displayed in a strikethrough font next the the default price.
+To accommodate business requirements, there can be various price types—for example, a *default price* is a product's regular price. An *original price* is typically used to show a product's price before a discount was applied. The original price is displayed in a strikethrough font next to the default price.
 
 
 ![Default and original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/default-and-original-prices.png)
@@ -53,16 +53,30 @@ In the last two cases described, since product variants don't have prices, custo
 
 ## Prices in database
 
-Prices are stored as an integer, in the smallest unit of a currency. For example, for Euro prices are stored in cents.
+Prices are stored as an integer, in the smallest unit of a currency—for example, Euro prices are stored in cents.
 
 Each price is assigned to a price type, like DEFAULT or ORIGINAL price. For a price type, there can be *one* to *n* product prices defined. Price type entity is used to differentiate between use cases. For example, you can have DEFAULT and ORIGINAL types to use for sale pricing.
 
-The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example. Price also has currency and store assigned to it.
+The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example. 
+
+{% info_block Net and Gross Prices Across Tax Regions %}
+
+It’s important to understand how Spryker calculates gross price for a product across tax regions, to ensure your store displays the intended price to customers. If a customer chooses *gross* mode and chooses to buy the product in a tax region different than the store's tax region, Spryker calculates the new region’s tax based on the product's gross price defined for this product in the store, rather than the product's net price. Therefore, the tax amount will be different depending on whether *gross* or *net* is enabled on the storefront. Here's a simple example of price calculation across tax regions:
+
+The Value Added Tax (VAT) in country A, the store's tax region, is 20%. The net price of a product is 100. In country A the gross price is 120. The customer sees a price of 100 in net mode and a price of 120 in gross mode.
+
+However, your customer chooses to buy the same product from country B while still in the store that falls under country A tax rates.
+
+VAT in country B is 10%. Tax for the new region is calculated based on the product's _gross_ price in the store's region because the customer selected *gross* mode. In country B, the customer still sees a gross price of 120. However, the net price shown is 109,09 (VAT at 10% rate from 120 is 10.91).
+
+{% endinfo_block %}
+
+Price also has currency and store assigned to it.
 ![Price calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_calculation.png)
 
 ## Price retrieving logic
 
-If a concrete product doesn’t have a price entity stored, it inherits the values stored for its abstract product. When fetching the price of a concrete product, the price entity of the respective concrete product SKU is checked. If the entity exists, the price is returned. If not, an abstract product owning that concrete product is queried and it's price entity is checked. If it exists, the abstract product's price is returned for the concrete product. If it does not exist an exception is thrown.
+If a concrete product doesn’t have a price entity stored, it inherits the values stored for its abstract product. When fetching the price of a concrete product, the price entity of the respective concrete product SKU is checked. If the entity exists, the price is returned. If not, an abstract product owning that concrete product is queried and its price entity is checked. If it exists, the abstract product's price is returned for the concrete product. If it does not exist an exception is thrown.
 
 The following diagram summarizes the logic for retrieving the price for a product:
 ![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png)

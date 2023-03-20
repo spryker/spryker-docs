@@ -5,7 +5,7 @@
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Cart Prices functionality**.
+The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the *Cart Prices functionality*.
 
 {% endinfo_block %}
 
@@ -16,8 +16,8 @@ To start feature integration, integrate the required features:
 | NAME                                        | VERSION          | INTEGRATE GUIDE                                                                                                                                                 |
 |---------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Cart                                        | {{site.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                                            |
-| Prices                                      | {{site.version}} | [Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)              |
-| Marketplace Product Offer Prices (Optional) | {{site.version}} | [Marketplace Product Offer Prices](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-prices-feature-integration.html) |
+| Prices                                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)              |
+| Marketplace Product Offer Prices (Optional) | {{site.version}} | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-product-offer-prices-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

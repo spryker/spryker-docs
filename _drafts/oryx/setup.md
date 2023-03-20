@@ -12,7 +12,7 @@ To install Oryx on your local system, you need the following:
 
 ## Installation
 
-To install Oryx you can use the [boilerplate project](https://github.com/spryker/composable-frontend) that we've prepared for you. In this repository you'll will find the minimum dependencies and configuration to install a standard Oryx application.
+To install Oryx you can use the [boilerplate project](https://github.com/spryker/composable-frontend) that we've prepared for you. In this repository you'll find the minimum dependencies and configuration to install a standard Oryx application.
 
 The installation can be done with the following steps. This will install the dependencies and run the application.
 
@@ -29,8 +29,8 @@ To better understand how the minimal boilerplate works, you can find more detail
 
 ## Builders/bundlers
 
-The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However,  Oryx is compatible with a wide variety of build tools, such as rollup, parcel, webpack, etc.
-The build tool must [support exporting entry points](https://nodejs.org/api/packages.html#package-entry-points)  in package.json (sicne Oryx uses exports in every package to split logical parts to sub-packages).
+The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However, Oryx is compatible with a wide variety of build tools, such as rollup, parcel, webpack, etc.
+The build tool must [support exporting entry points](https://nodejs.org/api/packages.html#package-entry-points) in package.json (since Oryx uses exports in every package to split logical parts to sub-packages).
 
 ## Packages
 

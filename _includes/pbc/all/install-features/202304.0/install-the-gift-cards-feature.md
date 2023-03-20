@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 | NAME   | VERSION | INTEGRATE GUIDE |
 | --- | --- | --- | 
 | Spryker Core | {{site.version}}| [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) | 
-| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 |Product  | {{site.version}} |[Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html)|
 |Payments  | {{site.version}} |[Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/payments-feature-integration.html)|
 | Shipment | {{site.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html)|
@@ -1161,8 +1161,8 @@ To start feature integration, integrate the required features:
 | NAME   | VERSION | INTEGRATE GUIDE |
 | --- | --- | --- | 
 | Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) | 
-| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-checkout-feature.html)
+| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
 
 ### 1) Install the required modules using Composer
 

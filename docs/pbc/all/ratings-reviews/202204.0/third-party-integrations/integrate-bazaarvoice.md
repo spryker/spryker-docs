@@ -6,7 +6,7 @@ template: howto-guide-template
 
 ## Prerequisites
 
-The BazaarVoice app requires the following Spryker modules:
+The Bazaarvoice app requires the following Spryker modules:
 
 * `spryker/asset: ^1.3.0`
 * `spryker/asset-storage: ^1.1.0`
@@ -83,7 +83,7 @@ If you have custom templates or make your own frontend, the markups required for
 #### DCC (product catalog collection)
 Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
-| schema.org property          | Bazaarvoice property |
+| SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY |
 |------------------------------|----------------------|
 | product.sku                  | productId            |
 | product.name                 | productName          |
@@ -98,7 +98,7 @@ Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 #### DCC (merchant catalog collection)
 Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
-| schema.org property        | Bazaarvoice property |
+| SCHEMA.ORG PROPERTY        | BAZAARVOICE PROPERTY |
 |----------------------------|----------------------|
 | organization.identifier    | productId            |
 | organization.name          | productName          |
@@ -110,7 +110,7 @@ Core templates:
 * `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
 * `SprykerShop/Yves/MerchantWidget/Theme/default/views/merchant-meta-schema/merchant-meta-schema.twig` (only for Marketplace)
 
-| schema.org property                        | Bazaarvoice property | Only for Marketplace |
+| SCHEMA.ORG PROPERTY                        | BAZAARVOICE PROPERTY | ONLY FOR MARKETPLACE |
 |--------------------------------------------|----------------------|----------------------|
 | invoice.email                              | email                |                      |
 | invoice.priceCurrency                      | currency             |                      |

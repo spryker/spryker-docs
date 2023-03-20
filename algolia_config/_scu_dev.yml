@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'paas_plus_dev'
+  index_name: 'scu_dev'
   files_to_exclude:
     - index.md
     - 404.md
@@ -13,4 +13,4 @@ algolia:
     - docs/cloud/dev/spryker-cloud-commerce-os/**/*.md
     - docs/fes/dev/**/*.md
     - docs/acp/user/**/*.md
-    - docs/sdk/dev/**/*.md    
+    - docs/sdk/dev/**/*.md

@@ -25,7 +25,7 @@ Review the system and software requirements in the table.
 | BIOS Virtualization | Enabled           | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager&nbsp;<span aria-label="and then">></span> Performance** tab. For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
 | CPU SLAT-capable feature | Enabled           |SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
 | Docker | 18.09.1 or higher |
-| Docker Compose | 1.28 or 1.29      |  
+| Docker Compose | 2.0 or higher      |  
 | RAM  | 4GB or more       |
 | Swap  | 2GB or more       |
 
@@ -160,7 +160,7 @@ Install Docker Compose:
 1. Download the current stable release of Docker Compose:
 
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/2.16.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
 2. Apply executable permissions to the binary:

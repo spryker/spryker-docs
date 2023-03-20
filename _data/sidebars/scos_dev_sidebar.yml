@@ -1358,7 +1358,7 @@ entries:
       url: /docs/scos/dev/glue-api-guides/retrieving-discounts.html
       include_versions:
       - "202005.0"
-  - title: Feature integration guides
+  - title: Feature integration guides 
     url: /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
     nested:
     - title: Glue API
@@ -1703,16 +1703,22 @@ entries:
               - "202212.0"
     - title: Agent Assist
       url: /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Agent Assist + Cart
       url: /docs/scos/dev/feature-integration-guides/agent-assist-cart-feature-integration.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Agent Assist + Shopping List
       url: /docs/scos/dev/feature-integration-guides/agent-assist-shopping-list-feature-integration.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Alternative Products
       url: /docs/scos/dev/feature-integration-guides/alternative-products-feature-integration.html
       include_versions:
@@ -1814,6 +1820,14 @@ entries:
       - "202108.0"
     - title: Category Filters
       url: /docs/scos/dev/feature-integration-guides/category-filters-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Category Image
       url: /docs/scos/dev/feature-integration-guides/category-image-feature-integration.html
       include_versions:
@@ -1922,7 +1936,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Company Account + Order Management
       url: /docs/scos/dev/feature-integration-guides/company-account-order-management-feature-integration.html
       include_versions:
@@ -1937,7 +1950,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Configurable Bundle + Order Management
       url: /docs/scos/dev/feature-integration-guides/configurable-bundle-order-management-feature-integration.html
       include_versions:
@@ -1961,7 +1973,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Customer Account Management
       url: /docs/scos/dev/feature-integration-guides/customer-account-management-feature-integration.html
       include_versions:
@@ -1971,15 +1982,12 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
-      - "202304.0"
     - title: Customer Account Management + Agent Assist
       url: /docs/scos/dev/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html
       include_versions:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Customer Account Management + Order Management
       url: /docs/scos/dev/feature-integration-guides/customer-account-management-order-management-feature-integration.html
       include_versions:
@@ -2093,7 +2101,7 @@ entries:
     - title: Merchant Product Restrictions
       url: /docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
     - title: Merchants and Merchant Relations
-      link: docs/scos/dev/feature-integration-guides/merchants-and-merchant-relations-feature-integration.html
+      url: /docs/scos/dev/feature-integration-guides/merchants-and-merchant-relations-feature-integration.html
     - title: Microsoft Azure Active Directory
       url: /docs/scos/dev/feature-integration-guides/microsoft-azure-active-directory.html
       include_versions:
@@ -2342,8 +2350,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/product-rating-and-reviews-feature-integration.html
       include_versions:
       - "202108.0"
-      - "202204.0"
-      - "202108.0"
     - title: Product Relations
       url: /docs/scos/dev/feature-integration-guides/product-relations-feature-integration.html
       include_versions:
@@ -2370,7 +2376,7 @@ entries:
       - "202009.0"
       - "202108.0"
     - title: Push Notification
-      url: /docs/scos/dev/feature-integration-guides/install-push-notification-feature.html
+      url: /docs/scos/dev/feature-integration-guides/install-the-push-notification-feature.html
       include_versions:
       - "202304.0"
     - title: Queue Data Import
@@ -2511,6 +2517,14 @@ entries:
       - "202204.0"
     - title: Shared Carts
       url: /docs/scos/dev/feature-integration-guides/shared-carts-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Shipment
       url: /docs/scos/dev/feature-integration-guides/shipment-feature-integration.html
       include_versions:
@@ -2533,13 +2547,30 @@ entries:
       - "202108.0"
     - title: Shopping Lists
       url: /docs/scos/dev/feature-integration-guides/shopping-lists-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Shopping Lists + Product Options
       url: /docs/scos/dev/feature-integration-guides/shopping-lists-product-options-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Splittable Order Items
       url: /docs/scos/dev/feature-integration-guides/splittable-order-items-feature-integration.html
       include_versions:
       - "201811.0"
       - "201903.0"
+      - "201907.0"
       - "202204.0"
       - "202212.0"
     - title: Spryker Core
@@ -2553,6 +2584,7 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
+      - "202304.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html
       include_versions:
@@ -2562,8 +2594,16 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Spryker Core Back Office + Warehouse User Management
+      url: /docs/scos/dev/feature-integration-guides/install-spryker-core-back-office-warehouse-user-management-feature.html
+      include_versions:
+      - "202304.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
+    - title: Warehouse picking
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
+      include_versions:
+      - "202304.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:
@@ -2584,6 +2624,10 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/spryker-in-docker/spryker-in-docker-feature-integration-guides.html
         include_versions:
         - "201907.0"
+    - title: Warehouse User Management
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-user-management-feature.html
+      include_versions:
+      - "202304.0"
     - title: Zed API
       url: /docs/scos/dev/feature-integration-guides/zed-api-feature-integration.html
       include_versions:
@@ -4126,6 +4170,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
       - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
+      - title: "HowTo: Process incoming HTTP requests from external ERP services for order updates"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
       - title: "HowTo: Set up stores with multiple locales"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
       - title: "HowTo: Handle graceful shutdown"

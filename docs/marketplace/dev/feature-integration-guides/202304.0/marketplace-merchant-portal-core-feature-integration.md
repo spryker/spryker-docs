@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Acl | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-acl-feature.html) |
 
-###  1) Install the required modules using Composer
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
@@ -60,7 +60,7 @@ Add the following configuration:
 
 | CONFIGURATION                        | SPECIFICATION                                                               | NAMESPACE        |
 |--------------------------------------|-----------------------------------------------------------------------------|------------------|
-| GuiTableConfig::getDefaultTimezone() | Defines default timezone for formatting `DateTime` data to ISO 8601 format. | Pyz\Zed\GuiTable |
+| GuiTableConfig::getDefaultTimezone() | Defines default timezone for formatting the `DateTime` data to the ISO 8601 format. | Pyz\Zed\GuiTable |
 
 **src/Pyz/Zed/GuiTable/GuiTableConfig.php**
 
@@ -126,7 +126,7 @@ console transfer:generate
 
 Set up behavior as follows:
 
-#### Integrate the following plugins:
+#### Integrate the following plugins
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---| --- |---|
@@ -418,7 +418,9 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 
 #### Enable Merchant Portal infrastructural plugins
 
-<details><summary markdown='span'>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
+1. Enable the following plugins:
+
+<details open><summary markdown='span'>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -525,7 +527,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-Open access to the Merchant Portal login page by default:
+2. Open access to the Merchant Portal login page by default:
 
 **config/Shared/config_default.php**
 
@@ -543,7 +545,7 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
 ];
 ```
 
-Add a console command for warming up the *Merchant Portal* router cache:
+3. Add a console command for warming up the *Merchant Portal* router cache:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 ```php
@@ -825,7 +827,7 @@ yarn install
 
 {% info_block warningBox "Warning" %}
 
-If you're getting `Missing write access to node_modules/mp-profile`, delete this *file* and make a *folder* with the same name.
+If you get `Missing write access to node_modules/mp-profile`, delete this *file* and make a *folder* with the same name.
 
 {% endinfo_block %}
 
@@ -880,7 +882,7 @@ export default async (
 };
 ```
 
-### 6) Add files for the Merchant Portal entry point:
+### 6) Add files for the Merchant Portal entry point
 
 **public/MerchantPortal/index.php**
 
@@ -1051,8 +1053,8 @@ Ensure `yarn run mp:build` runs successfully. If it doesn't work, try the full r
 
 To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and installation commands in the deployment YAML:
 
-- Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
-- Add required console commands:
+1. Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
+2. Add required console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -1085,15 +1087,16 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```
 
-- Add the Merchant Portal installation command:
-  - build-static:
+3. Add the Merchant Portal installation command:
 
-    ```yaml
-    merchant-portal-install-dependencies:
-    command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
-    ```
+build-static:
 
-- Add the Merchant Portal build command:
+ ```yaml
+ merchant-portal-install-dependencies:
+ command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
+ ```
+
+4. Add the Merchant Portal build command:
   - build-static-production:
     ```yaml
     merchant-portal-build-frontend:
@@ -1467,7 +1470,7 @@ groups:
 
 ### 2) Create a dedicated database user
 
-Grant only default CRUD operations—`INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
+Grant only default CRUD operations—`INSERT`, `DELETE`, `UPDATE`, and `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 The following code snippet example is for MySQL:
 

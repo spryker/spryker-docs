@@ -138,7 +138,7 @@ Set up a new `Launch.json`:
             "port": 9003,
             "runtimeExecutable": "/absolute/path/php/bin",
             "pathMappings": {
-                "/data": "/local/absolute/path",
+                "/data": "${workspaceFolder}",
             },
             "log": true,
             "xdebugSettings": {

@@ -48,6 +48,7 @@ commonOptions = {
     /atom.io\/[\.\w\-\/\?]+/,
     /www.acunetix.com\/[\.\w\-\/\?]+/,
     /gcc.gnu.org\/[\.\w\-\/\?]+/,
+    /github.com\/[\.\w\-\/\?]+/,
     /www.collect.ai\/[\.\w\-\/\?]+/
 
   ],

@@ -21,5 +21,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cartvariant.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cartvariant.html
   - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-cartvariant.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cartvariant-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cartvariant-module.md -->

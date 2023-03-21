@@ -8,6 +8,7 @@ originalArticleId: 0b3107fb-825e-481e-bb6d-27e13f4a7d0f
 redirect_from:
   - /v3/docs/multiple-carts-api-feature-integration-201907
   - /v3/docs/en/multiple-carts-api-feature-integration-201907
+  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/install-glue-api/install-the-multiple-carts-glue-api.html
 ---
 
 {% include pbc/all/install-features/202212.0/install-glue-api/install-the-multiple-carts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-multiple-carts-glue-api.md -->

@@ -20,6 +20,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-checkoutrestapi.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-checkoutrestapi.html
   - /docs/scos/dev/module-migration-guides/202212.0/glue-api/migration-guide-checkoutrestapi.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
 related:
   - title: Migration guide - Payment
     link: docs/scos/dev/module-migration-guides/migration-guide-payment.html

@@ -10,7 +10,8 @@ redirect_from:
   - /docs/file-details-commentcsv
   - /docs/en/file-details-commentcsv
   - /docs/scos/dev/data-import/201907.0/data-import-categories/miscellaneous/file-details-comment.csv.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/miscellaneous/file-details-comment.csv.html  
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/miscellaneous/file-details-comment.csv.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/import-and-export-data/file-details-comment.csv.html
 ---
 
 This document describes the `comment.csv` file to configure [Comment](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/comments-feature-overview.html)  information in your Spryker Demo Shop.

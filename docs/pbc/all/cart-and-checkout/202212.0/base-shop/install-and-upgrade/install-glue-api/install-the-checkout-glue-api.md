@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-checkout-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-checkout-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-checkout-feature-integration.html  
+  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 related:
   - title: Checkout feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/checkout-feature-integration.html

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-quantitycsv
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/import-and-export-data/file-details-product-quantity.csv.html
 ---
 
 This document describes the `product_quantity.csv` file to configure [Product Quantity](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/non-splittable-products-feature-overview.html) Store information in your Spryker Demo Shop.

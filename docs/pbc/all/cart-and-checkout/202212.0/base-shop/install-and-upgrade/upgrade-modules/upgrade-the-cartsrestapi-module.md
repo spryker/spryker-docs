@@ -30,6 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
   - /module_migration_guides/glue_api/cartsrestapi-migration-guide.htm
   - /docs/scos/dev/module-migration-guides/202212.0/glue-api/cartsrestapi-migration-guide.html
+  - /docs/pbc/all/cart-and-checkout/202212.0/install-and-upgrade/upgrade-modules/upgrade-the-cartsrestapi-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-cartsrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-cartsrestapi-module.md -->

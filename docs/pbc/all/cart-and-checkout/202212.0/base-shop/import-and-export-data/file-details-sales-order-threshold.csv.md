@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-sales-order-thresholdcsv
   - /docs/file-details-sales-order-thresholdcsv
   - /docs/en/file-details-sales-order-thresholdcsv
+  - /docs/pbc/all/cart-and-checkout/202212.0/import-and-export-data/file-details-sales-order-threshold.csv.html
 ---
 
 This document describes the `sales_order_threshold.csv` file to configure [Sales Order Threshold](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html) information in your Spryker Demo Shop.

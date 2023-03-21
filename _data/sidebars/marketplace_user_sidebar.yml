@@ -28,7 +28,7 @@ entries:
 
           - title: Marketplace B2B Demo Shop
             url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2b-demo-shop.html
-          
+
           - title: Upcoming major module releases
             url: /docs/marketplace/user/intro-to-spryker-marketplace/upcoming-major-module-releases.html
 
@@ -72,16 +72,16 @@ entries:
           - "202204.0"
           - "202212.0"
           - "202212.0"
-          
+
         - title: Marketplace Product
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
 
-        - title: Marketplace Product Approval Process 
+        - title: Marketplace Product Approval Process
           url: /docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html
-          include_versions:       
+          include_versions:
           - "202204.0"
           - "202212.0"
-        
+
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 
@@ -90,6 +90,8 @@ entries:
 
         - title: Marketplace Inventory Management
           url: /docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
+          include_versions:
+          - "202204.0"          
 
         - title: Marketplace Order Management
           url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
@@ -122,7 +124,7 @@ entries:
 
         - title: Marketplace Shopping List
           url: /docs/marketplace/user/features/marketplace-shopping-list-feature-overview.html
-          include_versions:       
+          include_versions:
             - "202204.0"
 
         - title: Marketplace Wishlist
@@ -131,7 +133,7 @@ entries:
         - title: Marketplace Merchant Portal Product Offer Management
           url: /docs/marketplace/user/features/marketplace-merchant-portal-product-offer-management-feature-overview.html
 
-        
+
       - title: Back Office user guides
         url: /docs/marketplace/user/back-office-user-guides/back-office-user-guides.html
         include_versions:

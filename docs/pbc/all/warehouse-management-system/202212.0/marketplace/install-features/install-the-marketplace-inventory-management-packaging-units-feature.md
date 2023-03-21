@@ -1,5 +1,5 @@
 ---
-title: Marketplace Inventory Management + Packaging Units feature integration
+title: Install the Marketplace Inventory Management + Packaging Units feature
 last_updated: Sep 07, 2021
 description: This document describes the process how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
 template: feature-integration-guide-template

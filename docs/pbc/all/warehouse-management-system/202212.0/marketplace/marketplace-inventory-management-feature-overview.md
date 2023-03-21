@@ -32,7 +32,7 @@ Also, you can do the following using the data import:
 * Manage stock of product offers for a merchant by importing the product offer and stock data separately: [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html).
 * Define stock when importing the product offer data: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html).
 * Import merchant stock data: [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html).
-* Import stock of merchant products: [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/import-and-export-data/file-details-product-stock.csv.html).
+* Import stock of merchant products: [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/import-data/file-details-product-stock.csv.html).
 
 ## Marketplace availability management
 
@@ -60,10 +60,14 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. A cust
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
-| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-in-the-back-office/edit-warehouses.html) <!--- UPDATE LINK--> |
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/manage-in-the-back-office/edit-warehouses.html) |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Marketplace Inventory Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-inventory-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES |DATA IMPORT |
+|---------|---------|
+| [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html) | [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html) |
+| [Glue API: Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-feature-integration.html)  | [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html) |
+| [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html) | [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html) |
+| [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) ||
+| [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html) ||

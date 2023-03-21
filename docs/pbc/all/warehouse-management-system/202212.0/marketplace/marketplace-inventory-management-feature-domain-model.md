@@ -1,16 +1,10 @@
 ---
-title: Marketplace Inventory Management feature walkthrough
+title: "Marketplace Inventory Management feature: Domain model"
 description: Merchants are product and service sellers in the Marketplace.
 template: feature-walkthrough-template
 ---
 
 The _Marketplace Inventory Management_ implies stock & availability management as well as multiple warehouse stock management for product offers and marketplace products.
-
-{% info_block warningBox "User documentation" %}
-
-To learn more about the feature and to find out how end users use it, see [Marketplace Inventory Management feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html) for business users.
-
-{% endinfo_block %}
 
 ## Module dependency graph
 
@@ -37,13 +31,3 @@ To learn more about the feature and to find out how end users use it, see [Marke
 ## Domain model
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/7be7c0cf-b4d5-41c5-bfc3-e30b76efce31.png?utm_medium=live&utm_source=confluence)
-
-## Related Developer articles
-
-|INSTALLATION GUIDES |DATA IMPORT |
-|---------|---------|
-| [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html) | [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html) |
-| [Glue API: Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-feature-integration.html)  | [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html) |
-| [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html) | [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html) |
-| [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) ||
-| [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html) ||

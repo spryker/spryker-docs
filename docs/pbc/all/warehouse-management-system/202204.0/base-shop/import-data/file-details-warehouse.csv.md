@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
 ---
 
 This document describes the `warehouse.csv` file to configure the [Warehouse](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
@@ -57,6 +57,6 @@ By default, `warehouse.csv` exists only in folder `…/vendor/spryker/stock-data
 
 ## Next steps
 
-* [File details - warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-and-export-data/file-details-warehouse-address.csv.html)
-* [File details - warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-and-export-data/file-details-warehouse-store.csv.html)
-* [File details - product_stock.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-and-export-data/file-details-product-stock.csv.html)
+* [File details - warehouse_address.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-data/file-details-warehouse-address.csv.html)
+* [File details - warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-data/file-details-warehouse-store.csv.html)
+* [File details - product_stock.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-data/file-details-product-stock.csv.html)

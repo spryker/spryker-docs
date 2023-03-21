@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Marketplace Inventory Management feature integration"
+title: Install the Marketplace Inventory Management Glue API
 description: This document describes the process how to integrate the Marketplace Inventory Management Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 related:

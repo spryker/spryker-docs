@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
-  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
 ---
 
 This document describes the `warehouse_store.csv` file to configure the relation between [Warehouse](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) and Store in your Spryker Demo Shop.
@@ -20,7 +20,7 @@ This document describes the `warehouse_store.csv` file to configure the relation
 
 ## Import file dependencies
 
-* [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-and-export-data/file-details-warehouse.csv.html)
+* [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-data/file-details-warehouse.csv.html)
 * `stores.php` configuration file of demo shop PHP project, where stores are defined initially
 
 ## Import file parameters
@@ -28,7 +28,7 @@ This document describes the `warehouse_store.csv` file to configure the relation
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| warehouse_name | ✓ | String | Must be a valid warehouse name imported from [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-and-export-data/file-details-warehouse.csv.html). | Name of the warehouse. |
+| warehouse_name | ✓ | String | Must be a valid warehouse name imported from [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-data/file-details-warehouse.csv.html). | Name of the warehouse. |
 | store_name | ✓ | String | Must be a valid store name imported from the existing `stores.php` configuration file of demo shop PHP project. | Name of the store. |
 
 

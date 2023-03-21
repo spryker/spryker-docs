@@ -6,7 +6,7 @@ entries:
     nested:
       - title: Setup
         url: /docs/marketplace/dev/setup/setup.html
-        include_versions:     
+        include_versions:
         nested:
           - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
@@ -134,7 +134,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Offer Prices
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
@@ -261,9 +260,9 @@ entries:
 
       - title: Feature integration guides
         url: /docs/marketplace/dev/feature-integration-guides/feature-integration-guides.html
-        
+
         nested:
-        
+
           - title: ACL feature integration
             url: /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
             include_versions:
@@ -287,21 +286,18 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Inventory Management + Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Inventory Management + Packaging Units feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-packaging-units-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Merchant feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html
@@ -599,14 +595,12 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Inventory Management + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-wishlist-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Merchant feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html
@@ -718,7 +712,7 @@ entries:
           - title: ProductMerchantPortalGui
             url: /docs/marketplace/dev/module-migration-guides/migration-guide-productmerchantportalgui.html
           - title: ProductOfferPricesRestApi
-            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html                        
+            url: /docs/marketplace/dev/module-migration-guides/migration-guide-productofferpricesrestapi.html
       - title: Glue API guides
         url: /docs/marketplace/dev/glue-api-guides/glue-api-guides.html
         nested:
@@ -990,7 +984,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-store.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-store.csv.html
@@ -1051,7 +1044,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-product-offer-store.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer-store.csv.html

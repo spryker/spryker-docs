@@ -291,6 +291,8 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html
           - title: Marketplace
             url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-overview.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: Install the Marketplace Cart feature
                 url: /docs/pbc/all/cart-and-checkout/marketplace/install-the-marketplace-cart-feature.html

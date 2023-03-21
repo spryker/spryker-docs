@@ -2604,6 +2604,10 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
       include_versions:
       - "202304.0"
+    - title: Picker user login
+      url: /docs/scos/dev/feature-integration-guides/install-the-picker-user-login-feature.html
+      include_versions:
+        - "202304.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:

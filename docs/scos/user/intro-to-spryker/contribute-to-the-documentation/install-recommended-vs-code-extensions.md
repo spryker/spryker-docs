@@ -23,13 +23,13 @@ We recommend the following VS Code extensions for writing and reviewing document
 * *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
 * *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
 
-## Install an extension
+## Install extensions
 
 1. In the side pane, click the **Extensions** icon. Alternatively, you can use the shortcut <kbd>Ctrl+Shift+X</kbd> on Windows or <kbd>Cmd+Shift+X</kbd> on Mac.
-2. In the search line of the **EXTENSIONS** menu, enter the extension name you want to install.
+2. In the search line of the **EXTENSIONS** menu, enter the name of the extension you want to install.
 3. Find the extension in the search results list and click **Install**.
 
-Some extensions, like Vale, need additional configuration to work. For Vale installation instructions, see the following sections.
+Some extensions, like Vale, need additional configuration. For Vale installation instructions, see the following sections.
 
 ## Vale overview
 
@@ -43,21 +43,19 @@ When Vale identifies an issue, it highlights the relevant text and displays an i
 Additionally, Vale displays feedback in the VS Code **PROBLEMS** pane, which provides a list of all the issues found in the file.
 To navigate directly to the relevant line of code in the file and make corrections, you need to click an issue in the **PROBLEMS** pane.
 
-For more information about Vale soon, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).
+For more information about Vale, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).
 
-### Install Vale
+## Install Vale
 
-To use the extension, you need to install the Vale linter on your computer. For this, follow the instructions in the [Vale official documentation](https://vale.sh/docs/vale-cli/installation/).
+To use Vale in VS Code, you need to install it on your computer. For installation instructions, see [Installation in Vale's official docs](https://vale.sh/docs/vale-cli/installation/).
 
-### Configure Vale in VS code
+## Configure Vale in VS Code
 
-Once you've installed Vale and its extension, you need to configure the extension.
-
-1. In the **Extensions** menu, find Vale and open **Extension Settings**.
+1. In the **Extensions** menu, right-click Vale and select **Extension Settings**.
 2. On the **User** tab, for **Vale > Vale CLI: Config**, enter `${workspaceFolder}/.vale.ini`.
 3. For **Vale › Vale CLI: Min Alert Level**, select **inherited**.
 4. For **Vale › Vale CLI: Path**, enter `vale`.
+5. Click the **Workspace** tab and repeat steps 2-4. 
+6. To apply the settings, relaunch VS Code.
 
-4. Relaunch VS Code to make sure settings have been applied.
-
- Now you can use Vale to lint and style-check Markdown files within the project.
+ Now you can use Vale to lint and style-check Markdown files in the project.

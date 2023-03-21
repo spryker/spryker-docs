@@ -6,11 +6,6 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/201907.0/marketplace-shipment-cart-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202005.0/marketplace-shipment-cart-feature-integration.html
-related:
-  - title: Marketplace Shipment feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
-  - title: Marketplace Cart feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shipment + Cart feature into a Spryker project.

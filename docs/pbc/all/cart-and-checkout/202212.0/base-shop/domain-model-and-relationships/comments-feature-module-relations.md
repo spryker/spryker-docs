@@ -4,7 +4,7 @@ last_updated: Aug 12, 2021
 description: The Comments feature lets you add multiple comments to any entity
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/202212.0/comments-feature-walkthrough.html
+- /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/comments-feature-module-relations.html
 ---
 
 The following schema illustrates module relations in the Comments feature:

@@ -214,6 +214,13 @@ Also, make sure that commands that need to trigger for each store have stores: `
 
 ## Configure the deploy file
 
+
+{% info_block warningBox "Change Request needed" %}
+
+For PaaS Customers: Once you have configured your deploy.yml file as described below, please get in touch with our Support, as infrastructure adjustments are needed. Attach your deploy.yml file to the case to speed up the process.
+
+{% endinfo_block %}
+
 According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
 
 Deploy file configuration for the multi-store setup 1:

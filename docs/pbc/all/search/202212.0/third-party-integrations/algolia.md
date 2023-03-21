@@ -35,14 +35,14 @@ An index is a place where the data used by Algolia is stored.
 In case of the Spryker store, the index is a complete list of all active concrete products that can appear in search results.
 There are separate indexes for each locale and sorting strategy. With the Algolia app, the search results in your store can be sorted by the following options:
 
-- Popularity
+- Primary index
 - From highest to lowest rating
 - By price in ascending order
 - By price in descending order
 - By name in ascending order
 - By name in descending order
 
-For example, if you have two locales, there will be 10 indexes for your store in Algolia. One for each locale and sorting strategy:
+For example, if you have two locales, there will be 12 indexes for your store in Algolia. One for each locale and sorting strategy:
 
 ![algolia-indexes](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/algolia-index.png)
 

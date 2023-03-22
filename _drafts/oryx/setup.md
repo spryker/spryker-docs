@@ -1,29 +1,32 @@
-# Setup
+# Set up Oryx
 
-This guide explains how to set up your environment for Oryx framework development.
+This document describes how to set up an environment for developing in the Oryx framework. We provide a [boilerplate project](https://github.com/spryker/composable-frontend) that helps you quickstart the development. It contains minimum dependencies and configuration to install a standard Oryx application.
 
 ## Prerequisites
 
-To install Oryx on your local system, you need the following:
+* [Node.js](https://nodejs.org/) or a compatible Javascript runtime.
+* npm package manager.
+* A [Spryker Storefront API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html). A public API is provided with the   (a public API is provided by default to get you up and running quick)
 
-- [Node.js](https://nodejs.org/) or compatible Javascript runtime
-- npm package manager
-- A [Spryker storefront API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/glue-rest-api.html) (a public API is provided by default to get you up and running quick)
+## Install Oryx
 
-## Installation
 
-To install Oryx you can use the [boilerplate project](https://github.com/spryker/composable-frontend) that we've prepared for you. In this repository you'll find the minimum dependencies and configuration to install a standard Oryx application.
+1. Download the boilerplate project and install dependencies:
 
-The installation can be done with the following steps. This will install the dependencies and run the application.
-
-```
-git clone https://github.com/spryker/composable-frontend
-cd composable-frontend
+```shell
+git clone https://github.com/spryker/composable-frontend && \
+cd composable-frontend && \
 npm i
+```
+
+
+2. Run the application:
+
+```shell
 npm run dev
 ```
 
-Application will be available on `localhost:3000` by default.
+The application should now be available at `localhost:3000`.
 
 To better understand how the minimal boilerplate works, you can find more details in the [boilerplate guide](./boilerplate.md).
 

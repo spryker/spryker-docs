@@ -7,7 +7,7 @@ related:
   - title: Marketplace Product feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
   - title: Marketplace Inventory Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-inventory-management-feature-overview.html
+    link: docs/pbc/all/warehouse-management-system/page.version/marketplace/install-features/install-the-marketplace-inventory-management-feature.html
   - title: Marketplace Product Approval Process feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
 ---

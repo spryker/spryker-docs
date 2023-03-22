@@ -2,9 +2,6 @@
 title: Install the Marketplace Inventory Management Glue API
 description: This document describes the process how to integrate the Marketplace Inventory Management Glue API feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Inventory Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Inventory Management Glue API feature into a Spryker project.
@@ -127,4 +124,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |---|---|---|
-| Marketplace Inventory Management + Wishlist Glue API |  |  [Glue API: Marketplace Inventory Management + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-wishlist-feature-integration.html) |
+| Marketplace Inventory Management + Wishlist Glue API |  |  [Glue API: Marketplace Inventory Management + Wishlist feature integration ](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html) |

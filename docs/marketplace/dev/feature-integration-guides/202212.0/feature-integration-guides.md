@@ -8,9 +8,6 @@ template: concept-topic-template
 This section contains the following Marketplace feature integration guides:
 * [Combined Product Offer Import feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)
 * [Marketplace Dummy Payment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-dummy-payment-feature-integration.html)
-* [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)
-* [Marketplace Inventory Management + Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)
-* [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)
 * [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
 * [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
 * [Marketplace Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-cart-feature-integration.html)

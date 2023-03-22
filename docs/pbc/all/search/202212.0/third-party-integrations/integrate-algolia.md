@@ -42,7 +42,7 @@ Follow these steps to integrate Algolia.
 
 ### 1. Configure shared configs
 
-Add the following config to `config/Shared/common/config_default.php` (also may be `config/Shared/config_default.php`):
+Add the following config to `config/Shared/config_default.php`
 
 ```php
 //...
@@ -578,7 +578,7 @@ class SearchHttpConfig extends SprykerSearchHttpConfig
      */
     public function getSearchHttpSynchronizationPoolName(): ?string
     {
-        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME; # May be SynchronizationConfig::PYZ_DEFAULT_SYNCHRONIZATION_POOL_NAME
+        return SynchronizationConfig::PYZ_DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
 }
 ```

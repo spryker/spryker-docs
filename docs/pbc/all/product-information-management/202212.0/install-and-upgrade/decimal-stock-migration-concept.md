@@ -64,7 +64,7 @@ console transfer:generate
 ```
 
 5. Follow the steps in the individual migration guide for [ProductPackagingUnitStorage](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html#upgrading-from-version-4-to-v--version-500).
-6. Follow the steps in the individual migration guide for [Availability](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900).
+6. Follow the steps in the individual migration guide for [Availability](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900).
 
 {% info_block errorBox %}
 
@@ -76,13 +76,13 @@ The following table lists the modules affected by the Decimal Stock update and w
 
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
-| `spryker/availability` | 9.0.0 | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900) |
+| `spryker/availability` | 9.0.0 | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html#upgrading-from-version-8-to-version-900) |
 | `spryker/oms` | 11.0.0 | [Migration Guide - OMS](/docs/scos/dev/module-migration-guides/migration-guide-oms.html#upgrading-from-version-10-to-version-1100) |
 | `spryker/stock` | 8.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7-to-version-800) |
-| `spryker/availability-storage` | 2.0.0 | [Upgrade the AvailabilityStorage module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html#upgrading-from-version-1-to-version-200) |
-| `spryker/availability-gui` | 6.0.0 | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html#upgrading-from-version-5-to-version-600) |
-| `spryker/availability-cart-connector` | 7.0.0 | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html#upgrading-from-version-6-to-version-700) |
-| `spryker/availability-offer-connector` | 4.0.0 | [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html#upgrading-from-version-3-to-version-400) |
+| `spryker/availability-storage` | 2.0.0 | [Upgrade the AvailabilityStorage module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html#upgrading-from-version-1-to-version-200) |
+| `spryker/availability-gui` | 6.0.0 | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html#upgrading-from-version-5-to-version-600) |
+| `spryker/availability-cart-connector` | 7.0.0 | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html#upgrading-from-version-6-to-version-700) |
+| `spryker/availability-offer-connector` | 4.0.0 | [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html#upgrading-from-version-3-to-version-400) |
 | `spryker/cart-variant` | 2.0.0 | [Upgrade the CartVariant module](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html#upgrading-from-version-1-to-version-200) |
 | `spryker/product-availabilities-rest-api` | 4.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html#upgrading-from-version-3-to-version-4) |
 | `spryker/product-bundle` | 7.0.0 | [Migration Guide - ProductBundle](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html#upgrading-from-version-6-to-version-700) |

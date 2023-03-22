@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/availability-notification-feature-integration.html
 related:
   - title: Install the Availability Notification Glue API
-    link: docs/pbc/all/warehouse-management-system/page.version/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-availability-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-availability-notification-feature.md -->

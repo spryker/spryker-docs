@@ -1,3 +1,10 @@
+## Patch release 202212.0-p2
+
+The patch release 202212.0-p2 includes the following changes:
+- Updated github actions to enable testing newer PHP versions (8.0 & 8.1).
+- Updated backoffice GUI base module to allow backoffice tables to have strict search on their columns (check this page [here](https://docs.spryker.com/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html#configure-search-by-columns)).
+- Removed explicit usage of Devvm since it’s a deprecated concept.
+
 ## Patch release 202212.0-p1
 
 The patch release 202212.0-p1 includes the following changes:
@@ -13,13 +20,6 @@ The patch release 202212.0-p1 includes the following changes:
 - [B2C Demo Marketplace](https://github.com/spryker-shop/b2c-demo-marketplace/releases/tag/202212.0-p1)
 - [B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace/releases/tag/202212.0-p1)
 
-
-## Patch release 202212.0-p2
-
-The patch release 202212.0-p2 includes the following changes:
-- Updated github actions to enable testing newer PHP versions (8.0 & 8.1).
-- Updated backoffice GUI base module to allow backoffice tables to have strict search on their columns (check this page [here](https://docs.spryker.com/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html#configure-search-by-columns)).
-- Removed explicit usage of Devvm since it’s a deprecated concept.
 
 ### GitHub release pages:
 

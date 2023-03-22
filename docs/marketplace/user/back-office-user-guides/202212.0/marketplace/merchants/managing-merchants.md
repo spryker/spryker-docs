@@ -46,7 +46,7 @@ This tab contains the main merchant information.
 | Is Active | Checkbox that gets the merchant profile page on the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
-| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html#marketplace-warehouse-management). |  |
+| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
 
 #### Contact Person Details tab
 
@@ -146,7 +146,7 @@ This tab contains the main merchant information.
 | Is Active | Checkbox that gets the merchant profile page on the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
-| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html#marketplace-warehouse-management). |  |
+| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
 
 #### Contact Person Details tab
 

@@ -18,7 +18,7 @@ The Spryker B2C Marketplace Demo Shop is a collection of ready-to-use B2C-Market
 - [Marketplace Product Offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html)
 - [Marketplace Cart](/docs/marketplace/user/features/{{site.version}}/marketplace-cart-feature-overview.html)
 - [Marketplace Order Management](/docs/marketplace/user/features/{{site.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html)
-- [Marketplace Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-featuree-marketplace-inventory-management-feature.html)
+- [Marketplace Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/marketplace-inventory-management-feature-overviewe-marketplace-inventory-management-feature.html)
 - [Marketplace Promotions and Discounts](/docs/marketplace/user/features/{{site.version}}/marketplace-promotions-and-discounts-feature-overview.html)
 - [Marketplace Return Management](/docs/marketplace/user/features/{{site.version}}/marketplace-return-management-feature-overview.html)
 - [Marketplace Shipment](/docs/marketplace/user/features/{{site.version}}/marketplace-shipment-feature-overview.html)

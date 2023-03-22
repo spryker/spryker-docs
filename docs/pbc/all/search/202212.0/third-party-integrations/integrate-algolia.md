@@ -42,7 +42,7 @@ Follow these steps to integrate Algolia.
 
 ### 1. Configure shared configs
 
-Add the following config to `config/Shared/config_default.php`
+Add the following config to `config/Shared/config_default.php`:
 
 ```php
 //...

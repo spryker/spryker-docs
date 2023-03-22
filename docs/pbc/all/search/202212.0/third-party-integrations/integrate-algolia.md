@@ -78,7 +78,6 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...
     'product' => 'http',
-    'search' => 'http',
 ];
 ```
 

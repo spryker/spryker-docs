@@ -239,9 +239,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-## 1.3. Null as the return
+## 1.3 Null as the return
 
-Code example 1.1.4: Method returns null
+Code example 1.3.1: Method returns null
 ```php
 use Spryker\Zed\Api\ApiConfig as SprykerApiConfig;
 

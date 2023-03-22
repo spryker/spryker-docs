@@ -89,6 +89,7 @@ entries:
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:
           - title: Base shop
+            url: /docs/pbc/all/cart-and-checkout/base-shop/cart-and-checkout-base-shop.html
             nested:
               - title: What's changed
                 url: /docs/pbc/all/cart-and-checkout/base-shop/whats-changed-in-cart-and-checkout.html
@@ -119,7 +120,7 @@ entries:
               - title: Approval Process feature overview
                 url: /docs/pbc/all/cart-and-checkout/base-shop/approval-process-feature-overview.html
               - title: Comments feature overview
-                url: /docs/pbc/all/cart-and-checkout/cbase-shop/omments-feature-overview.html
+                url: /docs/pbc/all/cart-and-checkout/base-shop/comments-feature-overview.html
               - title: Non-splittable Products feature overview
                 url: /docs/pbc/all/cart-and-checkout/base-shop/non-splittable-products-feature-overview.html
               - title: Resource Sharing feature overview

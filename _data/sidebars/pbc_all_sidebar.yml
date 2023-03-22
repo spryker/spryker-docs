@@ -2035,6 +2035,8 @@ entries:
                     url: /docs/pbc/all/warehouse-management-system/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
           - title: Marketplace
             url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-overview.html
+            include_versions:
+            - "202212.0"  
             nested:
               - title: Install features
                 nested:

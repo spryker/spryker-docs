@@ -110,7 +110,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 }
 ```
 
-2. Adjust `.github/workflows/ci.yml`:
+2. If the project uses CI, adjust `.github/workflows/ci.yml`:
 
 ```yaml
 jobs:
@@ -125,7 +125,6 @@ jobs:
       - name: ES lint
         run: npm run yves:eslint
 ```
-
 
 ## 3) Remove unnecessary files
 

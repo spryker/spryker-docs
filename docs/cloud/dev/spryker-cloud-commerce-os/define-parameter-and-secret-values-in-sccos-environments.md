@@ -33,6 +33,6 @@ To define parameters and their values, do the following.
 
 {% info_block warningBox "Propagation of Parameters" %}
 
-Plese note that if you need parameters to be available in your Jenkins instance, we will need to terraform your added or changed parameters. Please create a [support case](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#plattform-change-requests) to ask for this adjustment to be made.
+If you need parameters to be available in your Jenkins instance, we need to terraform your added or changed parameters. To ask for this adjustment, create a [support case](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#plattform-change-requests).
 
 {% endinfo_block %}

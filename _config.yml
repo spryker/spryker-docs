@@ -150,14 +150,14 @@ defaults:
       role: "user"
   -
      scope:
-       path: "docs/paas-plus"
+       path: "docs/scu"
      values:
-       product: "platform-as-a-service-plus"
+       product: "spryker-code-upgrader"
   -
      scope:
-       path: "docs/paas-plus/dev"
+       path: "docs/scu/dev"
      values:
-       sidebar: "paas_plus_dev_sidebar"
+       sidebar: "scu_dev_sidebar"
        role: "dev"
   -
      scope:
@@ -207,6 +207,7 @@ versioned_categories:
       - back-office-user-guides
       - technology-partners
       - shop-user-guides
+      - overview-of-features
     dev:
       - feature-walkthroughs
       - feature-integration-guides
@@ -234,7 +235,7 @@ versioned_categories:
       - price-management
       - product-information-management
       - product-relationship-management
-      - punchout      
+      - punchout
       - return-management
       - ratings-reviews
       - request-for-quote
@@ -255,7 +256,7 @@ sidebars:
   - scos_user_sidebar
   - sdk_dev_sidebar
   - acp_user_sidebar
-  - paas_plus_dev_sidebar
+  - scu_dev_sidebar
   - pbc_all_sidebar
 
 description: "Spryker documentation center."
@@ -291,8 +292,8 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'paas_plus_dev'
-      title: 'PaaS+'
+    - name: 'scu_dev'
+      title: 'Cloud Developer'
 sass:
     sass_dir: css
     style: compressed

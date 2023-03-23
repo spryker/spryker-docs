@@ -6,6 +6,7 @@ last_updated: Mar 3, 2023
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
 ---
+To integrate Bazaarvoice, follow these guidelines.
 
 ## Prerequisites
 
@@ -15,8 +16,8 @@ The Bazaarvoice app requires the following Spryker modules:
 * `spryker/asset-storage: ^1.1.0`
 * `spryker/merchant-profile: ^1.1.0` (Marketplace only)
 * `spryker/message-broker: ^1.3.0`
-* `spryker/message-broker-aws: ^1.3.2`
-* `spryker/oms: ^11.23.0`
+* `spryker/message-broker-aws: ^1.4.1`
+* `spryker/oms: ^11.23.1`
 * `spryker/product-review: ^2.10.0`
 * `spryker/product-review-gui: ^1.5.0`
 * `spryker-shop/asset-widget: ^1.0.0`
@@ -91,8 +92,7 @@ Since merchants don't have their own entities in the Bazaarvoice service, produc
 
 {% endinfo_block %}
 
-Core template:
-`SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
 | SCHEMA.ORG PROPERTY        | BAZAARVOICE PROPERTY |
 |----------------------------|----------------------|
@@ -101,6 +101,7 @@ Core template:
 | organization.logo          | productImageURL      |
 
 #### Ratings and reviews (for Product)
+
 Core templates:
 * `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 * `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`

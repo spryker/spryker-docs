@@ -56,7 +56,7 @@ To edit the existing marketplace abstract product:
 
 ### Reference information: [Product name] drawer, Abstract Product Details tab
 
-| ATTRIBUTE   | DESCRIPTION  | REQUIRED? |
+| ATTRIBUTE   | DESCRIPTION  | REQUIRED |
 | ----------- | -------------- | --------- |
 | Name        | Name of your product displayed on the Storefront. It is set per locale. | ✓         |
 | Description | Description of the product displayed on the Storefront. It is set per locale. |           |

@@ -77,12 +77,7 @@ PaaS nonproduction email service has the following quotas:
 * Daily sending limit: 200 emails.
 * Sending limit messages per second: 1
 
-{% info_block infoBox "Note" %}
-
-Recipients of emails need to be individually [verified](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html) for nonproduction systems.
-
-{% endinfo_block %}
-
+Note that recipients of emails need to be individually [verified](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html) for nonproduction systems.
 
 Reach out to [Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-support.html) if these are not sufficient to support your use case.
 

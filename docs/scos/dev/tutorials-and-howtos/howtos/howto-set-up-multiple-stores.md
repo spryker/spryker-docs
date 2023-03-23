@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/multiple-stores
 ---
 
-{% info_block warningBox "Multiple stores in cloud environments" %}
+{% info_block infoBox "Multiple stores in cloud environments" %}
 
 For instructions about setting up multiple stores in Spryker Cloud Commerce OS, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
 
@@ -214,13 +214,6 @@ Also, make sure that commands that need to trigger for each store have stores: `
 
 ## Configure the deploy file
 
-
-{% info_block warningBox "Change Request needed" %}
-
-For PaaS Customers: Once you have configured your deploy.yml file as described below, please get in touch with our Support, as infrastructure adjustments are needed. Attach your deploy.yml file to the case to speed up the process.
-
-{% endinfo_block %}
-
 According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
 
 Deploy file configuration for the multi-store setup 1:
@@ -269,6 +262,12 @@ The following configuration parameters are used in this example:
 * The `stores` parameter defines the list of stores and store-specific settings for `services`.
 
 For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
+
+{% info_block warningBox "Change Request needed" %}
+
+Once you have configured your `deploy.yml` file, get in touch with our Support because infrastructure adjustments are needed. To speed up the process, attach your `deploy.yml file` to the case.
+
+{% endinfo_block %}
 
 ## Define the store context
 

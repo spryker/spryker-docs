@@ -64,6 +64,7 @@ composer require --dev spryker/profiler
 
 ```php
 <?php
+
 namespace Pyz\Yves\EventDispatcher;
 
 use Spryker\Yves\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
@@ -86,6 +87,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 ```php
 <?php
+
 namespace Pyz\Yves\WebProfilerWidget;
 
 use Spryker\Yves\Profiler\Plugin\WebProfiler\WebProfilerProfilerDataCollectorPlugin;
@@ -114,6 +116,8 @@ class WebProfilerWidgetDependencyProvider extends SprykerWebProfilerDependencyPr
 | WebProfilerProfilerDataCollectorPlugin | Shows the traces data in the web profiler toolbar. | WebProfilerExtension     | Spryker\Zed\Profiler\Communication\Plugin\WebProfiler\WebProfilerProfilerDataCollectorPlugin |
 
 ```php
+<?php
+
 namespace Pyz\Zed\EventDispatcher;
 
 use Spryker\Zed\Profiler\Communication\Plugin\EventDispatcher\ProfilerRequestEventDispatcherPlugin;
@@ -135,6 +139,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 ```php
 <?php
+
 namespace Pyz\Zed\WebProfiler;
 
 use Spryker\Zed\Profiler\Communication\Plugin\WebProfiler\WebProfilerProfilerDataCollectorPlugin;

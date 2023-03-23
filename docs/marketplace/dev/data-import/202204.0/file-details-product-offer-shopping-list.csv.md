@@ -26,7 +26,7 @@ console data:import product-offer-shopping-list-item
 
 The file should have the following parameters:
 
-| PARAMETER   | REQUIRED? | TYPE  | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER   | REQUIRED | TYPE  | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |--------------|-----------|---------|---------------|------------|
 | shopping_list_item_key  | &check;   | String  | Unique  | Identifier of the shopping list item in the system. |
 | product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the system. |

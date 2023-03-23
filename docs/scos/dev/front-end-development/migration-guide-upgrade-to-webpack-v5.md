@@ -5,8 +5,6 @@ last_updated: Jan 12, 2023
 template: module-migration-guide-template
 ---
 
-**Commit to *`BRANCH_NAME`***
-
 ## Upgrading Webpack from version 4.* to version 5.*
 
 This document provides instructions for upgrading Webpack to version 5 in your Spryker project.
@@ -238,7 +236,7 @@ const getAssetsConfig = (appSettings) => [
 ];
 ```
 
-## 2) Build assets
+## 3) Build assets
 
 Check correct builds for all layers `Yves`, `Zed`, and `MP` (if Merchant Portal is used), including `watch` and `production` modes:
 

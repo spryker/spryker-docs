@@ -8,7 +8,30 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/search-feature-walkthrough.html
 ---
 
-Search is one of the most effective navigation tools in modern shops. The Search capability lets you create the right search for your shop and enable customers to quickly find what they are looking for.
+Search is one of the most effective navigation tools in modern shops. The Search capability lets you create the right search for your shop and enables customers to quickly find what they are looking for.
+
+The Search capability comes with a variety of functionalities to make your customer's search experience smoother and more efficient.
+
+**Fuzzy Search**
+Suggests search results that do not precisely match the search request.
+**Auto-completion & Suggestions**
+Helps customers by predicting the rest of a search string and offers a list of matching options, and on-the-fly page suggestions for products, categories, or CMS pages.
+**Did-you-mean**
+Offers typo corrections for a search string.
+**Mimic a Dynamic Category**
+Leverages the search URL and uses it as a link within your navigation. This makes it look like a category to a user, but enables you to create more sophisticated categories.
+
+A successful search engine optimization is done through five steps.
+
+1) Building a search index
+2) Defining sorting criteria & formula
+3) Measuring KPIs and Metrics
+4) Testing your strategy
+5) Going live with your search operation
+
+Spryker's search capability will enable you to pursue each of those steps to their fullest.
+
+
 
 ## Related Business User articles
 

@@ -67,9 +67,38 @@ related:
     link: docs/pbc/all/search/page.version/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
-Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you get to store in it.
+Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you get to store in it. It indexes the original data to make it easier to search for specific and related terms.
 
-Because the used data structure is static, you need to define it in advance. The definitions of the indexes and mappings are written in JSON. You can find it in the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html).
+Elasticsearch is:
+* Scalable
+* Real-time
+* Highly available
+* Developer-friendly
+* Versatile in storage
+* Complex queries & aggreggations
+
+It's also fully text-boosted, allowing different methods towards calculating relevance scores, and has default stopwords such as "the" or "and" which are filtered out of results, for maximum accuracy.
+
+**Filter and Sorting**
+
+The following filter options are available:
+* Brand
+* Label (alcoholic, kosher, organic)
+* Origin (country)
+* Category (not yet available on frontend)
+The following sorting options are available:
+* By relevance (default)
+* By Price
+* By Name
+
+**Elasticsearch Enhancements**
+
+URL Redirects are a way to forward customers and search engines from one URL to another. For example, if a user searches “advent calendars”, they will see a search results page for this query and will be additionally notified about the URL redirect. The customer can then choose to follow that redirect, or browse search results. However, this capability is not available OOTB (Out Of The Box), and requires enabling in the Back Office.
+
+
+
+
+Because the used data structure is static, you need to define it in advance. The definitions of the indexes and mappings are written in JSON. You can find them in the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html).
 
 The content of the configuration files must follow the conventions listed in the [Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) document of the official Elasticsearch documentation.
 
@@ -91,6 +120,8 @@ Each configured store has its index, which is installed automatically. An index 
 * An optional prefix, which is defined by the `SearchElasticsearchConstants::INDEX_PREFIX` configuration option.
 * A store name.
 * A configuration file name.
+
+Indexing Analyzers help define how the data you provide and acquire is stored. Indexing documents and data is a core component of any successful search engine optimization process.
 
 Index name components are delimited with an underscore—for example, `spryker_de_page`.
 
@@ -156,9 +187,9 @@ To define new indexes and mappings, under the `Shared` namespace of any module, 
 
 To extend or overwrite the existing configurations, create a new file with the same name you want to modify and provide only the differences compared to the original one.
 
-When the search installer runs, it reads all the available configuration files and merges them by an index name per store. This might be handy if you have modules that are not tightly coupled together, but both need to use the same index for some reason, or you just need to extend or override the default configuration provided on the core level.
+When the search installer runs, it reads all the available configuration files and merges them by an index name per each store. This is especially useful if you have modules that are not tightly coupled together, but need to use the same index for some reason, or if you just need to extend or override the default configuration provided on the core level.
 
-To extend or modify indexes and mappings for a specific store, create a new configuration file along with the store's name—for example, `de_page.json`. The file is used for this store only. For example, if you have a different analyzing strategy for your stores, you must define it separately.
+To extend or modify indexes and mappings for a specific store, create a new configuration file along with the store's name—for example, `de_page.json`. The file is used for this specific, single store only. If you have a different analyzing strategy for your stores, you must define it separately.
 
 ## Install indexes and mappings
 
@@ -171,7 +202,7 @@ The first command installs indexes that are not created and [updates the mapping
 
 If an index is created with the given settings, it is changed by running this process, but the mapping can be modified and changed.
 
-In the development environment, to create new analyzers or change the index settings, you must delete the index and run the installation process again.
+To create new analyzers or change the index settings in the development environment, you must delete the index and run the installation process again.
 
 Populate the newly created index with data:
 
@@ -179,10 +210,10 @@ Populate the newly created index with data:
 vendor/bin/console publish:trigger-events
 ```
 
-After running the `search:setup:source-map` command, a helper class is autogenerated for every installed index. You can find these classes under the `\Generated\Shared\Search` namespace. The name of the generated class starts with the name of the index and is followed by the suffix `IndexMap`.
+After running the `search:setup:source-map` command, a helper class is autogenerated for every installed index. You can find these classes under the `\Generated\Shared\Search` namespace. The name of the generated class starts with the name of the index, and is followed by the suffix `IndexMap`.
 
 For the default page index, the class is `\Generated\Shared\Search\PageIndexMap`.
 
 These classes provide some information from mapping, such as fields and metadata. Use these classes for references to program against something related to that mapping schema.
 
-If you change mapping and run the installer, autogenerated classes change accordingly.
+If you change the mapping and run the installer, autogenerated classes will change accordingly.

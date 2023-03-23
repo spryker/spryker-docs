@@ -40,7 +40,7 @@ A search engine facilitates better navigation, allowing customers to quickly loc
 
 The search engine returns a small number of items that match the query.
 
-Facets provide aggregated data based on a search query. For example, you need to query for all the shirts that are in blue. The search engine has configured a facet on a category and one on the color attribute. Therefore, the search query is executed using these two facets. The search result returns the entries that are aggregated both in the category facet with the shirt category ID and in the color facet with the value blue.
+Facets provide aggregated data based on a search query. For example, you need to query for all shirts that are in blue. The search engine has configured a facet on a category, and one on the color attribute. Due to this, the search query is executed using these two facets. The search result returns the entries that are aggregated both in the category facet with the shirt category ID, and in the color facet with the value blue.
 
 ## Category facet filter
 
@@ -48,9 +48,9 @@ Facets provide aggregated data based on a search query. For example, you need to
 
 * `catalogSearch($searchString, array $requestParameters = [])`
 
-The operation can contain other facet filters (such as color or size)  in the request.
+The operation can contain other facet filters (such as color or size) in the request.
 
-On the category detail page, `catalogSearch($searchString, $parameters)` must be used, as in the following example:
+On the category detail page `catalogSearch($searchString, $parameters)` must be used, as in the following example:
 
 ```php
 <?php
@@ -116,7 +116,7 @@ A facet search is executed using the category facet with the provided category n
 
 ## Configure facet filters
 
-The category facet is a special case and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category detail page is requested.
+The category facet is a special case, and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category's detail page is requested.
 
 Other than that, the `CatalogClient` operation can handle requests that contain other facet filters.
 
@@ -126,7 +126,7 @@ You can integrate as many facet filters in your search query, as long as they ar
 
 The configuration you make in `CatalogDependencyProvider` must be in sync with the structure of the data exported to Elasticsearch.
 
-However, even if you have the facets exported in Elasticsearch, without adding the necessary configuration in `CatalogDependencyProvider`, you can't submit the correct queries.
+However, even if you have the facets exported in Elasticsearch, you can't submit the correct queries without adding the necessary configuration in `CatalogDependencyProvider`.
 
 {% endinfo_block %}
 
@@ -160,7 +160,7 @@ The search attributes are configured in `CatalogDependencyProvider`.
     }
 ```
 
-Adding the price attribute to the configuration as an active facet lets you filter the products on the value of this attribute.
+Adding the price attribute to the configuration as an active facet lets you filter the products by the value of this attribute.
 
 The `https://mysprykershop.com/en/computers/notebooks?price=0-300` request performs a search using the category and price facets. It returns the products under the notebooks category with a price range between 0 and 300.
 

@@ -34,7 +34,7 @@ This tutorial is also available on the Spryker Training website. For more inform
 
 {% endinfo_block %}
 
-When you add a red camera to the cart, all red cameras are going to be boosted in the catalog and pushed to the top of the products.
+When you add a red camera to the cart, all red cameras are going to be boosted in the catalog and pushed to the top of the product catalog.
 
 This tutorial also explains how to work with plugins and extend the search plugin stack.
 
@@ -341,7 +341,7 @@ class CatalogFactory extends SprykerCatalogFactory {
 
 In `CatalogDependencyProvider`, there is a stack of plugins for expanding the search query.
 
-Boosting the catalog is an expansion of the base search query for changing the weight of products on the catalog page so that the order of products on that page changes as well.
+Boosting the catalog is an expansion of the base search query for changing the weight of products on the catalog page, so that the order of products on that page changes as well.
 
 To use your new plugin, inject it into the `CatalogDependencyProvider` in the `createCatalogSearchQueryExpanderPlugins()` method:
 

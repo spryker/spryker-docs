@@ -9,7 +9,7 @@ related:
     link: docs/pbc/all/search/page.version/search.html
 ---
 
-By default, customers can search by product names and SKUs. Search preferences enable searching by product attribute values. However, enabling search preferences for a big number of attributes results in a huge list of search results. This document describes how to effectively use search preferences to promote products.
+By default, customers can search for products by product names and SKUs. Search preferences also enable searching by product attribute values. However, enabling search preferences for a big number of attributes results in a huge list of search results. This document describes how to effectively use search preferences to promote products.
 
 For example, there is a new camera *Supracam focus* which is popular on the market for its video recording properties: geotagging and autofocus. To add the product and search preferences, do the following:
 

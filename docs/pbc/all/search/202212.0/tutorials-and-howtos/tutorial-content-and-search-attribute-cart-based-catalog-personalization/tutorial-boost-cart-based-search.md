@@ -26,11 +26,11 @@ related:
     link: docs/pbc/all/search/page.version/search.html
 ---
 
-This tutorial describes how you can improve the cart-based search in your project.
+This tutorial describes how you can improve cart-based searches in your project.
 
 Based on the colors of the products in the user's cart, the catalog must first display products that have the same color. For example, if there’s a red product in the cart, the top results in the catalog must also contain red products.
 
-To solve the challenge, use instructions from the following sections.
+To solve this challenge, follow the instructions from the following sections.
 
 ## Preparation
 

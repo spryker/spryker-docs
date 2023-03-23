@@ -18,18 +18,18 @@ redirect_from:
   - /docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html
 ---
 
-Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider.  It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in its version 6 - primarily because of the removal of mapping types. From the very beginning, Spryker’s search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
+Previously, out of the box, Spryker provided support only for Elasticsearch 5 as the search provider.  It was impossible to use major versions of Elasticsearch later because of the breaking changes introduced in version 6, primarily because of the removal of mapping types. From the very beginning, Spryker’s search setup included one index per store, which was logically divided into several mapping types to support different types of resources. Besides, there was no easy way to substitute Elasticsearch with alternative search providers.
 
-Refactoring of the Spryker’s search sub-system has two main goals:
+Refactoring of Spryker’s search sub-system has two main goals:
 
-1. Prepare the infrastructure for replacing Elasticsearch with alternative search providers as well as for using several search providers at a time.
-2. Unblock the ability to use Elasticsearch 6, by changing the way, in which the search data is stored in Elasticsearch - rather than having all the data inside of a single index with multiple mapping types, indexed documents are now stored across multiple Elasticsearch indexes each having its own single mapping type. This is compatible with Elasticsearch 6, which allows a single mapping type per index,  and is a solid foundation for the future migration to Elasticsearch 7, where the concept of mapping types is removed completely.
+1. Prepare our infrastructure for replacing Elasticsearch with alternative search providers, as well as for using several search providers at a time.
+2. Unblock the ability to use Elasticsearch 6, by changing the way in which the search data is stored in Elasticsearch. Rather than having all the data inside of a single index with multiple mapping types, indexed documents are now stored across multiple Elasticsearch indexes, with each having its own single mapping type. This is compatible with Elasticsearch 6, which allows a single mapping type per index, and is a solid foundation for a future migration to Elasticsearch 7, where the concept of mapping types is removed completely.
 
-This article describes the changes made to add support of Elasticsearch 6 and create the foundation for replacing Elasticsearch with other search providers.
+This article describes the changes made to add support for Elasticsearch 6, and to create the foundation for replacing Elasticsearch with other search providers.
 
 ## Preparing the infrastructure for replacing Elasticsearch
 
-The central place of the Spryker’s search sub-system is the *Search* module. This module provides APIs for:
+The central place of Spryker’s search sub-system is the *Search* module. This module provides APIs for:
 
 * installing the infrastructure for search (creating/updating Elasticsearch indexes)
 * searching for data
@@ -38,10 +38,10 @@ The central place of the Spryker’s search sub-system is the *Search* module. T
 Old versions of the Search module were highly coupled to Elasticsearch 5 as the search provider.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Current+Search+state+Copy.png)
 
-From now on, all the search provider-specific tasks are performed by the dedicated modules, which implement various plugin interfaces from the new *SearchExtension* module and are hooked to the Search module. The Search module itself is all about receiving requests through its API and routing them to the corresponding search provider-specific module(s) through the delegation mechanism. All Elasticsearch specific code has been deprecated in the Search module and moved to the new *SearchElasticsearch* module.
+From now on, all the search provider-specific tasks are performed by the dedicated modules, which implement various plugin interfaces from the new *SearchExtension* module and are hooked to the Search module. The Search module itself is all about receiving requests through its API and routing them to the corresponding search provider-specific module(s) through the delegation mechanism. All Elasticsearch-specific code has been deprecated in the Search module and moved to the new *SearchElasticsearch* module.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Migration+Concepts/Desired+state+Copy.png)
 
-To achieve this in the backward-compatible way, a new concept called **search context** was introduced, which is represented by the `SearchContextTransfer` object. The search context is needed to determine the search provider, which should respond to a particular search request, as well as to store information/configuration needed to handle this request. The main and mandatory part of this search context is the source identifier. The source identifier is used in two scenarios:
+To achieve this in a backwards compatible way, a new concept called **search context** was introduced, which is represented by the `SearchContextTransfer` object. The search context is needed to determine the search provider, which should respond to a particular search request, as well as to store information/configuration needed to handle this request. The main and mandatory part of this search context is the source identifier. The source identifier is used in two scenarios:
 
 * resolving a search provider to handle the search request
 * resolving a source (index, in terms of Elasticsearch) to perform search/storing of data
@@ -62,7 +62,7 @@ All the Elasticsearch specific commands in the *Search* module were deprecated a
 
 ### Searching for data
 
-Searching for data is done through the SearchClient. Whenever there is a need to search for some data, implementation of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`, tailored for that specific search, is defined by some satellite module.  It is then passed to `SearchClient::search()` method. Right now, all existing implementations of this interface in the core are bound to Elasticsearch. To provide future support for other search providers all these classes now implement the additional interface `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. This interface could be implemented like this:
+Searching for data is done through the SearchClient. Whenever there is a need to search for some data, implementation of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`, tailored for that specific search, is defined by some satellite module.  It is then passed to the `SearchClient::search()` method. Right now, all existing implementations of this interface in the core are bound to Elasticsearch. To provide future support for other search providers all these classes now implement the additional interface `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. This interface could be implemented like this:
 
 **Code sample**
 
@@ -129,12 +129,12 @@ class SomeProjectLevelSearchQueryPlugin extends AbstractPlugin implements QueryI
 }
 ```
 
-The main idea here is that a query plugin must be able to set up and store the search context internally, and this search context could later be changed from outside of the plugin.
+The idea is that a query plugin must be able to set up and store the search context internally, and this search context could later be changed from outside of the plugin.
 Here is how the SearchElastisearch module resolves a source (index name) from the source identifier:
 
 * `ElasticsearchSearchContextTransfer` is introduced, which has a property for storing index name for the current search operation
-* New property is added to `SearchContextTransfer`, which is of type `ElasticsearchSearchContextTransfer`
-* Source identifier is extracted from the passed `SearchContextTransfer` object, transformed into an index name
+* New property is added to `SearchContextTransfer`, which is of the type `ElasticsearchSearchContextTransfer`
+* The source identifier is extracted from the passed `SearchContextTransfer` object, transformed into an index name
 * A new `ElasticsearchSearchContextTransfer` object is created, and the index name is set as its property
 * This new transfer object is set as the property of the passed `SearchContextTransfer` object, which is then returned back to the *Search* module
 
@@ -144,11 +144,11 @@ Data that needs to be stored for future search is passed along with some metadat
 
 ## Unblocking Elasticsearch 6
 
-As already mentioned before, previously, there was one index per store for all searchable data, which was split into several mapping types (page, product-review, etc.). From now on, for each of the mapping types, a separate index will be created by the SearchElasticsearch module, which will only have its dedicated mapping type. All the operations related to indexing/searching for documents will then be routed to the proper index with the help of source identifiers.
+As already mentioned before, previously there was only one index per store for all searchable data, which was split into several mapping types (page, product-review, etc.). From now on, for each of the mapping types, a separate index will be created by the SearchElasticsearch module, which will only have its dedicated mapping type. All the operations related to indexing/searching for documents will then be routed to the proper index with the help of source identifiers.
 
 ## Migrating to Elasticsearch 7
 
-In Elasticsearch 7, among other changes, the mapping types removal started in version 6, continues. While the previous major version has deprecated the concept of mapping types themselves but still required one mapping type per index, Elasticsearch 7.x by default, does not allow mapping types at all.
+In Elasticsearch 7, among other changes, the mapping types removal that was started in version 6 continues. While the previous major version has deprecated the concept of mapping types themselves but still required one mapping type per index, Elasticsearch 7.x by default does not allow mapping types at all.
 
 ### General information
 
@@ -170,7 +170,7 @@ to migrate from Elasticsearch 6 to Elasticsearch 7, update the necessary modules
 composer update spryker/elastica spryker/product-review spryker/search spryker/search-elasticsearch spryker/synchronization spryker/collector --with-dependencies
 ```
 
-You don't need to do any extra-work related to your indexes and the data stored. That is, you don't need to adjust your indexes in any way, for example, by removing their corresponding mapping types and re-index the data, as both Elasicsearch 7.x and Spryker can work with your indexes created for version 6.x out of the box. But keep in mind that **all the new indexes created in Elasticsearch 7.x must not contain mapping types**.
+You don't need to do any extra work related to your indexes and the data stored. That is, you don't need to adjust your indexes in any way, for example, by removing their corresponding mapping types and re-index the data, as both Elasicsearch 7.x and Spryker can work with your indexes created for version 6.x out of the box. But keep in mind that **all the new indexes created in Elasticsearch 7.x must not contain mapping types**.
 
 ### Migrating from Elasticsearch 5.x to Elasticsearch 7.x
 
@@ -185,7 +185,7 @@ To perform the upgrade without shutting down the cluster, you have to do a rolli
 
 {% endinfo_block %}
 
-That being done, the migration to Elasticsearch 7 from Elasticsearch 5 is complete.
+With that done, the migration to Elasticsearch 7 from Elasticsearch 5 is complete.
 
 ## Modules to upgrade
 

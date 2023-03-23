@@ -48,23 +48,23 @@ related:
     link: docs/pbc/all/search/page.version/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
-Once you have all the necessary data in Elasticsearch, you can display it on Yves.
+Once you have all the necessary data in Elasticsearch, you can display it in Yves.
 
-To achieve this, [query Elasticsearch](#query-elasticsearch), which returns raw data needed for [processing the query result](#process-query-result) to display it in the templates.
+To achieve this, [query Elasticsearch](#query-elasticsearch), which returns the raw data needed to [process the query result](#process-query-result) in order to display it in the templates.
 
 In `SearchClient`, you can find the `search()` method `(\Spryker\Client\Search\SearchClientInterface::search())`. Call this method to execute any search query. It expects to receive an instance of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface` as the first parameter, which represents the query itself, and a collection of `\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface` instances, which are applied to the response data to format it.
 
 ## Query Elasticsearch
 
-The first step is implementing the `QueryInterface`. To communicate with Elasticsearch, Spryker uses the [Elastica](http://elastica.io/) library as a Data Query Language.
+The first step is implementing the `QueryInterface`. To communicate with Elasticsearch, Spryker uses the [Elastica](http://elastica.io/) library as its Data Query Language.
 
-Inside `QueryInterface`, create an instance of `\Elastica\Query`, configure it to fit your needs, and then return it with `getSearchQuery()`.
+Inside `QueryInterface`, create an instance of `\Elastica\Query`, configure it to fit your needs, then return it with `getSearchQuery()`.
 
-This is the point where configuring the query is completely up to you. Use Elastica to alter the query to your needs, add filters, aggregations, boosts, sorting, pagination, or anything else you like and Elasticsearch allows you.
+At this point, configuring the query is completely up to you. You can use Elastica to alter the query to your needs, add filters, aggregations, boosts, sorting, pagination, or anything else you like that is allowed by Elasticsearch.
 
 {% info_block infoBox %}
 
-The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuery()` method is called multiple times and alters the original query (see [Expanding queries](#expand-queries)), so make sure that it returns the same instance. This can be achieved by creating the `\Elastica\Query` instance at construction time and returning it in the `getSearchQuery()` method.
+The `QueryInterface` instance is a stateful class. Sometimes, the `getSearchQuery()` method is called multiple times and alters the original query (see [Expanding queries](#expand-queries)), so make sure that it returns the same instance each time. This can be achieved by creating the `\Elastica\Query` instance at the time of construction, and returning it in the `getSearchQuery()` method.
 
 {% endinfo_block %}
 
@@ -440,4 +440,4 @@ To execute the previously created query along with this result formatter plugin,
 
 When you use the result formatter plugins, the result of the `SearchClient::search()` method is an associative array, where the keys are the name of each result formatters (provided by the `getName()` method) and the values are the response for each result formatter.
 
-This way, in your controller, where you get the response at the end, you can simply provide everything you get right to the template to care of.
+This way, when you get the response at the end in your controller, you can simply provide everything you get right to the template to care of.

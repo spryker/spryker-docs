@@ -265,6 +265,9 @@ entries:
       - "202108.0"
     - title: Merchant
       url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"      
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
       include_versions:
@@ -2081,7 +2084,6 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-integration-guides/merchant-b2b-contracts-feature-integration.html
       include_versions:
@@ -2092,7 +2094,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-integration-guides/merchant-custom-prices-feature-integration.html
       include_versions:
@@ -2609,6 +2610,10 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
       include_versions:
       - "202304.0"
+    - title: Picker user login
+      url: /docs/scos/dev/feature-integration-guides/install-the-picker-user-login-feature.html
+      include_versions:
+        - "202304.0"
     - title: Volume Prices
       url: /docs/scos/dev/feature-integration-guides/volume-prices-feature-integration.html
       include_versions:

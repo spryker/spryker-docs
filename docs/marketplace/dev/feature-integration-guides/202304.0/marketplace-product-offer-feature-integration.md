@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | -------|
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Product              | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
@@ -217,7 +217,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new MerchantProductOfferWritePublisherPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -228,7 +228,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductOfferStoreProductConcreteWritePublisherPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
      */
@@ -608,7 +608,7 @@ offer418,112_312526172,MER000002,,1,approved
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | -------------- | ----------- | -------- | --------- | ------------------ |
 | product_offer_reference | &check;      | string    | offer1        | Product offer reference that is referenced to this merchant. |
 | concrete_sku            | &check;        | string    | 093_24495843  | Concrete product SKU this product offer is attached to.      |
@@ -1008,7 +1008,7 @@ offer418,AT
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ---------------- | ------------ | ------- | ------------- | ------- |
 | product_offer_reference | &check;     | string    | roan-gmbh-und-co-k-g | A product offer reference, unique identifier per Offer. |
 | store_name              | &check;    | string    | DE  | The name of the store.  |
@@ -1041,7 +1041,7 @@ offer94,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 offer95,2020-07-01 00:00:00.000000,2025-12-01 00:00:00.000000
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ------------ |-----------|-----------| ----------- | ---------------- |
 | product_offer_reference | &check;   | string    | offer1       | A unique product offer identifier.             |
 | valid_from              |           | String    | 2020-01-01   | Date since which the product offer is valid. |
@@ -1176,7 +1176,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new MerchantReferenceQueryExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
@@ -1186,7 +1186,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new MerchantReferenceQueryExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
@@ -1353,7 +1353,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new MerchantReferencesProductAbstractsMapExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageMapExpanderPluginInterface>
      */
@@ -1577,7 +1577,7 @@ To start feature integration, integrate the following features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | ---------- | ----- | --------------|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature-merchant-feature.html) |
 
 ### 1) Install the required modules using Composer
 

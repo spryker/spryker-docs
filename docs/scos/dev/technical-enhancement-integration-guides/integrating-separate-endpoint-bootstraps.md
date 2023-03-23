@@ -28,7 +28,7 @@ Update the required modules:
 "spryker/monitoring": "2.3.0"
 "spryker/router": "1.12.0"
 "spryker/session": "4.10.0"
-"spryker/twig": "3.15.1"```
+"spryker/twig": "3.15.1"
 ```
 
 2. Update the modules to the specified versions:

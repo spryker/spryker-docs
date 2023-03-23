@@ -311,7 +311,7 @@ br2,Test Banner 2,Ipsum Ipsum,banner title 2,us banner title 2,,banner sub-title
 br3,Test Banner 3,Lorem Lorem,banner title 3,,de banner title 3,banner sub-title 3,,banner sub-title 3de,http://example.com/en/canon-powershot-n-035,,http://www.demo-spryker.local/en/canon-powershot-n-035,banner image 3,,banner image 3
 ```
 
-| Column | REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |
@@ -331,7 +331,7 @@ apl2,APL Name 2,APL Description 2,"191,190","","156,154"
 apl3,APL Name 3,APL Description 3,"180,171","152,151",""
 ```
 
-| Column | REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |
@@ -347,7 +347,7 @@ PS-2,PS Name 2,PS Description 2,2_sony_set,,1_hp_set
 PS-3,PS Name 3,PS Description 3,3_tomtom_runner_set,2_sony_set,
 ```
 
-| Column | REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |

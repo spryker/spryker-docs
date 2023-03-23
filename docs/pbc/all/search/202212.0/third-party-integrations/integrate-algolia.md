@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Feb 23, 2023
 ---
 
-This document describes how to integrate [Algolia](docs/pbc/all/search/{{page.version}}/third-party-integrations/algolia.html) into a Spryker sho.
+This document describes how to integrate [Algolia](docs/pbc/all/search/{{page.version}}/third-party-integrations/algolia.html) into a Spryker shop.
 
 ## Prerequisites
 

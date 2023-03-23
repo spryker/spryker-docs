@@ -65,7 +65,7 @@ Warehouse2,1
 Warehouse3,0
 ```
     
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `name` | mandatory | string | Warehouse1 | Name of the warehouse. |
 | `is_active` | mandatory | bool | 1 | Is the warehouse activated? |
@@ -80,7 +80,7 @@ Warehouse2,AT
 Warehouse2,US
 ```
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `warehouse_name` | mandatory | string | Warehouse1 | Name of the warehouse. |
 | `store_name` | mandatory | string | DE | Name of the store where the warehouse is available. |

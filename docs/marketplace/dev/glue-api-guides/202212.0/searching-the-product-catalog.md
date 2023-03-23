@@ -1,5 +1,5 @@
 ---
-title: Searching the product catalog
+title: "Glue API: Search the product catalog"
 description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
 related:

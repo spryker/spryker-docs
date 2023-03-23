@@ -89,7 +89,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_i
 <br>
 </details>
     
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 |  `abstract_sku` | optional | string | 001 | Existing abstract product SKU of scheduled price. |
 |  `concrete_sku` | optional | string | 060_26027598 | Existing concrete product SKU of scheduled price. |

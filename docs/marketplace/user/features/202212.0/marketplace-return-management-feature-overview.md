@@ -35,7 +35,7 @@ The relation of the sales order items statuses and the return states is as follo
 
 ## Marketplace return slip
 
-Buyers and Back Office users (Marketplace administrator and [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)) can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains:
+Buyers and Back Office users (Marketplace administrator and [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html)) can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains:
 
 * The return and marketplace sales order references.
 * Details about the returnable marketplace sales order items.

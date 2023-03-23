@@ -17,7 +17,7 @@ data:import merchant-category
 
 The file should have the following parameters:
 
-| PARAMETER      | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION      |
+| PARAMETER      | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION      |
 | -------------- | ----------- | ------- | ------------- | -------------------- | ------------------------------- |
 | category_key       | &check;             | String   |                   |                              | Category key to assign the merchant to.   |
 | merchant_reference | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system. |

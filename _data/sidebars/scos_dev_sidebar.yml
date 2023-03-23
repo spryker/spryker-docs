@@ -3752,6 +3752,8 @@ entries:
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
     - title: Migration guide - Upgrade to Webpack v5
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
+    - title: Migration guide - Switch from TSLint to ESLint
+      url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:

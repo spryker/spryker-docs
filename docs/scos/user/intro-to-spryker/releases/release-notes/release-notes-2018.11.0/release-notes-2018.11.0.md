@@ -144,13 +144,13 @@ Enrich your products with an individual barcode that is generated based on the S
 
 With the Product Restrictions feature, you as a shop owner can easily define who of your customers gets to see what items or categories. Any item in your product catalog can be either whitelisted or blacklisted per customer. The lists can be uploaded or imported to make it easier to set up.
 
-**Documentation**: [Product Restrictions](/docs/scos/user/features/{{site.version}}/merchant-product-restrictions-feature-overview.html)
+**Documentation**: [Product Restrictions](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html)
 
 ### Merchant Concept
 
 We have introduced the concept of Merchant to allow our customers to implement the Marketplace functionality. In a non-marketplace setup, there is always one Merchant. Product Restrictions and Customer Specific Prices are implemented by linking a B2B customer to the Merchant.
 
-**Documentation**: [Merchants and Merchant Relations](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html)
+**Documentation**: [Merchants and Merchant Relations](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html)
 
 ## General Cart Enhancements
 

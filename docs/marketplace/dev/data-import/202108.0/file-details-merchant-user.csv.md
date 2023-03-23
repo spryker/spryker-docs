@@ -17,7 +17,7 @@ data:import merchant-user
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | merchant_reference | &check; | String |   |  Unique | Identifier of the merchant in the system. |
 | username | &check; | String |   |  Unique | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user.  |

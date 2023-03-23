@@ -290,7 +290,7 @@ product,relation_type,rule,product_relation_key,is_active,is_rebuild_scheduled
 022,up-selling,"{""condition"":""AND"",""rules"":[{""condition"":null,""rules"":{},""id"":""product_sku"",""field"":""product_sku"",""type"":""string"",""input"":""text"",""operator"":""in"",""value"":""024,025,026,027,028,029""}],""id"":null,""field"":null,""type"":null,""input"":null,""operator"":null,""value"":null}",Prk-7,1,0
 ```
 
-|Column |	Required? |	Data Type |	Data Example |	Data Explanation |
+|Column |	REQUIRED |	Data Type |	Data Example |	Data Explanation |
 |---|---|---|---|---|
 |`product` |	Yes |	string |	001 |	SKU of the abstract product which owns the relation. |
 |`relation_type` |	Yes |	string |	up-selling |	Type of the product relation. |
@@ -306,7 +306,7 @@ Prk-1,DE
 Prk-1,US
 ```
 
-|Column |	Required? |	Data Type |	Data Example |	Data Explanation |
+|Column |	REQUIRED |	Data Type |	Data Example |	Data Explanation |
 |---|---|---|---|---|
 |`product_relation_key` |	yes |	string |	prk-1 |	Product relation key. |
 |`product_relation_key` |	yes |	string |	DE |	Name of the store. |

@@ -234,7 +234,7 @@ group_key_2,005,1
 ```
 
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | group_key | Yes | string | group_key_1 | Unique product group identifier. |
 | abstract_sku | Yes | string  | 001 | SKU of an abstract product. |

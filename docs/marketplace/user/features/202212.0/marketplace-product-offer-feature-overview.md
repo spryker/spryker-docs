@@ -97,7 +97,7 @@ Merchants can define product offer stores in the Merchant Portal when they [crea
 
 Merchant product offer with all the related offer information is visible on the product detail page, and further on the shopping cart page and checkout pages when the following conditions are met:
 
-1. The merchant who owns the offer is [*Active*](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+1. The merchant who owns the offer is [*Active*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants).
 2. The product offer status is:
    - Approved
    - Active

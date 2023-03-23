@@ -207,6 +207,7 @@ versioned_categories:
       - back-office-user-guides
       - technology-partners
       - shop-user-guides
+      - overview-of-features
     dev:
       - feature-walkthroughs
       - feature-integration-guides
@@ -230,6 +231,7 @@ versioned_categories:
       - emails
       - gift-cards
       - identity-access-management
+      - merchant-management
       - order-management-system
       - price-management
       - product-information-management

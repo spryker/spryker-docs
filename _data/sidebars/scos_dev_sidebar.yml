@@ -265,6 +265,9 @@ entries:
       - "202108.0"
     - title: Merchant
       url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"      
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
       include_versions:
@@ -1358,7 +1361,7 @@ entries:
       url: /docs/scos/dev/glue-api-guides/retrieving-discounts.html
       include_versions:
       - "202005.0"
-  - title: Feature integration guides 
+  - title: Feature integration guides
     url: /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
     nested:
     - title: Glue API
@@ -2076,7 +2079,6 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-integration-guides/merchant-b2b-contracts-feature-integration.html
       include_versions:
@@ -2087,7 +2089,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-integration-guides/merchant-custom-prices-feature-integration.html
       include_versions:
@@ -3751,6 +3752,8 @@ entries:
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
     - title: Migration guide - Upgrade to Webpack v5
       url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
+    - title: Migration guide - Switch from TSLint to ESLint
+      url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
   - title: Migration concepts
     url: /docs/scos/dev/migration-concepts/migration-concepts.html
     nested:

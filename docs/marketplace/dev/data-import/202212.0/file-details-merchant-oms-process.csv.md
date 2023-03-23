@@ -22,7 +22,7 @@ data:import merchant-oms-process
 
 The file should have the following parameters:
 
-| PARAMETER  | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION   |
+| PARAMETER  | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION   |
 | --------------- | ---------- | ------- | ------------ | -------------- | ----------------------- |
 | merchant_reference        | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system. |
 | merchant_oms_process_name | &check;             | String   |                   |                              | Name of the merchant state machine.       |
@@ -31,7 +31,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
+- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html)
 
 ## Import template file and content example
 

@@ -116,9 +116,12 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
     public function getProtectedPaths(): array
     {
         return [
-            '/\/picking-lists.*/' => [
-                 'isRegularExpression' => true,
-             ],
+               '/\/picking-lists.*/' => [
+                'isRegularExpression' => true,
+                'methods' => [
+                    'patch',
+                ],
+            ],
         ];
     }
 }
@@ -337,12 +340,12 @@ console data:import glossary
 
 1. Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                         | SPECIFICATION                                                                             | PREREQUISITES | NAMESPACE                                        |
-|------------------------------------------------|-------------------------------------------------------------------------------------------|---------------|--------------------------------------------------|
-| GeneratePickingListsCommandByOrderPlugin       | Generates the picking lists based on warehouse strategy.                                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
-| IsPickingFinishedConditionPlugin               | Checks if all picking lists are finished for the given sales order item.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
-| IsPickingListGenerationFinishedConditionPlugin | Checks if picking lists generation is finished for the given sales order item.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
-| IsPickingStartedConditionPlugin                | Checks if picking of at least one picking list is started for the given sales order item. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+| PLUGIN                                         | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                        |
+|------------------------------------------------|--------------------------------------------------------------------------------------|---------------|--------------------------------------------------|
+| GeneratePickingListsCommandByOrderPlugin       | Generates the picking lists based on warehouse strategy.                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+| IsPickingFinishedConditionPlugin               | Checks if all picking lists are finished for the given sales order.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+| IsPickingListGenerationFinishedConditionPlugin | Checks if picking lists generation is finished for the given sales order.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+| IsPickingStartedConditionPlugin                | Checks if picking of at least one picking list is started for the given sales order. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
 
 **\Pyz\Zed\Oms\OmsDependencyProvider.php**
 
@@ -430,10 +433,11 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 
 3. To enable the Backend API, register the plugins:
 
-| PLUGIN                                | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                                            |
-|---------------------------------------|----------------------------------------------|---------------|----------------------------------------------------------------------|
-| PickingListsBackendResourcePlugin     | Registers the `picking-lists` resource.      |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication |
-| PickingListItemsBackendResourcePlugin | Registers the `picking-list-items` resource. |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication |
+| PLUGIN                                                          | SPECIFICATION                                                                              | PREREQUISITES | NAMESPACE                                                            |
+|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
+| PickingListsBackendResourcePlugin                               | Registers the `picking-lists` resource.                                                    |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication |
+| PickingListItemsBackendResourcePlugin                           | Registers the `picking-list-items` resource.                                               |               | Spryker\Glue\PickingListsBackendApi\Plugin\GlueBackendApiApplication |
+| PickingListItemsByPickingListsBackendResourceRelationshipPlugin | Adds the `picking-list-items` resources as relationships to the `picking-lists` resources. |               |                                                                      |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -462,6 +466,38 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 ```
 
+**src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector;
+
+use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
+use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
+use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiConfig;
+use Spryker\Glue\PickingListsBackendApi\Plugin\GlueJsonApiConvention\PickingListItemsByPickingListsBackendResourceRelationshipPlugin;
+
+class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider
+{
+    /**
+     * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            PickingListsBackendApiConfig::RESOURCE_PICKING_LISTS,
+            new PickingListItemsByPickingListsBackendResourceRelationshipPlugin(),
+        );
+
+        return $resourceRelationshipCollection;
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 As a prerequisite, you must take the following steps:
@@ -475,6 +511,8 @@ Make sure that you can send the following requests:
 
 * To get a collection of available picking lists for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists`.
 
+* To get a collection of available picking lists with picking list items for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
+
 * To get a single picking list for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 
 
@@ -484,12 +522,12 @@ Make sure that you can send the following requests:
 
 ```json
 {
-    "data": {
-        "type": "picking-lists",
-        "attributes": {
-        "action": "startPicking"
-        }
+  "data": {
+    "type": "picking-lists",
+    "attributes": {
+      "action": "startPicking"
     }
+  }
 }
 ```
 
@@ -503,24 +541,24 @@ Make sure that you can send the following requests:
 
 ```json
 {
-    "data" : [
+  "data": [
     {
-        "id": "{{picking-list-item-uuid1}}",
-        "type" : "picking-list-items",
-        "attributes" : {
-            "numberOfPicked": "{{number of picked}}",
-            "numberOfNotPicked": "{{number of not picked}}"
-        }
+      "id": "{{picking-list-item-uuid1}}",
+      "type": "picking-list-items",
+      "attributes": {
+        "numberOfPicked": "{{number of picked}}",
+        "numberOfNotPicked": "{{number of not picked}}"
+      }
     },
     {
-        "id": "{{picking-list-item-uuid2}}",
-        "type" : "picking-list-items",
-        "attributes" : {
-            "numberOfPicked": "{{number of picked}}",
-            "numberOfNotPicked": "{{number of not picked}}"
-        }
+      "id": "{{picking-list-item-uuid2}}",
+      "type": "picking-list-items",
+      "attributes": {
+        "numberOfPicked": "{{number of picked}}",
+        "numberOfNotPicked": "{{number of not picked}}"
+      }
     }
-]
+  ]
 }
 ```
 

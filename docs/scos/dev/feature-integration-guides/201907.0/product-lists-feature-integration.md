@@ -724,7 +724,7 @@ pl-007,177_25913296
 <br>
 </details>
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `product_list_key` | mandatory | string | pl-002 | An existing product list identifier for the assignment. |
 |`concrete_sku`|mandatory|string|166_30230575|An existing concrete product SKU to assign to the product list.|

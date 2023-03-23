@@ -4,7 +4,7 @@ description: This document describes the peculiarities of the Merchant Portal ap
 template: concept-topic-template
 ---
 
-The Merchant Portal is a section from the Back office for the [Marketplace merchants](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html). It is based on Zed and Zed UI Framework, and provides the interface for Merchants to conduct their business on the Marketplace. Here merchants can manage their profile, offers, products, and sales related to their company.
+The Merchant Portal is a section from the Back office for the [Marketplace merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html). It is based on Zed and Zed UI Framework, and provides the interface for Merchants to conduct their business on the Marketplace. Here merchants can manage their profile, offers, products, and sales related to their company.
 
 
 By default, Marketplace administrators do not have access to the Merchant Portal.

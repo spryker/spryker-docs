@@ -266,7 +266,7 @@ t000002,product_image_set_3
 t000002,product_image_set_4
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
 | product_image_set_key | mandatory | string | product_image_set_1 | Internal data import identifier for the product image set. |

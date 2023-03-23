@@ -7,9 +7,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202212.0/cart-and-checkout.html
 ---
 
-The *Cart and Checkout* capability aenables customers and guest users to create and manage multiple shopping carts. After filling a cart, they go through a multi-step checkout to fill in all the details and place an order.
-
-To learn about cart and checkout, see the following feature overviews:
+To learn about the base Cart and Checkout, see the following feature overviews:
 
 * [Cart feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/cart-feature-overview/cart-feature-overview.html)
 * [Multiple Carts feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/multiple-carts-feature-overview.html)

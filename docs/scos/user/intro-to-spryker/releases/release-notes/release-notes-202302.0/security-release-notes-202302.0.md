@@ -26,7 +26,7 @@ spryker-feature/order-management: 202009.0-202212.0
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, you need to update the sales module.
+To implement a fix for this vulnerability, update the Sales module.
 
 {% info_block infoBox "Recommended upgrade is 11.36.2" %}
 
@@ -40,7 +40,7 @@ Spryker recommends upgrading to 11.36.2 because it is the continuous latest stab
 * If your version of `spryker/sales` is 11.34.0 up to and including 11.35.1, follow [Upgrade `spryker/sales` module versions including 11.34.0 up to and including 11.35.*x*](#upgrade-sprykersales-module-versions-including-11340-up-to-and-including-1135x).
 * If your current version of `spryker/sales` is 11.36.0 or 11.36.1 follow [Upgrade on `spryker/sales` module versions 11.36.0 or later](#upgrade-on-sprykersales-module-versions-11360-or-later).
 * Optional upgrades:
-  * If you considering switching from version 11.30 or earlier to 11.31 or later of the sales module, follow our guidelines in the [Optional: Propel migration: Upgrade spryker/sales modules with versions 11.30.x or earlier to 11.31.2](#optional-propel-migration-upgrade-sprykersales-modules-with-versions-1130x-or-earlier-to-11312) section.
+  * If you are considering switching from version 11.30 or earlier to 11.31 or later of the sales module, follow our guidelines in the [Optional: Propel migration: Upgrade spryker/sales modules with versions 11.30.x or earlier to 11.31.2](#optional-propel-migration-upgrade-sprykersales-modules-with-versions-1130x-or-earlier-to-11312) section.
   * If you are considering switching to PHP 8.0, follow our guidelines in the [Optional: PHP8 migration: Upgrade spryker/sales module with versions including 11.31.x up to and including 11.33.x to 11.34.1](#optional-php8-migration-upgrade-sprykersales-module-with-versions-including-1131x-up-to-and-including-1133x-to-11341) section.
   * If you are considering switching to Symfony 6, follow our guidelines in the [Optional: Symfony migration: Upgrade spryker/sales module with versions including 11.34.x up to and including 11.36.x to 11.36.2](#optional-symfony-migration-upgrade-sprykersales-module-with-versions-including-1134x-up-to-and-including-1136x-to-11362) section.
 
@@ -130,7 +130,7 @@ ls data/cache/propel/generated-conf # Verify the file was created.
 
 The following points are the potential BC breaking points from the Propel upgrade in 11.31.0:
 * Ensure any project code extending the Propel repository is updated (especially the method signatures).
-* Note that most Propel methods have parameter and return types being added. In case a project extension was not updated, you might encounter errors like this: `Fatal error: Declaration of ExtendedThing::process(array $items): array must be compatible with Thing::process(stdClass $item): array in ... on line ....`
+* Note that most Propel methods have parameter and return types added. In case a project extension was not updated, you might encounter errors like this: `Fatal error: Declaration of ExtendedThing::process(array $items): array must be compatible with Thing::process(stdClass $item): array in ... on line ....`
 * The `TIMESTAMP` column type in schema files for the MySQL database now generates a column with the actual `TIMESTAMP` type instead of `DATETIME` as it was previously. Propel diff considers it as a table structure change and generates migration. Create a migration for the difference and apply it:
 ```bash
 vendor/bin/console console propel:migrate

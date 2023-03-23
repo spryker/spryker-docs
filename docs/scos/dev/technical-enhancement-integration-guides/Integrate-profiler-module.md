@@ -11,13 +11,13 @@ This document describes how to integrate profiler module into a Spryker project.
 
 To start the integration, review and install the necessary features:
 
-| NAME         | VERSION          |
-|--------------|------------------|
-| Spryker Core | {{page.version}} |
+| NAME         | VERSION          | INTEGRATION GUIDE |
+|--------------|------------------|-------------------|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
 
-## Enable extension
+## 1) Enable extension
 
-Enable xhprof extension to collect execution traces.
+To collect execution traces, enable the `xhprof` extension.
 
 ```yaml
 version: '0.1'
@@ -33,13 +33,15 @@ image:
       - xhprof
 ```
 
-## Bootstrap the docker setup
+## 2) Bootstrap the Docker setup
 
 ```shell
 docker/sdk boot deploy.dev.yml
 ```
 
-## Install the required modules using Composer
+## 3) Install the required modules using Composer
+
+{% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been updated:
 
@@ -48,13 +50,15 @@ Ensure that the following modules have been updated:
 | EventDispatcherExtension | vendor/spryker/event-dispatcher-extension |
 | WebProfilerExtension     | vendor/spryker/web-profiler-extension     |
 
+{% endinfo_block %}
+
 ```shell
 composer require --dev spryker/profiler
 ```
 
-### Set up Behavior
+### 4) Set up behavior
 
-1. Register the following plugins for `Yves` application:
+1. For `Yves` application, register the following plugins:
 
 | PLUGIN                                 | SPECIFICATION                                      | PREREQUISITES            | NAMESPACE                                                                                    |
 |----------------------------------------|----------------------------------------------------|--------------------------|----------------------------------------------------------------------------------------------|

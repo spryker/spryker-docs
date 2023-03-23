@@ -29,7 +29,7 @@ This endpoint allows retrieving information about availability of abstract produ
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
 
 ## Retrieve availability of an abstract product
 
@@ -88,4 +88,4 @@ Response sample: retrieve availability of an abstract product
 | 305 | Availability is not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html
 ---
 
-In a multi-store environment, you can manage relationships between warehouses, stores, and databases in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) feature.
+In a multi-store environment, you can manage relationships between warehouses, stores, and databases in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/inventory-management-feature-overview.html) feature.
 
 ## Scenario 1: Separate warehouses and databases
 

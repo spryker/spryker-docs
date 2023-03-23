@@ -22,7 +22,7 @@ To start feature integration, integrate the required features:
 |-|-|-|
 | Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html) |
 | Marketplace Merchant Portal Core | dev-master | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
-| Marketplace Inventory Management  | dev-master | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html) |
+| Marketplace Inventory Management  | dev-master | [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-featureory-management-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -52,7 +52,7 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-    
+
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |

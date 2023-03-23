@@ -22,7 +22,7 @@ data:import merchant-opening-hours-date-schedule
 
 The file should have the following parameters:
 
-| PARAMETER      | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION                               |
+| PARAMETER      | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION                               |
 | ------------- | ---------- | ------ | ----------- | ------------------- | ------------------------------------ |
 | merchant_reference | &check;             | String   |                   | Unique                        | Identifier of the merchant in the system.     |
 | date               | &check;             | Date     |                   | Date is in format: yyyy-mm-dd | Date of the described schedule.               |

@@ -17,7 +17,7 @@ data:import merchant-product
 
 The file should have the following parameters:
 
-| PARAMETER   | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION  |
+| PARAMETER   | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION  |
 | -------------- | ----------- | ------- | ------------- | ------------------- | ---------------------- |
 | sku                | &check;             | String   |                   | Unique                           | SKU of the product.                                          |
 | merchant_reference | &check;             | String   |                   | Unique                           | Unique identifier of the merchant in the system.             |

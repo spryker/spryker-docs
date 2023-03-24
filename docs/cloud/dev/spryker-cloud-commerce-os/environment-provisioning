@@ -78,13 +78,13 @@ GitLab and Bitbucket: Connecting GitLab and Bitbucket repositories directly to p
 
 {% info_block infoBox "Note" %}
 
-We can share required credentials mentioned in above documentation only after environment provisioning is complete.
+We can share the required credentials mentioned in the preceding documentation only after environment provisioning is complete.
 
 {% endinfo_block %}
 
 ### Deploy file
 
-The *Deploy file* is a YAML file used by the Docker SDK to build infrastructure for applications. If a customer provides their own repository, a deploy file must be provided. For demo shop deployments, Spryker Cloud Ops prepares the file on their own. A repository usually has multiple deploy files that are relevant for different purposes and environments. Demoshops have a `deploy.dev.yml` file that is mostly meant for local development purposes. The naming of these files is important. The naming convention is `deploy.{PROJECT_NAME}-{ENVIRONEMENT_NAME}.yml`—for example, `deploy.myshop-production.yml`. For reference, see [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html). The most relevant deploy file that can be used as reference is [deploy.aws-env-template.yml](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.aws-env-template.yml). Each demo shop repository has its respective deploy file template. Adjust this accordingly to your requirements and preferences following the above documentation and share it with Spryker.
+The *Deploy file* is a YAML file used by the Docker SDK to build infrastructure for applications. If a customer provides their own repository, a deploy file must be provided. For demo shop deployments, Spryker Cloud Ops prepares the file on their own. A repository usually has multiple deploy files that are relevant for different purposes and environments. Demoshops have a `deploy.dev.yml` file that is mostly meant for local development purposes. The naming of these files is important. The naming convention is `deploy.{PROJECT_NAME}-{ENVIRONEMENT_NAME}.yml`—for example, `deploy.myshop-production.yml`. For reference, see [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html). The most relevant deploy file that can be used as reference is [deploy.aws-env-template.yml](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.aws-env-template.yml). Each demo shop repository has its respective deploy file template. Adjust this accordingly to your requirements and preferences following the preceding documentation and share it with Spryker.
 
 ## Domains
 

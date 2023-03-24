@@ -422,9 +422,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 },
 ```
 
-4. In `package.json`, rename the `mp:lint` script to the `mp:eslint`. 
-
-5. In `tslint.json`, add the `"src/Pyz/Zed/*/Presentation/Components/**"` path to the `linterOptions.exlude` section: 
+4. In `tslint.json`, add the `"src/Pyz/Zed/*/Presentation/Components/**"` path to the `linterOptions.exlude` section: 
 
 ```json
 {
@@ -438,7 +436,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 }
 ```
 
-6. Make sure to replace `tslint` disable comments with `eslint`—for example: 
+5. Make sure to replace `tslint` disable comments with `eslint`—for example: 
 
 ```ts
 /* tslint:disable:no-unnecessary-class */

@@ -20,7 +20,7 @@ data:import merchant-product-option-group
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ---------- | ---------- | ------- | ------------- | ------------------ | ------------- |
 | product_option_group_key | &check;  | String   | It should be either one word, or several words separated with underscore.    | Unique   | Glossary key for a product option group. |
 | merchant_reference | &check;     | String |      |      | Unique identifier of the merchant the product option group belongs to. |

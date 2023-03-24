@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Switch from TSLint to ESLint
 description: Use this guide to migrate the project from TSLint to ESLint.
-last_updated: Mar 22, 2023
+last_updated: Mar 24, 2023
 template: module-migration-guide-template
 ---
 

@@ -11,7 +11,7 @@ If you need any additional support with this content, [contact our support](mail
 
 ## SQL injection in OrderSearchForm (order history)
 
-The Spryker-based application in scope offers an order history with a list of orders that have been placed in the past. During the security assessment, it was observed that a server-side error while testing order history with the search function and discovered SQL injection in OrderSearchForm vulnerability in the Spryker applications. SQL injection vulnerabilities occur when attacker-controlled data is embedded unchecked in SQL queries. Such vulnerabilities let attackers bypass restrictions in the application logic and issue manipulated queries to the database server. Depending on various factors, such as the database management system used or database user permissions, it may be possible to read, modify and delete data and compromise the database or application server.
+The Spryker-based application in scope offers an order history with a list of orders that have been placed in the past. During the security assessment, a server-side error was detected while testing order history with the search function and discovered SQL injection in OrderSearchForm vulnerability in the Spryker applications. SQL injection vulnerabilities occur when attacker-controlled data is embedded unchecked in SQL queries. Such vulnerabilities let attackers bypass restrictions in the application logic and issue manipulated queries to the database server. Depending on various factors, such as the database management system used or database user permissions, it may be possible to read, modify and delete data and compromise the database or application server.
 
 ### Affected modules
 
@@ -26,7 +26,7 @@ spryker-feature/order-management: 202009.0-202212.0
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, update the Sales module.
+To implement a fix for this vulnerability, update the sales module.
 
 {% info_block infoBox "Recommended upgrade is 11.36.2" %}
 
@@ -40,7 +40,7 @@ Spryker recommends upgrading to 11.36.2 because it is the continuous latest stab
 * If your version of `spryker/sales` is 11.34.0 up to and including 11.35.1, follow [Upgrade `spryker/sales` module versions including 11.34.0 up to and including 11.35.*x*](#upgrade-sprykersales-module-versions-including-11340-up-to-and-including-1135x).
 * If your current version of `spryker/sales` is 11.36.0 or 11.36.1 follow [Upgrade on `spryker/sales` module versions 11.36.0 or later](#upgrade-on-sprykersales-module-versions-11360-or-later).
 * Optional upgrades:
-  * If you are considering switching from version 11.30 or earlier to 11.31 or later of the sales module, follow our guidelines in the [Optional: Propel migration: Upgrade spryker/sales modules with versions 11.30.x or earlier to 11.31.2](#optional-propel-migration-upgrade-sprykersales-modules-with-versions-1130x-or-earlier-to-11312) section.
+  * If you considering switching from version 11.30 or earlier to 11.31 or later of the sales module, follow our guidelines in the [Optional: Propel migration: Upgrade spryker/sales modules with versions 11.30.x or earlier to 11.31.2](#optional-propel-migration-upgrade-sprykersales-modules-with-versions-1130x-or-earlier-to-11312) section.
   * If you are considering switching to PHP 8.0, follow our guidelines in the [Optional: PHP8 migration: Upgrade spryker/sales module with versions including 11.31.x up to and including 11.33.x to 11.34.1](#optional-php8-migration-upgrade-sprykersales-module-with-versions-including-1131x-up-to-and-including-1133x-to-11341) section.
   * If you are considering switching to Symfony 6, follow our guidelines in the [Optional: Symfony migration: Upgrade spryker/sales module with versions including 11.34.x up to and including 11.36.x to 11.36.2](#optional-symfony-migration-upgrade-sprykersales-module-with-versions-including-1134x-up-to-and-including-1136x-to-11362) section.
 
@@ -152,15 +152,15 @@ This involves additional migration effort because of a required upgrade to PHP 8
 
 {% endinfo_block %}
 
-Use this guide Supported versions of PHP | Spryker Documentation to upgrade to PHP 8.
+To upgrade to PHP 8.0, see [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html).
 
 Ensure that you have the security fix applied to the PHP8 version.
 
-Update the `spryker/sales` version and verify the version.
-
+Update the `spryker/sales` version and verify the version:
+```bash
 composer require spryker/sales:"~11.34.1"
-
 composer show spryker/sales # Verify the version
+```
 
 ### Optional: Symfony migration: Upgrade spryker/sales module with versions including 11.34.x up to and including 11.36.x to 11.36.2
 
@@ -180,7 +180,7 @@ Ensure that you have the security fix applied on the Symfony 6 version.
 
 {% endinfo_block %}
 
-Update the `spryker/sales` version and verify the version.
+Update the `spryker/sales` version and verify the version:
 
 ```bash
 composer require spryker/sales:"~11.36.2"

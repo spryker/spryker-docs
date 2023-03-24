@@ -7,7 +7,7 @@ entries:
       - title: Environments overview
         url: /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
       - title: Environments provisioning
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/environments-provisioning.html
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html
       - title: Access
         url: /docs/cloud/dev/spryker-cloud-commerce-os/access/access.html
         nested:

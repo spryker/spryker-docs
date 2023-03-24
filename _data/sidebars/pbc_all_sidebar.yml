@@ -125,7 +125,7 @@ entries:
           - title: Install and upgrade
             nested:
               - title: Install features
-                nested:
+                nested: 
                   - title: Approval Process
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-approval-process-feature.html
                   - title: Cart + Agent Assist
@@ -144,32 +144,32 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html
                   - title: Checkout + Quotation Process
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
+                  - title: Checkout + Workflow
+                    url: docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-workflow-feature.html
                   - title: Comments
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-feature.html
                   - title: Comments + Order Management
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-order-management-feature.html
-                  - title: Comments
+                  - title: Comments + Persistent Cart
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html
+                  - title: Multiple Carts
+                    url: docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-feature.html
+                  - title: Multiple Carts + Quick Order
+                    url: docs/pbc/all/cart-and-checkoutinstall-and-upgrade/install-features/install-the-multiple-carts-quick-order-feature.html
+                  - title: Multiple Carts + Quotation Process
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-quotation-process-feature.html
                   - title: Multiple Carts + Reorder
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html
-                  - title: Multiple Carts
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-comments-feature.html
-                  - title: Multiple Carts + Quick Order
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html
-                  - title: Multiple Carts + Quotation Process
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-sharing-shared-carts-feature.html
-                  - title: Multiple Carts + Reorder
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html
                   - title: Persistent Cart + Comments
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-comments-feature.html
                   - title: Persistent Cart Sharing
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html
                   - title: Persistent Cart Sharing + Shared Carts
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-sharing-shared-carts-feature.html
                   - title: Quick Add to Cart + Discontinued Products
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html
                   - title: Quick Add to Cart
-                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-feature.html
                   - title: Quick Add to Cart + Measurement Units
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html
                   - title: Quick Add to Cart + Non-splittable Products

@@ -78,7 +78,7 @@ GitLab and Bitbucket: Connecting GitLab and Bitbucket repositories directly to p
 
 {% info_block infoBox "Note" %}
 
-We can share required credentials mentioned in above documentation only after environment provisioning is complete.
+We can share the required credentials mentioned in the preceding documentation only after environment provisioning is complete.
 
 {% endinfo_block %}
 

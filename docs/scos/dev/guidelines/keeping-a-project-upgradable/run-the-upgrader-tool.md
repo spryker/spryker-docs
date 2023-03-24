@@ -16,12 +16,6 @@ This document describes how to upgrade all the modules to the latest versions.
 
 1. Install the upgrader by [installing Spryker SDK](https://github.com/spryker-sdk/sdk#installation).
 
-{% info_block warningBox "Running the upgrader without installing Spryker SDK" %}
-
-Alternatively, you can use the `spryker-sdk` image from the project directory without installing it. To do that, run all the commands in this doc as follows: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {COMMAND}'
-
-{% endinfo_block %}
-
 2. To enable the upgrader tool to commit and push changes, adjust your project’s Git and environment configuration as follows:
 
   * Add a GitHub token with the permissions to push branches and create PRs:

@@ -4,12 +4,12 @@ description: Extension scenario for the registration of event subscribers
 last_updated: Mar 13, 2023
 template: concept-topic-template
 related:
-- title: Plugins registration
-  link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
-- title: Event subscribers registration
-  link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
-- title: Modules configuration
-  link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+  - title: Keeping a project upgradable
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+  - title: Event subscribers registration
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+  - title: Modules configuration
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
 ---
 
 ## Introduction

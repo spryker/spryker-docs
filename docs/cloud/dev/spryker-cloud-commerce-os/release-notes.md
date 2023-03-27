@@ -9,11 +9,11 @@ redirect_from:
   - /docs/en/release-notes
 ---
 
-This document describes new features and enhancements we released for Spryker Cloud Commerce OS.
+This document describes new features and enhancements released for Spryker Cloud Commerce OS.
 
 {% info_block infoBox %}
 
-Although these features will be available to all Spryker customers, we are introducing them as part of a gradual rollout.
+Although these features will be available to all SCCOS projects, we are introducing them as part of a gradual rollout.
 
 {% endinfo_block %}
 
@@ -21,32 +21,43 @@ Although these features will be available to all Spryker customers, we are intro
 
 ## March 2023
 
+The following features were released in March 2023.
+
 ### Environment variable management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Manage environment variables and secrets of applications using a UI without having to create a support ticket. This lets you to make changes autonomously, controlling the scope of the variables: application, scheduler or both. You can decide if changes should be applied immediately or as part of the next deployment.
 
 Benefits:
 
-Better flexibility and higher autonomy. Projects can now change their environment variables according to a needed schedule, enabling them to adapt more easily to changing needs and requirements.
+Better flexibility and higher autonomy. You can change environment variables according to a needed schedule, which lets you adapt more easily to changing needs and requirements.
+
+#### Documentation
+
+[Define parameter and secret values in SCCOS environments](/docs/cloud/dev/spryker-cloud-commerce-os/define-parameter-and-secret-values-in-sccos-environments.html)
 
 
 ### Maintenance mode <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Enable and disable the maintenance mode of an application using a dedicated pipeline without having to create a support ticket. This feature helps you deploy new versions of your application without disrupting the user experience by unexpected errors.
+Enable and disable the maintenance mode of an application using a dedicated pipeline without having to create a support ticket. This feature helps you deploy new versions of applications without disrupting the user experience by unexpected errors.
 
 Benefits:
 
-Faster maintenance. Projects can now enable maintenance mode more quickly, reducing downtime and minimizing disruption.
+Faster maintenance. You can enable maintenance mode more quickly, reducing downtime and minimizing disruption.
+
+#### Documentation
+
+* [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
+* [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
 
 
 ### Deployment optimization for RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-We optimized a deployment step that significantly reduces the pipeline runtime. This optimization involves the decoupling of RabbitMQ in the deployment process.
+Optimized the RabbitMQ deployment step that significantly reduces the pipeline runtime. This optimization involves the decoupling of RabbitMQ in the deployment process.
 
 
 ### Platform upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-We upgraded MariaDB, Redis, Jenkins, and their dependencies.
+Upgraded MariaDB, Redis, Jenkins, and their dependencies.
 
 Benefits:
 
@@ -55,6 +66,9 @@ Benefits:
 
 
 ## August 2022
+
+The following features were released in August 2022.
+
 
 ### Destructive pipeline support for Multi Logical DB
 
@@ -88,7 +102,9 @@ Benefits of a multi-store setup:
 * Enables distinct category navigation, product schema details, and users.
 * Improves privacy store management: one store has no knowledge about the users of another.
 
+### Documentation
 
+[Multi-store setups](/https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html#shared-setup)
 
 
 ## January 2022

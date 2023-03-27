@@ -282,6 +282,25 @@ $config[AvailabilityNotificationConstants::STORE_TO_YVES_HOST_MAPPING] = [
 ];
 ```
 
+To enable the new endpoint, adjust a Deploy file:
+
+**deploy.*.yml**
+
+```yaml
+version: "0.1"
+
+namespace: spryker_demo
+tag: '1.0'
+
+environment: docker.dev
+image:
+    environment:
+        SPRYKER_YVES_HOST_DE: yves.de.spryker.local
+        SPRYKER_YVES_HOST_AT: yves.at.spryker.local
+        SPRYKER_YVES_HOST_US: yves.us.spryker.local
+...
+```
+
 {% info_block infoBox %}
 
 You can control whether `AvailabilityNotificationFacade::subscribe()` throws an exception `\Spryker\Zed\Product\Business\Exception\MissingProductException` (if SKU does not exist in the database) or not. You can do it through the `AvailabilityNotificationConfig::AVAILABILITY_NOTIFICATION_CHECK_PRODUCT_EXISTS` config setting. If set to `false` (by default), then the exception is thrown. If set to `true`, then the exception is not thrown, but `AvailabilityNotificationFacade::subscribe()` returns the instance of `AvailabilityNotificationSubscriptionResponseTransfer::$isSuccess = true`.

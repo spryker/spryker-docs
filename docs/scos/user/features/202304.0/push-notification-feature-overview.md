@@ -13,15 +13,19 @@ The feature can be integrated into the non-Srpyker customer application only. Sp
 
 {% endinfo_block %}
 
+## Key pair
+
+To set up the process, you need to generate a private and public key pair. These two keys are generated once for a website and are known as *Voluntary Application Server Identification for Web Push (VAPID)* keys. The private key must be hidden from the end user and must only be used on the server side to encrypt created notifications. The utilization of VAPID protection guarantees that only authorized servers are permitted to send notifications to clients
+
 ## Subscribing to notifications
 
-There are two tasks that enable the feature. The first lets the user subscribe to the web push notifications. For this, the site page needs a service worker with which the user is registered on the server and received messages are processed. The service worker is downloaded to the user’s platform in the background, which lets it be executed outside of the site page's context.
+To let users subscribe to the web push notifications, the site page needs a service worker with which the user is registered on the server and received messages are processed. The service worker is downloaded to the user’s platform in the background, which lets it be executed outside of the site page's context. 
 
 After a user subscribes to the service, the service worker is registered. The service worker requests all required information through the web push API and sends this through an HTTP request to the server. The server stores this information in its database to send notifications to the client.
 
 ## Sending notifications
 
-Notifications are sent from the server to all registered subscriptions with an HTTP request. To correctly identify a user, a signature must be transmitted in the request header. This signature is generated from the public key used for registration and the private key. The actual message and further information are transmitted as user data. If the encryption and formatting are correct, and the signature is validated, the push service sends the notification to the user.
+Notifications are sent from the server to all registered subscriptions with an HTTP request. To correctly identify a user, a signature must be transmitted in the request header. The signature is created from the private key and public key used for registration. The actual message and further information are transmitted as user data. If the encryption and formatting are correct and the signature is validated, the push service sends the notification to the user.
 
 ## Push Notifications diagram
 

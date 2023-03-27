@@ -10,13 +10,13 @@ The Spryker B2C Marketplace Demo Shop is a collection of ready-to-use B2C-Market
 <details>
 <summary markdown='span'>Marketplace B2C feature list</summary>
 
-- [Marketplace Merchant](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
-- [Merchant Category](/docs/marketplace/user/features/{{site.version}}/merchant-category-feature-overview.html)
-- [Merchant Opening Hours](/docs/marketplace/user/features/{{site.version}}/merchant-opening-hours-feature-overview.html)
+- [Marketplace Merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
+- [Merchant Category](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html)
+- [Merchant Opening Hours](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html)
 - [Marketplace Product](/docs/marketplace/user/features/{{site.version}}/marketplace-product-feature-overview.html)
 - [Marketplace Product Options](/docs/marketplace/user/features/{{site.version}}/marketplace-product-options-feature-overview.html)
 - [Marketplace Product Offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html)
-- [Marketplace Cart](/docs/marketplace/user/features/{{site.version}}/marketplace-cart-feature-overview.html)
+- [Marketplace Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/marketplace-cart-feature-overview.html)
 - [Marketplace Order Management](/docs/marketplace/user/features/{{site.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html)
 - [Marketplace Inventory Management](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html)
 - [Marketplace Promotions and Discounts](/docs/marketplace/user/features/{{site.version}}/marketplace-promotions-and-discounts-feature-overview.html)

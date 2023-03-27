@@ -749,7 +749,7 @@ offer418,DEFAULT,DE,CHF,32000,27000,"[{""quantity"":4,""net_price"":15000,""gros
 
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | &check; | string | offer1 | Product offer reference that will have these prices |
 | price_type | &check; | string | DEFAULT | Sets price type to product offer price |

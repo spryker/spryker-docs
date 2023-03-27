@@ -555,7 +555,7 @@ MER000007,MerchantDefaultStateMachine
 MER000005,MerchantDefaultStateMachine
 ```
 
-|PAREMETER |REQUIRED?  |TYPE  |DATA EXAMPLE | DESCRIPTION |
+|PAREMETER |REQUIRED  |TYPE  |DATA EXAMPLE | DESCRIPTION |
 |---------|---------|---------|---------| ---------|
 |merchant_reference     |  &check;       |  string       | spryker        |String identifier for merchant in the Spryker system. |
 |merchant_oms_process_name     |    &check;     |     string   |  MainMerchantStateMachine       | String identifier for the State Machine processes.|

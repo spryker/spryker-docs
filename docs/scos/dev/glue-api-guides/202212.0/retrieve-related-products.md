@@ -618,7 +618,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 

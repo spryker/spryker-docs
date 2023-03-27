@@ -22,7 +22,7 @@ The *Product Merchandising* category contains all data you need to manage mercha
 * [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html): allows you to define product sets.
 * [product_discontinued.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html): allows you to define discontinued products.
 * [product_alternative.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-alternative.csv.html): allows you to define alternative products.
-* [product_quantity.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/import-and-export-data/file-details-product-quantity.csv.html): allows you to set product quantity restrictions.
+* [product_quantity.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/file-details-product-quantity.csv.html): allows you to set product quantity restrictions.
 
 The following table provides details about Product Merchandising data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 

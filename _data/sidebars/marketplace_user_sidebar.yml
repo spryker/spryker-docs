@@ -118,6 +118,9 @@ entries:
 
         - title: Marketplace Cart
           url: /docs/marketplace/user/features/marketplace-cart-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Marketplace Return Management
           url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html

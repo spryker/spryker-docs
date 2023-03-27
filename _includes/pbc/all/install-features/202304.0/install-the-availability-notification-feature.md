@@ -282,7 +282,7 @@ $config[AvailabilityNotificationConstants::STORE_TO_YVES_HOST_MAPPING] = [
 ];
 ```
 
-2.To set YVES host environment variables, adjust a Deploy file:
+2. To set YVES host environment variables, adjust your deploy file:
 
 **deploy.*.yml**
 

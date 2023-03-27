@@ -282,7 +282,7 @@ $config[AvailabilityNotificationConstants::STORE_TO_YVES_HOST_MAPPING] = [
 ];
 ```
 
-To enable the new endpoint, adjust a Deploy file:
+To set YVES host environment variables, adjust a Deploy file:
 
 **deploy.*.yml**
 

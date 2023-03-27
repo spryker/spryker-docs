@@ -21,7 +21,7 @@ After a user subscribes to the service, the service worker is registered. The se
 
 ## Sending notifications
 
-Notifications are sent from the server to all registered subscriptions with an HTTP request. To correctly identify a user, a signature must be transmitted in the request header. This signature is generated from the public key used for registration and the private key. The actual message and further information are transmitted as user data. If the encryption and formatting are correct and the signature is validated, the push service sends the notification to the user.
+Notifications are sent from the server to all registered subscriptions with an HTTP request. To correctly identify a user, a signature must be transmitted in the request header. This signature is generated from the public key used for registration and the private key. The actual message and further information are transmitted as user data. If the encryption and formatting are correct, and the signature is validated, the push service sends the notification to the user.
 
 ## Push Notifications diagram
 

@@ -41,16 +41,17 @@ Faster maintenance. Projects can now enable maintenance mode more quickly, reduc
 
 ### Deployment optimization for RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-We have introduced deployment step optimization that significantly reduces the pipeline runtime for our Spryker Core Commerce solution. This optimization involves the decoupling of RabbitMQ in the deployment process. Improvement
+We optimized a deployment step that significantly reduces the pipeline runtime. This optimization involves the decoupling of RabbitMQ in the deployment process.
 
 
 ### Platform upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Major platform upgrades. We have completed a series of upgrades to our diverse platform resources. These upgrades include MariaDB, Redis, Jenkins, and its dependencies.
+We upgraded MariaDB, Redis, Jenkins, and their dependencies.
 
 Benefits:
-Improved performance: The upgrades have resulted in increased performance and reliability for our platform.
-Enhanced security: The upgrades include various security enhancements that improve the overall security of our platform.
+
+* Improved performance and reliability
+* Improved security
 
 
 ## August 2022
@@ -58,10 +59,12 @@ Enhanced security: The upgrades include various security enhancements that impro
 ### Destructive pipeline support for Multi Logical DB
 
 
-This feature lets users quickly delete their logical databases and associated resources, such as tables and indexes, in a single pipeline.
+This feature lets you quickly delete logical databases and associated resources, such as tables and indexes, in a single pipeline.
+
 Benefits:
-Improved efficiency: The destructive pipeline support allows users to delete their logical databases and associated resources more quickly and easily, streamlining the process and saving time.
-Enhanced flexibility: Users can now delete their logical databases and associated resources on their schedule, rather than having to coordinate with Spryker Support & Operations team.
+
+* Improved efficiency: projects can delete their logical databases and associated resources more quickly and easily, streamlining the process and saving time.
+* Improved flexibility: projects can delete their logical databases and associated resources according to a needed schedule, rather than having to coordinate it with Spryker Support and Operations teams.
 
 
 ### Speed up the deployment pipeline
@@ -73,31 +76,24 @@ Optimized deployment pipeline image to speed up the build of Jenkins.
 
 Multi-Store with Multi Logical DB setup: Previously, it was possible to have only one logical DB in one AWS environment.
 
-Benefits:
-Each store has a dedicated index for ES and its own virtual key-value storage (Redis).
-Shared virtual separated database per store.
-Now it's possible to have the cluster sharing the same or use different database setups.
-One region can now have multiple stores.
-Use code buckets for store customization (logic).
-Improved flexibility allowing to have user themes for different visual “look and feel” per store.
-Optimize environment instances usage and costs.
-Higher flexibility managing URLs (solve uniqueness problem with URLs for different locales with the same language).
-Higher flexibility in managing store configuration, allowing distinct category navigation, product schema details, and users.
-Improved privacy store management - one store has no knowledge about the users of another.
+Benefits of a multi-store setup:
+* Each store has a dedicated index for Elasticsearch and its own virtual key-value storage (Redis).
+* Shared virtual separated database per store.
+* A cluster can share the same or use different database setups.
+* One region can have multiple stores.
+* Use code buckets for store customization logic.
+* Use themes for different visual look and feel per store.
+* Optimized environment instances usage and costs.
+* Solves the uniqueness problem with URLs for different locales with the same language.
+* Enables distinct category navigation, product schema details, and users.
+* Improves privacy store management: one store has no knowledge about the users of another.
 
 
 
 
 ## January 2022
 
-Increased stability of Jenkins deployment: This update addresses several critical issues and bugs, resulting in a more reliable and efficient experience. With this new release, you can expect fewer interruptions, faster deployment times, and improved overall performance.
-
-…
-
-//—----------- Footer —-----------
-
-
-
+Increased the stability of Jenkins deployment. This update addresses several critical issues and bugs, resulting in a more reliable and efficient experience. You can expect fewer interruptions, faster deployment times, and overall improved performance.
 
 
 ## May 2021

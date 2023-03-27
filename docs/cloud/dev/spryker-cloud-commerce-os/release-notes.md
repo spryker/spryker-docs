@@ -11,24 +11,32 @@ redirect_from:
 
 This document describes new features and enhancements we released for Spryker Cloud Commerce OS.
 
+{% info_block infoBox %}
+
+Although these features will be available to all Spryker customers, we are introducing them as part of a gradual rollout.
+
+{% endinfo_block %}
+
 
 
 ## March 2023
 
 ### Environment variable management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Manage environment variables and secrets of your SCOS application yourself through a UI without having to create a support ticket. This allows you to make changes autonomously, controlling the scope of the variables (application, scheduler, or both). You can decide if changes should be applied immediately or as part of the next deployment. New_feature
+Manage environment variables and secrets of applications using a UI without having to create a support ticket. This lets you to make changes autonomously, controlling the scope of the variables: application, scheduler or both. You can decide if changes should be applied immediately or as part of the next deployment.
 
 Benefits:
-Enhanced flexibility and higher autonomy: Users can now change their environment variables on their schedule, allowing them to adapt more easily to changing needs and requirements.
+
+Better flexibility and higher autonomy. Projects can now change their environment variables according to a needed schedule, enabling them to adapt more easily to changing needs and requirements.
 
 
 ### Maintenance mode <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Enable and disable the maintenance mode of your store using a dedicated pipeline without having to create a support ticket. This feature helps you deploy new versions of your application without disrupting the user experience, allowing you to quickly fix unexpected errors. By automating the process with dedicated pipelines, we have made it easier for you to enable and disable this maintenance mode for Backoffice, Glue, and Yves.* New_feature
+Enable and disable the maintenance mode of an application using a dedicated pipeline without having to create a support ticket. This feature helps you deploy new versions of your application without disrupting the user experience by unexpected errors.
 
 Benefits:
-Faster maintenance: The self-service feature allows users to put their service into maintenance mode more quickly, reducing downtime and minimizing disruption.
+
+Faster maintenance. Projects can now enable maintenance mode more quickly, reducing downtime and minimizing disruption.
 
 
 ### Deployment optimization for RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -88,7 +96,7 @@ Increased stability of Jenkins deployment: This update addresses several critica
 
 //—----------- Footer —-----------
 
-*Although these features will be available to all Spryker customers, we are introducing them as part of a gradual rollout.
+
 
 
 

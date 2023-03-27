@@ -51,9 +51,9 @@ The manifest files cover a list of the ways code changes can be done.
 
 To ensure the successful delivery of Spryker updates, we recommend using the next extension points:
 
-* [Plugins registration](docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html)
-* [Event subscribers registration](docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html)
-* [Modules configuration](docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html)
+* [Plugins registration](/docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html)
+* [Event subscribers registration](/docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html)
+* [Modules configuration](/docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html)
 
 {% info_block infoBox "" %}
 

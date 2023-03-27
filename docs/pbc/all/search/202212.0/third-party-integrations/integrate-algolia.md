@@ -470,7 +470,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
         return [
             new ImageSetProductConcreteMergerPlugin(),
             new PriceProductConcreteMergerPlugin(),
-            new ApprovalStatusProductConcreteMergerPlugin(), # Optional
+            new ApprovalStatusProductConcreteMergerPlugin(), # Add this plugin if you are using spryker/product-approval module
         ];
     }
     

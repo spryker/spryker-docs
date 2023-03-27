@@ -261,7 +261,7 @@ You can define stores to Yves hosts mapping. This allows generating correct URLs
 
 {% endinfo_block %}
 
-Add the following configuration to your project:
+1. Add the following configuration to your project:
 
 | CONFIGURATION                                                 | SPECIFICATION                                                                                                                                            | NAMESPACE                               |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
@@ -282,7 +282,7 @@ $config[AvailabilityNotificationConstants::STORE_TO_YVES_HOST_MAPPING] = [
 ];
 ```
 
-To set YVES host environment variables, adjust a Deploy file:
+2.To set YVES host environment variables, adjust a Deploy file:
 
 **deploy.*.yml**
 

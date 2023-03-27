@@ -43,6 +43,12 @@ Azure access token should have the following repository permissions:
 
 6. Enter your Azure repository URL, username and password, and click on **Connect repository** button.
 
+{% info_block infoBox "Repository URL" %}
+
+Repository URL should be in format `https://dev.azure.com/<organization_name>/<project_name>/_git/<repository_name>` (without `<organization_name>@` prefix).
+
+{% endinfo_block %}
+
 ## Support for Spryker CI
 
 * For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).

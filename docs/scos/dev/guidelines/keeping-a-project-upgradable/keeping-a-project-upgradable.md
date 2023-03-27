@@ -9,7 +9,7 @@ related:
   - title: Run the Upgrader tool
     link:/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
   - title: Plugins registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugin-registration.html
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
   - title: Event subscribers registration
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
   - title: Modules configuration

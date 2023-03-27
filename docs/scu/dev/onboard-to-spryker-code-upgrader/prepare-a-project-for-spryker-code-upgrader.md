@@ -30,7 +30,7 @@ The Upgrader does not evaluate frontend customizations. You can either move to h
 
 ## Optional: Ensure your code is compliant with the supported extensions scenarios.
 
-To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the [Keeping a project upgradable#Follow the upgradability best practices](docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
+To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#Follow the upgradability best practices).
 
 ## Migrate to Spryker Cloud Commerce OS
 

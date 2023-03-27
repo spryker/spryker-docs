@@ -17,7 +17,7 @@ The feature can be integrated into the non-Srpyker customer application only. Sp
 
 There are two tasks that enable the feature. The first lets the user subscribe to the web push notifications. For this, the site page needs a service worker with which the user is registered on the server and received messages are processed. The service worker is downloaded to the user’s platform in the background, which lets it be executed outside of the site page's context.
 
-If a user subscribes to the service, the service worker is registered. The service worker requests all required information through the web push API and sends this through an HTTP request to the server. The server stores this information in its database to send notifications to the client.
+After a user subscribes to the service, the service worker is registered. The service worker requests all required information through the web push API and sends this through an HTTP request to the server. The server stores this information in its database to send notifications to the client.
 
 ## Sending notifications
 

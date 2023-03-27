@@ -15,7 +15,7 @@ The feature can be integrated into the non-Srpyker customer application only. Sp
 
 ## Key pair
 
-To set up the process, you need to generate a private and public key pair. These two keys are generated once for a website and are known as *Voluntary Application Server Identification for Web Push (VAPID)* keys. The private key must be hidden from the end user and must only be used on the server side to encrypt created notifications. The utilization of VAPID protection guarantees that only authorized servers are permitted to send notifications to clients
+To set up the process, you need to generate a private and public key pair. These two keys are generated once for a website and are known as *Voluntary Application Server Identification for Web Push (VAPID)* keys. The private key must be hidden from the end user and must only be used on the server side to encrypt created notifications. The utilization of VAPID protection guarantees that only authorized servers are permitted to send notifications to clients.
 
 ## Subscribing to notifications
 

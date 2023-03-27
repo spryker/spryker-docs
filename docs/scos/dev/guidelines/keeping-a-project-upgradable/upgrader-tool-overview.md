@@ -7,7 +7,7 @@ related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
   - title: Run the Upgrader tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
 ---
 
 

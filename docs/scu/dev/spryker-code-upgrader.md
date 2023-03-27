@@ -7,6 +7,10 @@ redirect_from:
   - /docs/paas-plus/dev/platform-as-a-service-plus.html
 ---
 
+{% info_block infoBox "Availability" %}
+Provided through PaaS+
+{% endinfo_block %}
+
 Keeping enterprise software up-to-date is a known hurdle, especially when it comes to sophisticated transactional business models with complex customizations. Current upgrade strategies often require a high investment of time, resources, and money that projects would rather spend on innovation. At the same time, low upgrade frequency comes with reduced access to security, improvements, patches, and new features.
 
 The Spryker Code Upgrader addresses the challenges of an application's upgradability. The Upgrader runs on [Spryker CI](/docs/scu/dev/spryker-ci.html) to provide automated upgrades and code quality checks. You retain full control of what customizations to make and apply in your application. By reducing upgrade efforts to a minimum, the Upgrader makes it easy to keep up with Spryker’s daily releases.

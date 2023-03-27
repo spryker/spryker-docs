@@ -24,8 +24,8 @@ The checkout is based on a flexible step engine and can be adjusted to any use c
 Developer:
 - [Get a general idea of the Checkout steps](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html)
 - [Get a general idea of the Checkout process](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/checkout-feature-overview.html)
-- [Migrate the Checkout module from version 4.* to version 6.0.0](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html#upgrading-from-version-4-to-version-600)
-- [Migrate the CheckoutPage module from version 2.* to version 3.*](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html)
+- [Migrate the Checkout module from version 4.* to version 6.0.0](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html#upgrading-from-version-4-to-version-600)
+- [Migrate the CheckoutPage module from version 2.* to version 3.*](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html)
 
 Shop User:
 - [Get a general idea of the Checkout steps](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html)

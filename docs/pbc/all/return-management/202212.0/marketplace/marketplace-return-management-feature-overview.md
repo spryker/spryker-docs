@@ -78,8 +78,9 @@ Merchants process their returns in the Merchant Portal. For details about how to
 | [Managing merchant returns](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html#managing-merchant-returns) | [Managing marketplace returns](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/managing-marketplace-returns.html) |
 |    | [Managing main merchant returns](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/managing-main-merchant-returns.html) |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Marketplace Return Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-return-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES      | GLUE API GUIDES     |
+| -------------------- | -------------- |
+| [Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-return-management-feature-integration.html) | [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html) |
+| [Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html) |              

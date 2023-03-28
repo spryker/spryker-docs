@@ -1,5 +1,5 @@
 ---
-title: "Marketplace Return Management feature: Domain model"
+title: "Marketplace Return Management feature: Domain model and relationships"
 description: This document provides technical details about the Marketplace Return Management feature.
 template: feature-walkthrough-template
 ---

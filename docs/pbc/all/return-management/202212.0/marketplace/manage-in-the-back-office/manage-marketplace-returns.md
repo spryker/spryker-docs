@@ -1,5 +1,5 @@
 ---
-title: Managing  marketplace returns
+title: Manage marketplace returns
 last_updated: Aug 09, 2021
 description: This guide explains how to manage marketplace returns in the Back Office.
 template: back-office-user-guide-template

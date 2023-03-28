@@ -21,7 +21,7 @@ This document describes the `product_stock.csv` file to configure [Product Stock
 ## Import file dependencies
 
 * [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
-* [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/import-data/file-details-warehouse.csv.html)
+* [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse.csv.html)
 
 ## Import file parameters
 

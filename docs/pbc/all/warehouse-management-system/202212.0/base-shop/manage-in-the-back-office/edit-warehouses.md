@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/administration/warehouses/managing-warehouses.html
 related:
   - title: Inventory Management feature overview
-    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
+    link: docs/scos/user/features/page.version/base-shop/inventory-management-feature-overview.html
 ---
 
 This document describes how to edit warehouses in the Back Office.

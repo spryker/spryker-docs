@@ -43,7 +43,7 @@ Events are generated in the following cases:
 | Case 1 | If availability amount was equal to 0 and now it's more than 0, the event is triggered. |
 | Case 2 | If availability amount was more than 0 and now it's equal to 0, the event is triggered. |
 
-The default behavior is having the *available* or *not available* status set for a product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/pbc/all/warehouse-management-system/{{page.version}}/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html).
+The default behavior is having the *available* or *not available* status set for a product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html).
 
 Published data example in JSON.
 
@@ -146,4 +146,4 @@ That means that both DE and AT share a database. This information will be used w
 
 When placing an order in Store A, the reservation is stored with the store identifier `fk_store`. An event is created and published in the queue, and synchronization with Store B happens. See scenario 3 above for information about how reservations are handled as well learn about the new configuration option for shared database in the `store.php` file.
 
-To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/pbc/all/warehouse-management-system/{{page.version}}/inventory-management-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) for business users.

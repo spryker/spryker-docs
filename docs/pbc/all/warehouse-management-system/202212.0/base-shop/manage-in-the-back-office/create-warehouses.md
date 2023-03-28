@@ -20,7 +20,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/create-warehouses.html
 related:
   - title: Inventory Management feature overview
-    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
+    link: docs/scos/user/features/page.version/base-shop/inventory-management-feature-overview.html
 ---
 
 The document describes how to create warehouses in the Back Office.

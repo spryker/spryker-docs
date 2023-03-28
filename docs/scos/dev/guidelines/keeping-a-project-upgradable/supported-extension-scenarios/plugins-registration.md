@@ -1,22 +1,27 @@
 ---
-title: Supported code changes
-description: Description and examples of the supported code changes by manifests
-last_updated: Dec 31, 2022
+title: Plugins registration
+description: Plugins registration extension scenario
+last_updated: Mar 13, 2023
 template: concept-topic-template
 related:
-  - title: Upgradability guidelines
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+  - title: Keeping a project upgradable
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+  - title: Event subscribers registration
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+  - title: Modules configuration
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
 ---
 
-## 1. Plugins registration
+## Introduction
 
-Manifests support the registration of plugins in dependency provider classes and in configuration files. There are multiple ways in which the plugins can be registered inside of a project.
+Manifests support plugins registration in the dependency provider and plugins registration in the configuration files. There are multiple ways how the plugins can be registered inside of the project. 
 
-### 1.1. Plugins registration in the configuration file
+## 1.1. Plugins registration in the configuration file
 
-Code example:
-
+Code example 1.1: Single plugin registration in the global configuration file (e.g. config_default.php)
 ```php
+<?php
+
 use Spryker\Shared\Log\LogConstants;
 use Spryker\Glue\Log\Plugin\GlueLoggerConfigPlugin;
 use Spryker\Yves\Log\Plugin\YvesLoggerConfigPlugin;
@@ -30,15 +35,14 @@ $config[LogConstants::LOGGER_CONFIG_GLUE] = GlueLoggerConfigPlugin::class;
 
 ...
 ```
-<em>Code example 1.1</em>: A single plugin registration in the global configuration file (e.g. config_default.php)
 
 ## 1.2. Plugins registration in the dependency provider file
+
 ### 1.2.1. Single plugin registration
 
-Inside of a dependency provider call, you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. Manifests also support constant concatenation inside of the constructor arguments.
+Inside of dependency provider call you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. Manifests also support constant concatenation inside of the constructor arguments.
 
-Code examples:
-
+Code example 1.2.1: Single plugin registration with arguments in constructor
 ```php
 use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
 use Spryker\Client\CatalogPriceProductConnector\Plugin\CurrencyAwareSuggestionByTypeResultFormatter;
@@ -56,8 +60,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.1</em>: A single plugin registration with arguments in constructor
 
+Code example 1.2.2: Single plugin registration with wrap method call
 ```php
 use Spryker\Service\FileSystemExtension\Dependency\Plugin\FileSystemReaderPluginInterface;
 use Spryker\Service\Flysystem\Plugin\FileSystem\FileSystemReaderPlugin;
@@ -77,21 +81,20 @@ class FileSystemDependencyProvider extends AbstractBundleDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.2</em>: A single plugin registration with wrap method call
 
 ### 1.2.2. Plugins registration in an indexed array
-Manifests fully support multiple plugins registration in an indexed array. Manifests also support additional conditions for the registration of plugins, and additional restrictions on the order of plugins.
 
-Restrictions on the order of plugins can be done with special annotation keys ‘before' and ‘after’ (Code example 1.2.4). 
+Manifests fully support multiple plugins registration in an indexed array. Manifests also support additional conditions for plugin registration and restrictions on the order of the plugins.
 
-If the plugin doesn’t contain any of these keys, it will be added to the end of the plugin stack. 
+Restrictions on the order of the plugins can be done with special annotation keys ‘before' and ‘after’ (Code example 1.2.4).
+
+If the plugin doesn’t contain any of these keys, it will be added to the end of the plugin stack.
 
 If the plugin contains the ‘after' key and defined plugins in ‘after’ parameter don’t exist on the project side, the plugin will be added to the end of the plugin stack.
 
-If the plugin contains the ‘before' key and defined plugins in ‘before’ parameter don’t exist on the project side, the plugin will be added as the first plugin in the plugin stack.
+If the plugin contains the ‘before' key and defined plugins in ‘before’ parameter don’t exist on the project side, the plugin will be added as the first plugin in plugin stack.
 
-Code examples:
-
+Code example 1.2.3: Multiple plugins registration in an indexed array.
 ```php
 use Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
 use Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage\ProductOfferReferenceStrategyPlugin;
@@ -109,8 +112,8 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
     }
 }
 ```
-<em>Code example 1.2.3</em>: Multiple plugins registration in an indexed array
 
+Code example 1.2.4: Multiple plugins registration in an indexed array with restrictions on the order of the plugins.
 ```php
 use Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
 use Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage\DefaultProductOfferReferenceStrategyPlugin;
@@ -139,8 +142,8 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
     }
 }
 ```
-<em>Code example 1.2.4</em>: Multiple plugins registration in an indexed array with restrictions on the order of the plugins
 
+Code example 1.2.5: Multiple plugins registration in an indexed array (BC reasons only)
 ```php
 use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;
 use Spryker\Yves\Validator\Plugin\Form\ValidatorExtensionFormPlugin;
@@ -166,7 +169,8 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.5</em>: Multiple plugins registration in an indexed array (BC reasons only)
+
+Code example 1.2.6: Multiple console commands registration with constant concatenated constructor argument
 
 ```php
 use Pyz\Zed\DataImport\DataImportConfig;
@@ -190,17 +194,15 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.6</em>: Multiple console commands registration with a constant concatenated constructor argument
 
 ### 1.2.3. Plugins in an associative array
-Manifests fully support multiple plugins registration in an associative array. As a key you can use:
 
+Manifests fully support multiple plugins registration in associative array. As a key you can use:
 * string
 * constant
 * function call with arguments
 
-Code examples:
-
+Code example 1.2.7: Multiple plugins registration in an indexed array
 ```php
 use Spryker\Shared\Config\Config;
 use Spryker\Shared\Event\EventConstants;
@@ -223,8 +225,8 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.7</em>: Multiple plugins registration in an indexed array
 
+Code example 1.2.8: Multiple plugins registration in an indexed array
 ```php
 use Spryker\Shared\Config\Config;
 use Spryker\Shared\Event\EventConstants;
@@ -249,14 +251,14 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.8</em>: Multiple plugins registration in an indexed array
 
 ### 1.2.4. Plugins in multidimensional array
-Manifests have limited support of multidimensional arrays:
 
-* only arrays that are added through the key are supported
+Manifests have limited support of multidimensional array:
 
-* only multidimensional arrays with up to 2 levels of depth are supported. It means that the following structure WILL NOT BE SUPPORTED: 
+only arrays that are added through the key are supported
+
+only multidimensional arrays with up to 2 levels of depth are supported. It means that the following structure WILL NOT BE SUPPORTED: 
 
 ```php
 protected function getPlugins(): array
@@ -275,8 +277,7 @@ protected function getPlugins(): array
 }
 ```
 
-Code examples:
-
+Code example 1.2.9: Multiple plugins registration in multidimensional array
 ```php
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryKey\GlossaryDeletePublisherPlugin as GlossaryKeyDeletePublisherPlugin;
@@ -299,8 +300,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.9</em>: Multiple plugins registration in a multidimensional array
 
+Code example 1.2.10: Multiple plugins registration in multidimensional array
 ```php
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryKey\GlossaryDeletePublisherPlugin as GlossaryKeyDeletePublisherPlugin;
@@ -325,13 +326,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.10</em>: Multiple plugins registration in a multidimensional array
 
 ### 1.2.5. Container extension
-Manifests fully support the possibility of adding plugins through a container extension. The Order of the plugins is NOT SUPPORTED inside of the container extension. It means that `before` and `after` are NOT SUPPORTED in this case.
 
-Code example:
+Manifests fully support the possibility of adding plugins through container extension. Order of the plugins is NOT SUPPORTED inside of the container extension. It means that before and after are NOT SUPPORTED in this case.
 
+Code example 1.2.11: Multiple plugins registration through container extension
 ```php
 use Generated\Shared\Transfer\PaymentTransfer;
 use Spryker\Shared\Nopayment\NopaymentConfig;
@@ -359,13 +359,12 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 }
 ```
-<em>Code example 1.2.11</em>: Multiple plugins registration through a container extension
 
 ### 1.2.6. Merging plugins
-Manifests fully support the possibility of merging the results of calling the registration methods of multiple plugins.
+
+Manifests fully support the possibility of merging the results of calling multiple plugins registration methods.
 
 Inside of array merge function call you can use:
-
 * wrap methods calls
 * parent method call
 * indexed arrays
@@ -373,10 +372,9 @@ Inside of array merge function call you can use:
 * multidimensional arrays
 * variables
 
-Multidimensional associative arrays are supported up to 2 levels, but for its usage the wrapped functions MUST be used.
+Multidimensional associative arrays are supported inside of the array_merge() up to 2 levels, but for its usage the wrapped functions MUST be used.
 
-Code examples:
-
+Code example 1.2.12: Multiple plugins registration with merging plugins method call
 ```php
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
 use Spryker\Shared\PublishAndSynchronizeHealthCheck\PublishAndSynchronizeHealthCheckConfig;
@@ -448,307 +446,13 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
-<em>Code example 1.2.12</em>: Multiple plugins registration with the merging plugins method call
 
-### 1.3. Special situations
-If the target dependency provider class doesn’t exist in the project, it will be automatically created, and all required methods will be created automatically as well.
+## 1.3. Special situations
 
-If the target dependency provider class exists, but the target method doesn’t exist in the class, the method won’t be created, and the changes won’t be applied.
+* If the target dependency provider class doesn’t exist in the project, it will be created and all required methods will be created automatically as well.
 
-If the target method inside of the dependency provider class was modified on the project level and, for example, the array was extracted into the separated method, the upgrader won’t find the array, and the changes won’t be applied.
+* If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method will be created and the changes will be applied.
 
-## 2. Event subscribers registration
-Manifests support the registration of event subscribers in the dependency provider.
+* If the target dependency provider class exists in the project without the target method, and such method also doesn’t exist in the parent class, the method WILL NOT be created and the changes WILL NOT be applied.
 
-Manifests fully support event subscribers registration in collection. Restrictions to the order of the plugins in collection are NOT SUPPORTED. New plugin will be added to the end of the collection.
-
-Code examples:
-
-```php
-use Spryker\Zed\AvailabilityStorage\Communication\Plugin\Event\Subscriber\AvailabilityStorageEventSubscriber;
-use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
-use Spryker\Zed\UrlStorage\Communication\Plugin\Event\Subscriber\UrlStorageEventSubscriber;
-
-class EventDependencyProvider extends SprykerEventDependencyProvider
-{
-    ...
-    protected function getEventSubscriberCollection()
-    {
-        $collection = parent::getEventSubscriberCollection();
-    
-        $collection->add(new AvailabilityStorageEventSubscriber());
-        $collection->add(new UrlStorageEventSubscriber());
-    
-        return $collection;
-    }
-}
-```
-<em>Code example 2.1</em>: Event subscribers registration in collection with a parent method call
-
-```php
-use Spryker\Zed\AvailabilityStorage\Communication\Plugin\Event\Subscriber\AvailabilityStorageEventSubscriber;
-use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
-use Spryker\Zed\UrlStorage\Communication\Plugin\Event\Subscriber\UrlStorageEventSubscriber;
-
-class EventDependencyProvider extends SprykerEventDependencyProvider
-{
-    ...
-    protected function getEventSubscriberCollection()
-    {
-        $collection = parent::getEventSubscriberCollection();
-    
-        $collection->add(new AvailabilityStorageEventSubscriber())
-            ->add(new UrlStorageEventSubscriber());
-    
-        return $collection;
-    }
-}
-```
-<em>Code example 2.2</em>: Event subscriber registration in a collection with a chain
-
-## 3. Modules configuration
-Manifests support changes in a module's configuration files.
-
-Manifests support all scalar types (bool, int, float, string), alongside the compound type array and the special type null.
-
-Manifests do not support the compound types object, or any callable, iterable and special type resources.
-
-Manifest only add the values to configuration files. Manifests DO NOT REMOVE the values from project configuration. 
-
-## 3.1. Basic scalar values as return 
-Manifests fully support 4 scalar types:
-
-* bool
-* int
-* float (floating-point number)
-* string
-
-Manifests also support usage of the constants and have built in basic support for constant concatenation.
-
-Code examples:
-
-```php
-use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
-
-class RabbitMqConfig extends SprykerRabbitMqConfig
-{
-    ...
-    protected function getDefaultBoundQueueNamePrefix(): string
-    {
-        return 'error';
-    }
-}
-```
-<em>Code example 3.1.1</em>: Method returns string
-
-```php
-use Pyz\Zed\Synchronization\SynchronizationConfig;
-use Spryker\Zed\ConfigurableBundleStorage\ConfigurableBundleStorageConfig as SprykerConfigurableBundleStorageConfig;
-
-class ConfigurableBundleStorageConfig extends SprykerConfigurableBundleStorageConfig
-{
-    ...
-    public function getConfigurableBundleTemplateSynchronizationPoolName(): string
-    {
-        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
-    }
-}
-```
-<em>Code example 3.1.2</em>: Method returns string (constant used)
-
-```php
-use Spryker\Zed\Development\DevelopmentConfig as SprykerDevelopmentConfig;
-
-class DevelopmentConfig extends SprykerDevelopmentConfig
-{
-    ...
-    public function getCodingStandard(): string
-    {
-        return APPLICATION_ROOT_DIR . DIRECTORY_SEPARATOR . 'phpcs.xml';
-    }
-}
-```
-<em>Code example 3.1.3</em>: Method returns string with constant concatenation
-
-```php
-use SprykerShop\Yves\ProductReplacementForWidget\ProductReplacementForWidgetConfig as SprykerShopProductReplacementForWidgetConfig;
-
-class ProductReplacementForWidgetConfig extends SprykerShopProductReplacementForWidgetConfig
-{
-    ...
-    public function isProductReplacementFilterActive(): bool
-    {
-        return true;
-    }
-}
-```
-<em>Code example 3.1.4</em>: Method returns boolean
-
-```php
-use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
-
-class CustomerConfig extends SprykerCustomerConfig
-{
-    ...
-    public function getCustomerPasswordSequenceLimit(): ?int
-    {
-        return 3;
-    }
-}
-```
-<em>Code example 3.1.5</em>: Method returns int
-
-## 3.2. Array as return
-
-### 3.2.1.  Indexed array as return
-
-```php
-use Spryker\Client\Storage\StorageConfig as SprykerStorageClientConfig;
-
-class StorageConfig extends SprykerStorageClientConfig
-{
-    ...
-    public function getAllowedGetParametersList(): array
-    {
-        return [
-            'page',
-            'sort',
-            'ipp',
-            'q',
-        ];
-    }
-}
-```
-<em>Code example 3.2.1</em>: Method returns indexed array
-
-### 3.2.2. Associative array as return
-
-```php
-use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfigi;
-
-class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfigi
-{
-    ...
-    public function getNavigationTypeToUrlResourceIdFieldMapping(): array
-    {
-        return [
-            'category' => 'fkResourceCategorynode',
-            'cms_page' => 'fkResourcePage',
-        ];
-    }
-}
-```
-<em>Code example 3.2.2</em>: Method returns associative array
-
-### 3.2.3. Multidimensional array as return
-
-Multidimensional associative arrays are supported up to 2 levels, but for its usage the wrapped functions MUST be used: 
-
-```php
-use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
-use Spryker\Shared\Event\EventConfig;
-use Spryker\Shared\Event\EventConstants;
-use Spryker\Shared\Log\LogConstants;
-
-class RabbitMqConfig extends SprykerRabbitMqConfig
-{
-    ...
-    protected function getQueueConfiguration(): array
-    {
-        return [
-            EventConstants::EVENT_QUEUE => $this->getEventQueuePlugins(),
-            $this->get(LogConstants::LOG_QUEUE_NAME),
-        ];
-    }
-    
-    protected function getEventQueuePlugins(): array
-    {
-        return [
-            EventConfig::EVENT_ROUTING_KEY_RETRY => EventConstants::EVENT_QUEUE_RETRY,
-            EventConfig::EVENT_ROUTING_KEY_ERROR => EventConstants::EVENT_QUEUE_ERROR,
-        ];
-    }
-}
-```
-<em>Code example 3.2.3</em>: Method returns multidimensional array (with constants)
-
-### 3.2.4. Merging array
-
-Manifests fully support the possibility of merging the results of calling multiple methods.
-
-Inside of array merge function call you can use:
-
-* wrap methods calls
-* parent method call
-* indexed arrays
-* associative arrays
-* multidimensional arrays
-* variables
-
-```php
-use Generated\Shared\Transfer\QuoteTransfer;
-use Spryker\Client\MultiCart\MultiCartConfig as SprykerMultiCartConfig;
-
-class MultiCartConfig extends SprykerMultiCartConfig
-{
-    ...
-    public function getQuoteFieldsAllowedForQuoteDuplicate(): array
-    {
-        return array_merge(parent::getQuoteFieldsAllowedForQuoteDuplicate(), [
-            QuoteTransfer::BUNDLE_ITEMS,
-            QuoteTransfer::CART_NOTE,
-        ]);
-    }
-}
-```
-<em>Code example 3.2.4</em>: Method returns with associative array (with constants, parent method call and array merging)
-
-Multidimensional arrays up to 2 levels are also supported here, but for its usage the wrapped function MUST be used.
-
-```php
-use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
-use Spryker\Shared\Event\EventConfig;
-use Spryker\Shared\Event\EventConstants;
-use Spryker\Shared\Log\LogConstants;
-
-class RabbitMqConfig extends SprykerRabbitMqConfig
-{
-    ...
-    protected function getQueueConfiguration(): array
-    {
-        return array_merge(
-            [
-                EventConstants::EVENT_QUEUE => $this->getEventQueuePlugins(),
-                $this->get(LogConstants::LOG_QUEUE_NAME),
-            ],
-            $this->getPublishQueueConfiguration(),
-            $this->getSynchronizationQueueConfiguration(),
-        );
-    }
-    
-    protected function getEventQueuePlugins(): array
-    {
-        return [
-            EventConfig::EVENT_ROUTING_KEY_RETRY => EventConstants::EVENT_QUEUE_RETRY,
-            EventConfig::EVENT_ROUTING_KEY_ERROR => EventConstants::EVENT_QUEUE_ERROR,
-        ];
-    }
-}
-```
-<em>Code example 3.2.5</em>: Method returns multidimensional array (with constants, wrap methods call and array merging)
-
-### 3.3. Null as return
-
-```php
-use Spryker\Zed\Api\ApiConfig as SprykerApiConfig;
-
-class ApiConfig extends SprykerApiConfig
-{
-    ...
-    public function getAllowedOrigin(): ?string
-    {
-        return null;
-    }
-}
-```
-<em>Code example 3.1.4</em>: Method returns null
+* If the target method inside of the dependency provider class was modified on the project level and e.g. array was extracted into the separated method, upgrader won’t find the array, the changes won’t be applied.

@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Set number of days for a return policy"
+title: Set number of days for a return policy
 description: The document describes how to set a number of days for a Return Policy
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/howto-set-number-of-days-for-a-return-policy
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
+  - /docs/pbc/all/return-management/202212.0/howto-set-number-of-days-for-a-return-policy.html
 ---
 
 To define a period within which an item can be returned, in `Pyz\Zed\SalesReturn\SalesReturnConfig`, redefine the config by adding the following:

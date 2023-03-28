@@ -6,8 +6,8 @@ template: concept-topic-template
 
 ---
 
-Before starting to provision your Spryker PaaS environment we want to take some time to explain to you some information that we need from you to provision your environment quickly and precisely. The environment provisioning is started by creating a case using your support portal access. You can find the support portal [here](https://support.spryker.com). If you do not yet have a support portal access, request one through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey. 
-Once you are logged in, you can find the form that creates the provisioning request on [Spryker Support Portal](https://support.spryker.com/s/hosting-change-requests/change-request-new-environment).
+Before starting to provision your Spryker PaaS environment we want to explain what we need from you to provision your environment. The environment provisioning is started by creating a case using your support portal access. If you have questions, visit [Spryker Support Portal](https://support.spryker.com). If you do not yet have a support portal access, request one through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey. 
+Once you are logged in to Spryker Support Portal, you can send the [environment provisioning request](https://support.spryker.com/s/hosting-change-requests/change-request-new-environment).
 
 {% info_block warningBox %}
 

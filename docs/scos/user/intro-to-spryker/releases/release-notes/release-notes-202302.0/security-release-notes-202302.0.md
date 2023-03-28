@@ -11,7 +11,7 @@ If you need any additional support with this content, [contact our support](mail
 
 ## SQL injection in OrderSearchForm (order history)
 
-The Spryker-based application in scope offers an order history with a list of orders that have been placed in the past. During the security assessment, a server-side error was detected while testing order history with the search function and discovered SQL injection in OrderSearchForm vulnerability in the Spryker applications. SQL injection vulnerabilities occur when attacker-controlled data is embedded unchecked in SQL queries. Such vulnerabilities let attackers bypass restrictions in the application logic and issue manipulated queries to the database server. Depending on various factors, such as the database management system used or database user permissions, it may be possible to read, modify and delete data and compromise the database or application server.
+The Spryker-based application in scope offers an order history with a list of orders that have been placed in the past. During the security assessment, a server-side error was detected while testing order history with the search function. Also, SQL injection in the OrderSearchForm vulnerability in the Spryker applications was discovered. SQL injection vulnerabilities occur when attacker-controlled data is embedded unchecked in SQL queries. Such vulnerabilities let attackers bypass restrictions in the application logic and issue manipulated queries to the database server. Depending on various factors, such as the database management system used or database user permissions, it may be possible to read, modify and delete data and compromise the database or application server.
 
 ### Affected modules
 

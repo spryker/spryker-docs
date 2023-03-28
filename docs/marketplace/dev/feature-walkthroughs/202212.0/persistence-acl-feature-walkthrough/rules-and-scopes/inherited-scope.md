@@ -13,7 +13,7 @@ Inherited scope rules apply when you need to grant access to an entity (child) t
 
 ![Inherited scope](https://confluence-connect.gliffy.net/embed/image/e473a9ca-2eb7-481d-b0c4-72d2563ec466.png?utm_medium=live&utm_source=custom)
 
-Inheritance rules (child-parent relationship) are set in the configuration. For more details, see [Persistence ACL configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html).
+Inheritance rules (child-parent relationship) are set in the configuration. For more details, see [Persistence ACL configuration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html).
 
 Inherited scope functionality has one unique feature: it is sufficient to have **read** access to the parent for successful inheritance for any operation (create/read/update/delete).
 

@@ -57,7 +57,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
@@ -181,7 +180,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Wishlist
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
@@ -230,12 +228,21 @@ entries:
 
           - title: Merchant Category
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
 
           - title: Merchant Opening Hours
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
 
           - title: Merchant Portal
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-portal-feature-walkthrough.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
 
               - title: Marketplace Merchant Portal Core
@@ -304,31 +311,30 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Merchant Portal Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
 
           - title: Marketplace Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-cart-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Category feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-category-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Opening Hours feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
@@ -607,21 +613,18 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Merchant Opening Hours feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-opening-hours-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Merchant Category feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/merchant-category-feature-integration.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Product feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html
@@ -756,20 +759,21 @@ entries:
 
           - title: Сarts of registered users
             url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/carts-of-registered-users.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Managing carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Managing items in carts of registered users
                 url: /docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Content items
             nested:
@@ -782,20 +786,21 @@ entries:
 
           - title: Guest carts
             url: /docs/marketplace/dev/glue-api-guides/guest-carts/guest-carts.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Managing guest carts
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-carts.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
-              - title: Managing items in carts of registered users
+              - title: Managing guest cart items
                 url: /docs/marketplace/dev/glue-api-guides/guest-carts/managing-guest-cart-items.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Merchants
             url: /docs/marketplace/dev/glue-api-guides/merchants/merchants.html
@@ -805,21 +810,18 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Retrieving merchant addresses
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Retrieving merchant opening hours
                 url: /docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Product offers
             url: /docs/marketplace/dev/glue-api-guides/product-offers/product-offers.html
@@ -942,42 +944,36 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-profile.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-profile-address.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile-address.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-open-hours-week-day-schedule.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant_open_hours_date_schedule.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-category.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-category.csv.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-stock.csv.html
@@ -990,7 +986,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: merchant-oms-process.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-oms-process.csv.html
@@ -1024,7 +1019,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
@@ -1533,18 +1527,6 @@ entries:
 
           - title: "How-To: Split products by stores"
             url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
-
-          - title: "How-To: Extend Merchant Portal dashboard"
-            url: /docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html
-
-          - title: "How-To: Create a new Gui module"
-            url: /docs/marketplace/dev/howtos/how-to-create-gui-module.html
-
-          - title: "How-To: Create a new Gui table"
-            url: /docs/marketplace/dev/howtos/how-to-create-gui-table.html
-
-          - title: "How-To: Extend an existing Gui table"
-            url: /docs/marketplace/dev/howtos/how-to-extend-gui-table.html
 
           - title: "How-To: Create a new Gui table column type"
             url: /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html

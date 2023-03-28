@@ -55,6 +55,9 @@ entries:
         nested:
         - title: Marketplace Merchant
           url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
           nested:
 
           - title: Merchant users
@@ -62,15 +65,20 @@ entries:
 
         - title: Merchant Category
           url: /docs/marketplace/user/features/merchant-category-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Merchant Opening Hours
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Marketplace Merchant Custom Prices
           url: /docs/marketplace/user/features/marketplace-merchant-custom-prices-feature-overview.html
           include_versions:
           - "202204.0"
-          - "202212.0"
           - "202212.0"
 
         - title: Marketplace Product
@@ -91,7 +99,7 @@ entries:
         - title: Marketplace Inventory Management
           url: /docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
           include_versions:
-          - "202204.0"          
+          - "202204.0"
 
         - title: Marketplace Order Management
           url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
@@ -112,6 +120,9 @@ entries:
 
         - title: Marketplace Cart
           url: /docs/marketplace/user/features/marketplace-cart-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Marketplace Return Management
           url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html
@@ -218,6 +229,9 @@ entries:
 
             - title: Merchants
               url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/merchants.html
+              include_versions:
+              - "202108.0"
+              - "202204.0"
               nested:
 
                 - title: Managing merchants
@@ -261,6 +275,9 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/managing-merchants-performance-data.html
 
         - title: Profile
+          include_versions:
+            - "202108.0"
+            - "202204.0"
           nested:
           - title: Editing merchant's profile details
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html

@@ -15,7 +15,6 @@ This section provides descriptions of Marketplace features from a development pe
 * [Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shipment-feature-walkthrough.html)
 * [Marketplace Promotions and Discounts](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-promotions-and-discounts-feature-walkthrough.html)
 * [Marketplace Product Options](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-options-feature-walkthrough.html)
-* [Marketplace Cart](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-cart-feature-walkthrough.html)
 * [Marketplace Wishlist](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-wishlist-feature-walkthrough.html)
 * [Marketplace Shopping Llists](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html)
 * [persistence ACL](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html)

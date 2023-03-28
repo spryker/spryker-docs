@@ -8,7 +8,7 @@ redirect_from:
 
 To update a project, the Spryker Code Upgrader runs the following steps.
 
-### 1. Identifies the Spryker modules to update
+### 1. Identifies the available updates for the Spryker modules
 
 The Spryker Code Upgrader performs the following sub-steps:
 
@@ -37,7 +37,7 @@ Please follow the link below to find all documentation needed to help you upgrad
 https://api.release.spryker.com/release-group/XXXX
 ```
 
-To continue the usage of Upgrader, install the major manually, and re-run the Upgrader.
+To continue the usage of the Upgrader, install the major version manually, and re-run the Upgrader.
 
 ### 3. Creates a Git branch
 

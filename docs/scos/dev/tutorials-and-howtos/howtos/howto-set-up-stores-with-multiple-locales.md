@@ -30,7 +30,7 @@ This document describes the steps to consider when setting up stores with multip
 
 {% info_block warningBox %}
 
-If using Dynamic multi store feature, configuration via `stores.php` is depricated. For more information, see [Integration Guide](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-dynamic-multiple-stores.html).
+When using the Dynamic Multi-Store functionality, configuring via the stores.php file is no longer supported. Please refer to the [Integration Guide](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-dynamic-multiple-stores.html) for additional information.
 
 {% endinfo_block %}
 

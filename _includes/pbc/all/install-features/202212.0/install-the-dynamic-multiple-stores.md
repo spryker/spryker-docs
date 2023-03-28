@@ -1128,15 +1128,12 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% info_block warningBox "Configuration stores.php" %}
 
-Before dynamic store was introduced, the configuration for the store was stored in the file `config/Shared/stores.php`. Since the dynamic store is enabled, the configuration for the store is stored in the database, and the file `config/Shared/stores.php` depricated. 
+Before dynamic store was introduced, the configuration for the store was stored in the file `config/Shared/stores.php`. Since the dynamic store is enabled, the configuration for the store is stored in the database, and the file `config/Shared/stores.php` deprecated. 
 
-It replaced by the following modules: StoreDataImport, LocaleDataImport, CountryDataImport, CurrencyDataImport modules.
-Also introduced new major modules: Locale, Country, Currency.
+The default store configuration will now be imported using new data import modules such as StoreDataImport, LocaleDataImport, CountryDataImport, and CurrencyDataImport. These modules will populate the store configuration in the database.
+New major modules have been introduced, including Locale, Country, and Currency, which are now responsible for configuring the store in the database.
 
 {% endinfo_block %}
-
-
-
 
 
 1. Change the default configuration file. 

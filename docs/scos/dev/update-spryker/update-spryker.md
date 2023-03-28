@@ -80,7 +80,7 @@ The table below shows when it might be more relevant to you to make updates at t
 
 ## Splitting from features to individual modules
 
-If you need to update at the module level, you might want to extract individual modules out of features. To do that, you only need to change your `composer. json` file. Read on to learn how you can do it.
+If you need to update on the module level, you might want to extract individual modules out of features. To do that, you only need to change your `composer. json` file. Read on to learn how you can do it.
 
 ### Spryker feature structure
 
@@ -98,8 +98,8 @@ If you started with Spryker features, your `composer.json` should look similar t
 ....
 ```
 
-Every Spryker feature is nothing more than a standalone module with a `composer.json` file that contains a list of individual Spryker modules as dependencies. A feature contains no functional code; the entire code is kept in modules.
-Let's take the `spryker-feature/agent-assist` feature from the example above and check [its composer.json file](https://github.com/spryker-feature/product-sets/blob/master/composer.json):
+Every Spryker feature is a standalone module with a `composer.json` file with a list of individual Spryker modules as dependencies. A feature contains no functional code; the entire code is kept in modules.
+Following the example with the `spryker-feature/agent-assist` feature, check [its composer.json file](https://github.com/spryker-feature/product-sets/blob/master/composer.json):
 
 ```json
 {
@@ -126,17 +126,18 @@ Let's take the `spryker-feature/agent-assist` feature from the example above and
   }
 }
 ```
-In this example, you can see the list of Spryker modules; the feature depends on modules in the `require` part.
+
+In the `require` part, you can see the module this feature consists of.
 
 ### Replacing the feature dependencies with module dependencies
 
-You can replace the `spryker-feature/agent-assist` dependency in your `composer.json` with the list of its dependencies (modules). After doing the same iteratively to other features, you will get your project to depend on individual modules instead of features. Your shop functionality remains the same.
+You can replace the `spryker-feature/agent-assist` dependency in your `composer.json` with the list of its dependencies (modules). After doing the same to other features, the project starts depending on modules instead of features. At the same time, the shops functionality does not change.
 
-## Planning the update
+## Plan the update
 
-This section provides recommendations on how you can build a process around upgrading your Spryker project so you can plan, estimate, and continuously deliver, just like any feature you are building.
+This section provides recommendations on how you can build a process around updating your Spryker project, so you can plan, estimate, and continuously deliver updates, just like any feature you are building.
 
-According to the latest statistics from 2019, Spryker is doing *12 releases of individual modules per day*. So if you haven't done an update for a while (3+ months), there are a lot of things to be updated. If you approach Spryker update as an "everything at once" task, you will end up with a quite time-consuming routine that lasts a couple of iterations, conflicting with the main feature development process.
+According to the statistics from 2019, Spryker is doing *12 releases of individual modules per day*. So if you haven't done an update for a while (3+ months), there are a lot of things to be updated. If you approach Spryker update as an "everything at once" task, you may end up with a quite time-consuming routine that lasts a couple of iterations, conflicting with the main feature development process.
 
 {% info_block infoBox %}
 
@@ -144,19 +145,18 @@ To see why you have something installed, and why something must not be installed
 
 {% endinfo_block %}
 
-To streamline your update process, prepare for it.
-First of all, check how big your update is going to be by following the steps below.
+To streamline your update process, prepare for it. First of all, check how big your update is going to be by following the steps below.
 
 ### 1. Check all outdated packages
 
-To check for the outdated packages, run:
+Check for outdated packages:
 
 ```BASH
 php -d memory_limit=-1 composer.phar outdated | grep spryker
 ```
 
-The command returns a list of the outdated Spryker packages. It gives you a clear picture of what is outdated, how many majors/minors/bugfixes you have, and allows you to kind of estimate the effort for the update. See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) for information about the module release types.
-Now, same as for any feature update that can take a while, the best approach for the update process would be to split it into deliverable chunks. Therefore, according to our best practices, the next step would be:
+The command returns a list of outdated Spryker packages. It gives you a clear picture of what is outdated, how many majors, minors, and bugfixes you have, and lets you estimate the effort for the update. See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) for information about the module release types.
+As any feature update can take a while, the best approach is to split the update into deliverable chunks.
 
 ### 2. Build up update iterations
 

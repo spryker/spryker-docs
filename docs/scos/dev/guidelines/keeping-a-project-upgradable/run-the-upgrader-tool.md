@@ -1,33 +1,20 @@
 ---
 title: Run the upgrader tool
 description: Instructions for running the upgrader tool
-last_updated: Nov 25, 2021
+last_updated: Mar 24, 2023
 template: concept-topic-template
-redirect_from:
-  - /docs/scos/dev/upgradability-services/run-the-upgrader-tool.html
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html
 
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
   - title: Upgrader tool overview
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
-  - title: Run the evaluator tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
-  - title: Define custom prefixes for core entity names
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---
 This document describes how to upgrade all the modules to the latest versions.
 
 ## Prerequisites
 
 1. Install the upgrader by [installing Spryker SDK](https://github.com/spryker-sdk/sdk#installation).
-
-{% info_block warningBox "Running the upgrader without installing Spryker SDK" %}
-
-Alternatively, you can use the `spryker-sdk` image from the project directory without installing it. To do that, run all the commands in this doc as follows: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {COMMAND}'
-
-{% endinfo_block %}
 
 2. To enable the upgrader tool to commit and push changes, adjust your project’s Git and environment configuration as follows:
 

@@ -21,8 +21,7 @@ spryker-feature/order-management: 202009.0-202212.0
 
 ### Introduced changes
 
-* To separate user input from the query, adjusted `OrderSearchQueryJoinQueryBuilder::addSalesOrderQueryFilters()`.
-* Impacted `SalesFacade::searchOrders()` with these changes.
+In order to separate user input from the query, `OrderSearchQueryJoinQueryBuilder::addSalesOrderQueryFilters()` was adjusted. These changes impacted `SalesFacade::searchOrders()`.
 
 ### How to get the fix
 

@@ -54,12 +54,11 @@ The more outdated your module versions become, the more effort will be needed to
 
 {% endinfo_block %}
 
-The most *reasonable strategy* of staying up to date is sticking to the Spryker release cycle and updating modules whenever there is a new release announcement. [Subscribe to the release notes](/docs/scos/user/intro-to-spryker/releases/releases.html) if you want to get notified about new releases.
-During the active development phase, it would make sense to do updates more often, for example, monthly.
+The most *reasonable strategy* of staying up to date is sticking to the Spryker release cycle and updating modules whenever there is a new release announcement. To get notified about releases,  [subscribe to the release notes](/docs/scos/user/intro-to-spryker/releases/releases.html). During the active development phase, it makes sense to do updates more often, for example, monthly.
 
 ## Features versus individual module updates
 
-When you know that you need to update your Spryker-based project, you need to decide at which level you want to do updates: at the *feature *level* or the *module* level*.
+When you know that you need to update your project, you need to decide at which level you want to do updates: at the *feature *level* or the *module* level*.
 
 {% info_block infoBox %}
 
@@ -71,13 +70,13 @@ The table below shows when it might be more relevant to you to make updates at t
 
 | FEATURE-LEVEL UPDATE | MODULE-LEVEL UPDATE |
 | --- | --- |
-| Your project is in *operations mode*. This means that the project is completed and is in the support phase, not much development is happening. | Your project is in active *development mode*, and you want to update more often to get the latest features/bugfixes. |
-| You want to update as soon as the Spryker Product Release happens. | You are getting core commitments from Spryker at the module level. |
-| You want to do updates at the big feature level, installing complete features. | Your strategy is to have smaller and simpler updates more often, rather than long and complex but rare. |
+| Your project is in *operations mode*. The project is completed and is in the support phase, not much development is happening. | Your project is in active *development mode*, and you want to update more often to get the latest features and bugfixes. |
+| You want to update as soon as a Spryker Product Release happens. | You are getting core commitments from Spryker at the module level. |
+| Your strategy is to install and update features at once. | Your strategy is to have smaller and simpler updates more often. |
 |  | You want to do updates with a single-module precision. |
 |  | You want to be more flexible and be able to split updates into chunks, distributing them across your sprints. |
-|  | You have not been updating for a while (6+ months), and now you have to do a huge update. |
-|  | Your project is highly customized, and you have extended a lot of code at your project level. |
+|  | You have not been updating for a while (6+ months), and now you have to do a big update. |
+|  | Your project is highly customized, and you extended a lot of code at the project level. |
 
 ## Splitting from features to individual modules
 
@@ -85,7 +84,7 @@ If you need to update at the module level, you might want to extract individual 
 
 ### Spryker feature structure
 
-If you have started with the Spryker features, you should see something like this in your `composer.json`:
+If you started with Spryker features, your `composer.json` should look similar to the following:
 
 ```json
 "ext-readline": "*",

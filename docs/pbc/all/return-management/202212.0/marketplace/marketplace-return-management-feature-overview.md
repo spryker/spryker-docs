@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Retu
 template: concept-topic-template
 related:
   - title: Managing marketplace returns
-    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-marketplace-returns.html
+    link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
 ---
 
 *Marketplace Return Management* feature lets you create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.
@@ -14,7 +14,7 @@ Once an order has been shipped, the registered buyer or a Back Office user can i
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html).
+You can also create and manage returns via Glue API. For details, see [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-returns.html).
 
 {% endinfo_block %}
 
@@ -69,18 +69,18 @@ A Back Office user can create returns for the [returnable items](/docs/pbc/all/r
 
 ## Marketplace Return Management in the Merchant Portal
 
-Merchants process their returns in the Merchant Portal. For details about how to manage the merchant returns, see [Merchant Portal guide: Managing merchant orders ](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html).
+Merchants process their returns in the Merchant Portal. For details about how to manage the merchant returns, see [Merchant Portal guide: Managing merchant orders ](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-merchant-orders.html).
 
 ## Related Business User articles
 
 | MERCHANT PORTAL USER GUIDES  | BACK OFFICE USER GUIDES |
 | --- | --- |
-| [Managing merchant returns](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html#managing-merchant-returns) | [Managing marketplace returns](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/managing-marketplace-returns.html) |
-|    | [Managing main merchant returns](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/managing-main-merchant-returns.html) |
+| [Managing merchant returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-merchant-orders.html#managing-merchant-returns) | [Managing marketplace returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-returns.html) |
+|    | [Managing main merchant returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html) |
 
 ## Related Developer articles
 
 | INTEGRATION GUIDES      | GLUE API GUIDES     |
 | -------------------- | -------------- |
-| [Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-return-management-feature-integration.html) | [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html) |
-| [Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html) |              
+| [Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-returns.html) |
+| [Glue API: Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |              

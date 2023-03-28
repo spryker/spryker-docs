@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Return Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-return-management-feature-walkthrough.html
+    link: docs/pbc/all/return-management/page.version/marketplace/marketplace-return-management-feature-overview.html
 ---
 
 This document describes how to integrate the Marketplace Return Management feature into a Spryker project.
@@ -1108,4 +1108,4 @@ console frontend:yves:build
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Return Management API | | [Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html) |
+| Marketplace Return Management API | | [Glue API: Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |

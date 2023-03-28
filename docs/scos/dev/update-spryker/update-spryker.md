@@ -78,11 +78,11 @@ The table below shows when it might be more relevant to you to make updates at t
 |  | You have not been updating for a while (6+ months), and now you have to do a big update. |
 |  | Your project is highly customized, and you extended a lot of code at the project level. |
 
-## Splitting from features to individual modules
+## Switch from feature to module dependencies
 
-If you need to update on the module level, you might want to extract individual modules out of features. To do that, you only need to change your `composer. json` file. Read on to learn how you can do it.
+To switch from updates on a feature level to a module level, you need to update your `composer. json` by replacing feature dependencies with the module dependencies which the features consist of.
 
-### Spryker feature structure
+### Check the features in your project
 
 If you started with Spryker features, your `composer.json` should look similar to the following:
 
@@ -97,6 +97,8 @@ If you started with Spryker features, your `composer.json` should look similar t
 "spryker-feature/cart": "^{{page.version}}",
 ....
 ```
+
+## Check the modules a feature consists of
 
 Every Spryker feature is a standalone module with a `composer.json` file with a list of individual Spryker modules as dependencies. A feature contains no functional code; the entire code is kept in modules.
 Following the example with the `spryker-feature/agent-assist` feature, check [its composer.json file](https://github.com/spryker-feature/product-sets/blob/master/composer.json):
@@ -127,49 +129,19 @@ Following the example with the `spryker-feature/agent-assist` feature, check [it
 }
 ```
 
-In the `require` part, you can see the module this feature consists of.
+In the `require` part, you can see the modules this feature consists of.
 
-### Replacing the feature dependencies with module dependencies
+### Replace feature dependencies with module dependencies
 
 You can replace the `spryker-feature/agent-assist` dependency in your `composer.json` with the list of its dependencies (modules). After doing the same to other features, the project starts depending on modules instead of features. At the same time, the shops functionality does not change.
 
-## Plan the update
 
-This section provides recommendations on how you can build a process around updating your Spryker project, so you can plan, estimate, and continuously deliver updates, just like any feature you are building.
 
-According to the statistics from 2019, Spryker is doing *12 releases of individual modules per day*. So if you haven't done an update for a while (3+ months), there are a lot of things to be updated. If you approach Spryker update as an "everything at once" task, you may end up with a quite time-consuming routine that lasts a couple of iterations, conflicting with the main feature development process.
 
-{% info_block infoBox %}
 
-To see why you have something installed, and why something must not be installed, run `composer why` and `composer why-not` commands, respectively.
 
-{% endinfo_block %}
 
-To streamline your update process, prepare for it. First of all, check how big your update is going to be by following the steps below.
 
-### 1. Check all outdated packages
-
-Check for outdated packages:
-
-```BASH
-php -d memory_limit=-1 composer.phar outdated | grep spryker
-```
-
-The command returns a list of outdated Spryker packages. It gives you a clear picture of what is outdated, how many majors, minors, and bugfixes you have, and lets you estimate the effort for the update. See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) for information about the module release types.
-As any feature update can take a while, the best approach is to split the update into deliverable chunks.
-
-### 2. Build up update iterations
-
-From the list of the outdated packages, you've got in the previous step, create the update iterations. We recommend including the following number of updates into each of the update iterations:
-*     30+ bugfix updates or
-*     around 10 minor updates or
-*     1-5 major updates
-
-The numbers above depend on how many customizations for the respective modules you've done on your project or how complicated the migration effort is.
-
-### 3. Plan, estimate, and prioritize
-
-Like with any other task, you can prioritize and estimate the update iterations. You can also distribute them across different sprints and share them between several team members, mixing in features required from the business perspective.
 
 ## Upgrade iteratively
 
@@ -177,7 +149,7 @@ To make your update process as smooth as possible, we recommend following the be
 
 ### Bugfix and minor version updates
 
-For *bugfix* and *minor* module version updates, run the update for modules from your update iteration, for example:
+For *bugfix* and *minor* module version updates, run the update for modules from your update iteration. Example:
 
 ```BASH
 composer update spryker/propel spryker/oms spryker/currency spryker/money spryker/glossary spryker/mail spryker/customer-extension spryker/calculation spryker/price-product …
@@ -185,11 +157,11 @@ composer update spryker/propel spryker/oms spryker/currency spryker/money spryke
 
 The list of modules to be updated might change if Composer warns you about dependencies on other modules. Keep adding them to the list, but make sure your update iteration does not get blown up too much. Otherwise, split the iteration into several ones.
 
-For the *minor* module updates, where you have lots of customizations, it would be good to double-check the changes Spryker has made, to make sure there are no conflicts with your logic. You can check the changes made by Spryker by doing the following:
+Before taking minor updates to the modules you customized on the project level, we recommend double-checking that the update does not conflict with the project-level logic. . You can do it as follows:
 
 1. Go to `https://github.com/[module-name-here]/compare/[your-version]…[available-version]`.  For example, [https://github.com/spryker/queue/compare/1.1.2...1.2.0](https://github.com/spryker/queue/compare/1.1.2...1.2.0).
-2. Carefully check the code changes made by the Spryker team.
-3. Fix / integrate with the issues if you've found any.
+2. Carefully check the code changes.
+3. Fix or integrate with the issues if any.
 
 ### Major version updates and new packages installation
 

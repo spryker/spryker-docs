@@ -6,8 +6,6 @@ template: concept-topic-template
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
-  - title: Run the Upgrader tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
 ---
 
 
@@ -89,8 +87,3 @@ If any step results in an error, the upgrader proceeds directly to this step to 
 
 For example, if at step 6, due to incorrect authentication details, the upgrader fails to push changes, it proceeds to step 8 to discard the committed changes and delete local and remote branches.
 
-
-
-## Next steps
-
-[Running the upgrader tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html)

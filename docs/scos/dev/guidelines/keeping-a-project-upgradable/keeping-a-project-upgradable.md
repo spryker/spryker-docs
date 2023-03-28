@@ -6,8 +6,6 @@ template: concept-topic-template
 related:
   - title: Upgrader tool overview
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
-  - title: Run the Upgrader tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
   - title: Plugins registration
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
   - title: Event subscribers registration

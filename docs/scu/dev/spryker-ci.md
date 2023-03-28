@@ -21,4 +21,4 @@ Spryker CI is shipped with an Upgrader pipeline per project.
 
 ## Next steps
 
-[Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html)
+[How the Spryker Code Upgrader works](/docs/scu/dev/how-the-spryker-code-upgrader-works.html)

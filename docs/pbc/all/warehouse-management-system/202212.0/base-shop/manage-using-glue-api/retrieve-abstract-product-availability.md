@@ -29,7 +29,7 @@ This endpoint allows retrieving information about availability of abstract produ
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
 
 ## Retrieve availability of an abstract product
 

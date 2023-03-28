@@ -23,7 +23,7 @@ This endpoint allows retrieving subscriptions to availability notifications of a
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Availability Notification Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Availability Notification Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html).
 
 ## Retrieve subscriptions to availability notifications
 

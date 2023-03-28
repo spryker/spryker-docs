@@ -14,7 +14,7 @@ The Spryker Code Upgrader performs the following sub-steps:
 
 1. To identify the modules to be updated, it compares the information present in the `composer.json` and `composer.lock` files with our latest released code.
 
-2. Creates a list of modules and third-party libraries to be updated. Groups the modules according to how we released them.
+2. It creates a list of modules and third-party libraries to be updated. Groups the modules according to how we released them.
 
 {% info_block infoBox "Module groups" %}
 

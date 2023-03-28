@@ -7,7 +7,7 @@ template: concept-topic-template
 
 This document describes the security-related issues we have recently resolved. All issues are listed by description and affected modules.
 
-If you need any additional support with this content, [contact our support](mailto:support@spryker.com). If you found a new security vulnerability, inform us through security@spryker.com.
+If you need any additional support with this content, [contact our support](mailto:support@spryker.com). If you found a new security vulnerability, inform us through [security@spryker.com](mailto:security@spryker.com).
 
 ## SQL injection in OrderSearchForm (order history)
 

@@ -4,8 +4,6 @@ description: Guidelines for keeping a project upgradable
 last_updated: Mar 24, 2023
 template: concept-topic-template
 related:
-  - title: Upgrader tool overview
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
   - title: Plugins registration
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
   - title: Event subscribers registration

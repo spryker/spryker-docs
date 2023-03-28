@@ -4715,8 +4715,6 @@ entries:
     - title: Keeping a project upgradable
       url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
-        - title: Upgrader tool overview
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
         - title: Event subscribers' registration
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
         - title: Modules configuration

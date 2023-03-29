@@ -61,6 +61,7 @@ In the Spryker Commerce OS's core, the following is the public API:
 * Dependencies to open source components
 * Glossary keys
 * Software design
+* Symfony App Events
 
 
 

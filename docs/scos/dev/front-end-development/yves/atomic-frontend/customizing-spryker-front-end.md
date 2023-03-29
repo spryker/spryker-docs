@@ -43,7 +43,7 @@ For more information about Twig basics, see [Twig Homepage](https://twig.symfon
 
 After integrating the Spryker Shop application into your project, all UI components shipped with Spryker are located in `vendor/spryker-shop`. The layout of any of them can be overridden on the project level. For this, create a Twig file with your own layout in the `src/Pyz/Yves` folder. To override the structure of any component, the Twig file name must be the same as the name of the Twig template you want to override, and also the folder structure must replicate the structure of the component you are overriding.
 
-To extend an existing component template, you need to copy the whole Twig you are extending to the project level, and then add your own code to the project-level file. For instance, if you need to add a new component to the main layout of the whole Shop Suite, copy the layout to your project level, and then make changes to the project-level file. To do this, copy file `page-layout-main.twig` to your project level to `src/Pyz/Yves/ShovarpUi/Theme/default/templates/page-layout-main/page-layout-main.twig`. Then, make changes as follows:
+To extend an existing component template, you need to copy the whole Twig you are extending to the project level, and then add your own code to the project-level file. For instance, if you need to add a new component to the main layout of the whole Shop Suite, copy the layout to your project level, and then make changes to the project-level file. To do this, copy file `page-layout-main.twig` to your project level to `src/Pyz/Yves/ShopUi/Theme/default/templates/page-layout-main/page-layout-main.twig`. Then, make changes as follows:
 
 <details><summary markdown='span'>page-layout-main.twig</summary>
 

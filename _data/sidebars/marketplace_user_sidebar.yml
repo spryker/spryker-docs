@@ -17,6 +17,9 @@ entries:
           - title: Back Office for Marketplace Operator
             url: /docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html
 
+          - title: Merchant oborading
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding.html
+
           - title: Marketplace Storefront
             url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html
 

@@ -159,54 +159,50 @@ The list of modules to be updated might change if Composer warns you about depen
 
 Before taking minor updates to the modules you customized on the project level, we recommend double-checking that the update does not conflict with the project-level logic. . You can do it as follows:
 
-1. Go to `https://github.com/[module-name-here]/compare/[your-version]…[available-version]`.  For example, [https://github.com/spryker/queue/compare/1.1.2...1.2.0](https://github.com/spryker/queue/compare/1.1.2...1.2.0).
+1. Go to `https://github.com/[module-name-here]/compare/[your-version]…[available-version]`.  For example, [https://github.com/spryker/price/compare/4.0.0...5.0.0](https://github.com/spryker/price/compare/4.0.0...5.0.0).
 2. Carefully check the code changes.
 3. Fix or integrate with the issues if any.
 
 ### Major version updates and new packages installation
 
-<a name="{major}"></a>For *major* module version updates or installation of *new packages*, follow the steps below.
+For *major* module version updates or installation of *new packages*, follow the steps below.
 
 1. Require a new module:
 
 ```BASH
-php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
+php -d memory_limit=-1 composer.phar require "spryker/price:^5.0.0"
 ```
-If no extra dependencies are found, `composer.json` will be updated, respectively. Otherwise, see the [Troubleshooting](#troubleshooting) section at the end of the article, *In case when update is not possible* part.
+If no extra dependencies are found, `composer.json` is updated respectively. Otherwise, see [Update is not possible](#update-is-not-possible).
 
-2. [Check the migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
+2. Follow the upgrade steps of the needed module version in the upgrade guide. Following the example with the price module, see [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
 
 ## Test after each iteration
 
-{% info_block infoBox %}
-
-To find out about the obvious update errors before executing the tests, run `php -d memory_limit=-1 ./vendor/bin/phpstan analyze --no-progress src/ -l 5`. Keep in mind, that it has to be set up and green before the updates happen.
-
-{% endinfo_block %}
+To find out about the obvious update errors before executing the tests, run `php -d memory_limit=-1 ./vendor/bin/phpstan analyze --no-progress src/ -l 5`. It has to be set up and green before the updates happen.
 
 Once you've completed the update, it's necessary to make sure that everything still works as expected, and nothing is broken. To do so, complete the following steps right after the update:
 
 ### 1. Run automated tests
 
-Automoted tests are must-have for every project in general and are very helpful in case of updates. We recommend to run the following tests:
-* Acceptance tests—cover the most critical e-commerce functionality of your shop.
-* Functional tests—cover your Facade methods in Zed.
-* Unit tests—cover classes with complex business logic and tricky algorithms.
+Automated tests are must-have for every project and are very helpful in case of updates. We recommend running the following tests:
+* Acceptance tests: cover the most critical e-commerce functionality of your shop.
+* Functional tests: cover your Facade methods in Zed.
+* Unit tests: cover classes with complex business logic and tricky algorithms.
 
-See the [Testing](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html) section for information about what Spryker has to offer in terms of testing your project's code.
+See [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html) for more information about testing your project's code.
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "Qualitative coverage" %}
 
-The goal of the automoted tests in case of updates is not to have a 100% code coverage, but rather qualitative coverage of your critical functionality.
+In case of updates, the goal of automated tests is not a 100% code coverage, but a qualitative coverage of your critical functionality.
 
 {% endinfo_block %}
 
 ### 2. Run code analysis tools
 
-We find the following static code analysis tools the most helpful for running after the update and strongly recommend that you use them:
-* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules), and many more. See [PHPStan](/docs/scos/dev/sdk/development-tools/phpstan.html) for information about how to install and use the tool.
-* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean and consistent after the update. See [Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html) for information about how to use the tool.
+We find the following static code analysis tools the most helpful strongly recommend using them:
+* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules), and many more. For information about installing and using  the tool, see [PHPStan](/docs/scos/dev/sdk/development-tools/phpstan.html).
+* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the code clean and consistent after updates. See [Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html) for information about how to use the tool.
 * [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/development-tools/architecture-sniffer.html) for information about how to run the tool.
 
 ### 3. Make other possible checks

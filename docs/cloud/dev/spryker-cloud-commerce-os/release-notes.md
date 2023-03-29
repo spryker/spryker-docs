@@ -18,7 +18,6 @@ Although these features will be available to all SCCOS projects, we are introduc
 {% endinfo_block %}
 
 
-
 ## March 2023
 
 The following features were released in March 2023.
@@ -29,7 +28,7 @@ Manage environment variables and secrets of applications using a UI without havi
 
 Benefits:
 
-Better flexibility and higher autonomy. You can change environment variables according to a needed schedule, which lets you adapt more easily to changing needs and requirements.
+Flexibility. You can change environment variables according to a needed schedule, which lets you adapt more easily to changing needs and requirements.
 
 #### Documentation
 
@@ -50,9 +49,9 @@ Faster maintenance. You can enable maintenance mode more quickly, reducing downt
 * [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
 
 
-### Deployment optimization for RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Deployment optimization of RabbitMQ <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Optimized the RabbitMQ deployment step that significantly reduces the pipeline runtime. This optimization involves the decoupling of RabbitMQ in the deployment process.
+Optimized the deployment of RabbitMQ by moving it to another existing step. This significantly reduces the pipeline runtime. Deploy RabbitMQ is now part of another deployment step.
 
 
 ### Platform upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -77,13 +76,13 @@ This feature lets you quickly delete logical databases and associated resources,
 
 Benefits:
 
-* Improved efficiency: projects can delete their logical databases and associated resources more quickly and easily, streamlining the process and saving time.
-* Improved flexibility: projects can delete their logical databases and associated resources according to a needed schedule, rather than having to coordinate it with Spryker Support and Operations teams.
+* Improved efficiency: delete logical databases and associated resources more quickly and easily, streamlining the process and saving time.
+* Improved flexibility: delete logical databases and associated resources according to a needed schedule, rather than having to coordinate it with Spryker Support & Operations teams.
 
 
-### Speed up the deployment pipeline
+### Deployment optimization of Jenkins
 
-Optimized deployment pipeline image to speed up the build of Jenkins.
+Optimized deployment pipeline images to speed up the build of Jenkins.
 
 
 ## April 2022
@@ -109,7 +108,7 @@ Benefits of a multi-store setup:
 
 ## January 2022
 
-Increased the stability of Jenkins deployment. This update addresses several critical issues and bugs, resulting in a more reliable and efficient experience. You can expect fewer interruptions, faster deployment times, and overall improved performance.
+Increased the stability of Jenkins deployment. This update addresses critical issues and bugs, resulting in a more reliable and efficient experience. You can expect fewer interruptions, faster deployment times, and overall improved performance.
 
 
 ## May 2021

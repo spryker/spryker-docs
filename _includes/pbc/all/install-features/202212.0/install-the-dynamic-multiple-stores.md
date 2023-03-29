@@ -2520,11 +2520,13 @@ Please, check `deploy.dev.dynamic-store.yml` file for more details.
 
 ## Data migration 
 
-Data in database migration for dynamic store feature is not required. 
+You don't need to migrate data in the database for the dynamic store feature. Only changes in the search and storage engine are necessary.
 Propel migration will be executed automatically and added new tables for dynamic store feature and populate new tables with data via data import.
 For correct work of dynamic store feature you need to add new data structure for search and storage engines.
 
-First of all, you need to truncate all data from search and storage engines.
+
+First of all, you need to truncate all data from search and storage engines. 
+Please see below for more details in the section **"Truncate data from search and storage engines"**.
 Next step is run sync:data command for populate new data structure for search and storage engines.
 
 ```bash
@@ -2536,14 +2538,26 @@ All data will be populated in search and storage engines.
 {% info_block warningBox "Verification" %}
 
 
+### Truncate data from search and storage engines
+
 #### Storage engine
 
-Data is stored with keys that contain the name store, if you use Redis as a key-value store.
-The key name follows this format: `kv:{store}:{locale}:{resource-type}:{key}`.
+Since Dynamic Store feature uses Redis as a key-value store for each region instead of store. If using same Redis instance for region, you need to clear all data from Redis for existing stores.
+The data is stored in the following format: `kv:{resource-type}:{store}:{locale}:{key}`.
+ 
+ For remove data from Redis you can use `redis-cli` command:
+ 
+ ```bash
+ redis-cli KEYS "*:xxx:*" | xargs redis-cli DEL
+```
 
+{% info_block warningBox  %}
 Note that the key name can be different, depending on the configuration of the project.
 Below is a list of keys, taking into account the default configuration out of the box.
+{% endinfo_block %}
 
+
+{% info_block warningBox "Verification" %}
 Example list of keys where `xxx` - is a store name: 
 
 - `kv:availability:xxx:*`
@@ -2562,20 +2576,21 @@ Example list of keys where `xxx` - is a store name:
 - `kv:product_offer:xxx:*`
 - `kv:product_offer_availability:xxx:*`
 - `kv:category_node:xxx:*`
-- `kv:category_tree:at:*`
+- `kv:category_tree:xxx:*`
 - `kv:cms_block:xxx:*`
 - `kv:cms_page:xxx:*`
 - `kv:merchant:xxx:*`
 - `kv:price_product_abstract_merchant_relationship:xxx:*`
 - `kv:store:xxx`
 
-Also appear new keys for dynamic store feature:
-`kv:store_list:` and delete store name XXX values in stores. 
-```json
-{"stores":["AT","DE","XXX"],"_timestamp":111111111111}
-``` 
+{% endinfo_block %}
+
+But recomedation flash all data from Redis for instance and populate it again.
+
 
 ### Search engine
+
+For dynamic store feature out of the box changed indexes prefix for all stores. So data from old indexes not available for new stores.
 
 If you are using Elasticsearch, following indexes are available in the standard configuration (example: `xxx` -  store name): 
 
@@ -2584,7 +2599,12 @@ If you are using Elasticsearch, following indexes are available in the standard 
 - `spryker_xxx_product-review`.
 - `spryker_xxx_return_reason`.
 
-{% endinfo_block %} 
+For delete indexes you can use `curl` command. For example:
+```bash
+
+curl -XDELETE 'http://localhost:9200/spryker_xxx_page'
+
+```
 
 
 ## Delete store in database

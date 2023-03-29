@@ -13,7 +13,7 @@ This document describes new features and enhancements released for Spryker Cloud
 
 {% info_block infoBox %}
 
-Although these features will be available to all SCCOS projects, we are introducing them as part of a gradual rollout.
+Although these features are available to all SCCOS projects, we are introducing them as part of a gradual rollout.
 
 {% endinfo_block %}
 

@@ -156,7 +156,7 @@ Documentation:
 * [Retrieving merchant concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{site.version}}/product-offers/retrieving-product-offers.html)
 * [Retrieving product offers of concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html)
-* [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{site.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
+* [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
 * [Retrieving Marketplaceorders](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-marketplace-orders.html)
 * [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{site.version}}/managing-the-returns.html)
 * [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-wishlist-items.html)

@@ -957,6 +957,10 @@ entries:
       - "202108.0"
       nested:
       - title: Guest carts
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
         nested:
         - title: Managing guest carts
           url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html
@@ -980,6 +984,7 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
+        - "202204.0"        
         nested:
         - title: Managing carts of registered users
           url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -4710,19 +4715,12 @@ entries:
     - title: Keeping a project upgradable
       url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
-        - title: Upgradability guidelines
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
-          nested:
-            - title: Entity name is not unique
-              url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html
-            - title: Private API is used on the project level
-              url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
-        - title: Run the Evalutor tool
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
-        - title: Define custom prefixes for core entity names
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
-        - title: Define evaluation rules to ignore
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-evaluation-rules-to-ignore.html
+        - title: Event subscribers' registration
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+        - title: Modules configuration
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+        - title: Plugins registration
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
     - title: Performance guidelines
       url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:

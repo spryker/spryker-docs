@@ -12,7 +12,7 @@ related:
   - title: Managing Guest Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing Carts of Registered Users
-    link: docs/pbc/all/cart-and-checkout/page.version/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
 ---
 
 ## Install feature API

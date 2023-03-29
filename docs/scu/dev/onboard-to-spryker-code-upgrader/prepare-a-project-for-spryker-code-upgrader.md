@@ -16,19 +16,21 @@ The Upgrader provides automatic minor and patch updates for the current version 
 
 Spryker Quality Gate contains code checkers that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
 
-For instructions on making code compliant with the guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
-
 ## Implement E2E testing in development workflow
 
 Upgrades are provided as PRs that are automatically created in a project’s repository. To make sure all business functionality works as expected, you will need to review and test the PRs before merging.
 
 ## Migrate to a supported version control system
 
-Currently, the Upgrader supports GitHub and GitLab. If you want to use a different version control system, [contact support](https://spryker.force.com/support/s/), so we can implement its support in future.
+Currently, the Upgrader supports GitHub, GitLab and Azure. If you want to use a different version control system, [contact support](https://spryker.force.com/support/s/), so we can implement its support in future.
 
 ## Optional: Implement headless design
 
 The Upgrader does not evaluate frontend customizations. You can either move to headless or apply frontend upgrades manually.
+
+## Optional: Ensure your code is compliant with the supported extensions scenarios.
+
+To ensure the successful delivery of Spryker updates, we recommend using the extension points that exist in the [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#Follow the upgradability best practices).
 
 ## Migrate to Spryker Cloud Commerce OS
 

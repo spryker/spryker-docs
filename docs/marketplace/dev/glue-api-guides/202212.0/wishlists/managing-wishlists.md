@@ -9,10 +9,10 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202005.0/wishlists/managing-wishlists.html
 related:
   - title: Managing wishlist items
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/manage-using-glue-api/glue-api-manage-wishlist-items.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 ---
 
-The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
+The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
 
 ## Installation
 
@@ -426,7 +426,7 @@ To retrieve all wishlists of a customer, send the request:
 
 For attributes of the included resources, see:
 
-- [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-using-glue-api/glue-api-manage-wishlist-items.html#add-an-item-to-a-wishlist)
+- [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html#add-an-item-to-a-wishlist)
 - [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 - [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 
@@ -2220,7 +2220,7 @@ To retrieve a specific wishlist, send the request:
 
 For the attributes of the included resources, see
 
-[Adding items to wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/manage-using-glue-api/glue-api-manage-wishlist-items.html#add-an-item-to-a-wishlist)
+[Adding items to wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html#add-an-item-to-a-wishlist)
 
 [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 

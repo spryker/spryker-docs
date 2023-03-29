@@ -46,7 +46,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
-- [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/wishlist-feature-overview.html)
+- [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/wishlist-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)

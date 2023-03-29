@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/multiple-stores
 ---
 
-{% info_block warningBox "Multiple stores in cloud environments" %}
+{% info_block infoBox "Multiple stores in cloud environments" %}
 
 For instructions about setting up multiple stores in Spryker Cloud Commerce OS, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
 
@@ -262,6 +262,12 @@ The following configuration parameters are used in this example:
 * The `stores` parameter defines the list of stores and store-specific settings for `services`.
 
 For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
+
+{% info_block warningBox "Change Request needed" %}
+
+Once you have configured your `deploy.yml` file, get in touch with our Support because infrastructure adjustments are needed. To speed up the process, attach your `deploy.yml file` to the case.
+
+{% endinfo_block %}
 
 ## Define the store context
 

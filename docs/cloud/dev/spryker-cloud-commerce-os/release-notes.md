@@ -103,7 +103,7 @@ Benefits of a multi-store setup:
 
 ### Documentation
 
-[Multi-store setups](/https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html)
+[Multi-store setups](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html)
 
 
 ## January 2022

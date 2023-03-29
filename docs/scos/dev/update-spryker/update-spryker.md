@@ -177,68 +177,21 @@ If no extra dependencies are found, `composer.json` is updated respectively. Oth
 2. Follow the upgrade steps of the needed module version in the upgrade guide. Following the example with the price module, see [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
 
-## Test after each iteration
 
-To find out about the obvious update errors before executing the tests, run `php -d memory_limit=-1 ./vendor/bin/phpstan analyze --no-progress src/ -l 5`. It has to be set up and green before the updates happen.
 
-Once you've completed the update, it's necessary to make sure that everything still works as expected, and nothing is broken. To do so, complete the following steps right after the update:
 
-### 1. Run automated tests
 
-Automated tests are must-have for every project and are very helpful in case of updates. We recommend running the following tests:
-* Acceptance tests: cover the most critical e-commerce functionality of your shop.
-* Functional tests: cover your Facade methods in Zed.
-* Unit tests: cover classes with complex business logic and tricky algorithms.
 
-See [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html) for more information about testing your project's code.
 
-{% info_block infoBox "Qualitative coverage" %}
 
-In case of updates, the goal of automated tests is not a 100% code coverage, but a qualitative coverage of your critical functionality.
 
-{% endinfo_block %}
 
-### 2. Run code analysis tools
 
-We find the following static code analysis tools the most helpful strongly recommend using them:
-* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules), and many more. For information about installing and using  the tool, see [PHPStan](/docs/scos/dev/sdk/development-tools/phpstan.html).
-* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the code clean and consistent after updates. See [Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html) for information about how to use the tool.
-* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/development-tools/architecture-sniffer.html) for information about how to run the tool.
 
-### 3. Make other possible checks
 
-In addition to the automotive tests and code analysis tools, you can optionally do the following:
-* *Re-install the project locally* after the update, to make sure the installation process is not broken, demo-data import along with [publish and synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) work as expected.
-* *Run a manual smoke test* either locally or on stage to make sure everything works and looks fine. This is especially important in case you don't have enough acceptance test coverage.
 
-## Prevent potential issues
 
-One of the most common issues projects face during the upgrade, is the situation, when a Spryker class that was inherited at the project level also got updated on the Spryker side. This can result in code syntax issues or logical issues, and it's completely in the project's team hands to spot and fix such issues. However, there are some recommendations that can help you avoid them:
-
-### 1. Avoid inheritance
-
-*Minimizing the number of inheritance cases* on your project is the best approach to avoid inheritance issues. Let's see how you can achieve that.
-
-Usually, when you're inheriting a class from Spryker, you want to change its behavior. But before extending the class, check if you can do the following:
-* *Configure the behavior*. Check your environment and module configs. If configuration can fit your needs - that would be the best solution.
-* Change the behavior by *introducing a new plugin or an event listener*. If the behavior you want to inherit is triggered by one of the plugins in a plugin stack or by an event listener, just add a new plugin and introduce a new class at the project level (potentially, implementing some interface). You don't need inheritance in this case.
-* *Use a composition pattern*. There is a lot of information on the internet for *composition vs. inheritance* that will help you to understand the pattern. The main idea is to introduce a new class at the project level and to use the class you wanted to inherit as a constructor dependency, for example, kind of "wrapping". Even though this is a very good practice, it might not work in cases when you want to change protected methods.
-* *Do you really need the inheritance?* In case of heavy customizations, think if you really need to extend the existing Spryker class. Replacing it by introducing a new class at the project level and instantiating it in the corresponding factory instead of the Spryker one - would be the preferred way to go.
-
-### 2. Follow the best practices for inheritance
-
-Sometimes inheritance is exactly what you need, and none of the above strategies works for you, which is also fine. In this case, *minimizing the amount of inherited code* is a rule of thumb. To follow this rule, you can take this approach:
-1. First of all, *reduce the number of extended methods in a class*. Sometimes, developers just copy-paste the whole class to the project namespace, change the methods they want, and leave the rest as is. Don't do that: remove the methods you didn't touch.
-2. Now, focusing on a method you change, *reduce the amount of the inherited code*, delegating the rest to the `parent:: class` call. Ideally, you should have only project-specific logic in your new inherited class.
-3. In some complicated cases, for example, if you want to remove/add a line from the middle of the original method and none of the above techniques works,  surround your change with a meaningful comment. The comment should explain why you made the change, ideally also mentioning the related (Jira) ticket number. That will help the person who does the update understand your goal and take the necessary steps.
-
-### 3. Lock your module version after inheritance
-
-If you inherit a class from Spryker, there is one more way to "protect" yourself during the update by locking your module version to the current minor. You can do this by, for example, replacing the *carret* module version (“^1.3.2”) with the *tilde* version (“~1.3.2”) in your `composer.json`. Next time when the class you've updated gets minor changes on the Spryker side, composer will warn you about the locked version, and you will have to investigate why this module was locked. Make sure to leave a meaningful comment in your VCS when locking the module for the person who will investigate that.
-
-In Spryker we have the [Composer Constrainer](/docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html) tool that will try to lock modules for you automatically by searching for inherited classes in your project namsepace.
-
-## Updating and installing features
+## Update and install features
 
 At some point, you will need to add new or update the existing features for your project. This section will help you do that.
 

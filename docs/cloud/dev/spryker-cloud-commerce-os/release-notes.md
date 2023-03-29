@@ -87,7 +87,7 @@ Optimized deployment pipeline images to speed up the build of Jenkins.
 
 ## April 2022
 
-Multi-Store with Multi Logical DB setup: Previously, it was possible to have only one logical DB in one AWS environment.
+Introduced a multi-database setup for multi-store environments. Now you can create databases per store in the same AWS environment.
 
 Benefits of a multi-store setup:
 * Each store has a dedicated index for Elasticsearch and its own virtual key-value storage (Redis).
@@ -103,7 +103,7 @@ Benefits of a multi-store setup:
 
 ### Documentation
 
-[Multi-store setups](/https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html#shared-setup)
+[Multi-store setups](/https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html)
 
 
 ## January 2022

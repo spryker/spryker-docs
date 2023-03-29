@@ -20,9 +20,9 @@ Stock does not always reflect the real availability of products, as not all the 
 
 ## Warehouse management
 
-You can [create warehouses in the Back Office](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/create-warehouses.html) or [import them](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse.csv.html).
+You can [create warehouses in the Back Office](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/create-warehouses.html) or [import them](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Manage stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about managing warehouses and stores in the back office, see [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/edit-warehouses.html). For details about importing the warehouse and store data, see [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse-store.csv.html).
+A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Manage stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about managing warehouses and stores in the back office, see [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html). For details about importing the warehouse and store data, see [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-warehouse-store.csv.html).
 
 ### Defining a warehouse address
 
@@ -64,7 +64,7 @@ Schematically, the process looks like this:
 
 When the order is made, the stock is not updated automatically in the system, and you have to set it manually. You can define stock only for concrete products. You can set stock by doing the following:
 
-* Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
+* Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
 * Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
 
 ## Availability management
@@ -81,7 +81,7 @@ Product availability after the order:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
-For details about checking product availability in the Back Office, see [Check availability of products](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/check-availability-of-products.html).
+For details about checking product availability in the Back Office, see [Check availability of products](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/check-availability-of-products.html).
 
 {% info_block infoBox %}
 
@@ -108,10 +108,10 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create warehouses](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/create-warehouses.html)  |
-| [Edit warehouses](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/edit-warehouses.html) |
-| [Check availability of products](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/check-availability-of-products.html)  |
-| [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html)  |
+| [Create warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/create-warehouses.html)  |
+| [Edit warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html) |
+| [Check availability of products](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/check-availability-of-products.html)  |
+| [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html)  |
 
 ## Related Developer articles
 

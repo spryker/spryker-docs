@@ -6,6 +6,8 @@ entries:
         url: /docs/scu/dev/spryker-code-upgrader.html
       - title: Spryker CI
         url: /docs/scu/dev/spryker-ci.html
+      - title: How the Spryker Code Upgrader works
+        url: /docs/scu/dev/how-the-spryker-code-upgrader-works.html
       - title: The Upgrader in a development workflow
         url: /docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html
       - title: Onboard to the Upgrader

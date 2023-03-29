@@ -2599,7 +2599,7 @@ If you are using Elasticsearch, following indexes are available in the standard 
 - `spryker_xxx_product-review`.
 - `spryker_xxx_return_reason`.
 
-For delete indexes you can use `curl` command. For example:
+For delete indexes you can use `curl` command. For example for delete `spryker_xxx_page` index: 
 ```bash
 
 curl -XDELETE 'http://localhost:9200/spryker_xxx_page'

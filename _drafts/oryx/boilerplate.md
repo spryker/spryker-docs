@@ -65,7 +65,7 @@ The `package.json` file contains all the dependencies of the project. To simplif
 
 That being said, having unused dependencies in your project will _not_ affect the build time or run time of your project. It is only an overhead during the installation process.
 
-The bare minimum package.json is setup with the following package.json:
+The bare minimum package.json is setup with the following dependencies:
 
 ```json
 {

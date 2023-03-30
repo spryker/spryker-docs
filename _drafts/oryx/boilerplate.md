@@ -18,7 +18,7 @@ In Oryx, we use a few tactics to prevent boilerplate code. These tactics include
 2. Expose an function to setup the [app orchestrator](./app-orchestrator.md) conveniently.
 3. Provide [presets](./presets.md) for the standard application setup, including the feature sets and UI themes.
 4. Provide the source code in a [public repository](https://github.com/spryker/oryx) to enable developers to read the source code.
-5. Provide configurable component and business logic.
+5. Provide configurable components and business logic.
 6. Allow for customizations by [dependency injection](./dependency-injection.md).
 
 Most of the details around these tactics can be found elsewhere in the documentation. In the following sections you read more details on the boilerplate files that are needed.

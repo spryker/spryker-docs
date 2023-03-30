@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Alternative Products](/docs/pbc/all/product-information-management/{{site.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/alternative-products-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -13,13 +13,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 |---|---|---|
-| Product | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/alternative-products: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/alternative-products: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -253,7 +253,7 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 155_30149933,134_26145012,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |  concrete_sku | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
 |  alternative_product_concrete_sku | optional | string | 420565 | SKU of the concrete alternative product. |
@@ -412,13 +412,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 |---|---|---|
-| Product | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 ```bash
-composer require spryker-feature/alternative-products: "^{{site.version}}" --update-with-dependencies
+composer require spryker-feature/alternative-products: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -524,6 +524,6 @@ Make sure that the following widgets have been registered:
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Labels feature](/docs/pbc/all/product-information-management/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 {% endinfo_block %}

@@ -10,7 +10,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |-|-|
-| Availability Notification | {{site.version}} |
+| Availability Notification | {{page.version}} |
 
 ## 1) Install required modules using Composer
 

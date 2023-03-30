@@ -7,9 +7,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Product Management | {{site.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Product Label | {{site.version}} | |
+| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product Management | {{page.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Product Label | {{page.version}} | |
 
 
 ## 1) Install the required modules using Composer

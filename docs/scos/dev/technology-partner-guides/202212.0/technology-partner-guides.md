@@ -12,6 +12,4 @@ Technology partners enrich the Spryker Commerce OS with the services you need to
 
 * [Operational tools, monitoring, legal, etc.](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html)
 
-* [Order management (ERPOMS)](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
-
 * [Payment partners](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/installing-and-configuring-adyen.html)

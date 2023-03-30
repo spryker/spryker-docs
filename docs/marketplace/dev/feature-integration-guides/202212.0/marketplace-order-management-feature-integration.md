@@ -21,9 +21,9 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 | State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
 
 ### 1) Install required modules using Composer
@@ -555,7 +555,7 @@ MER000007,MerchantDefaultStateMachine
 MER000005,MerchantDefaultStateMachine
 ```
 
-|PAREMETER |REQUIRED?  |TYPE  |DATA EXAMPLE | DESCRIPTION |
+|PAREMETER |REQUIRED  |TYPE  |DATA EXAMPLE | DESCRIPTION |
 |---------|---------|---------|---------| ---------|
 |merchant_reference     |  &check;       |  string       | spryker        |String identifier for merchant in the Spryker system. |
 |merchant_oms_process_name     |    &check;     |     string   |  MainMerchantStateMachine       | String identifier for the State Machine processes.|

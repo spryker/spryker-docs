@@ -93,7 +93,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
 194,,DEFAULT,AT,EUR,20780,23089,"[{""quantity"":5,""net_price"":265,""gross_price"":295}, {""quantity"":10,""net_price"":275,""gross_price"":310}, {""quantity"":20,""net_price"":285,""gross_price"":320}]"
 ```
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 |---|---|---|---|---|
 |  `abstract_sku` | optional | string | 193 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
 |  `concrete_sku` | optional | string | 117_29890338 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |

@@ -11,7 +11,6 @@ To integrate Dynamic multistore feature  in your project, you need to:
 Since implementation dynamic multistore features you can define region or store by domains or by headers.
 We recommend defining region by domains, which is supported by default for dynamic store. 
 
-
 {% info_block infoBox "Recomedations for changing domain name" %}
 
 For example, you have an existing store that uses the domain de.spryker.shop. With the integration of Dynamic Store, you have also started using the domain eu.spryker.shop. 
@@ -47,7 +46,15 @@ Please note if you don't use some features, you can skip some packages for updat
 
 Minimum version for packages 
 
-For Dynamic Store feature you need to update the following packages:
+For Dynamic Store feature you need to update the following packages
+
+{% info_block infoBox "Note" %}
+
+You can found the list of modules and their versions in the table by the [link](https://api.release.spryker.com/release-group/0000). <!-- Update link after release-->
+
+{% endinfo_block %}
+
+<details><summary markdown='span'>Click to expend table </summary>
 
 | MODULE                      | MIN VERSION                                  |
 |-----------------------------|---------------------------------------------|
@@ -388,6 +395,30 @@ Min version for Spryker-Shop modules:
 | IngListPage                 | 1.9.0                                       |
 | ToreWidget                  | 1.0.0                                       |
 |-----------------------------|---------------------------------------------|
+
+</details>
+
+
+This list of modules can be separated in two groups. List of modules to update in order for the functionality to work and list of modules to update in order for them to work with the new functionality.
+Bellow provided list of modules which need to be updated for integration Dynamic Store:
+
+Modules to update in order for the functionality to work:
+
+```bash
+
+```
+
+
+
+And list of modules to update in order for them to work with the new functionality:
+
+```bash
+
+```
+
+
+
+
 
 Commands for update packages: 
 
@@ -1090,8 +1121,6 @@ Make sure that the new modules have been installed or updated in the following d
 Apply database changes and generate entity and transfer changes:
     
 ```bash 
-
-console transfer:generate
 console propel:install
 console transfer:generate
 
@@ -1128,11 +1157,11 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% info_block warningBox "Configuration store.php" %}
 
-Dynamic store allows not to use the configuration in the file `config/Shared/stores.php` where setup configureation for  store's. 
+Dynamic store allows not to use the configuration in the file `config/Shared/stores.php` where setup configuration for stores. 
 
 {% endinfo_block %}
 
-1. Change the default configuration file. 
+1. Change the configuration file. 
 Allow configurations for queues to be set dynamically.
 
 Modify your configuration file
@@ -1191,7 +1220,16 @@ foreach ($rabbitConnections as $key => $connection) {
 ```
 
 This code allows to set the configuration for queues dynamically. Use environment variables `SPRYKER_CURRENT_REGION` and `APPLICATION_STORE` to set the configuration for queues.
-    
+
+Also add configuration for queues dynamically. Use environment variables `SPRYKER_YVES_HOST_EU` and `SPRYKER_YVES_HOST_US` to set the configuration for queues. Please add the following code to the configuration file:
+
+```php
+$config[AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING] = [
+    'EU' => getenv('SPRYKER_YVES_HOST_EU'),
+    'US' => getenv('SPRYKER_YVES_HOST_US'),
+];
+```
+
 
 ###  Change configuration for Jenkins jobs.
 
@@ -1253,10 +1291,42 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 }
 ```
 
+You also can check this configuration in the file `config/Zed/cronjobs/jenkins.php` in the [Spryker Suite repository](https://github.com/spryker-shop/suite).
+
+
+### Wire plugin in QuoteDependencyProvider
+
+Add the following code to the configuration file `src/Pyz/Zed/Quote/QuoteDependencyProvider.php`:
+
+```php
+<?php
+
+namespace Pyz\Client\Quote;
+
+use Spryker\Client\PersistentCart\Plugin\Quote\QuoteSyncDatabaseStrategyReaderPlugin;
+use Spryker\Client\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
+
+class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\QuoteExtension\Dependency\Plugin\DatabaseStrategyReaderPluginInterface>
+     */
+    protected function getDatabaseStrategyReaderPlugins(): array
+    {
+        return [
+            new QuoteSyncDatabaseStrategyReaderPlugin(),
+        ];
+    }
+}
+
+```
+
+
 ### Change the configuration of the RabbitMQ queue.
 
+The configuration of the RabbitMQ connection is set in the configuration file `config/Shared/config_default.php` and `config/Shared/config_ci.php`. 
 
-The configuration of the RabbitMQ connection is set in the configuration file `config/Shared/config_default.php` and `config/Shared/config_ci.php`.
+Also need add the following code to the configuration queue pools for the current region, default locale and synchronization queue configuration. 
 
 ```
 src/Pyz/Client/RabbitMq/RabbitMqConfig.php
@@ -1279,9 +1349,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     public function getQueuePools(): array
     {
         return [
-            'synchronizationPool' => [
-                'EU-connection',
-            ],
+            'synchronizationPool' => $this->getQueueConnectionNames(),
         ];
     }
 
@@ -1302,12 +1370,28 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
         return [
             StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE,
         ];
-    } 
+    }
+
+    /**
+     * @return array<string>
+     */
+    protected function getQueueConnectionNames(): array
+    {
+        return array_map(
+            function (array $connection): string {
+                return $connection[RabbitMqEnv::RABBITMQ_CONNECTION_NAME];
+            },
+            $this->get(RabbitMqEnv::RABBITMQ_CONNECTIONS),
+        );
+    }    
 }    
 
 ```
 
 ### Change the configuration of the Store module.
+
+
+Wire `StoreStorageStoreExpanderPlugin` plugin to the `StoreDependencyProvider` to extend the StoreTransfer with the current store data.
 
 ```
 src/Pyz/Client/Store/StoreDependencyProvider.php
@@ -1372,7 +1456,7 @@ class ZedRequestDependencyProvider extends SprykerZedRequestDependencyProvider
 
 ### Adjust GlueApplicationDependencyProvider class. 
 
-Remove `SetStoreCurrentLocaleBeforeActionPlugin` plugin from the `getControllerBeforeActionPlugins` method and add `StoreHttpHeaderApplicationPlugin` and `LocaleApplicationPlugin` plugins instead.
+Replace `SetStoreCurrentLocaleBeforeActionPlugin` plugin in the `GlueApplicationDependencyProvider::getControllerBeforeActionPlugins()` method with `StoreHttpHeaderApplicationPlugin` and `LocaleApplicationPlugin` plugins.
 
 ```
 src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
@@ -1386,7 +1470,7 @@ namespace Pyz\Glue\GlueApplication;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplication\Plugin\Rest\SetStoreCurrentLocaleBeforeActionPlugin;
 use Spryker\Glue\Locale\Plugin\Application\LocaleApplicationPlugin;
-use Spryker\Glue\StoresRestApi\Plugin\GlueStorefrontApiApplication\StoreHttpHeaderApplicationPlugin;
+use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
 
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
@@ -1422,7 +1506,9 @@ src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependency
 namespace Pyz\Glue\GlueStorefrontApiApplication;
 
 use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
-use Spryker\Glue\StoresRestApi\Plugin\GlueStorefrontApiApplication\StoreHttpHeaderApplicationPlugin;
+use Spryker\Glue\Http\Plugin\Application\HttpApplicationPlugin;
+use Spryker\Glue\Locale\Plugin\Application\LocaleApplicationPlugin;
+use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
 
 class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
 {
@@ -1432,12 +1518,44 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     protected function getApplicationPlugins(): array
     {
         return [
+            new HttpApplicationPlugin(),
             new StoreHttpHeaderApplicationPlugin(),
+            new LocaleApplicationPlugin(),
         ];
 }
 
 ```
 
+### Adjust GlueBackendApiApplicationDependencyProvider.
+
+Same for `GlueBackendApiApplicationDependencyProvider` class.
+
+```
+src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php
+```
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use Spryker\Glue\StoresRestApi\Plugin\Application\StoreHttpHeaderApplicationPlugin;
+ 
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    protected function getApplicationPlugins(): array
+    {
+        return [
+            new StoreHttpHeaderApplicationPlugin(),
+        ];
+    }
+}
+```
 
 ### Add RouterConfig class.
 
@@ -1472,6 +1590,7 @@ class RouterConfig extends SprykerRouterConfig
 }
 ```
 
+By using this code, you can utilize the language prefix in the URL. The function `RouterConfig::getAllowedLanguages()` will provide a list of supported languages for manipulating the Route. If an incoming URL contains a language prefix, such as `/en/home`, the router will remove the prefix so that it only contains the relevant URL path, such as `/home`. This is because the router is only configured to handle URL paths without optional prefixes or suffixes.
 
 ### Addjust ShopApplicationDependencyProvider
 
@@ -1486,6 +1605,7 @@ src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+use SprykerShop\Yves\StoreWidget\Plugin\ShopApplication\StoreApplicationPlugin;
 use SprykerShop\Yves\StoreWidget\Widget\StoreSwitcherWidget;
 
 
@@ -1497,12 +1617,57 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             StoreSwitcherWidget::class,
         ];
     }
+
+    /**
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    protected function getApplicationPlugins(): array
+    {
+        return [
+            new StoreApplicationPlugin(),
+        ];
+    }    
 }
 ```
 
+### Adjust AclMerchantPortalDependencyProvider class.
+
+Wire up the new plugins to the `AclMerchantPortalDependencyProvider` class.
+
+```
+src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php
+```
+```php
+<?php
+
+namespace Pyz\Zed\AclMerchantPortal;
+
+use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
+use Spryker\Zed\Country\Communication\Plugin\AclMerchantPortal\CountryStoreAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Currency\Communication\Plugin\AclMerchantPortal\CurrencyStoreAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\Locale\Communication\Plugin\AclMerchantPortal\LocaleStoreAclEntityConfigurationExpanderPlugin;
+
+class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
+     */
+    protected function getAclEntityConfigurationExpanderPlugins(): array
+    {
+        return [
+            new CountryStoreAclEntityConfigurationExpanderPlugin(),
+            new CurrencyStoreAclEntityConfigurationExpanderPlugin(),
+            new LocaleStoreAclEntityConfigurationExpanderPlugin(),
+        ];
+    }
+}
+
+```
+
+
 ### Adjust ApplicationDependencyProvider. 
 
-Add `CurrencyBackendGatewayApplicationPlugin`, `LocaleBackendGatewayApplicationPlugin`, `StoreBackendGatewayApplicationPlugin`, `RequestBackendGatewayApplicationPlugin` plugins to the `getBackendGatewayApplicationPlugins` method.
+Add `CurrencyBackendGatewayApplicationPlugin`, `LocaleBackendGatewayApplicationPlugin`, `StoreBackendGatewayApplicationPlugin`, `RequestBackendGatewayApplicationPlugin` plugins to the `getBackendGatewayApplicationPlugins` method, and add `BackofficeStoreApplicationPlugin` to the `getBackofficeApplicationPlugins` method.
 
 ```
 src/Pyz/Zed/Application/ApplicationDependencyProvider.php
@@ -1516,12 +1681,25 @@ namespace Pyz\Zed\Application;
 use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
 use Spryker\Zed\Currency\Communication\Plugin\Application\CurrencyBackendGatewayApplicationPlugin;
 use Spryker\Zed\Locale\Communication\Plugin\Application\LocaleBackendGatewayApplicationPlugin;
+use Spryker\Zed\Store\Communication\Plugin\Application\BackofficeStoreApplicationPlugin;
 use Spryker\Zed\Store\Communication\Plugin\Application\StoreBackendGatewayApplicationPlugin;
 use Spryker\Zed\ZedRequest\Communication\Plugin\Application\RequestBackendGatewayApplicationPlugin;
 
 
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
+
+        /**
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    protected function getBackofficeApplicationPlugins(): array
+    {
+        return [
+            new BackofficeStoreApplicationPlugin(),
+        ];
+    }
+
+
     /**
      * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
@@ -1568,6 +1746,38 @@ class CustomerConfig extends SprykerCustomerConfig
 
 ```
 
+
+###  ProductCategoryFilterGuiDependencyProvider class.
+
+
+Review the `ProductCategoryFilterGuiDependencyProvider` class and add the `StoreProductCategoryListActionViewDataExpanderPlugin` plugin to the `getProductCategoryListActionViewDataExpanderPlugins` method. 
+Plugin is used to add store information to the category list.
+
+```
+src/Pyz/Zed/ProductCategoryFilterGui/ProductCategoryFilterGuiDependencyProvider.php
+```
+
+```php
+<?php
+namespace Pyz\Zed\ProductCategoryFilterGui;
+
+use Spryker\Zed\ProductCategoryFilterGui\ProductCategoryFilterGuiDependencyProvider as SprykerProductCategoryFilterGuiDependencyProvider;
+use Spryker\Zed\StoreGui\Communication\Plugin\ProductCategoryFilterGui\StoreProductCategoryListActionViewDataExpanderPlugin;
+
+class ProductCategoryFilterGuiDependencyProvider extends SprykerProductCategoryFilterGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductCategoryFilterGuiExtension\Dependency\Plugin\ProductCategoryListActionViewDataExpanderPluginInterface>
+     */
+    protected function getProductCategoryListActionViewDataExpanderPlugins(): array
+    {
+        return [
+            new StoreProductCategoryListActionViewDataExpanderPlugin(),
+        ];
+    }
+}
+```
+
 ### Adjust PublisherDependencyProvider class.
 
 Add publisher plugins to the `getPublisherPlugins` method.
@@ -1594,6 +1804,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getPublisherPlugins(): array
     {
         return array_merge(
+            // ...
             $this->getStoreStoragePlugins(),
         );
     }
@@ -1914,6 +2125,7 @@ class StoreStorageConfig extends SprykerStoreStorageConfig
 
 ### Add plugin to StoreGuiDependencyProvider.
 
+Wire the `StoreSynchronizationDataPlugin` plugin to the `StoreGuiDependencyProvider` class for the `getSynchronizationDataPlugins()` method. This plugin will be used to synchronize the store data. 
 
 ```
 src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php
@@ -1985,6 +2197,7 @@ class CodeBucketConfig extends AbstractCodeBucketConfig
 
 ```
 
+
 ### Dataimport and console commands.
 
 Due to release new major version of `spryker/locale`, `spryker/currency`, `spryker/country` modules, we need to adjust data import.
@@ -1997,7 +2210,7 @@ Due to release new major version of `spryker/locale`, `spryker/currency`, `spryk
 
 ### Adjust DataImportBusinessFactory` class.
 
-Remove mthod `createStoreImporter` and in method `getDataImporterByType` remove the following code with case `DataImportConfig::IMPORT_TYPE_STORE`
+Remove mthod `createStoreImporter` and in method `getDataImporterByType` remove the following code with case `DataImportConfig::IMPORT_TYPE_STORE`. 
 
 ```
 src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php
@@ -2256,7 +2469,7 @@ namespace Pyz\Zed\Console;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use Spryker\Zed\StoreDataImport\StoreDataImportConfig;
-use Spryker\Zed\Locale\Communication\Plugin\Application\LocaleApplicationPlugin;
+use Spryker\Zed\Locale\Communication\Plugin\Application\ConsoleLocaleApplicationPlugin;
 use Spryker\Zed\LocaleDataImport\LocaleDataImportConfig;
 use Spryker\Zed\CountryDataImport\CountryDataImportConfig;
 use Spryker\Zed\CurrencyDataImport\CurrencyDataImportConfig;
@@ -2297,7 +2510,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     {
         $applicationPlugins = parent::getApplicationPlugins($container);
 
-        $applicationPlugins[] = new LocaleApplicationPlugin();
+        $applicationPlugins[] = new ConsoleLocaleApplicationPlugin();
 
         return $applicationPlugins;
     }
@@ -2307,6 +2520,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 
 ### Preparing csv files for configure stores, locales, currencies, countries via data import 
+
+Below you can find examples of csv files for configure stores, locales, currencies, countries via data import, but also you can find them in the `data/import/common` folder of public repository [spryker-shop/suite](https://github.com/spryker-shop/suite).
 
 Example for DE store locales configurations: 
 `data/import/common/DE/locale_store.csv`
@@ -2393,9 +2608,9 @@ Make sure that the configured data has been added to the spy_glossary table in t
 
 ## Deploy file changes and enable dynamic store feature 
 
-Due to chnage ideology of region insted store configuration, you need to change deploy file for enable dynamic store feature.
+Due to a change in the ideology of the region instead store configuration, you need to change the deploy file to enable the dynamic store feature.
 
-1. Change `deploy.yml` file for enable dynamic store feature.
+1.  To use the new region configuration, create a new deployment file, such as `deploy.dynamic-store.yml` (or `deploy.dev.dynamic-store.yml` for development environment).
 
 For example development deoploy file for EU region:
 

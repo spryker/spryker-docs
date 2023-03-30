@@ -1,5 +1,5 @@
 ---
-title: Wishlists
+title: "Glue API: Manage marketplace wishlists and wishlist items"
 description: Describes the Glue API endpoints used for Wishlists when developing in Spryker Marketplace
 last_updated: Jan 13, 2023
 template: concept-topic-template

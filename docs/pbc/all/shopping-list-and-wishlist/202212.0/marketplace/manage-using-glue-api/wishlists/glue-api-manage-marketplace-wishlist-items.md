@@ -1,5 +1,5 @@
 ---
-title: Managing wishlist items
+title: "Glue API: Manage marketplace wishlist items"
 description: Retrieve details about wishlist items and learn what else you can do with the resource in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
 redirect_from:

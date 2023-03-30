@@ -1,5 +1,5 @@
 ---
-title: Marketplace Shopping List feature overview
+title: Marketplace Shopping Lists feature overview
 description: This document contains concept information for the Marketplace Shopping List feature.
 template: concept-topic-template
 ---
@@ -50,8 +50,9 @@ Regardless of whether the shopping list is shared with full or read access, the 
 
 The *Print Shopping List* functionality does not contain any merchant-related information.
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Marketplace Shopping Lists feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES  | GLUE API GUIDES  | DATA IMPORT   |
+|-----------------|-------------|-----------------|
+| [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html) | [Managing shopping lists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-lists.html) | [File details: file-details-product-offer-shopping-list.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-shopping-list.csv.html) |
+| [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-shopping-lists-feature-integration.html)   | [Managing shopping list items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html) | | | |

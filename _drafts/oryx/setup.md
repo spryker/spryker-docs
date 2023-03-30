@@ -12,7 +12,7 @@ This document describes how to set up an environment for developing in the Oryx 
 * [Node.js](https://nodejs.org/) or a compatible Javascript runtime
 * npm package manager
 
-## Install Orxy with the boilerplate project
+## Install Oryx with the boilerplate project
 
 
 1. Download the boilerplate project and install dependencies:
@@ -32,7 +32,7 @@ npm run dev
 
 For more information about the boilerplate project, see the [boilerplate guide](./boilerplate.md).
 
-## Builders and bundlers
+## Builders and bundlers for Oryx
 
 The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However, Oryx is compatible with a wide variety of build tools, like rollup, parcel or webpack. Since Oryx uses exports in every package to split logical parts to sub-packages, the build tool you choose must support [exporting entry points](https://nodejs.org/api/packages.html#package-entry-points) in `package.json`.
 

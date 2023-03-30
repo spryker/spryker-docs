@@ -17,14 +17,11 @@ Supported operating systems:
 * iOS 16.x
 * Android 13.x
 * macOS Ventura
-* Windows 10
-* Linux**
+* Windows 10/11
+* Linux* (if it uses UI and supports latest browsers)
 
 ---
 
 Supported screen resolutions:
 
-* 393 x 786 px - iOS | iPhone 14 Pro Max | Safari
-* 360 x 670 px - Android | Samsung Galaxy S20 | Chrome
-* 1440+ px wide - macOS latest | Safari latest
-* 1366+ px wide - Windows latest | Chrome/Edge latest
+* 360-1920px wide screens (includes mobiles, tablets and desktops)

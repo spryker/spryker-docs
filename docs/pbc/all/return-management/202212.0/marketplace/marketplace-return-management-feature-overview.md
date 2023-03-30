@@ -14,7 +14,7 @@ Once an order has been shipped, the registered buyer or a Back Office user can i
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-returns.html).
+You can also create and manage returns via Glue API. For details, see [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html).
 
 {% endinfo_block %}
 
@@ -82,5 +82,5 @@ Merchants process their returns in the Merchant Portal. For details about how to
 
 | INTEGRATION GUIDES      | GLUE API GUIDES     |
 | -------------------- | -------------- |
-| [Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-returns.html) |
+| [Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) |
 | [Glue API: Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |              

@@ -1832,7 +1832,7 @@ entries:
         url: /docs/pbc/all/return-management/return-management.html
         nested:
           - title: Base shop
-            url: /docs/pbc/all/return-management/base-shop/return-management-base-shop.html
+            url: /docs/pbc/all/return-management/base-shop/return-management-feature-overview.html
             nested:
               - title: Install and upgrade
                 nested:
@@ -1876,8 +1876,8 @@ entries:
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
               - title: Manage merchant orders in merchant portal
                 url: /docs/pbc/all/return-management/marketplace/manage-merchant-orders.html
-              - title: "Glue API: Manage returns"
-                url: /docs/pbc/all/return-management/marketplace/glue-api-manage-returns.html
+              - title: "Glue API: Manage marketplace returns"
+                url: /docs/pbc/all/return-management/marketplace/glue-api-manage-marketplace-returns.html
               - title: "Domain model and relationships"
                 url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-domain-model-and-relationships.html
       - title: Search

@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Manage returns"
+title: "Glue API: Manage marketplace returns"
 description: Manage the returns via Glue API in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
 related:

@@ -22,7 +22,7 @@ data:import merchant-stock
 
 The file should have the following parameters:
 
-| PARAMETER    | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
+| PARAMETER    | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
 | ------------- | -------- | ------ | ------------- | --------------------------------- | ----------------- |
 | merchant_reference | &check;             | String   |                   | Unique                                                       | Identifier of the merchant in the system. |
 | stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                        |

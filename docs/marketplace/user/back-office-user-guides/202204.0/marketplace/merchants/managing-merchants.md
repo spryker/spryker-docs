@@ -37,7 +37,7 @@ The following table describes the attributes you enter and select when creating 
 
 This tab contains the main merchant information.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Name | Text field where you specify the name of the merchant that you create. | &check; |
 | Registration number | Text field where you specify the number assigned to the company at the point of registration. |  |
@@ -52,7 +52,7 @@ This tab contains the main merchant information.
 
 This tab contains information about the contact person. The contact person information is going to be used to create a **Merchant Admin User** who will be able to log in to **Merchant Portal**.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Title | Formal salutation for your contact person (for example, Mr, Ms, Mrs, Dr). There is no default value selected. |  |
 | Role | Text field where you can define the role the contact person performs. |  |
@@ -64,7 +64,7 @@ This tab contains information about the contact person. The contact person infor
 
 This tab includes the public information about the merchant that is displayed in the Storefront).
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Public Email | Text field where you specify the business/public email address for the merchant.  |  |
 | Public Phone | Text field where you specify the merchant's public phone number. |  |
@@ -86,7 +86,7 @@ This tab includes the public information about the merchant that is displayed in
 
 This tab contains legal information that is displayed on the **Merchant Profile** page in the Storefront.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Cancellation Policy | Standard WYSIWYG editor with text formatting options where you specify the cancellation policy for the merchant for a locale. |  |
 | Data Privacy | Standard WYSIWYG editor with text formatting options where you specify the data privacy statement for a locale. |  |
@@ -137,7 +137,7 @@ You can sort the table by other values (Name and Status) using  the respective s
 
 This tab contains the main merchant information.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Name | Text field where you specify the name of the merchant that you edit. | &check; |
 | Registration number | Text field where you specify the number assigned to the company at the point of registration. |  |
@@ -152,7 +152,7 @@ This tab contains the main merchant information.
 
 This tab contains information about the contact person. The contact person information is going to be used to create a **Merchant Admin User** who will be able to log in to Merchant Portal.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Title | Formal salutation for your contact person (for example, Mr, Ms, Mrs, Dr). There is no default value selected. |  |
 | Role | Text field where you can define the role the contact person performs. |  |
@@ -164,7 +164,7 @@ This tab contains information about the contact person. The contact person infor
 
 This tab includes the public information about the merchant that is displayed in the Storefront).
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Public Email | Text field where you specify the business/public email address for the merchant.  |  |
 | Public Phone | Text field where you specify the merchant's public phone number. |  |
@@ -186,7 +186,7 @@ This tab includes the public information about the merchant that is displayed in
 
 This tab contains legal information that is displayed on the **Merchant Profile** page in the Storefront.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Cancellation Policy | Standard WYSIWYG editor with text formatting options where you specify the cancellation policy for the merchant for a locale. |  |
 | Data Privacy | Standard WYSIWYG editor with text formatting options where you specify the data privacy statement for a locale. |  |

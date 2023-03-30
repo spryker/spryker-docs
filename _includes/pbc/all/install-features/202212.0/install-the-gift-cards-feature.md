@@ -250,7 +250,7 @@ abstract_sku,pattern
 1234,{prefix}-{randomPart}-{suffix}
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | abstract_sku |mandatory  | string | 1234 |  SKU reference of an abstract gift card product.|
 | pattern |mandatory  | string | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
@@ -264,7 +264,7 @@ sku,value
 1234_3,5000
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | sku | mandatory | string| 1234 | SKU reference of an abstract gift card product. |
 | value | mandatory | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |

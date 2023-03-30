@@ -28,7 +28,7 @@ To learn more about bulk importing with the help of the configuration file, see 
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ---------- | ------------ | ------ | ------------ | ----------------- | ------------- |
 | product_offer_reference                      | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
 | merchant_product_offer.concrete_sku          | &check;             | String   |                   | Unique                                                       | SKU of the concrete product the offer is being created for.  |

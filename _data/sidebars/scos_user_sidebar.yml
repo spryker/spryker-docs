@@ -473,7 +473,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Merchant Custom Prices
       url: /docs/scos/user/features/merchant-custom-prices-feature-overview.html
       include_versions:
@@ -489,7 +488,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Multiple Carts
       url: /docs/scos/user/features/multiple-carts-feature-overview.html
       include_versions:
@@ -706,6 +704,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Push Notification
+      url: /docs/scos/user/features/push-notification-feature-overview.html
+      include_versions:
+      - "202304.0"
     - title: Quick Add to Cart
       url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
     - title: Quotation Process
@@ -2802,38 +2804,32 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Create merchants
           url: /docs/scos/user/back-office-user-guides/marketplace/merchants/create-merchants.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Edit merchants
           url: /docs/scos/user/back-office-user-guides/marketplace/merchants/edit-merchants.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
       - title: Merchant relations
         include_versions:
         - "202108.0"
         - "202204.0"
-        - "202212.0"
         nested:
         - title: Create merchant relations
           url: /docs/scos/user/back-office-user-guides/marketplace/merchant-relations/create-merchant-relations.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
         - title: Edit merchant relations
           url: /docs/scos/user/back-office-user-guides/marketplace/merchant-relations/edit-merchant-relations.html
           include_versions:
           - "202108.0"
           - "202204.0"
-          - "202212.0"
       - title: Merchants and merchant relations
         include_versions:
         - "201903.0"

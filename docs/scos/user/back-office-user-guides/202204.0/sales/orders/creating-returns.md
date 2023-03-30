@@ -11,7 +11,7 @@ related:
 
 This document describes how to create returns in the Back Office.
 
-If a sales order item is [returnable](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-base-shop.html), you can create a return for it. On the Storefront, only registered users can create returns. In the Back Office, you can create returns for both the registered and guest users.
+If a sales order item is [returnable](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html), you can create a return for it. On the Storefront, only registered users can create returns. In the Back Office, you can create returns for both the registered and guest users.
 
 ## Prerequisites
 

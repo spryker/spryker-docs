@@ -1874,8 +1874,6 @@ entries:
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
                   - title: Marketplace returns
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
-              - title: Manage merchant orders in merchant portal
-                url: /docs/pbc/all/return-management/marketplace/manage-merchant-orders.html
               - title: "Glue API: Manage marketplace returns"
                 url: /docs/pbc/all/return-management/marketplace/glue-api-manage-marketplace-returns.html
               - title: "Domain model and relationships"

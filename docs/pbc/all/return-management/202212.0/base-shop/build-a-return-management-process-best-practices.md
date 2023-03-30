@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/return-management/202212.0/build-a-return-management-process-best-practices.html
 ---
 
-Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This document contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-base-shop.html) functionality.
+Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This document contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) functionality.
 
 <a name="scenario1"></a>
 
@@ -44,7 +44,7 @@ This scenario is typical for most B2C models, and its main advantages are:
 
 * Suits perfectly for the 14-days returns.
 * Requires minimum human intervention.
-* Can be implemented with the default Spryker [Return Management](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-base-shop.html) functionality, without extra development effort.
+* Can be implemented with the default Spryker [Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) functionality, without extra development effort.
 
 <a name="scenario2"></a>
 

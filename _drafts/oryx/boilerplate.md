@@ -8,7 +8,7 @@
 
 ## Introduction
 
-Boilerplate refers to the _template_ code that is used to generate an application code that can be further customized. Changing boilerplate is convenient at first sight as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you've customize the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the boilerplate during every update to a new version of the application. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
+Boilerplate refers to the _template_ code that is used to generate an application code that can be further customized. Changing boilerplate is convenient at first sight as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you've customize the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the new version during every update to a new version of the application. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
 
 ## How we prevent boilerplate code
 
@@ -25,7 +25,7 @@ Most of the details around these tactics can be found elsewhere in the documenta
 
 ### NPM Packages
 
-One of the biggest sources of boilerplate code in any project is the application logic itself. In Oryx, we've separated out all the application logic into individual packages that are distributed on npm. These packages include components, business logic and integrations to the Spryker APIs.
+One of the biggest sources of boilerplate code in any project is the application logic itself. In Oryx, we've separated out all the application logic into individual packages that are [distributed on npm](https://www.npmjs.com/org/spryker-oryx). These packages include components, business logic and integrations to the Spryker APIs.
 
 By separating out the application logic in this way, we've eliminated the boilerplate code from your projects. Instead of writing code to handle basic functionality, you can simply install the appropriate package and use it directly in your code. And because the packages are distributed on npm and published with [Semantic Versioning](https://semver.org/), you can be confident that upgrading to a new version of the framework won't break your code.
 
@@ -33,7 +33,7 @@ By separating out the application logic in this way, we've eliminated the boiler
 
 Another source of boilerplate code in any project is the configuration required to get your application up and running. To simplify this process, we've introduced the concept of presets in Oryx.
 
-Presets provide configurations and data structures that are designed to get you up and running quickly without providing a lot of configuration yourself. Presets can be considered as so-called "demo applications", as they typically represent a demo application for a specific business model (e.g. "b2c demo shop"). By using presets, you can quickly configure your application without writing a lot of boilerplate code. This is particularly great when you first start your project or want to demo or test things out.
+The [preset package](https://www.npmjs.com/package/@spryker-oryx/presets) provide configurations and data structures that are designed to get you up and running quickly without providing a lot of configuration yourself. Presets can be considered as so-called "demo applications", as they typically represent a demo application for a specific business model (e.g. "b2c demo shop"). By using presets, you can quickly configure your application without writing any code. This is a great when you start your first project or want to demo an application or test things out.
 
 ### Using appBuilder
 
@@ -109,9 +109,9 @@ Oryx allows to be installed and used next to other application code. You could t
 The `app.ts` file contains the bootstrap code of the application. Bootstrapping the application can be done with the `appBuilder`, a function that allows to configure the application. While the `appBuilder` can be configured with a lot of fine-grained configurations, the bare minimum setup is very clean:
 
 ```ts
-import { appBuilder } from '@spryker-oryx/core';
-import { b2cFeatures } from '@spryker-oryx/presets';
-import { storefrontTheme } from '@spryker-oryx/themes';
+import { appBuilder } from "@spryker-oryx/core";
+import { b2cFeatures } from "@spryker-oryx/presets";
+import { storefrontTheme } from "@spryker-oryx/themes";
 
 export const app = appBuilder()
   .withFeature(b2cFeatures)

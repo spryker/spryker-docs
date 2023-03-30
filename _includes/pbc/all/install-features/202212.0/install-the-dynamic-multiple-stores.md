@@ -56,345 +56,118 @@ You can found the list of modules and their versions in the table by the [link](
 
 <details><summary markdown='span'>Click to expend table </summary>
 
-| MODULE                      | MIN VERSION                                  |
-|-----------------------------|---------------------------------------------|
-| Country                     | 4.0.0                                       |
-| CountryDataImport           | 0.1.0                                       |
-| CountryGui                  | 1.0.0                                       |
-| Currency                    | 4.0.0                                       |
-| CurrencyDataImport          | 0.1.0                                       |
-| CurrencyGui                 | 1.0.0                                       |
-| Locale                      | 4.0.0                                       |
-| LocaleDataImport            | 0.1.0                                       |
-| LocaleGui                   | 1.0.0                                       |
-| ToreContextGui              | 1.0.0                                       |
-| ToreDataImport              | 0.1.0                                       |
-| ToreExtension               | 1.0.0                                       |
-| ToreGuiExtension            | 1.0.0                                       |
-| ToreStorage                 | 1.0.0                                       |
-| Shop/storeWidget            | 1.0.0                                       |
-| Eco/payone                  | 4.5.0                                       |
-| AbbitMq                     | 2.16.0                                      |
-| AclEntityDataImport         | 0.2.2                                       |
-| AclMerchantPortal           | 1.10.0                                      |
-| Application                 | 3.32.0                                      |
-| Availability                | 9.17.0                                      |
-| AvailabilityGui             | 6.8.0                                       |
-| AvailabilityNotification    | 1.3.0                                       |
-| CartCurrencyConnector       | 1.2.0                                       |
-| CatalogPriceProductConnector | 1.5.0                                       |
-| CatalogSearchRestApi        | 2.8.0                                       |
-| Category                    | 5.12.0                                      |
-| CategoryDataFeed            | 0.2.4                                       |
-| CategoryDiscountConnector   | 1.2.0                                       |
-| CategoryGui                 | 2.2.0                                       |
-| CategoryImage               | 1.2.0                                       |
-| CategoryImageGui            | 1.6.0                                       |
-| CategoryStorage             | 2.6.0                                       |
-| Cms                         | 7.12.0                                      |
-| CmsBlock                    | 3.5.0                                       |
-| CmsBlockCategoryConnector   | 2.7.0                                       |
-| CmsBlockGui                 | 2.10.0                                      |
-| CmsBlockProductConnector    | 1.5.0                                       |
-| CmsBlockStorage             | 2.5.0                                       |
-| CmsGui                      | 5.11.0                                      |
-| CmsPageSearch               | 2.6.0                                       |
-| CmsSlotBlockCategoryGui     | 1.3.0                                       |
-| CmsSlotBlockCmsGui          | 1.1.0                                       |
-| CmsSlotBlockProductCategoryConnector | 1.4.0                                       |
-| CmsSlotBlockProductCategoryGui | 1.1.0                                       |
-| CmsSlotLocaleConnector      | 1.1.0                                       |
-| CmsStorage                  | 2.7.0                                       |
-| Collector                   | 6.8.0                                       |
-| CommentDataImport           | 0.1.1                                       |
-| CompanyBusinessUnitDataImport | 0.5.3                                       |
-| CompanyRoleDataImport       | 0.1.3                                       |
-| CompanySupplierDataImport   | 0.1.4                                       |
-| CompanySupplierGui          | 1.3.0                                       |
-| CompanyUnitAddress          | 1.15.0                                      |
-| CompanyUnitAddressDataImport | 0.3.3                                       |
-| CompanyUnitAddressGui       | 1.3.0                                       |
-| CompanyUserDataImport       | 0.2.1                                       |
-| Config                      | 3.6.0                                       |
-| ConfigurableBundle          | 2.2.0                                       |
-| ConfigurableBundleCartsRestApi | 0.1.3                                       |
-| ConfigurableBundleDataImport | 0.2.2                                       |
-| ConfigurableBundleGui       | 1.4.0                                       |
-| ConfigurableBundleStorage   | 2.6.0                                       |
-| Console                     | 4.12.0                                      |
-| Content                     | 2.3.0                                       |
-| ContentFileGui              | 2.2.0                                       |
-| ContentGui                  | 2.6.0                                       |
-| ContentProductGui           | 1.2.0                                       |
-| ContentProductSetGui        | 1.2.0                                       |
-| ContentStorage              | 2.6.0                                       |
-| Customer                    | 7.50.0                                      |
-| CustomerApi                 | 0.2.2                                       |
-| DataImport                  | 1.21.0                                      |
-| Dataset                     | 1.2.0                                       |
-| Discount                    | 9.30.0                                      |
-| FileManager                 | 2.2.0                                       |
-| FileManagerGui              | 2.4.0                                       |
-| FileManagerStorage          | 2.3.0                                       |
-| GiftCardMailConnector       | 1.2.0                                       |
-| Glossary                    | 3.13.0                                      |
-| Http                        | 1.9.0                                       |
-| Nel                         | 3.72.0                                      |
-| Log                         | 3.14.0                                      |
-| Mail                        | 4.11.0                                      |
-| ManualOrderEntryGui         | 0.9.4                                       |
-| MerchantGui                 | 3.10.0                                      |
-| MerchantProduct             | 1.4.0                                       |
-| MerchantProductStorage      | 1.4.0                                       |
-| MerchantProfile             | 1.1.0                                       |
-| MerchantProfileDataImport   | 0.6.1                                       |
-| MerchantProfileGui          | 1.1.0                                       |
-| MerchantProfileMerchantPortalGui | 2.1.0                                       |
-| MerchantRelationshipSalesOrderThreshold | 1.3.0                                       |
-| MerchantRelationshipSalesOrderThresholdDataImport | 0.1.3                                       |
-| MerchantRelationshipSalesOrderThresholdGui | 1.8.0                                       |
-| MerchantSalesOrderDataExport | 0.2.1                                       |
-| MerchantSwitcher            | 0.6.3                                       |
-| Money                       | 2.12.0                                      |
-| Monitoring                  | 2.8.0                                       |
-| MultiCart                   | 1.9.0                                       |
-| MultiCartDataImport         | 0.1.7                                       |
-| Navigation                  | 2.7.0                                       |
-| NavigationGui               | 2.9.0                                       |
-| NavigationStorage           | 1.10.0                                      |
-| OfferGui                    | 0.3.10                                      |
-| Oms                         | 11.23.0                                     |
-| IstentCart                  | 3.6.0                                       |
-| IceCartConnector            | 6.9.0                                       |
-| IceProduct                  | 4.39.0                                      |
-| IceProductDataImport        | 0.1.14                                      |
-| IceProductMerchantRelationshipDataImport | 0.2.3                                       |
-| IceProductMerchantRelationshipStorage | 1.16.0                                      |
-| IceProductOffer             | 1.4.0                                       |
-| IceProductOfferDataImport   | 0.7.2                                       |
-| IceProductOfferGui          | 1.2.0                                       |
-| IceProductOfferStorage      | 1.3.0                                       |
-| IceProductSchedule          | 2.6.0                                       |
-| IceProductScheduleDataImport | 0.1.5                                       |
-| IceProductVolume            | 3.4.0                                       |
-| IceProductVolumeGui         | 3.3.0                                       |
-| Oduct                       | 6.31.0                                      |
-| OductAbstractDataFeed       | 0.2.7                                       |
-| OductAlternative            | 1.3.0                                       |
-| OductAlternativeProductLabelConnector | 1.2.0                                       |
-| OductAttribute              | 1.12.0                                      |
-| OductAttributeGui           | 1.5.0                                       |
-| OductBarcodeGui             | 1.3.0                                       |
-| OductBundle                 | 7.14.0                                      |
-| OductCartConnector          | 4.10.0                                      |
-| OductCategory               | 4.20.0                                      |
-| OductCategoryFilterGui      | 2.4.0                                       |
-| OductCategoryStorage        | 2.5.0                                       |
-| OductConfiguration          | 1.2.0                                       |
-| OductConfigurationStorage   | 1.1.0                                       |
-| OductCustomerPermission     | 1.3.0                                       |
-| OductDiscontinued           | 1.10.0                                      |
-| OductDiscontinuedGui        | 1.5.0                                       |
-| OductDiscontinuedProductLabelConnector | 1.4.0                                       |
-| OductDiscontinuedStorage    | 1.15.0                                      |
-| OductDiscountConnector      | 5.2.0                                       |
-| OductImage                  | 3.14.0                                      |
-| OductLabel                  | 3.6.0                                       |
-| OductLabelGui               | 3.4.0                                       |
-| OductLabelStorage           | 2.7.0                                       |
-| OductListGui                | 2.3.0                                       |
-| OductManagement             | 0.19.34                                     |
-| OductMerchantPortalGui      | 3.1.0                                       |
-| OductNew                    | 1.5.0                                       |
-| OductOfferGui               | 1.4.0                                       |
-| OductOfferMerchantPortalGui | 2.1.0                                       |
-| OductOption                 | 8.14.0                                      |
-| OductOptionStorage          | 1.14.0                                      |
-| OductOptionsRestApi         | 1.3.0                                       |
-| OductPackagingUnit          | 4.7.0                                       |
-| OductPageSearch             | 3.30.0                                      |
-| OductPricesRestApi          | 1.7.0                                       |
-| OductRelation               | 3.3.0                                       |
-| OductRelationGui            | 1.4.0                                       |
-| OductReview                 | 2.11.0                                      |
-| OductReviewGui              | 1.6.0                                       |
-| OductReviewSearch           | 1.8.0                                       |
-| OductSearch                 | 5.18.0                                      |
-| OductSet                    | 1.7.0                                       |
-| OductSetGui                 | 2.7.0                                       |
-| OductSetPageSearch          | 1.8.0                                       |
-| OductStorage                | 1.37.0                                      |
-| Opel                        | 3.37.0                                      |
-| QuickOrder                  | 3.1.0                                       |
-| Quote                       | 2.18.0                                      |
-| QuoteExtension              | 1.8.0                                       |
-| QuoteRequestDataImport      | 0.2.1                                       |
-| QuoteRequestsRestApi        | 0.1.6                                       |
-| TRequestValidator           | 1.5.0                                       |
-| Ales                        | 11.37.0                                     |
-| AlesDataExport              | 0.2.1                                       |
-| AlesInvoice                 | 1.3.0                                       |
-| AlesMerchantPortalGui       | 2.1.0                                       |
-| AlesOms                     | 0.1.2                                       |
-| AlesOrderThreshold          | 1.8.0                                       |
-| AlesOrderThresholdDataImport | 0.1.4                                       |
-| AlesOrderThresholdGui       | 1.9.0                                       |
-| AlesReturn                  | 1.5.0                                       |
-| AlesReturnGui               | 1.6.0                                       |
-| AlesReturnSearch            | 1.1.0                                       |
-| Cheduler                    | 1.3.0                                       |
-| ChedulerJenkins             | 1.3.0                                       |
-| Arch                        | 8.20.0                                      |
-| ArchElasticsearch           | 1.15.0                                      |
-| ArchExtension               | 1.2.0                                       |
-| Hipment                     | 8.11.0                                      |
-| HipmentDataImport           | 1.2.0                                       |
-| HoppingListDataImport       | 0.2.1                                       |
-| TockAddress                 | 1.1.0                                       |
-| TockAddressDataImport       | 0.1.1                                       |
-| Torage                      | 3.20.0                                      |
-| Tore                        | 1.18.0                                      |
-| ToreGui                     | 1.2.0                                       |
-| ToresRestApi                | 1.1.0                                       |
-| Nchronization               | 1.16.0                                      |
-| Tax                         | 5.13.0                                      |
-| TaxProductConnector         | 4.7.0                                       |
-| Testify                     | 3.48.0                                      |
-| Touch                       | 4.6.0                                       |
-| Translator                  | 1.11.0                                      |
-| Url                         | 3.11.0                                      |
-| UrlCollector                | 1.3.0                                       |
-| UrlStorage                  | 1.16.0                                      |
-| UserLocale                  | 1.3.0                                       |
-| UserLocaleGui               | 1.1.0                                       |
-| UserMerchantPortalGui       | 2.1.0                                       |
-| UtilDateTime                | 1.3.0                                       |
-| ZedRequest                  | 3.19.0                                      |
-| ZedRequestExtension         | 1.1.0                                       |
-| Shop/customerPage           | 2.41.0                                      |
-| Shop/shopUi                 | 1.67.0                                      |
-| NchronizationBehavior       | 1.10.0                                      |
-| Agent                       | 1.5.2                                       |
-| AssetStorage                | 1.2.1                                       |
-| AuthRestApi                 | 2.14.2                                      |
-| AvailabilityStorage         | 2.7.1                                       |
-| BusinessOnBehalf            | 1.1.3                                       |
-| Calculation                 | 4.12.1                                      |
-| Cart                        | 7.11.1                                      |
-| CartCodesRestApi            | 1.4.1                                       |
-| CartsRestApi                | 5.22.1                                      |
-| CategoryImageStorage        | 1.6.1                                       |
-| CategoryNavigationConnector | 1.0.3                                       |
-| CategoryPageSearch          | 2.2.1                                       |
-| Checkout                    | 6.4.3                                       |
-| CmsSlotBlock                | 1.1.1                                       |
-| CmsSlotStorage              | 1.2.1                                       |
-| Comment                     | 1.2.2                                       |
-| Company                     | 1.5.2                                       |
-| CompanyBusinessUnit         | 2.14.3                                      |
-| CompanyBusinessUnitGui      | 2.10.1                                      |
-| CompanyBusinessUnitSalesConnector | 1.1.1                                       |
-| CompanyRole                 | 1.7.2                                       |
-| CompanySalesConnector       | 1.1.1                                       |
-| CompanyUser                 | 2.15.2                                      |
-| CompanyUserInvitation       | 1.3.2                                       |
-| CompanyUserStorage          | 1.5.1                                       |
-| CompanyUsersRestApi         | 2.5.1                                       |
-| ConfigurableBundleNote      | 1.0.1                                       |
-| ConfigurableBundlePageSearch | 1.4.1                                       |
-| CustomerAccessStorage       | 1.7.1                                       |
-| CustomerNote                | 1.1.1                                       |
-| CustomerUserConnector       | 1.0.4                                       |
-| Development                 | 3.34.4                                      |
-| GiftCard                    | 1.8.1                                       |
-| GlossaryStorage             | 1.11.1                                      |
-| Gui                         | 3.47.2                                      |
-| MerchantOms                 | 1.0.3                                       |
-| MerchantOpeningHoursStorage | 1.0.2                                       |
-| MerchantProductOfferSearch  | 1.4.1                                       |
-| MerchantProductOfferStorage | 2.0.1                                       |
-| MerchantProductOfferWishlist | 1.2.1                                       |
-| MerchantProductOfferWishlistRestApi | 1.1.1                                       |
-| MerchantProductSearch       | 1.2.1                                       |
-| MerchantSalesOrder          | 1.1.2                                       |
-| MerchantSalesReturn         | 1.0.1                                       |
-| MerchantSearch              | 1.0.1                                       |
-| MerchantStorage             | 1.1.1                                       |
-| Oauth                       | 2.8.1                                       |
-| OauthCompanyUser            | 2.2.1                                       |
-| OauthPermission             | 1.3.1                                       |
-| OmsProductOfferReservation  | 1.0.2                                       |
-| OrderCustomReference        | 1.0.1                                       |
-| Ayment                      | 5.10.2                                      |
-| Mission                     | 1.5.4                                       |
-| IceProductMerchantRelationship | 1.9.1                                       |
-| IceProductOfferVolume       | 1.0.3                                       |
-| IceProductScheduleGui       | 2.3.1                                       |
-| IceProductStorage           | 4.9.1                                       |
-| OductAlternativeStorage     | 1.11.1                                      |
-| OductBundleStorage          | 1.1.1                                       |
-| OductCategorySearch         | 1.1.1                                       |
-| OductConfigurationWishlist  | 1.0.2                                       |
-| OductConfigurationWishlistsRestApi | 1.1.2                                       |
-| OductGroupStorage           | 1.4.1                                       |
-| OductImageCartConnector     | 1.2.4                                       |
-| OductLabelCollector         | 1.3.1                                       |
-| OductLabelSearch            | 2.3.1                                       |
-| OductMeasurementUnit        | 5.3.2                                       |
-| OductOffer                  | 1.5.1                                       |
-| OductOfferAvailability      | 1.1.2                                       |
-| OductOfferAvailabilityStorage | 1.0.2                                       |
-| OductOfferShoppingList      | 1.0.1                                       |
-| OductOptionCartConnector    | 7.1.3                                       |
-| OductPackagingUnitStorage   | 5.2.1                                       |
-| OductRelationStorage        | 2.3.1                                       |
-| OductReviewStorage          | 1.5.1                                       |
-| QuoteApproval               | 1.6.2                                       |
-| QuoteRequest                | 2.4.2                                       |
-| Outer                       | 1.15.1                                      |
-| AlesConfigurableBundle      | 1.5.2                                       |
-| AlesPayment                 | 1.3.1                                       |
-| AlesProductConnector        | 1.8.2                                       |
-| HaredCart                   | 1.19.1                                      |
-| HaredCartsRestApi           | 1.2.6                                       |
-| HipmentCartConnector        | 2.1.2                                       |
-| HipmentsRestApi             | 1.6.2                                       |
-| HoppingList                 | 4.10.1                                      |
-| HoppingListNote             | 1.2.1                                       |
-| HoppingListProductOptionConnector | 1.4.2                                       |
-| Tock                        | 8.5.1                                       |
-| TockDataImport              | 1.2.1                                       |
-| TorageDatabase              | 1.2.1                                       |
-| TaxProductStorage           | 1.3.1                                       |
-| TaxStorage                  | 1.4.1                                       |
-| Twig                        | 3.18.1                                      |
-| Wishlist                    | 8.7.2                                       |
-| WishlistsRestApi            | 1.6.2                                       |
-|-----------------------------|---------------------------------------------|
+###  Min version modules
 
-Min version for Spryker-Shop modules:
-
-| MODULE                      | MIN VERSION                                  |
-|-----------------------------|---------------------------------------------|
-| CatalogPage                 | 1.25.0                                      |
-| CheckoutPage                | 3.24.0                                      |
-| CmsPage                     | 1.8.0                                       |
-| CompanyPage                 | 2.21.0                                      |
-| ConfigurableBundleWidget    | 1.8.0                                       |
-| CustomerPage                | 2.41.0                                      |
-| CustomerReorderWidget       | 6.14.0                                      |
-| LanguageSwitcherWidget      | 1.5.0                                       |
-| MoneyWidget                 | 1.7.0                                       |
-| DuctMeasurementUnitWidget   | 1.2.0                                       |
-| DuctNewPage                 | 1.4.0                                       |
-| DuctPackagingUnitWidget     | 1.5.0                                       |
-| DuctSearchWidget            | 3.5.0                                       |
-| QuickOrderPage              | 4.9.0                                       |
-| Application                 | 1.15.0                                      |
-| Ui                          | 1.67.0                                      |
-| IngListPage                 | 1.9.0                                       |
-| ToreWidget                  | 1.0.0                                       |
-|-----------------------------|---------------------------------------------|
+| MODULE                                        | MIN VERSION |
+|-----------------------------------------------|-------------|
+| spryker/category-data-import                  | 0.4.0       |
+| spryker/country                               | 4.0.0       |
+| spryker/country-data-import                   | 0.1.0       |
+| spryker/country-gui                           | 1.0.0       |
+| spryker/currency                              | 4.0.0       |
+| spryker/currency-data-import                  | 0.1.0       |
+| spryker/currency-gui                          | 1.0.0       |
+| spryker/locale                                | 4.0.0       |
+| spryker/locale-data-import                    | 0.1.0       |
+| spryker/locale-gui                            | 1.0.0       |
+| spryker/product-category-filter-gui-extension | 1.0.0       |
+| spryker/product-label-data-import             | 0.2.0       |
+| spryker/products-backend-api                  | 0.2.0       |
+| spryker/search-http                           | 0.3.0       |
+| spryker/store-context-gui                     | 1.0.0       |
+| spryker/store-data-import                     | 0.1.0       |
+| spryker/store-extension                       | 1.0.0       |
+| spryker/store-gui-extension                   | 1.0.0       |
+| spryker/store-storage                         | 1.0.0       |
+| spryker-shop/store-widget                     | 1.0.0       |
+| spryker-eco/payone                            | 4.5.0       |
+| spryker/rabbit-mq                             | 2.16.0      |
+| spryker/app-catalog-gui                       | 1.3.0       |
+| spryker/application                           | 3.32.0      |
+| spryker/category-gui                          | 2.2.0       |
+| spryker/category-image                        | 1.3.0       |
+| spryker/category-storage                      | 2.6.0       |
+| spryker/cms                                   | 7.13.0      |
+| spryker/cms-block-storage                     | 2.5.0       |
+| spryker/cms-page-data-import                  | 1.2.0       |
+| spryker/cms-page-search                       | 2.6.0       |
+| spryker/cms-storage                           | 2.7.0       |
+| spryker/config                                | 3.6.0       |
+| spryker/console                               | 4.12.0      |
+| spryker/customer                              | 7.51.0      |
+| spryker/data-import                           | 1.21.0      |
+| spryker/discount                              | 9.33.0      |
+| spryker/gift-card-mail-connector              | 1.2.0       |
+| spryker/glue-application                      | 1.50.0      |
+| spryker/http                                  | 1.9.0       |
+| spryker/kernel                                | 3.72.0      |
+| spryker/manual-order-entry-gui                | 0.9.4       |
+| spryker/merchant-data-import                  | 0.5.1       |
+| spryker/money                                 | 2.12.0      |
+| spryker/multi-cart                            | 1.10.0      |
+| spryker/navigation-storage                    | 1.10.0      |
+| spryker/offer-gui                             | 0.3.10      |
+| spryker/oms                                   | 11.26.0     |
+| spryker/persistent-cart                       | 3.6.0       |
+| spryker/price-product-schedule                | 2.7.0       |
+| spryker/product-bundle                        | 7.15.0      |
+| spryker/product-category-filter-gui           | 2.4.0       |
+| spryker/product-label-gui                     | 3.4.0       |
+| spryker/product-merchant-portal-gui           | 3.4.0       |
+| spryker/product-option                        | 8.15.0      |
+| spryker/product-packaging-unit                | 4.7.0       |
+| spryker/product-page-search                   | 3.30.0      |
+| spryker/product-relation                      | 3.3.0       |
+| spryker/product-review-search                 | 1.8.0       |
+| spryker/product-set-page-search               | 1.8.0       |
+| spryker/propel                                | 3.37.0      |
+| spryker/quote                                 | 2.18.0      |
+| spryker/quote-extension                       | 1.8.0       |
+| spryker/rest-request-validator                | 1.5.0       |
+| spryker/sales                                 | 11.38.0     |
+| spryker/sales-data-export                     | 0.2.1       |
+| spryker/sales-invoice                         | 1.4.0       |
+| spryker/sales-order-threshold-data-import     | 0.1.4       |
+| spryker/sales-order-threshold-gui             | 1.9.0       |
+| spryker/scheduler                             | 1.3.0       |
+| spryker/scheduler-jenkins                     | 1.3.0       |
+| spryker/search                                | 8.20.0      |
+| spryker/search-elasticsearch                  | 1.15.0      |
+| spryker/storage                               | 3.20.0      |
+| spryker/store                                 | 1.19.0      |
+| spryker/store-gui                             | 1.2.0       |
+| spryker/stores-rest-api                       | 1.1.0       |
+| spryker/synchronization                       | 1.16.0      |
+| spryker/tax                                   | 5.14.0      |
+| spryker/testify                               | 3.48.0      |
+| spryker/url-storage                           | 1.16.0      |
+| spryker/user-locale                           | 1.3.0       |
+| spryker/user-merchant-portal-gui              | 2.4.0       |
+| spryker/util-date-time                        | 1.4.0       |
+| spryker/zed-request                           | 3.19.0      |
+| spryker-shop/catalog-page                     | 1.25.0      |
+| spryker-shop/checkout-page                    | 3.24.0      |
+| spryker-shop/cms-page                         | 1.8.0       |
+| spryker-shop/company-page                     | 2.21.0      |
+| spryker-shop/configurable-bundle-widget       | 1.8.0       |
+| spryker-shop/currency-widget                  | 1.6.0       |
+| spryker-shop/customer-page                    | 2.41.0      |
+| spryker-shop/customer-reorder-widget          | 6.14.0      |
+| spryker-shop/language-switcher-widget         | 1.5.0       |
+| spryker-shop/money-widget                     | 1.7.0       |
+| spryker-shop/price-product-volume-widget      | 1.9.0       |
+| spryker-shop/product-measurement-unit-widget  | 1.2.0       |
+| spryker-shop/product-new-page                 | 1.4.0       |
+| spryker-shop/product-packaging-unit-widget    | 1.6.0       |
+| spryker-shop/product-search-widget            | 3.5.0       |
+| spryker-shop/quick-order-page                 | 4.9.0       |
+| spryker-shop/shop-application                 | 1.15.0      |
+| spryker-shop/shop-ui                          | 1.68.0      |
+| spryker-shop/shopping-list-page               | 1.9.0       |
+| spryker/synchronization-behavior              | 1.10.0      |
+| spryker/price-product-schedule-gui            | 2.3.1       |
+| spryker/product-image-storage                 | 1.15.1      |
+| spryker/sales-reclamation-gui                 | 1.7.1       |
 
 </details>
 
@@ -404,25 +177,59 @@ Bellow provided list of modules which need to be updated for integration Dynamic
 
 Modules to update in order for the functionality to work:
 
+<!-- main-modules.md -->
+
+| MODULE                                        | VERSION |
+|-----------------------------------------------|---------|
+| spryker/category-data-import                  | 0.4.0   |
+| spryker/country                               | 4.0.0   |
+| spryker/country-data-import                   | 0.1.0   |
+| spryker/country-gui                           | 1.0.0   |
+| spryker/currency                              | 4.0.0   |
+| spryker/currency-data-import                  | 0.1.0   |
+| spryker/currency-gui                          | 1.0.0   |
+| spryker/locale                                | 4.0.0   |
+| spryker/locale-data-import                    | 0.1.0   |
+| spryker/locale-gui                            | 1.0.0   |
+| spryker/product-category-filter-gui-extension | 1.0.0   |
+| spryker/product-label-data-import             | 0.2.0   |
+| spryker/products-backend-api                  | 0.2.0   |
+| spryker/search-http                           | 0.3.0   |
+| spryker/store-context-gui                     | 1.0.0   |
+| spryker/store-data-import                     | 0.1.0   |
+| spryker/store-extension                       | 1.0.0   |
+| spryker/store-gui-extension                   | 1.0.0   |
+| spryker/store-storage                         | 1.0.0   |
+| spryker-shop/store-widget                     | 1.0.0   |
+| spryker/rabbit-mq                             | 2.16.0  |
+| spryker/application                           | 3.32.0  |
+| spryker/config                                | 3.6.0   |
+| spryker/console                               | 4.12.0  |
+| spryker/customer                              | 7.51.0  |
+| spryker/data-import                           | 1.21.0  |
+| spryker/discount                              | 9.33.0  |
+| spryker/glue-application                      | 1.50.0  |
+| spryker/http                                  | 1.9.0   |
+| spryker/kernel                                | 3.72.0  |
+| spryker/money                                 | 2.12.0  |
+| spryker/oms                                   | 11.26.0 |
+| spryker/product-page-search                   | 3.30.0  |
+| spryker/propel                                | 3.37.0  |
+| spryker/quote                                 | 2.18.0  |
+| spryker/scheduler                             | 1.3.0   |
+| spryker/scheduler-jenkins                     | 1.3.0   |
+| spryker/search                                | 8.20.0  |
+| spryker/search-elasticsearch                  | 1.15.0  |
+| spryker/storage                               | 3.20.0  |
+| spryker/store                                 | 1.19.0  |
+| spryker/store-gui                             | 1.2.0   |
+| spryker/zed-request                           | 3.19.0  |
+| spryker/synchronization-behavior              | 1.10.0  |
+
+Composer command to update modules:
+
 ```bash
-
-```
-
-
-
-And list of modules to update in order for them to work with the new functionality:
-
-```bash
-
-```
-
-
-
-
-
-Commands for update packages: 
-
-```bash
+composer require spryker/category-data-import:"^0.4.0" --update-with-dependencies
 composer require spryker/country:"^4.0.0" --update-with-dependencies
 composer require spryker/country-data-import:"^0.1.0" --update-with-dependencies
 composer require spryker/country-gui:"^1.0.0" --update-with-dependencies
@@ -432,325 +239,116 @@ composer require spryker/currency-gui:"^1.0.0" --update-with-dependencies
 composer require spryker/locale:"^4.0.0" --update-with-dependencies
 composer require spryker/locale-data-import:"^0.1.0" --update-with-dependencies
 composer require spryker/locale-gui:"^1.0.0" --update-with-dependencies
+composer require spryker/product-category-filter-gui-extension:"^1.0.0" --update-with-dependencies
+composer require spryker/product-label-data-import:"^0.2.0" --update-with-dependencies
+composer require spryker/products-backend-api:"^0.2.0" --update-with-dependencies
+composer require spryker/search-http:"^0.3.0" --update-with-dependencies
 composer require spryker/store-context-gui:"^1.0.0" --update-with-dependencies
 composer require spryker/store-data-import:"^0.1.0" --update-with-dependencies
 composer require spryker/store-extension:"^1.0.0" --update-with-dependencies
 composer require spryker/store-gui-extension:"^1.0.0" --update-with-dependencies
 composer require spryker/store-storage:"^1.0.0" --update-with-dependencies
 composer require spryker-shop/store-widget:"^1.0.0" --update-with-dependencies
-composer require spryker-eco/payone:"^4.5.0" --update-with-dependencies
 composer require spryker/rabbit-mq:"^2.16.0" --update-with-dependencies
-composer require spryker/acl-entity-data-import:"^0.2.2" --update-with-dependencies
-composer require spryker/acl-merchant-portal:"^1.10.0" --update-with-dependencies
 composer require spryker/application:"^3.32.0" --update-with-dependencies
-composer require spryker/availability:"^9.17.0" --update-with-dependencies
-composer require spryker/availability-gui:"^6.8.0" --update-with-dependencies
-composer require spryker/availability-notification:"^1.3.0" --update-with-dependencies
-composer require spryker/cart-currency-connector:"^1.2.0" --update-with-dependencies
-composer require spryker/catalog-price-product-connector:"^1.5.0" --update-with-dependencies
-composer require spryker/catalog-search-rest-api:"^2.8.0" --update-with-dependencies
-composer require spryker/category:"^5.12.0" --update-with-dependencies
-composer require spryker/category-data-feed:"^0.2.4" --update-with-dependencies
-composer require spryker/category-discount-connector:"^1.2.0" --update-with-dependencies
-composer require spryker/category-gui:"^2.2.0" --update-with-dependencies
-composer require spryker/category-image:"^1.2.0" --update-with-dependencies
-composer require spryker/category-image-gui:"^1.6.0" --update-with-dependencies
-composer require spryker/category-storage:"^2.6.0" --update-with-dependencies
-composer require spryker/cms:"^7.12.0" --update-with-dependencies
-composer require spryker/cms-block:"^3.5.0" --update-with-dependencies
-composer require spryker/cms-block-category-connector:"^2.7.0" --update-with-dependencies
-composer require spryker/cms-block-gui:"^2.10.0" --update-with-dependencies
-composer require spryker/cms-block-product-connector:"^1.5.0" --update-with-dependencies
-composer require spryker/cms-block-storage:"^2.5.0" --update-with-dependencies
-composer require spryker/cms-gui:"^5.11.0" --update-with-dependencies
-composer require spryker/cms-page-search:"^2.6.0" --update-with-dependencies
-composer require spryker/cms-slot-block-category-gui:"^1.3.0" --update-with-dependencies
-composer require spryker/cms-slot-block-cms-gui:"^1.1.0" --update-with-dependencies
-composer require spryker/cms-slot-block-product-category-connector:"^1.4.0" --update-with-dependencies
-composer require spryker/cms-slot-block-product-category-gui:"^1.1.0" --update-with-dependencies
-composer require spryker/cms-slot-locale-connector:"^1.1.0" --update-with-dependencies
-composer require spryker/cms-storage:"^2.7.0" --update-with-dependencies
-composer require spryker/collector:"^6.8.0" --update-with-dependencies
-composer require spryker/comment-data-import:"^0.1.1" --update-with-dependencies
-composer require spryker/company-business-unit-data-import:"^0.5.3" --update-with-dependencies
-composer require spryker/company-role-data-import:"^0.1.3" --update-with-dependencies
-composer require spryker/company-supplier-data-import:"^0.1.4" --update-with-dependencies
-composer require spryker/company-supplier-gui:"^1.3.0" --update-with-dependencies
-composer require spryker/company-unit-address:"^1.15.0" --update-with-dependencies
-composer require spryker/company-unit-address-data-import:"^0.3.3" --update-with-dependencies
-composer require spryker/company-unit-address-gui:"^1.3.0" --update-with-dependencies
-composer require spryker/company-user-data-import:"^0.2.1" --update-with-dependencies
 composer require spryker/config:"^3.6.0" --update-with-dependencies
-composer require spryker/configurable-bundle:"^2.2.0" --update-with-dependencies
-composer require spryker/configurable-bundle-carts-rest-api:"^0.1.3" --update-with-dependencies
-composer require spryker/configurable-bundle-data-import:"^0.2.2" --update-with-dependencies
-composer require spryker/configurable-bundle-gui:"^1.4.0" --update-with-dependencies
-composer require spryker/configurable-bundle-storage:"^2.6.0" --update-with-dependencies
 composer require spryker/console:"^4.12.0" --update-with-dependencies
-composer require spryker/content:"^2.3.0" --update-with-dependencies
-composer require spryker/content-file-gui:"^2.2.0" --update-with-dependencies
-composer require spryker/content-gui:"^2.6.0" --update-with-dependencies
-composer require spryker/content-product-gui:"^1.2.0" --update-with-dependencies
-composer require spryker/content-product-set-gui:"^1.2.0" --update-with-dependencies
-composer require spryker/content-storage:"^2.6.0" --update-with-dependencies
-composer require spryker/customer:"^7.50.0" --update-with-dependencies
-composer require spryker/customer-api:"^0.2.2" --update-with-dependencies
+composer require spryker/customer:"^7.51.0" --update-with-dependencies
 composer require spryker/data-import:"^1.21.0" --update-with-dependencies
-composer require spryker/dataset:"^1.2.0" --update-with-dependencies
-composer require spryker/discount:"^9.30.0" --update-with-dependencies
-composer require spryker/file-manager:"^2.2.0" --update-with-dependencies
-composer require spryker/file-manager-gui:"^2.4.0" --update-with-dependencies
-composer require spryker/file-manager-storage:"^2.3.0" --update-with-dependencies
-composer require spryker/gift-card-mail-connector:"^1.2.0" --update-with-dependencies
-composer require spryker/glossary:"^3.13.0" --update-with-dependencies
+composer require spryker/discount:"^9.33.0" --update-with-dependencies
+composer require spryker/glue-application:"^1.50.0" --update-with-dependencies
 composer require spryker/http:"^1.9.0" --update-with-dependencies
 composer require spryker/kernel:"^3.72.0" --update-with-dependencies
-composer require spryker/log:"^3.14.0" --update-with-dependencies
-composer require spryker/mail:"^4.11.0" --update-with-dependencies
-composer require spryker/manual-order-entry-gui:"^0.9.4" --update-with-dependencies
-composer require spryker/merchant-gui:"^3.10.0" --update-with-dependencies
-composer require spryker/merchant-product:"^1.4.0" --update-with-dependencies
-composer require spryker/merchant-product-storage:"^1.4.0" --update-with-dependencies
-composer require spryker/merchant-profile:"^1.1.0" --update-with-dependencies
-composer require spryker/merchant-profile-data-import:"^0.6.1" --update-with-dependencies
-composer require spryker/merchant-profile-gui:"^1.1.0" --update-with-dependencies
-composer require spryker/merchant-profile-merchant-portal-gui:"^2.1.0" --update-with-dependencies
-composer require spryker/merchant-relationship-sales-order-threshold:"^1.3.0" --update-with-dependencies
-composer require spryker/merchant-relationship-sales-order-threshold-data-import:"^0.1.3" --update-with-dependencies
-composer require spryker/merchant-relationship-sales-order-threshold-gui:"^1.8.0" --update-with-dependencies
-composer require spryker/merchant-sales-order-data-export:"^0.2.1" --update-with-dependencies
-composer require spryker/merchant-switcher:"^0.6.3" --update-with-dependencies
 composer require spryker/money:"^2.12.0" --update-with-dependencies
-composer require spryker/monitoring:"^2.8.0" --update-with-dependencies
-composer require spryker/multi-cart:"^1.9.0" --update-with-dependencies
-composer require spryker/multi-cart-data-import:"^0.1.7" --update-with-dependencies
-composer require spryker/navigation:"^2.7.0" --update-with-dependencies
-composer require spryker/navigation-gui:"^2.9.0" --update-with-dependencies
-composer require spryker/navigation-storage:"^1.10.0" --update-with-dependencies
-composer require spryker/offer-gui:"^0.3.10" --update-with-dependencies
-composer require spryker/oms:"^11.23.0" --update-with-dependencies
-composer require spryker/persistent-cart:"^3.6.0" --update-with-dependencies
-composer require spryker/price-cart-connector:"^6.9.0" --update-with-dependencies
-composer require spryker/price-product:"^4.39.0" --update-with-dependencies
-composer require spryker/price-product-data-import:"^0.1.14" --update-with-dependencies
-composer require spryker/price-product-merchant-relationship-data-import:"^0.2.3" --update-with-dependencies
-composer require spryker/price-product-merchant-relationship-storage:"^1.16.0" --update-with-dependencies
-composer require spryker/price-product-offer:"^1.4.0" --update-with-dependencies
-composer require spryker/price-product-offer-data-import:"^0.7.2" --update-with-dependencies
-composer require spryker/price-product-offer-gui:"^1.2.0" --update-with-dependencies
-composer require spryker/price-product-offer-storage:"^1.3.0" --update-with-dependencies
-composer require spryker/price-product-schedule:"^2.6.0" --update-with-dependencies
-composer require spryker/price-product-schedule-data-import:"^0.1.5" --update-with-dependencies
-composer require spryker/price-product-volume:"^3.4.0" --update-with-dependencies
-composer require spryker/price-product-volume-gui:"^3.3.0" --update-with-dependencies
-composer require spryker/product:"^6.31.0" --update-with-dependencies
-composer require spryker/product-abstract-data-feed:"^0.2.7" --update-with-dependencies
-composer require spryker/product-alternative:"^1.3.0" --update-with-dependencies
-composer require spryker/product-alternative-product-label-connector:"^1.2.0" --update-with-dependencies
-composer require spryker/product-attribute:"^1.12.0" --update-with-dependencies
-composer require spryker/product-attribute-gui:"^1.5.0" --update-with-dependencies
-composer require spryker/product-barcode-gui:"^1.3.0" --update-with-dependencies
-composer require spryker/product-bundle:"^7.14.0" --update-with-dependencies
-composer require spryker/product-cart-connector:"^4.10.0" --update-with-dependencies
-composer require spryker/product-category:"^4.20.0" --update-with-dependencies
-composer require spryker/product-category-filter-gui:"^2.4.0" --update-with-dependencies
-composer require spryker/product-category-storage:"^2.5.0" --update-with-dependencies
-composer require spryker/product-configuration:"^1.2.0" --update-with-dependencies
-composer require spryker/product-configuration-storage:"^1.1.0" --update-with-dependencies
-composer require spryker/product-customer-permission:"^1.3.0" --update-with-dependencies
-composer require spryker/product-discontinued:"^1.10.0" --update-with-dependencies
-composer require spryker/product-discontinued-gui:"^1.5.0" --update-with-dependencies
-composer require spryker/product-discontinued-product-label-connector:"^1.4.0" --update-with-dependencies
-composer require spryker/product-discontinued-storage:"^1.15.0" --update-with-dependencies
-composer require spryker/product-discount-connector:"^5.2.0" --update-with-dependencies
-composer require spryker/product-image:"^3.14.0" --update-with-dependencies
-composer require spryker/product-label:"^3.6.0" --update-with-dependencies
-composer require spryker/product-label-gui:"^3.4.0" --update-with-dependencies
-composer require spryker/product-label-storage:"^2.7.0" --update-with-dependencies
-composer require spryker/product-list-gui:"^2.3.0" --update-with-dependencies
-composer require spryker/product-management:"^0.19.34" --update-with-dependencies
-composer require spryker/product-merchant-portal-gui:"^3.1.0" --update-with-dependencies
-composer require spryker/product-new:"^1.5.0" --update-with-dependencies
-composer require spryker/product-offer-gui:"^1.4.0" --update-with-dependencies
-composer require spryker/product-offer-merchant-portal-gui:"^2.1.0" --update-with-dependencies
-composer require spryker/product-option:"^8.14.0" --update-with-dependencies
-composer require spryker/product-option-storage:"^1.14.0" --update-with-dependencies
-composer require spryker/product-options-rest-api:"^1.3.0" --update-with-dependencies
-composer require spryker/product-packaging-unit:"^4.7.0" --update-with-dependencies
+composer require spryker/oms:"^11.26.0" --update-with-dependencies
 composer require spryker/product-page-search:"^3.30.0" --update-with-dependencies
-composer require spryker/product-prices-rest-api:"^1.7.0" --update-with-dependencies
-composer require spryker/product-relation:"^3.3.0" --update-with-dependencies
-composer require spryker/product-relation-gui:"^1.4.0" --update-with-dependencies
-composer require spryker/product-review:"^2.11.0" --update-with-dependencies
-composer require spryker/product-review-gui:"^1.6.0" --update-with-dependencies
-composer require spryker/product-review-search:"^1.8.0" --update-with-dependencies
-composer require spryker/product-search:"^5.18.0" --update-with-dependencies
-composer require spryker/product-set:"^1.7.0" --update-with-dependencies
-composer require spryker/product-set-gui:"^2.7.0" --update-with-dependencies
-composer require spryker/product-set-page-search:"^1.8.0" --update-with-dependencies
-composer require spryker/product-storage:"^1.37.0" --update-with-dependencies
 composer require spryker/propel:"^3.37.0" --update-with-dependencies
-composer require spryker/quick-order:"^3.1.0" --update-with-dependencies
 composer require spryker/quote:"^2.18.0" --update-with-dependencies
-composer require spryker/quote-extension:"^1.8.0" --update-with-dependencies
-composer require spryker/quote-request-data-import:"^0.2.1" --update-with-dependencies
-composer require spryker/quote-requests-rest-api:"^0.1.6" --update-with-dependencies
-composer require spryker/rest-request-validator:"^1.5.0" --update-with-dependencies
-composer require spryker/sales:"^11.37.0" --update-with-dependencies
-composer require spryker/sales-data-export:"^0.2.1" --update-with-dependencies
-composer require spryker/sales-invoice:"^1.3.0" --update-with-dependencies
-composer require spryker/sales-merchant-portal-gui:"^2.1.0" --update-with-dependencies
-composer require spryker/sales-oms:"^0.1.2" --update-with-dependencies
-composer require spryker/sales-order-threshold:"^1.8.0" --update-with-dependencies
-composer require spryker/sales-order-threshold-data-import:"^0.1.4" --update-with-dependencies
-composer require spryker/sales-order-threshold-gui:"^1.9.0" --update-with-dependencies
-composer require spryker/sales-return:"^1.5.0" --update-with-dependencies
-composer require spryker/sales-return-gui:"^1.6.0" --update-with-dependencies
-composer require spryker/sales-return-search:"^1.1.0" --update-with-dependencies
 composer require spryker/scheduler:"^1.3.0" --update-with-dependencies
 composer require spryker/scheduler-jenkins:"^1.3.0" --update-with-dependencies
 composer require spryker/search:"^8.20.0" --update-with-dependencies
 composer require spryker/search-elasticsearch:"^1.15.0" --update-with-dependencies
-composer require spryker/search-extension:"^1.2.0" --update-with-dependencies
-composer require spryker/shipment:"^8.11.0" --update-with-dependencies
-composer require spryker/shipment-data-import:"^1.2.0" --update-with-dependencies
-composer require spryker/shopping-list-data-import:"^0.2.1" --update-with-dependencies
-composer require spryker/stock-address:"^1.1.0" --update-with-dependencies
-composer require spryker/stock-address-data-import:"^0.1.1" --update-with-dependencies
 composer require spryker/storage:"^3.20.0" --update-with-dependencies
-composer require spryker/store:"^1.18.0" --update-with-dependencies
+composer require spryker/store:"^1.19.0" --update-with-dependencies
 composer require spryker/store-gui:"^1.2.0" --update-with-dependencies
-composer require spryker/stores-rest-api:"^1.1.0" --update-with-dependencies
-composer require spryker/synchronization:"^1.16.0" --update-with-dependencies
-composer require spryker/tax:"^5.13.0" --update-with-dependencies
-composer require spryker/tax-product-connector:"^4.7.0" --update-with-dependencies
-composer require spryker/testify:"^3.48.0" --update-with-dependencies
-composer require spryker/touch:"^4.6.0" --update-with-dependencies
-composer require spryker/translator:"^1.11.0" --update-with-dependencies
-composer require spryker/url:"^3.11.0" --update-with-dependencies
-composer require spryker/url-collector:"^1.3.0" --update-with-dependencies
-composer require spryker/url-storage:"^1.16.0" --update-with-dependencies
-composer require spryker/user-locale:"^1.3.0" --update-with-dependencies
-composer require spryker/user-locale-gui:"^1.1.0" --update-with-dependencies
-composer require spryker/user-merchant-portal-gui:"^2.1.0" --update-with-dependencies
-composer require spryker/util-date-time:"^1.3.0" --update-with-dependencies
 composer require spryker/zed-request:"^3.19.0" --update-with-dependencies
-composer require spryker/zed-request-extension:"^1.1.0" --update-with-dependencies
-composer require spryker-shop/customer-page:"^2.41.0" --update-with-dependencies
-composer require spryker-shop/shop-ui:"^1.67.0" --update-with-dependencies
 composer require spryker/synchronization-behavior:"^1.10.0" --update-with-dependencies
-composer require spryker/agent:"^1.5.2" --update-with-dependencies
-composer require spryker/asset-storage:"^1.2.1" --update-with-dependencies
-composer require spryker/auth-rest-api:"^2.14.2" --update-with-dependencies
-composer require spryker/availability-storage:"^2.7.1" --update-with-dependencies
-composer require spryker/business-on-behalf:"^1.1.3" --update-with-dependencies
-composer require spryker/calculation:"^4.12.1" --update-with-dependencies
-composer require spryker/cart:"^7.11.1" --update-with-dependencies
-composer require spryker/cart-codes-rest-api:"^1.4.1" --update-with-dependencies
-composer require spryker/carts-rest-api:"^5.22.1" --update-with-dependencies
-composer require spryker/category-image-storage:"^1.6.1" --update-with-dependencies
-composer require spryker/category-navigation-connector:"^1.0.3" --update-with-dependencies
-composer require spryker/category-page-search:"^2.2.1" --update-with-dependencies
-composer require spryker/checkout:"^6.4.3" --update-with-dependencies
-composer require spryker/cms-slot-block:"^1.1.1" --update-with-dependencies
-composer require spryker/cms-slot-storage:"^1.2.1" --update-with-dependencies
-composer require spryker/comment:"^1.2.2" --update-with-dependencies
-composer require spryker/company:"^1.5.2" --update-with-dependencies
-composer require spryker/company-business-unit:"^2.14.3" --update-with-dependencies
-composer require spryker/company-business-unit-gui:"^2.10.1" --update-with-dependencies
-composer require spryker/company-business-unit-sales-connector:"^1.1.1" --update-with-dependencies
-composer require spryker/company-role:"^1.7.2" --update-with-dependencies
-composer require spryker/company-sales-connector:"^1.1.1" --update-with-dependencies
-composer require spryker/company-user:"^2.15.2" --update-with-dependencies
-composer require spryker/company-user-invitation:"^1.3.2" --update-with-dependencies
-composer require spryker/company-user-storage:"^1.5.1" --update-with-dependencies
-composer require spryker/company-users-rest-api:"^2.5.1" --update-with-dependencies
-composer require spryker/configurable-bundle-note:"^1.0.1" --update-with-dependencies
-composer require spryker/configurable-bundle-page-search:"^1.4.1" --update-with-dependencies
-composer require spryker/customer-access-storage:"^1.7.1" --update-with-dependencies
-composer require spryker/customer-note:"^1.1.1" --update-with-dependencies
-composer require spryker/customer-user-connector:"^1.0.4" --update-with-dependencies
-composer require spryker/development:"^3.34.4" --update-with-dependencies
-composer require spryker/gift-card:"^1.8.1" --update-with-dependencies
-composer require spryker/glossary-storage:"^1.11.1" --update-with-dependencies
-composer require spryker/gui:"^3.47.2" --update-with-dependencies
-composer require spryker/merchant-oms:"^1.0.3" --update-with-dependencies
-composer require spryker/merchant-opening-hours-storage:"^1.0.2" --update-with-dependencies
-composer require spryker/merchant-product-offer-search:"^1.4.1" --update-with-dependencies
-composer require spryker/merchant-product-offer-storage:"^2.0.1" --update-with-dependencies
-composer require spryker/merchant-product-offer-wishlist:"^1.2.1" --update-with-dependencies
-composer require spryker/merchant-product-offer-wishlist-rest-api:"^1.1.1" --update-with-dependencies
-composer require spryker/merchant-product-search:"^1.2.1" --update-with-dependencies
-composer require spryker/merchant-sales-order:"^1.1.2" --update-with-dependencies
-composer require spryker/merchant-sales-return:"^1.0.1" --update-with-dependencies
-composer require spryker/merchant-search:"^1.0.1" --update-with-dependencies
-composer require spryker/merchant-storage:"^1.1.1" --update-with-dependencies
-composer require spryker/oauth:"^2.8.1" --update-with-dependencies
-composer require spryker/oauth-company-user:"^2.2.1" --update-with-dependencies
-composer require spryker/oauth-permission:"^1.3.1" --update-with-dependencies
-composer require spryker/oms-product-offer-reservation:"^1.0.2" --update-with-dependencies
-composer require spryker/order-custom-reference:"^1.0.1" --update-with-dependencies
-composer require spryker/payment:"^5.10.2" --update-with-dependencies
-composer require spryker/permission:"^1.5.4" --update-with-dependencies
-composer require spryker/price-product-merchant-relationship:"^1.9.1" --update-with-dependencies
-composer require spryker/price-product-offer-volume:"^1.0.3" --update-with-dependencies
-composer require spryker/price-product-schedule-gui:"^2.3.1" --update-with-dependencies
-composer require spryker/price-product-storage:"^4.9.1" --update-with-dependencies
-composer require spryker/product-alternative-storage:"^1.11.1" --update-with-dependencies
-composer require spryker/product-bundle-storage:"^1.1.1" --update-with-dependencies
-composer require spryker/product-category-search:"^1.1.1" --update-with-dependencies
-composer require spryker/product-configuration-wishlist:"^1.0.2" --update-with-dependencies
-composer require spryker/product-configuration-wishlists-rest-api:"^1.1.2" --update-with-dependencies
-composer require spryker/product-group-storage:"^1.4.1" --update-with-dependencies
-composer require spryker/product-image-cart-connector:"^1.2.4" --update-with-dependencies
-composer require spryker/product-label-collector:"^1.3.1" --update-with-dependencies
-composer require spryker/product-label-search:"^2.3.1" --update-with-dependencies
-composer require spryker/product-measurement-unit:"^5.3.2" --update-with-dependencies
-composer require spryker/product-offer:"^1.5.1" --update-with-dependencies
-composer require spryker/product-offer-availability:"^1.1.2" --update-with-dependencies
-composer require spryker/product-offer-availability-storage:"^1.0.2" --update-with-dependencies
-composer require spryker/product-offer-shopping-list:"^1.0.1" --update-with-dependencies
-composer require spryker/product-option-cart-connector:"^7.1.3" --update-with-dependencies
-composer require spryker/product-packaging-unit-storage:"^5.2.1" --update-with-dependencies
-composer require spryker/product-relation-storage:"^2.3.1" --update-with-dependencies
-composer require spryker/product-review-storage:"^1.5.1" --update-with-dependencies
-composer require spryker/quote-approval:"^1.6.2" --update-with-dependencies
-composer require spryker/quote-request:"^2.4.2" --update-with-dependencies
-composer require spryker/router:"^1.15.1" --update-with-dependencies
-composer require spryker/sales-configurable-bundle:"^1.5.2" --update-with-dependencies
-composer require spryker/sales-payment:"^1.3.1" --update-with-dependencies
-composer require spryker/sales-product-connector:"^1.8.2" --update-with-dependencies
-composer require spryker/shared-cart:"^1.19.1" --update-with-dependencies
-composer require spryker/shared-carts-rest-api:"^1.2.6" --update-with-dependencies
-composer require spryker/shipment-cart-connector:"^2.1.2" --update-with-dependencies
-composer require spryker/shipments-rest-api:"^1.6.2" --update-with-dependencies
-composer require spryker/shopping-list:"^4.10.1" --update-with-dependencies
-composer require spryker/shopping-list-note:"^1.2.1" --update-with-dependencies
-composer require spryker/shopping-list-product-option-connector:"^1.4.2" --update-with-dependencies
-composer require spryker/stock:"^8.5.1" --update-with-dependencies
-composer require spryker/stock-data-import:"^1.2.1" --update-with-dependencies
-composer require spryker/storage-database:"^1.2.1" --update-with-dependencies
-composer require spryker/tax-product-storage:"^1.3.1" --update-with-dependencies
-composer require spryker/tax-storage:"^1.4.1" --update-with-dependencies
-composer require spryker/twig:"^3.18.1" --update-with-dependencies
-composer require spryker/wishlist:"^8.7.2" --update-with-dependencies
-composer require spryker/wishlists-rest-api:"^1.6.2" --update-with-dependencies
-composer require spryker-shop/catalog-page:"^1.25.0" --update-with-dependencies
-composer require spryker-shop/checkout-page:"^3.24.0" --update-with-dependencies
-composer require spryker-shop/cms-page:"^1.8.0" --update-with-dependencies
-composer require spryker-shop/company-page:"^2.21.0" --update-with-dependencies
-composer require spryker-shop/configurable-bundle-widget:"^1.8.0" --update-with-dependencies
-composer require spryker-shop/customer-reorder-widget:"^6.14.0" --update-with-dependencies
-composer require spryker-shop/language-switcher-widget:"^1.5.0" --update-with-dependencies
-composer require spryker-shop/money-widget:"^1.7.0" --update-with-dependencies
-composer require spryker-shop/product-measurement-unit-widget:"^1.2.0" --update-with-dependencies
-composer require spryker-shop/product-new-page:"^1.4.0" --update-with-dependencies
-composer require spryker-shop/product-packaging-unit-widget:"^1.5.0" --update-with-dependencies
-composer require spryker-shop/product-search-widget:"^3.5.0" --update-with-dependencies
-composer require spryker-shop/quick-order-page:"^4.9.0" --update-with-dependencies
-composer require spryker-shop/shop-application:"^1.15.0" --update-with-dependencies
-composer require spryker-shop/shopping-list-page:"^1.9.0" --update-with-dependencies
 ```
+
+And list of modules to update in order for them to work with the new functionality:
+
+
+<details><summary markdown='span'>Click to expend table </summary>
+
+<!-- other-modules.md -->
+| MODULE                                                | VERSION                 |
+|-------------------------------------------------------|-------------------------|
+| spryker-eco/payone                                    | 4.5.0                   |
+| spryker/app-catalog-gui                               | 1.3.0                   |
+| spryker/category-gui                                  | 2.2.0                   |
+| spryker/category-image                                | 1.3.0                   |
+| spryker/category-storage                              | 2.6.0                   |
+| spryker/cms                                           | 7.13.0                  |
+| spryker/cms-block-storage                             | 2.5.0                   |
+| spryker/cms-page-data-import                          | 1.2.0                   |
+| spryker/cms-page-search                               | 2.6.0                   |
+| spryker/cms-storage                                   | 2.7.0                   |
+| spryker/gift-card-mail-connector                      | 1.2.0                   |
+| spryker/manual-order-entry-gui                        | 0.9.4                   |
+| spryker/merchant-data-import                          | 0.5.1                   |
+| spryker/multi-cart                                    | 1.10.0                  |
+| spryker/navigation-storage                            | 1.10.0                  |
+| spryker/offer-gui                                     | 0.3.10                  |
+| spryker/persistent-cart                               | 3.6.0                   |
+| spryker/price-product-schedule                        | 2.7.0                   |
+| spryker/product-bundle                                | 7.15.0                  |
+| spryker/product-category-filter-gui                   | 2.4.0                   |
+| spryker/product-label-gui                             | 3.4.0                   |
+| spryker/product-merchant-portal-gui                   | 3.4.0                   |
+| spryker/product-option                                | 8.15.0                  |
+| spryker/product-packaging-unit                        | 4.7.0                   |
+| spryker/product-relation                              | 3.3.0                   |
+| spryker/product-review-search                         | 1.8.0                   |
+| spryker/product-set-page-search                       | 1.8.0                   |
+| spryker/quote-extension                               | 1.8.0                   |
+| spryker/rest-request-validator                        | 1.5.0                   |
+| spryker/sales                                         | 11.38.0                 |
+| spryker/sales-data-export                             | 0.2.1                   |
+| spryker/sales-invoice                                 | 1.4.0                   |
+| spryker/sales-order-threshold-data-import             | 0.1.4                   |
+| spryker/sales-order-threshold-gui                     | 1.9.0                   |
+| spryker/stores-rest-api                               | 1.1.0                   |
+| spryker/synchronization                               | 1.16.0                  |
+| spryker/tax                                           | 5.14.0                  |
+| spryker/testify                                       | 3.48.0                  |
+| spryker/url-storage                                   | 1.16.0                  |
+| spryker/user-locale                                   | 1.3.0                   |
+| spryker/user-merchant-portal-gui                      | 2.4.0                   |
+| spryker/util-date-time                                | 1.4.0                   |
+| spryker-shop/catalog-page                             | 1.25.0                  |
+| spryker-shop/checkout-page                            | 3.24.0                  |
+| spryker-shop/cms-page                                 | 1.8.0                   |
+| spryker-shop/company-page                             | 2.21.0                  |
+| spryker-shop/configurable-bundle-widget               | 1.8.0                   |
+| spryker-shop/currency-widget                          | 1.6.0                   |
+| spryker-shop/customer-page                            | 2.41.0                  |
+| spryker-shop/customer-reorder-widget                  | 6.14.0                  |
+| spryker-shop/language-switcher-widget                 | 1.5.0                   |
+| spryker-shop/money-widget                             | 1.7.0                   |
+| spryker-shop/price-product-volume-widget              | 1.9.0                   |
+| spryker-shop/product-measurement-unit-widget          | 1.2.0                   |
+| spryker-shop/product-new-page                         | 1.4.0                   |
+| spryker-shop/product-packaging-unit-widget            | 1.6.0                   |
+| spryker-shop/product-search-widget                    | 3.5.0                   |
+| spryker-shop/quick-order-page                         | 4.9.0                   |
+| spryker-shop/shop-application                         | 1.15.0                  |
+| spryker-shop/shop-ui                                  | 1.68.0                  |
+| spryker-shop/shopping-list-page                       | 1.9.0                   |
+| spryker/price-product-schedule-gui                    | 2.3.1                   |
+| spryker/product-image-storage                         | 1.15.1                  |
+| spryker/sales-reclamation-gui                         | 1.7.1                   |
+</details>
+
 
 If you can’t install the required version, run the following command to see what else you need to update:
 
@@ -768,353 +366,59 @@ composer show spryker/*
 {% info_block warningBox "Verification" %}
 
 Make sure that the new modules have been installed:
-
-| MODULE                      | EXPECTED DIRECTORY                          |
-|-----------------------------|---------------------------------------------|
-| Country                     | vendor/spryker/country/                     |
-| CountryDataImport           | vendor/spryker/country-data-import/         |
-| CountryGui                  | vendor/spryker/country-gui/                 |
-| Currency                    | vendor/spryker/currency/                    |
-| CurrencyDataImport          | vendor/spryker/currency-data-import/        |
-| CurrencyGui                 | vendor/spryker/currency-gui/                |
-| Locale                      | vendor/spryker/locale/                      |
-| LocaleDataImport            | vendor/spryker/locale-data-import/          |
-| LocaleGui                   | vendor/spryker/locale-gui/                  |
-| ToreContextGui              | vendor/spryker/store-context-gui/           |
-| ToreDataImport              | vendor/spryker/store-data-import/           |
-| ToreExtension               | vendor/spryker/store-extension/             |
-| ToreGuiExtension            | vendor/spryker/store-gui-extension/         |
-| ToreStorage                 | vendor/spryker/store-storage/               |
-| Shop/storeWidget            | vendor/spryker-shop/store-widget/           |
-| Eco/payone                  | vendor/spryker-eco/payone/                  |
-| AbbitMq                     | vendor/spryker/rabbit-mq/                   |
-| AclEntityDataImport         | vendor/spryker/acl-entity-data-import/      |
-| AclMerchantPortal           | vendor/spryker/acl-merchant-portal/         |
-| Application                 | vendor/spryker/application/                 |
-| Availability                | vendor/spryker/availability/                |
-| AvailabilityGui             | vendor/spryker/availability-gui/            |
-| AvailabilityNotification    | vendor/spryker/availability-notification/   |
-| CartCurrencyConnector       | vendor/spryker/cart-currency-connector/     |
-| CatalogPriceProductConnector | vendor/spryker/catalog-price-product-connector/ |
-| CatalogSearchRestApi        | vendor/spryker/catalog-search-rest-api/     |
-| Category                    | vendor/spryker/category/                    |
-| CategoryDataFeed            | vendor/spryker/category-data-feed/          |
-| CategoryDiscountConnector   | vendor/spryker/category-discount-connector/ |
-| CategoryGui                 | vendor/spryker/category-gui/                |
-| CategoryImage               | vendor/spryker/category-image/              |
-| CategoryImageGui            | vendor/spryker/category-image-gui/          |
-| CategoryStorage             | vendor/spryker/category-storage/            |
-| Cms                         | vendor/spryker/cms/                         |
-| CmsBlock                    | vendor/spryker/cms-block/                   |
-| CmsBlockCategoryConnector   | vendor/spryker/cms-block-category-connector/ |
-| CmsBlockGui                 | vendor/spryker/cms-block-gui/               |
-| CmsBlockProductConnector    | vendor/spryker/cms-block-product-connector/ |
-| CmsBlockStorage             | vendor/spryker/cms-block-storage/           |
-| CmsGui                      | vendor/spryker/cms-gui/                     |
-| CmsPageSearch               | vendor/spryker/cms-page-search/             |
-| CmsSlotBlockCategoryGui     | vendor/spryker/cms-slot-block-category-gui/ |
-| CmsSlotBlockCmsGui          | vendor/spryker/cms-slot-block-cms-gui/      |
-| CmsSlotBlockProductCategoryConnector | vendor/spryker/cms-slot-block-product-category-connector/ |
-| CmsSlotBlockProductCategoryGui | vendor/spryker/cms-slot-block-product-category-gui/ |
-| CmsSlotLocaleConnector      | vendor/spryker/cms-slot-locale-connector/   |
-| CmsStorage                  | vendor/spryker/cms-storage/                 |
-| Collector                   | vendor/spryker/collector/                   |
-| CommentDataImport           | vendor/spryker/comment-data-import/         |
-| CompanyBusinessUnitDataImport | vendor/spryker/company-business-unit-data-import/ |
-| CompanyRoleDataImport       | vendor/spryker/company-role-data-import/    |
-| CompanySupplierDataImport   | vendor/spryker/company-supplier-data-import/ |
-| CompanySupplierGui          | vendor/spryker/company-supplier-gui/        |
-| CompanyUnitAddress          | vendor/spryker/company-unit-address/        |
-| CompanyUnitAddressDataImport | vendor/spryker/company-unit-address-data-import/ |
-| CompanyUnitAddressGui       | vendor/spryker/company-unit-address-gui/    |
-| CompanyUserDataImport       | vendor/spryker/company-user-data-import/    |
-| Config                      | vendor/spryker/config/                      |
-| ConfigurableBundle          | vendor/spryker/configurable-bundle/         |
-| ConfigurableBundleCartsRestApi | vendor/spryker/configurable-bundle-carts-rest-api/ |
-| ConfigurableBundleDataImport | vendor/spryker/configurable-bundle-data-import/ |
-| ConfigurableBundleGui       | vendor/spryker/configurable-bundle-gui/     |
-| ConfigurableBundleStorage   | vendor/spryker/configurable-bundle-storage/ |
-| Console                     | vendor/spryker/console/                     |
-| Content                     | vendor/spryker/content/                     |
-| ContentFileGui              | vendor/spryker/content-file-gui/            |
-| ContentGui                  | vendor/spryker/content-gui/                 |
-| ContentProductGui           | vendor/spryker/content-product-gui/         |
-| ContentProductSetGui        | vendor/spryker/content-product-set-gui/     |
-| ContentStorage              | vendor/spryker/content-storage/             |
-| Customer                    | vendor/spryker/customer/                    |
-| CustomerApi                 | vendor/spryker/customer-api/                |
-| DataImport                  | vendor/spryker/data-import/                 |
-| Dataset                     | vendor/spryker/dataset/                     |
-| Discount                    | vendor/spryker/discount/                    |
-| FileManager                 | vendor/spryker/file-manager/                |
-| FileManagerGui              | vendor/spryker/file-manager-gui/            |
-| FileManagerStorage          | vendor/spryker/file-manager-storage/        |
-| GiftCardMailConnector       | vendor/spryker/gift-card-mail-connector/    |
-| Glossary                    | vendor/spryker/glossary/                    |
-| Http                        | vendor/spryker/http/                        |
-| Nel                         | vendor/spryker/kernel/                      |
-| Log                         | vendor/spryker/log/                         |
-| Mail                        | vendor/spryker/mail/                        |
-| ManualOrderEntryGui         | vendor/spryker/manual-order-entry-gui/      |
-| MerchantGui                 | vendor/spryker/merchant-gui/                |
-| MerchantProduct             | vendor/spryker/merchant-product/            |
-| MerchantProductStorage      | vendor/spryker/merchant-product-storage/    |
-| MerchantProfile             | vendor/spryker/merchant-profile/            |
-| MerchantProfileDataImport   | vendor/spryker/merchant-profile-data-import/ |
-| MerchantProfileGui          | vendor/spryker/merchant-profile-gui/        |
-| MerchantProfileMerchantPortalGui | vendor/spryker/merchant-profile-merchant-portal-gui/ |
-| MerchantRelationshipSalesOrderThreshold | vendor/spryker/merchant-relationship-sales-order-threshold/ |
-| MerchantRelationshipSalesOrderThresholdDataImport | vendor/spryker/merchant-relationship-sales-order-threshold-data-import/ |
-| MerchantRelationshipSalesOrderThresholdGui | vendor/spryker/merchant-relationship-sales-order-threshold-gui/ |
-| MerchantSalesOrderDataExport | vendor/spryker/merchant-sales-order-data-export/ |
-| MerchantSwitcher            | vendor/spryker/merchant-switcher/           |
-| Money                       | vendor/spryker/money/                       |
-| Monitoring                  | vendor/spryker/monitoring/                  |
-| MultiCart                   | vendor/spryker/multi-cart/                  |
-| MultiCartDataImport         | vendor/spryker/multi-cart-data-import/      |
-| Navigation                  | vendor/spryker/navigation/                  |
-| NavigationGui               | vendor/spryker/navigation-gui/              |
-| NavigationStorage           | vendor/spryker/navigation-storage/          |
-| OfferGui                    | vendor/spryker/offer-gui/                   |
-| Oms                         | vendor/spryker/oms/                         |
-| IstentCart                  | vendor/spryker/persistent-cart/             |
-| IceCartConnector            | vendor/spryker/price-cart-connector/        |
-| IceProduct                  | vendor/spryker/price-product/               |
-| IceProductDataImport        | vendor/spryker/price-product-data-import/   |
-| IceProductMerchantRelationshipDataImport | vendor/spryker/price-product-merchant-relationship-data-import/ |
-| IceProductMerchantRelationshipStorage | vendor/spryker/price-product-merchant-relationship-storage/ |
-| IceProductOffer             | vendor/spryker/price-product-offer/         |
-| IceProductOfferDataImport   | vendor/spryker/price-product-offer-data-import/ |
-| IceProductOfferGui          | vendor/spryker/price-product-offer-gui/     |
-| IceProductOfferStorage      | vendor/spryker/price-product-offer-storage/ |
-| IceProductSchedule          | vendor/spryker/price-product-schedule/      |
-| IceProductScheduleDataImport | vendor/spryker/price-product-schedule-data-import/ |
-| IceProductVolume            | vendor/spryker/price-product-volume/        |
-| IceProductVolumeGui         | vendor/spryker/price-product-volume-gui/    |
-| Oduct                       | vendor/spryker/product/                     |
-| OductAbstractDataFeed       | vendor/spryker/product-abstract-data-feed/  |
-| OductAlternative            | vendor/spryker/product-alternative/         |
-| OductAlternativeProductLabelConnector | vendor/spryker/product-alternative-product-label-connector/ |
-| OductAttribute              | vendor/spryker/product-attribute/           |
-| OductAttributeGui           | vendor/spryker/product-attribute-gui/       |
-| OductBarcodeGui             | vendor/spryker/product-barcode-gui/         |
-| OductBundle                 | vendor/spryker/product-bundle/              |
-| OductCartConnector          | vendor/spryker/product-cart-connector/      |
-| OductCategory               | vendor/spryker/product-category/            |
-| OductCategoryFilterGui      | vendor/spryker/product-category-filter-gui/ |
-| OductCategoryStorage        | vendor/spryker/product-category-storage/    |
-| OductConfiguration          | vendor/spryker/product-configuration/       |
-| OductConfigurationStorage   | vendor/spryker/product-configuration-storage/ |
-| OductCustomerPermission     | vendor/spryker/product-customer-permission/ |
-| OductDiscontinued           | vendor/spryker/product-discontinued/        |
-| OductDiscontinuedGui        | vendor/spryker/product-discontinued-gui/    |
-| OductDiscontinuedProductLabelConnector | vendor/spryker/product-discontinued-product-label-connector/ |
-| OductDiscontinuedStorage    | vendor/spryker/product-discontinued-storage/ |
-| OductDiscountConnector      | vendor/spryker/product-discount-connector/  |
-| OductImage                  | vendor/spryker/product-image/               |
-| OductLabel                  | vendor/spryker/product-label/               |
-| OductLabelGui               | vendor/spryker/product-label-gui/           |
-| OductLabelStorage           | vendor/spryker/product-label-storage/       |
-| OductListGui                | vendor/spryker/product-list-gui/            |
-| OductManagement             | vendor/spryker/product-management/          |
-| OductMerchantPortalGui      | vendor/spryker/product-merchant-portal-gui/ |
-| OductNew                    | vendor/spryker/product-new/                 |
-| OductOfferGui               | vendor/spryker/product-offer-gui/           |
-| OductOfferMerchantPortalGui | vendor/spryker/product-offer-merchant-portal-gui/ |
-| OductOption                 | vendor/spryker/product-option/              |
-| OductOptionStorage          | vendor/spryker/product-option-storage/      |
-| OductOptionsRestApi         | vendor/spryker/product-options-rest-api/    |
-| OductPackagingUnit          | vendor/spryker/product-packaging-unit/      |
-| OductPageSearch             | vendor/spryker/product-page-search/         |
-| OductPricesRestApi          | vendor/spryker/product-prices-rest-api/     |
-| OductRelation               | vendor/spryker/product-relation/            |
-| OductRelationGui            | vendor/spryker/product-relation-gui/        |
-| OductReview                 | vendor/spryker/product-review/              |
-| OductReviewGui              | vendor/spryker/product-review-gui/          |
-| OductReviewSearch           | vendor/spryker/product-review-search/       |
-| OductSearch                 | vendor/spryker/product-search/              |
-| OductSet                    | vendor/spryker/product-set/                 |
-| OductSetGui                 | vendor/spryker/product-set-gui/             |
-| OductSetPageSearch          | vendor/spryker/product-set-page-search/     |
-| OductStorage                | vendor/spryker/product-storage/             |
-| Opel                        | vendor/spryker/propel/                      |
-| QuickOrder                  | vendor/spryker/quick-order/                 |
-| Quote                       | vendor/spryker/quote/                       |
-| QuoteExtension              | vendor/spryker/quote-extension/             |
-| QuoteRequestDataImport      | vendor/spryker/quote-request-data-import/   |
-| QuoteRequestsRestApi        | vendor/spryker/quote-requests-rest-api/     |
-| TRequestValidator           | vendor/spryker/rest-request-validator/      |
-| Ales                        | vendor/spryker/sales/                       |
-| AlesDataExport              | vendor/spryker/sales-data-export/           |
-| AlesInvoice                 | vendor/spryker/sales-invoice/               |
-| AlesMerchantPortalGui       | vendor/spryker/sales-merchant-portal-gui/   |
-| AlesOms                     | vendor/spryker/sales-oms/                   |
-| AlesOrderThreshold          | vendor/spryker/sales-order-threshold/       |
-| AlesOrderThresholdDataImport | vendor/spryker/sales-order-threshold-data-import/ |
-| AlesOrderThresholdGui       | vendor/spryker/sales-order-threshold-gui/   |
-| AlesReturn                  | vendor/spryker/sales-return/                |
-| AlesReturnGui               | vendor/spryker/sales-return-gui/            |
-| AlesReturnSearch            | vendor/spryker/sales-return-search/         |
-| Cheduler                    | vendor/spryker/scheduler/                   |
-| ChedulerJenkins             | vendor/spryker/scheduler-jenkins/           |
-| Arch                        | vendor/spryker/search/                      |
-| ArchElasticsearch           | vendor/spryker/search-elasticsearch/        |
-| ArchExtension               | vendor/spryker/search-extension/            |
-| Hipment                     | vendor/spryker/shipment/                    |
-| HipmentDataImport           | vendor/spryker/shipment-data-import/        |
-| HoppingListDataImport       | vendor/spryker/shopping-list-data-import/   |
-| TockAddress                 | vendor/spryker/stock-address/               |
-| TockAddressDataImport       | vendor/spryker/stock-address-data-import/   |
-| Torage                      | vendor/spryker/storage/                     |
-| Tore                        | vendor/spryker/store/                       |
-| ToreGui                     | vendor/spryker/store-gui/                   |
-| ToresRestApi                | vendor/spryker/stores-rest-api/             |
-| Nchronization               | vendor/spryker/synchronization/             |
-| Tax                         | vendor/spryker/tax/                         |
-| TaxProductConnector         | vendor/spryker/tax-product-connector/       |
-| Testify                     | vendor/spryker/testify/                     |
-| Touch                       | vendor/spryker/touch/                       |
-| Translator                  | vendor/spryker/translator/                  |
-| Url                         | vendor/spryker/url/                         |
-| UrlCollector                | vendor/spryker/url-collector/               |
-| UrlStorage                  | vendor/spryker/url-storage/                 |
-| UserLocale                  | vendor/spryker/user-locale/                 |
-| UserLocaleGui               | vendor/spryker/user-locale-gui/             |
-| UserMerchantPortalGui       | vendor/spryker/user-merchant-portal-gui/    |
-| UtilDateTime                | vendor/spryker/util-date-time/              |
-| ZedRequest                  | vendor/spryker/zed-request/                 |
-| ZedRequestExtension         | vendor/spryker/zed-request-extension/       |
-| Shop/customerPage           | vendor/spryker-shop/customer-page/          |
-| Shop/shopUi                 | vendor/spryker-shop/shop-ui/                |
-| NchronizationBehavior       | vendor/spryker/synchronization-behavior/    |
-| Agent                       | vendor/spryker/agent/                       |
-| AssetStorage                | vendor/spryker/asset-storage/               |
-| AuthRestApi                 | vendor/spryker/auth-rest-api/               |
-| AvailabilityStorage         | vendor/spryker/availability-storage/        |
-| BusinessOnBehalf            | vendor/spryker/business-on-behalf/          |
-| Calculation                 | vendor/spryker/calculation/                 |
-| Cart                        | vendor/spryker/cart/                        |
-| CartCodesRestApi            | vendor/spryker/cart-codes-rest-api/         |
-| CartsRestApi                | vendor/spryker/carts-rest-api/              |
-| CategoryImageStorage        | vendor/spryker/category-image-storage/      |
-| CategoryNavigationConnector | vendor/spryker/category-navigation-connector/ |
-| CategoryPageSearch          | vendor/spryker/category-page-search/        |
-| Checkout                    | vendor/spryker/checkout/                    |
-| CmsSlotBlock                | vendor/spryker/cms-slot-block/              |
-| CmsSlotStorage              | vendor/spryker/cms-slot-storage/            |
-| Comment                     | vendor/spryker/comment/                     |
-| Company                     | vendor/spryker/company/                     |
-| CompanyBusinessUnit         | vendor/spryker/company-business-unit/       |
-| CompanyBusinessUnitGui      | vendor/spryker/company-business-unit-gui/   |
-| CompanyBusinessUnitSalesConnector | vendor/spryker/company-business-unit-sales-connector/ |
-| CompanyRole                 | vendor/spryker/company-role/                |
-| CompanySalesConnector       | vendor/spryker/company-sales-connector/     |
-| CompanyUser                 | vendor/spryker/company-user/                |
-| CompanyUserInvitation       | vendor/spryker/company-user-invitation/     |
-| CompanyUserStorage          | vendor/spryker/company-user-storage/        |
-| CompanyUsersRestApi         | vendor/spryker/company-users-rest-api/      |
-| ConfigurableBundleNote      | vendor/spryker/configurable-bundle-note/    |
-| ConfigurableBundlePageSearch | vendor/spryker/configurable-bundle-page-search/ |
-| CustomerAccessStorage       | vendor/spryker/customer-access-storage/     |
-| CustomerNote                | vendor/spryker/customer-note/               |
-| CustomerUserConnector       | vendor/spryker/customer-user-connector/     |
-| Development                 | vendor/spryker/development/                 |
-| GiftCard                    | vendor/spryker/gift-card/                   |
-| GlossaryStorage             | vendor/spryker/glossary-storage/            |
-| Gui                         | vendor/spryker/gui/                         |
-| MerchantOms                 | vendor/spryker/merchant-oms/                |
-| MerchantOpeningHoursStorage | vendor/spryker/merchant-opening-hours-storage/ |
-| MerchantProductOfferSearch  | vendor/spryker/merchant-product-offer-search/ |
-| MerchantProductOfferStorage | vendor/spryker/merchant-product-offer-storage/ |
-| MerchantProductOfferWishlist | vendor/spryker/merchant-product-offer-wishlist/ |
-| MerchantProductOfferWishlistRestApi | vendor/spryker/merchant-product-offer-wishlist-rest-api/ |
-| MerchantProductSearch       | vendor/spryker/merchant-product-search/     |
-| MerchantSalesOrder          | vendor/spryker/merchant-sales-order/        |
-| MerchantSalesReturn         | vendor/spryker/merchant-sales-return/       |
-| MerchantSearch              | vendor/spryker/merchant-search/             |
-| MerchantStorage             | vendor/spryker/merchant-storage/            |
-| Oauth                       | vendor/spryker/oauth/                       |
-| OauthCompanyUser            | vendor/spryker/oauth-company-user/          |
-| OauthPermission             | vendor/spryker/oauth-permission/            |
-| OmsProductOfferReservation  | vendor/spryker/oms-product-offer-reservation/ |
-| OrderCustomReference        | vendor/spryker/order-custom-reference/      |
-| Ayment                      | vendor/spryker/payment/                     |
-| Mission                     | vendor/spryker/permission/                  |
-| IceProductMerchantRelationship | vendor/spryker/price-product-merchant-relationship/ |
-| IceProductOfferVolume       | vendor/spryker/price-product-offer-volume/  |
-| IceProductScheduleGui       | vendor/spryker/price-product-schedule-gui/  |
-| IceProductStorage           | vendor/spryker/price-product-storage/       |
-| OductAlternativeStorage     | vendor/spryker/product-alternative-storage/ |
-| OductBundleStorage          | vendor/spryker/product-bundle-storage/      |
-| OductCategorySearch         | vendor/spryker/product-category-search/     |
-| OductConfigurationWishlist  | vendor/spryker/product-configuration-wishlist/ |
-| OductConfigurationWishlistsRestApi | vendor/spryker/product-configuration-wishlists-rest-api/ |
-| OductGroupStorage           | vendor/spryker/product-group-storage/       |
-| OductImageCartConnector     | vendor/spryker/product-image-cart-connector/ |
-| OductLabelCollector         | vendor/spryker/product-label-collector/     |
-| OductLabelSearch            | vendor/spryker/product-label-search/        |
-| OductMeasurementUnit        | vendor/spryker/product-measurement-unit/    |
-| OductOffer                  | vendor/spryker/product-offer/               |
-| OductOfferAvailability      | vendor/spryker/product-offer-availability/  |
-| OductOfferAvailabilityStorage | vendor/spryker/product-offer-availability-storage/ |
-| OductOfferShoppingList      | vendor/spryker/product-offer-shopping-list/ |
-| OductOptionCartConnector    | vendor/spryker/product-option-cart-connector/ |
-| OductPackagingUnitStorage   | vendor/spryker/product-packaging-unit-storage/ |
-| OductRelationStorage        | vendor/spryker/product-relation-storage/    |
-| OductReviewStorage          | vendor/spryker/product-review-storage/      |
-| QuoteApproval               | vendor/spryker/quote-approval/              |
-| QuoteRequest                | vendor/spryker/quote-request/               |
-| Outer                       | vendor/spryker/router/                      |
-| AlesConfigurableBundle      | vendor/spryker/sales-configurable-bundle/   |
-| AlesPayment                 | vendor/spryker/sales-payment/               |
-| AlesProductConnector        | vendor/spryker/sales-product-connector/     |
-| HaredCart                   | vendor/spryker/shared-cart/                 |
-| HaredCartsRestApi           | vendor/spryker/shared-carts-rest-api/       |
-| HipmentCartConnector        | vendor/spryker/shipment-cart-connector/     |
-| HipmentsRestApi             | vendor/spryker/shipments-rest-api/          |
-| HoppingList                 | vendor/spryker/shopping-list/               |
-| HoppingListNote             | vendor/spryker/shopping-list-note/          |
-| HoppingListProductOptionConnector | vendor/spryker/shopping-list-product-option-connector/ |
-| Tock                        | vendor/spryker/stock/                       |
-| TockDataImport              | vendor/spryker/stock-data-import/           |
-| TorageDatabase              | vendor/spryker/storage-database/            |
-| TaxProductStorage           | vendor/spryker/tax-product-storage/         |
-| TaxStorage                  | vendor/spryker/tax-storage/                 |
-| Twig                        | vendor/spryker/twig/                        |
-| Wishlist                    | vendor/spryker/wishlist/                    |
-| WishlistsRestApi            | vendor/spryker/wishlists-rest-api/          |
-|-----------------------------|---------------------------------------------|
+| MODULE                                        | EXPECTED DIRECTORY                                   |
+|-----------------------------------------------|------------------------------------------------------|
+| spryker/country-data-import                   | vendor/spryker/country-data-import                   |
+| spryker/country-gui                           | vendor/spryker/country-gui                           |
+| spryker/currency-data-import                  | vendor/spryker/currency-data-import                  |
+| spryker/currency-gui                          | vendor/spryker/currency-gui                          |
+| spryker/locale-data-import                    | vendor/spryker/locale-data-import                    |
+| spryker/locale-gui                            | vendor/spryker/locale-gui                            |
+| spryker/product-category-filter-gui-extension | vendor/spryker/product-category-filter-gui-extension |
+| spryker/store-context-gui                     | vendor/spryker/store-context-gui                     |
+| spryker/store-data-import                     | vendor/spryker/store-data-import                     |
+| spryker/store-extension                       | vendor/spryker/store-extension                       |
+| spryker/store-gui-extension                   | vendor/spryker/store-gui-extension                   |
+| spryker/store-storage                         | vendor/spryker/store-storage                         |
+| spryker-shop/store-widget                     | vendor/spryker-shop/store-widget                     |
 
 {% endinfo_block %}
 
 
 
-{% info_block warningBox "Verification Spryker-Shop modules" %}
+Also you can use script to check all modules and if needed update them:
 
-Make sure that the new modules have been installed or updated in the following directories:
+```bash 
+#!/bin/bash
 
-| MODULE                      | EXPECTED DIRECTORY                          |
-|-----------------------------|---------------------------------------------|
-| CatalogPage                 | vendor/spryker-shop/catalog-page/           |
-| CheckoutPage                | vendor/spryker-shop/checkout-page/          |
-| CmsPage                     | vendor/spryker-shop/cms-page/               |
-| CompanyPage                 | vendor/spryker-shop/company-page/           |
-| ConfigurableBundleWidget    | vendor/spryker-shop/configurable-bundle-widget/ |
-| CustomerPage                | vendor/spryker-shop/customer-page/          |
-| CustomerReorderWidget       | vendor/spryker-shop/customer-reorder-widget/ |
-| LanguageSwitcherWidget      | vendor/spryker-shop/language-switcher-widget/ |
-| MoneyWidget                 | vendor/spryker-shop/money-widget/           |
-| ProductMeasurementUnitWidget | vendor/spryker-shop/product-measurement-unit-widget/ |
-| ProductNewPage              | vendor/spryker-shop/product-new-page/       |
-| ProductPackagingUnitWidget  | vendor/spryker-shop/product-packaging-unit-widget/ |
-| ProductSearchWidget         | vendor/spryker-shop/product-search-widget/  |
-| QuickOrderPage              | vendor/spryker-shop/quick-order-page/       |
-| ShopApplication             | vendor/spryker-shop/shop-application/       |
-| ShopUi                      | vendor/spryker-shop/shop-ui/                |
-| ShoppingListPage            | vendor/spryker-shop/shopping-list-page/     |
-| StoreWidget                 | vendor/spryker-shop/store-widget/           |
+PACKAGES=(
+    "package1:1.2.3"
+    "package2:4.5.6"
+    "package3:7.8.9"
+)
 
-{% endinfo_block %}
+for pkg in "${PACKAGES[@]}"; do
+    PACKAGE=$(echo $pkg | cut -d':' -f1)
+    VERSION=$(echo $pkg | cut -d':' -f2)
+
+    # Check if package is installed
+    if ! composer show -q $PACKAGE &>/dev/null; then
+        echo "$PACKAGE not found. Skipping..."
+        composer require $PACKAGE:$VERSION
+    else
+        # Get the latest version of the package
+        LATEST_VERSION=$(composer show -i $PACKAGE | grep versions | cut -d' ' -f4 | tr -d '[],"')
+
+        # Check if package is up to date
+        if [ "$VERSION" != "$LATEST_VERSION" ]; then
+            echo "$PACKAGE needs to be updated from $LATEST_VERSION to $VERSION"
+            composer update $PACKAGE:$VERSION
+        else
+            echo "$PACKAGE is up to date"
+        fi
+    fi
+done
+```
 
 ### Set up database schema and transfer objects
 

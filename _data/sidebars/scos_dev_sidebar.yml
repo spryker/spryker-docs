@@ -54,6 +54,8 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html
       - title: Configuring
         nested:
+        - title: Configuring Spryker after installing with Docker
+          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html
         - title: Setting up a self-signed SSL certificate
           url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
         - title: Adjusting Jenkins for a Docker environment

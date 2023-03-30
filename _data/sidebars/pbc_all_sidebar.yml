@@ -1857,6 +1857,8 @@ entries:
               - title: "HowTo: Set number of days for a return policy"
                 url: /docs/pbc/all/return-management/base-shop/howto-set-number-of-days-for-a-return-policy.html
           - title: Marketplace
+            include_versions:
+            - "202212.0"
             nested:
               - title: Marketplace Return Management feature overview
                 url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-overview.html
@@ -1877,7 +1879,7 @@ entries:
               - title: "Glue API: Manage returns"
                 url: /docs/pbc/all/return-management/marketplace/glue-api-manage-returns.html
               - title: "Domain model and relationships"
-                url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-domain-model-and-relationships.html                                
+                url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-domain-model-and-relationships.html
       - title: Search
         url: /docs/pbc/all/search/search.html
         include_versions:

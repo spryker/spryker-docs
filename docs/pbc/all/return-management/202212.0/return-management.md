@@ -1,6 +1,6 @@
 ---
 title: Return Management
-description:
+description: The Return Management capability lets you and merchants process returns
 last_updated: Apr 3, 2023
 template: concept-topic-template
 ---

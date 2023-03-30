@@ -385,40 +385,12 @@ Make sure that the new modules have been installed:
 {% endinfo_block %}
 
 
+{% info_block infoBox "Note" %}
 
-Also you can use script to check all modules and if needed update them:
+More details about the updated modules can be found at the [link](https://api.release.spryker.com/release-group/0000). <!-- Update link after release-->
 
-```bash 
-#!/bin/bash
+{% endinfo_block %}
 
-PACKAGES=(
-    "package1:1.2.3"
-    "package2:4.5.6"
-    "package3:7.8.9"
-)
-
-for pkg in "${PACKAGES[@]}"; do
-    PACKAGE=$(echo $pkg | cut -d':' -f1)
-    VERSION=$(echo $pkg | cut -d':' -f2)
-
-    # Check if package is installed
-    if ! composer show -q $PACKAGE &>/dev/null; then
-        echo "$PACKAGE not found. Skipping..."
-        composer require $PACKAGE:$VERSION
-    else
-        # Get the latest version of the package
-        LATEST_VERSION=$(composer show -i $PACKAGE | grep versions | cut -d' ' -f4 | tr -d '[],"')
-
-        # Check if package is up to date
-        if [ "$VERSION" != "$LATEST_VERSION" ]; then
-            echo "$PACKAGE needs to be updated from $LATEST_VERSION to $VERSION"
-            composer update $PACKAGE:$VERSION
-        else
-            echo "$PACKAGE is up to date"
-        fi
-    fi
-done
-```
 
 ### Set up database schema and transfer objects
 

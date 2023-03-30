@@ -261,7 +261,7 @@ You can define stores to Yves hosts mapping. This allows generating correct URLs
 
 {% endinfo_block %}
 
-Add the following configuration to your project:
+1. Add the following configuration to your project:
 
 | CONFIGURATION                                                 | SPECIFICATION                                                                                                                                            | NAMESPACE                               |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
@@ -280,6 +280,25 @@ $config[AvailabilityNotificationConstants::STORE_TO_YVES_HOST_MAPPING] = [
     'AT' => getenv('SPRYKER_YVES_HOST_AT'),
     'US' => getenv('SPRYKER_YVES_HOST_US'),
 ];
+```
+
+2. To set YVES host environment variables, adjust your deploy file:
+
+**deploy.*.yml**
+
+```yaml
+version: "0.1"
+
+namespace: spryker_demo
+tag: '1.0'
+
+environment: docker.dev
+image:
+    environment:
+        SPRYKER_YVES_HOST_DE: yves.de.spryker.local
+        SPRYKER_YVES_HOST_AT: yves.at.spryker.local
+        SPRYKER_YVES_HOST_US: yves.us.spryker.local
+...
 ```
 
 {% info_block infoBox %}

@@ -1,12 +1,16 @@
-# Set up Oryx
+---
+title: Set up Oryx
+description: Learn how to set up Oryx using a boilerplate project
+last_updated: Apr 3, 2023
+template: howto-guide-template
+---
 
 This document describes how to set up an environment for developing in the Oryx framework. We provide a [boilerplate project](https://github.com/spryker/composable-frontend) that helps you quickstart the development. It contains minimum dependencies and configuration to install a standard Oryx application.
 
 ## Prerequisites
 
-* [Node.js](https://nodejs.org/) or a compatible Javascript runtime.
-* npm package manager.
-* A [Spryker Storefront API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html). A public API is provided with the   (a public API is provided by default to get you up and running quick)
+* [Node.js](https://nodejs.org/) or a compatible Javascript runtime
+* npm package manager
 
 ## Install Oryx
 
@@ -19,7 +23,6 @@ cd composable-frontend && \
 npm i
 ```
 
-
 2. Run the application:
 
 ```shell
@@ -28,12 +31,11 @@ npm run dev
 
 The application should now be available at `localhost:3000`.
 
-To better understand how the minimal boilerplate works, you can find more details in the [boilerplate guide](./boilerplate.md).
+For more information about the boilerplate project, see the [boilerplate guide](./boilerplate.md).
 
-## Builders/bundlers
+## Builders and bundlers
 
-The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However, Oryx is compatible with a wide variety of build tools, such as rollup, parcel, webpack, etc.
-The build tool must [support exporting entry points](https://nodejs.org/api/packages.html#package-entry-points) in package.json (since Oryx uses exports in every package to split logical parts to sub-packages).
+The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However, Oryx is compatible with a wide variety of build tools, like rollup, parcel or webpack. Since Oryx uses exports in every package to split logical parts to sub-packages, the build tool you choose must support [exporting entry points](https://nodejs.org/api/packages.html#package-entry-points) in `package.json`.
 
 ## Packages
 

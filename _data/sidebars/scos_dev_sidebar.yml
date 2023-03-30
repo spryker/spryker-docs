@@ -39,10 +39,9 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
         - title: Installing Docker prerequisites on Windows with WSL2
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
-      - title: Choosing an installation mode and installing
+      - title: Choosing an installation mode
+        url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html
         nested:
-        - title: Choosing an installation mode
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html
         - title: Installing in Development mode on MacOS and Linux
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html
         - title: Installing in Development mode on Windows

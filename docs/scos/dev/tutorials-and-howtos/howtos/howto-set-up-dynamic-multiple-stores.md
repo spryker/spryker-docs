@@ -186,7 +186,6 @@ For more information about deploy file configuration, see [Deploy file reference
 ## Define the store context
 
 You can define regions by domains or by headers. We recommend defining stores by regions, which is supported by default.  
-
 Defining stores by headers is not supported by default, but you can use the following workaround.
 
 {% info_block infoBox %}

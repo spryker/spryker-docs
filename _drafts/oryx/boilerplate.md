@@ -21,7 +21,7 @@ In Oryx, we use the following tactics to prevent boilerplate code:
 2. Expose a function to set up the [app orchestrator](./app-orchestrator.md) conveniently.
 3. Provide [presets](./presets.md) for the standard application setup, including the feature sets and UI themes.
 4. Provide the source code in a [public repository](https://github.com/spryker/oryx) to enable developers to read the source code.
-5. Provide configurable component and business logic.
+5. Provide configurable components and business logic.
 6. Allow for customizations with [dependency injection](./dependency-injection.md).
 
 Most of the details around these tactics can be found elsewhere in the documentation. In the following sections you read more details on the boilerplate files that are needed.
@@ -68,7 +68,7 @@ The `package.json` file contains all the dependencies of the project. To simplif
 
 That being said, having unused dependencies in your project will _not_ affect the build time or run time of your project. It is only an overhead during the installation process.
 
-The bare minimum package.json is set up with the following package.json:
+The bare minimum package.json is setup with the following dependencies:
 
 ```json
 {

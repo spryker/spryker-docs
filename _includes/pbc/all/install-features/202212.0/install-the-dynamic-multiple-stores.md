@@ -2558,7 +2558,7 @@ Below is a list of keys, taking into account the default configuration out of th
 
 
 {% info_block warningBox "Verification" %}
-Example list of keys where `xxx` is a store name: 
+Example list of keys where `xxx` is a store name (store name example: DE, AT, etc.): 
 
 - `kv:availability:xxx:*`
 - `kv:price_product_abstract:xxx:*`

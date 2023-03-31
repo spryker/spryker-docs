@@ -23,7 +23,7 @@ With the Spryker Commerce OS, you can create multiple stores per your business r
 The dynamic multi-store setup is very versatile and customizable — for example, you can do the following:
 
 * Build one store for multiple countries and languages or separate stores for each region.
-* Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
+* Make abstract products, discounts, and other logic and code be shared between stores, or create a dedicated setup for each of them.
 * Define separate search preferences to create an entirely different set of rankings, rules, and settings per store—for example, a date format or a currency.
 
 ## Dynamic multi-store setup infrastructure options
@@ -64,12 +64,12 @@ Code buckets provide an easy way to execute different business logic in runtime 
 
 ### Configure stores
 
-1. Configiguretion stores will be created in the database. To configure stores, see [Dynamic multiple stores installation and configuration](/docs/scos/dev/feature-integration-guides/202212.0/dynamic-multiple-stores.html).
+1. Configuration stores will be created in the database. To configure stores, see [Dynamic multiple stores installation and configuration](/docs/scos/dev/feature-integration-guides/202212.0/dynamic-multiple-stores.html).
 2. Optional: Define store-specific configuration:
-  1. For one or more stores you've defined in database, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
-  2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment` section.
+  1. For one or more stores you've defined in database, define a separate, store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
+  2. To apply the defined, store-specific configuration, adjust the related deploy file in the `environment` section.
 
-  In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment):
+  In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see the [environment](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment):
 
   ```yaml
   ....
@@ -80,9 +80,9 @@ Code buckets provide an easy way to execute different business logic in runtime 
     tag:
   ```
 
-3. To import data for the stores you've added, adjust all the [import files and import configuration](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html).
+3. To import data for the stores you've added, adjust all the [import files and import configuration files](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html).
 
-For example, define the import source for the `EU` region and  `DE` store you've added:
+Define the import source for the `EU` region and  `DE` store you've added:
 
 ```php
 # Setup data import for region 
@@ -110,7 +110,7 @@ regions:
 ...    
 ```
 
-For example, to add the `EU` and `US` region, adjust an installation recipe as follows:
+To add the `EU` and `US` region, adjust the installation recipe as follows:
 
 ```yaml
 ...
@@ -122,7 +122,7 @@ stores:
 ...    
 ```
 
-Also, make sure that commands that need to trigger for each store have stores: `true` added, as in the following example. This is especially important for validation cache generation in the `docker.yml` file, as this is responsible for generating the validation cache when your application is deployed on the Spryker PaaS:
+Make sure that commands that need to trigger for each store have `stores: true` added, as in the following example. This is especially important for validation cache generation in the `docker.yml` file, as this is responsible for generating the validation cache when your application is deployed on the Spryker PaaS:
 
 ```yaml
 ...
@@ -134,9 +134,9 @@ Also, make sure that commands that need to trigger for each store have stores: `
 
 ## Configure the deploy file
 
-According to the desired infrastructure setup, configure the deploy file for the dynamic multi-store setup. In the following example, we configure the [dynamic multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
+According to your desired infrastructure setup, configure the deploy file for the dynamic multi-store setup. In the following example, we configure the [dynamic multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
 
-Deploy file configuration for the dynamic multi-store setup 1:
+Deploy the file configuration for the dynamic multi-store setup 1:
 
 ```yaml
 # ....
@@ -179,9 +179,9 @@ regions:
 # ...                      
 ```
 
-* The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. The visibility of the project's stores is limited to operating only with the stores that belong to a region, which refers to geographical terms like data centers, regions, and continents in the real world.
+* The `regions` parameter defines one or more isolated instances of the Spryker applications that only have one persistent database to work with. The visibility of the project's stores is limited to operating only with stores that belong to a region, such as a data center, country, or continent in the real world.
 
-For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
+For more information about deploying a file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 ## Define the store context
 
@@ -190,7 +190,7 @@ Defining stores by headers is not supported by default, but you can use the foll
 
 {% info_block infoBox %}
 
-The workaround is only supported by the [multi-store store setup 1](#multi-store-setup-infrastructure-options) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
+The workaround is only supported by the [multi-store store setup 1](#multi-store-setup-infrastructure-options) when all the resources are shared. With the other setups, you need to manage the infrastructure configuration on the application level.
 
 **public/Glue/index.php**
 ```php
@@ -209,7 +209,7 @@ Environment::initialize();
 ...
 ```
 
-To check if the workaround works, in the browser console, run the following:
+To check if the workaround works, run the following in the browser console:
 ```php
 fetch("http://{domain-name}/catalog-search", {
   "headers": {

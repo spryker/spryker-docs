@@ -1854,7 +1854,7 @@ entries:
                     url: /docs/pbc/all/return-management/base-shop/manage-using-glue-api/glue-api-retrieve-return-reasons.html
               - title: "Build a return management process: Best practices"
                 url: /docs/pbc/all/return-management/base-shop/build-a-return-management-process-best-practices.html
-              - title: "HowTo: Set number of days for a return policy"
+              - title: "Set number of days for a return policy"
                 url: /docs/pbc/all/return-management/base-shop/set-number-of-days-for-a-return-policy.html
           - title: Marketplace
             include_versions:

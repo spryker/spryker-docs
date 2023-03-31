@@ -69,13 +69,13 @@ A Back Office user can create returns for the [returnable items](/docs/pbc/all/r
 
 ## Marketplace Return Management in the Merchant Portal
 
-Merchants process their returns in the Merchant Portal. For details about how to manage the merchant returns, see [Merchant Portal guide: Managing merchant orders ](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-merchant-orders.html).
+Merchants process their returns in the Merchant Portal. For details about how to manage the merchant returns, see [Merchant Portal guide: Managing merchant orders ](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html).
 
 ## Related Business User articles
 
 | MERCHANT PORTAL USER GUIDES  | BACK OFFICE USER GUIDES |
 | --- | --- |
-| [Managing merchant returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-merchant-orders.html#managing-merchant-returns) | [Managing marketplace returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-returns.html) |
+| [Managing merchant returns](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html#managing-merchant-returns) | [Managing marketplace returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-returns.html) |
 |    | [Managing main merchant returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html) |
 
 ## Related Developer articles

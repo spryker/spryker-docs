@@ -2590,7 +2590,7 @@ But recommendation is to flash all data from the Redis by instance and populate 
 
 ### Search engine
 
-For dynamic store feature out of the box changed indexes prefix for all stores. So data from old indexes not available for new stores.
+For the dynamic store feature out of the box index prefixes were changed for all stores. So data from old indexes are not available for new stores.
 
 If you are using Elasticsearch, following indexes are available in the standard configuration (example: `xxx` -  store name): 
 

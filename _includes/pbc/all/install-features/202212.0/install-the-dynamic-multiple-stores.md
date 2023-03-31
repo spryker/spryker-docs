@@ -2585,7 +2585,7 @@ Example list of keys where `xxx` - is a store name:
 
 {% endinfo_block %}
 
-But recomedation flash all data from Redis for instance and populate it again.
+But recommendation is to flash all data from the Redis by instance and populate them again.
 
 
 ### Search engine

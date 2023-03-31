@@ -1,6 +1,9 @@
-# Understanding Boilerplate in Oryx
-
-"How to Create Maintainable and Upgradeable Applications"
+---
+title: Boilerplate in Oryx
+description: How to Create Maintainable and Upgradeable Applications
+last_updated: Apr 3, 2023
+template: concept-topic-template
+---
 
 **TLTR:**
 
@@ -8,26 +11,26 @@
 
 ## Introduction
 
-Boilerplate refers to the _template_ code that is used to generate an application code that can be further customized. Changing boilerplate is convenient at first sight as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you've customize the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the new version during every update to a new version of the application. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
+Boilerplate refers to the _template_ code that is used to generate application code which can be further customized. At first sight, changing boilerplate is convenient as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you customized the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the new version during every update. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
 
 ## How we prevent boilerplate code
 
-In Oryx, we use a few tactics to prevent boilerplate code. These tactics include:
+In Oryx, we use the following tactics to prevent boilerplate code:
 
-1. Bootstrap the application from [npm packages](https://www.npmjs.com/org/spryker-oryx) rather than source.
-2. Expose an function to setup the [app orchestrator](./app-orchestrator.md) conveniently.
+1. Bootstrap the application from [npm packages](https://www.npmjs.com/org/spryker-oryx) instead of source.
+2. Expose a function to set up the [app orchestrator](./app-orchestrator.md) conveniently.
 3. Provide [presets](./presets.md) for the standard application setup, including the feature sets and UI themes.
 4. Provide the source code in a [public repository](https://github.com/spryker/oryx) to enable developers to read the source code.
 5. Provide configurable component and business logic.
-6. Allow for customizations by [dependency injection](./dependency-injection.md).
+6. Allow for customizations with [dependency injection](./dependency-injection.md).
 
 Most of the details around these tactics can be found elsewhere in the documentation. In the following sections you read more details on the boilerplate files that are needed.
 
 ### NPM Packages
 
-One of the biggest sources of boilerplate code in any project is the application logic itself. In Oryx, we've separated out all the application logic into individual packages that are [distributed on npm](https://www.npmjs.com/org/spryker-oryx). These packages include components, business logic and integrations to the Spryker APIs.
+One of the biggest sources of boilerplate code in a project is the application logic. In Oryx, we  separated out all the application logic into individual packages that are [distributed on npm](https://www.npmjs.com/org/spryker-oryx). These packages include components, business logic, and integrations to the Spryker APIs.
 
-By separating out the application logic in this way, we've eliminated the boilerplate code from your projects. Instead of writing code to handle basic functionality, you can simply install the appropriate package and use it directly in your code. And because the packages are distributed on npm and published with [Semantic Versioning](https://semver.org/), you can be confident that upgrading to a new version of the framework won't break your code.
+By separating out the application logic in this way, we eliminated the boilerplate code from your projects. Instead of writing code to handle basic functionality, you can install the needed packages and use it  in your code. And because the packages are distributed on npm and published with [Semantic Versioning](https://semver.org/), you can be confident that upgrading to a new version of the framework won't break your code.
 
 ### Using Presets
 
@@ -65,7 +68,7 @@ The `package.json` file contains all the dependencies of the project. To simplif
 
 That being said, having unused dependencies in your project will _not_ affect the build time or run time of your project. It is only an overhead during the installation process.
 
-The bare minimum package.json is setup with the following package.json:
+The bare minimum package.json is set up with the following package.json:
 
 ```json
 {
@@ -80,18 +83,18 @@ The bare minimum package.json is setup with the following package.json:
 }
 ```
 
-Vite is the recommended build system, but you can use alternative build systems to build the application. See the [setup guide](./setup-guide.md) for more details.
+Vite is the recommended build system, but you can use alternative build systems to build the application. For more details, see [Set up Oryx with the boilerplate project](./setup-guide.md).
 
 ### `index.html`
 
 The `index.html` file contains two lines of boilerplate code to bootstrap the application:
 
-1. the `root-app` element
-2. an import of the `app.ts` module
+1. The `root-app` element.
+2. An import of the `app.ts` module.
 
 Both the `root-app` element and the `app.ts` module can be replaced with custom alternatives.
 
-While the index.html can have a few more details, the bare minimum required code is shown in the snippet below:
+While `index.html` can have a few more details, the following is the bare minimum required code:
 
 ```html
 <html>
@@ -102,11 +105,11 @@ While the index.html can have a few more details, the bare minimum required code
 </html>
 ```
 
-Oryx allows to be installed and used next to other application code. You could therefor have other elements and code that are not related to Oryx. Oryx is bootstrapped with the `oryx-app` root element by default, but you can set it up to use an alternative root element.
+Oryx can be installed and used next to other applications' code. You could therefore have other elements and code that are not related to Oryx. Oryx is bootstrapped with the `oryx-app` root element by default, but you can set it up to use an alternative root element.
 
 ### `app.ts`
 
-The `app.ts` file contains the bootstrap code of the application. Bootstrapping the application can be done with the `appBuilder`, a function that allows to configure the application. While the `appBuilder` can be configured with a lot of fine-grained configurations, the bare minimum setup is very clean:
+`app.ts` contains the bootstrap code of the application. Bootstrapping the application can be done with the `appBuilder`, a function that allows to configure the application. While the `appBuilder` can be configured with a lot of fine-grained configurations, the following is the bare minimum setup:
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";
@@ -120,16 +123,16 @@ export const app = appBuilder()
   .create();
 ```
 
-This code uses a standard _feature set_ and _theme_. Both the feature set and theme are opinionated and might not be the production setup that you're looking for, but it's a great starting point to build your first project.
+This code uses a standard _feature set_ and _theme_. Both the feature set and theme are opinionated and might not be the production setup you're looking for, but it's a great starting point to build your first project.
 
 ### SSR boilerplate
 
 If you're using server-side rendering (SSR) in your application, you need to build an serve the application with different code. The boilerplate provides a minimum setup to accomplish this:
 
-- `server/render.ts` –  This file is responsible for rendering the initial HTML content for your application on the server, and can be customized as needed.
-- `server/server.ts` – This file is responsible for setting up the server and handling incoming requests.
+- `server/render.ts` –  Rendering the initial HTML content for your application on the server, and can be customized as needed.
+- `server/server.ts` – Sets up the server and handles incoming requests.
 
-If you use vite, you can add an npm script in your package.json to build and serve the SSR server:
+If you use Vite, you can add an npm script in your `package.json` to build and serve the SSR server:
 
 ```json
 "scripts": {

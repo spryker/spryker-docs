@@ -2521,13 +2521,13 @@ Please, check `deploy.dev.dynamic-store.yml` file for more details.
 ## Data migration 
 
 You don't need to migrate data in the database for the dynamic store feature. Only changes in the search and storage engine are necessary.
-Propel migration will be executed automatically and added new tables for dynamic store feature and populate new tables with data via data import.
-For correct work of dynamic store feature you need to add new data structure for search and storage engines.
+Propel migration executes automatically, adds new tables for the dynamic store feature, and populates new tables with data via data import.
+To make the dynamic store feature work correctly, you need to add new data structures for search and storage engines.
 
 
-First of all, you need to truncate all data from search and storage engines. 
+You first need to truncate all data from search and storage engines. 
 Please see below for more details in the section **"Truncate data from search and storage engines"**.
-Next step is run sync:data command for populate new data structure for search and storage engines.
+Next, run the `sync:data` command to populate the new data structure for search and storage engines.
 
 ```bash
 vendor/bin/console sync:data
@@ -2542,10 +2542,10 @@ All data will be populated in search and storage engines.
 
 #### Storage engine
 
-Since Dynamic Store feature uses Redis as a key-value store for each region instead of store. If using same Redis instance for region, you need to clear all data from Redis for existing stores.
+The Dynamic Store feature uses Redis as a key-value store for each region instead of store. If you are using the same Redis instance for a region, you need to clear all data from Redis for existing stores.
 The data is stored in the following format: `kv:{resource-type}:{store}:{locale}:{key}`.
  
- For remove data from Redis you can use `redis-cli` command:
+ To remove data from Redis, use the `redis-cli` command:
  
  ```bash
  redis-cli KEYS "*:xxx:*" | xargs redis-cli DEL
@@ -2558,7 +2558,7 @@ Below is a list of keys, taking into account the default configuration out of th
 
 
 {% info_block warningBox "Verification" %}
-Example list of keys where `xxx` - is a store name: 
+Example list of keys where `xxx` is a store name: 
 
 - `kv:availability:xxx:*`
 - `kv:price_product_abstract:xxx:*`
@@ -2592,14 +2592,14 @@ But recommendation is to flash all data from the Redis by instance and populate 
 
 For the dynamic store feature out of the box index prefixes were changed for all stores. So data from old indexes are not available for new stores.
 
-If you are using Elasticsearch, following indexes are available in the standard configuration (example: `xxx` -  store name): 
+If you are using Elasticsearch, the following indexes are available in the standard configuration (example: `xxx` -  store name): 
 
 - `spryker_xxx_merchant`.
 - `spryker_xxx_page`.
 - `spryker_xxx_product-review`.
 - `spryker_xxx_return_reason`.
 
-For delete indexes you can use `curl` command. For example for delete `spryker_xxx_page` index: 
+To delete indexes, you can use the `curl` command. For example, to delete the `spryker_xxx_page` index: 
 ```bash
 
 curl -XDELETE 'http://localhost:9200/spryker_xxx_page'

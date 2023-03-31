@@ -189,6 +189,43 @@ You can define regions by domains or by headers. We recommend defining stores by
 
 Defining stores by headers is not supported by default, but you can use the following workaround.
 
-You've successfully added the stores and can access them according to how you've defined their context.
+{% info_block infoBox %}
 
+The workaround is only supported by the [multi-store store setup 1](#multi-store-setup-infrastructure-options) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
+
+**public/Glue/index.php**
+```php
+<?php
+
+...
+require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
+
+// Add this block
+if (isset($_SERVER['HTTP_APPLICATION_STORE'])) {
+    putenv('APPLICATION_STORE=' . $_SERVER['HTTP_APPLICATION_STORE']);
+}
+
+Environment::initialize();
+
+...
+```
+
+To check if the workaround works, in the browser console, run the following:
+```php
+fetch("http://{domain-name}/catalog-search", {
+  "headers": {
+    "upgrade-insecure-requests": "1",
+    "application-store": "MY_STORE"
+  },
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+}).then(r => console.log(r.text()));
+```
+
+{% endinfo_block %}
+
+You've successfully added the stores and can access them according to how you've defined their context.
 

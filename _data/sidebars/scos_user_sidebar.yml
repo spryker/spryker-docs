@@ -12,6 +12,10 @@ entries:
       - title: Release notes
         url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
         nested:
+        - title: Relese notes 202302.0
+          nested:
+          - title: Security release notes 202302.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
         - title: Release notes 202212.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
           nested:

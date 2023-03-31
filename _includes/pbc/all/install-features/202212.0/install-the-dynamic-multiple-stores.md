@@ -2535,9 +2535,6 @@ vendor/bin/console sync:data
 
 All data will be populated in search and storage engines.
 
-{% info_block warningBox "Verification" %}
-
-
 ### Truncate data from search and storage engines
 
 #### Storage engine

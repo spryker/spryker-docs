@@ -150,8 +150,8 @@ regions:
                     email: no-reply@spryker.local
             database:
                 database: eu-docker
-                username: spryker
-                password: secret
+                username: username
+                password: password
 
             broker:
                 namespace: eu-docker
@@ -168,8 +168,8 @@ regions:
                     email: no-reply@spryker.local
             database:
                 database: us-docker
-                username: spryker
-                password: secret
+                username: username
+                password: password
             broker:
                 namespace: us-docker
             key_value_store:
@@ -185,7 +185,7 @@ For more information about deploy file configuration, see [Deploy file reference
 
 ## Define the store context
 
-You can define regions by domains and define stores by domains or by headers. We recommend defining stores by regions, which is supported by default.  
+You can define regions by domains or by headers. We recommend defining stores by regions, which is supported by default.  
 
 Defining stores by headers is not supported by default, but you can use the following workaround.
 

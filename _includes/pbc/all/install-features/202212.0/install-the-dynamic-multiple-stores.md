@@ -2555,7 +2555,7 @@ Below is a list of keys, taking into account the default configuration out of th
 
 
 {% info_block warningBox "Verification" %}
-Example list of keys where `xxx` is a store name (store name example: DE, AT, etc.): 
+The following is an example list of keys where `xxx` is a store name (store name example: DE, AT, etc.): 
 
 - `kv:availability:xxx:*`
 - `kv:price_product_abstract:xxx:*`
@@ -2582,12 +2582,12 @@ Example list of keys where `xxx` is a store name (store name example: DE, AT, et
 
 {% endinfo_block %}
 
-But recommendation is to flash all data from the Redis by instance and populate them again.
+It's recommended to flash all data from the Redis by instance and populate them again.
 
 
 ### Search engine
 
-For the dynamic store feature out of the box index prefixes were changed for all stores. So data from old indexes are not available for new stores.
+Out of the box index prefixes were changed for all stores in the dynamic store feature.  Data from old indexes is not available for new stores.
 
 If you are using Elasticsearch, the following indexes are available in the standard configuration (example: `xxx` -  store name): 
 
@@ -2596,7 +2596,7 @@ If you are using Elasticsearch, the following indexes are available in the stand
 - `spryker_xxx_product-review`.
 - `spryker_xxx_return_reason`.
 
-To delete indexes, you can use the `curl` command. For example, to delete the `spryker_xxx_page` index: 
+To delete indexes, you can use the `curl` command. To delete the `spryker_xxx_page` index, follow these steps: 
 ```bash
 
 curl -XDELETE 'http://localhost:9200/spryker_xxx_page'

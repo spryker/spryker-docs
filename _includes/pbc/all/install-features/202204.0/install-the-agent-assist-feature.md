@@ -1,26 +1,28 @@
 
 
-This document describes how to integrate the [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html) feature into a Spryker project.
+
+This document describes how to integrate the [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
 Follow the steps below to install the feature core.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
-| Cart | {{site.version}}| [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+| Cart | {{page.version}}| [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
-composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -36,7 +38,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up the database schema
 
-Run the following commands to apply database changes and to generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -53,11 +55,7 @@ Verify the following changes by checking your database:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
-
-Set up the following behaviors.
-
-#### Configure user Zed UI for agent handling
+### 3) Configure user Zed UI for agent handling
 
 Enable the following behaviors by registering the plugins:
 
@@ -125,9 +123,9 @@ Ensure that the following plugins have been registered:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the feature front end.
+Follow the steps below to install the feature frontend.
 
 ### Prerequisites
 
@@ -135,14 +133,12 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
-
 ```bash
-composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -158,7 +154,7 @@ Ensure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-By default, in Spryker, posting login form (where SecurityBlocker will make its check and block agents who made too many failed login attempts) is locale-independent. So, to be able to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
+By default, in Spryker, posting a login form (where SecurityBlocker makes its check and block agents who made too many failed login attempts) is locale-independent. So, to be able to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
 
 **src/Pyz/Yves/AgentPage/AgentPageConfig.php**
 
@@ -183,7 +179,7 @@ class AgentPageConfig extends SprykerAgentPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code. For example, `/de/agent/login_check` would be the default value for the agent.
+Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code. For example, `/de/agent/login_check` is the default value for the agent.
 
 {% endinfo_block %}
 
@@ -220,7 +216,7 @@ autocomplete.placeholder,Search,en_US
 autocomplete.placeholder,Suche,de_DE
 ```
 
-2. Run the following command to add the glossary keys:
+2. Add the glossary keys:
 
 ```bash
 console data:import:glossary
@@ -230,7 +226,7 @@ console data:import:glossary
 
 Enable the following controllers.
 
-#### Service provider list
+#### Register the service provider
 
 Register the service provider in the Yves application:
 
@@ -264,14 +260,14 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 Ensure that you've registered the providers correctly:
 
-1. Open http://mysprykershop.com/agent/secured.
-2. This should redirect you to http://mysprykershop.com/agent/login.
+1. Open https://mysprykershop.com/agent/secured.
+2. This redirects you to https://mysprykershop.com/agent/login.
 
 {% endinfo_block %}
 
-#### Controller provider list
+#### Registers controller provider
 
-Register the controller provider(s) in the Yves application:
+Register the controller providers in the Yves application:
 
 | PROVIDER | NAMESPACE | ENABLED CONTROLLER | CONTROLLER SPECIFICATION |
 | --- | --- | --- | --- |

@@ -45,7 +45,7 @@ Even though you can use any time zone for defining a price schedule, in the data
 
 You can define price schedules as follows:
 Import a CSV file with a list of prices. This option is for bulk operations. You can import the file through [Back Office](/docs/pbc/all/price-management/{{site.version}}/manage-in-the-back-office/create-scheduled-prices.html) or [manually](/docs/pbc/all/price-management/{{site.version}}/import-and-export-data/file-details-product-price-schedule.csv.html).
-Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
+Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 
 ## Cron job
 
@@ -89,7 +89,7 @@ In this case:
 The feature has the following functional constraints which are going to be resolved in the future.
 
 * The default number of prices that the cron job can process at a time is 1000.
-* The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html).
+* The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html).
 
 ## Related Business User articles
 

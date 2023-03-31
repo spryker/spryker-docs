@@ -59,10 +59,6 @@ Verify that the following changes have been applied by checking your database:
 | spy_acl_entity_segment | table | created |
 | spy_acl_entity_rule | table | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE | EVENT | PATH  |
@@ -101,7 +97,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| AccessControlEventDispatcherPlugin | Adds a listener to the `\Symfony\Component\HttpKernel\KernelEvents::REQUEST` which checks if the user is allowed to access the current resource. |  | Spryker\Zed\Acl\Communication\Plugin\EventDispatcher |
+| AccessControlEventDispatcherPlugin | Adds a listener to `\Symfony\Component\HttpKernel\KernelEvents::REQUEST`, which checks if the user is allowed to access the current resource. |  | Spryker\Zed\Acl\Communication\Plugin\EventDispatcher |
 | AclNavigationItemCollectionFilterPlugin | Checks if the navigation item can be accessed by the current user. |  | Spryker\Zed\Acl\Communication\Plugin\Navigation |
 | AclInstallerPlugin | Fills the DB  with required ACL data. |  | Spryker\Zed\Acl\Communication\Plugin |
 | GroupPlugin | Provides Acl Groups for User. |  | Spryker\Zed\Acl\Communication\Plugin |
@@ -245,7 +241,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-Use the following example if you want to enable ACL Entity for the whole Application, for example,for the Merchant Portal:
+Use the following example if you want to enable ACL Entity for the whole Application—for example, for the Merchant Portal:
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
@@ -273,26 +269,20 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 
 ### 5) Install the database data for ACL
 
-Run the following command:
-
 ```bash
 console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the request doesn't succeed for users without permission.
+Make sure that the following:
 
-Make sure that the user can see only the allowed menu links.
-
-Make sure that `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
-
-Make sure that you can edit user's ACL groups on User edit page in Back Office.
-
-Make sure that `AclEntityRule` is created in `spy_acl_entity_rule` when the `RoleTransfer` is saved and contains `AclEntityRules`.
-
-Make sure that `RolesTransfer` contains needed `AclEntityRules`.
-
-Ensure the user who is not supposed to have access to an entity or endpoint does not have it.
+* The request doesn't succeed for users without permission.
+* The user can see only the allowed menu links.
+* The `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
+* In the Back Office, you can edit user's ACL groups on the **User edit** page 
+* `AclEntityRule` is created in `spy_acl_entity_rule` when `RoleTransfer` is saved and contains `AclEntityRules`.
+* `RolesTransfer` contains needed `AclEntityRules`.
+* The user who is not supposed to have access to an entity or endpoint does not have it.
 
 {% endinfo_block %}

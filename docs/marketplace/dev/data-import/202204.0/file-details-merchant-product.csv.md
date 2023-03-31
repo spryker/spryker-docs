@@ -22,7 +22,7 @@ data:import merchant-product
 
 The file should have the following parameters:
 
-| PARAMETER   | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION  |
+| PARAMETER   | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION  |
 | -------------- | ----------- | ------- | ------------- | ------------------- | ---------------------- |
 | sku                | &check;             | String   |                   | Unique                           | SKU of the product.                                          |
 | merchant_reference | &check;             | String   |                   | Unique                           | Unique identifier of the merchant in the system.             |
@@ -33,7 +33,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
 
 ## Import template file and content example
 

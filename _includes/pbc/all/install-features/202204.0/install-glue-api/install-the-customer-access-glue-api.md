@@ -15,12 +15,12 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html) |
-| Customer Access | {{site.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-access-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html) |
+| Customer Access | {{page.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-access-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
 composer require spryker/customer-access-rest-api:"^1.1.0" --update-with-dependencies

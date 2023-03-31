@@ -32,11 +32,7 @@ Combined, they let you make changes without developers’ help, decouple and spe
 
 The Launchpad lets developers and content managers create frontend applications and connect them to Spryker backends.
 
-![Spryker Launchpad](https://spryker.s3.eu-central-1.amazonaws.com/docs/
-
-
-
-/dev/front-end-enablement-service.md/spryker-launchpad.png)
+![Spryker Launchpad](https://spryker.s3.eu-central-1.amazonaws.com/docs/dev/front-end-enablement-service.md/spryker-launchpad.png)
 
 
 The default frontend template is a Storefront based on a [progressive web application (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) that supports mobile first design and native features.

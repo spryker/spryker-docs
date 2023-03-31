@@ -87,7 +87,7 @@ On the page of the wishlist, a merchant relation is displayed for each product. 
 
 If, after a product was added to a wishlist, a merchant becomes inactive, the merchant reference is no longer displayed for the product and the customer can't add it to cart. If the merchant becomes active again, the relation is displayed, and the customer can add the product to cart.
 
-If a product in a wishlist is out of stock, an [alternative product](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only marketplace products can be displayed there.
+If a product in a wishlist is out of stock, an [alternative product](/docs/pbc/all/product-information-management/{{site.version}}/alternative-products-feature-overview.html) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only marketplace products can be displayed there.
 
 ## Marketplace shopping lists
 
@@ -111,7 +111,7 @@ On the **Merchant Profile** page, customers can find the following merchant-spec
 * Imprint
 * Data privacy statement
 
-Customers can access only the profile pages of [active](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
+Customers can access only the profile pages of [active](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
 
 For an example, see the [Spryker merchant profile](https://www.de.b2c-marketplace.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.
 

@@ -24,31 +24,32 @@ In Oryx, we use the following tactics to prevent boilerplate code:
 5. Provide configurable components and business logic.
 6. Allow for customizations with [dependency injection](./dependency-injection.md).
 
-Most of the details around these tactics can be found elsewhere in the documentation. In the following sections you read more details on the boilerplate files that are needed.
+By using these tactics, we greatly reduced the amount of boilerplate code required in Oryx projects. This simplifies maintaining and upgrading code over time, and lets you focus on building features instead of maintaining the underlying framework.
+
+In the following sections, you read more details on the boilerplate files that are needed.
 
 ### NPM Packages
 
-One of the biggest sources of boilerplate code in a project is the application logic. In Oryx, we  separated out all the application logic into individual packages that are [distributed on npm](https://www.npmjs.com/org/spryker-oryx). These packages include components, business logic, and integrations to the Spryker APIs.
+One of the biggest sources of boilerplate code in a project is the application logic. In Oryx, we separated out all the application logic into individual packages that are [distributed on npm](https://www.npmjs.com/org/spryker-oryx). These packages include components, business logic, and integrations to the Spryker APIs.
 
-By separating out the application logic in this way, we eliminated the boilerplate code from your projects. Instead of writing code to handle basic functionality, you can install the needed packages and use it  in your code. And because the packages are distributed on npm and published with [Semantic Versioning](https://semver.org/), you can be confident that upgrading to a new version of the framework won't break your code.
+By separating out the application logic, we eliminated the boilerplate code from your projects. Instead of writing code to handle basic functionality, you can install the needed packages and use it in your code. And because the packages are distributed on npm and published with [Semantic Versioning](https://semver.org/), you can be confident that upgrading to a new version of the framework won't break your code.
 
-### Using Presets
+### Presets
 
-Another source of boilerplate code in any project is the configuration required to get your application up and running. To simplify this process, we've introduced the concept of presets in Oryx.
+Another source of boilerplate code is the configuration required to get your application up and running. To simplify this process, we introduced the concept of presets in Oryx.
 
-The [preset package](https://www.npmjs.com/package/@spryker-oryx/presets) provide configurations and data structures that are designed to get you up and running quickly without providing a lot of configuration yourself. Presets can be considered as so-called "demo applications", as they typically represent a demo application for a specific business model (e.g. "b2c demo shop"). By using presets, you can quickly configure your application without writing any code. This is a great when you start your first project or want to demo an application or test things out.
+The [preset packages](https://www.npmjs.com/package/@spryker-oryx/presets) provide configurations and data structures that are designed to get your project up and running quickly without providing a lot of configuration yourself. Presets can be considered as "demo applications", as they typically represent a demo application for a specific business model, like a B2C Demo Shop. By using presets, you can quickly configure an application without writing any code. This is useful for starting the first project, running a demo, or for testing things out.
 
-### Using appBuilder
+### appBuilder
 
-Finally, we provide an appBuilder function that can be used to set up your application in just a few lines of code. This function takes care of all the boilerplate code for you, including loading presets and configuring your application environment. By using `appBuilder()`, you can avoid writing boilerplate code and focus on building out your application's features.
+Finally, we provide an appBuilder function that can be used to set up your application in just a few lines of code. This function takes care of all the boilerplate code, including loading presets and configuring your application environment. By using `appBuilder()`, you can avoid writing boilerplate code and focus on building the features.
 
-By using these tactics, we've been able to greatly reduce the amount of boilerplate code required in Oryx projects. This makes it easier to maintain and upgrade your code over time, and allows you to focus on building out your application's features instead of worrying about the underlying framework.
 
 ## The minimal boilerplate code
 
-When you create a new project in Oryx, you'll notice that there is a small amount of boilerplate code included by default. This boilerplate code is designed to provide the basic structure and configuration for your application, and can be customized as needed.
+When you create a project in Oryx, there is a small amount of boilerplate code by default. This boilerplate code is designed to provide the basic structure and configuration for your application, and can be customized as needed.
 
-The boilerplate contains the following files, with the server files (SSR) being optional.
+The boilerplate contains the following files, with the server side rendering (SSR) files being optional.
 
 ```
 oryx-app/
@@ -60,15 +61,15 @@ oryx-app/
 │   └──server.ts
 ```
 
-Here's a breakdown of the different bits of boilerplate code:
+The following is a breakdown of the different bits of boilerplate code.
 
 ### `package.json`
 
-The `package.json` file contains all the dependencies of the project. To simplify the dependency management, all dependencies are pulled through a single preset package. The preset package contains dependencies to all available oryx packages. This might not be the most optimal setup for your project over time, as it might contain a lot of "dead code", but for the start of your project it is very convenient. While you're getting experienced with Oryx over time, you could consider to create a narrowed down list of dependencies.
+`package.json` contains all the dependencies of the project. To simplify the dependency management, all dependencies are pulled through a single preset package. The preset package contains dependencies to all available Oryx packages. This might not be the most optimal setup over time, as it might contain a lot of "dead code", but it is a convenient starting point. As you are getting experienced with Oryx, you can consider creating a narrowed down list of dependencies.
 
-That being said, having unused dependencies in your project will _not_ affect the build time or run time of your project. It is only an overhead during the installation process.
+That being said, having unused dependencies in your project does *not* affect the build time or run time of your project. It is only an overhead during the installation process.
 
-The bare minimum package.json is setup with the following dependencies:
+The bare minimum `package.json` includes the following dependencies:
 
 ```json
 {
@@ -83,18 +84,18 @@ The bare minimum package.json is setup with the following dependencies:
 }
 ```
 
-Vite is the recommended build system, but you can use alternative build systems to build the application. For more details, see [Set up Oryx with the boilerplate project](./setup-guide.md).
+Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx with the boilerplate project](./setup-guide.md).
 
 ### `index.html`
 
-The `index.html` file contains two lines of boilerplate code to bootstrap the application:
+`index.html` contains two lines of boilerplate code to bootstrap the application:
 
 1. The `root-app` element.
 2. An import of the `app.ts` module.
 
 Both the `root-app` element and the `app.ts` module can be replaced with custom alternatives.
 
-While `index.html` can have a few more details, the following is the bare minimum required code:
+While `index.html` can have a few more details, the following is the required bare minimum:
 
 ```html
 <html>
@@ -105,11 +106,11 @@ While `index.html` can have a few more details, the following is the bare minimu
 </html>
 ```
 
-Oryx can be installed and used next to other applications' code. You could therefore have other elements and code that are not related to Oryx. Oryx is bootstrapped with the `oryx-app` root element by default, but you can set it up to use an alternative root element.
+Oryx can be installed and used next to other applications' code. You could therefore have other elements and code that are not related to Oryx.
 
 ### `app.ts`
 
-`app.ts` contains the bootstrap code of the application. Bootstrapping the application can be done with the `appBuilder`, a function that allows to configure the application. While the `appBuilder` can be configured with a lot of fine-grained configurations, the following is the bare minimum setup:
+`app.ts` contains the bootstrap code of the application. The application can be bootstrapped with `appBuilder`, a function that configures the application. While the configuration of `appBuilder` can be fine-tuned to small details, the following is the bare minimum setup:
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";
@@ -123,16 +124,16 @@ export const app = appBuilder()
   .create();
 ```
 
-This code uses a standard _feature set_ and _theme_. Both the feature set and theme are opinionated and might not be the production setup you're looking for, but it's a great starting point to build your first project.
+This configuration uses a standard _feature set_ and _theme_. The feature set and theme are opinionated and might not be the production setup you're looking for, but it's a great starting point.
 
 ### SSR boilerplate
 
-If you're using server-side rendering (SSR) in your application, you need to build an serve the application with different code. The boilerplate provides a minimum setup to accomplish this:
+If you're using SSR in your application, you need to build an serve the application with different code. The boilerplate provides a minimum customizable setup to accomplish this:
 
-- `server/render.ts` –  Rendering the initial HTML content for your application on the server, and can be customized as needed.
+- `server/render.ts` – Renders the initial HTML content for your application on the server.
 - `server/server.ts` – Sets up the server and handles incoming requests.
 
-If you use Vite, you can add an npm script in your `package.json` to build and serve the SSR server:
+If you use Vite, in `package.json`, you can add an npm script to build and serve the SSR server:
 
 ```json
 "scripts": {

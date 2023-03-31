@@ -20,7 +20,7 @@ For instructions about setting up dynamic multiple stores in Spryker Cloud Comme
 {% endinfo_block %}
 
 With the Spryker Commerce OS, you can create multiple stores per your business requirements for different scenarios. 
-The dynamic multi-store setup is very versatile and customizable—for example, you can do the following:
+The dynamic multi-store setup is very versatile and customizable — for example, you can do the following:
 
 * Build one store for multiple countries and languages or separate stores for each region.
 * Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.

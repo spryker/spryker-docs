@@ -70,7 +70,7 @@ Code buckets provide an easy way to execute different business logic in runtime 
 
 {% info_block warningBox %}
 
-When using the Dynamic Multi-Store functionality, configuring via the stores.php file is no longer supported. Please refer to the [Integration Guide](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-dynamic-multiple-stores.html) for additional information.
+When using the Dynamic Multi-Store functionality, configuration via the `stores.php` file is no longer supported. Please refer to the [Integration Guide](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-dynamic-multiple-stores.html) for additional information.
 
 {% endinfo_block %}
 

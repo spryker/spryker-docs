@@ -2,6 +2,7 @@
 title: Key concepts of Reactivity
 description: Understanding Reactivity concepts will help you understand how Oryx works
 template: concept-topic-template
+last_updated: Apr 3, 2023
 ---
 
 ## Reactive data streams
@@ -37,7 +38,7 @@ Most of the application state is driven by loading data from backend APIs. Oryx 
 | Controller | Resolves application state for a given context, so that the component can be reused in different places. For example, a product title component can be used on the Product Details Page, product card, and in a cart entry. The controller resolves the product _sku_ from the context, so that the right product title can be resolved. |
 | Service    | Manages the application state for a certain application domain.                                                                                                                                                                                                                                                                          |
 | Adapter    | Loads the data from a specific backend API and convert it into the client model.                                                                                                                                                                                                                                                         |
-| Http       | Wraps the native http fetch and provides additional utilities to integrate http headers like the authorization header.                                                                                                                                                                                                                   |
+| Http       | Wraps the native HTTP fetch and provides additional utilities to integrate HTTP headers like the authorization header.                                                                                                                                                                                                                   |
 
 Some layers can be considered optional if you build your own domains or components. However, for Oryx, these layers are part of the recommended architecture. It increases separation of concerns and provides a clear and clean extension model. All application layers are customizable and allow for an alternative implementation.
 
@@ -64,16 +65,16 @@ sequenceDiagram
 
 Description:
 
-1. `ProductTitleComponent` is a web component that renders titles in the DOM. A title is typically an `<h1>` element, but this is configurable to make the component reusable in other contexts, for example, inside a cart entry component. The product title component relies on a controller to get the context and associated product data. The product title `name` is mapped from the product data.
+1. `ProductTitleComponent` is a web component that renders titles in the DOM. A title is typically an `<h1>` element, but this is configurable to make the component reusable in other contexts—for example, inside a cart entry component. The product title component relies on a controller to get the context and associated product data. The product title `name` is mapped from the product data.
 2. `ProductController` uses finds out the relevant _context_ for the component and resolves the product qualifier (SKU) in order to make the right request. Whenever the product data is resolved, an update to the DOM is requested (this is actually done in the `AsyncStateController` which is left out on this diagram). The `ProductController` uses the `ProductService` to resolve the product data.
 3. `ProductService` is a business service that control the application state for the product. It will make sure that multiple requests for the same product will not result in multiple request to the backend. The `ProductService` delegates actual loading of the data to the `ProductAdapter`.
-4. `ProductAdapter` integrates with the backend, by creating an http request. The `ProductAdapter` knows the backend endpoint and it's contract so that it can create the right request. The `ProductAdapter` delegates actual http requests to the `HttpService`.  
-   When an alternative backend is integrated, the `ProductAdapter` can be replaced. The adapter will convert the API data model to the client side model in case of a mismatch (this is done by using normalizers, see [Designing the data model](./best-practice.md#designing-the-data-model).
-5. `HttpService` is a small wrapper that is used to provide additional features such as support for interceptors..
+4. `ProductAdapter` integrates with the backend, by creating an HTTP request. The `ProductAdapter` knows the backend endpoint and it's contract so that it can create the right request. The `ProductAdapter` delegates actual HTTP requests to the `HttpService`.  
+   When an alternative backend is integrated, the `ProductAdapter` can be replaced. The adapter converts the API data model to the client-side model in case of a mismatch. This is done by using normalizers. For details, see [Designing the data model](./best-practice.md#designing-the-data-model.
+5. `HttpService` is a small wrapper that is used to provide additional features such as support for interceptors.
 
 ## Updating data in the DOM
 
-While observables and RxJS operators provide a great setup for an in-memory reactive system, it doesn't synchronize this to the UI automatically. Each JavaScript framework comes with it's own concept and techniques of updating the UI. The method of choice contributes significantly to the performance and user experience of the application.
+While observables and RxJS operators provide a great setup for an in-memory reactive system, it doesn't synchronize this to the UI automatically. Each JavaScript framework comes with its own concept and techniques for updating the UI. The method of choice contributes significantly to the performance and user experience of the application.
 
 Oryx has a standardized library of web components and uses [Lit](https://lit.dev) to develop those components. Lit can update only the mutable parts of the components, and maintains the static parts unchanged. This results in a highly efficient rendering performance.
 

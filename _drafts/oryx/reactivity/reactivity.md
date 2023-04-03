@@ -2,6 +2,7 @@
 title: Reactivity
 description: Reactivity enables real-time updates
 template: concept-topic-template
+last_updated: Apr 3, 2023
 ---
 
 # Reactivity
@@ -42,18 +43,22 @@ deactivate ProductComponent
 deactivate AsyncStateController
 ```
 
-**Note:** Some of the standard architectural layers of Oryx are omitted in this diagram to keep the focus on the reactive concepts.
+{% info_block infoBox "Note" %}
+
+Some of the standard architectural layers of Oryx are omitted in this diagram to keep the focus on the reactive concepts.
+
+{% endinfo_block %}
 
 The following steps are identified in the diagram:
 
-1. Components are not concerned with _how_ the component lifecycle is wired with the application state; new emissions of application state are automatically updated in the view.
+1. Components are not concerned with _how_ the component lifecycle is wired with the application state; new emissions of the application state are automatically updated in the view.
 2. Component state is controlled by a _reactive controller_ that knows the component lifecycle. This controller is specific to LIT. If you use another component framework, you can leverage the service's lower application layers, but you need to take care of the component lifecycle yourself.
 3. Components delegate the loading of data to a service. API integration is done in lower layers of the application logic: adapters, converters.
 4. To avoid duplicated requests in parallel or sequence, API responses are maintained in the service layer.
 5. The component receives newly emitted data through the observable stream provided by RxJS.
 6. The `AsyncStateController` observes (new) emission of the data stream.
 7. The controller requests an update for the component.
-8. The component re-renders the requested update (but not for other non-related parts of the application).
+8. The component rerenders the requested update (but not for other non-related parts of the application).
 
 ## Next steps
 

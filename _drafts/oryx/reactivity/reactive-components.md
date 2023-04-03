@@ -2,6 +2,7 @@
 title: Reactive components
 description: Reactive components are built with Lit
 template: concept-topic-template
+last_updated: Apr 3, 2023
 ---
 
 Components are organized by domains, for example components in a product domain, and can leverage domain logic to communicate with the associated backend API. Each domain is shipped with a domain service that provides an API to communicate with a backend API. For example, when rendering product data, `ProductService` can be used as follows:
@@ -13,9 +14,9 @@ export class ProductPriceComponent extends LitElement {
 }
 ```
 
-To ensure that components are reusable in different contexts, it is recommended to not couple them directly with the qualifier that is used to load data. For example, `ProductPriceComponent`does not need to be aware of the `SKU`, as the `SKU` can be determined from the route of the product page, the product card in a list, or the cart entry. Oryx provides a mechanism to setup a so-called context. In the case of product components, the product controller is used to resolve the SKU from the context controller.
+To ensure that components are reusable in different contexts, it is recommended to not couple them directly with the qualifier that is used to load data. For example, `ProductPriceComponent` does not need to be aware of `SKU`, as `SKU` can be determined from the route of the product page, the product card in a list, or the cart entry. Oryx provides a mechanism to set up a so-called context. In the case of product components, the product controller is used to resolve the SKU from the context controller.
 
-`ProductController` resolves the product qualifier (SKU) from the context and returns an observable from `ProductService`. If SKU is provided statically to the component, `ProductController` also takes `sku` as a component property into account. This can be useful in custom development or for demonstrating the component, for example, in a Storybook.
+`ProductController` resolves the product qualifier (SKU) from the context and returns an observable from `ProductService`. If an SKU is provided statically to the component, `ProductController` also takes `sku` as a component property into account. This can be useful in custom development or for demonstrating the component—for example, in a Storybook.
 
 ```ts
 export class ProductPriceComponent extends LitElement {
@@ -25,7 +26,7 @@ export class ProductPriceComponent extends LitElement {
 }
 ```
 
-To emit values, [observables](./key-concepts-of-reactivity.md) require to be subscribed to and unsubscribed when the values are no longer needed. To avoid such boilerplate code, you can use a decorator to subscribe and unsubscribe from observables. The decorator subscribes to the observable, but also unsubscribes when the component is destroyed. This ensures that there's no leaking memory in the application. In the following snippet, an observable is assigned to the local `product$` field.
+To emit values, [observables](./key-concepts-of-reactivity.md) require to be subscribed to and unsubscribed when the values are no longer needed. To avoid such boilerplate code, you can use a decorator to subscribe and unsubscribe from observables. The decorator subscribes to the observable but also unsubscribes when the component is destroyed. This ensures that there's no leaking memory in the application. In the following snippet, an observable is assigned to the local `product$` field.
 
 ```ts
 export class ProductPriceComponent {

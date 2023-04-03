@@ -14,7 +14,6 @@ Spryker’s customers need to import data from other systems into their Spryker 
 * [File details: merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)
 * [File details: price_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html)
 * [File details: product_offer_shopping_list.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-shopping-list.csv.html)
-* [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html)
 * [File details: merchant_product_offer_store.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store.csv.html)
 * [File details: product_offer_validity.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-validity.csv.html)
 * [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html)

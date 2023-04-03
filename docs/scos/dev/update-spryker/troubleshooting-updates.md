@@ -5,15 +5,15 @@ last_updated: Jun 16, 2021
 template: concept-topic-template
 ---
 
-This section contains common issues related to updates and provides solutions on how to fix them. If an issue is not on the list, and you need help, [contact us](#let-us-know).
+This document contains common issues related to updates and provides solutions for fixing them. If an issue is not on the list, and you need help, [contact us](#get-help-with-an-update).
 
-### I see Spryker Code Sniffer updates
+## You see Spryker Code Sniffer updates
 
-If you see Code Sniffer updates from Spryker, check if the new code sniffer rules were added. Investigate what they are doing and decide if you need them. If you don't need those rules, exclude them from the list.
+If you see Code Sniffer updates from Spryker, check if the new code sniffer rules were added. Investigate what they are doing and decide if you need them. If you don't need the rules, exclude them from the list.
 
 {% info_block infoBox "Note" %}
 
-In some projects, all Spryker sniffs might be included automatically.
+In some projects, all Spryker sniffs are included automatically.
 
 {% endinfo_block %}
 
@@ -26,13 +26,9 @@ To exclude or include sniff rules, in `ruleset.xml`, adjust the following sectio
 </rule>
 ```
 
-### Update is not possible
+## Nothing to install or update or your requirements could not be resolved
 
-There can be several cases when the update is not possible:
-
-#### Update is "ignored" by Composer
-
-There may be situations when you know there is a new version, but Composer returns the following message:
+You know there is a new version, but Composer returns the following message:
 
 ```BASH
 ...
@@ -40,25 +36,7 @@ Updating dependencies (including require-dev)
 Nothing to install or update....
 ```
 
-Most likely, this means that the update requires some other dependencies that currently can not be satisfied in the project.
-One of the ways to check what’s missing is to use `composer why-not` command like this:
-
-```BASH
-php -d memory_limit=-1 composer.phar why-not "spryker/symfony:^3.2.0"
-```
-
-Composer will return what exactly is needed:
-
-```BASH
-spryker/symfony 3.2.0 requires symfony/stopwatch (^4.0.0)
-myProject/platform dev-develop does not require symfony/stopwatch (but v2.8.34 is installed)
-```
-
-Make sure to first update the packages that are required first, and then try updating again.
-
-#### 2. Dependencies prevent package from updating
-
-You might see a message like this one:
+Or you get an error similar to the following:
 
 ```BASH
 Updating dependencies (including require-dev)
@@ -71,15 +49,24 @@ Problem 1
 ....
 ```
 
-To understand what's missing, run `composer why-not` as in the previous step.
+Most likely, the update requires some other dependencies that currently can not be satisfied in the project.
+To check what is missing, use the `composer why-not` command. Example:
 
-#### Complicated cases
+```BASH
+php -d memory_limit=-1 composer.phar why-not "spryker/symfony:^3.2.0"
+```
 
-Each situation requires a custom approach. If you have not found your solution here, but think it might help others, please feel free to add it here by clicking **Edit or Report** right under the title of this article.
+Composer returns what is needed for the update:
 
-## Let us know
+```BASH
+spryker/symfony 3.2.0 requires symfony/stopwatch (^4.0.0)
+myProject/platform dev-develop does not require symfony/stopwatch (but v2.8.34 is installed)
+```
+		Update the required packages, then try updating the original module again.
 
-Please let us know if anything goes wrong with your update:
+## Get help with an update
+
+Let us know if anything goes wrong with an update:
 
 * You find an issue in the code while reviewing the diff in a Spryker repo.
 * After running automated tests or testing the website, you find an issue that broke the website. If it's not a project-related conflict, and other projects can potentially be affected, please report the issue as soon as you can.

@@ -209,7 +209,7 @@ To add an item to a wishlist, send the request:
 | availability    | Object  | Contains information about the product's availability. |
 | availability.isNeverOutOfStock | Boolean | Defines if the product is never out of stock. |
 | availability.availability  | Boolean | Defines if the product is available.  |
-| availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#warehouse-management).   |
+| availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html#warehouse-management).   |
 | prices  | Array   | Contains information about prices.    |
 | prices.priceTypeName  | String  | Price type. |
 | prices.grossAmount  | Integer | Gross price in cents.  |

@@ -12,6 +12,10 @@ entries:
       - title: Release notes
         url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
         nested:
+        - title: Relese notes 202302.0
+          nested:
+          - title: Security release notes 202302.0
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
         - title: Release notes 202212.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
           nested:
@@ -704,6 +708,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+    - title: Push Notification
+      url: /docs/scos/user/features/push-notification-feature-overview.html
+      include_versions:
+      - "202304.0"
     - title: Quick Add to Cart
       url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
     - title: Quotation Process

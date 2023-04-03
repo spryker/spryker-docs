@@ -7,4 +7,4 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-wishlist-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-glue-api/202212.0/marketplace/install-prices-marketplace-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202212.0/marketplace/install-prices-marketplace-wishlist-glue-api.md -->
+{% include pbc/all/install-glue-api/202212.0/marketplace/install-the-prices-marketplace-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202212.0/marketplace/install-the-prices-marketplace-wishlist-glue-api.md -->

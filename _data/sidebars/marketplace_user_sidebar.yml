@@ -101,6 +101,8 @@ entries:
 
         - title: Marketplace Inventory Management
           url: /docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
+          include_versions:
+          - "202204.0"
 
         - title: Marketplace Order Management
           url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html

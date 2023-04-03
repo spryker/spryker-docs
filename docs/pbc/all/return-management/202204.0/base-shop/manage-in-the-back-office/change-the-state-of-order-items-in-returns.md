@@ -8,7 +8,7 @@ related:
   - title: Viewing returns of an order
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html
   - title: Managing returns
-    link: docs/pbc/all/return-management/page.version/manage-in-the-back-office/manage-returns.html
+    link: docs/pbc/all/return-management/page.version/base-shop/manage-in-the-back-office/manage-returns.html
   - title: Return Management feature overview
     link: docs/pbc/all/return-management/page.version/return-management.html
 ---

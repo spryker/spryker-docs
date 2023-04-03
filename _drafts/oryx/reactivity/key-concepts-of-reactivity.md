@@ -1,4 +1,8 @@
-# Key concepts of Reactivity
+---
+title: Key concepts of Reactivity
+description: Understanding Reactivity concepts will help you understand how Oryx works
+template: concept-topic-template
+---
 
 ## Reactive data streams
 

@@ -1,4 +1,8 @@
-# Reactive components
+---
+title: Reactive components
+description: Reactive components are built with Lit
+template: concept-topic-template
+---
 
 Components are organized by domains, for example components in a product domain, and can leverage domain logic to communicate with the associated backend API. Each domain is shipped with a domain service that provides an API to communicate with a backend API. For example, when rendering product data, `ProductService` can be used as follows:
 

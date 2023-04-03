@@ -1,7 +1,7 @@
 
 
 
-This document describes how to ingrate the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) + [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) + [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html) feature into a Spryker project.
 
 {% info_block errorBox %}
 
@@ -10,7 +10,7 @@ The following features integration guide expects the basic feature to be in plac
 The current feature integration guide adds the following functionality:
 
 * [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html)
-* [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
+* [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html)
 
 {% endinfo_block %}
 

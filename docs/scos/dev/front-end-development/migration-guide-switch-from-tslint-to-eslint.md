@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Switch from TSLint to ESLint
 description: Use this guide to migrate the project from TSLint to ESLint.
-last_updated: Mar 22, 2023
+last_updated: Mar 24, 2023
 template: module-migration-guide-template
 ---
 
@@ -51,8 +51,8 @@ TSLint support was discontinued as of December 1, 2020. The solution is migratio
 
         ```json
         {
-            "yves:eslint": "eslint --no-error-on-unmatched-pattern ./src/Pyz/Yves/**/Theme/**/*.{js,ts}",
-            "yves:eslint:fix": "eslint --no-error-on-unmatched-pattern --fix ./src/Pyz/Yves/**/Theme/**/*.{js,ts}"
+            "yves:lint": "eslint --no-error-on-unmatched-pattern ./src/Pyz/Yves/**/Theme/**/*.{js,ts}",
+            "yves:lint:fix": "eslint --no-error-on-unmatched-pattern --fix ./src/Pyz/Yves/**/Theme/**/*.{js,ts}"
         }
         ```
 
@@ -164,7 +164,7 @@ jobs:
         run: node ./frontend/libs/tslint --format stylish
       # Must be
       - name: ES lint
-        run: npm run yves:eslint
+        run: npm run yves:lint
 ```
 
 ## 3) Remove unnecessary files
@@ -176,4 +176,4 @@ jobs:
 ## 4) Check project `.js` and `.ts` files
 
 - Check all project `.js` and `.ts` files for `tslint:` comments and replace them with `eslint-` if they are still relevant.
-- Execute the `npm run yves:eslint` command and check result.
+- Execute the `npm run yves:lint` command and check result.

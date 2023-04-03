@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-return-reasons
 related:
   - title: Managing the returns
-    link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html
+    link: docs/marketplace/dev/glue-api-guides/page.version/managing-the-returns.html
   - title: Return Management feature overview
     link: docs/pbc/all/return-management/page.version/return-management.html
 ---

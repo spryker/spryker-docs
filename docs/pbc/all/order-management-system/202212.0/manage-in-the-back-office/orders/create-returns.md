@@ -8,7 +8,7 @@ related:
   - title: Viewing returns of an order
     link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/orders/view-returns-of-an-order.html
   - title: Changing the state of order items in returns
-    link: docs/pbc/all/return-management/page.version/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
+    link: docs/pbc/all/return-management/page.version/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
 ---
 
 This document describes how to create returns in the Back Office.

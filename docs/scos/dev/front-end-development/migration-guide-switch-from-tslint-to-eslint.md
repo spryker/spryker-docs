@@ -110,8 +110,9 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
     }
 }
 ``` 
-    - For projects with Marketplace:
-    
+
+- For projects with Marketplace:
+
     ```json
     {
         "root": true,

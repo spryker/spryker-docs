@@ -110,7 +110,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
     }
 }
 ``` 
-    - For projects wit Marketplace:
+    - For projects with Marketplace:
     
     ```json
     {

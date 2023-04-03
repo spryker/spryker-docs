@@ -51,13 +51,13 @@ Follow the steps to install Spryker in Development mode:
     * Clone the B2C repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
     ```
 
 5. Depending on the repository you've cloned, navigate into the cloned folder:

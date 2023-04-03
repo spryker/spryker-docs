@@ -27,7 +27,7 @@ brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/
 - B2B Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop && \
+git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop && \
 cd b2b-demo-shop && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -36,7 +36,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2C Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p1 --single-branch ./b2c-demo-shop && \
+git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop && \
 cd b2c-demo-shop && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -45,7 +45,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2B Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2b-demo-marketplace && \
 cd b2b-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -54,7 +54,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2C Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202212.0-p2 --single-branch ./b2c-demo-marketplace && \
 cd b2b-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -62,7 +62,9 @@ docker/sdk bootstrap deploy.dev.yml
 
 ## 2. Update the hosts
 
-Update the hosts file using the command provided in the output of the previous step.
+Update the hosts file using the command provided in the output of the previous step. It should be similar to the following:
+
+![update-hosts](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux/update-hosts.png)
 
 ## 3. Build and start the instance
 
@@ -70,16 +72,7 @@ Update the hosts file using the command provided in the output of the previous s
 docker/sdk up
 ```
 
-You can now access your project using the following endpoints:
+The project is now running. For the full list of the project's endpoints, see `http://spryker.local`.
 
-* Storefront: `yves.de.spryker.local`
-* Back Office: `backoffice.de.spryker.local`
-
-
-{% info_block infoBox "Info" %}
-
-If you see `.de.` in your URL, the application is store-specific. By default, Spryker comes with three stores: *de*, *at*, and *us*.
-
-{% endinfo_block %}
 
 For detailed installation instructions, start with [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).

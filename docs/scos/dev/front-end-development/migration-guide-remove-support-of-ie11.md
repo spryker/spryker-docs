@@ -204,6 +204,9 @@ The `es6-polyfill.ts` file was removed because all polyfills were specified in `
 
 2. Remove IE11-related dependencies:
 ```json
+"@webcomponents/custom-elements",
+"@webcomponents/webcomponents-platform",
+"@webcomponents/webcomponentsjs",
 "classlist-polyfill",
 "date-input-polyfill",
 "element-closest",

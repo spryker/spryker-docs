@@ -18,7 +18,7 @@ related:
   - title: Decimal Stock migration concept
     link: docs/pbc/all/product-information-management/page.version/install-and-upgrade/decimal-stock-migration-concept.html
   - title: Split Delivery migration concept
-    link: docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
+    link: docs/pbc/all/order-management-system/page.version/install-and-upgrade/split-delivery-migration-concept.html
   - title: Silex Replacement migration concept
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---

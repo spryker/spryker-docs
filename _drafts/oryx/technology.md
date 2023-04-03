@@ -16,7 +16,7 @@ JavaScript is a high-level programming language that is widely used in web devel
 TypeScript is a superset of JavaScript that adds optional static typing, classes, and interfaces to the language. In Oryx, TypeScript is used to provide type safety and better code organization. It allows developers to catch errors early in the development process and provides better code navigation and refactoring capabilities.
 
 ## Web Components
-Web Components are a set of web platform APIs that allow developers to create custom, reusable, and encapsulated HTML elements. In Oryx, Web Components are used to create reusable UI components that can be used across the application. It allows developers to create complex components with minimal code duplication and provides better code organization and maintainability.
+Web Components are a set of web platform APIs that allow developers to create custom, reusable, and encapsulated HTML elements. In Oryx, Web Components are used to create reusable UI components that can be used across the application. It allows developers to create complex components with minimal code duplication and provides better code organization and maintainability. At the same time it means Oryx component are compatible with any other frontend framework and can be integrated into almost any web-application.
 
 ## Lit
 Lit is a lightweight library for creating web components using TypeScript and HTML templates. In Oryx, Lit is used to create reusable and encapsulated UI components that can be easily styled and extended. It provides a simple and intuitive API for creating custom elements and allows developers to write less boilerplate code.

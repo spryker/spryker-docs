@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | ---  |
-| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html)|
+| Category Management | {{page.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 

@@ -426,7 +426,7 @@ MER000005,2023-12-31,14:00:00,17:00:00,
 ```
 </details>
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                                  | DATA EXPLANATION                                                                  |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                                  | DATA EXPLANATION                                                                  |
 |---------------------|-----------|-----------|-----------------------------------------------|-----------------------------------------------------------------------------------|
 | merchant_reference  | &check;   | string    | MER000005                                     | Merchant identifier.                                                              |
 | date                | &check;   | string    | 2022-01-01                                    | Date with special opening hours                                                   |
@@ -472,7 +472,7 @@ MER000005,SATURDAY,8:00:00,19:00:00
 MER000005,SUNDAY,,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | ----------- | ---------- | --------- | ------------ | ---------------- |
 | `merchant_reference` | &check; | string | MER000005 | Merchant identifier.  |
 | week_day_key | &check; | `string`  | MONDAY | Day of the week to assign opening hours to a merchant.It is an enum in database with the following values:MONDAYTUESDAYWEDNESDAYTHURSDAYFRIDAYSATURDAYSUNDAY. |

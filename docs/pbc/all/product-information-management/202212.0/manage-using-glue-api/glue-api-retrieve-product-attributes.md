@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Retrieving product attributes"
+title: "Glue API: Retrieve product attributes"
 description: The article explains how you can retrieve product attributes via the API
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template

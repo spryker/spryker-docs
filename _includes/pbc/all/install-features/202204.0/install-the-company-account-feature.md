@@ -16,14 +16,14 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/company-account: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/company-account: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -274,7 +274,7 @@ DE--7,BoB-Hotel-Kudamm,business-unit-kudamm-1,0
 DE--7,spryker_systems,spryker_systems_HQ,0
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | customer_reference | mandatory | string | DE--6 | Identifies a customer to add data to. |
 | company_key | mandatory | string | BoB-Hotel-Mitte | Identifies a company to add data to. |
@@ -694,16 +694,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Customer Account ManagemenT | {{site.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html) |
-| Company Account | {{site.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Customer Account ManagemenT | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Company Account | {{page.version}} | |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/company-account: "{{site.version}}" --update-with-dependencies
+composer require spryker-feature/company-account: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

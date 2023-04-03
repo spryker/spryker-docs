@@ -12,7 +12,7 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME    | VERSION    | INTEGRATION GUIDE            |
 |---------------| ----------------- |------------------------|
-| Spryker Core  | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)  |
+| Spryker Core  | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->

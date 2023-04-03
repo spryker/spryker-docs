@@ -14,7 +14,7 @@ There are two primary roles: *operator* and *merchant*:
 
 The onboarding process consists of seven steps. Each step requires specific actions that merchants, operators, or both need to take. 
 
-If you run into any issues, please get in touch with your Spryker contact.
+If you run into any issues, get in touch with your Spryker contact.
 
 ## Merchant onboarding process
 

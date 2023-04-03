@@ -2043,7 +2043,11 @@ entries:
                       - title: Marketplace Wishlist
                         nested: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-glue-api.html
                       - title: Marketplace Wishlist + Product Offer
-                        nested: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-product-offer-glue-api.html                                                        
+                        nested: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-product-offer-glue-api.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Manage shopping lists
+                    url:
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
@@ -2231,7 +2235,7 @@ entries:
           - title: Marketplace
             url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-overview.html
             include_versions:
-            - "202212.0"  
+            - "202212.0"
             nested:
               - title: Install features
                 nested:

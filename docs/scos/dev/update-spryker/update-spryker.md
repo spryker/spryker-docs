@@ -305,14 +305,14 @@ Each situation requires a custom approach. If you have not found your solution h
 Please let us know if anything goes wrong with your update:
 
 * You find an issue in the code while reviewing the diff in a Spryker repo.
-* After running autotests / testing the website you find an issue that broke the website. If this is not a project-related conflict and other projects can potentially be affected, please report the issue as soon as you can.
-* There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) in our documentation.
+* After running automated tests or testing the website, you find an issue that broke the website. If it's not a project-related conflict, and other projects can potentially be affected, please report the issue as soon as you can.
+* There are missing steps in an upgrade guide.
 
-Reach us out at:
-* *Support and community*: share your problem or solution or learn from others in our [community slack](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
-* *Create a request* on our [support portal](https://spryker.force.com/support/s/).
-* *Contribute to code*: if you want to share your fix with us, let Spryker take care of it. Spryker can support it in the future and make the fix available for your other projects. To contribute to code, create a pull request on the module's [Github repository](https://github.com/spryker);
-* *Contribute to documentation*: if you found an issue in a migration guide or some parts of it are missing - you can suggest a change by clicking **Edit or Report** right below the article title.
+Reach us out at using one of the following channels:
+* Support and community: share your issue or solution and learn from others in our [community slack](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
+* Create a request on our [support portal](https://spryker.force.com/support/s/).
+* Contribute to code: share your fix with us. We can implement the fix and make it available for other projects. To contribute, create a pull request on the module's [Github repository](https://github.com/spryker).
+* Contribute to the docs: if you found any issue in an upgrade guide or any other document,  you can edit the document by clicking **Edit on GitHub** next to the document's name.
 
 ## Reference
 

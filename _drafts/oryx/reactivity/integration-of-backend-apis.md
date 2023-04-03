@@ -46,7 +46,7 @@ The following steps are visualized:
 1. Service requests data from Adapter.
 2. Adapter sends an API call to the API.
 3. API returns a response to Adapter.
-4. Adapter loops through all Normalizers, passing the response through each one.
+4. Adapter loops through all normalizers, passing the response through each one.
 5. Normalizers normalize the response.
 6. Adapter receives the normalized response from Normalizer and returns it to Service.
 

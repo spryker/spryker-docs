@@ -258,7 +258,7 @@ protected function extendCommandPlugins(Container $container): Container
 
 Adjust your OMS state machine configuration to trigger the `Order/RequestProductReviews` command according to your project’s requirements.
 
-Here is an example with the `DummyPayment01.xml` process for the `authorize` event:
+Here is an example with the `DummyPayment01.xml` process for the `deliver` event:
 
 ```xml
 <?xml version="1.0"?>
@@ -271,7 +271,7 @@ Here is an example with the `DummyPayment01.xml` process for the `authorize` eve
         <!-- ... -->
         <events>
             <!-- ... -->
-            <event name="authorize" timeout="1 second" command="Order/RequestProductReviews"/>
+            <event name="deliver" timeout="1 second" command="Order/RequestProductReviews"/>
             <!-- ... -->
         </events>
     </process>

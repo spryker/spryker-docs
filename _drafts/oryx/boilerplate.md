@@ -1,6 +1,6 @@
 ---
 title: Oryx boilerplate
-description: Create maintainable and upgradeable applications using Oryx boilerplate
+description: Create maintainable and upgradeable applications using the Oryx boilerplate
 last_updated: Apr 3, 2023
 template: concept-topic-template
 ---
@@ -21,8 +21,6 @@ In Oryx, we use the following tactics to prevent boilerplate code:
 6. Allow for customizations with [dependency injection](./dependency-injection.md).
 
 By using these tactics, we greatly reduced the amount of boilerplate code required in Oryx projects. This simplifies maintaining and upgrading code over time, and lets you focus on building features instead of maintaining the underlying framework.
-
-In the following sections, you read more details on the boilerplate files that are needed.
 
 ### NPM Packages
 

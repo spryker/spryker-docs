@@ -34,7 +34,7 @@ Each step is described in the following sections.
 
 The official onboarding starts with a merchant requesting to join the marketplace. 
 
-To request a new merchant account, you can build a landing page with the Spryker CMS where potential merchants can find the email address or a form to contact the operator to join the marketplace. In some cases, the operator may contact their partners and inform them about the marketplace.
+To request a new merchant account, you can build a landing page with the [Spryker CMS](/docs/pbc/all/content-management-system/{{site.version}}/content-management-system.html) where potential merchants can find the email address or a form to contact the operator to join the marketplace. In some cases, the operator may contact their partners and inform them about the marketplace.
 
 ### 2) Operator: Verify (the KYC process) and register a merchant
 
@@ -75,8 +75,8 @@ In the Merchant Portal, merchants can create and update products and offers indi
 {% info_block infoBox %}
 
 Based on the product volume, we recommend the following:
-- If the number of products to be created or edited is small, merchants can use the interface in the Merchant Portal.
-- For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through the Spryker Middleware.
+- If the number of products to be created or edited is small, merchants can use the interface in the [Merchant Portal](/docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html).
+- For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through the [Spryker Middleware](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html).
 
 {% endinfo_block %}
 

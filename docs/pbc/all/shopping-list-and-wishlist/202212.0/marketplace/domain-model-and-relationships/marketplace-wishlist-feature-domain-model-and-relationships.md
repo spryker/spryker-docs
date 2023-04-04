@@ -1,5 +1,5 @@
 ---
-title: Marketplace Wishlist feature: Domain model and relationships
+title: "Marketplace Wishlist feature: Domain model and relationships"
 description: This document provides technical details about the Marketplace Wishlist feature.
 template: feature-walkthrough-template
 ---

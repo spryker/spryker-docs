@@ -76,7 +76,7 @@ In the Merchant Portal, merchants can create and update products and offers indi
 
 Based on the product volume, we recommend the following:
 - If the number of products to be created or edited is small, merchants can use the interface in the Merchant Portal.
-- For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through Spryker Middleware.
+- For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through the Spryker Middleware.
 
 {% endinfo_block %}
 

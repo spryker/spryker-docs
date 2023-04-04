@@ -38,7 +38,6 @@ The [preset packages](https://www.npmjs.com/package/@spryker-oryx/presets) provi
 
 Finally, we provide an appBuilder function that can be used to set up your application in just a few lines of code. This function takes care of all the boilerplate code, including loading presets and configuring your application environment. By using `appBuilder()`, you can avoid writing boilerplate code and focus on building the features.
 
-
 ## The minimal boilerplate code
 
 When you create a project in Oryx, there is a small amount of boilerplate code by default. This boilerplate code is designed to provide the basic structure and configuration for your application, and can be customized as needed.
@@ -50,7 +49,7 @@ oryx-app/
 ├── app.ts
 ├── index.html
 ├── package.json
-├── (server/)
+├── server/ (optional)
 │   ├──render.ts
 │   └──server.ts
 ```
@@ -61,7 +60,7 @@ The following is a breakdown of the different bits of boilerplate code.
 
 `package.json` contains all the dependencies of the project. To simplify the dependency management, all dependencies are pulled through a single preset package. The preset package contains dependencies to all available Oryx packages. This might not be the most optimal setup over time, as it might contain a lot of "dead code", but it is a convenient starting point. As you are getting experienced with Oryx, you can consider creating a narrowed down list of dependencies.
 
-That being said, having unused dependencies in your project does *not* affect the build time or run time of your project. It is only an overhead during the installation process.
+That being said, having unused dependencies in your project does _not_ affect the build time or run time of your project. It is only an overhead during the installation process.
 
 The bare minimum `package.json` includes the following dependencies:
 
@@ -77,6 +76,8 @@ The bare minimum `package.json` includes the following dependencies:
   ...
 }
 ```
+
+> **_NOTE:_** It is recommended to front the dependencies with a caret notation (`^`), so that the latest _minor_ release is pulled on each installation.
 
 Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](./set-up-oryx.md).
 
@@ -122,7 +123,7 @@ This configuration uses a standard _feature set_ and _theme_. The feature set an
 
 ### SSR boilerplate
 
-If you're using SSR in your application, you need to build an serve the application with different code. The boilerplate provides a minimum customizable setup to accomplish this:
+If you're using SSR in your application, you need to build and serve the application with different code. The boilerplate provides a minimum customizable setup to accomplish this:
 
 - `server/render.ts` – Renders the initial HTML content for your application on the server.
 - `server/server.ts` – Sets up the server and handles incoming requests.

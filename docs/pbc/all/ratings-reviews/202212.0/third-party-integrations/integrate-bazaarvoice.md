@@ -14,10 +14,10 @@ The Bazaarvoice app requires the following Spryker modules:
 
 * `spryker/asset: ^1.3.0`
 * `spryker/asset-storage: ^1.1.0`
-* `spryker/merchant-profile: ^1.1.0` (Marketplace only)
+* `spryker/merchant-profile: ^1.2.1` (Marketplace only)
 * `spryker/message-broker: ^1.3.0`
 * `spryker/message-broker-aws: ^1.4.1`
-* `spryker/oms: ^11.23.1`
+* `spryker/oms: ^11.25.0`
 * `spryker/product-review: ^2.10.0`
 * `spryker/product-review-gui: ^1.5.0`
 * `spryker-shop/asset-widget: ^1.0.0`
@@ -179,12 +179,10 @@ $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...,
     'reviews' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'orders' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...,
-    'reviews' => 'http',
     'orders' => 'http',
 ];
 ```

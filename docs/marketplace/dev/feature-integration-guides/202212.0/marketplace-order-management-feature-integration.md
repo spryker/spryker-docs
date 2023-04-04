@@ -1122,4 +1122,4 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
 | Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
-| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
+| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html)  |

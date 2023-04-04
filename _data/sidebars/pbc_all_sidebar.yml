@@ -2151,80 +2151,103 @@ entries:
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
         nested:
-          - title: Inventory Management feature overview
-            url: /docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html
-          - title: Availability Notification feature overview
-            url: /docs/pbc/all/warehouse-management-system/availability-notification-feature-overview.html
-          - title: Install and upgrade
+          - title: Base shop
+            nested:
+              - title: Inventory Management feature overview
+                url: /docs/pbc/all/warehouse-management-system/base-shop/inventory-management-feature-overview.html
+              - title: Availability Notification feature overview
+                url: /docs/pbc/all/warehouse-management-system/base-shop/availability-notification-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Availability Notification
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature.html
+                      - title: Inventory Management
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
+                      - title: Inventory Management + Alternative Products
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
+                      - title: Availability Notification Glue API
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
+                      - title: Inventory Management Glue API
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html
+                  - title: Upgrade modules
+                    nested:
+                      - title: Availability
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
+                      - title: AvailabilityCartConnector
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html
+                      - title: AvailabilityGui
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html
+                      - title: AvailabilityOfferConnector
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html
+                      - title: AvailabilityStorage
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
+              - title: Import data
+                nested:
+                  - title: File details - warehouse.csv
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-warehouse.csv.html
+                  - title: File details - warehouse_address.csv
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-warehouse-address.csv.html
+                  - title: File details - warehouse_store.csv
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-warehouse-store.csv.html
+                  - title: File details - product_stock.csv
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-product-stock.csv.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Create warehouses
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/create-warehouses.html
+                  - title: Edit warehouses
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/edit-warehouses.html
+                  - title: Check availability of products
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/check-availability-of-products.html
+                  - title: Edit stock of products and product bundles
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Retrieve abstract product availability
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-abstract-product-availability.html
+                  - title: Retrieve availability when retrieving abstract products
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-abstract-products.html
+                  - title: Retrieve concrete product availability
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html
+                  - title: Retrieve availability when retrieving concrete products
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
+                  - title: Manage availability notifications
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/manage-availability-notifications.html
+                  - title: Retrieve subscriptions to availability notifications
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html
+              - title: Domain mode and relationships
+                url: /docs/pbc/all/warehouse-management-system/base-shop/domain-model-and-relationships/availability-notification-domain-model-and-relationships.html
+              - title: Extend and customize
+                nested:
+                  - title: Configure product availability to be published on product amount changes
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html
+                  - title: Inventory Management feature modules overview
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/extend-and-customize/inventory-management-feature-modules-overview.html
+                  - title: "Manage stocks in a multi-store environment: Best practices"
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
+          - title: Marketplace
+            url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-overview.html
+            include_versions:
+            - "202212.0"  
             nested:
               - title: Install features
                 nested:
-                  - title: Availability Notification
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-availability-notification-feature.html
-                  - title: Inventory Management
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-feature.html
-                  - title: Inventory Management + Alternative Products
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
-                  - title: Availability Notification Glue API
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
-                  - title: Inventory Management Glue API
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html
-              - title: Upgrade modules
+                  - title: Marketplace Inventory Management
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-marketplace-inventory-management-feature.html
+                  - title: Marketplace Inventory Management + Order Management
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-marketplace-inventory-management-order-management-feature.html
+                  - title: Marketplace Inventory Management + Packaging Units
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html
+              - title: Install Glue API
                 nested:
-                  - title: Availability
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
-                  - title: AvailabilityCartConnector
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html
-                  - title: AvailabilityGui
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html
-                  - title: AvailabilityOfferConnector
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html
-                  - title: AvailabilityStorage
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
-          - title: Import and export data
-            nested:
-              - title: File details - warehouse.csv
-                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html
-              - title: File details - warehouse_address.csv
-                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-address.csv.html
-              - title: File details - warehouse_store.csv
-                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html
-              - title: File details - product_stock.csv
-                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html
-          - title: Manage in the Back Office
-            nested:
-              - title: Create warehouses
-                url: /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/create-warehouses.html
-              - title: Edit warehouses
-                url: /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-warehouses.html
-              - title: Check availability of products
-                url: /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/check-availability-of-products.html
-              - title: Edit stock of products and product bundles
-                url: /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html
-          - title: Manage using Glue API
-            nested:
-              - title: Retrieve abstract product availability
-                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html
-              - title: Retrieve availability when retrieving abstract products
-                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-availability-when-retrieving-abstract-products.html
-              - title: Retrieve concrete product availability
-                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html
-              - title: Retrieve availability when retrieving concrete products
-                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
-              - title: Manage availability notifications
-                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/manage-availability-notifications.html
-              - title: Retrieve subscriptions to availability notifications
-                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html
-          - title: Domain mode and relationships
-            url: /docs/pbc/all/warehouse-management-system/domain-model-and-relationships/availability-notification-domain-model-and-relationships.html
-          - title: Extend and customize
-            nested:
-              - title: Configure product availability to be published on product amount changes
-                url: /docs/pbc/all/warehouse-management-system/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html
-              - title: Inventory Management feature modules overview
-                url: /docs/pbc/all/warehouse-management-system/extend-and-customize/inventory-management-feature-modules-overview.html
-              - title: "Manage stocks in a multi-store environment: Best practices"
-                url: /docs/pbc/all/warehouse-management-system/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
+                  - title: Marketplace Inventory Management
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-glue-api.html
+                  - title: Marketplace Inventory Management + Wishlist
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html
+              - title: "Marketplace Inventory Management feature: Domain model"
+                url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-domain-model.html
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html
         nested:

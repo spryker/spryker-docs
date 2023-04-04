@@ -193,24 +193,19 @@ If no extra dependencies are found, `composer.json` is updated respectively. Oth
 
 ## Update and install features
 
-At some point, you will need to add new or update the existing features for your project. This section will help you do that.
+At some point, you need to add new or update the existing features.
 
-{% info_block infoBox "Info" %}
+You can learn about new Spryker features from the [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). Not to miss new release notes, we recommend [subscribing to our release newsletter](/docs/scos/user/intro-to-spryker/releases/releases.html).
 
-You can learn about a new Spryker feature from the [Release Notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). We recommend [subscribing to our release mail](/docs/scos/user/intro-to-spryker/releases/releases.html) in order not to miss a new release announcement.
-A complete list of all Spryker features can be found in the [Features](/docs/scos/user/features/{{site.version}}/features.html) section. This section contains general descriptions of the features and links to their [Integration Guides](/docs/scos/dev/feature-integration-guides/{{site.version}}/feature-integration-guides.html) that you will use to install or update the features.  
+Features are grouped into packages business capabilities(PBCs). For a complete list of PBCs and respective features, see [Packaged Business Capabilities](/docs/pbc/all/pbc.html). In the Related Developer articles section of each feature overview, you can find links to the installation guides for the feature. For example, see [Related Developer articles](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html#related-developer-articles) for the Checkout feature. Use the installation guides to install or update features.
 
-{% endinfo_block %}
 
-To install a new feature or update an existing one, follow the instructions of the [Integration Guide](/docs/scos/dev/feature-integration-guides/{{site.version}}/feature-integration-guides.html) for the feature you want to install/update.
-
-{% info_block warningBox "Warning" %}
 
 Make sure you use the integration guide for the feature version you need. To select a specific version of the feature integration guide, choose the documentation (product release) version in the green dropdown in the right corner of the page. This will switch the version of the documentation to the selected one.
 
-{% endinfo_block %}
 
-Keep in mind, that if the selected feature version is newer than that of the installed features, you need to replace the feature with its modules in your composer.json. For example, `spryker-feature/gift-cards":"^201907.0"`
+
+If the selected feature version is newer than that of the installed features, you need to replace the feature with its modules in your `composer.json`. For example, `spryker-feature/gift-cards":"^201907.0"`
 should be replaced with
 
 ```json
@@ -219,11 +214,7 @@ should be replaced with
 ...
 ```
 
-{% info_block infoBox "Info" %}
-
 A new feature might require a higher major version for a specific module. In this case, do a [single module update](#major-version-updates-and-new-packages-installation).
-
-{% endinfo_block %}
 
 
 

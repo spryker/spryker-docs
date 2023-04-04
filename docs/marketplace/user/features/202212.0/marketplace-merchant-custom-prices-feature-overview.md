@@ -18,6 +18,8 @@ A merchant can set two types of prices:
 
 Customers see custom prices for products based on their merchant relationship, or default prices if the merchant relationship doesn't have prices for marketplace products.
 
+Prerequisite: Marketplace Operators need to define a relationship between the business units of the B2B Customer and the Merchant(s) before Merchants are able to define custom prices for these business unit users. Check the guide [here](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) to define a contract relationship between your marketplace B2B customers and the merchants. Once this relationship is established, merchants can see the existing contracts. 
+
 ## Related Business User articles
 
 | MERCHANT PORTAL USER GUIDES  |

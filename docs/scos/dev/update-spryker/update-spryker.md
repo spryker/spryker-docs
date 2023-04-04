@@ -193,22 +193,16 @@ If no extra dependencies are found, `composer.json` is updated respectively. Oth
 
 ## Update and install features
 
-At some point, you need to add new or update the existing features.
-
-You can learn about new Spryker features from the [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). Not to miss new release notes, we recommend [subscribing to our release newsletter](/docs/scos/user/intro-to-spryker/releases/releases.html).
+At some point, you need to install new or update existing features.
 
 Features are grouped into packages business capabilities(PBCs). For a complete list of PBCs and respective features, see [Packaged Business Capabilities](/docs/pbc/all/pbc.html). In the Related Developer articles section of each feature overview, you can find links to the installation guides for the feature. For example, see [Related Developer articles](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html#related-developer-articles) for the Checkout feature. Use the installation guides to install or update features.
 
+When you open an installation guide, in the right upper corner of the page, select the version of the feature you want to install.
 
-
-Make sure you use the integration guide for the feature version you need. To select a specific version of the feature integration guide, choose the documentation (product release) version in the green dropdown in the right corner of the page. This will switch the version of the documentation to the selected one.
-
-
-
-If the selected feature version is newer than that of the installed features, you need to replace the feature with its modules in your `composer.json`. For example, `spryker-feature/gift-cards":"^201907.0"`
-should be replaced with
+Sometimes, you may want to install a feature of a version higher than your installed features. In this case, instead of adding the feature to your `composer.json`, you need to add the modules which the feature consists of. For example, instead of `spryker-feature/gift-cards":"^201907.0"`, you can add the following:
 
 ```json
+...
 "spryker-shop/cart-code-widget": "^1.0.0",
 "spryker-shop/gift-card-widget": "^1.1.0",`
 ...
@@ -216,7 +210,7 @@ should be replaced with
 
 A new feature might require a higher major version for a specific module. In this case, do a [single module update](#major-version-updates-and-new-packages-installation).
 
-
+You can learn about new Spryker features from the [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). Not to miss new release notes, we recommend [subscribing to our release newsletter](/docs/scos/user/intro-to-spryker/releases/releases.html).
 
 ## Spryker Safari materials
 

@@ -87,7 +87,7 @@ yarn run build-zed
 
 ### Extend or change the settings
 
-Settings are extended and changed by using the onyx-for-zed [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
+Settings are extended and changed by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 
 The example below shows how to create a custom build:
 
@@ -121,7 +121,7 @@ You will now be able to…
 
 ### Extend/change webpack configuration
 
-`webpack` is customized by using the `onyx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
+`webpack` is customized by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 
 The example below shows how to create a custom build:
 

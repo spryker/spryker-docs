@@ -55,7 +55,7 @@ Once installed, you can:
 
 ### Simple builder
 
-The following section describes how to run `oryx-for-zed`.
+The following section describes how to run `oryx-for-zed`. 
 Add the following script to your `package.json`:
 
 ```json
@@ -76,10 +76,10 @@ yarn run build-zed
 
 ### Extend or change the settings
 
-Settings are extended and changed by using the `onyx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
+Settings are extended and changed by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 The example below shows how to create a custom build:
 
-**Step 1:** `build.js`
+**Step 1:** `build.js`  
 Create a `build.js` file in your project containing your custom settings and the logic needed to get the webpack configuration and run the builder:
 
 ```js
@@ -101,7 +101,7 @@ oryxForZed.getConfiguration(myCustomZedSettings)
     .catch(error => console.error('An error occurred while creating configuration', error));
 ```
 
-**Step 2:** `package.json`
+**Step 2:** `package.json`  
 Add a script into your `package.json` pointing to `build.js`.
 
 ```json
@@ -116,11 +116,11 @@ You will now be able to…
 
 ### Extend/change webpack configuration
 
-`webpack` is customized by using the `onyx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
+`webpack` is customized by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 
 The example below shows how to create a custom build:
 
-**Step 1:** `webpack.config.js`
+**Step 1:** `webpack.config.js`  
 Create a `webpack.config.js` file in your project containing your Webpack custom configuration:
 
 ```js
@@ -142,7 +142,7 @@ async function myCustomZedConfiguration() {
 }
 ```
 
-**Step 2:** `build.js`
+**Step 2:** `build.js`  
 Create a `build.js` file in your project containing your Webpack configuration and the logic needed to run the builder:
 
 ```js
@@ -154,7 +154,7 @@ myCustomZedConfiguration()
     .catch(error => console.error('An error occurred while creating configuration', error));
 ```
 
-**Step 3**: `package.json`
+**Step 3**: `package.json`  
 Add a script into your `package.json` pointing to `build.js`.
 
 ```json

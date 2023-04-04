@@ -12,7 +12,7 @@ related:
 ---
 This document explains how a Spryker Marketplace MerchantPortal is designed.
 
-The following diagrams outline the relation between Zed, MerchantPortal, Back Office, and DB. To learn more about MerchantPortal, see [Marketplace MerchantPortal Core feature](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html).
+The following diagrams outline the relation between Zed, MerchantPortal, Back Office, and DB. To learn more about MerchantPortal, see [Marketplace MerchantPortal Core feature](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/marketplace-merchant-portal-core-feature-overview.html).
 
 ![MerchantPortal Architecture overview](https://confluence-connect.gliffy.net/embed/image/4b06167a-3c9a-483c-8b57-32544b211fc5.png?utm_medium=live&utm_source=custom)
 
@@ -34,6 +34,5 @@ Make sure to fulfill [Spryker Marketplace System Infrastructure requirements](/d
 ### Security of the Spryker Marketplace MerchantPortal application
 
 The main database contains all the data of your system. It consists of the Merchant-specific data (MerchantOrders, MerchantOffers, and MerchantProducts) that should never be available to other Merchants in the system.
-Keep this in mind while developing custom functionality for the Merchant Portal. For more details, see [How to add a custom page on Merchant Portal](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-how-to-add-a-page.html).
 
-To provide an additional layer of protection for sensitive data, we have developed the [Persistence ACL for MerchantPortal](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-acl.html). It filters all the data coming from the database on query level.
+To provide an additional layer of protection for sensitive data, we have developed the [Persistence ACL for MerchantPortal](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html). It filters all the data coming from the database on query level.

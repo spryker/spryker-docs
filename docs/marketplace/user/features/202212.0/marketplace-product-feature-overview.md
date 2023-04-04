@@ -22,7 +22,7 @@ Merchants can let other merchants create offers for their unique products. This 
 The marketplace products are displayed on the Storefront when the following conditions are met:
 
 1. The product status is *Active*.
-2. The merchant who owns the product is [*Active*](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+2. The merchant who owns the product is [*Active*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants).
 3. The product visibility state is *Online*.
 4. The product is defined for the current store.
 5. The product has stock or is always in stock.
@@ -46,7 +46,7 @@ The marketplace product is also displayed with the **Sold By** field defining th
 
 ### Marketplace product on the Quick Order page
 
-On the **Quick Order** page, customers can add products to cart by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only products of those merchants are available for selection when they enter **SKU or Name** of the product. Buyers who select the **All Merchants** option can add products from all merchants. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick Add to Cart feature, see [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/quick-add-to-cart-feature-overview.html)
+On the **Quick Order** page, customers can add products to cart by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only products of those merchants are available for selection when they enter **SKU or Name** of the product. Buyers who select the **All Merchants** option can add products from all merchants. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick Add to Cart feature, see [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/quick-add-to-cart-feature-overview.html)
 
 ![quick-order-from-quick-order-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-order-from-quick-order-page.gif)
 
@@ -90,7 +90,7 @@ A Marketplace administrator can filter the products belonging to certain merchan
 
 ![merchants-switcher-on-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/filter-merchant-productsby-merchant-back-office.gif)
 
-Also, Marketplace administrators can edit products, if needed, and create products when acting as the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html).
+Also, Marketplace administrators can edit products, if needed, and create products when acting as the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html).
 
 
 ## Marketplace products in the Merchant Portal

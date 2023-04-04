@@ -7,7 +7,7 @@ related:
   - title: Marketplace Product feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
   - title: Marketplace Inventory Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-inventory-management-feature-overview.html
+    link: docs/pbc/all/warehouse-management-system/page.version/marketplace/marketplace-inventory-management-feature-overview.html
 ---
 
 This document describes how to edit a marketplace concrete product in the Merchant Portal.
@@ -59,7 +59,7 @@ To edit an existing marketplace concrete product:
 
 ### Reference information: *Concrete Product SKU, Name* page
 
-| PANE    | ATTRIBUTE     | DESCRIPTION | REQUIRED? |
+| PANE    | ATTRIBUTE     | DESCRIPTION | REQUIRED |
 | -------------- | ---------------- | ----------- | --------- |
 | Status         |                  | Defines the status of the concrete product. |           |
 |                |  Concrete Product is active    | The selected check box makes the product active and available in store. |               |

@@ -23,7 +23,7 @@ The merchant onboarding process consists of the following steps:
 1. The merchant puts in a request to join the marketplace.
 2. The operator verifies and registers the merchant.
 3. The operator approves the merchant and provides them access to the Merchant Portal to complete their profile.
-4. The merchant creates products and offers in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
+4. The merchant creates products and [offers](/docs/marketplace/user/merchant-portal-user-guides/202212.0/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
 5. The operator decides what kind of payment process to implement—for example, whether or not to use a *Payment Service Provider (PSP)*.
 6. An order management process for fulfillment, shipping, and returns is established for merchants through the Spryker State Machine.
 7. The operator conducts a final check on the merchant's public profile, products, and offer quality. The operator activates merchants and their products and offers in the Back Office. Everything can be activated via a data importer as well.

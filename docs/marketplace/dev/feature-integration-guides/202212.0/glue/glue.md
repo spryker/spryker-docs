@@ -7,9 +7,6 @@ template: concept-topic-template
 
 This section contains the following Glue API Marketplace feature integration guides:
 
-* [Glue API: Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-feature-integration.html)
-
-* [Glue API: Marketplace Inventory Management + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-wishlist-feature-integration.html)
 
 * [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html)
 

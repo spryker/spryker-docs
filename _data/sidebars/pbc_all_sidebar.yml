@@ -598,7 +598,7 @@ entries:
       - title: Customer Relationship Management
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
-          - "202212.0"
+        - "202212.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -1039,7 +1039,7 @@ entries:
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         include_versions:
-          - "202212.0"
+        - "202212.0"
         nested:
           - title: Order Management feature overview
             url: /docs/pbc/all/order-management-system/order-management-feature-overview/order-management-feature-overview.html
@@ -2045,7 +2045,7 @@ entries:
                       - title: Marketplace Wishlist + Product Offer
                         nested: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-product-offer-glue-api.html
               - title: Manage using Glue API
-                url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists-and-wishlists.html              
+                url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists-and-wishlists.html
                 nested:
                   - title: Manage shopping lists
                     url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html

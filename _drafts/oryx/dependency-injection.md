@@ -36,7 +36,7 @@ There are two primary methods for injecting services and dependencies:
 
 ### inject()
 
-The `inject` method is used to inject services from the current injector. This method can be used when the injection context is defined, such as in services at construction time or in provided factories that use `useFactory`.
+The `inject` method is used to inject services from the current injector. This method can be used when the injection context is defined, such as in services' constructors or in provided factories that use `useFactory`.
 
 ```ts
 export class MyService {
@@ -64,7 +64,7 @@ A typical Oryx application usually uses one global DI container, which is set up
 
 # Defining services
 
-In Oryx, we follow certain conventions for defining services.
+The following sections describe the conventions used in Oryx to define services. We recommend using them when developing with Oryx.
 
 ## String-based token
 
@@ -167,13 +167,13 @@ In this example, the `inject` method is used to resolve a dependency based on a 
 
 # Multi-providers
 
-Most dependencies in an application correspond to only one value, like a class. In some cases, it is useful to have dependencies with multiple values, for example, HTTP interceptors or normalizers. However, it's not very practical to configure these dependencies separately, because we want to access them all together at once. Therefore, you can use a special type of dependency that accepts multiple values and is linked to the exact same dependency injection token. These are called multi-providers.
+Most dependencies in an application correspond to only one value, like a class. In some cases, it is useful to have dependencies with multiple values, for example, HTTP interceptors or normalizers. However, it's not very practical to configure these dependencies separately, because the application needs to access them all together at once. Therefore, you can use a special type of dependency that accepts multiple values and is linked to the exact same dependency injection token. These are called multi-providers.
 
 There are different types of multi-providers based on asterisks(`*`) in their token naming. They are described in the following sections.
 
 ### Providers with a single asterisk at the end of their token name (`[token-base-name]*`):
 
-- These create multi-providers with an array of elements.
+These define multi-providers with an array of elements.
 
 ```ts
 [
@@ -187,8 +187,8 @@ inject('multi*'); // [a,b,c];
 
 ### Providers with an asterisk within their token name (`[token-base-name]*[token-specifier-name]`):
 
-- These create a single provider for the token `[token-base-name]*[token-specifier-name]`.
-- They also create multi-providers with an array of elements for the token `[token-base-name]*`.
+- These define a single provider for the token `[token-base-name]*[token-specifier-name]`.
+- They also define multi-providers with an array of elements for the token `[token-base-name]*`.
 
 ```ts
 [
@@ -203,9 +203,9 @@ inject('multi*'); // [a,b,c];
 
 ### Providers with two (or more) asterisks in their token name (`[token-base-name]*[sub-token-name]*[token-specifier-name]`):
 
-- These create a single provider for the token `[token-base-name]*[sub-token-name]*[token-specifier-name]`.
-- They create multi-providers with an array of elements for the token `[token-base-name]*`.
-- Additionally, they create multi-providers with an array of elements for the token `[token-base-name]*[sub-token-name]*`.
+- These define a single provider for the token `[token-base-name]*[sub-token-name]*[token-specifier-name]`.
+- They define multi-providers with an array of elements for the token `[token-base-name]*`.
+- Additionally, they define multi-providers with an array of elements for the token `[token-base-name]*[sub-token-name]*`.
 
 ```ts
 [
@@ -221,7 +221,7 @@ inject('multi*'); // [a,b,c,d];
 inject('multi*new*'); // [c,d];
 ```
 
-It is also possible to combine multiple providers if a provider is created with the token `[token-base-name]*[token-specifier-name]` and another one is added with the token `[token-base-name]*`.
+It is also possible to combine multiple providers if a provider is defined with the token `[token-base-name]*[token-specifier-name]` and another one is added with the token `[token-base-name]*`.
 
 ```ts
 [
@@ -233,4 +233,4 @@ inject('multi*a'); // a;
 inject('multi*'); // [a,b];
 ```
 
-In summary, providers with different asterisk patterns in their token names offer various ways to create single and multi-providers. These patterns allow for more flexibility and organization when managing dependencies within an application.
+In summary, providers with different asterisk patterns in their token names offer various ways to define single and multi-providers. These patterns allow for more flexibility and organization when managing dependencies within an application.

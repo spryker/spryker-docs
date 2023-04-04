@@ -35,8 +35,8 @@ related:
 
 ### Requirements
 
-* `nodejs` version >=12.0
-* `npm` version  >= 6.9.0
+* `nodejs` version >=12.0.0
+* `npm` version >=6.9.0
 
 ### Setup
 
@@ -63,9 +63,7 @@ Once installed, you can:
 
 ### Simple builder
 
-The following section describes how to run run oryx-for-zed.
-To run run oryx-for-zed
-
+The following section describes how to run `oryx-for-zed`. 
 Add the following script to your `package.json`:
 
 ```json
@@ -74,12 +72,11 @@ Add the following script to your `package.json`:
         "zed": "node ./node_modules/@spryker/oryx-for-zed/build"
     }
 }
-
 ```
 
 Open the terminal and type:
 
-```
+```bash
 npm run build-zed
 # or
 yarn run build-zed
@@ -91,10 +88,10 @@ Settings are extended and changed by using the `oryx-for-zed` [API](/docs/scos/d
 
 The example below shows how to create a custom build:
 
-**Step 1:** `build.js`
+**Step 1:** `build.js`  
 Create a `build.js` file in your project containing your custom settings and the logic needed to get the webpack configuration and run the builder:
 
-```bash
+```js
 const oryx = require('@spryker/oryx');
 const oryxForZed = require('@spryker/oryx-for-zed');
 
@@ -103,11 +100,10 @@ const myCustomZedSettings = Object.assign({}, oryxForZed.settings, {
 });
 
 oryxForZed.getConfiguration(myCustomZedSettings).then(configuration => oryx.build(configuration));
-
 ```
 
-**Step 2:** `package.json`
-Add a script into your `package.json` pointing to `build.js`.
+**Step 2:** `package.json`  
+Add a script into your `package.json` pointing to `build.js`:
 
 ```json
 {
@@ -125,11 +121,12 @@ You will now be able to…
 
 The example below shows how to create a custom build:
 
-**Step 1:** `webpack.config.js`
+**Step 1:** `webpack.config.js`  
 Create a `webpack.config.js` file in your project containing your Webpack custom configuration:
 
 ```js
 const oryxForZed = require('@spryker/oryx-for-zed');
+
 async function myCustomZedConfiguration() {
     const oryxConfiguration = await oryxForZed.getConfiguration(oryxForZed.settings);
 
@@ -139,8 +136,7 @@ async function myCustomZedConfiguration() {
 }
 ```
 
-**Step 2:** `build.js`
-
+**Step 2:** `build.js`  
 Create a `build.js` file in your project containing your Webpack configuration and the logic needed to run the builder:
 
 ```js
@@ -150,8 +146,8 @@ const myCustomZedConfiguration = require('./webpack.config.js');
 myCustomZedConfiguration().then(configuration => oryx.build(configuration));
 ```
 
-**Step 3**: `package.json`
-Add a script into your `package.json` pointing to `build.js`.
+**Step 3:** `package.json`  
+Add a script into your `package.json` pointing to `build.js`:
 
 ```json
 {
@@ -173,18 +169,19 @@ Contains all the basic settings used in the Webpack configuration. Go to the cod
 
 ### getConfiguration()
 
-`oryxForZed.getConfiguration(settings)`
-Returns a promise with the default Zed Webpack configuration, based on provided settings.
+```js
+oryxForZed.getConfiguration(settings)
+```
 
-Go to the code for more details.
+Returns a promise with the default Zed Webpack configuration, based on provided settings. Go to the code for more details.
 
 ### CLI args
 
-`oryx-for-zed`1 uses arguments to customize the build process.
+`oryx-for-zed` uses arguments to customize the build process.
 
 You can pass them using the terminal:
 
-```
+```bash
 npm run zed -- --arg
 # or
 yarn run zed -- --arg
@@ -200,7 +197,7 @@ Or embed them into the script section in `package.json`:
 }
 ```
 
-Args list
+### Args list
 
 * `--dev`: development mode; enable `webpack` watchers on the code
 * `--prod`: production mode; enable assets optimization/compression

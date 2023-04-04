@@ -34,7 +34,7 @@ It also provides access to Zed settings and Zed Webpack configuration, so you ca
 ### Requirements
 
 * `nodejs` version >=16.0.0
-* `npm` version  >=8.0.0
+* `npm` version >=8.0.0
 
 ### Setup
 
@@ -102,7 +102,7 @@ oryxForZed.getConfiguration(myCustomZedSettings)
 ```
 
 **Step 2:** `package.json`  
-Add a script into your `package.json` pointing to `build.js`.
+Add a script into your `package.json` pointing to `build.js`:
 
 ```json
 {
@@ -154,8 +154,8 @@ myCustomZedConfiguration()
     .catch(error => console.error('An error occurred while creating configuration', error));
 ```
 
-**Step 3**: `package.json`  
-Add a script into your `package.json` pointing to `build.js`.
+**Step 3:** `package.json`  
+Add a script into your `package.json` pointing to `build.js`:
 
 ```json
 {
@@ -224,7 +224,7 @@ Or embed them into the script section in `package.json`:
 }
 ```
 
-Args list
+### Args list
 
 * `--dev`: development mode; enable `webpack` watchers on the code
 * `--prod`: production mode; enable assets optimization/compression

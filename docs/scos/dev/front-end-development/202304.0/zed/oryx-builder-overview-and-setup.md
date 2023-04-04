@@ -29,7 +29,7 @@ related:
 
 {% info_block warningBox "No longer supported" %}
 
-This package is no longer supported. All functionality has been moved to [Oryx for Zed](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html) starting from *2.13.0* version.
+This package is no longer supported. All functionality has been moved to [Oryx for Zed](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html) starting from **2.13.0** version.
 
 {% endinfo_block %}
 

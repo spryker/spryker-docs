@@ -9,8 +9,8 @@ This document describes how to onboard merchants.
 Once created and approved, merchants become official marketplace members and can create products and offers to sell, fulfill orders and manage their profile in [Merchant Portal](/docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html).
 
 There are two primary roles: *operator* and *merchant*:
-* An operator is a company that owns and administers the platform.
-* A merchant is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
+* An [operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html) is a company that owns and administers the platform.
+* A [merchant](docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#merchant-user) is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
 
 The merchant onboarding process consists of seven steps. Each step requires specific actions that merchants, operators, or both need to take. 
 
@@ -26,7 +26,7 @@ The merchant onboarding process consists of the following steps:
 4. The merchant [creates products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/products.html) and [offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
 5. The operator decides what kind of payment process to implement—for example, whether or not to use a *Payment Service Provider (PSP)*.
 6. An order management process for fulfillment, shipping, and returns is established for merchants through the [Spryker State Machine](/docs/pbc/all/order-management-system/{{site.version}}/state-machine-cookbook/state-machine-cookbook.html).
-7. The operator conducts a final check on the merchant's public profile, products, and offer quality. The operator activates merchants and their products and offers in the Back Office. Everything can be activated via a data importer as well.
+7. The operator conducts a final check on the merchant's public profile, products, and offer quality. The operator [activates merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and their products and offers in the Back Office. Everything can be activated through a [data importer](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) as well.
 
 Each step is described in the following sections.
 
@@ -47,7 +47,7 @@ To accelerate the validation process, you can use relevant Spryker technology pa
 
 {% endinfo_block %}
 
-The official relationship between the operator and merchant can be established by providing a contract to a merchant. For specific merchants, custom contracts can be used. If not, boilerplate agreements should be readily available. Contracts can be created as part of the terms and conditions, which must be accepted beforehand, along with the platform rules, customer communication guidelines, data policy, and SLA agreement. Clarification is also required regarding who the product data owner is, in which categories the merchant is allowed to sell, and the commissions and fees the merchant must pay the operator.
+The official relationship between the operator and merchant can be established by providing a contract to a merchant. For specific merchants, you can use custom contracts. If not, boilerplate agreements should be readily available. Contracts can be created as part of the terms and conditions, which must be accepted beforehand, along with the platform rules, customer communication guidelines, data policy, and SLA agreement. Clarification is also required regarding who the product data owner is, in which categories the merchant is allowed to sell, and the commissions and fees the merchant must pay the operator.
 
 ![edit-merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-2-edit-merchant.png)
 
@@ -56,7 +56,7 @@ The official relationship between the operator and merchant can be established b
 1. In the Back Office, navigate to **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
 2. On the **Overview of Merchants** page that opens, in the **Actions** column, click **Approve Access**. 
 
-By approving the merchant, the operator enables merchant users to access the Merchant Portal to complete their public-facing profile and create products and offers. 
+By [approving the merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#approving-and-denying-merchants), the operator enables merchant users to access the Merchant Portal to complete their public-facing profile and create products and offers. 
 A merchant admin user needs to be created by the operator based on data provided through the registration form, such as the email or first and last name of the contact person. 
 The email with the password is automatically sent to access the Merchant Portal later on. The operator can also create more user accounts for the merchant if required.
 

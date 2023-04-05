@@ -2039,28 +2039,14 @@ entries:
                   - title: Install Glue API
                     nested:
                       - title: Marketplace Shopping Lists
-                        nested: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
-                      - title: Marketplace Wishlist
-                        nested: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-glue-api.html
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
+                      - title: Marketplace Wishlist + Prices
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-prices-glue-api.html
                       - title: Marketplace Wishlist + Product Offer
-                        nested: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-product-offer-glue-api.html
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-product-offer-glue-api.html
               - title: Manage using Glue API
-                url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists-and-wishlists.html
                 nested:
-                  - title: Manage shopping lists
-                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
-                  - title: Manage shopping list items
-                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html
-                  - title: Manage wishlists
-                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html
-                  - title: Manage wishlist items
-                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlist-items.html
-              - title: Domain model and relationships
-                nested:
-                  - title: Marketplace Shopping Lists
-                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-shopping-lists-feature-domain-model-and-relationships.html
-                  - title: Marketplace Wishlist
-                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html
+                  - title: 
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

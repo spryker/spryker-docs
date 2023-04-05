@@ -525,14 +525,12 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Portal feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html

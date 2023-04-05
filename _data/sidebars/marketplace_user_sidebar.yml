@@ -132,6 +132,8 @@ entries:
 
         - title: Marketplace Shipment
           url: /docs/marketplace/user/features/marketplace-shipment-feature-overview.html
+          include_versions:
+            - "202204.0"          
 
         - title: Marketplace Shopping List
           url: /docs/marketplace/user/features/marketplace-shopping-list-feature-overview.html

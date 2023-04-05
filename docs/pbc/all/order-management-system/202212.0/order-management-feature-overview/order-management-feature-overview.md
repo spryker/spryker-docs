@@ -50,4 +50,4 @@ B2B customers usually purchase large volumes of products selecting specific meas
 |[ Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) |  |  |  |  |
 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |  |  |  |  |
 | [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |  |  |  |  |
-| [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-the-shipment-feature.html) |  |  |  |  |
+| [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-the-shipment-feature.html) |  |  |  |  |

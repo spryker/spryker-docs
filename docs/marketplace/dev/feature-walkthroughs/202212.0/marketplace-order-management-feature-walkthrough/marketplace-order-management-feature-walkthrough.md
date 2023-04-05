@@ -6,7 +6,7 @@ related:
     - title: MerchantOms
       link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/merchant-oms.html
     - title: Marketplace Shipment
-      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
+      link: docs/pbc/all/carrier-management/page.version/marketplace/marketplace-shipment-feature-overview.html
     - title: Marketplace and merchant state machines
       link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
     - title: Marketplace and merchant state machines interaction

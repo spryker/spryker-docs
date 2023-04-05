@@ -159,7 +159,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Promotions and Discounts
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
@@ -498,28 +497,24 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Shipment + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Shipment + Customer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-customer-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Shipment feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Shopping Lists feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html

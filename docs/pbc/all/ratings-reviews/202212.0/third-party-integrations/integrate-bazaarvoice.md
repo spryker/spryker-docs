@@ -72,17 +72,17 @@ If you have custom Yves templates or make your own frontend, add the markups req
 
 Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
-| SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY |
-|------------------------------|----------------------|
-| product.sku                  | productId            |
-| product.name                 | productName          |
-| product.description          | productDescription   |
-| product.image                | productImageURL      |
-| product.url                  | productPageURL       |
-| product.brand.name           | brandId, brandName   |
-| product.category             | categoryPath         |
-| product.gtin12               | upcs                 |
-| product.inProductGroupWithID | family               |
+| SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY | Required |
+|------------------------------|----------------------|----------|
+| product.sku                  | productId            | Yes      |
+| product.name                 | productName          | Yes      |
+| product.description          | productDescription   | No       |
+| product.image                | productImageURL      | Yes      |
+| product.url                  | productPageURL       | Yes      |
+| product.brand.name           | brandId, brandName   | No       |
+| product.category             | categoryPath         | No       |
+| product.gtin12               | upcs                 | No       |
+| product.inProductGroupWithID | family               | No       |
 
 #### DCC for merchants
 
@@ -94,11 +94,11 @@ Since merchants don't have their own entities in the Bazaarvoice service, produc
 
 Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
-| SCHEMA.ORG PROPERTY        | BAZAARVOICE PROPERTY |
-|----------------------------|----------------------|
-| organization.identifier    | productId            |
-| organization.name          | productName          |
-| organization.logo          | productImageURL      |
+| SCHEMA.ORG PROPERTY     | BAZAARVOICE PROPERTY | Required |
+|-------------------------|----------------------|----------|
+| organization.identifier | productId            | Yes      |
+| organization.name       | productName          | Yes      |
+| organization.logo       | productImageURL      | Yes      |
 
 #### Ratings and reviews (for Product)
 

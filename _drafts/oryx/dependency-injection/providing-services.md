@@ -127,4 +127,4 @@ inject('multi*a'); // a;
 inject('multi*'); // [a,b];
 ```
 
-In summary, providers with different asterisk patterns in their token names offer various ways to define single and multi-providers. These patterns allow for more flexibility and organization when managing dependencies within an application.
+In summary, providers with different asterisk patterns in their token names offer various ways to define single and multi-providers. These patterns allow for more flexibility and organization when managing dependencies in an application.

@@ -11,6 +11,12 @@ related:
 
 The *Marketplace Merchant Custom Prices* feature allows marketplace merchants to define custom prices for the marketplace products within specific business units of B2B customers via the Merchant Portal.
 
+{% info_block infoBox "Prerequisite" %}
+
+Marketplace operators need to define a relationship between the business units of the B2B customer and the merchants before merchants are able to define custom prices for these business unit users. For information on how to define a contract relationship between your marketplace B2B customers and the merchants, see [Merchant B2B contracts feature overview](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-feature-overview.html). Once this relationship is established, merchants can see the existing contracts.
+
+{% endinfo_block %}
+
 A merchant can set two types of prices:
 
 - *Default prices*. These are the prices shown by default to all regular customers.
@@ -18,7 +24,11 @@ A merchant can set two types of prices:
 
 Customers see custom prices for products based on their merchant relationship, or default prices if the merchant relationship doesn't have prices for marketplace products.
 
-Prerequisite: Marketplace Operators need to define a relationship between the business units of the B2B Customer and the Merchant(s) before Merchants are able to define custom prices for these business unit users. Check the guide [here](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) to define a contract relationship between your marketplace B2B customers and the merchants. Once this relationship is established, merchants can see the existing contracts. 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+merchant+custom+prices+feature+overview/merchant_custom_price.mov" type="video/mov">
+  </video>
+</figure>
 
 ## Related Business User articles
 

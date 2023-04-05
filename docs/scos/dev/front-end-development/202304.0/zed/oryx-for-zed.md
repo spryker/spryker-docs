@@ -33,6 +33,12 @@ It also provides access to Zed settings and Zed Webpack configuration, so you ca
 
 ### Requirements
 
+{% info_block infoBox "Note" %}
+
+`oryx-for-zed` starting from `2.13.0` version requires `spryker/chart` module version `>=1.4.0`.
+
+{% endinfo_block %}
+
 * `nodejs` version >=16.0.0
 * `npm` version >=8.0.0
 

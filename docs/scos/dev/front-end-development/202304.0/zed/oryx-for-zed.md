@@ -77,6 +77,7 @@ yarn run build-zed
 ### Extend or change the settings
 
 Settings are extended and changed by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
+
 The example below shows how to create a custom build:
 
 **Step 1:** `build.js`  

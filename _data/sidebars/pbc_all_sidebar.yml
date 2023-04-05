@@ -2045,8 +2045,22 @@ entries:
                       - title: Marketplace Wishlist + Product Offer
                         url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-product-offer-glue-api.html
               - title: Manage using Glue API
+                url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists-and-wishlists.html
                 nested:
-                  - title: 
+                  - title: Manage marketplace shopping lists
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
+                  - title: Manage marketplace shopping list items
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html
+                  - title: Manage marketplace wishlists
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html
+                  - title: Manage marketplace wishlist items
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlist-items.html
+              - title: Domain model and relationships
+                nested:
+                  - title: Marketplace Shopping Lists
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-shopping-lists-feature-domain-model-and-relationships.html
+                  - title: Marketplace Wishlist
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html                                      
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

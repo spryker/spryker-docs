@@ -186,13 +186,11 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Shopping Lists
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Persistence ACL
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
@@ -699,7 +697,6 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
                 include_versions:
                 - "202204.0"
-                - "202212.0"
 
 
       - title: Module migration guides
@@ -854,6 +851,9 @@ entries:
 
           - title: Wishlists
             url: /docs/marketplace/dev/glue-api-guides/wishlists/wishlists.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"            
             nested:
               - title: Managing wishlists
                 url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
@@ -903,6 +903,9 @@ entries:
             - "202212.0"
 
           - title: Shopping lists
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Managing shopping lists
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html

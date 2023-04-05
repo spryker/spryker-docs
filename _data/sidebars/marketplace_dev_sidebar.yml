@@ -843,19 +843,16 @@ entries:
             url: /docs/marketplace/dev/glue-api-guides/shopping-lists/marketplace-shopping-lists.html
             include_versions:
             - "202204.0"
-            - "202212.0"
             nested:
               - title: Managing marketplace shopping lists
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
                 include_versions:
                 - "202204.0"
-                - "202212.0"
 
               - title: Managing marketplace shopping list items
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
                 include_versions:
                 - "202204.0"
-                - "202212.0"
 
           - title: Wishlists
             url: /docs/marketplace/dev/glue-api-guides/wishlists/wishlists.html
@@ -865,14 +862,12 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Managing wishlist items
                 url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Searching the product catalog
             url: /docs/marketplace/dev/glue-api-guides/searching-the-product-catalog.html

@@ -77,7 +77,12 @@ The bare minimum `package.json` includes the following dependencies:
 }
 ```
 
-> **_NOTE:_** It is recommended to front the dependencies with a caret notation (`^`), so that the latest _minor_ release is pulled on each installation.
+{% info_block infoBox %}
+
+We recommend fronting the dependencies with a caret notation (`^`), so that the latest _minor_ release is pulled on each installation.
+
+{% endinfo_block %}
+
 
 Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](./set-up-oryx.md).
 

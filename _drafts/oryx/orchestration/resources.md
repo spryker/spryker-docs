@@ -6,8 +6,7 @@ template: concept-topic-template
 
 # Application resources
 
-`Resources` represent a generic way of lazy loading graphics into Oryx application at runtime.
-It is usually used to load things like images, icons, fonts, etc.
+`Resources` represent a generic way of lazy loading graphics into Oryx application at runtime. It is usually used to load things like images, icons, fonts, etc.
 
 Declare your resources using a variable which should resolve to a string:
 

@@ -27,8 +27,7 @@ class MyService {
 }
 ```
 
-Also `App` instance is available inside of the plugins to be able to easily interact
-with the application instance:
+Also `App` instance is available inside of the plugins to be able to easily interact with the application instance:
 
 ```ts
 class MyPlugin implements AppPlugin {
@@ -40,11 +39,7 @@ class MyPlugin implements AppPlugin {
 
 ## Interacting with plugins
 
-If you need to access some of the registered plugins you can use `findPlugin` or `requirePlugin` APIs
-depending on your requirement towards the plugins.
-If your code needs a plugin to work and you cannot provide feasible fallback without it - use `requirePlugin` API as it will throw an error if the plugin was not registered with the Oryx application.
-Otherwise you can use `findPlugin` which may return `undefined` in case the plugin is not available
-in which case you must design your code to handle the fallback logic.
+If you need to access some of the registered plugins you can use `findPlugin` or `requirePlugin` APIs depending on your requirement towards the plugins. If your code needs a plugin to work and you cannot provide feasible fallback without it - use `requirePlugin` API as it will throw an error if the plugin was not registered with the Oryx application. Otherwise you can use `findPlugin` which may return `undefined` in case the plugin is not available in which case you must design your code to handle the fallback logic.
 
 Both methods expect a plugin class reference or plugin name string to resolve the plugin.
 

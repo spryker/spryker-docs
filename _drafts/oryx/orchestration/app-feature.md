@@ -8,15 +8,16 @@ template: concept-topic-template
 
 `AppFeature` is a higher level collection of lower level primitives such as:
 
-- [Components](TODO: Link to components)
-- [Providers](TODO: Link to providers)
+<!-- TODO: Link to components -->
+- Components
+<!-- TODO: Link to providers -->
+- Providers
 - [Plugins](./app-plugins.md)
 - [Resources](./resources.md)
 - [Feature options](#feature-options)
-- [Builder options](./app-builder.md#options)
+- [Builder options](./index.md#options)
 
-Features are useful to structure and organise code and functionality into
-logical groups and to make them easier to reuse in different scenarios.
+Features are useful to structure and organise code and functionality into logical groups and to make them easier to reuse in different scenarios.
 
 Every Oryx package exposes such features for your application to be easily integrated.
 
@@ -30,9 +31,7 @@ const myFeature: AppFeature = {...};
 const app = appBuilder().withFeature(myFeature);
 ```
 
-`AppFeature` is represented as an interface and you may create them
-as simple object literals or as classes/functions when you want them
-to be configurable and more flexible:
+`AppFeature` is represented as an interface and you may create them as simple object literals or as classes/functions when you want them to be configurable and more flexible:
 
 ```ts
 import { AppFeature } from '@spryker-oryx/core';
@@ -56,10 +55,11 @@ class MyConfigurableFeature implements AppFeature {
 }
 ```
 
+## Extending features
+
 You may also extend existing features but it will depend how the feature is defined.
 
-For features defined as object literals you may use spread operators
-to customize some parts of it:
+For features defined as object literals you may use spread operators to customize some parts of it:
 
 ```ts
 const myExtendedFeature = {
@@ -73,8 +73,7 @@ const myExtendedFeature = {
 };
 ```
 
-For features defined as classes/function you would have to also use class or function
-to be able to accept configuration and pass it to the original feature:
+For features defined as classes/function you would have to also use class or function to be able to accept configuration and pass it to the original feature:
 
 ```ts
 class MyExtendedFeature extends MyConfigurableFeature {
@@ -92,8 +91,7 @@ class MyExtendedFeature extends MyConfigurableFeature {
 
 ## Feature options
 
-If your feature requires some options from the consumer you may define it's type
-on the special global interface `FeatureOptions` with the key that you will later use to get the options:
+If your feature requires some options from the consumer you may define it's type on the special global interface `FeatureOptions` with the key that you will later use to get the options:
 
 ```ts
 declare global {
@@ -105,8 +103,7 @@ declare global {
 interface YourFeatureOptions {}
 ```
 
-Once you have defined the type of your options you now can use them in your code
-by using `FeatureOptionsService.getFeatureOptions()` API:
+Once you have defined the type of your options you now can use them in your code by using `FeatureOptionsService.getFeatureOptions()` API:
 
 ```ts
 import { FeatureOptionsService } from '@spryker-oryx/core';
@@ -119,8 +116,7 @@ class MyService {
 }
 ```
 
-This will allow consumers of your feature to pass the options via `AppBuilder.withOptions()`
-and it's going to be fully typed and typesafe:
+This will allow consumers of your feature to pass the options via `AppBuilder.withOptions()` and it's going to be fully typed and typesafe:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';
@@ -130,10 +126,7 @@ appBuilder().withOptions({'your-feature-key': {...}});
 
 ### Default options
 
-It is sometimes usefull to provide default values for your feature options
-to not force your users to always pass the same kind of values.
-For that you may define `AppFeature.defaultOptions` on your feature which
-will be used by default if the user did not provide any options for your feature:
+It is sometimes usefull to provide default values for your feature options to not force your users to always pass the same kind of values. For that you may define `AppFeature.defaultOptions` on your feature which will be used by default if the user did not provide any options for your feature:
 
 ```ts
 import { AppFeature } from '@spryker-oryx/core';

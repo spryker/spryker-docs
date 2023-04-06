@@ -5,7 +5,7 @@ last_updated: April 5, 2023
 template: howto-guide-template
 ---
 
-Suppose you have two testing environments, and you need to migrate a large amount of data from one environment to another to perform different tests with the same data. If you have little data, you can export it using the `mysqldump` command. However, for large amounts of data, this method can be slow due to long waiting time and VPN connection issues. In this case, you can use AWS S3 to efficiently import the data between the environments. Here's how to do it:
+Suppose you have two testing environments, and you need to migrate a large amount of data from one environment to another to perform different tests with the same data. If you have little data, you can export by running the `mysqldump` command on the local machine. However, for large amounts of data, this method can be slow due to long waiting time and VPN connection issues. In this case, you can use run the `mysqldump` command on the Jenkins instance and upload the dump file to AWS S3 to import the data between the environments faster. Here's how to do it:
 
 1. Go the the Jenkins instance of the environment from where you want to import the data. 
 2. Export the database as a compressed file and upload it to an S3 bucket using the following command:
@@ -17,10 +17,10 @@ mysqldump -h $SPRYKER_DB_HOST -u $SPRYKER_DB_ROOT_USERNAME -p $SPRYKER_DB_PASSWO
 ![mysqldump-command-in-jenkins](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments/mysqldump-command-in-jenkins.png)
 
 3. Monitor the command execution until it finishes. Once it's finished, go to AWS and download the dump file to the necessary environment. Since the S3 bucket is shared, the dump file is accessible from any of your environments.
-4. To recover the dump file, run the following command:
+4. To recover the compressed dump file, run the following command:
 
 ```php
-mysql -u $SPRYKER_DB_ROOT_USERNAME -p $SPRYKER_DB_PASSWORD $SPRYKER_DB_DATABASE < dumpfile.sql.gz
+zcat your_database_dump.sql.gz | mysql -u $SPRYKER_DB_ROOT_USERNAME -p $SPRYKER_DB_PASSWORD $SPRYKER_DB_DATABASE
 ```
 
 {% info_block infoBox "Clean up old dump files" %}

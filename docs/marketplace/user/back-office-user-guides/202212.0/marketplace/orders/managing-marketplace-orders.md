@@ -163,7 +163,7 @@ To be able to create a return, your marketplace state machine should have the re
 
 {% endinfo_block %}
 
-If an order item is **[returnable](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html)**, you can create a return for it.
+If an order item is **[returnable](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html)**, you can create a return for it.
 
 To create a return:
 

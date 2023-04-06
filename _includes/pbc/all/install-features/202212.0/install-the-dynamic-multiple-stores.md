@@ -1,4 +1,4 @@
-To integrate Dynamic multistore feature  in your project, you need to:
+To integrate Dynamic multistore feature in your project, you need to:
 
 - [Define the region stores context by domain](#define-the-region-stores-context-by-domain)
 - [Integration Dynamic Store feature](#integration-dynamic-store-feature)
@@ -2011,6 +2011,92 @@ New configuration for deploy file use region instead store name for services, en
 Evnironment variable `SPRYKER_DYNAMIC_STORE_MODE` enable dynamic store feature, by default it is disabled.
 Also you need to change domain name for all endpoints in EU region.
 Please, check `deploy.dev.dynamic-store.yml` file for more details.
+
+
+## Data migration 
+
+You don't need to migrate data in the database for the dynamic store feature. Only changes in the search and storage engine are necessary.
+Propel migration executes automatically, adds new tables for the dynamic store feature, and populates new tables with data via data import.
+To make the dynamic store feature work correctly, you need to add new data structures for search and storage engines.
+
+
+You first need to truncate all data from search and storage engines. 
+Please see below for more details in the section **"Truncate data from search and storage engines"**.
+Next, run the `sync:data` command to populate the new data structure for search and storage engines.
+
+```bash
+vendor/bin/console sync:data
+```
+
+All data will be populated in search and storage engines.
+
+### Truncate data from search and storage engines
+
+#### Storage engine
+
+The Dynamic Store feature uses Redis as a key-value store for each region instead of store. If you are using the same Redis instance for a region, you need to clear all data from Redis for existing stores.
+The data is stored in the following format: `kv:{resource-type}:{store}:{locale}:{key}`.
+ 
+ To remove data from Redis, use the `redis-cli` command:
+ 
+ ```bash
+ redis-cli KEYS "*:xxx:*" | xargs redis-cli DEL
+```
+
+{% info_block warningBox  %}
+Note that the key name can be different, depending on the configuration of the project.
+Below is a list of keys, taking into account the default configuration out of the box.
+{% endinfo_block %}
+
+
+{% info_block warningBox "Verification" %}
+The following is an example list of keys where `xxx` is a store name (store name example: DE, AT, etc.): 
+
+- `kv:availability:xxx:*`
+- `kv:price_product_abstract:xxx:*`
+- `kv:price_product_abstract_merchant_relationship:xxx:*`
+- `kv:price_product_concrete:xxx:*`
+- `kv:price_product_concrete_merchant_relationship:xxx:*`
+- `kv:product_abstract:xxx:*`
+- `kv:product_abstract_category:xxx:*`
+- `kv:product_abstract_option:xxx:*`
+- `kv:product_abstract_relation:xxx:*`
+- `kv:product_concrete_measurement_unit:xxx:*`
+- `kv:product_concrete_product_offer_price:xxx:*`
+- `kv:product_concrete_product_offers:xxx:*`
+- `kv:product_label_dictionary:xxx:*`
+- `kv:product_offer:xxx:*`
+- `kv:product_offer_availability:xxx:*`
+- `kv:category_node:xxx:*`
+- `kv:category_tree:xxx:*`
+- `kv:cms_block:xxx:*`
+- `kv:cms_page:xxx:*`
+- `kv:merchant:xxx:*`
+- `kv:price_product_abstract_merchant_relationship:xxx:*`
+- `kv:store:xxx`
+
+{% endinfo_block %}
+
+It's recommended to flash all data from the Redis by instance and populate them again.
+
+
+### Search engine
+
+Out of the box index prefixes were changed for all stores in the dynamic store feature.  Data from old indexes is not available for new stores.
+
+If you are using Elasticsearch, the following indexes are available in the standard configuration (example: `xxx` -  store name): 
+
+- `spryker_xxx_merchant`.
+- `spryker_xxx_page`.
+- `spryker_xxx_product-review`.
+- `spryker_xxx_return_reason`.
+
+To delete indexes, you can use the `curl` command. To delete the `spryker_xxx_page` index, follow these steps: 
+```bash
+
+curl -XDELETE 'http://localhost:9200/spryker_xxx_page'
+
+```
 
 
 ## Delete store in database

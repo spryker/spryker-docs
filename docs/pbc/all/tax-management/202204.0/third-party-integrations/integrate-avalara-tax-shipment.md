@@ -29,7 +29,7 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Shipment | master | [Shipment feature integration guide](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-the-shipment-feature.html) |
+| Shipment | master | [Shipment feature integration guide](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
 | Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{site.version}}/third-party-integrations/integrate-avalara.html) |
 
 ### 1) Install the required modules using Composer

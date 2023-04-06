@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-shipment-feature-integration.html  
 related:
   - title: Shipment feature integration
-    link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-the-shipment-feature.html
+    link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Retrieving orders

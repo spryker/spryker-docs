@@ -1,8 +1,9 @@
 ---
-title: Marketplace Shipment feature overview
-description: This document contains concept information for the Marketplace Shipment feature.
+title: Carrier Management
+description: The Carrier Management capability deals with delivery methods
 template: concept-topic-template
-redirect_from:
-  - /docs/marketplace/user/features/202212.0/marketplace-shipment-feature-overview.html
-  - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-shipment-feature-walkthrough.html
 ---
+
+Carrier Management lets you set up different deliver methods.
+
+The capability consists of a base shop and the marketplace addon. With the base shop features, you can set up delivery methods, and your customers can choose preferred methods for their orders. With the marketplace features, customers can choose different delivery methods for items from different merchants. To run a marketplace, the features from both the base shop and the marketplace addon are required. 

@@ -1,5 +1,5 @@
 ---
-title: Carrier Management
+title: Shipment feature overview
 description: With the Carrier Management capability, you can create and manage carrier companies and their delivery methods for every individual store.
 last_updated: July 07, 2022
 template: concept-topic-template
@@ -19,7 +19,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
 ---
 
-The *Carrier Management* capability lets you create and manage carrier companies, and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. You can define delivery price and expected delivery time, tax sets, and the availability of specific delivery methods per each store.
+The *Shipment* feature lets you create and manage carrier companies, and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. You can define delivery price and expected delivery time, tax sets, and the availability of specific delivery methods per each store.
 
 The main concepts regarding shipping are as follows:
 * *Carrier company*: A company that provides shipping services such as DHL, FedEx, or Hermes.

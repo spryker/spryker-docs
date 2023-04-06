@@ -1,9 +1,13 @@
-## Upgrade iteratively
+---
+title: Installing features and updating modules
+description: Learn how to take different kinds of updates and install new packages
+last_updated: Jun 16, 2021
+template: concept-topic-template
+---
 
+This document describes how to install new features and modules and take different kind of updates.
 
-To make your update process as smooth as possible, we recommend following the best practices described in this section.
-
-### Bugfix and minor version updates
+## Bugfix and minor version updates
 
 For *bugfix* and *minor* module version updates, run the update for modules from your update iteration. Example:
 
@@ -11,15 +15,15 @@ For *bugfix* and *minor* module version updates, run the update for modules from
 composer update spryker/propel spryker/oms spryker/currency spryker/money spryker/glossary spryker/mail spryker/customer-extension spryker/calculation spryker/price-product …
 ```
 
-The list of modules to be updated might change if Composer warns you about dependencies on other modules. Keep adding them to the list, but make sure your update iteration does not get blown up too much. Otherwise, split the iteration into several ones.
+If Composer warns you about dependencies on other modules, keep adding them to the list but make sure your update iteration does not get blown up too much. Otherwise, split the iteration into several ones.
 
-Before taking minor updates to the modules you customized on the project level, we recommend double-checking that the update does not conflict with the project-level logic. . You can do it as follows:
+Before taking minor updates for the modules you customized on the project level, double-check  that the update does not conflict with the project-level logic:
 
 1. Go to `https://github.com/[module-name-here]/compare/[your-version]…[available-version]`.  For example, [https://github.com/spryker/price/compare/4.0.0...5.0.0](https://github.com/spryker/price/compare/4.0.0...5.0.0).
 2. Carefully check the code changes.
-3. Fix or integrate with the issues if any.
+3. Fix or integrate with any issues you find.
 
-### Update to a major versions and install new packages
+## Update to a major versions and install new packages
 
 For *major* module version updates or installation of *new packages*, follow the steps below.
 
@@ -34,20 +38,7 @@ If no extra dependencies are found, `composer.json` is updated respectively. Oth
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Update and install features
+## Updating and installing features
 
 At some point, you need to install new or update existing features.
 
@@ -67,3 +58,7 @@ Sometimes, you may want to install a feature of a version higher than that of yo
 A new feature may require a higher major version of a specific module. In this case, do a [single module update](#major-version-updates-and-new-packages-installation).
 
 You can learn about new Spryker features from the [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). Not to miss new release notes, we recommend [subscribing to our release newsletter](/docs/scos/user/intro-to-spryker/releases/releases.html).
+
+## Next steps
+
+[Testing updates](/docs/scos/dev/updating-spryker/testing-updates.html)

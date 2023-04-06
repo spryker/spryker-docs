@@ -1,5 +1,5 @@
 ---
-title: Testing of updated code
+title: Testing updates
 description: Learn how to test your code after taking updates
 last_updated: Apr 3, 2023
 template: howto-guide-template
@@ -36,3 +36,8 @@ We find the following static code analysis tools the most helpful and strongly r
 In addition to the automated tests and code analysis tools, you can optionally do the following:
 * *Re-install the project locally* to make sure the installation process is not broken, demo-data import along with [publish and synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) work as expected.
 * *Run a manual smoke test* either locally or on stage to make sure everything works and looks fine. This is especially important if you don't have enough acceptance test coverage.
+
+
+## Next steps
+
+[Preventing update issues](/docs/scos/dev/updating-spryker/preventing-update-issues.html)

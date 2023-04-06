@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/oryx
   - /v1/docs/oryx
   - /v1/docs/en/oryx
+  - docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
 related:
   - title: Oryx for Zed
     link: docs/scos/dev/front-end-development/zed/oryx-for-zed.html

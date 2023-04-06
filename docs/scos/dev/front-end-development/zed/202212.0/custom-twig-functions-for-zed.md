@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/en/custom-twig-functions-for-zed
   - /v4/docs/custom-twig-functions-for-zed
   - /v4/docs/en/custom-twig-functions-for-zed
+  - /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
 ---
 
 To improve developer experience, [Twig](https://twig.symfony.com/) functionality has been extended with new Twig functions. All the Twig extension implementations are located in the `Gui` module and can be found in `Pyz\Zed\Twig\TwigDependencyProvider`.

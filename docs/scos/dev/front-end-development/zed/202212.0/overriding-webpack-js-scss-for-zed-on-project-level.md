@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/verriding-webpack-js-scss-for-zed-on-project-level
   - /v1/docs/verriding-webpack-js-scss-for-zed-on-project-level
   - /v1/docs/en/verriding-webpack-js-scss-for-zed-on-project-level
+  - /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
 ---
 
 To override or expand core JS and SCSS files, you need to expand the oryx-for-zed building system with an additional config:

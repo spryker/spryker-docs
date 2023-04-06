@@ -92,6 +92,8 @@ entries:
                   - title: Paqato
                     url: /docs/pbc/all/carrier-management/base-shop/third-party-integrations/paqato.html
           - title: Marketplace
+            include_versions:
+            - "202212.0"
             nested:
               - title: Marketplace Shipment feature overview
                 url: /docs/pbc/all/carrier-management/marketplace/marketplace-shipment-feature-overview.html

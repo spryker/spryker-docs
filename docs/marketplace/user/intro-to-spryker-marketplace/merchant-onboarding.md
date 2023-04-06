@@ -57,7 +57,7 @@ The official relationship between the operator and merchant can be established b
 2. On the **Overview of Merchants** page that opens, in the **Actions** column, click **Approve Access**. 
 
 By [approving the merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#approving-and-denying-merchants), the operator enables merchant users to access the Merchant Portal to complete their public-facing profile and create products and offers. 
-A merchant admin user needs to be created by the operator based on data provided through the registration form, such as the email or first and last name of the contact person. 
+Then, the operator needs to create a merchant admin user based on data provided through the registration form, such as the email or first and last name of the contact person. For this, the operator finds a merchant user in the Back Office, in **Merchant&nbsp;<span aria-label="and then">></span> Users** and assigns them the required permissions.
 The email with the password is automatically sent to access the Merchant Portal later on. The operator can also create more user accounts for the merchant if required.
 
 ![overview-of-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-3-overview-of-merchants.png)

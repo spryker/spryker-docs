@@ -20,9 +20,9 @@ If you run into any issues when onboarding the merchant, get in touch with your 
 
 The merchant onboarding process consists of the following steps:
 
-1. The merchant puts in a request to join the marketplace.
+1. The merchant puts in a request to join the marketplace and provides all required documents.
 2. The operator verifies and registers the merchant.
-3. The operator approves the merchant and provides them access to the Merchant Portal to complete their profile.
+3. The operator approves the merchant and provides access to the Merchant Portal.
 4. The merchant [creates products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/products.html) and [offers](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
 5. The operator decides what kind of payment process to implement—for example, whether or not to use a *Payment Service Provider (PSP)*.
 6. An order management process for fulfillment, shipping, and returns is established for merchants through the [Spryker State Machine](/docs/pbc/all/order-management-system/{{site.version}}/state-machine-cookbook/state-machine-cookbook.html).
@@ -140,7 +140,7 @@ Trusted merchants can have an automatic pre-approval, while new merchants have t
 
 ![offers-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-7-offers-in-the-back-office.png)
 
-![offers-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-7-offers-on-storefront.png)
+![offers-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding/step-7-offers-on-the-storefront.png)
 
 
 

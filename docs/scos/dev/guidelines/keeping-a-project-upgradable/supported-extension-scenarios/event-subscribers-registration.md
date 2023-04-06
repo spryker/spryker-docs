@@ -12,13 +12,12 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
 ---
 
-## Introduction
-
 Manifests support registering event subscribers only in the dependency provider, a type of code class.
 
 Manifests fully support the registration of event subscribers in the collection. Restrictions to the order of the plugins in collection are **not supported**. New plugin will be added to the end of the collection.
 
-Code example 1.1: Event subscribers registration in collection with parent method call
+To register event subscribers in collection with parent method call, use the following:
+
 ```php
 use Spryker\Zed\AvailabilityStorage\Communication\Plugin\Event\Subscriber\AvailabilityStorageEventSubscriber;
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
@@ -39,7 +38,8 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Code example 1.2: Event subscriber registration in collection, with a chain of method calls.
+To register event subscribers in collection with a chain of method calls, use the following:
+
 ```php
 use Spryker\Zed\AvailabilityStorage\Communication\Plugin\Event\Subscriber\AvailabilityStorageEventSubscriber;
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;

@@ -112,10 +112,10 @@ Since merchants don't have their own entities in the Bazaarvoice service, produc
 
 Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
-| SCHEMA.ORG PROPERTY     | BAZAARVOICE PROPERTY | Required | Example                                                           |
-|-------------------------|----------------------|----------|-------------------------------------------------------------------|
-| organization.identifier | productId            | Yes      | MER000001                                                           |
-| organization.name       | productName          | Yes      | Xyz Merchant                                                      |
+| SCHEMA.ORG PROPERTY     | BAZAARVOICE PROPERTY | Required | Example                                                                      |
+|-------------------------|----------------------|----------|------------------------------------------------------------------------------|
+| organization.identifier | productId            | Yes      | MER000001                                                                    |
+| organization.name       | productName          | Yes      | Xyz Merchant                                                                 |
 | organization.logo       | productImageURL      | Yes      | https://www.example.com/merchant/merchant-logo.png (always use absolute URL) |
 
 Example:

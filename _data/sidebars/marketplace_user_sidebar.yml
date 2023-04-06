@@ -298,6 +298,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html
 
         - title: Products
+          url: /docs/marketplace/user/merchant-portal-user-guides.0/products/products.md
           nested:
 
           - title: Abstract products

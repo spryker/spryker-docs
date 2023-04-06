@@ -25,7 +25,7 @@ Implement the features and functionality of the Marketplace by following the int
 | [Marketplace Promotions & Discounts](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-promotions-discounts-feature-integration.html) | With the Marketplace Promotions and Discounts feature, the discounts are correctly applied to the merchant orders. |
 | [Marketplace Order Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-order-management-feature-integration.html) | With the Marketplace Order Management, default orders that contain additional information about the merchants are called Marketplace orders. In turn, every merchant can view and manage only the orders that are related to their items. Such orders are called merchant orders. |
 | [Marketplace Shipment](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-shipment-feature-integration.html) | The Marketplace orders are split into several shipments based on the merchants from which the items were bought. Merchants can see their shipments only. |
-| [Marketplace Return Management](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-return-management-feature-integration.html) | Order returns management enhancement for OMS. |
+| [Marketplace Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) | Order returns management enhancement for OMS. |
 
 ## 2) Add MerchantPortal features
 

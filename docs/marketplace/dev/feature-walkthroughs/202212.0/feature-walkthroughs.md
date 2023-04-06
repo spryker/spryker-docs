@@ -11,7 +11,6 @@ This section provides descriptions of Marketplace features from a development pe
 * [Marketplace Order Management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html)
 * [Marketplace Product Offer Prices](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-prices-feature-walkthrough.html)
 * [Marketplace Merchant Custom Prices](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-custom-prices-feature-walkthrough.html)
-* [Marketplace Return Management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-return-management-feature-walkthrough.html)
 * [Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shipment-feature-walkthrough.html)
 * [Marketplace Promotions and Discounts](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-promotions-and-discounts-feature-walkthrough.html)
 * [Marketplace Product Options](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-options-feature-walkthrough.html)

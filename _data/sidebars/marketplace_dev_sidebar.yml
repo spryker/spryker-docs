@@ -152,7 +152,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Shipment
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html
@@ -491,7 +490,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Shipment + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-cart-feature-integration.html
@@ -695,7 +693,6 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: "Glue API: Marketplace Shopping Lists feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
@@ -886,7 +883,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Resolving search engine friendly URLs
             url: /docs/marketplace/dev/glue-api-guides/resolving-search-engine-friendly-urls.html

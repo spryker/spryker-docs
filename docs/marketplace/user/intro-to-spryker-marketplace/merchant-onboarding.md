@@ -70,7 +70,7 @@ Operator: Decide who is the owner of the product data:
 * If the operator is the owner and manages the product data, other merchants can create offers with specific prices and available quantities on top of existing products.
 * If merchants can create products, the operator needs to make sure there are no duplicates in the Marketplace and regularly check the product data quality.
 
-In the Merchant Portal, merchants can create and update products and offers individually. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or establish the data exchange process from the merchant's PIM or ERP system.
+In the Merchant Portal, merchants can [create and update products](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/products/products.html) and offers individually. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or establish the data exchange process from the merchant's PIM or ERP system.
 
 {% info_block infoBox %}
 

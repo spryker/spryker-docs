@@ -34,7 +34,8 @@ TSLint support was discontinued as of December 1, 2020. The solution is migratio
         ```json
         {
             "@spryker/frontend-config.tslint": "x.x.x",
-            "tslint": "x.x.x"
+            "tslint": "x.x.x",
+            "typescript-eslint-parser": "x.x.x"
         }
         ```
      

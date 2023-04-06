@@ -32,7 +32,7 @@ The dynamic multi-store setup is very versatile and customizable — for example
 
 ![dynamic multi-store setup 1](/images/howto-set-up-dynamic-multiple-stores/dynamic-multi-store-setup-configuration-option-1.png)
 
-Due to the resources being shared, the infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and a small amount of data like products and prices.
+Due to the resources being shared, infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and a small amount of data like products and prices.
 
 
 **Dynamic multi-store setup 2: Each region has a dedicated search engine and key-value storage while the database is shared.**
@@ -47,7 +47,7 @@ This setup is most suitable for B2B projects with high traffic and a large amoun
 
 This setup is most suitable for projects with the following requirements:
 
-* Completely different business requirements per store, like business logic and features.
+* Completely different business requirements per store, such as business logic and features.
 * Independent maintenance and development flow.
 * Separated data management for entities like products, customers, and orders.
 * On-demand setup of any type of environment per region, store, like test, staging, or production.
@@ -56,7 +56,7 @@ It's the most expensive but flexible option in terms of per-store scaling and pe
 
 ## Set up multiple stores
 
-To set up multiple stores, follow the steps in the following sections:
+To set up multiple stores, follow the steps in the following sections.
 
 ### Configure code buckets
 
@@ -66,8 +66,8 @@ Code buckets provide an easy way to execute different business logic in runtime 
 
 1. Configuration stores will be created in the database. To configure stores, see [Dynamic multiple stores installation and configuration](/docs/scos/dev/feature-integration-guides/202212.0/dynamic-multiple-stores.html).
 2. Optional: Define store-specific configuration:
-  1. For one or more stores you've defined in database, define a separate, store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
-  2. To apply the defined, store-specific configuration, adjust the related deploy file in the `environment` section.
+  a. For one or more stores you've defined in database, define a separate, store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
+  b. To apply the defined, store-specific configuration, adjust the related deploy file in the `environment` section.
 
   In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see the [environment](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment):
 
@@ -97,7 +97,7 @@ Define the import source for the `EU` region and  `DE` store you've added:
 ...   
 ```
 
-4. Configure installation recipes
+4. Configure the installation recipes.
 
 Add the new regions to the installation recipes in `config/install/*` as follows:
 

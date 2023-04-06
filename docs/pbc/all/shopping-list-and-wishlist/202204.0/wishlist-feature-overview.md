@@ -88,7 +88,7 @@ For more details about wishlists, check the video:
 {% wistia g7hzsa9xw7 720 480 %}
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES  |
 |---------|---------|---------|

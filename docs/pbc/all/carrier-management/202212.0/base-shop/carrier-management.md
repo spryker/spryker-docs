@@ -53,9 +53,9 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies
 ```
 
-2. Follow the integration guides in [Related Developer articles](#related-developer-articles).
+2. Follow the integration guides in [Related Developer documents](#related-developer-articles).
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 |---| - |
@@ -63,7 +63,7 @@ composer require spryker-feature/shipment:"{{page.version}}" --update-with-depen
 | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html)  | [Paazl](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/paazl.html) |
 | [Edit delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-delivery-methods.html)  | [Paqato](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/third-party-integrations/paqato.html) | |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|

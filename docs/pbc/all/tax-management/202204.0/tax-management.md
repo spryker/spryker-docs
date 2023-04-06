@@ -103,7 +103,7 @@ The capability has the following functional constraints:
 * Many Avalara features are not supported yet. This will be resolved in the future.
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -112,7 +112,7 @@ The capability has the following functional constraints:
 | [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/create-tax-sets.html) |
 | [Edit tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/edit-tax-sets.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|

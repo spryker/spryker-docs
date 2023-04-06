@@ -197,7 +197,7 @@ Company users can perform the following actions using the Approval Process featu
 </details>
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|

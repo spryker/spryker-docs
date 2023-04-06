@@ -129,7 +129,7 @@ This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/do
 {% wistia s776wlo9ds 960 720 %}
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

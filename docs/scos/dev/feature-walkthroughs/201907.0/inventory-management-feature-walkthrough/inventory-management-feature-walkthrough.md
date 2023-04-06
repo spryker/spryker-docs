@@ -144,7 +144,7 @@ To learn more about the feature and to find out how end users use it, see [Inven
 
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|

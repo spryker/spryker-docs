@@ -84,13 +84,13 @@ Or, you can remove merchant relation prices referring to specific merchant relat
 console price-product-merchant-relationship:delete [-m X] . X = MR ID
 ```
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Set prices per merchant relations when creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | MIGRATION GUIDES |
 |---------|---------|

@@ -80,14 +80,14 @@ The feature has the following functional constraints, which are going to be reso
 * If you create a product option, the price remains the same for all merchants.
 * Unlike other prices in Spryker, the product option price is not bound to any of the available price types. (DEFAULT or ORIGINAL)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create product options](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-options/create-product-options.html)  |
 | [Edit product options](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-options/edit-product-options.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | DATA IMPORT |
 |---------|---------|---------|

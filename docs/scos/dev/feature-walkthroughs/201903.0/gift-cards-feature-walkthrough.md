@@ -11,7 +11,7 @@ The _Gift Cards_ feature enables you to create a virtual product (a gift card) w
 To learn more about the feature and to find out how end users use it, see [Gift Cards feature overview](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|

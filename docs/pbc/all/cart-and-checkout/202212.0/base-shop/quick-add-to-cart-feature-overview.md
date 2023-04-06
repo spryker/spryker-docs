@@ -134,7 +134,7 @@ Using the Quick Order feature on the Storefront, company users can do the follow
 The following figure shows how to perform these actions:
 ![create-quick-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/create-quick-order.gif)
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES |
 |---|---|

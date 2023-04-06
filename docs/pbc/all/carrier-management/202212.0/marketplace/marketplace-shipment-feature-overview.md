@@ -37,7 +37,7 @@ On the **Order _[Order ID]_** drawer, every merchant can view only the shipment 
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shipment/shipment-merchant-portal.png)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

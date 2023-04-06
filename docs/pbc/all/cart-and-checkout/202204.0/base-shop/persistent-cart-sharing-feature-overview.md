@@ -49,7 +49,7 @@ The link allows displaying prices according to the selected currency. The cart s
 
 If a customer selects a link of the cart that's not available, the _This cart is unavailable_ message is displayed.
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  |
 |---|

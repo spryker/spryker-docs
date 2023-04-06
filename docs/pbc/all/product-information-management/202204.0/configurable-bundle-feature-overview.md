@@ -243,7 +243,7 @@ The feature has the following functional constraints which are going to be resol
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -251,7 +251,7 @@ The feature has the following functional constraints which are going to be resol
 |  [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)  |
 |  [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|

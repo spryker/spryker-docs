@@ -80,7 +80,7 @@ Or, you can remove merchant relation prices referring to specific merchant relat
 console price-product-merchant-relationship:delete [-m X] . X = MR ID
 ```
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

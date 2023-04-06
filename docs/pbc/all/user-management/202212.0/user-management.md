@@ -40,7 +40,7 @@ composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature
 * [User Management](#related-developer-articles).
 * [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html#related-developer-articles)
 
-## Related Business User articles
+## Related Business User documents
 
 | OVERVIEWS | BACK OFFICE USER GUIDES|
 | - |---|
@@ -54,7 +54,7 @@ composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature
 | | [Assign and deassign customers from users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html) |
 | | [Delete users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/delete-users.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | OVERVIEWS | INSTALLATION GUIDES |
 | - | - |

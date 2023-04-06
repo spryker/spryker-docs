@@ -72,17 +72,35 @@ If you have custom Yves templates or make your own frontend, add the markups req
 
 Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
-| SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY | Required |
-|------------------------------|----------------------|----------|
-| product.sku                  | productId            | Yes      |
-| product.name                 | productName          | Yes      |
-| product.description          | productDescription   | No       |
-| product.image                | productImageURL      | Yes      |
-| product.url                  | productPageURL       | Yes      |
-| product.brand.name           | brandId, brandName   | No       |
-| product.category             | categoryPath         | No       |
-| product.gtin12               | upcs                 | No       |
-| product.inProductGroupWithID | family               | No       |
+| SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY | Required | Example                                                                          |
+|------------------------------|----------------------|----------|----------------------------------------------------------------------------------|
+| product.sku                  | productId            | Yes      | 012_3456789                                                                      |
+| product.name                 | productName          | Yes      | Camera Pro 123                                                                   |
+| product.description          | productDescription   | No       | Lorem ipsum dolor sit amet, consectetur adipiscing elit.                         |
+| product.image                | productImageURL      | Yes      | https://www.example.com/img/gallery/camera-pro-123.jpg (always use absolute URL) |
+| product.url                  | productPageURL       | Yes      | https://www.example.com/office-chair (always use absolute URL)                   |    
+| product.brand.name           | brandId, brandName   | No       | Xyz Brand                                                                        |
+| product.category             | categoryPath         | No       | [{"id":1,"name":"Cameras & Camcorders"},{"id":4,"name":"Digital Cameras"}]       |
+| product.gtin12               | upcs                 | No       | 123456789876                                                                     |
+| product.inProductGroupWithID | family               | No       | 6                                                                                |
+
+Example:
+```html
+<section itemscope="" itemtype="https://schema.org/Product">
+    <meta itemprop="name" content="Camera Pro 123">
+    <meta itemprop="url" content="https://www.example.com/camera-pro-123?">
+    <meta itemprop="sku" content="012_3456789">
+    <meta itemprop="productId" content="012_3456789">
+    <meta itemprop="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+    <meta itemprop="image" content="https://www.example.com/img/gallery/camera-pro-123.jpg">
+    <div itemprop="brand" itemscope="" itemtype="https://schema.org/Brand">
+        <meta itemprop="name" content="Xyz Brand">
+    </div>
+    <meta itemprop="category" content="[{&quot;id&quot;:1,&quot;name&quot;:&quot;Cameras &amp; Camcorders&quot;},{&quot;id&quot;:4,&quot;name&quot;:&quot;Digital Cameras&quot;}]">
+    <meta itemprop="inProductGroupWithID" content="6">
+    <meta itemprop="gtin12" content="123456789876">
+</section>
+```
 
 #### DCC for merchants
 
@@ -94,11 +112,20 @@ Since merchants don't have their own entities in the Bazaarvoice service, produc
 
 Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
 
-| SCHEMA.ORG PROPERTY     | BAZAARVOICE PROPERTY | Required |
-|-------------------------|----------------------|----------|
-| organization.identifier | productId            | Yes      |
-| organization.name       | productName          | Yes      |
-| organization.logo       | productImageURL      | Yes      |
+| SCHEMA.ORG PROPERTY     | BAZAARVOICE PROPERTY | Required | Example                                                           |
+|-------------------------|----------------------|----------|-------------------------------------------------------------------|
+| organization.identifier | productId            | Yes      | MER000001                                                           |
+| organization.name       | productName          | Yes      | Xyz Merchant                                                      |
+| organization.logo       | productImageURL      | Yes      | https://www.example.com/merchant/merchant-logo.png (always use absolute URL) |
+
+Example:
+```html
+<section itemscope="" itemtype="https://schema.org/Organization">
+    <meta itemprop="identifier" content="MER000001">
+    <meta itemprop="name" content="Xyz Merchant">
+    <meta itemprop="logo" content="https://www.example.com/merchant/merchant-logo.png">
+</section>
+```
 
 #### Ratings and reviews (for Product)
 

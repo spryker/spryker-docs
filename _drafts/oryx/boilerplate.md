@@ -54,7 +54,7 @@ oryx-app/
 │   └──server.ts
 ```
 
-The following is a breakdown of the different bits of boilerplate code.
+The following is a breakdown of the different bits of the boilerplate code.
 
 ### `package.json`
 
@@ -130,8 +130,8 @@ This configuration uses a standard _feature set_ and _theme_. The feature set an
 
 If you're using SSR in your application, you need to build and serve the application with different code. The boilerplate provides a minimum customizable setup to accomplish this:
 
-- `server/render.ts` – Renders the initial HTML content for your application on the server.
-- `server/server.ts` – Sets up the server and handles incoming requests.
+- `server/render.ts`: Renders the initial HTML content for your application on the server.
+- `server/server.ts`: Sets up the server and handles incoming requests.
 
 If you use Vite, in `package.json`, you can add an npm script to build and serve the SSR server:
 

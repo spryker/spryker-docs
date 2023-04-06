@@ -28,7 +28,7 @@ npm i
 ```shell
 npm run dev
 ```
-    The application should now be available at [localhost:3000](http://localhost:3000).
+The application gets available at [localhost:3000](http://localhost:3000).
 
 For more information about the boilerplate project, see the [boilerplate guide](./boilerplate.md).
 

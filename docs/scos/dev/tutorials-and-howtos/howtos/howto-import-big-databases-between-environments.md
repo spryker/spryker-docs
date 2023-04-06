@@ -5,7 +5,7 @@ last_updated: April 5, 2023
 template: howto-guide-template
 ---
 
-Suppose you have two testing environments, and you need to migrate a large amount of data from one environment to another to perform different tests with the same data. If you have little data, you can export by running the `mysqldump` command on the local machine. However, for large amounts of data, this method can be slow due to long waiting time and VPN connection issues. In this case, you can use run the `mysqldump` command on the Jenkins instance and upload the dump file to AWS S3 to import the data between the environments faster. Here's how to do it:
+Suppose you have two testing environments, and you need to migrate a large amount of data from one environment to another to perform different tests with the same data. If you have little data, you can export by running the `mysqldump` command on the local machine. However, for large amounts of data, this method can be slow due to long waiting time and VPN connection issues. In this case, to import the data between the environments faster, you can run the `mysqldump` command on the Jenkins instance and upload the dump file to AWS S3. Here's how to do it:
 
 1. Go the the Jenkins instance of the environment from where you want to import the data. 
 2. Export the database as a compressed file and upload it to an S3 bucket using the following command:
@@ -30,10 +30,3 @@ If you run the command from step 2 multiple times, this creates multiple dump fi
 {% endinfo_block %}
 
 With this approach, you can efficiently import large databases between environments, since you are downloading the dump file not to your local machine, but to the machine that is in the same network as the database. Additionally, compressing the dump file speeds up the upload process, reducing the overall time it takes to import the data.
-
-
-
-
-
-
-

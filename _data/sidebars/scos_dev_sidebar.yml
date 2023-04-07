@@ -267,7 +267,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"      
+      - "202204.0"
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
       include_versions:
@@ -593,6 +593,9 @@ entries:
         - "201903.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      - "202108.0"
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       include_versions:
@@ -984,7 +987,7 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"        
+        - "202204.0"
         nested:
         - title: Managing carts of registered users
           url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -2600,10 +2603,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core Back Office + Warehouse User Management
-      url: /docs/scos/dev/feature-integration-guides/install-spryker-core-back-office-warehouse-user-management-feature.html
-      include_versions:
-      - "202304.0"
+      - "202204.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Warehouse picking

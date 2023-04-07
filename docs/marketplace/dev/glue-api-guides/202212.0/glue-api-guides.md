@@ -16,7 +16,7 @@ This section provides a collection of articles that explain the Glue API endpoin
 * [Marketplace shopping lists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/marketplace-shopping-lists.html)
 * [Wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/wishlists.html)
 * [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html)
-* [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html)
+* [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html)
 * [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html)
 * [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
 * [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html)

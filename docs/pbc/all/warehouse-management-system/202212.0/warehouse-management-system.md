@@ -7,7 +7,6 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
 ---
 
-The *Warehouse Management System* capability lets you create and manage warehouses and their stock. To learn about the capability, see the following feature overviews:
+The *Warehouse Management System* capability lets you create and manage warehouses and their stock.
 
-* [Inventory Management feature overview](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
-* [Availability Notification feature overview](/docs/pbc/all/warehouse-management-system/{{site.version}}/availability-notification-feature-overview.html)
+The capability consists of a base shop and the marketplace addon. The base shop features are needed for running a regular shop in which the warehouse entity represents physical warehouses which store the products in the shop. The marketplace features let you create a virtual warehouse per merchant and manage the stock of their products. To run a marketplace, the features from both the base shop and the marketplace addon are required.

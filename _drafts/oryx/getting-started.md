@@ -14,7 +14,7 @@ There are different ways to learn Oryx. If you like to get your hands dirty stra
 - *Composable and configurable*: components can be composed and configured to fit your project needs.
 - *Extensible and upgradable*: components are customizable without losing the ability to upgrade to newer versions.
 - *Platform agnostic*: Oryx is based on web components and uses plain Typescript code wherever possible, so it can be integrated into any web technology.
-- *Component driven*: Oryx is component centric and uses are based on web components
+- *Component driven*: Oryx is component centric and is based on web components
 - *Multi-site*: supports multiple sites within one installation.
 - *High quality*: optimized for performance, SEO, and responsive design with keyboard support.
 

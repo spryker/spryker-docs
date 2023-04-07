@@ -1,42 +1,40 @@
 ---
-title: Getting started
+title: Getting started with Oryx
 description: Getting started with Oryx
 template: concept-topic-template
 last_updated: Apr 4, 2023
 ---
 
-# Getting started
+Oryx is a framework for building composable front-ends, providing a rich library of components and a design system. The components integrate with Spryker APIs by default, providing a seamless experience for developers.
 
-Oryx is a framework for building composable front-ends, providing a rich library of components, and a design system. The components integrate with Spryker APIs by default, providing a seamless experience for developers.
+There are different ways to learn Oryx. If you like to get your hands dirty straight away, continue to the [setup guide](./set-up-oryx.md). If you want to first learn more about Oryx, continue reading this document.
 
-There are different ways to learn Oryx. If you like to get your hands dirty straight away, you can continue to the [setup guide](./set-up-oryx.md). If you like to learn the concepts, you can continue reading this document, and learn the high-level characteristics and features. More details will be provided in the linked documents.
+## Key characteristics
 
-## Key Characteristics
+- *Composable and configurable*: components can be composed and configured to fit your project needs.
+- *Extensible and upgradable*: components are customizable without losing the ability to upgrade to newer versions.
+- *Platform agnostic*: Oryx is based on web components and uses plain Typescript code wherever possible, so it can be integrated into any web technology.
+- *Component driven*: Oryx is component centric and uses are based on web components
+- *Multi-site*: supports multiple sites within one installation.
+- *High quality*: optimized for performance, SEO, and responsive design with keyboard support.
 
-- **Composable & Configurable** – Oryx components can be composed and configured to fit your project needs.
-- **Extensible & Upgradable** – All components are customizable without losing the ability to upgrade to newer versions.
-- **Platform Agnostic** – Oryx can be integrated into any web technology, it is based on web components and uses plain Typescript code wherever possible.
-- **Component Driven** – Oryx is component centric and uses are based on web components
-- **Multi-Site** – Oryx supports multiple sites within one installation.
-- **High Quality** – Optimized for performance, SEO, and responsive design, with keyboard support.
+## Platform features
 
-## Platform Features
+- *SSR*: supports server-side rendering for improved performance and SEO.
+- *Lazy Loading*: delays loading of non-critical resources for a faster initial load time.
+- *Partial Hydration*: enhances performance by hydrating only critical components on initial load.
+- *Layout and Theming*: provides a flexible layout system and easy theme customization.
+- *Routing*: configurable and dynamic routing for a seamless user experience.
+- *Context*: provides data context for components.
+- *Presets and Feature Sets*: provides a set of pre-configured features for common use cases.
+- *Dependency Injection*: allows for customizability and extensibility for shared business logic.
 
-- **SSR** – Supports server-side rendering for improved performance and SEO.
-- **Lazy Loading** – Delays loading of non-critical resources for faster initial load time.
-- **Partial Hydration** – Enhances performance by only hydrating critical components on initial load.
-- **Layout & Theming** – Provides a flexible layout system and easy theme customization.
-- **Routing** – Configurable and dynamic routing for a seamless user experience.
-- **Context** – Provides data context for components
-- **Presets and Feature Sets** – Provides a set of pre-configured features for common use cases.
-- **Dependency Injection** – Allow for customizability and extensibility for shared business logic
+## Business features
 
-## Business Features
-
-- **Internationalization** – Supports multiple languages, currencies and sites for easy rollout to multiple countries.
-- **Auth** – Provides functionality and components for user authentication.
-  Search – Provides search features that are used to build search and filtering experiences.
-- **Product** – Provides product features that are used to build a product page experience.
-- **Cart** – Provides shopping cart features.
-- **Checkout** – Provides anonymous and registered checkout features.
-- **User** – Provides features to manage the user profile.
+- *Internationalization*: supports multiple languages, currencies, and sites for an easy rollout to multiple countries.
+- *Auth*: provides functionality and components for user authentication.
+- *Search*: provides search features that are used to build search and filtering experiences.
+- *Product*: provides product features that are used to build a product page experience.
+- *Cart*: provides shopping cart features.
+- *Checkout*: provides guest and registered checkout features.
+- *User*: provides features to manage the user profile.

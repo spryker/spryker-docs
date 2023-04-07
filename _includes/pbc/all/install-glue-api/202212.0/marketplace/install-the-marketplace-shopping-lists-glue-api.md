@@ -11,7 +11,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
 | Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html)
+| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)
 
 ### 1) Install the required modules using Composer
 
@@ -250,4 +250,4 @@ Response sample:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html)  |
+| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)  |

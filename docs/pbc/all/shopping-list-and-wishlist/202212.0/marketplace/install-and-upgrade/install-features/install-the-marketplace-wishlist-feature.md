@@ -5,7 +5,7 @@ Description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Wishlist feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-wishlist-feature-walkthrough.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-wishlist-feature-overview.html
 ---
 
 {% include pbc/all/install-features/202212.0/marketplace/install-the-marketplace-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-the-marketplace-wishlist-feature.md -->

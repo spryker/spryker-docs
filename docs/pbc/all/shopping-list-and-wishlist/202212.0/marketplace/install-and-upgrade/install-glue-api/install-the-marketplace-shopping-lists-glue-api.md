@@ -5,7 +5,7 @@ description: This document describes how to integrate the Shopping Lists feature
 template: feature-integration-guide-template
 related:
   - title: Marketplace Shopping Lists feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shopping-lists-feature-walkthrough.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-shopping-lists-feature-overview.html
 ---
 
 {% include pbc/all/install-glue-api/202212.0/marketplace/install-the-marketplace-shopping-lists-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202212.0/marketplace/install-the-marketplace-shopping-lists-glue-api.md -->

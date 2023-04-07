@@ -1855,28 +1855,53 @@ entries:
       - title: Return Management
         url: /docs/pbc/all/return-management/return-management.html
         nested:
-          - title: Install and upgrade
+          - title: Base shop
+            url: /docs/pbc/all/return-management/base-shop/return-management-feature-overview.html
             nested:
-              - title: Install the Return Management feature
-                url: /docs/pbc/all/return-management/install-and-upgrade/install-the-return-management-feature.html
-              - title: Install the Return Management Glue API
-                url: /docs/pbc/all/return-management/install-and-upgrade/install-the-return-management-glue-api.html
-          - title: Manage in the Back Office
+              - title: Install and upgrade
+                nested:
+                  - title: Install the Return Management feature
+                    url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-feature.html
+                  - title: Install the Return Management Glue API
+                    url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-glue-api.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Change the state of order items in returns
+                    url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
+                  - title: Manage returns
+                    url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/manage-returns.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Manage returns
+                    url: /docs/pbc/all/return-management/base-shop/manage-using-glue-api/glue-api-manage-returns.html
+                  - title: Retrieve return reasons
+                    url: /docs/pbc/all/return-management/base-shop/manage-using-glue-api/glue-api-retrieve-return-reasons.html
+              - title: "Build a return management process: Best practices"
+                url: /docs/pbc/all/return-management/base-shop/build-a-return-management-process-best-practices.html
+              - title: "Set number of days for a return policy"
+                url: /docs/pbc/all/return-management/base-shop/set-number-of-days-for-a-return-policy.html
+          - title: Marketplace
+            include_versions:
+            - "202212.0"
             nested:
-              - title: Change the state of order items in returns
-                url: /docs/pbc/all/return-management/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
-              - title: Manage returns
-                url: /docs/pbc/all/return-management/manage-in-the-back-office/manage-returns.html
-          - title: Manage using Glue API
-            nested:
-              - title: Manage returns
-                url: /docs/pbc/all/return-management/manage-using-glue-api/glue-api-manage-returns.html
-              - title: Retrieve return reasons
-                url: /docs/pbc/all/return-management/manage-using-glue-api/glue-api-retrieve-return-reasons.html
-          - title: "Build a return management process: Best practices"
-            url: /docs/pbc/all/return-management/build-a-return-management-process-best-practices.html
-          - title: "HowTo: Set number of days for a return policy"
-            url: /docs/pbc/all/return-management/howto-set-number-of-days-for-a-return-policy.html
+              - title: Marketplace Return Management feature overview
+                url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install the Return Management feature
+                    url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-feature.html
+                  - title: Install the Return Management Glue API
+                    url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-glue-api.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Main merchant returns
+                    url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
+                  - title: Marketplace returns
+                    url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
+              - title: "Glue API: Manage marketplace returns"
+                url: /docs/pbc/all/return-management/marketplace/glue-api-manage-marketplace-returns.html
+              - title: "Domain model and relationships"
+                url: /docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-domain-model-and-relationships.html
       - title: Search
         url: /docs/pbc/all/search/search.html
         include_versions:

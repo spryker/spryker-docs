@@ -11,7 +11,7 @@ This document contains common issues related to updates and provides solutions f
 
 If you see Code Sniffer updates from Spryker, check if the new code sniffer rules were added. Investigate what they are doing and decide if you need them. If you don't need the rules, exclude them from the list.
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox %}
 
 In some projects, all Spryker sniffs are included automatically.
 

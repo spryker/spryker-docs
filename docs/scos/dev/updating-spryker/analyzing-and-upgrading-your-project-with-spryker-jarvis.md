@@ -85,7 +85,7 @@ In this view, under the list of features to upgrade and the dependencies, you ca
 
 ### No-features view: Upgrading modules to their current versions
 
-To upgrade your modules to their curret major and minor versions, use the *no-features* view.
+To upgrade your modules to their current major and minor versions, use the *no-features* view.
 
 This view provides information about modules that have been upgraded to new versions by Spryker.
 

@@ -1,6 +1,6 @@
 ---
-title: Supported browsers, OSes, and resolutions
-description: Reactivity enables real-time updates
+title: "Oryx: Supported browsers, OSes, and resolutions"
+description: Browsers, OSes, and resolutions supported by Oryx
 template: concept-topic-template
 ---
 

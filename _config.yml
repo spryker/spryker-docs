@@ -221,6 +221,11 @@ versioned_categories:
       - technology-partner-guides
       - devops-migration-guides
       - system-requirements
+  dev:
+    front-end-development:
+      - zed
+
+
   pbc:
     all:
       - cart-and-checkout

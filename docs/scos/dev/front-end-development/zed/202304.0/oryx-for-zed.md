@@ -24,6 +24,10 @@ redirect_from:
   - /v1/docs/en/oryx-for-zed
   - /front-end_developer_guide/zed/oryx/oryx-for-zed
   - /front-end_developer_guide/zed/oryx/oryx-for-zed.htm
+  - /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
+related:
+  - title: Oryx builder overview and setup
+    link: docs/scos/dev/front-end-development/zed/page.version/oryx-builder-overview-and-setup.html
 ---
 
 ## Introduction
@@ -38,13 +42,13 @@ It also provides access to Zed settings and Zed Webpack configuration, so you ca
 
 {% info_block infoBox "Note" %}
 
-`oryx-for-zed` starting from `2.13.0` version requires `spryker/chart` module version `>=1.4.0`.
+`oryx-for-zed` starting from `2.13.0` version requires `spryker/chart` module version `1.4.0` or higher.
 
 {% endinfo_block %}
 
 ### Setup
 
-You need to add `oryx-for-zed` to your `package.json`. Open the terminal, go to your project root folder and type:
+You need to add `oryx-for-zed` to your `package.json`. Open the terminal, go to your project root folder, and type:
 
 ```bash
 npm install @spryker/oryx-for-zed --save-dev
@@ -54,15 +58,16 @@ yarn add @spryker/oryx-for-zed --dev
 
 ## Usage
 
-Once installed, you can:
+Once installed, you can do the following actions:
 
-* call the builder directly from your scripts (simple builder)
-* extend/change the settings/webpack configuration for your custom Zed build
+* Call the builder directly from your scripts (simple builder).
+* Extend or change the settings and Webpack configuration for your custom Zed build.
 
 ### Simple builder
 
 The following section describes how to run `oryx-for-zed`. 
-Add the following script to your `package.json`:
+
+1. Add the following script to your `package.json`:
 
 ```json
 {
@@ -72,7 +77,7 @@ Add the following script to your `package.json`:
 }
 ```
 
-Open the terminal and type:
+2. Open the terminal and type:
 
 ```bash
 npm run build-zed
@@ -84,10 +89,9 @@ yarn run build-zed
 
 Settings are extended and changed by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 
-The example below shows how to create a custom build:
+The following example shows how to create a custom build:
 
-**Step 1:** `build.js`  
-Create a `build.js` file in your project containing your custom settings and the logic needed to get the webpack configuration and run the builder:
+1. In your project containing your custom settings and the logic needed to get the Webpack configuration, create a `build.js` file and run the builder:
 
 ```js
 const oryxForZed = require('@spryker/oryx-for-zed');
@@ -108,8 +112,7 @@ oryxForZed.getConfiguration(myCustomZedSettings)
     .catch(error => console.error('An error occurred while creating configuration', error));
 ```
 
-**Step 2:** `package.json`  
-Add a script into your `package.json` pointing to `build.js`:
+2. Add a script into your `package.json` pointing to `build.js`:
 
 ```json
 {
@@ -121,14 +124,13 @@ Add a script into your `package.json` pointing to `build.js`:
 
 You will now be able to…
 
-### Extend/change webpack configuration
+### Extend and change the Webpack configuration
 
 `webpack` is customized by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 
-The example below shows how to create a custom build:
+The following example shows how to create a custom build:
 
-**Step 1:** `webpack.config.js`  
-Create a `webpack.config.js` file in your project containing your Webpack custom configuration:
+1. In your project containing your Webpack custom configuration, create a `webpack.config.js` file:
 
 ```js
 const oryxForZed = require('@spryker/oryx-for-zed');
@@ -149,8 +151,7 @@ async function myCustomZedConfiguration() {
 }
 ```
 
-**Step 2:** `build.js`  
-Create a `build.js` file in your project containing your Webpack configuration and the logic needed to run the builder:
+2. In your project containing your Webpack configuration and the logic needed to run the builder, create a `build.js` file:
 
 ```js
 const oryxForZed = require('@spryker/oryx-for-zed');
@@ -161,8 +162,7 @@ myCustomZedConfiguration()
     .catch(error => console.error('An error occurred while creating configuration', error));
 ```
 
-**Step 3:** `package.json`  
-Add a script into your `package.json` pointing to `build.js`:
+3. Add a script into your `package.json` pointing to `build.js`:
 
 ```json
 {
@@ -173,6 +173,8 @@ Add a script into your `package.json` pointing to `build.js`:
 ```
 
 ## API
+
+This section describes API settings.
 
 ### Settings
 
@@ -197,10 +199,10 @@ Go to the code for more details.
 oryxForZed.build(configuration, callback)
 ```
 
-Build assets using `webpack` and print a formatted terminal output. This function is just a wrapper for `webpack(configuration, callback)`:
+Builds assets using `webpack` and prints a formatted terminal output. This function is just a wrapper for `webpack(configuration, callback)`:
 
-* `configuration {object}`: Webpack configuration file
-* `callback(error, stats) {function} [optional]`: function called once Webpack build task is completed
+* `configuration {object}`: Webpack configuration file.
+* `callback(error, stats) {function} [optional]`: Function called once Webpack build task is completed.
 
 ### copyAssets()
 
@@ -208,7 +210,7 @@ Build assets using `webpack` and print a formatted terminal output. This functio
 oryxForZed.copyAssets()
 ```
 
-Copy public assets to `Zed` folder for backward compatibility only.
+Copies public assets to `Zed` folder for backward compatibility only.
 
 ### CLI args
 
@@ -233,8 +235,8 @@ Or embed them into the script section in `package.json`:
 
 ### Args list
 
-* `--dev`: development mode; enable `webpack` watchers on the code
-* `--prod`: production mode; enable assets optimization/compression
-* `--boost`: boost mode (experimental); build assets using eval source maps
+* `--dev`: Development mode; enable `webpack` watchers on the code
+* `--prod`: Production mode; enable assets optimization/compression
+* `--boost`: Boost mode (experimental); build assets using eval source maps
 
 If no arg is passed, development is activated but without watchers.

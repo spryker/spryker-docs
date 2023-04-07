@@ -15,12 +15,14 @@ redirect_from:
   - /v5/docs/en/custom-twig-functions-for-zed
   - /v4/docs/custom-twig-functions-for-zed
   - /v4/docs/en/custom-twig-functions-for-zed
-  - /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
+  - /docs/scos/dev/front-end-development/zed/202212.0/custom-twig-functions-for-zed.html
+
 ---
 
 To improve developer experience, [Twig](https://twig.symfony.com/) functionality has been extended with new Twig functions. All the Twig extension implementations are located in the `Gui` module and can be found in `Pyz\Zed\Twig\TwigDependencyProvider`.
 
-**Pyz\Zed\Twig\TwigDependencyProvider**
+<details>
+<summary>Pyz\Zed\Twig\TwigDependencyProvider</summary>
 
 ```php
 namespace Pyz\Zed\Twig;
@@ -85,10 +87,11 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
     }
   }
 ```
+</details>
 
 | FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |
 | --- | --- | --- | --- |
-| `assetsPath` | <ul><li>Provides a safe way to access the `public` folder where compiled assets are located. Returns a string in the following format: <br>`{publicAssetsPath}{namespaceName}{themeName}{relativeAssetPath}`. For example, `/assets/css/spryker-zed-gui-main.js`.<br>`/assets/css/spryker-zed-gui-main.css`.<br>The string is used internally to resolve a component/resource location within a provided module.</li><li>Provides a safe way to access a remote folder where compiled assets are located, e.g. a CDN (Content Delivery Network) resource. See [Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.</li></ul> | `function assetsPath($relativePath: string): string`<ul><li>`$relativePath` - relative asset path (*required*).</li></ul> | `{% raw %}{{{% endraw %} assetsPath('js/spryker-zed-gui-main.js') {% raw %}}}{% endraw %}`<br>`{% raw %}{{{% endraw %} assetsPath('css/spryker-zed-gui-main.css') {% raw %}}}{% endraw %}` |
+| `assetsPath` | <ul><li>Provides a safe way to access the `public` folder where compiled assets are located. Returns a string in the following format: <br>`{publicAssetsPath}{namespaceName}{themeName}{relativeAssetPath}`. For example, `/assets/css/spryker-zed-gui-main.js`.<br>`/assets/css/spryker-zed-gui-main.css`.<br>The string is used internally to resolve a component/resource location within a provided module.</li><li>Provides a safe way to access a remote folder where compiled assets are located—for example, a Content Delivery Network (CDN) resource. For more details, see [Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) f.</li></ul> | `function assetsPath($relativePath: string): string`<ul><li>`$relativePath` - relative asset path (*required*).</li></ul> | `{% raw %}{{{% endraw %} assetsPath('js/spryker-zed-gui-main.js') {% raw %}}}{% endraw %}`<br>`{% raw %}{{{% endraw %} assetsPath('css/spryker-zed-gui-main.css') {% raw %}}}{% endraw %}` |
 | `url` | Generates an internal URL from a path string and converts special characters into HTML entities. | `function url($url: string, $query: array, $options: array): string`<ul><li>`$url` - relative URL (*required*).</li><li>`$query` - query string (*optional*). The default value is `[]`.</li><li>`$options` - additional options (*optinal*). The default value is `[]`.</li></ul> | `{% raw %}{{{% endraw %} url('{url}', {'id': id}) {% raw %}}}{% endraw %}` |
 | `urldecode` | Encodes the URL. | `function urldecode($url: string): string`<ul><li>`$url`- URL string to be decoded (*required*).</li></ul> | `{% raw %}{{{% endraw %} urldecode('{url}') {% raw %}}}{% endraw %}` |
 | `tabs` | Renders tabs upon navs and cards internally by the defined template - `@Gui/Tabs/tabs.twig`. | `function tabs($tabsViewTransfer: TabsViewTransfer, $context: array): string`<ul><li>`$tabsViewTransfer` - data transfer object that contains the tabs to be rendered (*required*).</li><li>`$context` - array of parameters to pass to the template (*optional*). The default value is `[]`.</li></ul> | `{% raw %}{{{% endraw %} tabs(contentTabs, {'contentForm' : contentForm}) {% raw %}}}{% endraw %}` |

@@ -8,7 +8,7 @@ related:
   - title: Managing main merchant orders
     link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-orders.html
   - title: Managing main merchant returns
-    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-returns.html
+    link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
 ---
 
 The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.
@@ -38,6 +38,6 @@ The workflow of the main merchant state machine is schematically displayed in th
 
 ## Main merchant returns
 
-If the [Marketplace Return Management](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) feature is integrated into the project, the main merchant state machine obtains an additional return subprocess, and the flow looks like this:
+If the [Marketplace Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) feature is integrated into the project, the main merchant state machine obtains an additional return subprocess, and the flow looks like this:
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Merchant/Main+merchant+concept/marketplace-main-merchant-return-process.png)

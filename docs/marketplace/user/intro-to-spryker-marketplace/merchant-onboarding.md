@@ -10,7 +10,7 @@ Once created and approved, merchants become official marketplace members and can
 
 There are two primary roles: *operator* and *merchant*:
 * An [operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html) is a company that owns and administers the platform.
-* A [merchant](docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#merchant-user) is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
+* A [merchant](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#merchant-user) is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
 
 The merchant onboarding process consists of seven steps. Each step requires specific actions that merchants, operators, or both need to take. 
 

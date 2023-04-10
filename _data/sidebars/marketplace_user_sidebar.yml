@@ -126,6 +126,9 @@ entries:
 
         - title: Marketplace Return Management
           url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Marketplace Promotions and Discounts
           url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
@@ -159,12 +162,18 @@ entries:
 
             - title: Managing marketplace returns
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-marketplace-returns.html
+              include_versions:
+              - "202108.0"
+              - "202204.0"
 
             - title: Managing main merchant orders
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
 
             - title: Managing main merchant returns
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-returns.html
+              include_versions:
+              - "202108.0"
+              - "202204.0"
 
         - title: Catalog
           url: /docs/marketplace/user/back-office-user-guides/catalog/catalog.html

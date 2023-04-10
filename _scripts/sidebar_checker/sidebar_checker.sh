@@ -2,7 +2,6 @@
 
 # To run the scipt, in Terminal, run `bash _scripts/sidebar_checker/check_all_sidebars.sh`.
 # The `missing_documents.yml` file with missing documents is generated and saved in the `_scripts/sidebar_checker` folder.
-# Note: If you don't need the `missing_documents.yml` file, remove it in order not to push it to GuitHub.
 
 #!/bin/bash
 

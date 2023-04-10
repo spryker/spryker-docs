@@ -21,5 +21,3 @@ bash _scripts/sidebar_checker/sidebar_checker.sh
 ```
 
 This prints a message in the terminal indicating which files are missing and generates the `missing-documents.yml` file with missing documents. The file is saved in the `_scripts/sidebar_checker` folder.
-
-**Note:** If you don't need the `missing-documents.yml` file, remove it in order to not push it to GitHub.

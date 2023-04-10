@@ -36,9 +36,9 @@ Make sure that the following module has been installed:
 
 Enable the following plugins.
 
-| PLUGIN                                                              | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                                                                 |
-|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------|
-| ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin | Adds `concrete-products` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\PickingListsProductsBackendResourceRelationship\Plugin\GlueJsonApiConvention |
+| PLUGIN                                                              | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                                                                                                   |
+|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------|
+| ConcreteProductsByPickingListItemsBackendResourceRelationshipPlugin | Adds `concrete-products` resources as a relationship to `picking-list-items` resources. |               | Spryker\Glue\PickingListsProductsBackendResourceRelationship\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 
 **src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**

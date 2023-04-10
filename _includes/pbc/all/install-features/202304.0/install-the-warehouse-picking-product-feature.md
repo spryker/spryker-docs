@@ -10,11 +10,29 @@ To start feature integration, integrate the required features:
 
 | NAME              | VERSION          | INTEGRATION GUIDE                                                                                                                                                 |
 |-------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse Picking | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-picking-feature.html)                     |
+| Warehouse Picking | {{site.version}} | [Warehouse Picking feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-picking-feature.html)                    |
 | Product           | {{site.version}} | [Product feature integration](docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 
-### 1) Set up behavior
+## 1) Install the required modules using Composer
+
+Install the required modules:
+
+```bash
+composer require spryker/picking-lists-products-backend-resource-relationship:"^0.1.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following module has been installed:
+
+| MODULE                                          | EXPECTED DIRECTORY                                                  |
+|-------------------------------------------------|---------------------------------------------------------------------|
+| PickingListsProductsBackendResourceRelationship | vendor/spryker/picking-lists-products-backend-resource-relationship |
+
+{% endinfo_block %}
+
+### 2) Set up behavior
 
 Enable the following plugins.
 

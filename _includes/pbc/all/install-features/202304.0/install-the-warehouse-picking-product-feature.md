@@ -1,4 +1,4 @@
-This document describes how to ingrate the Warehouse Picking + [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the Warehouse Picking + [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

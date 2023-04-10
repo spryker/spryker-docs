@@ -1,4 +1,4 @@
-This document describes how to ingrate the Warehouse Picking + [Order Management](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the Warehouse Picking + [Order Management](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

@@ -1,7 +1,7 @@
 ---
 title: Install the Warehouse picking + Spryker Core Back Office feature
 description: Learn how to integrate the Warehouse picking + Spryker Core Back Office feature into your project
-last_updated: April 10, 2023
+last_updated: Apr 10, 2023
 template: feature-integration-guide-template
 ---
 

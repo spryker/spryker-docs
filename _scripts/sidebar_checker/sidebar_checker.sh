@@ -6,7 +6,7 @@
 
 #!/bin/bash
 
-# Define doc folders
+# Define doc folder paths
 FOLDERS=("docs/acp/user" "docs/cloud/dev" "docs/marketplace/dev" "docs/marketplace/user" "docs/pbc/all" "docs/scos/dev" "docs/scos/user" "docs/scu/dev" "docs/sdk/dev")
 
 # Define sidebar file paths
@@ -15,7 +15,7 @@ SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/cloud_dev_sideba
 # Define sidebar titles
 TITLES=("ACP User" "Cloud Dev" "Marketplace Dev" "Marketplace User" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")
 
-# Define list of ignored folders
+# Define the folders to ignore
 IGNORED_FOLDERS=("201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0")
 
 # Define output file path

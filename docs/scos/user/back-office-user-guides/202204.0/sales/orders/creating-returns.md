@@ -6,12 +6,12 @@ related:
   - title: Viewing returns of an order
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html
   - title: Changing the state of order items in returns
-    link: docs/pbc/all/return-management/page.version/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
+    link: docs/pbc/all/return-management/page.version/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
 ---
 
 This document describes how to create returns in the Back Office.
 
-If a sales order item is [returnable](/docs/pbc/all/return-management/{{page.version}}/return-management.html), you can create a return for it. On the Storefront, only registered users can create returns. In the Back Office, you can create returns for both the registered and guest users.
+If a sales order item is [returnable](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html), you can create a return for it. On the Storefront, only registered users can create returns. In the Back Office, you can create returns for both the registered and guest users.
 
 ## Prerequisites
 

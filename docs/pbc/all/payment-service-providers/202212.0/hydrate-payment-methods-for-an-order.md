@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Hydrate payment methods for an order"
+title: Hydrate payment methods for an order
 description: This doc describes how to use PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS and how to add other payment methods into the order.
 last_updated: Jun 16, 2021
 template: howto-guide-template

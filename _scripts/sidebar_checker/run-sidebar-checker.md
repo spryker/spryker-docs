@@ -1,6 +1,6 @@
 This document explains how Sidebar Checker works and how to run it.
 
-*Sidebar Checker* is a script that checks sidebars for missing entries in the `docs` folder and generates a YAML file with these missing entries.
+*Sidebar Checker* is a script that generates a YAML report of missing sidebar entries based on the documents in the `docs` folder.
 
 ## Overview of Sidebar Checker
 

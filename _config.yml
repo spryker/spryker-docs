@@ -223,6 +223,7 @@ versioned_categories:
       - system-requirements
   pbc:
     all:
+      - back-office
       - cart-and-checkout
       - carrier-management
       - content-management-system

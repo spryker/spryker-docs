@@ -1,5 +1,5 @@
 ---
-title: Log into the Back Office
+title: Back Office login
 description: Learn how a Back Office user can log into the Back Office either with a regular account or through a third-party service
 last_updated: Jun 17, 2021
 template: back-office-user-guide-template
@@ -39,9 +39,11 @@ If a user does not remember their password, they can reset it using the form ava
 
 ## Login with a single sign-on
 
-Your project can have an single sign-on(SSO) login configured for Back Office login. SSO lets users log into the Back Office with accounts of a third-party service.
+Your project can have a single sign-on(SSO) login configured for the Back Office. SSO lets users log into the Back Office with accounts of a third-party service.
 
 To log in with an SSO, on the Back Office login page, users click **Login with {Third-party service name}**. This opens the sign-in page of the configured service. Users sign in with their accounts and get redirected to the Back Office.
+
+After a user logs in using an SSO, a
 
 User with the email you used for the third-party service login appears on the [*Users*](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html) page.
 

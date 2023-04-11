@@ -27,23 +27,29 @@ The feature is shipped with an exemplary ECO module that supports authentication
 
 If a user chooses to log in using a third party, the user is redirected to the OAuth provider's sign-in page—for example, Microsoft Azure. If the user logs in to the third-party service successfully, the check is made if the user exists in the Spryker database. If the user exists in the database and is active, the user is logged in. If the user does not exist in the database, you can have one of the two different behaviors or strategies for your project:
 
+
+## SSO login strategies
+
+Depending on your access and security requirements, you can have one of the following strategies implemented for SSO authentication.
+
 <a name="strategies"></a>
 
-**Strategy 1: Upon the first login, create the Back Office admin user based on the third-party system’s user data.**
 
-If a user who does not exist in the Spryker database logs in for the first time, the following happens:
-* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [Users page](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html) in the Back Office.
-* The user is assigned to the default [group](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html).
+### Registration is required only with the SSO service
 
-With Strategy 1, the login process looks like this:
+If a user logs in with an SSO but does not have a Back Office account, the following happens:
+* Based on the third-party system’s user data, such as first name, last name, and email, a Back Office account is created.
+* The user is assigned to the default user group.
+* The user is logged into the Back Office.
+
+The login process looks like this:
 
 ![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
 
-**Strategy 2: Do not log in to the user unless they exist in the Spryker database.**
+### Registration is required with the SSO service and with Spryker
 
-Before a user can log in to Back Office with third-party service credentials, the user must be added and set to `Active` in the database. You can add the user using either the Back Office or the ACL module.
+If a user logs in with an SSO but does not have a Back Office account, the user is not logged in. To be able to log in, a user must have a Back Office account registered using the email address used for their account with the SSO service. Usually, this strategy is used when not all the users that have access to the SSO service need access to the Back Office. 
 
-With Strategy 2, the login process looks like this:
 
 ![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
 

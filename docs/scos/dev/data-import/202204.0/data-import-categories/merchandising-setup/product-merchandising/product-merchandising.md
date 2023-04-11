@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/product-merchandising
 ---
 
-The **Product Merchandising** category contains all data you need to manage merchandising information in your online store. We have structured this section according to the following CSV files that you will have to use to import the data:
+The *Product Merchandising* category contains all data you need to manage merchandising information in your online store. We have structured this section according to the following CSV files that you must use to import the data:
 
 * [product_group.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-group.csv.html): allows you to create product groups.
 * [product_label.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html): allows you to create labels to assign to products. You can use the "New" or  "Special sales", etc. labels to promote the products.
@@ -22,9 +22,9 @@ The **Product Merchandising** category contains all data you need to manage merc
 * [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html): allows you to define product sets.
 * [product_discontinued.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html): allows you to define discontinued products.
 * [product_alternative.csv](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-alternative.csv.html): allows you to define alternative products.
-* [product_quantity.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/import-and-export-data/file-details-product-quantity.csv.html): allows you to set product quantity restrictions.
+* [product_quantity.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/file-details-product-quantity.csv.html): allows you to set product quantity restrictions.
 
-The table below provides details on Product Merchandising data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
+The following table provides details about Product Merchandising data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILES | DEPENDENCIES |
 | --- | --- | --- | --- |--- |

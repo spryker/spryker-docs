@@ -150,14 +150,14 @@ defaults:
       role: "user"
   -
      scope:
-       path: "docs/paas-plus"
+       path: "docs/scu"
      values:
-       product: "platform-as-a-service-plus"
+       product: "spryker-code-upgrader"
   -
      scope:
-       path: "docs/paas-plus/dev"
+       path: "docs/scu/dev"
      values:
-       sidebar: "paas_plus_dev_sidebar"
+       sidebar: "scu_dev_sidebar"
        role: "dev"
   -
      scope:
@@ -182,6 +182,7 @@ versions:
   '202108.0': '202108.0'
   '202204.0': '202204.0'
   '202212.0': '202212.0'
+  '202304.0': 'Upcoming release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -206,6 +207,7 @@ versioned_categories:
       - back-office-user-guides
       - technology-partners
       - shop-user-guides
+      - overview-of-features
     dev:
       - feature-walkthroughs
       - feature-integration-guides
@@ -222,22 +224,27 @@ versioned_categories:
   pbc:
     all:
       - cart-and-checkout
+      - carrier-management
       - content-management-system
+      - customer-relationship-management
       - discount-management
+      - emails
       - gift-cards
       - identity-access-management
-      - user-management
-      - return-management
-      - emails
-      - carrier-management
+      - merchant-management
+      - order-management-system
       - price-management
+      - product-information-management
+      - product-relationship-management
+      - punchout
+      - return-management
       - ratings-reviews
       - request-for-quote
+      - search
       - shopping-list-and-wishlist
       - tax-management
+      - user-management
       - warehouse-management-system
-      - product-information-management
-
 
 
 # these are defaults used for the front matter for these file types
@@ -250,7 +257,7 @@ sidebars:
   - scos_user_sidebar
   - sdk_dev_sidebar
   - acp_user_sidebar
-  - paas_plus_dev_sidebar
+  - scu_dev_sidebar
   - pbc_all_sidebar
 
 description: "Spryker documentation center."
@@ -286,8 +293,8 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'paas_plus_dev'
-      title: 'PaaS+'
+    - name: 'scu_dev'
+      title: 'Cloud Developer'
 sass:
     sass_dir: css
     style: compressed

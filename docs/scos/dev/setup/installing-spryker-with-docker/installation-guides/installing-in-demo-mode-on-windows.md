@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/installing-in-demo-mode-on-windows
   - /v6/docs/installing-in-demo-mode-on-windows
   - /v6/docs/en/installing-in-demo-mode-on-windows
-related: 
+related:
   - title: Database access credentials
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
@@ -37,13 +37,13 @@ Follow the steps to install Spryker in Demo Mode:
     * Clone the B2C repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202212.0-p2 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202212.0-p2 --single-branch ./b2b-demo-shop
     ```
 
 5. Depending on the cloned repository, navigate into the cloned folder:

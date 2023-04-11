@@ -32,7 +32,7 @@ related:
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
@@ -41,7 +41,7 @@ After a customer has been created (to create a customer, see [Customers](/docs/s
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html).
 
 ## Confirm customer registration
 

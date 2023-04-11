@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Sending an email"
-description: The tutorial provides code samples on how to process customer registration information in Zed to register the customer and send a confirmation email.
+description: This tutorial provides code samples on how to process customer registration information in Zed, in order to register the customer and send a confirmation email.
 last_updated: Sep 27, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/sending-an-email
@@ -16,11 +16,11 @@ redirect_from:
 
 The following example represents a real-world scenario: `CustomerRegistration`.
 
-A customer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer receives a confirmation email.
+A customer goes through the registration process in your frontend (Yves) and all of the customer's information is sent to Zed. Zed uses the provided information to register the customer. Once the registration is completed, the customer receives a confirmation email in their inbox.
 
 ## 1. Handle mail usage
 
-In the model which handles the registration, you can override the `sendRegistrationToken` function:
+In the model which handles registration, you can override the `sendRegistrationToken` function:
 
 ```php
 <?php
@@ -65,7 +65,7 @@ class Customer extends SprykerCustomer
 }
 ```
 
-Also, override factory:
+You can also override factory:
 
 ```php
 <?php
@@ -102,9 +102,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 }
 ```
 
-All `MailTransfers` need to know which mail type (nothing more than a string) must be used for further internal processing.
-
-A simple example is as follows:
+All `MailTransfers` need to know which mail type, which must be a string,  has to be used for further internal processing. For example:
 
 ```php
 protected function sendRegistrationToken()
@@ -117,7 +115,7 @@ protected function sendRegistrationToken()
 
 ## 2. Creating a MailTypeBuilderPlugin
 
-Create `MailTypeBuilderPlugin` implementing the `MailTypeBuilderPluginInterface`. For more information about creating a `MailTypeBuilderPlugin`, see [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html):
+Create `MailTypeBuilderPlugin` by implementing `MailTypeBuilderPluginInterface`. For more information about creating a `MailTypeBuilderPlugin`, see [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html):
 
 <details><summary markdown='span'>Code sample:</summary>
 
@@ -175,7 +173,7 @@ class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin imp
 
 ## 3. Registering a plugin
 
-When the plugin is created, it must be registered in `MailDependencyProvider`:
+When a plugin is created, it must be registered in `MailDependencyProvider`:
 
 ```php
 <?php
@@ -197,12 +195,12 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 ## 4. Mail translations
 
-The `MailTypeBuilderPlugin` also has access to the glossary with the `setSubject()` method.
+`MailTypeBuilderPlugin` also has access to the glossary with the `setSubject()` method.
 
-A string is used as a key of the translation. The default mail provider internally does the translation through `GlossaryFacade`.
+A string is used as a key of the translation. The default mail provider does the translation internally through `GlossaryFacade`.
 
 You can also translate with the parameters setting up the placeholder to be replaced.  For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
-In your `MailTypeBuilderPlugin` you can use the `orderReference` from the given `OrderTransfer` within the subject translations:
+In `MailTypeBuilderPlugin`, you can use `orderReference` from the given `OrderTransfer` within the subject translation:
 
 ```php
 <?php
@@ -241,15 +239,15 @@ class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin imp
 ```
 
 {% info_block infoBox "Info" %}
-Note `MailSenderTransfer.setName()` and `MailRecipientTransfer.setName()` as well as `MailTransfer.setSubject()` allow setting up the translations.
-Besides that `MailSenderTransfer.setNameTranslations()` and  `MailRecipientTransfer.setNameTranslations()` are used in order to translate with parameters.
+`MailSenderTransfer.setName()`, `MailRecipientTransfer.setName()` as well as `MailTransfer.setSubject()` allow setting up translations.
+Besides that, `MailSenderTransfer.setNameTranslations()` and  `MailRecipientTransfer.setNameTranslations()` are used in order to translate with parameters.
 {% endinfo_block %}
 
 ## Set templates
 
-Usually, you have a `.twig` file which contains the template you want to use for mail.
+You usually have a `.twig` file which contains the template you want to use for emails.
 
-Set the template in `MailTransfer` which must be used in your `MailTypeBuilderPlugin` plugin.
+Set the template in `MailTransfer`, which must be used in the `MailTypeBuilderPlugin` plugin.
 
 ```php
 <?php
@@ -274,7 +272,7 @@ class CustomCustomerRegistrationMailTypeBuilderPlugin extends AbstractPlugin imp
 }
 ```
 
-The provider determines the template's final look. It can contain plain text or HTML. For example, you can even have a template that generates JSON:
+The provider determines the template's final look. It can contain information that can be stored in either plain text, or in HTML. For example, you can have a template that generates JSON:
 
 ```twig
 {
@@ -282,17 +280,17 @@ The provider determines the template's final look. It can contain plain text or 
 }
 ```
 
-In the following example, you have a plain text template with:
+In the following example, you have a plain text template:
 
 ```twig
 {% raw %}{{{% endraw %} 'mail.customer.registration.text' | trans {% raw %}}}{% endraw %}
 ```
 
-The templates must be placed within the module's `Presentation` layer—for example, `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`. You can use the same trans filter as used with Yves and Zed templates.
+The templates must be placed within the module's `Presentation` layer, such as `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`. You can use the same trans filter as with Yves and Zed templates.
 
 `TwigRenderer` is the default renderer, but you can add your own renderer by implementing `RendererInterface`.
 
-We also provide a basic layout file, where you can inject concrete content files into. If you want to build your own layout, you need the following in your template:
+Spryker also provides a basic layout file, where you can inject concrete content files. If you want to build your own layout, you need the following in your template:
 
 ```twig
 {% raw %}{%{% endraw %} for template in mail.templates {% raw %}%}{% endraw %}
@@ -304,7 +302,7 @@ We also provide a basic layout file, where you can inject concrete content files
 
 The preceeding template is used for plain text messages, and templates can also be used to generate JSON or query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`. It’s up to your provider to decide what to render.
 
-For HTML messages, you need to have this in your layout file:
+For HTML based messages, you need to have this in your layout file:
 
 ```twig
 {% raw %}{%{% endraw %} for template in mail.templates {% raw %}%}{% endraw %}
@@ -314,4 +312,4 @@ For HTML messages, you need to have this in your layout file:
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-When you complete the steps, to activate the mail functionality, call `MailFacade::handleMail()`.
+When you complete the steps, to activate the email functionality, call `MailFacade::handleMail()`.

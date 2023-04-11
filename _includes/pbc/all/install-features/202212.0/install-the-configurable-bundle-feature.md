@@ -8,17 +8,17 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core	 | {{site.version}} |
-| Cart | {{site.version}} |
-| Product | {{site.version}} |
-| Product Lists	 | {{site.version}} |
+| Spryker Core	 | {{page.version}} |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
+| Product Lists	 | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/configurable-bundle:"^{{site.version}}" --update-with-dependencies
+composer require spryker-feature/configurable-bundle:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -666,7 +666,7 @@ t000001,8d8510d8-59fe-5289-8a65-19f0c35a0089,configurable_bundle.templates.confi
 t000002,c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de,configurable_bundle.templates.smartstation.name,1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
 | configurable_bundle_template_uuid | optional | string | 8d8510d8-59fe-5289-8a65-19f0c35a0089 | Unique identifier for the configurable bundle. |
@@ -685,7 +685,7 @@ s000005,configurable_bundle.template_slots.slot-5.name,9626de80-6caa-57a9-a683-2
 s000006,configurable_bundle.template_slots.slot-6.name,2a5e55b1-993a-5510-864c-a4a18558aa75,t000002,pl-014
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | configurable_bundle_template_slot_key | mandatory | string | s000001 | Internal data import identifier for the configurable bundle template slot. |
 | configurable_bundle_template_slot_name | mandatory | string | configurable_bundle.template_slots.slot-1.name |Name (glossary key) for the configurable bundle template slot.  |
@@ -1151,17 +1151,17 @@ Please overview and install the necessary features before beginning the integrat
 
 | Feature | Version |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Cart | {{site.version}} |
-| Product | {{site.version}} |
-| Prices | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
+| Prices | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/configurable-bundle: "^{{site.version}}" --update-with-dependencies
+composer require spryker-feature/configurable-bundle: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

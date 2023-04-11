@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/authentication-and-authorization
   - /docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
   - /docs/scos/dev/glue-api-guides/202200.0/authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202204.0/authentication-and-authorization.html
 related:
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
@@ -20,10 +21,10 @@ related:
   - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
   - title: Customer Login overview
-    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-login-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-login-overview.html
 ---
 
-[Protected resources](#protected-resources) in Spryker Glue API require user authentication. For the authentication, Spryker implements the [OAuth 2.0 mechanism](https://tools.ietf.org/html/rfc6749). On the REST API level, it is represented by the Login API.
+[Protected resources](#protected-resources) in Spryker Glue API require user authentication. For the authentication, Spryker implements the OAuth 2.0 mechanism. On the REST API level, it is represented by the Login API.
 
 To get access to a protected resource, a user obtains an *access token*. An access token is a JSON Web Token used to identify a user during API calls. Then, they pass the token in the request header.
 

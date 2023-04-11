@@ -20,8 +20,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Merchant | {{page.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Shipment | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/integrate-the-shipment-feature.html) |
+| Merchant | {{page.version}} | [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Shipment | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-the-shipment-feature.html) |
 
 
 ### 1) Install the required modules using Composer

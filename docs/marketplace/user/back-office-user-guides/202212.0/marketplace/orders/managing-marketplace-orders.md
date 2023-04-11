@@ -70,7 +70,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 |   | Trigger all matching states inside this order   | Action button for changing the available states for all the items in the order. For details, see [Changing marketplace order states](#changing-marketplace-order-states). |
 | Custom Order Reference |   | Custom number that can be added to the order. |
 | Customer |   | Section with the information about the customer who has submitted the order. |
-|   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/view-customers.html)* page. |
+|   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/view-customers.html)* page. |
 |   | Name | Name of the customer. |
 |   | Email | Customer’s email address. |
 |   | Previous orders count | Number of orders the customer has submitted. |
@@ -163,7 +163,7 @@ To be able to create a return, your marketplace state machine should have the re
 
 {% endinfo_block %}
 
-If an order item is **[returnable](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html)**, you can create a return for it.
+If an order item is **[returnable](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html)**, you can create a return for it.
 
 To create a return:
 

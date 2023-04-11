@@ -1129,7 +1129,7 @@ For attributes of the other included resources, see the following:
 * [Retrieve sales units of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html)
 * [Retrieve a measurement unit](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve image sets of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html)
-* [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{site.version}}/manage-using-glue-api/retrieve-concrete-product-availability.html)
+* [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html)
 * [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{page.version}}/manage-using-glue-api/retrieve-concrete-product-prices.html)
 * [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 * [Retrieve product ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-using-glue-api/manage-product-reviews-using-glue-api.html)

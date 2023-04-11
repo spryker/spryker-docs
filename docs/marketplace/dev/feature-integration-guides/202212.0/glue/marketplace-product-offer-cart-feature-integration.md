@@ -2,11 +2,6 @@
 title: "Glue API: Marketplace Product Offer + Cart feature integration"
 description: This integration guide provides steps on how to integrate the Marketplace Product Offer + Cart Glue API feature into a Spryker project.
 template: feature-integration-guide-template
-related:
-  - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
-  - title: Marketplace Cart feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer + Cart Glue API feature into a Spryker project.
@@ -21,9 +16,9 @@ To start feature integration, integrate the required features:
 
 | NAME                  | VERSION | INTEGRATION GUIDE |
 | --------------------- | ------- | ------------------|
-| Cart API                         | {{page.version}}  | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
+| Cart API                         | {{page.version}}  | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
 | Marketplace Product Offer API    | {{page.version}}  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html) |
-| Marketplace Inventory Management | {{page.version}}  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html) |
+| Marketplace Inventory Management | {{page.version}}  | [Marketplace Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
 
 ### 1) Set up behavior
 

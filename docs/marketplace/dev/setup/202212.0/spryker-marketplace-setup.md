@@ -4,15 +4,10 @@ description: This document describes how to get started with the B2C Demo Market
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/setup/spryker-marketplace-setup.html
+  - /docs/marketplace/dev/setup/installation.html
 ---
 
 This document describes how to get started with the B2C Demo Marketplace.
-
-{% info_block infoBox "Info" %}
-
-The B2C Demo Marketplace installation process described in this document is based on the [Spryker in Docker installation](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). You can also install the B2C Demo Marketplace based on Vagrant. To do so, use [Installing Spryker with the Development Virtual Machine](/docs/scos/dev/developer-getting-started-guide.html) for reference and adapt this installation guide to installation in Vagrant.
-
-{% endinfo_block %}
 
 ## Prerequisites
 

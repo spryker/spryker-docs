@@ -2,9 +2,11 @@
 
 This document describes how to integrate the Catalog + Order Management feature connector into a Spryker project.
 
-## 1) Install the required modules using Composer
+## Install feature core
 
-Install the required modules:
+Follow the steps below to install the Catalog + Order Management feature connector's core.
+
+### 1) Install the required modules using Composer
 
 ```shell
 composer require spryker/sales-product-connector:"^1.6.0" --update-with-dependencies
@@ -23,7 +25,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-## 2) Set up transfer objects
+### 2) Set up transfer objects
 
 Generate transfer changes:
 
@@ -64,7 +66,7 @@ Register the following plugins:
 | PopularitySortConfigTransferBuilderPlugin | Builds a popularity sort configuration transfer for a catalog page. |               | Spryker\Client\SalesProductConnector\Plugin\PopularitySortConfigTransferBuilderPlugin |
 
 
-<details><summary markdown='span'>/src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details open><summary markdown='span'>/src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -113,7 +115,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+**/src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -140,9 +142,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-</details>
 
-<details><summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
+
+**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
 ```php  
 <?php
@@ -165,9 +167,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
-</details>
-
-
 
 ## 4) Add translations
 
@@ -181,8 +180,7 @@ catalog.sort.popularity,Sort by popularity,en_US
 catalog.sort.popularity,Sortieren nach Beliebtheit,de_DE
 ```
 
-
-2. Run the following console command to import data:
+2. Import data:
 
 ```shell
 console data:import glossary
@@ -218,9 +216,9 @@ vendor/bin/console scheduler:setup
 
 {% info_block warningBox "Verification" %}
 
+Make sure that you can sort products by popularity:
 1. Place several orders.
 2. Go to a Catalog page.
-
-Make sure that you can sort products by popularity.
+3. Try to sort products by popularity.
 
 {% endinfo_block %}

@@ -46,6 +46,8 @@ redirect_from:
   - /2021080/docs/en/installation-guide-b2c
   - /docs/installation-guide-b2c
   - /docs/en/installation-guide-b2c
+  - /dev-getting-started.htm
+  - /installation/spryker_in_docker/getting-started-with-docker-201907.htm
 ---
 
 This document guides you into getting started with the Spryker Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access our [Spryker Community Slack group](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
@@ -63,7 +65,7 @@ Both Demo Shops can also be expanded with separate [features](/docs/scos/user/fe
 
 ### Install Spryker with Docker
 
-When installing Spryker, we recommend starting with a Docker SDK environment. It features a lightweight environment that is closer to production implementation. This option includes Docker and related tools to build and run containers that match your requirements. 
+When installing Spryker, we recommend starting with a Docker SDK environment. It features a lightweight environment that is closer to production implementation. This option includes Docker and related tools to build and run containers that match your requirements.
 
 To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
@@ -119,7 +121,7 @@ We recommend running this command weekly to ensure you have the latest fixes. We
 
 {% endinfo_block %}
 
-* To update a particular module: `composer update "spryker/module-name"`. 
+* To update a particular module: `composer update "spryker/module-name"`.
 
 {% info_block infoBox %}
 
@@ -139,7 +141,7 @@ The next step to take once installation has finished and modules set up, you nee
 2. Configure your environment:
     * [Database](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
     * [Redis](/docs/scos/dev/setup/redis-configuration.html)
-    <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html)-->
+    <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
     * [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
 3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
@@ -163,7 +165,7 @@ This step depends on the store setup you came up with during your configuring. F
 
 ### Data import clean-up
 
-Located in the `data/import` folder, you may find additional files related to these other stores. As with cleaning up stores, you must define the stores you intend to use and remove unused files of the rest. 
+Located in the `data/import` folder, you may find additional files related to these other stores. As with cleaning up stores, you must define the stores you intend to use and remove unused files of the rest.
 
 {% info_block infoBox "Info" %}
 
@@ -236,7 +238,7 @@ It is safe to disable cache indexing for the following files:
 
 ## 7. Configure debugging
 
-Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following: 
+Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
 
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 
@@ -251,11 +253,10 @@ When in a production environment, Zed must be configured to use a VPN, basic acc
 As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 
 * [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
-* [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
+* [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html): to learn about layers and how various functionality is encapsulated in modules.
 * [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
 * [Technology stack](/docs/scos/dev/architecture/technology-stack.html): to learn about the technologies we use.
 
 <!---* Introduction to navigating the folder structure, main concepts and namespacing.
 * The project directory
 * The OS directories-->
-

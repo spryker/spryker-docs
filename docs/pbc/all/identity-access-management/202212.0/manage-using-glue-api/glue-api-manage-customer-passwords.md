@@ -32,11 +32,11 @@ related:
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: Password Management overview
-    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 The endpoints in this document allows you to manage customer passwords. You can change or reset a password.

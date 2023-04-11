@@ -46,7 +46,7 @@ API URLs:
 Services:
 * [Risk Check](/docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html)
 
-To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) for more details.
+To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) for more details.
 
 ## Installation
 

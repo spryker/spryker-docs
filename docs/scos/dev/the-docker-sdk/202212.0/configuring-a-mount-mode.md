@@ -163,7 +163,7 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
 
 1. [Install Docker Desktop Stable](https://docs.docker.com/docker-for-windows/install/) 2.3.0.2 or higher.
 
-2. [Enable WSL1](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+2. [Enable WSL1](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 3. In WSL, install the latest version of Docker:
 
@@ -353,7 +353,7 @@ docker/sdk up --build --data --assets
 To configure native mount mode for Windows with Windows Subsystem for Linux 2 (WSL2):
 
 1. [Download and install Docker Desktop Stable](https://docs.docker.com/docker-for-windows/install/) 2.3.0.2 or higher.
-2. [Enable WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+2. [Enable WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 3. In WSL, install Docker:
 

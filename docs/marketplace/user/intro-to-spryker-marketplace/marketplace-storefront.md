@@ -111,7 +111,7 @@ On the **Merchant Profile** page, customers can find the following merchant-spec
 * Imprint
 * Data privacy statement
 
-Customers can access only the profile pages of [active](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
+Customers can access only the profile pages of [active](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
 
 For an example, see the [Spryker merchant profile](https://www.de.b2c-marketplace.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.
 

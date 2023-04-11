@@ -89,11 +89,11 @@ composer update spryker/*
    * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
    * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html).
    * **ProductManagement >= 0.9.** — see [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html). New forms and views have been added.
-   * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html).
-   * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/scos/dev/module-migration-guides/migration-guide-productrelationcollector.html).
+   * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelation-modulehtml).
+   * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelationcollector-module.html).
    * **ProductSetGui >= 2.** — see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html).
-   * **Wishlist >= 2.** — see [Migration Guide - Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/upgrade-the-wishlist-module.html).
-   * **Search >= 7.0** - see [Migration Guide - Search](/docs/scos/dev/module-migration-guides/migration-guide-search.html).
+   * **Wishlist >= 2.** — see [Migration Guide - Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-wishlist-module.html).
+   * **Search >= 7.0** - see [Migration Guide - Search](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html).
 
 6. Regarding the Product Options, the way the price is entered in Zed Admin UI has been changed to support multi-currency behavior. Now Collector collects prices by store and cart checkout has been amended to support multi-currency product options.
 

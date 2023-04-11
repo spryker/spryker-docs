@@ -1,7 +1,7 @@
 ---
 title: Creating product options
 last_updated: Apr 21, 2021
-description: Use this procedure to create Marketplace product option groups and values in the Back Office.
+description: Use this procedure to create Marketplace Product Optionsgroups and values in the Back Office.
 template: back-office-user-guide-template
 ---
 This document describes how to create Marketplace product options.

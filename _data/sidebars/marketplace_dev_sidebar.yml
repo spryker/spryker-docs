@@ -185,13 +185,11 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Shopping Lists
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Persistence ACL
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
@@ -523,14 +521,12 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html
             include_versions:
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Merchant Portal feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html
@@ -698,7 +694,6 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
                 include_versions:
                 - "202204.0"
-                - "202212.0"
 
 
       - title: Module migration guides
@@ -840,36 +835,34 @@ entries:
             url: /docs/marketplace/dev/glue-api-guides/shopping-lists/marketplace-shopping-lists.html
             include_versions:
             - "202204.0"
-            - "202212.0"
             nested:
               - title: Managing marketplace shopping lists
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
                 include_versions:
                 - "202204.0"
-                - "202212.0"
 
               - title: Managing marketplace shopping list items
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
                 include_versions:
                 - "202204.0"
-                - "202212.0"
 
           - title: Wishlists
             url: /docs/marketplace/dev/glue-api-guides/wishlists/wishlists.html
+            include_versions:
+            - "202108.0"
+            - "202204.0"            
             nested:
               - title: Managing wishlists
                 url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
               - title: Managing wishlist items
                 url: /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
                 include_versions:
                 - "202108.0"
                 - "202204.0"
-                - "202212.0"
 
           - title: Searching the product catalog
             url: /docs/marketplace/dev/glue-api-guides/searching-the-product-catalog.html
@@ -906,6 +899,9 @@ entries:
             - "202212.0"
 
           - title: Shopping lists
+            include_versions:
+            - "202108.0"
+            - "202204.0"
             nested:
               - title: Managing shopping lists
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html

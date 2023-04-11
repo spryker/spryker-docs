@@ -1,5 +1,5 @@
 ---
-title: Payments feature integration
+title: Install the Payments feature
 description: Use the guide to install the Payment per store feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -22,4 +22,4 @@ related:
     link: docs/scos/user/features/page.version/payments-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-payments-feature.md -->
+{% include pbc/all/install-features/202212.0/install-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-payments-feature.md -->

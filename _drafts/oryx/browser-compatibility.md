@@ -9,7 +9,7 @@ Oryx supports and is being tested on all modern browsers, operating systems and 
 ## Supported browsers
 
 | BROWSER | VERSION | DESKTOP SUPPORT | MOBILE SUPPORT |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Safari | latest | &#9989; | &#9989; |
 | Chrome | latest | &#9989; | &#9989; |
 | Edge | latest | &#9989; | |
@@ -25,4 +25,4 @@ Oryx supports and is being tested on all modern browsers, operating systems and 
 
 ## Supported screen resolutions
 
-360-1920px wide screens, which includes mobiles, tablets and desktops.
+360-1920px wide screens: includes mobiles, tablets, and desktops.

@@ -16,7 +16,7 @@ To connect the Upgrader manually using a Azure access token, follow the steps.
 
 Open **Clone Repository** window in your Azure repository and click on **Generate Git credentials** button.
 
-![Generate Git credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.md/generate_git_credentials.png){height="327" width="468"}
+![Generate Git credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.md/generate_git_credentials.png)
 
 2. [Create a Azure access token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate#create-a-pat)
 
@@ -42,6 +42,12 @@ Azure access token should have the following repository permissions:
 ![Spryker CI Code Azure](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.md/azure_code_add.png)
 
 6. Enter your Azure repository URL, username and password, and click on **Connect repository** button.
+
+{% info_block infoBox "Repository URL" %}
+
+Repository URL should be in format `https://dev.azure.com/<organization_name>/<project_name>/_git/<repository_name>` (without `<organization_name>@` prefix).
+
+{% endinfo_block %}
 
 ## Support for Spryker CI
 

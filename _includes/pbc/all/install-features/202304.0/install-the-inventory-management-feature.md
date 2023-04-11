@@ -1,15 +1,15 @@
 
 
-This document describes how to ingrate the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html) feature into a Spryker project.
 
 {% info_block errorBox %}
 
 The following feature integration guide expects the basic feature to be in place.
 
 The current feature integration guide adds the following functionality:
-* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#warehouse-management)
+* [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html#warehouse-management)
 * [Add to cart from catalog page](/docs/scos/user/features/{{site.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
-* [Warehouse address](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address)
+* [Warehouse address](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 
@@ -276,7 +276,7 @@ Sony Experts MER000006 Warehouse 1,1
 ```
 
 
-| COLUMN    | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                    |
+| COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                    |
 |-----------|-----------|-----------|--------------|-------------------------------------|
 | name      | mandatory | string    | Warehouse1   | Name of the warehouse.              |
 | is_active | mandatory | bool      | 1            | Defines if the warehouse is active. |
@@ -292,7 +292,7 @@ Warehouse2,US
 ```
 
 
-| COLUMN         | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                      |
+| COLUMN         | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                      |
 |----------------|-----------|-----------|--------------|-------------------------------------------------------|
 | warehouse_name | mandatory | string    | Warehouse1   | Name of the warehouse.                                |
 | store_name     | mandatory | string    | DE           | Name of the store the warehouse will be available in. |
@@ -310,7 +310,7 @@ Budget Cameras MER000005 Warehouse 1,Kurfuerstendamm 96,,,89077,Ulm Weststadt,,D
 Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48 41 25,
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE       | DATA EXPLANATION                          |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE       | DATA EXPLANATION                          |
 |-------------------|-----------|-----------|--------------------|-------------------------------------------|
 | warehouse_name    | mandatory | string    | Warehouse1         | Warehouse name.                           |
 | address1          | mandatory | string    | Hallesches Ufer 71 | The first line of the warehouse address.  |
@@ -721,6 +721,6 @@ Make sure that after the order is created, the new row in the `warehouse_allocat
 
 | FEATURE                  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                          |
 |--------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Inventory Management API |                                  | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)                |
+| Inventory Management API |                                  | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)                |
 | Alternative Products     |                                  | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-inventory-management-feature-integration.html) |
 | Order Management         |                                  | [Order Management + Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-inventory-management-feature-integration.html)               |

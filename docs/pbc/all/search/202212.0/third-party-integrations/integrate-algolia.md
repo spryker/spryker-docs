@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Feb 23, 2023
 ---
 
-This document describes how to integrate [Algolia](docs/pbc/all/search/{{page.version}}/third-party-integrations/algolia.html) into a Spryker sho.
+This document describes how to integrate [Algolia](docs/pbc/all/search/{{page.version}}/third-party-integrations/algolia.html) into a Spryker shop.
 
 ## Prerequisites
 
@@ -17,13 +17,13 @@ The Algolia app requires the following Spryker modules:
 * `spryker/category: "^5.11.0"`
 * `spryker/category-storage: "^2.5.0"`
 * `spryker/message-broker-aws: "^1.3.1"`
-* `spryker/price-product: "^4.37.0"`
-* `spryker/product: "^6.29.0"`
-* `spryker/product-approval: "^1.1.0"`
+* `spryker/price-product: "^4.40.0"`
+* `spryker/product: "^6.32.0"`
+* `spryker/product-approval: "^1.1.0"` (Optional)
 * `spryker/product-category: "^4.19.0"`
-* `spryker/product-extension: "^1.4.0"`
+* `spryker/product-extension: "^1.5.0"`
 * `spryker/product-image: "^3.13.0"`
-* `spryker/product-label "^3.5.0"`
+* `spryker/product-label "^3.8.0"`
 * `spryker/product-label-storage "^2.6.0"`
 * `spryker/product-review: "^2.9.0"`
 * `spryker/search: "^8.19.3"`
@@ -42,7 +42,7 @@ Follow these steps to integrate Algolia.
 
 ### 1. Configure shared configs
 
-Add the following config to `config/Shared/common/config_default.php`:
+Add the following config to `config/Shared/config_default.php`:
 
 ```php
 //...
@@ -78,7 +78,6 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...
     'product' => 'http',
-    'search' => 'http',
 ];
 ```
 
@@ -306,7 +305,7 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
     {
         return [
             new ProductSearchConfigExpanderPlugin(),
-            new MerchantProductMerchantNameSearchConfigExpanderPlugin(),
+            new MerchantProductMerchantNameSearchConfigExpanderPlugin(), # Marketplace only
         ];
     }
 }
@@ -471,7 +470,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
         return [
             new ImageSetProductConcreteMergerPlugin(),
             new PriceProductConcreteMergerPlugin(),
-            new ApprovalStatusProductConcreteMergerPlugin(),
+            new ApprovalStatusProductConcreteMergerPlugin(), # Add this plugin if you are using the spryker/product-approval module
         ];
     }
     
@@ -578,7 +577,7 @@ class SearchHttpConfig extends SprykerSearchHttpConfig
      */
     public function getSearchHttpSynchronizationPoolName(): ?string
     {
-        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
+        return SynchronizationConfig::PYZ_DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
 }
 ```

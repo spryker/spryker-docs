@@ -7,7 +7,7 @@ related:
   - title: Marketplace Product feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
   - title: Marketplace Inventory Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-inventory-management-feature-overview.html
+    link: docs/pbc/all/warehouse-management-system/page.version/marketplace/marketplace-inventory-management-feature-overview.html
   - title: Marketplace Product Approval Process feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
 ---
@@ -56,7 +56,7 @@ To edit the existing marketplace abstract product:
 
 ### Reference information: [Product name] drawer, Abstract Product Details tab
 
-| ATTRIBUTE   | DESCRIPTION  | REQUIRED? |
+| ATTRIBUTE   | DESCRIPTION  | REQUIRED |
 | ----------- | -------------- | --------- |
 | Name        | Name of your product displayed on the Storefront. It is set per locale. | ✓         |
 | Description | Description of the product displayed on the Storefront. It is set per locale. |           |

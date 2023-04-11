@@ -28,7 +28,7 @@ _Merchant Portal_ is the management interface where merchants do all administrat
 
 Documentation:
 * [Merchant Portal overview](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/logging-in-to-the-merchant-portal.html)
-* [Merchant users overview](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
+* [Merchant users overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 ### Merchant Profile
 
@@ -47,7 +47,7 @@ Every reference to a merchant on the Storefront is linked to their merchant prof
 
 ![Merchant profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-profile-page.png)
 
-Documentation: [Marketplace Merchant feature overview](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
+Documentation: [Marketplace Merchant feature overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html)
 
 ## Merchant Products and Merchant Product Offers
 
@@ -156,10 +156,10 @@ Documentation:
 * [Retrieving merchant concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{site.version}}/product-offers/retrieving-product-offers.html)
 * [Retrieving product offers of concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html)
-* [Managing items in carts of registered users](/docs/marketplace/dev/glue-api-guides/{{site.version}}/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
+* [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
 * [Retrieving Marketplaceorders](/docs/marketplace/dev/glue-api-guides/{{site.version}}/retrieving-marketplace-orders.html)
-* [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{site.version}}/managing-the-returns.html)
-* [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/manage-using-glue-api/glue-api-manage-wishlist-items.html)
+* [Managing the returns](/docs/pbc/all/return-management/{{site.version}}/marketplace/glue-api-manage-marketplace-returns.html)
+* [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html)
 * [Search the product catalog](/docs/marketplace/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)
 * [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{site.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html)
 

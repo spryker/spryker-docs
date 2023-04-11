@@ -58,9 +58,7 @@ In the Spryker Commerce OS's core, the following is the public API:
 * Search
 * [Storage](/docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html)
 * [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
-* Dependencies to open source components
 * Glossary keys
-* Software design
 
 
 

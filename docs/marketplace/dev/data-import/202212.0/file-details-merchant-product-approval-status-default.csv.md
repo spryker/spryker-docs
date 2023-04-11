@@ -21,14 +21,14 @@ console data:import merchant-product-approval-status-default
 
 The file must have the following parameters:
 
-| PARAMETER      | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION                               |
+| PARAMETER      | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION                               |
 | ------------- | ---------- | ------ | ----------- | ------------------- | ------------------------------------ |
 | merchant_reference | &check;             | String   |                   | Unique                        | Identifier of the merchant in the system.     |
 | approval_status               | &check;             | String     |                   |  | Default approval status for the merchant products.               |
 
 ## Import file dependencies
 
-The file has the following dependency: [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html).
+The file has the following dependency: [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html).
 
 ## Import template file and content example
 

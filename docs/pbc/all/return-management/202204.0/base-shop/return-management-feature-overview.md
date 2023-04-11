@@ -127,7 +127,7 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 
 2. Follow the integration guides in [Related Developer articles](#related-developer-documents).
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

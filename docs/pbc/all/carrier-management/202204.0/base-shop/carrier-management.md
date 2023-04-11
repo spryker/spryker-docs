@@ -53,7 +53,7 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies
 ```
 
-2. Follow the integration guides in [Related Developer documents](#related-developer-articles).
+2. Follow the integration guides in [Related Developer documents](#related-developer-documents).
 
 ## Related Business User documents
 

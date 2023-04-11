@@ -16,8 +16,8 @@ To learn about the base Cart and Checkout, see the following feature overviews:
 * [Shared Carts feature overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/shared-carts-feature-overview.html)
 * [Checkout feature overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html)
 * [Approval Process feature overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/approval-process-feature-overview.html)
-* [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/comments-feature-overview.html#related-developer-articles)
-* [Resource Sharing](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/resource-sharing-feature-overview.html#related-developer-articles)
+* [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/comments-feature-overview.html#related-developer-documents)
+* [Resource Sharing](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/resource-sharing-feature-overview.html#related-developer-documents)
 * [Non-splittable Products feature overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/non-splittable-products-feature-overview.html)
 
 
@@ -33,12 +33,12 @@ composer require spryker-feature/cart: "{{page.version}}" spryker-feature/order-
 
 2. Follow the integrations guides for individual features:
 
-* [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/approval-process-feature-overview.html#related-developer-articles)
-* [Cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/cart-feature-overview/cart-feature-overview.html#related-developer-articles)
-* [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/comments-feature-overview.html#related-developer-articles)
-* [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html#related-developer-articles)
-* [Multiple Carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/multiple-carts-feature-overview.html#related-developer-articles)
-* [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/persistent-cart-sharing-feature-overview.html#related-developer-articles)
-* [Quick Add to Cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/quick-add-to-cart-feature-overview.html#related-developer-articles)
-* [Resource Sharing](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/resource-sharing-feature-overview.html#related-developer-articles)
-* [Shared Carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/shared-carts-feature-overview.html#related-developer-articles)
+* [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/approval-process-feature-overview.html#related-developer-documents)
+* [Cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/cart-feature-overview/cart-feature-overview.html#related-developer-documents)
+* [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/comments-feature-overview.html#related-developer-documents)
+* [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html#related-developer-documents)
+* [Multiple Carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/multiple-carts-feature-overview.html#related-developer-documents)
+* [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/persistent-cart-sharing-feature-overview.html#related-developer-documents)
+* [Quick Add to Cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/quick-add-to-cart-feature-overview.html#related-developer-documents)
+* [Resource Sharing](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/resource-sharing-feature-overview.html#related-developer-documents)
+* [Shared Carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/shared-carts-feature-overview.html#related-developer-documents)

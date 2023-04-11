@@ -2355,7 +2355,7 @@ entries:
                   - title: Marketplace Shopping Lists
                     url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-shopping-lists-feature-domain-model-and-relationships.html
                   - title: Marketplace Wishlist
-                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html                                      
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

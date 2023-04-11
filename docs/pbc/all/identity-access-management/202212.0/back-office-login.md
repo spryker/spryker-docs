@@ -17,10 +17,10 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/logging-in-to-the-back-office.html
 ---
 
-To be able to use the Back Office, you have to log in to it. You can log in via:
+Back Office supports login via two types of accounts:
 
-* Regular Back Office user account
-* Third-party service
+* Back Office account.
+* Account of a third-party service that is configured as a single sign-on.
 
 {% info_block warningBox %}
 
@@ -28,44 +28,22 @@ Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/man
 
 {% endinfo_block %}
 
-## Logging in with a regular Back Office user account
+## Login with a Back Office account
 
-<a name="prerequisites"></a>
-
-{% info_block warningBox "Prerequisites" %}
-
-To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html#create-a-user) or [programmatically by a developer](/docs/pbc/all/user-management/{{page.version}}/user-and-rights-overview.html).
-
-{% endinfo_block %}
+Only an existing Back Office user with sufficient permissions or a developer can create Back Office accounts. That is, if you want to onboard a new Back Office user, you need to create an account for them. For instructions on creating accounts in the Back Office, see [Create users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
 
 
-To log in, on the Back Office login page, enter your login details.
+To log in, on the Back Office login page, a user enters the email address and password of their account. If the credentials are correct and their account is active at that time, they are logged in.
 
-### Restoring your password
+If a user does not remember their password, they can reset it using the form available on the login page.
 
-<a name="password-reset"></a>
-If you forgot your password:
+## Login with a single sign-on
 
-1. In the login form, click **Forgot password**.
-2. Enter the email that was used for your Back Office account registration and click **Recover password**.
-You should receive an email with the link to restore your password.
-3. In the email, click the change password link.
-This takes you to the *Reset password page* in the Back Office.
-4. In the *Password* and *Repeat password* fields, enter your new password.
-5. Click **Reset**.
+Your project can have an single sign-on(SSO) login configured for Back Office login. SSO lets users log into the Back Office with accounts of a third-party service.
 
-Your password is now updated. To log in, enter the new password in the login form.
+To log in with an SSO, on the Back Office login page, users click **Login with {Third-party service name}**. This opens the sign-in page of the configured service. Users sign in with their accounts and get redirected to the Back Office.
 
-## Logging in with a third-party account
-
-Depending on the configuration of your project, you may be able to log in to the Back Office via a third-party system.
-
-To log in with a third-party system credentials:
-
-1. In the login form, click **Login with {Third-party service name}**. This redirects your to the third-party sign-in page.
-2. Log in to the third-party system by entering your username and password.
-
-You are taken to the Back Office home page as a logged-in user. User with the email you used for the third-party service login appears on the [*Users*](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html) page.
+User with the email you used for the third-party service login appears on the [*Users*](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html) page.
 
 {% info_block warningBox %}
 

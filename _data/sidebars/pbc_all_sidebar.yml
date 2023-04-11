@@ -2,6 +2,14 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
+      - title: Back Office
+        nested:
+          - title: Spryker Core Back Office feature overview
+            url: /docs/pbc/all/back-office/spryker-core-back-office-feature-overview.html
+          - title: Back Office Translations overview
+            url: /docs/pbc/all/back-office/back-office-translations-overview.html
+          - title: Install the Spryker Core Back Office feature
+            url: /docs/pbc/all/back-office/install-the-spryker-core-back-office-feature.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -2205,7 +2213,7 @@ entries:
           - title: Marketplace
             url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-overview.html
             include_versions:
-            - "202212.0"  
+            - "202212.0"
             nested:
               - title: Install features
                 nested:

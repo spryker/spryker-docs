@@ -598,7 +598,7 @@ entries:
       - title: Customer Relationship Management
         url: /docs/pbc/all/customer-relationship-management/customer-relationship-management.html
         include_versions:
-          - "202212.0"
+        - "202212.0"
         nested:
           - title: Install and upgrade
             nested:
@@ -1039,7 +1039,7 @@ entries:
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         include_versions:
-          - "202212.0"
+        - "202212.0"
         nested:
           - title: Order Management feature overview
             url: /docs/pbc/all/order-management-system/order-management-feature-overview/order-management-feature-overview.html
@@ -1996,53 +1996,96 @@ entries:
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
-          - title: What's changed
-            url: /docs/pbc/all/shopping-list-and-wishlist/whats-changed-in-shopping-list-and-wishlist.html
-          - title: Shopping List feature overview
-            url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+          - title: Base Shop
             nested:
-              - title: Shopping List Notes overview
-                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html
-              - title: Shopping List Printing overview
-                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-printing-overview.html
-              - title: Shopping List Widget overview
-                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.html
-          - title: Wishlist feature overview
-            url: /docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html
-          - title: Install and upgrade
+              - title: What's changed
+                url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/whats-changed-in-shopping-list-and-wishlist.html
+              - title: Shopping List feature overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+                nested:
+                  - title: Shopping List Notes overview
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html
+                  - title: Shopping List Printing overview
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview/shopping-list-printing-overview.html
+                  - title: Shopping List Widget overview
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview/shopping-list-widget-overview.html
+              - title: Wishlist feature overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Integrate the Shopping Lists feature
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/integrate-the-shopping-lists-feature.html
+                  - title: Integrate the Shopping Lists Glue API
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
+                  - title: Install the Shopping List + Agent Assist feature
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-list-agent-assist-feature.html
+                  - title: Install the Shopping Lists + Quick Add to Cart feature
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-shopping-lists-quick-add-to-cart-feature.html
+                  - title: Integrate the Shopping Lists + Product Options feature
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html
+                  - title: Integrate the Wishlist Glue API
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/integrate-the-wishlist-glue-api.html
+                  - title: Install the Wishlist + Alternative Products feature
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/install-the-wishlist-alternative-products-feature.html
+                  - title: Upgrade the ShoppingList module
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglist-module.html
+                  - title: Upgrade the ShoppingListPage module
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglistpage-module.html
+                  - title: Upgrade the ShoppingListWidget module
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
+                  - title: Upgrade the Wishlist module
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/install-and-upgrade/upgrade-the-wishlist-module.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Shopping lists
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html
+                  - title: Shopping list items
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
+                  - title: Wishlists
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
+                  - title: Wishlist items
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
+          - title: Marketplace
+            include_versions:
+            - "202212.0"
             nested:
-              - title: Integrate the Shopping Lists feature
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html
-              - title: Integrate the Shopping Lists Glue API
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
-              - title: Install the Shopping List + Agent Assist feature
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/install-the-shopping-list-agent-assist-feature.html
-              - title: Install the Shopping Lists + Quick Add to Cart feature
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/install-the-shopping-lists-quick-add-to-cart-feature.html
-              - title: Integrate the Shopping Lists + Product Options feature
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html
-              - title: Integrate the Wishlist Glue API
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html
-              - title: Install the Wishlist + Alternative Products feature
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/install-the-wishlist-alternative-products-feature.html
-              - title: Upgrade the ShoppingList module
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.html
-              - title: Upgrade the ShoppingListPage module
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html
-              - title: Upgrade the ShoppingListWidget module
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
-              - title: Upgrade the Wishlist module
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.html
-          - title: Manage using Glue API
-            nested:
-              - title: Shopping lists
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-shopping-lists.html
-              - title: Shopping list items
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-shopping-list-items.html
-              - title: Wishlists
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-wishlists.html
-              - title: Wishlist items
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-using-glue-api/glue-api-manage-wishlist-items.html
+              - title: Marketplace Shopping Lists feature overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/marketplace-shopping-lists-feature-overview.html
+              - title: Marketplace Wishlist feature overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/marketplace-wishlist-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Marketplace Shopping Lists
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html
+                      - title: Marketplace Wishlist
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html
+                  - title: Install Glue API
+                    nested:
+                      - title: Marketplace Shopping Lists
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
+                      - title: Marketplace Wishlist + Prices
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-prices-glue-api.html
+                      - title: Marketplace Wishlist + Product Offer
+                        url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-wishlist-product-offer-glue-api.html
+              - title: Manage using Glue API
+                url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists-and-wishlists.html
+                nested:
+                  - title: Manage marketplace shopping lists
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
+                  - title: Manage marketplace shopping list items
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html
+                  - title: Manage marketplace wishlists
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html
+                  - title: Manage marketplace wishlist items
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlist-items.html
+              - title: Domain model and relationships
+                nested:
+                  - title: Marketplace Shopping Lists
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-shopping-lists-feature-domain-model-and-relationships.html
+                  - title: Marketplace Wishlist
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html                                      
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
@@ -2230,7 +2273,7 @@ entries:
           - title: Marketplace
             url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-overview.html
             include_versions:
-            - "202212.0"  
+            - "202212.0"
             nested:
               - title: Install features
                 nested:

@@ -92,7 +92,7 @@ composer update spryker/*
    * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html).
    * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/scos/dev/module-migration-guides/migration-guide-productrelationcollector.html).
    * **ProductSetGui >= 2.** — see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html).
-   * **Wishlist >= 2.** — see [Migration Guide - Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/install-and-upgrade/upgrade-the-wishlist-module.html).
+   * **Wishlist >= 2.** — see [Migration Guide - Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-wishlist-module.html).
    * **Search >= 7.0** - see [Migration Guide - Search](/docs/scos/dev/module-migration-guides/migration-guide-search.html).
 
 6. Regarding the Product Options, the way the price is entered in Zed Admin UI has been changed to support multi-currency behavior. Now Collector collects prices by store and cart checkout has been amended to support multi-currency product options.

@@ -35,8 +35,6 @@ This section contains the following Marketplace feature integration guides:
 * [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-checkout-feature-integration.html)
 * [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-customer-feature-integration.html)
 * [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html)
-* [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html)
-* [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html)
 * [Merchant Portal feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html)
 * [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)
 * [Merchant Portal - Marketplace Product Options Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html)

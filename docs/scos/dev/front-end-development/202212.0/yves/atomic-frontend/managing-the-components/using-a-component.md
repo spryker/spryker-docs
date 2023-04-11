@@ -26,7 +26,7 @@ related:
   - title: Creating a component
     link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/creating-a-component.html
   - title: Extending a component
-    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/managing-the-components/extending-a-component.html
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/extending-a-component.html
   - title: Overriding a component
     link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 ---

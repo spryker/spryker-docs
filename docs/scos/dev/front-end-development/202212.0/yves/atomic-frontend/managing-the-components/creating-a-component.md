@@ -26,7 +26,7 @@ related:
   - title: Using a Component
     link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/using-a-component.html
   - title: Extending a Component
-    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/managing-the-components/extending-a-component.html
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/extending-a-component.html
   - title: Overriding a Component
     link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 ---

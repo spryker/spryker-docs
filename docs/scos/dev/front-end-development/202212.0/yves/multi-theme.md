@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/multi-theme.html
 related:
   - title: Yves multi-themes
-    link: docs/scos/dev/front-end-development/page.verison/yves/yves-multi-themes.html
+    link: docs/scos/dev/front-end-development/page.version/yves/yves-multi-themes.html
 ---
 
 Spryker Frontend consists of two main parts: [Atomic Frontend](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html) (JS/CSS/Twg) and [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html) (Widgets and Pages). Both support theming and the same inheritance strategy: Current Theme > Default Theme.

@@ -19,11 +19,11 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html
 related:
   - title: Atomic Frontend - general overview
-    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/atomic-front-end-general-overview.html
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/atomic-front-end-general-overview.html
   - title: Integrating JQuery into Atomic Frontend
-    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
   - title: Integrating React into Atomic Frontend
-    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
 ---
 
 Spryker Frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles, and behavior of existing components, as well as create components on your own.

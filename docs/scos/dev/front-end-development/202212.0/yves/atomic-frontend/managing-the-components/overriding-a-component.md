@@ -28,7 +28,7 @@ related:
   - title: Using a Component
     link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/using-a-component.html
   - title: Extending a Component
-    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/managing-the-components/extending-a-component.html
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/extending-a-component.html
 ---
 
 If the implementation of any of the components shipped with Spryker Frontend does not suite your needs, you can override it with a component of your own. The following article shows how to override a molecule called **simple-carousel**. By default, the component is used, for example, to display product suggestions at the bottom of the page.

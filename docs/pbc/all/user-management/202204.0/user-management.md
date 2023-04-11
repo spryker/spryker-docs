@@ -38,7 +38,7 @@ composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature
 ```
 2. Follow the integration guides for the individual features:
 * [User Management](#related-developer-articles).
-* [Agent Assist](/docs/pbc/all/user-management/202204.0/agent-assist-feature-overview.html#related-developer-articles)
+* [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html#related-developer-documents)
 
 ## Related Business User documents
 

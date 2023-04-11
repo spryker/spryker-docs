@@ -27,7 +27,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 <summary markdown='span'>B2C feature list</summary>
 
 - [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/configurable-product-feature-overview/configurable-product-feature-overview.html)
-- [Return Management](/docs/pbc/all/return-management/{{site.version}}/return-management.html)
+- [Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html)
 - [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html)
@@ -46,7 +46,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
-- [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/wishlist-feature-overview.html)
+- [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/wishlist-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)

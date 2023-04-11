@@ -17,6 +17,9 @@ entries:
           - title: Back Office for Marketplace Operator
             url: /docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html
 
+          - title: Merchant onborading
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding.html
+
           - title: Marketplace Storefront
             url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html
 
@@ -306,6 +309,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html
 
         - title: Products
+          url: /docs/marketplace/user/merchant-portal-user-guides/products/products.html
           nested:
 
           - title: Abstract products

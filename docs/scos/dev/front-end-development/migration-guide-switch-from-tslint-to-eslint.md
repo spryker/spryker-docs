@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Switch from TSLint to ESLint
 description: Use this guide to migrate the project from TSLint to ESLint.
-last_updated: Mar 22, 2023
+last_updated: Mar 24, 2023
 template: module-migration-guide-template
 ---
 
@@ -15,8 +15,8 @@ TSLint support was discontinued as of December 1, 2020. The solution is migratio
 
 ## 1) Update dependencies
 
-1. In `package.json`: 
-    - Add or update the following dependencies to the new version:
+1. In `package.json`, do the following: 
+    1. Add or update the following dependencies to the new version:
 
       ```json
       {
@@ -24,20 +24,22 @@ TSLint support was discontinued as of December 1, 2020. The solution is migratio
           "@typescript-eslint/eslint-plugin": "~5.54.0",
           "@typescript-eslint/parser": "~5.54.0",
           "eslint": "~8.35.0",
+          "eslint-plugin-deprecation": "~1.4.0",
           "prettier": "~2.8.4"
       }
       ```
 
-    - Remove the following dependencies:
+    2. Remove the following dependencies:
 
         ```json
         {
             "@spryker/frontend-config.tslint": "x.x.x",
-            "tslint": "x.x.x"
+            "tslint": "x.x.x",
+            "typescript-eslint-parser": "x.x.x"
         }
         ```
      
-    - Update the following commands:
+    3. Update the following commands:
 
         ```json
         {
@@ -46,12 +48,12 @@ TSLint support was discontinued as of December 1, 2020. The solution is migratio
         }
         ```
       
-        Must be
+        It must be as follows:
 
         ```json
         {
-            "yves:eslint": "eslint --no-error-on-unmatched-pattern ./src/Pyz/Yves/**/Theme/**/*.{js,ts}",
-            "yves:eslint:fix": "eslint --no-error-on-unmatched-pattern --fix ./src/Pyz/Yves/**/Theme/**/*.{js,ts}"
+            "yves:lint": "eslint --no-error-on-unmatched-pattern ./src/Pyz/Yves/**/Theme/**/*.{js,ts}",
+            "yves:lint:fix": "eslint --no-error-on-unmatched-pattern --fix ./src/Pyz/Yves/**/Theme/**/*.{js,ts}"
         }
         ```
 
@@ -70,45 +72,84 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 
 ## 2) Create or update configuration files
 
-1. Create `.eslintrc.json` file:
-
-```json
-{
-    "root": true,
-    "extends": ["./node_modules/@spryker/frontend-config.eslint/.eslintrc.js", "plugin:@typescript-eslint/recommended"],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 2020,
-        "sourceType": "module",
-        "project": "./tsconfig.yves.json"
-    },
-    "plugins": ["deprecation"],
-    "ignorePatterns": [
-        "docker/",
-        "public/*/assets/",
-        "**/dist/",
-        "**/node_modules/",
-        "vendor/",
-        "src/Pyz/Zed/*/Presentation/Components/"
-    ],
-    "rules": {
-        "accessor-pairs": ["error", { "setWithoutGet": true, "enforceForClassMembers": false }],
-        "@typescript-eslint/no-empty-function": ["error", { "allow": ["methods"] }],
-        "@typescript-eslint/no-magic-numbers": [
-            "error",
-            {
-                "ignore": [-1, 0, 1],
-                "ignoreDefaultValues": true,
-                "ignoreClassFieldInitialValues": true,
-                "ignoreArrayIndexes": true,
-                "ignoreEnums": true,
-                "ignoreReadonlyClassProperties": true
-            }
+1. Create the `.eslintrc.json` file:
+    * For SCOS demo shops, use this:
+    ```json
+    {
+        "root": true,
+        "extends": ["./node_modules/@spryker/frontend-config.eslint/.eslintrc.js", "plugin:@typescript-eslint/recommended"],
+        "parser": "@typescript-eslint/parser",
+        "parserOptions": {
+            "ecmaVersion": 2020,
+            "sourceType": "module",
+            "project": "./tsconfig.json"
+        },
+        "plugins": ["deprecation"],
+        "ignorePatterns": [
+            "docker/",
+            "public/*/assets/",
+            "**/dist/",
+            "**/node_modules/",
+            "vendor/",
+            "src/Pyz/Zed/*/Presentation/Components/"
         ],
-        "deprecation/deprecation": "warn"
+        "rules": {
+            "accessor-pairs": ["error", { "setWithoutGet": true, "enforceForClassMembers": false }],
+            "@typescript-eslint/no-empty-function": ["error", { "allow": ["methods"] }],
+            "@typescript-eslint/no-magic-numbers": [
+                "error",
+                {
+                    "ignore": [-1, 0, 1],
+                    "ignoreDefaultValues": true,
+                    "ignoreClassFieldInitialValues": true,
+                    "ignoreArrayIndexes": true,
+                    "ignoreEnums": true,
+                    "ignoreReadonlyClassProperties": true
+                }
+            ],
+            "deprecation/deprecation": "warn"
+        }
     }
-}
-```
+    ``` 
+
+    * For Marketplace projects, use this:
+    ```json
+    {
+        "root": true,
+        "extends": ["./node_modules/@spryker/frontend-config.eslint/.eslintrc.js", "plugin:@typescript-eslint/recommended"],
+        "parser": "@typescript-eslint/parser",
+        "parserOptions": {
+            "ecmaVersion": 2020,
+            "sourceType": "module",
+            "project": "./tsconfig.yves.json"
+        },
+        "plugins": ["deprecation"],
+        "ignorePatterns": [
+            "docker/",
+            "public/*/assets/",
+            "**/dist/",
+            "**/node_modules/",
+            "vendor/",
+            "src/Pyz/Zed/*/Presentation/Components/"
+        ],
+        "rules": {
+            "accessor-pairs": ["error", { "setWithoutGet": true, "enforceForClassMembers": false }],
+            "@typescript-eslint/no-empty-function": ["error", { "allow": ["methods"] }],
+            "@typescript-eslint/no-magic-numbers": [
+                "error",
+                {
+                    "ignore": [-1, 0, 1],
+                    "ignoreDefaultValues": true,
+                    "ignoreClassFieldInitialValues": true,
+                    "ignoreArrayIndexes": true,
+                    "ignoreEnums": true,
+                    "ignoreReadonlyClassProperties": true
+                }
+            ],
+            "deprecation/deprecation": "warn"
+        }
+    }
+    ``` 
 
 2. If the project uses CI, adjust `.github/workflows/ci.yml`:
 
@@ -123,16 +164,16 @@ jobs:
         run: node ./frontend/libs/tslint --format stylish
       # Must be
       - name: ES lint
-        run: npm run yves:eslint
+        run: npm run yves:lint
 ```
 
 ## 3) Remove unnecessary files
 
-1. `.eslintrc.js`
-2. `tslint.json`
-3. `frontend/libs/tslint.js`
+* `.eslintrc.js`
+* `tslint.json`
+* `frontend/libs/tslint.js`
 
 ## 4) Check project `.js` and `.ts` files
 
-- Check all project `.js` and `.ts` files for `tslint:` comments and replace them with `eslint-` if they are still relevant.
-- Execute the `npm run yves:eslint` command and check result.
+1. Check all project `.js` and `.ts` files for `tslint:` comments and replace them with `eslint-` if they are still relevant.
+2. Execute the `npm run yves:lint` command and check the result.

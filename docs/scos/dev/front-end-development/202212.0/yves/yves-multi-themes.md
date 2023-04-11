@@ -12,9 +12,10 @@ redirect_from:
   - /docs/en/yves-multi-themes
   - /v6/docs/yves-multi-themes
   - /v6/docs/en/yves-multi-themes
+  - /docs/scos/dev/front-end-development/yves/yves-multi-themes.html
 related:
   - title: Multi-theme
-    link: docs/scos/dev/front-end-development/yves/multi-theme.html
+    link: docs/scos/dev/front-end-development/page.verison/yves/multi-theme.html
 ---
 
 This document describes how to use and extend themes on the project level.

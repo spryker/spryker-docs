@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/adding-using-external-libraries-yves
   - /v1/docs/adding-using-external-libraries-yves
   - /v1/docs/en/adding-using-external-libraries-yves
+  - /docs/scos/dev/front-end-development/yves/adding-and-using-external-libraries-in-yves.html
 ---
 
 ## Adding and Using External Library in Your Project via npm

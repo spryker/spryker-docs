@@ -25,12 +25,12 @@ redirect_from:
   - /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
 related:
   - title: Oryx for Zed
-    link: docs/scos/dev/front-end-development/zed/page.version/oryx-for-zed.html
+    link: docs/scos/dev/front-end-development/page.version/zed/oryx-for-zed.html
 ---
 
 {% info_block warningBox "No longer supported" %}
 
-This package is no longer supported. All functionality has been moved to [Oryx for Zed](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html) starting from **2.13.0** version.
+This package is no longer supported. All functionality has been moved to [Oryx for Zed](/docs/scos/dev/front-end-development/{{page.version}}/zed/oryx-for-zed.html) starting from **2.13.0** version.
 
 {% endinfo_block %}
 
@@ -40,7 +40,7 @@ Oryx relies on Webpack 2.
 
 {% info_block warningBox "Oryx for Zed" %}
 
-If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html).
+If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/front-end-development/{{page.version}}/zed/oryx-for-zed.html).
 
 {% endinfo_block %}
 

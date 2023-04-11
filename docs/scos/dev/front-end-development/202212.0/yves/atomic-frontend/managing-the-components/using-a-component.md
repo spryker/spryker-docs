@@ -1,5 +1,5 @@
 ---
-title: Using a Component
+title: Using a component
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-use-component
@@ -21,16 +21,17 @@ redirect_from:
   - /v2/docs/en/t-use-component
   - /v1/docs/t-use-component
   - /v1/docs/en/t-use-component
+  - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html
 related:
-  - title: Creating a Component
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
-  - title: Extending a Component
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
-  - title: Overriding a Component
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
+  - title: Creating a component
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/creating-a-component.html
+  - title: Extending a component
+    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/managing-the-components/extending-a-component.html
+  - title: Overriding a component
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 ---
 
-To use a component, in Spryker Shop, you need to add it to a layout template (Twig file). Components can be added to other components (except atoms), views, page templates and widgets. There are two possible strategies for this purpose: **include** and **embed**. In the following document, we shall review both of them.
+To use a component, in Spryker Shop, you need to add it to a layout template (Twig file). Components can be added to other components (except atoms), views, page templates, and widgets. There are two possible strategies for this purpose: **include** and **embed**. In the following document, we shall review both of them.
 
 ## Helper functions
 
@@ -42,8 +43,8 @@ Before adding a component, you need to locate it. There are 3 helper functions p
 
 The functions are implemented similarly and have the same arguments:
 
-* **name** (required) - specifies the component name,
-* **module** (optional) - specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you do not pass this argument, _ShopUi_ is used by default.
+* **name** (required): Specifies the component name,
+* **module** (optional): Specifies the name of the Spryker module where the component is implemented. Use this argument if you have two or more components with the same name and at the same level in different modules. If you don't pass this argument, _ShopUi_ is used by default.
 
 The function returns the fully qualified component name that can be used in Twig, for example:
 
@@ -57,33 +58,33 @@ The function returns the fully qualified component name that can be used in Twig
 
 _Include_ or _Embed_ needs to be called with 2 arguments:
 
-* `with {}` - defines the context to pass to the component;
-* `only` - **Important**: This mandatory attribute closes the context so that everything you pass via with {} is passed to the included object **only**.
+* `with {}`: Defines the context to pass to the component;
+* `only` (*Important*): This mandatory attribute closes the context so that everything you pass via with `{}` is passed to the included object *only*.
 
-The `with{}` attribute must pass the objects and variables that are defined in the component. They need to follow the contracts defined by the component itself. The most important of them is the **data** object that defines the data contract.
+The `with{}` attribute must pass the objects and variables that are defined in the component. They need to follow the contracts defined by the component itself. The most important of them is the *data* object that defines the data contract.
 
 {% info_block errorBox %}
 
-It is important to always pass **required** properties, otherwise, the component you are including will fail.
+You must always pass *required* properties; otherwise, the component you are including will fail.
 
 {% endinfo_block %}
 
 The most common attributes to include are:
 
-* `data` (required) - specifies the data passed to the component;
-* `attributes` (optional) - specifies the attributes to be passed;
-* `class` (optional) - used to inject custom class names into the component tag,
-* `modifiers` (optional) - used to enable component modifiers.
+* `data` (required): Specifies the data passed to the component;
+* `attributes` (optional): Specifies the attributes to be passed;
+* `class` (optional): Used to inject custom class names into the component tag,
+* `modifiers` (optional): Used to enable component modifiers.
 
 {% info_block infoBox %}
 
-For more details, see section _Twig_ in [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#twig).
+For more details, see section _Twig_ in [Atomic Frontend](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html#twig).
 
 {% endinfo_block %}
 
 ## Include
 
-By including a component, you place it on a page as is. Each component has the `data`, `attributes` and other properties that allows passing the necessary information to configure it, but apart from that, you cannot change it. The outlook of the component depends only on configuration. By including an element, you also pass the context of the page where it is added.
+By including a component, you place it on a page as is. Each component has the `data`, `attributes`, and other properties that allow passing the necessary information to configure it, but apart from that, you can't change it. The outlook of the component depends only on configuration. By including an element, you also pass the context of the page where it is added.
 The following block demonstrates how to include component `new-component-counter`.
 
 ```twig
@@ -102,7 +103,7 @@ The following block demonstrates how to include component `new-component-counter
 
 {% info_block infoBox %}
 
-See component implementation in [How To Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+See component implementation in [How To Create a Component](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/managing-the-components/creating-a-component.html).
 
 {% endinfo_block %}
 
@@ -114,12 +115,12 @@ Now, let us have a look at the embedded element on the page:
 
 Embedding gives you more freedom with components. It allows you to modify the template of the component you include and even add additional elements to it. For example, you can add or remove blocks, arrange them differently etc. Unlike including, context is not passed via the embed statement, so you need to define the required contracts explicitly.
 
-The following example shows how to embed  block to component `new-component-counter`. For this purpose, we need to do the following:
+The following example shows how to embed a block to component `new-component-counter`. For this purpose, do the following:
 
-1. Add a new object called embed to the list of data that we pass. The object has one property, `message`, with the value of the actual message that will be displayed.
-2. Change the template of the source component. To change the outlook of the component, we change its Twig template. In the below example, we remove everything from block `counter` and add our new message instead.
+1. Add a new object called embed to the list of data that we pass. The object has one property, `message`, with the value of the actual message that is displayed.
+2. Change the template of the source component. To change the outlook of the component, we change its Twig template. In the below example, we remove everything from the block `counter` and add the new message instead.
 
-The resulting Twig will look as follows:
+The resulting Twig looks as follows:
 
 ```twig
 {% raw %}{%{% endraw %} embed molecule('new-component-counter') with {
@@ -149,10 +150,10 @@ The resulting Twig will look as follows:
 
 {% info_block infoBox %}
 
-You can find the original Twig of the component in the _Create Component Template_ section of [HowTo: Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+You can find the original Twig of the component in the "Create Component Template" section of [Creating a Component](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/managing-the-components/creating-a-component.html).
 
 {% endinfo_block %}
 
-Now, let us check how it looks like on the page.
+The following image shows how it looks.
 
 ![Updated embedded element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/updated-embedded-element.png) 

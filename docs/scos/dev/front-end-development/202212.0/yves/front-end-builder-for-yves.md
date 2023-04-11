@@ -15,6 +15,7 @@ redirect_from:
   - /v4/docs/front-end-builder-for-yves
   - /v4/docs/en/front-end-builder-for-yves
   - /docs/scos/dev/front-end-development/frontend-builder-for-yves.html
+  - /docs/scos/dev/front-end-development/yves/front-end-builder-for-yves.html
 ---
 
 This article provides information about how to prepare assets (CSS, js, images, etc.) for different namespaces and their themes.

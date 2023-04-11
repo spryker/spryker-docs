@@ -3,6 +3,8 @@ title: Migration guide - Upgrade to Webpack v5
 description: Use the guide to update versions of the Webpack and related modules.
 last_updated: Jan 12, 2023
 template: module-migration-guide-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
 ---
 
 ## Upgrading Webpack from version 4.* to version 5.*

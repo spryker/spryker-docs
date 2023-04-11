@@ -21,13 +21,14 @@ redirect_from:
   - /v2/docs/en/t-integrate-jquery
   - /v1/docs/t-integrate-jquery
   - /v1/docs/en/t-integrate-jquery
+  - /docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
 related:
   - title: Atomic Frontend - general overview
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
+    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/atomic-front-end-general-overview.html
   - title: Customizing Spryker Frontend
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html
+    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/customizing-spryker-front-end.html
   - title: Integrating React into Atomic Frontend
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
+    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
 ---
 
 This guide aims to illustrate how to use _JQuery_ and any _JQuery_ plugin inside Spryker components.

@@ -3,6 +3,8 @@ title: Migration guide - Switch from Yarn to NPM v8
 last_updated: Aug 31, 2022
 description: Use this guide to migrate the project from Yarn to NPM v8.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
 ---
 
 This document provides instructions for migrating from YARN to NPM version 8 in your Spryker project.

@@ -15,7 +15,7 @@ redirect_from:
   - /v5/docs/en/custom-twig-functions-for-zed
   - /v4/docs/custom-twig-functions-for-zed
   - /v4/docs/en/custom-twig-functions-for-zed
-  - /docs/scos/dev/front-end-development/zed/202212.0/custom-twig-functions-for-zed.html
+  - /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
 
 ---
 

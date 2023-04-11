@@ -1,5 +1,5 @@
 ---
-title: Overriding a Component
+title: Overriding a component
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-override-component
@@ -21,13 +21,14 @@ redirect_from:
   - /v2/docs/en/t-override-component
   - /v1/docs/t-override-component
   - /v1/docs/en/t-override-component
+  - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 related:
   - title: Creating a Component
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/creating-a-component.html
   - title: Using a Component
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html
+    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/using-a-component.html
   - title: Extending a Component
-    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
+    link: docs/scos/dev/front-end-development/page.verison/yves/atomic-frontend/managing-the-components/extending-a-component.html
 ---
 
 If the implementation of any of the components shipped with Spryker Frontend does not suite your needs, you can override it with a component of your own. The following article shows how to override a molecule called **simple-carousel**. By default, the component is used, for example, to display product suggestions at the bottom of the page.

@@ -3,6 +3,8 @@ title: Migration guide - Remove support of IE11
 last_updated: Aug 31, 2022
 description: This document shows how to remove support of IE11 in your Spryker project.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
 ---
 
 This document provides instructions for removing support of IE11 in your Spryker project.

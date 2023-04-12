@@ -1,13 +1,10 @@
-You can log into the Back Office using one of the following accounts:
+This document describes how to log into the Back Office using a Back Office account or a single sign-on.
 
-* Back Office account.
-* Account of a third-party service that is configured as a single sign-on in your project.
+## Prerequisites
 
-{% info_block warningBox %}
+* To log in with a Back Office account, create and activate the account in **Users&nbsp;<span aria-label="and then">></span> Users**. An existing Back Office user or a developer can create accounts. For detailed instructions, see [Create users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
+* To log in with a single sign-on(SSO), check the requirements with your development team. For more details about SSO authentication, see [Identity Access Management](/docs/pbc/all/identity-access-management/{{page.version}}/identity-access-management.html)
 
-Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/activating-and-deactivating-users.html) Back Office accounts can log into the Back Office.
-
-{% endinfo_block %}
 
 ## Log in with a Back Office account
 
@@ -30,17 +27,12 @@ If you don't have a Back Office account, ask an existing Back Office user or a d
 
 Your password is now updated. To log in, enter the new password in the login form.
 
-## Log in with a third-party account
+## Log in with a single sign-on
 
-If single sign-on is configured in your project, you can log in with a third-party account as follows:
+If SSO is configured for the Back Office, you can log in with a third-party account as follows:
 
 1. In the login form, click **Login with {Third-party service name}**.
     This opens the third-party sign-in page.
 2. Sign into the third-party system by entering your username and password.
 
 This logs you in and opens the Back Office home page.
-
-**Tips and tricks**
-
-
-<br> After you log in with a third-party account, a Back Office account with the same email address is created in the system. To use that account to log into the Back Office, [reset the account's password](#restore-a-back-office-password). After you reset the password, you can [log into the Back Office as a regular user](#log-in-with-a-back-office-account).

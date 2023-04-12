@@ -18,9 +18,9 @@ redirect_from:
 related:
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/page.version/product-labels-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
-  - title: Product Labels feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-labels-feature-overview.html
 
 This document describes the `product_label_store.csv` file to configure [Product Label](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
 

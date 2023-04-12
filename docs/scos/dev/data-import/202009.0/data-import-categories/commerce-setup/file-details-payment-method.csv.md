@@ -7,6 +7,9 @@ originalArticleId: 9f414d6e-725a-49b0-81a4-33d7767fd367
 redirect_from:
   - /v6/docs/file-details-payment-methodcsv
   - /v6/docs/en/file-details-payment-methodcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **payment_method.csv** file to configure [Payment Method](/docs/scos/user/features/{{page.version}}/payments-feature-overview.html) information on your Spryker Demo Shop.

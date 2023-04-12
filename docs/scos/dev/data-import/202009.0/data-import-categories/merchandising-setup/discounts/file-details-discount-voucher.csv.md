@@ -7,6 +7,9 @@ originalArticleId: 3615d558-b57d-4ac0-abbb-f67ef5fd367b
 redirect_from:
   - /v6/docs/file-details-discount-vouchercsv
   - /v6/docs/en/file-details-discount-vouchercsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **discount_voucher.csv** file to configure Discount Voucher information on your Spryker Demo Shop.

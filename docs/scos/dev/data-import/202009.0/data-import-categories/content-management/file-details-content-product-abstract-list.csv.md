@@ -7,6 +7,9 @@ originalArticleId: a92811ae-ad20-42f5-babc-6267179d8964
 redirect_from:
   - /v6/docs/file-details-content-product-abstract-listcsv
   - /v6/docs/en/file-details-content-product-abstract-listcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **content_product_abstract_list.csv** file to configure [Content Product Abstract List](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.

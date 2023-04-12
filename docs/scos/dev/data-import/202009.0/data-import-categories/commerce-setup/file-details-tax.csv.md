@@ -7,6 +7,9 @@ originalArticleId: ce146a7e-31cd-491b-b6b4-2358bbb30b9f
 redirect_from:
   - /v6/docs/file-details-taxcsv
   - /v6/docs/en/file-details-taxcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **tax.csv** file to configure [Tax](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) information on your Spryker Demo Shop.

@@ -1,23 +1,26 @@
-This document explains how Sidebar Checker works and how to run it.
+#!/bin/bash
 
-*Sidebar Checker* is a script that generates a YAML report of missing sidebar entries based on the documents in the `docs` folder.
+# Define the root directory to search
+ROOT_DIR="./docs"
 
-## Overview of Sidebar Checker
+# Define directories to ignore
+IGNORE_DIRS=( "201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0" )
 
-The script does the following: 
+# Find all files starting with "file-details" in the root directory and its subdirectories, excluding the ignored directories
+FILES=$(find "$ROOT_DIR" -type f -name "file-details*.md" "${IGNORE_DIRS[@]/#/-path}" -prune -o -print)
 
-1. Defines the directories to check, the sidebars to update, and the sidebar titles.
-2. Defines a list of folders to ignore.
-3. Removes the output YAML file if it exists.
-4. For each sidebar, the script looks for missing files in the corresponding directory.
-5. If missing files are found, the script prints a message indicating which files are missing and writes the missing files to a YAML file.
+# Loop through each file
+for FILE in $FILES; do
 
-## Run the script
+  # Check if the file has a "related" tag in the frontmatter
+  RELATED_TAG=$(grep -E "^related:" "$FILE")
 
-1. In VS Code, open Terminal.
-2. Run the script:
-```bash
-bash _scripts/sidebar_checker/sidebar_checker.sh
-```
+  # If the file does not have a "related" tag, add the default related link to the end of the frontmatter
+  if [[ -z "$RELATED_TAG" ]]; then
+    sed -i '/^---$/a related:\n  - title: Data export Merchant Orders CSV files format\n    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html' "$FILE"
+  # If the file has a "related" tag, add the default related link after the last subtag of the "related" tag
+  else
+    sed -i '/^related:/,/^- title:/s/^- title:/  - title: Data export Merchant Orders CSV files format\n    link: docs\/scos\/dev\/data-import\/page.version\/demo-shop-data-import\/execution-order-of-data-importers-in-demo-shop.html\n\n  - title:/' "$FILE"
+  fi
 
-This prints a message in the terminal indicating which files are missing and generates the `missing-documents.yml` file with missing documents. The file is saved in the `_scripts/sidebar_checker` folder.
+done

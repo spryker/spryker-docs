@@ -7,6 +7,9 @@ originalArticleId: 87edad35-fe53-4fad-9c78-1f6c5ea358d1
 redirect_from:
   - /v5/docs/file-details-category-templatecsv
   - /v5/docs/en/file-details-category-templatecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **category_template.csv** file to configure Category Template information on your Spryker Demo Shop.

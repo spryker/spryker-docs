@@ -7,6 +7,9 @@ originalArticleId: 1ef5628c-325d-4e2c-a778-48c898c9f94b
 redirect_from:
   - /v6/docs/file-details-commentcsv
   - /v6/docs/en/file-details-commentcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **comment.csv** file to configure [Comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html)  information on your Spryker Demo Shop.

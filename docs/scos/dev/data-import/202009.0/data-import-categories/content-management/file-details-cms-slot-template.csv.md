@@ -7,6 +7,9 @@ originalArticleId: 6d6304e4-45a8-4348-b3f3-052fc0feb6e8
 redirect_from:
   - /v6/docs/file-details-cms-slot-templatecsv
   - /v6/docs/en/file-details-cms-slot-templatecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **cms_slot_template.csv** file to configure  [CMS Slot Template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) information on your Spryker Demo Shop.

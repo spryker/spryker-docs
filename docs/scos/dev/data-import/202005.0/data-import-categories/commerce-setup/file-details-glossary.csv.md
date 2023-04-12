@@ -7,6 +7,9 @@ originalArticleId: ca662124-7a04-470e-b3ec-a4549a2b9ec2
 redirect_from:
   - /v5/docs/file-details-glossarycsv
   - /v5/docs/en/file-details-glossarycsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **glossary.csv** file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/glossary.html) information on your Spryker Demo Shop.

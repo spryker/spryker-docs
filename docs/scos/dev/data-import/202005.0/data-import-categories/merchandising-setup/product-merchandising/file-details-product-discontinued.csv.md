@@ -7,6 +7,9 @@ originalArticleId: 141cd600-707d-4c78-a009-feec3b900725
 redirect_from:
   - /v5/docs/file-details-product-discontinuedcsv
   - /v5/docs/en/file-details-product-discontinuedcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_discontinued.csv** file to configure [Discontinued Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html) information on your Spryker Demo Shop.

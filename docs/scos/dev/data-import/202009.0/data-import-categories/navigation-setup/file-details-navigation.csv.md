@@ -7,6 +7,9 @@ originalArticleId: eefd7da7-711a-46c6-b858-a4dada20c835
 redirect_from:
   - /v6/docs/file-details-navigationcsv
   - /v6/docs/en/file-details-navigationcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **navigation.csv** file to configure [Navigation](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html) information on your Spryker Demo Shop.

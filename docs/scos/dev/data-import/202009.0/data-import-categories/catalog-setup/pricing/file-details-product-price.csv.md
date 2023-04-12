@@ -7,6 +7,9 @@ originalArticleId: 5a23dccd-e882-462b-a7e4-3a86cf637ee2
 redirect_from:
   - /v6/docs/file-details-product-pricecsv
   - /v6/docs/en/file-details-product-pricecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_price.csv** file to configure [prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Dhop.

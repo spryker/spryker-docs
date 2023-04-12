@@ -7,6 +7,9 @@ originalArticleId: da21d495-45e5-419e-9701-24d0cc805eba
 redirect_from:
   - /v6/docs/file-details-cms-block-categorycsv
   - /v6/docs/en/file-details-cms-block-categorycsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **cms_block_category.csv** file to configure CMS Block Category information on your Spryker Demo Shop.

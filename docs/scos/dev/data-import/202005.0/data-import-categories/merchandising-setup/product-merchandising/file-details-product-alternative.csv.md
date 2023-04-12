@@ -7,6 +7,9 @@ originalArticleId: 78a707f7-ef45-4e6f-94e9-902c3a9003a4
 redirect_from:
   - /v5/docs/file-details-product-alternativecsv
   - /v5/docs/en/file-details-product-alternativecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_alternative.csv** file to configure [Alternative Product](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) information on your Spryker Demo Shop.

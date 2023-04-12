@@ -7,6 +7,9 @@ originalArticleId: baa2805b-a787-4c31-ac6a-0f180cd50479
 redirect_from:
   - /v6/docs/file-details-product-groupcsv
   - /v6/docs/en/file-details-product-groupcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_group.csv** file to configure [Product Group](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html) information on your Spryker Demo Shop.

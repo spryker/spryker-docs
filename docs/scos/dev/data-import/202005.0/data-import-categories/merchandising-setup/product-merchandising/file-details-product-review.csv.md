@@ -8,6 +8,9 @@ redirect_from:
   - /v5/docs/file-details-product-reviewcsv
   - /v5/docs/en/file-details-product-reviewcsv
   - /docs/scos/dev/data-import/202005.0/data-import-categories/merchandising-setup/product-merchandising/%5Bproduct_review.csv%5D(/docs/scos/dev/data-import/202005.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_review.csv** file to configure [Product Review](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) information on your Spryker Demo Shop.

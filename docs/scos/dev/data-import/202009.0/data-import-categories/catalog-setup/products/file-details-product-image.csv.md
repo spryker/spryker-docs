@@ -7,6 +7,9 @@ originalArticleId: 20772173-5295-46b2-a325-892e54b3a8b3
 redirect_from:
   - /v6/docs/file-details-product-imagecsv
   - /v6/docs/en/file-details-product-imagecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the *product_image.csv* file to configure [Product Image](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.

@@ -7,6 +7,9 @@ originalArticleId: 9e8f470c-153e-4792-95db-28889f514520
 redirect_from:
   - /v5/docs/file-details-mime-typecsv
   - /v5/docs/en/file-details-mime-typecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **mime_type.csv** file to configure Mime Type information on your Spryker Demo Shop.

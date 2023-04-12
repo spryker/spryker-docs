@@ -7,6 +7,9 @@ originalArticleId: 7438b515-34f6-4f94-816d-c8c23548ab81
 redirect_from:
   - /v5/docs/file-details-product-quantitycsv
   - /v5/docs/en/file-details-product-quantitycsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_quantity.csv** file to configure [Product Quantity](/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions.html) Store information on your Spryker Demo Shop.

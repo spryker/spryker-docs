@@ -7,6 +7,9 @@ originalArticleId: c0eeeba8-90a3-4f25-bbd7-bbda769bac32
 redirect_from:
   - /v5/docs/file-details-gift-card-abstract-configurationcsv
   - /v5/docs/en/file-details-gift-card-abstract-configurationcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **gift_card_abstract_configuration.csv** file to configure [Gift Card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) Abstract Configuration information on your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. The **Gift Card Abstract Product** represents a type of Gift Cards with a code pattern (e.g. "XMAS-", “Happy-B”, etc.).

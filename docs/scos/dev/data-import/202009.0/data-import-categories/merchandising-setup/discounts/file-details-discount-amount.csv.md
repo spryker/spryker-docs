@@ -7,6 +7,9 @@ originalArticleId: 1440e98d-a79f-4d2c-9695-3cff4eb5c200
 redirect_from:
   - /v6/docs/file-details-discount-amountcsv
   - /v6/docs/en/file-details-discount-amountcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **discount_amount.csv** file to configure Discount Amount information on your Spryker Demo Shop.

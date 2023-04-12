@@ -7,6 +7,9 @@ originalArticleId: 1ada953d-4879-4d6e-ad3c-e6e6b1d91114
 redirect_from:
   - /v6/docs/file-details-product-attribute-keycsv
   - /v6/docs/en/file-details-product-attribute-keycsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_attribute_key.csv** file to configure [Product Attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) information on your Spryker Demo Shop.

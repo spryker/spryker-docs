@@ -7,6 +7,9 @@ originalArticleId: 01900909-5374-4dee-833e-ce1cdc25fef2
 redirect_from:
   - /v5/docs/file-details-currencycsv
   - /v5/docs/en/file-details-currencycsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **currency.csv** file to configure [Currency](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) information on your Spryker Demo Shop.

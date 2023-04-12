@@ -7,6 +7,9 @@ originalArticleId: 7c1fa4e8-2b26-4807-bd76-fd0f0d8914a8
 redirect_from:
   - /v6/docs/file-details-gift-card-concrete-configurationcsv
   - /v6/docs/en/file-details-gift-card-concrete-configurationcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **gift_card_concrete_configuration.csv** file to configure [Gift Card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) Concrete Configuration information on your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. In this file, you can configure the amount of money that will be loaded in the Gift Card.

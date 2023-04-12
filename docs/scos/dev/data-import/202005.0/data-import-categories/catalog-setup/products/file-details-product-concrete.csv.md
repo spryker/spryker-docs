@@ -7,6 +7,9 @@ originalArticleId: bf535214-3304-423a-ae82-27044cdd4ec6
 redirect_from:
   - /v5/docs/file-details-product-concretecsv
   - /v5/docs/en/file-details-product-concretecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_concrete.csv** file to configure [Concrete Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information on your Spryker Demo Shop.

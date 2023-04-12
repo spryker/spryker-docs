@@ -7,6 +7,9 @@ originalArticleId: 9fd9a7a4-5c68-4d5e-b07c-3b60784f0196
 redirect_from:
   - /v6/docs/file-details-product-reviewcsv
   - /v6/docs/en/file-details-product-reviewcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_review.csv** file to configure [Product Review](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) information on your Spryker Demo Shop.

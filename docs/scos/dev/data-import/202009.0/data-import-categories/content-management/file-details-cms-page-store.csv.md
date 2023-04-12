@@ -7,6 +7,9 @@ originalArticleId: a656dff8-f969-437b-a1fa-e379a08c1e95
 redirect_from:
   - /v6/docs/file-details-cms-page-storecsv
   - /v6/docs/en/file-details-cms-page-storecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **cms_page_store.csv** file to configure CMS Page Store information on your Spryker Demo Shop.

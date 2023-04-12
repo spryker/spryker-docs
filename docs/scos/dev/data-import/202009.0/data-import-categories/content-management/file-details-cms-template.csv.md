@@ -7,6 +7,9 @@ originalArticleId: 8a1c02c1-77b8-4d35-868a-dc485705dc50
 redirect_from:
   - /v6/docs/file-details-cms-templatecsv
   - /v6/docs/en/file-details-cms-templatecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **cms_template.csv** file to configure [CMS Template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template) information on your Spryker Demo Shop.

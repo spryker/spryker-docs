@@ -7,6 +7,9 @@ originalArticleId: 257d522c-7afb-4235-b5fc-c1ae6d90d374
 redirect_from:
   - /v5/docs/file-details-product-search-attributecsv
   - /v5/docs/en/file-details-product-search-attributecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_search_attribute.csv** file to configure Product Search Attribute information on your Spryker Demo Shop.

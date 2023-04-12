@@ -3,6 +3,9 @@ title: "File details: merchant_open_hours_date_schedule.csv"
 last_updated: Jun 07, 2021
 description: This document describes the merchant_open_hours_date_schedule.csv file to configure Merchant opening hours information in your Spryker shop.
 template: import-file-template
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_open_hours_date_schedule.csv` file to configure [special merchant opening hours](/docs/marketplace/user/features/{{site.version}}/merchant-opening-hours-feature-overview.html) in your Spryker shop.

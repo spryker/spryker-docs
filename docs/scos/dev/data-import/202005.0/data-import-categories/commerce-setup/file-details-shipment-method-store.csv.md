@@ -7,6 +7,9 @@ originalArticleId: e8ad47a1-4e94-4211-9564-dda73b7b0e4c
 redirect_from:
   - /v5/docs/file-details-shipment-method-storecsv
   - /v5/docs/en/file-details-shipment-method-storecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains information about the [Shipment Method](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) and Store relation to be added to your Spryker Demo Shop.

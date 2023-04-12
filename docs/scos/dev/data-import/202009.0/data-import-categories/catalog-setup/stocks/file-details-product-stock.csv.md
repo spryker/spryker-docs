@@ -7,6 +7,9 @@ originalArticleId: 81b6e4b9-5f36-46f2-85ec-c65f184b3e5d
 redirect_from:
   - /v6/docs/file-details-product-stockcsv
   - /v6/docs/en/file-details-product-stockcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_stock.csv** file to configure [Product Stock](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information on your Spryker Demo Shop.

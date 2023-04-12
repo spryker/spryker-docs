@@ -7,6 +7,9 @@ originalArticleId: b59cc055-9844-4dcf-8e90-36767b169283
 redirect_from:
   - /v5/docs/file-details-product-search-attribute-mapcsv
   - /v5/docs/en/file-details-product-search-attribute-mapcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **product_search_attribute_map.csv** file to configure Product Search Attribute Map information on your Spryker Demo Shop.

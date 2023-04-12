@@ -7,6 +7,9 @@ originalArticleId: 59d40c42-a29f-40f0-8823-2f128b1c575b
 redirect_from:
   - /v6/docs/file-details-shipment-pricecsv
   - /v6/docs/en/file-details-shipment-pricecsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This article contains content of the **shipment_price.csv** file to configure [Shipment Price](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) information on your Spryker Demo Dhop.

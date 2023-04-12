@@ -14,7 +14,7 @@ To connect the Upgrader manually using a Gitlab access token, take the following
 
 1. [Create a GitLab access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token)
 
-GitLab access token should have the following repository permissions:
+Your GitLab access token should have the following repository permissions:
 
 * **api,write_repository** for Spryker Upgrader Service: grants read and write access to the repository to enable the Upgrader to analyze the project and create PRs.
 

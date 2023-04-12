@@ -1,5 +1,5 @@
 ---
-title: Features or module updates
+title: Feature or module updates
 description: Choose at which level to take updates
 last_updated: Jun 16, 2021
 template: concept-topic-template

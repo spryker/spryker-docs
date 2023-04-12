@@ -267,7 +267,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"      
+      - "202204.0"
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
       include_versions:
@@ -984,7 +984,7 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"        
+        - "202204.0"
         nested:
         - title: Managing carts of registered users
           url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -4943,10 +4943,25 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
         - title: Vendor folder synchronization error
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
-  - title: Updating a Spryker-based project
-    url: /docs/scos/dev/updating-a-spryker-based-project.html
-  - title: Analyzing and upgrading your project with Spryker Jarvis
-    url: /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
+  - title: Updating Spryker
+    url: /docs/scos/dev/updating-spryker/updating-spryker.html
+    nested:
+      - title: Feature or module updates
+        url: /docs/scos/dev/updating-spryker/feature-or-module-updates.html
+      - title: Plan updates
+        url: /docs/scos/dev/updating-spryker/plan-updates.html
+      - title: Installing features and updating modules
+        url: /docs/scos/dev/updating-spryker/installing-features-and-updating-modules.html
+      - title: Testing updates
+        url: /docs/scos/dev/updating-spryker/testing-updates.html
+      - title: Preventing update issues
+        url: /docs/scos/dev/updating-spryker/preventing-update-issues.html
+      - title: Analyzing and upgrading projects with Spryker Jarvis
+        url: /docs/scos/dev/updating-spryker/analyzing-and-upgrading-projects-with-spryker-jarvis.html
+      - title: Switch Demo Shop version
+        url: /docs/scos/dev/updating-spryker/switch-demo-shop-version.html
+      - title: Troubleshooting updates
+        url: /docs/scos/dev/updating-spryker/troubleshooting-updates.html
   - title: Code contribution guide
     url: /docs/scos/dev/code-contribution-guide.html
 ...

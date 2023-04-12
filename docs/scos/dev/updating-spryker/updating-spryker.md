@@ -59,7 +59,7 @@ The most *reasonable strategy* of staying up to date is sticking to the Spryker 
 
 ## Next steps
 
-[Features or module updates](/docs/scos/dev/updating-spryker/features-or-module-updates.html)
+[Feature or module updates](/docs/scos/dev/updating-spryker/feature-or-module-updates.html)
 
 
 ## Spryker Safari materials

@@ -1,5 +1,5 @@
 ---
-title: Analyzing and upgrading your project with Spryker Jarvis
+title: Analyzing and upgrading projects with Spryker Jarvis
 description: Learn how to install and use the Spryker Jarvis tool for upgrade and analysis of your project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/analyzing-and-upgrading-your-project-with-spryker-jarvis
   - /v6/docs/analyzing-and-upgrading-your-project-with-spryker-jarvis
   - /v6/docs/en/analyzing-and-upgrading-your-project-with-spryker-jarvis
+  - /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
 ---
 
 [Spryker Jarvis](https://github.com/spryker/jarvis) is the command-line tool that lets you analyze your Spryker-based project and eventually migrate it to the most up-to-date version of Spryker. The tool helps you quickly get answers to the following questions:

@@ -8,7 +8,7 @@ redirect_from:
 
 ## Connect Spryker Code Upgrader using GitLab access token
 
-To connect the Upgrader manually using a Gitlab access token, follow the steps.
+To connect the Upgrader manually using a Gitlab access token, take the following steps.
 
 ## Prerequisites
 

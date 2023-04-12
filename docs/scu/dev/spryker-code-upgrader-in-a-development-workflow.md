@@ -24,24 +24,22 @@ The Upgrader connects to a selected base branch in your project's repository, li
 
 {% info_block infoBox "" %}
 
-The Upgrader creates a PR only after a previous PR was merged or closed.
+The Upgrader doesn't change existing PRs and creates a new one only after a previous PR was merged or closed.
 
 {% endinfo_block %}
 
 
-Following your standard development process, the updates are deployed to a staging environment. After passing all quality processes, the Development branch propagates into your release branch where it gets deployed to production.
+Following your standard development process, the updates are deployed to a staging environment. After passing all quality processes, the Development branch propagates into your release branch.
 
 ![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/spryker-code-upgrader-in-a-development-workflow.md/spryker-code-upgrader-integration-diagramm.png)
 
 ## Development team responsibilities
 
-* Prepare your project for the Upgrader.
+* Prepare your project for the Upgrader. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
 
-* Connect the Upgrader of Spryker Code Upgrader with your code hosting service.
+* Connect the Upgrader of Spryker Code Upgrader with your code hosting service. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)
 
 * Cover customizations with automated tests.
-
-* Extend development process with additional guidelines and quality checks.
 
 * Regularly process upgrade suggestions.
 

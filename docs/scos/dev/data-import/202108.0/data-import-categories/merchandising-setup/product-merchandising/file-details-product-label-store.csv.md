@@ -14,6 +14,7 @@ related:
   - title: Product Labels feature overview
     link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
+
 This document describes the `product_label_store.csv` file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
 
 To import the file, run:

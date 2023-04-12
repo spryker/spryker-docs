@@ -221,6 +221,7 @@ versioned_categories:
       - technology-partner-guides
       - devops-migration-guides
       - system-requirements
+      - front-end-development
   pbc:
     all:
       - cart-and-checkout

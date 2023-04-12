@@ -1,15 +1,20 @@
 ---
-title: Spryker Core feature walkthrough
-last_updated: Aug 20, 2021
-description: The Spryker Core feature represents a set of basic modules representing the Spryker Commerce OS.
+title: Spryker Core feature overview
+last_updated: Jul 2, 2021
 template: concept-topic-template
+originalLink: https://documentation.spryker.com/2021080/docs/spryker-core
+originalArticleId: 422423d0-beff-4da2-9ab7-4940262da733
+redirect_from:
+  - /2021080/docs/spryker-core
+  - /2021080/docs/en/spryker-core
+  - /docs/spryker-core
+  - /docs/en/spryker-core
+  - /docs/scos/user/features/201907.0//spryker-core-feature-overview/spryker-core-feature-overview.html
+  - /docs/scos/user/features/201903.0//spryker-core-feature-overview/spryker-core-feature-overview.html
+  - /docs/scos/user/features/201811.0//spryker-core-feature-overview/spryker-core-feature-overview.html
 ---
 
-The _Spryker Core_ feature is a set of basic modules representing the Spryker Commerce OS.
-
-
-To learn more about the feature and to find out how end users use it, see [Spryker Core](/docs/scos/user/features/{{page.version}}//spryker-core-feature-overview/spryker-core-feature-overview.html) for business users.
-
+The Spryker Core feature is the very basis of all the functionality in Spryker.
 
 ## Related Developer articles
 

@@ -3,6 +3,20 @@ title: Packaged Business Capabilities
 description: Welcome to the Packaged Business Capabilities (PBC) documentation section
 template: concept-topic-template
 redirect_from:
+  - /2021080/docs/overview-of-the-feature-guides
+  - /2021080/docs/en/overview-of-the-feature-guides
+  - /docs/overview-of-the-feature-guides
+  - /docs/en/overview-of-the-feature-guides
+  - /docs/scos/user/features/202200.0/features.html
+  - /docs/scos/user/features/202212.0/features.html
+  - /docs/scos/dev/feature-walkthroughs/202005.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202009.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201811.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202001.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201903.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/feature-walkthroughs.html  
+  - /docs/scos/dev/feature-walkthroughs/202212.0/feature-walkthroughs.html  
   - /docs/pbc/all/pbc-landing.html
 ---
 

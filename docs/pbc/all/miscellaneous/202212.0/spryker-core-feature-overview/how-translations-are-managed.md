@@ -31,5 +31,3 @@ The schema bellow summarizes the levels of persistence used in order to offer lo
 We can consider the key-value storage as a denormalized model of the relational model stored in the Sql database and the request of rendering a page as a query that the user makes. Statistically, query requests are happening a lot more often than command requests ( such as checkout or submitting a payment) and using a dedicated storage for them brings a lot of speed in the application.
 
 Another advantage of using a denormalized model for displaying localized content is that we don't have to do the transformations of the objects stored in the relational database when using them on the client side logic.
-
-<!-- Last review date: Apr 4, 2019 by Ehsan Zanjani -->

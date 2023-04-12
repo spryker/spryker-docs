@@ -53,7 +53,7 @@ Your GitLab access token should have the following repository permissions:
 
 {% info_block infoBox "Masked property" %}
 
-Please use **Masked** property for the **ACCESS_TOKEN** variable. 
+Use the  **Masked** property for the **ACCESS_TOKEN** variable. 
 
 {% endinfo_block %}
 

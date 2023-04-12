@@ -1,5 +1,5 @@
 ---
-title: Payment Service Providers
+title: Payment service provider integrations
 last_updated: Jul 1, 2022
 description: This document describes the Payment Service Providers that have an integration with Spryker
 template: concept-topic-template

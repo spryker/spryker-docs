@@ -18,7 +18,7 @@ Your GitLab access token should have the following repository permissions:
 
 * **api,write_repository** for the Spryker Upgrader Service. This grants read and write access to the repository to enable the Upgrader to analyze the project and create PRs.
 
-![GitLab access token](//TODO)
+![GitLab access token](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-self-hosted-managed-project.md/personal_access_tokens.png)
 
 ## Configure the connection in Spryker CI
 
@@ -47,7 +47,7 @@ Your GitLab access token should have the following repository permissions:
 4. Open **Upgrader** pipline.
 5. Open **Variables** tab.
 
-![Spryker CI Variables Tab](//TODO)
+![Spryker CI Variables Tab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-self-hosted-managed-project.md/pipeline_upgrader.png)
 
 6. Add **ACCESS_TOKEN** variable with your GitLab access token. 
 

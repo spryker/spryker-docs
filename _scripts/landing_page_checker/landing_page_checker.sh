@@ -1,36 +1,68 @@
 #!/bin/bash
 
-# create a directory to store the landing page checker file
-mkdir -p _scripts/landing_page_checker/
-
-# find all subdirectories of the docs/ folder
-find docs -type d | while read folder; do
+# define function to check if a folder has .md files or subfolders with .md files
+check_folder() {
+  local folder="$1"
+  local found=0
+  local skip=0
+  local md_file_pattern="*.md"
+  
   # skip over excluded folders
-  if [[ "$folder" == *"201811.0"* || "$folder" == *"201903.0"* || "$folder" == *"201907.0"* || "$folder" == *"202001.0"* || "$folder" == *"202005.0"* || "$folder" == *"202009.0"* || "$folder" == *"202108.0"* ]]; then
-    continue
+  if [[ "$folder" == *"201811.0"* || "$folder" == *"201903.0"* || "$folder" == *"201907.0"* || "$folder" == *"202001.0"* || "$folder" == *"202005.0"* || "$folder" == *"202009.0"* || "$folder" == *"202108.0"* || "$folder" == *".[0-9][0-9][0-9][0-9][0-9][0-9].0" ]]; then
+    skip=1
   fi
-
-  # check if the folder contains .md files or only subfolders
-  if [[ $(find "$folder" -maxdepth 1 -type f -name "*.md") || $(find "$folder" -maxdepth 1 -mindepth 1 -type d | grep -v "$(basename "$folder")") ]]; then
-    # check if the folder contains an .md file with the same name or index.md
-    if [[ ! -f "$folder/$(basename "$folder").md" && ! -f "$folder/index.md" ]]; then
-      # check if the folder has only subfolders and no .md files
-      if [[ $(find "$folder" -mindepth 2 -type f -name "*.md" | wc -l) -eq 0 ]]; then
-        # exclude folders that only contain subdirectories and no .md files
-        continue
-      fi
-      # check if the folder is of the form XXXXXX.0
-      if [[ $(basename "$folder") =~ ^[0-9]{6}\.0$ ]]; then
-        # check if the folder contains a file with the same name as its parent folder
-        parent_dir=$(dirname "$(dirname "$folder")")
-        parent_file="${parent_dir}/$(basename "${parent_dir}").md"
-        if [[ -f "${parent_file}" ]]; then
-          # skip the folder if it has a file with the same name as its parent folder
-          continue
+  
+  if [[ "$skip" == 0 ]]; then
+    for file in "$folder"/*; do
+      if [[ -d "$file" ]]; then
+        # recursively check subfolders
+        check_folder "$file"
+        if [[ "$found" == 1 ]]; then
+          break
         fi
+      elif [[ "$file" == $md_file_pattern ]]; then
+        # folder has at least one .md file
+        found=1
+        break
       fi
-      # add the folder path to the landing page checker file
-      echo "- $folder" >> _scripts/landing_page_checker/landing_page_checker.md
+    done
+  fi
+  
+  if [[ "$found" == 1 ]]; then
+    # check if folder needs to be skipped based on special rule
+    if [[ "$folder" =~ .*/[0-9]{6}\.0$ ]]; then
+      parent_folder=$(basename "$(dirname "$folder")")
+      if [[ ! -f "$folder/$parent_folder.md" ]]; then
+        # folder does not have parent folder .md file
+        echo "$folder" >> /tmp/landing_page_folders.txt
+      fi
+    else
+      echo "$folder" >> /tmp/landing_page_folders.txt
     fi
   fi
-done
+}
+
+# start checking from the docs folder
+check_folder docs/
+
+# save the paths to a temporary file
+cat /tmp/landing_page_folders.txt | sort > /tmp/landing_page_folders_sorted.txt
+
+# generate the .md file using the sorted paths
+while read -r folder; do
+  echo "## $folder" >> _scripts/landing_page_checker/landing_page_checker.md
+  echo "" >> _scripts/landing_page_checker/landing_page_checker.md
+  echo "These pages were found in this folder:" >> _scripts/landing_page_checker/landing_page_checker.md
+  echo "" >> _scripts/landing_page_checker/landing_page_checker.md
+  for file in "$folder"/*; do
+    if [[ "$file" == *.md ]]; then
+      filename=$(basename "$file")
+      echo "- [$filename]($file)" >> _scripts/landing_page_checker/landing_page_checker.md
+    fi
+  done
+  echo "" >> _scripts/landing_page_checker/landing_page_checker.md
+done < /tmp/landing_page_folders_sorted.txt
+
+# remove temporary files
+rm /tmp/landing_page_folders.txt
+rm /tmp/landing_page_folders_sorted.txt

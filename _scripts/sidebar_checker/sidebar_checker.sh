@@ -1,68 +1,46 @@
-
-
-# To run the scipt, in Terminal, run `bash _scripts/sidebar_checker/sidebar_checker.sh`.
-# The `missing_documents.yml` file with missing documents is generated and saved in the `_scripts/sidebar_checker` folder.
-
 #!/bin/bash
 
-# Define doc folder paths
-FOLDERS=("docs/acp/user" "docs/cloud/dev" "docs/marketplace/dev" "docs/marketplace/user" "docs/pbc/all" "docs/scos/dev" "docs/scos/user" "docs/scu/dev" "docs/sdk/dev")
-
-# Define sidebar file paths
-SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/cloud_dev_sidebar.yml" "_data/sidebars/marketplace_dev_sidebar.yml" "_data/sidebars/marketplace_user_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml" "_data/sidebars/scos_dev_sidebar.yml" "_data/sidebars/scos_user_sidebar.yml" "_data/sidebars/scu_dev_sidebar.yml" "_data/sidebars/sdk_dev_sidebar.yml")
-
-# Define sidebar titles
-TITLES=("ACP User" "Cloud Dev" "Marketplace Dev" "Marketplace User" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")
-
-# Define the folders to ignore
-IGNORED_FOLDERS=("201811.0" "201903.0" "201907.0" "202001.0" "202005.0" "202009.0" "202108.0")
-
-# Define output file path
-OUTPUT_FILE="_scripts/sidebar_checker/missing-documents.yml"
-
-# Remove existing output file if exists
-rm -f "$OUTPUT_FILE"
-
-# Check for missing files in each sidebar
-for i in "${!SIDEBARS[@]}"; do
-  sidebar="${SIDEBARS[$i]}"
-  folder="${FOLDERS[$i]}"
-  sidebar_title="${TITLES[$i]}"
-
-  # Find missing files in folder
-  missing_files=($(find "$folder" -type f -name "*.md" -not -path "*/\.*" -not -path "*/drafts-dev/*" -print0 | while IFS= read -r -d '' file_path; do
-    ignored=false
-    for dir in $(dirname "$file_path" | tr '/' ' '); do
-      if [[ "${IGNORED_FOLDERS[*]}" =~ "$dir" ]]; then
-        ignored=true
+# define function to check if a folder has .md files or subfolders with .md files
+check_folder() {
+  local folder="$1"
+  local found=0
+  local skip=0
+  local md_file_pattern="*.md"
+  
+  # skip over excluded folders
+  if [[ "$folder" == *"201811.0"* || "$folder" == *"201903.0"* || "$folder" == *"201907.0"* || "$folder" == *"202001.0"* || "$folder" == *"202005.0"* || "$folder" == *"202009.0"* || "$folder" == *"202108.0"* || "$folder" == *".[0-9][0-9][0-9][0-9][0-9][0-9].0" ]]; then
+    skip=1
+  fi
+  
+  if [[ "$skip" == 0 ]]; then
+    for file in "$folder"/*; do
+      if [[ -d "$file" ]]; then
+        # recursively check subfolders
+        check_folder "$file"
+        if [[ "$found" == 1 ]]; then
+          break
+        fi
+      elif [[ "$file" == $md_file_pattern ]]; then
+        # folder has at least one .md file
+        found=1
         break
       fi
     done
-    if $ignored; then
-      continue
-    fi
-
-    if ! grep -q "^\s*url:\s.*$(basename "${file_path%.*}")" "$sidebar"; then
-      echo "$file_path"
-    fi
-  done))
-
-  # Print missing files if any
-  if [[ ${#missing_files[@]} -gt 0 ]]; then
-    echo "The following files are missing from $sidebar_title:"
-    printf -- '- %s\n' "${missing_files[@]}"
-    
-    # Write missing files to a file
-    echo "# Missing files in $sidebar_title" >> "$OUTPUT_FILE"
-    for file_path in "${missing_files[@]}"; do
-      title=$(grep "^title:" "$file_path" | sed 's/^title: //')
-      url="${file_path}"
-      url="${url%.md}.html"
-
-      cat <<EOF >> "$OUTPUT_FILE"
-- title: $title
-  url: /$url
-EOF
-    done
   fi
-done
+  
+  if [[ "$found" == 1 ]]; then
+    # check if folder needs to be skipped based on special rule
+    if [[ "$folder" =~ .*/[0-9]{6}\.0$ ]]; then
+      parent_folder=$(basename "$(dirname "$folder")")
+      if [[ ! -f "$folder/$parent_folder.md" ]]; then
+        # folder does not have parent folder .md file
+        echo "$folder"
+      fi
+    else
+      echo "$folder"
+    fi
+  fi
+}
+
+# start checking from the docs folder
+check_folder docs/

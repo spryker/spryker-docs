@@ -155,6 +155,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
       - title: Add and edit diagrams
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html
+      - title: Install recommended VS Code extensions
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/install-recommended-vs-code-extensions.html
       - title: Report documentation issues
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
       - title: Build the documentation site
@@ -285,6 +287,13 @@ entries:
         - "201811.0"
     - title: Company Account
       url: /docs/scos/user/features/company-account-feature-overview/company-account-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Company accounts
         url: /docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html
@@ -394,8 +403,22 @@ entries:
       - "202108.0"
     - title: Customer Access
       url: /docs/scos/user/features/customer-access-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Customer Account Management
       url: /docs/scos/user/features/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Customer Accounts
         url: /docs/scos/user/features/customer-account-management-feature-overview/customer-accounts-overview.html
@@ -498,6 +521,13 @@ entries:
       - "202108.0"
     - title: Navigation
       url: /docs/scos/user/features/navigation-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"        
     - title: Non-splittable products
       url: /docs/scos/user/features/non-splittable-products-feature-overview.html
       include_versions:
@@ -1023,7 +1053,7 @@ entries:
         - "202005.0"
   - title: Back Office User guides
     url: /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
-    nested: 
+    nested:
     - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
       include_versions:

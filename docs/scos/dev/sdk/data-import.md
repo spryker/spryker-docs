@@ -32,7 +32,7 @@ redirect_from:
 related:
   - title: About Demo Shop Data Import
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/importing-demo-shop-data.html
-  - title: Execution Order of Data Importers in Demo Shop
+  - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
   - title: About Data Import Categories
     link: docs/scos/dev/data-import/page.version/data-import-categories/about-data-import-categories.html

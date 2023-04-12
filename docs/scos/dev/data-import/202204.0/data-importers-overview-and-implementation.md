@@ -101,7 +101,7 @@ Then you can run the `./vendor/bin/console data:import --config=path/to/config.y
 
 On the project level, you can set a default configuration file path in `DataImportConfig::getDefaultYamlConfigPath()` so this file is used when the `--config` option is not specified—for example, when you run the `./vendor/bin/console data:import` command.
 
-Be advised that some of the importers are related to the data that is imported by another one. For example, *Product Concrete Importer* does not work if there are no abstract products in a database because a particular product cannot exist without an abstract. The same goes for all data with relations. Therefore, make sure to check the database relations or dependencies in [Execution Order of Data Importers in Demo Shop](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html) before running the importers.
+Be advised that some of the importers are related to the data that is imported by another one. For example, *Product Concrete Importer* does not work if there are no abstract products in a database because a particular product cannot exist without an abstract. The same goes for all data with relations. Therefore, make sure to check the database relations or dependencies in [Execution order of data importers in Demo Shop](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html) before running the importers.
 
 ## Implementation overview
 

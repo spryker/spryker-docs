@@ -84,7 +84,7 @@ The availability of a configurable product is based on the selected configuratio
 
 A customer selects the quantity of a product in a configurator or a shop. If a configurator allows them to select a product quantity, it passes the specified quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and they select the product quantity in the shop.
 
-If a configurator does not pass availability, [regular product availability](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html) is used.
+If a configurator does not pass availability, [regular product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) is used.
 
 ### Price calculation in a product configurator
 
@@ -115,11 +115,11 @@ The information in the [Complete and incomplete configuration](#complete-and-inc
 
 #### Shopping List with a configurable product
 
-The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to the [Shopping List](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
+The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to the [Shopping List](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
 
 #### Wish List with a configurable product
 
-The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to the [Wish List](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/wishlist-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
+The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to the [Wish List](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/wishlist-feature-overview.html) functionality. A customer can add products with the complete or incomplete configuration.
 
 ### Preconfigured parameter values
 

@@ -26,7 +26,7 @@ Customers see custom prices for products based on their merchant relationship, o
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+merchant+custom+prices+feature+overview/merchant_custom_price.mov" type="video/mov">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+merchant+custom+prices+feature+overview/merchant_custom_price.mp4" type="video/mp4">
   </video>
 </figure>
 

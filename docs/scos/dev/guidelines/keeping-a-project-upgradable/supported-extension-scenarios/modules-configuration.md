@@ -243,9 +243,6 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ```
 * variables
 
-
-
-
 ## Null as the return
 
 The following is an example of how to have the method return a null result:

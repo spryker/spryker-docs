@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE  |
 |-|-|-|
 | Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html)|
-| Marketplace Wishlist | {{page.version}} | [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
+| Marketplace Wishlist | {{page.version}} | [Marketplace Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
 
 ### 1) Set up behavior
 

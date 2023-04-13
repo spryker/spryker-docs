@@ -57,11 +57,13 @@ The more outdated your module versions become, the more effort will be needed to
 
 The most *reasonable strategy* of staying up to date is sticking to the Spryker release cycle and updating modules whenever there is a new release announcement. To get notified about releases,  [subscribe to the release notes](/docs/scos/user/intro-to-spryker/releases/releases.html). During the active development phase, it makes sense to do updates more often, for example, monthly.
 
+## Spryker Safari materials
+
+Check out the how to migrate and update Spryker projects video for more details on the topic.
+
+{% wistia kitd5w26zq 960 720 %}
+
+
 ## Next steps
 
 [Feature or module updates](/docs/scos/dev/updating-spryker/feature-or-module-updates.html)
-
-
-## Spryker Safari materials
-
-Check out the [How to migrate and update Spryker projects video](https://training.spryker.com/pages/spryker-tv?wchannelid=papy2tx2f6&wmediaid=kitd5w26zq) for more details on the topic.

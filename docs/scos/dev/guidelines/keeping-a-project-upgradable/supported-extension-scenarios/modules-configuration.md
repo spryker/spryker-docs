@@ -153,7 +153,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfigi
 
 ### Multidimensional array as the return
 
-Multidimensional associative arrays are supported up to 2 levels, but for its usage the wrapped functions **must** be used: 
+Multidimensional associative arrays are supported up to 2 levels, but for its usage the wrapped functions *must* be used: 
 
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
@@ -214,7 +214,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
 }
 ```
 
-Multidimensional arrays (up to 2 levels) are also supported here, but to use them the wrapped function **must** be used.
+Multidimensional arrays (up to 2 levels) are also supported here, but to use them the wrapped function *must* be used.
 
 For the method to return a multidimensional array (with constants, wrap methods call and array merging) use the following:
 

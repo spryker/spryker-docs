@@ -260,7 +260,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ### Plugins in multidimensional array
 
-Manifests have limited support of multidimensional array. Oonly arrays that are added through the key are supported. only multidimensional arrays with up to 2 levels of depth are supported. It means that structures like the following **will not be supported**: 
+Manifests have limited support of multidimensional array. Oonly arrays that are added through the key are supported. only multidimensional arrays with up to 2 levels of depth are supported. It means that structures like the following *will not be supported*: 
 
 ```php
 protected function getPlugins(): array
@@ -331,7 +331,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ### Container extension
 
-Manifests fully support the possibility of adding plugins through container extension. Order of the plugins is **not supported** inside of the container extension. It means that before and after are **not supported** in this case.
+Manifests fully support the possibility of adding plugins through container extension. Order of the plugins is *not supported* inside of the container extension. It means that before and after are *not supported* in this case.
 
 For multiple plugins registration through container extension, use the following:
 

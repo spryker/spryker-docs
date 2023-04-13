@@ -14,7 +14,7 @@ related:
 
 [Manifests](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#follow-the-upgradability-best-practices) support registering event subscribers only in the dependency provider, a type of code class.
 
-Manifests fully support the registration of event subscribers in the collection. Restrictions to the order of the plugins in collection are **not supported**. New plugin will be added to the end of the collection.
+Manifests fully support the registration of event subscribers in the collection. Restrictions to the order of the plugins in collection are *not supported*. New plugin will be added to the end of the collection.
 
 To register event subscribers in collection with parent method call, use the following:
 

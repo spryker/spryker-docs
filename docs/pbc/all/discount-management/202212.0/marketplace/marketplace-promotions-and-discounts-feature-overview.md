@@ -16,7 +16,7 @@ There are two discount types:
 
 A product catalog manager selects a discount type when [creating a discount](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html).
 
-{% info_block warningBox "Warning" %}
+{% info_block warningBox %}
 
 In current implementation, it is impossible to create cart rules or vouchers based on any merchant parameters, such as merchant or product offer. However, it is still possible to create cart rules and vouchers for the marketplace products. See [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html) for more details.
 
@@ -218,8 +218,8 @@ If a cart is eligible for a discount outside of its validity interval, the cart 
 A product catalog manager defines calculation when [creating a discount](/docs/pbc/all/discount-management/{{page.version}}/manage-in-the-back-office/create-discounts.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Marketplace Promotions and Discounts feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-promotions-and-discounts-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES|
+| -------------- |
+| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html) |

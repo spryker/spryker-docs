@@ -107,7 +107,7 @@ class CustomerConfig extends SprykerCustomerConfig
 }
 ```
 
-There's a multitude of ways to view arrays as the return.
+There's a multitude of ways to view arrays as the return. Manifests support the following array types:
 
 ### Indexed array as the return
 

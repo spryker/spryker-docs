@@ -1,0 +1,25 @@
+# .github/release.yml
+
+changelog:
+  exclude:
+    labels:
+      - do not merge
+      - dependencies
+      - github_actions
+      - in progress
+      - javascript
+      - new
+      - ruby
+      - small changes
+    authors:
+      - "*"
+  categories:
+    - title: New documents
+      labels:
+        - new
+    - title: Updated documents
+      labels:
+        - updated
+    - title: Other Changes
+      labels:
+        - small changes

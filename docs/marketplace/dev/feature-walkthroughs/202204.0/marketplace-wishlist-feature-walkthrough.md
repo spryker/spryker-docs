@@ -32,7 +32,7 @@ The following diagram illustrates the domain model of the *Marketplace Wishlist*
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/6d5e9f9f-f841-4877-bf65-7fdd38d6d49b.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | GLUE API GUIDES  |
 | ------------- | -------------- |

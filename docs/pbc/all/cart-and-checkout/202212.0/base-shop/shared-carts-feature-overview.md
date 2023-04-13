@@ -141,7 +141,7 @@ On the storefront, company users can share a cart with other users within the sa
 ![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-a-shopping-cart.gif)
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|

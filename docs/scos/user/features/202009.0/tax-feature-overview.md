@@ -65,7 +65,7 @@ Currently, the feature has the following functional constraints:
 * Many Avalara features are not supported yet. This will be resolved in the future.
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

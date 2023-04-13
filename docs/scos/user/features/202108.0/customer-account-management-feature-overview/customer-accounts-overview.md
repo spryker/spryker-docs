@@ -98,7 +98,7 @@ Customer can perform the following actions the Storefront:
 
 </details>
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

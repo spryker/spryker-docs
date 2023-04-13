@@ -46,7 +46,7 @@ A Back Office user cannot manage newsletter subscriptions.
 
 A developer can manage the newsletter text files in `/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail` and check the list of subscriptions in the `spy_availability_subscription`database table.
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|

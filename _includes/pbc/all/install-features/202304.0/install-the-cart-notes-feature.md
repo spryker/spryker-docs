@@ -4,7 +4,7 @@
 
 This feature integration guide expects the basic feature to be in place.
 The current feature integration guide adds the following functionalities:
-* Translation TODO:
+* Cart Notes Backend API
 
 {% endinfo_block %}
 
@@ -21,7 +21,7 @@ Ensure that the related features are installed:
 1. Install the required modules:
 
 ```bash
-composer require spryker/cart-notes-backend-api:^1.0 --update-with-dependencies
+composer require spryker/cart-notes-backend-api:^0.1.0 --update-with-dependencies
 ```
 
 Ensure that the following modules have been installed:
@@ -40,13 +40,13 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following transfers have been created:
+Make sure that the following changes have been triggered in transfer objects:
 
-| TRANSFER             | TYPE  | EVENT   | PATH                                              |
-|----------------------|-------|---------|---------------------------------------------------|
-| ApiOrdersAttributes  | class | created | src/Generated/Shared/Transfer/ApiOrdersAttributes |
+| TRANSFER                     | TYPE     | EVENT   | PATH                                              |
+|------------------------------|----------|---------|---------------------------------------------------|
+| ApiOrdersAttributes.cartNote | property | created | src/Generated/Shared/Transfer/ApiOrdersAttributes |
 
-## 4) Set up behavior
+## 3) Set up behavior
 
 1. Enable the following behaviors by registering the plugins:
 
@@ -79,5 +79,7 @@ class SalesOrdersBackendApiDependencyProvider extends SprykerSalesOrdersBackendA
 ```
 
 {% info_block warningBox "Verification" %}
-TODO?
+
+Make sure that `sales-orders` resources from `SalesOrdersBackendApiResource::getOrderResourceCollection()` results contains cart note data: `OrderResourceCollectionTransfer.orderResources.attributes.cartNote` are set for the orders that have cart notes.
+
 {% endinfo_block %}

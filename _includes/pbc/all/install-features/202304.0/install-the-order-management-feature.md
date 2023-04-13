@@ -9,6 +9,7 @@ The following feature integration guide expects the basic feature to be in place
 - Show `display names` for order item states
 - Invoice generation
 - Custom order reference
+- Sales Orders Backend API
 
 {% endinfo_block %}
 
@@ -21,8 +22,8 @@ Follow the steps below to install the Order Management feature core.
 
 To start feature integration, overview and install the necessary features:
 
-| NAME                    | VERSION    |
-| ---------------------- | --------- |
+| NAME                    | VERSION          |
+|-------------------------|------------------|
 | Spryker Core            | {{page.version}} |
 | Mailing & Notifications | {{page.version}} |
 | Order Management        | {{page.version}} |
@@ -33,7 +34,7 @@ To start feature integration, overview and install the necessary features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/order-management: "{{page.version}}r" --update-with-dependencies
+composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -41,9 +42,10 @@ composer require spryker-feature/order-management: "{{page.version}}r" --update-
 Make sure that the following modules have been installed:
 
 | MODULE                  | EXPECTED DIRECTORY                        |
-| --------------------- | --------------------------------------- |
+|-------------------------|-------------------------------------------|
 | OrderCustomReference    | vendor/spryker/order-custom-reference     |
 | OrderCustomReferenceGui | vendor/spryker/order-custom-reference-gui |
+| SalesOrdersBackendApi   | vendor/spryker/sales-orders-backend-api   |
 
  {% endinfo_block %}
 
@@ -54,8 +56,6 @@ Apply database changes and generate transfer changes:
 ```bash
 console transfer:generate
 console propel:install
-console transfer:entity:generate
-console frontend:zed:build
 ```
 
 {% info_block warningBox "Verification" %}
@@ -63,7 +63,7 @@ console frontend:zed:build
 Make sure that the following changes have been applied in the database:
 
 | DATABASE ENTITY                        | TYPE   | EVENT   |
-| ----------------------------------- | ----- | ----- |
+|----------------------------------------|--------|---------|
 | spy_sales_order_invoice                | table  | created |
 | spy_sales_order.order_custom_reference | column | created |
 
@@ -73,19 +73,21 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE     | EVENT   | PATH  |
-| --------------------- | ------- | ------ | ---------------- |
-| OrderInvoice                                      | class    | created | src/Generated/Shared/Transfer/OrderInvoiceTransfer           |
-| OrderInvoiceSendRequest                           | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendRequestTransfer |
-| OrderInvoiceSendResponse                          | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendResponseTransfer |
-| OrderInvoiceCriteria                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer   |
-| OrderInvoiceCollection                            | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCollectionTransfer |
-| OrderInvoiceResponse                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceResponseTransfer   |
-| Mail.recipientBccs                                | property | created | src/Generated/Shared/Transfer/MailTransfer                   |
-| OrderCustomReferenceResponse                      | class    | created | Generated/Shared/Transfer/OrderCustomReferenceResponseTransfer |
-| Quote.orderCustomReference                        | property | created | Generated/Shared/Transfer/QuoteTransfer                      |
-| QuoteUpdateRequestAttributes.orderCustomReference | property | created | Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
-| Order.orderCustomReference                        | property | created | Generated/Shared/Transfer/OrderTransfer                      |
+| TRANSFER                                          | TYPE     | EVENT   | PATH                                                               |
+|---------------------------------------------------|----------|---------|--------------------------------------------------------------------|
+| OrderInvoice                                      | class    | created | src/Generated/Shared/Transfer/OrderInvoiceTransfer                 |
+| OrderInvoiceSendRequest                           | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendRequestTransfer      |
+| OrderInvoiceSendResponse                          | class    | created | src/Generated/Shared/Transfer/OrderInvoiceSendResponseTransfer     |
+| OrderInvoiceCriteria                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCriteriaTransfer         |
+| OrderInvoiceCollection                            | class    | created | src/Generated/Shared/Transfer/OrderInvoiceCollectionTransfer       |
+| OrderInvoiceResponse                              | class    | created | src/Generated/Shared/Transfer/OrderInvoiceResponseTransfer         |
+| OrderCustomReferenceResponse                      | class    | created | src/Generated/Shared/Transfer/OrderCustomReferenceResponseTransfer |
+| ApiOrdersAttributes                               | class    | created | src/Generated/Shared/Transfer/ApiOrdersAttributesTransfer          |
+| OrderResourceCollection                           | class    | created | src/Generated/Shared/Transfer/OrderResourceCollectionTransfer      |
+| Mail.recipientBccs                                | property | created | src/Generated/Shared/Transfer/MailTransfer                         |
+| Quote.orderCustomReference                        | property | created | src/Generated/Shared/Transfer/QuoteTransfer                        |
+| QuoteUpdateRequestAttributes.orderCustomReference | property | created | src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer |
+| Order.orderCustomReference                        | property | created | src/Generated/Shared/Transfer/OrderTransfer                        |
 
 {% endinfo_block %}
 
@@ -360,8 +362,6 @@ use Spryker\Zed\SalesInvoice\SalesInvoiceConfig as SprykerSalesInvoiceConfig;
 class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 {
     /**
-     * @api
-     *
      * @return string
      */
     public function getOrderInvoiceTemplatePath(): string
@@ -692,8 +692,8 @@ Set up the following behaviors.
 
 #### 5.1) Set up Order Item Display Name
 
-| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ------------------ | ------------------ | ------------ | ------------ |
+| PLUGIN                                            | SPECIFICATION                                  | PREREQUISITES | NAMESPACE                                    |
+|---------------------------------------------------|------------------------------------------------|---------------|----------------------------------------------|
 | CurrencyIsoCodeOrderItemExpanderPlugin            | Expands order items with currency codes (ISO). |               | Spryker\Zed\Sales\Communication\Plugin\Sales |
 | StateHistoryOrderItemExpanderPlugin               | Expands order items with history states.       |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 | ItemStateOrderItemExpanderPlugin                  | Expands order items with its item states.      |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
@@ -716,7 +716,7 @@ use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
      */
     protected function getOrderItemExpanderPlugins(): array
     {
@@ -728,7 +728,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\SearchOrderExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\SearchOrderExpanderPluginInterface>
      */
     protected function getSearchOrderExpanderPlugins(): array
     {
@@ -752,8 +752,8 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 ### 5.2) Set up order cancellation behavior
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
-| -------------- | -------------------- | ---------- | --------------- |
+| PLUGIN                                 | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                    |
+|----------------------------------------|-----------------------------------------------------|---------------|----------------------------------------------|
 | IsCancellableOrderExpanderPlugin       | Checks if each order item has the cancellable flag. |               | Spryker\Zed\Sales\Communication\Plugin\Sales |
 | IsCancellableSearchOrderExpanderPlugin | Checks if each order item has the cancellable flag. |               | Spryker\Zed\Oms\Communication\Plugin\Sales   |
 
@@ -772,7 +772,7 @@ use Spryker\Zed\Oms\Communication\Plugin\Sales\IsCancellableSearchOrderExpanderP
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\SearchOrderExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\SearchOrderExpanderPluginInterface>
      */
     protected function getSearchOrderExpanderPlugins(): array
     {
@@ -782,7 +782,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
      */
     protected function getOrderHydrationPlugins(): array
     {
@@ -814,8 +814,8 @@ Set up the following order invoice generation behaviors.
 
 Set up the following plugin:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
-| ----------- | --------------- | ----------- | ----------------- |
+| PLUGIN                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                          |
+|----------------------------|---------------------------------------------------------|---------------|----------------------------------------------------|
 | OrderInvoiceMailTypePlugin | Email type that prepares an invoice email for an order. |               | Spryker\Zed\SalesInvoice\Communication\Plugin\Mail |
 
 
@@ -861,8 +861,8 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 Set up the following plugin:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
-| -------------- | ---------------- | ------------ | -------------- |
+| PLUGIN                            | SPECIFICATION                                                              | PREREQUISITES | NAMESPACE                                         |
+|-----------------------------------|----------------------------------------------------------------------------|---------------|---------------------------------------------------|
 | GenerateOrderInvoiceCommandPlugin | A command in the OMS state machine that generates an invoice for an order. |               | Spryker\Zed\SalesInvoice\Communication\Plugin\Oms |
 
 
@@ -902,8 +902,8 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 1. Set up the following plugin:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
-| ---------- | -------------- | ------------ | ----------------- |
+| PLUGIN                  | SPECIFICATION                                                       | PREREQUISITES | NAMESPACE                                      |
+|-------------------------|---------------------------------------------------------------------|---------------|------------------------------------------------|
 | OrderInvoiceSendConsole | A console command that sends not-yet-sent order invoices via email. |               | Spryker\Zed\SalesInvoice\Communication\Console |
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
@@ -922,15 +922,13 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return list<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
-        $commands = [
+        return [
             new OrderInvoiceSendConsole(),
         ];
-
-        return $commands;
     }
 }
 ```
@@ -975,10 +973,10 @@ Place an order with an invoice and make sure that you receive an invoice within 
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE |
-| ------------------- | ------------------ | ------------ | ----------------- |
-| OrderCustomReferenceOrderPostSavePlugin                      | After an order is saved, persists `orderCustomReference` in the `spy_sales_order` schema. |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales\ |
-| OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin | Returns the `QuoteTransfer` fields related to a custom order reference. |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\Quote  |
+| PLUGIN                                                        | SPECIFICATION                                                                             | PREREQUISITES | NAMESPACE                                                   |
+|---------------------------------------------------------------|-------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
+| OrderCustomReferenceOrderPostSavePlugin                       | After an order is saved, persists `orderCustomReference` in the `spy_sales_order` schema. |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\Sales |
+| OrderCustomReferenceQuoteFieldsAllowedForSavingProviderPlugin | Returns the `QuoteTransfer` fields related to a custom order reference.                   |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\Quote |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
@@ -993,7 +991,7 @@ use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostSavePluginInterface[]
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostSavePluginInterface>
      */
     protected function getOrderPostSavePlugins()
     {
@@ -1017,7 +1015,7 @@ use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteFieldsAllowedForSavingProviderPluginInterface[]
+     * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteFieldsAllowedForSavingProviderPluginInterface>
      */
     protected function getQuoteFieldsAllowedForSavingProviderPlugins(): array
     {
@@ -1038,8 +1036,8 @@ Log in and make sure that, at `zed.mysprykershop.com/sales/detail`, you can see 
 
 Set up the following plugins:
 
-| PLUGIN | SPECIFICATION  | PREREQUISITES | NAMESPACE |
-| ---------- | ------------- | ----------- | ----------------- |
+| PLUGIN                        | SPECIFICATION                                    | PREREQUISITES | NAMESPACE                                          |
+|-------------------------------|--------------------------------------------------|---------------|----------------------------------------------------|
 | OrderSaverPlugin              | Saves an order.                                  |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
 | OrderTotalsSaverPlugin        | Saves order totals.                              |               | Spryker\Zed\Sales\Communication\Plugin\Checkout    |
 | SalesOrderShipmentSaverPlugin | Saves an order shipment. Adds shipment expenses. |               | Spryker\Zed\Shipment\Communication\Plugin\Checkout |
@@ -1064,19 +1062,16 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface[]
+     * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface>
      */
     protected function getCheckoutOrderSavers(Container $container)
     {
-        /** @var \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface[] $plugins */
-        $plugins = [
+        return [
             new OrderSaverPlugin(),
             new OrderTotalsSaverPlugin(),
             new SalesOrderShipmentSavePlugin(),
             new OrderItemsSaverPlugin(),
         ];
-
-        return $plugins;
     }
 }
 ```
@@ -1103,8 +1098,8 @@ Follow the steps below to install the Order Management feature front end.
 
 To start the feature integration, overview and install the necessary features.
 
-| NAME                        | VERSION    |
-| ---------------------- | ------- |
+| NAME                        | VERSION          |
+|-----------------------------|------------------|
 | Spryker Core                | {{page.version}} |
 | Cart                        | {{page.version}} |
 | Checkout                    | {{page.version}} |
@@ -1123,7 +1118,7 @@ composer require spryker-feature/order-management: "{{page.version}}" --update-w
 Make sure that the following modules have been installed:
 
 | MODULE                     | EXPECTED DIRECTORY                                |
-| ------------------------- | ------------------------------------------------ |
+|----------------------------|---------------------------------------------------|
 | OrderCustomReferenceWidget | vendor/spryker-shop/order-custom-reference-widget |
 
 {% endinfo_block %}
@@ -1145,7 +1140,6 @@ order_cancel_widget.order.cancelled,Die Bestellung wurde erfolgreich storniert.,
 console data:import:glossary
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Ensure that in the database, the configured data has been added to the `spy_glossary` table.
@@ -1157,7 +1151,7 @@ Ensure that in the database, the configured data has been added to the `spy_glos
 Register the following route provider on the Storefront:
 
 | PROVIDER                             | NAMESPACE                                        |
-| ----------------------------------- | ----------------------------------------------- |
+|--------------------------------------|--------------------------------------------------|
 | OrderCancelWidgetRouteProviderPlugin | SprykerShop\Yves\OrderCancelWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
@@ -1173,7 +1167,7 @@ use SprykerShop\Yves\OrderCancelWidget\Plugin\Router\OrderCancelWidgetRouteProvi
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     * @return list<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
      */
     protected function getRouteProvider(): array
     {
@@ -1199,8 +1193,8 @@ Set up the following behaviors.
 
 Set up the following plugin:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
-| ------------- | ------------ | ------------ | ---------------- |
+| PLUGIN                  | SPECIFICATION                                | PREREQUISITES | NAMESPACE                                 |
+|-------------------------|----------------------------------------------|---------------|-------------------------------------------|
 | OrderCancelButtonWidget | Shows a **Cancel** button on the Storefront. |               | SprykerShop\Yves\OrderCancelWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -1216,7 +1210,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return list<string>
      */
     protected function getGlobalWidgets(): array
     {
@@ -1243,8 +1237,8 @@ Ensure the following:
 
 Register the route provider in the Yves application:
 
-| PROVIDER   | NAMESPACE  |
-| ---------- | ---------------- |
+| PROVIDER                                      | NAMESPACE                                                 |
+|-----------------------------------------------|-----------------------------------------------------------|
 | OrderCustomReferenceWidgetRouteProviderPlugin | SprykerShop\Yves\OrderCustomReferenceWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
@@ -1260,7 +1254,7 @@ use SprykerShop\Yves\OrderCustomReferenceWidget\Plugin\Router\OrderCustomReferen
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     * @return list<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
      */
     protected function getRouteProvider(): array
     {
@@ -1275,8 +1269,8 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 1. Register the following plugin to enable widgets:
 
-| PLUGIN  | DESCRIPTION  | PREREQUISITES | NAMESPACE  |
-| ----------- | -------------- | ----------- | --------------- |
+| PLUGIN                     | DESCRIPTION                                                 | PREREQUISITES | NAMESPACE                                          |
+|----------------------------|-------------------------------------------------------------|---------------|----------------------------------------------------|
 | OrderCustomReferenceWidget | Edits and shows a custom order reference on the Storefront. |               | SprykerShop\Yves\OrderCustomReferenceWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -1289,13 +1283,10 @@ namespace Pyz\Yves\ShopApplication;
 use SprykerShop\Yves\OrderCustomReferenceWidget\Widget\OrderCustomReferenceWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
-/**
- * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
- */
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return list<string>
      */
     protected function getGlobalWidgets(): array
     {
@@ -1322,13 +1313,13 @@ To make sure that you’ve registered the widget, log in as a customer on the St
 
 Integrate the following related features:
 
-| FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE   |
-| ---------------------- | ------------- | ---------------- |
-| Comments + Order Management feature integration              |                                  | [Comments + Order Management feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html) |
-| Glue API: Order Management feature integration               |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |
-| Company Account + Order Management feature integration       |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-order-management-feature-integration.html) |
-| Product + Order Management feature integration               |                                  | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
-| Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html) |
-| Packaging Units feature integration                  |                                  | [Packaging Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |
-| Product + Order Management feature integration                      |                                  | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
-| Product Options + Order Management feature integration                       |                                  | [Product Options + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |
+| FEATURE                                                            | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                      |
+|--------------------------------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Comments + Order Management feature integration                    |                                  | [Comments + Order Management feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html)                  |
+| Glue API: Order Management feature integration                     |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)                                               |
+| Company Account + Order Management feature integration             |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-order-management-feature-integration.html)                                         |
+| Product + Order Management feature integration                     |                                  | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                 |
+| Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html)                 |
+| Packaging Units feature integration                                |                                  | [Packaging Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-packaging-units-feature.html)                                     |
+| Product + Order Management feature integration                     |                                  | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                 |
+| Product Options + Order Management feature integration             |                                  | [Product Options + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |

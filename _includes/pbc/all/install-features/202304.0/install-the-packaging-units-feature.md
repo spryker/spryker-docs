@@ -6,13 +6,13 @@ Follow the steps to install Packaging Units feature core.
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
+| NAME                 | VERSION          |
+|----------------------|------------------|
 | Inventory Management | {{page.version}} |
-|Spryker Core  | {{page.version}} |
-|Order Management  | {{page.version}} |
-| Product | {{page.version}} |
-| Measurement Units | {{page.version}} |
+| Spryker Core         | {{page.version}} |
+| Order Management     | {{page.version}} |
+| Product              | {{page.version}} |
+| Measurement Units    | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
@@ -24,11 +24,11 @@ composer require spryker-feature/packaging-units:"{{page.version}}" --update-wit
 {% info_block warningBox "Verification" %}
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| ProductPackagingUnit | vendor/spryker/product-packaging-unit |
+| MODULE                         | EXPECTED DIRECTORY                                |
+|--------------------------------|---------------------------------------------------|
+| ProductPackagingUnit           | vendor/spryker/product-packaging-unit             |
 | ProductPackagingUnitDataImport | vendor/spryker/product-packaging-unit-data-import |
-| ProductPackagingUnitStorage | vendor/spryker/product-packaging-unit-storage |
+| ProductPackagingUnitStorage    | vendor/spryker/product-packaging-unit-storage     |
 
 {% endinfo_block %}
 
@@ -59,12 +59,11 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 
 Adjust the schema definition, so entity changes can trigger events.
 
-<div>
-| AFFECTED ENTITY | TRIGGERED EVENTS |
-| --- | --- |
-| spy_product_packaging_unit | Entity.spy_product_packaging_unit.create<br>Entity.spy_product_packaging_unit.update<br>Entity.spy_product_packaging_unit.delete |
+| AFFECTED ENTITY                 | TRIGGERED EVENTS                                                                                                                                |
+|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| spy_product_packaging_unit      | Entity.spy_product_packaging_unit.create<br>Entity.spy_product_packaging_unit.update<br>Entity.spy_product_packaging_unit.delete                |
 | spy_product_packaging_unit_type | Entity.spy_product_packaging_unit_type.create<br>Entity.spy_product_packaging_unit_type.update<br>Entity.spy_product_packaging_unit_type.delete |
-</div>
+
 
 **src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml**
 
@@ -118,13 +117,13 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY | TYPE | EVENT |
-| --- | --- | --- |
-| spy_product_packaging_unit | table | created |
-| spy_product_packaging_unit_type | table | created |
-| spy_product_abstract_packaging_storage | table | created |
-| spy_sales_order_item.amount | column | created |
-| spy_sales_order_item.amount_sku | column | created |
+| DATABASE ENTITY                        | TYPE   | EVENT   |
+|----------------------------------------|--------|---------|
+| spy_product_packaging_unit             | table  | created |
+| spy_product_packaging_unit_type        | table  | created |
+| spy_product_abstract_packaging_storage | table  | created |
+| spy_sales_order_item.amount            | column | created |
+| spy_sales_order_item.amount_sku        | column | created |
 
 {% endinfo_block %}
 
@@ -132,19 +131,19 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes in transfer objects have been applied:
 
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| ProductPackagingUnitTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitTransfer |
-| ProductPackagingUnitAmountTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitAmountTransfer |
-| ProductPackagingUnitStorageTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitStorageTransfer |
-| SpyProductPackagingUnitEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductPackagingUnitEntityTransfer |
-| ProductConcretePackagingStorage | class | created | src/Generated/Shared/Transfer/ProductConcretePackagingStorageTransfer |
-| SpyProductPackagingUnitTypeEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductPackagingUnitTypeEntityTransfer |
-| SpyProductPackagingUnitStorageEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyProductPackagingUnitStorageEntityTransfer |
-| SpySalesOrderItemEntityTransfer.amount | property | created | src/Generated/Shared/Transfer/SpySalesOrderItemEntityTransfer |
-| SpySalesOrderItemEntityTransfer.amountSku | property | created | src/Generated/Shared/Transfer/SpySalesOrderItemEntityTransfer |
-| ItemTransfer.amount | property | created | src/Generated/Shared/Transfer/ItemTransfer |
-| ItemTransfer.amountLeadProduct | property | created | src/Generated/Shared/Transfer/ItemTransfer |
+| TRANSFER                                     | TYPE     | EVENT   | PATH                                                                       |
+|----------------------------------------------|----------|---------|----------------------------------------------------------------------------|
+| ProductPackagingUnitTransfer                 | class    | created | src/Generated/Shared/Transfer/ProductPackagingUnitTransfer                 |
+| ProductPackagingUnitAmountTransfer           | class    | created | src/Generated/Shared/Transfer/ProductPackagingUnitAmountTransfer           |
+| ProductPackagingUnitStorageTransfer          | class    | created | src/Generated/Shared/Transfer/ProductPackagingUnitStorageTransfer          |
+| SpyProductPackagingUnitEntityTransfer        | class    | created | src/Generated/Shared/Transfer/SpyProductPackagingUnitEntityTransfer        |
+| ProductConcretePackagingStorage              | class    | created | src/Generated/Shared/Transfer/ProductConcretePackagingStorageTransfer      |
+| SpyProductPackagingUnitTypeEntityTransfer    | class    | created | src/Generated/Shared/Transfer/SpyProductPackagingUnitTypeEntityTransfer    |
+| SpyProductPackagingUnitStorageEntityTransfer | class    | created | src/Generated/Shared/Transfer/SpyProductPackagingUnitStorageEntityTransfer |
+| SpySalesOrderItemEntityTransfer.amount       | property | created | src/Generated/Shared/Transfer/SpySalesOrderItemEntityTransfer              |
+| SpySalesOrderItemEntityTransfer.amountSku    | property | created | src/Generated/Shared/Transfer/SpySalesOrderItemEntityTransfer              |
+| ItemTransfer.amount                          | property | created | src/Generated/Shared/Transfer/ItemTransfer                                 |
+| ItemTransfer.amountLeadProduct               | property | created | src/Generated/Shared/Transfer/ItemTransfer                                 |
 
 {% endinfo_block %}
 
@@ -152,14 +151,13 @@ Make sure that the following changes in transfer objects have been applied:
 
 Make sure that the changes have been implemented successfully. To do it, trigger the following methods and make sure that the above events have been triggered:
 
-<div>
-| PATH | METHOD NAME |
-| --- | --- |
-| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
-| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
+| PATH                                                                                        | METHOD NAME                                                                  |
+|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php               | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
+| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php           | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductPackagingUnitStorage.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
-| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php | sendToQueue() |
-</div>
+| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php           | sendToQueue()                                                                |
+
 
 {% endinfo_block %}
 
@@ -245,9 +243,9 @@ This step publishes tables on change (create, edit, delete) to the `spy_product_
 
 #### Set up event listeners
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductPackagingUnitStorageEventSubscriber| Registers listeners that are responsible for publishing product abstract packaging unit storage entity changes when a related entity change event occurs. | None | Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event\Subscriber|
+| PLUGIN                                     | SPECIFICATION                                                                                                                                             | PREREQUISITES | NAMESPACE                                                                     |
+|--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
+| ProductPackagingUnitStorageEventSubscriber | Registers listeners that are responsible for publishing product abstract packaging unit storage entity changes when a related entity change event occurs. |               | Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -261,7 +259,10 @@ use Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event\Subscribe
 
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
-    public function getEventSubscriberCollection()
+    /**
+     * @return \Spryker\Zed\Event\Dependency\EventSubscriberCollectionInterface
+     */
+    public function getEventSubscriberCollection(): EventSubscriberCollectionInterface
     {
         $eventSubscriberCollection = parent::getEventSubscriberCollection();
         $eventSubscriberCollection->add(new ProductPackagingUnitStorageEventSubscriber());
@@ -273,9 +274,9 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 #### Set up publish feature
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductPackagingUnitSynchronizationDataPlugin | Registers a publisher for manually triggering the publish command. | None | Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event |
+| PLUGIN                                        | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                                          |
+|-----------------------------------------------|--------------------------------------------------------------------|---------------|--------------------------------------------------------------------|
+| ProductPackagingUnitSynchronizationDataPlugin | Registers a publisher for manually triggering the publish command. |               | Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event |
 
 **src/Pyz/Zed/Event/EventBehaviorDependencyProvider.php**
 
@@ -289,7 +290,10 @@ use Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Event\ProductPa
 
 class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProvider
 {
-    public function getEventTriggerResourcePlugins()
+    /**
+     * @return list<\Spryker\Zed\EventBehavior\Dependency\Plugin\EventResourcePluginInterface>
+     */
+    protected function getEventTriggerResourcePlugins(): array
     {
         return [
             new ProductPackagingUnitEventResourceBulkRepositoryPlugin(),
@@ -300,9 +304,9 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 #### Set up sync feature
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductPackagingUnitSynchronizationDataPlugin | Allows synchronizing the whole storage table content into Storage. | None | Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Synchronization |
+| PLUGIN                                        | SPECIFICATION                                                      | PREREQUISITES | NAMESPACE                                                                    |
+|-----------------------------------------------|--------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
+| ProductPackagingUnitSynchronizationDataPlugin | Allows synchronizing the whole storage table content into Storage. |               | Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -317,40 +321,12 @@ use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSync
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface[]
+     * @return list<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */
     protected function getSynchronizationDataPlugins(): array
     {
         return [
             new ProductPackagingUnitSynchronizationDataBulkPlugin(),
-        ];
-    }
-}
-```
-
-#### Set up the Warehouse Picking feature (TODO: check if the feature name is correct)
-
-| PLUGIN                                                  | SPECIFICATION                                                                                                                   | PREREQUISITES | NAMESPACE                                                         |
-|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
-| ProductPackagingUnitPickingListCollectionExpanderPlugin | Expands `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem` transfer objects with `amountSalesUnit` property. | None          | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PickingList |
-
-```php
-<?php
-
-namespace Pyz\Zed\PickingList;
-
-use Spryker\Zed\PickingList\PickingListDependencyProvider as SprykerPickingListDependencyProvider;
-use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PickingList\ProductPackagingUnitPickingListCollectionExpanderPlugin;
-
-class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Zed\PickingListExtension\Dependency\Plugin\PickingListCollectionExpanderPluginInterface>
-     */
-    protected function getPickingListCollectionExpanderPlugins(): array
-    {
-        return [
-            new ProductPackagingUnitPickingListCollectionExpanderPlugin(),
         ];
     }
 }
@@ -364,9 +340,9 @@ Import the following data.
 
 Add infrastructural data:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-|ProductPackagingUnitTypeInstallerPlugin|Installs the configured infrastructural packaging unit types.|None|Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Installer|
+| PLUGIN                                  | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                       |
+|-----------------------------------------|---------------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| ProductPackagingUnitTypeInstallerPlugin | Installs the configured infrastructural packaging unit types. |               | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Installer |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
@@ -381,7 +357,7 @@ use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Installer\ProductPacka
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface[]
+     * @return list<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
      */
     public function getInstallerPlugins()
     {
@@ -423,15 +399,15 @@ packaging_unit_type.pack_100.name
 packaging_unit_type.pack_500.name
 ```
 
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-| --- | --- | --- | --- | --- |
-| name |  mandatory|string  | packaging_unit_type.ring_500.name |Glossary key that will be used to display a packaging unit type . Each name needs a glossary key definition for all configured locales.  |
+| COLUMN | REQUIRED  | DATA TYPE | DATA EXAMPLE                      | DATA EXPLANATION                                                                                                                        |
+|--------|-----------|-----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| name   | mandatory | string    | packaging_unit_type.ring_500.name | Glossary key that will be used to display a packaging unit type . Each name needs a glossary key definition for all configured locales. |
 
 Register the following plugin to enable data import:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-|ProductPackagingUnitTypeDataImportPlugin | Imports packaging unit type data into the database. | None | Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport |		
+| PLUGIN                                   | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                                                  |
+|------------------------------------------|-----------------------------------------------------|---------------|----------------------------------------------------------------------------|
+| ProductPackagingUnitTypeDataImportPlugin | Imports packaging unit type data into the database. |               | Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport |		
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -445,6 +421,9 @@ use Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport\P
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
+    /**
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     */
     protected function getDataImporterPlugins(): array
     {
         return [
@@ -483,26 +462,23 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 215_124,215_123,packaging_unit_type.ring_500.name,1,0,,,
 ```
 
-<div>
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-| --- | --- | --- | --- | --- |
-| concrete_sku | mandatory | string | 218_123 |Concrete product SKU of packaging unit. |
-| lead_product_sku | mandatory | string | 1 | Lead product concrete SKU. |
-| packaging_unit_type_name | mandatory | string | packaging_unit_type.ring_500.name | Type a name of the current concrete product. |
-| default_amount | optional | positive integer | 5 | <ul><li>Defines how many lead products should be sold together with each quantity of the current product concrete.</li><li>Effective only if the current concrete product `has_lead_product = 1`.</li></ul> |
-| is_amount_variable | mandatory | bool integer | 1 | <ul><li>Allows customers to override the `default_amount` and decide how many lead products will be ordered for each quantity of this product concrete.</li></ul> |
-| amount_min | optional | positive integer | 3 | <ul><li>Restricts a customer to buy at least this amount of lead products.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is 1 when not provided.</li></ul> |
-| amount_max | optional | positive integer | 5 | <ul><li>Restricts a customer not to buy more than this value.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value remains empty (unlimited) when not provided.</li></ul> |
-| amount_interval | optional | positive integer | 2 | <ul><li>Restricts customers to buy the amount that fits into the interval beginning with `amount_min`.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is `amount_min` when not provided.</li></ul> Min = 3; Max = 10; Interval = 2 <br> Choosable: 3, 5, 7, 9|
-</div>
+| COLUMN                   | REQUIRED  | DATA TYPE        | DATA EXAMPLE                      | DATA EXPLANATION                                                                                                                                                                                                                                                                         |
+|--------------------------|-----------|------------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| concrete_sku             | mandatory | string           | 218_123                           | Concrete product SKU of packaging unit.                                                                                                                                                                                                                                                  |
+| lead_product_sku         | mandatory | string           | 1                                 | Lead product concrete SKU.                                                                                                                                                                                                                                                               |
+| packaging_unit_type_name | mandatory | string           | packaging_unit_type.ring_500.name | Type a name of the current concrete product.                                                                                                                                                                                                                                             |
+| default_amount           | optional  | positive integer | 5                                 | <ul><li>Defines how many lead products should be sold together with each quantity of the current product concrete.</li><li>Effective only if the current concrete product `has_lead_product = 1`.</li></ul>                                                                              |
+| is_amount_variable       | mandatory | bool integer     | 1                                 | <ul><li>Allows customers to override the `default_amount` and decide how many lead products will be ordered for each quantity of this product concrete.</li></ul>                                                                                                                        |
+| amount_min               | optional  | positive integer | 3                                 | <ul><li>Restricts a customer to buy at least this amount of lead products.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is 1 when not provided.</li></ul>                                                                                                   |
+| amount_max               | optional  | positive integer | 5                                 | <ul><li>Restricts a customer not to buy more than this value.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value remains empty (unlimited) when not provided.</li></ul>                                                                                           |
+| amount_interval          | optional  | positive integer | 2                                 | <ul><li>Restricts customers to buy the amount that fits into the interval beginning with `amount_min`.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is `amount_min` when not provided.</li></ul> Min = 3; Max = 10; Interval = 2 <br> Choosable: 3, 5, 7, 9 |
+
 
 Register the following plugin to enable data import:
 
-<div>
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
+| PLUGIN                               | SPECIFICATION                                       | PREREQUISITES                                                                                                                                                                                         | NAMESPACE                                                                  |
+|--------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | ProductPackagingUnitDataImportPlugin | Imports packaging unit type data into the database. | <ul><li>Requires related product concretes and product abstract to be present in the database already.</li><li>Requires related packaging unit types to be present in the database already.</li></ul> | Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport |
-</div>
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -513,10 +489,12 @@ namespace Pyz\Zed\DataImport;
 
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport\ProductPackagingUnitDataImportPlugin;
-use Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport\ProductPackagingUnitTypeDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
+    /**
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     */
     protected function getDataImporterPlugins(): array
     {
         return [
@@ -546,32 +524,32 @@ Set up the following behaviors.
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| AmountAvailabilityCartPreCheckPlugin | Validates if the given amount is available according to stock configuration during the cart change. | Expects the `amount` field to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| AmountGroupKeyItemExpanderPlugin | Expands a group key with the amount and its sales unit to granulate the item grouping in the cart for packaging unit items. | Expects the `amount` and `amountSalesUnit` fields to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| AmountRestrictionCartPreCheckPlugin | Validates the amount restrictions when Item has restrictions. | Expects the `amount` and `amountSalesUnit` fields to be set in `ItemTransfer` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| AmountSalesUnitItemExpanderPlugin | Sets the `amountSalesUnit` field for `ItemTransfers` with packaging units.  | Expects the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| AmountSalesUnitValuePostSavePlugin |Sets a normalized amount sales unit value field.  | Expects the `amount` and `amountSalesUnit` fields to be set in `ItemTransfer` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| CustomAmountPriceItemExpanderPlugin | Updates unit prices for variable amounted packaging units. | Expects the `amount` and `productPackagingUnit` fields to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| ProductPackagingUnitCartAddItemStrategyPlugin | Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the cart add action. | Expects the amount field to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| ProductPackagingUnitCartRemoveItemStrategyPlugin | Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the cart removal action. | Expects the amount field to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| ProductPackagingUnitItemExpanderPlugin | Sets the `amountLeadProduct` and `productPackagingUnit` fields in the `ItemTransfer` properties . | Expects the `amount` field to be set in `ItemTransfer` properties with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| ProductPackagingUnitCartPreCheckPlugin | Checks if packaging units are found for items in `CartChangeTransfer`. | Expects the `amount` field to be set in the `ItemTransfer` properties with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart |
-| AmountAvailabilityCheckoutPreConditionPlugin | Validates if the given amount is available according to stock configuration during checkout. |Expects the `amount` and `amountLeadProduct` fields to be set in `ItemTransfers` with packaging units.  | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout |
-| ProductPackagingUnitCartAddItemStrategyPlugin |Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the persistent cart add action.  | Expects the `amount` field to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PersistentCart |
-| LeadProductReservationHandlerPlugin | Updates availability and reservation of a lead product for a given product packaging unit for reservation handler. |None  | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Reservation |
-| AmountLeadProductHydrateOrderPlugin | Hydrates the `leadProduct` field for Order read. | Expects the `items`, `amount`, and `amountSku` fields to be set in Order. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales |
-| AmountSalesUnitHydrateOrderPlugin | Hydrates the `amountSalesUnit` field for Order read. | Expects the `items` field to be set in Order. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales |
-| AmountSalesUnitOrderItemExpanderPreSavePlugin |Sets the amount measurement related fields in the Order item for saving.  | Expects the `amountSalesUnit` field to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension |
-| ProductPackagingUnitOrderItemExpanderPreSavePlugin |Sets the `amount` and `amountSku` fields in the Order item for saving.|Expects `amountLeadProduct` to be set in `ItemTransfers` with packaging units.  | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension |
-| LeadProductStockUpdateHandlerPlugin |Updates availability and reservation of a lead product for a given product packaging unit for stock update handler.  | None | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Stock |
-| ProductPackagingUnitAmountCartChangeRequestExpanderPlugin | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for cart change. |  Expects a request to contain the to-be-used information.| Spryker\Client\ProductPackagingUnit\Plugin\CartExtension |
-| ProductPackagingUnitAmountPersistentCartChangeExpanderPlugin | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for persistent cart change. | Expects a request to contain the to-be-used information. | Spryker\Client\ProductPackagingUnit\Plugin\PersistentCartExtension |
-| ProductPackagingUnitReservationAggregationStrategyPlugin | Aggregates the product reservation for packaging untis and lead product of packaging untis. | None | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms |
-| ProductPackagingUnitProductAbstractAddToCartPlugin | Filters out products which have packaging unit available. | None | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\ProductPageSearch |
-| AmountLeadProductOrderItemExpanderPlugin | Expands order items with additional packaging unit amount lead product. | None | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales |
-| AmountSalesUnitOrderItemExpanderPlugin | Expands order items with additional packaging unit sales unit. | None | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales |
+| PLUGIN                                                       | SPECIFICATION                                                                                                                                    | PREREQUISITES                                                                                                               | NAMESPACE                                                               |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| AmountAvailabilityCartPreCheckPlugin                         | Validates if the given amount is available according to stock configuration during the cart change.                                              | Expects the `amount` field to be set in `ItemTransfers` with packaging units.                                               | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| AmountGroupKeyItemExpanderPlugin                             | Expands a group key with the amount and its sales unit to granulate the item grouping in the cart for packaging unit items.                      | Expects the `amount` and `amountSalesUnit` fields to be set in `ItemTransfers` with packaging units.                        | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| AmountRestrictionCartPreCheckPlugin                          | Validates the amount restrictions when Item has restrictions.                                                                                    | Expects the `amount` and `amountSalesUnit` fields to be set in `ItemTransfer` with packaging units.                         | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| AmountSalesUnitItemExpanderPlugin                            | Sets the `amountSalesUnit` field for `ItemTransfers` with packaging units.                                                                       | Expects the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` to be set in `ItemTransfers` with packaging units. | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| AmountSalesUnitValuePostSavePlugin                           | Sets a normalized amount sales unit value field.                                                                                                 | Expects the `amount` and `amountSalesUnit` fields to be set in `ItemTransfer` with packaging units.                         | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| CustomAmountPriceItemExpanderPlugin                          | Updates unit prices for variable amounted packaging units.                                                                                       | Expects the `amount` and `productPackagingUnit` fields to be set in `ItemTransfers` with packaging units.                   | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| ProductPackagingUnitCartAddItemStrategyPlugin                | Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the cart add action.                 | Expects the amount field to be set in `ItemTransfers` with packaging units.                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| ProductPackagingUnitCartRemoveItemStrategyPlugin             | Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the cart removal action.             | Expects the amount field to be set in `ItemTransfers` with packaging units.                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| ProductPackagingUnitItemExpanderPlugin                       | Sets the `amountLeadProduct` and `productPackagingUnit` fields in the `ItemTransfer` properties .                                                | Expects the `amount` field to be set in `ItemTransfer` properties with packaging units.                                     | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| ProductPackagingUnitCartPreCheckPlugin                       | Checks if packaging units are found for items in `CartChangeTransfer`.                                                                           | Expects the `amount` field to be set in the `ItemTransfer` properties with packaging units.                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart              |
+| AmountAvailabilityCheckoutPreConditionPlugin                 | Validates if the given amount is available according to stock configuration during checkout.                                                     | Expects the `amount` and `amountLeadProduct` fields to be set in `ItemTransfers` with packaging units.                      | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout          |
+| PackagingUnitSplittableItemTransformerStrategyPlugin         | Splitting order item if product packaging unit item is splittable                                                                                |                                                                                                                             | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout          |
+| ProductPackagingUnitCartAddItemStrategyPlugin                | Merges the `quantity` and `amount` fields changes into the cart for `ItemTransfers` with packaging units on the persistent cart add action.      | Expects the `amount` field to be set in `ItemTransfers` with packaging units.                                               | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PersistentCart    |
+| LeadProductReservationPostSaveTerminationAwareStrategyPlugin | Updates the lead product's reservation for the provided product packaging unit SKU.                                                              |                                                                                                                             | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Reservation       |
+| AmountSalesUnitOrderItemExpanderPreSavePlugin                | Sets the amount measurement related fields in the Order item for saving.                                                                         | Expects the `amountSalesUnit` field to be set in `ItemTransfers` with packaging units.                                      | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension    |
+| ProductPackagingUnitOrderItemExpanderPreSavePlugin           | Sets the `amount` and `amountSku` fields in the Order item for saving.                                                                           | Expects `amountLeadProduct` to be set in `ItemTransfers` with packaging units.                                              | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension    |
+| LeadProductStockUpdateHandlerPlugin                          | Updates availability and reservation of a lead product for a given product packaging unit for stock update handler.                              |                                                                                                                             | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Stock             |
+| ProductPackagingUnitAmountCartChangeRequestExpanderPlugin    | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for cart change.            | Expects a request to contain the to-be-used information.                                                                    | Spryker\Client\ProductPackagingUnit\Plugin\CartExtension                |
+| ProductPackagingUnitAmountPersistentCartChangeExpanderPlugin | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for persistent cart change. | Expects a request to contain the to-be-used information.                                                                    | Spryker\Client\ProductPackagingUnit\Plugin\PersistentCartExtension      |
+| ProductPackagingUnitOmsReservationAggregationPlugin          | Aggregates reservations for provided SKU both with or without packaging unit.                                                                    |                                                                                                                             | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms               |
+| ProductPackagingUnitProductAbstractAddToCartPlugin           | Filters out products which have packaging unit available.                                                                                        |                                                                                                                             | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\ProductPageSearch |
+| AmountLeadProductOrderItemExpanderPlugin                     | Expands order items with additional packaging unit amount lead product.                                                                          |                                                                                                                             | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales             |
+| AmountSalesUnitOrderItemExpanderPlugin                       | Expands order items with additional packaging unit sales unit.                                                                                   |                                                                                                                             | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales             |
+| ProductPackagingUnitPickingListCollectionExpanderPlugin      | Expands `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem` transfer objects with `amountSalesUnit` property.                  |                                                                                                                             | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PickingList       |
 
 **src/Pyz/Client/Cart/CartDependencyProvider.php**
 
@@ -597,9 +575,9 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
    /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Cart\Dependency\ItemExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\Cart\Dependency\ItemExpanderPluginInterface>
      */
-    protected function getExpanderPlugins(Container $container)
+    protected function getExpanderPlugins(Container $container): array
     {
         return [
             new ProductPackagingUnitItemExpanderPlugin(),
@@ -612,7 +590,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\CartOperationStrategyPluginInterface[]
+     * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\CartOperationStrategyPluginInterface>
      */
     protected function getCartRemoveItemStrategyPlugins(Container $container): array
     {
@@ -624,7 +602,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface[]
+     * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface>
      */
     protected function getCartPreCheckPlugins(Container $container)
     {
@@ -638,7 +616,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Cart\Dependency\PostSavePluginInterface[]
+     * @return list<\Spryker\Zed\Cart\Dependency\PostSavePluginInterface>
      */
     protected function getPostSavePlugins(Container $container)
     {
@@ -650,7 +628,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\CartOperationStrategyPluginInterface[]
+     * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\CartOperationStrategyPluginInterface>
      */
     protected function getCartAddItemStrategyPlugins(Container $container): array
     {
@@ -677,7 +655,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container ’
      *
-     * @return \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutPreConditionInterface[]
+     * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutPreConditionInterface>
      */
     protected function getCheckoutPreConditions(Container $container)
     {
@@ -704,7 +682,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\CartOperationStrategyPluginInterface[]
+     * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\CartOperationStrategyPluginInterface>
      */
     protected function getCartAddItemStrategyPlugins(Container $container): array
     {
@@ -722,32 +700,29 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 namespace Pyz\Zed\Oms;
 
-use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
-use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms\ProductPackagingUnitReservationAggregationStrategyPlugin;
-use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Reservation\LeadProductReservationHandlerPlugin;
+use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms\ProductPackagingUnitOmsReservationAggregationPlugin;
+use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Reservation\LeadProductReservationPostSaveTerminationAwareStrategyPlugin;
 
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Oms\Dependency\Plugin\ReservationHandlerPluginInterface[]
+     * @return list<\Spryker\Zed\OmsExtension\Dependency\Plugin\ReservationPostSaveTerminationAwareStrategyPluginInterface>
      */
-    protected function getReservationHandlerPlugins(Container $container)
+    protected function getReservationPostSaveTerminationAwareStrategyPlugins(): array
     {
         return [
-            new LeadProductReservationHandlerPlugin(),
+            new LeadProductReservationPostSaveTerminationAwareStrategyPlugin(),
         ];
     }
 
     /**
-     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\ReservationAggregationStrategyPluginInterface[]
+     * @return list<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
      */
-    protected function getReservationAggregationStrategyPlugins(): array
+    protected function getOmsReservationAggregationPlugins(): array
     {
         return [
-            new ProductPackagingUnitReservationAggregationStrategyPlugin(),
+            new ProductPackagingUnitOmsReservationAggregationPlugin(),
         ];
     }
 }
@@ -761,9 +736,8 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 namespace Pyz\Zed\Sales;
 
 use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
-use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales\AmountLeadProductHydrateOrderPlugin;
+use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Checkout\PackagingUnitSplittableItemTransformerStrategyPlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales\AmountLeadProductOrderItemExpanderPlugin;
-use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales\AmountSalesUnitHydrateOrderPlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales\AmountSalesUnitOrderItemExpanderPlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension\AmountSalesUnitOrderItemExpanderPreSavePlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension\ProductPackagingUnitOrderItemExpanderPreSavePlugin;
@@ -771,20 +745,9 @@ use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\SalesExtension\Product
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Sales\Dependency\Plugin\HydrateOrderPluginInterface[]
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface>
      */
-    protected function getOrderHydrationPlugins()
-    {
-        return [
-            new AmountLeadProductHydrateOrderPlugin(),
-            new AmountSalesUnitHydrateOrderPlugin(),
-        ];
-    }
-
-    /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface[]
-     */
-    protected function getOrderItemExpanderPreSavePlugins()
+    protected function getOrderItemExpanderPreSavePlugins(): array
     {
         return [
             new ProductPackagingUnitOrderItemExpanderPreSavePlugin(),
@@ -793,13 +756,23 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
      */
     protected function getOrderItemExpanderPlugins(): array
     {
         return [
             new AmountLeadProductOrderItemExpanderPlugin(),
             new AmountSalesUnitOrderItemExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\ItemTransformerStrategyPluginInterface>
+     */
+    public function getItemTransformerStrategyPlugins(): array
+    {
+        return [
+            new PackagingUnitSplittableItemTransformerStrategyPlugin(),
         ];
     }
 }
@@ -821,9 +794,9 @@ class StockDependencyProvider extends SprykerStockDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Stock\Dependency\Plugin\StockUpdateHandlerPluginInterface[]
+     * @return list<\Spryker\Zed\Stock\Dependency\Plugin\StockUpdateHandlerPluginInterface>
      */
-    protected function getStockUpdateHandlerPlugins(Container $container)
+    protected function getStockUpdateHandlerPlugins(Container $container): array
     {
         return [
             new LeadProductStockUpdateHandlerPlugin(),
@@ -845,9 +818,9 @@ use Spryker\Client\ProductPackagingUnit\Plugin\CartExtension\ProductPackagingUni
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
-     * @return \Spryker\Client\CartExtension\Dependency\Plugin\CartChangeRequestExpanderPluginInterface[]
+     * @return list<\Spryker\Client\CartExtension\Dependency\Plugin\CartChangeRequestExpanderPluginInterface>
      */
-    protected function getAddItemsRequestExpanderPlugins()
+    protected function getAddItemsRequestExpanderPlugins(): array
     {
         return [
             new ProductPackagingUnitAmountCartChangeRequestExpanderPlugin(),
@@ -869,12 +842,36 @@ use Spryker\Client\ProductPackagingUnit\Plugin\PersistentCartExtension\ProductPa
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
     /**
-     * @return \Spryker\Client\PersistentCartExtension\Dependency\Plugin\PersistentCartChangeExpanderPluginInterface[]
+     * @return list<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\PersistentCartChangeExpanderPluginInterface>
      */
     protected function getChangeRequestExtendPlugins(): array
     {
         return [
             new ProductPackagingUnitAmountPersistentCartChangeExpanderPlugin(), #ProductPackagingUnit
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/PickingList/PickingListDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\PickingList;
+
+use Spryker\Zed\PickingList\PickingListDependencyProvider as SprykerPickingListDependencyProvider;
+use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PickingList\ProductPackagingUnitPickingListCollectionExpanderPlugin;
+
+class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\PickingListExtension\Dependency\Plugin\PickingListCollectionExpanderPluginInterface>
+     */
+    protected function getPickingListCollectionExpanderPlugins(): array
+    {
+        return [
+            new ProductPackagingUnitPickingListCollectionExpanderPlugin(),
         ];
     }
 }
@@ -926,6 +923,12 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 
 {% endinfo_block %}
 
+{% info_block warningBox "Verification" %}
+
+Make sure that picking lists from `PickingListFacade::getPickingListCollection()` results contains packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
+
+{% endinfo_block %}
+
 
 ## Install feature frontend
 
@@ -933,10 +936,10 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
+| NAME                    | VERSION          |
+|-------------------------|------------------|
 | Spryker Core E-commerce | {{page.version}} |
-| Measurement Units | {{page.version}} |
+| Measurement Units       | {{page.version}} |
 | Non-splittable Products | {{page.version}} |
 
 ### 1) Install the required modules using Composer
@@ -951,8 +954,8 @@ composer require spryker-feature/packaging-units: "{{page.version}}" --update-wi
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
+| MODULE                     | EXPECTED DIRECTORY                                |
+|----------------------------|---------------------------------------------------|
 | ProductPackagingUnitWidget | vendor/spryker-shop/product-packaging-unit-widget |
 
 {% endinfo_block %}
@@ -1013,8 +1016,8 @@ Make sure that the configured data in the database has been added to the `spy_gl
 
 Enable the following global widget(s):
 
-| WIDGET | DESCRIPTION | NAMESPACE |
-| --- | --- | --- |
+| WIDGET                     | DESCRIPTION                                                 | NAMESPACE                                          |
+|----------------------------|-------------------------------------------------------------|----------------------------------------------------|
 | ProductPackagingUnitWidget | Displays product packaging options for quantity and amount. | SprykerShop\Yves\ProductPackagingUnitWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -1030,7 +1033,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return list<string>
      */
     protected function getGlobalWidgets(): array
     {
@@ -1043,9 +1046,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 `ProductPackagingUnitWidget` uses Javascript for some functionality:
 
-|Functionality|Path|
-|--- |--- |
-|Controls base unit => sales unit calculationsApplies product quantity and amount restrictions on sales unit levelOffers recommendation when invalid quantity or amount is selectedMaintains stock-based quantity, amount and sales unit information for posting|`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`|
+| Functionality                                                                                                                                                                                                                                                   | Path                                                                                                                                                                                                        |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Controls base unit => sales unit calculationsApplies product quantity and amount restrictions on sales unit levelOffers recommendation when invalid quantity or amount is selectedMaintains stock-based quantity, amount and sales unit information for posting | `vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts` |
 
 
 Run the following command to enable Javascript and CSS changes:
@@ -1061,3 +1064,35 @@ console frontend:yves:build
 - Check if the `amount` field appears correctly with measurement unit information on the previous Orders page.
 
 {% endinfo_block %}
+
+### 4) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                           | DESCRIPTION                                                                                                    | PREREQUISITES | NAMESPACE                                                     |
+|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
+| QuickOrderItemDefaultPackagingUnitExpanderPlugin | Expands `ItemTransfer` with packaging unit data if available using product abstract ID and product concrete ID |               | SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder |
+
+**src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\QuickOrderPage;
+
+use SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder\QuickOrderItemDefaultPackagingUnitExpanderPlugin;
+use SprykerShop\Yves\QuickOrderPage\QuickOrderPageDependencyProvider as SprykerQuickOrderPageDependencyProvider;
+
+class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
+{
+    /**
+     * @return list<\SprykerShop\Yves\QuickOrderPageExtension\Dependency\Plugin\QuickOrderItemExpanderPluginInterface>
+     */
+    protected function getQuickOrderItemTransferExpanderPlugins(): array
+    {
+        return [
+            new QuickOrderItemDefaultPackagingUnitExpanderPlugin(),
+        ];
+    }
+}
+```

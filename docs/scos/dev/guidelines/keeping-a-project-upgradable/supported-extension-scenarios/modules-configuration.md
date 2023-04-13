@@ -13,13 +13,13 @@ related:
 ---
 
 
-[Manifests](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#follow-the-upgradability-best-practices) support changes in a module's configuration files.
+This document explains how manifests support changes in the configuration files of modules. [Manifests](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#follow-the-upgradability-best-practices) support changes in a module's configuration files.
 
 Manifests support all scalar types (bool, int, float, string), the compound type array, and the special type, null.
 
 Manifests do not support compound type objects, or callable, iterable and special type resources.
 
-Manifest only add values to configuration files. Manifests **will not remove** values from project configuration. 
+Manifest only add values to configuration files. Manifests *will not remove* values from project configuration. 
 
 ## Basic scalar values as the return
 

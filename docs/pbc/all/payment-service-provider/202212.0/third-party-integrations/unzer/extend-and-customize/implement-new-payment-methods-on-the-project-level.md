@@ -11,8 +11,8 @@ This document shows how to implement Unzer payment types, which are not currentl
 
 Before implementing the Unzer payment method, make sure to check and fulfill the following preconditions:
 
-* [Install and configure Unzer](/docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html).
-* [Integrate Unzer](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)
+* [Install and configure Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/unzer/version}}/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html).
+* [Integrate Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/unzer/install-unzer/integrate-unzer.html)
 
 
 ## Implementation
@@ -164,7 +164,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     title: 'checkout.step.payment.title' | trans,
     customForms: {
         ...
-        
+
         'Unzer/views/pay-pal': ['pay-pal', 'unzer'],
         },
 } %}
@@ -283,7 +283,7 @@ class PayPalSubform extends AbstractUnzerSubForm
             'data_class' => UnzerPaymentTransfer::class,
         ])->setRequired(static::OPTIONS_FIELD_NAME);
     }
-} 
+}
 ```
 
 </details>
@@ -362,14 +362,14 @@ use Pyz\Yves\Unzer\Plugin\StepEngine\UnzerPayPalSubFormPlugin;
         $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $paymentMethodHandler) {
             ...
             $paymentMethodHandler->add(new UnzerStepHandlerPlugin(), UnzerConfig::PAYMENT_METHOD_KEY_PAYPAL);
-            
+
             return $paymentMethodHandler;
         });
     }
-    
+
     ...
-    
-    
+
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -426,7 +426,7 @@ class UnzerFactory extends EcoUnzerFactory
             $this->getQuoteClient(),
         );
     }
-} 
+}
 ```
 
 </details>
@@ -728,5 +728,3 @@ The following are examples of the shipment state changes when the order paid wit
 ![back-office-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/back-office-3.jpeg)
 
 </details>
-
-

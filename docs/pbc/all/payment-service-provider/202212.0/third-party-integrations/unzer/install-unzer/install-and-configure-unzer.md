@@ -5,10 +5,10 @@ last_updated: Jun 22, 2022
 template: feature-integration-guide-template
 related:
 - title: Integrate Unzer
-  link: docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html
+  link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/unzer/install-unzer/integrate-unzer.html
 ---
 
-This document describes how to install and configure the Unzer module to [integrate the Unzer module](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html) into your project.
+This document describes how to install and configure the Unzer module to [integrate the Unzer module](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/unzer/install-unzer/integrate-unzer.html) into your project.
 
 ## Overview
 

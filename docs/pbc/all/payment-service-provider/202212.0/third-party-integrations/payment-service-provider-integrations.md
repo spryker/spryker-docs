@@ -18,4 +18,4 @@ Spryker offers the following Payment Service Providers (PSP) integrations:
 | Optile | No | No |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html) | No | Yes |
 | Ratepay | No | No |
-| [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) | Yes | No |
+| [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/unzer/unzer.html) | Yes | No |

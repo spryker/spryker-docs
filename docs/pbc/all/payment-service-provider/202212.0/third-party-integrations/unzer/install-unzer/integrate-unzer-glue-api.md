@@ -5,7 +5,7 @@ last_updated: Aug 11, 2022
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) Glue API into a Spryker project.
+This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/unzer/unzer.html) Glue API into a Spryker project.
 
 ## Install feature core
 
@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME               | INTEGRATION GUIDE                                                                                                                                 |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unzer              | [Unzer feature integration](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)                                     |
+| Unzer              | [Unzer feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/unzer/install-unzer/integrate-unzer.html)                                     |
 | Glue API: Checkout | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-checkout-feature-integration.html) |
 | Glue API: Payments | [Glue API - Payments feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html) |
 

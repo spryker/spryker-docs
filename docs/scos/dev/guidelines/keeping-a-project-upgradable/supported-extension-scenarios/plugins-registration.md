@@ -61,7 +61,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
-For ingle plugin registration with the wrap method call, use the following:
+For single plugin registration with the wrap method call, use the following:
 ```php
 use Spryker\Service\FileSystemExtension\Dependency\Plugin\FileSystemReaderPluginInterface;
 use Spryker\Service\Flysystem\Plugin\FileSystem\FileSystemReaderPlugin;

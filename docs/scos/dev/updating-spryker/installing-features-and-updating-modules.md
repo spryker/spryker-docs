@@ -32,7 +32,7 @@ For *major* module version updates or installation of *new packages*, follow the
 ```BASH
 php -d memory_limit=-1 composer.phar require "spryker/price:^5.0.0"
 ```
-If no extra dependencies are found, `composer.json` is updated respectively. Otherwise, see [Update is not possible](#update-is-not-possible).
+If no extra dependencies are found, `composer.json` is updated respectively. Otherwise, see [Update is not possible](/docs/scos/dev/updating-spryker/troubleshooting-updates.html).
 
 2. Follow the upgrade steps of the needed module version in the upgrade guide. Following the example with the price module, see [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
@@ -55,7 +55,7 @@ Sometimes, you may want to install a feature of a version higher than that of yo
 ...
 ```
 
-A new feature may require a higher major version of a specific module. In this case, do a [single module update](#major-version-updates-and-new-packages-installation).
+A new feature may require a higher major version of a specific module. In this case, do a [single module update](#update-to-a-major-versions-and-install-new-packages).
 
 You can learn about new Spryker features from the [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). Not to miss new release notes, we recommend [subscribing to our release newsletter](/docs/scos/user/intro-to-spryker/releases/releases.html).
 

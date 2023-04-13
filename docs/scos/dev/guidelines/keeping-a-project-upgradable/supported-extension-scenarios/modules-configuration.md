@@ -29,9 +29,7 @@ Manifests fully support 4 PHP data types:
 * float (floating-point number)
 * string
 
-Manifests also support the usage of constants and have built in basic support for constant concatenation.
-
-For the method to return a string, use the following:
+For the method to return a string, use the following example:
 
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
@@ -45,6 +43,8 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
+
+Manifests also support the usage of constants and have built in basic support for constant concatenation.
 
 For the method to return a string with a constant, use the following:
 

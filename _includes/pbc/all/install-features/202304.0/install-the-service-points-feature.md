@@ -271,7 +271,7 @@ console data:import glossary
 
 ### 6) Set up behavior
 
-4. To enable the Backend API, register the plugin:
+1. To enable the Backend API, register the plugin:
 
 | PLUGIN                             | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                                                            |
 |------------------------------------|------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|

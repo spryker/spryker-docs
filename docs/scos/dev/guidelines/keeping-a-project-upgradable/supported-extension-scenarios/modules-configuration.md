@@ -103,10 +103,6 @@ class DevelopmentConfig extends SprykerDevelopmentConfig
 }
 ```
 
-
-
-
-
 There's a multitude of ways to view arrays as the return. Manifests support the following array types:
 
 ### Indexed array as the return
@@ -192,9 +188,6 @@ Inside of an array merge function call you can use the following:
 * parent method call
 * indexed arrays
 * associative arrays
-* multidimensional arrays
-* variables
-
 For the method to return an associative array (with constants, parent method call and array merging) use the following:
 
 ```php
@@ -213,7 +206,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
     }
 }
 ```
-
+* multidimensional arrays
 Multidimensional arrays (up to 2 levels) are also supported here, but to use them the wrapped function *must* be used.
 
 For the method to return a multidimensional array (with constants, wrap methods call and array merging) use the following:
@@ -248,6 +241,10 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
+* variables
+
+
+
 
 ## Null as the return
 

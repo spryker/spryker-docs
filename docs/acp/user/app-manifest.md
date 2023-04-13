@@ -236,15 +236,15 @@ For the manifest, make sure to follow these conditions:
 
 ```json
 "dialogs": {
-    "onSave": {
-        "type": "confirmation",
-        "title": "Confirmation dialog title",
-        "content": "Confirmation dialog content",
-        "buttons": {
-            "ok": "Save",
-            "cancel": "Cancel"
-        }
+  "onSave": {
+    "type": "confirmation",
+    "title": "Confirmation dialog title",
+    "content": "Confirmation dialog content",
+    "buttons": {
+      "ok": "Save",
+      "cancel": "Cancel"
     }
+  }
 }
 ```
 </details>

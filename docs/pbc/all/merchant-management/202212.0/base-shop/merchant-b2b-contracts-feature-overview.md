@@ -32,7 +32,7 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 {% wistia aowgi1c6k1 960 720 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -41,7 +41,7 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 | [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)  |
 | [Edit merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

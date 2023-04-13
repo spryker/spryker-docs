@@ -33,7 +33,7 @@ Setting up company structure:
 {% wistia qkdgkeannb 960 720 %}
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

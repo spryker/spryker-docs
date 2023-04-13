@@ -76,7 +76,7 @@ Hydrating payment methods for an order
 
   -->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

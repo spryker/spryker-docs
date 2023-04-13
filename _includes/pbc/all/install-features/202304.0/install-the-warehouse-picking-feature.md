@@ -11,12 +11,13 @@ Follow the steps below to install the Warehouse picking feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME                                    | VERSION          | INTEGRATION GUIDE                                                                                                                                                                  |
-|-----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse User Management               | {{site.version}} | [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html)                     |
-| Order Management + Inventory Management | {{site.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-order-management-and-inventory-management-feature.html) |
-| Shipment                                | {{site.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                                       |
-| Picker User Login                       | {{site.version}} | [Install the Picker User Login feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-picker-user-login-feature.html)                         |
+| NAME                                         | VERSION          | INTEGRATION GUIDE                                                                                                                                                                  |
+|----------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Warehouse User Management                    | {{site.version}} | [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html)                     |
+| Order Management + Inventory Management      | {{site.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-order-management-and-inventory-management-feature.html) |
+| Shipment                                     | {{site.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                                       |
+| Push Notification                            | {{site.version}} | [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-push-notification-feature.md.html)                                  |
+| Spryker core backoofice (check the previous) |                  |                                                                                                                                                                                    |
 
 ### 1) Install the required modules using Composer
 
@@ -28,11 +29,13 @@ composer require spryker-feature/warehouse-picking: "{{site.version}}" --update-
 
 Make sure that the following modules have been installed:
 
-| MODULE                 | EXPECTED DIRECTORY                       |
-|------------------------|------------------------------------------|
-| PickingList            | vendor/spryker/picking-list              |
-| PickingListExtension   | vendor/spryker/picking-list-extension    |
-| PickingListsBackendApi | vendor/spryker/picking-lists-backend-api |
+| MODULE                          | EXPECTED DIRECTORY                                 |
+|---------------------------------|----------------------------------------------------|
+| PickingList                     | vendor/spryker/picking-list                        |
+| PickingListExtension            | vendor/spryker/picking-list-extension              |
+| PickingListPushNotification     | vendor/spryker/picking-lists-push-notification     |
+| PickingListsBackendApi          | vendor/spryker/picking-lists-backend-api           |
+| PickingListsBackendApiExtension | vendor/spryker/picking-lists-backend-api-extension |
 
 Also, we offer the demo multi-shipment picking strategy. To use it, install the following module:
 
@@ -70,28 +73,29 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been triggered in transfer objects:
 
-| TRANSFER                        | TYPE     | EVENT   | PATH                                                          |
-|---------------------------------|----------|---------|---------------------------------------------------------------|
-| PickingListCriteria             | class    | created | src/Generated/Shared/Transfer/PickingListCriteria             |
-| PickingListConditions           | class    | created | src/Generated/Shared/Transfer/PickingListConditions           |
-| PickingListCollection           | class    | created | src/Generated/Shared/Transfer/PickingListCollection           |
-| PickingList                     | class    | created | src/Generated/Shared/Transfer/PickingList                     |
-| PickingListItem                 | class    | created | src/Generated/Shared/Transfer/PickingListItem                 |
-| PickingListCollectionRequest    | class    | created | src/Generated/Shared/Transfer/PickingListCollectionRequest    |
-| PickingListCollectionResponse   | class    | created | src/Generated/Shared/Transfer/PickingListCollectionResponse   |
-| GeneratePickingListsRequest     | class    | created | src/Generated/Shared/Transfer/GeneratePickingListsRequest     |
-| PickingListOrderItemGroup       | class    | created | src/Generated/Shared/Transfer/PickingListOrderItemGroup       |
-| StockCollection                 | class    | created | src/Generated/Shared/Transfer/StockCollection                 |
-| StockConditions                 | class    | created | src/Generated/Shared/Transfer/StockConditions                 |
-| ApiPickingListRequestAttributes | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes |
-| ApiPickingListAttributes        | class    | created | src/Generated/Shared/Transfer/ApiPickingListAttributes        |
-| ApiPickingListItemAttributes    | class    | created | src/Generated/Shared/Transfer/ApiPickingListItemAttributes    |
-| ApiPickingListRequestAttributes | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes |
-| ApiPickingListRequestAttributes | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes |
-| ApiPickingListRequestAttributes | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes |
-| Item.uuid                       | property | created | src/Generated/Shared/Transfer/Item                            |
-| User.uuid                       | property | created | src/Generated/Shared/Transfer/User                            |
-| Stock.pickingListStrategy       | property | created | src/Generated/Shared/Transfer/Stock                           |
+| TRANSFER                                       | TYPE     | EVENT   | PATH                                                            |
+|------------------------------------------------|----------|---------|-----------------------------------------------------------------|
+| PickingListCriteria                            | class    | created | src/Generated/Shared/Transfer/PickingListCriteria               |
+| PickingListConditions                          | class    | created | src/Generated/Shared/Transfer/PickingListConditions             |
+| PickingListCollection                          | class    | created | src/Generated/Shared/Transfer/PickingListCollection             |
+| PickingList                                    | class    | created | src/Generated/Shared/Transfer/PickingList                       |
+| PickingListItem                                | class    | created | src/Generated/Shared/Transfer/PickingListItem                   |
+| PickingListCollectionRequest                   | class    | created | src/Generated/Shared/Transfer/PickingListCollectionRequest      |
+| PickingListCollectionResponse                  | class    | created | src/Generated/Shared/Transfer/PickingListCollectionResponse     |
+| GeneratePickingListsRequest                    | class    | created | src/Generated/Shared/Transfer/GeneratePickingListsRequest       |
+| PickingListOrderItemGroup                      | class    | created | src/Generated/Shared/Transfer/PickingListOrderItemGroup         |
+| StockCollection                                | class    | created | src/Generated/Shared/Transfer/StockCollection                   |
+| StockConditions                                | class    | created | src/Generated/Shared/Transfer/StockConditions                   |
+| ApiPickingListRequestAttributes                | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes   |
+| ApiPickingListAttributes                       | class    | created | src/Generated/Shared/Transfer/ApiPickingListAttributes          |
+| ApiPickingListItemAttributes                   | class    | created | src/Generated/Shared/Transfer/ApiPickingListItemAttributes      |
+| ApiPickingListRequestAttributes                | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes   |
+| ApiPickingListRequestAttributes                | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes   |
+| ApiPickingListRequestAttributes                | class    | created | src/Generated/Shared/Transfer/ApiPickingListRequestAttributes   |
+| Item.uuid                                      | property | created | src/Generated/Shared/Transfer/Item                              |
+| User.uuid                                      | property | created | src/Generated/Shared/Transfer/User                              |
+| Stock.pickingListStrategy                      | property | created | src/Generated/Shared/Transfer/Stock                             |
+| PushNotificationCollectionRequest.pickingLists | property | created | src/Generated/Shared/Transfer/PushNotificationCollectionRequest |
 
 {% endinfo_block %}
 
@@ -243,6 +247,57 @@ Make sure that the OMS transition diagram shows the expected transitions:
 
 {% endinfo_block %}
 
+3. Configure the Push Notification provider:
+
+**src/Pyz/Zed/PickingListPushNotification/PickingListPushNotificationConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\PickingListPushNotification;
+
+use Spryker\Zed\PickingListPushNotification\PickingListPushNotificationConfig as SprykerPickingListPushNotificationConfig;
+
+class PickingListPushNotificationConfig extends SprykerPickingListPushNotificationConfig
+{
+    /**
+     * @uses \Spryker\Zed\PushNotificationWebPushPhp\PushNotificationWebPushPhpConfig::WEB_PUSH_PHP_PROVIDER_NAME
+     *
+     * @var string
+     */
+    protected const PUSH_NOTIFICATION_PROVIDER_NAME = 'web-push-php';
+
+    /**
+     * @return string
+     */
+    public function getPushNotificationProviderName(): string
+    {
+        return static::PUSH_NOTIFICATION_PROVIDER_NAME;
+    }
+}
+```
+
+4. Configure the `User` module to execute post save plugins: // TODO: check if this one is correct
+
+**src/Pyz/Zed/User/UserConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\User;
+
+use Spryker\Zed\User\UserConfig as SprykerUserConfig;
+
+class UserConfig extends SprykerUserConfig
+{
+    /**
+     * @var bool
+     */
+    protected const IS_POST_SAVE_PLUGINS_ENABLED_AFTER_USER_STATUS_CHANGE = true;
+
+}
+```
+
 ### 4) Import warehouse picking list strategies
 
 1. Prepare your data according to your requirements using our demo data:
@@ -328,6 +383,8 @@ picking_list.validation.picking_list.validation.picking_list_duplicated,PickingL
 picking_list.validation.picking_list.validation.picking_list_duplicated,PickingList dupliziert.,de_DE
 picking_list.validation.picking_list.validation.picking_list_item_duplicated,PickingListItem duplicated.,en_US
 picking_list.validation.picking_list.validation.picking_list_item_duplicated,PickingListItem dupliziert.,de_DE
+picking_list_push_notification.validation.warehouse_entity_not_found,Warehouse not found.,en_US
+picking_list_push_notification.validation.warehouse_entity_not_found,Lager nicht gefunden.,de_DE
 ```
 
 2. Import data:
@@ -340,12 +397,15 @@ console data:import glossary
 
 1. Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                         | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                        |
-|------------------------------------------------|--------------------------------------------------------------------------------------|---------------|--------------------------------------------------|
-| GeneratePickingListsCommandByOrderPlugin       | Generates the picking lists based on warehouse strategy.                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
-| IsPickingFinishedConditionPlugin               | Checks if all picking lists are finished for the given sales order.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
-| IsPickingListGenerationFinishedConditionPlugin | Checks if picking lists generation is finished for the given sales order.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
-| IsPickingStartedConditionPlugin                | Checks if picking of at least one picking list is started for the given sales order. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms |
+| PLUGIN                                                                                                                                      | SPECIFICATION                                                                                                                   | PREREQUISITES | NAMESPACE                                                                     |
+|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
+| GeneratePickingListsCommandByOrderPlugin                                                                                                    | Generates the picking lists based on warehouse strategy.                                                                        |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingFinishedConditionPlugin                                                                                                            | Checks if all picking lists are finished for the given sales order.                                                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingListGenerationFinishedConditionPlugin                                                                                              | Checks if picking lists generation is finished for the given sales order.                                                       |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingStartedConditionPlugin                                                                                                             | Checks if picking of at least one picking list is started for the given sales order.                                            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| PushNotificationPickingListPostCreatePlugin                                                                                                 | Creates a push notification after creating a picking list.                                                                      |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
+| PushNotificationPickingListPostUpdatePlugin                                                                                                 | Creates a push notification after updating a picking list.                                                                      |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
+| WarehouseUserPushNotificationSubscriptionValidatorPlugin                                                                                    | Validates whether the user has a warehouse assignment.                                                                          |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
 
 **\Pyz\Zed\Oms\OmsDependencyProvider.php**
 
@@ -396,6 +456,115 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
         return $container;
     }
 }
+```
+
+**src/Pyz/Glue/SalesOrdersBackendApi/SalesOrdersBackendApiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\SalesOrdersBackendApi;
+
+use Spryker\Glue\CartNotesBackendApi\Plugin\SalesOrdersBackendApi\CartNoteApiOrdersAttributesMapperPlugin;
+use Spryker\Glue\SalesOrdersBackendApi\SalesOrdersBackendApiDependencyProvider as SprykerSalesOrdersBackendApiDependencyProvider;
+
+class SalesOrdersBackendApiDependencyProvider extends SprykerSalesOrdersBackendApiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Glue\SalesOrdersBackendApiExtension\Dependency\Plugin\ApiOrdersAttributesMapperPluginInterface>
+     */
+    protected function getApiOrdersAttributesMapperPlugins(): array
+    {
+        return [
+            new CartNoteApiOrdersAttributesMapperPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/PickingList/PickingListDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\PickingList;
+
+use Spryker\Zed\PickingList\PickingListDependencyProvider as SprykerPickingListDependencyProvider;
+use Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList\PushNotificationPickingListPostCreatePlugin;
+use Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList\PushNotificationPickingListPostUpdatePlugin;
+
+class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\PickingListExtension\Dependency\Plugin\PickingListPostCreatePluginInterface>
+     */
+    protected function getPickingListPostCreatePlugins(): array
+    {
+        return [
+            new PushNotificationPickingListPostCreatePlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\PickingListExtension\Dependency\Plugin\PickingListPostUpdatePluginInterface>
+     */
+    protected function getPickingListPostUpdatePlugins(): array
+    {
+        return [
+            new PushNotificationPickingListPostUpdatePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/PushNotification/PushNotificationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\PushNotification;
+
+use Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification\WarehouseUserPushNotificationSubscriptionValidatorPlugin;
+use Spryker\Zed\PushNotification\PushNotificationDependencyProvider as SprykerPushNotificationDependencyProvider;
+
+class PushNotificationDependencyProvider extends SprykerPushNotificationDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\PushNotificationExtension\Dependency\Plugin\PushNotificationSubscriptionValidatorPluginInterface>
+     */
+    protected function getPushNotificationSubscriptionValidatorPlugins(): array
+    {
+        return [
+            new WarehouseUserPushNotificationSubscriptionValidatorPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/User/UserDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\User;
+
+use Spryker\Zed\PickingList\Communication\Plugin\User\UnassignPickingListUserPostSavePlugin;
+use Spryker\Zed\User\UserDependencyProvider as SprykerUserDependencyProvider;
+
+class UserDependencyProvider extends SprykerUserDependencyProvider
+{
+
+    /**
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserPostSavePluginInterface>
+     */
+    protected function getPostSavePlugins(): array
+    {
+        return [
+            new UnassignPickingListUserPostSavePlugin(),
+        ];
+    }
+}
+
 ```
 
 2. Enable the demo multi-shipment picking strategy plugin:
@@ -515,7 +684,6 @@ Make sure that you can send the following requests:
 
 * To get a single picking list for a warehouse user, send the request: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 
-
 * To start a pick-up operation for a warehouse user, send the request:
 
 `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`
@@ -562,4 +730,13 @@ Make sure that you can send the following requests:
 }
 ```
 
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+1. Make an order with a products from the warehouse with `multi-shipment` picking strategy.
+2. Log to the Back Office and navigate to **Sales&nbsp;<span aria-label="and then">></span> Orders&nbsp;**. The **Orders** page opens.
+3. Select your order and click the **View** button.
+4. Wait until the order item status became **Ready for picking**.
+5. Check the `spy_push_notification` database table to ensure that a push notification was created.
 {% endinfo_block %}

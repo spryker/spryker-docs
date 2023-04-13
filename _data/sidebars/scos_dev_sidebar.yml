@@ -2634,6 +2634,10 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/spryker-in-docker/spryker-in-docker-feature-integration-guides.html
         include_versions:
         - "201907.0"
+    - title: Warehouse Picking
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
+      include_versions:
+      - "202304.0"
     - title: Warehouse User Management
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-user-management-feature.html
       include_versions:

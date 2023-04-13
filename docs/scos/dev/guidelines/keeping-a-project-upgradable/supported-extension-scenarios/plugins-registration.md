@@ -16,7 +16,7 @@ Manifests support plugins registration in the dependency provider and plugins re
 
 ## Plugins registration in the configuration file
 
-For single plugin registration in the global configuration file (e.g. config_default.php), use the following:
+The following is an example of how to have single plugin registration in the global configuration file (e.g. config_default.php):
 
 ```php
 <?php
@@ -41,7 +41,7 @@ Plugins can also be registered in the dependency provider file.
 
 Inside of a dependency provider call, you can also register the plugin directly in the method or through another wrap method, with and without constructor arguments. Manifests also support constant concatenation inside of the constructor arguments.
 
-For single plugin registration with arguments in constructor, use the following:
+The following is an example of how to have single plugin registration with arguments in constructor:
 
 ```php
 use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
@@ -61,7 +61,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
-For single plugin registration with the wrap method call, use the following:
+The following is an example of how to have single plugin registration with the wrap method call:
+
 ```php
 use Spryker\Service\FileSystemExtension\Dependency\Plugin\FileSystemReaderPluginInterface;
 use Spryker\Service\Flysystem\Plugin\FileSystem\FileSystemReaderPlugin;
@@ -94,7 +95,7 @@ If the plugin contains the ‘after' key and defined plugins in ‘after’ para
 
 If the plugin contains the ‘before' key and defined plugins in ‘before’ parameter don’t exist on the project side, the plugin will be added as the first plugin in plugin stack.
 
-For multiple plugins registration in an indexed array, use the following:
+The following is an example of how to have multiple plugins registration in an indexed array:
 
 ```php
 use Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
@@ -114,7 +115,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 }
 ```
 
-For multiple plugins registration in an indexed array with restrictions on the order of the plugins, use the following:
+The following is an example of how to have multiple plugins registration in an indexed array with restrictions on the order of the plugins:
 
 ```php
 use Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage\MerchantProductProductOfferReferenceStrategyPlugin;
@@ -145,7 +146,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 }
 ```
 
-For multiple plugins registration in an indexed array (BC reasons only), use the following:
+The following is an example of how to have multiple plugins registration in an indexed array (BC reasons only):
 
 ```php
 use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;
@@ -173,7 +174,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-For multiple console commands registration with a constant concatenated constructor argument, use the following:
+The following is an example of how to have multiple console commands registration with a constant concatenated constructor argument:
 
 ```php
 use Pyz\Zed\DataImport\DataImportConfig;
@@ -206,7 +207,7 @@ Manifests fully support multiple plugins registration in associative array. As a
 * constant
 * function call with arguments
 
-For multiple plugins registration in an indexed array, use the following:
+The following is an example of how to have multiple plugins registration in an indexed array:
 
 ```php
 use Spryker\Shared\Config\Config;
@@ -231,7 +232,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-For multiple plugins registration in an indexed array, use the following:
+The following is an example of how to have multiple plugins registration in an indexed array:
 
 ```php
 use Spryker\Shared\Config\Config;
@@ -279,7 +280,8 @@ protected function getPlugins(): array
 }
 ```
 
-For multiple plugins registration in a multidimensional array, use the following:
+The following is an example of how to have multiple plugins registration in a multidimensional array:
+
 ```php
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryKey\GlossaryDeletePublisherPlugin as GlossaryKeyDeletePublisherPlugin;
@@ -303,7 +305,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-For multiple plugins registration in a multidimensional array, use the following:
+The following is an example of how to have multiple plugins registration in a multidimensional array:
+
 ```php
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
 use Spryker\Zed\GlossaryStorage\Communication\Plugin\Publisher\GlossaryKey\GlossaryDeletePublisherPlugin as GlossaryKeyDeletePublisherPlugin;
@@ -333,7 +336,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 Manifests fully support the possibility of adding plugins through container extension. Order of the plugins is *not supported* inside of the container extension. It means that before and after are *not supported* in this case.
 
-For multiple plugins registration through container extension, use the following:
+The following is an example of how to have multiple plugins registration through container extension:
 
 ```php
 use Generated\Shared\Transfer\PaymentTransfer;
@@ -378,7 +381,8 @@ Inside of array merge function call you can use:
 
 Multidimensional associative arrays are supported inside of the array_merge() up to 2 levels, but for its usage the wrapped functions MUST be used.
 
-For multiple plugins registration with the merging plugins method call, use the following:
+The following is an example of how to have multiple plugins registration with the merging plugins method call:
+
 ```php
 use Spryker\Shared\GlossaryStorage\GlossaryStorageConfig;
 use Spryker\Shared\PublishAndSynchronizeHealthCheck\PublishAndSynchronizeHealthCheckConfig;

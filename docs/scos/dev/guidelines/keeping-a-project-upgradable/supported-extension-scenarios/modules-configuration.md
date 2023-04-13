@@ -25,7 +25,7 @@ Manifest only add values to configuration files. Manifests *will not remove* val
 
 Manifests fully support 4 PHP data types as the return.
 
-For the method to return a boolean, use the following:
+The following is an example of how to have the method return a boolean:
 
 ```php
 use SprykerShop\Yves\ProductReplacementForWidget\ProductReplacementForWidgetConfig as SprykerShopProductReplacementForWidgetConfig;
@@ -40,7 +40,7 @@ class ProductReplacementForWidgetConfig extends SprykerShopProductReplacementFor
 }
 ```
 
-For the method to return an int, use the following:
+The following is an example of how to have the method return an int:
 
 ```php
 use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
@@ -55,8 +55,7 @@ class CustomerConfig extends SprykerCustomerConfig
 }
 ```
 
-For the method to return a string, use the following example:
-
+The following is an example of how to have the method return a string:
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 
@@ -72,7 +71,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 Manifests also support the usage of constants and have built in basic support for constant concatenation.
 
-For the method to return a string with a constant, use the following:
+The following is an example of how to have the method return a string with a constant:
 
 ```php
 use Pyz\Zed\Synchronization\SynchronizationConfig;
@@ -88,7 +87,7 @@ class ConfigurableBundleStorageConfig extends SprykerConfigurableBundleStorageCo
 }
 ```
 
-For the method to return a string with constant concatenation, use the following:
+The following is an example of how to have the method return a string with constant concatenation:
 
 ```php
 use Spryker\Zed\Development\DevelopmentConfig as SprykerDevelopmentConfig;
@@ -107,7 +106,7 @@ There's a multitude of ways to view arrays as the return. Manifests support the 
 
 ### Indexed array as the return
 
-For the method to return an indexed array, use the following:
+The following is an example of how to have the method return an indexed array:
 
 ```php
 use Spryker\Client\Storage\StorageConfig as SprykerStorageClientConfig;
@@ -129,7 +128,7 @@ class StorageConfig extends SprykerStorageClientConfig
 
 ### Associative array as the return
 
-For the method to return an associative array, use the following:
+The following is an example of how to have the method return an associative array:
 
 ```php
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfigi;
@@ -188,7 +187,8 @@ Inside of an array merge function call you can use the following:
 * parent method call
 * indexed arrays
 * associative arrays
-For the method to return an associative array (with constants, parent method call and array merging) use the following:
+
+The following is an example of how to have the method return an associative array (with constants, parent method call and array merging):
 
 ```php
 use Generated\Shared\Transfer\QuoteTransfer;
@@ -209,7 +209,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
 * multidimensional arrays
 Multidimensional arrays (up to 2 levels) are also supported here, but to use them the wrapped function *must* be used.
 
-For the method to return a multidimensional array (with constants, wrap methods call and array merging) use the following:
+The following is an example of how to have the method return a multidimensional array (with constants, wrap methods call and array merging):
 
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
@@ -248,7 +248,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ## Null as the return
 
-For the method return a null result, use the following:
+The following is an example of how to have the method return a null result:
 
 ```php
 use Spryker\Zed\Api\ApiConfig as SprykerApiConfig;

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-payment-methodcsv
 ---
 
-This document describes the `payment_method.csv` file to configure the [Payment Method](/docs/scos/user/features/{{page.version}}/payments-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `payment_method.csv` file to configure the [Payment Method](/docs/pbc/all/payment-service-provider/{{page.version}}/payments-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

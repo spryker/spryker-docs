@@ -14,7 +14,7 @@ related:
   - title: Payments feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/payments-feature-integration.html
   - title: Payments feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough.html
+    link: docs/pbc/all/payment-service-provider/page.version/payments-feature-overview.html
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Updating payment data

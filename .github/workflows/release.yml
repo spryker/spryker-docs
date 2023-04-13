@@ -1,0 +1,50 @@
+name: Generate Release Notes
+
+on:
+  schedule:
+    - cron: '40 16 13 4 *' # Run at 16:40 UTC on April 13, 2023
+
+jobs:
+  generate_release_notes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.0
+      - run: gem install bundler
+      - run: bundle install
+      - name: Generate release notes
+        uses: docker://dhermes/github-release-notes:0.5.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FROM_TAG: $(date -d '1 month ago' +%Y-%m-%d)
+          TO_TAG: $(date +%Y-%m-%d)
+          CHANGELOG_PATH: CHANGELOG.md
+          AUTHORS: "*"
+          CATEGORIES: |
+            - title: New
+              labels:
+                - new
+            - title: Updated
+              labels:
+                - updated
+          EXCLUDE_LABELS: |
+            - do not merge
+            - dependencies
+            - github_actions
+            - in progress
+            - javascript
+            - new
+            - ruby
+            - small changes
+      - name: Create release
+        uses: actions/create-release@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.sha }}
+          release_name: Release ${{ github.sha }}
+          body: ${{ steps.generate_release_notes.outputs.changelog }}
+          draft: false
+          prerelease: false

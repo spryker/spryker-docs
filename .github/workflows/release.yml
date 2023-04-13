@@ -2,7 +2,7 @@ name: Generate Release Notes
 
 on:
   schedule:
-    - cron: '0 0 1-30 4 *'
+    - cron: '40 16 13 4 *' # Run at 16:40 UTC on April 13, 2023
 
 jobs:
   generate_release_notes:

@@ -46,7 +46,7 @@ Both non-splittable and splittable order items can be refunded in the Back Offic
 
 `refundable amount: sumPriceToPayAggregation - canceledAmount`
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

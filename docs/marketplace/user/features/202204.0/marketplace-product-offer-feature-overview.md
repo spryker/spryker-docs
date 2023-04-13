@@ -167,7 +167,7 @@ Note that the drop-down with merchants is not visible until the product offer is
 * All cart-related B2B features (for example, Quick Order, RFQ, Approval Process) will be supported later.
 * Availability Notification is not supported.
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|

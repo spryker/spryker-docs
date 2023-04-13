@@ -122,7 +122,7 @@ If no store relation is defined for a product relation, it is not displayed on S
 
 Stores are defined when creating or editing a product relation in the Back Office.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

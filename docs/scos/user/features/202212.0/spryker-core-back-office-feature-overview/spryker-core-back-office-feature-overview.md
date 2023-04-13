@@ -55,7 +55,7 @@ The following diagram shows what features are used for both *B2B and B2C* and wh
 
 You can always define what exactly is going to be needed for your specific project.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

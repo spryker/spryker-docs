@@ -10,4 +10,4 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202212.0/marketplace/install-the-marketplace-product-marketplace-product-offer-feature-integration.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-the-marketplace-product-marketplace-product-offer-feature-integration.md -->
+{% include pbc/all/install-features/202212.0/marketplace/install-the-marketplace-product-marketplace-product-offer-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-the-marketplace-product-marketplace-product-offer-feature.md -->

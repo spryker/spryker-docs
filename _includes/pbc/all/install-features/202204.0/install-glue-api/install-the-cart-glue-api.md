@@ -1,22 +1,22 @@
 
 
 
-This document describes how to integrate the [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/cart-feature-overview/cart-feature-overview.html) feature API into a Spryker project.
+This document describes how to integrate the [Cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/cart-feature-overview/cart-feature-overview.html) feature API into a Spryker project.
 
 ## Prerequisites
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                   | VERSION          | INTEGRATION GUIDE                                                                                                                                                |
-|------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Glue API: Product      | {{site.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)          |
-| Cart                   | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html)                                             |
+| NAME   | VERSION | INTEGRATION GUIDE     |
+| ------------------- | ------ | ------------------------ |
+| Glue API: Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Product      | {{page.version}}  | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Cart                   | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                             |
 
 
 ### 1) Install the required modules using Composer
 
-Install the required module:
+Install the required modules:
 
 ```bash
 composer require spryker/carts-rest-api:"^5.22.0" --update-with-dependencies
@@ -39,9 +39,9 @@ Ensure that the following modules have been installed:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate 
-console propel:install 
-console transfer:generate 
+console transfer:generate
+console propel:install
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -99,7 +99,7 @@ Ensure that, in the `spy_quote` table, the `uuid` field is populated for all the
 ```sql
 SELECT COUNT(*) FROM spy_quote WHERE uuid IS NULL;
 ```
-The result is `0 records`. 
+The result is `0 records`.
 
 {% endinfo_block %}
 
@@ -110,7 +110,7 @@ Activate the following plugin:
 | PLUGIN                                   | SPECIFICATION                                                                                                                                            | PREREQUISITES | NAMESPACE                                  |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------|
 | AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource. |               | Spryker\Glue\CartsRestApi\Plugin\Validator |
- 
+
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -216,7 +216,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-There are two cart behavior strategies: single cart and multicart. Unlike the single cart behavior, the multicart one lets you create more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the following table, wire only one plugin into the respective provider. 
+There are two cart behavior strategies: single cart and multicart. Unlike the single cart behavior, the multicart one lets you create more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the following table, wire only one plugin into the respective provider.
 
 {% endinfo_block %}
 
@@ -295,28 +295,28 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 {% info_block warningBox "Verification" %}
- 
+
 Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
-1. [Create one or more carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart).
+1. [Create one or more carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart).
 2. Send the request: `GET https://glue.mysprykershop.com/carts/`.
-3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with.
+3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) with.
 
 Ensure that the `https://glue.mysprykershop.com/guest-carts` endpoint is available:
 
-1. [Create a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart).
+1. [Create a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart).
 2. Send the request: `GET https://glue.mysprykershop.com/carts/`.
 3. Check that the response contains the cart you have created.
 
 Ensure that the `items` resource relationships are registered as a relationship of the `carts` resource:
 
-1. [Add one or more items to the cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+1. [Add one or more items to the cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
 2. Send the request: `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`.
 3. Check that the response contains the relationships to the `items` resource.
 
 Ensure that the `guest-cart-items` resource relationship is registered as a relationship of the `guest-carts` resource:
 
-1. [Add one or more items to the cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
+1. [Add one or more items to the cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
 2 Send the request: `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=guest-cart-items`.
 1. Check that the response contains the relationships to the `guest-cart-items` resource.
 

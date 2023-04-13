@@ -11,7 +11,7 @@ This document describes how to retrieve shipments in orders. For full informatio
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/integrate-the-shipment-glue-api.html)
+* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-glue-api.html)
 * [Glue API: Order Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
 
 ## Retrieve an order
@@ -339,9 +339,9 @@ To retrieve detailed information about an order, send the following request:
 </details>
 
 
-{% include pbc/all/glue-api-guides/retrieve-an-order-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-order-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202204.0/retrieve-an-order-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-an-order-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/retrieve-an-order-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-order-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202204.0/retrieve-an-order-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202204.0/retrieve-an-order-response-attributes-of-included-resources.md -->
 
 
 ## Possible errors

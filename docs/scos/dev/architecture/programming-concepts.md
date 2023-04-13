@@ -107,4 +107,4 @@ Directories:
 ## Next steps
 
 * To find out how data flows are separated in Spryker Commerce OS, see [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html).
-* To learn about application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html).
+* To learn about application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html).

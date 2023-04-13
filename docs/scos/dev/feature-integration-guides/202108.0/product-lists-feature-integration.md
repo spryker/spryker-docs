@@ -491,7 +491,7 @@ Import product lists:
 "pl-008","No Smartwatches","blacklist"
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | product_list_key | mandatory | string (unique) | pl-001 | Unique identifier used to identify a product list. |
 |name|mandatory|string|All computers|Custom product list name used to provide a readable title or sentence of what the list contains. Used only for internal representation.|
@@ -558,7 +558,7 @@ pl-004,smartphones
 pl-008,smartwatches
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | product_list_key | mandatory | string | pl-001 | An existing product list identifier for the assignment. |
 |category_key|mandatory|string|computer|An existing category identifier to be assigned to the product list.|
@@ -655,7 +655,7 @@ pl-007,177_24867659
 pl-007,177_25913296
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | product_list_key | mandatory | string | pl-002 | An existing product list identifier for the assignment. |
 |concrete_sku|mandatory|string|166_30230575|An existing concrete product SKU to assign to the product list.|

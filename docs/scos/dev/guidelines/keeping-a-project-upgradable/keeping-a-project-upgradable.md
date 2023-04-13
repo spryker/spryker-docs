@@ -1,18 +1,15 @@
 ---
 title: Keeping a project upgradable
-description: Tools and guidelines for keeping a project upgradable
+description: Guidelines for keeping a project upgradable
+last_updated: Mar 24, 2023
 template: concept-topic-template
 related:
-  - title: Upgradability guidelines
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
-  - title: Upgrader tool overview
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
-  - title: Run the evaluator tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
-  - title: Running the upgrader tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
-  - title: Define custom prefixes for core entity names
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
+  - title: Plugins registration
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+  - title: Event subscribers registration
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+  - title: Modules configuration
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
 ---
 
 Keeping software up to date is a known concern, especially when it comes to transactional business models with sophisticated requirements.
@@ -35,59 +32,29 @@ To keep your project upgradable, we recommend using the following development st
 * Plug and play
 * Project modules
 
-For more information about the strategies and how they affect upgradability, see [Development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html).
-
+For more information about the strategies and how they affect upgradability, see [Development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html).
 
 ## 2. Follow development guidelines
 
 The best way to resolve compatibility issues is to prevent them. Throughout the development cycle, we recommend following our [Project development guidelines](/docs/scos/dev/guidelines/project-development-guidelines.html).
 
-## 3. Check if project is upgradable using the Evaluator tool
+## 3. Follow the upgradability best practices
 
-The Evaluator tool is part of Spryker SDK that performs a number of checks based on the static code analysis of our tools.
+The Spryker Code Upgrader implements code changes on the project level.
 
-Evaluator provides informative output about your code. If all the checks are successful, the tool returns zero messages.
+Code changes on the project level can be delivered to a customer's projects through manifest files.
+The manifest files cover a list of the ways code changes can be done.
 
-Evaluation example without compliance errors:
+To ensure the successful delivery of Spryker updates, we recommend using the next extension points:
 
-```bash
-Total messages: 0
-```
+* [Plugins registration](/docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html)
+* [Event subscribers registration](/docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html)
+* [Modules configuration](/docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html)
 
-If one or more checks fail, Evaluator returns errors per check.
+{% info_block infoBox "" %}
 
-```bash
-...
-PrivateApi:MethodIsOverridden Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
------------------------------- ----------------------------------------------------------------------------------------------------
-...
-Total messages: 1
+In case of a project using a method to change code that is not covered, expected changes will be skipped during the update process.
 
-```    
+{% endinfo_block %}
 
 
-### Using the evaluator tool
-
-You can use the evaluator tool as follows:
-
-* Analyze project code compliance:
-
-```bash
-analyze:php:code-compliance
-```
-
-* Generate a report about code compliance issues:
-
-```bash
-analyze:php:code-compliance-report
-```
-
-For detailed instructions, see [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
-
-## 4. Resolve the evaluation issues
-
-If Evaluator detects compliance issues, resolve them by using the instructions in [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html).
-
-## 5. Update your project
-
-After passing an evaluation successfully, you can safely take minor and patch updates. If the project is enrolled into PaaS+, the updates will be provided automatically.

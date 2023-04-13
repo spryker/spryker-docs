@@ -6,17 +6,23 @@ template: howto-guide-template
 
 ## Prerequisites
 
-The BazaarVoice app requires the following Spryker modules:
+The Bazaarvoice app requires the following Spryker modules:
 
-* `spryker/asset: ^1.2.0`
+* `spryker/asset: ^1.3.0`
 * `spryker/asset-storage: ^1.1.0`
-* `spryker/message-broker: ^1.0.0`
-* `spryker/message-broker-aws: ^1.0.0`
-* `spryker/message-broker-extension: ^1.0.0`
+* `spryker/message-broker: ^1.3.0`
+* `spryker/message-broker-aws: ^1.3.2`
+* `spryker/message-broker-extension: ^1.1.0`
 * `spryker-shop/asset-widget: ^1.0.0`
+* `spryker-shop/cart-page: ^3.32.0`
 * `spryker-shop/product-detail-page: ^3.17.0`
 * `spryker-shop/product-category-widget: ^1.6.0`
-* `spryker-shop/shop-ui: ^1.59.0`
+* `spryker-shop/shop-ui: ^1.62.0`
+* `spryker-shop/checkout-page: ^3.23.0`
+* `spryker-shop/merchant-page: ^1.1.0` (Marketplace only)
+* `spryker-shop/merchant-profile-widget: ^1.1.0` (Marketplace only)
+* `spryker-shop/merchant-widget: ^1.3.0` (Marketplace only)
+* `spryker-shop/payment-page: ^1.3.0`
 
 ## Integrate Bazaarvoice
 
@@ -64,6 +70,109 @@ Alternatively, you may add the domain to the allowlist from the `config/Shared/c
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
+```
+
+### 3. Add markup to custom templates
+
+The Bazaarvoice PBC takes data on products from the Storefront pages (for example, Product Detail page).
+To get necessary data from the pages, schemas from [Schema.org](https://schema.org/) are used.
+By default, the necessary markups are already available in the Yves templates.
+
+If you have custom templates or make your own frontend, the markups required for the Bazaarvoice PBC must be added according to the tables below.
+
+#### DCC (product catalog collection)
+Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
+
+| SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY |
+|------------------------------|----------------------|
+| product.sku                  | productId            |
+| product.name                 | productName          |
+| product.description          | productDescription   |
+| product.image                | productImageURL      |
+| product.url                  | productPageURL       |
+| product.brand.name           | brandId, brandName   |
+| product.category             | categoryPath         |
+| product.gtin12               | upcs                 |
+| product.inProductGroupWithID | family               |
+
+#### DCC (merchant catalog collection)
+Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+
+| SCHEMA.ORG PROPERTY        | BAZAARVOICE PROPERTY |
+|----------------------------|----------------------|
+| organization.identifier    | productId            |
+| organization.name          | productName          |
+| organization.logo          | productImageURL      |
+
+#### Tracking pixel
+Core templates:
+* `SprykerShop/Yves/PaymentPage/Theme/default/views/payment-success/index.twig`
+* `SprykerShop/Yves/CheckoutPage/Theme/default/views/order-success/order-success.twig`
+* `SprykerShop/Yves/MerchantWidget/Theme/default/views/merchant-meta-schema/merchant-meta-schema.twig` (only for Marketplace)
+
+| SCHEMA.ORG PROPERTY                        | BAZAARVOICE PROPERTY | ONLY FOR MARKETPLACE |
+|--------------------------------------------|----------------------|----------------------|
+| invoice.email                              | email                |                      |
+| invoice.priceCurrency                      | currency             |                      |
+| invoice.identifier                         | orderId              |                      |
+| invoice.total                              | price                |                      |
+| invoice.orderItem.price                    | items.price          |                      |
+| invoice.orderItem.orderQuantity            | items.quantity       |                      |
+| invoice.orderItem.sku                      | items.productId      |                      |
+| invoice.orderItem.name                     | items.name           |                      |
+| invoice.orderItem.offers.seller.name       | items.productId      | *                    |
+| invoice.orderItem.offers.seller.identifier | items.name           | *                    |
+
+#### Ratings and reviews (Product)
+Core templates:
+* `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
+* `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/pdp-review-rating/pdp-review-rating.twig`
+* `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.twig`
+
+Example:
+```html
+<section itemscope itemtype="https://schema.org/Product">
+   <meta itemprop="sku" content="{some_sku}">
+   
+   <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
+      <meta itemprop="ratingValue" content="{rating}">
+      <meta itemprop="bestRating" content="{best_rating}">
+   </section>
+   
+   <section class="review-summary"></section>
+</section>
+```
+
+#### Ratings and reviews (Merchant)
+Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+
+Example:
+```html
+<section itemscope itemtype="https://schema.org/Organization">
+   <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating"></section>
+   
+   <section class="review-summary"></section>
+</section>
+```
+
+#### Inline ratings
+Core templates:
+* `SprykerShop/Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.twig`
+* `SprykerShop/Yves/ProductReviewWidget/Theme/default/views/product-review-display/product-review-display.twig`
+* `SprykerShop/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.twig`
+
+Example:
+```html
+<section itemscope itemtype="https://schema.org/Product">
+   <meta itemprop="sku" content="{some_sku}">
+   
+   <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
+      <meta itemprop="ratingValue" content="{rating}">
+      <meta itemprop="bestRating" content="{best_rating}">
+      
+      <rating-selector></rating-selector>
+   </section>
+</section>
 ```
 
 ## Next steps

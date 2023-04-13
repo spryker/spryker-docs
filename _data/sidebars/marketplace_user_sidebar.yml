@@ -17,6 +17,9 @@ entries:
           - title: Back Office for Marketplace Operator
             url: /docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html
 
+          - title: Merchant onborading
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding.html
+
           - title: Marketplace Storefront
             url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html
 
@@ -28,7 +31,7 @@ entries:
 
           - title: Marketplace B2B Demo Shop
             url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2b-demo-shop.html
-          
+
           - title: Upcoming major module releases
             url: /docs/marketplace/user/intro-to-spryker-marketplace/upcoming-major-module-releases.html
 
@@ -36,7 +39,10 @@ entries:
             nested:
 
             - title: Release notes 202212.0
-              url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202212.0.html
+              url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202212.0/release-notes-202212.0.html
+              nested:
+              - title: Patch releases 202212.0
+                url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202212.0/patch-releases-202212.0.html
 
             - title: Release notes 202211.0
               url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-202211.0.html
@@ -52,6 +58,9 @@ entries:
         nested:
         - title: Marketplace Merchant
           url: /docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
           nested:
 
           - title: Merchant users
@@ -59,23 +68,31 @@ entries:
 
         - title: Merchant Category
           url: /docs/marketplace/user/features/merchant-category-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Merchant Opening Hours
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Marketplace Merchant Custom Prices
           url: /docs/marketplace/user/features/marketplace-merchant-custom-prices-feature-overview.html
           include_versions:
           - "202204.0"
-          
+          - "202212.0"
+
         - title: Marketplace Product
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
 
-        - title: Marketplace Product Approval Process 
+        - title: Marketplace Product Approval Process
           url: /docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html
-          include_versions:       
+          include_versions:
           - "202204.0"
-        
+          - "202212.0"
+
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 
@@ -84,6 +101,8 @@ entries:
 
         - title: Marketplace Inventory Management
           url: /docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
+          include_versions:
+          - "202204.0"
 
         - title: Marketplace Order Management
           url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
@@ -104,9 +123,15 @@ entries:
 
         - title: Marketplace Cart
           url: /docs/marketplace/user/features/marketplace-cart-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Marketplace Return Management
           url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
 
         - title: Marketplace Promotions and Discounts
           url: /docs/marketplace/user/features/marketplace-promotions-and-discounts-feature-overview.html
@@ -116,45 +141,64 @@ entries:
 
         - title: Marketplace Shopping List
           url: /docs/marketplace/user/features/marketplace-shopping-list-feature-overview.html
-          include_versions:       
+          include_versions:
             - "202204.0"
 
         - title: Marketplace Wishlist
           url: /docs/marketplace/user/features/marketplace-wishlist-feature-overview.html
+          include_versions:
+            - "202204.0"          
 
         - title: Marketplace Merchant Portal Product Offer Management
           url: /docs/marketplace/user/features/marketplace-merchant-portal-product-offer-management-feature-overview.html
 
-        
+
       - title: Back Office user guides
+        url: /docs/marketplace/user/back-office-user-guides/back-office-user-guides.html
+        include_versions:
+          - "202212.0"
         nested:
 
         - title: Sales
+          url: /docs/marketplace/user/back-office-user-guides/sales/sales.html
+          include_versions:
+          - "202212.0"
           nested:
 
             - title: Managing marketplace returns
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-marketplace-returns.html
+              include_versions:
+              - "202108.0"
+              - "202204.0"
 
             - title: Managing main merchant orders
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
 
             - title: Managing main merchant returns
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-returns.html
+              include_versions:
+              - "202108.0"
+              - "202204.0"
 
         - title: Catalog
-
+          url: /docs/marketplace/user/back-office-user-guides/catalog/catalog.html
+          include_versions:
+          - "202212.0"
           nested:
 
             - title: Availability
+              url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
               nested:
 
               - title: "Availability: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
 
             - title: Products
+              url: /docs/marketplace/user/back-office-user-guides/catalog/products/products.html
               nested:
 
               - title: Abstract products
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/abstract-products.html
                 nested:
 
                 - title: Creating abstract products
@@ -164,31 +208,44 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html
 
               - title: Concrete products
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
                 nested:
 
                 - title: Creating product variants
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
 
               - title: Managing products
+                url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
+                include_versions:
+                - "202212.0"
                 nested:
 
                 - title: Managing products
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
+                  include_versions:
+                  - "202212.0"
 
-        - title: Product Options
-          nested:
+                - title: Product Options
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/product-options.html
+                  nested:
 
-            - title: Creating product options
-              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
+                    - title: Creating product options
+                      url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
 
-            - title: Managing product options
-              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
+                    - title: Managing product options
+                      url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
 
         - title: Marketplace
-
+          url: /docs/marketplace/user/back-office-user-guides/marketplace/marketplace.html
+          include_versions:
+          - "202212.0"
           nested:
 
             - title: Merchants
+              url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/merchants.html
+              include_versions:
+              - "202108.0"
+              - "202204.0"
               nested:
 
                 - title: Managing merchants
@@ -198,12 +255,14 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
 
             - title: Offers
+              url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
               nested:
 
                 - title: Managing marketplace product offers
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
 
             - title: Orders
+              url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
               nested:
 
                 - title: Managing marketplace orders
@@ -230,6 +289,9 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/managing-merchants-performance-data.html
 
         - title: Profile
+          include_versions:
+            - "202108.0"
+            - "202204.0"
           nested:
           - title: Editing merchant's profile details
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html
@@ -247,6 +309,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html
 
         - title: Products
+          url: /docs/marketplace/user/merchant-portal-user-guides/products/products.html
           nested:
 
           - title: Abstract products

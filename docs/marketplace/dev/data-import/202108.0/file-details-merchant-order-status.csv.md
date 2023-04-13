@@ -18,7 +18,7 @@ order-oms:status-import merchant-order-status
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | merchant_reference |   | String |   | Unique | Identifier of the merchant in the system. |
 | merchant_order_reference |   | String |   | Unique | Identifier of the merchant order in the system. |

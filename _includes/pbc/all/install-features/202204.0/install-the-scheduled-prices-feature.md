@@ -8,16 +8,16 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Product | {{site.version}} |
-| Price | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Product | {{page.version}} |
+| Price | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+
 
 ```bash
-composer require spryker-feature/scheduled-prices:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/scheduled-prices:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -58,7 +58,7 @@ Make sure that the following changes have been applied by checking your database
 {% info_block warningBox "Verification" %}
 Make sure that the following changes in transfer objects have been applied:
 
-| Transfer | Type | Event | Path |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | PriceProductScheduleTransfer | class | created | src/Generated/Shared/Transfer/PriceProductScheduleTransfer |
 | PriceProductScheduleCsvValidationResultTransfer | class | created | src/Generated/Shared/Transfer/PriceProductScheduleCsvValidationResultTransfer |
@@ -114,7 +114,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_i
 ,060_26175504,DEFAULT,AT,EUR,11296,12552,2019-06-23T00:00:00-00:00,2019-07-19T23:59:59-00:00
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |  abstract_sku | optional | string | 001 | Existing abstract product SKU of the scheduled price. |
 |  concrete_sku | optional | string | 060_26027598 | Existing concrete product SKU of the scheduled price. |

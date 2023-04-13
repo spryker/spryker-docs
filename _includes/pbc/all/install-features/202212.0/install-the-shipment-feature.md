@@ -21,7 +21,7 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE |
 |--------------|------------------|-------------------| 
-| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/202204.0/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -108,7 +108,7 @@ spryker_no_shipment,DE
 spryker_no_shipment,US
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
 | shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
 | store               | mandatory | string    | DE                              | Name of an existing store.          |

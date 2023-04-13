@@ -39,7 +39,7 @@ This section describes the attributes you enter and select when editing the merc
 
 The contact person is the only contact of the merchant with the Marketplace administrator.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Role | Role in the company/organization the contact person performs. |   |
 | Title | Formal salutation for your contact person (for example, Mr, Ms, Mrs, Dr).  |   |
@@ -52,7 +52,7 @@ The contact person is the only contact of the merchant with the Marketplace admi
 
 This section contains general information about the company the merchant has.
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Company Name | Name of the merchant. It is also displayed as the merchant name in the Storefront. | &check; |
 | Registration Number | Number assigned to the company at the point of registration. |   |
@@ -74,21 +74,21 @@ This section describes attributes you see when editing the merchant's online pro
 
 #### Store Profile URL
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Store Profile URL | Field where you can specify the URL of the Merchant Profile in the Marketplace Storefront for every locale. | &check; |
 | About Your Store | Description of the merchant company/store. It’s provided for every locale. |   |
 
 #### Visual assets
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Logo URL | You can add a logo for your Merchant Profile. Provide a link to your logo here. |   |
 | Banner URL | You can add a banner for your Merchant Profile. Provide a link to your banner for every locale. |   |
 
 #### Contact Details & Address
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Street | Street of the merchant's business address. |   |
 | Number | Number of the building in the merchant's business address. |   |
@@ -104,13 +104,13 @@ This section describes attributes you see when editing the merchant's online pro
 
 #### Average Delivery Time
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Average Delivery Time | Average time during which the order is shipped. It is defined per a locale. |   |
 
 #### Legal Information
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Terms & Conditions | In this field, you can specify the terms and conditions for the merchant. |   |
 | Return Policy | In this field, you can specify the return policy for the merchant. |   |
@@ -119,7 +119,7 @@ This section describes attributes you see when editing the merchant's online pro
 
 #### Shop Status
 
-| ATTRIBUTE | DESCRIPTION | REQUIRED? |
+| ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
 | Your Store is online | By selecting this option, you can define whether the merchant store (with the profile, marketplace products and offers) should be displayed on the Marketplace Storefront. |   |
 

@@ -12,15 +12,15 @@ redirect_from:
   - /docs/en/payolution-requests
 related:
   - title: Integrating the invoice paymnet method for Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html
   - title: Payolution request flow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-request-flow.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution-request-flow.html
   - title: Integrating the installment payment method for Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-installment-payment-method-for-payolution.html
   - title: Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution.html
   - title: Installing and configuring Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/installing-and-configuring-payolution.html
 ---
 
 To perform the needed requests, you can easily use the implemented state machine commands and conditions. This article gives a summary of them. You can also use the facade methods directly, which, however, are invoked by the state machine.

@@ -33,7 +33,7 @@ The Spryker Commerce OS supports the integration of the following payment provid
 * [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
 * [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html)
 * [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
-* [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
+* [Billie](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/billie.html)
 * [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
@@ -41,10 +41,10 @@ The Spryker Commerce OS supports the integration of the following payment provid
 * [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay.html)
 * [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay.html)
 * [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna.html)
-* [Payolution](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution.html)
-* [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
-* [ratenkauf by easyCredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit.html)
-* [RatePay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
+* [Payolution](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payolution/payolution.html)
+* [Powerpay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/powerpay.html)
+* [ratenkauf by easyCredit](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+* [RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/ratepay.html)
 
 ## Dummy payment
 

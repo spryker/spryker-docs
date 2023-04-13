@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/ratenkauf-integration-into-project
 related:
   - title: ratenkauf by easyCredit
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
   - title: Installing and configuring ratenkauf by easyCredit
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
 ---
 
 {% info_block errorBox %}

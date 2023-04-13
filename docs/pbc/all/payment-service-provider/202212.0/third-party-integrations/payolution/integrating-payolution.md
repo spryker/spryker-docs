@@ -11,15 +11,15 @@ redirect_from:
   - /docs/en/payolution-integration-into-project
 related:
   - title: Installing and configuring Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/installing-and-configuring-payolution.html
   - title: Payolution - Performing Requests
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution-performing-requests.html
   - title: Payolution request flow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-request-flow.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution-request-flow.html
   - title: Integrating the installment payment method for Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-installment-payment-method-for-payolution.html
   - title: Integrating the invoice paymnet method for Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html
 ---
 
 {% info_block errorBox %}
@@ -30,7 +30,7 @@ There is currently an issue when using giftcards with Payolution. Our team is de
 
 ## Prerequisites
 
-Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/installing-and-configuring-payolution.html) the Payolution module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payolution/installing-and-configuring-payolution.html) the Payolution module.
 
 ## Frontend Integration
 

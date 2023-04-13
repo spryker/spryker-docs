@@ -12,7 +12,7 @@ The App Composition Platform (ACP) lets Spryker Cloud customers connect, configu
 
 The following apps are supported:
 
-- [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html), a Payment Service Provider (PSP)
+- [Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payone/payone.html), a Payment Service Provider (PSP)
 - [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html), a Consent Management Platform (CMP)
 - [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html), a platform for User-Generated Content (UGC)
 

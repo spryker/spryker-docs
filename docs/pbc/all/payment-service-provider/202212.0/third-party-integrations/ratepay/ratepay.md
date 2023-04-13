@@ -57,16 +57,16 @@ RatePAY provides four methods of payment
 
 ## Related Developer guides
 
-* [RatePay Core module structure diagram](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-core-module-structure-diagram.html)
-* [RatePay state machines](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-state-machines.html)
-* [Integrating the Direct Debit payment method for RatePay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html)
-* [Integrating the Installment payment method for RatePay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html)
-* [Integrating the Invoice payment method for RatePay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html)
-* [Integrating the Prepayment payment method for RatePay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html)
-* [Disabling address updates from the backend application for RatePay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html)
-* [RatePay facade methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-facade-methods.html)
-* [RatePay payment workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-payment-workflow.html)
-* [RatePay state machine commands and conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html)
+* [RatePay Core module structure diagram](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html)
+* [RatePay state machines](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/ratepay-state-machines.html)
+* [Integrating the Direct Debit payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html)
+* [Integrating the Installment payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html)
+* [Integrating the Invoice payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html)
+* [Integrating the Prepayment payment method for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html)
+* [Disabling address updates from the backend application for RatePay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html)
+* [RatePay facade methods](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/ratepay-facade-methods.html)
+* [RatePay payment workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/ratepay-payment-workflow.html)
+* [RatePay state machine commands and conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html)
 ---
 
 ## Copyright and Disclaimer

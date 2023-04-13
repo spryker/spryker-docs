@@ -1175,14 +1175,14 @@ entries:
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
           - title: Payone
-            url: /docs/pbc/all/payment-service-providers/payone/payone.html
+            url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/payone.html
             nested:
               - title: Integrate Payone
-                url: /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integrate-payone.html
               - title: Manage in the Back Office
                 nested:
                   - title: Disconnect Payone
-                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/disconnect-payone.html
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/manage-in-the-back-office/disconnect-payone.html
           - title: Unzer
             url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/unzer.html
             nested:

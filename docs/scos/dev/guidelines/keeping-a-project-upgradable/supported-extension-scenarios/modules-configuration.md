@@ -23,11 +23,37 @@ Manifest only add values to configuration files. Manifests *will not remove* val
 
 ## Basic scalar values as the return
 
-Manifests fully support 4 PHP data types:
-* boolean
-* int
-* float (floating-point number)
-* string
+Manifests fully support 4 PHP data types as the return.
+
+For the method to return a boolean, use the following:
+
+```php
+use SprykerShop\Yves\ProductReplacementForWidget\ProductReplacementForWidgetConfig as SprykerShopProductReplacementForWidgetConfig;
+
+class ProductReplacementForWidgetConfig extends SprykerShopProductReplacementForWidgetConfig
+{
+    ...
+    public function isProductReplacementFilterActive(): bool
+    {
+        return true;
+    }
+}
+```
+
+For the method to return an int, use the following:
+
+```php
+use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
+
+class CustomerConfig extends SprykerCustomerConfig
+{
+    ...
+    public function getCustomerPasswordSequenceLimit(): ?int
+    {
+        return 3;
+    }
+}
+```
 
 For the method to return a string, use the following example:
 
@@ -77,35 +103,9 @@ class DevelopmentConfig extends SprykerDevelopmentConfig
 }
 ```
 
-For the method to return a boolean, use the following:
 
-```php
-use SprykerShop\Yves\ProductReplacementForWidget\ProductReplacementForWidgetConfig as SprykerShopProductReplacementForWidgetConfig;
 
-class ProductReplacementForWidgetConfig extends SprykerShopProductReplacementForWidgetConfig
-{
-    ...
-    public function isProductReplacementFilterActive(): bool
-    {
-        return true;
-    }
-}
-```
 
-For the method to return an int, use the following:
-
-```php
-use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
-
-class CustomerConfig extends SprykerCustomerConfig
-{
-    ...
-    public function getCustomerPasswordSequenceLimit(): ?int
-    {
-        return 3;
-    }
-}
-```
 
 There's a multitude of ways to view arrays as the return. Manifests support the following array types:
 

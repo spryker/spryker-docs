@@ -9,4 +9,4 @@ related:
     link: docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
 ---
 
-{% include pbc/all/install-features/202212.0/marketplace/install-the-merchant-portal-feature-integration.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-the-merchant-portal-feature-integration.md -->
+{% include pbc/all/install-features/202212.0/marketplace/install-the-merchant-portal-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/marketplace/install-the-merchant-portal-feature.md -->

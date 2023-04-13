@@ -13,7 +13,7 @@ related:
 ---
 
 
-Manifests support changes in a module's configuration files.
+[Manifests](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#follow-the-upgradability-best-practices) support changes in a module's configuration files.
 
 Manifests support all scalar types (bool, int, float, string), the compound type array, and the special type, null.
 

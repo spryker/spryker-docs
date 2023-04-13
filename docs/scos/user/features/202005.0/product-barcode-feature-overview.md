@@ -50,7 +50,7 @@ Barcodes are often overlooked as a way to cut costs and save time. A valuable an
 
 <!-- Last review date: Oct, 26-- by Vitaliy Kirichenko, Oksana Karasyova -->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

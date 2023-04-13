@@ -24,7 +24,7 @@ The Marketplace administrator can see the special request in the [order details 
 
 In a situation where the same product variants are added to the cart with different notes, the variants get merged with the same note.
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |
 |---------|---------|---------|--------|

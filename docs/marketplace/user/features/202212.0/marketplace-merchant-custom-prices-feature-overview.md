@@ -26,14 +26,14 @@ Customers see custom prices for products based on their merchant relationship, o
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+merchant+custom+prices+feature+overview/merchant_custom_price.mp4" type="video/mp4">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+merchant+custom+prices+feature+overview/merchant_custom_price.mp4" type="video/mov">
   </video>
 </figure>
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES  |
-| -------------------- | 
+| -------------------- |
 | [Managing marketplace abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html) |
 | [Managing marketplace concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html)
 

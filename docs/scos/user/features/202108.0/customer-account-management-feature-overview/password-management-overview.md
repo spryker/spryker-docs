@@ -22,7 +22,7 @@ With the help of [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue
 
 On the Storefront, it is mandatory to enter a password when creating a customer account. After the account is created, you can update the password in the customer account or request a password reset via email.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

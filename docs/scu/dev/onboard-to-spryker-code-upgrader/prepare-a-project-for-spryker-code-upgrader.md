@@ -12,7 +12,7 @@ Before you can start managing the upgrades of your project with Spryker Code Upg
 
 The Upgrader provides automatic minor and patch updates for the current version of each module. Since most updates are released for the latest module versions, modules need to be of the latest major version to receive updates.
 
-To ensure that your project is suitable for the requirement, update all `spryker-feature*` modules in composer.json to version `2022.04` or higher.
+To ensure that your project is suitable for the requirement, update all `spryker-feature-*` packages in composer.json to version `2022.04` or higher.
 
 ## Make sure your code is compliant with Upgradability Guidelines
 

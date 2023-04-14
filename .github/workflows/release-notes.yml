@@ -1,0 +1,20 @@
+name: Generate automatic release notes
+
+on:
+  push:
+    branches:
+      - scheduled-release-notes
+
+jobs:
+  generate-release-notes:
+    name: Generate Release Notes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate Release Notes
+        uses: andrewscwei/release-notes-generator@v2.2.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          since: 'last-tag'
+          exclude_labels: 'do not merge,dependencies,github_actions,in progress,javascript,new,ruby,small changes'
+          categories: 'new:New,updated:Updated'

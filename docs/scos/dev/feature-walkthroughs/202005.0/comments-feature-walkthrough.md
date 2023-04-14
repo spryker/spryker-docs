@@ -22,7 +22,7 @@ The following schema illustrates module relations in the Comments feature:
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------|---------|

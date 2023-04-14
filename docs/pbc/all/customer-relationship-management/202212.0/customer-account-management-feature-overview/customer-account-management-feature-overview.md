@@ -31,7 +31,7 @@ Password management enables basic password security for customer accounts. It le
 
 Also, it lets you manage customer access, request a password change, or change it on your side. You can restrict the possibility for the customers to register with simple passwords and lock out accounts after several unsuccessful logins for a certain period of time.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -41,7 +41,7 @@ Also, it lets you manage customer access, request a password change, or change i
 | [Get a general idea of Customer Groups](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)   |
 | [Get a general idea of Password Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|---|

@@ -13,7 +13,7 @@ The _Resource Sharing_ feature lets you generate a unique URL for any entity in 
 
 For each entity, you must use an additional connector module. For example, to share carts, combine the Resource Sharing feature with the [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html) feature.
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

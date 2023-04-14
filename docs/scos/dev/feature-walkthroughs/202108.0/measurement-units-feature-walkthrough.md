@@ -27,7 +27,7 @@ The following schema illustrates relations between alternative products:
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | GLUE API GUIDES |
 |---------|---------|

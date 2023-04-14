@@ -17,6 +17,9 @@ entries:
           - title: Back Office for Marketplace Operator
             url: /docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html
 
+          - title: Merchant onborading
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding.html
+
           - title: Marketplace Storefront
             url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html
 
@@ -135,6 +138,8 @@ entries:
 
         - title: Marketplace Shipment
           url: /docs/marketplace/user/features/marketplace-shipment-feature-overview.html
+          include_versions:
+            - "202204.0"          
 
         - title: Marketplace Shopping List
           url: /docs/marketplace/user/features/marketplace-shopping-list-feature-overview.html
@@ -143,6 +148,8 @@ entries:
 
         - title: Marketplace Wishlist
           url: /docs/marketplace/user/features/marketplace-wishlist-feature-overview.html
+          include_versions:
+            - "202204.0"          
 
         - title: Marketplace Merchant Portal Product Offer Management
           url: /docs/marketplace/user/features/marketplace-merchant-portal-product-offer-management-feature-overview.html
@@ -304,6 +311,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html
 
         - title: Products
+          url: /docs/marketplace/user/merchant-portal-user-guides/products/products.html
           nested:
 
           - title: Abstract products

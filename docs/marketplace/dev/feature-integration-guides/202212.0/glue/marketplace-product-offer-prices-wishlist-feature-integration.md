@@ -6,7 +6,7 @@ related:
   - title: Marketplace Product Offer Prices feature walkthrough
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
   - title: Marketplace Wishlist feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-wishlist-feature-walkthrough.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-wishlist-feature-overview.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer Prices + Wishlist Glue API feature into a Spryker project.
@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
-| Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
+| Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
 | Marketplace Product Offer Prices API | {{page.version}} |[Glue API: Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html) |
 
 

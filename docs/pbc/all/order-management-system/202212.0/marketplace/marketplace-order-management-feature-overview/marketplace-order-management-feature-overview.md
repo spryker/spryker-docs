@@ -76,6 +76,35 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 
 {% endinfo_block %}
 
+
+## Merchant orders in the Merchant Portal
+
+{% info_block warningBox “Warning” %}
+
+Do not build the Merchant functionality around Orders, but rather around Merchant Orders.
+Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html) for this purpose.
+
+{% endinfo_block %}
+
+In the Merchant Portal, merchants can view and manage their `MerchantOrders`.
+
+The information in the Merchant Portal is limited and includes:
+- Customer information
+- Shipment address
+- Merchant order overview
+- Totals
+
+Merchant order uses its own totals based on order totals, restricted by the Merchant Order Item:
+- refundTotal
+- grandTotal
+- taxTotal
+- expenseTotal
+- subtotal
+- discountTotal
+- canceledTotal
+
+The *merchant order total* is the sum of the totals of items of an order relating to the merchant order.
+
 ## Next steps
 * [Learn about the merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html)
 * [Learn about the Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
@@ -88,8 +117,9 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 |[Marketplace and merchant state machines overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) | | |
 |[Marketplace and merchant state machines interaction](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) | | |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer documents
 
-Are you a developer? See [Marketplace Order Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
+|---------|---------|---------|--------|
+| [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)    | [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html)  |
+| [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)    |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-order-status.csv.html)        |  [How-to: Creation a new MerchantOms flow](/docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html)   |

@@ -126,7 +126,7 @@ Structure:
   - fk_locale is a locale identifier.
 * Parameters are settings or data for a content item.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

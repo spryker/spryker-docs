@@ -56,7 +56,7 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. A cust
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |

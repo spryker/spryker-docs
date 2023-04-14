@@ -29,7 +29,7 @@ The following schema illustrates the *Marketplace Product Approval Process* doma
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/dd3fdb7e-e244-4472-a7ed-1341bfa8bcbc.png?utm_medium=live&utm_source=custom)
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------| --- |

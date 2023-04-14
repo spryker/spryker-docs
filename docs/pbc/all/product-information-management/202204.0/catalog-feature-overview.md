@@ -34,7 +34,7 @@ To keep your catalog dynamic, you can include auto-generated pages based on cate
 
 The main benefits of working with the catalog are to pave the way for a smooth shopping journey with well-organized categories that organize and extend your catalog to match your business needs.
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|

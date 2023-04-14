@@ -29,7 +29,7 @@ Password management enables the basic password security for customer accounts. I
 
 Also, it lets you manage customer access, request a password change or change it on your side. You can restrict the possibility for the customers to register with simple passwords and lock out accounts after several unsuccessful logins for a certain period of time.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

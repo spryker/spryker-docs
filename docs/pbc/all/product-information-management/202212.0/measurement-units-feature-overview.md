@@ -65,7 +65,7 @@ If a global unit conversion exists between the base and sales unit, then factor 
 - A shopper cannot reorder items with the selected measurement units as they are not added automatically. They must be added manually on the product details page.
 - In the [Quick Order](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/quick-add-to-cart-feature-overview.html) form and [Search](/docs/pbc/all/search/{{page.version}}/search.html), the products use the default measurement units that cannot be changed.
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | GLUE API GUIDES |
 |---------|---------|

@@ -11,7 +11,7 @@ The _Promotions & Discounts_ feature allows defining several types of discounts 
 To learn more about the feature and to find out how end users use it, see [Promotions & Discounts feature overview](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|

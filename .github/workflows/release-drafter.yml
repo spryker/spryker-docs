@@ -1,0 +1,25 @@
+name: Release Drafter
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  generate-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+      - name: Install Dependencies
+        run: npm install
+      - name: Generate Release Notes
+        uses: release-drafter/release-drafter@v7.3.0
+        with:
+          config-file: .github/release-drafter.yml
+          start-date: '2023-04-01T00:00:00Z'
+          end-date: '2023-04-30T23:59:59Z'

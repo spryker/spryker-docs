@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/afterpay
 related:
   - title: Afterpay - Installation and Configuration
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/afterpay/installing-and-configuring-afterpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/afterpay/installing-and-configuring-afterpay.html
 ---
 
 ## Partner Information
@@ -43,8 +43,8 @@ Unlike other pay-after-delivery providers we keep you informed of your customers
 
 ## Related Developer guides
 
-* [Installing and configuring Afterpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/afterpay/installing-and-configuring-afterpay.html)
-* [Integrating Afterpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/afterpay/integrating-afterpay.html)
+* [Installing and configuring Afterpay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/afterpay/installing-and-configuring-afterpay.html)
+* [Integrating Afterpay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/afterpay/integrating-afterpay.html)
 
 ---
 

@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/braintree
 related:
   - title: Installing and configuring Braintree
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/installing-and-configuring-braintree.html
   - title: Integrating Braintree
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/integrating-braintree.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/integrating-braintree.html
   - title: Braintree - Performing Requests
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/braintree-performing-requests.html
   - title: Braintree - Request workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-request-workflow.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/braintree-request-workflow.html
 ---
 
 [ABOUT BRAINTREE](https://www.braintreepayments.com/)
@@ -51,10 +51,10 @@ Because of PCI compliance reasons, credit card data is communicated to the third
 
 ## Related Developer guides
 
-* [Installing and configuring Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html)
-* [Integrating Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/integrating-braintree.html)
-* [Braintree - Request workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-request-workflow.html)
-* [Braintree - Performing requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-performing-requests.html)
+* [Installing and configuring Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/braintree/installing-and-configuring-braintree.html)
+* [Integrating Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/braintree/integrating-braintree.html)
+* [Braintree - Request workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/braintree/braintree-request-workflow.html)
+* [Braintree - Performing requests](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/braintree/braintree-performing-requests.html)
 
 
 ---

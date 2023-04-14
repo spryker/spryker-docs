@@ -29,12 +29,12 @@ The Spryker Commerce OS offers integrations with several payment providers that 
 
 The Spryker Commerce OS supports the integration of the following payment providers, which are our official partners:
 
-* [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen.html)
-* [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html)
-* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
+* [Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/adyen/adyen.html)
+* [AfterPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/afterpay/afterpay.html)
+* [Amazon Pay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/amazon-pay/amazon-pay.html)
+* [Arvato](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/arvato/arvato.html)
 * [Billie](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/billie.html)
-* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
+* [Billpay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/billpay/billpay.html)
 * [Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/braintree/braintree.html)
 * [BS Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/bs-payone.html)
 * [Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/computop/computop.html)

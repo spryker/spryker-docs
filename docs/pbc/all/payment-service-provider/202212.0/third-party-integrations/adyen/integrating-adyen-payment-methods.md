@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/adyen/integrating-adyen-payment-methods.html
 related:
   - title: Installing and configuring Adyen
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/installing-and-configuring-adyen.html
   - title: Integrating Adyen
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/integrating-adyen.html
   - title: Enabling filtering of payment methods for Ayden
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/enabling-filtering-of-payment-methods-for-adyen.html
 ---
 
 ## Credit card
@@ -28,7 +28,7 @@ Adyen module provides the following integration options:
 
 3D Secure integration requires adjustments on the project level. Do the following:
 
-1. Add one more checkout step. 
+1. Add one more checkout step.
 Exemplary implementation:
 
 **src/Pyz/Yves/CheckoutPage/Process/Steps/AdyenExecute3DStep.php**

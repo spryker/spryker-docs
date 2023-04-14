@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/braintree-integration
 related:
   - title: Installing and configuring Braintree
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/installing-and-configuring-braintree.html
   - title: Braintree - Performing Requests
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/braintree-performing-requests.html
   - title: Braintree - Request workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-request-workflow.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/braintree-request-workflow.html
 ---
 
 {% info_block errorBox %}
@@ -27,7 +27,7 @@ Gift cards are not compatible with Braintree. We are working on resolving this c
 
 ## Prerequisites
 
-Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html) the Braintree module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/braintree/installing-and-configuring-braintree.html) the Braintree module.
 
 ## Frontend integration
 

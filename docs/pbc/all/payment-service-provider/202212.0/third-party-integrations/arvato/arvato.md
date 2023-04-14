@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/arvato
 related:
   - title: Arvato - Store Order 2.0
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/arvato/arvato-store-order.html
 ---
 
 ## Partner Information
@@ -23,9 +23,9 @@ related:
 
  ## Related Developer guides
 
- * [Installing and configuring Arvato](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/installing-and-configuring-arvato.html)
- * [Arvato - Risk Check](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/arvato-risk-check.html)
- * [Arvato - Store Order](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/arvato-store-order.html)  
+ * [Installing and configuring Arvato](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/arvato/installing-and-configuring-arvato.html)
+ * [Arvato - Risk Check](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/arvato/arvato-risk-check.html)
+ * [Arvato - Store Order](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/arvato/arvato-store-order.html)  
 
 
 ---

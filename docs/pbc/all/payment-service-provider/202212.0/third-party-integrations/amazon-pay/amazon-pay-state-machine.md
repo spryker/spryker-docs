@@ -14,13 +14,13 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/amazon-pay-state-machine.html
 related:
   - title: Handling orders with Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Configuring Amazon Pay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/configuring-amazon-pay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/amazon-pay/configuring-amazon-pay.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
 The state machine is different for synchronous and asynchronous flow. Although from status "capture completed" it is the same and in the state machine, it's presented as a sub-process.

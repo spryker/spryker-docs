@@ -38,7 +38,7 @@ The following links provide additional information about the Mail module, its pl
 * A tutorial about the procedure for sending an email—[Tutorial: Sending a mail](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html).
 
 
-## Related Developer articles
+## Related Developer documents
 
  | TUTORIALS AND HOWTOS |
 |---------|

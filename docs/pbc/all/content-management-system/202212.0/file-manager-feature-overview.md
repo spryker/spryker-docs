@@ -111,7 +111,7 @@ The following environment variables are used for that:
 
 See [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -119,7 +119,7 @@ See [Integrating custom location for static assets](/docs/scos/dev/technical-enh
 | [Manage file list](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/manage-file-list.html) |
 | [Add and edit MIME types](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/add-and-edit-mime-types.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | UPGRADE GUIDES| DATA IMPORT	|
 | - | - |

@@ -59,7 +59,7 @@ This is how the Order Cancellation feature works on the Spryker Demo Shop Storef
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/shop-guide-cancelling-orders.gif)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

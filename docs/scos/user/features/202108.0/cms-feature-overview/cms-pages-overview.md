@@ -50,7 +50,7 @@ With the CMS Pages feature, you can:
 * Specify validity dates for CMS Pages.
 * Assign a CMS Page to a specific locale, thus making it visible or hidden for a specific store (the Multi-store CMS feature).
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

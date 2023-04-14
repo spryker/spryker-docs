@@ -199,7 +199,7 @@ Agents can perform the same actions (on company users' behalf) as company users.
 * Request for Quote does not work with the product bundles.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|

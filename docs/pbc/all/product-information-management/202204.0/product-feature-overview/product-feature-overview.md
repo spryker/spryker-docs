@@ -110,7 +110,7 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 * [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
 
 
-## Related Business User articles
+## Related Business User documents
 
 | OVERVIEWS |BACK OFFICE USER GUIDES|
 | - |---|
@@ -120,7 +120,7 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 | [Timed Product Availability](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/timed-product-availability-overview.html)  | [Edit a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html) |
 |  |  [Manage products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-products.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|

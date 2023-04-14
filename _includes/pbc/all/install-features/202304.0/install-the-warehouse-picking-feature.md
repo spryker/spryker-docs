@@ -11,13 +11,13 @@ Follow the steps below to install the Warehouse picking feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME                                         | VERSION          | INTEGRATION GUIDE                                                                                                                                                                  |
-|----------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warehouse User Management                    | {{site.version}} | [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html)                     |
-| Order Management + Inventory Management      | {{site.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-order-management-and-inventory-management-feature.html) |
-| Shipment                                     | {{site.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                                       |
-| Push Notification                            | {{site.version}} | [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-push-notification-feature.md.html)                                  |
-| Spryker core backoofice (check the previous) |                  |                                                                                                                                                                                    |
+| NAME                                    | VERSION          | INTEGRATION GUIDE                                                                                                                                                                  |
+|-----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Warehouse User Management               | {{site.version}} | [Install the Warehouse User Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-warehouse-user-management-feature.html)                     |
+| Order Management + Inventory Management | {{site.version}} | [Order Management and Inventory Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-order-management-and-inventory-management-feature.html) |
+| Shipment                                | {{site.version}} | [Install the Shipment feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                                       |
+| Push Notification                       | {{site.version}} | [Install the Push Notification feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-push-notification-feature.html)                                     |
+| Spryker Core Back Office                | {{site.version}} | [Install the Spryker Core Backoffice feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-spryker-core-back-office-feature.html)                        |
 
 ### 1) Install the required modules using Composer
 
@@ -277,27 +277,6 @@ class PickingListPushNotificationConfig extends SprykerPickingListPushNotificati
 }
 ```
 
-4. Configure the `User` module to execute post save plugins: // TODO: check if this one is correct
-
-**src/Pyz/Zed/User/UserConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\User;
-
-use Spryker\Zed\User\UserConfig as SprykerUserConfig;
-
-class UserConfig extends SprykerUserConfig
-{
-    /**
-     * @var bool
-     */
-    protected const IS_POST_SAVE_PLUGINS_ENABLED_AFTER_USER_STATUS_CHANGE = true;
-
-}
-```
-
 ### 4) Import warehouse picking list strategies
 
 1. Prepare your data according to your requirements using our demo data:
@@ -397,15 +376,15 @@ console data:import glossary
 
 1. Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                                                                                                      | SPECIFICATION                                                                                                                   | PREREQUISITES | NAMESPACE                                                                     |
-|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| GeneratePickingListsCommandByOrderPlugin                                                                                                    | Generates the picking lists based on warehouse strategy.                                                                        |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingFinishedConditionPlugin                                                                                                            | Checks if all picking lists are finished for the given sales order.                                                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingListGenerationFinishedConditionPlugin                                                                                              | Checks if picking lists generation is finished for the given sales order.                                                       |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| IsPickingStartedConditionPlugin                                                                                                             | Checks if picking of at least one picking list is started for the given sales order.                                            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
-| PushNotificationPickingListPostCreatePlugin                                                                                                 | Creates a push notification after creating a picking list.                                                                      |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
-| PushNotificationPickingListPostUpdatePlugin                                                                                                 | Creates a push notification after updating a picking list.                                                                      |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
-| WarehouseUserPushNotificationSubscriptionValidatorPlugin                                                                                    | Validates whether the user has a warehouse assignment.                                                                          |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
+| PLUGIN                                                    | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                                     |
+|-----------------------------------------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
+| GeneratePickingListsCommandByOrderPlugin                  | Generates the picking lists based on warehouse strategy.                             |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingFinishedConditionPlugin                          | Checks if all picking lists are finished for the given sales order.                  |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingListGenerationFinishedConditionPlugin            | Checks if picking lists generation is finished for the given sales order.            |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| IsPickingStartedConditionPlugin                           | Checks if picking of at least one picking list is started for the given sales order. |               | Spryker\Zed\PickingList\Communication\Plugin\Oms                              |
+| PushNotificationPickingListPostCreatePlugin               | Creates a push notification after creating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
+| PushNotificationPickingListPostUpdatePlugin               | Creates a push notification after updating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
+| WarehouseUserPushNotificationSubscriptionValidatorPlugin  | Validates whether the user has a warehouse assignment.                               |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
 
 **\Pyz\Zed\Oms\OmsDependencyProvider.php**
 
@@ -454,30 +433,6 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
         });
 
         return $container;
-    }
-}
-```
-
-**src/Pyz/Glue/SalesOrdersBackendApi/SalesOrdersBackendApiDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Glue\SalesOrdersBackendApi;
-
-use Spryker\Glue\CartNotesBackendApi\Plugin\SalesOrdersBackendApi\CartNoteApiOrdersAttributesMapperPlugin;
-use Spryker\Glue\SalesOrdersBackendApi\SalesOrdersBackendApiDependencyProvider as SprykerSalesOrdersBackendApiDependencyProvider;
-
-class SalesOrdersBackendApiDependencyProvider extends SprykerSalesOrdersBackendApiDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Glue\SalesOrdersBackendApiExtension\Dependency\Plugin\ApiOrdersAttributesMapperPluginInterface>
-     */
-    protected function getApiOrdersAttributesMapperPlugins(): array
-    {
-        return [
-            new CartNoteApiOrdersAttributesMapperPlugin(),
-        ];
     }
 }
 ```
@@ -733,6 +688,8 @@ Make sure that you can send the following requests:
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
+Make sure that push notification generation work for the picking list feature:
 
 1. Make an order with a products from the warehouse with `multi-shipment` picking strategy.
 2. Log to the Back Office and navigate to **Sales&nbsp;<span aria-label="and then">></span> Orders&nbsp;**. The **Orders** page opens.

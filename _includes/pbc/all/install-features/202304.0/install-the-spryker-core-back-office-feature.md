@@ -217,6 +217,27 @@ Make sure that, in the Back Office, you can select **Maintenance&nbsp;<span aria
 
 {% endinfo_block %}
 
+### Configure the `User` module to execute post save plugins:
+
+**src/Pyz/Zed/User/UserConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\User;
+
+use Spryker\Zed\User\UserConfig as SprykerUserConfig;
+
+class UserConfig extends SprykerUserConfig
+{
+    /**
+     * @var bool
+     */
+    protected const IS_POST_SAVE_PLUGINS_ENABLED_AFTER_USER_STATUS_CHANGE = true;
+
+}
+```
+
 ## 4) Set up behavior
 
 Set up the following behaviors.

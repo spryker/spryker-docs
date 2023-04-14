@@ -122,7 +122,7 @@ If no store relation is defined for a product relation, it is not displayed on S
 
 Stores are defined when creating or editing a product relation in the Back Office.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -130,7 +130,7 @@ Stores are defined when creating or editing a product relation in the Back Offic
 | [Create product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html)  |   |
 | [Edit product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html)  |   |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|

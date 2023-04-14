@@ -37,10 +37,10 @@ To install the User Management capability, do the following:
 composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature/acl:"{{site.version}}" --update-with-dependencies
 ```
 2. Follow the integration guides for the individual features:
-* [User Management](#related-developer-articles).
-* [Agent Assist](/docs/pbc/all/user-management/202204.0/agent-assist-feature-overview.html#related-developer-articles)
+* [User Management](#related-developer-documents).
+* [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html#related-developer-documents)
 
-## Related Business User articles
+## Related Business User documents
 
 | OVERVIEWS | BACK OFFICE USER GUIDES|
 | - |---|
@@ -54,7 +54,7 @@ composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature
 | | [Assign and deassign customers from users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html) |
 | | [Delete users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/delete-users.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | OVERVIEWS | INSTALLATION GUIDES |
 | - | - |

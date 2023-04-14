@@ -29,7 +29,7 @@ To learn more about the feature and to find out how end users use it, see [Merch
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/2f9ddeb3-aefe-4511-b1d0-7936a7935c6a.png?utm_medium=live&utm_source=custom)
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | DATA IMPORT |
 |---|---|

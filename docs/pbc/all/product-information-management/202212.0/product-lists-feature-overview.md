@@ -21,14 +21,14 @@ The *Product Lists* feature lets you configure product availability for specific
 
 <!-- add a link Enable Barcode Generator for your project -->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/create-product-lists.html)  |
 | [Edit product lists](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-lists/edit-product-lists.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES |
 |---------|

@@ -13,7 +13,7 @@ The _Reorder_ feature lets customers to repeat their previous orders in one clic
 To learn more about the feature and to find out how end users use it, see [Reorder feature overview](/docs/scos/user/features/{{page.version}}/reorder-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|

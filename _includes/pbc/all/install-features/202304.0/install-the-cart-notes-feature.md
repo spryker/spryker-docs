@@ -46,6 +46,8 @@ Make sure that the following changes have been triggered in transfer objects:
 |------------------------------|----------|---------|---------------------------------------------------|
 | ApiOrdersAttributes.cartNote | property | created | src/Generated/Shared/Transfer/ApiOrdersAttributes |
 
+{% endinfo_block %}
+
 ## 3) Set up behavior
 
 1. Enable the following behaviors by registering the plugins:

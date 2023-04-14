@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/klarna
 related:
   - title: Klarna payment workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-payment-workflow.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarna-payment-workflow.html
   - title: Klarna - Invoice Pay in 14 days
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-invoice-pay-in-14-days.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
   - title: Klarna - Part Payment Flexible
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-part-payment-flexible.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarna-part-payment-flexible.html
   - title: Klarna state machine commands and conditions
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
 ---
 
 ## Partner Information
@@ -62,10 +62,10 @@ The [Klarna State Machine Commands and Conditions](klarna-state-machine.htm) tri
 
 ## Related Developer guides
 
-* [Klarna - Invoice Pay in 14 days](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/klarna/klarna-invoice-pay-in-14-days.html)
-* [Klarna - Part Payment Flexible](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/klarna/klarna-part-payment-flexible.html)
-* [Klarna payment workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/klarna/klarna-payment-workflow.html)
-* [Klarna state machine commands and conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html)
+* [Klarna - Invoice Pay in 14 days](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html)
+* [Klarna - Part Payment Flexible](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/klarna/klarna-part-payment-flexible.html)
+* [Klarna payment workflow](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/klarna/klarna-payment-workflow.html)
+* [Klarna state machine commands and conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html)
 
 ---
 

@@ -12,17 +12,17 @@ redirect_from:
   - /docs/en/payone-direct-debit
 related:
   - title: PayOne - Prepayment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
   - title: PayOne - Authorization and Preauthorization Capture Flows
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
   - title: PayOne - Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
   - title: PayOne - Cash on Delivery
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-cash-on-delivery.html
   - title: PayOne - Security Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
   - title: PayOne - Online Transfer Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
 ---
 
 ## Front-End Integration

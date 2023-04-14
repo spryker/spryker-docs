@@ -12,21 +12,21 @@ redirect_from:
   - /docs/en/payone-v1-1
 related:
   - title: PayOne - Integration into the SCOS Project
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
   - title: PayOne - Risk Check and Address Check
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-risk-check-and-address-check.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-risk-check-and-address-check.html
   - title: PayOne - Prepayment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
   - title: PayOne - Authorization and Preauthorization Capture Flows
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
   - title: PayOne - Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
   - title: PayOne - Cash on Delivery
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-cash-on-delivery.html
   - title: PayOne - Credit Card Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html
   - title: PayOne - Security Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
 ---
 
 ## Partner Information
@@ -50,14 +50,14 @@ YOUR ADVANTAGES:
 We integrate with a wide range of payment methods that can be configured according to your needs and convenience. Payment method flows are configured using state machines.
 
 Payone provides the following methods of payment:
-* [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html)
-* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html)
-* [Online Transfer](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html)
-* [Paypal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
-* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html)
-* [Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html)
-* [Security Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html)
-* [Paypal Express Checkout](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
+* [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html)
+* [Direct Debit](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html)
+* [Online Transfer](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html)
+* [Paypal](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
+* [Prepayment](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html)
+* [Invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html)
+* [Security Invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html)
+* [Paypal Express Checkout](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
 
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 

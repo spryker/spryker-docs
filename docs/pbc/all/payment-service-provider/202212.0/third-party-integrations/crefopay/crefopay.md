@@ -14,11 +14,11 @@ The `SprykerEco.CrefoPay` module includes integration with:
 
 The `SprykerEco.CrefoPay` module provides the following payment methods:
 
-* [Bill](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html#bill)
-* [Cash on Delivery](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html#cash-on-delivery)
-* [Credit Card](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html#credit-card)
-* [Card with 3D secure](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html#credit-card-with-3d-secure)
-* [Direct Debit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html#direct-debit)
-* [PayPal](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html#paypal)
-* [Cash in advance](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html#cash-in-advance)
-* [SofortÜberweisung](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html#sofortberweisung)
+* [Bill](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#bill)
+* [Cash on Delivery](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#cash-on-delivery)
+* [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#credit-card)
+* [Card with 3D secure](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#credit-card-with-3d-secure)
+* [Direct Debit](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#direct-debit)
+* [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#paypal)
+* [Cash in advance](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#cash-in-advance)
+* [SofortÜberweisung](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#sofortberweisung)

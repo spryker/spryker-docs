@@ -21,8 +21,8 @@ The services available on the unique CrefoPay platform offered by CrefoPayment G
 ## Related Developer guides
 
 To integrate CrefoPay into your system the see following articles:
-* [Installing and configuring CrefoPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html)
-* [Integrating CrefoPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/integrating-crefopay.html)
+* [Installing and configuring CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/installing-and-configuring-crefopay.html)
+* [Integrating CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/integrating-crefopay.html)
 
 ---
 

@@ -12,17 +12,17 @@ redirect_from:
   - /docs/en/payone-authorization-and-preauthorization-capture-flows
 related:
   - title: PayOne - Prepayment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
   - title: PayOne - Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html
   - title: PayOne - Cash on Delivery
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-cash-on-delivery.html
   - title: PayOne - Credit Card Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html
   - title: PayOne - Security Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
   - title: PayOne - Direct Debit Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
 ---
 
 Payone module makes it possible for a project to choose which Payone flow it wants to implement: authorize or preauthorize + capture.

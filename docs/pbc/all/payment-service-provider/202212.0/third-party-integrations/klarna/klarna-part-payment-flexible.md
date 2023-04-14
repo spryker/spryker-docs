@@ -12,23 +12,23 @@ redirect_from:
   - /docs/en/klarna-part-payment-flexible
 related:
   - title: Klarna
-    link: docs/scos/user/technology-partners/page.version/payment-partners/klarna.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarnaions/klarna/klarna.html
   - title: Klarna payment workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-payment-workflow.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarna-payment-workflow.html
   - title: Klarna - Invoice Pay in 14 days
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-invoice-pay-in-14-days.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
   - title: Klarna state machine commands and conditions
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
 ---
 
 ## Payment Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_paymentworkflow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_paymentworkflow.png)
 
 ## Cancel Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_cancelworkflow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_cancelworkflow.png)
 
 ## Refund Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_refundworkflow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_refundworkflow.png)
 
 ## Integrating Klarna Part Payment
 The configuration to integrate `Part Payment` using Klarna is:
@@ -52,4 +52,4 @@ The configuration to integrate `Part Payment` using Klarna is:
 You can copy over configuration to your config file from the Klarna bundles `config.dist.php` file.
 
 ## Perform Requests
-In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html). The next section gives you a summary of them.
+In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html). The next section gives you a summary of them.

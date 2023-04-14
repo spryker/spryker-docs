@@ -13,28 +13,28 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
 related:
   - title: Heidelpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/heidelpay.html
   - title: Integrating the Credit Card Secure payment method for Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
   - title: Configuring Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/configuring-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/configuring-heidelpay.html
   - title: Integrating the Direct Debit payment method for Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
   - title: Integrating Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-heidelpay.html
   - title: Heidelay - Sofort (Online Transfer)
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html
   - title: Installing Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/installing-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/installing-heidelpay.html
   - title: Heidelpay workflow for errors
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html
   - title: Integrating the Split-payment Marketplace payment method for Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
 ---
 
 ### Setup
 
-The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/installing-heidelpay.html) and [integrated](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/configuring-heidelpay.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/heidelpay/installing-heidelpay.html) and [integrated](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/heidelpay/configuring-heidelpay.html).
 
 #### Configuration
 
@@ -86,6 +86,6 @@ class HeidelpayPostSavePlugin extends BaseAbstractPlugin implements CheckoutPost
 
 The most important data here is the payment reference ID which can be used for further transactions like `capture/cancel/etc`.
 
-In the response Heidelpay expects an URL string which defines where customer has to be redirected. In case if customer successfully confirmed payment, it should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see `HeidelpayController::paymentFailedAction()` and [Heidelpay workflow for errors](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and the payment process is finished. 
+In the response Heidelpay expects an URL string which defines where customer has to be redirected. In case if customer successfully confirmed payment, it should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see `HeidelpayController::paymentFailedAction()` and [Heidelpay workflow for errors](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and the payment process is finished. 
 
 **Capture the money** - later on, when the item is shipped to the customer, it is time to call "capture" command of the state machine to capture the money from the customer's account. It is done in CapturePlugin of the OMS command. In the provided basic order of state machine for Paypal authorize method, the command will be executed automatically, when order is manually moved into the "shipped" state. Now the order can be considered as "paid".

@@ -12,17 +12,17 @@ redirect_from:
   - /docs/en/payone-invoice
 related:
   - title: PayOne - Prepayment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
   - title: PayOne - Authorization and Preauthorization Capture Flows
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
   - title: PayOne - Cash on Delivery
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/scos-integration/payone-cash-on-delivery.html
   - title: PayOne - Direct Debit Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html
   - title: PayOne - Security Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html
   - title: PayOne - Online Transfer Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html
 ---
 
 ## Front-end Integration
@@ -48,4 +48,3 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
  'PayoneInvoice',
 ];
 ```
-

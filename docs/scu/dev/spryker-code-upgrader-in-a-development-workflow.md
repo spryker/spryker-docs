@@ -35,15 +35,17 @@ Following your standard development process, the updates are deployed to a stagi
 
 ## Development team responsibilities
 
-* Prepare your project for the Upgrader.
+* Prepare your project for Spryker Code Upgrader
 
-* Connect the Upgrader of Spryker Code Upgrader with your code hosting service.
+* Connect Spryker Code Upgrader with your code hosting service
 
-* Cover customizations with automated tests.
+* Cover your customizations with automated tests
 
-* Extend development process with additional guidelines and quality checks.
+* Extend development process with additional [Spryker Code Upgrader guidelines and quality checks](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html#update-all-spryker-modules-to-version-202204-or-higher)
 
-* Regularly process upgrade suggestions.
+* Regularly process upgrade suggestions
+
+* Apply major upgrades manually to continue receiving suggestions from Spryker Code Upgrader
 
 ## Next steps
 

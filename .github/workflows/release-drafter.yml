@@ -2,7 +2,7 @@ name: Release Drafter
 
 on:
   schedule:
-    - cron: "30 14 * * *"
+    - cron: "0 18 * * *"
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
           node-version: 16.x
       - name: Install Dependencies
         run: npm install
-      - name: Generate Release Notes
+      - name: Release Drafter
         uses: release-drafter/release-drafter@v7.3.0
         with:
           config-file: .github/release-drafter.yml

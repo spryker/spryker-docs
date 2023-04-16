@@ -18,7 +18,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Release Drafter
-        uses: release-drafter/release-drafter@v7.3.0
+        uses: release-drafter/release-drafter@v5
         with:
           config-file: .github/release-drafter.yml
           start-date: '2023-04-01T00:00:00Z'

@@ -364,17 +364,20 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY | TYPE | EVENT |
-| --------------- | ---- | ------ |
+| DATABASE ENTITY                     | TYPE   | EVENT   |
+|-------------------------------------|--------|---------|
 | spy_sales_return.merchant_reference | column | created |
 
 Make sure that the following changes have been triggered in transfer objects:
 
-| TRANSFER | TYPE | EVENT  | PATH  |
-| --------- | ------- | ----- | ------------- |
-| MerchantOrderCriteria.orderItemUuids | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
-| MerchantOrder.return | attribute | created | src/Generated/Shared/Transfer/MerchantOrderTransfer |
-| Return.merchantOrders | attribute | created | src/Generated/Shared/Transfer/ReturnTransfer |
+| TRANSFER                                      | TYPE      | EVENT   | PATH                                                        |
+|-----------------------------------------------|-----------|---------|-------------------------------------------------------------|
+| MerchantOrderCriteria.orderItemUuids          | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.withOrder               | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.withItems               | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| MerchantOrderCriteria.merchantOrderReferences | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| Order.items                                   | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
+| Return.merchantOrders                         | attribute | created | src/Generated/Shared/Transfer/ReturnTransfer                |
 
 
 {% endinfo_block %}
@@ -416,18 +419,18 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 <!--This is a comment, it will not be included -->
 Enable the following behaviors by adding and registering the plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| ------------ | ----------- | ----- | ------------ |
-| MerchantReturnPreCreatePlugin | Sets merchant reference to the return transfer. |  |   Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
-| MerchantReturnCreateRequestValidatorPlugin | Checks if each item in the `itemTransfers` has the same merchant reference. |  |   Spryker\Zed\MerchantSalesReturn\Communication\Plugin |
-| MerchantReturnExpanderPlugin | Expands `Return` transfer object with merchant orders. |  |   Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn |
-| CancelReturnMarketplaceOrderItemCommandPlugin | Triggers 'cancel-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| DeliverReturnMarketplaceOrderItemCommandPlugin | Triggers 'deliver-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| ExecuteReturnMarketplaceOrderItemCommandPlugin | Triggers 'execute-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| RefundMarketplaceOrderItemCommandPlugin | Triggers 'refund' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| ReturnMerchantOrderItemCommandPlugin | Triggers 'start-return' event on a marketplace order item, initiate return. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| ShipReturnMarketplaceOrderItemCommandPlugin | Triggers 'ship-return' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| MerchantReturnCreateTemplatePlugin |  Replace the template, that renders item table on return create page in Zed. |  |   Spryker\Zed\MerchantSalesReturnGui\Communication\Plugin\SalesReturnGui |
+| PLUGIN                                         | SPECIFICATION                                                                                                                                                                  | PREREQUISITES | NAMESPACE                                                              |
+|------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| MerchantReturnPreCreatePlugin                  | Sets merchant reference to the return transfer.                                                                                                                                |               | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn       |
+| MerchantReturnCreateRequestValidatorPlugin     | Checks if each item in the `itemTransfers` has the same merchant reference.                                                                                                    |               | Spryker\Zed\MerchantSalesReturn\Communication\Plugin                   |
+| MerchantReturnExpanderPlugin                   | Expands `Return` transfer object with merchant orders.                                                                                                                         |               | Spryker\Zed\MerchantSalesReturn\Communication\Plugin\SalesReturn       |
+| CancelReturnMarketplaceOrderItemCommandPlugin  | Triggers 'cancel-return' event on a marketplace order item.                                                                                                                    |               | Pyz\Zed\MerchantOms\Communication\Plugin\Oms                           |
+| DeliverReturnMarketplaceOrderItemCommandPlugin | Triggers 'deliver-return' event on a marketplace order item.                                                                                                                   |               | Pyz\Zed\MerchantOms\Communication\Plugin\Oms                           |
+| ExecuteReturnMarketplaceOrderItemCommandPlugin | Triggers 'execute-return' event on a marketplace order item.                                                                                                                   |               | Pyz\Zed\MerchantOms\Communication\Plugin\Oms                           |
+| RefundMarketplaceOrderItemCommandPlugin        | Triggers 'refund' event on a marketplace order item.                                                                                                                           |               | Pyz\Zed\MerchantOms\Communication\Plugin\Oms                           |
+| ReturnMerchantOrderItemCommandPlugin           | Triggers 'start-return' event on a marketplace order item, initiate return.                                                                                                    |               | Pyz\Zed\MerchantOms\Communication\Plugin\Oms                           |
+| ShipReturnMarketplaceOrderItemCommandPlugin    | Triggers 'ship-return' event on a marketplace order item.                                                                                                                      |               | Pyz\Zed\MerchantOms\Communication\Plugin\Oms                           |
+| MerchantSalesReturnCreateFormHandlerPlugin     | Expands `ReturnCreateForm` form with merchant product sub-forms, form data with merchant product data and `ReturnCreateRequestTransfer` with submitted merchant product items. |               | Spryker\Zed\MerchantSalesReturnGui\Communication\Plugin\SalesReturnGui |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php</summary>
@@ -911,7 +914,7 @@ Make sure that when you create and process a return for merchant order items, it
 
 namespace Pyz\Zed\SalesReturnGui;
 
-use Spryker\Zed\MerchantSalesReturnGui\Communication\Plugin\SalesReturnGui\MerchantReturnCreateTemplatePlugin;
+use Spryker\Zed\MerchantSalesReturnGui\Communication\Plugin\SalesReturnGui\MerchantSalesReturnCreateFormHandlerPlugin;
 use Spryker\Zed\SalesReturnGui\SalesReturnGuiDependencyProvider as SprykerSalesReturnGuiDependencyProvider;
 
 class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyProvider
@@ -922,7 +925,7 @@ class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyPr
     protected function getReturnCreateTemplatePlugins(): array
     {
         return [
-            new MerchantReturnCreateTemplatePlugin(),
+            new MerchantSalesReturnCreateFormHandlerPlugin(),
         ];
     }
 }

@@ -1,0 +1,7 @@
+- name: "Build Changelog"
+  uses: mikepenz/release-changelog-builder-action@{latest-release}
+  with:
+    configuration: "configuration.ymln"
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    fromTag: "04.2023"

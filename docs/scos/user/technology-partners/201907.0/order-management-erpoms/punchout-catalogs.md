@@ -8,6 +8,7 @@ originalArticleId: 1927b321-9c2c-4c08-9169-70abdff2046e
 redirect_from:
   - /v3/docs/punchout-catalogs
   - /v3/docs/en/punchout-catalogs
+  - /docs/scos/user/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
 ---
 
 Big e-commerce corporations and business enterprises are always searching for a way to simplify their purchasing process and manage their spendings. In most cases, these companies rely on e-procurement systems (ERPs), like [SAP](https://www.sap.com/index.html) or [Ariba](https://www.ariba.com/) that automate many of the procurement processes and manage their purchase cycle. However, in the B2B environment, these buyers also demand access to an e-commerce interface that will interfere with the procurement system for expanding the market.

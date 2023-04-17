@@ -335,6 +335,7 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_AGENT_BLOCKING_NUMBER_OF_ATTE
 Run the following commands to apply database changes, generate entity, and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -673,7 +674,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the front end of the Spryker Core feature.
 

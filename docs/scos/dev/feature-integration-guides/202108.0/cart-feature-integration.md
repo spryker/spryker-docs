@@ -63,7 +63,7 @@ Make sure that above keys and corresponding translations are present in the `spy
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 ### Prerequisites
 

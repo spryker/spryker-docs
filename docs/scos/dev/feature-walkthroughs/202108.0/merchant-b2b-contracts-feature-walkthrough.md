@@ -3,7 +3,8 @@ title: Merchant B2B Contracts feature walkthrough
 last_updated: Aug 13, 2021
 description: The Merchant B2B Contracts feature allows setting up contracts between a merchant and B2B customer
 template: concept-topic-template
-redirect_from: /docs/scos/dev/feature-walkthroughs/202108.0/merchant-b2b-contracts-feature-walkthrpugh.html
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202108.0/merchant-b2b-contracts-feature-walkthrpugh.html
 ---
 
 The _Merchant B2B Contracts_ feature allows setting up contracts between a merchant and B2B customer.
@@ -23,9 +24,9 @@ The following schema shows relations within the merchant domain:
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  |
+|INSTALLATION GUIDES  |
 |---------|
 | [Merchant B2B Contracts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-b2b-contracts-feature-integration.html)   |
 | [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html)  |

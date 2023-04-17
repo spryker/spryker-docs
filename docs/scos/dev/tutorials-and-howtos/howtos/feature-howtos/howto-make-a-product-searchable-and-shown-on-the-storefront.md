@@ -1,5 +1,5 @@
 ---
-title: HowTo - Make a Product Searchable and Shown on the Storefront
+title: "HowTo: Make a product searchable and shown on the Storefront"
 description: Use the guide to learn about conditions need to be performed to make a product searchable in the online store.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,20 +22,23 @@ redirect_from:
   - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
 related:
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
 ---
 
 {% info_block infoBox %}
-The article describes the flow on how to make a product searchable and displayed on the Storefront.
+
+The document describes the flow of making a product searchable and displayed on the Storefront.
+
 {% endinfo_block %}
 
-There are a number of conditions that should be fulfilled to make your product searchable and shown on Yves by URL. What is important is to make sure that your product meets the following conditions:
+There are a number of conditions that must be fulfilled to make your product searchable and shown on Yves by URL. What is important is to make sure that your product meets the following conditions:
 
-* It is assigned to categories. See the [Category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/assigning-products-to-categories.html) section for details on how to assign products to categories.
-* It is in stock in the warehouse for the current store. See the [Availability](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/availability/managing-products-availability.html) section to learn how to check products' availability.
-* The product's status is **Active**. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/managing-products/managing-products.html#activating-products) section to learn how to manage products, including status change.
-* It has a price in the current locale. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/managing-products/managing-products.html) section for more details.
-* It has been marked as searchable in the Back Office. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) section for more details
-* It has product variants - abstract product will not be displayed on Yves unless it has product variants. See [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) to learn how to create product variants.
+* It is assigned to categories. For information about how to assign products to categories, see the [Category](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/category/assign-products-to-categories.html) section.
+* It is in stock in the warehouse for the current store. To learn how to check products' availability, see the [Availability](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/availability/managing-products-availability.html) section.
+* The product's status is `Active`. To learn how to manage products, including the status change, see the [Products](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-products.html#activating-products) section.
+* It has a price in the current locale. For more details, see the [Products](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-products.html) section.
+* It has been marked as searchable in the Back Office. For more details, see the [Products](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html) section.
+* It has product variants—an abstract product is not displayed on Yves unless it has product variants. To learn how to create product variants, [Products](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).

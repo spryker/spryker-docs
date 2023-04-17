@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/glue-api-return-management-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
@@ -42,7 +42,7 @@ console transfer:generate
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables  in the database.
+Make sure that the configured data are added to the `spy_glossary` table  in the database.
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |

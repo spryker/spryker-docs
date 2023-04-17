@@ -56,9 +56,9 @@ The following schema illustrates the {Feature name} domain model:
 - [{Name of the page}]({link to the page})
 
 
-## Related Developer articles
+## Related Developer documents
 <!-- Usually filled by a technical writer. You can omit this part -->
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
 | [{Integration guide name}]({Integration guide link})          | [{Glue API guide name}]({Glue API guide link})          | [{Import file name}]({import file link})           | {Any doc related to this feature should be placed here}  |

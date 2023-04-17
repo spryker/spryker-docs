@@ -8,6 +8,7 @@ originalArticleId: f9f61de5-1910-4676-aefe-1112470aa938
 redirect_from:
   - /v2/docs/heidelpay
   - /v2/docs/en/heidelpay
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay.html
 ---
 
 ## Partner Information

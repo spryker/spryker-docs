@@ -8,8 +8,7 @@ originalArticleId: d82fa803-15bb-49bd-ae48-a701c4a3b61c
 redirect_from:
   - /v1/docs/standard-filters
   - /v1/docs/en/standard-filters
+  - /docs/scos/user/features/201811.0/search-feature-overview/standard-filters-size-type-color-etc....html
 ---
 
 The Spryker Commerce OS offers a variety of different filter types to ease the process of product discovery. These filters include single- or multi-select and range filters.
-
-

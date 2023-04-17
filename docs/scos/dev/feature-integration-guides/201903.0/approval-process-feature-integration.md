@@ -38,6 +38,7 @@ Run the following commands to:
 * generate entity and transfer changes
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate 
 ```
@@ -101,7 +102,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that the configured data has been added to the `spy_glossary` table in the database.
 {% endinfo_block %}
 
 ### 4) Set up Behavior
@@ -271,7 +272,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 Check that customer without `PlaceOrderPermission` permission is not able to proceed to checkout.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -344,7 +345,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that  the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that  the configured data has been added to the `spy_glossary` table in the database.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

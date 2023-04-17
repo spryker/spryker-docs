@@ -8,9 +8,11 @@ originalArticleId: 1384ece4-b7f7-4dbb-bd19-de42b38cc8ae
 redirect_from:
   - /v3/docs/products-feature-integration
   - /v3/docs/en/products-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/products-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/product-api-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -44,6 +46,7 @@ Make sure that the following modules were installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -8,6 +8,7 @@ originalArticleId: 6ba8cf91-fd82-47e1-9ba6-ae86bed86245
 redirect_from:
   - /v3/docs/adding-content-item-widgets-to-pages-and-blocks
   - /v3/docs/en/adding-content-item-widgets-to-pages-and-blocks
+  - /docs/scos/user/back-office-user-guides/201907.0/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html
 related:
   - title: Editing Content Items in CMS Pages and Blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
@@ -69,7 +70,7 @@ The **Insert a Content Item** pop-up window opens.
 
   {% info_block infoBox %}
 
-  You can preview the page to see how the content item widget will be displayed on the website or publish it. See  [Managing CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html) to learn how to preview and publish the page. 
+  You can preview the page to see how the content item widget will be displayed on the website or publish it. See  [Managing CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html) to learn how to preview and publish the page.
 
   {% endinfo_block %}
 ***

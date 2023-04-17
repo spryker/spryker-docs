@@ -8,6 +8,7 @@ originalArticleId: 6cd8b2a9-c486-482a-84db-31c8743991b5
 redirect_from:
   - /v4/docs/managing-users
   - /v4/docs/en/managing-users
+  - /docs/scos/user/back-office-user-guides/202001.0/users/managing-users/creating-users.html
 related:
   - title: Roles- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html

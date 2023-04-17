@@ -2,6 +2,8 @@
 title: Editing users
 description: Learn how to edit users in the Back Office
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202108.0/users/roles-groups-and-users/managing-users.html
 ---
 
 This document describes how to edit users in the Back Office.
@@ -45,4 +47,4 @@ The following table describes the attributes you enter and select when editing u
 | ASSIGNED GROUPS | The user groups this user is assigned to. User groups define what areas and actions the user has access to. To learn how to create user groups, see [Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
-| STATUS | 
+| STATUS |

@@ -27,7 +27,7 @@ To start the feature integration, overview and install the necessary features:
 
 
 
-## 1) Install the required modules using composer
+## 1) Install the required modules using Composer
 
 
 Run the following command to install the required modules:

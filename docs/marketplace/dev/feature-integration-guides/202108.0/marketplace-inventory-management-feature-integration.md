@@ -74,6 +74,7 @@ Adjust the schema definition so entity changes trigger events:
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -240,6 +241,12 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 }
 
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={{idProductOffer}}`, you can see the `Stock` section. 
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
@@ -512,7 +519,7 @@ MER000005,Budget Cameras MER000005 Warehouse 1
 MER000006,Sony Experts MER000006 Warehouse 1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | string | MER000001 | Merchant identifier. |
 | stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -650,7 +657,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | product_offer_reference | &check; | string | offer350 | Product offer identifier. |
 | stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
@@ -726,8 +733,8 @@ Make sure that the imported data is added to the `spy_merchant_stock` and `spy_p
 
 ## Related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                                       | 
-|  ---  |  ---  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Inventory Management + Order Management | &check;  | [Marketplace Inventory Management + Order Management feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)                 |
-| Marketplace Inventory Management + Packaging Units |  | [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)                   |
-| Merchant Portal - Marketplace Product + Inventory Management feature integration | | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html) |
+| FEATURE                                             | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                       | 
+|-----------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Inventory Management + Order Management | &check;                          | [Marketplace Inventory Management + Order Management feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html) |
+| Marketplace Inventory Management + Packaging Units  |                                  | [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)   |
+| Marketplace Product + Inventory Management          |                                  | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)                   |

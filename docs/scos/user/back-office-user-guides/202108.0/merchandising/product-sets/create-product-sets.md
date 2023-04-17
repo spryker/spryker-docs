@@ -55,16 +55,16 @@ On the **Product Sets** page, click **Create Product Set** and follow the instru
 
 ### 4. Add images for the product set
 
-1. In the **Images** tab, do the following for the needed locales:
+1. On the **Images** tab, do the following for the needed locales:
     1. click **Add image set**.
     2. Enter an **IMAGE SET NAME**.
     3. Enter a **SMALL IMAGE URL**.
     4. Enter a **LARGE IMAGE URL**.
     5. Optional: Enter a **SORT ORDER**.
     6. Optional: To add one more image, click **Add image**.
-    7. Repeat steps 9-13 until you add all the needed images.
+    7. Repeat steps 3-6 until you add all the needed images.
     8. Optional: To add one more image set, click **Add image set**.
-    9. Repeat steps 9-15 until you add all the needed image sets.
+    9. Repeat steps 2-8 until you add all the needed image sets.
 2. Click **Save**.   
 
     This opens the **View Product Set** page with a success message displayed.

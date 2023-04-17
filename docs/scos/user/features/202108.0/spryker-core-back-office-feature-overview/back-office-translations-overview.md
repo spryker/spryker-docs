@@ -44,7 +44,7 @@ If a translation is missing, the corresponding key is displayed instead.
 
 {% endinfo_block %}
 
-Unlike **Glossary** section of Zed which is used for managing Front-end(Yves) translations, there is no interface for managing Zed translations currently. All the translations are managed by updating corresponding CSV files directly. Similarly to uploading translation files, you need to regenerate translation cache to reflect the changes after updating them. Use the commands to do that.
+Unlike **Glossary** section of Zed which is used for managing Front-end (Yves) translations, there is no interface for managing Zed translations. All the translations are managed by updating corresponding CSV files directly. Similarly to uploading translation files, you need to regenerate translation cache to reflect the changes after updating them. Use the commands to do that.
 
 Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Back Office translations feature integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html).
 

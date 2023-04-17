@@ -34,6 +34,7 @@ Verify if the following modules were installed:
 #### Implementation
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```yaml
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -113,7 +114,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 Add an item with a product option to a shopping list, make sure that the corresponding table row has been created in `spy_shopping_list_product_option`.
 Make sure that when creating a cart from a shopping list, the product options are transferred to cart. The other way around should also work, having a cart with an item with product options in it, when creating a shopping list out of should contain the selected product options.
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please review  and install the necessary features before beginning the integration step.
 |Name|Version|
@@ -139,7 +140,7 @@ console data:import glossary
 ```
 #### Verification
 
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 
 ### 2) Set up Behavior
 Enable the following behaviors by registering the plugins:

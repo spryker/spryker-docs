@@ -24,7 +24,7 @@ These are the header fields to be included in the .csv file:
 This file has no dependencies.
 
 ## Recommendations & Other Information
-Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
+Check the [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
 {% info_block infoBox "Note" %}
 
 The *warehouse.csv* file replaces *stock.csv* previously used. 

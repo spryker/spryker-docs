@@ -27,9 +27,9 @@ On the Storefront, the product group is not displayed as a group. Instead, the b
 
 Product abstract card:
 
-1. Holding the pointer over the product abstract card opens a pop-up menu with the colors of all the products included into the group.
+1. Holding the pointer over the product abstract card opens a dialog with the colors of all the products included into the group.
 2. Holding the pointer over or clicking a color circle changes the abstract product image, title, rating, label, and the price.
-3. Having held the pointer over the desired color, a shop user clicks on the product abstract card to be redirected to the **Product Details** page of the corresponding product.
+3. Having held the pointer over the needed color, a shop user clicks on the product abstract card to be redirected to the **Product Details** page of the corresponding product.
 
 ![Product group - product abstract card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Groups/Product+Groups+Feature+Overview/product-group-product-abstract-card.gif)
 
@@ -51,12 +51,12 @@ Also, they can insert product groups into CMS pages via content widgets in the [
 
 ## Creating product groups
 
-Currently, only a developer can create product groups by [importing them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
+Only a developer can create product groups by [importing them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
 
 
 ## Current constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future:
+The feature has the following functional constraints which are going to be resolved in the future:
 
 * There is no user interface to manage product groups in the Back Office.
 * Products can only be grouped by the color attribute.

@@ -88,7 +88,7 @@
     &__opener {
         position: absolute;
         z-index: 3;
-        top: 5px;
+        top: 46px;
         right: 0;
         margin: 0 -20px 0 0;
         padding: 7px;
@@ -99,6 +99,10 @@
         text-decoration: none;
         border: 2px solid $grey-lighten;
         flex: 0 0 auto;
+
+        @include media("<laptop") {
+            top: 25px;
+        }
 
         @include media("<desktop") {
             position: static;

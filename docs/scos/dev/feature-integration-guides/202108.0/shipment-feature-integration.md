@@ -60,6 +60,7 @@ Make sure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -126,7 +127,7 @@ spryker_no_shipment,DE
 spryker_no_shipment,US
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shipment_method_key | mandatory | string | spryker_dummy_shipment-standard | Key of an existing shipping method. |
 | store | mandatory | string | DE | Name of an existing store. |

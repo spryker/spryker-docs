@@ -13,9 +13,9 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES  |
+| INSTALLATION GUIDES | UPGRADE GUIDES |
 |---------|---------|
 | [Shopping Lists + Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-product-options-feature-integration.html)  | ProductOption migration guide  |
 | [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)  | |

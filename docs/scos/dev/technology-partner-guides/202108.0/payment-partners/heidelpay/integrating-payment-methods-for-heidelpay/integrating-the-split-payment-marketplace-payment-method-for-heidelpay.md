@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-split-payment-marketplace
   - /docs/heidelpay-split-payment-marketplace
   - /docs/en/heidelpay-split-payment-marketplace
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

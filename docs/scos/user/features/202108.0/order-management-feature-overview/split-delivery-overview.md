@@ -59,7 +59,7 @@ For more details about how to create and manage shipments in the Back Office, se
 
 ### Gift card compatibility
 
-Currently, the Split Delivery is not compatible with the Gift Cards feature. If you want to buy a Gift card, only *one* delivery address can be selected for the whole order.
+The Split Delivery is not compatible with the Gift Cards feature. If you want to buy a Gift card, only *one* delivery address can be selected for the whole order.
 
 ### Limitation for payment service providers
 
@@ -70,7 +70,7 @@ Most of payment service providers (PSP) support a single delivery address for a 
 With Split Delivery, Product Bundles items can be shipped to different delivery addresses. However, if a product bundle is a part of the order and you don't want it to be split and delivered to different delivery addresses, you need to configure the implementation of the Checkout process on your project level.
 -->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

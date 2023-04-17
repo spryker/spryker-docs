@@ -21,7 +21,7 @@ This document describes mount modes and how you can choose one.
 
 Depending on your operating system (OS), choose one of the mount modes in the table.
 
-| Mount mode |        MacOS            | Linux              | Windows (WSL1)          | Windows (WSL2)     |
+| MOUNT MODE |        MACOS            | LINUX              | WINDOWS (WSL1)          | WINDOWS (WSL2)     |
 |--------------|-------------------------|--------------------|-------------------------|--------------------|
 | native       | ☑️ | ✔️ | ☑️ | ✔️ |
 | mutagen      | ✔️      |                    |                         |                    |
@@ -101,9 +101,10 @@ Synchronization mount modes, such as mutagen or docker-sync, use algorithms to s
 ### What should I keep in mind when using synchronization mount modes?
 
 Keep the following in mind:
+
 * When you change one or more files, it may take several seconds to synchronize them.
 * When performing big file operations, like `git checkout` or `composer install`, make sure to wait for synchronization by looking at the synchronization status.
-* To check synchronisation session status, use `docker/sdk sync logs`. It works for mutagen and docker-sync.
+* To check synchronization session status, use `docker/sdk sync logs`. It works for mutagen and docker-sync.
 * When you finish working, make sure to terminate the synchronization session by running `docker/sdk down`.
 
 ## See also

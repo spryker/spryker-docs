@@ -18,6 +18,7 @@ redirect_from:
   - /v2/docs/en/demoshop-with-publish-and-sync
   - /v1/docs/demoshop-with-publish-and-sync
   - /v1/docs/en/demoshop-with-publish-and-sync
+  - /docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
 related:
   - title: Making the Legacy Demoshop Compatible with the Modular Frontend
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html

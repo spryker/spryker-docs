@@ -191,6 +191,7 @@ Once you've finished Setup Behavior step, make sure that:
 Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -1152,7 +1153,7 @@ Note: You need to complete Feature Frontend integration before you can verify th
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
@@ -1245,7 +1246,7 @@ console data:import:glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

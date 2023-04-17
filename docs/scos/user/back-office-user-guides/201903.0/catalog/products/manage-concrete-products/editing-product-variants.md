@@ -8,6 +8,7 @@ originalArticleId: e9d392df-5379-4d6c-8231-899fe0b500ff
 redirect_from:
   - /v2/docs/updating-a-product-variant
   - /v2/docs/en/updating-a-product-variant
+  - /docs/scos/user/back-office-user-guides/201903.0/catalog/products/manage-concrete-products/editing-product-variant.html
 related:
   - title: Abstract and Concrete Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
@@ -45,9 +46,9 @@ The procedure you are going to perform is very similar to the procedure describe
    1. **General tab**: populate name and description, valid from and to dates, make the product searchable by selecting the Searchable checkbox for the appropriate locale (or all locales).
    2. **Price & Stock tab**: define the default/original, gross/net prices, and stock.
     {% info_block warningBox "Note" %}
-    
+
     The prices for the variant are inherited from the abstract product so you will see the same values as you have entered while creating the abstract product. **B2B:** The merchant relation prices are inherited by Product Variants as well.
-    
+
     {% endinfo_block %}
 
    3. **Image tab**: define the image(s), image set(s), and the image order for you product variant.
@@ -56,7 +57,7 @@ The procedure you are going to perform is very similar to the procedure describe
    6. **Product Alternatives** tab: This tab is used to define the product alternatives for the product. See the [Adding Product Alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/products/products/managing-products/adding-product-alternatives.html) topic to know more.
    7. **Scheduled Prices** tab: here you can only review scheduled prices imported via a CSV file if any. The actual import is done in the **Prices > Scheduled Prices** section.
 3. Once done, click **Save**.
-4. 
+4.
 ***
 
 **What's next?**

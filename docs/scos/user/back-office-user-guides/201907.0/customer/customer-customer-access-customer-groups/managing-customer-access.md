@@ -8,6 +8,7 @@ originalArticleId: b21c4e04-3792-43d6-a594-e46bcc949ede
 redirect_from:
   - /v3/docs/managing-customer-access
   - /v3/docs/en/managing-customer-access
+  - /docs/scos/user/back-office-user-guides/201907.0/customer/customers-customer-access-customer-groups/managing-customer-access.html
 related:
   - title: Managing Customer Groups
     link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-groups.html
@@ -37,6 +38,6 @@ To define the restrictions:
     {% info_block errorBox "**B2B Only**" %}
 
     This option is selected by default and cannot be deselected.
-    
+
     {% endinfo_block %}
 2. Click **Save** to save the changes.

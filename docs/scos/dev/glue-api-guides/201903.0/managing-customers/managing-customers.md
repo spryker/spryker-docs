@@ -7,6 +7,7 @@ originalArticleId: 7dbdf8d2-7f8a-47e2-92ce-5e37c3cf5063
 redirect_from:
   - /v2/docs/managing-customers-api
   - /v2/docs/en/managing-customers-api
+  - /docs/scos/dev/glue-api-guides/201903.0/manging-customers/managing-customers.html
 related:
   - title: Managing Wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
@@ -170,7 +171,9 @@ Request sample: `PATCH http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to modify.
 
 {% info_block warningBox "Authentication " %}
+
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 To modify a customer, the client must send a **RestCustomersRequest**.
@@ -186,7 +189,7 @@ To modify a customer, the client must send a **RestCustomersRequest**.
 				}
 		}
 	}
-	
+
 ```
 
 If a customer is modified successfully, the endpoint will respond with a **RestCustomersResponse**.
@@ -235,7 +238,9 @@ If a customer is modified successfully, the endpoint will respond with a **RestC
 Customers can provide a set of addresses used for billing, goods delivery, and other purposes. The **Customer API** provides a set of endpoints to manage addresses of a registered customer.
 
 {% info_block warningBox "Authentication " %}
+
 Only authenticated users can manage customer addresses. For details on how to authenticate a customer, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ## Adding an Address
@@ -283,7 +288,7 @@ The POST data must contain a **RestAddressesRequest**.
 					"isDefaultShipping": false,
 					"isDefaultBilling": false
 				}
-		
+
 ```
 
 If the address was created successfully, the endpoint will respond with a **RestAddressesResponse**.
@@ -550,7 +555,7 @@ If password is changed successfully, the endpoint will respond with the **204 No
 ## Resetting Customer's Password
 In case customer forgets their password, Glue API also provides the possibility to reset it. For this purpose, you need to use the following procedure:
 
-1. Send a POST request to the following endpoint: 
+1. Send a POST request to the following endpoint:
 `/customer-forgotten-password`
 Request sample: `POST http://mysprykershop.com/customer-forgotten-password`
 **Sample Request Body**
@@ -564,8 +569,8 @@ Request sample: `POST http://mysprykershop.com/customer-forgotten-password`
       }
     ```
     If the request was successful, the endpoint will respond with the 204 No Content status point, an email with a password reset link will be sent to the customer. The email will contain a **Password Reset Key**.
-    
-2. Send a PATCH request to the following endpoint: 
+
+2. Send a PATCH request to the following endpoint:
 `/customer-restore-password`
 Request sample: `PATCH http://mysprykershop.com/customer-restore-password`
 **Attributes:**
@@ -600,7 +605,7 @@ If the password reset was successful, the endpoint will respond with the **204 N
 | 415 | The Password Reset Key is invalid |
 
 ## Anonymizing a Customer
-To anonymize a customer account, send a DELETE request to the following endpoint: 
+To anonymize a customer account, send a DELETE request to the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}`
 Request sample: `DELETE http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to anonymize.

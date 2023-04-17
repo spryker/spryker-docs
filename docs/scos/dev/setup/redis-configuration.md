@@ -1,5 +1,5 @@
 ---
-title: Redis Configuration
+title: Redis configuration
 description: In Spryker, Redis is used as the key-value storage and the session data storage.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -20,6 +20,13 @@ redirect_from:
   - /v3/docs/en/redis-configruation
   - /v2/docs/redis-configruation
   - /v2/docs/en/redis-configruation
+related: 
+  - title: Install module structure and configuration
+    link: docs/scos/dev/setup/install-module-structure-and-configuration.html
+  - title: Installing Spryker with custom set of modules
+    link: docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
+  - title: Managing SCOS dependencies with Composer
+    link: docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
 ---
 
 In Spryker, Redis is used in two scenarios:

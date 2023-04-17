@@ -7,6 +7,7 @@ originalArticleId: 1428f917-f2a8-4c8a-9898-4b4641dbaa43
 redirect_from:
   - /v5/docs/creating-service-offerings
   - /v5/docs/en/creating-service-offerings
+  - /docs/scos/user/back-office-user-guides/202005.0/catalog/products/creating-service-offerings.html
 ---
 
 This article describes how you can create products that can or have to include service assistance.
@@ -25,7 +26,7 @@ The first thing you need to do to start selling a product with either free or ch
 To create the product, do the following:
 
 1. Go to **Catalog > Products** section and click Create Product on the top-right corner of the page.
-2. Populate the necessary fields in the **General, Price & Tax, Variants, SEO, Image** tabs. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) for details on the tabs and their values.
+2. Populate the necessary fields in the **General, Price & Tax, Variants, SEO, Image** tabs. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) for details on the tabs and their values.
 3. Click **Save**. Your product is now created and will appear in the list of products in the **Catalog > Products** section.
 4. Activate the product:
     1. In the list of products in the **Catalog > Products** section, find your product and click **Edit** in the *Actions* column for it.
@@ -60,7 +61,7 @@ To implement this approach, you need to create the Service product option and ti
 To create the product option, do the following:
 
 1. Go to the **Catalog > Product Options** section and click **Create product option** in the top right corner.
-2. Populate all necessary fields in **General** tab. See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#creating-a-product-option) for details on the fields and their values.
+2. Populate all necessary fields in **General** tab. See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html#creating-a-product-option) for details on the fields and their values.
 3. In the **Products** tab, find the product you want to tie the option to, and check the checkbox in the very right column of the table with the product.
 4. Click **Save**. The product option is now created and appears in the **Product option list** on the **Catalog > Product Options** page.
 5. Activate the option by clicking **Activate** in the *Actions* column of the **Product option list**.
@@ -91,7 +92,7 @@ If you don’t want to display the Service products in the Storefront so buyers 
 
 {% endinfo_block %}
 
-2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-slots) - one for the physical products, and one for the service:
+2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slots) - one for the physical products, and one for the service:
     1. Go to **Merchandising > Configurable Bundle Templates** section and click Create New Template in the top right corner.
     2. On the **Template details** page, enter the name of your bundle template in the **Name** field for the corresponding locale.
     3. Click **Save**. A new tab Slots will appear on the same page.

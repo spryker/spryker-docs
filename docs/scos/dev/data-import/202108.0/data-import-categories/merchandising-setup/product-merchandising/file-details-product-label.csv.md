@@ -1,5 +1,5 @@
 ---
-title: File details- product_label.csv
+title: File details - product_label.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-labelcsv
@@ -11,34 +11,41 @@ redirect_from:
   - /docs/en/file-details-product-labelcsv
 ---
 
-This article contains content of the **product_label.csv** file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) information on your Spryker Demo Shop.
+This document describes the `product_label.csv` file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:product-label
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **name** | Yes | String |N/A* | Name of the label. |
-| **is_active** | No | Boolean |N/A | Indicates if the label is active. |
-| **is_dynamic** | No | Boolean |N/A | Indicates if the label is dynamic. |
-| **is_exclusive** | No | Boolean |N/A | Indicates if the label is exclusive. |
-| **front_end_reference** | No | String |N/A | Front end reference of the label. |
-| **valid_from** | No | Date |N/A |	Label valid from this date. |
-| **valid_to** | No | Date |N/A | Label valid to this date. |
-| **name.{ANY_LOCALE_NAME}** **<br>Example value: *name.en_US* | No | String |N/A | Name of the label, in the available locale (US for our example). |
-| **product_abstract_skus** | No | String |N/A* | List of comma-separated product abstract SKUs.  |
-*N/A: Not applicable.
-**ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postifx can be changed, removed, and any number of columns with different locales can be added to the .csv files.
+| name | &check; | String |  | Name of the label. |
+| is_active |  | Boolean |  | Indicates if the label is active. |
+| is_dynamic |  | Boolean |  | Indicates if the label is dynamic. |
+| is_exclusive |  | Boolean |  | Indicates if the label is exclusive. |
+| front_end_reference |  | String |  | Front end reference of the label. |
+| valid_from |  | Date |  |	Label valid from this date. |
+| valid_to |  | Date |  | Label valid to this date. |
+| name.{ANY_LOCALE_NAME}*<br>Example value: *name.en_US* |  | String |  | Name of the label, in the available locale (US for our example). |
+| product_abstract_skus |  | String |  | List of comma-separated product abstract SKUs.  |
 
-## Dependencies
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
 
-This file has the following dependency:
-*    [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+## Import file dependencies
 
-## Template File & Content Example
-A template and an example of the *product_label.csv*  file can be downloaded here:
+This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
-| File | Description |
+## Import template file and content example
+
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [product_label.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_label.csv) | Product Label .csv template file (empty content, contains headers only). |
-| [product_label.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_label.csv) | Product Label .csv file containing a Demo Shop data sample. |
+| [product_label.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_label.csv) | Exemplary import file with headers only. |
+| [product_label.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_label.csv) | Exemplary import file with headers only. |

@@ -15,7 +15,7 @@ related:
 
 ## Partner Information
 
-[ABOUT HANSEL AMS](www.haensel–ams.com)
+[ABOUT HANSEL AMS](https://haensel-ams.com/)
 Haensel AMS – Advanced Mathematical Solutions – is a leading technology and data analytics boutique that offers you innovative and outstanding machine learning and big data solutions. We work for our international corporate clients at locations in Germany (Berlin) and the USA (New York). We provide and offer our clients customized solutions, data sovereignty lies with you, we do not collect data, we always bring the optimal Data Analytics solution to you. Our expertise focuses primarily on multi-channel attribution, customer journey analytics and pricing for a wide range of industries, including retail/e-commerce, travel/tourism, finance and logistics.
 Our only internal KPI for success is that our solutions are fully used by YOU !
 

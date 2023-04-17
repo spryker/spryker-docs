@@ -1,5 +1,5 @@
 ---
-title: File details- cms_slot_template.csv
+title: File details - cms_slot_template.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-slot-templatecsv
@@ -11,26 +11,34 @@ redirect_from:
   - /docs/en/file-details-cms-slot-templatecsv
 ---
 
-This article contains content of the **cms_slot_template.csv** file to configure  [CMS Slot Template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) information on your Spryker Demo Shop.
+This document describes the `cms_slot_template.csv` file to configure  [CMS Slot Template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:cms-slot-template
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **template_path** | Yes  | String |Must be a valid path to a twig template. | Path to the Twig file template. |
-| **name** |  Yes  | String |Human-readable. | Alphabetical identifier of the slot. It will be shown in the Back Office. |
-| **description** |  No  | String |N/A* | Description of the slot. It will be shown in the Back Office. |
-*N/A: Not applicable.
+| template_path | &check;  | String |Must be a valid path to a twig template. | Path to the Twig file template. |
+| name |  &check;  | String | Human-readable. | Alphabetical identifier of the slot. It will be shown in the Back Office. |
+| description |    | String |  | Description of the slot. It will be shown in the Back Office. |
 
-## Dependencies
+## Import file dependencies
 
 This file has no dependencies.
 
-## Template File & Content Example
-A template and an example of the *cms_slot_template.csv*  file can be downloaded here:
+## Import template file and content example
 
-| File | Description |
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [cms_slot_template.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_slot_template.csv) |  CMS Slot Template .csv template file (empty content, contains headers only). |
-| [cms_slot_template.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_slot_template.csv) |  CMS Slot Template .csv file containing a Demo Shop data sample. |
+| [cms_slot_template.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_slot_template.csv) |  Exemplary import file with headers only.  |
+| [cms_slot_template.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_slot_template.csv) | Exemplary import file with Demo Shop data. |
+

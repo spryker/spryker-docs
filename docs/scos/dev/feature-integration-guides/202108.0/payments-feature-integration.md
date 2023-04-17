@@ -57,6 +57,7 @@ Make sure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -109,7 +110,7 @@ dummyPaymentInvoice,Invoice,dummyPayment,Dummy Payment,1
 dummyPaymentCreditCard,Credit Card,dummyPayment,Dummy Payment,1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | payment_method_key | mandatory | string | dummyPaymentInvoice | Key of a payment method. |
 | payment_method_name | mandatory | string | Invoice | Name of a payment method. |
@@ -129,7 +130,7 @@ dummyPaymentCreditCard,AT
 dummyPaymentCreditCard,US
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | payment_method_key | mandatory | string | dummyPaymentInvoice | Key of the existing payment method. |
 | store | mandatory | string | DE |Name of the existing store. |

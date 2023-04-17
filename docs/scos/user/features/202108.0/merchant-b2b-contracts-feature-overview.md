@@ -22,7 +22,7 @@ There are three key figures: marketplace owner, merchant, and buyer.
 
 The business relationships between merchants and buyers are usually based on contracts.
 
-A Back Office user can manage merchants and merchant relations. To learn how to do that, see [Managing merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html) and [Managing merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html).
+A Back Office user can create merchants and merchant relations. See [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html) and [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html) to learn how to do that.
 
 A developer can also import merchants and merchant relations.
 
@@ -30,12 +30,14 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 {% wistia aowgi1c6k1 960 720 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html)  |
-| [Manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html)  |
+| [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html)  |
+| [Edit merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/edit-merchants.html)  |
+| [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html)  |
+| [Edit merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

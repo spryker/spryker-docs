@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/checkout-shop-guide-201911
   - /v3/docs/en/checkout-shop-guide-201911
   - /docs/scos/user/shop-user-guides/page.version/checkout/shop-guide-checkout.html
+  - /docs/scos/user/shop-user-guides/201907.0/checkout/shop-guide-checkout.html
 ---
 
 Checkout allows purchasing the items added to the cart.
@@ -24,7 +25,7 @@ A typical checkout process includes the following steps:
 * [Payment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-payment-step.html): Select the payment method.
 * [Summary](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-summary-step.html): View the details, update the information, if needed, and place the order.
 
-![Checkout process](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/split-delivery-checkout.gif) 
+![Checkout process](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/split-delivery-checkout.gif)
 ***
 **What's next?**
 

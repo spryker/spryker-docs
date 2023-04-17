@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-users
   - /docs/managing-users
   - /docs/en/managing-users
+  - /docs/scos/user/back-office-user-guides/202009.0/users/roles-groups-and-users/references/reference-information-user.html
 related:
   - title: User and Rights Management
     link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html

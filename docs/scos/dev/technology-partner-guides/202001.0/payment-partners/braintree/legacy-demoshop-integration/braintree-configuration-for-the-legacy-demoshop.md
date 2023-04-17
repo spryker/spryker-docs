@@ -8,6 +8,8 @@ originalArticleId: 156313b7-1121-4d09-8256-1c638facc48a
 redirect_from:
   - /v4/docs/braintree-configuration-legacy-demoshop
   - /v4/docs/en/braintree-configuration-legacy-demoshop
+  - /docs/scos/dev/technology-partner-guides/202001.0/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-configuration-for-the-legacy-demoshop.html
+  - /docs/scos/user/technology-partners/202001.0/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html

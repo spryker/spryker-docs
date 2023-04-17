@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/glue-api-products-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 
@@ -49,6 +49,7 @@ Make sure that the following modules were installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

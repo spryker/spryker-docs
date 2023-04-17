@@ -8,6 +8,7 @@ originalArticleId: a5f44efc-1d57-46f9-86e2-fe479b619aad
 redirect_from:
   - /v1/docs/cart-functionality
   - /v1/docs/en/cart-functionality
+  - /docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/cart-module-reference-information.html
 ---
 
 Our Cart consists of a few components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.
@@ -20,7 +21,7 @@ When an operation is invoked, `CartClient` makes an HTTP request to Zed Cart mod
 
 ## Cart Data Flow
 
-![Cart Data Flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Cart+Functionality/cart_data_flow.png) 
+![Cart Data Flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Cart+Functionality/cart_data_flow.png)
 
 ## Cart Operations
 The Cart module in Zed has a cart operation class that handles cart operation requests. Each operation does the following:

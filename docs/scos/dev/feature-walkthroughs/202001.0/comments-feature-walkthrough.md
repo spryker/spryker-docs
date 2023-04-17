@@ -22,9 +22,9 @@ The following schema illustrates module relations in the Comments feature:
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  |
+|INSTALLATION GUIDES  |
 |---------|
 | [Comments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/comments-feature-integration.html)  | 
 | [Comments + persistent cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/comments-persistent-cart-feature-integration.html) |

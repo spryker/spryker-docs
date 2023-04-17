@@ -163,6 +163,7 @@ Make sure that `http://mysprykershop.com/quote-request` with not logged user red
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -232,7 +233,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 5) Set up Behavior
@@ -381,7 +382,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 Make sure that when you make lock reset for a cart, quote request associated with it removed.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
@@ -539,7 +540,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Behavior

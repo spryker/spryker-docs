@@ -14,6 +14,7 @@ redirect_from:
   - /v2/docs/en/navigation
   - /v2/docs/product-based-shop-navigation
   - /v2/docs/en/product-based-shop-navigation
+  - /docs/scos/user/features/201903.0/navigation-feature-overview-html-api-feature-integration-1
 
 ---
 

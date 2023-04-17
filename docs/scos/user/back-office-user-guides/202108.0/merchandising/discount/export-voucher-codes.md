@@ -2,6 +2,8 @@
 title: Export voucher codes
 description: Learn how to generate voucher codes in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202108.0/merchandising/discount/export-voucher-codes.html
 ---
 
 To export voucher codes, do the following:
@@ -9,4 +11,4 @@ To export voucher codes, do the following:
     This opens the **Discount** page.
 2. Next to the discount voucher you want to export the codes of, click **Add code**.
 3. On the **Edit Discount**, click **Export**.
-    This downloads a CSV file with the codes. 
+    This downloads a CSV file with the codes.

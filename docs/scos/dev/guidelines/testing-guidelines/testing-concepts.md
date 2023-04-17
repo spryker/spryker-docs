@@ -1,5 +1,5 @@
 ---
-title: Testing Concepts
+title: Testing concepts
 description: Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -23,6 +23,29 @@ redirect_from:
   - /v1/docs/testing-concepts
   - /v1/docs/en/testing-concepts
   - /docs/scos/dev/guidelines/testing-concepts.html
+related:
+  - title: Available test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+  - title: Code coverage
+    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+  - title: Data builders
+    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+  - title: Executing tests
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+  - title: Publish and Synchronization testing
+    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+  - title: Setting up tests
+    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+  - title: Test framework
+    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+  - title: Test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+  - title: Testify
+    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+  - title: Testing best practices
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+  - title: Testing console commands
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
 Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks. QA is the process of assuring quality, not just verifying you will not get an error on some page.
@@ -35,9 +58,9 @@ An important case for having an on-staff QA engineer is that usually when develo
 
 With or without a QA engineer, we have compiled a few tips, guidelines and recommendations that we feel can help keep your project on track:
 
-## The Four Main Reasons Errors Occur
+## The four main reasons errors occur
 
-Errors can appear during all stages of software development: while introducing a feature, during specification, development and testing phases. These are elements of human error - features are introduced without taking into consideration how they will work for the end user, specifications don't include integration with an existing or upcoming feature, validation rules and behaviour descriptions are not fully thought through and many more other intricacies that are overlooked. In the development stage, bugs are a natural occurrence and during testing it is not uncommon to discover that fixing a bug actually reveals or introduces new ones.
+Errors can appear during all stages of software development: while introducing a feature, during specification, development and testing phases. These are elements of human error - features are introduced without taking into consideration how they will work for the end user, specifications don't include integration with an existing or upcoming feature, validation rules and behavior descriptions are not fully thought through and many more other intricacies that are overlooked. In the development stage, bugs are a natural occurrence and during testing it is not uncommon to discover that fixing a bug actually reveals or introduces new ones.
 
 Generally, errors happen from the following reasons:
 
@@ -59,7 +82,7 @@ We have compiled a short checklist to use while creating the specification and d
 * Did I inform the testers of specific areas which need to be double checked?
 * Do the testers need any kind of help to perform the tests (for example, scripts for generating specific data)?
 
-## What is “High-Quality Software”?
+## What is “high-quality software”?
 
 Quality doesn't mean "bug free". Quality means, meeting the stated requirements, functions correctly where it is supposed to, there are no critical, blocking or major issues, and that bugs of other severity are brought to the possible minimum or don’t distract/prevent the user from using the system.
 
@@ -80,7 +103,7 @@ We can prevent this by thinking of performance testing in advance. Plan performa
 
 ### Security
 
-Is the capability of a system to prevent malicious or accidental actions outside of the designed usage, and to prevent disclosure or loss of information. When working with thousands of people’s data and personal information, security leaks and the resulting money loss means that security testing should be one of the first things you think about. Ensure that confidential user data cannot be revealed, that your frontend doesn't allow SQL injections in the text fields ( SQL injections are SQL queries that could be put into a text field like a password or username and instead of requesting authorisation to the website a request is made to the DB or malicious data is written into it).
+Is the capability of a system to prevent malicious or accidental actions outside of the designed usage, and to prevent disclosure or loss of information. When working with thousands of people’s data and personal information, security leaks and the resulting money loss means that security testing should be one of the first things you think about. Ensure that confidential user data cannot be revealed, that your frontend doesn't allow SQL injections in the text fields ( SQL injections are SQL queries that could be put into a text field like a password or username and instead of requesting authorization to the website a request is made to the DB or malicious data is written into it).
 
 ### Usability
 
@@ -88,11 +111,11 @@ Usability defines how well the application meets user requirements. We are looki
 
 Naturally, there are many more quality attributes and there are lots of articles and resources online that you can use to further research and tailor your own list, like (Chapter 16: Quality Attributes)[https://msdn.microsoft.com/en-us/library/ee658094.aspx]. However, for us, our top priority is to focus on performance, security and usability.
 
-## Development/Testing Process and TDD
+## Development or testing process and TDD
 
 Whether you have a QA team or not you will have to test your application. When you do not have a dedicated resource for testing the process can be slightly different. However, there still is a clear process that can be followed. At Spryker we structure our testing process to follow the concepts of TDD (Test Driven Development)
 
-### Testing Without a Full-Time QA Engineer:
+### Testing without a full-time QA engineer
 
 If you do not have a team or a person dedicated for testing, from the first days of development till the go-live stage, you will need to optimize planning and development to leave time for testing.
 
@@ -108,7 +131,7 @@ Here are the steps you should follow:
 The following diagram illustrates what a test process looks like without a QA team.
 ![Testing concepts without QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-noqa.png)
 
-### Testing with a Full-Time QA Engineer or Team:
+### Testing with a full-time QA engineer or team
 
 A QA Engineer or team will probably lead the process and define their own process allowing developers and product owners to do their own job instead of QA. In this case there will be dedicated time for writing test scenarios, testing and retesting things. All in all the process should look more or less like this:
 ![Testing concepts with QA](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Testing+Concepts/testing-concepts-qa.png)
@@ -116,8 +139,6 @@ A QA Engineer or team will probably lead the process and define their own proces
 You will still need to adhere to the steps listed above and plan time for testing, but the overall time will still be reduced as far as development staff are not involved in time consuming acceptance testing and can continue with implementing the next feature. Also, the test quality will be much better.
 
 A test engineer should be involved in the development and specification process from the very first days. Testers who know how to identify edge cases and possible test scenarios can look at the specification from a different angle and ask important clarification questions. If a tester receives the requirements for review when the feature is half done, then clarifications, additions and corrections to the specification from the tester will be given too late and this will prolong development time. So, invite the QA team to the specification review before beginning the implementation.
-
-
 
 
 ## Testware
@@ -132,7 +153,7 @@ In the future when you need to remember how something worked, how it was planned
 
 To recap, think of other people and of yourself in the future, if everybody tries to help others in the team by creating manuals, saving steps, providing access information, this would be a highly-effective team with happy people doing their work and not being distracted or stressed by missing things necessary for their work.
 
-## Testing Activities
+## Testing activities
 
 Be a part of your project. If you have QA professionals working on your project, always communicate with them. QA is a person that should understand your vision, project needs and be your go-to for a second opinion. During testing artifact creation, always let the QA team review them because sometimes what is written with a development approach is not quite understandable for testers.
 
@@ -152,9 +173,9 @@ After each completed iteration, create reports and keep them in the same wiki wh
 
 Each iteration, at least big one, should be ended with regression testing. If you don’t have time or manpower to perform a full regression, make sure to test at least all high priority test cases to see that none of the main use scenarios are broken.
 
-## Testing Scenarios
+## Testing scenarios
 
-Test scenarios come from use cases or other documented requirements. Use cases usually describe positive scenarios, how the system should work, sometimes also error scenarios are specified, but usually requirements only describe what a user should see with a correct behaviour of the system. Even if negative scenarios are not described, think about them and put them into your test cases, because negative usage scenarios come out of positive. The requirement says, you can create an element with x,y fields using latin characters? Then for sure, there will be cases where you create an element without these fields, create an identical element or set some unexpected characters. So even if something is not specified it could be undetermined, think 360 degrees.
+Test scenarios come from use cases or other documented requirements. Use cases usually describe positive scenarios, how the system should work, sometimes also error scenarios are specified, but usually requirements only describe what a user should see with a correct behavior of the system. Even if negative scenarios are not described, think about them and put them into your test cases, because negative usage scenarios come out of positive. The requirement says, you can create an element with x,y fields using latin characters? Then for sure, there will be cases where you create an element without these fields, create an identical element or set some unexpected characters. So even if something is not specified it could be undetermined, think 360 degrees.
 
 We mentioned prioritizing test scenarios, make the positive cases that check what should work high priority and negative cases that check that what shouldn’t low priority (unless the case would break everything).
 
@@ -178,27 +199,27 @@ Negative cases:
 
 Remember to list the steps that were done during the test to remember what needs to be done to pass.
 
-## Test Environments
+## Test environments
 
 Test environments should as much as possible, correspond with the final target or production environments. This is to minimize the risk of environment-specific failures not being found while testing.
 
-### Where to Test
+### Where to test
 
 When you are working on a single module or functionality, it is easy to forget that the end result is a collection of many working pieces. Do not limit testing to just either Yves or Zed, check them both together. For example: if you create a new shipment method, it is not enough to see the success message in Zed. Take a moment to go to Yves to see that the new element is also there, functional and not throwing exceptions when you try to select/open it.
 
-### Test and Test Again
+### Test and test again
 
 This is a note for developers - if you are implementing new code, logically you are already on the branch and have the application running on the VM. This is an ideal time to **take a few moments to open Yves/Zed and check that your fix works and doesn’t break anything else**. Remembering to check how the fix looks like in the UI can prevent having to make a bigger fix down the line. This simple check can save lots of time. Detecting an issue during the development stage is faster and easier to fix than during the testing stage.
 
 Even if you tested during development and it worked for you, ask somebody to test it after the development is done. If you do not have a QA in the team, this could be another developer or product owner, but the final check should always be done on a different machine and best - by a different person. Why? Some things can pass for you locally because you have some special extensions, software installed or a special state of DB, in an environment with different conditions something can fail, so you need to ensure that things work not only for you locally but also on all environments. Another person for testing is needed, because it will bring a new view on the feature and new scenarios of using it so new problems could be revealed.
 
-## Re-Testing and Regression Testing
+## Re-testing and regression testing
 
 After a defect is detected and fixed, the software should be re-tested to confirm that the original defect has been successfully removed and new defects were not revealed or introduced. This is regression testing - checking already existing and checked functionalities or features after some changes were done to any of the related things like dependant module changes or DB changes.
 
 This will not be much of a problem if you have documented previously test scenarios and stored test artifacts from previous runs, you will already have all scenarios and can compare how things were working before.
 
-## The Psychology of Testing
+## The psychology of testing
 
 The mindset during testing is different than the mindset and view during development. With the right mindset, developers can test their own code, but giving this task to a tester helps focus efforts and provide additional benefits, such as an independent view by a trained professional testing resource.
 
@@ -213,7 +234,7 @@ A certain degree of independence often makes the tester more effective at findin
 
 The third variant is the preferred one, because it has a necessary level of abstraction from code and concentration on functionality and usability. At the same time, these are testers you can always have available for project needs unlike the fourth variant when testers are available for a limited time period. The Second level is the next best thing if the third and fourth cannot be used in the project.
 
-Be prepared that even if all the tests done by test team passed, there will still be bugs reported by the real end-users after the software goes live. Even with their level of abstraction from code, testers cannot 100% simulate real user behaviour, because testers are psychologically stuck to the requirements and are too familiar with the system. This makes it hard to notice some defects in scenarios other than tested and repeated so many times already. A real user, has no idea about requirements and just wants to use the software in all possible and sometimes impossible ways. This is why we cannot say that the software is 100% bug-free after all tests and quality assurance. So, there are always ways for improvement.
+Be prepared that even if all the tests done by test team passed, there will still be bugs reported by the real end-users after the software goes live. Even with their level of abstraction from code, testers cannot 100% simulate real user behavior, because testers are psychologically stuck to the requirements and are too familiar with the system. This makes it hard to notice some defects in scenarios other than tested and repeated so many times already. A real user, has no idea about requirements and just wants to use the software in all possible and sometimes impossible ways. This is why we cannot say that the software is 100% bug-free after all tests and quality assurance. So, there are always ways for improvement.
 
 ## Endnotes
 

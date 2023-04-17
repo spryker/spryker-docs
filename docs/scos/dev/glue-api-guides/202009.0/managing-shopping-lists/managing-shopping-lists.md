@@ -848,7 +848,7 @@ To delete a shopping list, send the request:
 
 ### Request
 
-Request sample: `DELETE https://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` — Delete the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`.
+Request sample: `DELETE https://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83`—Delete the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`.
 
 ### Response
 If the shopping list is deleted successfully, the endpoint retruns the `204 No Content` status code.

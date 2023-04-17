@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Creating a Table View
+title: "Tutorial: Creating a table view"
 description: Use the guide to render data, fetched from the database, in the table.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -28,14 +28,15 @@ redirect_from:
 
 This tutorial explains how to retrieve data from the database and render it in a table.
 
-**Prerequisites:**
+## Prerequisites
 
-* You have created a new [module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
+You have created a new [module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html).
 
-## Creating a Table
+## Create a table
+
 Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/Table` folder:
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -52,16 +53,16 @@ class ProductTable extends AbstractTable
     /**
      * @var \Orm\Zed\Product\Persistence\SpyProductQuery
      */
-    protected $spyProductPropelQuery;
+    protected $spyProductQuery;
 
     /**
      * ProductTable constructor.
      *
-     * @param \Orm\Zed\Product\Persistence\SpyProductQuery $spyProductPropelQuery
+     * @param \Orm\Zed\Product\Persistence\SpyProductQuery $spyProductQuery
      */
-    public function __construct(SpyProductQuery $spyProductPropelQuery)
+    public function __construct(SpyProductQuery $spyProductQuery)
     {
-        $this->spyProductPropelQuery = $spyProductPropelQuery;
+        $this->spyProductQuery = $spyProductQuery;
     }
 
     /**
@@ -86,7 +87,7 @@ class ProductTable extends AbstractTable
      */
     protected function prepareData(TableConfiguration $config): array
     {
-        $queryResult = $this->runQuery($this->spyProductPropelQuery, $config);
+        $queryResult = $this->runQuery($this->spyProductQuery, $config);
 
         $results = [];
         foreach ($queryResult as $resultItem) {
@@ -101,8 +102,9 @@ class ProductTable extends AbstractTable
 }
 ```
 
-## Creating a Factory
-The factory should be placed in the communication layer and should contain a method that returns an instance of the `ProductTable` class. Add the method that constructs the instance of the `ProductTable` class:
+## Create a factory
+
+The factory should be placed in the Communication layer and should contain a method that returns an instance of the `ProductTable` class. Add the method that constructs the instance of the `ProductTable` class:
 
 ```php
 <?php
@@ -120,22 +122,22 @@ class HelloWorldCommunicationFactory extends AbstractCommunicationFactory
      */
     public function createProductTable(): ProductTable
     {
-        return new ProductTable($this->createProductPropelQuery());
+        return new ProductTable($this->createProductQuery());
     }
 
     /**
      * @return \Orm\Zed\Product\Persistence\SpyProductQuery
      */
-    public function createProductPropelQuery(): SpyProductQuery
+    public function createProductQuery(): SpyProductQuery
     {
         return SpyProductQuery::create();
     }
 }
 ```
 
-## Adding a Controller Action that Renders the Table
+## Add a Controller action that renders the table
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -183,10 +185,11 @@ The `tableAction()` will be called by a jQuery Plugin ([Datatables](https://data
 
 {% endinfo_block %}
 
-## Creating the Twig Template
+## Create the twig template
+
 Add the products variable to `Pyz/Zed/HelloWorld/Presentation/Index/index.twig` to render the table containing the list of products.
 
-```php
+```twig
 {% raw %}{%{% endraw %} extends '@Gui/Layout/layout.twig' {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
@@ -203,6 +206,11 @@ Add the products variable to `Pyz/Zed/HelloWorld/Presentation/Index/index.twig` 
 
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-Run the `vendor/bin/console router:cache:warm-up` command.
+
+Run the command:
+
+```bash
+vendor/bin/console router:cache:warm-up:backoffice
+```
 
 This is all! To see the table you created, go to `https://zed.mysprykershop.com/hello-world`. You will be able to see the products listed in the table.

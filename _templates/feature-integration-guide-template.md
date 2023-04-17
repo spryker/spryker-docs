@@ -88,6 +88,7 @@ Set up database schema and transfer objects as follows:
 5. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -128,6 +129,7 @@ Set up database schema as follows:
 2. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -392,7 +394,7 @@ Enable the following behaviors by registering the plugins:
 
 ---
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the {Feature Name} feature front end.
 

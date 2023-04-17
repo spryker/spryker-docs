@@ -8,6 +8,7 @@ originalArticleId: 82e16ca1-a0db-4966-a6d5-5b44a79b6ff9
 redirect_from:
   - /v5/docs/cms-feature-integration-guide
   - /v5/docs/en/cms-feature-integration-guide
+  - /docs/scos/dev/feature-integration-guides/202005.0/cms-feature-integration-guide.html
 ---
 
 ## Install Feature Core
@@ -1360,7 +1361,7 @@ Make sure that:
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
@@ -1398,7 +1399,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

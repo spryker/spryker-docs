@@ -29,6 +29,18 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/cronjob-scheduling.html
   - /docs/scos/dev/sdk/202009.0/cronjob-scheduling.html
   - /docs/scos/dev/sdk/202108.0/cronjob-scheduling.html
+  - /docs/scos/user/features/202005.0/sdk/cronjob-scheduling.html
+related:
+  - title: Code Generator
+    link: docs/scos/dev/sdk/code-generator.html
+  - title: Data export
+    link: docs/scos/dev/sdk/data-export.html
+  - title: Data import
+    link: docs/scos/dev/sdk/data-import.html
+  - title: Development virtual machine, docker containers & console
+    link: docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
+  - title: Twig and TwigExtension
+    link: docs/scos/dev/sdk/twig-and-twigextension.html
 ---
 
 To enable your system to process all requests effortlessly, the Spryker Commerce OS is equipped with a Cronjob Scheduling feature. All jobs can be scheduled and executed automatically or manually. Jobs are versioned and can easily be changed by your own developers.

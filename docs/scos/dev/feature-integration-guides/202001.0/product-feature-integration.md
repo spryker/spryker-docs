@@ -65,6 +65,7 @@ Make sure that the following module is installed:
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -99,7 +100,7 @@ console data:import glossar
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that the configured data are added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 
@@ -253,7 +254,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Overview and install the necessary features before beginning the integration step.
 

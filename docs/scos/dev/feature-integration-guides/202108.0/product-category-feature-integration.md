@@ -143,6 +143,7 @@ class ProductCategoryFilterStorageConfig extends SprykerProductCategoryFilterSto
 2. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -636,7 +637,7 @@ Make sure that, after updating or removing a category in the Back Office, the pr
 {% endinfo_block %}
 
 
-## Install feature front end
+## Install feature frontend
 
 To install the Category Management feature front end, follow the steps below.
 

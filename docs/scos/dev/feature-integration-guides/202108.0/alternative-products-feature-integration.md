@@ -107,6 +107,7 @@ Set up synchronization queue pools so that non-multistore entities (not store sp
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -280,7 +281,7 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 155_30149933,134_26145012,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |  concrete_sku | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
 |  alternative_product_concrete_sku | optional | string | 420565 | SKU of the concrete alternative product. |
@@ -428,7 +429,7 @@ Make sure that when you edit any product variant in Zed you have "Product Altern
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 ### Prerequisites
 
@@ -484,7 +485,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

@@ -22,6 +22,19 @@ redirect_from:
   - /v2/docs/en/repository
   - /v1/docs/repository
   - /v1/docs/en/repository
+related: 
+  - title: Database overview
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+  - title: Database schema definition
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+  - title: Entity
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+  - title: Entity manager
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+  - title: About the query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+  - title: Query objects - creation and usage
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
 ---
 
 Since Kernel version 3.2 it's possible to use a Repository class in your persistence layer. The repository implements the [repository pattern](https://martinfowler.com/eaaCatalog/repository.html), which means you have a clear separation between business and persistence layers. Propel entities are not allowed outside the persistence layer. We are using transfer objects instead. This separation enables switching to different database systems or ORMs, you could even use NOSQL to store your data.
@@ -153,5 +166,5 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterfaceMethod` - Add Zed Persistence Repository Interface Method
 * `vendor/bin/console spryk:run AddZedPersistenceRepositoryMethod` - Add Zed Persistence Repository Method
 
-See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.
+For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).
 

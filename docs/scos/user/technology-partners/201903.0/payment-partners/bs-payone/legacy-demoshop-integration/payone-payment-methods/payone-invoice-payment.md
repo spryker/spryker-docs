@@ -8,6 +8,7 @@ originalArticleId: 3917b613-5662-431d-82e6-36181d545145
 redirect_from:
   - /v2/docs/payone-invoice
   - /v2/docs/en/payone-invoice
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-invoice-payment.html
 related:
   - title: PayOne - Prepayment
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
@@ -46,4 +47,3 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
  'PayoneInvoice',
 ];
 ```
-

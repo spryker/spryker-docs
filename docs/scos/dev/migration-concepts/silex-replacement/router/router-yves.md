@@ -18,6 +18,9 @@ redirect_from:
   - /v4/docs/en/router-yves
   - /v3/docs/router-yves-201907
   - /v3/docs/en/router-yves-201907
+related:
+  - title: Router Zed
+    link: docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
 ---
 
 The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component. For more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).
@@ -34,16 +37,20 @@ You can find the list of all the modules related to the service below:
 For information on the installation, see [Migration Guide - Router](/docs/scos/dev/module-migration-guides/migration-guide-router.html).
 
 ### RouterDependencyProvider
+
 #### RouterPlugins
+
 Routers are added to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouterPlugins()` method. Spryker provides two build-in routers:
 
 * `\Spryker\Yves\Router\Plugin\Router\YvesRouterPlugin` - this is the main router which is required for Yves routing.
 * `\Spryker\Yves\Router\Plugin\Router\ZedDevelopmentRouterPlugin` - this router is not required and is only a fallback router for development.
 
 ### RouteProviderPlugins
+
 `RouteProviderPlugins` are added to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()` method. See detailed information about extension points below.
 
-### Configure Router per Environment
+### Configure router per environment
+
 The Router can be configured with the following `\Spryker\Yves\Router\RouterEnvironmentConfigConstantsYves` options:
 
 * `\Spryker\Shared\Router\RouterConstants::YVES_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it is enabled.
@@ -53,12 +60,14 @@ The Router can be configured with the following `\Spryker\Yves\Router\RouterEnvi
 
 For further information, check out the specifications for the Router.
 
-### Configure Router
+### Configure router
+
 Additionally, you also have the option to configure the Symfony Router with `\Spryker\Yves\Router\RouterConfig::getRouterConfiguration()`.
 
 Check `\Symfony\Component\Routing\Router::setOptions()` to see what you can use. Basically, you do not have to change this configuration, but if you need to, you can.
 
-### Extending Router
+### Extending router
+
 The Router can be extended in many ways. To add additional functionality, there is a `RouterExtension` module which is installed automatically with the `spryker/router` module.
 
 The extension module offers the following interfaces:
@@ -225,25 +234,31 @@ interface RouterEnhancerPluginInterface
 
 Use this plugin to hook into the match and to generate processes of the Router.
 
-## Console Commands
+## Console commands
+
 The Router module provides the following console commands:
 
 * `\Spryker\Yves\Router\Plugin\Console\RouterDebugZedConsole` - lists all routes and can be used to see detailed information about each route.
 * `\Spryker\Yves\Router\Plugin\Console\RouterCacheWarmUpConsole` - can be used to warm or refresh the generated cache files.
 
 ## Route manipulator plugins
+
 These plugins are used to manipulate the `Route` after it was added to the `RouteCollection` with `\Spryker\Yves\Router\Route\RouteCollection::add()`.
 
 ### LanguageDefaultPostAddRouteManipulatorPlugin
+
 This plugin adds the default language to every `Route`.
 
 ### SslPostAddRouteManipulatorPlugin
+
 This plugin ensures that all `Route`s have a scheme set. Whether the `Route` should use `http` or `https` is determined by `\Spryker\Yves\Router\RouterConfig::isSslEnabled()` and `\Spryker\Yves\Router\RouterConfig::getSslExcludedRouteNames()`.
 
 ### StoreDefaultPostAddRouteManipulatorPlugin
+
 This plugin adds the default store to every `Route`.
 
 ## Router enhancer plugins
+
 These plugins can be used in three stages of the Router lifecycle.
 
 1. `RouterEnhancerPluginInterface::beforeMatch()`
@@ -251,23 +266,29 @@ These plugins can be used in three stages of the Router lifecycle.
 3. `RouterEnhancerPluginInterface::afterGenerate()`
 
 #### BeforeMatch
+
 This method is executed before the Router tries to match it to a `Route`. As mentioned earlier, `Route`s have a defined URL, for example, `/cart`. Suppose your shop allows a language prefix in the URL's, so the current URL will be `/en/cart`. In this case, to match `/en/cart` to the defined `/cart`, we need to manipulate this URL information before the `Router` tries to match it. The `RouterEnhancer` plugin needs to remember the extracted information for later processing.
 
 #### AfterMatch
+
 This method is executed after the `Router` was able to match an incoming URL to a `Route`. To forward all necessary information that was extracted in the `RouterEnhancerPluginInterface::beforeMatch()` to the application, this method adds the information to the `Route` parameters.
 
 #### AfterGenerate
+
 This method is executed after the `Router` was able to generate a URL by its name. The `Router` is able to generate URL's by a route name, for example, `cart`. The Router would now return you the defined URL for it, for example, `/cart`. If your shop works with a language prefix in the URLs, you need to get a different URL generated, in our case `/en/cart`. This is done in the `RouterEnhancerPluginInterface::afterGenerate()` method.
 
 ### LanguagePrefixRouterEnhancerPlugin
+
 This plugin is responsible for extracting the current language name from an incoming URL, to add the current language to the `Route` parameters, and to prefix the generated URLs with the current language.
 
 Through the `\Spryker\Yves\Router\RouterConfig::getAllowedLanguages()` configuration, you tell this plugin what languages it has to work with.
 
 ### QueryStringRouterEnhancerPlugin
+
 This plugin is responsible for adding the previously used query parameters to the newly generated URLs. All current query parameters are added to every generated URL.
 
 ### StorePrefixRouterEnhancerPlugin
+
 This plugin is responsible for extracting the current store name from an incoming URL, for adding the current store name to the `Route` parameters, and for prefixing the generated URL's with the current store name.
 
 Through the `\Spryker\Yves\Router\RouterConfig::getAllowedStores()` configuration, you tell this plugin what store names it has to work with.

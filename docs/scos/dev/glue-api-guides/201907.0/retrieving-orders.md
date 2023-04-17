@@ -7,6 +7,7 @@ originalArticleId: 8c03651a-4645-4c55-95f1-aecdee411518
 redirect_from:
   - /v3/docs/retrieving-order-history
   - /v3/docs/en/retrieving-order-history
+  - docs/scos/dev/glue-api-guides/201907.0/retrieving-customers-order-history.html
 ---
 
 For every registered customer, there is an order history retrievable. The list of orders, as well as detailed order information including every step of the calculation and addresses used in the orders, is available for retrieval.

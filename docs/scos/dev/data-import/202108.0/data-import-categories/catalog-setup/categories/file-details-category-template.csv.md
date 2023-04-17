@@ -1,5 +1,5 @@
 ---
-title: File details- category_template.csv
+title: File details - category_template.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-templatecsv
@@ -11,25 +11,32 @@ redirect_from:
   - /docs/en/file-details-category-templatecsv
 ---
 
-This article contains content of the **category_template.csv** file to configure Category Template information on your Spryker Demo Shop.
+This document describes the `category_template.csv` file to configure category templates in your Spryker shop.
 
-## Headers & Mandatory Fields
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:category-template
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE |  REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **template_name** | Yes | String |N/A | Name of the category template. |
-| **template_path** | Yes (*unique*) | String |Must be a valid path to a twig file and it is a unique field, for example, the file cannot have more than one line with the same template path. | Path of the category template. |
-*N/A: Not applicable.
+| template_name | &check; | String |   | Name of the category template. |
+| template_path | &check; | String |   | Must be a valid path to a twig file and it is a unique field, for example, the file cannot have more than one line with the same template path. | Path of the category template. |
 
-## Dependencies
+## Import file dependencies
 
 This file has no dependencies.
 
-## Template File & Content Example
-A template and an example of the *category_template.csv*  file can be downloaded here:
+## Import template file and content example
 
-| File | Description |
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [category_template.csv template]() | Category Template .csv template file (empty content, contains headers only). |
-| [category_template.csv]() | Category Template .csv file containing a Demo Shop data sample. |
+| [category_template.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Categories/Template+category_template.csv) | Exemplary import file with headers only. |
+| [category_template.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Categories/category_template.csv) | Exemplary import file with Demo Shop data. |

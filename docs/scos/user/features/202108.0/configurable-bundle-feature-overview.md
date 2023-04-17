@@ -18,7 +18,7 @@ For example, when buying a kitchen set, a customer selects pieces of furniture, 
 ## Configurable bundle template
 Every configurable bundle is created per a template. A *configurable bundle template* is a model with configuration details for a bundle, like a number of [slots](#configurable-bundle-slot) or product lists assigned to a slot. There can be multiple templates in a shop, like a sport suit, a car, or a kitchen set.
 
-A Back Office User creates the templates in the Back Office. To learn how they do it, see [Сreating configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).
+A Back Office User creates the templates in the Back Office. See [Сreate configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html) to learn how they do it.
 
 ![Configurable Bundle Template in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+back+office.png)
 
@@ -73,12 +73,12 @@ When a Back Office user creates a configurable bundle template, they create the 
 
 * A configurable bundle template can have an unlimited number of slots.
 
-* You can assign the same product list to multiple slots in a configurable bundle template only via data import.
+* You can assign the same product list to multiple slots in a configurable bundle template only by data import.
 
 {% endinfo_block %}
 
 To learn how a Back Office User edits product lists, see [Managing product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html).
-To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-slots-in-configurable-bundle-templates).
+To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html#create-slots-in-a-configurable-bundle-template).
 
 When a Storefront user configures a bundle, for each slot, they select a product from the provided product list.
 ![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
@@ -106,7 +106,7 @@ A Storefront User can add a note to a configurable bundle. The note is displayed
 
 ## Configurable bundle quantity, stock, and price
 
-Currently, the feature supports 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a bigger quantity for the products in the slots.
+The feature supports 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a bigger quantity for the products in the slots.
 
 On the **Cart** page, a Storefront User can change the quantity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
 
@@ -228,7 +228,7 @@ The Configurable Bundle feature looks as follows on the Storefront:
 
 ### Current constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 
 
 * On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html).
@@ -244,12 +244,13 @@ Currently, the feature has the following functional constraints which are going 
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Create a configurable bundle template](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html)  |
-|  [Manage configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html)  |
+|  [Create configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html)  |
+|  [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)  |
+|  [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

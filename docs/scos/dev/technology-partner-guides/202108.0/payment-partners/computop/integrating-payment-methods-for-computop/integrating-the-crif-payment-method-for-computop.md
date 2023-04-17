@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-crif
   - /docs/computop-crif
   - /docs/en/computop-crif
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop-payment-methods/computop-crif.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html

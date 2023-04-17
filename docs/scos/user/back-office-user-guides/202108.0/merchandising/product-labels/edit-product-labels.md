@@ -2,10 +2,9 @@
 title: Edit product labels
 description: Learn how to edit product labels in the Back Office
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202108.0/merchandising/product-labels/managing-product-labels.html
 ---
-
-
-
 
 ## Prerequisites
 

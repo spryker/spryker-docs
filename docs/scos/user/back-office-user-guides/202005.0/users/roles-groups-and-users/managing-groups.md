@@ -8,6 +8,7 @@ originalArticleId: a1a8458b-9586-4761-8c18-b82308e75e53
 redirect_from:
   - /v5/docs/managing-groups
   - /v5/docs/en/managing-groups
+  - /docs/scos/user/back-office-user-guides/202005.0/users/managing-user-groups/creating-user-groups.html
 related:
   - title: Roles- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
@@ -39,7 +40,7 @@ To create a group:
 
 This will redirect you to the **Edit Group** page. The page contains the same fields as the **Create Group** page. The only difference is that on the **Edit** page you will see the **Users** section.
 
-In this section, you can see what users are assigned to this specific group and de-assign them if needed. 
+In this section, you can see what users are assigned to this specific group and de-assign them if needed.
 
 ## Editing a Group
 
@@ -47,7 +48,7 @@ To edit the group:
 1. In the **Groups > Actions** column, click **Edit**.
 2. On the **Edit Group** page you can:
   * Rename the group by changing the value in the **Title** field.
-  * Assign a new role to a group. 
+  * Assign a new role to a group.
       You can also remove the already assigned roles by clicking **X** on the left of the assigned role.
 4. Once you finish updating the values, click **Save**.
 
@@ -64,9 +65,8 @@ To de-assign a user from a group:
 **Tips and tricks**
 In case you need to know what roles are assigned to a specific group without initiating the update flow, do the following:
 1. On the **Groups** table view page, click the hyperlinked value in the _Roles_ column.
-  All roles assigned to this group are listed in the **Roles in Group** pop-up that appears. 
+  All roles assigned to this group are listed in the **Roles in Group** pop-up that appears.
 2. Click **Close** to close the pop-up window.
 
 **What's next?**
 The preliminary steps are performed so you can proceed and create an actual user record.
-

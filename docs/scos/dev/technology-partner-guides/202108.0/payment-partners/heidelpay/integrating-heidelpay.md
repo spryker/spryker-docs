@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-integration-scos
   - /docs/heidelpay-integration-scos
   - /docs/en/heidelpay-integration-scos
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

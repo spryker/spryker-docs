@@ -9,6 +9,8 @@ redirect_from:
   - /v4/docs/updating-a-product-variant
   - /v4/docs/en/updating-a-product-variant
   - /docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/updating-product-variants.html
+  - /docs/scos/user/back-office-user-guides/202001.0/catalog/products/manage-concrete-products/updating-product-variants.html
+  - /docs/scos/user/back-office-user-guides/202001.0/catalog/products/concrete-products/updating-product-variants.html
 related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html

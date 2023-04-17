@@ -17,25 +17,20 @@ redirect_from:
   - /v4/docs/health-checks
   - /v4/docs/en/health-checks
   - /docs/scos/dev/technical-enhancements/health-checks.html
-related:
-  - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
-## General Information
+## General information
 
 A health checks allows you to identify whether application services are functioning properly by sending GET requests to application endpoints.
 
 In the table below you can find all the Spryker services that you can run health checks for. The services are grouped by the applications they belong to.
 
-
-|  Zed | Yves | Glue |
+|  ZED | YVES | GLUE |
 | --- | --- | --- |
 | Search | Search | Search |
 | Storage | Storage | Storage |
 | Database | ZedRequest | ZedRequest |
 | Session | Session |  |
-
 
 ## Endpoints
 
@@ -44,8 +39,11 @@ By default, all the application endpoints are closed for security reasons. You c
 To enable the endpoints, add the following to `/config/Shared/config_default.php`:
 
 ```php
-Spryker\Shared\HealthCheck\HealthCheckConstants;$config[HealthCheckConstants::HEALTH_CHECK_ENABLED] = true;
+use Spryker\Shared\HealthCheck\HealthCheckConstants;
+
+$config[HealthCheckConstants::HEALTH_CHECK_ENABLED] = true;
 ```
+
 ## Running Application Health Checks
 
 To run a health check, either open the URL of an application endpoint in a browser or send a curl GET request. The pattern is `http://application.mysprykershop.com/health-check`. For example, `http://zed.mysprykershop.com/health-check`.
@@ -65,31 +63,30 @@ When an application service is unavailable, you might want to apply a fix and ru
 
 To start feature integration, overview and install the necessary features:
 
-
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202108.0 |
+| Spryker Core | {{page.version}} |
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/spryker-core: "^202108.0" --update-with-dependencies
+composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox “Verification” %}
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `HealthCheck` | `vendor/spryker/health-check` |
-|`HealthCheckExtension`|`vendor/spryker/health-check-extension`|
+| HealthCheck | vendor/spryker/health-check |
+| HealthCheckExtension | vendor/spryker/health-check-extension |
 
 {% endinfo_block %}
 
-### 2) Set up Configuration
+### 2) Set up configuration
 
 1. Extend ACL configuration settings:
 
@@ -141,17 +138,16 @@ class AuthConfig extends SprykerAuthConfig
 }
 ```
 
-
 ### 3) Set up Behavior
 
-1. Register the following plugins for `Zed `application:
+1. Register the following plugins for `Zed` application:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `SessionHealthCheckPlugin` | Performs a health check for the Session service. | None | `Spryker\Zed\Session\Communication\Plugin\HealthCheck` |
-| `KeyValueStoreHealthCheckPlugin` | Performs a health check for the Storage service. | None | `Spryker\Zed\Storage\Communication\Plugin\HealthCheck` |
-| `SearchHealthCheckPlugin` | Performs a health check for the Search service. | None | `Spryker\Zed\Search\Communication\Plugin\HealthCheck` |
-| `DatabaseHealthCheckPlugin` | Performs a health check for the Propel service. | None | `Spryker\Zed\Propel\Communication\Plugin\HealthCheck` |    
+| SessionHealthCheckPlugin | Performs a health check for the Session service. | None | Spryker\Zed\Session\Communication\Plugin\HealthCheck |
+| KeyValueStoreHealthCheckPlugin | Performs a health check for the Storage service. | None | Spryker\Zed\Storage\Communication\Plugin\HealthCheck |
+| SearchHealthCheckPlugin | Performs a health check for the Search service. | None | Spryker\Zed\Search\Communication\Plugin\HealthCheck |
+| DatabaseHealthCheckPlugin | Performs a health check for the Propel service. | None | `Spryker\Zed\Propel\Communication\Plugin\HealthCheck |
 
 ```php
 <?php
@@ -181,15 +177,14 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 }
 ```
 
-
 2. Register the following plugins for `Yves` application:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `SessionHealthCheckPlugin` | Performs a health check for the Session service. | None | `Spryker\Yves\Session\Plugin\HealthCheck` |
-| `KeyValueStoreHealthCheckPlugin` | Performs a health check for the Storage service. | None | `Spryker\Yves\Storage\Plugin\HealthCheck` |
-| `SearchHealthCheckPlugin` |Performs a health check for the Search service.| None | `Spryker\Yves\Search\Plugin\HealthCheck` |
-| `ZedRequestHealthCheckPlugin` | Performs a health check for the ZedRequest service. | None | `Spryker\Yves\ZedRequest\Plugin\HealthCheck` |    
+| SessionHealthCheckPlugin | Performs a health check for the Session service. | None | Spryker\Yves\Session\Plugin\HealthCheck |
+| KeyValueStoreHealthCheckPlugin | Performs a health check for the Storage service. | None | Spryker\Yves\Storage\Plugin\HealthCheck |
+| SearchHealthCheckPlugin |Performs a health check for the Search service.| None | Spryker\Yves\Search\Plugin\HealthCheck |
+| ZedRequestHealthCheckPlugin | Performs a health check for the ZedRequest service. | None | Spryker\Yves\ZedRequest\Plugin\HealthCheck |    
 
 ```php
 <?php
@@ -221,11 +216,11 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 
 3. Register the following plugins for `Glue` application:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| `KeyValueStoreHealthCheckPlugin` | Performs a health check for the Storage service. | None | `Spryker\Glue\Storage\Plugin\HealthCheck` |
-| `SearchHealthCheckPlugin` | Performs a health check for the Search service. | None | `Spryker\Glue\Search\Plugin\HealthCheck` |
-| `ZedRequestHealthCheckPlugin` |Performs a health check for the ZedRequest service.| None | `Spryker\Glue\ZedRequest\Plugin\HealthCheck` |
+| KeyValueStoreHealthCheckPlugin | Performs a health check for the Storage service. | None | Spryker\Glue\Storage\Plugin\HealthCheck |
+| SearchHealthCheckPlugin | Performs a health check for the Search service. | None | Spryker\Glue\Search\Plugin\HealthCheck |
+| ZedRequestHealthCheckPlugin |Performs a health check for the ZedRequest service.| None |Spryker\Glue\ZedRequest\Plugin\HealthCheck |
 
 ```php
 <?php
@@ -253,9 +248,10 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 }
 ```
 
-### 4) Set up Transfer Objects
+### 4) Set up transfer objects
 
 Run the following command to apply transfer changes:
+
 ```bash
 vendor/bin/console transfer:generate
 ```
@@ -264,10 +260,10 @@ vendor/bin/console transfer:generate
 
 Make sure that the following changes took place in transfer objects:
 
-| Transfer | Type | Event | Namespace |
+| TRANSFER | TYPE | EVENT | NAMESPACE |
 | --- | --- | --- | --- |
-| `HealthCheckRequestTransfer` | class | created | `src\Generated\Shared\Transfer\HealthCheckRequestTransfer` |
-| `HealthCheckResponseTransfer` | class | created | `src\Generated\Shared\Transfer\HealthCheckResponseTransfer` |
-| `HealthCheckServiceResponseTransfer` | class | created | `src\Generated\Shared\Transfer\HealthCheckServiceResponseTransfer` |
+| HealthCheckRequestTransfer | class | created | src\Generated\Shared\Transfer\HealthCheckRequestTransfer |
+| HealthCheckResponseTransfer | class | created | src\Generated\Shared\Transfer\HealthCheckResponseTransfer |
+| HealthCheckServiceResponseTransfer | class | created | src\Generated\Shared\Transfer\HealthCheckServiceResponseTransfer |
 
 {% endinfo_block %}

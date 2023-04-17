@@ -49,6 +49,7 @@ Make sure that the following modules were installed:
 Run the following commands to apply the database changes and generate the entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -423,7 +424,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` are activated, check if `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` console commands exist.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

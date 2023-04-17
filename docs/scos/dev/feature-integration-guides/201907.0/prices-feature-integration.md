@@ -91,7 +91,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
  <br>   
 </details>
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 |---|---|---|---|---|
 |  `abstract_sku` | optional | string | 193 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
 |  `concrete_sku` | optional | string | 117_29890338 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
@@ -242,7 +242,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 Go to the product detail page for a product with Volume Prices set, update the quantity to meet any of Volume Prices boundaries and check the price. Then add the product to the cart and if the price of the item in the Cart remains the same as it was on the Product Detail Page, the plugins are installed.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -297,7 +297,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

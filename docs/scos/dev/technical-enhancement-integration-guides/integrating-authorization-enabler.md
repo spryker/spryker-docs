@@ -13,8 +13,6 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/authorization-enabler-integration.html
 ---
 
-
-
 This document describes how to integrate the Authorization Enabler into a Spryker project.
 
 ## Prerequisites
@@ -22,8 +20,8 @@ This document describes how to integrate the Authorization Enabler into a Spryke
 To start the integration, review and install the necessary features:
 
 | NAME         | VERSION |
-| :----------- | :------ |
-| Spryker Core | master  |
+| ----------- | ------ |
+| Spryker Core | {{page.version}}  |
 
 ## 1) Install the required modules using Composer
 
@@ -33,30 +31,23 @@ To start the integration, review and install the necessary features:
 composer require spryker/authorization spryker/glue-application-authorization-connector --update-with-dependencies
 ```
 
-
 2. Optional: Install or update modules with endpoint authorization:
 
-```
+```bash
 composer require spryker/orders-rest-api:"^4.10.0" spryker/availability-notifications-rest-api:"^1.1.0" spryker/carts-rest-api:"^5.16.0" spryker/customers-rest-api:"^1.19.0" --update-with-dependencies
 ```
-
-
-
-
 
 {% info_block warningBox "Verificaiton" %}
 
 Ensure that the following modules have been installed in `vendor/spryker`:
 
-| MODULE                                         | EXPECTED DIRECTORY                                           |
-| :--------------------------------------------- | :----------------------------------------------------------- |
-| Authorization                                  | vendor/spryker/authorization                                 |
-| GlueApplicationAuthorizationConnector          | vendor/spryker/glue-application-authorization-connector      |
-| AuthorizationExtension                         | vendor/spryker/authorization-extension                       |
-| GlueApplicationExtension                       | vendor/spryker/glue-application-extension                    |
+| MODULE    | EXPECTED DIRECTORY   |
+| -------------- | -------------------------- |
+| Authorization   | vendor/spryker/authorization    |
+| GlueApplicationAuthorizationConnector | vendor/spryker/glue-application-authorization-connector  |
+| AuthorizationExtension   | vendor/spryker/authorization-extension  |
+| GlueApplicationExtension   | vendor/spryker/glue-application-extension  |
 | GlueApplicationAuthorizationConnectorExtension | vendor/spryker/glue-application-authorization-connector-extension |
-
-
 
 {% endinfo_block %}
 
@@ -64,7 +55,7 @@ Ensure that the following modules have been installed in `vendor/spryker`:
 
 Generate transfer changes:
 
-```
+```bash
 console transfer:generate
 ```
 
@@ -72,10 +63,8 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-
-
-| TRANSFER                         | TYPE  | EVENT   | PATH                                                         |
-| :------------------------------- | :---- | :------ | :----------------------------------------------------------- |
+| TRANSFER   | TYPE  | EVENT   | PATH   |
+| ------------------ | ---- | ------ | ------------------- |
 | AuthorizationRequestTransfer     | class | created | src/Generated/Shared/Transfer/AuthorizationRequestTransfer.php |
 | AuthorizationResponseTransfer    | class | created | src/Generated/Shared/Transfer/AuthorizationResponseTransfer.php |
 | AuthorizationIdentityTransfer    | class | created | src/Generated/Shared/Transfer/AuthorizationIdentityTransfer.php |
@@ -83,7 +72,7 @@ Make sure that the following changes have been applied in transfer objects:
 | RouteAuthorizationConfigTransfer | class | created | src/Generated/Shared/Transfer/RouteAuthorizationConfigTransfer.php |
 | RestErrorMessageTransfer         | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer.php   |
 
- {% endinfo_block %}
+{% endinfo_block %}
 
 ## 3) Set up behavior
 
@@ -93,8 +82,8 @@ Set up the following behaviors.
 
 Activate the following plugins:
 
-| PLUGIN                                                       | SPECIFICATION                                                | NAMESPACE                                                    |
-| :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| PLUGIN   | SPECIFICATION  | NAMESPACE  |
+| ---------------- | ------------------- | ---------------------- |
 | CustomerReferenceMatchingEntityIdAuthorizationStrategyPlugin | Authorization rule for the route that uses the current strategy. | Spryker\Client\Customer\Plugin                               |
 | AuthorizationRestUserValidatorPlugin                         | Validates a request if the route implements the authorization interface. | Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication |
 | AuthorizationRouterParameterExpanderPlugin                   | Expands a route with additional parameters.                  | Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication |
@@ -123,11 +112,10 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>rc/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -162,10 +150,9 @@ class GlueApplicationDependencyProvider extends SprykerAuthorizationDependencyPr
     }
 }
 ```
+</details>
 
- </details>
-
-{% info_block warningBox "Verificaiton" %}
+{% info_block warningBox "Verification" %}
 
 To make sure that the plugins are activated, send a request with incorrect authentication details to a protected resource and check that it returns an authorization error.
 

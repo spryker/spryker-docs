@@ -110,12 +110,12 @@ Check out this video to get more details about how Return Management works:
 
 ## Current constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future:
+The feature has the following functional constraints which are going to be resolved in the future:
 
 * There is no user interface for managing the return policy and the return reasons.
 * You can’t return individual items of a Product Bundle.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

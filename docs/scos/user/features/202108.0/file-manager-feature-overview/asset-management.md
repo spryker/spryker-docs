@@ -24,7 +24,7 @@ Static assets are images, fonts, CSS, JS, HTML and PHP files that are available 
 
 {% info_block infoBox %}
 
-Currently, except for the error handling files, there are no Glue related assets.
+Except for the error handling files, there are no Glue related assets.
 
 {% endinfo_block %}
 

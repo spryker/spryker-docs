@@ -43,7 +43,7 @@ To learn how a product catalog manager can create a voucher in the Back Office, 
 
 ### Voucher code collection
 
-All the voucher codes belonging to a voucher discount comprise a *voucher code collection*. A customer can apply one voucher code from a collection to a cart. If they apply two codes from a single collection to a cart, the code with a bigger discount value is applied.
+All the voucher codes belonging to a voucher discount include a *voucher code collection*. A customer can apply one voucher code from a collection to a cart. If they apply two codes from a single collection to a cart, the code with a bigger discount value is applied.
 
 At the same time, a customer can apply two voucher codes to a single cart, if the codes belong to different collections.
 
@@ -220,7 +220,7 @@ If a cart is eligible for a discount outside of its validity interval, the cart 
 A product catalog manager defines calculation when [creating a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

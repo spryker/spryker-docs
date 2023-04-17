@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay
   - /docs/heidelpay
   - /docs/en/heidelpay
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay.html
 ---
 
 ## Partner Information

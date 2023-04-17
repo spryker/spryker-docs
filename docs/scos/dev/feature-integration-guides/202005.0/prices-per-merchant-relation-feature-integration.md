@@ -180,8 +180,11 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 | `DataImport` | `PriceProductMerchantRelationshipDataImportPlugin` | Imports prices for merchant relations. | `getDataImporterPlugins` |
 
 {% info_block warningBox %}
-If you have not installed plugins needed for Merchant and Merchant Relations<!-- add a link-->, add them here as well. See _Merchant and Merchant Relations feature integration guide_ <!-- link to IG--> for more details.)
+
+If you have not installed plugins needed for Merchant and Merchant Relations<!-- add a link-->, add them here as well. See _Merchant and Merchant Relations feature integration guide_ <!-- link to IG--> for more details.
+
 {% endinfo_block %}
+
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
@@ -376,6 +379,8 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-{% info_block infoBox %}
-See  [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html
-{% endinfo_block %} for information on how to migrate to a newer version of the `PriceProduct` module with price dimensions support.)
+{% info_block infoBox %}]
+
+See  [Migration Guide - PriceProduct](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) for information on how to migrate to a newer version of the `PriceProduct` module with price dimensions support.
+
+{% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: File details- cms_block_category.csv
+title: File details - cms_block_category.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-categorycsv
@@ -11,28 +11,34 @@ redirect_from:
   - /docs/en/file-details-cms-block-categorycsv
 ---
 
-This article contains content of the **cms_block_category.csv** file to configure CMS Block Category information on your Spryker Demo Shop.
+This document describes the `cms_block_category.csv` file to configure CMS Block Category information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:cms-block-category
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **block_key** | Yes | String |N/A* |  Identifier key of the Block.|
-| **category_key** | Yes | String |N/A | Identifier key of the category. |
-| **category_template_name** | Yes | String |N/A | Name of the category template. |
-| **cms_block_category_position_name** | No | String |N/A | Name of the CMS block category position. |
-*N/A: Not applicable.
+| block_key | &check; | String |  |  Identifier key of the Block.|
+| category_key | &check; | String |  | Identifier key of the category. |
+| category_template_name | &check; | String |  | Name of the category template. |
+| cms_block_category_position_name |  | String |  | Name of the CMS block category position. |
 
-## Dependencies
+## Import file dependencies
 
-This file has the following dependency:
-*     [cms_block_category_position.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html) 
+This file has the following dependency: [cms_block_category_position.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html). 
 
-## Template File & Content Example
-A template and an example of the *cms_block_category.csv*  file can be downloaded here:
+## Import template file and content example
 
-| File | Description |
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [cms_block_category.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_template.csv) | CMS Block Category .csv template file (empty content, contains headers only). |
-| [cms_block_category.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category.csv) | PCMS Block Category .csv file containing a Demo Shop data sample. |
+| [cms_block_category.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_template.csv) | Exemplary import file with headers only. |
+| [cms_block_category.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category.csv) | Exemplary import file with Demo Shop data. |

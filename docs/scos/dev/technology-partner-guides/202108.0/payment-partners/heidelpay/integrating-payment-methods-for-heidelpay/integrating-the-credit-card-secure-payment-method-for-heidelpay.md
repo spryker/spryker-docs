@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-credit-card
   - /docs/heidelpay-credit-card
   - /docs/en/heidelpay-credit-card
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

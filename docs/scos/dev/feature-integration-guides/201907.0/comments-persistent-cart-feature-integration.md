@@ -57,7 +57,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 Make sure that `QuoteTransfer::commentThread` contains information about comments when you retrieve a quote from the database.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

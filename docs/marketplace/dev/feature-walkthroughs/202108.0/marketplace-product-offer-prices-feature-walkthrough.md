@@ -61,9 +61,9 @@ The following schema illustrates the Marketplace Product Offer Prices domain mod
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/0ad490bb-f21f-4e4a-b6eb-e0102a8c7b42.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
 | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)          | [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html)          | [File details: price-product-offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html)           |
 |[Glue API: Marketplace Product Offer Prices integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)           |           |           |

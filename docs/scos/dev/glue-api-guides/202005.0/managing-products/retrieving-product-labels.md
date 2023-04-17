@@ -173,7 +173,7 @@ The above requests fetch not only label information, but also information on the
 The endpoint responds with information on the requested cart, including the products in it and the labels assigned to them. For each assigned label, the attributes are the same as when requesting a specific label.
 
 **Sample:**
-    
+
 ```json
 {
     "data": [
@@ -271,7 +271,7 @@ The endpoint responds with information on the requested cart, including the prod
 ```
 
 ### Possible Errors
-For information on the possible error responses, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) and [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html-of-registered-users-201907).
+For information on the possible error responses, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) and [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 
 ## Get Product Labels for Wishlist Items
 To retrieve labels for all products in a wishlist, send a GET request to the following endpoints and include **product-labels** as a relationship:
@@ -291,7 +291,7 @@ The above requests fetch not only label information, but also information on the
 The endpoint responds with information on the requested wishlist, including the products in it and the labels assigned to them. For each assigned label, the attributes are the same as when requesting that specific label.
 
 **Sample:**
-    
+
 ```json
 {
     "data": {

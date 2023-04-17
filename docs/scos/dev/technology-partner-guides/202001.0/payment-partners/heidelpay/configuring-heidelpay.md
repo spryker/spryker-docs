@@ -87,4 +87,3 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
  HeidelpayConfig::PAYMENT_METHOD_IDEAL => 'HeidelpayIdeal01',
 ];
 ```
-

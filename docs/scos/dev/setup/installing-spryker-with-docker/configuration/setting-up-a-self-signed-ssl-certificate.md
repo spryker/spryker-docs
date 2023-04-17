@@ -12,6 +12,12 @@ redirect_from:
   - /docs/en/setting-up-a-self-signed-ssl-certificate
   - 6/docs/setting-up-a-self-signed-ssl-certificate
   - 6/docs/en/setting-up-a-self-signed-ssl-certificate
+  - /v3/docs/en/ht-use-self-signed-ssl-certificates
+related:
+  - title: Configuring Spryker after installing with Docker
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html
+  - title: Adjusting Jenkins for a Docker environment
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
 ---
 
 
@@ -19,24 +25,30 @@ This HowTo describes the steps to import a self-signed SSL (Secure Sockets Layer
 
 A *self-signed SSL certificate* is an identity certificate that is signed by the same entity whose identity it certificates. Such a certificate is used only for development purposes. For production purposes, we recommend generating a valid SSL certificate signed by an official certification center like [letsEncrypt](https://letsencrypt.org/).
 
-There is a self-signed SSL certificate shipped with Spryker in Docker. It is located in `docker/deployment/default/spryker_ca.crt.` To access your instace via a secure connection, add the certificate to trusted authorities in the host system.
+There is a self-signed SSL certificate shipped with Spryker in Docker. It is located in `docker/deployment/default/spryker_ca.crt.` To access your instance via a secure connection, add the certificate to trusted authorities in the host system.
 
 Depending on the operating system, follow the instructions:
-* [Setting up a self-signed SSL certificate on Windows](#setting-up-a-self-signed-ssl-certificate-on-windows)
-* [Setting up a self-signed SSL certificate on Linux](#setting-up-a-self-signed-ssl-certificate-on-linux)
-* [Setting up a self-signed SSL certificate on MacOS](#setting-up-a-self-signed-ssl-certificate-on-macos)
+- [Setting up a self-signed SSL certificate on Windows](#setting-up-a-self-signed-ssl-certificate-on-windows)
+- [Setting up a self-signed SSL certificate on Linux](#setting-up-a-self-signed-ssl-certificate-on-linux)
+  - [Setting up a self-signed SSL certificate in Google Chrome on Linux](#setting-up-a-self-signed-ssl-certificate-in-google-chrome-on-linux)
+  - [Setting up a self-signed SSL certificate in Firefox on Linux](#setting-up-a-self-signed-ssl-certificate-in-firefox-on-linux)
+- [Setting up a self-signed SSL certificate on MacOS](#setting-up-a-self-signed-ssl-certificate-on-macos)
 
 ## Setting up a self-signed SSL certificate on Windows
+
 To add `spryker_ca.crt` to trusted authorities in Windows:
+
 1. To open the **Run** window, press **Win+R**.
 2. In the **Open** field, enter *mmc* and press **Enter**.
 3. Click **Yes** to confirm the action.
 4. From the **File** menu, select **Add/Remove Snap-in...**.
+
 {% info_block infoBox %}
 
 Alternatively, press **Ctrl+M** to open the **Add or Remove Snap-ins** window.
 
 {% endinfo_block %}
+
 5. In the **Available snap-ins** list, select **Certificates**.
 6. Select **Add >**.
 ![Add certs](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/add-certs.png)
@@ -54,10 +66,13 @@ Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
 {% endinfo_block %}
 
 ## Setting up a self-signed SSL certificate on Linux
+
 On Linux, you can add the certificate to trusted authorities only in a browser. Below, you can find instructions for importing the certificate in Google Chrome and Firefox.
 
 ### Setting up a self-signed SSL certificate in Google Chrome on Linux
+
 To add `spryker_ca.crt` to trusted authorities in Google Chrome on Linux:
+
 1. Click **More**![google-chrome-more-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/chrome-more-button.png).
 2. Select **Settings**.
 3. On the *Settings* page, go to **Advanced** > **Manage certificates**.
@@ -76,6 +91,7 @@ Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
 {% endinfo_block %}
 
 ### Setting up a self-signed SSL certificate in Firefox on Linux
+
 To add `spryker_ca.crt` to trusted authorities in Firefox on Linux:
 
 1. Click **Open menu** ![firefox-menu-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/firefox-menu-button.png).
@@ -88,6 +104,7 @@ To add `spryker_ca.crt` to trusted authorities in Firefox on Linux:
 8. Select **Trust this CA to identify websites.**
 ![Select file in Firefox](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/select-file.png)
 9. Click **OK** to save the changes.
+
 {% info_block warningBox "Verification" %}
 
 Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
@@ -96,7 +113,9 @@ Ensure that you can open Yves, Zed, and Glue without warnings via HTTPS.
 {% endinfo_block %}
 
 ## Setting up a self-signed SSL certificate on MacOS
+
 To add `spryker_ca.crt` to trusted authorities in MacOS:
+
 1. Open Keychain Access.
 2. Select **File** > **Import Items**.
 3. Select `spryker_ca.crt` and click **Open**.
@@ -107,8 +126,6 @@ To add `spryker_ca.crt` to trusted authorities in MacOS:
 6. Open the **Trust** drop-down menu.
 7. In the **When using this certificate** drop-down menu, select **Always Trust**.
 ![Make the certificate trusted](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Docker+HowTos/HowTo+Install+Self-Signed+SSL+Certificates/always-trust.png)
-
-
 
 {% info_block warningBox "Verification" %}
 

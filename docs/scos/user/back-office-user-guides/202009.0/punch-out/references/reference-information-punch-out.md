@@ -8,6 +8,7 @@ originalArticleId: b6314be9-6666-482a-9c18-d39f3c5a556b
 redirect_from:
   - /v6/docs/punch-out-reference-information
   - /v6/docs/en/punch-out-reference-information
+  - /docs/scos/user/back-office-user-guides/202009.0/punch-out/references/reference-information-punchout.html
 ---
 
 This topic contains the reference information for working in **Punch Out** > **Connections and Punch Out** > **Trnsactions Log**.
@@ -37,7 +38,7 @@ The following table describes the attributes that are used when creating or upda
 | Username | The required field for the OCI connection setup that needs to be sent the buyer's ERP system. The username validates the Punch Out setup request. |
 | Password | The required field for the OCI connection setup that needs to be sent the buyer's ERP system. The password validates the Punch Out setup request. |
 | Type | A drop-down list with the available types of the connection, e.g *Setup Request*. |
-| Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g. 128. Any characters outside the limit will be cut off on a transferred cart. | 
+| Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g. 128. Any characters outside the limit will be cut off on a transferred cart. |
 | Cart Encoding | A drop-down list with the available cart encoding types: base64, url-encoded, no-encoding.This configuration varies based on the buyer's ERP requirements. Base64 is selected by default. |
 | Totals Mode | A drop-down list with the available options: Line and Header. This configuration allows you to set whether the cart total is set in the header or on the line level, and it varies based on the buyer's ERP requirements. The header is not supported using the OCI connection type. |
 | Cart Mapping | JSON mapping definition for cart mapping. |
@@ -50,13 +51,10 @@ The following table describes the attributes that are used when creating or upda
 ## Transactions Log
 On the **Transactions Log** page, you see the following:
 
-* Transaction ID 
+* Transaction ID
 * Message Type
 * Business Unit
 * Connection Name
 * Transaction Status
 * Session ID
 * The date when the transaction was created
-
-
-

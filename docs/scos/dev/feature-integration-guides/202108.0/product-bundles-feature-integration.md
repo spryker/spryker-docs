@@ -96,6 +96,7 @@ Set up database schema and transfer objects:
 2. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

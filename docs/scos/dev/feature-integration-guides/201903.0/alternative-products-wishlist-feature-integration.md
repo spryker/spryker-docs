@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/alternative-products-wishlist-feature-integration
 ---
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, review and install the necessary features:
 |Name|Version|
@@ -31,7 +31,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 2) Set up Widgets

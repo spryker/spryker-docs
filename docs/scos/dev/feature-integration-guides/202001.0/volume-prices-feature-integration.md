@@ -216,7 +216,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -258,7 +258,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

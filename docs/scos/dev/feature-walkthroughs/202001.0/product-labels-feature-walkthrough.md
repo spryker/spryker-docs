@@ -12,9 +12,9 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 
 
-## Related Developer articles
+## Related Developer documents
 
-| INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES |
+| INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES |
 |---|---|---|
 | [Product Label feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-label-feature-integration.html) | ProductLabel migration guide | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html) |
 |  | ProductLabelGUI migration guide |  |

@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
 | State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
-| Marketplace Dummy Payment | {{page.version}} | [Marketplace Dummy Payment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-dummy-payment-feature-integration.html) |
+| Marketplace Dummy Payment | {{page.version}} | [Marketplace Dummy Payment integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-dummy-payment-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
 
@@ -467,6 +467,7 @@ Adjust the schema definition so entity changes trigger events:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -553,7 +554,7 @@ MER000007,MerchantDefaultStateMachine
 MER000005,MerchantDefaultStateMachine
 ```
 
-|PAREMETER |REQUIRED?  |TYPE  |DATA EXAMPLE | DESCRIPTION |
+|PAREMETER |REQUIRED  |TYPE  |DATA EXAMPLE | DESCRIPTION |
 |---------|---------|---------|---------| ---------|
 |merchant_reference     |  &check;       |  string       | spryker        |String identifier for merchant in the Spryker system. |
 |merchant_oms_process_name     |    &check;     |     string   |  MainMerchantStateMachine       | String identifier for the State Machine processes.|
@@ -877,20 +878,6 @@ use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as Spryk
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    public function provideCommunicationLayerDependencies(Container $container): Container
-    {
-        $container = parent::provideCommunicationLayerDependencies($container);
-
-        $container = $this->addSalesFacade($container);
-
-        return $container;
-    }
-
-    /**
      * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface>
      */
     protected function getMerchantOrderPostCreatePlugins(): array
@@ -1116,25 +1103,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 
 ```
-
-**src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
-
-```twig
-{%- raw -%}
-{% extends molecule('order-detail-table', '@SprykerShop:CustomerPage') %}
-
-{% block body %}
-    {% for shipmentGroup in data.shipmentGroups %}
-        <article class="grid grid--gap spacing-bottom spacing-bottom--big">
-            ...
-            {% widget 'MerchantOrderReferenceForItemsWidget' args [shipmentGroup.items] only %}{% endwidget %}
-            ...
-        </article>
-    {% endfor %}
-{% endblock %}
-{% endraw %}
-```
-
 
 {% info_block warningBox "Verification" %}
 

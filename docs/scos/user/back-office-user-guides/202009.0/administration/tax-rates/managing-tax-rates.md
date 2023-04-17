@@ -78,7 +78,7 @@ You can delete a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Delete** in the top-right corner.
 2. On the *Delete Tax Rate* page, confirm your action.
 
-## What's next?
+## Next steps
 You cannot use the tax rate itself for products, shipment, and threshold taxation. You use tax sets instead. 
 So you can proceed to the procedure of [creating a tax set and assigning it to the tax rate](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html). 
 

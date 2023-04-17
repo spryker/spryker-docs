@@ -59,6 +59,7 @@ Make sure that the following modules were installed:
 Run the following commands to apply database changes, as well as generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -101,7 +102,7 @@ mr-011,pl-007
 mr-011,pl-008
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |merchant_relation_key  | mandatory | string | mr-008 | Identifier of merchant relations. The merchant relations must exist already. |
 | product_list_key |mandatory  | string | pl-001 | Identifier of product lists. The product lists must exist already. |

@@ -8,6 +8,7 @@ originalArticleId: 84504b3f-2bbf-4f1e-b5c1-c0ed98c864b1
 redirect_from:
   - /v4/docs/adding-volume-prices
   - /v4/docs/en/adding-volume-prices
+  - /docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/adding-volume-prices.html
 related:
   - title: Volume Prices Feature Overview
     link: docs/scos/user/features/page.version/prices-feature-overview/volume-prices-overview.html

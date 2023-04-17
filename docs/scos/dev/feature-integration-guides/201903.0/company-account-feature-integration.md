@@ -40,6 +40,7 @@ Run the following commands to:
 * generate entity and transfer changes
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -75,7 +76,7 @@ DE--7,spryker_systems,spryker_systems_HQ,0
 <br>
 </details>
     
-|Column|REQUIRED?|Data Type|Data Example|Data Explanation|
+|Column|REQUIRED|Data Type|Data Example|Data Explanation|
 |---|---|---|---|---|
 |customer_reference|mandatory|string|DE--6|The key that will identify the Customer to which the data is added.|
 |company_key|mandatory|string|BoB-Hotel-Mitte|The key that will identify the Company to which the data is added.|
@@ -162,7 +163,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 <br>1. Log in with a сustomer who has multiple Company Users and a default one.<br>2. Check in the session if the default Company User was assigned to the Customer.<br>3. Check in the session if the IsOnBehalf property is set correctly for the Customer.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please review and install the necessary features before beginning the integration step.
 |Name|Version|
@@ -207,7 +208,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

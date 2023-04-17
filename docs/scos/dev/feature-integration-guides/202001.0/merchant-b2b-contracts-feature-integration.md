@@ -36,6 +36,7 @@ Make sure that the following modules were installed:<table><thead><tr><td>Module
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -84,7 +85,7 @@ mr-010,restrictions-merchant,Sales-under-400,"Sales-under-400"
 mr-011,restrictions-merchant,Sales,Sales;Sales-under-400 
 ```
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 |---|---|---|---|---|
 |  `merchant_relation_key` | optional | string | mr-002 | A reference used for the merchant relationship data import. |
 |  `merchant_key` | mandatory | string | kudu-merchant-1 | A reference used to define a Merchant of the contract (relationship) between him and the company business unit. |

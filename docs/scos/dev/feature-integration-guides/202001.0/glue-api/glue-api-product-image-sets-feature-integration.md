@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/glue-api-product-image-sets-api-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

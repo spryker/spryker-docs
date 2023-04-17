@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/media-management
 ---
 
-The *FIle Manager* feature lets you upload and manager your assets effectively.
+The *File Manager* feature lets you upload and manager your assets effectively.
 
 A Back Office user can upload files and add them to CMS pages and blocks to display on the Storefront.
 
@@ -25,7 +25,7 @@ Apart from images, you can add a great variety of different types of assets to y
 
 This lets content managers create rich, compelling and attractive content for your customers, as well as gives the chance to offer your customers additional information they might be interested in, like user manuals or instructions.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

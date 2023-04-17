@@ -22,11 +22,19 @@ redirect_from:
   - /v2/docs/en/code-style-guide
   - /v1/docs/code-style-guide
   - /v1/docs/en/code-style-guide
+related:
+  - title: Code Architecture Guide
+    link: docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
+  - title: Code Quality
+    link: docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+  - title: Secure Coding Practices
+    link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
 
-We at Spryker follow the [PSR-2 standards](http://www.php-fig.org/psr/psr-2/) as the coding style guide. To achieve a styled codebase, we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+We at Spryker follow the PSR-2 standards<!-- ](http://www.php-fig.org/psr/psr-2/) check if it works before restoring --> as the coding style guide. To achieve a styled codebase, we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 
 ## Code Sniffer and Fixer
+
 [Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html) helps to keep the code clean and to prevent simple mistakes. To make the most of the Code Sniffer, follow the recommendations below.
 
 ### Automate code style correction
@@ -49,7 +57,7 @@ $ vendor/bin/console code:sniff:style src/Pyz/Zed
 $ vendor/bin/console code:sniff:style ... -s Spryker.Commenting.FullyQualifiedClassNameInDocBlock
 ```
 
- {% info_block infoBox "Tip" %}
+{% info_block infoBox "Tip" %}
 
 `c:s:s` can be used as a shortcut.
 
@@ -74,7 +82,7 @@ See the [code sniffer](https://github.com/spryker/code-sniffer) documentation fo
 
 Make sure you change the composer package name of your application once you forked or copied the Demo Shop code. By default, the tool reads the name in the main `composer.json`:
 
-```
+```json
  "name": "spryker-shop/suite",
 ```
 
@@ -120,6 +128,7 @@ if ($b === static::SOME_CONST)
 Only use `empty()` and `isset()` where the variable or array key could possibly not exist:
 
 Bad:
+
 ```php
 getVar();
 if (empty($var)) {
@@ -189,7 +198,6 @@ public function doReturnSth()
 }
 ```
 
-
 Bottom line: use `void` if nothing is expected to be returned, use `null` otherwise, or if mixed with others. Try to return only one type, as mixed return types are often a code smell. Also, a proper object is better than associative arrays most of the time.
 
 ### Avoid "no-op" methods
@@ -213,7 +221,7 @@ When you deprecate a method, class, or alike, it is recommended to add a short s
 | $email | Scalar (string or int) |
 | $idUser | User ID (int) |
 | $userIds | plural for user IDs (int[ ]) |
-| $users | Array with the user-releated data |
+| $users | Array with the user-related data |
 | $isValidatedPassword<br>$hasPassword | boolean |
 | $i, $j, $x, $y, $k, $m | Pointer in loops |
 
@@ -223,7 +231,7 @@ When you deprecate a method, class, or alike, it is recommended to add a short s
 | --- | --- |
 | singular | getFoo() / setFoo() |
 | plural | getFoos() / setFoos() |
-| boolean | getIsActive() / setIsActive(), <br> optionally hasActive() to only check |
+| boolean | getIsActive() / setIsActive(),<br> optionally hasActive() to only check |
 | Find or not (nullable) | find...() |
 | Get or throw exception (not nullable), applies to empty collection returns) | get...() |
 | Check if exists - usually used with get | has....() |

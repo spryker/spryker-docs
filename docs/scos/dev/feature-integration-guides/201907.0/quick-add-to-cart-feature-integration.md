@@ -89,7 +89,7 @@ console data:import:glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 4) Set up Behavior
@@ -133,7 +133,7 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 Make the following checks at https://mysprykershop.com/quick-order : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 To start feature integration, review and install the necessary features:
@@ -246,7 +246,7 @@ console data:import:glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that translations data was added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that translations data was added to the `spy_glossary` table in the database.
 {% endinfo_block %}
 
 ### 3) Enable Controllers

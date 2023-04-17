@@ -8,10 +8,11 @@ originalArticleId: f8d0248d-0411-4a3c-a23a-2a0f3c33627e
 redirect_from:
   - /v1/docs/econda-frontend-integration
   - /v1/docs/en/econda-frontend-integration
+  - /docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
   - /docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
 ---
 
-To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html) and [plugins](/docs/scos/dev/back-end-development/implementing-and-using-plugins.html).
+To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) and [plugins](/docs/scos/dev/back-end-development/implementing-and-using-plugins.html).
 
 ## Zed Output Folder
 

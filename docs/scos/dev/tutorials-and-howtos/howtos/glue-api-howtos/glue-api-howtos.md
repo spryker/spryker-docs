@@ -26,8 +26,9 @@ related:
 
 Glue API HowTo tutorials provide guides and instructions for tasks related to [Spryker Glue Rest API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html).
 
-From these guides, you will learn how to perform the following tasks:
+From these guides, you can learn how to perform the following tasks:
 
-* [Configuring Visibility of the Included Section](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html)
-* [Configuring Glue for Cross-Origin Requests](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html)
-* [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
+* [Configuring visibility of the included section](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html)
+* [Configuring Glue for cross-origin requests](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html)
+* [Managing customer access to API resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
+* [HowTo: Integrate a CIAM provider](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/howto-integrate-a-ciam-provider.html)

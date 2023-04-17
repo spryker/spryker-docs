@@ -5,7 +5,7 @@ description: This article provides the technical details of the PriceProduct mod
 template: concept-topic-template
 ---
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](https://docs.spryker.com/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
+This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
 
 ## Price dimension
 
@@ -62,6 +62,7 @@ class PriceProductConfig extends SprykerPriceProductConfig
     protected const IS_DELETE_ORPHAN_STORE_PRICES_ON_SAVE_ENABLED = true;
 }
 ```
+
 or run `console price-product-store:optimize` from time to time when needed.
 
 {% endinfo_block %}
@@ -76,5 +77,6 @@ Reading prices from Storage is implemented in `PriceProductStorage` module, plug
 Prices for price dimension inside Storage are supposed to be stored as a separate key-value for each product, abstract and concrete. For example, can check `kv:price_product_abstract:X` (X = ID of product).
 
 All plugins can be added on the project level in:
+
 - `PriceProductDependencyProvider` for the Zed and Service layers.
 - `PriceProductStorageDependencyProvider` for the Client layer.

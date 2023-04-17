@@ -22,9 +22,9 @@ The following schema illustrates the module relations of the Quotation Process f
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
-| INTEGRATION GUIDES | MIGRATION GUIDES |
+| INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|
 | [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | QuoteRequestAgent migration guide |
 | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) | QuoteRequestPage migration guide |

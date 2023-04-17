@@ -123,6 +123,7 @@ Adjust the schema definition so that entity changes can trigger events.
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -235,7 +236,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -509,7 +510,7 @@ Cameras,Cameras,DE--21
 Workstations,WorkstationsDE--21
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shopping_list_key| mandatory | string | Laptops | Key that will identify the shopping list to be referred to in future imports. |
 | name | mandatory | string | Laptops | Name of the shopping list. |
@@ -602,7 +603,7 @@ Workstations,117_30585828,1
 Workstations,129_30706500,1
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shopping_list_key | mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
 | product_sku | mandatory | string | 187_26306352 | SKU of the concrete product variant that will be added to the shopping list. |
@@ -671,7 +672,7 @@ Workstations,Spryker--3,READ_ONLY
 Workstations,Spryker--6,READ_ONLY
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shopping_list_key | mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
 | company_user_key | mandatory | string | Spryker--7 | Key that will identify the company user that the shopping list is shared with. |
@@ -736,7 +737,7 @@ Cameras,spryker_systems_Zurich,FULL_ACCESS
 Workstations,spryker_systems_Berlin,READ_ONLY
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shopping_list_key| mandatory | string | Laptops | Key that will identify the shopping list to add data to. |
 | business_unit_key | mandatory | string | spryker_systems_HR | Key that will identify the company business unit that the shopping list is shared with. |
@@ -1270,7 +1271,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

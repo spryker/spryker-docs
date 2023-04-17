@@ -14,6 +14,8 @@ redirect_from:
   - /2021080/docs/en/payment-provider-integration-guide
   - /docs/payment-provider-integration-guide
   - /docs/en/payment-provider-integration-guide
+  - /docs/scos/user/technology-partners/202108.0/technology-partner-integration.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/informa-solutions.html
 ---
 
 In this section you will find information about our Technology Partner Integration solutions.

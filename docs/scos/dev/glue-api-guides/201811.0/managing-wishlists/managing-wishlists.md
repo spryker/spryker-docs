@@ -7,6 +7,7 @@ originalArticleId: 8a6a206f-ce6e-4913-8d5c-60aa3ebc30ba
 redirect_from:
   - /v1/docs/managing-wishlists
   - /v1/docs/en/managing-wishlists
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-wishlists.html
 ---
 
 The Wishlists API provides REST access to managing [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) of a customer. With the help of the endpoints provided by the API, you can create, list and delete wishlists, as well as manage the items inside them.
@@ -14,17 +15,24 @@ The Wishlists API provides REST access to managing [wishlists](/docs/scos/user/f
 In your development, these resources can help you to enable complete wishlist functionality for your customers.
 
 {% info_block warningBox "Authentication " %}
+
 Since wishlists are available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.vesion}}/glue-api/glue-api-wishlist-feature-integration.html).
 
 ## Creating a Wishlist
+
 To create a wishlist for a registered user, you need to send a POST request to the following endpoint:
+
 `/wishlists`
+
 Request sample: `POST http://mysprykershop.com/wishlists`
+
 **Attributes:**
+
 * **name** - sets a name for the new wishlist.
 
 **Request sample body**
@@ -40,6 +48,7 @@ Request sample: `POST http://mysprykershop.com/wishlists`
 ```
 
 **Sample Response:**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | String | Name of the wishlist |
@@ -71,15 +80,20 @@ Request sample: `POST http://mysprykershop.com/wishlists`
 The response contains a unique identifier, contained in the id attribute, and a self link that can be used to access the wishlist later.
 
 ### Possible errors
+
 | Code | Reason |
 | --- | --- |
 | 202 | A wishlist with the same name already exists. |
 | 203 | Cannot create a wishlist. |
 
 ## Accessing Wishlists of User
+
 To access all wishlists of a user, send a GET request to the following endpoint:
+
 `/wishlists`
+
 Request sample: `GET http://mysprykershop.com/wishlists`
+
 **Sample Response:**
 | Field* | Type | Description |
 | --- | --- | --- |
@@ -102,6 +116,7 @@ The endpoint will respond with a **RestWishlistsResponse**. The following respon
 	}
 ```
 If there are any wishlists already created for a user, they will be returned in the **data** attribute of the response.
+
 **Sample response**
 ```js
 {
@@ -131,11 +146,15 @@ If there are any wishlists already created for a user, they will be returned in 
 ```
 
 ## Modifying Wishlists
+
 To modify a user's wishlist, send a PATCH request to the following endpoint:
+
 `/wishlists`
+
 Request sample: `PATCH http://mysprykershop.com/wishlists`
 
 **Sample Request Body**
+
 The following sample changes the name of a wishlist.
 
 **Sample response**
@@ -152,6 +171,7 @@ The following sample changes the name of a wishlist.
 ```
 
 **Sample Response:**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | String | Name of the wishlist |
@@ -164,6 +184,7 @@ The following sample changes the name of a wishlist.
 In case of a successful update, the endpoint will also respond with a RestWishlistsResponse, where the wishlist name will be updated.
 
 **Sample response**
+
 ### Possible errors
 
 | Code | Reason |
@@ -173,25 +194,36 @@ In case of a successful update, the endpoint will also respond with a RestWishli
 | 204 | Cannot update the wishlist. |
 
 ## Deleting Wishlists
+
 To delete a wishlist, send a DELETE request:
+
 `/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}`
+
 Request sample: `DELETE http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
+
 where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist you want to remove.
 
 **Response:**
+
 If the wishlist was deleted successfully, the endpoint would respond with a **204 No Content** status code.
 
 ### Possible errors
+
 | Code | Reason |
 | --- | --- |
 | 201 | Cannot find the wishlist. |
 | 205 | Cannot remove the wishlist. |
 
 ## Getting Wishlists
+
 The Wishlist API allows you not only to manage wishlists, but also to manage items inside them. Each wishlist item is referenced by the SKU of the respective product.
+
 To get all items in a wishlist, send a request to the following endpoint:
+
 `/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}`
+
 Request sample: `GET http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
+
 where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist you want to retrieve.
 
 **Sample Response:**
@@ -209,20 +241,27 @@ If the specified wishlist exists, the endpoint will respond with a RestWishlists
 **Sample response**
 
 ## Possible errors
+
 | Code | Reason |
 | --- | --- |
 | 201 | Cannot find the wishlist. |
 
 To add an item to a wishlist, send a POST request to the following endpoint:
+
 `/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items`
+
 Request sample: `POST http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
+
 where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist to which you want to add an item.
 
 **Attributes:**
+
 * **sku** - specifies the SKU of the product you want to add to the wishlist.
+*
 **Request sample body**
 
 **Sample Response:**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | sku | String | Concrete product SKU. |
@@ -248,20 +287,28 @@ The endpoint will respond with a **RestWishlistItemResponse** that contains info
 ```
 
 ### Possible errors
+
 | Code | Reason |
 | --- | --- |
 | 201 | Cannot find the wishlist. |
 | 206 | Cannot add an item to the wishlist. |
 
 To delete an item, send a DELETE request:
+
 `/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}item_sku{% raw %}}}{% endraw %}`
+
 Request sample: `DELETE http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
+
 where: `09264b7f-1894-58ed-81f4-d52d683e910a` - the ID of the wishlist where you want to delete an item;
+
 `064_18404924` - SKU of the item you want to remove.
+
 **Response:**
+
 If the item was removed successfully, the endpoint will respond with a **204 No Content** status code.
 
 ## Possible errors:
+
 | Code | Reason |
 | --- | --- |
 | 201 | Cannot find the wishlist. |

@@ -8,6 +8,7 @@ originalArticleId: 05879934-f16e-41d3-b54c-1957c84c48de
 redirect_from:
   - /v2/docs/computop-api-details
   - /v2/docs/en/computop-api-details
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-api-calls.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -59,4 +60,3 @@ Status inquiries within Paygate give detailed information about the amounts that
     - Create `Pyz\Zed\Computop\ComputopConfig`.
     - Extend it from original `SprykerEco\Zed\Computop\ComputopConfig`.
     - Update `isRefundShipmentPriceEnabled` method (set up "false").
-

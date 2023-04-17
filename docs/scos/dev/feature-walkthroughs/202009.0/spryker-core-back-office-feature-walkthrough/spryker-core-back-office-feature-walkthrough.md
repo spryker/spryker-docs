@@ -12,9 +12,9 @@ To learn more about the feature and to find out how end users use it, see [Spryk
 -->
 
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  | REFERENCES|
+|INSTALLATION GUIDES  | REFERENCES|
 |---------|---------|
 | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)  | [Back Office Translations overview](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
 |    |[Users and rights overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html) |

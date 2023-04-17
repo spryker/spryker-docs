@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/klarna-part-payment-flexible
   - /docs/klarna-part-payment-flexible
   - /docs/en/klarna-part-payment-flexible
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/klarna/technical-details-and-howtos/klarna-part-payment-flexible.html
 related:
   - title: Klarna
     link: docs/scos/user/technology-partners/page.version/payment-partners/klarna.html
@@ -22,13 +23,13 @@ related:
 ---
 
 ## Payment Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_paymentworkflow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_paymentworkflow.png)
 
 ## Cancel Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_cancelworkflow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_cancelworkflow.png)
 
 ## Refund Workflow Scenarios
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_refundworkflow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Klarna/flexible_refundworkflow.png)
 
 ## Integrating Klarna Part Payment
 The configuration to integrate `Part Payment` using Klarna is:

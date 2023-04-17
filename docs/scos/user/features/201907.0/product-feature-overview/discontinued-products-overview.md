@@ -8,11 +8,12 @@ originalArticleId: 907cc590-c20e-4510-9f4c-12ededf591fa
 redirect_from:
   - /v3/docs/discontinued-products-overview
   - /v3/docs/en/discontinued-products-overview
+  - /docs/scos/user/features/201907.0product-feature-overview/discontinued-products-overview.html
 ---
 
 ## Out of Stock vs. Discontinued Products
 While we try to keep all the items in stock, we occasionally run out of products. In such a case the concrete product is tagged as out of stock and cannot be added to cart:
-![Discontinued PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-pdp-page.png) 
+![Discontinued PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-pdp-page.png)
 
 Once the stock is updated with the positive number - the concrete product will be available for purchase.
 
@@ -26,6 +27,6 @@ can become discontinued.
 {% endinfo_block %}
 
 The schema below illustrates the relations between discontinued products, abstract and concrete products:
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png) 
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png)
 
 <!-- Last review date: Mar 1, 2019-- by Ahmed Sabaa, Yuliia Boiko -->

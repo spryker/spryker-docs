@@ -3,6 +3,8 @@ title: "Glue API: Marketplace Product Offer Prices feature integration"
 last_updated: Nov 10, 2020
 description: This document describes the process how to integrate the Marketplace Product Offer Prices Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-offer-prices-feature-integration.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer Prices Glue API feature into a Spryker project.
@@ -42,6 +44,7 @@ Make sure that the following modules have been installed:
 Update the database and generate transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -129,4 +132,3 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |---|---|---|
 | Marketplace Product Offer Prices + Wishlist Glue API | &check;  |  [Glue API: Marketplace Product Offer Prices + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-wishlist-feature-integration.html) |
-

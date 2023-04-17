@@ -7,6 +7,7 @@ originalArticleId: 731d5b6d-603e-4f90-8235-871caaf0285c
 redirect_from:
   - /v2/docs/retrieving-order-history
   - /v2/docs/en/retrieving-order-history
+  - /docs/scos/dev/glue-api-guides/201903.0/retrieving-orders.html
 ---
 
 For every registered customer, there is an order history retrievable. The list of orders, as well as detailed order information including every step of the calculation and addresses used in the orders, is available for retrieval.
@@ -44,7 +45,7 @@ Request sample: `GET http://mysprykershop.com/orders`
 | priceMode | String | Price mode that was active when placing the order. |
 
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
- 
+
 
 The endpoint responds with a RestOrdersResponse. The following is an example of a response for a customer that has placed 1 order:
 

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/product-labels-feature-overview
 ---
 
-The _Product Label_ feature lets product catalog managers highlight the desired products by adding a special type of information—product labels.
+The _Product Label_ feature lets product catalog managers highlight the needed products by adding a special type of information—product labels.
 
 ## Product label
 
@@ -128,13 +128,13 @@ A product label can have the following statuses:
 * Active
 * Inactive
 
-If a product label is active, it is displayed on all the product pages it is applied to. If a product label is inactive, it is still applied to the selected product, but it is not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the desired products. When the event starts, you just need to activate the label to show it on all the product pages it is applied to.
+If a product label is active, it is displayed on all the product pages it is applied to. If a product label is inactive, it is still applied to the selected product, but it is not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the needed products. When the event starts, you just need to activate the label to show it on all the product pages it is applied to.
 
 To learn how a Back Office user can activate and deactivate product labels in the Back Office, see [Edit product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/edit-product-labels.html)
 
 ## Product label exclusivity
 
-The *Exclusive* product label is a product label that, when applied to a product, discards all the other product labels applied to it. The other product labels are still applied to the product, but only the exclusive one is displayed on the respective product card and product details page. This might be useful when running several discounts in a store at the same time. By assigning the labels with corresponding discount names to desired products, you can show the shop users to which products each discount is applied.
+The *Exclusive* product label is a product label that, when applied to a product, discards all the other product labels applied to it. The other product labels are still applied to the product, but only the exclusive one is displayed on the respective product card and product details page. This might be useful when running several discounts in a store at the same time. By assigning the labels with corresponding discount names to needed products, you can show the shop users to which products each discount is applied.
 
 To learn how a Back Office user can create an exclusive product label, see [Creating product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html).
 
@@ -144,7 +144,7 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 
 ![Filter product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/filter-labels-yves.png)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

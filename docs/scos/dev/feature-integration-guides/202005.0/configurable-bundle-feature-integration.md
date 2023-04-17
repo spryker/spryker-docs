@@ -124,6 +124,7 @@ Adjust the schema definition so that entity changes will trigger the events:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -311,7 +312,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -678,7 +679,7 @@ t000001,8d8510d8-59fe-5289-8a65-19f0c35a0089,configurable_bundle.templates.confi
 t000002,c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de,configurable_bundle.templates.smartstation.name,1
 ```
 
-| Column | REQUIRED? | Data Type | Daa Example | Data Explanation |
+| Column | REQUIRED | Data Type | Daa Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `configurable_bundle_template_key` | mandatory | string | `t000001` | Internal data import identifier for the configurable bundle template. |
 | `configurable_bundle_template_uuid` | optional | string | `8d8510d8-59fe-5289-8a65-19f0c35a0089` | Unique identifier for the configurable bundle. |
@@ -697,7 +698,7 @@ s000005,configurable_bundle.template_slots.slot-5.name,9626de80-6caa-57a9-a683-2
 s000006,configurable_bundle.template_slots.slot-6.name,2a5e55b1-993a-5510-864c-a4a18558aa75,t000002,pl-014
 ```
 
-| Column | REQUIRED? | Data Type | Daa Example | Data Explanation |
+| Column | REQUIRED | Data Type | Daa Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `configurable_bundle_template_slot_key` | mandatory | string | `s000001` | Internal data import identifier for the configurable bundle template slot. |
 | `configurable_bundle_template_slot_name` | mandatory | string | `configurable_bundle.template_slots.slot-1.name` |Name (glossary key) for the configurable bundle template slot.  |
@@ -1152,7 +1153,7 @@ Run the following command to enable Javascript and CSS changes for Zed:
 console frontend:zed:build
 ```
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

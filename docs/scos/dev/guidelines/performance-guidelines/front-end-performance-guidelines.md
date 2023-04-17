@@ -1,6 +1,6 @@
 ---
-title: Front-end performance guidelines
-description: Optimize your Spryker frontend.
+title: Frontend performance guidelines
+description: Optimize your Spryker Frontend.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/front-end-performance-guidelines
@@ -13,6 +13,11 @@ redirect_from:
   - /v6/docs/front-end-performance-guidelines
   - /v6/docs/en/front-end-performance-guidelines
   - /docs/scos/dev/guidelines/front-end-performance-guidelines.html
+related:
+  - title: General performance guidelines
+    link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+  - title: Architecture performance guidelines
+    link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---
 
 This document describes general and Spryker-specific frontend performance guidelines.
@@ -27,8 +32,6 @@ Server configuration:
 * Expires and ETag response headers.
 * Production build mode.  To build production, run `npm run yves:production` and `npm run zed:production`.
 
-
-
 Assets optimization:
 
 * Optimize images to reduce their size for network transfer. To optimize project images, run `npm run yves:images-optimization`.
@@ -36,18 +39,15 @@ Assets optimization:
 * Remove unused characters from fonts.
 * Use lazy loading for images.
 
-
-
 HTML optimization:
 
 * If users are very likely to follow a link, apply a pretender: `<link rel="prerender" href="">`.
 
-
-
 ## Spryker-specific performance guidelines for frontend
+
 General rules:
 
-* Use the `lazy` webpack directive to register unnecessary components.
+* Use the `lazy` Webpack directive to register unnecessary components.
 * Decrease the number of components on each page to as small as possible.
 * Avoid using `querySelectorAll` or at least do not use it in `Document` contexts.
 * Detect and resolve `404` errors.

@@ -31,17 +31,18 @@ Previously, the behavior of Spryker applications depended on the environment nam
 To be able to use any environment name and manage application behavior more efficiently, the environment name settings are replaced with explicit configuration.
 
 ## Integration
+
 Follow the steps below to integrate the environment enhancement into your project.
 
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version | Required sub-feature |
+| NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
@@ -53,18 +54,18 @@ composer require spryker/api:"^0.2.2" spryker/application:"^3.16.0" spryker/conf
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-|  `Api ` |  `vendor/spryker/api ` |
-|  `Application ` |  `vendor/spryker/application ` |
-|  `Config ` |  `vendor/spryker/config ` |
-|  `Kernel ` |  `vendor/spryker/kernel ` |
-|  `Session ` |  `vendor/spryker/session ` |
-|  `Setup ` |  `vendor/spryker/setup ` |
-|  `ZedRequest ` |  `vendor/spryker/zed-request ` |
-|  `ShopApplication ` |  `vendor/spryker-shop/shop-application ` |
-|  `ErrorPage ` |  `vendor/spryker-shop/error-page ` |
-|  `CalculationPage ` |  `vendor/spryker-shop/calculation-page ` |
+|  Api  |  vendor/spryker/api |
+|  Application  |  vendor/spryker/application |
+|  Config |  vendor/spryker/config |
+|  Kernel |  vendor/spryker/kernel |
+|  Session |  vendor/spryker/session |
+|  Setup |  vendor/spryker/setup |
+|  ZedRequest |  vendor/spryker/zed-request |
+|  ShopApplication |  vendor/spryker-shop/shop-application |
+|  ErrorPage |  vendor/spryker-shop/error-page |
+|  CalculationPage |  vendor/spryker-shop/calculation-page |
 
 {% endinfo_block %}
 
@@ -80,7 +81,7 @@ Make sure that the following modules have been installed:
 Delete the  `Spryker\* Zed || Yves *\Application\Communication\Plugin\
 Provider\AssertUrlConfigurationServiceProvider ` dependency:
 
-src/Pyz/Zed/Application/ApplicationDependencyProvider.php
+**src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
 ```php
 use Spryker\Zed\Application\Communication\Plugin\ServiceProvider\AssertUrlConfigurationServiceProvider;
@@ -93,7 +94,7 @@ if (Environment::isDevelopment()) {
 ...
 ```
 
-src/Pyz/Yves/ShopApplication/YvesBootstrap.php
+**src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
 
 ```php
 use Spryker\Yves\Application\Communication\Plugin\ServiceProvider\AssertUrlConfigurationServiceProvider;
@@ -106,11 +107,11 @@ if (Environment::isDevelopment()) {
 ...
 ```
 
-### 3) Set up Behavior
+### 3) Set up behavior
 
-#### Adjust Console Module on Project Layer
+#### Adjust Console module on project layer
 
-1. Init the new constant -  `Pyz\Shared\Console\ConsoleConstants::ENABLE_DEVELOPMENT_CONSOLE_COMMANDS `:
+1. Init the new constant -  `Pyz\Shared\Console\ConsoleConstants::ENABLE_DEVELOPMENT_CONSOLE_COMMANDS`:
 
 ```php
 <?php
@@ -132,7 +133,8 @@ if (Environment::isDevelopment()) {
     public const ENABLE_DEVELOPMENT_CONSOLE_COMMANDS = 'CONSOLE:ENABLE_DEVELOPMENT_CONSOLE_COMMANDS';
 }
 ```
-2. Introduce the new method -  `Pyz\Zed\Console\ConsoleConfig::isDevelopmentConsoleCommandsEnabled() `:
+
+2. Introduce the new method -  `Pyz\Zed\Console\ConsoleConfig::isDevelopmentConsoleCommandsEnabled()`:
 
 ```php
 ...
@@ -145,6 +147,7 @@ public function isDevelopmentConsoleCommandsEnabled(): bool
 }
 ...
 ```
+
 3. Adjust  `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands() ` by replacing  `Environment::isDevelopment() || Environment::isTesting() ` with  `$this->getConfig()->isDevelopmentConsoleCommandsEnabled() `:
 
 ```php
@@ -159,11 +162,11 @@ public function isDevelopmentConsoleCommandsEnabled(): bool
 ...
 ```
 
-#### Adjust All Configuration Files
+#### Adjust all configuration files
 
 Adjust the following files:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 use Spryker\Shared\Api\ApiConstants;
@@ -187,7 +190,7 @@ $config[ApplicationConstants::TWIG_ENVIRONMENT_NAME]
  $config[ApplicationConstants::ENABLE_PRETTY_ERROR_HANDLER] = false;
 ```
 
-config/Shared/config_default-development.php
+**config/Shared/config_default-development.php**
 
 ```php
 ...
@@ -210,7 +213,7 @@ $config[ApplicationConstants::ENABLE_PRETTY_ERROR_HANDLER] = true;
 $config[ConsoleConstants::ENABLE_DEVELOPMENT_CONSOLE_COMMANDS] = true;
 ```
 
-config/Shared/config_default-devtest.php
+**config/Shared/config_default-devtest.php**
 
 ```php
 ...

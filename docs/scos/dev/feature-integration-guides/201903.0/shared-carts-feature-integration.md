@@ -39,6 +39,7 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -71,7 +72,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that the configured data has been added to the `spy_glossary` table in the database.
 {% endinfo_block %}
 
 ### 4) Import Data
@@ -209,7 +210,7 @@ quote-23,Spryker--5,READ_ONLY
 <br>
 </details>
 
-|Column|REQUIRED?|Data Type|Data Example|Data Explanation|
+|Column|REQUIRED|Data Type|Data Example|Data Explanation|
 |---|---|---|---|---|
 |`quote_key`|mandatory|string |quote-22|Key that will identify the quote to add data to.|
 |`company_user_key`|mandatory|string|Spryker--1|Key that will identify the company user that the quote is shared with.|
@@ -541,7 +542,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 Before removing a company user, all records from the `spy_quote_company_user` DB table related to the company user must be removed.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 Please review and install the necessary features before beginning the integration step.
@@ -646,7 +647,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

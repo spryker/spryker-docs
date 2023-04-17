@@ -8,6 +8,7 @@ originalArticleId: 9d330e5c-aae8-4a45-96b2-f29de65bc2f1
 redirect_from:
   - /v5/docs/creating-a-product-option
   - /v5/docs/en/creating-a-product-option
+  - /docs/scos/user/back-office-user-guides/202005.0/catalog/product-options/creating-a-product-option.html
 related:
   - title: Product Options
     link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/product-options.html
@@ -32,7 +33,7 @@ Let's say you want to add additional options to your product, like a warranty or
 
 **To create a product option:**
 1. Click **Create product option** in the top right corner of the **Product option list** page.
-2. On the **Create new Product Options** page that opens, you see **General Information** and **Products** tabs. 
+2. On the **Create new Product Options** page that opens, you see **General Information** and **Products** tabs.
 In the **General Information** tab:
   1. Add the group name translation key. The format of the group name translation key should be as follows: **product.option.group.name.[your key]**. For example, product.option.group.name.test.
   2. Define a tax set assigned to your product option group by selecting the appropriate value from the drop-down list.
@@ -57,12 +58,12 @@ In the **General Information** tab:
 
   6. In the **Translation** section, add a group name and option name that will be displayed in the shop application per each locale. You can copy the Group and Option names from one locale to another using the corresponding **Copy** icon.
 3. Click **Next** to proceed to the **Products** tab, or just click on it.
-4. In the **Products** tab, select product(s) to be assigned to the product. 
+4. In the **Products** tab, select product(s) to be assigned to the product.
     Alternatively, you can click **Select all on the page**. In this case, all the products displayed on the page will be selected and added to the product option. The products you select will appear in the **Products to be assigned** tab.
  5. Once done, click **Save**.
 
 ## Activating a Product Option
-Your product option is created, however, it is not activated thus it will not be seen on the product details page. 
+Your product option is created, however, it is not activated thus it will not be seen on the product details page.
 
 **To activate a product option:**
 On the **Edit product option** page, click **Activate** in the top right corner.
@@ -73,13 +74,13 @@ On the **Product option list** page, click **Activate** for a specific product o
 While creating a product option, if you want to remove some product from the selected, clear checkboxes next to the products you selected or click **Deselect all on the page** (this will remove all products from the to-be-assigned list you selected on this page).
 
 You can switch between **All products** and **Products to be assigned** view by selecting the respective options on the top of the products table.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Creating+a+product+option/product-to-be-assigned-tab.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Creating+a+product+option/product-to-be-assigned-tab.png)
 
 If you know the name or the SKU of the product to which an option should be assigned, you can search for it in the **Search** field.
 
 Each product abstract can have multiple product option groups assigned.
 ***
 **What's next?**
-Once the option is created, you may want to know how those options are managed. See [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html) for more details. 
+Once the option is created, you may want to know how those options are managed. See [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html) for more details.
 
 To learn more about the attributes that you see, enter and select while creating a product option, as well as if you are interested to see some examples of how the product options are used, see [Product Options: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/references/product-options-reference-information.html).

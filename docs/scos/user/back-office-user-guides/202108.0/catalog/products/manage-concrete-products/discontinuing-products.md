@@ -59,6 +59,6 @@ Let's say the Smartphone with a flash memory equals 16GB is no longer popular, a
 You will discontinue this product variant and set up other products to be displayed as alternatives.
 ![Discontinued and alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/Discontinued-and-Alternative.gif)
 
-## What's next?
+## Next steps
 
 Review the other articles in the _Products_ section to know more about product management.

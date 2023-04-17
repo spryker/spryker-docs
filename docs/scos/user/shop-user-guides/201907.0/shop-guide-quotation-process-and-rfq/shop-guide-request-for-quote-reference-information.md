@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/rfq-reference-information-shop-guide
   - /v3/docs/en/rfq-reference-information-shop-guide
   - /docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html
+  - /docs/scos/user/shop-user-guides/201907.0/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html
 ---
 
 This page contains the information on the UI elements and pages that refer to the Quotation Process & RFQ.

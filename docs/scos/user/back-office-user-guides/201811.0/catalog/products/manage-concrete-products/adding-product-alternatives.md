@@ -8,9 +8,10 @@ originalArticleId: c2f21c3c-e0a4-4777-a5db-01c9deda6ace
 redirect_from:
   - /v1/docs/adding-product-alternatives
   - /v1/docs/en/adding-product-alternatives
+  - /docs/scos/user/back-office-user-guides/201811.0/products/products/managing-products/adding-product-alternatives.html
 related:
   - title: Creating an Abstract Product
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
   - title: Managing Products
@@ -40,14 +41,14 @@ For example, if smartphone 1 is out of stock, or discontinued, you can set smart
 ***
 
 To set product alternatives for a product, do the following:
-1. On the **Edit Concrete Product** page, switch to the Product Alternatives tab. 
+1. On the **Edit Concrete Product** page, switch to the Product Alternatives tab.
 2. To add product alternatives, enter _Product Name_ or its _SKU_ in the **Add Product Alternative by Name** or **SKU** field.
     You can add multiple alternative products.
-![Adding product alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/add-product-alternative.png) 
+![Adding product alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/add-product-alternative.png)
 
 4. Click **Save**.
 
-Once the setup is completed, the page is refreshed to display the table with the alternative products you have added. 
+Once the setup is completed, the page is refreshed to display the table with the alternative products you have added.
 To remove any alternative product, click **Remove** in the _Actions_ column.
 ***
 

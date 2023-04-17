@@ -122,7 +122,7 @@ The _**Full access**_ permission allows:
 
 By default, the user who has created the cart has Owner access permission. Owner access permission allows everything that allows Full access permission and an ability to share the cart with other users.
 
-If user does not need a cart, that has been shared with them, it is possible to remove it from their shopping carts and thus cancel sharing. To do so, on the **Shopping Cart** page, in **Actions** next to the respective shared shopping cart, the user clicks **Dismiss**. It is possible to dismiss sharing shopping carts with both Read only and Full access rights. Own shopping carts cannot be dismissed.
+If a user does not need a cart that has been shared with them, they can remove it from their shopping carts and thus cancel sharing. To do so, on the **Shopping Cart** page, in **Actions** next to the respective shared shopping cart, the user clicks **Dismiss**. They can dismiss sharing shopping carts with both *Read only* and *Full access* rights. Own shopping carts cannot be dismissed.
 
 {% info_block errorBox "Important!" %}
 

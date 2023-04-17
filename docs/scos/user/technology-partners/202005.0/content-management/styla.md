@@ -14,7 +14,8 @@ related:
 ---
 
 ## Partner Information
-[ABOUT STYLA](https://www.styla.com/de/) 
+
+[ABOUT STYLA](https://www.styla.com) 
 Styla is a content commerce suite that automatically designs content and makes it shoppable, inspiring customers to buy more. Styla's automation technology is creating the design itself and ensures that the content looks attractive on all devices. A seamless integration with all common e-commerce systems allows an easy embedding of products and creates a whole new world of shoppable inspiration.More information can be found the [Styla documentation](https://docs.styla.com/styla-plugins). 
 
 YOUR ADVANTAGES:

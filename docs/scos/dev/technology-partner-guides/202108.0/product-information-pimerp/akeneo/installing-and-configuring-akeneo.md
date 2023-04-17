@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/akeneo-installation-configuration
   - /docs/akeneo-installation-configuration
   - /docs/en/akeneo-installation-configuration
-  - /docs/scos/user/technology-partners/202108.0/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
 related:
   - title: Akeneo
     link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo.html

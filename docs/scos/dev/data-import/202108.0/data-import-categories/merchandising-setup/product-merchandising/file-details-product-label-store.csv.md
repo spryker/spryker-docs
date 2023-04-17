@@ -1,5 +1,5 @@
 ---
-title: File details- product_label_store.csv
+title: File details - product_label_store.csv
 description: Description of the product_label_store.csv import file used to import store relations of product labels.
 last_updated: Jun 16, 2021
 template: data-import-template
@@ -15,27 +15,32 @@ related:
     link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
 
-This article contains content of the **product_label_store.csv** file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) information on your Spryker Demo Shop.
+This document describes the `product_label_store.csv` file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:product-label-store
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **name** | Yes | String |N/A* | Name of the label. |
-| **store_name** | No | String |N/A | Defines the store realtion of the product label. |
-*N/A: Not applicable.
+| name | &check; | String |  | Name of the label. |
+| store_name |  | String | | Defines the store relation of the product label. |
 
+## Import file dependencies
 
-## Dependencies
+This file has the following dependency: [product_label.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html).
 
-This file has the following dependency:
-*    [product_label.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html)
+## Import template file and content example
 
-## Template File & Content Example
-A template and an example of the *product_label_store.csv*  file can be downloaded here:
+Find the template and an example of the file below:
 
-| File | Description |
+| FILE | DESCRIPTION |
 | --- | --- |
-| [product_label_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_label_store.csv) | Product Label .csv template file (empty content, contains headers only). |
-| [product_label_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_label_store.csv) | Product Label .csv file containing a Demo Shop data sample. |
+| [product_label_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_label_store.csv) | Exemplary import file with headers only. |
+| [product_label_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_label_store.csv) | Exemplary import file with Demo Shop data. |

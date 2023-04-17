@@ -7,6 +7,7 @@ originalArticleId: b3124f03-6fde-4c70-b22c-1fbae12008db
 redirect_from:
   - /v1/docs/managing-guest-carts
   - /v1/docs/en/managing-guest-carts
+  - /docs/marketplace/dev/glue-api-guides/201811.0/guest-carts/managing-guest-carts.html
 related:
   - title: Managing Carts of Registered Users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html

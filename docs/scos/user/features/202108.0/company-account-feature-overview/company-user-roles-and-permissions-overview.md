@@ -108,12 +108,12 @@ For example, the permission to view a product, a page, or permission to place an
 
 {% info_block infoBox %}
 
-<div>For example, the permission to add to cart up to X [order value] would be the Zed-side permission. In this case the process of permissions check would be as follows:<ul><li>After the user clicked **Add to cart**, the request comes to Zed and the pre-checks are made following the “add to cart” request.</li><li>After that, the calculations are run. The calculations apply discounts per item, and then per cart (total).
+<div>For example, the permission to add to cart up to X [order value] would be the Zed-side permission. In this case the process of permissions check would be as follows:<ul><li>After the user clicked **Add to cart**, the request comes to Zed and the prechecks are made following the “add to cart” request.</li><li>After that, the calculations are run. The calculations apply discounts per item, and then per cart (total).
 <br>The logic behind this is simple: a user might have a discount for a specific item, and a discount for order starting from a specific order value. The order value would be calculated taken the discount per items into account, and therefore the discount per cart would be applied after all discounts per items have been calculated.</li><li>After the calculations have been made, the cart is saved.</li></ul></div>
 
 {% endinfo_block %}
 
-Obviously, the permissions can not be checked at the step when user just clicks **Add to cart**, because actual order value has not been calculated yet (pre-checks have not been made yet, discounts have not been calculated). Also, the permissions check request can not be started after the cart has been updated—that would be too late, as, the cart has already been persisted. The request for rights check is made somewhere in between—specifically, right after the discounts have been calculated. That is why the so-called “termination hooks” have been implemented deep in logic, where the permissions checks are made.
+Obviously, the permissions can not be checked at the step when user just clicks **Add to cart**, because actual order value has not been calculated yet (prechecks have not been made yet, discounts have not been calculated). Also, the permissions check request can not be started after the cart has been updated—that would be too late, as, the cart has already been persisted. The request for rights check is made somewhere in between—specifically, right after the discounts have been calculated. That is why the so-called “termination hooks” have been implemented deep in logic, where the permissions checks are made.
 
 The termination hooks (plugin stack) do not allow the permissions sneak into the business logic foundation so it will remain clean from the permissions and not overwhelmed with “can” “if not; then…”.
 
@@ -131,19 +131,22 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Add item to cart**—allows adding products to cart. Without this permission, the user will get This action is forbidden error when trying to add the product in the cart.
   - **Change item in cart**—allows changing products in the cart (changing the quantity, adding notes etc).
   - **Remove item from cart**—allows deleting the products from the cart.
-  - **Place Order**—allows placing the order. Without this permission enabled, a user will have error when trying to submit the order. If the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required in order to be able to place an order.
+  - **Place Order**—allows placing the order. Without this permission enabled, a user will have error when trying to submit the order. If the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required to be able to place an order.
   - **Buy up to grand total (Requires "Send cart for approval")**—sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
   - **Approve up to grand total**—with this permission enabled, a user can approve the the cart. For more details, see [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html).
   - **View Business Unit orders**—with this permission enabled, a user can see not only their own orders, but also the orders of their business unit.
   - **View Company orders**—with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their comapny.
   - **Send cart for approval (Requires "Buy up to grand total")**—lets a user send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html) |
-| [Manage company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html) |
+| [Create company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html) |
+| [Edit company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/edit-company-roles.html) |
+| [Create company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html) |
+| [Edit company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/edit-company-users.html) |
+
 
 
 {% info_block warningBox "Developer guides" %}

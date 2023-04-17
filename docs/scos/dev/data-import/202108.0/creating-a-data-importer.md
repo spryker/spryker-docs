@@ -21,6 +21,7 @@ Currently, we only support CSV as a format for file imports out of the box. Howe
 {% endinfo_block %}
 
 ## Prerequisites
+
 <a name="prerequisites"></a>Before you start creating a data importer, you need to know what data it should include. We recommend you start by checking out the respective database tables you want to fill with data. The image below shows the table relation for product images.
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_database_schema.png) 
 
@@ -50,10 +51,11 @@ To identify the data for your import file, you can also check out the .csv files
 
 Now that you know what data your import file should include, you can proceed with the first step of creating a data importer: creating an import file.
 
-## Create an Import File
-Since only .csv format is supported for import out of the box, we will start with creating a .csv file in any preferred editor.
+## Create an import file
 
-Your .csv file for the product images import will contain the following header columns:
+Since only CSV format is supported for import out of the box, we will start with creating a .csv file in any preferred editor.
+
+Your CSV file for the product images import will contain the following header columns:
 
 * image_set_name
 * external_url_large
@@ -71,29 +73,36 @@ Save the new file under `data/import/*`.
 
 That’s it - your import file is ready. Now you have to configure the data importer.
 
-## Configure the Data Importer
+## Configure the data importer
+
 Every import type needs its own `DataImporterConfiguration`. To add it, open the `DataImportConfig` class and add a constant for the import type.
 
 {% info_block infoBox %}
+
 The constant is used to identify an import type. More information about it will follow later in this article. In our case we will use const `IMPORT_TYPE_PRODUCT_IMAGE = 'product-image';`.
+
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration .yml file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+You also need to define the new data importer in the [configuration YML file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
 
-```
+```yml
 actions:
   ...
   - data_entity: product-image
     source: data/import/icecat_biz_data/product_image.csv
 ```
+
 where:
+
 * `data_entity` represents the name of your data importer;
 * `source` indicates the path to your `.csv` file with data to import.
 
-## Create a Writer Step
+## Create a writer step
 
 {% info_block infoBox "Steps" %}
+
 (Each importer needs at least one step to write the data from the file to a database. You can add as many steps as you need to your `DataSetStepBroker`.
+
 {% endinfo_block %}
 
 First, we will create a new class called `ProductImageWriterStep` in `"*/Zed/DataImport/Business/Model/ProductImage/"` with this content:
@@ -125,9 +134,11 @@ class ProductImageWriterStep implements DataImportStepInterface
 
 }
 ```
+
 Now that the writer has been created, you can wire up your data importer.
 
 ## Wire up the DataImporter
+
 We now have everything at hand to wire up the new `DataImport` and run it. To do so:
 
 1. Add the following method in `DataImportBusinessFactory`:
@@ -187,7 +198,8 @@ public function getConsoleCommands(Container $container)
 
 Now you have a new console command `data:import:product-image` available. When you run `vendor/bin/console` you will see a new entry: `data:import:product-image This command executes your "product-image" importer.`
 
-## Execute the Data Importer
+## Execute the data importer
+
 As mentioned in the previous step, the DataImport module brings a generic command which can be used several times. You need to at least register it once without a constructor argument.
 
 {% info_block infoBox "Info" %}
@@ -208,7 +220,6 @@ This will then only execute the data set at potion 43 of your import file.
 
 {% endinfo_block %}
 
-
 The `DataImporter` catches exceptions by default and continues to import data. In development mode, you can use the throw-exception option to throw the occurred exception instead of catching it.
 
 {% info_block infoBox "Info" %}
@@ -217,15 +228,17 @@ There are a couple more options, you can see them when you execute `vendor/bin/c
 
 {% endinfo_block %}
 
-## Finalize the Data Importer
+## Finalize the data importer
+
 We have made sure that the data importer can be executed, but we only print a debug message right now. We need to do some additional things to really save some data. Follow the steps below to finalize your data importer.
 
-### 1. Convert Logical Identifier to Foreign Keys
+### 1. Convert logical identifier to foreign keys
+
 As mentioned in the [Prerequisites](#prerequisites), we can not use foreign keys in our import file - we need a logical identifier that can now be used to get the foreign key of a related entity.
 
 There are several ways of how we can get the logical identifier. For example, we could add a new Step e.g. `LocaleNameToIdLocaleStep`. However, in our case, it’s better to use a Repository, which provides us with a getter to retrieve the `id_locale` by its name. We will take this approach and do the following:
 
- 1. Add `LocaleRepository` to get the foreign key of a locale by its name:
+1. Add `LocaleRepository` to get the foreign key of a locale by its name:
 
 ```php
 <?php
@@ -302,7 +315,8 @@ When this is done we can use it like this: `$idLocale = $this->localeRepository-
 
 We need to add a similar `Repository` to retrieve the **ID** of an abstract or concrete product by its SKU. This is then also added to our `ProductImageWriterStep` as already done with `LocaleRepository`.
 
-### 2. Find or Create Entities
+### 2. Find or create entities
+
 We will now create the `spy_product_image_set`, `spy_product_image`, `spy_product_image_set_to_product_image` and entities.
 
 With the first run of an importer, all entities are new and we need to do an insert. When the importer is executed more than once, it updates the existing entities. To execute this approach, we use Propel's `findOrCreate()` method. Do the following:
@@ -324,7 +338,7 @@ protected function findOrCreateImageSet(DataSetInterface $dataSet)
 		->filterByFkLocale($idLocale);
 
 	if (!empty($dataSet[static::KEY_ABSTRACT_SKU])) {
-		$idProductAbstract = $this->productRepository->;getIdProductAbstractByAbstractSku($dataSet[static::KEY_ABSTRACT_SKU]);
+		$idProductAbstract = $this->productRepository->getIdProductAbstractByAbstractSku($dataSet[static::KEY_ABSTRACT_SKU]);
 		$query->filterByFkProductAbstract($idProductAbstract);
 	}
 
@@ -429,7 +443,8 @@ public function execute(DataSetInterface $dataSet)
 }
 ```
 
-## 7. Run the Importer
+## 7. Run the importer
+
 That’s it! Now when you run the console command `vendor/bin/console data:import:product-image`, you will see an output similar to this one:
 
 ![Importer command](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+New+DataImport+Type/product_image_import_console_output.png) 

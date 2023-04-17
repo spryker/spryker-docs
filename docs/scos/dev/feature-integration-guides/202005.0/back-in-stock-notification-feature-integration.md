@@ -38,6 +38,7 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 
 Run the following commands to apply database changes, generate entities and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate 
 ```
@@ -215,7 +216,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` is working:<ol><li>add a new product;</li><li>on Yves, as a company user, subscribe to its availability notifications;</li><li>on Yves, go to account overview> *Newsletters* page;</li><li>check that you are subscribed to the product's availability notifications.</li></ol>
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -293,7 +294,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that, in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that, in the database, the configured data is added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3)Enable Controllers

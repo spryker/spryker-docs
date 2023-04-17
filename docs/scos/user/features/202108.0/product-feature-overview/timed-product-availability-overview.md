@@ -18,7 +18,7 @@ The Timed Product Availability feature is implemented through the `isActive` fie
 
 {% info_block infoBox %}
 
-Which means that, if, for example, the following **conditions** are met: 
+Which means that, if, for example, the following **conditions** are met:
   - a product has been manually set to *Deactivated*
   - this product has **Valid from** and **Valid to** values specified
   - **Valid to** date lies in the future
@@ -27,7 +27,7 @@ Which means that, if, for example, the following **conditions** are met:
 
 {% endinfo_block %}
 
-Time set for the product validity **Valid from** and **Valid to** fields is accurate up to the minute. However, technically it is possible to change the accuracy (up to the second or up to the days) via a cronjob. The time is set in GMT by default.
+Time set for the product validity **Valid from** and **Valid to** fields is accurate up to the minute. However, technically you can change the accuracy (up to the second or up to the days) using a cronjob. The time is set in GMT by default.
 
 ## Use cases
 
@@ -41,7 +41,7 @@ The following table shows possible usage scenarios with the TTL feature and resu
 | "Valid to" is set in the past | Product will be deactivated shortly. |
 | "Valid from" is set, "Valid to" is set and lies in the future, the product is deactivated manually | Message saying that the product will be activated because of setting "Valid from" and "Valid to" time.|
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

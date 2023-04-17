@@ -212,11 +212,7 @@
         font-size: 13px;
         font-weight: 600;
         background: $grey;
-        text-transform: lowercase;
-
-        &::first-letter {
-            text-transform: capitalize;
-        }
+        text-transform: uppercase;
 
         &:first-child {
             border-top-left-radius: 4px;
@@ -254,7 +250,6 @@
     details {
         margin: 0 0 24px;
         border: 2px solid $grey-lighten;
-        background: $grey-lightest;
         border-radius: 4px;
         position: relative;
 
@@ -275,6 +270,7 @@
             color: $grey-dark;
             word-break: break-word;
             border-radius: 2px;
+            background: $grey-lightest;
 
             &:hover {
                 @include hover {
@@ -380,7 +376,7 @@
     img {
         display: block;
         margin: 0 auto 1em;
-        max-width: 50%;
+        max-width: 80%;
         cursor: zoom-in;
         position: relative;
 
@@ -630,5 +626,27 @@
                 display: none;
             }
         }
+    }
+}
+
+.swagger-ui {
+    pre {
+        background: none;
+    }
+
+    th {
+        text-transform: none;
+        background: none;
+    }
+
+    ol,
+    ul {
+        li {
+            margin: 0;
+        }
+    }
+
+    ul > li::before {
+        content: none;
     }
 }

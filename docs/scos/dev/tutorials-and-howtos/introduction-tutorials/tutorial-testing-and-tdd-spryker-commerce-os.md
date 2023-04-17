@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Testing and TDD - Spryker Commerce OS
+title: "Tutorial: Testing and TDD - Spryker Commerce OS"
 description: Use the tutorial to understand how testing concepts work with Spryker by using the test-driven development approach.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,32 +24,26 @@ redirect_from:
   - /v1/docs/en/t-testing-tdd-scos
 ---
 
-{% info_block infoBox %}
-
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
-
-{% endinfo_block %}
-
-## Challenge Description
-This task helps to understand the main concepts of testing with Spryker and see how simple it is to build tests. You will use the **Test-Driven Development (TDD)** approach.
+This document helps you understand the main concepts of testing with Spryker and see how simple it is to build tests. You will use the *Test-Driven Development (TDD)* approach.
 
 Spryker's testing structure and data handling make it very easy to develop using TDD. You will build a simple module that reverses a string and test it.
 
 Using TDD, you will write the test first, see it fails, and then write the string reverser that makes the test pass.
 
 ## 1. Build the test that fails
+
 As everything in Spryker is modular, tests are also modular. To build a new test, you simply add a new module inside your tests.
 
 {% info_block warningBox %}
 
-Spryker introduces a new namespace for testing in your project called **PyzTest**.
+Spryker introduces a new namespace for testing in your project called `PyzTest`.
 
 {% endinfo_block %}
 
-As you are going to work with Zed, the test module will be for Zed:
+As you are going to work with Zed, the test module is for Zed:
 
 1. Create a new test module inside the tests directory in you project `tests/PyzTest/Zed` and call it `StringReverser`.
-2. Spryker uses `Codeception` as a testing framework. Using `Codeception`, add the config file for your new module inside `tests/PyzTest/Zed/StringReverser` and call it `codeception.yml`. The config looks like this:
+2. Spryker uses `Codeception` as a testing framework. In `tests/PyzTest/Zed/StringReverser`, using `Codeception`, add the config file for your new module and call it `codeception.yml`. The config looks like this:
 
 **Code sample**
 
@@ -60,7 +54,7 @@ paths:
     tests: .
     data: _data
     support: _support
-    log: _output
+    output: _output
 
 coverage:
     enabled: true
@@ -70,7 +64,7 @@ coverage:
 suites:
     Business:
         path: Business
-        class_name: StringReverserBusinessTester
+        actor: StringReverserBusinessTester
         modules:
             enabled:
                 - Asserts
@@ -101,8 +95,13 @@ class StringReverserDependencyProvider extends AbstractBundleDependencyProvider
 
 }
 ```
-4. Add the Business folder inside `tests/PyzTest/Zed/StringReverser`.
-5. To generate the needed test classes from Codeception, run the command `vendor/bin/codecept build -c tests/PyzTest/Zed/StringReverser`.
+
+4. Add the `Business` folder inside `tests/PyzTest/Zed/StringReverser`.
+5. From `Codeception`, generate the needed test classes:
+```bash
+vendor/bin/codecept build -c tests/PyzTest/Zed/StringReverser
+```
+
 6. Create a facade test class to add your test inside it. The facade test class looks like this:
 
 **Code sample**
@@ -130,16 +129,16 @@ class StringReverserFacadeTest extends Unit
 }
 ```
 
-7. Spryker can generate transfer objects for testing using a concept called **Data Builders**. Data Builders generators work similarly to transfer generators, except that they use data fakers to generate random data for testing purposes. You can generate Data Builders using the same transfer object schemas and running the command `console transfer:databuilder:generate`.
+7. Spryker can generate transfer objects for testing using a concept called *Data Builders**. Data Builders generators work similarly to transfer generators, except that they use data fakers to generate random data for testing purposes. You can generate Data Builders using the same transfer object schemas and running the command `console transfer:databuilder:generate`.
 
-To add the data faker rules for the test we need to create a data builder schema. Inside `tests/`, create a new directory called `_data` and inside it add the data builder schema. Call it `string_reverser.databuilder.xml`.
+To add the data faker rules for the test, create a data builder schema. Inside `tests/`, create a new directory called `_data`. Then, add the data builder schema inside the directory and call it `string_reverser.databuilder.xml`.
 
 {% info_block infoBox %}
-The schema looks very similar to a transfer object schema. This schema will only add the rules when generating the data builders.
-{% endinfo_block %}
 
-{% info_block warningBox %}
-Remember, you can generate the data builders without the rules and without the schema.
+The schema looks very similar to a transfer object schema. This schema only adds the rules when generating the data builders.
+
+You can generate the data builders without the rules and without the schema.
+
 {% endinfo_block %}
 
 **Code sample**
@@ -160,9 +159,9 @@ Remember, you can generate the data builders without the rules and without the s
     </transfers>
 ```
 
-8. Data builders return transfer objects of the same type of the data builder. So, you need to have a transfer object called StringReverser in order for the data builder to work.
+8. Data builders return transfer objects of the same type of the data builder. You need to have a transfer object called `StringReverser` so that the data builder can work.
 
-Data builders cannot even be generated if the transfer object is not there. Add the `StringReverser` transfer inside `src/Pyz/Shared/StringReverser/Transfer`.
+Data builders cannot even be generated if the transfer object is not there. In `src/Pyz/Shared/StringReverser/Transfer`, add the `StringReverser` transfer.
 
 **Code sample**
 
@@ -179,24 +178,32 @@ Data builders cannot even be generated if the transfer object is not there. Add 
 </transfers>
 ```
 
-9. Run the command `console transfer:generate` to generate the transfer object first, then run the command `console transfer:databuilder:generate` to generate the data builder.
+9. Generate the transfer object first:
+```bash
+console transfer:generate
+```
 
-You should have both of them generated by now.
+10. Generate the data builder:
+```bash
+console transfer:databuilder:generate
+```
 
-10. It is time to add the test method. You will test if the string is reversed correctly.
+You must have both of them generated.
+
+11. Add the test method. Test if the string is reversed correctly.
 
 A test in Spryker consists of three main blocks:
 
-* **Arrange** - to prepare the test data.
-* **Act** - to act on the data.
+* *Arrange*—to prepare the test data.
+* *Act*—to act on the data.
 
 {% info_block infoBox %}
 
-In the case described in this tutorial, **Act** will be calling the facade method.
+In the case described in this tutorial, *Act* calls the facade method.
 
 {% endinfo_block %}
 
-* **Assert** - to check the results.
+* *Assert*—to check the results.
 
 **Code sample**
 
@@ -223,15 +230,16 @@ public function testStringIsReversedCorrectly(): void
 }
 ```
 
-11. Run the test using the command `vendor/bin/codecept run -c tests/PyzTest/Zed/StringReverser`.
+12. Run the test using the command `vendor/bin/codecept run -c tests/PyzTest/Zed/StringReverser`.
 
-The test at this point should fail and give an error that the `StringReverserFacade` cannot be resolved because it does not exist.
+The test at this point must fail and give an error that the `StringReverserFacade` cannot be resolved because it does not exist.
 
 ## 2. Make the test pass
-Now you can write the actual logic (feature) to reverse a string and make the test pass:
 
-1. Add a new module in Zed called `StringReverser`.
-2. Add the facade and the needed logic to reverse the string in a model. Your Zed module should have a `StringReverserConfig` and a `StringReverserDependencyProvider` so that the class locator can work with you test.
+Write the actual logic (feature) to reverse a string and make the test pass:
+
+1. In Zed, add a new module called `StringReverser`.
+2. Add the facade and the needed logic to reverse the string in a model. Your Zed module must have `StringReverserConfig` and `StringReverserDependencyProvider` so that the class locator can work with your test.
 
 {% info_block warningBox %}
 
@@ -239,7 +247,7 @@ Use the code generators to generate the module in Zed console `code:generate:mod
 
 {% endinfo_block %}
 
-**Code sample**
+<details><summary markdown='span'>Code samples</summary>
 
 ```php
 namespace Pyz\Zed\StringReverser\Business;
@@ -307,4 +315,11 @@ class StringReverser implements StringReverserInterface
 }
 ```
 
-3. Run the test again `vendor/bin/codecept run -c tests/PyzTest/Zed/StringReverser`. The test should pass.
+</details>
+
+3. Run the test again 
+```bash
+vendor/bin/codecept run -c tests/PyzTest/Zed/StringReverser
+```
+
+ The test must pass.

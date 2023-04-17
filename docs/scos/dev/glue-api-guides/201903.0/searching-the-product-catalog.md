@@ -7,6 +7,7 @@ originalArticleId: 3b73442c-1db2-401f-aa10-37fa915c64b7
 redirect_from:
   - /v2/docs/catalog-search
   - /v2/docs/en/catalog-search
+  - /docs/scos/dev/glue-api-guides/201903.0/searching-the-product-catalog.htmlct-catalog.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker demo shops. The search engine used is Elasticsearch and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.

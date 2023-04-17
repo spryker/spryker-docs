@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Console Commands
+title: "Tutorial: Console commands"
 description: Use the guide to create and use a new console command.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,14 +22,18 @@ redirect_from:
   - /v2/docs/en/t-console-commands
   - /v1/docs/t-console-commands
   - /v1/docs/en/t-console-commands  
+related:
+  - title: Console Commands in Spryker
+    link: docs/scos/dev/back-end-development/console-commands/console-commands.html
 ---
 
 A console command is a PHP class that contains the implementation of a functionality that can get executed from the command line.
 
 Spryker offers a wrapper over Symfony’s Console component that makes the implementation and configuration of a console command easier.
 
-## Implementing a New Console Command
-To exemplify how to implement and use a console command, we’ll build a console command that refreshes the application cache and clears folder for generated files. The `UpdateApplicationConsole` will run the following commands in one step:
+## Implementing a new Console command
+
+To demonstrate how to use and implement a console command, we will create one that clears the generated files folder and refreshes the application cache. The `UpdateApplicationConsole` will run the following commands in one step:
 
 ```bash
 vendor/bin/console router:cache:warm-up
@@ -38,9 +42,9 @@ vendor/bin/console navigation:build-cache
 vendor/bin/console glue:rest:build-request-validation-cache
 ```
 
-Create the `UpdateApplicationConsole` class.
+1. Create the `UpdateApplicationConsole` class.
 
-The console commands must be added in Zed, under the Communication layer of the module, to the Console folder. The console command must extend the `Console` class from Spryker, as you can see below:
+The console commands must be added in Zed, under the Communication layer of the module, to the `Console` folder. The console command must extend the `Console` class from Spryker:
 
 ```php
 <?php
@@ -56,7 +60,7 @@ class UpdateApplicationConsole extends Console
 }
 ```
 
-2. Configure the new console command: specify the name and a short description:
+2. Configure the new console command—specify the name and a short description:
 
 ```php
 <?php
@@ -136,3 +140,5 @@ public function getConsoleCommands()
 ```bash
 vendor/bin/console tutorial:update
 ```
+
+That's it! A new console command is created.

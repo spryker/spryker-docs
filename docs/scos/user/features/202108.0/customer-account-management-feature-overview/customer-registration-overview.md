@@ -49,7 +49,7 @@ After checkout registration, the cart created by a customer as a guest user is c
 
 A Back Office user can register a customer by entering customer account details. The verification email is sent to the email address specified by the Back Office user. Until the customer verifies their account via the link in the email, in the Back Office, the status of their account is `Unverified`. Once they click the link, the status changes to `Verified`.
 
-To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#creating-customers).
+To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html).
 
 ### Registration via Glue API
 
@@ -61,7 +61,7 @@ A developer can verify a customer's email address via Glue API regardless of the
 
 {% endinfo_block %}
 
-To learn how a developer creates customer accounts via Glue API, see [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer).
+To learn how a developer creates customer accounts via Glue API, see [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html).
 
 To learn how a developer confirms a customer's email address, see [Confirming customer registration](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/confirming-customer-registration.html).
 
@@ -69,11 +69,11 @@ To learn how a developer confirms a customer's email address, see [Confirming cu
 
 A developer can register a customer by importing their customer account details. The verification email is snet to the email address specified in the import file. The customer activates the account by verifying their email address.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#creating-customers)  |
+| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

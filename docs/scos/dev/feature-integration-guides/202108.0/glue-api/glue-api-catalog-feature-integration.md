@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/catalog-api-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

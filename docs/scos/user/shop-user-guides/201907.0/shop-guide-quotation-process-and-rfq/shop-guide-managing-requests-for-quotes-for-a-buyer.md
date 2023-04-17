@@ -9,6 +9,8 @@ redirect_from:
   - /v3/docs/managing-rfqs-for-buyer-shop-guide
   - /v3/docs/en/managing-rfqs-for-buyer-shop-guide
   - /docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+  - /docs/scos/user/shop-user-guides/201907.0/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+  - /docs/scos/user/shop-user-guides/201907.0/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
 ---
 
 This topic describes the procedure for managing the Request for Quotes (RFQs) from the Buyer perspective:

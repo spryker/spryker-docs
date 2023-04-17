@@ -17,11 +17,17 @@ The *Quick Order* feature allows placing bulk orders for wholesale and returning
 On the *Quick Order* page, customers can add multiple products along with the required quantities in a fast and efficient way. They can search for a specific concrete product by SKU or name with the help of Search Widget for Concrete Products. When starting to fill out the *SKU/Name* field, a drop-down list with auto-suggested appropriate items appears. A shop visitor can select the concrete product by clicking on it in the drop-down list.
 
 {% info_block infoBox %}
+
 Use the Tab button to automatically fill in a partially typed product name or SKU.
+
 {% endinfo_block %}
+
 {% info_block infoBox %}
+
 By default, we use SKU as a product identifier for filtering the results. The identifier determines what input to validate in the *SKU/Name* field. You can configure to use more than one identifier such as EAN, GTIN, or Article number on the project level by changing the template in the `ProductSearchWidget` module and use any of the available fields for the product.
+
 {% endinfo_block %}
+
 To view how to create a quick order, see [Quick Order on the Storefront](#quick-order-on-the-storefront).
 <!--- ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png)
 --->

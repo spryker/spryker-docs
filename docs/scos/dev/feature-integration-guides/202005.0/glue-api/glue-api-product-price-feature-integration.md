@@ -7,9 +7,10 @@ originalArticleId: 85d16fa0-d908-4e2b-863d-6a3e5060e103
 redirect_from:
   - /v5/docs/glue-api-product-price-api-feature-integration
   - /v5/docs/en/glue-api-product-price-api-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-product-price-api-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -75,16 +76,16 @@ Activate the following plugins:
 **`src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`**
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\ProductPricesRestApi\Plugin\AbstractProductPricesRoutePlugin;
 use Spryker\Glue\ProductPricesRestApi\Plugin\ConcreteProductPricesRoutePlugin;
 use Spryker\Glue\ProductsProductPricesResourceRelationship\Plugin\AbstractProductsProductPricesResourceRelationshipPlugin;
 use Spryker\Glue\ProductsProductPricesResourceRelationship\Plugin\ConcreteProductsProductPricesResourceRelationshipPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -97,7 +98,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ConcreteProductPricesRoutePlugin(),
         ];
     }
- 
+
     /**
     * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
     *
@@ -114,7 +115,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             ProductsRestApiConfig::RESOURCE_CONCRETE_PRODUCTS,
             new ConcreteProductsProductPricesResourceRelationshipPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }
@@ -124,13 +125,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the following endpoints are available:
 
-* `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices` 
+* `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
 * `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make the request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`. Make sure that the response includes relationships to the `abstract-product-prices` resources. 
+Make the request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`. Make sure that the response includes relationships to the `abstract-product-prices` resources.
 {% endinfo_block %}
 {% info_block warningBox "Verification" %}
 Make the request to `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`. Make sure that the response includes relationships to the `concrete-product-prices` resources.

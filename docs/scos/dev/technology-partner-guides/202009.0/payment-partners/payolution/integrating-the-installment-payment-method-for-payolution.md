@@ -8,6 +8,7 @@ originalArticleId: 0cf8a86d-6e80-493c-8b97-4df039a204b0
 redirect_from:
   - /v6/docs/payolution-installment
   - /v6/docs/en/payolution-installment
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/payolution/payolution-provided-payment-methods/payolution-installment-payment.html
 related:
   - title: Installing and configuring Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html

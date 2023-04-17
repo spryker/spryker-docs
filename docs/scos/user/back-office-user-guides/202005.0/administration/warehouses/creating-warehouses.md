@@ -8,6 +8,7 @@ originalArticleId: 113f7a9d-02fc-4cab-af5b-51984f51bd33
 redirect_from:
   - /v5/docs/creating-a-warehouse
   - /v5/docs/en/creating-a-warehouse
+  - /docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
 related:
   - title: Warehouses- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/references/warehouses-reference-information.html
@@ -38,7 +39,7 @@ Keep in mind that if you clear all checkboxes for stores assigned to a specific 
 
 The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a Product Variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 
-Additionally, you can edit any warehouse if needed. For more details, see the [Editing Warehouse Details](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html#editing-warehouse-details) section in *Managing Warehouses*.
+Additionally, you can edit any warehouse if needed. For more details, see the [Editing Warehouse Details](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html"#editing-warehouse-details) section in *Managing Warehouses*.
 
 To learn more about the attributes you view or edit while creating or managing the warehouses, see [Warehouses: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/references/warehouses-reference-information.html).
 

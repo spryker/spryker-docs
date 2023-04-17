@@ -22,20 +22,22 @@ This document describes how to enable CMS block widget in a Spryker project.
 
 {% info_block infoBox %}
 
-CMS block widgets are outdated. We recommed using [slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot) which are part of the [CMS feature](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html). For integration instructions, see [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html)
+CMS block widgets are outdated. We recommend using [slots](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot) which are part of the [CMS feature](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/cms-feature-overview.html). For integration instructions, see [Install the CMS feature](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-cms-feature.html)
 
 {% endinfo_block %}
 
 ## Prerequisites
+
 Install the necessary features before beginning the integration step.
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
-| CMS |master  |
+| CMS | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
 composer require spryker/cms-content-widget-cms-block-connector:"^1.0.0" --update-with-dependencie
 ```
@@ -44,7 +46,7 @@ composer require spryker/cms-content-widget-cms-block-connector:"^1.0.0" --updat
 
 Make sure that the following modules have been installed:
 
-|Module| Expected Directory|
+| MODULE | EXPECTED DIRECTORY |
 |---|---|
 | CmsContentWidgetCmsBlockConnector| vendor/spryker/cms-content-widget-cms-block-connector|
 
@@ -82,6 +84,7 @@ class CmsContentWidgetConfig extends SprykerCmsContentConfig
 {% info_block warningBox "Verification" %}
 
 Make sure that the `cms_block` option is displayed in the Back Office:
+
 1. Go to **Content** > **Blocks**
 2. Select **Edit Placeholder** next to a block.
 3. Check that, in the widget drop-down menu, the `cms_block` option is displayed.
@@ -92,7 +95,7 @@ Make sure that the `cms_block` option is displayed in the Back Office:
 
 Add the following plugin to your project:
 
-|Plugin  | Specification | Prerequisites | Namespace |
+|PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 |  `CmsBlockContentWidgetPlugin`| Creates a new widget for editing CMS Blocks. |None  | `Spryker\Yves\CmsContentWidgetCmsBlockConnector\Plugin` |
 

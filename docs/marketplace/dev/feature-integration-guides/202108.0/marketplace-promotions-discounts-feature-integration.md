@@ -128,14 +128,6 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
     }
 }
 ```
-
-Run the following command:
-
-```bash
-console router:cache:warm-up:backend-gateway             
-console router:cache:warm-up:backoffice
-```
-
 ---
 
 

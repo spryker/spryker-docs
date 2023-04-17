@@ -3,6 +3,8 @@ title: Vault for Tokens overview
 last_updated: Aug 20, 2021
 description: This articles overviews Vault for Tokens, which provides the functionality to store sensitive data
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/user/features/201903.0/spryker-core-feature-overview/vault-for-tokens-overview.html
 ---
 
 Vault for Tokens provides the functionality to store sensitive data. This feature doesn't have any GUI and consists of two modules: _Spryker.UtilEncryption_ and _Spryker.Vault_.

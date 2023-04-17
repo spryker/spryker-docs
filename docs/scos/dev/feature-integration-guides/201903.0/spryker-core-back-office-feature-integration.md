@@ -8,9 +8,10 @@ originalArticleId: 638b6efd-8506-45a8-a043-38671bc2a617
 redirect_from:
   - /v2/docs/back-office-feature-integration-201903
   - /v2/docs/en/back-office-feature-integration-201903
+  - /docs/scos/dev/feature-integration-guides/201903.0/back-office-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 Ensure that the related features have been installed:
 
@@ -98,7 +99,7 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Installer;
 
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
@@ -133,11 +134,11 @@ Make sure that:<ul><li>the command has cleaned previous translation cache inform
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Application;
- 
+
 use Spryker\Zed\Translator\Communication\Plugin\Messenger\TranslationPlugin;
- 
+
 class MessengerDependencyProvider extends SprykerMessengerDependencyProvider
 {
     /**
@@ -223,7 +224,7 @@ Make sure that the locale of the back office matches the locale of the logged in
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\User;
 
 use Spryker\Zed\User\UserDependencyProvider as SprykerUserDependencyProvider;
@@ -285,7 +286,7 @@ Make sure that plugins work: <br>1. Log into back office.<br>2. Go to the *User 
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Kernel\Container;
@@ -322,4 +323,3 @@ console translator:generate-cache
 ```
 The `console translator:clean-cache` command will clean translator cache folder that is `data/{YourStore}/cache/Zed/translation`, by default.
 The `console translator:generate-cache` command will generate translator cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in folder `data/{YourStore}/cache/Zed/translation`, by default.
-

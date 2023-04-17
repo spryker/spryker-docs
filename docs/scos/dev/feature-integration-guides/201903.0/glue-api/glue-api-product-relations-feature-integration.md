@@ -8,9 +8,11 @@ originalArticleId: 92a22dbc-988d-45df-ba3c-005ba5f4cac4
 redirect_from:
   - /v2/docs/product-relations-api-feature-integration-201903
   - /v2/docs/en/product-relations-api-feature-integration-201903
+  - /docs/scos/user/features/201903.0/product-relations-feature-overview-api-feature-integration-201903.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/product-relations-api-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 |Name|Version|Required Sub-Feature|
@@ -26,7 +28,7 @@ composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-p
 ```
 <section contenteditable="false" class="warningBox"><div class="content">
     Make sure that the following modules are installed:
-    
+
 |Module|Expected Directory|
 |---|---|
 |`RelatedProductsRestApi`|`vendor/spryker/related-products-rest-api`|
@@ -48,14 +50,14 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\RelatedProductsRestApi\Plugin\RelatedProductsRoutePlugin
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\UpSellingProductsForCartRoutePlugin
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\UpSellingProductsForGuestCartRoutePlugin
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**

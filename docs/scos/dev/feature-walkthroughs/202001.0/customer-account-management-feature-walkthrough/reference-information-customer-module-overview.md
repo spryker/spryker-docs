@@ -8,6 +8,7 @@ originalArticleId: c1e5c067-76fc-4ee1-83e5-ed4fcdb90928
 redirect_from:
   - /v4/docs/customer-module-overview
   - /v4/docs/en/customer-module-overview
+  - /docs/scos/dev/feature-walkthroughs/202001.0/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
 related:
   - title: Customers
     link: docs/scos/user/back-office-user-guides/page.version/customer/customers.html

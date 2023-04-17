@@ -13,7 +13,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 |Name|Version|Integration guide|
@@ -41,6 +41,7 @@ composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 Run the following commands to apply database changes, and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

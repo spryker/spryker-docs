@@ -8,6 +8,7 @@ originalArticleId: 556b138b-bc79-4da0-be9b-9ff4a5800c03
 redirect_from:
   - /v2/docs/managing-customer-access
   - /v2/docs/en/managing-customer-access
+  - /docs/scos/user/back-office-user-guides/201903.0/customer/customers-customer-access-customer-groups/managing-customer-access.html
 related:
   - title: Managing Customer Groups
     link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-groups.html
@@ -32,9 +33,11 @@ To define the restrictions:
   * **wishlist** - if selected, no **Wishlist** option is available
   * **Shopping List** - if selected, no **Add to Shopping List** option is available
   * **Can place an order** - if selected, the not logged in user is not able to place in order.
+
   {% info_block errorBox "**B2B Only**" %}
 
   This option is selected by default and cannot be deselected.
-  
+
   {% endinfo_block %}
+
 2. Click **Save** to save the changes.

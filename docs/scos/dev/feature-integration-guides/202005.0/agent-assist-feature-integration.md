@@ -38,6 +38,7 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 
 Run the following commands to apply database changes and to generate entity and transfer changes.
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate 
 ```
@@ -108,7 +109,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 Make sure that the following plugins were registered:<table><thead><tr><th>Plugin</th><th>Description</th><th>Prerequisites</th><th>Namespace</th></tr></thead><tbody><tr ><td>`UserAgentFormExpanderPlugin`</td><td>Adds "is an agent" checkbox to the Zed User form.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr><tr><td>`UserAgentTableConfigExpanderPlugin`</td><td>Adds "is an agent" column to the Zed Users table.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr><tr><td>`UserAgentTableDataExpanderPlugin`</td><td>Fills "is an agent" column in the Zed Users table.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr></tbody></table>
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -167,7 +168,7 @@ Run the following command(s) to add the glossary keys:
 console data:import:glossary 
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Enable Controllers

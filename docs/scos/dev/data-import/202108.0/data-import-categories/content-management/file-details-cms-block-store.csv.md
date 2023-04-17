@@ -11,27 +11,35 @@ redirect_from:
   - /docs/en/file-details-cms-block-storecsv
 ---
 
-This article contains content of the **cms_block_store.csv** file to configure CMS Block Store information on your Spryker Demo Shop.
+This document describes the `cms_block_store.csv` file to configure CMS Block Store information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:cms-block-store
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **block_key** | Yes | String |N/A* | Key identifier of the block.  |
-| **store_name** | Yes | String |N/A | Name of the store. |
-*N/A: Not applicable.
+| block_key | &check; | String |  | Key identifier of the block.  |
+| store_name | &check; | String |  | Name of the store. |
 
-## Dependencies
+
+## Import file dependencies
 
 This file has the following dependencies:
-*    [cms_block.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html)
-*     *stores.php* configuration file of the demo shop PHP project
+* [cms_block.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html)
+* *stores.php* configuration file of the demo shop PHP project
 
-## Template File & Content Example
-A template and an example of the *cms_block_store.csv*  file can be downloaded here:
+## Import template file and content example
 
-| File | Description |
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [cms_block_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_block_store.csv) | CMS Block Store .csv template file (empty content, contains headers only). |
-| [cms_block_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_store.csv) | CMS Block Store .csv file containing a Demo Shop data sample. |
+| [cms_block_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_block_store.csv) | Exemplary import file with headers only. |
+| [cms_block_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_store.csv) | Exemplary import file with Demo Shop data. |

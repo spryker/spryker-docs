@@ -8,6 +8,7 @@ originalArticleId: 0c0a9f00-bf3b-4667-946e-fcb1f7c6494a
 redirect_from:
   - /v3/docs/product-quantity-restrictions
   - /v3/docs/en/product-quantity-restrictions
+  - /docs/scos/user/features/201907.0/non-splittable-products/non-splittable-products-feature-overview.html
 ---
 
 

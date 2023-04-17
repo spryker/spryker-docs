@@ -3,6 +3,29 @@ title: Testing console commands
 description: How to test console commands.
 last_updated: Jan 12, 2022
 template: concept-topic-template
+related:
+  - title: Available test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+  - title: Code coverage
+    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+  - title: Data builders
+    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+  - title: Executing tests
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+  - title: Publish and Synchronization testing
+    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+  - title: Setting up tests
+    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+  - title: Test framework
+    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+  - title: Test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+  - title: Testify
+    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+  - title: Testing best practices
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+  - title: Testing concepts
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
 ---
 
 Spryker supports several [test helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html) to assist you in testing your project. This article provides details of how to test console commands with ConsoleHelper.
@@ -11,22 +34,23 @@ To test console commands, do the following:
 
 1. Add `\SprykerTest\Zed\Console\Helper\ConsoleHelper` to the `codeception.yml` file:
 
-```
+```yml
 suites:
     Communication:
         path: Communication
-        class_name: {ModuleName}CommunnicationTester
+        actor: {ModuleName}CommunnicationTester
         modules:
             enabled:
                 - \SprykerTest\Zed\Console\Helper\ConsoleHelper
                 - ...
 ```
-For more information about the `codeception.yml` file, see [Test framework](https://docs.spryker.com/docs/scos/dev/guidelines/testing-guidelines/test-framework.html).
+
+For more information about the `codeception.yml` file, see [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html).
 
 2. Create the test directory `tests/PyzTests/Zed/FooModule/Communication/Plugin/Console/`, if it is not available yet.
 3. Add the test class:
 
-```
+```php
 <?php
 
 namespace PyzTest\Zed\FooModule\Communication\Plugin\Console;
@@ -44,7 +68,8 @@ class MyConsoleCommandTest extends Unit
 ```
 
 4. Add the test method:
-```
+
+```php
 public function testMyConsoleCommand(): void
 {
     // You can also use a mocked command or add a mocked facade etc.

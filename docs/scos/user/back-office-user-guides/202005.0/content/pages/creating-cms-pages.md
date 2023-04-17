@@ -32,11 +32,13 @@ To create a page:
   * Use the **store relation** to set a store for which your page will be visible on the website. If you want your CMS page not to be displayed per specific locale, clear a respective checkbox.
   * **Optional**: Select **Is searchable** if you want your page to be searched for on the web.
   * Select a page template that will determine a page layout. This is a **mandatory** step.
+
   {% info_block infoBox %}
 
   Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-cms-page).
 
   {% endinfo_block %}
+  
   * **Optional**: Enter **Valid from** and **Valid to** if you want to define the validity period during which your page will be available in the shop.
   * Enter **Name** and **URL** of the page per locale. This is a **mandatory** step.
 
@@ -50,7 +52,7 @@ To create a page:
 * Please consider the following cases:
   * If **Is searchable** is selected, but **store relation** is turned off for all stores, the CMS page will not be displayed and will not be searchable.
   * If **Is searchable** is not selected, but **store relation** is turned on, the CMS page will be shown but will not be searchable.
- 
+
 * If you want to create **different** versions of the page per locale, add the general information to the section in the corresponding language.
 
 ***

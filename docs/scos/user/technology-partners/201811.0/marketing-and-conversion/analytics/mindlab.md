@@ -15,7 +15,7 @@ related:
 
 ## Partner Information
 [ABOUT MINDLAB SOLUTIONS](http://www.mindlab.de/)
-As a web analysis pioneer with 18 years of experience, Mindlab Solutions is one of the leading specialists in the implementation of challenging analytics projects for websites, apps and intranet systems. Germany's leading companies count on Mindlab when it comes to increasing the scope of digital applications, raising customer satisfaction and conversion rates, and evaluating the efficiency of digitally transformed processes. 
+As a web analysis pioneer with 18 years of experience, Mindlab Solutions is one of the leading specialists in the implementation of challenging analytics projects for websites, apps and intranet systems. Germany's leading companies count on Mindlab when it comes to increasing the scope of digital applications, raising customer satisfaction and conversion rates, and evaluating the efficiency of digitally transformed processes.
 {% info_block infoBox "Info" %}
 This integration is built and supported by our technology partner [Mindlab Solutions](http://www.mindlab.de).
 {% endinfo_block %}
@@ -27,7 +27,7 @@ For successful e-commerce strategies in today's world, meaningful data analysis 
 
 ## Mindlab Download and Support
 
-For downloads, support and additional information send a message to: [info@mindlab.de](info@mindlab.de)
+For downloads, support and additional information send a message to: [info@mindlab.de](mailto:info@mindlab.de)
 
 ---
 
@@ -52,4 +52,3 @@ For further information on this partner and integration into Spryker, please con
             "></div>
 </div>
 </div>
-

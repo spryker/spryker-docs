@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Database Transaction Handling
+title: "Tutorial: Database transaction handling"
 description: Use the guide to understand how to handle database transactions.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -36,7 +36,7 @@ To reduce boilerplate code and properly handle database transactions you can use
 
 To use database transactions in the `DatabaseTransactionHandlingExample` class:
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -84,11 +84,11 @@ class DatabaseTransactionHandlingExample
 }
 ```
 
-## Under the Hood
+## Under the hood
 
 In case of any error, the transaction will be rolled back and an exception will be re-thrown. The code only has one method. The `$connection` parameter is optional and if not specified `Propel::getConnection()` will be used.
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php

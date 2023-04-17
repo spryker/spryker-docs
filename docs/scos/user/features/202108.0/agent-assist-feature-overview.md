@@ -20,19 +20,19 @@ Every agent user is a Back Office user. When creating or editing a Back Office u
 
 A Back Office user can create an agent user in **Users&nbsp;<span aria-label="and then">></span> Users**.
 
-To learn more about managing agent users in Back Office, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html)
+To learn more about managing agent users in Back Office, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html).
 
 ![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png)
 
 ## Agent Assist feature on the Storefront
 
-To act on a customer's behalf, the agent signs in at `https://mysprykershop.com/agent/login` with the agent account details and searches for the desired customer by typing their name or email in the customer search field.
+To act on a customer's behalf, the agent signs in at `https://mysprykershop.com/agent/login` with the agent account details and searches for the needed customer by typing their name or email in the customer search field.
 
 ![customer-assitent.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/customer-assitent.png)
 
-Once they find the desired customer, they select **Confirm** to impersonate them.
+Once they find the needed customer, they select **Confirm** to impersonate them.
 
-This logs the agent into the selected customer account, so they see the shop the way the customer does and can do anything the customer asks for. If a customer's cart is stored in the database, the agent can see and manage the cart and its items. If the cart is stored only in the customer's session, the agent can't manage it.
+This logs the agent into the selected customer account, so they see the shop the way the customer does and can do anything the customer asks for. If the customer's cart is stored in the database, the agent can see and manage the cart and its items. If the cart is stored only in the customer's session, the agent can't manage it.
 
 After performing all the requested actions, the agent ends the customer assistance session by selecting **End Customer Assistance**.
 
@@ -45,7 +45,7 @@ This is how the Agent Assist feature works on the Spryker Demo Shop Storefront:
 Check out this video tutorial on setting up an Agent user in a B2B company account:
 <iframe src="https://spryker.wistia.com/medias/5zraqrascy" title="Agent Assist" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="720" height="480"></iframe>
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

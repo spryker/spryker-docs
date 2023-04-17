@@ -16,9 +16,9 @@ redirect_from:
 
 ---
 
-The *Cart* feature lets your customers add products to their cart by selecting the desired quantity of a product. Inside the cart, customers can change the quantity of items, switch between different variants of the product, add notes, apply vouchers and remove items.
+The *Cart* feature lets your customers add products to their cart by selecting the needed quantity of a product. Inside the cart, customers can change the quantity of items, switch between different variants of the product, add notes, apply vouchers and remove items.
 
-Any changes the customer makes within the cart trigger an automatic sum-recalculation that is immediately applied to the total in the sum. Pre-defined taxes are applied and shown automatically. Additionally, logged-in customers can see and edit their cart from any device.  
+Any changes the customer makes within the cart trigger an automatic sum-recalculation that is immediately applied to the total in the sum. Predefined taxes are applied and shown automatically. Additionally, logged-in customers can see and edit their cart from any device.  
 
 The persistent cart functionality lets authenticated customers store their cart throughout multiple sessions. The Cart feature also ensures that your business rules, such as discounts, taxes, or shipping, are applied, based on the customers' final choice of items.
 
@@ -28,7 +28,7 @@ The feature supports [product groups](/docs/scos/user/features/{{page.version}}/
 
 In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by pointing to the cart icon.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

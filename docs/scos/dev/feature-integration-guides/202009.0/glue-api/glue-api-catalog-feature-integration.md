@@ -13,7 +13,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:

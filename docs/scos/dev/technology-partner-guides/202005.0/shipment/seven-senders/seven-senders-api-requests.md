@@ -1,5 +1,5 @@
 ---
-title: Seven Senders — API requests
+title: Seven Senders—API requests
 template: concept-topic-template
 ---
 

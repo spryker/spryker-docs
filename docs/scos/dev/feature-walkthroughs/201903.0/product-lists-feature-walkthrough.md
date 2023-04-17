@@ -12,8 +12,8 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES |
+|INSTALLATION GUIDES |
 |---------|
 | [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) |

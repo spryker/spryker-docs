@@ -23,12 +23,21 @@ redirect_from:
   - /v1/docs/composer
   - /v1/docs/en/composer  
   - /docs/scos/dev/setup/composer.html
+related: 
+  - title: Install module structure and configuration
+    link: docs/scos/dev/setup/install-module-structure-and-configuration.html
+  - title: Installing Spryker with custom set of modules
+    link: docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
+  - title: Redis configuration
+    link: docs/scos/dev/setup/redis-configuration.html
 ---
 
 Spryker Commerce OS uses [Composer](https://getcomposer.org/) as a dependency manager. Composer allows declaring the libraries your project depends on and the versions required as well as it will manage them for you. Composer is downloaded as `composer.phar` file (PHP archive). To start using Composer in your project, all you need is a `composer.json` file. The file defines the required dependencies and is located in the root folder of the project.
 
 {% info_block infoBox %}
+
 Root folder is the main folder that includes all your project files.
+
 {% endinfo_block %}
 
 Spryker Commerce OS consists of a number of independent components. Each of them has a dedicated Git repository. Every module contains its own `composer.json` that defines its dependencies:
@@ -68,7 +77,8 @@ In the project level `composer.json` file you can specify the components that yo
     "spryker-shop/cart-page-extension": "^1.0.0",
 ...
 ```
-## Core Updates
+
+## Core updates
 
 Pulling hundreds of composer dependencies declared in `composer.json` file takes time and can be tricky sometimes. On the one hand, you want your system to have all the newest functionality and improvements, but on the other hand, you might be reluctant to invest additional development effort into the updates. While minor updates do not affect compatibility, that might not be the case for major updates. Check the recommendations below in order to perform the core updates smoothly.
 
@@ -90,17 +100,20 @@ Staring from November 2021, all Spryker modules require PHP 7.4 as a minimum ver
     },
 },
 ```
+
 Make sure to adjust this platform version to your production environment. So if you use 8.0.10 for example, this should be also reflected here to have a matching local installation including all dependencies and their compatible versions.
 
 {% info_block infoBox %}
+
 Make sure every minor or patch release is applied before upgrading to a major released version.
+
 {% endinfo_block %}
 
 <a name="composer-update"></a>
 
 To update all the modules, run the following command:
 
-```
+```bash
 composer update "spryker/*"
 ```
 
@@ -108,7 +121,7 @@ This will fetch the latest matching versions (according to your `composer.json` 
 
 To check what major updates are available without changing `composer.json`, run:
 
-```
+```bash
 composer outdated
 ```
 
@@ -116,13 +129,14 @@ Just for the modules that have been extended (factory and classes have been over
 
 For any installation that does not require working in vendor directories, make sure to always use composer `install`/`update` with `--prefer-dist` flag:
 
-```
+```bash
 composer install --prefer-dist
 ```
+
 to use deployment-like download of all packages as zip files. This also dramatically speeds it up as side-effect.
 
 
-## Replace Spryker Module Dependencies
+## Replace Spryker module dependencies
 
 Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. For example, `spryker/product` needs a dependent `spryker/product-label` module as the product label cannot be attached when there is no product itself. Usually, adjustments are done via our [plugin mechanism](/docs/scos/dev/back-end-development/plugins/plugins.html) or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need **to replace the module**, and secondly, **connect the module to the new functionality**.
 
@@ -132,7 +146,7 @@ For each module that you want to add:
 
 * Replace the old module with the new one by creating a dummy module repository in a directory accessible to composer.
 
-* 1. Name or rename the new module by using the old module’s name and prefixing it with `replace_`. For example, create a dummy file called `replace_refund` to replace the refund module. This will help to keep track of any replaces you do in the project.
+  1. Name or rename the new module by using the old module’s name and prefixing it with `replace_`. For example, create a dummy file called `replace_refund` to replace the refund module. This will help to keep track of any replaces you do in the project.
   2. In the newly created dummy module directory, create an empty `composer.json` file and add the following Composer Configuration Information.
   3. Add the newly created module to your project’s `composer.json` file by going into your project’s `composer.json` and adding the new location.
   4. Check if the core module is in your project’s `composer.json` file and if it is, remove it.
@@ -151,7 +165,6 @@ For more information on using the composer replace command see  [Composer websit
 
 {% endinfo_block %}
 
-
 ```php
 {
 "name": “[vendor]/ replace_[the name of the module you are replacing] ",
@@ -169,7 +182,7 @@ If you added a replace module, navigate to `vendor/spryker/` and check that comp
 
 Navigate to `[ROOT]/vendor/spryker/` and check that composer removed the modules that needed to be replaced from the directory. The next step is to connect the module to your new functionality.
 
-### Setting Up Connection With the New Functionality
+### Setting up connection with the new functionality
 
 Now that we have replaced a core module with a different one, we need to connect the rest of the OS to it.
 

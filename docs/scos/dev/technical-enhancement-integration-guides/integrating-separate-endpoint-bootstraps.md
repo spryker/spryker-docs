@@ -1,6 +1,6 @@
 ---
 title: Integrating separate endpoint bootstraps
-last_updated: Fab 8, 2022
+last_updated: Feb 8, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/separating-different-endpoint-bootstraps
 originalArticleId: 9f42f274-0278-4632-8a9f-0279c3ed4675
@@ -28,12 +28,12 @@ Update the required modules:
 "spryker/monitoring": "2.3.0"
 "spryker/router": "1.12.0"
 "spryker/session": "4.10.0"
-"spryker/twig": "3.15.1"```
+"spryker/twig": "3.15.1"
 ```
 
 2. Update the modules to the specified versions:
 
-```shell
+```bash
 composer update spryker/twig spryker/session spryker/router spryker/monitoring spryker/event-dispatcher spryker/application
 ```
 
@@ -73,7 +73,7 @@ npm run zed
 
 **public/BackendApi/index.php**
 
-```
+```php
 <?php
 
 use Spryker\Shared\Config\Application\Environment;
@@ -98,7 +98,7 @@ $bootstrap
 
 **public/BackendGateway/index.php**
 
-```
+```php
 <?php
 
 use Spryker\Shared\Config\Application\Environment;
@@ -150,8 +150,7 @@ $bootstrap
 
 2. Add the following error pages:
 
-<details>
-<summary markdown='span'>public/Backoffice/errorpage/4xx.html</summary>
+<details><summary markdown='span'>public/Backoffice/errorpage/4xx.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -193,11 +192,9 @@ $bootstrap
     </body>
 </html>
 ```
-
 </details>
 
-<details>
-<summary markdown='span'>public/Backoffice/errorpage/5xx.html</summary>
+<details><summary markdown='span'>public/Backoffice/errorpage/5xx.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -239,16 +236,21 @@ $bootstrap
     </body>
 </html>
 ```
-
 </details>
 
 3. Configure a maintenance page:
+
+{% info_block warningBox %}
+
+The maintenance page is not yet compatible with Spryker Cloud.
+
+{% endinfo_block %}
 
     1. Add the maintenance page:
 
     **public/Backoffice/maintenance/index.html**
 
-        ```html
+    ```html
         <!DOCTYPE html>
         <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
             <head>
@@ -279,7 +281,7 @@ $bootstrap
                 </div>
             </body>
         </html>
-        ```
+    ```
 
     2. Configure the page you’ve added in step 1 to be displayed when the error `503` occurs:
 
@@ -303,6 +305,7 @@ $bootstrap
 ### 4) Separate application plugin stacks
 
 1. Replace `ApplicationDependencyProvider::getApplicationPlugins();` with separate plugin stacks per endpoint:
+
   -  `ApplicationDependencyProvider::getBackofficeApplicationPlugins()`
   - `ApplicationDependencyProvider::getBackendGatewayApplicationPlugins()`
   - `ApplicationDependencyProvider::getBackendApiApplicationPlugins()`
@@ -376,7 +379,6 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
   }
 }
 ```
-
 </details>
 
 ### 5) Separate event dispatcher plugin stacks
@@ -488,6 +490,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 You’ve added the following commands:
+
 - `console router:cache:warm-up:backoffice`
 - `console router:cache:warm-up:backend-gateway`
 
@@ -569,7 +572,6 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
     ],
 ...
 ```
-
 </details>
 
 2. To open new entry points for external API systems, add the following paths to `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php`:
@@ -582,6 +584,12 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 ```
 
 3. Adjust the server configuration of the application according to the added endpoints.
+
+{% info_block errorBox "Inform the Support Team" %}
+
+Inform the Spryker Support Team of your intention to add additional endpoints. Your PaaS environment needs to be configured to be compatible with this new setup, and you need to agree with the team on a maintenance window for making this change, as it will result in brief service degradation. Please ask the Support Team for the adjustments by sharing your updated deploy file. Please do so with ample lead time, at least 5 working days prior to the planned change.
+
+{% endinfo_block %}
 
 ### 9) Update the Docker SDK
 
@@ -643,12 +651,11 @@ groups:
             entry-point: BackendApi      
 ...
 ```
+</details>
 
-</details>           
+1. Update the hosts file by running the `docker/sdk boot {deploy_file}` or `docker/sdk install` command and following the instructions in the output.
 
-3. Update the hosts file by running the `docker/sdk boot {deploy_file}` or `docker/sdk install` command and following the instructions in the output.
-
-4. Run the application:
+2. Run the application:
 
 ```bash
 docker/sdk up --build

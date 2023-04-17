@@ -19,15 +19,15 @@ related:
 
 This article contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
 
-*     orders.csv
-*     order-items.csv
-*     order-expenses.csv
+* orders.csv
+* order-items.csv
+* order-expenses.csv
 
 ## Orders
 
 These are the header fields included in the order.csv file:
 
-| Default sequence | .csv column header name | Mandatory | Type | Other requirements / Comments | Description |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | 1 | order_reference | Yes | String | Unique | Order reference identifier. |
 | 2 | customer_reference | No | String |  | Customer reference identifier. |
@@ -67,17 +67,15 @@ These are the header fields included in the order.csv file:
 | 36 | order_totals_refund_total | No | Number | The original value is multiplied by 100, before stored in this field. | Refund total of the order totals. |
 | 37 | order_totals_subtotal | No | Number | The original value is multiplied by 100, before stored in this field. | Subtotal of the order totals. |
 | 38 | order_totals_tax_total | No | Number | The original value is multiplied by 100, before stored in this field. | Tax total of the order totals. |
-| 39 | order_comments | No | Object | The comments are presented in a  JSON array format:<br>*order_comments<br>{% raw %}{{{% endraw %}username, message, createdat, updated_at}, …}* | Comments added by the customer to the sales order.<br>Username may be a different name from the customer first, middle or last name, e. g. a nickname.
- |
+| 39 | order_comments | No | Object | The comments are presented in a  JSON array format:<br>*order_comments<br>{% raw %}{{{% endraw %}username, message, createdat, updated_at}, …}* | Comments added by the customer to the sales order.<br>Username may be a different name from the customer first, middle or last name, e. g. a nickname. |
 
  Check out the [orders.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/orders.csv).
 
-##  Order Items
+## Order items
 
 These are the header fields included in the order_items.csv file:
 
-
-| Default sequence | .csv column header name | Mandatory | Type | Other requirements / Comments | Description |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | 1 | order_reference | Yes | String |  | Order reference identifier. |
 | 2 | order_item_reference | No | String | Unique | Order item reference identifier. |
@@ -140,9 +138,9 @@ These are the header fields included in the order_items.csv file:
 
  Check out the [order-items.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/order-items.csv).
 
-##  Order Expenses
+## Order expenses
 
-| Default sequence | .csv column header name | Mandatory | Type | Other requirements / Comments | Description |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | 1 | order_reference | Yes | String |  | Order reference identifier. |
 | 2 | order_shipment_id | No | Number |  |Order shipment identification. |

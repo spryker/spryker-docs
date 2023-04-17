@@ -1,11 +1,11 @@
 ---
-title: Deploy file inheritance — common use cases
+title: Deploy file inheritance—common use cases
 description: Examples of using deploy file inheritance
 template: concept-topic-template
 ---
 
-
 This document contains examples of using deploy file inheritance. The examples show how to do the following:
+
 * Avoid defining duplicate parameters in deploy files.
 * Re-use configuration from a deploy file in multiple deploy files.
 * Use dynamic parameters when the a configuration is reused in multiple environments.
@@ -21,6 +21,7 @@ The following examples show how you can define different domain names for two en
 Defined in main deploy files, the configuration of different domain names looks as follows:
 
 **deploy.prod.yml**
+
 ```yaml
 ...
 groups:
@@ -34,7 +35,9 @@ groups:
                         store: DE
 ...
 ```
+
 **deploy.dev.yml**
+
 ```yaml
 ...
 groups:
@@ -51,14 +54,13 @@ groups:
 
 ### Defining domain names via a dedicated deploy file
 
-
 To define domain names by including a dedicated deploy file with a dynamic parameter, do the following:
 
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/groups.yml`.
-
 2. Define the domain name as a dynamic parameter. For example, define it as a `domain` parameter name.
 
 **config/deploy-templates/groups.yml**
+
 ```yaml
 groups:
     EU:
@@ -74,6 +76,7 @@ groups:
 3. In `deploy.prod.yml` and `deploy.dev.yml`, include `config/deploy-templates/groups.yml` with the `domain` dynamic parameter defined for each environment.
 
 **deploy.prod.yml**
+
 ```yaml
 ...
 imports:
@@ -82,7 +85,9 @@ imports:
             domain: spryker.com
 ...
 ```
+
 **deploy.dev.yml**
+
 ```yaml
 ...
 imports:
@@ -91,6 +96,7 @@ imports:
             domain: dev.spryker.com
 ...
 ```
+
 ***
 
 ## Enabling New Relic
@@ -102,6 +108,7 @@ By default, NewRelic is disabled. The following examples show how you can enable
 The configuration of enabled New Relic looks as follows in main deploy files:
 
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -122,6 +129,7 @@ imports:
 
 
 **deploy.dev.yml**
+
 ```yaml
 version: '0.1'
 
@@ -147,15 +155,17 @@ To enable New Relic with a dedicated deploy file, do the following:
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/enabled-newrelic.yml`.
 
 2. Define New Relic as enabled with the license key defined dynamically:
+   
 ```yaml
 docker:
     newrelic:
         license: %license_key%
 ```
 
-2. In `deploy.prod.yml` and `deploy.dev.yml`, include `config/deploy-templates/enabled-newrelic.yml` with the `license_key` dynamic parameter  defined for each environment.
+3. In `deploy.prod.yml` and `deploy.dev.yml`, include `config/deploy-templates/enabled-newrelic.yml` with the `license_key` dynamic parameter  defined for each environment.
 
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -174,6 +184,7 @@ imports:
 ```
 
 **deploy.dev.yml**
+
 ```yaml
 version: '0.1'
 
@@ -190,8 +201,8 @@ imports:
         parameters:
             env_name: 'dev'
 ```
-***
 
+***
 
 ## Adding an application
 
@@ -202,6 +213,7 @@ The following examples shows how to add two applications with different endpoint
 The configuration of a new application in main deploy files looks as follows:
 
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -232,8 +244,8 @@ imports:
 ```
 
 
-
 **deploy.dev.yml**
+
 ```yaml
 version: '0.1'
 
@@ -271,6 +283,7 @@ To add an application via an included deploy file, do the following:
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/merchant-application.yml`.
 
 2. Define the application with the endpoint defined dynamically:
+   
 ```yaml
 groups:
     EU:
@@ -288,7 +301,7 @@ groups:
                                 namespace: 7
 ```
 
-2. In `deploy.prod.yml` and `deploy.dev.yml`, include `merchant-application.yml` with the `hostname` dynamic parameter defined:
+3. In `deploy.prod.yml` and `deploy.dev.yml`, include `merchant-application.yml` with the `hostname` dynamic parameter defined:
 
 **deploy.prod.yml**
 ```yaml
@@ -310,6 +323,7 @@ imports:
 
 
 **deploy.dev.yml**
+
 ```yaml
 version: '0.1'
 
@@ -326,6 +340,7 @@ imports:
         parameters:
             env_name: 'dev'
 ```
+
 ***
 
 ## Enabling services
@@ -338,6 +353,7 @@ The Docker SDK has the `dashboard` service enabled by default only for the `dev`
 The configuration of enabled dashboard looks as follows in main deploy files:
 
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -359,6 +375,7 @@ imports:
 ```
 
 **deploy.demo.yml**
+
 ```yaml
 version: '0.1'
 
@@ -380,15 +397,14 @@ imports:
 ```
 
 
-
-
 ### Enable services via a dedicated deploy file
 
-To enable dashboard via a dedicated deploy file with endpoing defined dynamically, do the following:
+To enable dashboard via a dedicated deploy file with endpoint defined dynamically, do the following:
 
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/services.yml`.
 
 2. Add the configuration of an enabled dashboard with the endpoint defined dynamically.
+
 ```yaml
 services:
     dashboard:
@@ -400,6 +416,7 @@ services:
 2. In `deploy.prod.yml` and `deploy.dev.yml`, include `services.yml` with the `dashboard_hostname` dynamic parameter defined:
 
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -418,6 +435,7 @@ imports:
 ```
 
 **deploy.demo.yml**
+
 ```yaml
 version: '0.1'
 
@@ -434,6 +452,7 @@ imports:
         parameters:
             env_name: 'demo'
 ```
+
 ***
 
 ## Changing namespaces
@@ -445,6 +464,7 @@ The following examples show how to set different namespaces for two environments
 The namespaces defined via main deploy files look as follows:
 
 **deploy.dev.yml**
+
 ```yaml
 version: '0.1'
 
@@ -458,7 +478,9 @@ imports:
         parameters:
             env_name: 'dev'
 ```
+
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -480,6 +502,7 @@ To create a deploy file with a dynamic configuration and re-use it in multiple e
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/namespace.yml`.
 
 2. In `namespace.yml`, define the namespace name with the environment name defined dynamically:
+
 ```yaml
 namespace: spryker-%env_name%
 ```
@@ -487,6 +510,7 @@ namespace: spryker-%env_name%
 2. In `deploy.prod.yml` and `deploy.prod.yml`, include `namespace.yml` with the `env_name` dynamic parameter defined:
 
 **deploy.dev.yml**
+
 ```yaml
 version: '0.1'
 
@@ -505,6 +529,7 @@ imports:
 ```
 
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -521,10 +546,12 @@ imports:
         parameters:
             env_name: 'prod'
 ```
+
 ***
 
 
 ## Adding regions
+
 To add a new region, you can extend the deploy files of the desired environments or create a dedicated deploy file and re-use it in the deploy files of the desired environments.
 
 ### Adding regions via the main deploy files
@@ -649,6 +676,7 @@ imports:
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/regions.yml`.
 
 2. In `regions.yml`, define the configuration you want to extend the existing configuration with:
+
 ```yaml
 regions:
     US:
@@ -679,9 +707,11 @@ imports:
         parameters:
             env_name: 'dev'
 ```
+
 ***
 
 ## Removing regions
+
 To remove one or more regions, instead of using the default `deploy.base.template.yml` template, you need to init a custom one with specific regions.
 ***
 
@@ -692,6 +722,7 @@ To disable a service, you need to add service data to the main deploy file or in
 ### Extending the main deploy file to disable a service
 
 **deploy.dev.yml**
+
 ```yaml
 version: '0.1'
 
@@ -708,11 +739,12 @@ imports:
         parameters:
             env_name: 'dev'
 ```
+
 ***
+
 ### Including a deploy file with a disabled service
 
 To disable a service by including a dedicated deploy file, do the following:
-
 
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/disabled-dashboard.yml`.
 
@@ -724,6 +756,7 @@ services:
 2. In `deploy.prod.yml` and `deploy.prod.yml`, include `disabled-dashboard.yml`:
 
 **deploy.dev.yml**
+
 ```yaml
 version: '0.1'
 

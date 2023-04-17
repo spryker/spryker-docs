@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/glue-api-product-relations-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 Follow the steps to install the Product Relations feature API.
 
 ### Prerequisites

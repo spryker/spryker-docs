@@ -27,9 +27,9 @@ The following schema illustrates module relations in the Approval Process featur
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  | TUTORIALS AND HOWTOS |
+|INSTALLATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo - Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
+| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo: Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
 | [Shipment + Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-approval-process-feature-integration.html)  |   |

@@ -9,6 +9,7 @@ redirect_from:
   - /v5/docs/ratepay-facade
   - /v5/docs/en/ratepay-facade
   - /docs/scos/user/technology-partners/202005.0/payment-partners/ratepay/ratepay-facade-methods.html
+  - /docs/scos/dev/technology-partner-guides/202005.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-facade-methods.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html

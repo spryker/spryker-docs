@@ -12,15 +12,29 @@ redirect_from:
   - /docs/en/an-application-is-not-reachable-via-http
   - /v6/docs/an-application-is-not-reachable-via-http
   - /v6/docs/en/an-application-is-not-reachable-via-http
+related:
+  - title: 413 Request Entity Too Large
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html
+  - title: MacOS and Windows - file synchronization issues in Development mode
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
+  - title: Mutagen error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html
+  - title: Mutagen synchronization issue
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html
+  - title: Nginx welcome page
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
+  - title: Port is already occupied on host
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
 ---
 
 ## Description
+
 An application like Yves, BackOffice(Zed), GlueStorefront(Glue), GlueBackend or MerchantPortal is not reachable after installation.
 
-
-
 ## Solution
+
 In `deploy.*.yml`, ensure that SSL encryption is disabled:
+
 ```yaml
 docker:
     ssl:

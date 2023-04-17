@@ -70,11 +70,18 @@ class ShipmentConfig extends SprykerShipmentConfig
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+Place an order and check that items are grouped by merchant shipment in backoffice.
+
+{% endinfo_block %}
+
 ### 3) Set up the database schema and transfer definitions
 
 Apply the database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

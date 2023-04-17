@@ -8,6 +8,7 @@ originalArticleId: fdf220a1-7d96-4263-b088-2c1aff5a9cd1
 redirect_from:
   - /v1/docs/shopping-list
   - /v1/docs/en/shopping-list
+  - /docs/scos/user/features/201811.0/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
@@ -117,9 +118,13 @@ It is possible to grant different access rights on a shopping list to a business
 ## Search widget for shopping lists
 
 Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+
 {% info_block warningBox %}
+
 Without the Search widget, you will not be able to search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
+
 {% endinfo_block %}
+
 ![Search widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shopping-list-search-widget.png)
 
 ## Subtotal for a shopping list
@@ -175,7 +180,7 @@ Check out this video tutorial on how to use shopping lists.
 
 We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, e.g., gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price - €45.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

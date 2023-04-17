@@ -186,6 +186,7 @@ Once you've finished Setup Behaviour step, make sure that:<ul><li>NoPayment01 st
 Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -1136,7 +1137,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 Make sure that:<ul><li>You can activate a gift card using its generated code.</li><li>You can't activate a gift card the balance of which has been depleted.</li><li>During the checkout process, payment method selection is skipped in case the gift card covers the grand total.</li><li>Having made a successful purchase with the help of a gift card, you receive a gift card balance notification e-mail.</li></ul>Note: You need to complete Feature Frontend integration before you can verify these points.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
@@ -1228,7 +1229,7 @@ console data:import:glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

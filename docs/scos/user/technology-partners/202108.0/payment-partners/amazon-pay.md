@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/amazon-pay
   - /docs/amazon-pay
   - /docs/en/amazon-pay
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
 related:
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html

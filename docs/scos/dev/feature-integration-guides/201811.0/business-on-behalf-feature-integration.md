@@ -29,6 +29,7 @@ Make sure that the following modules were installed:<table><thead><tr><td>Module
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```shell
+console transfer:generate
 console propel:install
 console transfer:generate 
 ```
@@ -158,7 +159,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 To check that the step has been completed correctly:<br>Log in with a customer who has multiple company users and a default company user.<br>Check in the session if the default company user was assigned to the customer.<br>Check in the session if the IsOnBehalf property is set correctly for the customer.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -199,7 +200,7 @@ Run the following console command to import the data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 2) Set up Widgets

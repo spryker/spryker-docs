@@ -8,6 +8,7 @@ originalArticleId: 827fff89-4b27-4097-b542-b1f57475e8a0
 redirect_from:
   - /v1/docs/creating-a-product-option
   - /v1/docs/en/creating-a-product-option
+  - /docs/scos/user/back-office-user-guides/201811.0/catalog/product-options/creating-a-product-option.html
 related:
   - title: Product Options feature overview
     link: docs/scos/user/features/page.version/product-options-feature-overview.html
@@ -35,9 +36,9 @@ In the **General Information** tab:
    2. Define a tax set assigned to your product option group by selecting the appropriate value from the drop-down list.
    3. In the **Option Values** section, enter an option name translation key value. The format of the option name translation key should be as follows: **product.option.[your key]**. For example, product.option.newtest.
     {% info_block infoBox "Note" %}
-    
+
     You can remove an option value by clicking **Remove** next to the Option name translation key and SKU fields.
-    
+
     {% endinfo_block %}
 
    4. Add a unique SKU for a product option value or proceed with the auto-generated one.

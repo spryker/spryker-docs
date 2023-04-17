@@ -8,6 +8,7 @@ originalArticleId: eb573db0-c54a-453b-abd6-5498e7fde23d
 redirect_from:
   - /v5/docs/adding-content-to-storefront-pages-using-templates-slots
   - /v5/docs/en/adding-content-to-storefront-pages-using-templates-slots
+  - /docs/scos/user/back-office-user-guides/202005.0/content/adding-content-to-storefront-pages-using-templates-and-slots.html
 related:
   - title: Slots- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/content/slots/references/slots-reference-information.html

@@ -135,6 +135,7 @@ Set up synchronization queue pools so that non-multistore entities (not store sp
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -262,7 +263,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that  the configured data in the database has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that  the configured data in the database has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 5) Configure Export to Redis
@@ -852,7 +853,7 @@ Go to the Zed UI Sales overview and check the order.
 - Verify if the correct amount is displayed per sales order item.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -926,7 +927,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the configured data in the database has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that the configured data in the database has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

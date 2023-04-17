@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/arvato-installation-configuration
   - /docs/arvato-installation-configuration
   - /docs/en/arvato-installation-configuration
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/arvato/arvato-installation-and-configuration.html
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
@@ -64,7 +65,7 @@ Services:
 * [Risk Check](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/arvato-risk-check.html)
 * [Store Order](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
 
-To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html) for more details.
+To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) for more details.
 
 ## Installation
 

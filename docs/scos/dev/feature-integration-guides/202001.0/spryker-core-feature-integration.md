@@ -54,6 +54,7 @@ Make sure that the following modules were installed:
 Run the following commands to apply the database changes and generate the entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -416,7 +417,7 @@ To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole`
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

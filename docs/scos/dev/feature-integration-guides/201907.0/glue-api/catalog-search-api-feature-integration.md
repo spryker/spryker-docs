@@ -10,7 +10,7 @@ redirect_from:
   - /v3/docs/en/catalog-search-api-feature-integration-201903
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 |Name|Version|Integration guide|

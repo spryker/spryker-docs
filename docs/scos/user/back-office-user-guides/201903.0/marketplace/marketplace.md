@@ -8,6 +8,7 @@ originalArticleId: 4289aae6-4be5-480d-a772-7f6cecb83f86
 redirect_from:
   - /v2/docs/merchants
   - /v2/docs/en/merchants
+  - /docs/scos/user/back-office-user-guides/201811.0/marketplace/marketplace.html
 related:
   - title: Merchants and Merchant Relations Feature Overview
     link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
@@ -20,10 +21,15 @@ The Merchants section in Back Office is mostly used by Spryker Admins. In a B2B 
 ![Merchant Relations - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/merchant-relations-section.png)
 
 {% info_block infoBox %}
+
 This is how the Spryker Admin sets up the merchant and merchant relations according to the contract conditions.
+
 {% endinfo_block %}
+
 {% info_block warningBox "Note" %}
+
 For a common B2B solution it should be only one merchant in the system, as two and more merchants are required only for B2B Marketplaces.
+
 {% endinfo_block %}
 ***
 The **Merchants** section in the Back Office is designed to set up the contract conditions.
@@ -38,4 +44,4 @@ In order to have a correct set, you should:
 **What's next?**
 
 * To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html).
-* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html).
+* To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/edit-merchant-relations.html).

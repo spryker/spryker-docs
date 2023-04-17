@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-installation
   - /docs/heidelpay-installation
   - /docs/en/heidelpay-installation
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay-installation.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

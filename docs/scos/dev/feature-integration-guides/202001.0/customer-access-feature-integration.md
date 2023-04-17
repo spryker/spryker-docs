@@ -108,6 +108,7 @@ src/Pyz/Zed/CustomerAccess/Persistence/Propel/Schema/spy_unauthenticated_custome
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -363,7 +364,7 @@ Make sure that everything works fine (checks should be done for not logged-in cu
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -392,6 +393,6 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}

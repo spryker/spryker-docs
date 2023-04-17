@@ -14,8 +14,6 @@ redirect_from:
 related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
-redirect_from:  
-  - /docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html
 ---
 
 This reference page describes version 1 of the Deploy file format. This is the newest version.
@@ -53,12 +51,13 @@ The topics below are organized alphabetically for top-level keys and sub-level k
 You can use the extended YAML syntax according to [YAML™ Version 1.2](https://yaml.org/spec/1.2/spec.html).
 Find B2B and B2C deploy file examples for [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) and [demo](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) environments in the table:
 
-| Development mode | Demo mode |
+| DEVELOPMENT MODE | DEMO MODE |
 | --- | --- |
 | [B2C Demo Shop deploy file](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.dev.yml) | [B2C Demo Shop deploy file](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.yml) |
 | [B2B Demo Shop deploy file](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.dev.yml) | [B2B Demo Shop deploy file](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.yml) |
 
 ***
+
 ### version:
 
 Defines the version of the Deploy file format.
@@ -73,9 +72,6 @@ version: 1.0
 namespace: spryker-demo
 ...
 ```
-
-
-
 
 ***
 
@@ -104,19 +100,17 @@ For example, Docker images and volumes are tagged with a `tag:` to avoid interse
 
 This variable is optional. If not specified, the default value applies: `tag: '1.0'`.
 
-
-
 ```yaml
 version: 1.0
 
 tag: '1.0'
 ```
+
 ```yaml
 version: 1.0
 
 tag: 'custom-one'
 ```
-
 
 ***
 
@@ -133,6 +127,7 @@ version: 1.0
 
 environment: 'docker'
 ```
+
 ***
 
 ### imports:
@@ -140,6 +135,7 @@ environment: 'docker'
 Defines any of the following:
 
 * Imports of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times. To define a deploy file and dynamic parameters for this type of import, see [imports: {import_name}:](#imports-importname).
+
 ```yaml
 imports:
     {import_name}:
@@ -147,6 +143,7 @@ imports:
 ```     
 
 * Additional deploy files to be included into a build. To define dynamic parameters for this type of import, see [imports: {deploy_file_name}:](#imports-deployfilename).
+
 ```yaml
 version: 1.0
 imports:
@@ -155,6 +152,7 @@ imports:
 ```
 
 * An array of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times. To define dynamic parameters for this type of import, see [imports: parameters:](#imports-parameters)
+
 ```yaml
 imports:
     - template: {deploy_file_name}
@@ -163,14 +161,11 @@ imports:
 
 The files must exist on a [project or base layer](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html).
 
-
-
 {% info_block infoBox "Merged deploy files" %}
 
 If you include a deploy file, the included deploy file is merged with the original one. The final deploy file is used to build the application. To check how the final deploy file looks without stopping containers, run `docker config {DEPLOY_FILE_NAME}`. For example, if your main deploy file is `deploy.dev.yml`, run `docker config deploy.dev.yml`. The command parses the included deploy files and returns the merged file and validation errors, if any.
 
 {% endinfo_block %}
-
 
 ***
 
@@ -187,6 +182,7 @@ imports:
 ```            
 
 Example:
+
 ```yaml
 imports:
   - template: deploy.porject.yml
@@ -203,11 +199,11 @@ Affects the included deploy file that it follows in an array of included deploy 
 
 ***
 
-
 ### imports: {import_name}:
 
 Defines the configuration of the import:
-* `{import_name}: template:` — defines the deploy file to be included into a build  as part of this import.
+
+* `{import_name}: template:`—defines the deploy file to be included into a build  as part of this import.
 * `{import_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml
@@ -218,7 +214,9 @@ imports:
           {dynamic_parameter_name}: '{dynamic_parameter_value}'
           {dynamic_parameter_name}: '{dynamic_parameter_value}'
 ```
+
 Example:
+
 ```yaml
 imports:
     base:
@@ -230,13 +228,11 @@ imports:
 
 ***
 
-
-
 ### imports: {deploy_file_name}:
 
 Defines the configuration to be used when parsing the included deploy file.
-* `{deploy_file_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
+* `{deploy_file_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml
 version: 1.0
@@ -246,6 +242,7 @@ imports:
         {dynamic_parameter_name}: '{dynamic_parameter_value}'
         {dynamic_parameter_name}: '{dynamic_parameter_value}'  
 ```
+
 Example:
 
 ```yaml
@@ -261,9 +258,10 @@ imports:
 
 ### image:
 
-Defines the Docker image configuraion to run Spryker applications in.
+Defines the Docker image configuration to run Spryker applications in.
 
 ***
+
 ### image:tag
 
 Defines the image tag according to the `spryker/php` images located at [Docker Hub](https://hub.docker.com/r/spryker/php/tags).
@@ -277,9 +275,8 @@ image:
     tag: spryker/php:7.3
 ```
 
-
-
 ***
+
 ### image: environment:
 
 Defines additional environment variables for Spryker applications.
@@ -314,10 +311,13 @@ image:
             - newrelic
             - tideways
 ```
+
 ***
+
 ### assets:
 
 Defines the setting of *Assets*.
+
 * `assets: image:` - defines a docker image for a front-end container. If not specified, the default value applies:
 `assets: image: nginx:alpine`.
 * `assets: mode:` - defines a mode for running a static build section from the install recipe. Possible values are `production` and `development`. This variable is optional with the default value of `development`.
@@ -410,6 +410,7 @@ groups:
  ```
 
 Applications can be defined as *Store*-agnostic, as in the example above. Also, applications can be defined as *Store*-specific by leaving a single endpoint pointing to each application. You can see it in the example below. You can use both approaches to scale applications separately by *Store*.
+
 ```yaml
 version: "1.0"
 
@@ -444,6 +445,7 @@ Obligatory parameters for `application:`:
 * `groups: applications: endpoints:` - defines the list of *Endpoints* to access the *Application*. See [groups: applications: endpoints:](#groups-applications-endpoints) to learn more.
 
 Optional parameters for `application:`:
+
 * `groups: applications: application: application:` - defines if the application is static. Only `static` is allowed here.
 * `groups: applications: application: endpoints: endpoint: entry-point:` - defines an entry-point, the path to the index directory of the application.
 * `groups: applications: application: endpoints: endpoint: redirect:` - defines redirect rules.
@@ -501,9 +503,6 @@ To disable the validation of request body size against this parameter, set it to
 {% endinfo_block %}
 
 
-
-
-
 ***
 
 ### services:
@@ -557,10 +556,12 @@ services:
     engine: mailhog
     endpoints:
       mail.spryker.local:
- ```
+```
+
 {% info_block warningBox %}
 
 After changing a service version, make sure to re-import demo data:
+
 1. Remove all Spryker volumes:
 ```shell
 docker/sdk clean-data
@@ -582,6 +583,7 @@ You can extend service settings on other levels for specific contexts. See [regi
 Defines the list of *Endpoints* to access the *Application*.
 
 The format of the key  is `domain[:port]`. The key must be project-wide unique.
+
 * `groups: applications: endpoints: store:` defines the *Store* as context to process requests within.
 * `groups: applications: endpoints: services:` defines the *Store*-specific settings for services. Only `session:` is currently allowed here. See [Services](#services) to learn more.
 * `groups: applications: endpoints: cors-allow-origin:` defines a [CORS header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin). It is allowed for `glue` application only. Possible values are:
@@ -596,7 +598,9 @@ The format of the key  is `domain[:port]`. The key must be project-wide unique.
 {% endinfo_block %}
 
 ### services: endpoints:
+
 Defines the list of *Endpoints* to access a *Service* for development or monitoring needs. The format of the key  is `domain[:port]`. The key must be project-wide unique.
+
 * `services: endpoints: protocol:` defines the protocol. Possible values are: `tcp`and `http`. The default one is `http`.
 
 A port must be defined if protocol is set to `tcp`. The TCP port must be project-wide unique.
@@ -606,6 +610,7 @@ A port must be defined if protocol is set to `tcp`. The TCP port must be project
 ### docker:
 
 Defines the settings for Spryker Docker SDK tools to make deployment based on Docker containers.
+
 ```yaml
 version: 1.0
 
@@ -623,7 +628,6 @@ docker:
  ```
 
 ***
-
 
 ### docker: newrelic:
 
@@ -659,7 +663,8 @@ docker:
   ssl:
     enabled: true
 
- ```
+```
+
 {% info_block infoBox %}
 
 To enable secure connection in your browser, register the self-signed CA certificate from `./docker/generator/openssl/default.crt` in your system.
@@ -676,6 +681,7 @@ To enable secure connection in your browser, register the self-signed CA certifi
 Defines the configuration for debugging.
 
 If `docker: debug: enabled:` is set to `true`, all applications work in debugging mode.
+
 ```yaml
 version: 1.0
 
@@ -683,15 +689,18 @@ docker:
   debug:
     enabled: true
 
- ```
+```
+
 * `docker: debug: xdebug: enabled:` - defines if Xdebug is enabled.
 
 ***
+
 ### docker: logs:
+
 * `docker: logs: path:` defines the path to the directory with Docker logs. This variable is optional. If not specified, the default value applies: `path: '/var/log/spryker`.
 
-
 ***
+
 ### docker: testing:
 
 Defines the configuration for testing.
@@ -712,6 +721,7 @@ Defines the mode for mounting source files into application containers.
 `As mount:` is a platform-specific setting. You can define multiple mount modes. Use the`platforms:` list to define a mount mode for a platform. Possible platforms are `windows`, `macos`, and `linux`.
 
 The first mount mode matching the host platform is selected by default.
+
 ```yaml
 version: 1.0
 
@@ -727,19 +737,23 @@ docker:
       platforms:
         - windows
 
- ```
- ***
+```
+***
 
 ### composer:
 
 Defines the composer settings to be used during deployment.
 
 1. `mode:` - defines whether packages should be installed from the  `require` or `require-dev` section of `composer.json`. Possible values are `--no-dev` and `-dev`. This variable is optional. If not specified, the default values apply:
-	* [Development mode]: `mode: --dev`
+	
+  * [Development mode]: `mode: --dev`
 	* [Demo mode]: `mode: --no-dev`
+
 2. `autoload:` - defines composer autoload options. Possible values are `--optimize` and `--classmap-authoritative`. This variable is optional. If not specified, the default values apply:
-	* Development mode: `autoload: --optimize`
+	
+  * Development mode: `autoload: --optimize`
 	* Demo mode: `autoload: --classmap-authoritative`
+
 ***
 
 ## Services
@@ -766,15 +780,20 @@ The following services are supported:
 * webdriver
 
 ***
+
 ### blackfire:
+
 An application profiler *Service* used for testing and debugging.
+
 * Project-wide
     - `blackfire: engine:` - possible value is `blackfire`.
     - `blackfire: server-id:` - defines the server id used to authenticate with Blackfire. Use it only if you have a shared agent between multiple environments.
     - `blackfire: server-token:` - defines the server token used to authenticate with Blackfire. Use it only if you have a shared agent between multiple environments.
     - `blackfire: client-id:` - defines the client ID from the Client ID/Client Token credentials pair.
     - `blackfire: client-token:` - defines the client Token from the Client ID/Client Token credentials pair.
+
 ***
+
 ### broker:
 
 A message broker *Service*.
@@ -790,8 +809,8 @@ A message broker *Service*.
   - `broker: namespace:` - defines a namespace (virtual host).
   - `broker: username:`, `broker: password:` - defines the credentials to access the namespace (virtual host) defined by `broker: namespace:`.
 
-
 ***
+
 ### dashboard:
 
 A real-time log monitoring *Service*.
@@ -800,6 +819,7 @@ A real-time log monitoring *Service*.
 
   - `dashboard: engine:` - possible value is `dashboard`.
   - `dashboard: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
+  - 
 ***
 
 ### database:
@@ -818,7 +838,6 @@ An SQL database management system *Service*.
   - `database: database:` - defines database name.
   - `database: username:`, `database: password:` - defines database credentials.
 
-
 ***
 
 ### key_value_store:
@@ -835,7 +854,6 @@ A key-value store *Service* for storing business data.
 
   * `key_value_store: namespace:` - defines a namespace (number for Redis).
 
-
 ***
 
 ### kibana:
@@ -845,7 +863,6 @@ A *Service* to visualize Elasticsearch data and navigate the Elastic Stack.
 * Project-wide
     * `kibana: engine:` - possible value is: `kibana`.
     * `kibana: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
-
 
 ***
 
@@ -858,22 +875,17 @@ A mail catcher *Service* used to catch all outgoing emails for development or te
      - `mail_catcher: engine:` - possible value is `mailhog`.
      - `mail_catcher: endpoints:`- defines the service's port and web interface that can be accessed via given endpoints.
 
-
-
-
 ***
+
 ### redis-gui:
 
 A **Service** that provides a graphical user interface to access Redis databases.
-
 
 * Project-wide
      - `redis-gui: engine:` - possible value is `redis-commander`.
      - `redis-gui: endpoints:`- defines the service's port and web interface that can be accessed via given endpoints.
 
-
 ***
-
 
 
 ### scheduler:
@@ -884,8 +896,8 @@ A scheduler *Service* used to run application-specific jobs periodically in the 
   * `scheduler: engine:` - possible value is `jenkins`.
   * `scheduler: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
 
-
 ***
+
 ### search:
 
 A search *Service* that provides a distributed, multitenant-capable full-text search engine.
@@ -893,6 +905,7 @@ A search *Service* that provides a distributed, multitenant-capable full-text se
 * Project-wide
   * `search: engine:` - possible value is `elastic`.
   * `search: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
+
 ***
 
 ### session:
@@ -909,9 +922,6 @@ A key-value store *Service* for storing session data.
   - `session: namespace:` - defines a namespace (number for Redis).
 
 
-
-
-
 ***
 ### swagger:
 
@@ -922,13 +932,15 @@ The swagger-ui *Service* used to run Swagger UI to develop API endpoints.
     * `swagger-ui: endpoints:` - defines the service's port or/and web interface that can be accessed via given endpoints.
 
 ***
+
 ### tideways:
+
 An application profiler *Service* for testing and debugging.
+
 * Project-wide
   - `tideways: apikey:` - defines the api-key to authenticate with Tideways.
   - `tideways: environment-name:` - defines the environment name of your environment on Tideways. This variable is optional with the default value of `production`.
-  - `tideways: cli-enabled:` - defines if profilling of CLI script is enabled. This variable is optional with the default value of `false`.
-
+  - `tideways: cli-enabled:` - defines if profiling of CLI script is enabled. This variable is optional with the default value of `false`.
 
 ***
 

@@ -124,7 +124,7 @@ That is a particular case of electricity bills where you pay more if you use mor
 
 {% info_block infoBox %}
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 
 {% endinfo_block %}
 
@@ -134,11 +134,11 @@ Currently, the feature has the following functional constraints which are going 
 
 * Volume prices cannot be applied to the [prices per merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html).
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html)  |
+| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/adding-volume-prices-to-abstract-products.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

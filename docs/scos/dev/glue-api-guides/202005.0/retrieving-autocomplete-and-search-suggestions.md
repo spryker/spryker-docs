@@ -8,6 +8,7 @@ originalArticleId: 5a31882d-7e51-446d-ad7a-8b3826bb0437
 redirect_from:
   - /v5/docs/retrieving-suggestions-for-auto-completion-and-search
   - /v5/docs/en/retrieving-suggestions-for-auto-completion-and-search
+  - /docs/scos/dev/glue-api-guides/202005.0/getting-suggestions-for-auto-completion-and-search.html
 related:
   - title: Catalog Search
     link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html

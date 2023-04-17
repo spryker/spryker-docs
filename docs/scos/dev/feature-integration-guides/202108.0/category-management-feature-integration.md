@@ -319,6 +319,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 3. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -929,7 +930,7 @@ category_key,parent_category_key,name.de_DE,name.en_US,meta_title.de_DE,meta_tit
 cameras-and-camcorder,demoshop,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,Kameras & Camcorders,Cameras & Camcorders,1,1,1,0,1,90,Catalog (default)
 ```
 
-|COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
+|COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 |--- |---| --- | --- | --- |
 | category_key | ✓ | string | cameras-and-camcorder | Sluggable name of the category. |
 | parent_category_key | | string | demoshop | Sluggable name of the parent category. |
@@ -1230,7 +1231,7 @@ Make sure you’ve integrated category store assignments successfully by checkin
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 To install the Category Management feature front end, follow the steps below.
 

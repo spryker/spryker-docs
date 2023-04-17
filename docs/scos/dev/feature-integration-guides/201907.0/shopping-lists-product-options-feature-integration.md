@@ -36,6 +36,7 @@ Verify that the following modules were installed:
 ### 2) Set up the Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```yaml
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -125,7 +126,7 @@ Add an item with a product option to a shopping list, make sure that the corresp
 Make sure that when creating a cart from a shopping list, the product options are transferred to cart. The other way around should also work, having a cart with an item with product options in it, when creating a shopping list out of should contain the selected product options.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please review and install the necessary features before beginning the integration step.
 |Name|Version|
@@ -145,7 +146,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block infoBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 2) Set up Behavior

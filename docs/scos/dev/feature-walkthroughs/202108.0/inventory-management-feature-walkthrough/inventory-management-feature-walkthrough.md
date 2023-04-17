@@ -11,14 +11,16 @@ The _Inventory Management_ feature adds stock and availability management as wel
 
 From this section, you will get to know how product availability is checked and calculated, how products are reserved, how availability can be imported to the database as well as how availability per store works.
 
-### Availability Check
+### Availability check
+
 The process of checking product's availability implies several operations described in the list below.
 
 * Product details page won’t show the **Add to cart** button when a concrete product is out of stock. Instead, informational message is displayed.
 * Pre-check plugin in cart. `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin`checks if all items in cart are available. It’s executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
 * Checkout pre-condition when an order is placed in the last step. `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin`  checks all items in cart. If any of them is not available anymore, order placing is aborted and error message is displayed.
 
-### "Reserved" Flag
+### "Reserved" flag
+
 When an order is placed, payment state machine is executed and an item is moved through states. Some states have a “reserved” flag which means that the state influences the item availability.
 
 When items are moved to state with the "reserved" flag, `ReservationHandlerPluginInterface::handle()` is triggered. This call means that the product availability has to be updated. State machine is also tracking products in the "reserved" state, and the database table `spy_oms_product_reservation` is used for this.
@@ -26,18 +28,18 @@ When items are moved to state with the "reserved" flag, `ReservationHandlerPlugi
 Below you can see dummy payment state machine, which is a sample implementation with the "reserved" flags:
 ![Reserved flags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/dummy_payment.jpg)
 
-### Availability Storage
+### Availability storage
 
 AvailabilityStorage publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 Events are generated in these two cases:
 
-| Case | Details |
+| CASE | DETAILS |
 | --- | --- |
 | Case 1 | If availability amount was equal to 0 and now it’s more than 0, the event is triggered. |
 | Case 2 | If availability amount was more than 0 and now it’s equal to 0, the event is triggered. |
 
-The default behavior is having **available** or not available **status** set for product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html).
+The default behavior is having **available** or not available **status** set for product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html).
 
 Published data example in JSON.
 
@@ -68,7 +70,7 @@ Published data example in JSON.
 
 This information is used on product details page when **Add to cart** is rendered.
 
-### Availability Calculation
+### Availability calculation
 
 Product availability can have flag `is_never_out_of_stock`. This indicates that the product is always available for sale and does not have a finite stock. In this situation the availability calculation is not needed anymore.
 
@@ -77,7 +79,7 @@ In state machine items get reserved for an open order. There are certain states 
 
 Stock update triggers the event `stock update`. For example, in our dummy payment’s implementation this will move the items from “Shipped” state to next state. As the consecutive state is not reserved, the items that have already been shipped, will not be reserved any more.
 
-### Import / Change Stock
+### Import or change stock
 
 It’s possible to use `vendor/bin/console data:import:product-stock` command to import stocks into database. The default stock importer uses `csv` file from `src/Pyz/Zed/Updater/Business/Internal/data/import/product_stock.csv` which imports stocks.
 
@@ -85,7 +87,7 @@ The Back Office is provided to allow assigning stocks to products. See [Availabi
 
 Stock update considers the stock from the stock file to be the absolute value. On stock update, the stock is overwritten with the values from the file. If a certain product does not have a record in the stock file, then it is considered that the stock of this product does not have to be updated.
 
-### Availability Per Store
+### Availability per store
 
 Since Availability module version 6.* we have added support for multi-store availability. That means that you can now have availability calculated per store basis. In the Administration Interface you can change from which store you want to see availability.
 
@@ -141,10 +143,10 @@ When placing an order in Store A, the reservation is stored with the store ident
 To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
-| INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
+| INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|
-| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [Reference information: AvailabilityStorage module overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html) |
+| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [AvailabilityStorage module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) |
 | [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) | [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) |
 |  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |  |

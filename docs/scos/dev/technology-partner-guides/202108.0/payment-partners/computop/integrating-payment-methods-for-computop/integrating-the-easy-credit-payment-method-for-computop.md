@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-easy-credit
   - /docs/computop-easy-credit
   - /docs/en/computop-easy-credit
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop-payment-methods/computop-easy-credit.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html

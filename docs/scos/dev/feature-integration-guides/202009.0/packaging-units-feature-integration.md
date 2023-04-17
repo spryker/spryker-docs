@@ -120,6 +120,7 @@ Set up synchronization queue pools, so non-multistore entities (not store-specif
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -239,7 +240,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that  the configured data in the database has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that  the configured data in the database has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 
@@ -396,7 +397,7 @@ packaging_unit_type.pack_100.name
 packaging_unit_type.pack_500.name
 ```
 
-| Column | REQUIRED? |Data Type  |Data Example  |Data Explanation  |
+| Column | REQUIRED |Data Type  |Data Example  |Data Explanation  |
 | --- | --- | --- | --- | --- |
 | `name` |  mandatory|string  | `packaging_unit_type.ring_500.name` |Glossary key that will be used to display a packaging unit type . Each name needs a glossary key definition for all configured locales.  |
 
@@ -455,7 +456,7 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 ```
 
 <div>
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `concrete_sku` | mandatory | string | 218_123 |Concrete product SKU of packaging unit. |
 | `lead_product_sku	` | mandatory | string | 1 | Lead product concrete SKU. |
@@ -899,7 +900,7 @@ Make sure that every order item from `SalesFacade::getOrderItems()` results cont
 {% endinfo_block %}
 
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -970,7 +971,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the configured data in the database has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that the configured data in the database has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

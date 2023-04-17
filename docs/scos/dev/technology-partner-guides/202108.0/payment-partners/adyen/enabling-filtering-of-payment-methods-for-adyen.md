@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/adyen-filter-payment-methods
   - /docs/adyen-filter-payment-methods
   - /docs/en/adyen-filter-payment-methods
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/adyen/adyen-filtering-payment-methods.html
 related:
   - title: Installing and configuring Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html

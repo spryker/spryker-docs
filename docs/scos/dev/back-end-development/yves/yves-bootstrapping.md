@@ -1,5 +1,5 @@
 ---
-title: Yves Bootstrapping
+title: Yves bootstrapping
 description: Yves and Zed are both built upon the Silex micro-framework. So most concepts about modern web frameworks apply here as well.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,12 +22,26 @@ redirect_from:
   - /v2/docs/en/t-yves-bootstrap
   - /v1/docs/t-yves-bootstrap
   - /v1/docs/en/t-yves-bootstrap
+related:
+  - title: Yves overview
+    link: docs/scos/dev/back-end-development/yves/yves.html
+  - title: Add translations for Yves
+    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
+  - title: CLI entry point for Yves
+    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+  - title: Controllers and actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+  - title: Modular Frontend
+    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+  - title: Yves routes
+    link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/yves/yves-bootstrapping/-->
 Yves and Zed are both built upon the [Symfony components](https://symfony.com/components). So most concepts about modern web frameworks are applied here as well.
 
-In `static/public/Yves/index.php`, you will find the entry for the front-end application.
+In `static/public/Yves/index.php`, you can find the entry for the frontend application.
 
 ```php
 <?php
@@ -42,11 +56,12 @@ $bootstrap
     ->run();
 ```
 
-The `boot()` method returns an application which has the `run()` method that processes the request and returns a response to the browser. YvesBootstrap is responsible for building the desired application. The registration process is handled by the `boot()` operation.
+The `boot()` method returns an application that has the `run()` method, which processes the request and returns a response to the browser. YvesBootstrap is responsible for building the desired application. The registration process is handled by the `boot()` operation.
 
 
 ## Application plugins
-The application is using application plugins that are used to add the required base functionality of your project.
+
+The application uses application plugins that add the required base functionality of your project.
 
 ```php
 <?php
@@ -71,4 +86,3 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
  
 // ...
 ```
-

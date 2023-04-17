@@ -10,13 +10,14 @@ redirect_from:
   - /2021080/docs/en/measurement-units-feature-overview
   - /docs/measurement-units-feature-overview
   - /docs/en/measurement-units-feature-overview
+  - /docs/scos/dev/feature-integration-guides/202108.0/product-measurement-unit-feature-integration.html
 ---
 
 The *Measurement Units* feature allows selling products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value, relative to which all the internal conversions and calculations will be made. Such value is referred to as base unit. The base unit is assigned to abstract products and by default it is "item", however it can be changed to any other unit.
 
 Besides the base unit, the shop owner can define **sales units**—alternate units of measure in which items will be offered in the shop. Sales units are assigned to concrete products, but if sales units are not defined, the **base unit** is used as a default sales unit. If there are several sales units and no default sales unit is defined, then the first unit to show will be the first in the alphabetical order.
 
-The sales units are displayed on product details page. It is also possible to define the sales units in the Administration Interface, but choose not to display them in the web shop. Actually, sales units are only shown on the website, but then immediately converted into the base unit, as internally the system only works with the base units.
+The sales units are displayed on product details page. You can define the sales units in the Administration Interface, but choose not to display them in the web shop. Actually, sales units are only shown on the website, but then immediately converted into the base unit, as internally the system only works with the base units.
 
 Sales units can be configured per store, that is, they have a store relation.
 
@@ -57,7 +58,7 @@ If a global unit conversion exists between the base and sales unit, then factor 
 
 ## Current constraints
 
-- In the Spryker Commerce OS you cannot define measurement units for products. Currently, they are imported into the database manually.
+- In the Spryker Commerce OS you cannot define measurement units for products. They are imported into the database manually.
 - We strive to shift all business logic to our backend, however, with Measurements Units, a part of the calculations (for example, quantity restrictions) are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
 - A shopper cannot reorder the items with the selected measurement units as they are not added automatically. They should be added manually on the product details page.

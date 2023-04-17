@@ -8,6 +8,7 @@ originalArticleId: 3459b42e-9e0b-47a0-8774-5755e00c9353
 redirect_from:
   - /v1/docs/shared-carts-feature-integration-201811
   - /v1/docs/en/shared-carts-feature-integration-201811
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/shared-carts-feature-integration.html
 ---
 
 ## Install Feature Core
@@ -39,6 +40,7 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -72,7 +74,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 4) Import Data
@@ -208,7 +210,7 @@ quote-23,Spryker--5,READ_ONLY
 <br>
 </details>
 
-| Column |REQUIRED? | Data Type |Data Example  |Data explanation  |
+| Column |REQUIRED | Data Type |Data Example  |Data explanation  |
 | --- | --- | --- | --- | --- |
 | `quote_key` |mandatory |  string|quote-22  | Key that will identify the quote to add data to. |
 | `company_user_key` | mandatory |  string| Spryker--1|Key that will identify the company user that the quote is shared with.  |
@@ -542,7 +544,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 Before removing a company user, all records from the  `spy_quote_company_user` DB table related to the company user must be removed.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -650,7 +652,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

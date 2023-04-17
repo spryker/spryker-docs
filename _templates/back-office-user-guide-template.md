@@ -7,7 +7,7 @@ template: back-office-user-guide-template
 
 This topic describes how to manage [{entity}s](Link to the feature overview or a section in the feature overview where this entity is described).
 
-To start working with {entities}, go to **{section}** > **{section}**.
+To start working with {entities}, go to **{section}&nbsp;<span aria-label="and then">></span> {section}**.
 
 ## Prerequisites
 

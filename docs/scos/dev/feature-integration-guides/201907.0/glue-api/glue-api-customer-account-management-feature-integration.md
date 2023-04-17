@@ -19,7 +19,7 @@ related:
 The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the Oauth, Auth Rest API and Customers Rest API functionality.
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -69,6 +69,7 @@ $config[OauthConstants::OAUTH_CLIENT_SECRET] = 'some-client-secret';
 Run the following commands to apply database changes, and also generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

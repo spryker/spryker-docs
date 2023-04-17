@@ -1,5 +1,5 @@
 ---
-title: HowTo - Generate a Token for Login
+title: "HowTo: Generate a token for login"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-generate-a-token-for-login
@@ -11,14 +11,18 @@ redirect_from:
   - /docs/en/howto-generate-a-token-for-login
   - /v6/docs/howto-generate-a-token-for-login
   - /v6/docs/en/howto-generate-a-token-for-login
+related:
+  - title: Customer Login by Token overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/customer-login-by-token-overview.html
 ---
 
-[Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html) feature allows B2B users to log in to a Spryker Shop using a token.
+The [Customer Login by Token](/docs/pbc/all/customer-relationship-management/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html) feature lets B2B users log in to a Spryker Shop using a token.
 
-A token is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in `base64url` format.
+A token is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in the `base64url` format.
 
 To generate a token, follow the steps:
-1. The following transfers have to be adjusted for expansion:
+
+1. Adjusted the following transfers for expansion:
 
 ```xml
 <transfer name="Customer">
@@ -37,6 +41,7 @@ To generate a token, follow the steps:
 	<property name="additionalProperty" type="array" />
 </transfer>
 ```
+
 2. Generate a token using a facade call `OauthCompanyUserFacade::createCompanyUserAccessToken()`:
 
 ```php
@@ -47,6 +52,7 @@ $customerTransfer = (new CustomerTransfer())
 $oauthResponseTransfer = OauthCompanyUserFacade::createCompanyUserAccessToken($customerTransfer);
 $accessToken = $oauthResponseTransfer->getAccessToken();
 ```
+
 3. Retrieve the customer by an access token using a client call `OauthCompanyUserClient::getCustomerByAccessToken()`:
 
 ```php

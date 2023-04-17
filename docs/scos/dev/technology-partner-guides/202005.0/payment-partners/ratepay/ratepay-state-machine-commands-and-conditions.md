@@ -8,6 +8,7 @@ originalArticleId: 27aa3eae-3882-4eeb-a7c7-602fb16dccd0
 redirect_from:
   - /v5/docs/ratepay-state-machine
   - /v5/docs/en/ratepay-state-machine
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
@@ -71,4 +72,3 @@ related:
 | `IsPaymentConfirmed` | Checks transaction status for successful order items payment response | `IsPaymentConfirmedPlugin` |
 | `IsDeliveryConfirmed` | Checks transaction status for successful order items delivery response | `IsDeliveryConfirmedPlugin` |
 | `IsCancellationConfirmed` | Checks transaction status for successful order items cancellation response | `IsCancellationConfirmedPlugin` |
-

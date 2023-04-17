@@ -96,6 +96,7 @@ Adjust the schema definition so entity changes will trigger events.
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -296,7 +297,7 @@ DE--7,BoB-Hotel-Kudamm,business-unit-kudamm-1,0
 DE--7,spryker_systems,spryker_systems_HQ,0
 ```
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `customer_reference` | mandatory | string | DE--6 | The key that will identify the Customer to add data to. |
 | `company_key` | mandatory | string | BoB-Hotel-Mitte | The key that will identify the Company to add data to. |
@@ -546,7 +547,7 @@ To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` was set u
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -604,7 +605,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

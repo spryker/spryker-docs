@@ -8,6 +8,7 @@ originalArticleId: ecb444d5-9319-4ba6-9197-98109e127f39
 redirect_from:
   - /v1/docs/arvato-2-0
   - /v1/docs/en/arvato-2-0
+  - /docs/scos/dev/technology-partner-guides/201811.0/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html

@@ -39,12 +39,14 @@ The marketplace product is also displayed with the **Sold By** field defining th
 
 
 ### Searching and filtering marketplace products
+
 When the merchant name is entered in the catalog search, not only the offers but also the products belonging to this merchant are displayed. By selecting a merchant name in the filter, products from this merchant are also displayed.
 
 ![Search for marketplace products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/search-for-products-by-name-and-sku.gif)
 
 
 ## Marketplace products in the Back Office
+
 Before new marketplace products become visible on the Storefront, they must be [activated either by the merchant](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) in the Merchant Portal or [by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#activating-a-product).
 
 A Marketplace administrator can filter the products belonging to certain merchants in the Back Office.
@@ -55,9 +57,10 @@ Also, Marketplace administrators can edit products, if needed, and create produc
 
 
 ## Marketplace products in the Merchant Portal
+
 Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/creating-marketplace-concrete-product.html) and [manage their products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html) in the Merchant Portal. They can [define prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html), stock, and [attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for their products.
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES  | BACK OFFICE USER GUIDES |
 | -------------------- | ----------------------- |

@@ -8,6 +8,7 @@ originalArticleId: 1d16868e-258b-45f6-96b0-a3389e353f4b
 redirect_from:
   - /v2/docs/managing-global-threshold
   - /v2/docs/en/managing-global-threshold
+  - /docs/scos/user/back-office-user-guides/201903.0/administration/thresholds/managing-global-threshold.html
 related:
   - title: Managing Merchant Order Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html

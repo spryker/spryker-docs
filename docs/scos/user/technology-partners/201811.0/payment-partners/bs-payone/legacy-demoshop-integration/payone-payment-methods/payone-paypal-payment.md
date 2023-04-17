@@ -8,6 +8,7 @@ originalArticleId: 4c111ceb-2da8-4651-b646-bb27377bd55d
 redirect_from:
   - /v1/docs/payone-paypal
   - /v1/docs/en/payone-paypal
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html
 related:
   - title: PayOne - Prepayment
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
@@ -55,4 +56,3 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
  'PayoneEWallet',
 ];
 ```
-

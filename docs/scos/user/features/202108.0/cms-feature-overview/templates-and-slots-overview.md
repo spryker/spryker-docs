@@ -202,7 +202,7 @@ The following schema shows how content is managed with the help of templates wit
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility conditions
-When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied. To narrow down the number of pages to a desired selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
+When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied. To narrow down the number of pages to a needed selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
 
 Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the following table.
 
@@ -300,7 +300,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 {% info_block infoBox %}
 
 
-* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
+* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
 
 
 {% endinfo_block %}
@@ -372,13 +372,13 @@ The following image shows the database schema for templates, slots and the Spryk
 
 {% info_block infoBox %}
 
-Currently, the functionality has the following functional constraints which are going to be resolved in the future.
+The functionality has the following functional constraints which are going to be resolved in the future.
 
 {% endinfo_block %}
 
 * The Back Office sections related to the CMS pages do not provide any relevant information about templates and slots.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

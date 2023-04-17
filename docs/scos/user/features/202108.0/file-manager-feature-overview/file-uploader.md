@@ -14,7 +14,7 @@ redirect_from:
 
 The *File Uploader* feature is helpful when a Back Office user needs to add instructions or additional documentation to the product as an attachment. These files can further be downloaded to visitors' PCs.
 
-A Back Office user can manage the media files in the **Back Office: File Manager** menu that comprises 3 submenus:
+A Back Office user can manage the media files in the **Back Office: File Manager** menu that consists of three submenus:
 
 * File Tree
 * File List
@@ -53,7 +53,7 @@ To upload a file to a particular directory follow the steps:
 
 {% info_block infoBox %}
 
-If Use file name option is selected, then File Name field is not required and will be disregarded. In this case, the file will be uploaded with its original name (the one you see in your local storage).
+If the **Use file name** option is selected, then the **File name** field is not required and is disregarded. In this case, the file is uploaded with its original name (the one you see in your local storage).
 
 {% endinfo_block %}
 
@@ -68,7 +68,7 @@ A Back Office user cannot upload an empty text file.
 ![Add translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file+menu.png)
 
 4. After the file is uploaded it is available in the Files list section in the directory:
-5.
+
 ![Files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/files-list.png)
 
 ## File List
@@ -86,8 +86,8 @@ A Back Office user can perform the following actions to files:
 
 **File Uploader** feature lets a Back Office user have several versions for every file.
 
-For example, at first you uploaded _**Instruction1.txt**_ file (**_v.1_**), then you updated and re-uploaded it to the Administration Interface as **_v.2_**.
-After that you decided that the image instruction would be more useful in this case and uploaded **_Instruction.png_** (**_v.3_**) to the file.
+For example, at first you uploaded `Instruction1.txt` file (`v.1`), then you updated and re-uploaded it to the Administration Interface as `v.2`.
+After that you decided that the image instruction would be more useful in this case and uploaded `Instruction.png` (`v.3`) to the file.
 
 Thus, you will have 3 versions of a file available: 2 text instructions and one image instruction.
 ![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png)
@@ -112,13 +112,14 @@ To add a file to the Shop App, do the following:
 
 1. Navigate to the **Back Office: Content Management&nbsp;<span aria-label="and then">></span> Pages**, select the required CMS Page and click **Edit Placeholders**:
 
-2. In the **Content** field, add **cms_file** widget:
+2. In the **Content** field, add the **cms_file** widget:
 
-3. You will get the string `{% raw %}{{{% endraw %} cms_file('identifier'){% raw %}}}{% endraw %}` where you need to insert the _file ID_ instead of _identifier_:
+3. You will get the string `{% raw %}{{{% endraw %} cms_file('identifier'){% raw %}}}{% endraw %}` where you need to insert the `file ID` instead of `identifier`:
 
-4. Save the changes and publish the page:
-5. Check the published page in the Shop Application:
+4. Save the changes and publish the page.
+5. Check the published page in the Shop Application.
 The file is available as a download link to the visitor shop visitor.
+
 {% info_block errorBox %}
 
 The shop visitor will download the latest version of the file.
@@ -134,11 +135,12 @@ The shop visitor will download the latest version of the file.
 [MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type will help the browser to determine how it will process a document. For example, if the MIME type is set as "text/html", then a client will open the document in Notepad, if the MIME type is set as "image/jpeg", then the client will open it via image viewer program.
 
 {% endinfo_block %}
+
 ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/mime-type-settings.png)
 
 {% info_block warningBox %}
 
-Only files with the MIME types ticked in "Is Allowed" column will be allowed for uploading to the Administration Interface.
+Only files with the MIME types ticked in the **Is Allowed** column will be allowed for uploading to the Administration Interface.
 
 {% endinfo_block %}
 
@@ -146,10 +148,10 @@ Most popular file types that a shop owner can allow uploading in the Administrat
 
 | TYPE | DESCRIPTION | EXAMPLE OF MIME TYPE |
 | --- | --- | --- |
-| text | Represents any document that contains text and is theoretically human readable | `text/plain, text/html, text/css, text/javascript`<br>For text documents without specific subtype, text/plain should be used.|
-|image | Represents any kind of images | `image/gif, image/png, image/jpeg, image/bmp, image/webp` |
-| audio | Represents any kind of audio files | `audio/midi, audio/mpeg, audio/webm, audio/ogg, audio/wav` |
-| video | Represents any kind of video files | `video/webm, video/ogg` |
+| text | Represents any document that contains text and is theoretically human readable | `text/plain`, `text/html`, `text/css`, `text/javascript`<br>For text documents without specific subtype, `text/plain` should be used.|
+|image | Represents any kind of images | `image/gif`, `image/png`, `image/jpeg`, `image/bmp`, `image/webp` |
+| audio | Represents any kind of audio files | `audio/midi`, `audio/mpeg`, `audio/webm`, `audio/ogg`, `audio/wav` |
+| video | Represents any kind of video files | `video/webm`, `video/ogg` |
 
 {% info_block infoBox %}
 
@@ -157,7 +159,7 @@ To check the full list of MIME types, refer to the article.
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

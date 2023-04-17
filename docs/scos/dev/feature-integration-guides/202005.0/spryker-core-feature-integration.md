@@ -54,6 +54,7 @@ Make sure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -538,7 +539,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 ```
 
 
-## Install Feature Frontend
+## Install feature frontend
 
 Follow the steps below to install the front end of Spryker Core feature.
 

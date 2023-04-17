@@ -8,6 +8,8 @@ originalArticleId: 076b8ea0-f31a-45d6-be1e-6e1ea354ff02
 redirect_from:
   - /v3/docs/calculation-3-0
   - /v3/docs/en/calculation-3-0
+  - /docs/scos/user/features/201907.0/cart-feature-overview/calculation/calculation-3.0.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/cart-feature-walkthrough/calculation-3-0.html
 related:
   - title: Cart Functionality
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-functionality.html
@@ -22,25 +24,32 @@ The calculation module extensively uses plugins to inject calculation algorithms
 ## How Calculation Works
 
 {% info_block infoBox "Quote Transfer" %}
+
 The quote transfer object is used to store data and plugins that calculate the amounts.
+
 {% endinfo_block %}
 
 There is already a list of plugins which populate quote transfer with corresponding data. Calculations are executed every time the content of the cart is updated.
 
 {% info_block infoBox %}
-For more details, check [Cart Data Flow](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-functionality-and-calculations/cart-functionality.html#cart-data-flow
-{% endinfo_block %} in the *Cart Functionality* section.)
-If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/scos/user/features/{{page.version}}/cart-feature-overview/calculation/calculation-data-structure.html#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes, etc.). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
+
+For more details, check [Cart Data Flow](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-functionality-and-calculations/cart-functionality.html#cart-data-flow) in the *Cart Functionality* section.
+
+{% endinfo_block %}
+
+If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/scos/user/features/{{page.version}}/cart-feature-overview/calculation/calculation-data-structure.html#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes, etc. Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
 
 {% info_block infoBox "Calculated amounts" %}
+
 Each amount is being calculated and stored in cents.
+
 {% endinfo_block %}
 
 ## Calculator Plugins
 
 Calculator plugins are registered in the `CalculationDependencyProvider::getCalculatorStack()` method. This method can be extended on the project level and the plugin stack can be updated with your own plugins. Each calculator must implement `CalculatorPluginInterface`.
 
-For more information see: 
+For more information see:
 
 ```php
 <?php

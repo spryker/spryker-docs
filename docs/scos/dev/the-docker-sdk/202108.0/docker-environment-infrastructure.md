@@ -23,4 +23,4 @@ Spryker containers  follow the rules:
 
 Below, you can find the diagram of Spryker in Docker environment:
 
- ![Local docker environment diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/docker-local-environment-diagram.png)
+![Local docker environment diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/docker-local-environment-diagram.png)

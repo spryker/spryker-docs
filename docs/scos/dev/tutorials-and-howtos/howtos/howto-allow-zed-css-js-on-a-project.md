@@ -1,5 +1,5 @@
 ---
-title: HowTo - Allow Zed CSS/JS on a project
+title: "HowTo: Allow Zed CSS/JS on a project"
 description: Learn how you can allow Zed CSS/JS on a project level.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -14,11 +14,11 @@ redirect_from:
   - /v6/docs/en/howto-allow-zed-cssjs-on-a-project
 ---
 
-To allow Zed CSS/JS on a project level, do the following:
+To allow Zed CSS/JS on a project level, follow these steps:
 
-1. Create `frontend/zed-build.js` on the project with the following content:
+1. On the project level, create `frontend/zed-build.js` the following content:
 
-```
+```js
 const oryx = require('@spryker/oryx');
 const api = require('@spryker/oryx-for-zed/lib');
 const path = require('path');
@@ -42,15 +42,19 @@ api.getConfiguration(settings)
 ```
 
 2. In `package.json`, update lines related to Zed to use this config:
-```
+
+```json
 "zed": "node ./frontend/zed-build",
 "zed:watch": "node ./frontend/zed-build --dev",
 "zed:production": "node ./frontend/zed-build --prod",
 ```
-Matching path is configured with line `path.resolve('./src/Pyz')`, and the file names are configured with line patterns: `['**/Zed/**/*.entry.js'],`.
-Example of the project file location:  `Pyz\Zed\Product\assets\js\main.entry.js` .
- {% info_block warningBox %}
 
-Do not remove pattern `'**/Zed/**/*.entry.js'`, as this would break Core assets build process and might lead to non-functional Zed.
+The matching path is configured with the `path.resolve('./src/Pyz')` line; and the file names are configured with line patterns: `['**/Zed/**/*.entry.js'],`.
+
+An example of the project file location:  `Pyz\Zed\Product\assets\js\main.entry.js`.
+
+{% info_block warningBox %}
+
+Do not remove pattern `/Zed/**/*.entry.js` because this breaks the Core assets build process and might lead to non-functional Zed.
 
 {% endinfo_block %}

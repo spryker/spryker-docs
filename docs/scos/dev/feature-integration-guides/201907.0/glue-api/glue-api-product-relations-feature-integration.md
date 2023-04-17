@@ -8,9 +8,10 @@ originalArticleId: ff50c3f0-1d65-499b-8570-a417da9bfcf5
 redirect_from:
   - /v3/docs/product-relations-api-feature-integration-201907
   - /v3/docs/en/product-relations-api-feature-integration-201907
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/product-relations-api-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/amazon-pay-state-machine
   - /docs/amazon-pay-state-machine
   - /docs/en/amazon-pay-state-machine
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
 related:
   - title: Handling orders with Amazon Pay API
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
@@ -104,5 +105,5 @@ Here is a list of commands and conditions to support processing of OMS:
  }
  </script>
  ```
- 
+
 </details>

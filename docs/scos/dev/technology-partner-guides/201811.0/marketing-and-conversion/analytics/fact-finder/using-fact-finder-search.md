@@ -8,6 +8,7 @@ originalArticleId: 4dfba258-9483-4c08-ace1-095e4a5ee3da
 redirect_from:
   - /v1/docs/search-factfinder-search
   - /v1/docs/en/search-factfinder-search
+  - /docs/scos/user/technology-partners/201811.0/marketing-and-conversion/analytics/fact-finder/fact-finder-search.html
 ---
 
 ## Prerequisites

@@ -1,5 +1,5 @@
 ---
-title: File details- tax.csv
+title: File details - tax.csv
 last_updated: Jun 23, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-taxcsv
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-taxcsv
 ---
 
-This article contains content of the **tax.csv** file to configure [tax](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) information on your Spryker Demo Shop.
+This document describes the `tax.csv` file to configure the [tax](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the data, run
 
@@ -20,21 +20,24 @@ data:import:tax
 ```
 
 ## Import file parameters
+
 The file should have the following parameters:
 
 
 | PARAMETER | REQUIRED | TYPE |REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-|tax_set_name | &check; | String |  | Name of the tax set. |
+| tax_set_name | &check; | String |  | Name of the tax set. |
 | country_name | &check; | String |  | Country to which the tax refers to. |
 | tax_rate_name | &check; | String | | Name of the tax rate. <br>Tax rate is the ratio (usually expressed as a percentage) at which a business or person is taxed. |
 | tax_rate_percent | &check; | Float | | Tax rate, expressed  as a percentage. |
 
  
- ## Dependencies
+## Import file dependencies
+
 This file has no dependencies.
 
 ## Import template file and content example
+
 Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |

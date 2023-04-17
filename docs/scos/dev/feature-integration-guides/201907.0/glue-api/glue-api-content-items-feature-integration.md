@@ -9,12 +9,13 @@ redirect_from:
   - /v3/docs/content-items-api-feature-integration
   - /v3/docs/en/content-items-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/content-items-apifeature-integration.html
 related:
   - title: Glue Infrastructure
     link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -77,16 +78,16 @@ Activate the following plugins:
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\ContentBannersRestApi\Plugin\ContentBannerResourceRoutePlugin;
 use Spryker\Glue\ContentProductAbstractListsRestApi\Plugin\ContentProductAbstractListRoutePlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**

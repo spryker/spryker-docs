@@ -59,7 +59,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -81,7 +81,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -116,7 +116,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -133,7 +133,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
     }
 }
 ```
-    
+
 <br>
 </details>
 

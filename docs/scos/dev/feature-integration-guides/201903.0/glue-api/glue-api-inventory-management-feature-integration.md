@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/inventory-management-feature-integration-201903
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

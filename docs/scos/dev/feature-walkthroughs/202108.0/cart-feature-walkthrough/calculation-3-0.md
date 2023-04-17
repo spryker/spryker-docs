@@ -66,21 +66,14 @@ ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGr
 ```
 
 * `SubtotalTotalsCalculatorPlugin`—sums each of the `sumGrossPriceWithProductOptions` items.
-
 `TotalsTransfer::subtotal = sum(ItemTransfer::sumGrossPriceWithProductOptions)`
-
 * `ExpensesGrossSumAmountCalculatorPlugin`—calculates `sumGrossPrice` for each item.
-
 `ExpenseTransfer::sumGrossPrice = ExpenseTransfer::unitGrossPrice * ExpenseTransfer::quantity`
-
 * `ExpenseTotalsCalculatorPlugin`—calculates `expenseTotal` in `TotalsTransfer`.
-
 `TotalsTransfer::expenseTotal = sum(ExpenseTransfer::sumGrossPrice)`
-
 * `DiscountCalculatorPlugin`—applies discounts to current `QuoteTransfer` each discountable item with property `calculatedDiscounts`, gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
 
 {% info_block infoBox "Discount Calculation" %}
-
 
 Discount calculation is a separate topic and is explained in the [Discount](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) article.
 
@@ -104,11 +97,8 @@ TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTot
 ```
 
 * `GrandTotalWithDiscountsCalculatorPlugin` —calculates `GrandTotal` after discounts in `TotalsTransfer`.
-
 `TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTotal - TotalsTransfer::discountTotal`
-
 * `TaxTotalsCalculatorPlugin`—calculates taxTotal and taxRate used from `TotalTransfer::grandTotal`, sets it in `TotalsTransfer::TaxTotalsTransfer`.
-
 
 `TaxableItems = ItemTransfer, ProductOptionTransfer, ExpenseTransfer. TaxTotalsTransfer::taxRate = sum(TaxableItems) / TaxableItems TaxTotalsTransfer::taxAmount = round((TotalsTransfer::grandTotal * TaxTotalsTransfer::taxRate) / TaxTotalsTransfer::taxRate / 100)`
 
@@ -116,7 +106,7 @@ TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTot
 
 This section describes calculation data structure.
 
-### Quote Transfer
+### Quote transfer
 
 {% info_block warningBox "" %}
 
@@ -138,7 +128,7 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 |payment (PaymentTransfer)|Information about currently selected payment, available after `PaymentStep`.|
 |shipment (ShipmentTransfer)|Information about currently selected shipment, available after `ShipmentStep`. |
 
-### Totals Transfer
+### Totals transfer
 
 `TotalsTransfer` is a data object holding cart totals, subtotal, expenses (shipping), discount total and grand total. Here should the amounts for order level be stored.
 
@@ -151,7 +141,7 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 |grandTotal (int)|The total amount the customer needs to pay after the discounts are applied. It is set by `GrandTotalWithDiscountsCalculatorPlugin` calculator plugin.|
 |hash (string)|Hash from total values to identify amount changes. It is set by `GrandTotalCalculatorPlugin`. |
 
-### Tax Total Transfer
+### Tax total transfer
 
 `TaxTotalsTransfer` holds taxRate and taxAmount used for grandTotal.
 
@@ -160,8 +150,7 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 | taxRate (int)|Current tax rate in percentage.|
 |amount (int)|Current tax amount from grandTotal. |
 
-
-### Item Transfer
+### Item transfer
 
 `ItemTransfer` is a cart item transfer, holds single product information.
 
@@ -197,7 +186,7 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 |canceledAmount (int)|Canceled amount for this item (order only)|
 |productOptions ([ProductOptionTransfer](#product-option-transfer)[])|Assigned product options. It’s set by `CartItemProductOptionPlugin` cart expander plugin. |
 
-### Calculated Discount Transfer
+### Calculated discount transfer
 
 Each item which can have discounts applied have `calculatedDiscounts` property added which holds the collection of discounts for each discount type.
 
@@ -210,11 +199,9 @@ Each item which can have discounts applied have `calculatedDiscounts` property a
 |unitGrossAmount (int)|Discount gross amount for single items; it’s set by `DiscountCalculatorPlugin`.|
 |sumGrossAmount (int)|Discount gross amount for sum of items; it’s set by `DiscountCalculatorPlugin`. |
 
-
-### Product Option Transfer
+### Product option transfer
 
 `ProductOptionTransfer`, some items may have product option collection attached which also have amounts calculated.
-
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -228,7 +215,7 @@ Each item which can have discounts applied have `calculatedDiscounts` property a
 Tax amount for single product option (order only) |
 | sumTaxAmount (int) | Tax amount for sum of product options (order only) |
 
-### Discount Transfer
+### Discount transfer
 
 `DiscountTransfer` is a collection of discounts used in all `QuoteTransfer` discountable items. It can be `voucherDiscounts` or `cartRuleDiscounts`.
 
@@ -246,7 +233,7 @@ Tax amount for single product option (order only) |
 |discountCollectors (DiscountCollectionTransfer[]|List of discount collectors used for this discount|
 |amount (int)|Total discount amount used for this discount type. It’s set by `DiscountCalculatorPlugin`. |
 
-### Expense Transfer
+### Expense transfer
 
 | FIELD | DESCRIPTION |
 | --- | --- |

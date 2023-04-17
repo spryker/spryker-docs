@@ -152,6 +152,7 @@ Set up database schema and transfer objects as follows:
 3. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -495,7 +496,7 @@ Label 3,1,1,0,highlight,,,Label 3,,3
 NEW,1,1,0,template:tag,,,New,Neu,,2
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | name | Yes | string | Label 1 | Unique product label identifier. |
 | is_active | Yes | integer | 1 | Defines if the product label is available. |
@@ -518,7 +519,7 @@ Label 2,US
 Label 3,DE
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | name | Yes | string | Label 1 | Unique product label identifier. |
 | store_name | Yes | string | US | Name of the store to assign the label to. |

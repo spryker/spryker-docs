@@ -17,39 +17,40 @@ related:
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
 ---
 
-
-
 This document describes configuration options of the services shipped with Spryker in Docker by default.
 
 {% info_block infoBox %}
 
 * Before you start configuring a service, make sure to install or update the Docker SDK to the latest version:
+
 ```bash
 git clone https://github.com/spryker/docker-sdk.git ./docker
 ```
 
 * After enabling a service, make sure to apply the new configuration:
+    
     1. Bootstrap docker setup:
+    
     ```bash
     docker/sdk boot {deploy.yml | deploy.dev.yml}
     ```
 
     2. Once the job finishes, build and start the instance:
+    
     ```bash
     docker/sdk up
     ```
 
-
-
-
 {% endinfo_block %}
 
 ## Database services
+
 [MariaDB](https://mariadb.org/) is provided as a service by default. MariaDB is about 40% faster on write operations when compared, for example, to PostgreSQL.
 
 Anyway, you can switch to MySQL or PostgreSQL as described below.
 
 ### MariaDB
+
 [MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://www.mysql.com/) relational database management system.
 
 See [MariaDB knowledge base](https://mariadb.com/kb/en/) for more details.
@@ -61,6 +62,7 @@ MariaDB is provided as a service by default. You may only need to use this confi
 {% endinfo_block %}
 
 #### Configuring MariaDB
+
 Follow the steps below to switch the database service to MariaDB:
 
 1. Adjust `deploy.*.yml` in the `services:` section:
@@ -76,7 +78,9 @@ services:
             localhost:3306:
 ...
 ```
+
 2. Bootstrap the docker setup, regenerate demo data, and rebuild the application:
+
 ```bash
 docker/sdk boot deploy.*.yml
 docker/sdk clean-data
@@ -85,13 +89,17 @@ docker/sdk up --build --data
 
 
 ### MySQL
+
 [MySQL](https://www.mysql.com) is an open source relational database management system based on Structured Query Language (SQL). MySQL enables data to be stored and accessed across multiple storage engines, including InnoDB, CSV and NDB. MySQL is also capable of replicating data and partitioning tables for better performance and durability.
 
 See [MySQL documentation](https://dev.mysql.com/doc/) for more details.
 
 #### Configuring MySQL
+
 Follow the steps below to switch database engine to MySQL:
+
 1. Adjust `deploy.*.yaml` in the `services:` section:
+
 ```yaml
 ...
 services:
@@ -104,6 +112,7 @@ services:
 ```
 
 2. Bootstrap the docker setup, regenerate demo data, and rebuild the application:
+
 ```bash
 docker/sdk boot deploy.*.yml
 docker/sdk clean-data
@@ -112,13 +121,17 @@ docker/sdk up --build --data
 
 
 ### PostgreSQL
+
 [PostgreSQL](https://www.postgresql.org/) PostgreSQL is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
 
 See [PostgreSQL documentation](https://www.postgresql.org/docs/) for more details.
 
 #### Configuring PostgreSQL
+
 Follow the steps below to switch database engine to PostgreSQL:
+
 1. Adjust `deploy.*.yml` in the `services:` section:
+
 ```yaml
 ...
 services:
@@ -131,6 +144,7 @@ services:
 ```
 
 2. Bootstrap the docker setup, regenerate demo data, and rebuild the application:
+
 ```bash
 docker/sdk boot deploy.*.yml
 docker/sdk clean-data
@@ -142,8 +156,9 @@ docker/sdk up --build --data
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 
 See:
-* [Configuring Elasticsearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html) to learn more about Elastcisearch configuration in Spryker.
-* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information on Elasticsearch.
+
+* [Configure Elasticsearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html) to learn more about ElastciSearch configuration in Spryker.
+* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information on ElasticSearch.
 
 ### Configuring ElasticSearch
 
@@ -166,8 +181,11 @@ See [Kibana documentation](https://www.elastic.co/guide/en/kibana/current/index.
 In Docker SDK, Kibana UI is provided as a service by default.
 
 ### Configuring Kibana UI
+
 Follow the steps to configure an endpoint for Kibana UI:
+
 1. Adjust `deploy.*.yml` in the `services:` section:
+
 ```yaml
 services:
     ...
@@ -178,6 +196,7 @@ services:
 ```
 
 2. Add the endpoint to the hosts file:
+
 ```bash
 echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 ```
@@ -202,7 +221,7 @@ services:
 
 ## Swagger UI
 
-[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone — be it your development team or your end consumers — to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for back end implementation and client-side consumption.
+[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone—be it your development team or your end consumers—to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for back end implementation and client-side consumption.
 
 See [Swagger UI documentation](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/) for more details.
 
@@ -213,8 +232,11 @@ In Docker SDK, Swagger UI is provided as a service by default.
 Spryker provides the basic functionality to generate [OpenApi schema specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) for REST API endpoints. This document provides an overview of REST API endpoints. For each endpoint, you will find the URL, REST request parameters as well as the appropriate request and response data formats.
 
 ### Configuring Swagger UI
+
 Follow the steps to configure an endpoint for Swagger UI:
+
 1. Adjust `deploy.*.yml` in the `services:` section:
+
 ```yaml
 services:
     ...
@@ -225,6 +247,7 @@ services:
 ```
 
 2. Add the endpoint to the hosts file:
+
 ```bash
 echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 ```
@@ -238,6 +261,7 @@ See [Redis documentation](https://redis.io/documentation) for more details.
 ### Configuring Redis
 
 Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing Redis:
+
 ```yaml
 services:
     key_value_store:
@@ -252,6 +276,7 @@ services:
 [Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys or import/export databases.
 
 ### Configuring Redis GUI
+
 Follow the steps to configure an endpoint for Redis Commander:
 
 1. Adjust `deploy.*.yml` in the `services:` section:
@@ -266,12 +291,10 @@ services:
 ```
 
 2. Adjust hosts file:
+
 ```bash
 echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 ```
-
-
-
 
 ## MailHog
 
@@ -285,13 +308,16 @@ With the MailHog service, developers can:
 {% info_block infoBox %}
 
 By default the following applies:
+
 *  `http://mail.demo-spryker.com/` is used to see incoming emails.
 * Login is not required
 
 {% endinfo_block %}
 
 ### Configuring MailHog
+
 Adjust `deploy.*.yml` in the `services:` section to specify a custom endpoint:
+
 ```yaml
 services:
         ...
@@ -302,6 +328,7 @@ services:
 ```
 
 ## Blackfire
+
 [Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked via Blackfire web interface.
 
 ### Configuring Blackfire
@@ -361,8 +388,8 @@ services:
 3. Pass Blackfire client details:
 
 ```bash
- BLACKFIRE_CLIENT_ID={client_id} BLACKFIRE_CLIENT_TOKEN={client-token} docker/sdk cli
- ```
+BLACKFIRE_CLIENT_ID={client_id} BLACKFIRE_CLIENT_TOKEN={client-token} docker/sdk cli
+```
 
 4. Pass Blackfire server details:
 
@@ -379,6 +406,7 @@ You can pass the server details only with the `docker/sdk up` command.
 It is not obligatory to pass all the details as environment variables or define all the details in the deploy file. You can pass the details in any combination.
 
 ## New Relic
+
 [New Relic](https://newrelic.com/) is a tool used to track the performance of services, environment to quickly find and fix issues.
 
 The solution consists of a client and a server. The client is used to collect the data about applications in an environment and send it to the server for further analysis and presentation. The server is used to aggregate, analyse and present the data.
@@ -436,6 +464,7 @@ image:
 ```bash
 NEWRELIC_LICENSE={new_relic_license} docker/sdk up
 ```
+
 {% info_block warningBox "Note" %}
 
 You can pass the New Relic license only with the `docker/sdk up` command.
@@ -443,13 +472,12 @@ You can pass the New Relic license only with the `docker/sdk up` command.
 {% endinfo_block %}
 
 ## Webdriver
-ChromeDriver is provided as a webdriver service by default, but you can switch to PhantomJS as described below.
 
+ChromeDriver is provided as a webdriver service by default, but you can switch to PhantomJS as described below.
 
 ### ChromeDriver
 
 [ChromeDriver](https://chromedriver.chromium.org/) is a thin wrapper on WebDriver and [Chromium](https://chromedriver.chromium.org/) headless browser. It is used for automating web page interaction, JavaScript execution, and other testing-related activities. It provides full-control API to make end-to-end testing flexible and comfortable.  
-
 
 {% info_block warningBox "Default service" %}
 
@@ -458,6 +486,7 @@ Chromedriver is provided as a service by default. You may only need to use this 
 {% endinfo_block %}
 
 #### Configuring ChromeDriver
+
 To enable Chromedriver, adjust `deploy.*.yml` as follows:
 
 ```yaml
@@ -465,7 +494,6 @@ services:
     webdriver:
         engine: chromedriver
 ```
-
 
 ### PhantomJS
 
@@ -481,11 +509,9 @@ services:
         engine: phantomjs
 ```
 
-
 ## Dashboard
 
 Dashboard is a tool that helps to monitor logs in real time. You can monitor logs in all or a particular container.
-
 
 ### Configuring Dashboard
 
@@ -502,7 +528,6 @@ services:
 ## Tideways
 
 [Tideways](https://tideways.com/) is an application profiler used for testing and debugging. Its main functions are profiling, monitoring, and exception tracking.
-
 
 ### Configuring Tideways
 

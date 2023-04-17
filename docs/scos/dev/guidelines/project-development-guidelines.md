@@ -1,5 +1,5 @@
 ---
-title: Project Development Guidelines
+title: Project development guidelines
 description: This article describes the strategies a project team can take while building a Spryker-based project.
 last_updated: Jan 28, 2022
 template: concept-topic-template
@@ -14,23 +14,73 @@ redirect_from:
   - /v6/docs/en/project-development-guidelines
   - /v5/docs/project-development-guidelines
   - /v5/docs/en/project-development-guidelines
+related:
+  - title: Data Processing Guidelines
+    link: docs/scos/dev/guidelines/data-processing-guidelines.html
+  - title: Making your Spryker shop secure
+    link: docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+  - title: Module configuration convention
+    link: docs/scos/dev/guidelines/module-configuration-convention.html
 ---
 
-## Development Strategies
+Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy  complex business requirements.
 
-Spryker OS exposes codebase Projects, which enables a high level of customization and can satisfy even the most complex Project business requirements.
+There are different strategies developers can use to develop projects. Before starting developing, choose a [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that meets your requirements. To get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date, we recommend the following approaches:
+- Configuration
+- Plug and play
+- Project modules
 
-The project development, the team is free to decide what approach to use. Spryker recommends considering **Configuration**, **Plug and Play**, and **Project modules** first to get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date.
+## Apply coding guidelines
 
-Before starting the project, we recommend you check available development strategies and define one for your implementation. See [Development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) for details.
+Starting from the first day of development, apply the [coding guidelines](/docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html).
 
-## Development & Tests
+## Use custom namespaces
 
-From the very first day of project development, it’s recommended to establish an incremental development process based on CI/CD supported by tests.
+Instead of using the `Pyz` namespace, create your own namespace for project development. For example, use the project name as a namespace.
 
-Spryker provides an infrastructure for Unit, Functional, and Acceptance tests.
+## Use custom names
 
-General test coverage depends on project business requirements and the complexity of a project. But defining critical e-commerce functionalities and covering them with tests is necessary for every project (even if they are only big 5: Home page, Catalog Page, PDP, Add to cart, and Place order).
+Use custom names for everything that is added on the project level, like the following:
+- Transfers
+- Transfer properties
+- DB tables
+- DB table fields,
+- Modules
+- Classes
+- Interfaces
+- Traits
+- Properties
+- Contants
+
+For example, customize the names by adding the project name.
+
+## Avoid using, extending, and overriding Private API
+
+Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), register the missing extension points in [Spryker ideas](https://spryker.ideas.aha.io/). In future, we will add the registered extension points, and you will be able to extend it via Public API.
+
+
+## Keep modules up to date
+
+During development and after going live, we recommend checking for security updates of external and Spryker dependencies on a regular basis.
+
+Additionally, we recommend keeping modules up to date in general.
+
+## Development and tests
+
+Starting from the first day of development, write tests for all the customizations you implement. We provide infrastructure for unit, functional, and acceptance tests.
+
+## Implement CI/CD
+
+Starting from the first day of development, we recommend establishing an incremental development process based on CI/CD and the tests mentioned in the previous section.
+
+
+## Establish coding standards
+
+Before you start developing, establish coding standards. Implement code checks based on the standards into your CI/CD. The default code checks shipped with Spryker are located in `/config/install/sniffs.yml`. You might want to add more checks that are based on your project's requirements.
+
+Make sure that code can't be merged until it corresponds to your coding standards.
+
+
 
 <!--More on test infrastructure <link>
 

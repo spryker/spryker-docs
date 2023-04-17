@@ -8,6 +8,7 @@ originalArticleId: 20225f1c-0df1-4498-97d2-6d7a6b7fabdd
 redirect_from:
   - /v1/docs/payone-prepayment
   - /v1/docs/en/payone-prepayment
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-prepayment.html
 related:
   - title: PayOne - Authorization and Preauthorization Capture Flows
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html

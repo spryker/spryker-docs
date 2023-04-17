@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/glue-promotions-discounts-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 
@@ -47,6 +47,7 @@ Make sure that the following modules have been installed:
 Run the following commands to generate transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

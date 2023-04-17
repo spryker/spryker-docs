@@ -88,7 +88,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -132,7 +132,7 @@ Make the following checks at `https://mysprykershop.com/quick-order` : `ProductP
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -244,7 +244,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that translations data was added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that translations data was added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 

@@ -22,9 +22,9 @@ The following schema illustrates product restrictions relations within the Merch
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
-| INTEGRATION GUIDES |
+| INSTALLATION GUIDES |
 |---------|
 | [Merchant B2B Contracts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-b2b-contracts-feature-integration.html) |
 

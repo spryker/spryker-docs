@@ -8,6 +8,7 @@ originalArticleId: 7edf5c72-6840-4415-add4-9f537dc40da4
 redirect_from:
   - /v5/docs/payone-credit-card
   - /v5/docs/en/payone-credit-card
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-credit-card-payment.html
 related:
   - title: PayOne - Prepayment
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
@@ -24,7 +25,9 @@ related:
 ---
 
 {% info_block infoBox "PCI Compliance" %}
+
 Because of PCI compliance reasons, credit card data is communicated to the third party through AJAX calls (sensitive information stays at the browser side).
+
 {% endinfo_block %}
 
 ## PCI Compliance
@@ -77,6 +80,6 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ## System Interaction
 
 The diagram shows the interaction between the browser, Zed and Payone. We recommend using the creditcardcheck (1) AJAX call from the browser to Payone directly. If the credit card data is valid, Payone will return a credit card pseudo pan. This number must be used with all subsequent Payone interactions as a reference. Optionally the pseudo pan can be stored with an AJAX request into the session (2). When it comes to checkout (3) a state machine must be started. The state machine can either use an authorize call to obtain the money directly or use a preauthorize call (3.1) that blocks the money. If 3d-secure is enabled a redirect message must be handled. At the given time (when package is ready for shipment e.g.) the preauthorized money can be captured.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/BS+Payone/payone-system-interaction.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/BS+Payone/payone-system-interaction.png)
 
 Credit card Check is an AJAX request from the browser to Payone directly. Before sending the credit card data, it is encrypted with asymmetric encryption algorithm. If the credit card is valid, a Pseudocreditcardpan is returned. This will be used for all subsequent interactions with Payone. The advantage is that a PCI compliance may not be needed.

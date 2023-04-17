@@ -8,6 +8,7 @@ originalArticleId: 9caced27-69ec-419e-bd5b-2893bb59622c
 redirect_from:
   - /v1/docs/billpay
   - /v1/docs/en/billpay
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/billpay/billpay.html
 ---
 
 ## Partner Information
@@ -61,7 +62,7 @@ You will also need your Merchant ID, Portal ID and security key - all provided b
 
 Additional important information can be found in the Billpay documentation - [https://www.billpay.de/en/shopintegration/techdocs/](https://www.billpay.de/en/shopintegration/techdocs/).
 
-To integrate Billpay make sure you familiar with concept of [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html).
+To integrate Billpay make sure you familiar with concept of [Extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html).
 
 ## Installation
 

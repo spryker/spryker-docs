@@ -120,21 +120,21 @@ If configuration is not complete, on entering the **Product Details** page, a St
 ![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
 
 
-Even if all the parameter values are [pre-configured](#pre-configured-parameter-values), but configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the pre-configured values though.
+Even if all the parameter values are [preconfigured](#preconfigured-parameter-values), but configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the preconfigured values though.
 
-![configuration-is-not-complete-message-with-pre-configured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
+![configuration-is-not-complete-message-with-preconfigured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
 
 #### Request for quote with a configurable product
 
 The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A Storefront user can only request a quote for a product with a complete configuration.
 
-### Pre-configured parameter values
+### preconfigured parameter values
 
-When a developer creates configurable products by importing them, they can pre-configure parameter values. If a Storefront user chooses to configure such a product, they start with the pre-configured parameter values and can change them.
+When a developer creates configurable products by importing them, they can preconfigure parameter values. If a Storefront user chooses to configure such a product, they start with the preconfigured parameter values and can change them.
 
-If a developer also defines that the configuration of such a product is complete, on entering the **Product Details** page, a Storefront user sees the pre-configured parameter values. They can add the product to cart without adjusting the configuration.
+If a developer also defines that the configuration of such a product is complete, on entering the **Product Details** page, a Storefront user sees the preconfigured parameter values. They can add the product to cart without adjusting the configuration.
 
-If a developer defines that the configuration of such a product is incomplete, on entering the **Product Details** page, a Storefront user does not see the pre-configured parameter values. However, they are still assigned to the product. The Storefront user has to configure the product, but they do not have to change the pre-configured parameter values.
+If a developer defines that the configuration of such a product is incomplete, on entering the **Product Details** page, a Storefront user does not see the preconfigured parameter values. However, they are still assigned to the product. The Storefront user has to configure the product, but they do not have to change the preconfigured parameter values.
 
 ## Configurable product on the Storefront
 
@@ -145,6 +145,6 @@ Storefront users configure a product on the Storefront as follows:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Configurable Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough.html) for developers.
+Are you a developer? See [Configurable Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

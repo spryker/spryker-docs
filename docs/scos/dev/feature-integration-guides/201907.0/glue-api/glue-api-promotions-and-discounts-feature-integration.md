@@ -8,6 +8,7 @@ originalArticleId: b85fcb26-9181-4f62-90e2-b2d91f63936c
 redirect_from:
   - /v3/docs/promotions-and-discounts-feature-integration-201907
   - /v3/docs/en/promotions-and-discounts-feature-integration-201907
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-promotions-and-discounts-feature-integration.html
 related:
   - title: Glue Application feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-application-feature-integration.html
@@ -15,7 +16,7 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -70,18 +71,18 @@ Activate the following plugin:
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelationshipByResourceIdPlugin;
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -93,7 +94,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new ProductLabelsResourceRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -106,7 +107,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			ProductsRestApiConfig::RESOURCE_ABSTRACT_PRODUCTS,
 			new ProductLabelsRelationshipByResourceIdPlugin()
 		);
-        
+
 		return $resourceRelationshipCollection;
 	}
 }

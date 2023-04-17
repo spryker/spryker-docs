@@ -28,6 +28,17 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-virtual-machine-docker-containers-and-console.html
   - /docs/scos/dev/sdk/202009.0/development-virtual-machine-docker-containers-and-console.html
   - /docs/scos/dev/sdk/202108.0/development-virtual-machine-docker-containers-and-console.html
+related:
+  - title: Code Generator
+    link: docs/scos/dev/sdk/code-generator.html
+  - title: Cronjob scheduling
+    link: docs/scos/dev/sdk/cronjob-scheduling.html
+  - title: Data export
+    link: docs/scos/dev/sdk/data-export.html
+  - title: Data import
+    link: docs/scos/dev/sdk/data-import.html
+  - title: Twig and TwigExtension
+    link: docs/scos/dev/sdk/twig-and-twigextension.html
 ---
 
 Spryker Commerce OS is shipped with an all-inclusive and fully pre-provisioned development environment on a virtual machine, based on Vagrant and VirtualBox. A Docker container-based environment is provided for development as an alternative to the virtual machine.

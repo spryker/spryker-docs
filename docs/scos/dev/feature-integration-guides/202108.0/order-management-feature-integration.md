@@ -705,7 +705,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -1118,7 +1118,7 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Order Management feature front end.
 
@@ -1171,7 +1171,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

@@ -9,6 +9,8 @@ redirect_from:
   - /v5/docs/en/multiple-shared-shopping-lists
   - /v5/docs/shopping-list
   - /v5/docs/en/shopping-list
+  - /docs/scos/user/features/202005.0/shopping-lists-feature-overview/shopping-list.html
+  - /docs/scos/user/features/202005.0/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html
 last_updated: Sep 15, 2020
 template: concept-topic-template
 ---
@@ -178,7 +180,7 @@ Check out this video tutorial on how to use shopping lists.
 
 We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, e.g., gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price - €45.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

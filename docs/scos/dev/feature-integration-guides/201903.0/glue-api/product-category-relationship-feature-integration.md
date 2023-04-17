@@ -9,7 +9,7 @@ redirect_from:
   - /v2/docs/en/product-category-relationship-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

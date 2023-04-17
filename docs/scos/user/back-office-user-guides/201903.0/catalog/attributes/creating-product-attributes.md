@@ -8,6 +8,7 @@ originalArticleId: 4b41f053-b125-490b-914c-0198693cfe07
 redirect_from:
   - /v2/docs/creating-a-product-attribute
   - /v2/docs/en/creating-a-product-attribute
+  - /docs/scos/user/back-office-user-guides/201903.0/catalog/attributes/creating-product-attribute.html
 ---
 
 This topic describes the procedure you need to perform in order to create a new product attribute, either a super attribute or a descriptive attribute.
@@ -21,9 +22,9 @@ For a new product in your store, you need to create both super attribute and pro
 2. On the **Create a Product Attribute** page:
    1. In the **Attribute Key** field, add a new attribute to the product.
         {% info_block warningBox "Note" %}
-        
+
         Keep in mind that it should not contain any special symbols.
-        
+
         {% endinfo_block %}
 
    2. In the **Input type** drop-down list, select the type of data input.
@@ -35,7 +36,7 @@ For a new product in your store, you need to create both super attribute and pro
     Once Save is selected, the **Translation** tab becomes enabled.
 4. In the **Translations** tab, add the translation for your attribute key.
 5. Click **Save**.
-   
+
 ***
 
 **Tips and tricks**
@@ -45,6 +46,6 @@ If you want to apply this translation to other languages, click **Copy to other 
 
 **What's next?**
 
-Learn how the product attributes are managed in the [Managing Product Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) article.
+Learn how the product attributes are managed in the [Managing Product Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html) article.
 
 Review the [References](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/references/attributes-reference-information.html) section to learn more about the attributes you populate for the Attribute entity and the examples of how the attributes are used.

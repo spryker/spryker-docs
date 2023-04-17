@@ -14,7 +14,7 @@ redirect_from:
 
 Order cancellation makes the shopping experience of B2B and B2C shoppers more flexible by allowing them to cancel their orders within a defined time period. Also, it optimizes the workflow of sales and customer service by allowing them to cancel orders on customers’ behalf in the Back Office.
 
-For example, a customer changes their mind about an item in an order they have placed. Instead of contacting customer service, they can cancel the order and place a new one with the desired items.
+For example, a customer changes their mind about an item in an order they have placed. Instead of contacting customer service, they can cancel the order and place a new one with the needed items.
 
 A customer can cancel orders on the **Order History** and **Order Details** pages.
 
@@ -36,7 +36,7 @@ To learn how B2B and B2C shoppers can cancel orders on the Storefront, see [Orde
 
 To learn how a Back Office user can cancel orders, see [Changing Order Statuses](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html).
 
-## Time frames and statuses
+## Timeframes and statuses
 
 A customer can cancel an order only within a defined time period. By default, the time period is 30 minutes. After the time period has passed, the buttons to cancel the order are not available. A Back Office user can skip the cancellation time period.  
 
@@ -59,7 +59,7 @@ This is how the Order Cancellation feature works on the Spryker Demo Shop Storef
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/shop-guide-cancelling-orders.gif)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

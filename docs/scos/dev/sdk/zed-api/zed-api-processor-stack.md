@@ -29,11 +29,22 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/zed-api/zed-api-processor-stack.html
   - /docs/scos/dev/sdk/202009.0/zed-api/zed-api-processor-stack.html
   - /docs/scos/dev/sdk/202108.0/zed-api/zed-api-processor-stack.html
+related:
+  - title: Zed API (Beta)
+    link: docs/scos/dev/sdk/zed-api/zed-api-beta.html
+  - title: Zed API configuration
+    link: docs/scos/dev/sdk/zed-api/zed-api-configuration.html
+  - title: Zed API resources
+    link: docs/scos/dev/sdk/zed-api/zed-api-resources.html
+  - title: Zed API CRUD functionality
+    link: docs/scos/dev/sdk/zed-api/zed-api-crud-functionality.html
+  - title: Zed API project implementation
+    link: docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
 ---
 
-## Request and Pre Processing
+## Request and pre-processing
 
-We now need to decide further on the URL format. Should this be extension driven, which is easier to browse, or HTTP header driven, for example? What kind of URL query string transformation do we need, what kind of header parsing REQUIRED?
+We now need to decide further on the URL format. Should this be extension driven, which is easier to browse, or HTTP header driven, for example? What kind of URL query string transformation do we need, what kind of header parsing REQUIRED
 
 In order to keep this flexible for our customers, we provide a basic pre and post stack for processing the incoming request and the outgoing response.
 
@@ -66,7 +77,7 @@ After that, the `ResourcePreProcessor`, `ResourceMethodPreProcessor` and `Resour
 
 Finally, we then prepare the CRUD methods with concrete params based on the payload, URL query strings, headers or alike. If you want to provide pagination, sorting, filtering, and more for your “find” action, you can hook in processors to translate your request to the `filterTransfer`.
 
-## Response and Post Processing
+## Response and post-processing
 
 Similarly, the post processing stack can further hydrate the `ApiResponseTransfer` before returning it. Any custom headers you need to add to the response, you can add here based on the request or persistence data. You can also set or adjust response codes (“HTTP Status Codes”) and add special meta data to the response.
 
@@ -88,10 +99,11 @@ Similarly, the post processing stack can further hydrate the `ApiResponseTransfe
 
 The processors in these stacks are deliberately very lax and easy to replace as each API implementation requires custom headers, parsing and mapping. By replacing the core processors or adding your own, you can map any incoming request to the underlying API dispatcher.
 
-### Customizing OPTIONS Request
+### Customizing OPTIONS request
+
 The options request by default will return the configured array of HTTP methods for collection vs item.
 
-| URI | Type  | Methods  |
+| URI | TYPE  | METHODS  |
 | --- | --- | --- |
 |  / | collection | OPTIONS, GET, POST |
 |  /{id/slug} | item  | OPTIONS, GET, PATCH, DELETE |

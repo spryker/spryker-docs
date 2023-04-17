@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-authorize
   - /docs/heidelpay-authorize
   - /docs/en/heidelpay-authorize
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

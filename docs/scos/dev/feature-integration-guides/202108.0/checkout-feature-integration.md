@@ -66,6 +66,7 @@ Ensure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -141,7 +142,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -221,7 +222,7 @@ DE,CHF,soft-minimum-threshold,200000,,
 DE,CHF,hard-maximum-threshold,320000,,
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | store| mandatory |string  | DE | The store where the sales order threshold is applicable.  |
 | currency | mandatory | string | EUR | The currency for which the sales order threshold is applicable. |
@@ -527,7 +528,7 @@ Ensure that:
 {% endinfo_block %}
 
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Checkout feature front end.
 
@@ -595,7 +596,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: File details- customer.csv
+title: File details - customer.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-customercsv
@@ -11,34 +11,43 @@ redirect_from:
   - /docs/en/file-details-customercsv
 ---
 
-This article contains content of the **customer.csv** file to configure [Customer](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information on your Spryker Demo Shop.
+This document describes the `customer.csv` file to configure [Customer](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:customer
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **customer_reference** | Yes (*unique*) | String | Must end with a number. | Reference of the Customer. |
-| **locale_name** | No | String | N/A* | Locale name. |
-| **phone** | No | String | N/A | Customer’s phone number. |
-| **email** | Yes (*unique*) | String | N/A | Customer’s e-mail |
-| **salutation** | Yes | String | Values must be:<ul><li>Mr</li><li>Mrs</li><li>Dr, or </li><li>Ms</li></ul> | Used salutation.<br> The value must be within the list of values predefined in the `spyCustomerTableMap.php` file. |
-| **first_name** | Yes | String | N/A | Customer’s first name. |
-| **last_name** | Yes | String | N/A | Customer’s last name. |
-| **company** | No | String | N/A | Customer’s Company |
-| **gender** | Yes | String |  Values must be:<ul><li>Male, or </li><li>Female</li></ul> | Customer’s gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. |
-| **date_of_birth** | No | Date | N/A | Customer’s date of birth. |
-| **password** | No | String | N/A | Customer’s password. |
-| **registered** | No | Date | N/A | Customer’s date of registration. |
-*N/A: Not applicable.
+| customer_reference | &check; | String |  Must be unique and end with a number. | Reference of the Customer. |
+| locale_name |  | String |  | Locale name. |
+| phone |  | String |  | Customer’s phone number. |
+| email | &check; | String | Must be unique. | Customer’s e-mail. |
+| salutation | &check; | String | Values must be:<ul><li>Mr</li><li>Mrs</li><li>Dr, or </li><li>Ms</li></ul> | The value must be within the list of values predefined in the `spyCustomerTableMap.php` file. | Used salutation. |
+| first_name | &check; | String |   | Customer’s first name. |
+| last_name | &check; | String |   | Customer’s last name. |
+| company |  | String |   | Customer’s Company |
+| gender | &check; | String |  Values must be:<ul><li>Male, or </li><li>Female</li></ul> | Customer’s gender.<br>The value must be within the list of values predefined in the `spyCustomerTableMap.php`file. | Gender definition.|
+| date_of_birth |  | Date |   | Customer’s date of birth. |
+| password |  | String |  | Customer’s password. |
+| registered |  | Date |  | Customer’s date of registration. |
 
-## Dependencies
+
+## Import file dependencies
+
 This file has no dependencies.
 
-## Template File & Content Example
-A template and an example of the *customer.csv* file can be downloaded here:
+## Import template file and content example
 
-| File | Description |
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [customer.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+customer.csv) | Customer .csv template file (empty content, contains headers only). |
-| [customer.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/customer.csv) | Customer .csv file containing a Demo Shop data sample. |
+| [customer.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+customer.csv) | Exemplary import file with headers only. |
+| [customer.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/customer.csv) | Exemplary import file with Demo Shop data. |

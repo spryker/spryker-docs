@@ -11,9 +11,9 @@ The _Multiple Carts_ feature allows you to create and manage one or multiple sho
 To learn more about the feature and to find out how end users use it, see [Multiple Carts feature overview](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  |
+|INSTALLATION GUIDES  |
 |---------|
 | [Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html)  |
 | [Multiple carts + Quick Order feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-quick-order-feature-integration.html)  |

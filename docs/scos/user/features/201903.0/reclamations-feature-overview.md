@@ -10,6 +10,7 @@ redirect_from:
   - /v2/docs/en/reclamations-feature-overview
   - /v2/docs/reclamations
   - /v2/docs/en/reclamations
+  - /docs/scos/user/features/201903.0/reclamations-feature-overview.html"
 ---
 
 Handling order claims are the reality of doing business for most e-commerce sites. A customer might have bought an item and then discovered, that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed etc.
@@ -33,7 +34,7 @@ A Back Office user can create a Reclamation in the Back Office as an action item
 
 In the Back Office in the order list, a Back Office user doesn't have the functionality to filter the orders by a business unit. All the orders within the shop system (for example, from multiple company accounts) are displayed here.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

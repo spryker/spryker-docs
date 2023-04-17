@@ -84,7 +84,7 @@ The following table illustrates the logic according to which the product offer 
 | Store where the product offer is added    | x    | &check;    | &check;    |
 | Is product offer visible?                 | no   | yes  | no   |
 
-Merchants can define product offer stores in the Merchant Portal when they create product offers,<!---LINK TO MERCHANT PORTAL FOR OFFERS--> or [import the product offer store](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store.csv.html).
+Merchants can define product offer stores in the Merchant Portal when they create [product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html), or [import the product offer store](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer-store.csv.html).
 
 ## Product offers on the Storefront
 
@@ -131,7 +131,7 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 * All cart-related B2B features (for example, Quick Order, RFQ, Approval Process) will be supported later.
 * Availability Notification is not supported.
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|

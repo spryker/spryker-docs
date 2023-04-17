@@ -7,6 +7,7 @@ originalArticleId: 7c265e1b-a970-47fd-8383-e83e1222fb1b
 redirect_from:
   - /v3/docs/getting-suggestions-for-autocompletion-and-search
   - /v3/docs/en/getting-suggestions-for-autocompletion-and-search
+  - /docs/scos/dev/glue-api-guides/201907.0/getting-suggestions-for-auto-completion-and-search.html
 ---
 
 In addition to the catalog search, Elasticsearch also offers auto-completion terms and suggestions for products, categories and CMS pages that can be retrieved via the search suggestions endpoint. Auto-completion helps to predict the rest of the search string and provides you with all the options.

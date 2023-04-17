@@ -57,6 +57,7 @@ src/Pyz/Zed/ConfigurableBundle/Persistence/Propel/Schema/spy_configurable_bundle
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -269,6 +270,7 @@ Run the following commands to apply database changes and generate entity and tra
 changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -285,7 +287,7 @@ t000002,product_image_set_3
 t000002,product_image_set_4
 ```
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `configurable_bundle_template_key` | mandatory | string | `t000001` | Internal data import identifier for the configurable bundle template. |
 | `product_image_set_key` | mandatory | string | `product_image_set_1` | Internal data import identifier for the product image set. |

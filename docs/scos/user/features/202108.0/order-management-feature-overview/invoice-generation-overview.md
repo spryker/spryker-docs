@@ -20,7 +20,7 @@ You can send a hidden copy of the invoice to yourself or your employees. Keep in
 
 {% endinfo_block %}
 
-It is possible to generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
+You can generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
 
 {% info_block infoBox "Info" %}
 
@@ -57,7 +57,7 @@ Keep in mind that bundled product itself always has a 0 tax rate. However, all o
 * Product options are not fully supported in the generated invoice for now. If product options have one tax rate and the product itself another, the tax rate difference is not reflected in the invoice. The invoice shows prices that already include tax rates of products and product options.
 * .pdf files of the invoices are not generated.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

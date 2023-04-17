@@ -38,12 +38,12 @@ For more details about product sets, check the video:
 
 ### Current constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future:
+The feature has the following functional constraints which are going to be resolved in the future:
 * Product sets are shared across all the stores of a project.
 * You cannot restrict availability of a product set to a store.
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

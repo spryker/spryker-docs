@@ -8,6 +8,7 @@ originalArticleId: 1917f113-c920-49ae-a110-8a9faca6bc74
 redirect_from:
   - /v3/docs/deploy-file-reference-version-1-201907
   - /v3/docs/en/deploy-file-reference-version-1-201907
+  - /docs/scos/dev/docker-sdk/201907.0/deploy-file-reference-1.0.html
 related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
@@ -373,7 +374,7 @@ Defines the mode for mounting source files into the application containers.
 
 `As mount:` is a platform-specific setting, it is possible to define multiple mount modes. The mount mode for a particular platform can be specified by using platforms: list. Possible platforms are windows, macos and linux. Check the example below.
 
-The first mount mode matching the host platform is chosen. 
+The first mount mode matching the host platform is chosen.
 ```yaml
 version: 1.0
 
@@ -488,4 +489,3 @@ The mail catcher **Service** to catch all outgoing emails for development or tes
 ### Change log
 
 * Initial reference document is introduced.
-

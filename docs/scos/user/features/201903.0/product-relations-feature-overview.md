@@ -16,6 +16,7 @@ redirect_from:
   - /v2/docs/en/product-relations-sales
   - /v2/docs/upsell
   - /v2/docs/en/upsell
+  - /docs/scos/user/features/201903.0/cross-sell-and-up-sell/cross-sell-and-up-sell.html
 ---
 
 Product relations help shop owners to promote the related goods as well as to point the customers' attention to the goods that they may also want to see.

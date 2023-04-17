@@ -64,17 +64,17 @@ GuiTable frontend component knows how to create the table itself, where to go fo
 
 {% info_block warningBox "Table design" %}
 
-To learn more about Table design, see [Table design](/docs/marketplace/dev/front-end/table-design/).
+To learn more about Table design, see [Table design](/docs/marketplace/dev/front-end/{{page.version}}/table-design/).
 
 {% endinfo_block %}
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
 | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)          |          | [File details: merchant_user.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-user.csv.html)           | [GUI modules concept](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html) |
 |        |          |          | [How to create a new GUI module](/docs/marketplace/dev/howtos/how-to-create-gui-module.html)  |
 |        |          |          | [How to create a new Gui table](/docs/marketplace/dev/howtos/how-to-create-gui-table.html)  |
 |        |          |          | [How to extend an existing Gui table](/docs/marketplace/dev/howtos/how-to-extend-gui-table.html)  |
 |        |          |          | [How to create a new Gui table filter type](/docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html)  |
-|        |          |          | [How to extend Merchant portal dashboard](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |
+|        |          |          | [How to extend Merchant Portal dashboard](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |

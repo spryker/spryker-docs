@@ -19,7 +19,7 @@ The current feature integration Guide only adds the Company Account REST API fun
 
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

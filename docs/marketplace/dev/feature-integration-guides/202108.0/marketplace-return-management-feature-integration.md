@@ -362,6 +362,7 @@ Add the following configuration:
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

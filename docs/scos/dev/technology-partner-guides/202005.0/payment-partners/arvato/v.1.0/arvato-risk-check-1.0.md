@@ -8,6 +8,7 @@ originalArticleId: f125d98e-d925-475a-b900-9a875ae35171
 redirect_from:
   - /v5/docs/arvato-risk-check-1-0
   - /v5/docs/en/arvato-risk-check-1-0
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
 related:
   - title: Installing and configuring Arvato 1.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html

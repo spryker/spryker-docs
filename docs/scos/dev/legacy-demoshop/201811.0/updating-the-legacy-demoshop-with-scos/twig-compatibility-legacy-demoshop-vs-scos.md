@@ -18,6 +18,7 @@ redirect_from:
   - /v2/docs/en/twig-compatibility-mode-demoshop-vs-suite
   - /v1/docs/twig-compatibility-mode-demoshop-vs-suite
   - /v1/docs/en/twig-compatibility-mode-demoshop-vs-suite
+  - /docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
 related:
   - title: Making the Legacy Demoshop Compatible with the Modular Frontend
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html

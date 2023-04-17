@@ -143,6 +143,7 @@ Make sure that you do not receive an `MissingYvesUrlConfigurationException` exce
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -235,7 +236,7 @@ console data:import glossary
 ```
 
 {% info_block infoBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 5) Import Data
@@ -370,7 +371,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 </details>
 
 
-| Column | REQUIRED? | Data Type | Data Example |
+| Column | REQUIRED | Data Type | Data Example |
 | --- | --- | --- | --- |
 | `business_unit_key` | mandatory | string | `Sales_Department` |
 | `username` | mandatory | string | `user_1` |
@@ -738,7 +739,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 </details>
 
 
-| Column | REQUIRED? | Data Type | Data Example |
+| Column | REQUIRED | Data Type | Data Example |
 | --- | --- | --- | --- |
 | `connection_name` | mandatory | string | `Client 1 - cXml - User 1` |
 | default_supplier_id | mandatory | string | `323332` |
@@ -1187,7 +1188,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 <br>
 </details>
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `connection_name` | mandatory | string | `Client 1 - cXml - User 1` | Name of the PunchoutCatalog connection. |
 | `business_unit_key` | mandatory | string | `Sales_Department` | Allows customers to configure in which BU the new company user should be created (dynamic login mode) |
@@ -1390,7 +1391,7 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
 Make sure that when you chose the supplier for transferred cart in ERP, and redirected to the shop - you are logged in.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

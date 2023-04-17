@@ -34,7 +34,7 @@ transfer:generate
 {% info_block warningBox "Verification" %}
 Make sure that the following changes in transfer objects:<table><col /><col  /><col  /><col /><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`ResourceShareData.idQuote`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/ResourceShareDataTransfer`</td></tr><tr><td>`ResourceShareData.ownerCompanyUserId`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/ResourceShareDataTransfer`</td></tr><tr><td>`ResourceShareData.ownerCompanyBusinessUnitId`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/ResourceShareDataTransfer`</td></tr></tbody></table>
 {% endinfo_block %}
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 
@@ -90,7 +90,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Behavior

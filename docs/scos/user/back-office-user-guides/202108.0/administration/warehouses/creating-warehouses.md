@@ -50,7 +50,7 @@ The following table describes the attributes you see and enter when creating, vi
 | Is this warehouse available? | *Yes*—the warehouse is active.<br>*No*—the warehouse is inactive. |
 | Store relation | Stores in which the warehouse is available. |
 
-## What's next?
+## Next steps
 
 The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 

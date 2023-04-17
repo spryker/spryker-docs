@@ -8,6 +8,7 @@ originalArticleId: e0ec7125-b6c9-40e4-ad8e-128f6e3d6cd9
 redirect_from:
   - /v1/docs/managing-customer-groups
   - /v1/docs/en/managing-customer-groups
+  - /docs/scos/user/back-office-user-guides/201811.0/customer/customers-customer-access-customer-groups/managing-customer-groups.html
 related:
   - title: Managing Customer Access
     link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html

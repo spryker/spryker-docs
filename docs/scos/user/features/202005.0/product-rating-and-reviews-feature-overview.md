@@ -12,6 +12,7 @@ redirect_from:
   - /v5/docs/en/rating-revew-management
   - /v5/docs/rating-reviews
   - /v5/docs/en/rating-reviews
+  - /docs/scos/user/features/{{202005.0}}/product-rating-and-reviews-feature-overview.html
 ---
 
 The Product Reviews feature allows customers to add reviews and ratings to abstract products. In a dedicated Back Office section, you can manage customers' ratings and reviews to moderate content and collect information before publishing them live. Rating information can be used for sorting and filtering products. Product ratings and reviews can be displayed for customers on demand.
@@ -36,7 +37,7 @@ For more details on managing ratings and reviews, check the video:
 
 {% wistia efvyq9vfb8 960 720 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

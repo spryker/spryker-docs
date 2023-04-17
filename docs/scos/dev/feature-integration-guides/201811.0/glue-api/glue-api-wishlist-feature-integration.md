@@ -10,7 +10,7 @@ redirect_from:
   - /v1/docs/en/wishlist-api-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -42,6 +42,7 @@ Make sure that the following modules are installed:
 Run the following commands to apply database changes, and also generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

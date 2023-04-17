@@ -8,6 +8,8 @@ originalArticleId: 8659a8a5-fc20-4d4f-838f-e9ea919e7387
 redirect_from:
   - /v4/docs/retrieving-company-information-201907
   - /v4/docs/en/retrieving-company-information-201907
+  - /docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-companies.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-companies.html
 related:
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
@@ -60,7 +62,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": [
@@ -113,7 +115,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {

@@ -98,6 +98,7 @@ Make sure that the following modules have been installed:
 3. Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -246,7 +247,7 @@ group_key_2,005,1
 ```
 
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | group_key | Yes | string | group_key_1 | Unique product group identifier. |
 | abstract_sku | Yes | string  | 001 | SKU of an abstract product. |
@@ -265,7 +266,7 @@ Make sure that the configured data has been added to the `spy_product_group` and
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install Product group feature front end.
 

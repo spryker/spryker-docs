@@ -14,7 +14,7 @@ redirect_from:
 
 This document describes how to integrate the Glue API: Spryker Core feature into a Spryker project.
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

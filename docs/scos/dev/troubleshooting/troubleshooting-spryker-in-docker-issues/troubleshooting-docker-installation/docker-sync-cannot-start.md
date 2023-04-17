@@ -12,11 +12,27 @@ redirect_from:
   - /docs/en/docker-sync-cannot-start
   - /v6/docs/docker-sync-cannot-start
   - /v6/docs/en/docker-sync-cannot-start
+related:
+  - title: An error during front end setups
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html
+  - title: Demo data was imported incorrectly
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html
+  - title: Docker daemon is not running
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
+  - title: Error 403 No valid crumb was included in the request
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/error-403-no-valid-crumb-was-included-in-the-request.html
+  - title: Node Sass does not yet support your current environment
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/node-saas-does-not-yet-support-your-current-environment.html
+  - title: Setup of new indexes throws an exception
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
+  - title: Vendor folder synchronization error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
 ---
 
-When runnning `docker-sync clean`, you might get two erros as described below.
+When running `docker-sync clean`, you might get two errors as described below.
 
 ## Error 1
+
 You get an error similar to this one:
 
 ```bash
@@ -24,18 +40,23 @@ docker: Error response from daemon: Conflict. The container name "/data-sync" is
 ```
 
 ## Solution
+
 1. Run `docker-sync clean`.
 2. Run `docker/sdk up` again.
 
-
 ## Error 2
+
 You get an error similar to this one:
+
 ```bash
 Unable to find image "eugenmayer/unison:hostsync_@.2' Locally
 docker: Error response from daemon: manifest for eugenmayer/unison:hostsync_@.2 not found: manifest unknown: manifest unknown.
 ```
+
 ## Solution
+
 Update docker-sync:
+
 ```bash
 gem install docker-sync
 ```

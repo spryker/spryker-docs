@@ -198,7 +198,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly).
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -249,7 +249,7 @@ Run the following console command to import it
 shelldata:console data:import glossary 
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Enable Controllers

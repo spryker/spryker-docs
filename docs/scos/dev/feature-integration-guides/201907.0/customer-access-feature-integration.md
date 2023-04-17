@@ -101,6 +101,7 @@ Adjust the schema definition so entity changes will trigger events.
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -338,7 +339,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 Make sure that everything works fine (checks should be done for not logged-in customers
 {% endinfo_block %}:<ul><li>`SeePricePermissionPlugin` will show or hide prices at all pages depending on configuration value</li><li>`SeeOrderPlaceSubmitPermissionPlugin` will allow or disallow order submitting after going through the checkout process depending on configuration value</li><li>`SeeAddToCartPermissionPlugin` is responsible for "Add to Cart" button on PDP. It will be available or not depending on configuration value</li><li>`SeeWishlistPermissionPlugin` takes care about "Add to Wishlist" button on PDP. It will be shown or not depending on configuration value</li><li>`SeeShoppingListPermissionPlugin` will allow or disallow adding product to shopping list from PDP depending on configuration value</li><li>`CustomerAccessPermissionStoragePlugin` is responsible for customer permissions retrieving</li></ul>)
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -367,5 +368,5 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data has been added to the `spy_glossary` table.
 {% endinfo_block %}

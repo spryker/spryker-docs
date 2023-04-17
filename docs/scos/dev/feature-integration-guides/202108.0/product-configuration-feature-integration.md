@@ -145,6 +145,7 @@ Set up database schema and transfer objects as follows:
 2. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -1095,7 +1096,7 @@ concrete_sku,configurator_key,is_complete,default_configuration,default_display_
 ```
 
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | concrete_sku | ✓ | string | 093_24495843 | Unique product identifier. |
 | configurator_key | ✓ | string | DATE_TIME_CONFIGURATOR | Unique identifier of a product configurator to be used for this product. |
@@ -1145,7 +1146,7 @@ Make sure that the configured data has been added to the `spy_product_cofigurat
 {% endinfo_block %}
 
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the feature front end.
 
@@ -1225,7 +1226,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -1528,7 +1529,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

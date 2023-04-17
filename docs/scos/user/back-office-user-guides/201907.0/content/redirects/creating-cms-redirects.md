@@ -28,7 +28,7 @@ To start working with the CMS redirects, navigate to the **Content Management > 
 
 On the **Add a CMS Redirect** page, you can return to the list of redirects by clicking **Back to CMS** in the top right corner of the page.
 ***
-#### What's next?
+#### Next steps
 The redirect URL has been created. However, you can either edit it or delete.
 
 * To learn how to edit and/or delete a redirect, see [Managing CMS Redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/creating-cms-redirects.html).

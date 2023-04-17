@@ -24,13 +24,17 @@ redirect_from:
 This section includes guidance for problems related to issues you might encounter with your Spryker-based project in the Docker environment.  
 
 ## Topics
+
 Troubleshooting [Docker installation](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html):
-* [Docker daemon is not running](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
-* [docker-sync cannot start](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html)
-* [Setup of new indexes throws an exception](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html)
-* [Vendor folder synchronization error](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html)
 * [An error during front end setup](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html)
 * [Demo data was imported incorrectly](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html)
+* [Docker daemon is not running](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [docker-sync cannot start](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html)
+* [Error 403 No valid crumb was included in the request](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/error-403-no-valid-crumb-was-included-in-the-request.html)
+* [Node Sass does not yet support your current environment](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/node-saas-does-not-yet-support-your-current-environment.html)
+* [Setup of new indexes throws an exception](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html)
+* [Vendor folder synchronization error](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html)
+
 
 Troubleshooting running applications in Docker:
 

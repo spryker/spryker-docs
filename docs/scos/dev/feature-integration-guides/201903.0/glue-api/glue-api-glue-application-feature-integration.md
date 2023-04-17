@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/glue-application-feature-integration-v2019030
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

@@ -8,6 +8,7 @@ originalArticleId: 5798f27e-2d26-48d3-af19-04465e75eb8e
 redirect_from:
   - /v5/docs/content-item-types-module-relations
   - /v5/docs/en/content-item-types-module-relations
+  - /docs/scos/user/features/202005.0/content-item-types-module-relations.html
 related:
   - title: Creating Content Items
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/creating-content-items.html

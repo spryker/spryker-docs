@@ -21,7 +21,26 @@ redirect_from:
   - /v1/docs/security-updates
   - /v1/docs/en/security-updates
   - /v6/docs/security-updates
-  - /v6/docs/en/security-updates 
+  - /v6/docs/en/security-updates
+related:
+  - title: Security release notes 202212.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
+  - title: Security release notes 202108.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202108.0/security-release-notes-202108.0.html
+  - title: "Security release notes: 202102.0 SEC"
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
+  - title: Security release notes - 202009.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
+  - title: Security Release Notes - Code Releases May, 2020
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/security-release-notes-code-releases-may-2020.html
+  - title: Security Release Notes 202001.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-release-notes-202001.0.html
+  - title: Security Release Notes 201907.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/security-release-notes-201907.0.html
+  - title: Security Release Notes 201903.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/security-release-notes-201903.0.html
+  - title: Security Release Notes 2018.11.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
 ---
 
 To receive a security updates email, please request the subscription at [support@spryker.com](mailto:support@spryker.com).

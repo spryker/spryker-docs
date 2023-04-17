@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Replacing a default data importer with the queue data importer
+title: "Tutorial: Replacing a default data importer with the queue data importer"
 description: This tutorial is a quick step-by-step guide on how to replace a default data importer with a queue data importer.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -21,15 +21,16 @@ This tutorial is a quick step-by-step guide on how to replace a default data imp
 Specifically, the `ProductAbstract` data importer is replaced here.
 
 ## Prerequisites
-You should have data in the `PRODUCT_ABSTRACT_QUEUE`. See [Importing data with the queue data importer](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html#exporting-data-from-csv-to-queue) for details on how to import data into the queue.
 
-## Step 1. Configuration
+You should have data in the `PRODUCT_ABSTRACT_QUEUE`. For details about how to import data into the queue, see [Importing data with the queue data importer](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html#importing-data-from-csv-to-queue)
+
+## 1. Configuration
+
 Configure `DataImportConfig` and add a constant to it. You can add a new constant and a public method to  `Pyz\Zed\DataImport\DataImportConfig`.
 
-The method should call `Spryker\Zed\DataImport::buildQueueDataImporterConfiguration()`, passing three arguments:
+The method must call `Spryker\Zed\DataImport::buildQueueDataImporterConfiguration()`, passing three arguments:
 
 * Import type
-
 * Queue consumer options
 
 **Pyz\Zed\DataImport\DataImportConfig.php**
@@ -66,7 +67,8 @@ class DataImportConfig extends SprykerDataImportConfig
 }
 ```
 
-## Step 2. Registering a console command
+## 2. Register a console command
+
 Register a new import console command in `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()`:
 
 **Pyz\Zed\Console\ConsoleDependencyProvider.php**
@@ -96,7 +98,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-## Step 3. Adjusting the business factory
+## 3. Adjust the business factory
+
 Go to `Pyz\Zed\DataImport\Business\DataImportBusinessFactory` and add a new method for creating the queue data importer that uses the queue reader and imports data to the database.
 Also, add a call to this method to `DataImportBusinessFactory::getDataImporterByType()`.
 
@@ -149,11 +152,12 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 ```
 </details>
 
-## Step 4. Adjusting writers
+## 4. Adjust writers
+
 Make changes to all bulk data set writers, which store data internally. Then, flush it to the database in bulk once a configured threshold is reached.
 First, use `Spryker\Zed\DataImport\Business\DataImporter\Queue\DataSetWriterPersistenceStateAwareTrait` inside these writers. Then, do the following:
-1. Switch the persistence state to `false` at the very beginning of the `::write()` method by calling `Spryker\Zed\DataImport\Business\DataImporter\Queue\DataSetWriterPersistenceStateAwareTrait::setDataSetWriterPersistenceState(false)`.
 
+1. Switch the persistence state to `false` at the very beginning of the `::write()` method by calling `Spryker\Zed\DataImport\Business\DataImporter\Queue\DataSetWriterPersistenceStateAwareTrait::setDataSetWriterPersistenceState(false)`.
 2. Once the buffered data has been saved to the database, switch the persistence state to `true`  by calling `Spryker\Zed\DataImport\Business\DataImporter\Queue\DataSetWriterPersistenceStateAwareTrait::setDataSetWriterPersistenceState(true)`.
 
 You need this for proper acknowledgment of the corresponding messages in the import queue.
@@ -199,11 +203,11 @@ class ProductAbstractBulkPdoDataSetWriter implements DataSetWriterInterface
     }
 }
 ```
-
 </details>
 
 
-## Step 5. Execution
+## 5. Execution
+
 To perform data importing from the queue into the persistent storage, run `vendor/bin/console data:import` with the `--group` option set to `QUEUE_READERS`.
 
-You can also run `data:import` for the specific queue importer like `endor/bin/console data:import:product-abstract-queue`.
+You can also run `data:import` for the specific queue importer like `vendor/bin/console data:import:product-abstract-queue`.

@@ -91,7 +91,7 @@ console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 ### 4) Set up Behavior
@@ -297,7 +297,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 To start feature integration, overview, and install the necessary features:
@@ -326,7 +326,7 @@ console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 ### 2) Setup Order Search Behavior

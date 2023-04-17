@@ -8,6 +8,7 @@ originalArticleId: 7147ffd2-fd6b-4510-a007-0129effaa291
 redirect_from:
   - /v3/docs/checking-out-purchases-and-getting-checkout-data-201907
   - /v3/docs/en/checking-out-purchases-and-getting-checkout-data-201907
+  - /docs/scos/dev/glue-api-guides/201907.0/checking-out-purchases-and-getting-checkout-data.html
 related:
   - title: Retrieving Customer's Order History
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-customers-order-history.html
@@ -82,7 +83,7 @@ To submit a request, the customer needs to have at least one cart with products 
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -140,7 +141,7 @@ To submit a request, the customer needs to have at least one cart with products 
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -156,7 +157,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -178,7 +179,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -206,7 +207,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 <details open>
 <summary markdown='span'>Response Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -442,7 +443,7 @@ In case of a successful update, the endpoint responds with information that can 
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -488,7 +489,7 @@ By default, if the checkout is successful, the order is placed and the shopping 
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -546,7 +547,7 @@ By default, if the checkout is successful, the order is placed and the shopping 
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -562,7 +563,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -610,7 +611,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -642,7 +643,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
 
 <details open>
 <summary markdown='span'>Response Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -659,7 +660,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
     },
 }
 ```
-    
+
 <br>
 </details>
 
@@ -673,7 +674,7 @@ Request sample: *POST http://glue.mysprykershop.com/checkout?include=orders*
 
 <details open>
 <summary markdown='span'>Response Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -891,7 +892,7 @@ Request sample: *POST http://glue.mysprykershop.com/checkout?include=orders*
     ]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -942,7 +943,7 @@ You can also use the **Accept-Language** header to specify the locale.<br>Sample
 
 <details open>
 <summary markdown='span'>Sample Request Body</summary>
-    
+
 ```json
 {
   "data": {
@@ -959,7 +960,7 @@ You can also use the **Accept-Language** header to specify the locale.<br>Sample
   }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -977,7 +978,7 @@ If the request was successful, the endpoint will respond with a 201 Created stat
 
 <details open>
 <summary markdown='span'>Response Sample</summary>
-    
+
 ```json
 {
   "data": {
@@ -1001,7 +1002,7 @@ If the request was successful, the endpoint will respond with a 201 Created stat
   }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -1011,4 +1012,3 @@ If the request was successful, the endpoint will respond with a 201 Created stat
 | --- | --- |
 | 404 | Order not found. |
 | 422 | Order payment is not updated. |
-

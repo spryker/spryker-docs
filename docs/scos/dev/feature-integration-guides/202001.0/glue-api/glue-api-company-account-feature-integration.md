@@ -26,7 +26,7 @@ The following feature integration guide expects the basic feature to be in place
 
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 
@@ -68,6 +68,7 @@ Make sure that the following modules are installed:
 Run the following commands to generate transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

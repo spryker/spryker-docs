@@ -50,7 +50,7 @@ On the *CMS Redirects* page, you can also:
 * Sort content items by *ID* and *From Url*.
 * Filter content items by *ID*, *From Url*, *To Url*, and *Status*.
 
-#### What's next?
+#### Next steps
 The redirect URL has been created. However, you can either edit it or delete.
 
 To learn how to edit and/or delete a redirect, see [Managing CMS redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/managing-cms-redirects.html).

@@ -51,6 +51,7 @@ Make sure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -109,7 +110,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that  the configured data has been added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 
@@ -151,7 +152,7 @@ quote-20,My Cart,DE--20,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",
 quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |key|mandatory|string|quote-19|Key that will identify the quote to be referred in future imports.|
 |name|mandatory|string|>My Cart|Name of the quote.|
@@ -592,7 +593,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

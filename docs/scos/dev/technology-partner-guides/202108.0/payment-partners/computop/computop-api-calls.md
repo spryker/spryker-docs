@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-api-details
   - /docs/computop-api-details
   - /docs/en/computop-api-details
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop/technical-details-and-howtos/computop-api.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html

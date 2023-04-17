@@ -12,10 +12,27 @@ redirect_from:
   - /docs/en/an-error-during-front-end-setup
   - /v6/docs/an-error-during-front-end-setup
   - /v6/docs/en/an-error-during-front-end-setup
+related:
+  - title: Demo data was imported incorrectly
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html
+  - title: Docker daemon is not running
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
+  - title: docker-sync cannot start
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html
+  - title: Error 403 No valid crumb was included in the request
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/error-403-no-valid-crumb-was-included-in-the-request.html
+  - title: Node Sass does not yet support your current environment
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/node-saas-does-not-yet-support-your-current-environment.html
+  - title: Setup of new indexes throws an exception
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
+  - title: Vendor folder synchronization error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
 ---
 
 ## Description
+
 The `frontend:project:install-dependencies` command returns an error similar to the following:
+
 ```
 -->  DEVELOPMENT MODE
 Store: US | Environment: docker
@@ -36,14 +53,18 @@ gyp ERR!
 [info]  find Python checking if "python" can be used
 gyp ERR!
 ```
+
 ## Solution
+
 1. In `deploy.*.yaml`, change the base PHP image:
+   
 ```yaml
 image:
     tag: spryker/php:7.3-alpine3.10
 ```
 
 2. Fetch the changes and start the instance:
+
 ```bash
 docker/sdk boot && docker/sdk up
 ```

@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/shop-guide-shopping-carts-reference-information
   - /v3/docs/en/shop-guide-shopping-carts-reference-information
   - /docs/scos/user/shop-user-guides/page.version/shopping-carts/shopping-carts-reference-information.html
+  - /docs/scos/user/shop-user-guides/201907.0/shopping-carts/shopping-carts-reference-information.html
 ---
 
 ## Shopping Carts

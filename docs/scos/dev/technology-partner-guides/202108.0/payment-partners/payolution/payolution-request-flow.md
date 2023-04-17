@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/payolution-workflow
   - /docs/payolution-workflow
   - /docs/en/payolution-workflow
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
 related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html

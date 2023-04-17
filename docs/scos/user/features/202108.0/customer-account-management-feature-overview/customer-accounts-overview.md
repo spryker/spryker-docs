@@ -57,13 +57,15 @@ A Back Office user can do the following:
 
 * Add notes attached for customers.
 * Set a preferred locale per customer.
-* Deleting a customer data via an anonymization mechanism.
+* Deleting a customer data using an anonymization mechanism.
 * Configure a non-linear customer reference for external communication.
 * Set address books with default addresses for billing and shipping.
-* Send a password token via email.
+* Send a password token by email.
 * Check last orders of a customer in the shop.
 
-For details, see [Managing customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html).
+For details, see the following:
+* [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)
+* [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:
@@ -96,12 +98,16 @@ Customer can perform the following actions the Storefront:
 
 </details>
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer accounts](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html)  |
-| [Manage customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)  |
+| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)  |
+| [Edit customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customers.html)  |
+| [View customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/view-customers.html)  |
+| [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)  |
+| [Add customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html)  |
+| [Edit customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customer-addresses.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

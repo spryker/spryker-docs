@@ -18,10 +18,16 @@ redirect_from:
   - v4/docs/en/additional-devops-guidelines
   - /v3/docs/additional-devops-information-201907
   - /v3/docs/en/additional-devops-information-201907
+related:
+  - title: Configuring Spryker after installing with Docker
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html
+  - title: Setting up a self-signed SSL certificate
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
 ---
 
 
 Follow the steps to adjust the Jenkins scheduler to docker like environments:
+
 1. Update the scheduler configuration settings in `src/Pyz/Zed/Scheduler/SchedulerDependencyProvider.php`:
 
 ```php
@@ -52,7 +58,6 @@ $config[SchedulerJenkinsConstants::JENKINS_TEMPLATE_PATH] = getenv('SPRYKER_JENK
         bash -c \
         "{% raw %}{{{% endraw %} job.command {% raw %}}}{% endraw %}"
 ]]>{% raw %}{%{% endraw %} endblock command {% raw %}%}{% endraw %}
-
 ```
 
 {% info_block infoBox %}
@@ -62,6 +67,7 @@ You can define additional store-specific variables if needed.
 {% endinfo_block %}
 
 3. Set up deployment, so that the following environment variables are set in the container where  `console scheduler:setup ` is run:
-*  `SPRYKER_SCHEDULER_HOST `
-*   `SPRYKER_SCHEDULER_PORT `
-*    `SPRYKER_JENKINS_TEMPLATE_PATH `
+
+* `SPRYKER_SCHEDULER_HOST `
+* `SPRYKER_SCHEDULER_PORT `
+* `SPRYKER_JENKINS_TEMPLATE_PATH `

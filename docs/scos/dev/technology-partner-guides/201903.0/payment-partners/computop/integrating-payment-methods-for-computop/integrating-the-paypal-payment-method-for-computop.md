@@ -8,6 +8,7 @@ originalArticleId: 3b27fe95-97c8-4bc4-bada-f1c71dfc3691
 redirect_from:
   - /v2/docs/computop-paypal
   - /v2/docs/en/computop-paypal
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -32,7 +33,7 @@ related:
 ---
 
 Example State Machine
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-paypal-flow-example.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-paypal-flow-example.png)
 
 ## Front-End Integration
 To adjust frontend appearance, provide following templates in your theme directory:

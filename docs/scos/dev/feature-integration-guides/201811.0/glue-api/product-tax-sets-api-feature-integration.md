@@ -10,7 +10,7 @@ redirect_from:
   - /v1/docs/en/product-tax-sets-api-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 
@@ -48,6 +48,7 @@ Make sure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate 
 ```

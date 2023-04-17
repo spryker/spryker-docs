@@ -30,6 +30,7 @@ A dynamic parameter is a YAML parameter that defines the value of a placeholder 
 For example, `deploy.dev.yaml` includes `deploy.base.template.yml`:
 
 **deploy.dev.yml**
+
 ```yaml
 version: 1.0
 
@@ -42,6 +43,7 @@ imports:
 The included deploy file includes more deploy files:
 
 **deploy.base.template.yml**
+
 ```yaml
 ...
 
@@ -58,6 +60,7 @@ imports:
 When `deploy.base.template.yml` is included into the build of `deploy.dev.yml`, `%env_name%` is replaced with `dev`:
 
 **deploy.base.template.yml**
+
 ```yaml
 ...
 
@@ -77,6 +80,7 @@ imports:
 You can include a deploy file into an application's configuration using one of the following import types.
 
 * File path:
+
 ```yaml
 imports:
     deploy.base.template.yml:
@@ -84,6 +88,7 @@ imports:
 ```      
 
 * Named array:
+
 ```yaml
 imports:
     base-deploy-file:
@@ -93,6 +98,7 @@ imports:
 ```
 
 * Unnamed array:
+
 ```yaml
 imports:
     - template: deploy.base.template.yml
@@ -124,8 +130,6 @@ Example of including the same deploy file with different parameters via an unnam
   parameters:
       env-name: 'dev'
 ```
-
-
 
 ## Deploy file inheritance
 
@@ -159,6 +163,7 @@ image:
         ini:
             memory_limit: 2048M
 ```
+
 And, in `./spryker/generator/deploy-file-generator/templates/services.deploy.template.yml`, the memory limit is defined as follows:
 
 ```yaml

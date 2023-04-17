@@ -30,6 +30,7 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 ### 2) Set up Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -58,7 +59,7 @@ multi_cart.cart.set_default.success,"Warenkorb '%quote%' wurde erfolgreich auf a
   console data:import glossary
   ```
   {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
   
   ### 4) Import Data
@@ -403,7 +404,7 @@ Here you can find a list of related feature integration guides.
 | Multiple Carts Quick Add to Cart | 2018.11 | [Multiple Carts + Quick Add to Cart feature integration](multiple-carts-quick-order-feature-integration-2018) |
 | Multiple Carts Reorder | 2018.11 | [Multiple Carts + Reorder feature integration](multiple-carts-reorder-feature-integration-2018) | -->
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 
@@ -538,7 +539,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 ### 3) Enable Controllers
 #### Controller Provider List

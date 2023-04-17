@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/creating-shopping-cart
   - /v3/docs/en/creating-shopping-cart
   - /docs/scos/user/shop-user-guides/page.version/shopping-carts/creating-a-shopping-cart.html
+  - /docs/scos/user/shop-user-guides/201907.0/shopping-carts/creating-a-shopping-cart.html
 ---
 
 This topic describes how to create a new shopping cart in your customer account.
@@ -21,16 +22,16 @@ To create a shopping cart:
 {% info_block infoBox %}
 See [Shopping Carts: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shopping-carts/shopping-carts-reference-information.html
 {% endinfo_block %} for information on the Shopping Carts page contents.)
-![Create shopping cart button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-shopping-cart-button.png) 
+![Create shopping cart button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-shopping-cart-button.png)
 
-2. Enter the cart name in the **Cart Name** field. 
-![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-cart.png) 
+2. Enter the cart name in the **Cart Name** field.
+![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-cart.png)
 4. Click **Submit**.
 
 You can also create a shopping cart via a **Shopping Cart Widget**.
 
 1. Follow the steps described below to do so: Navigate to the header of the shop application → My Cart.
-2. Click **Create New Cart**. 
+2. Click **Create New Cart**.
 ![Create a new cart from the widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-cart-from-widget.png)
 3. Enter the name of the cart in the **Cart Name** field.
 4. Click **Submit**.

@@ -8,6 +8,7 @@ originalArticleId: 1c8ff805-d2bf-45ff-bb24-79ffba43bb68
 redirect_from:
   - /v3/docs/cms-pages-in-search-results-integration
   - /v3/docs/en/cms-pages-in-search-results-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/cms-catalog-feature-integration.htm
 ---
 
 ## Install Feature Core
@@ -198,7 +199,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly).
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -214,7 +215,7 @@ To start feature integration, overview and install the necessary features:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/catalog:"^201903.0" spryker-feature/cms:"^201903.0" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies 
+composer require spryker-feature/catalog:"^201903.0" spryker-feature/cms:"^201903.0" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -243,13 +244,13 @@ cms.page.itemsFound,Items found,en_US
 <br>
 </details>
 
-Run the following console command to import it 
+Run the following console command to import it
 
 ```bash
-shelldata:console data:import glossary 
+shelldata:console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Enable Controllers
@@ -285,7 +286,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 		];
 	}
 }
-			
+
 ```
 <br>
 </details>

@@ -12,6 +12,7 @@ redirect_from:
   - /v5/docs/en/multi-store-cms-block
   - /v5/docs/multi-store-cms-block
   - /v5/docs/en/multi-store-cms-block
+  - /docs/scos/user/features/202005.0/cms-feature-overview/cms-block.html
 ---
 
 Embed custom blocks of content into your shop. Blocks come with full management and control capabilities. You can easily add promotional banners and define validity date ranges to emphasize specific, time limited content. You can create connections to other objects (e.g. Customer Groups (show a block only for a specific group), Countries (show a block for products from a specific country), etc.
@@ -38,12 +39,12 @@ Blocks help to place content in certain places in your template, so you can easi
                 <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-product-cms-block.html" class="mr-link">Install and configure a Product Block</a></li>
 <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-category-cms-blocks.html" class="mr-link">Install and configure a Category Block</a></li>
 <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-cms-block-feature-integration.html" class="mr-link">Enable multi-store management for CMS blocks</a></li>
-<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html" class="mr-link">Migrate CMS Collector module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html" class="mr-link">Migrate CMS Block module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html" class="mr-link">Migrate CMS Block Category Connector module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblockcategoryconnector-migration-console.html" class="mr-link">Migrate CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html" class="mr-link">Migrate CMS Block Collector  module from version 1.* to version 2.*</a></li>
-<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html" class="mr-link">Migrate CMS Block GUI  module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html" class="mr-link">Migrate CMS Collector module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html" class="mr-link">Migrate CMS Block module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html" class="mr-link">Migrate CMS Block Category Connector module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-modulecategoryconnector-migration-console.html" class="mr-link">Migrate CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html" class="mr-link">Migrate CMS Block Collector  module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html" class="mr-link">Migrate CMS Block GUI  module from version 1.* to version 2.*</a></li>
     </ul>
         </div>
         <!-- col2 -->

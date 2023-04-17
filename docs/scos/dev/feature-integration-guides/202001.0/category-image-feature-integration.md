@@ -99,6 +99,7 @@ Set up synchronization queue pools so non-multistore entities (not store specifi
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -401,7 +402,7 @@ Make sure that category image handling is integrated successfully by going to Ze
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.

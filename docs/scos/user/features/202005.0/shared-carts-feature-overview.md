@@ -10,6 +10,7 @@ redirect_from:
   - /v5/docs/en/shared-cart-overview
   - /v5/docs/shared-cart
   - /v5/docs/en/shared-cart
+  - /docs/scos/user/features/202005.0/shared-cart-feature-overview.html
 ---
 
 Shopping Cart is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart enables consumers to select products, review what they selected, make modifications or add extra items if needed, and purchase the products.
@@ -23,12 +24,12 @@ New items are added to the shopping cart by clicking on **Add to Cart** on the p
 
 To share a shopping cart, a user needs to click **Share cart** in the **Actions** column (on the _Shopping Cart_ page, in _My Account_ menu) for a cart they would like to share .
 
-![Shared cart button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-cart-button.png) 
+![Shared cart button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-cart-button.png)
 
 ## Permissions Management for Shared Shopping Carts
 A shopping cart can be shared with the users of the current business unit. The Share cart `<SHOPPING CART NAME>` page consists of the users within the business unit to share the shopping cart with.
 
-![Shared cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-cart-page.png) 
+![Shared cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-cart-page.png)
 
 There are 3 types of access rights that can be granted on shopping carts:
 
@@ -104,7 +105,7 @@ _**Full access**_ permission allows:
 
 9. **Proceeding to the checkout**.
 
-![Full access cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/full-access-cart.png) 
+![Full access cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/full-access-cart.png)
 
 10. **Editing shopping cart name**: The shopping cart name can be updated on Shopping cart page.
 
@@ -112,7 +113,7 @@ _**Full access**_ permission allows:
 
 13. **Deleting shopping cart**: The shopping cart can be deleted on Shopping cart page. Deleting a shared shopping cart also deletes it for users it has been shared with.
 
-![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/shopping-cart-actions.png) 
+![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/shopping-cart-actions.png)
 
 By default, the user who has created the cart has Owner access permission. Owner access permission allows everything that allows Full access permission and an ability to share the cart with other users.
 

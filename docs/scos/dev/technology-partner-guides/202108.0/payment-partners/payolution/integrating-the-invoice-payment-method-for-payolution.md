@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/payolution-invoice
   - /docs/payolution-invoice
   - /docs/en/payolution-invoice
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
 related:
   - title: Installing and configuring Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
@@ -97,4 +98,4 @@ The configuration to integrate invoice payments using Payolution is:
 
 ### Performing Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution—Performing Requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.

@@ -23,6 +23,16 @@ redirect_from:
   - /v1/docs/post-installation-steps-and-additional-info
   - /v1/docs/en/post-installation-steps-and-additional-info
   - /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
+related:
+  - title: Adjusting Jenkins for a Docker environment
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
+  - title: Setting up a self-signed SSL certificate
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
 ---
 
 This document describes how to configure Spryker after installing it with Docker.
@@ -84,16 +94,19 @@ groups:
                                 namespace: 1
 ...
 ```
+
 2. Bootstrap the local docker setup:
 
 ```shell
 docker/sdk boot
 ```
+
 3. Once the job finishes, build and start the instance:
 
 ```shell
 docker/sdk up
 ```
+
 4. Update the hosts file:
 
 ```shell

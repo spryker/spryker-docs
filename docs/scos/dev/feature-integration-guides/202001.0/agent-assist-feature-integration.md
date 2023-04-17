@@ -46,6 +46,7 @@ Make sure that the following modules were installed:
 Run the following commands to apply database changes and to generate entity and transfer changes.
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate 
 ```
@@ -131,7 +132,7 @@ Make sure that the following plugins were registered:
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -198,7 +199,7 @@ console data:import:glossary
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

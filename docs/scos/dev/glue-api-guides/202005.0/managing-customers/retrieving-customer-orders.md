@@ -8,6 +8,7 @@ originalArticleId: 3989ca5d-b1c1-4929-bfff-cf7a3540b1dc
 redirect_from:
   - /v5/docs/retrieving-customers-order-history
   - /v5/docs/en/retrieving-customers-order-history
+  - /docs/scos/dev/glue-api-guides/202005.0/retrieving-orders.html
 related:
   - title: Order Management
     link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
@@ -42,7 +43,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 ---
 
 ### Request
-Request sample: 
+Request sample:
 `GET https://glue.mysprykershop.com/orders`
 
 ### Response
@@ -50,7 +51,7 @@ The endpoint responds with an array of orders placed by the authenticated custom
 
 <details open>
 <summary markdown='span'>Response sample with one order</summary>
-   
+
 ```
 {
     "data": [
@@ -96,7 +97,7 @@ The endpoint responds with an array of orders placed by the authenticated custom
 | priceMode | String | Price mode that was active when placing the order. Possible values: <ul><li>**NET_MODE** - prices before tax;</li><li>**GROSS_MODE** - prices after tax.</li></ul> |
 
 *Type and ID attributes are not mentioned.
- 
+
 
 ## Paging Through Orders
 By default, the above request will return all orders placed by a customer. However, you can also enable paging and receive results in pages of a limited size. For this purpose, use the **limit** and **offset** parameters in your request:
@@ -111,7 +112,7 @@ When paging is enabled, the **links** section of the JSON response will contain 
 
 <details open>
 <summary markdown='span'>View example</summary>
-   
+
 ```
 {
     "data": [
@@ -389,7 +390,7 @@ Request sample: `GET https://glue.mysprykershop.com/orders/DE--1`
         }
     }
 }
-``` 
+```
 </details>
 
 **General Order Information**
@@ -534,7 +535,7 @@ Request sample: `GET https://glue.mysprykershop.com/orders/DE--1`
 | salesUnit | Object | List of attributes defining the sales unit to be used for item amount calculation. |
 | conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
 | precision | integer | Ratio between a sales unit and a base unit. |
-| measurementUnit | string | Code of the measurement unit. | 
+| measurementUnit | string | Code of the measurement unit. |
 | name | String | Name of the measurement unit. |
 | code | String | Code of the measurement unit. |
 

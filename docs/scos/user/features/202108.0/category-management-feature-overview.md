@@ -20,7 +20,7 @@ The product catalog is structured in a category tree, which consists of root, pa
 
 A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
 
-A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones via the Back Office or by importing the categories. For information about how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html). For information about how to import the child categories, see [File details: category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html).
+A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones by the Back Office or importing the categories. For information about how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html). For information about how to import the child categories, see [File details: category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html).
 
 On the Storefront, in comparison to parent category names, child category names are indented so that they can be identified.
 
@@ -58,9 +58,9 @@ Check out this video on managing categories:
 
 ## Current constraints
 
-Currently, the Category Management feature has the following functional constraints, which are going to be resolved in the future:
+The Category Management feature has the following functional constraints, which are going to be resolved in the future:
 
-* A category page is accessible via the same URL across all the stores. If the category is not available in the given store, the URL will lead to a 404.
+* A category page is accessible by the same URL across all the stores. If the category is not available in the given store, the URL will lead to a 404.
 * Root categories cannot be created in the Back Office. They are imported through CSV files.
 
 * A store can only be linked to one root category tree, but in the future, a store will be able to have multiple root category trees.
@@ -68,7 +68,7 @@ Currently, the Category Management feature has the following functional constrai
 * Category URLs are available in all the stores that share the same locales.
 * Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), you can still filter the products using the price range filter.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

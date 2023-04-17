@@ -8,9 +8,10 @@ originalArticleId: fbcdf200-a497-45d5-a040-a2745da5782f
 redirect_from:
   - /v2/docs/wishlist-api-feature-integration-201903
   - /v2/docs/en/wishlist-api-feature-integration-201903
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-wishlists/h/docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-wishlist-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -28,17 +29,18 @@ composer require spryker/wishlists-rest-api:"^1.3.0" spryker/wishlist-items-prod
 ```
 <section contenteditable="false" class="warningBox"><div class="content">
 Make sure that the following modules are installed:
-    
+
 |Module|Expected directory|
 |---|---|
 |`WishlistsRestApi`|`vendor/spryker/wishlists-rest-apiWishlistItems`|
 |`ProductsResourceRelationship`|`vendor/spryker/wishlist-items-products-resource-relationship`|
 </div></section>
-    
+
 ### 2) Set Up Database Schema and Transfer Objects
 Run the following commands to apply database changes, and also generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -71,16 +73,16 @@ Activate the console command provided by the module:
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
-    
+
 ```php    
 <?php
- 
+
 namespace Pyz\Zed\Console;
- 
+
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\WishlistsRestApi\Communication\Console\WishlistsUuidWriterConsole;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -135,9 +137,9 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CustomersRestApi\CustomersRestApiConfig;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
@@ -146,7 +148,7 @@ use Spryker\Glue\WishlistsRestApi\Plugin\WishlistItemsResourceRoutePlugin;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistRelationshipByResourceIdPlugin;
 use Spryker\Glue\WishlistsRestApi\Plugin\WishlistsResourceRoutePlugin;
 use Spryker\Glue\WishlistsRestApi\WishlistsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -159,7 +161,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new WishlistItemsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -176,7 +178,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CustomersRestApiConfig::RESOURCE_CUSTOMERS,
             new WishlistRelationshipByResourceIdPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }

@@ -322,7 +322,7 @@ protected function findOrCreateImageSet(DataSetInterface $dataSet)
 		->filterByFkLocale($idLocale);
 
 	if (!empty($dataSet[static::KEY_ABSTRACT_SKU])) {
-		$idProductAbstract = $this->productRepository->;getIdProductAbstractByAbstractSku($dataSet[static::KEY_ABSTRACT_SKU]);
+		$idProductAbstract = $this->productRepository->getIdProductAbstractByAbstractSku($dataSet[static::KEY_ABSTRACT_SKU]);
 		$query->filterByFkProductAbstract($idProductAbstract);
 	}
 

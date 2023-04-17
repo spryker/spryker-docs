@@ -26,7 +26,7 @@ This feature is supported by 3 modules:
 
 ## Current constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future:
+The feature has the following functional constraints which are going to be resolved in the future:
 * Product reviews are linked to locales, but not stores.
 * A review is available in all the stores that share the locale of the store in which it has been originally created.
 
@@ -36,7 +36,7 @@ For more details about managing ratings and reviews, check the video:
 
 {% wistia efvyq9vfb8 720 480 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

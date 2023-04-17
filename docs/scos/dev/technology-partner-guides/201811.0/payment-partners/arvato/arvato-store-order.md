@@ -8,6 +8,7 @@ originalArticleId: 7e78a9c5-3440-432b-a658-4dd368929879
 redirect_from:
   - /v1/docs/arvato-store-order-2-0
   - /v1/docs/en/arvato-store-order-2-0
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.2.0/arvato-store-order-2.0.html
 related:
   - title: Arvato - Risk Check 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html

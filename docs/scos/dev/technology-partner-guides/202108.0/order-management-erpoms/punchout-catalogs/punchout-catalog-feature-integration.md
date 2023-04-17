@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/punchout-catalog-feature-integration
   - /docs/punchout-catalog-feature-integration
   - /docs/en/punchout-catalog-feature-integration
-  - /docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
 ---
 
 ## Install Feature Core
@@ -158,6 +157,7 @@ Make sure that you do not receive an `MissingYvesUrlConfigurationException` exce
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -301,7 +301,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -1467,7 +1467,7 @@ Make sure that when you chose the supplier for transferred cart in ERP, and redi
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

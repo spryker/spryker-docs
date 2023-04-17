@@ -1,5 +1,5 @@
 ---
-title: HowTo - Install Spryker in AWS Environment
+title: "HowTo: Install Spryker in AWS environment"
 description: Learn how to configure native AWS services to prepare infrastructure for successful Spryker installation in AWS environment and about the installation itself.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,27 +24,23 @@ redirect_from:
   - /v1/docs/en/ht-install-spryker-in-aws-environment
 ---
 
-## Introduction
-This how-to is aimed to provide you with additional information about native configuration of AWS services and Spryker installation using AWS cloud as a base of infrastructure.
+This document provides additional information about the native configuration of AWS services and Spryker installation using the AWS cloud as a base of infrastructure.
 
-Following the instructions, you will get Spryker running on AWS. The first part is devoted to step-by-step configuration of AWS native services like RDS, Elasticsearch Service, ElastiCache to prepare a suitable infrastructure for running Spryker. The second part is the installation of Spryker itself.
+Following the instructions, you can get Spryker running on AWS. The first part is devoted to the step-by-step configuration of the AWS native services like RDS, Elasticsearch Service, and ElastiCache to prepare a suitable infrastructure for running Spryker. The second part is the installation of Spryker itself.
 
-## AWS Native Services Configuration
-The first thing you need to do to install Spryker or AWS is to configure the following AWS native services:
+## Install AWS native services
 
+To install Spryker in AWS, configure the following AWS native services:
 * Security Group
-* RDS (Managed relational database service)
+* Managed relational database service (RDS)
 * Elasticsearch Service
 * ElastiCache
 
-Follow the guidelines below to create and configure the services.
+To create and configure the services, follow instructions in the following sections.
 
+### Create s security group
 
-### Security Group
-
-To create a security group, do the following:
-
-1. Open EC2 console.
+1. Open the EC2 console.
 
 ![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png)
 
@@ -56,19 +52,17 @@ To create a security group, do the following:
 
 ![Choose security group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-security-group.png)
 
-See [Creating a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) and [Adding Rules to a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) for more information on how to create and configure the security group.
+For more information about creating and configuring the security group, see [Creating a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) and [Adding Rules to a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group).
 
 {% info_block warningBox %}
 
-You need to choose the security group for all services/instances that you will create following this instruction.
+You need to choose the security group for all services and instances that you create following this instruction.
 
 {% endinfo_block %}
 
-### RDS (Managed relational database service)
+### Create and configure RDS
 
-To create and configure RDS, do the following:
-
-1. Open RDS console.
+1. Open the RDS console.
 ![RDS console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/rds-console.png)
 
 2. Click **Create database**.
@@ -79,7 +73,8 @@ To create and configure RDS, do the following:
 
 ![Choose PostgreSQL](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-postgresql.png)
 
-4. Choose a use case
+4. Choose a use case.
+
 {% info_block infoBox %}
 
 For production purposes, we recommend choosing Multi-AZ Deployment.
@@ -98,16 +93,15 @@ For production purposes, we recommend choosing Multi-AZ Deployment.
 
 ![Database options](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/db-options.png)
 
-6. Get **DB Name**, **Endpoint** and **port**.
+6. Get **DB Name**, **Endpoint**, and **port**.
 
 ![Get database name endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-db-name-endpoint.png)
 
-See [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html) for more details on how to create the database.
+For more information about creating the database, see [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html).
 
-### Elasticsearch Service
-To create and configure Elasticsearch service console, do the following:
+### Create the Elasticsearch service console
 
-1. Open Elasticsearch service console.
+1. Open the Elasticsearch service console.
 
 ![Elasticsearch console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastic-search-console.png)
 
@@ -117,7 +111,7 @@ To create and configure Elasticsearch service console, do the following:
 
 3. Fill out all the outlined fields.
 
-4. Choose a deployment type
+4. Choose a deployment type.
 
 {% info_block infoBox %}
 
@@ -138,13 +132,11 @@ For production purposes, we recommend choosing the Production deployment type.
 
 ![Get VPS endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-vpc-endpoint.png)
 
-See [Elasticseacrh service creation manual](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains) for more details on how to create an Elasticsearch service domain.
+For more information about how to create an Elasticsearch service domain, see [Elasticseacrh service creation manual](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains)
 
-### ElastiCache
+### Configure ElastiCache
 
-To configure ElastiCache, do the following:
-
-1. Open ElastiCache console.
+1. Open the ElastiCache console.
 
 ![ElastiCache console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elasticache-console.png)
 
@@ -156,35 +148,33 @@ To configure ElastiCache, do the following:
 
 ![Elastisearch config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastisearch-config.png)
 
-
 4. Get **Primary Endpoint**.
 
 ![Primary endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-primary-endpoint.png)
 
-See [ElastiCache creation manual](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/GettingStarted.CreateCluster.html) for more details.
+For more details, see [ElastiCache creation manual](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/GettingStarted.CreateCluster.html).
 
-## EC2 Instance Installation and Configuration
-To install and configure EC2 instance, you need to:
+## Install and configure the EC2 instance
 
+To Installing and configuring the EC2 instance, you need to
 * Create SSH key
 * Launch instance
 * Configure Elastic IP
 * Connect to the Instance
 
-Follow the guidelines below to perform these actions.
+Each step is complex. Therefore, they are descriged separately in the following sections.
 
-### Creating the SSH Key
-Use the [manual](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) to create the SSH key.
+### Create an SSH key
 
+To create an SSH key, use the [manual](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair)
 
-### Launching Instance
-To launch the instance, do the following:
+### Launch the instance
 
 1. Open EC2 console.
 
 ![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png)
 
-2. Click **Launch instance**.
+2. Click **Launch Instance**.
 
 ![Launch instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/launch-instance.png)
 
@@ -201,7 +191,7 @@ To launch the instance, do the following:
 
 ![Add storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/add-storage.png)
 
-7. Add a Name tag and click **Next: Configure Security Group**.
+7. Add a **Name** tag and click **Next: Configure Security Group**.
 
 ![Add tags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/add-tags.png)
 
@@ -210,8 +200,7 @@ To launch the instance, do the following:
 
 ![Select SHH keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/select-ssh-key.png)
 
-### Elastic IP
-To configure Elastic IP, do the following:
+### Configure Elastic IP
 
 1. Open EC2 console.
 
@@ -225,22 +214,20 @@ To configure Elastic IP, do the following:
 
 ![Allocate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/allocate.png)
 
-4. Click **Actions** > **Associate address**.
+4. Click **Actions&nbsp;<span aria-label="and then">></span> Associate address**.
 
 ![Associate address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/associate-address.png)
 
-5. Choose Spryker instance and click **Associate**.
+5. Choose the Spryker instance and click **Associate**.
 
 
 ![Choose Spryker instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-spryker-instance.png)
 
-See [Allocating an Elastic IP Address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating) and [Associating an Elastic IP Address with a Running Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating) for more details on configuring the Elastic IP Address.
+For more information about configuring the Elastic IP Address, see [Allocating an Elastic IP Address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating) and [Associating an Elastic IP Address with a Running Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating)
 
-### Connecting to the Instance
+### Connect to the instance
 
-To connect to the instance, do the following:
-
-1. Click **Actions** > **Connect**.
+1. Click **Actions&nbsp;<span aria-label="and then">></span> Connect**.
 
 ![Connect action](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/actions-connect.png)
 
@@ -248,13 +235,11 @@ To connect to the instance, do the following:
 
 ![Connection instructions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connection-instructions.png)
 
-## Installing Additional Software
+## Install additional software
 
-You need to install and configure additional software to install Spryker in AWS. Follow the guidelines below for instructions.
+To install Spryker in AWS, install and configure additional software. Use the following guidelines for instructions.
 
-### System Tools Installation
-
-To install the system toools, do the following:
+### Install system tools
 
 1. Configure additional repositories:
 
@@ -291,8 +276,7 @@ make  \
 apache2-utils
 ```
 
-### PHP Installation
-To install PHP, run the commands:
+### Install PHP
 
 ```shell
 sudo apt-get install -q -y php7.2-fpm \
@@ -329,27 +313,25 @@ sudo update-alternatives --set phpize /usr/bin/phpize7.2
 sudo update-alternatives --set php-config /usr/bin/php-config7.2
 ```
 
-### PHP Configuration
-To configure PHP, do the following:
+### Configure PHP
 
 1. Create or update the following files using the provided templates:
 
-<details open>
+<details>
 <summary markdown='span'>/etc/php/7.2/fpm/php.ini</summary>
 
-```
+```php
 memory_limit = 1024M
 [mail function]
 sendmail_path = /usr/sbin/sendmail -t -i
 ```
-
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>/etc/php/7.2/fpm/pool.d/yves.conf</summary>
 
-```
+```php
 [yves]
 clear_env = no
 catch_workers_output = yes
@@ -379,13 +361,12 @@ php_admin_value[memory_limit] = 256M
 php_admin_value[expose_php] = off
 php_admin_value[error_log] = /dev/stderr
 ```
- <br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>/etc/php/7.2/fpm/pool.d/zed.conf</summary>
 
-```
+```php
 [zed]
 clear_env = no
 catch_workers_output = yes
@@ -415,13 +396,12 @@ php_admin_value[memory_limit] = 256M
 php_admin_value[expose_php] = off
 php_admin_value[error_log] = /dev/stderr
 ```
-<br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>/etc/php/7.2/fpm/pool.d/glue.conf</summary>
 
-```
+```php
 [glue]
 clear_env = no
 catch_workers_output = yes
@@ -451,17 +431,15 @@ php_admin_value[memory_limit] = 256M
 php_admin_value[expose_php] = off
 php_admin_value[error_log] = /dev/stderr
 ```
-<br>
 </details>    
-
 
 2. Edit the following file using the template:
 
-<details open>
+<details>
 <summary markdown='span'>
 /etc/php/7.2/fpm/conf.d/10-opcache.ini</summary>
 
-```
+```php
 ;zend_extension=opcache.so
 opcache.enable=1
 opcache.enable_cli=1
@@ -471,28 +449,29 @@ opcache.memory_consumption=256
 opcache.interned_strings_buffer=16
 opcache.fast_shutdown=1
 
-; Check if file updated each 2 seconds - for development
+; Check if file updated each 2 seconds—for development
 opcache.revalidate_freq=2
-; Check if file updated each 60 seconds - for production
+; Check if file updated each 60 seconds—for production
 ;opcache.revalidate_freq=60
 
 ; Workaround for PHP 7.2 bug
 ; https://bugs.php.net/bug.php?id=76029
 opcache.optimization_level=0
 ```
-
 </details>  
 
-### Postfix Installation
-Postfix is a mail server which will be used to send mail. Run these commands to install it:    
+### Install Postfix
+
+Postfix is a mail server used to send mail. To install it, run these commands:    
 
 ```shell
 sudo apt update
 sudo apt install -q -y postfix
 ```
 
-### Nginx Installation
-Nginx  is an open source web server which will proxy requests to PHP FPM via FCGI protocol. Run these commands to install it:
+### Install Nginx
+
+Nginx is an open-source web server that proxies requests to PHP FPM by the FCGI protocol. Run these commands to install it:
 
 ```shell
 sudo apt update
@@ -500,12 +479,11 @@ sudo apt-get  install -q -y nginx nginx-extras
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
-### Nginx Configuration
-To configure Nginx, do the following:
+### Configure Nginx
 
 1. Update `{% raw %}{{{% endraw %}YVES_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-yves-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
-<details open>
+<details>
 <summary markdown='span'>vhost-yves.conf template</summary>
 
 ```
@@ -527,8 +505,10 @@ set $application_store DE;
 # Maintenance mode
 #include /etc/nginx/maintenance.conf;
 
-# Static files - allow only specified here paths
-# all other resources should be served via static host (and cached, if possible, via reverse proxy or cdn)
+# Static files—allow only specified here paths
+
+# all other resources must be served by static host (and cached, if possible, by reverse proxy or cdn)
+
 location ~ (/assets/|/maintenance.html|/favicon.ico|/crossdomain.xml) {
 access_log off;
 expires 30d;
@@ -550,7 +530,7 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
 # PHP application
 
 location / {
-# Frontend - force browser to use new rendering engine
+# Frontend—force browser to use new rendering engine
 more_set_headers "X-UA-Compatible: IE=Edge,chrome=1";
 
 # Terminate OPTIONS requests immediately. No need for calling php
@@ -576,19 +556,18 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
 
 }
 ```
- <br>
 </details>
 
 
-2. Create a `passwd` file by running the command:
+2. Create a `passwd` file:
 
-```
+```bash
 sudo htpasswd -c /etc/nginx/.htpasswd {% raw %}{{{% endraw %}SOME_USER{% raw %}}}{% endraw %}
 ```
 
-3. Update `{% raw %}{{{% endraw %}ZED_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-zed-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
+3. Update `{% raw %}{{{% endraw %}ZED_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-zed-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using this template:
 
-<details open>
+<details>
 <summary markdown='span'>vhost-zed.conf template</summary>
 
 ```
@@ -611,8 +590,8 @@ set $application_store DE;
 
 #include /etc/nginx/maintenance.conf;
 
-# Timeout for ZED requests - 10 minutes
-# (longer requests should be converted to jobs and executed via jenkins)
+# Timeout for ZED requests—10 minutes
+# (longer requests must be converted to jobs and executed by jenkins)
 proxy_read_timeout 600s;
 proxy_send_timeout 600s;
 fastcgi_read_timeout 600s;
@@ -647,12 +626,11 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
 
 }
 ```
- <br>
 </details>
 
 4. Update `{% raw %}{{{% endraw %}GLUE_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-glue-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
-<details open>
+<details>
 <summary markdown='span'>vhost-glue.conf template</summary>
 
 ```
@@ -661,10 +639,10 @@ server unix:/tmp/.fpm.glue.sock;
 }
 
 server {
-## Listener for production/staging - requires external LoadBalancer directing traffic to this port
+## Listener for production/staging—requires external LoadBalancer directing traffic to this port
 #listen 10001;
 
-# istener for testing/development - one host only, doesn't require external LoadBalancer
+# istener for testing/development—one host only, doesn't require external LoadBalancer
 listen 80;
 
 server_name {% raw %}{{{% endraw %}GLUE_HOST{% raw %}}}{% endraw %};
@@ -678,8 +656,10 @@ root /data/public/Glue;
 set $application_env staging;
 set $application_store DE;
 
-# Timeout for Api requests - 10 minutes
-# (longer requests should be converted to jobs and executed via jenkins)
+# Timeout for Api requests—10 minutes
+
+# (longer requests must be converted to jobs and executed by Jenkins)
+
 proxy_read_timeout 600s;
 proxy_send_timeout 600s;
 fastcgi_read_timeout 600s;
@@ -711,16 +691,17 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
 
 }
 ```
- <br>
 </details>
 
 5. Restart php-fpm service:
+
 ```
 sudo service php7.2-fpm restart
 ```
-6. Create  `/etc/nginx/conf.d/jenkins.conf`:
 
-<details open>
+6. Create `/etc/nginx/conf.d/jenkins.conf`:
+
+<details>
 <summary markdown='span'>/etc/nginx/conf.d/jenkins.conf</summary>
 
 ```
@@ -755,12 +736,11 @@ proxy_request_buffering off;
 }
 }
 ```
-  <br>
 </details>
 
 7. Create `/etc/nginx/fastcgi_params` using the template:
 
-<details open>
+<details>
 <summary markdown='span'>fastcgi_params template</summary>
 
 ```
@@ -789,27 +769,26 @@ fastcgi_param SERVER_NAME $server_name;
 fastcgi_param REDIRECT_STATUS 200;
 
 # Are we using ssl? Backward compatibility env, to emulate Apache.
-# According to RFC, app should take a look at "X-Forwarded-Proto" header to deterimine if SSL is on.
+# According to RFC, app must take a look at "X-Forwarded-Proto" header to deterimine if SSL is on.
 if ($http_x_forwarded_proto = "https") {
 set $have_https on;
 }
 fastcgi_param HTTPS $have_https;
 
-# Pass request start time to CGI script - NewRelic uses this to monitor queue wait time
+# Pass request start time to CGI script—NewRelic uses this to monitor queue wait time
 fastcgi_param HTTP_X_REQUEST_START "t=${msec}";
 ```
- <br>
 </details>
 
-### Node.js Installation
-To install Node.js, run the following command:
+### Install Node.js
 
 ```shell
 sudo apt-get install -y nodejs
 ```
 
-### RabbitMQ Installation
-To install RabbitMQ, run the commands as root:
+### Insall RabbitMQ
+
+Run the commands as root:
 
 ```shell
 wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
@@ -822,8 +801,7 @@ sudo apt-get update
 sudo apt-get install -y rabbitmq-server
 ```
 
-### RabbitMQ Configuration
-To configure RabbitMQ, run the commands as root:   
+### Configure RabbitMQ
 
 * Service configuration.
 
@@ -852,8 +830,8 @@ sudo rabbitmqctl set_permissions -p /DE_spryker_zed spryker ".*" ".*" ".*"
 ```
 Repeat for `/AT_spryker_zed`, `/US_spryker_zed` virtual hosts.
 
-### Jenkins Installation
-To install Jenkins, do the following:
+### Install Jenkins
+
 1. Run the commands as root:
 
 ```shell
@@ -863,27 +841,32 @@ sudo apt-get update
 sudo apt-get install -y jenkins=2.164.3 openjdk-8-jdk
 ```
 
-2. Update java configuration
-```
+2. Update java configuration:
+
+```bash
 sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 ```
 
-3. Stop Jenkins service
-```
+3. Stop Jenkins service:
+
+```bash
 sudo service jenkins stop
 ```
 
-### Jenkins Configuration
-To configure Jenkins, do the following:
+### Configure Jenkins
 
 1. Change the `JENKINS_USER` variable in the `/etc/init.d/jenkins` and `/etc/default/jenkins` files to `JENKINS_USER="www-data"`.
-2. Create an init scripts directory
+2. Create an init scripts directory:
+
 ```shell
 sudo mkdir -p /var/lib/jenkins/init.groovy.d/
 ```
-3. Create an init script which disabled CSRF
+
+3. Create an init script which disabled CSRF.
+
 **/var/lib/jenkins/init.groovy.d/init.groovy**
-```
+
+```java
 import jenkins.model.Jenkins
 
 def instance = Jenkins.instance
@@ -897,17 +880,19 @@ sudo chown -R www-data:www-data /var/lib/jenkins
 sudo chown -R www-data:www-data /var/cache/jenkins
 sudo chown -R www-data:www-data /var/log/jenkins
 ```
+
 5. Reload services configuration:
 
 ```shell
 sudo systemctl daemon-reload
 ```
+
 6. Update Jenkins configuration file:
 
-<details open>
+<details>
 <summary markdown='span'>/var/lib/jenkins/config.xml</summary>
 
-```
+```xml
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson>
 <disabledAdministrativeMonitors>
@@ -949,16 +934,15 @@ sudo systemctl daemon-reload
 <globalNodeProperties/>
     </hudson>
 ```
-<br>
 </details>
-
 
 5. Restart Jenkins service:
 
 ```shell
 sudo service jenkins start
 ```
-### System Configuration
+
+### Configure system
 
 1. Change swappiness configuration:
 
@@ -966,11 +950,13 @@ sudo service jenkins start
 echo "vm.swappiness=5" | sudo tee /etc/sysctl.conf
 sudo sysctl -p
 ```
+
 2. Change file limit configuration:
 
 ```shell
 ulimit -n 65535
 ```
+
 3. Create logrotate configuration for Spryker:
 
 **/etc/logrotate.d/spryker**
@@ -992,17 +978,17 @@ su www-data www-data
 }
 ```
 
-## Spryker Installation
-To install Spryker, do the following:    
+## Install Spryker
 
-1. Create data folder:
+1. Create a data folder:
 
 ```shell
 sudo mkdir /data
 sudo chown ubuntu /data
 cd /data
 ```
-2. Clone project:
+
+2. Clone the project:
 
 ```shell
 git clone https://github.com/spryker-shop/b2c-demo-shop.git ./
@@ -1011,14 +997,12 @@ git checkout tags/{{page.version}}
 
 3. Create local configurations using the template.  
 
+Update all variables in curly braces such as `{% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %}` or `{% raw %}{{{% endraw %}REDIS_ENDPOINT{% raw %}}}{% endraw %}`.
 
-You should update all variables in curly braces such as {% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %} or {% raw %}{{{% endraw %} REDIS_ENDPOINT {% raw %}}}{% endraw %}.
-
-
-<details open>
+<details>
 <summary markdown='span'>/data/config/Shared/config_local.php</summary>
 
-```
+```php
 <?php
 use Pyz\Shared\Scheduler\SchedulerConfig;
 use Spryker\Shared\Application\ApplicationConstants;
@@ -1159,14 +1143,14 @@ $config[PropelConstants::PROPEL_DEBUG] = false;
 
 /** Activate Twig Compiler **/
 $config[TwigConstants::ZED_TWIG_OPTIONS] = [
-   'cache' => new Twig_Cache_Filesystem(sprintf(
+   'cache' => new FilesystemCache(sprintf(
 	'%s/data/%s/cache/Zed/twig',
 	 APPLICATION_ROOT_DIR, 'DE'),
 	 Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
 ];
 
 $config[TwigConstants::YVES_TWIG_OPTIONS] = [
-    'cache' => new Twig_Cache_Filesystem(sprintf(
+    'cache' => new FilesystemCache(sprintf(
 	'%s/data/%s/cache/Yves/twig',
 	 APPLICATION_ROOT_DIR, 'DE'),
 	 Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
@@ -1204,14 +1188,13 @@ $config[SessionConstants::ZED_SESSION_TIME_TO_LIVE] = SessionConfig::SESSION_LIF
 $config[SessionRedisConstants::ZED_SESSION_TIME_TO_LIVE] = $config[SessionConstants::ZED_SESSION_TIME_TO_LIVE];
 $config[SessionFileConstants::ZED_SESSION_TIME_TO_LIVE] = $config[SessionConstants::ZED_SESSION_TIME_TO_LIVE];
 ```
- <br>
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/Shared/config_local_DE.php</summary>
 
-```
+```php
 <?php
 use Spryker\Shared\Application\ApplicationConstants;
 use Spryker\Shared\Collector\CollectorConstants;
@@ -1318,13 +1301,12 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
     $config[ApplicationConstants::HOST_ZED],
 ];
 ```
- <br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/Shared/config_local_AT.php</summary>
 
-```
+```php
 <?php
 use Spryker\Shared\Application\ApplicationConstants;
 use Spryker\Shared\Collector\CollectorConstants;
@@ -1430,13 +1412,12 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
     $config[ApplicationConstants::HOST_ZED],
 ];
 ```
-<br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/Shared/config_local_US.php</summary>
 
-```
+```php
 <?php
 use Spryker\Shared\Application\ApplicationConstants;
 use Spryker\Shared\Collector\CollectorConstants;
@@ -1542,10 +1523,10 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
     $config[ApplicationConstants::HOST_ZED],
 ];
 ```
- <br>
 </details>
 
 Run the following commands:
+
 ```shell
 composer global require hirak/prestissimo
 composer install
@@ -1556,10 +1537,10 @@ composer require --no-update aws/aws-sdk-php
 
 5. Create the following file:
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/install/staging.yml</summary>
 
-```
+```yml
 env:
     APPLICATION_ENV: staging
 
@@ -1799,27 +1780,16 @@ sections:
             groups:
                 - project
 
-        yves-install-dependencies:
-            command: "vendor/bin/console frontend:yves:install-dependencies -vvv"
-            groups:
-                - yves
-
         yves-build-frontend:
             command: "vendor/bin/console frontend:yves:build -vvv"
             groups:
                 - yves
-
-        zed-install-dependencies:
-            command: "vendor/bin/console frontend:zed:install-dependencies -vvv"
-            groups:
-                - zed
 
         zed-build-frontend:
             command: "vendor/bin/console frontend:zed:build"
             groups:
                 - zed
 ```
- <br>
 </details>
 
 6. Run the `transfer:generate` and `propel:install` commands:
@@ -1830,11 +1800,13 @@ vendor/bin/console transfer:generate -vvv
 vendor/bin/console propel:install -vvv
 vendor/bin/console transfer:generate -vvv
 ```
-7. Run the install command:
+
+7. Run the installation command:
 
 ```shell
 APPLICATION_ENV=staging vendor/bin/install -vvv
 ```
+
 8. Change owner of the data folder:
 
 ```shell
@@ -1842,24 +1814,26 @@ sudo chown -R www-data:www-data /data
 ```
 
 {% info_block errorBox %}
-Make sure to provide secure configuration of Zed service. Sufficient security is not provided by "Basic AUTH" based on web server configuration, IP address restriction or direct VPN connection to the server.
+
+Make sure to provide a secure configuration of Zed service. Sufficient security is not provided by "Basic AUTH" based on web server configuration, IP address restriction, or direct VPN connection to the server.
+
 {% endinfo_block %}
 
 ### Requirements
 
-RDS (Managed relational database service):
+RDS:
 
-| Requirement | Value |
+| REQUIREMENT | VALUE |
 | --- | --- |
 | Instance type |  >= db.t2.micro|
 | Database type: |  |
-|PostgreSQL  |>= 9.6 - Default and preferred |
+|PostgreSQL  |>= 9.6—Default and preferred |
 | MySQL | >= 5.7 |
 | Public accessibility | no |
 
 Elasticsearch Service:
 
-| Requirement | Value |
+| REQUIREMENT | VALUE |
 | --- | --- |
 | Instance type | >= t2.small.elasticsearch |
 | Elasticsearch version | 5.6 |
@@ -1868,7 +1842,7 @@ Elasticsearch Service:
 
 EC2:
 
-| Requirement | Value |
+| REQUIREMENT | VALUE |
 | --- | --- |
 | Instance type | >= t2.medium |
 | Storage size | >= 20Gb |
@@ -1876,14 +1850,14 @@ EC2:
 
 Security groups:
 
-| Requirement | Value |
+| REQUIREMENT | VALUE |
 | --- | --- |
 | Incoming ports | 22, 80, 443 |
 
 
 List of connections:  
 
-| Requirement | Value |
+| REQUIREMENT | VALUE |
 | --- | --- |
 | Nginx | TCP: 80, 443 (Any) |
 | Yves, Glue, Zed | TCP: 9000 ( Nginx ) |
@@ -1893,37 +1867,40 @@ List of connections:
 | Redis | TCP: 6379 ( Yves, Glue, Zed ) |
 | Elasticsearch | TCP: 9200 ( Yves, Glue, Zed ) |
 
-## AWS Services Setup Validation
+## AWS services Setup validation: RDS latency check
 
-### RDS Latency Check
+Perform RDS LatencyCheck by running the following commands.
 
-Perform RDS LatencyCheck by running the commands below.
+## AWS services Setup validation: PostgreSQL
 
-#### PostgreSQL
-
-```
+```sql
 export PGPASSWORD={% raw %}{{{% endraw %}RDS_PASSWORD{% raw %}}}{% endraw %}
 /usr/bin/pgbench -i -h {% raw %}{{{% endraw %}RDS_ENDPOINT{% raw %}}}{% endraw %} -p 5432 -U {% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %} -d {% raw %}{{{% endraw %}RDS_DATABASE{% raw %}}}{% endraw %}
 /usr/bin/pgbench -c 10 -h {% raw %}{{{% endraw %}RDS_ENDPOINT{% raw %}}}{% endraw %} -p 5432 -U {% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %} -d {% raw %}{{{% endraw %}RDS_DATABASE{% raw %}}}{% endraw %}
 ```
 
 {% info_block infoBox %}
-Benchmark result examples: Average latency for db.t2.micro / db.t2.micro - 29 ms
+
+Benchmark result examples: Average latency for db.t2.micro / db.t2.micro—29 ms.
+
 {% endinfo_block %}
 
-#### MySQL
+### MySQL
 
-```
+```sql
 sudo apt-get -y install mysql-client
 mysqlslap --host= {% raw %}{{{% endraw %}RDS_ENDPOINT{% raw %}}}{% endraw %} --user={% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %} --concurrency=50 --iterations=10 --password={% raw %}{{{% endraw %}RDS_PASSWORD{% raw %}}}{% endraw %} --auto-generate-sql --verbose
 ```
 
 {% info_block infoBox "Benchmark result examples:" %}
-Average number of seconds to run all queries: 0.739 seconds - db.t2.small <br>Average number of seconds to run all queries: 0.485 seconds - db.t2.medium
+
+An average number of seconds to run all queries: 0.739 seconds—db.t2.small.
+
+An average number of seconds to run all queries: 0.485 seconds—db.t2.medium.
+
 {% endinfo_block %}
 
-#### Redis Latency Check
-Run the command:
+### Redis latency check
 
 ```
 redis-cli --latency -h {% raw %}{{{% endraw %}ELASTICACHE_ENDPOINT{% raw %}}}{% endraw %} -p 6379
@@ -1931,11 +1908,12 @@ redis-cli --latency -h {% raw %}{{{% endraw %}ELASTICACHE_ENDPOINT{% raw %}}}{% 
 
 {% info_block infoBox "Benchmark result examples:" %}
 
-avg: 0.48 (20038 samples) - cache.t2.micro <br>avg: 0.31 (20047 samples) - cache.t2.medium)
+avg: 0.48 (20038 samples)—cache.t2.micro <br>avg: 0.31 (20047 samples)—cache.t2.medium)
 
 {% endinfo_block %}
 
-## List of Connections
-The following diagramm illustrates the connections:
+## List of connections
+
+The following diagram illustrates the connections:
 
 ![List of connections](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connections-list.jpg)

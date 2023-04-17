@@ -8,9 +8,10 @@ originalArticleId: bc4f8fd7-4354-4f9f-8c7a-8029f52d6d43
 redirect_from:
   - /v1/docs/catalog-search-api-feature-integration
   - /v1/docs/en/catalog-search-api-feature-integration
+  - /docs/scos/dev/glue-api-guides/201811.0/(/docs/scos/dev/feature-integration-guides/201811.0/glue-api/catalog-search-api-feature-integration.html)
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -74,17 +75,17 @@ Activate the following plugins:
 **`src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`**
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CatalogSearchProductsResourceRelationship\Plugin\CatalogSearchAbstractProductsResourceRelationshipPlugin;
 use Spryker\Glue\CatalogSearchProductsResourceRelationship\Plugin\CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin;
 use Spryker\Glue\CatalogSearchRestApi\CatalogSearchRestApiConfig;
 use Spryker\Glue\CatalogSearchRestApi\Plugin\CatalogSearchResourceRoutePlugin;
 use Spryker\Glue\CatalogSearchRestApi\Plugin\CatalogSearchSuggestionsResourceRoutePlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
- 
- 
+
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -97,7 +98,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new CatalogSearchSuggestionsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
     * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
     *
@@ -114,7 +115,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CatalogSearchRestApiConfig::RESOURCE_CATALOG_SEARCH_SUGGESTIONS,
             new CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }

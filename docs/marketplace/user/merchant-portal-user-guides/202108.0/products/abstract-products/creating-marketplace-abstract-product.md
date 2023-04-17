@@ -1,5 +1,5 @@
 ---
-title: Creating marketplace abstract products
+title: Creating marketplace abstract product
 last_updated: Aug 11, 2021
 description: This document describes how to create marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template

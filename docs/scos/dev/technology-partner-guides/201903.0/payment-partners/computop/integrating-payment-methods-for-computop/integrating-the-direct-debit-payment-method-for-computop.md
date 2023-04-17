@@ -8,6 +8,7 @@ originalArticleId: a07a0cfd-474a-4742-b6c1-068928366234
 redirect_from:
   - /v2/docs/computop-direct-debit
   - /v2/docs/en/computop-direct-debit
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
 related:
   - title: Integrating the Sofort payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
@@ -32,7 +33,7 @@ related:
 ---
 
  Example State Machine:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-direct-debit-flow-example.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-direct-debit-flow-example.png)
 
 ## Front-end Integration
 To adjust the frontend appearance, provide the following templates in your theme directory:
@@ -70,4 +71,3 @@ For partial refunds:
 1. Partial refunds are possible for direct debit transactions.
 2. But please note, that you can not test it in test mode.
 3. If you want to test it, you have to say it afterwards to Computop help desk, so that they can prepare the transaction.
-

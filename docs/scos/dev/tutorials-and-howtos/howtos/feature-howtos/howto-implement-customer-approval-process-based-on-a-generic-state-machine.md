@@ -1,5 +1,5 @@
 ---
-title: HowTo - Implement customer approval process based on a generic state machine
+title: "HowTo: Implement customer approval process based on a generic state machine"
 description: The guide describes the implementation flow of a customer approval process based on a state machine.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,24 +22,29 @@ redirect_from:
   - /v2/docs/en/t-implement-customer-approval-process-on-state-machine
   - /v1/docs/t-implement-customer-approval-process-on-state-machine
   - /v1/docs/en/t-implement-customer-approval-process-on-state-machine
+related:
+  - title: Approval Process feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---
 
 ## Introduction
 
-There are only few things need to do to implement any business processes based on the `StateMachine` module:
+To implement any business processes based on the `StateMachine` module, follow these steps:
 
-1. First of all you need to add table in DB to connect Entity and StateMachine. In our case it's Customer Entity.
-2. We need to create CRUD operations for our new table.
-3. Implement the `StateMachineHandlerInterface` plugin and add into StateMachine module dependencies.
-4. Implement some Command and Condition plugins (if need it).
-5. Create state machine xml file with customer approve flow.
-6. Provide Zed UI presentation.
+1. In the database, add a table to connect `Entity` and `StateMachine`. In this case, it's the `Customer` entity.
+2. Create CRUD operations for our new table.
+3. Implement the `StateMachineHandlerInterface` plugin and add it to the `StateMachine` module dependencies.
+4. Implement some command and condition plugins if needed.
+5. Create astate machine XML file with the customer approval flow.
+6. Provide a Zed UI presentation.
 
 ## Schema creation
 
-Customer Approve Process Database Schema
+Create the corresponding approval process schema:
 
-```php
+**Customer approval process database schema**
+
+```sql
 <table name="pyz_customer_approve_process_item">
     <column name="id_customer_approve_process_item" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
     <column name="fk_customer" type="INTEGER" required="true"/>
@@ -62,12 +67,13 @@ Customer Approve Process Database Schema
 </table>
 ```
 
-We have added several foreign keys including foreign key to the `spy_customer` table.
+Several foreign keys have been added, including foreign key to the `spy_customer` table.
 
 ## CRUD implementation
-We will need few operations for managing customer approve process:
 
-CustomerApproveProcessFacadeInterface
+Set up a few operations for managing customer approval process:
+
+<details><summary markdown='span'>CustomerApproveProcessFacadeInterface</summary>
 
 ```php
 <?php
@@ -97,7 +103,7 @@ interface CustomerApproveProcessFacadeInterface
     public function getCustomerApproveProcessItemsByStateIds(array $stateIds = []): array;
 
     /**
-     * Creates `SpyCustomerApproveProcessItem` entity based on `CustomerTransfer` (only customer id is used) and saves it into DB.
+     * Creates `SpyCustomerApproveProcessItem` entity based on `CustomerTransfer` (only customer ID is used) and saves it into DB.
      *
      * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
      *
@@ -125,12 +131,14 @@ interface CustomerApproveProcessFacadeInterface
 }
 ```
 
+</details>
+
 This is all you need to implement in the business layer.
-`CustomerApproveProcessItemTransfer` was implemented to keep all the data in one place for further usage.
+`CustomerApproveProcessItemTransfer` has been implemented to keep all the data in one place for further usage.
 
-transfer.xml
+**transfer.xml**
 
-```html
+```xml
 <transfer name="CustomerApproveProcessItem">
     <property name="idCustomerApproveProcessItem" type="int"/>
     <property name="idCustomer" type="int"/>
@@ -142,7 +150,10 @@ transfer.xml
 ```
 
 ## StateMachineHandlerPlugin
-CustomerApproveProcessStateMachineHandlerPlugin
+
+Configure the `StateMachineHandlerPlugin`:
+
+<details><summary markdown='span'>CustomerApproveProcessStateMachineHandlerPlugin</summary>
 
 ```php
 <?php
@@ -222,7 +233,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
 
     /**
      * This method is called when state of item was changed, client can create custom logic for example update it's related table with new state id/name.
-     * StateMachineItemTransfer:identifier is id of entity from implementor.
+     * StateMachineItemTransfer:identifier is ID of entity from implementor.
      *
      * @param \Generated\Shared\Transfer\StateMachineItemTransfer $stateMachineItemTransfer
      *
@@ -241,7 +252,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
     }
 
     /**
-     * This method should return all list of StateMachineItemTransfer, with (identifier, IdStateMachineProcess, IdItemState)
+     * This method returns all list of StateMachineItemTransfer, with (identifier, IdStateMachineProcess, IdItemState)
      *
      * @param array $stateIds
      *
@@ -260,8 +271,13 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
 }
 ```
 
-## Commands and Conditions
-CustomerApproveProcessCommandPlugin
+</details>
+
+## Commands and conditions
+
+Configure the plugins:
+
+**CustomerApproveProcessCommandPlugin**
 
 ```php
 <?php
@@ -291,7 +307,7 @@ class CustomerApproveProcessCommandPlugin extends AbstractPlugin implements Comm
 }
 ```
 
-CustomerApproveProcessConditionPlugin
+**CustomerApproveProcessConditionPlugin**
 
 ```php
 <?php
@@ -323,12 +339,13 @@ class CustomerApproveProcessConditionPlugin extends AbstractPlugin implements Co
 }
 ```
 
-## Customer Approve Process Flow XML File
+## Customer approve process flow XML file
+
 There is a simple example of the state machine process, you need to put it into `config/Zed/StateMachine/CustomerApproveProcess/Process01.xml`.
 
-Process01.xml
+<details><summary markdown='span'>Process01.xml</summary>
 
-```html
+```xml
 <?xml version="1.0"?>
 <statemachine
     xmlns="spryker:state-machine-01"
@@ -390,11 +407,14 @@ Process01.xml
 </statemachine>
 ```
 
-## Zed UI presentation
-For representing our process items in Zed UI we need only two things: controller and template.
-Controller includes list of all items, add new item, delete item actions:
+</details>
 
-StateMachineItemsController
+## Zed UI presentation
+
+For representing our process items in Zed UI we need only two things: controller and template.
+Controller includes the list of all items, add new item, delete item actions:
+
+<details><summary markdown='span'>StateMachineItemsController</summary>
 
 ```php
 <?php
@@ -502,11 +522,13 @@ class StateMachineItemsController extends AbstractController
 }
 ```
 
-We need the template only for the list action, there is an example:
+</details>
 
-transfer.xml
+You need the template only for the list action; the following is an example:
 
-```html
+<details><summary markdown='span'>StateMachineItemsControllertransfer.xml</summary>
+
+```twig
 {% raw %}{%{% endraw %} extends '@Cms/Layout/layout.twig' {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} set widget_title = 'Customer Approve Process State Machine' {% raw %}%}{% endraw %}
@@ -579,7 +601,7 @@ transfer.xml
                 {% raw %}{%{% endraw %}- endif {% raw %}%}{% endraw %}
             </td>
             <td>
-                <a href="{% raw %}{{{% endraw %} url('/customer-approve-process/state-machine-items/delete-item', { id : customerApproveProcessItem.idCustomerApproveProcessItem }) {% raw %}}}{% endraw %}">
+                <a href="{% raw %}{{{% endraw %} url('/customer-approve-process/state-machine-items/delete-item', { ID : customerApproveProcessItem.idCustomerApproveProcessItem }) {% raw %}}}{% endraw %}">
                     Delete
                 </a>
             </td>
@@ -588,3 +610,5 @@ transfer.xml
     </table>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
+</details>

@@ -32,6 +32,7 @@ redirect_from:
   - /v2/docs/en/seo
   - /v2/docs/url-redirects
   - /v2/docs/en/url-redirects
+  - /docs/scos/user/features/201903.0/v1/docs/scos/user/features/201903.0/cms-feature-overview/cms-pages-overview.html
 ---
 
 When you decide to create customized content for your online shop, one of the best options is the CMS page feature. CMS page is an extra HTML page of your Spryker shop that you, as a shop administrator, can create and edit in the Back Office using the WYSIWYG editor. The About Us, Impressum, Terms, Contacts, and Conditions pages are the examples of CMS pages that you can easily add to your online shop. The CMS pages have unique URLs and layout. Moreover, you can add to a CMS page any of the available CMS content widgets that will enrich the page with the dynamic content and help fulfill its purpose.
@@ -56,9 +57,9 @@ This CMS pages feature is ideal for specific landing pages with dedicated URLs t
                 <li><a href="/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html" class="mr-link"> Create a template for a CMS page</a></li>
  <li><a href="/docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html" class="mr-link">Define maximum length of content fields</a></li>
 <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-extension-points-reference-information.html" class="mr-link">Enable an extension point for post activation and deactivation of CMS pages</a></li>
-<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cms.html#upgrading-from-version-6-to-version-7" class="mr-link">Migrate CMS module from version 6.* to version 7.*</a></li>
-<li><a "href=/docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html" class="mr-link">Migrate CmsStorage module from version 1.* to version 2.*</a></li><li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsgui.html" class="mr-link">Migrate CmsGui module from version 4.* to version 5.*</a></li>
-</li><li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html" class="mr-link">Migrate CmsPageSearch module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-module.html#upgrading-from-version-6-to-version-7" class="mr-link">Migrate CMS module from version 6.* to version 7.*</a></li>
+<li><a "href=/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-modulestorage.html" class="mr-link">Migrate CmsStorage module from version 1.* to version 2.*</a></li><li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-modulegui.html" class="mr-link">Migrate CmsGui module from version 4.* to version 5.*</a></li>
+</li><li><a href="/docs/pbc/all/content-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cms-modulepagesearch.html" class="mr-link">Migrate CmsPageSearch module from version 1.* to version 2.*</a></li>
            <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-product-lists-catalog-feature-integration.html" class="mr-link">Integrate CMS page search + Product Lists + Catalog Feature v. 201903.0 into your project </a></li>
  </li><li><a href="/docs/scos/dev/feature-integration-guides/201903.0/cms-catalog-feature-integration.html" class="mr-link">Integrate CMS page search + Catalog Feature v. 201903.0 into your project</a></li>
    </ul>

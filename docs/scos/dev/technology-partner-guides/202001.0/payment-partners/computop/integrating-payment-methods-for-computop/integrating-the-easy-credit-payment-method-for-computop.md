@@ -1,6 +1,6 @@
 ---
 title: Integrating the Easy Credit payment method for Computop
-description: Integrate Easy Credit payment through  Computop into the Spryker-based shop.
+description: Integrate Easy Credit payment through Computop into the Spryker-based shop.
 last_updated: Nov 22, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/computop-easy-credit
@@ -32,7 +32,7 @@ related:
 ---
 
 Example State Machine
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-easy-credit-flow-example.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-easy-credit-flow-example.png)
 
 ## Front-end Integration
 To adjust the frontend appearance, provide the following templates in your theme directory:

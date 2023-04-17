@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/splittable-order-items-overview
 ---
 
-As a final step of checkout, for each item in the cart, sales order items are created. By default, each product concrete is splittable: for example, if the product concrete is a pallet containing 1000 cans, 1000 sales order items will be created in the database upon checkout. To avoid creation of numerous individual sales order items for such products, you can make them non-splittable - i.e instead of many sales orders, just one will be created. This can be achieved by specifying either "true" of "false" value for `is_quantity_splittable` field in the product table. `is_quantity_splittable` attribute (true by default) controls how many sales order items should be created as a result of checkout.
+As a final step of checkout, for each item in the cart, sales order items are created. By default, each product concrete is splittable: for example, if the product concrete is a pallet containing 1000 cans, 1000 sales order items will be created in the database upon checkout. To avoid creation of numerous individual sales order items for such products, you can make them non-splittable; that is, instead of many sales orders, just one will be created. This can be achieved by specifying either "true" of "false" value for `is_quantity_splittable` field in the product table. `is_quantity_splittable` attribute (true by default) controls how many sales order items should be created as a result of checkout.
 
 Depending on the `is_quantity_splittable` value, different amount of splittable order items (SOI) is created. But the following is always true:
 
@@ -33,7 +33,7 @@ Product concrete with `is_quantity_splittable = true` has a separate line for ea
 Product concrete with `is_quantity_splittable = false` is counted as one sales item in the web shop:
 ![is_quantity_splittable = false](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Splittable+Order+Items/Splittable+Order+Items+Feature+Overview/SOI-false.png)
 
-It is possible to import splittable information for product concretes in the `product_concrete.csv` file by setting the value of the `is_splittable` field to either 1 or 0.
+You can import splittable information for product concretes in the `product_concrete.csv` file by setting the value of the `is_splittable` field to either 1 or 0.
 
 To import concrete products, run the following command:
 
@@ -41,11 +41,11 @@ To import concrete products, run the following command:
 
 For non-splittable order items, a Back Office user sees just one product per non-splittable item in the Back Office. For example, if a customer makes an order containing a non-splittable product in the quantity of 2, just 1 sales item with quantity = 2 (1 line) is created in the database. A Back Office user aslo sees just one sales order item (1 line) in **Number of Items** column of the **Order Overview** page, and actual quantity of items in the order is shown in the **Quantity** field of the **Order Details** page.
 
-Both non-splittable and splittable order items can be refunded in the Back Office. However, unlike splittalbe orders, it is impossible to refund orders with unsplittable items partially - only the whole order can be refunded, irrespective of its quantity. Currently, there are 2 prices in the `ItemTransfer` which are in balance: `RefundableAmount` and `CanceledAmount`. The refundable amount is calculated by the formula:
+Both non-splittable and splittable order items can be refunded in the Back Office. However, unlike splittalbe orders, you can't refund orders with unsplittable items partially - only the whole order can be refunded, irrespective of its quantity. There are 2 prices in the `ItemTransfer` which are in balance: `RefundableAmount` and `CanceledAmount`. The refundable amount is calculated by the formula:
 
 `refundable amount: sumPriceToPayAggregation - canceledAmount`
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

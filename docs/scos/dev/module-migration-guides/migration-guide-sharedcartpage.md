@@ -25,24 +25,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-sharedcartpage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-sharedcartpage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sharedcartpage.html
+  - /module_migration_guides/mg-shared-cart-page.htm
 ---
 
-## Upgrading from version 1.* to version 2.*
-
-From version 2 we have removed the disabled users from the shared list. The ability to enable/disable users was added to the `CompanyUser` module, version 2.0.0.
-
-*Estimated migration time: 10 minutes*
- 
-To upgrade to the new version of the module, do the following:
-
-1. Upgrade the `CompanyUser` module to version 2.0.0. See [Migration Guide - CompanyUser](/docs/scos/dev/module-migration-guides/migration-guide-companyuser.html) for more details:
-
-```yaml
-composer require spryker/company-user: “^2.0.0”
-```
-
-2. Regenerate transfer objects:
-
-```yaml
-vendor/bin/console transfer:generate
-```
+{% include pbc/all/upgrade-modules/upgrade-the-sharedcartpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-sharedcartpage-module.md -->

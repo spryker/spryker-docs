@@ -33,16 +33,20 @@
                                                 Marketplace developer guide
                                                 {% elsif page.product == 'marketplace' and page.role == 'user' %}
                                                 Marketplace users guide
+                                                {% elsif page.product == 'sdk' and page.role == 'dev' %}
+                                                Spryker SDK
                                                 {% elsif page.product == 'cloud' and page.role == 'dev' %}
                                                 Spryker Cloud Commerce OS
                                                 {% elsif page.product == 'scos' and page.role == 'dev' %}
                                                 SCOS developer guide
                                                 {% elsif page.product == 'scos' and page.role == 'user' %}
                                                 SCOS users guide
-                                                {% elsif page.product == 'frontend-enablement-service' and page.role == 'dev' %}
-                                                Frontend enablement Service
-                                                {% elsif page.product == 'platform-as-a-service-plus' and page.role == 'dev' %}
-                                                Platform as a Service Plus
+                                                {% elsif page.product == 'spryker-code-upgrader' and page.role == 'dev' %}
+                                                Spryker Code Upgrader
+                                                {% elsif page.product == 'packages-business-capabilities' and page.role == 'all' %}
+                                                Packages Business Capabilities
+                                                {% elsif page.product == 'acp' and page.role == 'user' %}
+                                                App Composition Platform users guide
                                                 {% else %}
                                                 Select Product
                                                 {% endif %}
@@ -83,7 +87,7 @@
                                                 </a>
                                                 <ul class="main-nav__drop dropdown-menu">
                                                     <li>
-                                                        <a href="/docs/marketplace/dev/setup/system-requirements.html" class="main-nav__drop-link">
+                                                        <a href="/docs/marketplace/dev/setup/{{ site.version }}/system-requirements.html" class="main-nav__drop-link">
                                                             <span class="main-nav__drop-link-title">
                                                                 <i class="icon-developer"></i>
                                                                 Developer
@@ -103,20 +107,30 @@
                                                 </ul>
                                             </li>
                                             <li>
+                                                <a href="/docs/sdk/dev/spryker-sdk.html" class="main-nav__drop-link">
+                                                Spryker SDK
+                                                </a>
+                                            </li>
+                                            <li>
                                                 <a href="/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html" class="main-nav__drop-link">
                                                 Spryker Cloud Commerce OS
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/docs/fes/dev/front-end-enablement-service.html" class="main-nav__drop-link">
-                                                Frontend enablement Service
+                                                <a href="/docs/acp/user/intro-to-acp/acp-overview.html" class="main-nav__drop-link">
+                                                App Composition Platform
                                                 </a>
                                             </li>
-                                            <!-- <li>
-                                                <a href="/docs/paas-plus/dev/setup/system-requirements.html" class="main-nav__drop-link">
-                                                Platform as a Service Plus
+                                            <li>
+                                                <a href="/docs/scu/dev/spryker-code-upgrader.html" class="main-nav__drop-link">
+                                                Spryker Code Upgrader
                                                 </a>
-                                            </li> -->
+                                            </li>
+                                            <li>
+                                                <a href="/docs/pbc/all/pbc.html" class="main-nav__drop-link">
+                                                Packaged Business Capabilities (PBC) [BETA]
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

@@ -11,12 +11,9 @@ Handling monetary values can be a problem and is often quite hard. The Money bun
 
 {% endinfo_block %}
 
-
-
 Spryker handles all monetary values as integers and provides conversions from decimal values to cent values and vice versa.
 
 The key feature of this module is to convert a `MoneyTransfer` into the proper string version of it, given the current locale and currency.
-
 
 ## Usage
 
@@ -57,15 +54,21 @@ The only difference between them is `MoneyTransfer::$currency`. This value diffe
 * If you pass a specific currency, it is used instead of the one that’s configured as default one.
 
 **`MoneyFacade::formatWithSymbol()`**
+
 `MoneyFacade::formatWithSymbol()` method accepts only one argument—a MoneyTransfer. It will return a string representation of the given object, considering the current locale.
 
 {% info_block infoBox "Example" %}
 
-MoneyTransfer::$amount = 1000<br>MoneyTransfer::$currency = ‘EUR’<br>Current locale is de_DE<br>The output would be 10,00 €<br>If the current locale would be en_US, the output would be: €10.00 when passing the same object.
+MoneyTransfer::$amount = 1000
+MoneyTransfer::$currency = ‘EUR’
+Current locale is de_DE
+The output would be 10,00 €
+If the current locale would be en_US, the output would be: €10.00 when passing the same object.
 
 {% endinfo_block %}
 
-** The `MoneyFacade::formatWithoutSymbol()`**
+**`MoneyFacade::formatWithoutSymbol()`**
+
 `MoneyFacade::formatWithoutSymbol()` method has the same behavior as `MoneyFacade::formatWithSymbol()`, except the fact that the currency symbol is not included.
 
 {% info_block infoBox "" %}
@@ -75,9 +78,11 @@ Then, for the above example, the output is `10,00` or `10.00`.
 {% endinfo_block %}
 
 **`MoneyFacade::convertIntegerToDecimal()`**
+
 In some cases you need a plain decimal representation of the value in integer (for example, cents). This can be useful, for example, for API calls.
 
 **`MoneyFacade::convertDecimalToInteger()`**
+
 In some cases you need an integer (for example, cents) representation for a decimal value. This can be useful for storing monetary values in the database.
 
 ## Money collection form type
@@ -108,7 +113,7 @@ protected function addMoneyValueCollectionType(FormBuilderInterface $builder)
 
 Also, modify the twig template to include the form money value collection table.
 
-```
+```twig
 {% raw %} {{ form_money_collection(mainForm.moneyValueCollection) }} {% endraw %}
 ```
 

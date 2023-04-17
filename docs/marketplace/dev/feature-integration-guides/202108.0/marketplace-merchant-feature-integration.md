@@ -73,6 +73,7 @@ Set up database schema:
 2. Apply database changes, generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -626,6 +627,99 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 }
 ```
 
+6. Set up result formatters:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|---|---|---|---|
+| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.    | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
+
+**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\MerchantSearch;
+
+use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
+use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter\MerchantSearchResultFormatterPlugin;
+
+class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>
+     */
+    protected function getMerchantSearchResultFormatterPlugins(): array
+    {
+        return [
+            new MerchantSearchResultFormatterPlugin(),
+        ];
+    }
+}
+```
+
+7. Set up query expanders:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|----|----|----|----|
+| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
+| StoreQueryExpanderPlugin | Allows searching to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
+
+**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\MerchantSearch;
+
+use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
+use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query\PaginatedMerchantSearchQueryExpanderPlugin;
+use Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin;
+
+class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
+     */
+    protected function getMerchantSearchQueryExpanderPlugins(): array
+    {
+        return [
+            new PaginatedMerchantSearchQueryExpanderPlugin(),
+            new StoreQueryExpanderPlugin(),
+        ];
+    }
+}
+```
+8. Add the `merchant` resource to the supported search sources:
+
+**src/Pyz/Shared/SearchElasticsearch/SearchElasticsearchConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\SearchElasticsearch;
+
+use Spryker\Shared\SearchElasticsearch\SearchElasticsearchConfig as SprykerSearchElasticsearchConfig;
+
+class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
+{
+    protected const SUPPORTED_SOURCE_IDENTIFIERS = [
+        'merchant',
+    ];
+}
+```
+
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
+
+
+| TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
+|---|---|
+| Merchant | merchant:1 |
+
+{% endinfo_block %}
+
 <details>
 <summary markdown='span'>Example of the expected data fragment</summary>
 
@@ -814,99 +908,6 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
  ```
  </details>
 
-6. Set up result formatters:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.    | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
-
-**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\MerchantSearch;
-
-use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
-use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter\MerchantSearchResultFormatterPlugin;
-
-class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>
-     */
-    protected function getMerchantSearchResultFormatterPlugins(): array
-    {
-        return [
-            new MerchantSearchResultFormatterPlugin(),
-        ];
-    }
-}
-```
-
-7. Set up query expanders:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|----|----|----|----|
-| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
-| StoreQueryExpanderPlugin | Allows searching to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
-
-**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\MerchantSearch;
-
-use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
-use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query\PaginatedMerchantSearchQueryExpanderPlugin;
-use Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin;
-
-class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
-    protected function getMerchantSearchQueryExpanderPlugins(): array
-    {
-        return [
-            new PaginatedMerchantSearchQueryExpanderPlugin(),
-            new StoreQueryExpanderPlugin(),
-        ];
-    }
-}
-```
-8. Add the `merchant` resource to the supported search sources:
-
-**src/Pyz/Shared/SearchElasticsearch/SearchElasticsearchConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Shared\SearchElasticsearch;
-
-use Spryker\Shared\SearchElasticsearch\SearchElasticsearchConfig as SprykerSearchElasticsearchConfig;
-
-class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
-{
-    protected const SUPPORTED_SOURCE_IDENTIFIERS = [
-        'merchant',
-    ];
-}
-```
-
-
-{% info_block warningBox "Verification" %}
-
-Make sure that when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
-
-
-| TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
-|---|---|
-| Merchant | merchant:1 |
-
-{% endinfo_block %}
-
 ### 7) Import data
 
 To import data:
@@ -932,7 +933,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 ```
 </details>
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000007 | Merchant identifier. |
 | contact_person_role |   | String | E-Commerce Manager | Role of the contact person of a merchant. |
@@ -975,7 +976,7 @@ MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,,
 MER000007,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,53.552463,10.004663
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000006 | Merchant identifier. |
 | country_iso2_code |   | String | DE | Country ISO-2 code the address exists in. |
@@ -1037,7 +1038,7 @@ merchant_reference,username
 MER000006,michele@sony-experts.com
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000006  | Identifier of the merchant in the system. Have to be unique. |
 | username | &check; | String | `michele@sony-experts.com`  | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user.  |
@@ -1383,6 +1384,16 @@ Enable Javascript and CSS changes:
 console frontend:yves:build
 ```
 
+{% info_block warningBox "Verification" %}
+
+Make sure that the following widgets were registered:
+
+| MODULE               | TEST                                                                                                                |
+|----------------------|---------------------------------------------------------------------------------------------------------------------|
+| SoldByMerchantWidget | Open product detail page, and you will see the sold by merchant text. (May require Marketplace Product integration) |
+
+{% endinfo_block %}
+
 ### 4) Set up behavior
 
 To set up behavior:
@@ -1441,6 +1452,12 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
     }
 }
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can open the merchant page at link `http://yves.de.demo-spryker.com/de/merchant/spryker`.
+
+{% endinfo_block %}
 
 2. Enable Javascript and CSS changes:
 

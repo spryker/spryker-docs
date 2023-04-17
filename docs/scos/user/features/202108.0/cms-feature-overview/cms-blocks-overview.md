@@ -18,7 +18,7 @@ A *CMS block* is a piece of reusable content which you can add to multipe CMS pa
 
 A *CMS block template* is a Twig file that, when applied to a block, defines its design, layout, and functionality.
 
-You can create templates to effectively create similar content. However, as CMS block, is a multi-purpose  entity, you can create templates that let you manage the content of different functionalities in your shop. For example, you can [manage emails via CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
+You can create templates to effectively create similar content. However, as far as CMS block is a multi-purpose entity, you can create templates that let you manage the content of different functionalities in your shop. For example, you can [manage emails using CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
 
 The CMS feature is shipped with several block templates by default. A developer can create more templates.
 
@@ -59,7 +59,7 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 --->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

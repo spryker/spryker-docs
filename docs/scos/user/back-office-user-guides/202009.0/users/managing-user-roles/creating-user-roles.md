@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-roles
   - /docs/en/managing-roles
   - /docs/scos/user/back-office-user-guides/202108.0/users/roles-groups-and-users/managing-roles.html
+  - /docs/scos/user/back-office-user-guides/202009.0/users/roles-groups-and-users/references/reference-information-roles.html
 ---
 
 This document describes how to create user roles in the Back Office.

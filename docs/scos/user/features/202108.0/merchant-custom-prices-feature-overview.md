@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/merchant-custom-prices-feature-overview
 related:
   - title: HowTo - Manage business unit specific prices via data import
-    link: docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
+    link: docs/pbc/all/price-management/page.version/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
 ---
 
 In B2B commerce transactions, prices are typically negotiated in contracts. Therefore, merchants and their clients, who are usually company business units, expect to see their own prices in the shop. With the Merchant Custom Prices feature, the shop owners of B2B and B2C marketplaces can provide different prices for merchants and their clients. This way, the relationship between merchants and buyers is reflected more accurately, and the shop owners can set different prices for various customers.
@@ -26,7 +26,7 @@ When talking about product prices that depend on customers they refer to, we dif
 
 The different price categories that can be selected based on contextual information, like customer or merchant relationship, is referred to as **price dimension**.
 
-Currently we have the following price dimensions:
+We have the following price dimensions:
 
 - Mode (Net/Gross)
 - Volume
@@ -80,7 +80,7 @@ Or, you can remove merchant relation prices referring to specific merchant relat
 console price-product-merchant-relationship:delete [-m X] . X = MR ID
 ```
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

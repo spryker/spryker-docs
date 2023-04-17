@@ -10,4 +10,4 @@ redirect_from:
 ---
 
 This section introduces you into developing with Glue REST API. Specifically, here you will find an overview of the [Glue API infrastructure](), [security and authentication]() process and other important notes on Glue workflow.
-Not found a guide you are looking for? Let us know about it by [creating an issue on Github](https://github.com/spryker/spryker-docs/issues/new) or dropping an email to [academy@spryker.com](academy@spryker.com).
+Not found a guide you are looking for? Let us know about it by [creating an issue on Github](https://github.com/spryker/spryker-docs/issues/new) or dropping an email to [academy@spryker.com](mailto:academy@spryker.com).

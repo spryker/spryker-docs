@@ -8,6 +8,7 @@ originalArticleId: c18b6116-0a52-4783-904f-4817cdffb56d
 redirect_from:
   - /v5/docs/product-bundle
   - /v5/docs/en/product-bundle
+  - /docs/scos/user/features/202005.0/product-information-management/product-bundles.html
 ---
 
 With the Product Bundles feature you can freely tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
@@ -94,11 +95,11 @@ Bundle product information is stored to `spy_sales_order_item_bundle`. When orde
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)  |
+| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

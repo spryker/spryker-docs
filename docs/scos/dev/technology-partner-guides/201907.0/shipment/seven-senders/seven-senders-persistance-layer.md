@@ -1,5 +1,5 @@
 ---
-title: Seven Senders — Persistence layer
+title: Seven Senders—Persistence layer
 template: concept-topic-template
 ---
 

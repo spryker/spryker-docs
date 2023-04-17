@@ -103,7 +103,7 @@ Make sure, that when you have a cart share link with Read-only or Full Access an
 Make sure, that when you have a cart share link with Read-only or Full Access, you are logged in and you follow the link - your default cart will be changed to shared one before you get redirected to the cart page.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -133,7 +133,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ##  2) Set up Behavior

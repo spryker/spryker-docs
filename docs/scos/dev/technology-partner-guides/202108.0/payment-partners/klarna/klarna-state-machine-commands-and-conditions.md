@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/klarna-state-machine-commands-and-conditions
   - /docs/klarna-state-machine-commands-and-conditions
   - /docs/en/klarna-state-machine-commands-and-conditions
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
 related:
   - title: Klarna - Invoice Pay in 14 days
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-invoice-pay-in-14-days.html

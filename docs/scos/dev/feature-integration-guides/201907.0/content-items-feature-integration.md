@@ -78,6 +78,7 @@ Adjust the schema definition so entity changes will trigger events:
 Run the following commands to apply database changes and generate changes for entities and transfers:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -346,7 +347,7 @@ br3,Test Banner 3,Lorem Lorem,banner title 3,,de banner title 3,banner sub-title
 <br>
 </details>
 
-| Column | REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |
@@ -369,7 +370,7 @@ apl3,APL Name 3,APL Description 3,"180,171","152,151",""
 <br>
 </details>
 
-| Column | REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |
@@ -388,7 +389,7 @@ PS-3,PS Name 3,PS Description 3,3_tomtom_runner_set,2_sony_set,
 <br>
 </details>
 
-| Column | REQUIRED? | Data Type | Data Explanation |
+| Column | REQUIRED | Data Type | Data Explanation |
 | --- | --- | --- | --- |
 | key | mandatory | string (unique) | Reference used for banner updates. |
 | name | mandatory | string | Content Item name. |
@@ -602,7 +603,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 Make sure that on the CMS Page and CMS Block edit pages you can see a new widget representing a block in the WYSIWYG editor toolbar when you add any Content Item using a **Content Item** button.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start the feature integration, review and install the necessary features:
 

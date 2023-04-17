@@ -43,6 +43,6 @@ To remove any alternative product, in the _Actions_ column, click **Remove**.
 In addition to the alternatives section, a dynamic label is assigned to the product for which the alternatives are set up.
 ![Product label alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/product-label-alternatives.png)
 
-## What's next?
+## Next steps
 
 See the articles in the _References_ section for more examples of the alternative products.

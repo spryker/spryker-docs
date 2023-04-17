@@ -22,6 +22,7 @@ redirect_from:
   - /v1/docs/en/whats-new
   - /v6/docs/whats-new
   - /v6/docs/en/whats-new
+  - /docs/scos/user/intro-to-spryker/whats-new/vat-rates-reduction-in-germany-between-july-2020-and-january-2021.html
 ---
 
 <!--

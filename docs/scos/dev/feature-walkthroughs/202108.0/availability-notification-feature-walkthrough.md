@@ -22,9 +22,9 @@ The following scheme illustrates relations between Availability, `AvailabilityNo
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
-|INTEGRATION GUIDES  | GLUE API GUIDES  |
+|INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
 | [Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/availability-notification-feature-integration.html)  | [Managing availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/managing-availability-notifications.html)  |
 | [Glue API: Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-availability-notification-feature-integration.html) | [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html)  |

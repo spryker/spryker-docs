@@ -3,6 +3,8 @@ title:  "Reference information: Customer module overview"
 last_updated: Aug 13, 2021
 description: This article describes how new customers can be created and managed and how to enable specific features related to customers.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202108.0/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
 ---
 
 The Customer entity wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This article describes how new customers can be created and managed and how to enable specific features related to customers.
@@ -75,7 +77,7 @@ Spryker consistently delivers the scalable operating system without coupling it 
 
 From version 7.0.0, on case-insensitive queries, using the `filterByEmail` conditions are enabled by default. If your version of the **Customer** module is lower, you are still able to use this feature.
 
-To enable case insensitive fields in Propel for filtering queries, update the PropelOrm module to the 1.5.0 version.
+To enable case insensitive fields in Propel for filtering queries, update the `PropelOrm` module to the 1.5.0 version.
 
 When the feature is enabled, add an attribute `caseInsensitive="true"` into the customer schema file on the project level (usually `src/Pyz/Zed/Customer/Persistence/Propel/Schema/spy_customer.schema.xml`).
 

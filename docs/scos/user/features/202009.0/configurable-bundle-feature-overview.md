@@ -244,12 +244,12 @@ Currently, the feature has the following functional constraints which are going 
 * The *Slot* page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Create a configurable bundle template](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html)  |
-|  [Manage configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html)  |
+|  [Creating configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html)  |
+|  [Managing configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

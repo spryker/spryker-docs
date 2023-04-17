@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-threshold-settings
   - /docs/managing-threshold-settings
   - /docs/en/managing-threshold-settings
+  - /docs/scos/user/back-office-user-guides/202108.0/administration/manage-threshold-settings.html
 related:
   - title: Managing Global Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-global-thresholds.html

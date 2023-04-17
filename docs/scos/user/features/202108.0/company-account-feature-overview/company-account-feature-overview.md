@@ -23,7 +23,7 @@ The feature lets you create your own permission rules and assign them to company
 
 Organizations with multiple business units that support their own set of accounts, customers, and vendors often need some of their company users to be able to access (and eventually manage) not one business unit but several business units within the whole company. Business on behalf lets you set up multiple company users for one customer account. You can assign a company user to multiple business units with different roles and permissions to match your organization's policies and procedures.
 
-The feature lets customers log in by token. By dynamically generating a token, a user is able to log in with a pre-defined company user to a new e-commerce provider. All this happens without sharing the login information or having to fill out a sign-up form.
+The feature lets customers log in by token. By dynamically generating a token, a user is able to log in with a predefined company user to a new e-commerce provider. All this happens without sharing the login information or having to fill out a sign-up form.
 
 Check out the following video about managing company accounts:
 
@@ -32,7 +32,7 @@ Setting up company structure:
 {% wistia qkdgkeannb 960 720 %}
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

@@ -28,9 +28,9 @@ The following schema illustrates relations  in the Quick Order feature:
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
-| INTEGRATION GUIDES  | MIGRATION GUIDES |
+| INSTALLATION GUIDES  | UPGRADE GUIDES |
 |---|---|
 | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html) | [ProductPackagingUnitStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html) |
 | [Quick Add to Cart + Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-shopping-lists-feature-integration.html) | [ProductPageSearch migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html) |

@@ -1,5 +1,5 @@
 ---
-title: Scheduled Prices feature integration
+title: Integrate the Scheduled prices feature
 description: Use the guide to install the Scheduled Prices feature into your project.
 last_updated: May 12, 2020
 template: feature-integration-guide-template
@@ -43,6 +43,7 @@ Run the following commands to:
 * generate entity and transfer changes
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -85,7 +86,7 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_i
 ,060_26175504,DEFAULT,AT,EUR,11296,12552,2019-06-23T00:00:00-00:00,2019-07-19T23:59:59-00:00
 ```
     
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 |  `abstract_sku` | optional | string | 001 | Existing abstract product SKU of the scheduled price. |
 |  `concrete_sku` | optional | string | 060_26027598 | Existing concrete product SKU of the scheduled price. |

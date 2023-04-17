@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Handling New Types of Entity URLs - Legacy Demoshop
+title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/url-handling-new-entity
@@ -23,35 +23,34 @@ redirect_from:
   - /v1/docs/en/url-handling-new-entity
 ---
 
-The following information describes how to handle URLs for other types of entities that Spryker core provides.
+This document shows how to handle URLs for other types of entities that Spryker core provides.
 
 ## Prerequisites
 
-* Before you begin, make sure the target entity is already in your database (the one to which you would like to assign URLs). In the examples below we'll call this entity `my_entity`.
-* The next step is to run a working storage collector to export your entities into the key-value storage (Redis).
-
-{% info_block infoBox %}
-To see how to create a new collector, see  Collector.
-{% endinfo_block %}
-
-When you create the collector, make sure its resource type is called the same as your entity (`my_entity` in our examples).
-
-* Once you have collected some data in the key-value storage, you can start to assign URLs to them and work towards displaying them on the frontend.
-
-## Preparing the Database
-To begin, do the following:
-
-1. Extend the `spy_url` table with a new foreign-key to our entity table. Following the existing naming convention for such columns, and prefix the name with `fk_resource_`, then end with the name of the new entity.
+* Make sure the target entity is already in your database—the one to which you would like to assign URLs. In the following examples, this entity is called *`my_entity`*.
+* To export your entities into the key-value storage (Redis), run a working storage collector.
 
 {% info_block infoBox %}
 
-For example: `fk_resource_my_entity`
+<!-- uncomment if you add the link:
+
+To create a new collector, see Collector.
+
+-->
+
+When you create the collector, make sure its resource type is called the same as your entity—in the following examples, it is *`my_entity`*.
 
 {% endinfo_block %}
 
-2. The propel schema XML file should appear as follows:
+* When you finish collecting data in the key-value storage, you can start to assign URLs to them and work towards displaying them on the frontend.
 
-Pyz/Zed/MyBundle/Persistence/Propel/Schema/spy_url.schema.xml
+## Prepare the database
+
+1. Extend the `spy_url` table with a new foreign key to your entity table. Follow the existing naming convention for such columns. Prefix the name with `fk_resource_` and end with the name of the new entity—for example, `fk_resource_my_entity`.
+
+2. The propel schema XML file must appear as follows:
+
+**Pyz/Zed/MyBundle/Persistence/Propel/Schema/spy_url.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -67,24 +66,25 @@ Pyz/Zed/MyBundle/Persistence/Propel/Schema/spy_url.schema.xml
     </database>
 ```
 
-3. After adding the schema extension file, run the following Propel commands to migrate the changes:
+3. After adding the schema extension file, migrate the changes:
+
 * `vendor/bin/console propel:diff`
 * `vendor/bin/console propel:migrate`
 * `vendor/bin/console propel:install`
 
-## Preparing URL Transfer Object
-Define a new property for `UrlTransfer`.
+## Prepare URL transfer object
 
+1. Define a new property for `UrlTransfer`.
 
 {% info_block infoBox %}
 
-The name of the new property should match the name of the newly added database column's name but must be `CamelCase` formatted.
+The name of the new property must match the name of the newly added database column's name but must be camel case formatted.
 
 {% endinfo_block %}
 
-The transfer definition xml should appear as follows:
+The transfer definition XML must appear as follows:
 
-Pyz/Shared/MyBundle/Transfer/my_bundle.transfer.xm
+**Pyz/Shared/MyBundle/Transfer/my_bundle.transfer.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -99,17 +99,25 @@ Pyz/Shared/MyBundle/Transfer/my_bundle.transfer.xm
     </transfers>
 ```
 
-To apply the change to the UrlTransfer run the following command:
-`vendor/bin/console transfer:generate`
+2. Apply the change to the `UrlTransfer`:
+
+```bash
+vendor/bin/console transfer:generate
+```
 
 {% info_block infoBox %}
-With the steps above you prepared both the database and the code to handle the URLs for the new type of entity.
+
+With the preceding steps, you have prepared both the database and the code to handle the URLs for the new type of entity.
+
 {% endinfo_block %}
 
-## Using the URL Facade
-To manipulate URLs, the URL module's public API is used : `\Spryker\Zed\Url\Business\UrlFacade`.
+## Use the URL facade
+
+To manipulate URLs, the URL module's public API is used: `\Spryker\Zed\Url\Business\UrlFacade`.
+
 The methods there accept instances of `\Generated\Shared\Transfer\UrlTransfer`.
-The code snippet below demonstrates how to create a new URL for `my_entity`.
+
+The code following snippet demonstrates how to create a new URL for *`my_entity`*.
 
 ```php
 <?php
@@ -136,24 +144,27 @@ public function createUrlForMyEntity($url, $idMyEntity, $idLocale)
 
 {% info_block infoBox %}
 
-The `\Spryker\Zed\Url\Business\UrlFacade::createUrl()` method persists a new URL in the database and also makes sure it will be collected to the key-value storage the next time the URL collector runs.
+The `\Spryker\Zed\Url\Business\UrlFacade::createUrl()` method persists a new URL in the database and also makes sure it is collected to the key-value storage the next time the URL collector runs.
 
 {% endinfo_block %}
 
-## Setting up the Frontend
-To setup the frontend, you need to create a Controller class in Yves and make sure it is discoverable to the responsible router.
+## Set up the frontend
 
-In the Spryker Legacy Demoshop, a basic infrastructure is provided that automatically collects the new `my_entity` resource types to the key-value storage (Redis) and the `\Pyz\Yves\Collector\Plugin\Router\StorageRouter` matches URLs that are stored there.
+To set up the frontend, in Yves, create a `Controller` class and make sure it is discoverable to the responsible router.
+
+In the Spryker Legacy Demoshop, basic infrastructure is provided that automatically collects the new *`my_entity`* resource types to the key-value storage (Redis), and the `\Pyz\Yves\Collector\Plugin\Router\StorageRouter` matches URLs that are stored there.
 
 This router gets a stack of `\Pyz\Yves\Collector\Creator\ResourceCreatorInterface` which handles the URL resource linked to the matching URLs.
 
 {% info_block infoBox %}
 
-This means that, if a `URL /foo` is linked to a `my_entity` record, then there must be a `ResourceCreator` for this URL that handle a `my_entity` type of resources and forwards the right information about the Controller to the Router that handles the request. <br> If there is no `ResourceCreator` registered for the `my_entity` resource type, a 404 page not found will be issued.
+This means that if a `URL /foo` is linked to a *`my_entity`* record, there must be a `ResourceCreator` for this URL that handles a *`my_entity`* type of resources and forwards the right information about the `Controller` to the `Router` that handles the request.
+
+If there is no `ResourceCreator` registered for the *`my_entity`* resource type, an HTTP `404 Page not found` status code is issued.
 
 {% endinfo_block %}
 
-To create an instance of `ResourceCreatorInterface` that provides information to a controller to handles URLs for your custom entity and register the `ResourceCreator` in the `StorageRouter`, follow the example below:
+To create an instance of `ResourceCreatorInterface` that provides information to a controller to handle URLs for your custom entity and register `ResourceCreator` in the `StorageRouter`, follow this example:
 
 **Code sample**
 
@@ -182,9 +193,9 @@ class MyEntityController extends AbstractController
 }
 ```
 
-2. Next implement the `ResourceCreator` that connects the router to our controller.
+1. Implement the `ResourceCreator` that connects the router to your controller.
 
-**Code sample**
+<details><summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -229,7 +240,9 @@ class MyEntityResourceCreator extends AbstractResourceCreator
 }
 ```
 
-3. Create a simple factory and a plugin to provide the `ResourceCreator` to the Collector module. Use plugins to communicate between module in Yves.
+</details>
+
+3. Create a simple factory and a plugin to provide the `ResourceCreator` to the `Collector` module. Use plugins to communicate between modules in Yves.
 
 **Code sample**
 
@@ -279,7 +292,7 @@ class MyEntityResourceCreatorPlugin extends AbstractPlugin
 }
 ```
 
-4. In `\Pyz\Yves\Collector\CollectorDependencyProvider` provide the plugin to the Collector module:
+4. In `\Pyz\Yves\Collector\CollectorDependencyProvider`, provide the plugin to the `Collector` module:
 
 ```php
 <?php
@@ -316,7 +329,7 @@ class CollectorDependencyProvider extends AbstractBundleDependencyProvider
 }
 ```
 
-5. Finally in `\Pyz\Yves\Collector\CollectorFactory` add the plugin to the `ResourceCreator` stack that the `StorageRouter` will use for matching resources.
+1. In `\Pyz\Yves\Collector\CollectorFactory` add the plugin to the `ResourceCreator` stack, which `StorageRouter` uses for matching resources.
 
 **Code sample**
 
@@ -354,11 +367,12 @@ class CollectorFactory extends AbstractFactory
 }
 ```
 
-## Next Steps
-You should now be able to open the URLs in Yves for the new entities that already have assigned URLs and were collected to the key-value storage as described above.
+## Next steps
 
-Next, you can:
+You can open the URLs in Yves for the new entities that already have assigned URLs and have collected to the key-value storage as described above.
 
-*  handle the request in the new controller properly;
-*  create some twig templates and display the page in a well formatted way;
-*  or anything that requirements bring.
+Next, you can do the following:
+
+* Handle the request in the new controller properly.
+* Create some twig templates and display the page in a well formatted way.
+* Or anything that requirements bring.

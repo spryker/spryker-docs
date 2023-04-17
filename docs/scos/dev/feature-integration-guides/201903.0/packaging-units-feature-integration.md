@@ -139,6 +139,7 @@ Set up synchronization queue pools so that non-multistore entities (not store-sp
 
 Run the following commands to apply the database changes and generate entity and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -264,7 +265,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that  the configured data in the database has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that  the configured data in the database has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 
@@ -401,7 +402,7 @@ packaging_unit_type.pack_500.name
 ```
 </details>
 
-| Column | REQUIRED? |Data Type  |Data Example  |Data Explanation  |
+| Column | REQUIRED |Data Type  |Data Example  |Data Explanation  |
 | --- | --- | --- | --- | --- |
 | `name` |  mandatory|string  | `packaging_unit_type.ring_500.name` |Glossary key that will be used for display. Each name needs a glossary key definition for all configured locales.  |
 
@@ -467,7 +468,7 @@ concrete_sku,is_lead_product,has_lead_product,packaging_unit_type_name,default_a
 </details>
 
 <div>
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `concrete_sku` | mandatory | string | 218_123 | Glossary key that will be used for display. Each name needs a glossary key definition for all configured locales. |
 | `is_lead_product` | mandatory | bool integer | 1 | Decides if the current concrete_sku is the lead concrete product of the product abstract. Exactly 1 concrete product has to be a lead product in a packaging unit-based product abstract. |
@@ -876,7 +877,7 @@ Go to the Zed UI Sales overview and check the order.
 - Verify if the correct amount is displayed per sales order item.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -945,7 +946,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the configured data in the database has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that the configured data in the database has been added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

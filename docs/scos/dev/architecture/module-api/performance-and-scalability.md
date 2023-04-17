@@ -1,6 +1,6 @@
 ---
-title: Performance and Scalability
-description: Scalability, as an integral part of the core architecture, is achieved by separating the front-end (Yves) and back-end (Zed) applications.
+title: Performance and scalability
+description: Scalability, as an integral part of the core architecture, is achieved by separating the frontend (Yves) and backend (Zed) applications.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-scalability
@@ -22,27 +22,39 @@ redirect_from:
   - /v2/docs/en/performance-scalability
   - /v1/docs/performance-scalability
   - /v1/docs/en/performance-scalability
+related:
+  - title: Semantic versioning - major vs. minor vs. patch release
+    link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+  - title: Using ~ Composer constraint for customized modules
+    link: docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
+  - title: "Declaration of module APIs: Public and private"
+    link: docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
 
-Spryker Commerce OS was built to enable the development of high-performance e-commerce applications that are able to support an extremely high number of unique visitors. However, no application can be both light and heavy at the same time.
+Spryker Commerce OS was built to enable the development of high-performance e-commerce applications that can support an extremely high number of unique visitors. However, no application can be both light and heavy at the same time.
 
-Therefore, we have two applications: Yves and Zed. Both communicate with each other using remote procedure calls. Both use dedicated data stores, and therefore no cache is needed. Complex business logic operations are handled by the back-end application.
+Therefore, we have two applications: Yves and Zed. Both communicate with each other using remote procedure calls. Both use dedicated data stores, and therefore no cache is needed. Complex business logic operations are handled by the backend application.
 
 {% info_block infoBox "Fast execution time " %}
-Depending on the server's performance, the execution time for the front-end application is around 50ms, which is fast enough to run any commerce application using a small infrastructure, even with a high amount of daily visitors.
+
+Depending on the server's performance, the execution time for the frontend application is around 50&nbsp;ms, which is fast enough to run any commerce application using a small infrastructure, even with a high amount of daily visitors.
+
 {% endinfo_block %}
 
-Scalability, as an integral part of the core architecture, is achieved by separating the front-end (Yves) and back-end (Zed) applications. A shared-nothing architecture ensures that every node of Yves has its own instance of the client-side data stores. New nodes can be easily added or removed ad hoc.
+Scalability, as an integral part of the core architecture, is achieved by separating the frontend (Yves) and backend (Zed) applications. A shared-nothing architecture ensures that every node of Yves has its own instance of the client-side data stores. New nodes can be easily added or removed ad hoc.
 
 ## Yves and Zed
 
-{% info_block infoBox "Separation of Responsibilities " %}
-The back end is only required for more complex business logic such as cart calculations and payments.
+{% info_block infoBox "Separation of Responsibilities" %}
+
+The backend is only required for more complex business logic such as cart calculations and payments.
+
 {% endinfo_block %}
 
 
 ### Yves
-Yves is the slimline front-end application that gets its data from fast **Key-Value storage** like Redis, and a **Search storage** like Elasticsearch.
+
+Yves is the slimline frontend application that gets its data from fast **Key-Value storage** like Redis, and a **Search storage** like Elasticsearch.
 
 Yves is built on top of Symfony components and uses Twig as its templating engine. It has no connection to the database in Zed.
 
@@ -56,9 +68,10 @@ Some of the key features:
 * SEO friendly
 
 ### Zed
-Zed is more of a heavy-duty back-end application. Like Yves, it's built on top of Symfony components and uses Twig. The main purpose of Zed is to take care of business logic, persistent data, and to connect to external systems.
 
-Some of the key features:
+Zed is more of a heavy-duty backend application. Like Yves, it's built on top of Symfony components and uses Twig. The main purpose of Zed is to take care of business logic, persistent data, and to connect to external systems.
+
+Some of the key features are as follows:
 
 * Based on Symfony components
 * MySQL, MariaDB, and PostgreSQL support
@@ -69,19 +82,17 @@ Some of the key features:
 * OMS Code Management Tools
 * Application Integrity Checks
 
-## Data Synchronization
+## Data synchronization
 
 {% info_block infoBox "No full page cache problems " %}
-Our front-end works without a full page cache. This allows continuous updates and avoids the problems of outdated product information – so tracking, stock information, and all the other details are always up to date.
+
+Our frontend works without a full page cache. This allows continuous updates and avoids the problems of outdated product information. This way, tracking, stock information, and all the other details are always up to date.
+
 {% endinfo_block %}
 
 In order for Yves to display any data, the data has to be first aggregated and exported.
 
-The synchronization happens in 3 steps:
-
+The synchronization happens in three steps:
 * Touch
 * Collect
 * Export
-
-Refer to Collector and Touch documentation for details.
-

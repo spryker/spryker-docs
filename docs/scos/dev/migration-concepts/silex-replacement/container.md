@@ -20,23 +20,29 @@ redirect_from:
   - /v3/docs/en/container-201903
   - /v2/docs/container-201903
   - /v2/docs/en/container-201903
+related:
+  - title: Silex replacement
+    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
+  - title: Application
+    link: docs/scos/dev/migration-concepts/silex-replacement/application.html
 ---
 
-A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the [PSR-11 interface](https://www.php-fig.org/psr/psr-11/).
+A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the PSR-11 interface<!-- ](https://www.php-fig.org/psr/psr-11/) check if it works before restoring-->.
 
 The container is used to add services and allow other application plugins access them. Services are integrations like Twig or Symfony components like Security or Form. To be able to configure or change the services easily, they are added to the applications as a part of [application plugins](/docs/scos/dev/migration-concepts/silex-replacement/application.html).
-
 
 It's important that almost everything that is accessible through the container should only be instantiated when it is requested. It's not as important for static values like `isDebugMode` as it is important for expensive instantiations.                
 
 ## Where is the container used?
+
 Spryker uses several container instances to separate the access to services. The first container is used for services like Twig, which are added to the application through `Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface`.
 The second container is used on a per-module basis. Each module creates its own container instance and can add its dependencies to the container. Usually, those dependencies are plugin stacks.
 
 ## How to use the container?
+
 The container implements the [PSR-11 interface](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md). On top of it, we added the following methods:
 
-| Method | Description |
+| METHOD | DESCRIPTION |
 | --- | --- |
 | `set()` | Adds services to the container. |
 | `setGlobal()` | Adds global services to the container. |
@@ -51,6 +57,7 @@ We added the `ArrayAccess` interface for backward compatibility and do not recom
 {% endinfo_block %}
 
 ### Add a service
+
 To add a service, pass the service ID and a callback to the `set()` method.
 
 ```php
@@ -60,6 +67,7 @@ $container = $container->set('your service identifier', function () {
 ```
 
 ### Create service aliases
+
 For backward compatibility, you can configure one or more aliases for a service. You can use them for renaming service identifiers without breaking the code which uses them.
 
 For example, you have a typo in the identifier of an added service:
@@ -116,6 +124,7 @@ $container->configure('service identifier', [
 ```
 
 ### Check if a service was added
+
 To check if a service exists in the container, use the `has()` method.
 
 Example:
@@ -127,7 +136,9 @@ if ($container->has('your service identifier')) {
 ```
 
 ### Retrieve a service
+
 To retrieve a service:
+
 1. Check if the service exists using the `has()` method.
 2. Retrieve the service using the `get()` method.
 
@@ -141,6 +152,7 @@ if ($container->has('your service identifier')) {
 ```
 
 ### Remove a service
+
 To remove a service from the container, use the `remove()` method.
 
 Example:
@@ -152,6 +164,7 @@ if ($container->has('your service identifier')) {
 ```
 
 ### Extend a service
+
 To extend a service without loading it, use the `extend()` method. It's very important to return the extended service from your callback.
 
 Example:
@@ -189,6 +202,7 @@ class FormApplicationPlugin extends AbstractPlugin implements ApplicationPluginI
     }
 }
 ```
+
 In the Dependency Provider of a module, add a unique constant. It allows you to use the constant as a key instead of the key provided by the service when referring to it in your Factory:
 
 ```php
@@ -223,6 +237,7 @@ class ModuleCommunicationFactory extends AbstractCommunicationFactory
 ## Troubleshooting
 
 **when**
+
 `FrozenServiceException` - The service `your service identifier` is marked as frozen and can't be extended at this point.
 
 **then**

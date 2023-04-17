@@ -8,6 +8,7 @@ originalArticleId: 7924cb82-d6f6-4f5f-a132-4177692d54fa
 redirect_from:
   - /v5/docs/checking-out-purchases-and-getting-checkout-data-201907
   - /v5/docs/en/checking-out-purchases-and-getting-checkout-data-201907
+  - /docs/scos/dev/glue-api-guides/202005.0/checking-out-purchases-and-getting-checkout-data.html
 related:
   - title: Managing Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/managing-carts.html
@@ -34,7 +35,7 @@ It is the responsibility of the API Client to redirect to the third party web si
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/managing-the-components/creating-a-component.html).
 
 ## Checkout Workflow
 There are three endpoints provided to implement checkout via the API:

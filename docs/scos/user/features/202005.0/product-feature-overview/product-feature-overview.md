@@ -12,16 +12,17 @@ redirect_from:
   - /v5/docs/en/product-abstraction
   - /v5/docs/product-information-management
   - /v5/docs/en/product-information-management
+  - /docs/scos/user/features/202005.0/product/product-feature-overview/products-overview.html
 ---
 
-Product is the central entity of a shop. Establishing the product data allows you to build and maintain a catalog representing your commercial offerings. The products are created and managed in the [ Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/general-back-office-overview.html). 
+Product is the central entity of a shop. Establishing the product data allows you to build and maintain a catalog representing your commercial offerings. The products are created and managed in the [ Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/general-back-office-overview.html).
 The product information you specify in the Back office, serves various purposes:
 
 * Contains characteristics that describe the product.
-* Affects the shop behavior. For example, filtering and search in your shop depend on the product attributes you set. 
+* Affects the shop behavior. For example, filtering and search in your shop depend on the product attributes you set.
 * Used for internal calculations, such as, for example, delivery costs based on the product weight.
 
-One and the same product can have multiple variants, such as size or color. In the context of the Spryker Commerce OS, such product variations are called **Product Variants**, or **Concrete Products**. To distinguish between different product versions, to keep track of their stock and to provide a better shopping experience to customers, the Product Variants are grouped under an **Abstract Product**. 
+One and the same product can have multiple variants, such as size or color. In the context of the Spryker Commerce OS, such product variations are called **Product Variants**, or **Concrete Products**. To distinguish between different product versions, to keep track of their stock and to provide a better shopping experience to customers, the Product Variants are grouped under an **Abstract Product**.
 
 
 ## Product Data That Differ Abstracts from Concretes
@@ -45,7 +46,7 @@ Le't consider an example illustrating the relation between Abstract and Concrete
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/product-abstraction.png)
 
-In this example, a T-shirt, the Abstract Product, is available in sizes S, M, and L, which are three different Product Variants, each holding its own stock. When you search *T-shirt* on the Storefront, it's the Abstract Product that appears as the search result. Your customers can not buy the Abstract Product. On the product detail page, they have to select between the Product Variants S, M, L to put the *T-shirt* product to cart. 
+In this example, a T-shirt, the Abstract Product, is available in sizes S, M, and L, which are three different Product Variants, each holding its own stock. When you search *T-shirt* on the Storefront, it's the Abstract Product that appears as the search result. Your customers can not buy the Abstract Product. On the product detail page, they have to select between the Product Variants S, M, L to put the *T-shirt* product to cart.
 
 {% info_block infoBox "Note" %}
 
@@ -63,7 +64,6 @@ Besides the Spryker Back Office, product information can be maintained in an ext
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html)
+* [Akeneo](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html)
 * [Censhare PIM](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
 * [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
-

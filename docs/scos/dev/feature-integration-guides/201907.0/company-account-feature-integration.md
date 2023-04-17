@@ -83,6 +83,7 @@ Adjust the schema definition so entity changes will trigger events.
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -261,7 +262,7 @@ DE--7,spryker_systems,spryker_systems_HQ,0
 <br>
 </details>
 
-| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
+| Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `customer_reference` | mandatory | string | DE--6 | The key that will identify the Customer to add data to. |
 | `company_key` | mandatory | string | BoB-Hotel-Mitte | The key that will identify the Company to add data to. |
@@ -524,7 +525,7 @@ Make sure that token generation for a company user works. For more information, 
 To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` was set up correctly, you need to check the data exported to the key-value storage key `kv:company_user:1` for the `id_company_business_unit:id`. `id_company_business_unit` needs to be set up to a correct foreign key of the business unit the company user is assigned to.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Overview and install the necessary features before beginning the integration step.
 
@@ -575,7 +576,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

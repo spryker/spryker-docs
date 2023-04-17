@@ -8,13 +8,16 @@ originalArticleId: ab38a147-b562-42fb-9e2d-2e67ff083261
 redirect_from:
   - /v5/docs/arvato-1-0
   - /v5/docs/en/arvato-1-0
+  - /docs/scos/dev/technology-partner-guides/202005.0/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/arvato/arvato-risk-solution-services-integration.html
 related:
   - title: Arvato - Risk Check 1.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
 ---
 
 The purpose of developing the risk solution services is to provide a complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation. Besides the use of pre-configured service modules for risk management, risk solution services comprise process support up to the outsourcing of the entire operative risk management. All risk management processes are supported by a business intelligence component.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png)
 
 ## Prerequisites
 For every service call of risk solution services an authorization is required.
@@ -45,7 +48,7 @@ API URLs:
 Services:
 * [Risk Check](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html)
 
-To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html) for more details.
+To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) for more details.
 
 ## Installation
 

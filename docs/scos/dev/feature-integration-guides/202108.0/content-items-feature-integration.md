@@ -105,6 +105,7 @@ Ensure that the following modules have been installed in `vendor/spryker`:
 2. Apply database changes and generate changes for entities and transfers:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -734,7 +735,7 @@ Make sure that, when editing CMS pages and blocks in the WYSIWYG editor, you can
 
 
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Content Item feature front end.
 

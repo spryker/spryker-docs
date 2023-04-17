@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Twig extensions
+title: "Tutorial: Twig extensions"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-twig-extensions
@@ -21,11 +21,14 @@ redirect_from:
   - /v2/docs/en/t-twig-extensions
   - /v1/docs/t-twig-extensions
   - /v1/docs/en/t-twig-extensions
+related:
+  - title: "Tutorial: How the define Twig tag is working"
+    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
 ---
 
-This article will teach you to implement a Twig extension. For the sake of an example, we’ll build a filter which can be used for displaying prices.
+This document shows how to implement a Twig extension. As an example, let's build a filter which can be used for displaying prices.
 
-To implement a Twig extension, you have to do the following:
+To implement a Twig extension, do the following:
 
 1. Implement the filter.
 2. Add the twig extension.
@@ -34,10 +37,11 @@ To implement a Twig extension, you have to do the following:
 
 Read on to learn how you can do this.
 
-## Implement the filter
+## 1. Implement the filter
+
 To implement the filter, add the logic to a dedicated class in the module you’re currently working on:
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -73,7 +77,7 @@ class PriceFilter
 }
 ```
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -95,7 +99,7 @@ class ServiceFactory extends AbstractServiceFactory
 }
 ```
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -116,10 +120,11 @@ class PriceFilterService extends AbstractService implements PriceFilterServiceIn
 }
 ```
 
-## Add the Twig extension
-Having implemented the filter, you have to add the Twig extension. To do so, create a class that extends the `AbstractTwigExtensionPlugin` class and calls the logic implemented in the class mentioned above.
+## 2. Add the Twig extension
 
-**Code sample:**
+Having implemented the filter, add the Twig extension by creating a class that extends the `AbstractTwigExtensionPlugin` class and calls the logic implemented in the preceding class.
+
+**Code sample**
 
 ```php
 <?php
@@ -152,8 +157,9 @@ class ExampleTwigExtensionPlugin extends AbstractTwigExtensionPlugin
 }
 ```
 
-## Register the Twig extension you created
-To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) for information on the dependency providers.
+## 3. Register the Twig extension you created
+
+To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html) for information on the dependency providers.
 
 First, add a reference to the Twig extension in `TwigDependencyProvider.php`:
 
@@ -168,14 +174,16 @@ protected function getTwigPlugins(Application $app): array
         new ExampleTwigExtensionPlugin(),
     ];
 }
+```
 
+## 4. Test the Twig extension
 
-## Test the Twig Extension
 Now, the Twig extension is ready to be used in the Twig templates.
 
-```json
+```twig
 {# outputs TEST STRING #}
 
 {% raw %}{{{% endraw %} 100|myFilter {% raw %}}}{% endraw %}
 ```
+
 An input of `100` will be output as `1.00 &euro`.

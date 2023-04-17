@@ -14,19 +14,15 @@ To start the feature integration, overview and install the necessary features:
 
 | FEATURE OR GLUE API  | VERSION    | INTEGRATION GUIDE    |
 | ----------------- | ---------- | --------------------- |
-| Glue API: Spryker Core                | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Company Account                       | {{site.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/company-account-feature-integration.html) |
-| Glue API: Customer Account Management | {{site.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Glue Application            | {{site.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| UUID Generation Console               | {{site.version}}  |  |
-| Glue API: Shipment                    | {{site.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) |
-| Glue API: Checkout                    | {{site.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html) |
-
-
+| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Company Account                       | {{page.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
+| Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| UUID Generation Console               | {{page.version}}  |  |
+| Glue API: Shipment                    | {{page.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html) |
+| Glue API: Checkout                    | {{page.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/company-user-auth-rest-api:"^2.0.0" spryker/oauth-company-user:"^2.0.0" spryker/oauth-permission:"^1.2.0" spryker/companies-rest-api:"^1.1.0" spryker/company-business-units-rest-api:"^1.2.0" spryker/company-business-unit-addresses-rest-api:"^1.1.0" spryker/company-roles-rest-api:"^1.1.0" spryker/company-users-rest-api:"^2.2.0" --update-with-dependencies
@@ -52,7 +48,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up configuration: Configure the resources available for company users
 
-Add the following resource to the list of resources that are accessible only for company users:
+Add the following resource to the list of resources that are accessible only to company users:
 
 **src/Pyz/Glue/CompanyUsersRestApi/CompanyUsersRestApiConfig.php**
 
@@ -75,13 +71,10 @@ class CompanyUsersRestApiConfig extends SprykerCompanyUsersRestApiConfig
 
 ## 3) Set up database schema and transfer objects
 
-Generate transfer changes:
-
 ```bash
 console propel:install
 console transfer:generate
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -134,10 +127,6 @@ Make sure that the following changes have occurred:
 | CheckoutErrorTransfer                                      | class    | created | src/Generated/Shared/Transfer/CheckoutErrorTransfer.php      |
 | RestShipmentsTransfer                                      | class    | created | src/Generated/Shared/Transfer/RestShipmentsTransfer.php      |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Verify that the following changes have occurred in the database:
 
 | DATABASE ENTITY                | TYPE   | EVENT |
@@ -173,18 +162,13 @@ Make sure that in the database the configured data has been added to the `spy_gl
 
 {% endinfo_block %}
 
-## 5) Set up behavior
-
-Set up the following behaviors.
-
-### Generate UUIDs for the existing company records without UUIDs
+## 5) Generate UUIDs for the existing company records without UUIDs
 
 Generate the `UUID` column values in the `spy_company` database table:
 
 ```bash
 console uuid:generate Company spy_company
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -198,12 +182,9 @@ select count(*) from spy_company where uuid is NULL;
 
 ### Generate UUIDs for the existing company business unit records without UUID
 
-Run the following command:
-
 ```bash
 console uuid:generate CompanyBusinessUnit spy_company_business_unit
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -217,12 +198,9 @@ select count(*) from spy_company_business_unit where uuid is NULL;
 
 ### Generate UUIDs for the existing company role records without UUID
 
-Run the following command:
-
 ```bash
 console uuid:generate CompanyRole spy_company_role
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -235,8 +213,6 @@ select count(*) from spy_company_role where uuid is NULL;
 {% endinfo_block %}
 
 ### Generate UUIDs for the existing Company Business Unit Address records without UUID
-
-Run the following command:
 
 ```bash
 console uuid:generate CompanyUnitAddress spy_company_unit_address
@@ -253,8 +229,6 @@ select count(*) from spy_company_unit_address where uuid is NULL;
 {% endinfo_block %}
 
 ### Generate UUIDs for the existing company user records without UUID:
-
-Run the following command:
 
 ```bash
 console uuid:generate CompanyUser spy_company_user
@@ -760,23 +734,14 @@ class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependen
 
 To verify that feature is set up correctly go throw the following steps:
 
-1. [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).
+1. [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).
 
-2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).
+2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).
 
-3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user).
+3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user).
 Check that the response contains all the necessary data.
 
-{% endinfo_block %}
-
-
-{% info_block warningBox "Verification" %}
-
 To verify that all the required data is provided in the access token, at [jwt.io](https://jwt.io/), decode the token and check that, in the `sub` property of the payload data, the required `customer_reference`, `id_customer`, `id_company_user`, and permissions are present.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the permission data is filtered out based on the record in the spy_oauth_access_token table. To do so, run the following SQL query and check that the result doesn't have any `permissions-related` data from the `user_identifier` column.
 
@@ -784,22 +749,11 @@ Make sure that the permission data is filtered out based on the record in the sp
 SELECT * FROM spy_oauth_access_token WHERE user_identifier LIKE '%{"id_company_user":"8da78283-e629-5667-9f84-e13207a7aef9"%';
 ```
 
-{% endinfo_block %}
-
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the permission data is filtered out based on the record in the `spy_oauth_refresh_token` table. To do so, run the following SQL query and check that the result doesn't have any permissions-related data from the `user_identifier` column.
 
 ```sql
 SELECT * FROM spy_oauth_refresh_token WHERE user_identifier LIKE '%{"id_company_user":"8da78283-e629-5667-9f84-e13207a7aef9"%';
 ```
-
-{% endinfo_block %}
-
-
-
-{% info_block warningBox "Verification" %}
 
 To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check that a non-company user can't access the resources listed in the `CompanyUsersRestApiConfig::COMPANY_USER_RESOURCES`, and the following error is returned:
 
@@ -814,10 +768,6 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
     ]
 }
 ```
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 - Send the `GET https://glue.mysprykershop.com/companies/mine` request. Make sure that the response contains a collection of resources with the companies your current company user belongs to.
 - Send the `GET https://glue.mysprykershop.com/companies/{% raw %}{{{% endraw %}company_uuid{% raw %}}}{% endraw %}` request. Make sure that the response contains only the company resource your current company user belongs to.
@@ -844,18 +794,10 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
     - One company user
     - The `company-roles`, `companies`, `company-business-units`, and `customers` relationships
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Verify the following using merchant prices and merchant threshold:
 
 - Make sure the company account information is saved during order placement: send the `POST https://glue.mysprykershop.com/checkout` request with a company user access token and check the company-related restrictions are applied to your order.
 - Make sure the company account information is used during cart operations: send the `POST https://glue.mysprykershop.com/carts/:uuid/items` request with company user access token and make sure the company-related restrictions are applied to your cart.
-
-{% endinfo_block %}
-{% info_block warningBox "Verification" %}
-
 
 To verify that `CompanyBusinessUnitAddressByCheckoutDataResourceRelationshipPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses` request and check that the response contains the `company-business-unit-addresses` resource.
 

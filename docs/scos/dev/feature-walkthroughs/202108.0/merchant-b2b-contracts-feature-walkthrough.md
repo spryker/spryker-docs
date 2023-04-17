@@ -24,7 +24,7 @@ The following schema shows relations within the merchant domain:
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

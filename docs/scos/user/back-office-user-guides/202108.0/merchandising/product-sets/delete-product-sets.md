@@ -2,6 +2,8 @@
 title: Delete product sets
 description: Learn how to reorder product sets in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-sets/delete-product-sets.html
 ---
 
 

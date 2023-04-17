@@ -20,6 +20,10 @@ redirect_from:
   - /2021080/docs/en/getting-started-with-docker
   - /docs/getting-started-with-docker
   - /docs/en/getting-started-with-docker
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
+  - /docs/scos/dev/setup/installing-spryker-without-docker.html
+  - /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
+  - /docs/docker-installation-prerequisites-windows
 related:
   - title: Installing Docker prerequisites on Linux
     link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html

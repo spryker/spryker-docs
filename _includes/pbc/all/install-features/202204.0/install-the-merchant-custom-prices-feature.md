@@ -8,17 +8,17 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.version}} |
-| Merchant | {{site.version}} |
-| Merchant Contracts | {{site.version}} |
-| Prices | {{site.version}} |
-| Product | {{site.version}} |
+| Spryker Core | {{page.version}} |
+| Merchant | {{page.version}} |
+| Merchant Contracts | {{page.version}} |
+| Prices | {{page.version}} |
+| Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
-Run the following command to install the required modules:
+
 
 ```bash
-composer require spryker-feature/merchant-custom-prices:"{{site.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/merchant-custom-prices:"{{page.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -279,7 +279,7 @@ mr-003,,051_29567823,DEFAULT,DE,CHF,12433,13833
 mr-003,,051_30107816,DEFAULT,DE,CHF,12533,10333
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 |merchant_relation_key | mandatory | string | mr-001 | Unique identifier used to identify a merchant contract. |
 | abstract_sku | mandatory (optional if `concrete_sku` provided) | string(unique) | 051 | Existing abstract product SKU to assign to the product list. |

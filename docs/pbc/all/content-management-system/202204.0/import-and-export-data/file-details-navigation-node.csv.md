@@ -1,5 +1,5 @@
 ---
-title: File details - navigation_node.csv
+title: "File details: navigation_node.csv"
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-navigation-nodecsv
@@ -20,14 +20,10 @@ This document describes the `navigation_node.csv` file to configure [Navigation 
 
 ## Import file dependencies
 
-
-
 * [navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html)
 * [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Import file parameters
-
-
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -41,12 +37,11 @@ This document describes the `navigation_node.csv` file to configure [Navigation 
 | valid_from | &check; | Date | |  Date from which the navigation node is valid.|
 | valid_to | &check; | Date | |  Date to which the navigation node is valid.|
 
-*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed or removed, and any number of columns with different locales can be added to the CSV files.
 
 
 
 ## Import template file and content example
-
 
 
 | FILE | DESCRIPTION |

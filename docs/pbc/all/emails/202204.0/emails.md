@@ -17,28 +17,28 @@ The *Emails* capability lets you manage newsletters and notifications.
 
 ## Newsletter subscriptions
 
-Offer Newsletter Subscriptions to your customers to increase loyalty. Send updates on product-related news, special offers, or any other update you wish to share. The Spryker Commerce OS offers opt-in and opt-out options.
+This feature allows you to offer Newsletter subscriptions to your customers to increase loyalty. Send updates on product-related news, special offers, or any other update you wish to share. The Spryker Commerce OS offers opt-in and opt-out options for handling newsletters.
 
-The newsletter subscription locates in the **Newsletter** section of the user profile.
+The newsletter subscription is located in the **Newsletter** section of the user profile.
 
-All your customers need to do is to agree to the newsletter subscription. Once they submit the agreement form, an email is triggered to confirm that the request is received and the sign-up is successful.
+All your customers need to do is to subscribe to the newsletter. Once they submit the agreement form, an email is sent to confirm that the request was received and the sign-up was successful.
 
 ![Newsletter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+%26+Communication/Newsletter+Subscription/subscribe-to-the-newsletter.gif)
 
 ## Transactional email management
 
-Keep your customers updated with a variety of emails you can either send by the internal SMTP system or an external email provider of your choice.
+Keep your customers updated with a variety of emails you can either send by the internal SMTP system, or by an external email provider of your choice.
 
-Automated Emails regarding order status, shipping, or transactions are just a few examples of how you can support the purchase process and increase brand loyalty.
+Automated emails about the status of your order, shipping, or transactions are just a few examples of how you can support the purchase process and increase brand loyalty.
 
-The following links provide additional information about the Mail module, plugins, and procedures:
+The following links provide additional information about the Mail module, its plugins, and procedures:
 
 * `MailTypePlugin` creation and registration—[HowTo: Create and register a `MailTypePlugin`](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html)
 * `MailProviderPlugin` general overview and the registration procedure—[HowTo: Create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html)
-* The tutorial that helps understand the procedure for sending an email—[Tutorial: Sending a mail](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html).
+* A tutorial about the procedure for sending an email—[Tutorial: Sending a mail](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html).
 
 
-## Related Developer articles
+## Related Developer documents
 
  | TUTORIALS AND HOWTOS |
 |---------|

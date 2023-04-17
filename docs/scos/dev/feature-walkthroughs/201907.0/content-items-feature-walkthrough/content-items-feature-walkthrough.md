@@ -9,7 +9,7 @@ The _Content Items_ feature creates an abstraction layer for content management 
 
 To learn more about the feature and to find out how end users use it, see [Content Items feature overview](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) for business users.
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|

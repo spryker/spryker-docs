@@ -1,23 +1,27 @@
 
 
+
+This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html) feature API into a Spryker project.
+
+## Install feature core
+
 Follow the steps below to install Checkout feature API.
 
-## Prerequisites
+### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| FEATURE   | VERSION | INTEGRATION GUIDE  |
-| ------------- | ------ | ------------------------ |
-| Glue API: Spryker Core                | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Glue API: Cart                        | {{site.version}}  | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html) |
-| Glue API: Customer Account Management | {{site.version}}  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Payments                    | {{site.version}}  | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-payments-feature-integration.html) |
-| Glue API: Shipment                   | {{site.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) |
+| FEATURE                                | VERSION          | INTEGRATION GUIDE                                                                                                                                                                        |
+|----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Glue API: Spryker Core                 | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)                                 |
+| Glue API: Cart                         | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                                                             |
+| Glue API: Customer Account Management  | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| Glue API: Payments                     | {{page.version}} | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html)                                         |
+| Glue API: Shipment                     | {{page.version}} | [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                            |
 
-## 1) Install the required modules using Composer
+### 1) Install the required modules using Composer
 
 Install the required modules:
-
 
 ```bash
 composer require spryker/checkout-rest-api:"3.5.0" spryker/order-payments-rest-api:"^1.0.0" spryker/sales-order-thresholds-rest-api:"^1.0.0" --update-with-dependencies
@@ -27,20 +31,19 @@ composer require spryker/checkout-rest-api:"3.5.0" spryker/order-payments-rest-a
 
 Make sure that the following modules have been installed:
 
-| MODULE                      | EXPECTED DIRECTORY                     |
-|-----------------------------| ------------------------------------- |
-| CheckoutRestApi             | vendor/spryker/checkout-rest-api       |
-| OrderPaymentsRestApi        | vendor/spryker/order-payments-rest-api |
+| MODULE                      | EXPECTED DIRECTORY                             |
+|-----------------------------|------------------------------------------------|
+| CheckoutRestApi             | vendor/spryker/checkout-rest-api               |
+| OrderPaymentsRestApi        | vendor/spryker/order-payments-rest-api         |
 | SalesOrderThresholdsRestApi | vendor/spryker/sales-order-thresholds-rest-api |
 
 {% endinfo_block %}
 
-## 2) Set up configuration
+### 2) Set up configuration
 
-Add all the payment methods available in the shop to `CheckoutRestApiConfig`. For example:
+Add all the payment methods available in the shop to `CheckoutRestApiConfig`—for example:
 
-
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
 
 ```php
@@ -131,27 +134,17 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
 ```
 </details>
 
-
 {% info_block infoBox "Info" %}
 
 If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`.
 
 Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` to false ignores the Glue API level configuration. Subsequently, the `checkout-data` endpoint returns all the payment methods.
 
-{% endinfo_block %}
-
-{% info_block warningBox “Verification” %}
-
 For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` set to true.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -213,22 +206,15 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAtt
 ```
 </details>
 
-
-{% endinfo_block %}
-
-
-{% info_block infoBox "Info" %}
-
 For the `checkout-data` endpoint to keep returning payment methods, keep `CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` set to true.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -275,7 +261,7 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
 
 {% endinfo_block %}
 
-## 3) Set up transfer objects
+### 3) Set up transfer objects
 
 Generate transfer changes:
 
@@ -283,81 +269,78 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                                             | TYPE     | EVENT      | PATH    |
-|------------------------------------------------------| ------- |------------| ----------------------- |
-| RestCheckoutDataTransfer                             | class    | created    | src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php   |
-| RestCheckoutErrorTransfer                            | class    | created    | src/Generated/Shared/Transfer/RestCheckoutErrorTransfer.php  |
-| RestCheckoutDataResponseTransfer                     | class    | created    | src/Generated/Shared/Transfer/RestCheckoutDataResponseTransfer.php |
-| RestCheckoutRequestAttributesTransfer                | class    | created    | src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer.php |
-| RestCustomerTransfer                                 | class    | created    | src/Generated/Shared/Transfer/RestCustomerTransfer.php       |
-| RestAddressTransfer                                  | class    | created    | src/Generated/Shared/Transfer/RestAddressTransfer.php        |
-| RestShipmentTransfer                                 | class    | created    | src/Generated/Shared/Transfer/RestShipmentTransfer.php       |
-| RestPaymentTransfer                                  | class    | created    | src/Generated/Shared/Transfer/RestPaymentTransfer.php        |
-| RestCheckoutDataResponseAttributesTransfer           | class    | created    | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php |
-| RestPaymentProviderTransfer                          | class    | created    | src/Generated/Shared/Transfer/RestPaymentProviderTransfer.php |
-| RestPaymentMethodTransfer                            | class    | created    | src/Generated/Shared/Transfer/RestPaymentMethodTransfer.php  |
-| RestShipmentMethodTransfer                           | class    | created    | src/Generated/Shared/Transfer/RestShipmentMethodTransfer.php |
-| RestCheckoutResponseAttributesTransfer               | class    | created    | src/Generated/Shared/Transfer/RestCheckoutResponseAttributesTransfer.php |
-| CheckoutResponseTransfer                             | class    | created    | src/Generated/Shared/Transfer/CheckoutResponseTransfer.php   |
-| SaveOrderTransfer                                    | class    | created    | src/Generated/Shared/Transfer/SaveOrderTransfer.php          |
-| CheckoutErrorTransfer                                | class    | created    | src/Generated/Shared/Transfer/CheckoutErrorTransfer.php      |
-| AddressesTransfer                                    | class    | created    | src/Generated/Shared/Transfer/AddressesTransfer.php          |
-| AddressTransfer                                      | class    | created    | src/Generated/Shared/Transfer/AddressTransfer.php            |
-| ShipmentMethodTransfer                               | class    | created    | src/Generated/Shared/Transfer/ShipmentMethodTransfer.php     |
-| ShipmentMethodsCollectionTransfer                    | class    | created    | src/Generated/Shared/Transfer/ShipmentMethodsCollectionTransfer.php |
-| PaymentProviderCollectionTransfer                    | class    | created    | src/Generated/Shared/Transfer/PaymentProviderCollectionTransfer.php |
-| PaymentProviderTransfer                              | class    | created    | src/Generated/Shared/Transfer/PaymentProviderTransfer.php    |
-| PaymentMethodsTransfer                               | class    | created    | src/Generated/Shared/Transfer/PaymentMethodsTransfer.php     |
-| PaymentMethodTransfer                                | class    | created    | src/Generated/Shared/Transfer/PaymentMethodTransfer.php      |
-| QuoteTransfer                                        | class    | created    | src/Generated/Shared/Transfer/QuoteTransfer.php              |
-| StoreTransfer                                        | class    | created    | src/Generated/Shared/Transfer/StoreTransfer.php              |
-| MoneyValueTransfer                                   | class    | created    | src/Generated/Shared/Transfer/MoneyValueTransfer.php         |
-| CurrencyTransfer                                     | class    | created    | src/Generated/Shared/Transfer/CurrencyTransfer.php           |
-| QuoteResponseTransfer                                | class    | created    | src/Generated/Shared/Transfer/QuoteResponseTransfer.php      |
-| QuoteErrorTransfer                                   | class    | created    | src/Generated/Shared/Transfer/QuoteErrorTransfer.php         |
-| ShipmentTransfer                                     | class    | created    | src/Generated/Shared/Transfer/ShipmentTransfer.php           |
-| RestErrorCollectionTransfer                          | class    | created    | src/Generated/Shared/Transfer/RestErrorCollectionTransfer.php |
-| CheckoutDataTransfer                                 | class    | created    | src/Generated/Shared/Transfer/CheckoutDataTransfer.php       |
-| ItemTransfer                                         | class    | created    | src/Generated/Shared/Transfer/ItemTransfer.php               |
-| RestCheckoutResponseTransfer                         | class    | created    | src/Generated/Shared/Transfer/RestCheckoutResponseTransfer.php |
-| RestErrorMessageTransfer                             | class    | created    | src/Generated/Shared/Transfer/RestErrorMessageTransfer.php   |
-| RestCheckoutDataTransfer.quote                       | property | added      | src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php   |
-| RestCheckoutResponseTransfer.checkoutData            | property | added      | src/Generated/Shared/Transfer/RestCheckoutResponseTransfer.php |
-| CheckoutDataTransfer.quote                           | property | added      | src/Generated/Shared/Transfer/CheckoutDataTransfer.php       |
-| RestCheckoutDataResponseAttributesTransfer.addresses | property | deprecated | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php |
-| QuoteTransfer.salesOrderThresholdValues              | property | added      | src/Generated/Shared/Transfer/QuoteTransfer.php |
-| RestCartsAttributesTransfer                          | class | created      | src/Generated/Shared/Transfer/RestCartsAttributesTransfer.php |
-| SalesOrderThresholdTypeTransfer                      | class | created      | src/Generated/Shared/Transfer/SalesOrderThresholdTypeTransfer.php |
-| SalesOrderThresholdValueTransfer                     | class | created      | src/Generated/Shared/Transfer/SalesOrderThresholdValueTransfer.php |
-| RestCartsThresholdsTransfer                          | class | created      | src/Generated/Shared/Transfer/RestCartsThresholdsTransfer.php |
+| TRANSFER                                             | TYPE     | EVENT       | PATH                                                                         |
+|------------------------------------------------------|----------|-------------|------------------------------------------------------------------------------|
+| RestCheckoutDataTransfer                             | class    | created     | src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php                   |
+| RestCheckoutErrorTransfer                            | class    | created     | src/Generated/Shared/Transfer/RestCheckoutErrorTransfer.php                  |
+| RestCheckoutDataResponseTransfer                     | class    | created     | src/Generated/Shared/Transfer/RestCheckoutDataResponseTransfer.php           |
+| RestCheckoutRequestAttributesTransfer                | class    | created     | src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer.php      |
+| RestCustomerTransfer                                 | class    | created     | src/Generated/Shared/Transfer/RestCustomerTransfer.php                       |
+| RestAddressTransfer                                  | class    | created     | src/Generated/Shared/Transfer/RestAddressTransfer.php                        |
+| RestShipmentTransfer                                 | class    | created     | src/Generated/Shared/Transfer/RestShipmentTransfer.php                       |
+| RestPaymentTransfer                                  | class    | created     | src/Generated/Shared/Transfer/RestPaymentTransfer.php                        |
+| RestCheckoutDataResponseAttributesTransfer           | class    | created     | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php |
+| RestPaymentProviderTransfer                          | class    | created     | src/Generated/Shared/Transfer/RestPaymentProviderTransfer.php                |
+| RestPaymentMethodTransfer                            | class    | created     | src/Generated/Shared/Transfer/RestPaymentMethodTransfer.php                  |
+| RestShipmentMethodTransfer                           | class    | created     | src/Generated/Shared/Transfer/RestShipmentMethodTransfer.php                 |
+| RestCheckoutResponseAttributesTransfer               | class    | created     | src/Generated/Shared/Transfer/RestCheckoutResponseAttributesTransfer.php     |
+| CheckoutResponseTransfer                             | class    | created     | src/Generated/Shared/Transfer/CheckoutResponseTransfer.php                   |
+| SaveOrderTransfer                                    | class    | created     | src/Generated/Shared/Transfer/SaveOrderTransfer.php                          |
+| CheckoutErrorTransfer                                | class    | created     | src/Generated/Shared/Transfer/CheckoutErrorTransfer.php                      |
+| AddressesTransfer                                    | class    | created     | src/Generated/Shared/Transfer/AddressesTransfer.php                          |
+| AddressTransfer                                      | class    | created     | src/Generated/Shared/Transfer/AddressTransfer.php                            |
+| ShipmentMethodTransfer                               | class    | created     | src/Generated/Shared/Transfer/ShipmentMethodTransfer.php                     |
+| ShipmentMethodsCollectionTransfer                    | class    | created     | src/Generated/Shared/Transfer/ShipmentMethodsCollectionTransfer.php          |
+| PaymentProviderCollectionTransfer                    | class    | created     | src/Generated/Shared/Transfer/PaymentProviderCollectionTransfer.php          |
+| PaymentProviderTransfer                              | class    | created     | src/Generated/Shared/Transfer/PaymentProviderTransfer.php                    |
+| PaymentMethodsTransfer                               | class    | created     | src/Generated/Shared/Transfer/PaymentMethodsTransfer.php                     |
+| PaymentMethodTransfer                                | class    | created     | src/Generated/Shared/Transfer/PaymentMethodTransfer.php                      |
+| QuoteTransfer                                        | class    | created     | src/Generated/Shared/Transfer/QuoteTransfer.php                              |
+| StoreTransfer                                        | class    | created     | src/Generated/Shared/Transfer/StoreTransfer.php                              |
+| MoneyValueTransfer                                   | class    | created     | src/Generated/Shared/Transfer/MoneyValueTransfer.php                         |
+| CurrencyTransfer                                     | class    | created     | src/Generated/Shared/Transfer/CurrencyTransfer.php                           |
+| QuoteResponseTransfer                                | class    | created     | src/Generated/Shared/Transfer/QuoteResponseTransfer.php                      |
+| QuoteErrorTransfer                                   | class    | created     | src/Generated/Shared/Transfer/QuoteErrorTransfer.php                         |
+| ShipmentTransfer                                     | class    | created     | src/Generated/Shared/Transfer/ShipmentTransfer.php                           |
+| RestErrorCollectionTransfer                          | class    | created     | src/Generated/Shared/Transfer/RestErrorCollectionTransfer.php                |
+| CheckoutDataTransfer                                 | class    | created     | src/Generated/Shared/Transfer/CheckoutDataTransfer.php                       |
+| ItemTransfer                                         | class    | created     | src/Generated/Shared/Transfer/ItemTransfer.php                               |
+| RestCheckoutResponseTransfer                         | class    | created     | src/Generated/Shared/Transfer/RestCheckoutResponseTransfer.php               |
+| RestErrorMessageTransfer                             | class    | created     | src/Generated/Shared/Transfer/RestErrorMessageTransfer.php                   |
+| RestCheckoutDataTransfer.quote                       | property | added       | src/Generated/Shared/Transfer/RestCheckoutDataTransfer.php                   |
+| RestCheckoutResponseTransfer.checkoutData            | property | added       | src/Generated/Shared/Transfer/RestCheckoutResponseTransfer.php               |
+| CheckoutDataTransfer.quote                           | property | added       | src/Generated/Shared/Transfer/CheckoutDataTransfer.php                       |
+| RestCheckoutDataResponseAttributesTransfer.addresses | property | deprecated  | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php |
+| QuoteTransfer.salesOrderThresholdValues              | property | added       | src/Generated/Shared/Transfer/QuoteTransfer.php                              |
+| RestCartsAttributesTransfer                          | class    | created     | src/Generated/Shared/Transfer/RestCartsAttributesTransfer.php                |
+| SalesOrderThresholdTypeTransfer                      | class    | created     | src/Generated/Shared/Transfer/SalesOrderThresholdTypeTransfer.php            |
+| SalesOrderThresholdValueTransfer                     | class    | created     | src/Generated/Shared/Transfer/SalesOrderThresholdValueTransfer.php           |
+| RestCartsThresholdsTransfer                          | class    | created     | src/Generated/Shared/Transfer/RestCartsThresholdsTransfer.php                |
 
 {% endinfo_block %}
 
-
-## 4) Set up behavior
+### 4) Set up behavior
 
 Set up the following behaviors.
 
-### Enable resources and relationships
+#### Enable resources and relationships
 
 Activate the following plugins:
 
+| PLUGIN                                                | SPECIFICATION                                                                                                          | PREREQUISITES | NAMESPACE                                           |
+|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------|
+| CheckoutDataResourcePlugin                            | Registers the `checkout-data` resource.                                                                                | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
+| CheckoutResourcePlugin                                | Registers the `checkout` resource.                                                                                     | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
+| OrderRelationshipByOrderReferencePlugin               | Adds a relationship to the `order` entity by order reference.                                                          | None          | Spryker\Glue\OrdersRestApi\Plugin                   |
+| OrderPaymentsResourceRoutePlugin                      | Registers the `order-payments` resource.                                                                               | None          | Spryker\Glue\OrderPaymentsRestApi\Plugin            |
+| CartByRestCheckoutDataResourceRelationshipPlugin      | Adds `carts` resource as relationship by `RestCheckoutDataTransfer.quote`. Applies only for registered customers.      | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
+| GuestCartByRestCheckoutDataResourceRelationshipPlugin | Adds `guest-carts` resource as the relationship by `RestCheckoutDataTransfer.quote`. Applies only for guest customers. | None          | Spryker\Glue\CartsRestApi\Plugin\GlueApplication    |
 
-| PLUGIN    | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
-| --------------- | -------------------- | ----------- | ---------------------- |
-| CheckoutDataResourcePlugin              | Registers the `checkout-data` resource.                      | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
-| CheckoutResourcePlugin                  | Registers the `checkout` resource.                           | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
-| OrderRelationshipByOrderReferencePlugin | Adds a relationship to the `order` entity by order reference. | None          | Spryker\Glue\OrdersRestApi\Plugin                   |
-| OrderPaymentsResourceRoutePlugin        | Registers the `order-payments` resource.                     | None          | Spryker\Glue\OrderPaymentsRestApi\Plugin            |
-
-
-
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
@@ -367,6 +350,8 @@ namespace Pyz\Glue\GlueApplication;
 
 use Spryker\Glue\CheckoutRestApi\CheckoutRestApiConfig;
 use Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication\CheckoutDataResourcePlugin;
+use Spryker\Glue\CartsRestApi\Plugin\GlueApplication\CartByRestCheckoutDataResourceRelationshipPlugin;
+use Spryker\Glue\CartsRestApi\Plugin\GlueApplication\GuestCartByRestCheckoutDataResourceRelationshipPlugin;
 use Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication\CheckoutResourcePlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
@@ -399,6 +384,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CheckoutRestApiConfig::RESOURCE_CHECKOUT,
             new OrderRelationshipByOrderReferencePlugin()
         );
+        $resourceRelationshipCollection->addRelationship(
+            CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
+            new CartByRestCheckoutDataResourceRelationshipPlugin(),
+        );
+        $resourceRelationshipCollection->addRelationship(
+            CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
+            new GuestCartByRestCheckoutDataResourceRelationshipPlugin(),
+        );
 
         return $resourceRelationshipCollection;
     }
@@ -406,22 +399,17 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 </details>
 
-
 {% info_block warningBox "Verification" %}
-
 
 Make sure that the following plugins are activated:
 
-| PLUGIN    | TEST   |
-| ------------------- | --------------------- |
-| CheckoutDataResourcePlugin              | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request. |
-| CheckoutResourcePlugin                  | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request. |
-| OrderRelationshipByOrderReferencePlugin | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request. |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
+| PLUGIN                                                | TEST                                                                                                                                                                            |
+|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CheckoutDataResourcePlugin                            | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request.                                                                   |
+| CheckoutResourcePlugin                                | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request.                                                                        |
+| OrderRelationshipByOrderReferencePlugin               | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request.                             |
+| CartByRestCheckoutDataResourceRelationshipPlugin      | Check if you get cart data as a relationship from the `checkout-data` resource by sending the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request.        |
+| GuestCartByRestCheckoutDataResourceRelationshipPlugin | Check if you get guest cart data as a relationship from the `checkout-data` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=guest-carts` request. |
 
 To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you get a valid response by sending the following request:
 
@@ -439,18 +427,126 @@ To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you 
 }
 ```
 
+To ensure that `CartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly:
+
+1. Send a request with an authorization token to a `checkout-data` endpoint with `carts` relation—Ffr example, send the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request with the request body:
+
+```json
+{"data":
+    {"type": "checkout-data",
+      "attributes":
+      {
+        "idCart": "_cart_id",
+        "shipment": {
+          "idShipmentMethod": 1
+        }
+      }
+    }
+}
+```
+
+2. Check that the cart data is returned as a relationship and contains `shipmentTotal` in cart totals:
+
+```json
+{
+  "data": {
+    "type": "checkout-data",
+    ...
+    },
+    ...
+    "relationships": {
+      "carts": {
+        "data": [
+          {
+            "type": "carts",
+            "id": "_cart_id"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "carts",
+      "id": "_cart_id",
+      "attributes": {
+        ...
+        "totals": {
+        ...
+          "shipmentTotal": ...
+        }
+      }
+    }
+  ]
+}
+```
+
+Ensure that `GuestCartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly:
+
+1. Send a request with an anonymous customer ID to a `checkout-data` endpoint with `guest-carts` relation—for example, send the `POST https://glue.mysprykershop.com/checkout-data?include=guest-carts` request with the request body:
+
+```json
+{"data":
+    {"type": "checkout-data",
+      "attributes":
+      {
+        "idCart": "_cart_id",
+        "shipment": {
+          "idShipmentMethod": 1
+        }
+      }
+    }
+}
+```
+
+2. Check that the guest cart data is returned as a relationship and contains `shipmentTotal` in cart totals:
+
+```json
+{
+  "data": {
+    "type": "checkout-data",
+    ...
+    },
+    ...
+    "relationships": {
+      "guest-carts": {
+        "data": [
+          {
+            "type": "guest-carts",
+            "id": "_cart_id"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "guest-carts",
+      "id": "_cart_id",
+      "attributes": {
+        ...
+        "totals": {
+        ...
+          "shipmentTotal": ...
+        }
+      }
+    }
+  ]
+}
+```
+
 {% endinfo_block %}
 
-For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html).
+For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html).
 
-### Configure mapping
+#### Configure mapping
 
-Mappers should be configured on a project level to map the data from the request into `QuoteTransfer`:
+Mappers must be configured on a project level to map the data from the request into `QuoteTransfer`:
 
 
-| PLUGIN    | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
-| ------------ | --------------------- | --------- | --------------------- |
-| CustomerQuoteMapperPlugin | Adds a mapper that maps customer information to `QuoteTransfer`. | None          | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi |
+| PLUGIN                    | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                         |
+|---------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
+| CustomerQuoteMapperPlugin | Adds a mapper that maps customer information to `QuoteTransfer`.                     | None          | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi |
 | AddressQuoteMapperPlugin  | Adds a mapper that maps billing and shipping address information to `QuoteTransfer`. | None          | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi |
 
 
@@ -482,18 +578,19 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `CustomerQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
+Ensure the following:
+* `CustomerQuoteMapperPlugin` is activated. Send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
 
-To make sure that `AddressQuoteMapperPlugin` is activated, send a `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
+* `AddressQuoteMapperPlugin` is activated. Send a `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
 
 {% endinfo_block %}
 
-### Configure the single payment method validator plugin
+#### Configure the single payment method validator plugin
 
 Activate the following plugins:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
-| -------------------------- | ---------------- | ----------- | --------------- |
+| PLUGIN                                                | SPECIFICATION                                                          | PREREQUISITES | NAMESPACE                           |
+|-------------------------------------------------------|------------------------------------------------------------------------|---------------|-------------------------------------|
 | SinglePaymentCheckoutRequestAttributesValidatorPlugin | Validates that checkout request data contains only one payment method. | None          | Spryker\Glue\CheckoutRestApi\Plugin |
 
 
@@ -519,10 +616,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
         ];
     }
 }
-
-
 ```
-
 
 {% info_block warningBox "Verification" %}
 
@@ -542,15 +636,15 @@ To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is act
 
 {% endinfo_block %}
 
-### Configure minimum order value plugins
+#### Configure minimum order value plugins
 
 Activate the following plugins:
 
-| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
-| -------------------------- |------------------------| ----------- | --------------- |
-| SalesOrderThresholdRestCartAttributesMapperPlugin | Maps `QuoteTransfer.salesOrderThresholdValues` to `RestCartsAttributesTransfer.thresholds`.  | None          | Spryker\Glue\SalesOrderThresholdsRestApi\Plugin\CartsRestApi |
-| SalesOrderThresholdCartTerminationPlugin | Finds applicable thresholds and expands quote with sales order thresholds data.              | None          | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Cart |
-| SalesOrderThresholdQuoteExpanderPlugin | Finds applicable thresholds and expands quote with sales order thresholds data.              | None          | Spryker\Zed\SalesOrderThresholdsRestApi\Communication\Plugin\CartsRestApi |
+| PLUGIN                                             | SPECIFICATION                                                                                | PREREQUISITES | NAMESPACE                                                                    |
+|----------------------------------------------------|----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
+| SalesOrderThresholdRestCartAttributesMapperPlugin  | Maps `QuoteTransfer.salesOrderThresholdValues` to `RestCartsAttributesTransfer.thresholds`.  | None          | Spryker\Glue\SalesOrderThresholdsRestApi\Plugin\CartsRestApi                 |
+| SalesOrderThresholdCartTerminationPlugin           | Finds applicable thresholds and expands quote with sales order thresholds data.              | None          | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Cart                    |
+| SalesOrderThresholdQuoteExpanderPlugin             | Finds applicable thresholds and expands quote with sales order thresholds data.              | None          | Spryker\Zed\SalesOrderThresholdsRestApi\Communication\Plugin\CartsRestApi    |
 | SalesOrderThresholdReadCheckoutDataValidatorPlugin | Finds applicable thresholds and adds error messages if threshold conditions are not matched. | None          | Spryker\Zed\SalesOrderThresholdsRestApi\Communication\Plugin\CheckoutRestApi |
 
 
@@ -658,7 +752,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 Ensure that the plugins work correctly:
 
-1. [Setting up Minimum Hard Threshold](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/thresholds/managing-global-thresholds.html).
+1. [Setting up Minimum Hard Threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html).
 2. Add a product to the cart with a price less minimum threshold value.
 3. Check that the following error is returned by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
 
@@ -713,8 +807,8 @@ Ensure that the plugins work correctly:
 }
 ```
 
-5. Add more products to cart to satisfy minimum threshold.
-6. Check result by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
+5. To satisfy the minimum threshold, add more products to the cart:
+6. To check the result, send the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
 
 ```json
 {
@@ -745,7 +839,7 @@ Ensure that the plugins work correctly:
 }
 ```
 
-7. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data` request.
+7. To check the result, send the `POST https://glue.mysprykershop.com/checkout-data` request.
 
 ```json
 {
@@ -766,7 +860,6 @@ Ensure that the plugins work correctly:
 }
 ```
 
-
 {% endinfo_block %}
 
 ## Related features
@@ -775,5 +868,5 @@ Integrate the following related features.
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE    |
 | -------- | ----------------- | ---------------------- |
-| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html)  |
-| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-payments-feature-integration.html) |
+| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)  |
+| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |

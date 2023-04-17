@@ -40,7 +40,7 @@ In the Back Office, you can perform the following actions on product options:
 * Assign product option groups to products.
 * Activate product options to make them visible in the Storefront.
 
-To learn more about how to work with product options in the Back Office, see [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html).
+To learn more about how to work with product options in the Back Office, see [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html).
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png)
 
@@ -74,11 +74,11 @@ The feature has the following functional constraints which are going to be resol
 * If you create a product option, the price will be the same for all merchants.
 * Unlike other prices in Spryker, product option price is not bound to any of the available price types. (DEFAULT or ORIGINAL)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a product option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)  |
+| [Create a product option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/create-product-options.html)  |
 | [Manage product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html)  |
 
 {% info_block warningBox "Developer guides" %}

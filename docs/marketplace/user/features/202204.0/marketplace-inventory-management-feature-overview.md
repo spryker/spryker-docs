@@ -19,7 +19,7 @@ When a merchant is created, the corresponding warehouse is created for this merc
 
 {% endinfo_block %}
 
-A warehouse can be assigned to a single store or shared between several stores. For details about how you can manage warehouses and stores in the Back Office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html).
+A warehouse can be assigned to a single store or shared between several stores. For details about how you can manage warehouses and stores in the Back Office, see [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html).
 
 ## Marketplace stock management
 
@@ -32,7 +32,7 @@ Also, you can do the following using the data import:
 * Manage stock of product offers for a merchant by importing the product offer and stock data separately: [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html).
 * Define stock when importing the product offer data: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html).
 * Import merchant stock data: [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html).
-* Import stock of merchant products: [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html).
+* Import stock of merchant products: [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/import-data/file-details-product-stock.csv.html).
 
 ## Marketplace availability management
 
@@ -56,11 +56,11 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. A cust
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
-| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) <!--- UPDATE LINK--> |
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html) <!--- UPDATE LINK--> |
 
 {% info_block warningBox "Developer guides" %}
 

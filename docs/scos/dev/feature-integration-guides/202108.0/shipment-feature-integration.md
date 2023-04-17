@@ -127,7 +127,7 @@ spryker_no_shipment,DE
 spryker_no_shipment,US
 ```
 
-| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | shipment_method_key | mandatory | string | spryker_dummy_shipment-standard | Key of an existing shipping method. |
 | store | mandatory | string | DE | Name of an existing store. |

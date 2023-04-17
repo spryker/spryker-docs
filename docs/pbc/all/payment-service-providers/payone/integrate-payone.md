@@ -13,7 +13,7 @@ To integrate Payone, follow these steps.
    This takes you to the Payone app details page.
 3. In the top right corner of the Payone app details page, click **Connect app**.
    This displays a message about the successful connection of the app to your SCCOS. The Payone app's status changes to *Connection pending*.   
-4. Go to [Payone](https://www.payone.com?ref=spryker-documentation) and obtain the credentials.
+4. Go to [Payone](https://www.payone.com/DE-en) and obtain the credentials.
    
    {% info_block infoBox "Info" %}
 

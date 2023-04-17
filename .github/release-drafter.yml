@@ -1,0 +1,22 @@
+name-template: 'v$NEXT_PATCH_VERSION'
+categories:
+  - title: 'New'
+    labels:
+      - 'new'
+  - title: 'Updated'
+    labels:
+      - 'updated'
+template: |
+  $CHANGES
+  $ISSUES
+exclude-labels:
+  - 'dependencies'
+  - 'github_actions'
+  - 'in progress'
+  - 'javascript'
+  - 'new'
+  - 'ruby'
+  - 'small changes'
+authors:
+  - name: '*'
+    email: '*'

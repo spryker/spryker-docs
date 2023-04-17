@@ -22,7 +22,7 @@ In the marketplace, when a buyer goes through checkout, the [Marketplace order](
 
 ## Merchant order calculation
 
-A merchant order consists of merchant order items, which are items (products) purchased by a customer. All the calculations for merchant order items are performed using the product offer, merchant products price, and *merchant order totals*. These are the [initial totals](/docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-3-0.html) that are calculated according to the product offer purchased:
+A merchant order consists of merchant order items, which are items (products) purchased by a customer. All the calculations for merchant order items are performed using the product offer, merchant products price, and *merchant order totals*. These are the [initial totals](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/extend-and-customize/calculation-3-0.html) that are calculated according to the product offer purchased:
 
 | TOTAL | DESCRIPTION |
 | -------- | -------------- |

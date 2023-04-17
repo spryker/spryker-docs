@@ -1,15 +1,20 @@
 
 
+
+This document describes how to integrate the [Quotation Process](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Quotation Process feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Checkout | {{site.version}} |
-| Quotation Process | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Checkout | {{page.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
 
 ### 1) Set up behavior
 
@@ -62,24 +67,26 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can't see the **Checkout** button on the Quote request items edit page.<br>Make sure that after you placed an order form quote request, a quote request has a closed status.
+On the **Quote request items edit** page, ensure you can't see the **Checkout** button.
+
+Ensure that after you place an order from a quote request, the quote request has the `closed` status.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
+Follow the steps below to install the [Quotation Process](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) feature frontend.
+
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME | VERSION |
-| --- | --- |
-| Checkout | {{site.version}} |
-| Quotation Process | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Checkout | {{page.version}} | Install [the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Quotation Process | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html) |
 
-### Set up behavior
-
-#### Set up quote request workflow
+### Set up quote request workflow
 
 Enable the following behaviors by registering the plugins:
 
@@ -116,10 +123,11 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
-Verify that when you add/edit shipping information in RFQ as an agent or a buyer you have access only to the address step and the shipment step.
-
-Verify that if you set source shipment price as an agent and then convert the RFQ to cart as a buyer you don't have access to the address step and the shipment step.
+Verify the following:
+* When you add or edit shipping information in RFQ as an agent or a buyer, you have access only to the address and shipment steps.
+* If you set the source shipment price as an agent and then convert the RFQ to cart as a buyer, you don't have access to the address and shipment steps.
 
 {% endinfo_block %}

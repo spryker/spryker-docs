@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Aug 30, 2022
 ---
 
-This document explains how to add support of number formatting in Back Office UI.
+This document explains how to add support of number formatting in the Back Office UI.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ To add support of number formatting in the Back Office, integrate the required f
 | Spryker Core                           | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                           |
 | Promotions & Discounts (Optional)      | {{site.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html)     |
 | Product Options (Optional)             | {{site.version}} | [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{site.version}}/product-options-feature-walkthrough.html)                           |
-| Product + Order Management (Optional)  | {{site.version}} | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-order-management-feature-integration.html) |
+| Product + Order Management (Optional)  | {{site.version}} | [Product + Order Management feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
 | Shipment (Optional)                    | {{site.version}} | [Shipment integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                           |
 
 ## 1) Install the required modules using Composer
@@ -38,15 +38,13 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
----
-
 ## 2) Set up configuration
 
-Extend `Discount` configuration settings:
+Extend the `Discount` configuration settings:
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Promotions & Discounts](/docs/pbc/all/discount-management/discount-management.html) feature installed.
+Apply the following changes only if you have the [Promotions & Discounts](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html) feature installed.
 
 {% endinfo_block %}
 
@@ -57,7 +55,7 @@ Apply the following changes only if you have the [Promotions & Discounts](/docs/
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information, view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\Discount;
@@ -105,7 +103,6 @@ Ensure the following transfers have been created:
 
 {% endinfo_block %}
 
----
 
 ## 4) Set up behavior
 
@@ -173,7 +170,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Discount Management](/docs/pbc/all/discount-management/discount-management.html) feature installed.
+Apply the following changes only if you have the [Discount Management](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html) feature installed.
 
 {% endinfo_block %}
 
@@ -201,7 +198,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -231,7 +228,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Product Options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/product-options-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -259,7 +256,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/carrier-management.html) feature installed.
+Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/shipment-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -268,7 +265,7 @@ Apply the following changes only if you have the [Carrier Management](/docs/pbc/
 ```php
 <?php
 
-use Spryker\Zed\Money\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
+use Spryker\Zed\MoneyGui\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
 use Spryker\Zed\ShipmentGui\ShipmentGuiDependencyProvider as SprykerShipmentGuiDependencyProvider;
 
 class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider

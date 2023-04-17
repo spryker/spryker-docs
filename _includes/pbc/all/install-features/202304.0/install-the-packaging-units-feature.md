@@ -910,6 +910,30 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 }
 ```
 
+**src/Pyz/Glue/PickingListsBackendApi/PickingListsBackendApiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\PickingListsBackendApi;
+
+use Spryker\Glue\PickingListsBackendApi\PickingListsBackendApiDependencyProvider as SprykerPickingListsBackendApiDependencyProvider;
+use Spryker\Glue\ProductPackagingUnitsBackendApi\Plugin\PickingListsBackendApi\ProductPackagingUnitApiPickingListItemsAttributesMapperPlugin;
+
+class PickingListsBackendApiDependencyProvider extends SprykerPickingListsBackendApiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Glue\PickingListsBackendApiExtension\Dependency\Plugin\ApiPickingListItemsAttributesMapperPluginInterface>
+     */
+    protected function getApiPickingListItemsAttributesMapperPlugins(): array
+    {
+        return [
+            new ProductPackagingUnitApiPickingListItemsAttributesMapperPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 Add an item with packaging units to cart.

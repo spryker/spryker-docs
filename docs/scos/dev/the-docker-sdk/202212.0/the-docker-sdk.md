@@ -233,7 +233,7 @@ To extend Docker/sdk, you can do the following:
    ```
    environment: docker.dev
    image:
-      tag: spryker/php 7.3
+      tag: spryker/php 8.0
       tag: registry.gitlab.com/my-company/spryker:1.0-php8debsap
    ```
   This approach is compatible with SCCOS, but provides limited customization possibilities.

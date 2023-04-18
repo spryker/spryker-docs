@@ -1,4 +1,4 @@
-name: Autorelease
+name: Build changelog
 on:
   push:
     tags:
@@ -11,13 +11,19 @@ jobs:
       - name: Build Changelog
         uses: mikepenz/release-changelog-builder-action@v3
         with:
-          configuration: configuration.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          fromTag: "04.2023"
-      - name: Create Release
-        uses: mikepenz/action-gh-release@v0.2.0-a03
-        with:
-          body: ${{steps.github_release.outputs.changelog}}
+          configurationJson: |
+            {
+              "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+              "categories": [
+                {
+                    "title": "## New pages",
+                    "labels": ["New"]
+                },
+                {
+                    "title": "## Updated pages",
+                    "labels": ["updated"]
+                }
+              ]
+            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

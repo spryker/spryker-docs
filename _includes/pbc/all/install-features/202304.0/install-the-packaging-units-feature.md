@@ -1,27 +1,31 @@
 
 
+
+This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/202212.0/packaging-units-feature-overview.html) feature into a Spryker project.
+
 ## Install feature core
+
 Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME                 | VERSION          |
-|----------------------|------------------|
-| Inventory Management | {{page.version}} |
-| Spryker Core         | {{page.version}} |
-| Order Management     | {{page.version}} |
-| Product              | {{page.version}} |
-| Measurement Units    | {{page.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+|---|---|---|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Order Management     | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html) 
+| Inventory Management | {{site.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-inventory-management-feature.md) |
+| Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+| Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
 ### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/packaging-units:"{{page.version}}" --update-with-dependencies`
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following modules have been installed:
 
 | MODULE                           | EXPECTED DIRECTORY                                 |
@@ -34,6 +38,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up Configuration
+
 Adjust synchronization queue pools in `src/Pyz/Zed/ProductPackagingUnitStorage/ProductPackagingUnitStorageConfig.php`:
 
 ```php
@@ -107,7 +112,7 @@ Set up synchronization queue pools, so non-multistore entities (not store-specif
 </database>
 ```
 
-Run the following commands to apply the database changes and generate entity and transfer changes:
+Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -125,10 +130,6 @@ Make sure that the following changes have been applied by checking your database
 | spy_product_abstract_packaging_storage | table  | created |
 | spy_sales_order_item.amount            | column | created |
 | spy_sales_order_item.amount_sku        | column | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects have been applied:
 
@@ -177,11 +178,7 @@ Make sure that the following changes in transfer objects have been applied:
 | ItemTransfer.amount                               | property | created | src/Generated/Shared/Transfer/ItemTransfer                                      |
 | ItemTransfer.amountLeadProduct                    | property | created | src/Generated/Shared/Transfer/ItemTransfer                                      |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the changes have been implemented successfully. To do it, trigger the following methods and make sure that the above events have been triggered:
+Make sure that the changes have been implemented successfully. To do it, trigger the following methods and make sure that the preceding events have been triggered:
 
 | PATH                                                                                        | METHOD NAME                                                                  |
 |---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
@@ -218,7 +215,7 @@ cart.item.packaging_unit.not_found,Verpackungseinheit für Produkt mit SKU '% sk
 
 {% info_block infoBox "Info" %}
 
-All packaging unit types need to have glossary entities for the configured locales
+All packaging unit types need to have glossary entities for the configured locales.
 
 {% endinfo_block %}
 
@@ -370,7 +367,7 @@ Import the following data.
 
 #### Add infrastructural data
 
-Add infrastructural data:
+1. Add the following data.
 
 | PLUGIN                                  | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                       |
 |-----------------------------------------|---------------------------------------------------------------|---------------|-----------------------------------------------------------------|
@@ -400,7 +397,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-Run the following console command to execute registered installer plugins and install infrastructural data:
+2. Execute registered installer plugins and install infrastructural data:
 
 ```bash
 console setup:init-db
@@ -414,7 +411,7 @@ Make sure that  the configured infrastructural packaging unit types of the datab
 
 #### Import product packaging unit types
 
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ProductPackagingUnitDataImport/data/import/product_packaging_unit_type.csv**
 
@@ -435,7 +432,7 @@ packaging_unit_type.pack_500.name
 |--------|-----------|-----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | name   | mandatory | string    | packaging_unit_type.ring_500.name | Glossary key that will be used to display a packaging unit type . Each name needs a glossary key definition for all configured locales. |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN                                   | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                                                  |
 |------------------------------------------|-----------------------------------------------------|---------------|----------------------------------------------------------------------------|
@@ -465,11 +462,11 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-packaging-unit-type
-```    
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -479,7 +476,7 @@ Make sure that in the database the configured data has been added to the `spy_pr
 
 #### Import product packaging units
 
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ProductPackagingUnitDataImport/data/import/product_packaging_unit.csv**
 
@@ -506,7 +503,7 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 | amount_interval          | optional  | positive integer | 2                                 | <ul><li>Restricts customers to buy the amount that fits into the interval beginning with `amount_min`.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is `amount_min` when not provided.</li></ul> Min = 3; Max = 10; Interval = 2 <br> Choosable: 3, 5, 7, 9 |
 
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN                               | SPECIFICATION                                       | PREREQUISITES                                                                                                                                                                                         | NAMESPACE                                                                  |
 |--------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
@@ -536,7 +533,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-packaging-unit
@@ -584,7 +581,8 @@ Enable the following behaviors by registering the plugins:
 | ProductPackagingUnitPickingListCollectionExpanderPlugin       | Expands `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem` transfer objects with `amountSalesUnit` property.                                         |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PickingList          |
 | ProductPackagingUnitApiPickingListItemsAttributesMapperPlugin | Maps amount sales unit from `PickingListItemTransfer.orderItem.amountSalesUnit` to `ApiPickingListItemsAttributesTransfer.orderItem.amountSalesUnit` transfer property. | Expects the `uuid` and `orderItem.amountSalesUnit.productMeasurementUnit` fields to be set in `PickingListItemTransfer`. Expects the `uuid` field to be set in `ApiPickingListItemsAttributesTransfer` as well. | Spryker\Glue\ProductPackagingUnitsBackendApi\Plugin\PickingListsBackendApi |                                                                         |
 
-**src/Pyz/Client/Cart/CartDependencyProvider.php**
+<details open>
+<summary>src/Pyz/Client/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -671,6 +669,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+</details>
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
@@ -761,7 +760,8 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+<details open>
+<summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -810,6 +810,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+</details>
 
 **src/Pyz/Zed/Stock/StockDependencyProvider.php**
 
@@ -936,21 +937,17 @@ class PickingListsBackendApiDependencyProvider extends SprykerPickingListsBacken
 
 {% info_block warningBox "Verification" %}
 
-Add an item with packaging units to cart.
+Add an item with packaging units to cart and check if the following statements are true:
 
-*     Check if a packaging unit can be found for an item.
-*     Check if the `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
-*     Check if the amount restriction works as expected.
-*     Check if availability is validated respectfully according to your lead product's and packaging unit's configuration.
-*     Check if item grouping in cart works as expected.
-*     Check if variable amount changes affect unit prices in the `ItemTransfer` properties.
-*     Check if quantity and amount are merged correctly when the group key matches.
+* A packaging unit can be found for an item.
+* The `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
+* The amount restriction works as expected.
+* Availability is validated respectfully according to your lead product's and packaging unit's configuration.
+* Item grouping in cart works as expected.
+* Variable amount changes affect unit prices in the `ItemTransfer` properties.
+* The quantity and amount are merged correctly when the group key matches.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Go through the checkout workflow and make an order>.
+Go through the checkout workflow, make an order and check if the following statements are true:
 * Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.
 * Check if the following fields in the `spy_sales_order_item` table are saved:
   * `amount`
@@ -960,29 +957,15 @@ Go through the checkout workflow and make an order>.
   * `amount_measurement_unit_precision`
   * `amount_measurement_unit_conversion`
   * `amount_base_measurement_unit_name`
-{% endinfo_block %}
 
-{% info_block warningBox "Verification" %}
-Go to the Zed UI Sales overview and check the order.
-- Verify if the correct sales unit is displayed.
-- Verify if the correct amount is displayed per sales order item.
-{% endinfo_block %}
+Go to the Zed UI Sales overview, check the order, and verify the following:
+- The correct sales unit is displayed.
+- The correct amount is displayed per sales order item.
 
-{% info_block warningBox "Verification" %}
-
-Make sure that abstract products which have packaging units available don’t have `add_to_cart_sku` field at Elasticsearch document.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that every order item from `SalesFacade::getOrderItems()` results contains packaging units data: `ItemTransfer.amountLeadProduct` and `ItemTransfer.amountSalesUnit` are set for the order items that have packaging units.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Make sure that picking lists from `PickingListFacade::getPickingListCollection()` results contains packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
+Make sure the following:
+* Abstract products which have packaging units available don’t have `add_to_cart_sku` field at Elasticsearch document.
+* Every order item from `SalesFacade::getOrderItems()` results contains packaging units data: `ItemTransfer.amountLeadProduct` and `ItemTransfer.amountSalesUnit` are set for the order items that have packaging units.
+* The results of picking lists from `PickingListFacade::getPickingListCollection()` contain packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
 
 {% endinfo_block %}
 

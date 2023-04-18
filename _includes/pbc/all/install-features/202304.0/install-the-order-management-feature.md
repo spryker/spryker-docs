@@ -1,5 +1,7 @@
 
-This document describes how to integrate the Order Management feature into a Spryker project.
+
+
+This document describes how to integrate the [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
 
 {% info_block warningBox "Included features" %}
 
@@ -24,9 +26,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/202212.0/spryker-core-feature-integration.html)|
-| Mailing and Notifications | {{page.version}} | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/202212.0/mailing-and-notifications-feature-integration.html)
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/202212.0/install-and-upgrade/install-features/install-the-order-management-feature.html)
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Mailing and Notifications | {{page.version}} | [Mailing and notifications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)
+| Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-features/install-the-order-management-feature.html)
 | Persistent Cart | {{page.version}} |  |
 
 ### 1) Install the required modules using Composer

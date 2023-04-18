@@ -3,22 +3,19 @@
 {% info_block errorBox %}
 
 This feature integration guide expects the basic feature to be in place.
-The current feature integration guide adds the following functionalities:
-* Cart Notes Backend API
+The current feature integration guide adds the Cart Notes Backend API functionality.
 
 {% endinfo_block %}
 
 ## Prerequisites
 
-Ensure that the related features are installed:
+To start feature integration, integrate the required feature:
 
 | NAME             | VERSION          | INTEGRATE GUIDE                                                                                                                              |
 |------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-feature.html) |
 
 ## 1) Install the required modules using Composer
-
-1. Install the required modules:
 
 ```bash
 composer require spryker/cart-notes-backend-api:^0.1.0 --update-with-dependencies
@@ -82,6 +79,6 @@ class SalesOrdersBackendApiDependencyProvider extends SprykerSalesOrdersBackendA
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `sales-orders` resources from `SalesOrdersBackendApiResource::getOrderResourceCollection()` results contains cart note data: `OrderResourceCollectionTransfer.orderResources.attributes.cartNote` are set for the orders that have cart notes.
+Make sure that `sales-orders` resources from `SalesOrdersBackendApiResource::getOrderResourceCollection()` results contain cart note data: `OrderResourceCollectionTransfer.orderResources.attributes.cartNote` are set for the orders that have cart notes.
 
 {% endinfo_block %}

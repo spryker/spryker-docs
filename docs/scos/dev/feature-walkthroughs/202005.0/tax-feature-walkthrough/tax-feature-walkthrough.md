@@ -10,7 +10,7 @@ The _Tax_ feature allows you to define taxes for the items you sell. The feature
 
 To learn more about the feature and to find out how end users use it, see [Tax feature overview](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) for business users.
 
-## Related Developer articles
+## Related Developer documents
 
 | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|

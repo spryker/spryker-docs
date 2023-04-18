@@ -11,7 +11,7 @@ The _Scheduled Prices_ feature enables Back Office users to schedule price chang
 To learn more about the feature and to find out how end users use it, see [Scheduled Prices feature overview](/docs/scos/user/features/{{page.version}}/scheduled-prices-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|

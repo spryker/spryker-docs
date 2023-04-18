@@ -43,7 +43,7 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 {% wistia lx0amx3m1b 960 720 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

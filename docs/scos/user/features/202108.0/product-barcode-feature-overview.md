@@ -61,7 +61,7 @@ You can see the barcodes in the **Catalog&nbsp;<span aria-label="and then">></sp
 
 You can see Product ID, product name, SKU, and the barcode itself.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

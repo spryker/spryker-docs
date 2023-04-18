@@ -22,7 +22,7 @@ One of the biggest factors that influences customer loyalty and persuades them t
 
 ![Reorder order details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Reorder/reorder_order_details.png)
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|

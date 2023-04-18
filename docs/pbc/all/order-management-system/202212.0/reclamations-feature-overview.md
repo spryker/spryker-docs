@@ -37,7 +37,7 @@ A Back Office user can create a Reclamation in the Back Office as an action item
 
 In the Back Office in the order list, a Back Office user doesn't have the functionality to filter the orders by a business unit. All the orders within the shop system (for example, from multiple company accounts) are displayed here.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -45,7 +45,7 @@ In the Back Office in the order list, a Back Office user doesn't have the functi
 | [View reclamations](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/reclamations/view-reclamations.html)  |
 | [Changing the state of order items in reclamations](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  |
 |---------|

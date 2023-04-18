@@ -102,7 +102,7 @@ Bundle product information is stored to `spy_sales_order_item_bundle`. When orde
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

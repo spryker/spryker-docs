@@ -25,7 +25,7 @@ Apart from images, you can add a great variety of different types of assets to y
 
 This lets content managers create rich, compelling and attractive content for your customers, as well as gives the chance to offer your customers additional information they might be interested in, like user manuals or instructions.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

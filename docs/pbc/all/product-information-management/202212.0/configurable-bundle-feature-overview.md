@@ -230,7 +230,7 @@ The Configurable Bundle feature looks as follows on the Storefront:
 ### Current constraints
 
 The feature has the following functional constraints which are going to be resolved in the future:
-* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/wishlist-feature-overview.html).
+* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/wishlist-feature-overview.html).
 * A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/pbc/all/product-information-management/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/packaging-units-feature-overview.html)
@@ -243,7 +243,7 @@ The feature has the following functional constraints which are going to be resol
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -251,7 +251,7 @@ The feature has the following functional constraints which are going to be resol
 |  [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)  |
 |  [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|

@@ -24,7 +24,7 @@ To make it easier for your customers to manage their orders and shipments, you c
 
 B2B customers usually purchase large volumes of products selecting specific measuring and packaging units relevant for their orders. In B2B eCommerce shops, some products, for example in pallets, might contain hundreds or even thousands and millions of items. Buying such products generally results in creation of hundreds, thousands or more sales order items in the database, and this might affect the system performance. Also, the customer ends up with a huge list of products on the checkout and order overview pages, which creates a bad buying experience. *Splittable Order Items* let you avoid long lists of sales order items, as you can choose not to split product concretes into separate sales items upon order.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

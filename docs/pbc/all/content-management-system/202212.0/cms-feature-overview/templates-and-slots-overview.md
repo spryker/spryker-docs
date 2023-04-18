@@ -375,7 +375,7 @@ The functionality has the following functional constraints which are going to be
 
 * The Back Office sections related to the CMS pages do not provide any relevant information about templates and slots.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 | - | - |

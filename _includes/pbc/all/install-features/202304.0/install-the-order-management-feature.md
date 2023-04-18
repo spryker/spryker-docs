@@ -20,7 +20,7 @@ Follow the steps below to install the Order Management feature core.
 
 ###  Prerequisites
 
-To start feature integration, integrate the required feature:
+To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|

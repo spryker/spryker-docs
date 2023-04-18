@@ -45,7 +45,7 @@ The feature has the following functional constraints which are going to be resol
 * You cannot restrict availability of a product set to a store.
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -53,7 +53,7 @@ The feature has the following functional constraints which are going to be resol
 | [Create product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html) |
 | [Manage product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | DATA IMPORT |
 |---------|---------|

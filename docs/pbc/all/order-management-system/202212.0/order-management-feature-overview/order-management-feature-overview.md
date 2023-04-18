@@ -26,7 +26,7 @@ To make it easier for your customers to manage their orders and shipments, you c
 
 B2B customers usually purchase large volumes of products selecting specific measuring and packaging units relevant to their orders. In B2B eCommerce shops, some products, for example in pallets, might contain hundreds or even thousands and millions of items. Buying such products generally results in the creation of hundreds, thousands, or more sales order items in the database, and this might affect the system's performance. Also, the customer ends up with a huge list of products on the checkout and order overview pages, which creates a bad buying experience. *Splittable Order Items* let you avoid long lists of sales order items, as you can choose not to split product concretes into separate sales items upon order.
 
-## Related Business User articles
+## Related Business User documents
 
 | OVERVIEWS | BACK OFFICE GUIDES |
 |---| - |
@@ -40,7 +40,7 @@ B2B customers usually purchase large volumes of products selecting specific meas
 | | [View returns of an order](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/view-returns-of-an-order.html) |
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|
@@ -50,4 +50,4 @@ B2B customers usually purchase large volumes of products selecting specific meas
 |[ Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) |  |  |  |  |
 | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |  |  |  |  |
 | [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |  |  |  |  |
-| [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/install-and-upgrade/install-the-shipment-feature.html) |  |  |  |  |
+| [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |  |  |  |  |

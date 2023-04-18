@@ -41,7 +41,7 @@ The following sequence diagram shows how sending and receiving push notification
 5. To send a notification, the SCCOS application server contacts the browser push service with an HTTP POST request. The request URL is the endpoint of the recipient. The browser is constantly connected to its own push service and fetches new notifications.
 6. The service worker is activated by the push message and is responsible for displaying the web notifications to the user.
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | 
 |---------|

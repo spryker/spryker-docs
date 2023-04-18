@@ -12,7 +12,7 @@ For shoppers, it's convenient to find the necessary and relevant merchants and t
 
 To create merchant categories, you should import them. For details, see [File details: merchant_category.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-category.csv.html).
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | DATA IMPORT |
 |---|---|

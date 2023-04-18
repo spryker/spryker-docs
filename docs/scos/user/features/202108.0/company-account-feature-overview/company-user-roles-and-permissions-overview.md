@@ -138,7 +138,7 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **View Company orders**—with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their comapny.
   - **Send cart for approval (Requires "Buy up to grand total")**—lets a user send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

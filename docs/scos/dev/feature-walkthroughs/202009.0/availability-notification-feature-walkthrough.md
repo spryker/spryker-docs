@@ -27,7 +27,7 @@ The following scheme illustrates relations between Availability, `AvailabilityNo
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|

@@ -2618,6 +2618,26 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
+    - title: Warehouse picking + Inventory Management
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-inventory-management-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Order Management
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-order-management-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Product
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-product-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Shipment
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-shipment-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Spryker Core Back Office
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-spryker-core-back-office-feature.html
+      include_versions:
+      - "202304.0"
     - title: Spryker in Docker
       include_versions:
       - "201907.0"

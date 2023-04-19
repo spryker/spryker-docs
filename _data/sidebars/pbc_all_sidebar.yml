@@ -1094,9 +1094,6 @@ entries:
                 nested:
                   - title: Order Management
                     url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-order-management-feature.html
-                    include_versions:
-                    - "202212.0"
-                    - "202304.0"
                   - title: Reclamations
                     url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-reclamations-feature.html
                   - title: Quick Add to Cart + Non-splittable Products
@@ -1422,10 +1419,6 @@ entries:
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
                   - title: Packaging Units
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-packaging-units-feature.html
-                    include_versions:
-                    - "202204.0"
-                    - "202212.0"
-                    - "202304.0"
                   - title: Product Approval Process
                     url: /docs/pbc/all/product-information-management/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
                   - title: Product Bundles + Cart

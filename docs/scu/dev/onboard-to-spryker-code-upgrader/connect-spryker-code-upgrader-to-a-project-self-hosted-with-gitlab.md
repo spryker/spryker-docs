@@ -43,7 +43,7 @@ The GitLab access token should have the following repository permissions:
 10. Click **New integration**.
     This connects the Upgrader to your GitLab organization and opens the **Switch repository or Git hosting provider** page.
 
-11. For **GROUP**, select the GitLab group of the repository you want to connect.
+11. For **GROUP**, select the GitLab group that has access to the repository you want to connect.
 
 12. For **REPOSITORY**, select the repository you want to connect.
    This displays a success message. The Spryker Code Upgrader is now connected to your repository.

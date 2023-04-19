@@ -2,6 +2,7 @@
 title: Connect Spryker Code Upgrader to a project self-hosted with GitLab
 description: Learn how to connect Spryker Code Upgrader to a project self-hosted with GitLab
 template: howto-guide-template
+last_updated: Apr 19, 2023
 ---
 
 To connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token, take the following steps.

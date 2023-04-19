@@ -1,6 +1,6 @@
 ---
 title: Feature integration guides
-last_updated: Jun 16, 2021
+last_updated: Apr 19, 2023
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-integration
 originalArticleId: 3c8973bd-80d2-451c-bd19-abfdd7eef96a

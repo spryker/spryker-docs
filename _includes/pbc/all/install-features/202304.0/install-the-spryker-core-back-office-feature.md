@@ -95,7 +95,7 @@ Add the following configuration to your project:
 | CONFIGURATION                                           | SPECIFICATION                                                                                                                | NAMESPACE                 |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES   | Fallback locales that are used if there is no translation for a selected locale.                                             | Spryker\Shared\Translator |
-| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY    | Absolute path to a translation cache directory. For example, `/var/www/data/DE/cache/Zed/translation`.                       | Spryker\Shared\Translator |
+| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY    | An absolute path to a translation cache directory. For example, `/var/www/data/DE/cache/Zed/translation`.                       | Spryker\Shared\Translator |
 | TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS | Paths to project level translations. You can use a global pattern that specifies sets of filenames with wildcard characters. | Spryker\Shared\Translator |
 | AclConstants::ACL_DEFAULT_RULES                         | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                 | Spryker\Shared\Acl        |
 
@@ -140,8 +140,8 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 
 Spryker offers two authentication strategies out of the box:
 
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`—if a user does not exist, it is created automatically based on the data from an external service.
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`—it accepts only existing users for authentication.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`: If a user doesn't exist, it is created automatically based on the data from an external service.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`: It accepts only existing users for authentication.
 
 
 **src/Pyz/Zed/SecurityOauthUser/SecurityOauthUserConfig.php**
@@ -175,7 +175,7 @@ class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
 After finishing the entire integration, ensure the following:
 * Entries without a translation for a language with a configured fallback are translated into the fallback language.
 * The translation cache is stored under the configured directory.
-* Translations are found based on the configured file path pattern.
+* Translations are found based on the configured path pattern.
 
 {% endinfo_block %}
 
@@ -213,7 +213,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the Back Office, you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
+In the Back Office, make sure that you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
 
 {% endinfo_block %}
 

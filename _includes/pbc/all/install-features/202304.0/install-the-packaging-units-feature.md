@@ -1,18 +1,19 @@
 
 
 
-This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/202212.0/packaging-units-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/packaging-units-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
 Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
+
 To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)|
 | Order Management     | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html) 
 | Inventory Management | {{site.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-inventory-management-feature.md) |
 | Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
@@ -37,7 +38,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up Configuration
+### 2) Set up configuration
 
 Adjust synchronization queue pools in `src/Pyz/Zed/ProductPackagingUnitStorage/ProductPackagingUnitStorageConfig.php`:
 
@@ -63,7 +64,7 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 
 ### 3) Set up the database schema and transfer objects
 
-Adjust the schema definition, so entity changes can trigger events.
+1. Adjust the schema definition, so entity changes can trigger events.
 
 | AFFECTED ENTITY                 | TRIGGERED EVENTS                                                                                                                                |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +92,7 @@ Adjust the schema definition, so entity changes can trigger events.
 </database>
 ```
 
-Set up synchronization queue pools, so non-multistore entities (not store-specific entities) can be synchronized among stores:
+2. Set up synchronization queue pools, so non-multistore entities (not store-specific entities) can be synchronized among stores:
 
 **src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml**
 
@@ -112,7 +113,7 @@ Set up synchronization queue pools, so non-multistore entities (not store-specif
 </database>
 ```
 
-Apply the database changes and generate entity and transfer changes:
+3. Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -192,7 +193,7 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 ### 4) Add translations
 
-Append glossary according to your language configuration:
+1. Append glossary according to your language configuration:
 
 **src/data/import/glossary.csv**
 
@@ -253,7 +254,7 @@ packaging_unit_type.pack_mixed.name,Mixed Screws boxes,en_US
 packaging_unit_type.pack_mixed.name,Gemischte Schraubenkästen,de_DE
 ```
 
-Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -361,11 +362,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-### 6) Import data
-
-Import the following data.
-
-#### Add infrastructural data
+### 6) Add infrastructural data
 
 1. Add the following data.
 
@@ -405,11 +402,11 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  the configured infrastructural packaging unit types of the database are added to the `spy_product_packaging_unit_type` table.
+Make sure that the configured infrastructural packaging unit types of the database are added to the `spy_product_packaging_unit_type` table.
 
 {% endinfo_block %}
 
-#### Import product packaging unit types
+### 7) Import product packaging unit types
 
 1. Prepare your data according to your requirements using our demo data:
 
@@ -430,7 +427,7 @@ packaging_unit_type.pack_500.name
 
 | COLUMN | REQUIRED  | DATA TYPE | DATA EXAMPLE                      | DATA EXPLANATION                                                                                                                        |
 |--------|-----------|-----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| name   | mandatory | string    | packaging_unit_type.ring_500.name | Glossary key that will be used to display a packaging unit type . Each name needs a glossary key definition for all configured locales. |
+| name   | mandatory | string    | packaging_unit_type.ring_500.name | Glossary key that will be used to display a packaging unit type. Each name needs a glossary key definition for all configured locales. |
 
 2. Register the following plugin to enable data import:
 
@@ -541,7 +538,7 @@ console data:import product-packaging-unit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data in the database has been added to the `spy_product_packaging_unit`  and `spy_product_packaging_unit_type` tables.
+Make sure that the configured data in the database has been added to the `spy_product_packaging_unit` and `spy_product_packaging_unit_type` tables.
 
 {% endinfo_block %}
 
@@ -972,19 +969,19 @@ Make sure the following:
 
 ## Install feature frontend
 
+Follow the steps below to install the {Feature Name} feature frontend.
+
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME                    | VERSION          |
-|-------------------------|------------------|
-| Spryker Core E-commerce | {{page.version}} |
-| Measurement Units       | {{page.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+|---|---|---|
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 | Non-splittable Products | {{page.version}} |
 
 ### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/packaging-units: "{{page.version}}" --update-with-dependencies
@@ -1002,7 +999,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -1041,20 +1038,21 @@ measurement_units.recommendation.suggestion,Would you like to add,en_US
 measurement_units.recommendation.suggestion,Was würden Sie gerne hinzufügen? ,de_DE
 ```
 
-Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the configured data in the database has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
 ### 3) Set up widgets
 
-Enable the following global widget(s):
+1. Enable the following global widgets:
 
 | WIDGET                     | DESCRIPTION                                                 | NAMESPACE                                          |
 |----------------------------|-------------------------------------------------------------|----------------------------------------------------|
@@ -1086,22 +1084,24 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 `ProductPackagingUnitWidget` uses Javascript for some functionality:
 
-| Functionality                                                                                                                                                                                                                                                   | Path                                                                                                                                                                                                        |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Functionality | Path |
+|---|---|
 | Controls base unit => sales unit calculationsApplies product quantity and amount restrictions on sales unit levelOffers recommendation when invalid quantity or amount is selectedMaintains stock-based quantity, amount and sales unit information for posting | `vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts` |
 
 
-Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
 ```
 {% info_block warningBox "Verification" %}
 
-- Check if the `amount` field appears on the Product Detail page for items with packaging units.
-- Check if the `amount` field appears correctly with measurement unit information on the Cart page.
-- Check if the `amount` field appears correctly with measurement unit information on the Checkout Summary page.
-- Check if the `amount` field appears correctly with measurement unit information on the previous Orders page.
+Check if Check if the `amount` field meets the following criteria: 
+
+- It appears on the Product Detail page for items with packaging units.
+- It is displayed correctly with measurement unit information on the Cart page.
+- It is displayed correctly with measurement unit information on the Checkout Summary page.
+- It is displayed correctly with measurement unit information on the previous Orders page.
 
 {% endinfo_block %}
 
@@ -1109,9 +1109,9 @@ console frontend:yves:build
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                           | DESCRIPTION                                                                                                    | PREREQUISITES | NAMESPACE                                                     |
-|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
-| QuickOrderItemDefaultPackagingUnitExpanderPlugin | Expands `ItemTransfer` with packaging unit data if available using product abstract ID and product concrete ID |               | SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+|---|---|---|---|
+| QuickOrderItemDefaultPackagingUnitExpanderPlugin | Expands `ItemTransfer` with packaging unit data if available using product the abstract ID and product concrete ID |   | SprykerShop\Yves\ProductPackagingUnitWidget\Plugin\QuickOrder |
 
 **src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
 

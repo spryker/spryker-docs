@@ -1094,6 +1094,9 @@ entries:
                 nested:
                   - title: Order Management
                     url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-order-management-feature.html
+                    include_versions:
+                    - "202212.0"
+                    - "202304.0"
                   - title: Reclamations
                     url: /docs/pbc/all/order-management-system/install-and-upgrade/install-features/install-the-reclamations-feature.html
                   - title: Quick Add to Cart + Non-splittable Products

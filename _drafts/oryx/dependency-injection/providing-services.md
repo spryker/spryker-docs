@@ -1,6 +1,6 @@
 ---
 title: Providing services
-description: Recommended conventions for defining services
+description: Recommended conventions for providing services
 template: concept-topic-template
 last_updated: Apr 13, 2023
 ---

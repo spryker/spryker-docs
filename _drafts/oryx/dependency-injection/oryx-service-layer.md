@@ -1,6 +1,6 @@
 ---
 title: Oryx service layer
-description: Oryx service layer uses dependency injection to abstract system functionality
+description: Oryx service layer abstracts system functionality using DI
 template: concept-topic-template
 last_updated: Apr 13, 2023
 ---

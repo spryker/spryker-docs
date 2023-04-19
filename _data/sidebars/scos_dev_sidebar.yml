@@ -3790,6 +3790,87 @@ entries:
           url: /docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html
         - title: Router Zed
           url: /docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
+  - title: Migration program
+    nested:
+    - title: "PaaS: migration instructions"
+      url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-instructions.html
+      nested:
+      - title: Assessment phase
+        nested:
+        - title: Is the latest version of Docker SDK installed?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-the-latest-version-of-docker-sdk-installed.html
+        - title: Is the latest version of Docker SDK integrated and project is running on Docker SDK?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-the-latest-version-of-docker-sdk-integrated.html
+        - title: Are performance and security guidelines implemented?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-performance-and-security-guidelines-implemented.html
+        - title: Is currently used PHP Version >=8.0?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-currently-used-php-version-8-0.html
+        - title: Are all used packages support PHP Version >=8.0?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-all-used-packages-support-php-version-8-0.html
+        - title: Is project based on or updated to the 202108.0 demoshop release?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-project-based-on-or-updated-to-the-202108-0-demoshop-release.html
+        - title: Are ZED endpoints split to 3 (BackendApi, BackendGateway, Backoffice)?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-zed-endpoints-split-to-3-backendapi-backendgateway-backoffice.html
+        - title: "Is amount of assets small (images, assets manager, videos, import data (if needed) etc.) Files: <30 GB?"
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-amount-of-assets-small.html
+        - title: "Are there some technical complexities, that might increase efforts like: CTE, Raw SQL?"
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-complexities-that-might-increase-efforts.html
+        - title: "Are there some technical complexities, that might increase efforts like: non standard services, high traffic amount, VPN?"
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-complexities-that-might-increase-efforts-services.html
+        - title: Is deployment process compatible with PaaS OOTB deployment process?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-deployment-process-compatible-with-paas-ootb-deployment-process.html
+        - title: Is ENV variables approach used for environment settings specification?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-env-variables-approach-used-for-environment-settings-specification.html
+        - title: "Test coverage: Is common E-com flow covered?"
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/test-coverage-is-common-e-com-flow-covered.html
+        - title: "Test coverage: Is critical custom functionality of E-com flow covered?"
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/test-coverage-is-critical-custom-functionality-of-e-com-flow-covered.html
+        - title: Is S3 bucket integrated for all needed storage of files?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-s3-bucket-integrated-for-all-needed-storage-of-files.html
+        - title: Has multi-store support?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/has-multi-store-support.html
+        - title: Is MariaDB / MySQL used in the project?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-mariadb-mysql-used-in-the-project.html
+        - title: Are ElasticSearch and Redis restorable?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-elasticsearch-and-redis-restorable.html
+        - title: How to do the transition?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/how-to-do-the-transition.html
+      - title: Migration phase
+        nested:
+        - title: Install the latest version of Docker SDK
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/install-the-latest-version-of-docker-sdk.html
+        - title: Integrate the latest version of Docker SDK and run project on it
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/integrate-the-latest-version-of-docker-sdk-and-run-project-on-it.html
+        - title: Implement security and performance guidelines
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/implement-security-and-performance-guidelines.html
+        - title: Migrate project to PHP >=8.0
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-project-to-php-8-0.html
+        - title: Upgrade all used packages to be compatible with PHP >=8.0
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/upgrade-all-used-packages-to-be-compatible-with-php-8-0.html
+        - title: Upgrade project packages
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/upgrade-project-packages.html
+        - title: Split ZED endpoints to 3 (BackendApi, BackendGateway, Backoffice)
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/split-zed-endpoints-to-3-backendapi-backendgateway-backoffice.html
+        - title: Migrate assets (images, assets manager, videos, import data (if needed) etc.)
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-assets-images-assets-manager-videos-import-data-if-needed-etc.html
+        - title: Migrate CTEs, Raw SQL queries, Views, Procedures etc.
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-ctes-raw-sql-queries-views-procedures-etc.html
+        - title: Migrate non standard services. Apply settings for high traffic, external connections, VPN etc.
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-non-standard-services.html
+        - title: Transfer environment specific application settings to Spryker Cloud (ENV variables)
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/transfer-environment-specific-application-settings-to-spryker-cloud-env-variables.html
+        - title: Migrate / develop common E-com flow tests
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-develop-common-e-com-flow-tests.html
+        - title: Migrate / develop critical custom functionality of E-com flow
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-develop-critical-custom-functionality-of-e-com-flow.html
+        - title: Migrate files storages usage to S3 usage
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-files-storages-usage-to-s3-usage.html
+        - title: Migrate existing DB driver to MariaDB
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/migrate-existing-db-driver-to-mariadb.html
+        - title: Restore Elasticsearch and Redis
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/restore-elasticsearch-and-redis.html
+        - title: Switch from on prem to Spryker Cloud
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-migration-documents/switch-from-on-prem-to-spryker-cloud.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:

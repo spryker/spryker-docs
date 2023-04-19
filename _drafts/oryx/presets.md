@@ -41,6 +41,22 @@ export const b2cFeatures: AppFeature[] = [
   ...
 ```
 
+## Themes
+
+The overarching UI of the application is driven by themes. To get you up and started with a default theme, you can import the theme from the preset package and apply it to your Oryx application:
+
+```ts
+import { appBuilder } from "@spryker-oryx/core";
+import { b2cFeatures, b2cTheme } from "@spryker-oryx/presets";
+
+export const app = appBuilder()
+  .withFeature(b2cFeatures)
+  .withTheme(b2cTheme)
+  .create();
+```
+
+The theme contains mainly design tokens that are used inside the components styles.
+
 ## Resources
 
 Most web applications use a `/public` folder to host static resources. This requires a folder in the boilerplate code (or a process to generate it) that is not easy to upgrade over time.

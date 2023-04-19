@@ -1,4 +1,7 @@
-This document describes how to integrate the Warehouse Picking + [Shipment](/docs/scos/user/features/{{site.version}}/shipment/shipment-feature-overview.html) feature into a Spryker project.
+
+
+
+This document describes how to integrate the Warehouse picking + [Shipment](/docs/scos/user/features/{{site.version}}/shipment/shipment-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -15,8 +18,6 @@ To start feature integration, integrate the required features:
 | Shipment          | {{site.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)        |
 
 ## 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/picking-lists-shipments-backend-resource-relationship:"^0.1.0" --update-with-dependencies

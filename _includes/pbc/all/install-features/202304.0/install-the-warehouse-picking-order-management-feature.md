@@ -1,9 +1,10 @@
-This document describes how to integrate the Warehouse Picking + [Order Management](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
+
+
+This document describes how to integrate the Warehouse picking + [Order Management](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/order-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Warehouse Picking + Order Management feature.
-To start feature integration, integrate the required features:
+Follow the steps below to install the Warehouse Picking + Order Management feature core.
 
 ### Prerequisites
 
@@ -15,8 +16,6 @@ To start feature integration, integrate the required features:
 | Order Management  | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html)   |
 
 ## 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/picking-lists-sales-orders-backend-resource-relationship:"^0.1.0" --update-with-dependencies
@@ -71,13 +70,11 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
         return $resourceRelationshipCollection;
     }
 }
-
-
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure you have a `sales-orders` resource as a relationship to `picking-list-items` when you do a request.
+Make sure you have the `sales-orders` resource as a relationship to `picking-list-items` when you do a request.
 
 `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-orders`
 <details>

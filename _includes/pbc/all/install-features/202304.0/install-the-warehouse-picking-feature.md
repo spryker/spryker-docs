@@ -191,59 +191,61 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 ```
 
-   1. Add the `DummyPicking` sub-process to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
+   2. Add the `DummyPicking` subprocess to the `DummyPayment01` process as an example. Consider OMS configuration using the `DummyPayment01` process as an example.
 
-**config/Zed/oms/DummyPayment01.xml**
+    <details><summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
 
-```xml
-<?xml version="1.0"?>
-<statemachine
-        xmlns="spryker:oms-01"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
->
+    ```xml
+    <?xml version="1.0"?>
+    <statemachine
+            xmlns="spryker:oms-01"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+    >
 
-    <process name="DummyPayment01" main="true">
-        <subprocesses>
-            <process>DummyPicking</process> <!-- Registering the subprocess. -->
-        </subprocesses>
+        <process name="DummyPayment01" main="true">
+            <subprocesses>
+                <process>DummyPicking</process> <!-- Registering the subprocess. -->
+            </subprocesses>
 
-        <transitions>
-            <!-- We will find the following transition and substitute it with the provided below. -->
-            <!--            <transition happy="true">-->
-            <!--                <source>waiting</source>-->
-            <!--                <target>exported</target>-->
-            <!--                <event>check giftcard purchase</event>-->
-            <!--            </transition>-->
-            <!-- / -->
+            <transitions>
+                <!-- We will find the following transition and substitute it with the provided below. -->
+                <!--            <transition happy="true">-->
+                <!--                <source>waiting</source>-->
+                <!--                <target>exported</target>-->
+                <!--                <event>check giftcard purchase</event>-->
+                <!--            </transition>-->
+                <!-- / -->
 
-            <transition happy="true">
-                <source>waiting</source>
-                <target>picking list generation scheduled</target>
-                <event>picking list generation schedule</event>
-            </transition>
+                <transition happy="true">
+                    <source>waiting</source>
+                    <target>picking list generation scheduled</target>
+                    <event>picking list generation schedule</event>
+                </transition>
 
-            <transition happy="true">
-                <source>picking finished</source>
-                <target>exported</target>
-                <event>finish picking</event>
-            </transition>
+                <transition happy="true">
+                    <source>picking finished</source>
+                    <target>exported</target>
+                    <event>finish picking</event>
+                </transition>
 
-        </transitions>
+            </transitions>
 
-    </process>
+        </process>
 
-    <process name="DummyPicking"
-             file="DummySubprocess/DummyPicking01.xml"/> <!-- Include the subprocess file to be loaded by the state machine. -->
+        <process name="DummyPicking"
+                file="DummySubprocess/DummyPicking01.xml"/> <!-- Include the subprocess file to be loaded by the state machine. -->
 
-</statemachine>
-```
+    </statemachine>
+    ```
+    </details>
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the OMS transition diagram shows the expected transitions:
-1. In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**, you will find the process `DummyPayment01`, click on it to see the diagram.
-2. Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
+1. In the Back Office of your demo store, navigate to **Administration&nbsp;<span aria-label="and then">></span> OMS**. 
+2. To see the diagram, click the `DummyPayment01` process.
+3. Make sure that the OMS transition diagram shows a possible transition from `waiting` to `picking list generation scheduled` and from `picking finished` to `exported`.
 
 {% endinfo_block %}
 
@@ -386,7 +388,7 @@ console data:import glossary
 | PushNotificationPickingListPostUpdatePlugin               | Creates a push notification after updating a picking list.                           |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PickingList      |
 | WarehouseUserPushNotificationSubscriptionValidatorPlugin  | Validates whether the user has a warehouse assignment.                               |               | Spryker\Zed\PickingListPushNotification\Communication\Plugin\PushNotification |
 
-**\Pyz\Zed\Oms\OmsDependencyProvider.php**
+<details open><summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -436,6 +438,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+</details>
 
 **src/Pyz/Zed/PickingList/PickingListDependencyProvider.php**
 
@@ -555,7 +558,7 @@ class PickingListDependencyProvider extends SprykerPickingListDependencyProvider
 }
 ```
 
-3. To enable the Backend API, register the plugins:
+3. To enable the Backend API, register these plugins:
 
 | PLUGIN                                                          | SPECIFICATION                                                                              | PREREQUISITES | NAMESPACE                                                            |
 |-----------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
@@ -685,15 +688,12 @@ Make sure that you can send the following requests:
 }
 ```
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that push notification generation work for the picking list feature:
 
 1. Make an order with a products from the warehouse with `multi-shipment` picking strategy.
 2. Log to the Back Office and navigate to **Sales&nbsp;<span aria-label="and then">></span> Orders&nbsp;**. The **Orders** page opens.
 3. Select your order and click the **View** button.
 4. Wait until the order item status became **Ready for picking**.
-5. Check the `spy_push_notification` database table to ensure that a push notification was created.
+5. Check the `spy_push_notification` database table to ensure that a push notification has been created.
+
 {% endinfo_block %}

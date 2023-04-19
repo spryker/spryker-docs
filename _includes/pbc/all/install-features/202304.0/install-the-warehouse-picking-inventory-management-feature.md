@@ -1,9 +1,8 @@
-This document describes how to integrate the Warehouse Picking + [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the Warehouse picking + [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
 Follow the steps below to install the Warehouse Picking + Inventory Management feature.
-To start feature integration, integrate the required features:
 
 ### Prerequisites
 
@@ -15,8 +14,6 @@ To start feature integration, integrate the required features:
 | Inventory Management | {{site.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-inventory-management-feature.md) |
 
 ## 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/picking-lists-warehouses-backend-resource-relationship:"^0.1.0" --update-with-dependencies
@@ -71,8 +68,6 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
         return $resourceRelationshipCollection;
     }
 }
-
-
 ```
 
 {% info_block warningBox "Verification" %}

@@ -1,8 +1,11 @@
-This document describes how to integrate the Warehouse Picking + [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) feature into a Spryker project.
+
+
+
+This document describes how to integrate the Warehouse picking + [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Warehouse Picking + Product feature.
+Follow the steps below to install the Warehouse Picking + Product feature core.
 
 ### Prerequisites
 
@@ -15,8 +18,6 @@ To start feature integration, integrate the required features:
 
 
 ## 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker/picking-lists-products-backend-resource-relationship:"^0.1.0" --update-with-dependencies

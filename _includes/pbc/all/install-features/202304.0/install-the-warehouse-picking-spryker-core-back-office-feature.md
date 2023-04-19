@@ -1,4 +1,7 @@
-This document describes how to integrate the Warehouse Picking + [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html) feature into a Spryker project.
+
+
+
+This document describes how to integrate the Warehouse picking + [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

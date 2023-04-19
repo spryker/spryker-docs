@@ -106,13 +106,13 @@ Bundle product information is stored to `spy_sales_order_item_bundle`. When an o
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | GLUE API GUIDES  |
 |---------|---------|

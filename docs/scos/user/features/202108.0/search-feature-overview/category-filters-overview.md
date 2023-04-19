@@ -22,7 +22,7 @@ The feature has the following functional constraints which are going to be resol
 * Category filters are shared across all the stores of a project.
 * You can't restrict availability of a category filter to a store.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

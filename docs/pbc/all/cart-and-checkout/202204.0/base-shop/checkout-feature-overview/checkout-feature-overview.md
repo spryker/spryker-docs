@@ -34,14 +34,14 @@ With order thresholds, you can do the following:
 * Ensure that the cost of items sold is not too high for each transaction, which, in the long run, can make your business more profitable.
 * Support promotional campaigns, by offering free shipping for orders above a threshold and other perks.
 
-## Related Business User articles
+## Related Business User documents
 
 |OVERVIEWS| BACK OFFICE USER GUIDES |
 |-|-|
 | [Multi-step Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/checkout-feature-overview/multi-step-checkout-overview.html)  | [Define global thresholds](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/define-global-thresholds.html) |
 | [Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)  | [Manage threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/manage-threshold-settings.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT |
 |---------|---------|---------|

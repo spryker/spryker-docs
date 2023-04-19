@@ -91,13 +91,13 @@ The feature has the following functional constraints which are going to be resol
 * The default number of prices that the cron job can process at a time is 1000.
 * The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html).
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Manage scheduled prices](/docs/pbc/all/price-management/{{site.version}}/manage-in-the-back-office/create-scheduled-prices.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | MIGRATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|

@@ -64,7 +64,7 @@ The following schemas illustrates relations between modules when Avalara is inte
 
 </details>
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|

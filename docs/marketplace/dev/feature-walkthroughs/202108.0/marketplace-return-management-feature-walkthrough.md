@@ -34,7 +34,7 @@ The following schema illustrates the Marketplace Return Management domain model:
 
 ![Entity diagram](https://confluence-connect.gliffy.net/embed/image/9f01ed2f-2be0-4e59-afa3-e56fd8390b51.png?utm_medium=live&utm_source=confluence)
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES      | GLUE API GUIDES     |
 | -------------------- | -------------- |

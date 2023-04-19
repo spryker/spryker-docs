@@ -1216,6 +1216,15 @@ entries:
             nested:
               - title: Edit payment methods
                 url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/edit-payment-methods.html
+              - title: View payment methods
+                url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/view-payment-methods.html
+          - title: Hydrate payment methods for an order
+            url: /docs/pbc/all/payment-service-provider/hydrate-payment-methods-for-an-order.html
+          - title: Interact with third party payment providers using Glue API
+            url: /docs/pbc/all/payment-service-provider/interact-with-third-party-payment-providers-using-glue-api.html
+          - title: "Payments feature: Domain model and relationships"
+            url: /docs/pbc/all/payment-service-provider/payments-feature-domain-model-and-relationships.html
+
 
 
 

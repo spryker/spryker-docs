@@ -3,6 +3,7 @@ title: CrefoPay
 template: concept-topic-template
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/crefopay.html
+    - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/crefopay/crefopay.html
 ---
 
 `SprykerEco.CrefoPay` [spryker-eco/crefo-pay](https://github.com/spryker-eco/crefo-pay) module provides integration of Spryker e-commerce system with the CrefoPay technology partner. It requires `SprykerEco.CrefoPayApi` [spryker-eco/crefo-pay-api](https://github.com/spryker-eco/crefo-pay-api) module that provides the REST Client for making API calls to CrefoPay Payment Provider.
@@ -22,3 +23,21 @@ The `SprykerEco.CrefoPay` module provides the following payment methods:
 * [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#paypal)
 * [Cash in advance](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#cash-in-advance)
 * [SofortÜberweisung](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/crefopay-payment-methods.html#sofortberweisung)
+
+
+## Related Developer guides
+
+To integrate CrefoPay into your system the see following articles:
+* [Installing and configuring CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/installing-and-configuring-crefopay.html)
+* [Integrating CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/integrating-crefopay.html)
+
+---
+
+## Copyright and Disclaimer
+
+See [Disclaimer](https://github.com/spryker/spryker-documentation).
+
+---
+For further information on this partner and integration into Spryker, please contact us.
+
+<div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

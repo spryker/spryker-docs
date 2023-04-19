@@ -1195,9 +1195,31 @@ entries:
                 url: /docs/pbc/all/order-management-system/third-party-integrations/nekom-cc-gmbh.html
               - title: Tradebyte
                 url: /docs/pbc/all/order-management-system/third-party-integrations/tradebyte.html
-      - title: Payment Service Providers
+      - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
+          - title: Payments feature overview
+            url: /docs/pbc/all/payment-service-provider/payments-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install the Payments feature
+                url: /docs/pbc/all/payment-service-provider/install-and-upgrade/install-the-payments-feature.html
+              - title: Upgrade the Payment module
+                url: /docs/pbc/all/payment-service-provider/install-and-upgrade/upgrade-the-payment-module.html
+          - title: Import data
+            nested:
+              - title: File details - payment_method.csv
+                url: /docs/pbc/all/payment-service-provider/import-data/file-details-payment-method.csv.html
+              - title: File details - payment_method_store.csv
+                url: /docs/pbc/all/payment-service-provider/import-data/file-details-payment-method-store.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Edit payment methods
+                url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/edit-payment-methods.html
+
+
+
+
           - title: Payone
             url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/payone.html
             nested:
@@ -2109,7 +2131,7 @@ entries:
                   - title: Marketplace Shopping Lists
                     url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-shopping-lists-feature-domain-model-and-relationships.html
                   - title: Marketplace Wishlist
-                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html                                      
+                    url: /docs/pbc/all/shopping-list-and-wishlist/marketplace/domain-model-and-relationships/marketplace-wishlist-feature-domain-model-and-relationships.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

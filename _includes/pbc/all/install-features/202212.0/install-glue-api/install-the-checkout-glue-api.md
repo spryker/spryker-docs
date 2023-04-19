@@ -545,7 +545,7 @@ Ensure that `GuestCartByRestCheckoutDataResourceRelationshipPlugin` is set up co
 
 {% endinfo_block %}
 
-For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html).
+For more details, see [Implementing Checkout Steps for Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/interact-with-third-party-payment-providers-using-glue-api.html).
 
 #### Configure mapping
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-payments-feature-integration.html
 related:
   - title: Payments feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/payments-feature-integration.html
+    link: docs/pbc/all/payment-service-provider/page.version/install-and-upgrade/install-the-payments-feature.html
   - title: Payments feature walkthrough
     link: docs/pbc/all/payment-service-provider/page.version/payments-feature-overview.html
   - title: Check out purchases

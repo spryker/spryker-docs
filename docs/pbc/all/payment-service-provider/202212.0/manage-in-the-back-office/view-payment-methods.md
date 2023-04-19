@@ -25,4 +25,4 @@ To view a payment methods in the Back Office, follow the steps:
 
 ## Next steps
 
-[Edit payment methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/edit-payment-methods.html)
+[Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/manage-in-the-back-office/edit-payment-methods.html)

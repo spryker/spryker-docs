@@ -1,4 +1,7 @@
-This document describes how to integrate the Marketplace Return Management feature into a Spryker project.
+
+
+
+This document describes how to integrate the [Marketplace Return Management](/docs/pbc/all/return-management/202212.0/marketplace/marketplace-return-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -15,22 +18,16 @@ To start feature integration, integrate the required features:
 | Marketplace Order Management | {{page.version}} | [Marketplace Order Management Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
 
 ### 1) Install required modules using Composer
-<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
 ```
 
-<!-- Have to be deleted after Return Management feature will be released with a new version-->
-
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
+| MODULE  | EXPECTED DIRECTORY |
 | -------- | ------------------- |
 | MerchantSalesReturn | spryker/merchant-sales-return |
 | MerchantSalesReturnGui | spryker/merchant-sales-return-gui |
@@ -39,7 +36,6 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up the configuration
-<!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
 
 Add the following configuration:
 
@@ -53,7 +49,7 @@ Add the following configuration:
 | MarketplaceRefund  | Add configuration for the `MarketplaceRefund` subprocess in the `MarketplaceSubprocess` folder for the OMS configuration. | config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml |
 | MarketplaceReturn  | Add configuration for `MarketplaceReturn` subprocess in the `MarketplaceSubprocess` folder for the OMS configuration. | config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml |
 
-<details>
+<details open>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
 
 ```xml
@@ -78,7 +74,7 @@ Add the following configuration:
 
 </details>
 
-<details>
+<details open>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml</summary>
 
 ```xml
@@ -100,10 +96,9 @@ Add the following configuration:
 
 </statemachine>
 ```
-
 </details>
 
-<details>
+<details open>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/Subprocess/MerchantRefund.xml</summary>
 
 ```xml
@@ -139,10 +134,9 @@ Add the following configuration:
 
 </statemachine>
 ```
-
 </details>
 
-<details>
+<details open>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/Subprocess/MerchantReturn.xml</summary>
 
 ```xml
@@ -209,7 +203,6 @@ Add the following configuration:
 
 </statemachine>
 ```
-
 </details>
 
 <details>
@@ -234,10 +227,9 @@ Add the following configuration:
 
 </statemachine>
 ```
-
 </details>
 
-<details>
+<details open>
 <summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml</summary>
 
 ```xml
@@ -273,10 +265,9 @@ Add the following configuration:
 
 </statemachine>
 ```
-
 </details>
 
-<details>
+<details open>
 <summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
 
 ```xml
@@ -343,14 +334,9 @@ Add the following configuration:
 
 </statemachine>
 ```
-
 </details>
 
 ### 3) Set up database schema and transfer objects
-<!--Provide the following with a description before each item:
-* Code snippets with DB schema changes.
-* Code snippets with transfer schema changes.
-* The console command to apply the changes in project and core. -->
 
 Apply database changes and to generate entity and transfer changes:
 
@@ -379,13 +365,9 @@ Make sure that the following changes have been triggered in transfer objects:
 | Order.items                                   | attribute | created | src/Generated/Shared/Transfer/MerchantOrderCriteriaTransfer |
 | Return.merchantOrders                         | attribute | created | src/Generated/Shared/Transfer/ReturnTransfer                |
 
-
 {% endinfo_block %}
 
 ### 4) Add translations
-<!--Provide glossary keys for `DE` and `EN` of your feature as a code snippet. When a glossary key is dynamically generated, describe how to construct the key.-->
-
-Add translations as follows:
 
 1. Append glossary for the feature:
 
@@ -409,14 +391,13 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-<!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
 ### 5) Set up behavior
-<!--This is a comment, it will not be included -->
+
 Enable the following behaviors by adding and registering the plugins:
 
 | PLUGIN                                         | SPECIFICATION                                                                                                                                                                  | PREREQUISITES | NAMESPACE                                                              |
@@ -736,7 +717,6 @@ class ShipReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEven
 }
 
 ```
-
 </details>
 
 <details>
@@ -888,21 +868,17 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 2. To verify `MerchantReturnCreateRequestValidatorPlugin`, make sure that you can't create a return for items from different merchants.
 3. To verify `MerchantReturnExpanderPlugin`, make sure that you can see merchant order references on the return details page.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that when you create and process a return for merchant order items, its statuses are synced between state machines in the following way:
 
-| Marketplace SM     | Default Merchant SM     | Main Merchant SM
-| -------- | ------------------- | ---------- |
-| Used by Operator	 | Used by 3rd-party Merchant	 | Used by Main Merchant
-| start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return	  | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return	 | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return
-| execute return --> returned   | execute return (manually executable) --> returned 	 | execute return (manually executable) --> returned
-| refund --> refunded		  | refund (manually executable) --> refunded	 | refund (manually executable) --> refunded
-| cancel return --> return canceled	  | cancel return (manually executable) --> return canceled 	 | cancel return (manually executable) --> return canceled
-| ship return --> shipped to customer 	  | ship return (manually executable) --> shipped to customer	 | ship return (manually executable) --> shipped to customer
-| deliver return --> delivered		  | deliver return (manually executable) --> delivered	 | deliver return (manually executable) --> delivered
+| MARKETPLACE SM | DEFAULT MERCHANT SM | MAIN MERCHANT SM |
+| --- | ---| --- |
+| Used by an operator	 | Used by a 3rd-party merchant	 | Used by a main merchant |
+| start-return (can be started by entering in the Return Flow; it is not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return | start-return (can be started by entering in the Return Flow, it is not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return | start-return (can be started by entering in the Return Flow, it is not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return
+| execute return&nbsp;<span aria-label="and then">></span> returned   | execute return (manually executable)&nbsp;<span aria-label="and then">></span> returned  execute return (manually executable)&nbsp;<span aria-label="and then">></span> returned
+| refund&nbsp;<span aria-label="and then">></span> refunded | refund (manually executable)&nbsp;<span aria-label="and then">></span> refunded	 | refund (manually executable)&nbsp;<span aria-label="and then">></span> refunded
+| cancel return&nbsp;<span aria-label="and then">></span> return canceled | cancel return (manually executable)&nbsp;<span aria-label="and then">></span> return canceled | cancel return (manually executable)&nbsp;<span aria-label="and then">></span> return canceled
+| ship return&nbsp;<span aria-label="and then">></span> shipped to customer | ship return (manually executable)&nbsp;<span aria-label="and then">></span> shipped to customer	 | ship return (manually executable)&nbsp;<span aria-label="and then">></span> shipped to customer
+| deliver return&nbsp;<span aria-label="and then">></span> delivered | deliver return (manually executable)&nbsp;<span aria-label="and then">></span> delivered	 | deliver return (manually executable)&nbsp;<span aria-label="and then">></span> delivered
 
 {% endinfo_block %}
 
@@ -940,7 +916,7 @@ Make sure when you open any order on `http://backoffice.de.spryker.local/sales-r
 
 {% endinfo_block %}
 
-Add config for the `SalesReturn`:
+Add config for `SalesReturn`:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnConfig.php</summary>
@@ -965,6 +941,7 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
 </details>
 
 ### 6) Configure navigation
+
 Add marketplace section to `navigation.xml`:
 
 **config/Zed/navigation.xml**
@@ -1017,29 +994,21 @@ Follow the steps below to install the Marketplace return management feature fron
 
 ### 1) Install required modules using Сomposer
 
-<!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
-
-Install the required modules:
-
 ```bash
 composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-<!--Describe how a developer can check they have completed the step correctly.-->
-
 Make sure that the following modules have been installed:
 
-| MODULE  | EXPECTED DIRECTORY <!--for public Demo Shops--> |
+| MODULE  | EXPECTED DIRECTORY |
 | -------- | ------------------- |
 | MerchantSalesReturnWidget | spryker-shop/merchant-sales-return-widget |
 
 {% endinfo_block %}
 
 ### 2) Set up widgets
-
-<!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating frontend code.-->
 
 Set up widgets as follows:
 
@@ -1081,17 +1050,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-<!--Describe how a developer can check they have completed the step correctly.-->
-
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET | VERIFICATION |
 | ---------------- | ----------------- |
-| MerchantSalesReturnCreateFormWidget | Go through the Return flow in the same way as now by clicking the **Create Return** button on the top of the *Order Details* page. Go to the *Create Return* page and create a return only with the items of one merchant order at a time and only for returnable items. |
+| MerchantSalesReturnCreateFormWidget | <ul><li>1. To go through the Return flow in the same way as now, on the **Order Details** page, click **Create Return**.</li><li>2. Go to the **Create Return** page and create a return only with the items of one merchant order at a time and only for returnable items</li></ul>. |
 
 {% endinfo_block %}
 
-2. Enable Javascript and CSS changes:
+1. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

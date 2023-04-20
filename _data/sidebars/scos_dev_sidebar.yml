@@ -2610,10 +2610,6 @@ entries:
       - "202304.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
-    - title: Warehouse picking
-      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
-      include_versions:
-      - "202304.0"
     - title: Picker user login
       url: /docs/scos/dev/feature-integration-guides/install-the-picker-user-login-feature.html
       include_versions:
@@ -2626,6 +2622,26 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
+    - title: Warehouse picking + Inventory Management
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-inventory-management-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Order Management
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-order-management-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Product
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-product-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Shipment
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-shipment-feature.html
+      include_versions:
+      - "202304.0"
+    - title: Warehouse picking + Spryker Core Back Office
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-spryker-core-back-office-feature.html
+      include_versions:
+      - "202304.0"
     - title: Spryker in Docker
       include_versions:
       - "201907.0"
@@ -2638,6 +2654,10 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/spryker-in-docker/spryker-in-docker-feature-integration-guides.html
         include_versions:
         - "201907.0"
+    - title: Warehouse picking
+      url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-picking-feature.html
+      include_versions:
+      - "202304.0"
     - title: Warehouse User Management
       url: /docs/scos/dev/feature-integration-guides/install-the-warehouse-user-management-feature.html
       include_versions:

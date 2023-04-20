@@ -16,11 +16,11 @@ related:
   - title: Installing and configuring Adyen
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/installing-and-configuring-adyen.html
   - title: Integrating Adyen
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/integrating-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/integrate-adyen.html
   - title: Integrating Adyen payment methods
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/integrating-adyen-payment-methods.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/integrate-adyen-payment-methods.html
   - title: Enabling filtering of payment methods for Ayden
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/enabling-filtering-of-payment-methods-for-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
 ---
 
 ## Partner Information
@@ -32,9 +32,9 @@ Adyen is a global payment company that allows businesses to accept e-commerce, m
 ## Related Developer guides
 
 * [Installing and configuring Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/adyen/installing-and-configuring-adyen.html)
-* [Integrating Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/adyen/integrating-adyen.html)
-* [Integrating Adyen payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/adyen/integrating-adyen-payment-methods.html)
-* [Enabling filtering of payment methods for Ayden](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/adyen/enabling-filtering-of-payment-methods-for-adyen.html)
+* [Integrating Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/adyen/integrate-adyen.html)
+* [Integrating Adyen payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/adyen/integrate-adyen-payment-methods.html)
+* [Enabling filtering of payment methods for Ayden](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html)
 
 ## Copyright and Disclaimer
 

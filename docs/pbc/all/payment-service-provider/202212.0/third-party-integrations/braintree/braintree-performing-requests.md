@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/braintree/braintree-performing-requests.html
 related:
   - title: Installing and configuring Braintree
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/installing-and-configuring-braintree.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/install-and-configure-braintree.html
   - title: Integrating Braintree
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/integrating-braintree.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/integrate-braintree.html
   - title: Braintree - Request workflow
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/braintree/braintree-request-workflow.html
 ---

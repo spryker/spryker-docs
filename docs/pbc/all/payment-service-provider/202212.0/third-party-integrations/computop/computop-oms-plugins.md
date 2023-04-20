@@ -15,23 +15,23 @@ related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/computop.html
   - title: Integrating the Sofort payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html
   - title: Integrating the PayPal payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html
   - title: Integrating the PayNow payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paynow-payment-method-for-computop.html
   - title: Integrating the Easy Credit payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html
   - title: Computop API calls
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/computop-api-calls.html
   - title: Integrating the iDeal payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html
   - title: Integrating the Direct Debit payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-direct-debit-payment-method-for-computop.html
   - title: Integrating the Credit Card payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html
   - title: Integrating the CRIF payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html
 ---
 
 The following plugins are used for performing calls to Paygate during OMS operation.

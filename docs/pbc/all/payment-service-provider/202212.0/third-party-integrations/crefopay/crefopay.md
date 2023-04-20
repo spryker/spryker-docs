@@ -28,8 +28,8 @@ The `SprykerEco.CrefoPay` module provides the following payment methods:
 ## Related Developer guides
 
 To integrate CrefoPay into your system the see following articles:
-* [Installing and configuring CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/installing-and-configuring-crefopay.html)
-* [Integrating CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/integrating-crefopay.html)
+* [Installing and configuring CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/install-and-configure-crefopay.html)
+* [Integrating CrefoPay](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/crefopay/integrate-crefopay.html)
 
 ---
 

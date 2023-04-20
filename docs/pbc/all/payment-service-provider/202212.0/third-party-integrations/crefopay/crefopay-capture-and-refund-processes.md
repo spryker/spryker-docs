@@ -13,15 +13,15 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
 related:
   - title: Integrating CrefoPay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/integrating-crefopay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/integrate-crefopay.html
   - title: CrefoPay
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/crefopay.html
   - title: Installing and configuring CrefoPay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/installing-and-configuring-crefopay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/install-and-configure-crefopay.html
   - title: CrefoPay callbacks
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/crefopay-callbacks.html
   - title: CrefoPay—Enabling B2B payments
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/crefopay-enabling-b2b-payments.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
   - title: CrefoPay payment methods
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/crefopay/crefopay-payment-methods.html
   - title: CrefoPay notifications

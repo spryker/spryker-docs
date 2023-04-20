@@ -1227,214 +1227,103 @@ entries:
           - title: Third-party integrations
             nested:
               - title: Adyen
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/adyen.html
                 nested:
-                  - title: Installing and configuring Adyen
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/installing-and-configuring-adyen.html
-                  - title: Integrating Adyen
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/integrating-adyen.html
-                  - title: Integrating payment methods
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/integrating-adyen-payment-methods.html
-                  - title: Enabling filtering of payment methods
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/enabling-filtering-of-payment-methods-for-adyen.html
+                  - title: Install and configure
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/install-and-configure-adyen.html
+                  - title: Integrate
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/integrate-adyen.html
+                  - title: Integrate payment methods
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/integrate-adyen-payment-methods.html
+                  - title: Enable filtering of payment methods
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
               - title: Afterpay
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/afterpay/afterpay.html
                 nested:
-                  - title: Installing and configuring Afterpay
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/afterpay/installing-and-configuring-afterpay.html
-                  - title: Integrating Afterpay
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/afterpay/integrating-afterpay.html
+                  - title: Install and configure Afterpay
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/afterpay/install-and-configure-afterpay.html
+                  - title: Integrate Afterpay
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/afterpay/integrate-afterpay.html
               - title: Amazon Pay
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/amazon-pay.html
                 nested:
-                  - title: Configuring Amazon Pay
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/configuring-amazon-pay.html
-                  - title: Obtaining an Amazon Order Reference and information about shipping addresses
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+                  - title: Configure Amazon Pay
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/configure-amazon-pay.html
+                  - title: Obtain an Amazon Order Reference and information about shipping addresses
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
                   - title: Sandbox Simulations
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
                   - title: State machine
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/amazon-pay-state-machine.html
                   - title: Handling orders with Amazon Pay API
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html
-                  - title: Legacy Demoshop Integration
-                    include_versions:
-                    - "201811.0"
-                    - "201903.0"
-                    - "201907.0"
-                    - "202001.0"
-                    - "202005.0"
-                    - "202009.0"
-                    nested:
-                      - title: "Rendering a \u201CPay with Amazon\u201D Button on the Cart Page"
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
-                      - title: Email Notifications
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
-                      - title: Configuration for the Legacy Demoshop
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
-                      - title: Sandbox Simulations
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
-                      - title: Support of Bundled Products
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
-                      - title: Order Reference and Information about Shipping Addresses
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
-                      - title: State Machine
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
-                      - title: Refund
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-                      - title: Handling orders with Amazon Pay API
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
               - title: Arvato
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/arvato.html
                 nested:
-                  - title: Installing and configuring Arvato
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/installing-and-configuring-arvato.html
-                    include_versions:
-                    - "202001.0"
-                    - "202005.0"
-                    - "202009.0"
-                    - "202108.0"
-                    - "202204.0"
-                  - title: v.1.0
-                    include_versions:
-                    - "201811.0"
-                    - "201903.0"
-                    - "201907.0"
-                    - "202001.0"
-                    - "202005.0"
-                    nested:
-                    - title: Arvato - Risk Check 1.0
-                      url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/v.1.0/arvato-risk-check-1.0.html
-                      include_versions:
-                      - "201811.0"
-                      - "201903.0"
-                      - "201907.0"
-                      - "202001.0"
-                      - "202005.0"
-                    - title: Installing and configuring Arvato 1.0
-                      url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/v.1.0/installing-and-configuring-arvato-1.0.html
-                      include_versions:
-                      - "201811.0"
-                      - "201903.0"
-                      - "201907.0"
-                      - "202001.0"
-                      - "202005.0"
-                  - title: Arvato - Risk Check
+                  - title: Install and configure
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/install-and-configure-arvato.html
+                  - title: Risk Check
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/arvato-risk-check.html
-                    include_versions:
-                    - "202001.0"
-                    - "202005.0"
-                    - "202009.0"
-                    - "202108.0"
-                    - "202204.0"
-                  - title: Arvato - Store Order
+                  - title: Store Order
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/arvato-store-order.html
-                  - title: v.2.0
-                    include_versions:
-                    - "201811.0"
-                    - "201903.0"
-                    - "201907.0"
-                    nested:
-                    - title: Arvato - Risk Check 2.0
-                      url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/v.2.0/arvato-risk-check-2.0.html
-                      include_versions:
-                      - "201811.0"
-                      - "201903.0"
-                      - "201907.0"
-                    - title: Installing and configuring Arvato 2.0
-                      url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/v.2.0/installing-and-configuring-arvato-2.0.html
-                      include_versions:
-                      - "201811.0"
-                      - "201903.0"
-                      - "201907.0"
               - title: Billpay
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/billpay/billpay.html
                 nested:
-                  - title: Integrating Billpay
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/billpay/integrating-billpay.html
-                  - title: Billpay - Switching invoice payments to a preauthorize mode
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
+                  - title: Integrate
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/billpay/integrate-billpay.html
+                  - title: Switch invoice payments to a preauthorize mode
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/billpay/billpay-switch-invoice-payments-to-a-preauthorize-mode.html
               - title: Braintree
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree.html
                 nested:
-                  - title: Installing and configuring Braintree
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/installing-and-configuring-braintree.html
-                  - title: Integrating Braintree
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/integrating-braintree.html
-                    include_versions:
-                    - "202009.0"
-                    - "202108.0"
-                    - "202204.0"
+                  - title: Install and configure
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/install-and-configure-braintree.html
+                  - title: Integrate
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/integrate-braintree.html
                   - title: Performing requests
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-performing-requests.html
                   - title: Request workflow
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-request-workflow.html
-                  - title: Braintree guides for the Legacy Demoshop
-                    include_versions:
-                    - "201811.0"
-                    - "201903.0"
-                    - "201907.0"
-                    - "202001.0"
-                    nested:
-                      - title: Configuration for the Legacy Demoshop
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-guides-for-the-legacy-demoshop/braintree-configuration-for-the-legacy-demoshop.html
-                        include_versions:
-                        - "201811.0"
-                        - "201903.0"
-                        - "201907.0"
-                        - "202001.0"
-                      - title: Performing Requests for the Legacy Demoshop
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-guides-for-the-legacy-demoshop/braintree-performing-requests-for-the-legacy-demoshop.html
-                        include_versions:
-                        - "201811.0"
-                        - "201903.0"
-                        - "201907.0"
-                        - "202001.0"
-                      - title: Braintree - Request workflow for Legacy Demoshop
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
-                        include_versions:
-                        - "201811.0"
-                        - "201903.0"
-                        - "201907.0"
-                        - "202001.0"
               - title: Computop
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/computop.html
                 nested:
-                - title: Installing and configuring Computop
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/installing-and-configuring-computop.html
+                - title: Install and configure
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/install-and-configure-computop.html
                 - title: OMS plugins
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/computop-oms-plugins.html
                 - title: API calls
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/computop-api-calls.html
-                - title: Integrating payment methods for Computop
+                - title: Integrate payment methods
                   nested:
-                  - title: Integrating the Sofort payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
-                  - title: Integrating the PayPal payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
-                  - title: Integrating the Easy Credit payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
-                  - title: Integrating the CRIF payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
-                  - title: Integrating the iDeal payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
-                  - title: Integrating the PayNow payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
-                  - title: Integrating the Сredit Сard payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
-                  - title: Integrating the Direct Debit payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
-                  - title: Integrating the Paydirekt payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
-                - title: Integrating Computop
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrating-computop.html
-                  include_versions:
-                  - "202009.0"
-                  - "202108.0"
-                  - "202204.0"
-                  - "202212.0"
+                  - title: Sofort
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html
+                  - title: PayPal
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html
+                  - title: Easy
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html
+                  - title: CRIF
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html
+                  - title: iDeal
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html
+                  - title: PayNow
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paynow-payment-method-for-computop.html
+                  - title: Сredit Сard
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html
+                  - title: Direct Debit
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-direct-debit-payment-method-for-computop.html
+                  - title: Paydirekt
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html
+                - title: Integrate
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/integrate-computop.html
               - title: CrefoPay
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/crefopay.html
                 nested:
-                - title: Installing and configuring CrefoPay
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/installing-and-configuring-crefopay.html
-                - title: Integrating CrefoPay
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/integrating-crefopay.html
-                - title: Enabling B2B payments
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/crefopay-enabling-b2b-payments.html
+                - title: Install and configure
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/install-and-configure-crefopay.html
+                - title: Integrate
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/integrate-crefopay.html
+                - title: Enable B2B payments
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
                 - title: Callbacks
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/crefopay-callbacks.html
                 - title: Notifications
@@ -1444,98 +1333,96 @@ entries:
                 - title: Payment methods
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/crefopay/crefopay-payment-methods.html
               - title: Heidelpay
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/heidelpay.html
                 nested:
-                - title: Installing Heidelpay
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/installing-heidelpay.html
-                - title: Integrating Heidelpay
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-heidelpay.html
-                - title: Configuring Heidelpay
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/configuring-heidelpay.html
-                - title: Integrating payment methods for Heidelpay
+                - title: Install
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/install-heidelpay.html
+                - title: Integrate
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-heidelpay.html
+                - title: Configure
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/configure-heidelpay.html
+                - title: Integrate payment methods
                   nested:
-                  - title: Integrating the Sofort payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html
-                  - title: Integrating the Invoice Secured B2C payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-invoice-secured-b2c-payment-method-for-heidelpay.html
-                  - title: Integrating the iDeal payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-ideal-payment-method-for-heidelpay.html
-                  - title: Integrating the Easy Credit payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html
-                  - title: Integrating the Direct Debit payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
-                  - title: Integrating the Split-payment Marketplace payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
-                  - title: Integrating the Paypal Debit payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-debit-payment-method-for-heidelpay.html
-                  - title: Integrating the Paypal Authorize payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
-                  - title: Integrating the Credit Card Secure payment method
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
+                  - title: Sofort
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-sofort-payment-method-for-heidelpay.html
+                  - title: Invoice Secured B2C
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-invoice-secured-b2c-payment-method-for-heidelpay.html
+                  - title: iDeal
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-ideal-payment-method-for-heidelpay.html
+                  - title: Easy Credit
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html
+                  - title: Direct Debit
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-direct-debit-payment-method-for-heidelpay.html
+                  - title: Split-payment Marketplace
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html
+                  - title: Paypal Debit
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-debit-payment-method-for-heidelpay.html
+                  - title: Paypal Authorize
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-authorize-payment-method-for-heidelpay.html
+                  - title: Credit Card Secure
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-credit-card-secure-payment-method-for-heidelpay.html
                 - title: Workflow for errors
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html
                 - title: OMS workflow
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/heidelpay-oms-workflow.html
-                - title: Integrating Heidelpay into the Legacy Demoshop
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
-                  include_versions:
-                  - "201811.0"
-                  - "201903.0"
-                  - "201907.0"
-                  - "202001.0"
-              - title: Payolution
+              - title: Klarna
+                url: docs/pbc/all/payment-service-provider/third-party-integrations/klarna/klarna.html
                 nested:
-                - title: Installing and configuring Payolution
+                  - title: Invoice Pay in 14 days
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
+                  - title: Part Payment Flexible
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/klarna/klarna-part-payment-flexible.html
+                  - title: Payment workflow
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/klarna/klarna-payment-workflow.html
+                  - title: State machine commands and conditions
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
+              - title: Payolution
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/payolution.html
+                nested:
+                - title: Install and configure Payolution
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/installing-and-configuring-payolution.html
-                - title: Integrating Payolution
-                  include_versions:
-                  - "202009.0"
-                  - "202108.0"
-                  - "202204.0"
-                  - "202212.0"
+                - title: Integrate Payolution
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrating-payolution.html
-                - title: Integrating the invoice paymnet method
+                - title: Integrate the invoice paymnet method
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html
-                - title: Integrating the installment payment method for
+                - title: Integrate the installment payment method for
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrating-the-installment-payment-method-for-payolution.html
                 - title: Performing requests
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/payolution-performing-requests.html
                 - title: Payolution request flow
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/payolution-request-flow.html
               - title: ratenkauf by easyCredit
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
                 nested:
-                - title: Installing and configuring ratenkauf by easyCredit
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
-                - title: Integrating ratenkauf by easyCredit
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
-                  include_versions:
-                  - "202009.0"
-                  - "202108.0"
-                  - "202204.0"
-                  - "202212.0"
+                - title: Install and configure
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html
+                - title: Integrate
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
               - title: RatePay
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/ratepay.html
                 nested:
                   - title: Facade methods
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/ratepay-facade-methods.html
                   - title: Payment workflow
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/ratepay-payment-workflow.html
-                  - title: Disabling address updates from the backend application
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
+                  - title: Disable address updates from the backend application
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
                   - title: State machine commands and conditions
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
                   - title: Core module structure diagram
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html
                   - title: State machines
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/ratepay-state-machines.html
-                  - title: Integrating payment methods for RatePay
+                  - title: Integrate payment methods
                     nested:
-                      - title: Integrating the Direct Debit payment method
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
-                      - title: Integrating the Prepayment payment method
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html
-                      - title: Integrating the Installment payment method
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html
-                      - title: Integrating the Invoice payment method
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
+                      - title: Direct Debit
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
+                      - title: Prepayment
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
+                      - title: Installment
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html
+                      - title: Invoice
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
               - title: Payone
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/payone.html
                 nested:

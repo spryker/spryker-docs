@@ -16,21 +16,21 @@ related:
   - title: Heidelpay
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/heidelpay.html
   - title: Integrating the Credit Card Secure payment method for Heidelpay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-credit-card-secure-payment-method-for-heidelpay.html
   - title: Configuring Heidelpay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/configuring-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/configure-heidelpay.html
   - title: Integrating the Paypal Authorize payment method for Heidelpay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-authorize-payment-method-for-heidelpay.html
   - title: Integrating Heidelpay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrate-heidelpay.html
   - title: Integrating the Direct Debit payment method for Heidelpay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-direct-debit-payment-method-for-heidelpay.html
   - title: Installing Heidelpay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/installing-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/install-heidelpay.html
   - title: Integrating the Easy Credit payment method for Heidelpay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html
   - title: Integrating the Invoice Secured B2C payment method for Heidelpay
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-invoice-secured-b2c-payment-method-for-heidelpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-invoice-secured-b2c-payment-method-for-heidelpay.html
 
 ---
 

@@ -447,14 +447,15 @@ When a category product assignment is changed through ORM, make sure it is expor
 
 Add the following plugins to your project:
 
-| PLUGIN                                                | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                                              |
-|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------|
-| ProductCategoryMapExpanderPlugin                      | Expands PageMapTransfer with category map data.                                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
-| ProductCategoryPageDataExpanderPlugin                 | Expands `ProductPageSearchTransfer` with category related data.                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
-| ProductCategoryPageDataLoaderPlugin                   | Expands `ProductPayloadTransfer.categories` with product category entities.                                   |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
-| ProductCategoryRelationReadPlugin                     | Gets localized products abstract names by category.                                                           |               | Spryker\Zed\ProductCategory\Communication\Plugin\CategoryGui                           |
-| RemoveProductCategoryRelationPlugin                   | Removes relations between category and products.                                                              |               | Spryker\Zed\ProductCategory\Communication\Plugin                                       |
-| ProductUpdateEventTriggerCategoryRelationUpdatePlugin | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
+| PLUGIN                                                                  | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                                              |
+|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------|
+| ProductCategoryMapExpanderPlugin                                        | Expands PageMapTransfer with category map data.                                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
+| ProductCategoryPageDataExpanderPlugin                                   | Expands `ProductPageSearchTransfer` with category related data.                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
+| ProductCategoryPageDataLoaderPlugin                                     | Expands `ProductPayloadTransfer.categories` with product category entities.                                   |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
+| ProductCategoryRelationReadPlugin                                       | Gets localized products abstract names by category.                                                           |               | Spryker\Zed\ProductCategory\Communication\Plugin\CategoryGui                           |
+| RemoveProductCategoryRelationPlugin                                     | Removes relations between category and products.                                                              |               | Spryker\Zed\ProductCategory\Communication\Plugin                                       |
+| ProductUpdateEventTriggerCategoryRelationUpdatePlugin                   | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
+| ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin | Expands product categories with their parent category IDs.                                                    |               | Spryker\Client\CategoryStorage\Plugin\ProductCategoryStorage                           |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
@@ -623,6 +624,35 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
 Make sure that, after updating or removing a category in the Back Office, the product assignments are changed respectively.
 
 {% endinfo_block %}
+
+**src/Pyz/Client/ProductCategoryStorage/ProductCategoryStorageDependencyProvider.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Client\ProductCategoryStorage;
+
+use Spryker\Client\CategoryStorage\Plugin\ProductCategoryStorage\ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin;
+use Spryker\Client\ProductCategoryStorage\ProductCategoryStorageDependencyProvider as SprykerProductCategoryStorageDependencyProvider;
+
+class ProductCategoryStorageDependencyProvider extends SprykerProductCategoryStorageDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\ProductCategoryStorageExtension\Dependency\Plugin\ProductAbstractCategoryStorageCollectionExpanderPluginInterface>
+     */
+    protected function getProductAbstractCategoryStorageCollectionExpanderPlugins(): array
+    {
+        return [
+            new ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin(),
+        ];
+    }
+}
+```
 
 ## Install feature frontend
 

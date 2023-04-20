@@ -12,10 +12,9 @@ The App Composition Platform (ACP) lets Spryker Cloud customers connect, configu
 
 The following apps are supported:
 
-- [Algolia](/docs/pbc/all/search/{{site.version}}/third-party-integrations/algolia.html), a Search Engine
-- [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html), a platform for User-Generated Content (UGC)
 - [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html), a Payment Service Provider (PSP)
 - [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html), a Consent Management Platform (CMP)
+- [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html), a platform for User-Generated Content (UGC)
 
 Spryker builds all integrations of the apps and provides them in a secure and no-code way for the SCCOS.
 
@@ -31,13 +30,44 @@ The ACP has the following advantages:
 
 {% info_block warningBox "" %}
 
-Your project must be hosted in Spryker Cloud.
+Your project must be hosted in the Spryker Cloud.
 
 {% endinfo_block %}
+
+The ACP catalog is embedded inside the Back Office containing the list of applications you can connect to your shop.
+You can access the ACP catalog for now only if you are a SCCOS customer and have been enabled for ACP, which means that your SCCOS is properly set up and registered with ACP.
+
+### ACP enablement
+
+ACP enablement is a multi-step process for now, which requires steps to be take by you as well as Spryker. In the first step it requires your SCOS to be **ACP-ready**, meaning that the required ACP modules are up-to-date and the SCOS Cloud environment is configured correctly. The second step is registering your SCOS with the Spryker's ACP, so that SCOS is **ACP-enabled** and the ACP Catalog in the backoffice can access the ACP. This enables you to browse, connect, configure all ACP applications for use with SCOS.
+
+![ACP_enablement_simple](https://user-images.githubusercontent.com/61967601/233411653-ce3938d2-472d-42d8-8a4d-1bede662044d.png)
+
+The diagram above outlines the different steps and responsibilities for executing them.
+
+Depending on the update status of your SCOS the type of actions and associated effort to update it to be ACP-ready may vary. The 2nd step to be ACP-enabled will always be handled by Spryker.
+
+<TODO Provide a Subpage for the required action to upgrade SCOS>
+- 1. Define environment variables in the deploy.yml file for each environment
+- 2. Update modules    
+- 3. Configure SCOS to activate the ACP catalog in the Back Office 
+    
+- SCOS Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html) : All changes are included out of the box for ACP-readiness but should be verified
+- Older : All steps required for ACP-ready
+
+If you were onboarded with a version older than Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html), [contact us](https://support.spryker.com/). 
+
+Once you completed the all steps, the ACP catalog appears in the Back Office:
+
+![aop-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
+
 
 ACP catalog is included by default to the Spryker Cloud product. However, if you started your Spryker project before March 31, 2022, to use the ACP catalog, you must install the following module into your Spryker project:
 
 * `spryker/app-catalog-gui: ^1.2.0` or higher
+* `spryker/message-broker:^1.4.0` or higher
+* `spryker/message-broker-aws:^1.3.2` or higher
+* `spryker/session:^4.15.1` or higher
 
 Add the configuration for the module and its dependencies.
 
@@ -66,10 +96,7 @@ $config[StoreConstants::STORE_NAME_REFERENCE_MAP] = $aopApplicationConfiguration
 
 ## Accessing the ACP catalog
 
-The ACP catalog is a page inside the Back Office containing the application list you can connect to your shop.
-You can access the ACP catalog only if you are a SCCOS customer. If you were onboarded after March 31, 2022, you get the ACP catalog into your Back Office by default. If you were onboarded earlier, [contact us](https://support.spryker.com/). Once you complete the installation, the ACP catalog appears in the Back Office:
 
-![aop-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
 
 ## Using an app from the ACP catalog
 

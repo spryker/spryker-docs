@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Marketplace Return Management](/docs/pbc/all/return-management/202212.0/marketplace/marketplace-return-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Marketplace Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -49,8 +49,7 @@ Add the following configuration:
 | MarketplaceRefund  | Add configuration for the `MarketplaceRefund` subprocess in the `MarketplaceSubprocess` folder for the OMS configuration. | config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml |
 | MarketplaceReturn  | Add configuration for `MarketplaceReturn` subprocess in the `MarketplaceSubprocess` folder for the OMS configuration. | config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml |
 
-<details open>
-<summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
+**config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -72,10 +71,7 @@ Add the following configuration:
 </statemachine>
 ```
 
-</details>
-
-<details open>
-<summary markdown='span'>config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml</summary>
+**config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -96,10 +92,8 @@ Add the following configuration:
 
 </statemachine>
 ```
-</details>
 
-<details open>
-<summary markdown='span'>config/Zed/StateMachine/Merchant/Subprocess/MerchantRefund.xml</summary>
+**config/Zed/StateMachine/Merchant/Subprocess/MerchantRefund.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -134,7 +128,6 @@ Add the following configuration:
 
 </statemachine>
 ```
-</details>
 
 <details open>
 <summary markdown='span'>config/Zed/StateMachine/Merchant/Subprocess/MerchantReturn.xml</summary>
@@ -205,8 +198,7 @@ Add the following configuration:
 ```
 </details>
 
-<details>
-<summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
+**config/Zed/oms/MarketplacePayment01.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -227,10 +219,8 @@ Add the following configuration:
 
 </statemachine>
 ```
-</details>
 
-<details open>
-<summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml</summary>
+**config/Zed/oms/MarketplaceSubprocess/MarketplaceRefund01.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -265,7 +255,6 @@ Add the following configuration:
 
 </statemachine>
 ```
-</details>
 
 <details open>
 <summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
@@ -371,18 +360,14 @@ Make sure that the following changes have been triggered in transfer objects:
 
 1. Append glossary for the feature:
 
-<details>
-<summary markdown='span'>data/import/common/common/glossary.csv</summary>
+**data/import/common/common/glossary.csv**
 
-```
+```csv
 merchant_sales_return.message.items_from_different_merchant_detected,"There are products from different merchants in your order. You can only return products from one merchant at a time.",en_US
 merchant_sales_return.message.items_from_different_merchant_detected,"Diese Bestellung enthält Artikel von verschiedenen Händlern. Sie können nur Artikel von einem Händler zur selben Zeit zurückschicken.",de_DE
 merchant_sales_return_widget.create_form.different_merchants_info,There are products from different merchants in your order. You can only return products from one merchant at a time.,en_US
 merchant_sales_return_widget.create_form.different_merchants_info,Diese Bestellung enthält Artikel von verschiedenen Händlern. Sie können nur Artikel von einem Händler zur selben Zeit zurückschicken.,de_DE
 ```
-
-</details>
-
 
 2. Import data:
 
@@ -398,7 +383,7 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 ### 5) Set up behavior
 
-Enable the following behaviors by adding and registering the plugins:
+1. Enable the following behaviors by adding and registering the plugins:
 
 | PLUGIN                                         | SPECIFICATION                                                                                                                                                                  | PREREQUISITES | NAMESPACE                                                              |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
@@ -413,8 +398,7 @@ Enable the following behaviors by adding and registering the plugins:
 | ShipReturnMarketplaceOrderItemCommandPlugin    | Triggers 'ship-return' event on a marketplace order item.                                                                                                                      |               | Pyz\Zed\MerchantOms\Communication\Plugin\Oms                           |
 | MerchantSalesReturnCreateFormHandlerPlugin     | Expands `ReturnCreateForm` form with merchant product sub-forms, form data with merchant product data and `ReturnCreateRequestTransfer` with submitted merchant product items. |               | Spryker\Zed\MerchantSalesReturnGui\Communication\Plugin\SalesReturnGui |
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php</summary>
+**src/Pyz/Zed/SalesReturn/SalesReturnDependencyProvider.php**
 
 ```php
 <?php
@@ -454,9 +438,7 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 }
 ```
 
-</details>
-
-<details>
+<details open>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/AbstractTriggerOmsEventCommandPlugin.php</summary>
 
 ```php
@@ -517,11 +499,9 @@ abstract class AbstractTriggerOmsEventCommandPlugin extends AbstractPlugin imple
 }
 
 ```
-
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelReturnMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelReturnMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -543,10 +523,7 @@ class CancelReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEv
 
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverReturnMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverReturnMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -568,10 +545,7 @@ class DeliverReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsE
 
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ExecuteReturnMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ExecuteReturnMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -593,10 +567,7 @@ class ExecuteReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsE
 
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/RefundMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/RefundMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -618,9 +589,7 @@ class RefundMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
 
 ```
 
-</details>
-
-<details>
+<details open>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ReturnMerchantOrderItemCommandPlugin.php</summary>
 
 ```php
@@ -692,11 +661,9 @@ class ReturnMerchantOrderItemCommandPlugin extends AbstractPlugin implements Com
 }
 
 ```
-
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipReturnMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipReturnMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -717,9 +684,8 @@ class ShipReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEven
 }
 
 ```
-</details>
 
-<details>
+<details open>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
 
 ```php
@@ -779,10 +745,9 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
     }
 }
 ```
-
 </details>
 
-<details>
+<details open>
 <summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
@@ -828,12 +793,9 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
-
 </details>
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php**
 
 ```php
 <?php
@@ -860,19 +822,19 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 }
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
 
-1. To verify `MerchantReturnPreCreatePlugin`, make sure that when you create a return for merchant order items, the row in `spy_sales_return`, which identifies the new return, has the `spy_sales_return.merchant_reference` field populated.
-2. To verify `MerchantReturnCreateRequestValidatorPlugin`, make sure that you can't create a return for items from different merchants.
-3. To verify `MerchantReturnExpanderPlugin`, make sure that you can see merchant order references on the return details page.
+To verify `MerchantReturnPreCreatePlugin`, make sure that when you create a return for merchant order items, the row in `spy_sales_return`, which identifies the new return, has the `spy_sales_return.merchant_reference` field populated.
+
+To verify `MerchantReturnCreateRequestValidatorPlugin`, make sure that you can't create a return for items from different merchants.
+
+To verify `MerchantReturnExpanderPlugin`, make sure that you can see merchant order references on the return details page.
 
 Make sure that when you create and process a return for merchant order items, its statuses are synced between state machines in the following way:
 
 | MARKETPLACE SM | DEFAULT MERCHANT SM | MAIN MERCHANT SM |
 | --- | ---| --- |
-| Used by an operator	 | Used by a 3rd-party merchant	 | Used by a main merchant |
+| Used by an operator	 | Used by a third-party merchant. | Used by a main merchant. |
 | start-return (can be started by entering in the Return Flow; it is not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return | start-return (can be started by entering in the Return Flow, it is not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return | start-return (can be started by entering in the Return Flow, it is not manually executable as a button)&nbsp;<span aria-label="and then">></span> waiting for return
 | execute return&nbsp;<span aria-label="and then">></span> returned   | execute return (manually executable)&nbsp;<span aria-label="and then">></span> returned  execute return (manually executable)&nbsp;<span aria-label="and then">></span> returned
 | refund&nbsp;<span aria-label="and then">></span> refunded | refund (manually executable)&nbsp;<span aria-label="and then">></span> refunded	 | refund (manually executable)&nbsp;<span aria-label="and then">></span> refunded
@@ -882,8 +844,7 @@ Make sure that when you create and process a return for merchant order items, it
 
 {% endinfo_block %}
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/SalesReturnGui/SalesReturnGuiDependencyProvider.php</summary>
+**src/Pyz/Zed/SalesReturnGui/SalesReturnGuiDependencyProvider.php**
 
 ```php
 <?php
@@ -908,18 +869,15 @@ class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyPr
 
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
 
 Make sure when you open any order on `http://backoffice.de.spryker.local/sales-return-gui` containing products from different merchants, you see the message: "You can only return products from one merchant at a time".
 
 {% endinfo_block %}
 
-Add config for `SalesReturn`:
+2. Add config for `SalesReturn`:
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/SalesReturn/SalesReturnConfig.php</summary>
+**src/Pyz/Zed/SalesReturn/SalesReturnConfig.php**
 
 ```php
 <?php
@@ -937,8 +895,6 @@ class SalesReturnConfig extends SprykerSalesReturnConfig
     ];
 }
 ```
-
-</details>
 
 ### 6) Configure navigation
 
@@ -987,7 +943,6 @@ Make sure that in the navigation menu of the Back Office, you can see the menu i
 
 {% endinfo_block %}
 
-
 ## Install feature frontend
 
 Follow the steps below to install the Marketplace return management feature frontend.
@@ -1018,7 +973,6 @@ Set up widgets as follows:
 | --------------- | -------------- | ------ | -------------- |
 | MerchantSalesReturnCreateFormWidgetCacheKeyGeneratorStrategyPlugin  | Disables widget cache for for the `MerchantSalesReturnCreateFormWidget`. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Plugin |
 | MerchantSalesReturnCreateFormWidget |  Provides "Create Return" only with the items of one merchant order at a time and only for the returnable items. |  |  SprykerShop\Yves\MerchantSalesReturnWidget\Widget |
-
 
 ```php
 <?php
@@ -1058,7 +1012,7 @@ Make sure that the following widgets have been registered by adding the respecti
 
 {% endinfo_block %}
 
-1. Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

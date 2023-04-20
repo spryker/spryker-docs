@@ -12,6 +12,10 @@ This document is aggregated list of activities which has to be done in order to 
 
 {% endinfo_block %}
 
+## Prerequisites
+
+[Prerequisites are explained here](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/paas-assessment-prerequisites.html).
+
 ## Assessment phase
 
 The phase has to be performed in order to understand the estimation and effort of project migration. The documents below explain the exact steps to do for such an assessment.
@@ -24,13 +28,13 @@ The phase has to be performed in order to understand the estimation and effort o
 6. [Is project based on or updated to the 202108.0 demoshop release?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-project-based-on-or-updated-to-the-202108-0-demoshop-release.html)
 7. [Are ZED endpoints split to 3 (BackendApi, BackendGateway, Backoffice)?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-zed-endpoints-split-to-3-backendapi-backendgateway-backoffice.html)
 8. [Is amount of assets small (images, assets manager, videos, import data (if needed) etc.) Files: <30 GB?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-amount-of-assets-small.html)
-9. [Are there some technical complexities, that might increase efforts like: CTE, Raw SQL?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-complexities-that-might-increase-efforts.html)
-10. [Are there some technical complexities, that might increase efforts like: non standard services, high traffic amount, VPN?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-complexities-that-might-increase-efforts-services.html)
+9. [Are there some technical complexities, that might increase efforts like: CTE, Raw SQL?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-db-complexities-that-might-increase-efforts.html)
+10. [Are there some technical complexities, that might increase efforts like: non standard services, high traffic amount, VPN?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-services-complexities-that-might-increase-efforts.html)
 11. [Is deployment process compatible with PaaS OOTB deployment process?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-deployment-process-compatible-with-paas-ootb-deployment-process.html)
 12. [Is ENV variables approach used for environment settings specification?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-env-variables-approach-used-for-environment-settings-specification.html)
 13. [Test coverage: Is common E-com flow covered?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/test-coverage-is-common-e-com-flow-covered.html)
 14. [Test coverage: Is critical custom functionality of E-com flow covered?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/test-coverage-is-critical-custom-functionality-of-e-com-flow-covered.html)
-15. [Is S3 bucket integrated for all needed storage of files?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-s3-bucket-integrated-for-all-needed-storage-of-files.html)
+15. [Is S3 bucket integrated for all needed storages of files?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-s3-bucket-integrated-for-all-needed-storages-of-files.html)
 16. [Has multi-store support?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/has-multi-store-support.html)
 17. [Is MariaDB / MySQL used in the project?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-mariadb-mysql-used-in-the-project.html)
 18. [Are ElasticSearch and Redis restorable?](/docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-elasticsearch-and-redis-restorable.html)

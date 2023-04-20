@@ -3814,9 +3814,9 @@ entries:
         - title: "Is amount of assets small (images, assets manager, videos, import data (if needed) etc.) Files: <30 GB?"
           url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-amount-of-assets-small.html
         - title: "Are there some technical complexities, that might increase efforts like: CTE, Raw SQL?"
-          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-complexities-that-might-increase-efforts.html
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-db-complexities-that-might-increase-efforts.html
         - title: "Are there some technical complexities, that might increase efforts like: non standard services, high traffic amount, VPN?"
-          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-complexities-that-might-increase-efforts-services.html
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/are-there-some-technical-services-complexities-that-might-increase-efforts.html
         - title: Is deployment process compatible with PaaS OOTB deployment process?
           url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-deployment-process-compatible-with-paas-ootb-deployment-process.html
         - title: Is ENV variables approach used for environment settings specification?
@@ -3825,8 +3825,8 @@ entries:
           url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/test-coverage-is-common-e-com-flow-covered.html
         - title: "Test coverage: Is critical custom functionality of E-com flow covered?"
           url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/test-coverage-is-critical-custom-functionality-of-e-com-flow-covered.html
-        - title: Is S3 bucket integrated for all needed storage of files?
-          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-s3-bucket-integrated-for-all-needed-storage-of-files.html
+        - title: Is S3 bucket integrated for all needed storages of files?
+          url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/is-s3-bucket-integrated-for-all-needed-storages-of-files.html
         - title: Has multi-store support?
           url: /docs/scos/dev/migration-program/migration-to-paas/paas-assessment-documents/has-multi-store-support.html
         - title: Is MariaDB / MySQL used in the project?

@@ -1197,6 +1197,8 @@ entries:
                 url: /docs/pbc/all/order-management-system/third-party-integrations/tradebyte.html
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-providers/psp.html
+        include_versions:
+        - "202212.0"
         nested:
           - title: Payments feature overview
             url: /docs/pbc/all/payment-service-provider/payments-feature-overview.html

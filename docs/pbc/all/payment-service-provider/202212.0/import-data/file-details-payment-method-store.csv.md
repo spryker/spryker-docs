@@ -28,7 +28,7 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|
-| payment_method_key | &check; | String | Value should be imported from the [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html) file. | Identifier of the payment method. |
+| payment_method_key | &check; | String | Value should be imported from the [payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/import-data/file-details-payment-method.csv.html) file. | Identifier of the payment method. |
 | store | &check; | String | Value must be within an existing store name, set in the *store.php* configuration file of the demo shop PHP project. | Name of the store. |
 
 
@@ -36,7 +36,7 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html)
+* [payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/import-data/file-details-payment-method.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

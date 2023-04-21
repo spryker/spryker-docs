@@ -12,19 +12,18 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
 ---
 
 This document describes the `payment_method_store.csv` file to configure Payment Method Store information in your Spryker Demo Shop.
 
-To import the file, run:
 
-```bash
-data:import:payment-method-store
-```
+## Import file dependencies
+
+* [payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/import-data/file-details-payment-method.csv.html)
+* *stores.php* configuration file of the demo shop PHP project
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|
@@ -32,18 +31,15 @@ The file should have the following parameters:
 | store | &check; | String | Value must be within an existing store name, set in the *store.php* configuration file of the demo shop PHP project. | Name of the store. |
 
 
-## Import file dependencies
-
-This file has the following dependencies:
-
-* [payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/import-data/file-details-payment-method.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
-
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [payment_method_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+payment_method_store.csv) | Exemplary import file with headers only. |
 | [payment_method_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/payment_method_store.csv) | Exemplary import file with Demo Shop data. |
+
+## Import command
+
+```bash
+data:import:payment-method-store
+```

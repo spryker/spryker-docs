@@ -9,19 +9,12 @@ redirect_from:
   - /2021080/docs/en/file-details-payment-methodcsv
   - /docs/file-details-payment-methodcsv
   - /docs/en/file-details-payment-methodcsv
+  - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-payment-method.csv.html
 ---
 
 This document describes the `payment_method.csv` file to configure the [Payment Method](/docs/pbc/all/payment-service-provider/{{page.version}}/payments-feature-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run:
-
-```bash
-data:import:payment-method
-```
-
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -31,15 +24,16 @@ The file should have the following parameters:
 | payment_provider_name | &check; | String |  | Name of the payment provider. |
 | is_active | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If the field is empty, it will be set to 0 (false).</li></ul> | Status indicating whether the payment method is active or not. |
 
-## Import file dependencies
-
-This file has no dependencies.
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [payment_method.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+payment_method.csv) | Exemplary import file with headers only. |
 | [payment_method.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/payment_method.csv) | Exemplary import file with Demo Shop data. |
+
+## Import command
+
+```bash
+data:import:payment-method
+```

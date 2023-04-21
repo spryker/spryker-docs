@@ -3,6 +3,8 @@ title: View payment methods
 description: Learn how to edit payment methods in the Back Office.
 last_updated: June 2, 2022
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202212.0/administration/payment-methods/view-payment-methods.html
 related:
   - title: Payments feature overview
     link: docs/pbc/all/payment-service-provider/page.version/payments-feature-overview.html

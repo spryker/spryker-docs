@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/payolution-requests
 related:
   - title: Integrating the invoice paymnet method for Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
   - title: Payolution request flow
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution-request-flow.html
   - title: Integrating the installment payment method for Payolution

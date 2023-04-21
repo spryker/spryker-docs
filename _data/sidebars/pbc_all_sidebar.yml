@@ -1403,7 +1403,7 @@ entries:
                 - title: Integrate Payolution
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrate-payolution.html
                 - title: Integrate the invoice paymnet method
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
                 - title: Integrate the installment payment method for
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html
                 - title: Performing requests

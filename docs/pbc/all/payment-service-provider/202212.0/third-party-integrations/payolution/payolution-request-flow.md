@@ -15,16 +15,16 @@ related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html
   - title: Integrating the installment payment method for Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-installment-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html
   - title: Payolution
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution.html
   - title: Installing and configuring Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/installing-and-configuring-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/install-and-configure-payolution.html
   - title: Payolution - Performing Requests
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution-performing-requests.html
 ---
 
-Both [invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html) and [installment](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payolution/integrating-the-installment-payment-method-for-payolution.html) payment methods utilize the same request flow. It basically consists of the following requests:
+Both [invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html) and [installment](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html) payment methods utilize the same request flow. It basically consists of the following requests:
 * Calculation (for instalment only): to calculate the instalment amounts, dues, and durations.
 * Pre-check (optional): to check the user information in order to make sure that all the needed information is correct before doing the actual pre-authorization.
 * Pre-authorize: to perform a payment risk check which is a mandatory step before every payment. The payment is basically considered accepted when it is authorized.

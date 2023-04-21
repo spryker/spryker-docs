@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
 related:
   - title: Installing and configuring Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/installing-and-configuring-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/install-and-configure-payolution.html
   - title: Integrating Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrate-payolution.html
   - title: Payolution - Performing Requests
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution-performing-requests.html
   - title: Payolution request flow

@@ -1200,7 +1200,7 @@ entries:
               - title: Tradebyte
                 url: /docs/pbc/all/order-management-system/third-party-integrations/tradebyte.html
       - title: Payment Service Provider
-        url: /docs/pbc/all/payment-service-providers/psp.html
+        url: /docs/pbc/all/payment-service-providers/payment-service-provider.html
         include_versions:
         - "202212.0"
         nested:
@@ -1272,6 +1272,8 @@ entries:
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/arvato-risk-check.html
                   - title: Store Order
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/arvato/arvato-store-order.html
+              - title: Billie
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/billie.html
               - title: Billpay
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/billpay/billpay.html
                 nested:
@@ -1383,7 +1385,7 @@ entries:
                 - title: OMS workflow
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/heidelpay/heidelpay-oms-workflow.html
               - title: Klarna
-                url: docs/pbc/all/payment-service-provider/third-party-integrations/klarna/klarna.html
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/klarna/klarna.html
                 nested:
                   - title: Invoice Pay in 14 days
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
@@ -1397,13 +1399,13 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/payolution.html
                 nested:
                 - title: Install and configure Payolution
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/installing-and-configuring-payolution.html
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/install-and-configure-payolution.html
                 - title: Integrate Payolution
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrating-payolution.html
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrate-payolution.html
                 - title: Integrate the invoice paymnet method
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html
                 - title: Integrate the installment payment method for
-                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrating-the-installment-payment-method-for-payolution.html
+                  url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html
                 - title: Performing requests
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/payolution/payolution-performing-requests.html
                 - title: Payolution request flow
@@ -1415,6 +1417,8 @@ entries:
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html
                 - title: Integrate
                   url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
+              - title: Powerpay
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/powerpay.html
               - title: RatePay
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/ratepay.html
                 nested:

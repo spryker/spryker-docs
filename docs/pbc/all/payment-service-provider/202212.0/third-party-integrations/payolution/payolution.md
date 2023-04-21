@@ -12,15 +12,15 @@ redirect_from:
   - /docs/en/payolution
 related:
   - title: Installing and configuring Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/installing-and-configuring-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/install-and-configure-payolution.html
   - title: Integrating Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrate-payolution.html
   - title: Payolution - Performing Requests
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution-performing-requests.html
   - title: Payolution request flow
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/payolution-request-flow.html
   - title: Integrating the installment payment method for Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-installment-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/payolution/integrating-the-invoice-payment-method-for-payolution.html
 ---

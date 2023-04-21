@@ -1292,17 +1292,26 @@ entries:
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-performing-requests.html
                   - title: Request workflow
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-request-workflow.html
-              - title: BS Payone
-                url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/bs-payone.html
+              - title: Payone
                 nested:
-                  - title: Integrate
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/integrate-payone.html
-                  - title: Cash on Delivery
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-cash-on-delivery.html
-                  - title: PayPal Express Checkout payment
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-paypal-express-checkout-payment.html
-                  - title: Risk Check and Address Check
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-risk-check-and-address-check.html
+                  - title: Integration in the Back Office
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/payone.html
+                    nested:
+                      - title: Integrate
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
+                      - title: Disconnect
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/manage-in-the-back-office/disconnect-payone.html
+                  - title: Manual integration
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/bs-payone.html
+                    nested:
+                      - title: Integrate
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/integrate-payone.html
+                      - title: Cash on Delivery
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-cash-on-delivery.html
+                      - title: PayPal Express Checkout payment
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-paypal-express-checkout-payment.html
+                      - title: Risk Check and Address Check
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-risk-check-and-address-check.html
               - title: Computop
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/computop.html
                 nested:
@@ -1444,21 +1453,12 @@ entries:
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html
                       - title: Invoice
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
-              - title: Payone
-                url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/payone.html
-                nested:
-                  - title: Integrate Payone
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integrate-payone.html
-                  - title: Manage in the Back Office
-                    nested:
-                      - title: Disconnect Payone
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/manage-in-the-back-office/disconnect-payone.html
               - title: Unzer
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/unzer.html
                 nested:
                   - title: What's changed
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/whats-changed-in-unzer.html
-                  - title: Install Unzer
+                  - title: Install
                     nested:
                       - title: Install and configure
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html
@@ -1466,26 +1466,26 @@ entries:
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/install-unzer/integrate-unzer.html
                       - title: Integrate Glue API
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/install-unzer/integrate-unzer-glue-api.html
-              - title: Use cases, HowTos, and tips
-                nested:
-                  - title: Refund shipping costs
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/howto-tips-use-cases/refund-shipping-costs.html
-                  - title: Understand how payment methods are displayed in the checkout process
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
-              - title: Configuration in the Back Office
-                nested:
-                  - title: Add Unzer standard credentials
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
-                  - title: Add Unzer marketplace credentials
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
-              - title: Extend and Customize
-                nested:
-                  - title: Implement new payment methods on the project level
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level.html
-                  - title: Customize the credit card display in your payment step
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/extend-and-customize/customize-the-credit-card-display-in-your-payment-step.html
-              - title: Domain model and relationships
-                url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/unzer-domain-model-and-relationships.html
+                  - title: Use cases, HowTos, and tips
+                    nested:
+                      - title: Refund shipping costs
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/howto-tips-use-cases/refund-shipping-costs.html
+                      - title: Understand how payment methods are displayed in the checkout process
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
+                  - title: Configuration in the Back Office
+                    nested:
+                      - title: Add Unzer standard credentials
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
+                      - title: Add Unzer marketplace credentials
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
+                  - title: Extend and Customize
+                    nested:
+                      - title: Implement new payment methods on the project level
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level.html
+                      - title: Customize the credit card display in your payment step
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/extend-and-customize/customize-the-credit-card-display-in-your-payment-step.html
+          - title: Domain model and relationships
+            url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/unzer-domain-model-and-relationships.html
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html
         nested:

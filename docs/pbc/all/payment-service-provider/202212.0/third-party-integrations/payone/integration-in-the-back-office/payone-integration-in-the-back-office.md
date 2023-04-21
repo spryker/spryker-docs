@@ -1,5 +1,5 @@
 ---
-title: Payone
+title: "Payone: Integration in the Back Office"
 description: With Payone, your customers can pay with common payment methods, such as credit card and PayPal.
 template: howto-guide-template
 redirect_from:
@@ -29,7 +29,7 @@ For the *Payone Paypal* payment method, we support only *Preauthorization and Ca
 
 {% info_block infoBox "State machine for Payone" %}
 
-The payment modes like Preauthorization and Capture must be set via the Spryker state machine in the Order Management System (OMS). However, the state machine for the Payone app is now in development, so you can not customize it for your project yet. 
+The payment modes like Preauthorization and Capture must be set via the Spryker state machine in the Order Management System (OMS). However, the state machine for the Payone app is now in development, so you can not customize it for your project yet.
 
 {% endinfo_block %}
 
@@ -40,7 +40,7 @@ When customers pay with a credit card (with optional support of 3DS), the flow i
 1. Customer provides their credit card payment credentials and pays the required amount for the placed order.
 2. The customer's credit card data is validated.
 3. Customer receives a payment message, whether the payment or authorization was successful.
-   
+
 When paying with a credit card, customers can do the following:
 
 - Repeat payments as often as they want if the payment (preauthorization) has failed, or cancel and close the payment page.

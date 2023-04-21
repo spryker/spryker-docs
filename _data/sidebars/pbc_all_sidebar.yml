@@ -1200,7 +1200,7 @@ entries:
               - title: Tradebyte
                 url: /docs/pbc/all/order-management-system/third-party-integrations/tradebyte.html
       - title: Payment Service Provider
-        url: /docs/pbc/all/payment-service-providers/payment-service-provider.html
+        url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         include_versions:
         - "202212.0"
         nested:

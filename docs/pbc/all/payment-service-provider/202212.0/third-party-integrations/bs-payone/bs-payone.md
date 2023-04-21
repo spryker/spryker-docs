@@ -47,18 +47,6 @@ YOUR ADVANTAGES:
 * **Short time to market thanks to plug'n pay**
 <br>1-click checkout and seamless integration. For an increasing conversion rate.
 
-We integrate with a wide range of payment methods that can be configured according to your needs and convenience. Payment method flows are configured using state machines.
-
-Payone provides the following methods of payment:
-* [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html)
-* [Direct Debit](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html)
-* [Online Transfer](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html)
-* [Paypal](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
-* [Prepayment](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html)
-* [Invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html)
-* [Security Invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-security-invoice-payment.html)
-* [Paypal Express Checkout](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/bs-payone/scos-integration/payone-integration-into-the-scos-project.html)
-
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 
 A basic and fully functional state machine for each payment method is already built:

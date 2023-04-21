@@ -1290,6 +1290,17 @@ entries:
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-performing-requests.html
                   - title: Request workflow
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/braintree/braintree-request-workflow.html
+              - title: BS Payone
+                url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/bs-payone.html
+                nested:
+                  - title: Integrate
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/integrate-payone.html
+                  - title: Cash on Delivery
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-cash-on-delivery.html
+                  - title: PayPal Express Checkout payment
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-paypal-express-checkout-payment.html
+                  - title: Risk Check and Address Check
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/bs-payone/payone-risk-check-and-address-check.html
               - title: Computop
                 url: /docs/pbc/all/payment-service-provider/third-party-integrations/computop/computop.html
                 nested:

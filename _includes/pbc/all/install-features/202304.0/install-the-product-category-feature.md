@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) + [Category](/docs/pbc/all/product-information-management/{{site.version}}/category-management-feature-overview.html#root-parent-and-child-categories) feature into a Spryker project.
+This document describes how to integrate the [Product](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) + [Category](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html#root-parent-and-child-categories) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,9 +12,9 @@ To start feature integration, integrate the required features:
 
 | NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)               |
-| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
-| Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
+| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)               |
+| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                         |
 
 ### 1) Install the required modules using Composer
 

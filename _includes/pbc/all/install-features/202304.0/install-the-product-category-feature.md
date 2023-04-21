@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product + Category feature into a Spryker project.
+This document describes how to integrate the [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) + [Category](/docs/pbc/all/product-information-management/{{site.version}}/category-management-feature-overview.html#root-parent-and-child-categories) feature into a Spryker project.
 
 ## Install feature core
 
@@ -449,7 +449,7 @@ Add the following plugins to your project:
 
 | PLUGIN                                                                  | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                                              |
 |-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------|
-| ProductCategoryMapExpanderPlugin                                        | Expands PageMapTransfer with category map data.                                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
+| ProductCategoryMapExpanderPlugin                                        | Expands `PageMapTransfer` with category map data.                                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
 | ProductCategoryPageDataExpanderPlugin                                   | Expands `ProductPageSearchTransfer` with category related data.                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
 | ProductCategoryPageDataLoaderPlugin                                     | Expands `ProductPayloadTransfer.categories` with product category entities.                                   |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
 | ProductCategoryRelationReadPlugin                                       | Gets localized products abstract names by category.                                                           |               | Spryker\Zed\ProductCategory\Communication\Plugin\CategoryGui                           |
@@ -457,7 +457,7 @@ Add the following plugins to your project:
 | ProductUpdateEventTriggerCategoryRelationUpdatePlugin                   | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
 | ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin | Expands product categories with their parent category IDs.                                                    |               | Spryker\Client\CategoryStorage\Plugin\ProductCategoryStorage                           |
 
-<details>
+<details open>
 <summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
@@ -704,15 +704,15 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 use SprykerShop\Yves\ProductBundleWidget\Widget\ProductBundleItemsMultiCartItemsListWidget;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{     
-	/**      
-	* @return string[]      
-	*/     
-	protected function getGlobalWidgets(): array     
-	{         
-		return [             
-			ProductBreadcrumbsWithCategoriesWidget::class,         
-		];     
+{
+	/**
+	* @return string[]
+	*/
+	protected function getGlobalWidgets(): array
+	{
+		return [
+			ProductBreadcrumbsWithCategoriesWidget::class,
+		];
 	}
 }
 ```

@@ -37,9 +37,6 @@ Oryx uses standard CSS syntax and does not utilize CSS preprocessors or post-pro
 
 Also unlike some other CSS methodologies, such as BEM (Block, Element, Modifier), Oryx does not rely on a specific naming convention to structure its CSS classes.
 
-### JavaScript
-JavaScript is a high-level programming language that is widely used in web development. In Oryx, JavaScript is used to add interactivity and dynamic behavior to the application. It allows developers to create complex logic and manipulate the DOM in real-time.
-
 ### TypeScript
 TypeScript is a superset of JavaScript that adds optional static typing, classes, and interfaces to the language. In Oryx, TypeScript is used to provide type safety and better code organization. It allows developers to catch errors early in the development process and provides better code navigation and refactoring capabilities.
 

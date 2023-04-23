@@ -19,6 +19,10 @@ This indicates that with a version number x.y.z:
 - If new features or non-critical fixes are being released, a minor release is made by modifying the y number (e.g., 1.5.2 to 15.6.0).
 - If there are significant changes that may break compatibility, a major release is made by changing the x number (e.g., 1.5.2 to 2.0.0).
 
+### Preview releases
+
+To give you a sneak peek of what's to come, we offer pre-release versions called Release Candidates (rc) for every major and minor release.
+
 ## Release Process
 The Oryx framework comprises three distinct components, each of which is released separately:
 - Libraries
@@ -27,11 +31,11 @@ The Oryx framework comprises three distinct components, each of which is release
 
 ### Libraries
 The primary sources of functionality within the Oryx frameworks are the Oryx libraries, which include core features, utilities and helpers, domain-specific functionality, as well as pre-designed themes and presets that can be readily used. 
-All the [packages](//TODO: add link) released together under the same version. 
+All the [packages](https://www.npmjs.com/org/spryker-oryx) released together under the same version. 
 
 ### Applications
 Oryx applications serve as boilerplate templates for specific domains or areas, such as b2c storefronts, fulfillment applications, and more.
-Oryx applications are [packages](//TODO: add link) released together under the same version. 
+Oryx applications are packages released together under the same version. 
 This version is different and independent from library packages version.
 
 ### Labs package

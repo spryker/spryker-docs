@@ -16,7 +16,7 @@ HTML, CSS, and JS are considered to be the fundamental and essential set of web 
 Web Components are a set of web platform APIs that allow developers to create custom, reusable, and encapsulated HTML elements.
 
 ### Web hosting
-Oryx uses Netlify as a hosting provider, which means you can easily find basic boilerplate to deploy your site on Netlify. However, if you choose to use a different hosting provider, there may be limitations on the implementation of SSR. To make it work, you would need to adjust the SSR rendering boilerplate, which is specific to the hosting provider.
+Currently, Oryx uses Netlify as a hosting provider, which means you can easily find basic boilerplate to deploy your site on Netlify. However, if you choose to use a different hosting provider, there may be limitations on the implementation of SSR. To make it work, you would need to adjust the SSR rendering boilerplate, which is specific to the hosting provider.
 
 ### CSR and SSR
 Oryx provides both client-side rendered (CSR) and server-side rendered (SSR) versions of websites, so you can choose the option that best fits your needs.

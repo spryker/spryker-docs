@@ -5,7 +5,7 @@ last_updated: Apr 19, 2023
 template: concept-topic-template
 ---
 
-While the Oryx code base is [available on Github](https://github.com/spryker/oryx/), the code is published and distributed as so-called packages on npm. npmjs.com is a widely used registry that is used to packages. Package managers (e.g. npm, yarn, deno, bun, etc) can be used to install the dependencies in a project. The dependencies are typically configured in the package.json file of your application.
+While the Oryx code base is [available on Github](https://github.com/spryker/oryx/), the code is published and distributed as so-called packages on npm. [npmjs.com](https://www.npmjs.com/) is a widely used registry that is used to packages. Package managers (e.g. npm, yarn, deno, bun, etc) can be used to install the dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of your application.
 
 The Oryx [packages](./packages.md) are distributed on under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped, see versioning for more information on the version strategy
 

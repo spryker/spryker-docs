@@ -55,7 +55,7 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 | NAME | CATEGORY |
 | --- | --- |
 | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html) | Ratings and Reviews |
-| [Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/payone/integration-in-the-back-office/payone.html) | PSP (Payment Service Provider) |
+| [Payone](/docs/pbc/all/payment-service-provider/{{site.version}}/third-party-integrations/payone/integration-in-the-back-office/-integration-in-the-back-office.html) | PSP (Payment Service Provider) |
 | [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |
 
 </div>

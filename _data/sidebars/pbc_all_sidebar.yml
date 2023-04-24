@@ -1295,12 +1295,12 @@ entries:
               - title: Payone
                 nested:
                   - title: Integration in the Back Office
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/payone.html
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
                     nested:
                       - title: Integrate
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
                       - title: Disconnect
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/manage-in-the-back-office/disconnect-payone.html
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html
                   - title: Manual integration
                     url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/manual-integration/payone.html
                     nested:

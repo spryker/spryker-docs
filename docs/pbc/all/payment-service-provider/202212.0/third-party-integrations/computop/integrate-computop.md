@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/computop-integration-into-project
   - /docs/computop-integration-into-project
   - /docs/en/computop-integration-into-project
+  - /docs/scos/dev/technology-partner-guides/202212.0/payment-partners/computop/integrating-computop.html
 ---
 
 {% info_block errorBox %}

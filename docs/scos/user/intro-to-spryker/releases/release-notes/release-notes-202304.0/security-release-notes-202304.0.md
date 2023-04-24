@@ -14,7 +14,7 @@ If you need any additional support with this content, [contact our support](mail
 
 An attacker can inject malicious code in functionalities of the Spryker application that are using the PropelFilterCriteria function. The injected code is then executed in the underlying database. The SQL injection vulnerability affects the Propel module that handles the interactions of the application with the database.
 
-### Affected modules:
+### Affected modules
 
   `spryker/propel`: 1.0.0-3.37.0
 
@@ -178,9 +178,9 @@ composer require spryker/discount:"~9.30.0"
 composer show spryker/discount # Verify the version
 ```
 
-## User Session Remains Valid After Deletion in the Back Office
+## User session remains valid after deletion in the Back Office
 
-The user’s session remains valid, even if the user is deleted in the Back Office. This results in the deleted user getting an exception page with stack trace information while trying to log into the Front Office.
+The user's session remains valid, even if the user is deleted in the Back Office. This results in the deleted user getting an exception page with stack trace information while trying to log into the Front Office.
 
 ### Affected modules
 
@@ -203,19 +203,19 @@ composer require "spryker/customer":"^7.49.0" "spryker/customer-storage":"^1.0.0
 
 2. Set up database schema and transfer objects:
    1. Edit the `src/Pyz/Zed/Customer/Persistence/Propel/Schema/spy_customer.schema.xml` file
-   ```xml
-   <?xml version="1.0"?>
-   <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Customer\Persistence" package="src.Orm.Zed.Customer.Persistence">
+    ```xml
+    <?xml version="1.0"?>
+    <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Customer\Persistence" package="src.Orm.Zed.Customer.Persistence">
 
-       <table name="spy_customer">
-           <behavior name="event">
-               <parameter name="spy_customer_anonymized_at" column="anonymized_at"/>
-               <parameter name="spy_customer_password" column="password"/>
-           </behavior>
-       </table>
+        <table name="spy_customer">
+            <behavior name="event">
+                <parameter name="spy_customer_anonymized_at" column="anonymized_at"/>
+                <parameter name="spy_customer_password" column="password"/>
+            </behavior>
+        </table>
 
-   </database>
-   ```
+    </database>
+    ```
 
    2. Run the following commands:
     ```bash
@@ -441,7 +441,7 @@ composer require spryker/util-sanitize-xss:"~1.1.0"
 composer show spryker/util-sanitize-xss # Verify the version
 ```
 
-1. In the `package.json` file, modify the version of the JQuery package to 3.6.3:
+3. In the `package.json` file, modify the version of the JQuery package to 3.6.3:
    1. Add the following line:
    ```js
    "jquery": "~3.6.3"
@@ -454,7 +454,7 @@ composer show spryker/util-sanitize-xss # Verify the version
 
 ## Vulnerable version of PHP in use
 
-In PHP versions 7.4.x and earlier than 7.4.28, 8.0.x and earlier than 8.0.16, and 8.1.x and earlier than  8.1.3, when using filter functions with the `FILTER_VALIDATE_FLOAT` filter and minimum and maximum limits, if the filter fails, you may trigger the use of allocated memory after free, which can result it crashes, and potentially in overwrite of other memory chunks and RCE. This issue affects code that uses `FILTER_VALIDATE_FLOAT` with minimum and maximum limits.
+In PHP versions 7.4.*x* and earlier than 7.4.28, 8.0.*x* and earlier than 8.0.16, and 8.1.*x* and earlier than  8.1.3, when using filter functions with the `FILTER_VALIDATE_FLOAT` filter and minimum and maximum limits, if the filter fails, you may trigger the use of allocated memory after free, which can result it crashes, and potentially in overwrite of other memory chunks and RCE. This issue affects code that uses `FILTER_VALIDATE_FLOAT` with minimum and maximum limits.
 
 ### Affected modules
 

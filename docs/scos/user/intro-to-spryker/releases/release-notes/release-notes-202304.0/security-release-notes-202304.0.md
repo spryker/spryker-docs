@@ -59,7 +59,7 @@ composer show spryker/product-merchant-portal-gui # Verify the version
 
 For module `spryker/merchant-profile-merchant-portal-gui`, depending on the version you are using, follow these steps:
 
-* If your version of _spryker/merchant-profile-merchant-portal-gui_ is earlier than 2.0.0, update to version 1.8.0:
+* If your version of `spryker/merchant-profile-merchant-portal-gui` is earlier than 2.0.0, update to version 1.8.0:
 ```bash
 composer require spryker/merchant-profile-merchant-portal-gui:"1.8.0" spryker/gui:"~3.48.0" spryker/util-sanitize-xss:"~1.1.0"
 composer show spryker/merchant-profile-merchant-portal-gui # Verify the version
@@ -73,7 +73,7 @@ composer show spryker/merchant-profile-merchant-portal-gui # Verify the version
 
 ## Self Cross-Site Scripting (XSS) in CMS
 
-Administrators can place a malicious payload in Placeholders, which will be executed in the editing and the view site, resulting in a XSS vulnerability.
+Administrators can place a malicious payload in Placeholders, which can be executed in the editing and the view site, resulting in a XSS vulnerability.
 
 ### Affected modules
 

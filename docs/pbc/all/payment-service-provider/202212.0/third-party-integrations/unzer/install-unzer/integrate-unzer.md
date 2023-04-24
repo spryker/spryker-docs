@@ -3,6 +3,8 @@ title: Integrate Unzer
 description: Integrate Unzer into the Spryker Commerce OS.
 last_updated: Aug 11, 2022
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html
 related:
 - title: Install and configure Unzer
   link: docs/pbc/all/payment-service-provider/page.version/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html

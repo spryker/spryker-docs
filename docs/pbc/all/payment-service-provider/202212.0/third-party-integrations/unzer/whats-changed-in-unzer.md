@@ -3,6 +3,8 @@ title: What's changed in Unzer
 last_updated: Jun 20, 2022
 description: This document lists all the Unzer releases
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/payment-service-providers/unzer/whats-changed-in-unzer.html
 ---
 
 ## June 14th, 2022

@@ -3,8 +3,9 @@ title: Unzer
 last_updated: Jun 9, 2022
 description: This document desribes the Unzer payment method
 template: concept-topic-template
-redirect_from: 
+redirect_from:
   - /docs/pbc/all/payment/unzer/unzer.html
+  - /docs/pbc/all/payment-service-providers/unzer/unzer.html
 ---
 
 [Unzer](https://www.unzer.com) is specialized in the European market and its currencies. You need a business located in Europe to be able to use Unzer services.

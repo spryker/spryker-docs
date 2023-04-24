@@ -3,6 +3,8 @@ title: Payment service provider integrations
 last_updated: Jul 1, 2022
 description: This document describes the Payment Service Providers that have an integration with Spryker
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/payment-service-providers/psp.html
 ---
 
 Spryker offers the following Payment Service Providers (PSP) integrations:

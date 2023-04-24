@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/ht-hydrate-payment-methods-for-order
   - /v4/docs/ht-hydrate-payment-methods-for-order
   - /v4/docs/en/ht-hydrate-payment-methods-for-order
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
 ---
 
 {% info_block warningBox "Warning" %}

@@ -2,6 +2,8 @@
 title: Integrate Payone
 description: Learn how you can integrate the Payone app into your Spryker shop
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
 ---
 
 To integrate Payone, follow these steps.
@@ -14,7 +16,7 @@ To integrate Payone, follow these steps.
 3. In the top right corner of the Payone app details page, click **Connect app**.
    This displays a message about the successful connection of the app to your SCCOS. The Payone app's status changes to *Connection pending*.   
 4. Go to [Payone](https://www.payone.com/DE-en) and obtain the credentials.
-   
+
    {% info_block infoBox "Info" %}
 
    It takes some time to obtain credentials from Payone because you have to go through a thorough vetting process by Payone, such as the "know your customer" (KYC) process before Payone verifies you.
@@ -36,7 +38,7 @@ To integrate Payone, follow these steps.
 8. Click **Save**.
 
 ![configure-payone](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/payone/integrate-payone/configure-payone.png)
-   
+
 If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. The payment methods you've selected in step 8, appear in **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
 ![payone-credit-card](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-credit-card.png).
 

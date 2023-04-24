@@ -3,6 +3,8 @@ title: Understand how payment methods are displayed in the checkout process
 description: Depending on your credentials type and the number of merchants in the cart, some payment methods are hidden.
 last_updated: Jun 22, 2022
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/payment-service-providers/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
 ---
 
 Depending on your Unzer credentials type defined in the Back Office, the display of the payment method follows a specific logic.
@@ -49,7 +51,7 @@ The customers in the checkout process see the following payment methods in the c
 
  For all the marketplace compatible payment methods, Spryker uses the marketplace Unzer credentials. For all the other payment methods, Spryker uses merchant-specific Unzer credentials.
 
-Based on the preceding example, Spryker uses the marketplace Unzer credentials for the Credit Card and Sofort payment methods. For PayPal and Apple Pay, Spryker uses the merchant-specific Unzer credentials. 
+Based on the preceding example, Spryker uses the marketplace Unzer credentials for the Credit Card and Sofort payment methods. For PayPal and Apple Pay, Spryker uses the merchant-specific Unzer credentials.
 
 {% endinfo_block %}
 

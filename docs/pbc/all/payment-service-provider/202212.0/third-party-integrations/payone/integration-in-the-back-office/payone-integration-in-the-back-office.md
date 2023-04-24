@@ -3,8 +3,9 @@ title: "Payone: Integration in the Back Office"
 description: With Payone, your customers can pay with common payment methods, such as credit card and PayPal.
 template: howto-guide-template
 redirect_from:
-   - docs/aop/user/apps/payone.html
-   - docs/acp/user/apps/payone.html
+   - /docs/aop/user/apps/payone.html
+   - /docs/acp/user/apps/payone.html
+   - /docs/pbc/all/payment-service-providers/payone/payone.html
 ---
 
 The [Payone](https://www.payone.com/DE-en?ref=spryker-documentation) app lets your customers make payments with common payment methods, such as credit card and PayPal.

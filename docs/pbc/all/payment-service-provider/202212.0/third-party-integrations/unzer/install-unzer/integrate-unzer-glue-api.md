@@ -3,6 +3,8 @@ title: Integrate Unzer Glue API
 description: Integrate Unzer Glue API into your project
 last_updated: Aug 11, 2022
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer-glue-api.html
 ---
 
 This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/third-party-integrations/unzer/unzer.html) Glue API into a Spryker project.

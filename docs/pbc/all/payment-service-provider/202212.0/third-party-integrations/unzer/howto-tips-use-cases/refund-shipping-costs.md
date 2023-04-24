@@ -5,6 +5,7 @@ last_updated: Jun 17, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/payment/unzer/howto-tips-use-cases/refund-shipping-costs.html
+  - /docs/pbc/all/payment-service-providers/unzer/howto-tips-use-cases/refund-shipping-costs.html
 ---
 
 The Spryker integration with Unzer offers multiple strategies to refund shipping costs. Ask a developer in your team to enable the strategy that suit your needs.

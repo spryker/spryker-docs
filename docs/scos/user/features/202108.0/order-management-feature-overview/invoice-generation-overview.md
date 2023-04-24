@@ -57,7 +57,7 @@ Keep in mind that bundled product itself always has a 0 tax rate. However, all o
 * Product options are not fully supported in the generated invoice for now. If product options have one tax rate and the product itself another, the tax rate difference is not reflected in the invoice. The invoice shows prices that already include tax rates of products and product options.
 * .pdf files of the invoices are not generated.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

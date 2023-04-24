@@ -11,7 +11,7 @@ The _Refunds_ feature allows issuing refunds on orders.
 To learn more about the feature and to find out how end users use it, see [Refunds feature overview](/docs/scos/user/features/{{page.version}}/refunds-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|

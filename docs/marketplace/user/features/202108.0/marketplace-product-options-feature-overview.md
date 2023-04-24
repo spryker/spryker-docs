@@ -74,7 +74,7 @@ Currently, the feature has the following functional constraints which are going 
 * [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html) does not support merchant product option groups and values.
 * Merchants can not create and manage product option groups and values in the Merchant Portal.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES |
 |---------|

@@ -35,7 +35,7 @@ Once you completed the all steps, the ACP catalog will appear in the Back Office
 
 ## Getting SCOS ACP-Ready
 
-As mentioned before, the first step to install ACP on SCOS is to get SCOS ACP-Ready. This itself requires different update step depending on the template version on which your project was started.
+As mentioned before, the first step to install ACP on SCOS is to get SCOS ACP-Ready. This itself requires different update steps depending on the template version on which your project was started.
 
 - **SCOS Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html)**: All changes are included for out-of-the-box ACP-Readiness, but need be verified on the project level
 - **Older versions**: All steps required are for ACP-Readiness
@@ -43,13 +43,14 @@ As mentioned before, the first step to install ACP on SCOS is to get SCOS ACP-Re
 If you were onboarded with a version older than Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html), please [contact us](https://support.spryker.com/). 
 
 
-### Update deploy.yml file
+### 1. Update the SCOS deploy.yml file
 
-You need to define the environment variables in the deploy.yml file of **each** SCOS environment (i.e. testing, staging, production)
+You need to define the environment variables in the `deploy.yml` file of **each** SCOS environment (i.e. testing, staging, production)
 
 The following environment variables must be configured to be used within your SCOS AWS environment.
 
 There will be multiple general environment variables that in turn will contain several configurations. 
+
 **NOTE**: Configuration keys used to be variable names.
 
 <details open>
@@ -64,7 +65,7 @@ ENVIRONMENT_VARIABLE_NAME_A={
 </details>
 
 <details open>
-<summary>Structure Example </summary>
+<summary>Data Structure Example for a Testing Environment</summary>
 
 ```json
 SPRYKER_AOP_INFRASTRUCTURE='{
@@ -91,7 +92,139 @@ SPRYKER_AOP_INFRASTRUCTURE='{
 ```
 </details>
 
-### Module updates for ACP
+#### Message Broker configuration
+
+**Variable name**: `SPRYKER_AOP_INFRASTRUCTURE`
+
+**1. Configuration key**: `SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG`
+
+**Explanation**: Receiver configuration. The queues must be defined for each store (or default queue for all stores is used)
+
+<details open>
+<summary>Value: Staging Example</summary>
+
+```json
+{
+    "default": {
+        "endpoint":"https://sqs.eu-central-1.amazonaws.com",
+        "auto_setup":false, "buffer_size":1
+    },
+    "DE": {
+        "queue_name":"queue_name_for_store_reference_DE"
+    },
+    "<Store Reference>": {
+        "queue_name":"queue_name_for_store_reference_<Store>"
+    }
+}
+```
+</details>
+
+**2. Configuration key**: `SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG`
+
+<details open>
+<summary>Value: Staging</summary>
+
+```json
+{
+    "endpoint":"https://api.atrs-staging.demo-spryker.com/event-tenant"
+}
+```
+</details>
+
+**Variable name**: `AWS_DEFAULT_REGION`
+
+Variable does not have configuration keys, but only a single value.
+
+**Explanation**: The variable is used inside AWS SDK, and can’t be moved to a combined variable
+
+#### Auth0 configuration
+
+**Variable name**: `SPRYKER_AOP_AUTHENTICATION`
+
+**1. Configuration key**: `AUTH0_CUSTOM_DOMAIN`
+
+**Explanation**: URL for retrieving the Auth0 token.
+
+<details open>
+<summary>Value: Staging/Testing</summary>
+
+```json
+dev-163i904u.us.auth0.com
+```
+</details>
+
+<details open>
+<summary>Value: Production</summary>
+
+```json
+spryker-prod.eu.auth0.com
+```
+</details>
+
+**2. Configuration key**: `AUTH0_CLIENT_ID`
+
+**Explanation**: ClientId for auth service.
+
+<details open>
+<summary>Value Example: Auth0 Client ID</summary>
+
+```json
+clientId from https://auth0.com/
+```
+</details>
+
+**3. Configuration key**: `AUTH0_CLIENT_SECRET`
+
+**Explanation**: ClientSecret for auth service.
+
+<details open>
+<summary>Value Example: Auth0 Client Secret</summary>
+
+```json
+clientSecret from https://auth0.com/
+```
+</details>
+
+**Variable name**: `AWS_SECRETS_MANAGER_ACCESS_KEY_ID`
+
+Variable does not have configuration keys, but only a single value.
+
+**Explanation**: Defines AWS access key used for Secrets Manager
+
+<details open>
+<summary>Value: Access Key Example</summary>
+
+```json
+AKIAY6V.....Y6JSGUF
+```
+</details>
+
+**Variable name**: `AWS_SECRETS_MANAGER_SECRET_ACCESS_KEY`
+
+Variable does not have configuration keys, but only a single value.
+
+**Explanation**: Defines AWS secret used for Secrets Manager
+
+<details open>
+<summary>Value: Secret Example</summary>
+
+```json
+o+X..X+Xfalz...MZXlZQ+UG3SQ.....xrnFPPp6
+```
+</details>
+
+#### Roles and permissions
+
+**Service**: SCOS (Tenant's) store SQS
+
+**Permissions**:
+ - `“sqs:SendMessage”`
+ - `"sqs:ReceiveMessage"`
+ - `"sqs:GetQueueUrl"`
+ - `"sqs:DeleteMessage"`
+ - `"sqs:ChangeMessageVisibility"`
+
+### 2. Module updates for ACP
 
 The ACP catalog is included by default to the Spryker Cloud product starting with the Spryker Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html). 
 
@@ -102,9 +235,21 @@ However, if your Spryker project is based on an earlier version you must install
 * `spryker/message-broker-aws:^1.3.2` or higher
 * `spryker/session:^4.15.1` or higher
 
-### Configure SCOS to activate the ACP catalog in the Back Office 
+{% info_block warningBox "" %}
 
-#### 1.Define the configuration and add plugins to the following files
+Depending on the specific ACP Apps or PBCs you would like to use via ACP you will have to add or update the modules for each respective App or PBC as detailed in the guide for each app.
+
+**TODO**: Add Distinction between Latest Product release vs older versions
+
+- [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html), a Payment Service Provider (PSP)
+- [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html), a Consent Management Platform (CMP)
+- [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html), a platform for User-Generated Content (UGC)
+
+{% endinfo_block %}
+
+### 3. Configure SCOS to activate the ACP catalog in the Back Office 
+
+#### 1. Define the configuration and add plugins to the following files
 
 <details open>
 <summary>config/Shared/config_default.php</summary>
@@ -168,7 +313,7 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'ao
 ```
 </details>
 
-#### 2.Add one more navigation item to the navigation.xml file:
+#### 2. Add one more navigation item to the navigation.xml file:
 
 <details open>
 <summary>config/Zed/navigation.xml</summary>
@@ -187,7 +332,7 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'ao
 ```
 </details>
 
-#### 3.In the MessageBrokerDependencyProvider.php, enable the following module plugins:
+#### 3. In the MessageBrokerDependencyProvider.php, enable the following module plugins:
 
 <details open>
 <summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
@@ -278,7 +423,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 ```
 </details>
 
-#### 4.In the MessageBrokerConfig.php, adjust the following module config:
+#### 4. In the MessageBrokerConfig.php, adjust the following module config:
 <details open>
 <summary>src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php</summary>
 
@@ -314,6 +459,11 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 ```
 </details>
 
+## Next Steps After ACP-Readiness
 Now, the SCOS codebase is up-to-date and once re-deloyed your environment is **ACP-Ready**!
 
-The next step is to get your newly updated and deployed **ACP-Ready SCOS** environment **ACP-Enabled**, which will register your  with the ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP) so that the ACP Catalog is fully active to work with SCOS.
+The next step is to get your newly updated and deployed **ACP-Ready SCOS** environment **ACP-Enabled**.
+
+The next step will be fully handled by Spryker and consists of the registration of your **ACP-Ready SCOS** environment with the ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP) so that the ACP Catalog is able to work with SCOS.
+
+Please contact Spryker support to get **ACP-Enabled**

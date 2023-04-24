@@ -13,7 +13,8 @@ template: concept-topic-template
 <!-- TODO: Link to providers -->
 - Providers
 - [Plugins](./app-plugins.md)
-- [Resources](./resources.md)
+<!-- TODO: Link to resources -->
+- Resources
 - [Feature options](#feature-options)
 - [Builder options](./index.md#options)
 
@@ -21,7 +22,7 @@ Features are useful to structure and organise code and functionality into logica
 
 Every Oryx package exposes such features for your application to be easily integrated.
 
-To register `AppFeature` with Oryx application use `AppBuilder.withFeature()` API:
+To register `AppFeature` with Oryx application use `appBuilder.withFeature()` API:
 
 ```ts
 import { appBuilder, AppFeature } from '@spryker-oryx/core';
@@ -116,7 +117,7 @@ class MyService {
 }
 ```
 
-This will allow consumers of your feature to pass the options via `AppBuilder.withOptions()` and it's going to be fully typed and typesafe:
+This will allow consumers of your feature to pass the options via `appBuilder.withOptions()` and it's going to be fully typed and typesafe:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';

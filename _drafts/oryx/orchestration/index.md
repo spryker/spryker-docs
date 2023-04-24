@@ -76,7 +76,7 @@ Now you have fully up and running Oryx [`App`](./app.md) instance tailored to yo
 
 When you are configuring your Oryx application you may need to customise some of it's options which have a reasonable defaults but may not suit your needs.
 
-For this you can use `AppBuilder.withAppOptions()` API which allows you to customise:
+For this you can use `appBuilder.withAppOptions()` API which allows you to customise:
 
 - Injector, it's parent and context
 - Global component options such as root mounting selector
@@ -100,7 +100,8 @@ To dive deeper into details of application orchestration check out:
 - Add components
 <!-- TODO: Link to providers -->
 - Configure providers
-- [Add resources](./resources.md)
+<!-- TODO: Link to resources -->
+- Add resources
 <!-- TODO: Link to theme -->
 - Add theme
 - [Add plugins](./app-plugins.md)

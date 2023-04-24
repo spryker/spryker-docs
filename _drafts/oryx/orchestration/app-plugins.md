@@ -122,6 +122,14 @@ There are two additional plugin life-cycle methods available that are invoked ar
 - `AppPluginBeforeApply` is invoked before the main life-cycle of all the plugins
 - `AppPluginAfterApply` is invoked after the main life-cycle of all the plugins
 
-> **Note** You should never rely on the order of the registration of the plugins to the Oryx application builder.
+> **Note** You should never rely on the order of the registration of the plugins to the Oryx application builder and instead use extra plugin lify-cycle methods to establish the order if necessary.
 
 See [interacting with plugins](./app.md#interacting-with-plugins) section for more information on how to access registered plugins.
+
+## Plugin use-cases
+
+A plugin may be usefull in a few cases:
+
+- To execute some code when Oryx application starts up
+- To interact with already existing Oryx plugins
+- To extend functionality of Oryx application by building a new custom plugin or extending existing Oryx plugin

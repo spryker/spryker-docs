@@ -1475,7 +1475,7 @@ entries:
                   - title: Configuration in the Back Office
                     nested:
                       - title: Add Unzer standard credentials
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configure-in-the-back-office/add-unzer-standard-credentails.html
                       - title: Add Unzer marketplace credentials
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configure-in-the-back-office/add-unzer-marketplace-credentials.html
                   - title: Extend and Customize

@@ -45,7 +45,7 @@ Azure access token should have the following repository permissions:
 
 {% info_block infoBox "Repository URL" %}
 
-Repository URL should be in format `https://dev.azure.com/<organization_name>/<project_name>/_git/<repository_name>` (without `<organization_name>@` prefix).
+Repository URL should be in format `https://dev.azure.com/<organization_name>/<project_name>/_git/<repository_name>` (without the `<organization_name>@` prefix).
 
 {% endinfo_block %}
 

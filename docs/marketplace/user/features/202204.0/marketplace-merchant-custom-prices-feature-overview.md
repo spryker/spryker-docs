@@ -18,7 +18,7 @@ A merchant can set two types of prices:
 
 Customers see custom prices for products based on their merchant relationship, or default prices if the merchant relationship doesn't have prices for marketplace products.
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES  |
 | -------------------- | 

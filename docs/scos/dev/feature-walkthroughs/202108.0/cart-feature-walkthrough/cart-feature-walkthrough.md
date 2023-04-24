@@ -9,7 +9,7 @@ The _Cart_ feature provides functionality of the shopping cart and cart total ca
 
 To learn more about the feature and to find out how end users use it, see [Cart](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-feature-overview.html) for business users.
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---------|---------|---------|---------|

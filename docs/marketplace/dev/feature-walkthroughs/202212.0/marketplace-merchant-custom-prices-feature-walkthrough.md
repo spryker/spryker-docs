@@ -31,7 +31,7 @@ The following schema illustrates the *Marketplace Merchant Custom Prices* domain
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/165bf49e-5aed-4228-b231-cc5187eca7d4.png?utm_medium=live&utm_source=custom)
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES|
 |---------|

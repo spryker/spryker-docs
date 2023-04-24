@@ -13,7 +13,7 @@ The _Configurable Product_ feature introduces a new type of product that can be 
 To learn more about the feature and to find out how end users use it, see [Configurable Product feature overview](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | DATA IMPORT |
 |---------|---------|

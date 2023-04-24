@@ -405,14 +405,14 @@ Cart subtotal: €100
 4. SITE5: (9999 priority): €71 - €3.55 = €67.45
 -->
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create a discount](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html)  |
 | [Edit discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/edit-discounts.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---|---|---|---|---|

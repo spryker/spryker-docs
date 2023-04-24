@@ -44,7 +44,7 @@ domain --> base
 
 ### Template packages
 
-The template layer contains packages that can be used as quick starters for demos and projects. Templated packages do follow semantic versioning and will deliver on the promise of upgradability, but are fairly opinionated as they mainly serve to get up to speed fast with a standard frontend application.
+The template layer contains packages that can be used as quick starters for demos and projects. Templated packages do follow semantic versioning and will deliver on the promise of upgradability. Some packages in the template layer (e.g. presets) are fairly opinionated and might not be used inside your final setup. Their main purpose is to get you up fast with a standard frontend application.
 
 | Packages                                                       | Location                    |
 | -------------------------------------------------------------- | --------------------------- |
@@ -58,7 +58,7 @@ The template layer contains packages that can be used as quick starters for demo
 
 ### Domain packages
 
-Domain packages provide components, services and adapters for a certain domain. Organising packages in domains helps the developer experience, as its' fairly easy to understand where to find a certain component or service. An example of a domain package is the `product` package, which contains all product related components as well as the product services and adapters that integrates with Spryker APIs.
+Domain packages provide components and service logic for a certain domain. Organising packages in domains helps the developer experience, as its' fairly easy to understand where to find a certain component or service. An example of a domain package is the `product` package, which contains all product related components as well as the product services and adapters that integrates with Spryker APIs.
 
 | Packages                                                         | Location                 |
 | ---------------------------------------------------------------- | ------------------------ |
@@ -75,7 +75,7 @@ Domain packages provide components, services and adapters for a certain domain. 
 
 ### Platform packages
 
-The platform layer contains the core packages, including `core` itself. They are providing the infrastructure to the whole system.
+The platform layer contains the core packages of Oryx framework. They provide the infrastructure to the whole system.
 
 | Packages                                                                           | Location                          |
 | ---------------------------------------------------------------------------------- | --------------------------------- |

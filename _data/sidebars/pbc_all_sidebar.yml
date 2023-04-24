@@ -1302,7 +1302,7 @@ entries:
                       - title: Disconnect
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html
                   - title: Manual integration
-                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/manual-integration/payone.html
+                    url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/manual-integration/payone-manual-integration.html
                     nested:
                       - title: Integrate
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/payone/manual-integration/integrate-payone.html
@@ -1477,7 +1477,7 @@ entries:
                       - title: Add Unzer standard credentials
                         url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
                       - title: Add Unzer marketplace credentials
-                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
+                        url: /docs/pbc/all/payment-service-provider/third-party-integrations/unzer/configure-in-the-back-office/add-unzer-marketplace-credentials.html
                   - title: Extend and Customize
                     nested:
                       - title: Implement new payment methods on the project level

@@ -3,6 +3,8 @@ entries:
   - product: PBC
     nested:
       - title: Back Office
+        include_versions:
+        - "202204.0"
         nested:
           - title: Spryker Core Back Office feature overview
             url: /docs/pbc/all/back-office/spryker-core-back-office-feature-overview.html

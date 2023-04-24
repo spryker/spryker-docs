@@ -62,7 +62,7 @@ console transfer:generate
 
 ## 2) Update Webpack
 
-Before starting the migration, make sure that Webpack is v5; if it's v4, the [Webpack migration guide](/docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html) is required.
+Before starting the migration, make sure that Webpack is v5; if it's v4, the [Webpack migration guide](/docs/scos/dev/front-end-development/{{page.version}}/migration-guide-upgrade-to-webpack-v5.html) is required.
 
 ## 3) Update NPM dependencies
 

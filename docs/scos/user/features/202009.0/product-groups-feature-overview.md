@@ -67,7 +67,7 @@ Check out this video tutorial on product groups:
 
 {% wistia r5l2kit2c1 960 720 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

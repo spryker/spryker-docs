@@ -189,7 +189,7 @@ You have a product in your shop—a pen. And there exists a packaging unit for a
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

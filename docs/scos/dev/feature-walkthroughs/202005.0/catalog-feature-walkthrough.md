@@ -10,7 +10,7 @@ The _Catalog_ feature allows building and organizing products to meet your and y
 To learn more about the feature and to find out how end users use it, see [Catalog feature overview](/docs/scos/user/features/{{page.version}}/catalog-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|

@@ -22,7 +22,7 @@ The following schema illustrates the module relations of the Quotation Process f
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|

@@ -73,7 +73,7 @@ composer show spryker/merchant-profile-merchant-portal-gui # Verify the version
 
 ## Self Cross-Site Scripting (XSS) in CMS
 
-Administrators can place a malicious payload in Placeholders, which can be executed in the editing and the view site, resulting in a XSS vulnerability.
+Administrators can place a malicious payload in Placeholders, which can be executed while trying to save, preview, or view the new page, resulting in an XSS vulnerability.
 
 ### Affected modules
 
@@ -454,7 +454,7 @@ composer show spryker/util-sanitize-xss # Verify the version
 
 ## Vulnerable version of PHP in use
 
-In PHP versions 7.4.*x* and earlier than 7.4.28, 8.0.*x* and earlier than 8.0.16, and 8.1.*x* and earlier than  8.1.3, when using filter functions with the `FILTER_VALIDATE_FLOAT` filter and minimum and maximum limits, if the filter fails, you may trigger the use of allocated memory after free, which can result it crashes, and potentially in overwrite of other memory chunks and RCE. This issue affects code that uses `FILTER_VALIDATE_FLOAT` with minimum and maximum limits.
+In PHP versions 7.4.*x* and earlier than 7.4.28, 8.0.*x* and earlier than 8.0.16, 8.1.*x* and earlier than  8.1.3, when using filter functions with the `FILTER_VALIDATE_FLOAT` filter and minimum and maximum limits, if the filter fails, you may trigger the use of allocated memory after free memory, which can result in crashes, and potentially in overwriting of other memory chunks and RCE. This issue affects code that uses `FILTER_VALIDATE_FLOAT` with minimum and maximum limits.
 
 ### Affected modules
 

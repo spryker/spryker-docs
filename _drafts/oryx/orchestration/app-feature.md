@@ -92,19 +92,7 @@ class MyExtendedFeature extends MyConfigurableFeature {
 
 ## Feature options
 
-If your feature requires some options from the consumer you may define it's type on the special global interface `FeatureOptions` with the key that you will later use to get the options:
-
-```ts
-declare global {
-  interface FeatureOptions {
-    'your-feature-key'?: YourFeatureOptions;
-  }
-}
-
-interface YourFeatureOptions {}
-```
-
-Once you have defined the type of your options you now can use them in your code by using `FeatureOptionsService.getFeatureOptions()` API:
+If your feature requires some options from the consumer you may use `FeatureOptionsService.getFeatureOptions()` API:
 
 ```ts
 import { FeatureOptionsService } from '@spryker-oryx/core';

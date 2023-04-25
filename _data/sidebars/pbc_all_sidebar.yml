@@ -281,6 +281,7 @@ entries:
                   - title: File details - sales_order_threshold.csv
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-sales-order-threshold.csv.html
               - title: Manage in the Back Office
+                url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: Define global thresholds
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html
@@ -523,6 +524,7 @@ entries:
               - title: Retrieve navigation trees
                 url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-navigation-trees.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/content-management-system/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: "Best practices: Add content to the Storefront pages using templates and slots"
                 url: /docs/pbc/all/content-management-system/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
@@ -706,6 +708,7 @@ entries:
           - title: Customer Access feature overview
             url: /docs/pbc/all/customer-relationship-management/customer-access-feature-overview.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: Manage customers
                 nested:
@@ -812,6 +815,7 @@ entries:
               - title: Upgrade the DiscountSalesAggregatorConnector module
                 url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/discount-management/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: "Best practices: Promote products with discounts"
                 url: /docs/pbc/all/discount-management/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
@@ -956,6 +960,7 @@ entries:
                   - title: Merchant
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-the-merchant-feature.html
               - title: Manage in the Back Office
+                url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: Create merchants
                     url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/create-merchants.html
@@ -1130,6 +1135,7 @@ entries:
           - title: Import order statuses
             url: /docs/pbc/all/order-management-system/file-details-order-status.csv.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/order-management-system/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: Orders
                 nested:
@@ -1313,6 +1319,7 @@ entries:
               - title: product_price.csv
                 url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/price-management/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: Create scheduled prices
                 url: /docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html
@@ -1647,6 +1654,7 @@ entries:
               - title: product_label.csv
                 url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-label.csv.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/product-information-management/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: Attributes
                 nested:
@@ -1753,6 +1761,7 @@ entries:
           - title: Import product relations
             url: /docs/pbc/all/product-relationship-management/file-details-product-relation.csv.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: "Best practices: Promote products with product relations"
                 url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html
@@ -1784,6 +1793,7 @@ entries:
               - title: "Eco: Punchout Catalogs + Product Bundles"
                 url: /docs/pbc/all/punchout/install-features/install-the-eco-punchout-catalogs-product-bundles-feature.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/punchout/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: Manage punch out connections
                 url: /docs/pbc/all/punchout/manage-in-the-back-office/manage-punch-out-connections.html
@@ -1807,6 +1817,7 @@ entries:
               - title: File details- product_review.csv
                 url: /docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: Manage product reviews
                 url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
@@ -1880,6 +1891,7 @@ entries:
                   - title: Install the Return Management Glue API
                     url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-glue-api.html
               - title: Manage in the Back Office
+                url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: Change the state of order items in returns
                     url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
@@ -1908,6 +1920,7 @@ entries:
                   - title: Install the Return Management Glue API
                     url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-glue-api.html
               - title: Manage in the Back Office
+                url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: Main merchant returns
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
@@ -1961,6 +1974,7 @@ entries:
               - title: Upgrade search initialization
                 url: /docs/pbc/all/search/install-and-upgrade/upgrade-search-initialization.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: "Best practices: Promote products with search preferences"
                 url: /docs/pbc/all/search/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html
@@ -2141,6 +2155,7 @@ entries:
               - title: Upgrade the Tax module
                 url: /docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: Create tax rates
                 url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
@@ -2199,6 +2214,7 @@ entries:
               - title: Install the Agent Assist Glue API
                 url: /docs/pbc/all/user-management/install-and-upgrade/install-the-agent-assist-glue-api.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
             nested:
               - title: "Best practices: Manage users and their permissions with roles and groups"
                 url: /docs/pbc/all/user-management/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
@@ -2276,6 +2292,7 @@ entries:
                   - title: File details - product_stock.csv
                     url: /docs/pbc/all/warehouse-management-system/base-shop/import-data/file-details-product-stock.csv.html
               - title: Manage in the Back Office
+                url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: Create warehouses
                     url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/create-warehouses.html

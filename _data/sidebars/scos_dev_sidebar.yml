@@ -3571,6 +3571,7 @@ entries:
       - title: Run and revert a database migration
         url: /docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
       - title: Data publishing
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/data-publishing.html
         nested:
         - title: Publish and Synchronization
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html

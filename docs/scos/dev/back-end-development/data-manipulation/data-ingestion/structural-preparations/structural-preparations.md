@@ -1,7 +1,7 @@
 ---
 title: Data ingestion
 description: This page lists documents inside the Structural preparations section
-last_updated: Sep 6, 2022
+last_updated: Apr 25, 2023
 template: howto-guide-template
 ---
 

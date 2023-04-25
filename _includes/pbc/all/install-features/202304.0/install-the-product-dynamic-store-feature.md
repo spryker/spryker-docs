@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Product + Dynamic store feature into a Spryker project.
+This document describes how to integrate the Product + Dynamic Store feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,25 +12,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{page.version}} |
 | Product | {{page.version}} |
 
-### 1) Install the required modules using Composer
-
-```bash
-composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| Product | vendor/spryker/product |
-| ProductImage | vendor/spryker/product-image |
-
-
-{% endinfo_block %}
-
-### 2) Set up behavior
+### 1) Set up behavior
 
 Register the following plugins:
 

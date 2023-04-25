@@ -10,34 +10,16 @@ To start feature integration, integrate the required features:
 | NAME | VERSION |
 | --- | --- |
 | Spryker Core | {{page.version}} |
+| Availability Notification | {{page.version}} |
 
 
-### 1) Install the required modules using Composer
-
-Install the required modules:
-
-```bash
-composer require spryker-feature/availability-notification:"{{page.version}}" --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| AvailabilityNotification | vendor/spryker/availability-notification |
-
-
-{% endinfo_block %}
-
-### 2) Set up configuration
+### 1) Set up configuration
 
 Add the following configuration to your project:
 
 | CONFIGURATION  | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING (See below in `config/Shared/config_default.php`) | Defines regions to Yves host mapping. | - |
+| AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING (See below in `config/Shared/config_default.php`) | Defines regions to Yves host mapping. | Spryker\Shared\AvailabilityNotification |
 
 
 **config/Shared/config_default.php**
@@ -54,3 +36,18 @@ $config[AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING] = [
 ];
 
 ```
+
+{% info_block warningBox "Verification" %}  
+
+To verify mail links are correct, make sure that the following configuration is correct:
+
+1. Add a new product and make it unavailable.
+2. As a customer, subscribe to its availability notifications on Yves.
+3. Make the product available.
+4. Check your mailbox for the email about the product’s availability.
+
+Check that the link in the email is correct and leads to the product details page on Yves use the correct host.
+
+
+{% endinfo_block %}
+

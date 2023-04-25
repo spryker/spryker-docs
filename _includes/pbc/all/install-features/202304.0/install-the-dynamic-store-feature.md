@@ -44,8 +44,8 @@ Make sure that the following modules were installed:
 
 Before dynamic store was introduced, configuration for the store was stored in the file `config/Shared/stores.php`. Since the dynamic store is now enabled, configuration for the store is stored in the database, making the file `config/Shared/stores.php` deprecated. 
 
-The default store configuration will now be imported using new data import modules such as StoreDataImport, LocaleDataImport, CountryDataImport, and CurrencyDataImport. These modules will populate the store configuration in the database.
-New major modules, namely Locale, Country, and Currency, have been introduced and they are responsible for extending store data and configuring it in the database.
+The default store configuration will now be imported using new data import modules such as StoreDataImport, LocaleDataImport and CountryDataImport. These modules will populate the store configuration in the database.
+New major modules, namely Locale and Country, have been introduced and they are responsible for extending store data and configuring it in the database.
 
 {% endinfo_block %}
 
@@ -57,12 +57,12 @@ New major modules, namely Locale, Country, and Currency, have been introduced an
 Since implementation dynamic multistore features you can define region or store by domains or by headers.
 We recommend defining region by domains, which is supported by default for dynamic store. 
 
-{% info_block infoBox "Recomedations for changing domain name" %}
+{% info_block infoBox "Recommendations for changing domain name" %}
 
-For example, you have an existing store that uses the domain de.spryker.shop. With the integration of Dynamic Store, you have also started using the domain eu.spryker.shop. 
-We recommend making de.spryker.shop a mirror of eu.spryker.shop to preserve the availability of old links in search engines.
+We recommend making de.mysprykershop.com a mirror of eu.mysprykershop.com to preserve the availability of old links in search engines.
 
 {% endinfo_block %}
+
 
 2. Enable dynamic store feature
 
@@ -193,15 +193,14 @@ Please, check `deploy.dev.dynamic-store.yml` file for more details.
 
 Add the following configuration to your project:
 
-Adjust `config/Shared/config_default.php` for 
 | CONFIGURATION        | SPECIFICATION | NAMESPACE |
 |----------------------|---------------| --- |
-| Default RabbitMQ connection. (See below in `config/Shared/config_default.php`) | Configuration allows to set the connection for queues dynamically. Use environment variable `SPRYKER_CURRENT_REGION`to set the configuration for queues | - |
-| RabbitMqConfig::getQueuePools() | Configure queue pools for regions. | Pyz\Client\RabbitMq |
+| Default RabbitMQ connection. (See below in `config/Shared/config_default.php`) | Configuration allows to set the connection for queues dynamically. Use environment variable `SPRYKER_CURRENT_REGION` to set the configuration for queues | - |
+| RabbitMqConfig::getQueuePools() | Configures queue pools for regions. | Pyz\Client\RabbitMq |
 | RabbitMqConfig::getDefaultLocaleCode() | Returns default locale code. | Pyz\Client\RabbitMq |
-| RabbitMqConfig::getSynchronizationQueueConfiguration() | Add StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE to configure sync queue. | Pyz\Client\RabbitMq |
+| RabbitMqConfig::getSynchronizationQueueConfiguration() | Adds StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE to configure sync queue. | Pyz\Client\RabbitMq |
 | Setup all cron jobs (See below in `config/Zed/cronjobs/jobs.php`)  | Adjust all cron jobs to use new configuration. | - |
-| StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configure sync queue name as used for processing store messages. | Pyz\Zed\StoreStorage |
+| StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures sync queue name as used for processing store messages. | Pyz\Zed\StoreStorage |
 
 
 
@@ -311,6 +310,13 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }    
 
 ```
+
+{% info_block warningBox "Verification" %}
+
+Please make sure that the following configuration is working via run `vendor/bin/console queue:worker:start` command.
+If the command execution was successful without rabbitmq connection errors, then everything works correctly.
+
+{% endinfo_block %}
 
 
 
@@ -478,6 +484,25 @@ Also check queue `sync.storage.store` in RabbitMQ.
 </database>
 ```
 
+{% info_block warningBox "Verification" %}
+
+
+For the changes to take effect, you need to suspend the scheduler.
+1. Stop scheduler and run the following commands. 
+
+```bash
+vendor/bin/console scheduler:suspend
+```
+
+2. Create store in the Back Office. Setup the store country and locale. 
+3. Check `publish` queue in RabbitMQ. You should see the following messages
+
+
+
+
+
+{% endinfo_block %}
+
 2. Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -516,7 +541,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Configure export to Redis
 
-1.  Set up publisher plugins:
+1.  Set up publisher plugins and trigger plugins:
 
 | PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -524,6 +549,7 @@ Make sure that the following changes have been applied in transfer objects:
 | StoreSynchronizationTriggeringPublisherPlugin | Publishes store data to synchronization queue. | None | Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\Store |
 | LocaleStoreWritePublisherPlugin | Publishes locale store data to storage table. | None | Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\LocaleStore |
 | CountryStoreWritePublisherPlugin | Publishes country store data to storage table. | None | Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CountryStore |
+| StorePublisherTriggerPlugin  | Retrieves store data based on the provided limit and offset.| - | Spryker\Zed\StoreStorage\Communication\Plugin\Publisher |
 
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
@@ -539,6 +565,7 @@ use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CountryStore\Country
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\LocaleStore\LocaleStoreWritePublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\Store\StoreSynchronizationTriggeringPublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\Store\StoreWritePublisherPlugin; 
+use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\StorePublisherTriggerPlugin;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
@@ -560,29 +587,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new StoreSynchronizationTriggeringPublisherPlugin(), 
             new CountryStoreWritePublisherPlugin(),
             new LocaleStoreWritePublisherPlugin(),
+            
         ];
     }
-}
-```
 
-2. Set up trigger plugins:
-
-| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| StorePublisherTriggerPlugin  | Retrieves store data based on the provided limit and offset.| - | Spryker\Zed\StoreStorage\Communication\Plugin\Publisher |
-
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Publisher;
-
-use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
-use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\StorePublisherTriggerPlugin;
-
-class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
-{
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
      */
@@ -595,35 +603,43 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-3. Set up synchronization plugins:
 
-| PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| StoreSynchronizationDataPlugin | Retrieves store data for synchronization. | None | Spryker\Zed\StoreStorage\Communication\Plugin\Synchronization |
+{% info_block warningBox "Verification" %}
 
-**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+Ensure that, when a store created, updated, or deleted with local and country data.  And it is exported to or removed from Redis.
 
-```php
-<?php
+Storage type: Redis
+Target entity: Store
 
-namespace Pyz\Zed\Synchronization;
+Example expected data identifier: `kv:store:de`
 
-use Spryker\Zed\StoreStorage\Communication\Plugin\Synchronization\StoreSynchronizationDataPlugin;
-use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
+Example expected data fragment:
 
-class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
+```json
 {
-    /**
-     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
-     */
-    protected function getSynchronizationDataPlugins(): array
-    {
-        return [
-            new StoreSynchronizationDataPlugin(),
-        ];
-    }
+  "id_store": 1,
+  "name": "DE",
+  "default_locale_iso_code": "en_US",
+  "available_locale_iso_codes": [
+    "de_DE",
+    "en_US"
+  ],
+  "stores_with_shared_persistence": [],
+  "countries": [
+    "CH",
+    "DE"
+  ],
+  "country_names": [
+    "Switzerland",
+    "Germany"
+  ],
+  "_timestamp": 100000000.000000
 }
 ```
+
+{% endinfo_block %}
+
+
 
 ### 4) Import data
 
@@ -692,7 +708,7 @@ Make sure that:
 
 
 2. Update the following import action files with the following action:
-    * `data/import/common/commerce_setup_import_config_{SPRYKEREGIONR_STORE}.yml`
+    * `data/import/common/commerce_setup_import_config_{REGION\_STORE}.yml`
     * `data/import/local/full\_{REGION\_STORE}.yml`
     * `data/import/production/full\_{SPRYKER\_STORE}.yml`
 
@@ -735,7 +751,6 @@ class DataImportConfig extends SprykerDataImportConfig
 | --- | --- | --- | --- |
 | StockDataImportPlugin | Imports Store. | None | \Spryker\Zed\StoreDataImport\Communication\Plugin\DataImport |
 | CountryStoreDataImportPlugin | Imports country store relations. | None | \Spryker\Zed\CountryDataImport\Communication\Plugin\DataImport |
-| CurrencyStoreDataImportPlugin | Imports currency store relations. | None | \Spryker\Zed\CurrencyDataImport\Communication\Plugin\DataImport |
 | LocaleStoreDataImportPlugin | Imports locale store relations. | None | \Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport |
 | DefaultLocaleStoreDataImportPlugin | Imports default locale store relations. | None | \Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport |
 
@@ -751,7 +766,6 @@ use Spryker\Zed\StoreDataImport\Communication\Plugin\DataImport\StoreDataImportP
 use Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport\DefaultLocaleStoreDataImportPlugin;
 use Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport\LocaleStoreDataImportPlugin;
 use Spryker\Zed\CountryDataImport\Communication\Plugin\DataImport\CountryStoreDataImportPlugin;
-use Spryker\Zed\CurrencyDataImport\Communication\Plugin\DataImport\CurrencyStoreDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
@@ -760,7 +774,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return [
             new StoreDataImportPlugin(),
             new CountryStoreDataImportPlugin(),
-            new CurrencyStoreDataImportPlugin(),
             new LocaleStoreDataImportPlugin(),
             new DefaultLocaleStoreDataImportPlugin(),
         ];     
@@ -853,20 +866,15 @@ Enable the following behaviors by registering the plugins:
 | CountryStoreCollectionExpanderPlugin | Expands country store collection. | None | Spryker\Zed\Country\Communication\Plugin\Store |
 | LocaleStoreCollectionExpanderPlugin | Expands locale store collection. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
 | LocaleStoreFormExpanderPlugin | Adds locale selection fields to the Store form. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
-| CurrencyStoreFormExpanderPlugin | Adds currency selection fields to the Store form. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
 | CountryStoreFormExpanderPlugin | Adds country selection fields to the Store form. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | LocaleStoreFormViewExpanderPlugin | Adds rendered locale tabs and tables as variables in template. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
-| CurrencyStoreFormViewExpanderPlugin | Adds rendered currency tabs and tables as variables in template. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
 | CountryStoreFormViewExpanderPlugin | Adds rendered country tabs and tables as variables in template. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | LocaleStoreFormTabExpanderPlugin | Expands Store form with Locales tab. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
-| CurrencyStoreFormTabExpanderPlugin | Expands Store form with Currencies tab. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
 | CountryStoreFormTabExpanderPlugin | Expands Store form with Countries tab. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | DefaultLocaleStoreViewExpanderPlugin | Returns template path for default locale and default locale ISO code.. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
 | AssignedLocalesStoreViewExpanderPlugin | Returns table with assigned locales. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
-| AssignedCurrenciesStoreViewExpanderPlugin | Returns table with assigned currencies. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
 | AssignedCountriesStoreViewExpanderPlugin | Returns table with assigned countries. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | LocaleStoreTableExpanderPlugin | Expands locale table with store column. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
-| CurrencyStoreTableExpanderPlugin | Expands table data rows of store table with currency codes. | None | Spryker\Zed\CurrencyGui\Communication\Plugin\StoreGui |
 | CountryStoreTableExpanderPlugin | Expands table data rows of store table with country codes. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 
 
@@ -1107,8 +1115,8 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Steps to verify:
-- Make sure that you get an error message if you try to create a store with a default locale that is not assigned to the default store.
-- Make sure that you get an error message if you try to update a store with a default locale that is not assigned to the default store.
+- Make sure that you get an error message if you try to create a store with a default locale that is not assigned to the store.
+- Make sure that you get an error message if you try to update a store with a default locale that is not assigned to the store.
 - Make sure that you can create a store with countries assigned to it.
 - Make sure that you can update a store with a default locale assigned to it.
 - Make sure that you can create a store with locales assigned to it.
@@ -1381,6 +1389,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure container has store `store` key. And it contains `current_store` and `stores` keys.
+Make sure the container has a store `store` service set. 
 
 {% endinfo_block %}

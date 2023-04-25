@@ -1,4 +1,3 @@
-HELP: As example used _includes/pbc/all/install-features/202212.0/install-glue-api/install-the-product-glue-api.md
 
 Follow the steps below to integrate the Glue API: Dynamic Store feature into your project.
 
@@ -9,32 +8,8 @@ To start feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} |
 
-## 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
-
-```bash
-composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules were installed:
-
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| CountryDataImport | vendor/spryker/country-data-import |
-| СountryGui | vendor/spryker/country-gui |
-| LocaleDataImport | vendor/spryker/locale-data-import |
-| LocaleGui | vendor/spryker/locale-gui |   
-| SecurityBlockerStorefrontCustomer  |spryker/security-blocker-storefront-customer | 
-| StoreContextGui | vendor/spryker/store-context-gui |
-| StoreDataImport | vendor/spryker/store-data-import |
-| StoreGui | vendor/spryker/store-gui |
-
-{% endinfo_block %}
-
-### 2) Set up behavior
+### 1) Set up behavior
 
 
 Activate the following plugins:

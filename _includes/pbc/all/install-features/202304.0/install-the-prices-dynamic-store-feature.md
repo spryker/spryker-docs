@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Prices + Dynamic store feature into a Spryker project.
+This document describes how to integrate the Prices + Dynamic Store feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,22 +12,14 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{page.version}} |
 | Prices | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Set up configuration
 
-```bash
-composer require spryker-feature/prices:"{{page.version}}" --update-with-dependencies
-```
+{% info_block warningBox "Configuration stores.php" %}
 
-{% info_block warningBox "Verification" %}
+Since the dynamic store is now enabled, configuration for the store is stored in the database, making the file `config/Shared/stores.php` deprecated. 
 
-Make sure that the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| Price | vendor/spryker/price |
-| PriceDataFeed | vendor/spryker/price-data-feed |
-| Currency | vendor/spryker/currency |
-| CurrencyDataImport | vendor/spryker/currency-data-import |
+The default store configuration will now be imported using new data import modules such as CurrencyDataImport. These modules will populate the store configuration in the database.
+A new major module Currency, have been introduced and that are responsible for extending store data and configuring it in the database.
 
 {% endinfo_block %}
 
@@ -54,6 +46,15 @@ Make sure that the following modules have been installed:
 </database>
 
 ```
+
+{% info_block warningBox "Verification" %}
+
+Впевеніться, що наступні зміни були застовані,  для цього додайте валюту до магазину в адмін панелі. 
+
+Make sure that the following changes have been applied by adding a currency to the store in the Administration Interface:
+
+
+{% endinfo_block %}
 
 2. Run the following commands to apply database changes and generate entity and transfer changes:
 
@@ -127,6 +128,35 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 
+{% info_block warningBox "Verification" %}
+
+Ensure that, when a stroy currency added, updated, or deleted, it is exported to or removed from Redis.
+
+Storage type: Redis
+Target entity: Store
+
+Example expected data identifier: `kv:store:de`
+
+Example expected data fragment:
+
+```json
+{
+  "id_store": 1,
+  "name": "DE",
+  ...
+  "default_currency_iso_code": "EUR",
+  "available_currency_iso_codes": [
+    "CHF",
+    "EUR"
+  ],
+  ...
+}
+```
+
+{% endinfo_block %}
+
+
+
 ### 4) Import data
 
 Import locale, store and country data:
@@ -160,7 +190,7 @@ Make sure that:
 {% endinfo_block %}
 
 2. Update the following import action files with the following action:
-    * `data/import/common/commerce_setup_import_config_{SPRYKEREGIONR_STORE}.yml`
+    * `data/import/common/commerce_setup_import_config_{REGION\_STORE}.yml`
     * `data/import/local/full\_{REGION\_STORE}.yml`
     * `data/import/production/full\_{SPRYKER\_STORE}.yml`
 
@@ -182,7 +212,6 @@ data_import:
 ```php
 namespace Pyz\Zed\DataImport;
 
-use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\CurrencyDataImport\Communication\Plugin\DataImport\CurrencyStoreDataImportPlugin;
 
@@ -207,8 +236,8 @@ namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
-use Spryker\Zed\Locale\Communication\Plugin\Application\ConsoleLocaleApplicationPlugin;
 use Spryker\Zed\CurrencyDataImport\CurrencyDataImportConfig;
+use Spryker\Zed\Kernel\Container;
 
 /**
  * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
@@ -245,7 +274,7 @@ vendor/bin/console data:import:currency-store
 
 {% info_block warningBox "Verification" %}
 
-Make sure that warehouse and warehouse address data have been added to the `spy_currency_store` table.
+Make sure that currency store data have been added to the `spy_currency_store` table.
 
 {% endinfo_block %}
 
@@ -371,9 +400,9 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Steps: 
-- Make sure that you get an error message if you try to create a store with a default currency that is not assigned to the default store.
-- Make sure that you get an error message if you try to update a store with a default currency that is not assigned to the default store.
-- Make sure that `spy_currency_store` table has been updated with the default currency of the default store for created store or updated store.
+- Make sure that you get an error message if you try to create a store with a default currency that is not assigned to the store.
+- Make sure that you get an error message if you try to update a store with a default currency that is not assigned to the store.
+- Make sure that `spy_currency_store` table has been updated with the default currency for the created store or updated store.
 - Make sure expanded store transfers have currency codes.
  
 {% endinfo_block %}

@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Cart + Dynamic store feature into a Spryker project.
+This document describes how to integrate the Cart + Dynamic Store feature into a Spryker project.
 
 ## Install feature core
 
@@ -18,31 +18,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{page.version}} |
 | Cart | {{page.version}} |
 
-### 1) Install the required modules using Composer
-
-Run the following command(s) to install the required modules:
-
-```bash
-composer require "spryker-feature/cart":"{{site.version}}" --update-with-dependencies
-composer require "spryker/quote":"^2.18.0" --update-with-dependencies
-```
- 
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules were installed:
-
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| Quote | vendor/spryker/quote |
-| Cart | vendor/spryker/cart |
-| Calculation | vendor/spryker/calculation |
-| CartNote | vendor/spryker/cart-note |
-
-
-{% endinfo_block %}
-
-### 2) Set up behavior
+### 1) Set up behavior
 
 
 Register the following plugins:

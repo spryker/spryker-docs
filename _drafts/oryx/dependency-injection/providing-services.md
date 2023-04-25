@@ -7,10 +7,10 @@ last_updated: Apr 13, 2023
 
 To use and inject services, they must be provided in the DI container. Oryx offers several types of providers:
 
-- `ClassProvider<T>`: Binds a token to a class constructor.
-- `ValueProvider<T>`: Binds a token to a value.
-- `FactoryProvider<T>`: Binds a token to a factory function.
-- `ExistingProvider<T>`: Binds a token to an existing token.
+- `ClassProvider<T>`: binds a token to a class constructor.
+- `ValueProvider<T>`: binds a token to a value.
+- `FactoryProvider<T>`: binds a token to a factory function.
+- `ExistingProvider<T>`: binds a token to an existing token.
 
 You can pass a list of providers as an argument to the `Injector` constructor or to the Injector's `provide` method.
 
@@ -80,7 +80,7 @@ inject('multi*'); // [a,b,c];
 Based on token name, these providers define the following:
 
 - `[token-base-name]*[token-specifier-name]`: a single provider.
-- `[token-base-name]*`: Multi-providers with an array of elements.
+- `[token-base-name]*`: multi-providers with an array of elements.
 
 ```ts
 [
@@ -115,7 +115,7 @@ inject('multi*'); // [a,b,c,d];
 inject('multi*new*'); // [c,d];
 ```
 
-It is also possible to combine multiple providers. You can define a provider with the `[token-base-name]*[token-specifier-name]` token and add another one with the `[token-base-name]*` token.
+You can also combine multiple providers by defining a provider with the `[token-base-name]*[token-specifier-name]` token and adding another one with the `[token-base-name]*` token.
 
 ```ts
 [

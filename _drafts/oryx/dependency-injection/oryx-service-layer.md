@@ -13,7 +13,7 @@ Furthermore, DI is utilized by many higher-level elements and concepts in Oryx, 
 
 ## Dependency injection npm package
 
-The `@spryker-oryx/di` package provides DI not only to Oryx applications but also to other packages and can even be used outside the Oryx framework. It includes a variety of useful utilities to streamline working with DI, such as the following:
+The `@spryker-oryx/di` package provides DI to Oryx applications and other packages. It can even be used outside the Oryx framework. It includes a variety of useful utilities to streamline working with DI, such as the following:
 
 - TypeScript model definitions. For example, Providers.
 - `Injector`: the implementation of a DI container in TypeScript.

@@ -28,7 +28,7 @@ export interface CartService {
 }
 ```
 
-Since TypeScript interfaces are lightweight, there's no overhead or tight coupling between the service definition (and its token) and its implementation.
+Because TypeScript interfaces are lightweight, there's no overhead or tight coupling between the service definition (and its token) and its implementation.
 
 ## Coupling token with interface
 

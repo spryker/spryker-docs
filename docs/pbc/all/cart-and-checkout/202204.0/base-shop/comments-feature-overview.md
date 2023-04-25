@@ -76,7 +76,7 @@ Company users can perform the following actions using the Comments widget on the
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Comments/filtering-tags.gif)
 </details>
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------|---------|

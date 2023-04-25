@@ -29,7 +29,7 @@ Merchants define the following settings when creating product offers:
 |Prices | Product offers support all types of Spryker Commerce OS prices: [volume](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/volume-prices-overview.html), [default and original](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html). |
 | Validity dates | Defines the period when an offer is displayed on the Storefront. Even if the respective product is no longer available, the offer can still be displayed. |
 
-## Related Business User articles
+## Related Business User documents
 
 |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|

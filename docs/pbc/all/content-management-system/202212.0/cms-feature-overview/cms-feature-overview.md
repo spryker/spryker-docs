@@ -45,7 +45,7 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 {% wistia lx0amx3m1b 960 720 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |OVERVIEWS|
 |---|
@@ -57,7 +57,7 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS | TECHNICAL ENHANCEMENTS | REFERENCES |
 |---------|---------|---------|---------|---------|---------|---------|

@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 ---
 
-This document describe the conventions we use and recommend for defining services in Oryx.
+This document describes the conventions we use and recommend for defining services in Oryx.
 
 ## String-based token
 

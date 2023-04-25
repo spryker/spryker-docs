@@ -412,7 +412,7 @@ class ShipmentTypeDataImportConfig extends SprykerShipmentTypeDataImportConfig
 
 | PLUGIN                            | SPECIFICATION                                                                                              | PREREQUISITES | NAMESPACE                                             |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
-| MoneyCollectionFormTypePlugin     | Represents the money collection fields based on stores, currencies, and price types defined in the system. | None          | Spryker\Zed\Money\Communication\Plugin\Form           |
+| MoneyCollectionFormTypePlugin     | Represents the money collection fields based on stores, currencies, and price types defined in the system. | None          | Spryker\Zed\MoneyGui\Communication\Plugin\Form        |
 | StoreRelationToggleFormTypePlugin | Represents a store relation toggle form based on stores registered in the system.                          | None          | Spryker\Zed\Store\Communication\Plugin\Form           |
 | ShipmentTotalCalculatorPlugin     | Calculates shipment total using expenses.                                                                  | None          | Spryker\Zed\Shipment\Communication\Plugin\Calculation |
 

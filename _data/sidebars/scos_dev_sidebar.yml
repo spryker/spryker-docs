@@ -4722,6 +4722,7 @@ entries:
     - title: Modules and application layers
       url: /docs/scos/dev/architecture/modules-and-application-layers.html
     - title: Module API
+      url: /docs/scos/dev/architecture/module-api/module-api.html
       nested:
       - title: Using ~ Composer Constraint for Customized Modules
         url: /docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html

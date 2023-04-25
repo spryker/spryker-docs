@@ -38,7 +38,7 @@ The following list illustrates the order followed to run the data importers and 
   * [payment-method](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html)
   * [payment-method-store](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html)
 
-* Catalog
+* [Catalog](https://docs.spryker.com/docs/pbc/all/product-information-management/202204.0/import-and-export-data/import-product-catalog-data.html)
   * [category-template](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category-template.csv.html)
   * [category](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category.csv.html)
   * [product-attribute-key](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html)
@@ -54,6 +54,8 @@ The following list illustrates the order followed to run the data importers and 
 * Special Products
   * [product-option](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-options/file-details-product-option.csv.html)
   * [product-option-price](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-options/file-details-product-option-price.csv.html)
+
+* [Gift cards](https://docs.spryker.com/docs/pbc/all/gift-cards/202212.0/import-and-export-data/import-of-gift-cards.html)
   * [gift-card-abstract-configuration](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html)
   * [gift-card-concrete-configuration](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html)
   * product-packaging-unit-type
@@ -66,7 +68,7 @@ The following list illustrates the order followed to run the data importers and 
   * configurable-bundle-template-slot
   * configurable-bundle-template-image
 
-* Merchandising
+* [Merchandising](https://docs.spryker.com/docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/merchandising-setup.html)
   * [discount](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount.csv.html)
   * [discount-store](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount-store.csv.html)
   * [discount-voucher](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount-voucher.csv.html)

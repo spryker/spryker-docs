@@ -3579,7 +3579,7 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
         - title: Publish and Synchronize repeated export
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
-        - title: Publish and Synchronize and multi-store shop systems
+        - title: Publish and synchronize and multi-store shop systems
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
         - title: Add publish events
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html

@@ -14,3 +14,5 @@ The *Data publishing* section includes the following documents:
 * [Implement synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html)
 * [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 * [Publish and synchronize and multi-store shop systems](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html)
+* [Publish and Synchronize repeated export](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html)
+* [Synchronization behavior - enabling multiple mappings](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html)

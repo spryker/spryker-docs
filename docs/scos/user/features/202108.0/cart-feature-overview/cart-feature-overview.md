@@ -28,7 +28,7 @@ The feature supports [product groups](/docs/scos/user/features/{{page.version}}/
 
 In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by pointing to the cart icon.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

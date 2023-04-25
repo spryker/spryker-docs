@@ -149,14 +149,14 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 
 ![Filter product labels](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Label/Product+Label+Feature+Overview/filter-labels-yves.png)
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/create-product-labels.html)  |
 | [Edit product labels](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-labels/edit-product-labels.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES |
 |---|---|---|

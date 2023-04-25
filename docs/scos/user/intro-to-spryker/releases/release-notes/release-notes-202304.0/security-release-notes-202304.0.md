@@ -20,7 +20,7 @@ An attacker can inject malicious code in functionalities of the Spryker applicat
 
 ### How to get the fix
 
-Update the affected module `spryker/propel` to version 3.38.0.
+Update the affected module `spryker/propel` to version 3.38.0:
 ```bash
 composer require spryker/propel:"~3.38.0"
 composer show spryker/propel # Verify the version
@@ -162,7 +162,7 @@ composer show spryker/merchant-profile-gui # Verify the version
 
 ## Temporary Denial of Service (DoS) in Back Office
 
-An attacker can cause a temporary denial of service in the Back Office application by inserting very large data while generating vouchers in the merchandise page.
+An attacker can cause a temporary denial of service in the Back Office application by inserting very large data while generating vouchers on the _Merchandising_ page.
 
 ### Affected modules
 
@@ -180,7 +180,7 @@ composer show spryker/discount # Verify the version
 
 ## User session remains valid after deletion in the Back Office
 
-The user's session remains valid, even if the user is deleted in the Back Office. This results in the deleted user getting an exception page with stack trace information while trying to log into the Front Office.
+The user's session remains valid, even if the user is deleted in the Back Office. This results in the deleted user getting an exception page with stack trace information while trying to log in to the Storefront.
 
 ### Affected modules
 
@@ -194,9 +194,9 @@ The user's session remains valid, even if the user is deleted in the Back Office
 
 ### How to get the fix
 
-To apply the fix, the customer needs to follow the below steps:
+To apply the fix, follow these steps:
 
-1. Install or update required modules:
+1. Install or update the required modules:
 ```bash
 composer require "spryker/customer":"^7.49.0" "spryker/customer-storage":"^1.0.0" "spryker/oauth":"^2.8.0" "spryker/oauth-customer-validation":"^1.0.0" "spryker/oauth-extension":"^1.8.0" "spryker-shop/customer-validation-page":"^1.0.0"
 ```

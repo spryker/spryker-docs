@@ -53,7 +53,7 @@ someServiceMethod(field) {
 
 ```
 
-In this example, the `inject` method is used to resolve a dependency based on a dynamic token that includes the `field` type. Since the `field` type is only known at runtime, it's impossible to inject the dependency directly. Instead, the `INJECTOR` token is injected, allowing the `inject` method to resolve the dependency dynamically.
+In this example, the `inject` method is used to resolve a dependency based on a dynamic token that includes the `field` type. Because the `field` type is only known at runtime, it's impossible to inject the dependency directly. Instead, the `INJECTOR` token is injected, allowing the `inject` method to resolve the dependency dynamically.
 
 ## Multi-providers
 

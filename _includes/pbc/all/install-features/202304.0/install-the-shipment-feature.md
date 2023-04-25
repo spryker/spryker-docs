@@ -187,10 +187,10 @@ spryker_no_shipment,US,CHF,0,0
 | COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
 | shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
-| store               | mandatory | string    |                                 |                                     |
-| currency            | mandatory | string    |                                 |                                     |
-| value_net           | ???       | string    |                                 |                                     |
-| value_gross         | ???       | string    |                                 |                                     |
+| store               | mandatory | string    | DE                              | Name of an existing store.          |
+| currency            | mandatory | string    | EUR                             | Name of an existing currency.       |
+| value_net           | optional  | integer   | 390                             | Net price in coins.                 |
+| value_gross         | optional  | integer   | 490                             | Gross price in coins.               |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_type.csv**
 ```yaml

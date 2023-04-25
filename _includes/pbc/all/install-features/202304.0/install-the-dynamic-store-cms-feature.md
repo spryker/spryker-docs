@@ -1,5 +1,5 @@
 
-This document describes how to integrate the CMS + Dynamic Store feature into a Spryker project.
+This document describes how to integrate the Dynamic Store + CMS feature into a Spryker project.
 
 ## Install Feature Frontend
 

@@ -487,7 +487,7 @@ Also check queue `sync.storage.store` in RabbitMQ.
 {% info_block warningBox "Verification" %}
 
 
-For the changes to take effect, you need to suspend the scheduler.
+Steps for the changes to take effect, you need to suspend the scheduler.
 1. Stop scheduler and run the following commands. 
 
 ```bash
@@ -495,13 +495,14 @@ vendor/bin/console scheduler:suspend
 ```
 
 2. Create store in the Back Office. Setup the store country and locale. 
-3. Check `publish` queue in RabbitMQ. You should see the following messages
+3. Check `event` queue in RabbitMQ.  Make sure events for update store, country and locale are in the queue.
 
-
-
+Note: Don't forget to start scheduler after the verification.
 
 
 {% endinfo_block %}
+
+
 
 2. Run the following commands to apply database changes and generate entity and transfer changes:
 

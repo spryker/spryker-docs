@@ -1,5 +1,5 @@
 
-This document describes how to ingrate the Customer Account Management feature + Dynamis Store feature into a Spryker project.
+This document describes how to ingrate the Dynamic Store + Customer Account Management feature into a Spryker project.
 
 ## Install feature core
 

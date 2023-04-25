@@ -1,5 +1,5 @@
 
-This document describes how to ingrate the Avalability Notification + Dynamic Store feature into a Spryker project.
+This document describes how to ingrate the Dynamic Store + Avalability Notification feature into a Spryker project.
 
 ## Install feature core
 

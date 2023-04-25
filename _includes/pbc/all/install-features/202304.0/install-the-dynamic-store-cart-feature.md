@@ -1,13 +1,7 @@
 
-This document describes how to integrate the Cart + Dynamic Store feature into a Spryker project.
+This document describes how to integrate the Dynamic Store + Cart feature into a Spryker project.
 
 ## Install feature core
-
-{% info_block errorBox %}
-
-The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the *Cart Dynamic store functionality*.
-
-{% endinfo_block %}
 
 ### Prerequisites
 

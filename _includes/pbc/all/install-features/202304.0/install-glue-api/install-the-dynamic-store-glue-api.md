@@ -48,6 +48,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+If everything is set up correctly, a request to `https://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE"},{"key":"Store","value":"DE"}]` should result in a response whithout any errors and contains the `content-language` header set to **de_DE**.
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
@@ -89,13 +94,19 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-Send a request to the Glue Backend API with the following headers:
+If everything is set up correctly, a request to `https://glue-backend.mysprykershop.com` with the header `[{"key":"Store","value":"DE"}]` should result in a response without any errors.
+
+Example for test: 
 
 ```bash
-Store: DE
-```
-Make sure that the store is set correctly.
+curl --location --request POST 'http://glue-backend.eu.mysprykershop.com/token' \
+--header 'Store: DE' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grantType=password' \
+--data-urlencode 'username={USERNAME}' \
+--data-urlencode 'password={PASSWORD}'
 
+```
 
 {% endinfo_block %}
 
@@ -130,11 +141,6 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block warningBox "Verification" %}
 
-Send a request to the Glue Storefront API with the following headers:
-
-```bash
-Store: DE
-```
-Make sure that the store is set correctly.
+If everything is set up correctly, a request to `https://glue-storefront.mysprykershop.com` with the header `[{"key":"accept-language","value":"de_DE"},{"key":"Store","value":"DE"}]` should result in a response whithout any errors and contains the `content-language` header set to **de_DE**.
 
 {% endinfo_block %}

@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Product + Dynamic Store feature into a Spryker project.
+This document describes how to integrate the  Dynamic Store + Product feature into a Spryker project.
 
 ## Install feature core
 

@@ -6,3 +6,7 @@ template: back-office-user-guide-template
 ---
 
 {% include pbc/all/manage-in-the-back-office/log-into-the-back-office.md %} <!-- To edit, see /_includes/pbc/all/manage-in-the-back-office/log-into-the-back-office.md -->
+
+## Next steps
+
+[Manage product reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html)

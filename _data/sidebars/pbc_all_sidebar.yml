@@ -45,6 +45,18 @@ entries:
                     url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                include_versions:
+                - "202212.0"
+                nested:
+                  - title: Add carrier companies
+                    url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-carrier-companies.html
+                  - title: Add delivery methods
+                    url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-delivery-methods.html
+                  - title: Edit delivery methods
+                    url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/edit-delivery-methods.html
+              - title: Manage in the Back Office
+                include_versions:
+                - "202204.0"
                 nested:
                   - title: Add carrier companies
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-carrier-companies.html
@@ -282,6 +294,8 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/file-details-sales-order-threshold.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                include_versions:
+                - "202212.0"
                 nested:
                   - title: Define global thresholds
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html
@@ -525,6 +539,8 @@ entries:
                 url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-navigation-trees.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/content-management-system/manage-in-the-back-office/log-into-the-back-office.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: "Best practices: Add content to the Storefront pages using templates and slots"
                 url: /docs/pbc/all/content-management-system/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
@@ -709,6 +725,8 @@ entries:
             url: /docs/pbc/all/customer-relationship-management/customer-access-feature-overview.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/customer-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: Manage customers
                 nested:
@@ -816,6 +834,8 @@ entries:
                 url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/discount-management/manage-in-the-back-office/log-into-the-back-office.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: "Best practices: Promote products with discounts"
                 url: /docs/pbc/all/discount-management/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
@@ -961,6 +981,8 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-the-merchant-feature.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                include_versions:
+                - "202212.0"
                 nested:
                   - title: Create merchants
                     url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/create-merchants.html
@@ -1042,6 +1064,8 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/import-data/file-details-merchant-user.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
+                include_versions:
+                - "202212.0"
                 nested:
                   - title: Manage merchants
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants.html
@@ -1136,6 +1160,8 @@ entries:
             url: /docs/pbc/all/order-management-system/file-details-order-status.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/order-management-system/manage-in-the-back-office/log-into-the-back-office.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: Orders
                 nested:
@@ -1320,6 +1346,8 @@ entries:
                 url: /docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/price-management/manage-in-the-back-office/log-into-the-back-office.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: Create scheduled prices
                 url: /docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html
@@ -1655,6 +1683,8 @@ entries:
                 url: /docs/pbc/all/product-information-management/import-and-export-data/file-details-product-label.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/product-information-management/manage-in-the-back-office/log-into-the-back-office.html
+            include_versions:
+            - "202212.0"
             nested:
               - title: Attributes
                 nested:
@@ -1762,6 +1792,8 @@ entries:
             url: /docs/pbc/all/product-relationship-management/file-details-product-relation.csv.html
           - title: Manage in the Back Office
             url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
+            include_versions:
+            - "202212.0"            
             nested:
               - title: "Best practices: Promote products with product relations"
                 url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html

@@ -3810,6 +3810,7 @@ entries:
       - title: Container
         url: /docs/scos/dev/migration-concepts/silex-replacement/container.html
       - title: Router
+        url: /docs/scos/dev/migration-concepts/silex-replacement/router/router.html
         nested:
         - title: Router Yves
           url: /docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html

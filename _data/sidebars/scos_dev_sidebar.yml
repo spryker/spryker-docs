@@ -4355,6 +4355,7 @@ entries:
           - title: Exporting Econda data
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
     - title: Operational tools, monitoring, legal, etc.
+      url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/operational-tools-monitoring-legal-etc.html
       nested:
         - title: New Relic
           include_versions:

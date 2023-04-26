@@ -4380,8 +4380,6 @@ entries:
       nested:
         - title: Adyen
           url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/adyen.html
-          include_versions:
-          - "202212.0"
           nested:
             - title: Installing and configuring Adyen
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html

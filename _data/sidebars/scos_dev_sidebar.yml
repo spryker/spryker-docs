@@ -4304,6 +4304,9 @@ entries:
       - title: Customer communication
         nested:
         - title: Episerver guides
+          url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver.html
+          include_versions:
+          - "202212.0"
           nested:
           - title: Integrating Episerver
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html

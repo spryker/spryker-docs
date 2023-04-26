@@ -4317,14 +4317,17 @@ entries:
           - title: Order reference commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
         - title: Inxmail guides
+          url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail.html
+          include_versions:
+          - "202212.0"
           nested:
           - title: Installing and configuring Inxmail
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
           - title: Integrating Inxmail
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
-          - title: API requests
+          - title: Inxmail API requests
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html
-          - title: Order referenced commands
+          - title: Inxmail order referenced commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
       - title: Personalization and cross-selling
         nested:

@@ -3678,7 +3678,8 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
         - title: Add events
           url: /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
-    - title: Extending Spryker
+    - title: Extend Spryker
+      url: /docs/scos/dev/back-end-development/extend-spryker/extend-spryker.html
       nested:
       - title: Development strategies
         url: /docs/scos/dev/back-end-development/extend-spryker/development-strategies.html

@@ -4392,6 +4392,7 @@ entries:
             - title: Enabling filtering of payment methods
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
         - title: Afterpay
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/afterpay.html
           nested:
             - title: Installing and configuring Afterpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/installing-and-configuring-afterpay.html

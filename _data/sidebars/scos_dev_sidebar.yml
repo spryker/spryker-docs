@@ -4437,6 +4437,7 @@ entries:
                 - title: Handling orders with Amazon Pay API
                   url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
         - title: Arvato
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato.html
           nested:
             - title: Installing and configuring Arvato
               url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html

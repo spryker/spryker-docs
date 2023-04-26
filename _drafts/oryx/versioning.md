@@ -24,19 +24,13 @@ This indicates that with a version number x.y.z:
 To give you a sneak peek of what's to come, we offer pre-release versions called Release Candidates (rc) for every major and minor release.
 
 ## Release Process
-The Oryx framework comprises three distinct components, each of which is released separately:
+The Oryx framework comprises two distinct components, each of which is released separately:
 - Libraries
-- Application
 - Labs
 
 ### Libraries
 The primary sources of functionality within the Oryx frameworks are the Oryx libraries, which include core features, utilities and helpers, domain-specific functionality, as well as pre-designed themes and presets that can be readily used. 
 All the [packages](https://www.npmjs.com/org/spryker-oryx) released together under the same version. 
-
-### Applications
-Oryx applications serve as boilerplate templates for specific domains or areas, such as b2c storefronts, fulfillment applications, and more.
-Oryx applications are packages released together under the same version. 
-This version is different and independent from library packages version.
 
 ### Labs package
 The Oryx labs package consists of experimental or demo functionality, and its version is tied to the current version of the libraries and is never considered stable. Therefore, the Labs version number comprises three parts:

@@ -19,7 +19,7 @@ Follow the steps below to install the Shipment feature core.
 
 ### Prerequisites
 
-To start the feature integration, overview and install the necessary features:
+To start the feature integration, integrate the required features:
 
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
@@ -106,6 +106,7 @@ spryker_drone_shipment-air_light,Air Light,Spryker Drone Shipment,Shipment Taxes
 spryker_no_shipment,NoShipment,NoShipment,Tax Exempt
 free_pickup,Free Pickup,pickup,Tax Exempt
 ```
+
 | COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION              |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------|
 | shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of the shipment method.   |
@@ -135,6 +136,7 @@ spryker_no_shipment,AT
 spryker_no_shipment,DE
 spryker_no_shipment,US
 ```
+
 | COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
 | shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
@@ -184,6 +186,7 @@ spryker_drone_shipment-air_light,US,CHF,1400,1700
 spryker_no_shipment,US,EUR,0,0
 spryker_no_shipment,US,CHF,0,0
 ```
+
 | COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
 | shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
@@ -198,6 +201,7 @@ key,name,is_active
 pickup,Pickup,1
 delivery,Delivery,1
 ```
+
 | COLUMN    | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION             |
 |-----------|-----------|-----------|--------------|------------------------------|
 | key       | mandatory | string    | pickup       | Key for the shipment type.   |
@@ -214,6 +218,7 @@ delivery,DE
 pickup,US
 delivery,US
 ```
+
 | COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                  |
 |-------------------|-----------|-----------|--------------|-----------------------------------|
 | shipment_type_key | mandatory | string    | pickup       | Key of an existing shipping type. |
@@ -230,12 +235,13 @@ spryker_drone_shipment-air_light,delivery
 spryker_no_shipment,delivery
 free_pickup,pickup
 ```
+
 | COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
 | shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
 | shipment_type_key   | mandatory | string    | delivery                        | Key of an existing shipping type.   |
 
-Register the following data import plugins:
+2. Register the following data import plugins:
 
 | PLUGIN                                     | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                           |
 |--------------------------------------------|---------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
@@ -281,7 +287,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-2. Enable the behaviors by registering the console commands:
+3. Enable the behaviors by registering the console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -319,7 +325,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-3. Import data:
+4. Import data:
 
 ```bash
 console data:import:shipment

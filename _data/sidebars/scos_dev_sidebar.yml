@@ -4096,6 +4096,7 @@ entries:
     - title: Development Virtual Machine, Docker Containers & Console
       url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
     - title: Zed API
+      url: /docs/scos/dev/sdk/zed-api/zed-api.html
       nested:
       - title: Project implementation - Zed API
         url: /docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html

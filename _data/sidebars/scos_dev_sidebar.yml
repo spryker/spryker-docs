@@ -4782,7 +4782,7 @@ entries:
       - title: Frontend performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
     - title: Testing guidelines
-      url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+      url: /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
       - title: Setting up tests
         url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html

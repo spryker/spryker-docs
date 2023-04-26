@@ -4262,6 +4262,9 @@ entries:
       - title: Analytics
         nested:
         - title: FACT-Finder
+          url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/fact-finder.html
+          include_versions:
+          - "202212.0"
           nested:
           - title: Installing and configuring FACT-Finder NG API
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html

@@ -6,7 +6,7 @@ template: concept-topic-template
 ## Release types
 Spryker uses Semantic versioning for its packages. There are 3 release types - major, minor, and patch. For more information visit our [Semantic versioning - major vs. minor vs. patch release](https://docs.spryker.com/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-release) page.
 
-Depending on the customization strategy and the type of release users need to invest additional efforts to integrate a release.
+Depending on the customization strategy and the type of release, you will possibly need to invest additional efforts to integrate a release.
 
 ## Customization types
 You can use the following strategies to customize your Spryker project:
@@ -14,7 +14,7 @@ You can use the following strategies to customize your Spryker project:
 - Configuration customization
 - Plug and Play customization
 - Project modules development strategy
-- Module customization(a.k.a. Private API customization)
+- Module customization (or, Private API customization)
 - Module replacement
 
 For more information, visit our [Development strategies](https://docs.spryker.com/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) article.
@@ -26,7 +26,7 @@ In terms of upgradability, we'll look at the following customization strategies:
 - Plug and Play development strategies.
 
 ### Module configuration customization
-Module configuration is one of the SCOS Public APIs.  This means that Spryker makes sure to keep both environment and module configuration stable in the patch and minor releases.
+Module configuration is one of the SCOS Public APIs.  This means that Spryker makes sure to keep both the environment and module configuration stable in the patch and minor releases.
 
 ### Plug and Play customization
 Plug and Play is Spryker’s out-of-the-box development strategy that allows customers to extend a project with various built-in plugins. In case there’s no plugin, it is recommended to create a feature request or create a custom plugin and wire it up in the DependencyProvider, or via configuration.
@@ -34,7 +34,7 @@ Plug and Play is Spryker’s out-of-the-box development strategy that allows cus
 Check out our [Plugins](https://docs.spryker.com/docs/scos/dev/back-end-development/plugins/plugins.html) article to get more information.
 
 ### Private API customization
-Spryker allows changing private APIs and core code in general. But, in this case, part of the upgrade responsibilities moves to the side of the customer.
+Spryker generally allows changing private APIs and core code. However in this case, part of the upgrade responsibilities move to the side of the customer.
 
 What is a Private API?
 
@@ -86,7 +86,7 @@ This section explains how different project customizations affect upgradability 
 
 {% info_block warningBox "Note" %}
 
-It describes only cases related to the existing packages. For the new packages upgradability works perfectly.
+Only cases related to existing packages are addressed below. For new packages, upgradability works perfectly.
 
 {% endinfo_block %}
 
@@ -121,33 +121,33 @@ class CategoryConfig extends SprykerCategoryConfig
 }
 ```
 
-Awesome, we adjusted the chunk size according to our needs and everything is perfect.
+We managed to adjust the chunk size according to our needs and everything works as intended.
 
 Assuming this customization is compatible with the version of Spryker being used, we can integrate new releases of the Catalog module without any additional effort.
 
 Let’s see how this affects our upgrade process.
 
-#### Patch release. (e.g., 1.2.1 to 1.2.2)
+#### Patch releases
 
-Patch releases will not affect `DEFAULT_CATEGORY_READ_CHUNK` value or usage so it’s safe to automatically update to patches even if the project has modified the constant value to suite its needs.
+Patch releases, such as for example 1.2.1 to 1.2.2, will not affect the `DEFAULT_CATEGORY_READ_CHUNK` value or usage so it is safe to automatically update to patches even if the project has modified the constant value to suit its needs.
 
-#### Minor release (e.g., 1.2.1 to 1.3.0)
+#### Minor release
 
-If the `DEFAULT_CATEGORY_READ_CHUNK` constant in the core module is deprecated in a minor version release and a new constant `CATEGORY_READ_CHUNK` is introduced to replace it. Spryker will keep backward compatibility and the old constant will still be used which makes the minors also safe for automatic update.
+Say the `DEFAULT_CATEGORY_READ_CHUNK` constant in the core module is deprecated in a minor version release, for example 1.2.1 to 1.3.0,  and a new constant `CATEGORY_READ_CHUNK` is introduced to replace it. Spryker will keep backwards compatibility and the old constant will still be used which makes minor updates also safe for automatic update.
 
-The problem might be lying in the minor releases that modify the project-level value of the constant. In case the project did not modify the default Core configuration value previously, the Upgrader tool might automatically add a new project-level value that might not suit the project's needs. In this case, a review might be needed.
+A potential issue can be found in the minor releases that modify the project-level value of the constant. In case the project did not modify the default Core configuration value previously, the Upgrader tool might automatically add a new project-level value that might not suit the project's needs. In this case, a review might be required.
 
-#### Major release (e.g., 1.2.1 to 2.0.0)
+#### Major release
 
-If the `DEFAULT_CATEGORY_READ_CHUNK` constant is completely removed from the core module in a major version release and a new constant `CATEGORY_READ_CHUNK` is used instead, end users who have customized `DEFAULT_CATEGORY_READ_CHUNK` in their project-level configuration will need to update their configuration to remove any references to the removed constant and use `CATEGORY_READ_CHUNK` instead. If they do not update their configuration, their application may experience unexpected behavior.
+If the `DEFAULT_CATEGORY_READ_CHUNK` constant is completely removed from the core module in a major version release, for example 1.2.1 to 2.0.0, and a new constant `CATEGORY_READ_CHUNK` is used instead, end users who have customized `DEFAULT_CATEGORY_READ_CHUNK` in their project-level configuration will need to update their configuration to remove any references to the removed constant and use `CATEGORY_READ_CHUNK` instead. If they do not update their configuration, their application may experience unexpected behavior.
 
-In general, it's important for developers to be aware of any changes to module configuration in new releases and to update their project-level configuration accordingly. This can help to ensure that their application continues to function as expected and to avoid unexpected issues or errors.
+In general, it's important for you to be aware of any changes to module configuration in new releases and to update your project-level configuration accordingly. This can help to ensure that your application continues to function as expected and to avoid unexpected issues or errors.
 
-### Plug and Play customization and how it affects upgradeability
+### Plug and Play customization and how it affects upgradability
 
 Let’s check this with the `DiscountCalculationConnector` module example and its releases.
 
-The `Calculation` module provides an extension point via `CalculationDependencyProvider` so the customers can create their own plugins that implements `CalculationPluginInterface` and add it to the plugin stack in the `CalculationDependencyProvider::getOrderCalculatorPluginStack()`. Let’s imagine the customer added their own plugins in the following way:
+The `Calculation` module provides an extension point via `CalculationDependencyProvider`, so you can create your own plugins that implement `CalculationPluginInterface` and add it to the plugin stack in the `CalculationDependencyProvider::getOrderCalculatorPluginStack()`. Let’s imagine you added your own plugins in the following way:
 
 ```php
 /**
@@ -166,15 +166,15 @@ protected function getOrderCalculatorPluginStack(): array
 
 In this particular example, the order does matter. Tax can’t be calculated before final price calculation.
 
-Now, let’s check how it affects upgradability.
+Now let’s check how this affects upgradability.
 
-#### Patch release (e.g., 1.0.0 to 1.0.1)
+#### Patch release
 
-And once again - the 1.0.1 version release of the `DiscountCalculationConnector` module provides only a typo fix in the `DiscountCalculator` business model used (executed) by the `DiscountCalculatorPlugin`. This change does not affect the plugin external API, which means it doesn’t affect upgradability.
+The 1.0.0 to 1.0.1 version release of the `DiscountCalculationConnector` module provides nothing beyond a typo fix in the `DiscountCalculator` business model used by the `DiscountCalculatorPlugin`. This change does not affect the plugin external API, which in turn means it doesn’t affect upgradability.
 
-#### Minor release (e.g., 1.0.0 to 1.1.0)
+#### Minor release
 
-The `DiscountCalculationConnector` module has a new 1.1.0 version that deprecates the old `DiscountCalculatorPlugin` and introduces the new `DiscountAmountCalculatorPlugin`.
+The `DiscountCalculationConnector` module has a new 1.0.0 to 1.1.0 version that deprecates the old `DiscountCalculatorPlugin` and introduces the new `DiscountAmountCalculatorPlugin`.
 
 In this case, the Upgrader tool automatically unwires the old plugin and adds a new plugin to the end of the plugin stack. The upgraded code will be the following:
 
@@ -190,7 +190,7 @@ protected function getOrderCalculatorPluginStack(): array
 }
 ```
 
-As a result, the amount of refund will be higher than the amount that the client paid for the order because it doesn’t take into account the discount. The project still works, and nothing fails but the business logic is changed leading to incorrect calculations during the checkout. This automatically applied minor release changes need review and QA before going to production.
+As a result, the refunded amount will be higher than the amount that the client paid for the order because the plugin doesn’t take into account the discount. The project still works, and nothing fails but the business logic is changed leading to incorrect calculations during the checkout. Because of this, automatically applied minor release changes need review and QA before going to production.
 
 Another case we can look at is when a project has previously customized the whole discount calculation process by unwiring the old plugin and introducing the new custom one to replace it:
 
@@ -206,7 +206,7 @@ protected function getOrderCalculatorPluginStack(): array
 }
 ```
 
-In this case, the automatic update to the `DiscountCalculationConnector` module version 1.1.0 will introduce an additional plugin for discount calculation while not removing the custom project’s plugin. This mean that a project developer (or anyone else who reviews the upgrader pull requests) needs to keep an eye open for this new plugin and remove it when it’s added:
+In this case, the automatic update to the `DiscountCalculationConnector` module version 1.1.0 will introduce an additional plugin for discount calculation while not removing the custom project’s plugin. This means that a project developer (or anyone else who reviews the upgrader pull requests) needs to keep an eye open for this new plugin and remove it when it’s added:
 
 ```php
 protected function getOrderCalculatorPluginStack(): array
@@ -221,9 +221,9 @@ protected function getOrderCalculatorPluginStack(): array
 }
 ```
 
-#### Major release (e.g., 1.0.0 to 2.0.0)
+#### Major release
 
-For instance, the `DiscountCalculationConnector` before the major release provided the `DiscountCalculatorPlugin`:
+For instance, the `DiscountCalculationConnector` before the major release, such as 1.0.0 to 2.0.0, provided the `DiscountCalculatorPlugin`:
 
 ```php
 protected function getOrderCalculatorPluginStack(): array
@@ -275,7 +275,7 @@ In the example above, the following issues may appear:
 
 As a result, `getOrderCalculatorPluginStack` must be adjusted manually in order to fix issues.
 
-### Private API customization and how it affects upgradeability
+### Private API customization and how it affects upgradability
 
 Let’s check this with the `Acme` module example and its releases.
 

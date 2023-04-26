@@ -4332,6 +4332,9 @@ entries:
       - title: Personalization and cross-selling
         nested:
         - title: Econda
+          url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
+          include_versions:
+          - "202212.0"
           nested:
           - title: Installing Econda
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html

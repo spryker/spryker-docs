@@ -1,7 +1,7 @@
 ---
-title: Marketplace Dynamic multiple stores feature integration
+title: Marketplace MerchantPortal Core + Dynamic Store feature integration
 last_updated: Apr 25, 2023
-description: Integrate theDynamic multiple stores feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace MerchantPortal Core + Dynamic Store feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 

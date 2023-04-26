@@ -49,10 +49,7 @@ A new major module Currency, have been introduced and that are responsible for e
 
 {% info_block warningBox "Verification" %}
 
-Впевеніться, що наступні зміни були застовані,  для цього додайте валюту до магазину в адмін панелі. 
-
-Make sure that the following changes have been applied by adding a currency to the store in the Administration Interface:
-
+Make sure that the following changes have been applied by adding a currency to the store in the Administration Interface. 
 
 {% endinfo_block %}
 

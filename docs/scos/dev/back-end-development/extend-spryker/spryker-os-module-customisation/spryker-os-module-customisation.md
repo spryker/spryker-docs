@@ -2,7 +2,7 @@
 title: Spryker OS module customisation
 description: This section lists documents inside the Spryker OS module customisation section.
 last_updated: Apr 26, 2023
-template: concept-topic
+template: concept-topic-template
 ---
 
 The *Spryker OS module customisation* section includes the following documents:

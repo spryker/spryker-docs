@@ -5,19 +5,19 @@ last_updated: Apr 19, 2023
 template: concept-topic-template
 ---
 
-While the Oryx code base is [available on Github](https://github.com/spryker/oryx/), the code is published and distributed as so-called packages on npm. [npmjs.com](https://www.npmjs.com/) is a widely used registry that is used to packages. Package managers (e.g. npm, yarn, deno, bun, etc) can be used to install the dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of your application.
+While the Oryx code base is [available on Github](https://github.com/spryker/oryx/), the code is published and distributed as so-called packages on npm. [npmjs.com](https://www.npmjs.com/) is a widely used registry that is used to packages. Package managers (e.g. npm, yarn, deno, bun, etc) are used to install dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
 
-The Oryx [packages](./packages.md) are distributed on under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped, see versioning for more information on the version strategy.
+Oryx [packages](./packages.md) are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see versioning.
 
 <!-- Add link to version.md (see https://spryker.atlassian.net/browse/HRZ-2147) -->
 
-You are encourage to [install](./set-up-oryx.md) the packages to your application rather than cloning the Oryx repository. By depending on packages, you can upgrade to later versions of the packages going forward with little effort.
+We recommend [installing](./set-up-oryx.md) the packages instead of cloning the Oryx repository. By depending on packages, you can easily upgrade to later versions of the packages.
 
 ## Layers
 
-While packages are all distributed as a flat list, there is an architectural hierarchy. The hierarchy is important as it will protect from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages can never depend on a layer above.
+While packages are distributed as a flat list, there is an architectural hierarchy. The hierarchy protects from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages can never depend on a layer above.
 
-While the package layering might not be relevant during your development, it might help you to better understand the package dependencies. The diagram below shows you the four package layers, the top layer in the diagram is the [boilerplate application](./boilerplate.md) that uses a preset to setup the a standard application.
+While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows you four package layers. The top layer is the [boilerplate application](./boilerplate.md) that uses a preset to setup the a standard application.
 
 <!-- Add link to presets.md (see https://spryker.atlassian.net/browse/HRZ-2153) -->
 
@@ -42,11 +42,11 @@ platform --> base
 domain --> base
 ```
 
-### Template packages
+## Template packages
 
-The template layer contains packages that can be used as quick starters for demos and projects. Templated packages do follow semantic versioning and will deliver on the promise of upgradability. Some packages in the template layer (e.g. presets) are fairly opinionated and might not be used inside your final setup. Their main purpose is to get you up fast with a standard frontend application.
+The template layer contains packages that can be used as quick starters for demos and projects. Templated packages follow semantic versioning and ensure upgradability. Some packages in the template layer, like presets, are opinionated and might not be used inside your final setup. Their main purpose is to quickly get up and running a standard frontend application.
 
-| Packages                                                       | Location                    |
+| PACKAGES                                                       | LOCATION                    |
 | -------------------------------------------------------------- | --------------------------- |
 |                                                                |                             |
 | [Application](https://www.npmjs.com/package/@spryker-oryx/)    | `@spryker-oryx/application` |
@@ -54,13 +54,17 @@ The template layer contains packages that can be used as quick starters for demo
 | [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)      | `@spryker-oryx/labs`        |
 | [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)  | `@spryker-oryx/themes`      |
 
-> **Note:** the labs package is an exception here. The labs package consists of experimental or demo functionality and is not recommended to be used in production.
+{% info_block infoBox %}
 
-### Domain packages
+The Labs package is an exception. It consists of experimental or demo functionality and is not recommended to be used in production.
 
-Domain packages provide components and service logic for a certain domain. Organising packages in domains helps the developer experience, as its' fairly easy to understand where to find a certain component or service. An example of a domain package is the `product` package, which contains all product related components as well as the product services and adapters that integrates with Spryker APIs.
+{% endinfo_block %}
 
-| Packages                                                         | Location                 |
+## Domain packages
+
+Domain packages provide components and service logic for a certain domain. Organizing packages in domains improves the developer experience by making it easy to understand where to find a certain component or service. For example, the `product` domain package contains all product related components, as well as product services and adapters that integrate with Spryker APIs.
+
+| PACKAGES                                                         | LOCATION                 |
 | ---------------------------------------------------------------- | ------------------------ |
 | [Auth](https://www.npmjs.com/package/@spryker-oryx/auth)         | `@spryker-oryx/auth`     |
 | [Cart](https://www.npmjs.com/package/@spryker-oryx/cart)         | `@spryker-oryx/cart`     |
@@ -73,11 +77,11 @@ Domain packages provide components and service logic for a certain domain. Organ
 | [Site](https://www.npmjs.com/package/@spryker-oryx/site)         | `@spryker-oryx/site`     |
 | [User](https://www.npmjs.com/package/@spryker-oryx/user)         | `@spryker-oryx/user`     |
 
-### Platform packages
+## Platform packages
 
 The platform layer contains the core packages of Oryx framework. They provide the infrastructure to the whole system.
 
-| Packages                                                                           | Location                          |
+| PACKAGES                                                                           | LOCATION                          |
 | ---------------------------------------------------------------------------------- | --------------------------------- |
 | [Core](https://www.npmjs.com/package/@spryker-oryx/core)                           | `@spryker-oryx/core`              |
 | [Experience](https://www.npmjs.com/package/@spryker-oryx/experience)               | `@spryker-oryx/experience`        |
@@ -87,11 +91,11 @@ The platform layer contains the core packages of Oryx framework. They provide th
 | [push-notification](https://www.npmjs.com/package/@spryker-oryx/push-notification) | `@spryker-oryx/push-notification` |
 | [router](https://www.npmjs.com/package/@spryker-oryx/router)                       | `@spryker-oryx/router`            |
 
-### Base packages
+## Base packages
 
-The base layer contains packages that serve as utilities to all above layers. An important part of the base layer is the design system package (UI).
+The base layer contains packages that serve as utilities to all layers above. An important part of the base layer is the design system package (UI).
 
-| Packages                                                           | Location                  |
+| PACKAGES                                                           | LOCATION                  |
 | ------------------------------------------------------------------ | ------------------------- |
 | [UI](https://www.npmjs.com/package/@spryker-oryx/ui)               | `@spryker-oryx/ui`        |
 | [Form](https://www.npmjs.com/package/@spryker-oryx/form)           | `@spryker-oryx/form`      |

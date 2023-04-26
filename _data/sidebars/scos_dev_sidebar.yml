@@ -4397,6 +4397,7 @@ entries:
             - title: Integrating Afterpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
         - title: Amazon Pay
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay.html
           nested:
             - title: Configuring Amazon Pay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html

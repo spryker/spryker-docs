@@ -4686,7 +4686,10 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
           - title: Payolution request flow
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-request-flow.html
-        - title: ratenkauf by easyCredit
+        - title: Ratenkauf by easyCredit
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
+          include_versions:
+          - "202212.0"
           nested:
           - title: Installing and configuring ratenkauf by easyCredit
             url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html

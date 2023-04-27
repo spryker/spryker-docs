@@ -4562,6 +4562,9 @@ entries:
                   - "201907.0"
                   - "202001.0"
         - title: Computop
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop.html
+          include_versions:
+          - "202212.0"
           nested:
           - title: Installing and configuring Computop
             url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring-computop.html
@@ -4570,6 +4573,9 @@ entries:
           - title: API calls
             url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-api-calls.html
           - title: Integrating payment methods for Computop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-payment-methods-for-computop.html
+            include_versions:
+            - "202212.0"
             nested:
             - title: Integrating the Sofort payment method
               url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html

@@ -269,15 +269,15 @@ protected function getOrderCalculatorPluginStack(): array
 
 In the example above, the following issues may appear:
 
-- If `CustomDiscountAmountCalculatorPlugin` extends core `DiscountCalculatorPlugin` which does not exist anymore. The code will fail.
-- The `DiscountAmountCalculatorPlugin` was added to the end because the Upgrader couldn’t find the removed plugin in the stack so it didn’t replace it.
-- Discount is calculated two times.
+- If `CustomDiscountAmountCalculatorPlugin` extends core `DiscountCalculatorPlugin` which does not exist anymore, the code will fail.
+- The `DiscountAmountCalculatorPlugin` was added to the end because the Upgrader couldn’t find the removed plugin in the stack and didn’t replace it.
+- The discount is calculated two times.
 
-As a result, `getOrderCalculatorPluginStack` must be adjusted manually in order to fix issues.
+As a result, `getOrderCalculatorPluginStack` must be adjusted manually in order to fix the issues that came up.
 
 ### Private API customization and how it affects upgradability
 
-Let’s check this with the `Acme` module example and its releases.
+Let’s check this scenario with the `Acme` module example and its releases.
 
 A core module named `Acme` is provided as a `spryker/acme` package with version 1.0.0. For instance, it contains `AcmeReader`.
 
@@ -297,7 +297,7 @@ class AcmeReader implements AcmeReaderInterface
 }
 ```
 
-And let’s say for some reason, the customer wants to customize `AcmeReader`. For example, some extra logic execution is added.
+And let’s say for some reason, the customer wants to customize `AcmeReader`, or example,  by adding extra logic execution.
 
 ```php
 class AcmeReader extends SprykerAcmeReader
@@ -323,11 +323,11 @@ class AcmeReader extends SprykerAcmeReader
 }
 ```
 
-Now, let’s imagine Spryker released new versions of `spryker/acme` package.
+Now, let’s imagine Spryker released new versions of the `spryker/acme` package.
 
-#### Patch release (e.g., 1.0.0 to 1.0.1).
+#### Patch release
 
-In version 1.0.1 was fixed a typo in the variables. So this
+The patch release, for example from 1.0.0 to 1.0.1, fixed a typo in the variables.
 
 ```php
 return $this->acmExpander->expand($acmeTransfer);
@@ -339,11 +339,11 @@ is changed to this
 return $this->acmeExpander->expand($acmeTransfer);
 ```
 
-As you can see, it doesn’t affect custom code and everything works fine.
+As you can see, this doesn’t affect custom code and everything works fine.
 
-#### Minor release (e.g., 1.0.0 to 1.1.0)
+#### Minor release
 
-In version 1.1.0 Spryker replaces the method it uses from the `FooFacade`, the method `findFooByAcme(int $id)` is marked as deprecated, instead providing a new method `findFooByCriteria(FooCriteriaTransfer $fooCriteriaTransfer)` with the more generic functionality. The `AcmeReader` also changed and now it looks like:
+In this example, the minor release 1.0.0 to 1.1.0 has Spryker replace the method it uses from `FooFacade`. The method `findFooByAcme(int $id)` is marked as deprecated, and a new method `findFooByCriteria(FooCriteriaTransfer $fooCriteriaTransfer)` is provided, with more generic functionality. The `AcmeReader` also changed and now it looks like this:
 
 ```php
 public function readAcme(AcmeCriteriaTransfer $acmeCriteriaTransfer): AcmeTransfer
@@ -359,8 +359,8 @@ public function readAcme(AcmeCriteriaTransfer $acmeCriteriaTransfer): AcmeTransf
 }
 ```
 
-Does this break customized logic? The answer is no. The project code continues to work just fine using the deprecated external facade method, while it might miss some performance improvements potentially brought by the new method.
+This does not break any customized logic. The project code continues to work just fine using the deprecated external facade method, and it might only miss some performance improvements potentially brought by the new method.
 
 #### Major release (e.g., 1.0.0 to 2.0.0)
 
-In major version 2.0.0, the deprecated method `FooFacade::findFooByAcme(int $id)` is completely removed. The upgrader tool will update the `spryker/acme` and `spryker/foo` packages to the latest version, now project code throws `Error` exception and breaks the application because the old method does not exist anymore. This means the developer needs to manually fix this issue.
+In the major version  release 1.0.0 to 2.0.0, the deprecated method `FooFacade::findFooByAcme(int $id)` is completely removed. The upgrader tool will update the `spryker/acme` and `spryker/foo` packages to the latest version. Because of this, the project's code now throws an `Error` exception and breaks the application because the old method does not exist anymore. This means you need to manually fix this issue.

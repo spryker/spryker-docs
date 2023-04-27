@@ -17,5 +17,5 @@ This section contains the following guides for developing in collaboration with 
 * [CrefoPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay.html)
 * [Heidelpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/installing-heidelpay.html)
 * [Payolution](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/installing-and-configuring-payolution.html)
-* [ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html)
+* [Ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html)
 * [RatePay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay.html)

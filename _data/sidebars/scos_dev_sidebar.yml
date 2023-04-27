@@ -4127,6 +4127,7 @@ entries:
     url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     nested:
     - title: Introduction Tutorials
+      url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/introduction-tutorials.html
       nested:
       - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html

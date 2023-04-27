@@ -4508,6 +4508,9 @@ entries:
                 - "201903.0"
                 - "201907.0"
         - title: Billpay
+          url: /https://github.com/spryker/spryker-docs/blob/add-landing-pages/docs/scos/dev/technology-partner-guides/202212.0/payment-partners/billpay/billpay.html
+          include_versions:
+          - "202212.0"
           nested:
             - title: Integrating Billpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/integrating-billpay.html

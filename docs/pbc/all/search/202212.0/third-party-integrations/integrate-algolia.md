@@ -630,6 +630,8 @@ $jobs[] = [
 
 If you are using the Marketplace features and want to search by merchant name or merchant reference, you need to go to the Algolia admin panel and set up the required field as a facet.
 
+For more information please refer to [Add new attributes for faceting](/docs/pbc/all/search/{{page.version}}/third-party-integrations/configure-algolia.html#Add new attributes for faceting).
+
 ## Next steps
 
 [Configure the Algolia app](/docs/pbc/all/search/{{site.version}}/third-party-integrations/configure-algolia.html) for your store.

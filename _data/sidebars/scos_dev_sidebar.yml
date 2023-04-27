@@ -4665,6 +4665,9 @@ entries:
             - "201907.0"
             - "202001.0"
         - title: Payolution
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution.html
+          include_versions:
+          - "202212.0"
           nested:
           - title: Installing and configuring Payolution
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html

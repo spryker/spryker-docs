@@ -1354,6 +1354,17 @@ entries:
               - title: File details - payment_method_store.csv
                 url: /docs/pbc/all/payment-service-provider/import-data/file-details-payment-method-store.csv.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/log-into-the-back-office.html
+            include_versions:
+            - "202212.0"
+            nested:
+              - title: Edit payment methods
+                url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/edit-payment-methods.html
+              - title: View payment methods
+                url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/view-payment-methods.html
+          - title: Manage in the Back Office
+            include_versions:
+            - "202204.0"
             nested:
               - title: Edit payment methods
                 url: /docs/pbc/all/payment-service-provider/manage-in-the-back-office/edit-payment-methods.html

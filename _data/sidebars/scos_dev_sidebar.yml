@@ -4380,6 +4380,8 @@ entries:
       nested:
         - title: Adyen
           url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/adyen.html
+          include_versions:
+          - "202212.0"
           nested:
             - title: Installing and configuring Adyen
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
@@ -4391,6 +4393,8 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
         - title: Afterpay
           url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/afterpay.html
+          include_versions:
+          - "202212.0"
           nested:
             - title: Installing and configuring Afterpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/installing-and-configuring-afterpay.html
@@ -4398,6 +4402,8 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
         - title: Amazon Pay
           url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay.html
+          include_versions:
+          - "202212.0"
           nested:
             - title: Configuring Amazon Pay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
@@ -4438,6 +4444,8 @@ entries:
                   url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
         - title: Arvato
           url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato.html
+          include_versions:
+          - "202212.0"
           nested:
             - title: Installing and configuring Arvato
               url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html

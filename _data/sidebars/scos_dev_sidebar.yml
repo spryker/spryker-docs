@@ -4620,6 +4620,9 @@ entries:
           - title: Payment methods
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
         - title: Heidelpay
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay.html
+          include_versions:
+          - "202212.0"
           nested:
           - title: Installing Heidelpay
             url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/installing-heidelpay.html

@@ -13,7 +13,7 @@ redirect_from:
   - /docs/configurable-bundle
 ---
 
-A *configurable bundle* is a [product bundle](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
+A *configurable bundle* is a [product bundle](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
@@ -68,7 +68,7 @@ For example, a *Kitchen furniture set* configurable bundle template can have the
 
 ![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
-When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/pbc/all/product-information-management/{{page.version}}/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management&nbsp;<span aria-label="and then">></span> Product Lists** section or by editing the slot in the configurable bundle template.
+When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management&nbsp;<span aria-label="and then">></span> Product Lists** section or by editing the slot in the configurable bundle template.
 
 {% info_block warningBox "Slots" %}
 
@@ -217,7 +217,7 @@ The order looks as follows:
 
 {% info_block errorBox "Packaging units are not supported" %}
 
-The product splitting logic does not support [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/packaging-units-feature-overview.html) with configurable bundle products.
+The product splitting logic does not support [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/packaging-units-feature-overview.html) with configurable bundle products.
 
 {% endinfo_block %}
 
@@ -233,12 +233,12 @@ The feature has the following functional constraints which are going to be resol
 * On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/wishlist-feature-overview.html).
 * A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
-    - Products with [measurement](/docs/pbc/all/product-information-management/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/packaging-units-feature-overview.html)
-    - [Product bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html)
+    - Products with [measurement](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/measurement-units-feature-overview.html) or [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/packaging-units-feature-overview.html)
+    - [Product bundles](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-bundles-feature-overview.html)
     - [Gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
-    * [Product options](/docs/pbc/all/product-information-management/{{page.version}}/product-options-feature-overview.html)
-    * [Product labels](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html)
+    * [Product options](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-options-feature-overview.html)
+    * [Product labels](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-labels-feature-overview.html)
     * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/non-splittable-products-feature-overview.html)
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.

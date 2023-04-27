@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
 ---
 
-This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
 
 ## Import file dependencies

@@ -37,7 +37,7 @@ In Spryker Commerce OS, you create and manage products in the [Back Office](/doc
 
 A product can have multiple variants, such as size or color. Such product variations are called *product variants*, or *concrete products*. To distinguish product versions, track their stock, and provide a better shopping experience, product variants are grouped under *abstract products*.
 
-The abstract product is the highest level of the product hierarchy. It does not have its own stock but defines the properties shared by its product variants. A product variant always belongs to one abstract product, has a distinctive stock, and is always different from another product variant with at least one [super product attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html).
+The abstract product is the highest level of the product hierarchy. It does not have its own stock but defines the properties shared by its product variants. A product variant always belongs to one abstract product, has a distinctive stock, and is always different from another product variant with at least one [super product attribute](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html).
 
 The following table shows the differences between abstract products and product variants:
 
@@ -90,7 +90,7 @@ The product information is structured as follows:
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials
 
-To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/pbc/all/product-information-management/{{page.version}}/product-groups-feature-overview.html) feature.
+To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-groups-feature-overview.html) feature.
 
 Using the Product Group feature, you create a group of five abstract products, one for each color. Each abstract product  contains up to 12 concrete products of different combinations of the sizes and the materials.
 
@@ -114,10 +114,10 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 
 | OVERVIEWS |BACK OFFICE USER GUIDES|
 | - |---|
-| [Product Attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html)  | [Create an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) |
-| [Discontinued Products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/discontinued-products-overview.html)  | [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html) |
-| [Product Images](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-images-overview.html)  | [Create a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html) |
-| [Timed Product Availability](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/timed-product-availability-overview.html)  | [Edit a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html) |
+| [Product Attributes](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html)  | [Create an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) |
+| [Discontinued Products](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/discontinued-products-overview.html)  | [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html) |
+| [Product Images](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-images-overview.html)  | [Create a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html) |
+| [Timed Product Availability](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/timed-product-availability-overview.html)  | [Edit a product variant](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html) |
 |  |  [Manage products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-products.html) |
 
 ## Related Developer documents

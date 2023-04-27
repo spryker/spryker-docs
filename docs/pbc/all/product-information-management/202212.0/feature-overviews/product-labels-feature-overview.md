@@ -10,10 +10,10 @@ redirect_from:
   - /docs/product-labels-feature-overview
   - /docs/en/product-labels-feature-overview
   - /docs/scos/user/features/202200.0/product-labels-feature-overview.html
-  - /docs/scos/user/features/202204.0/product-labels-feature-overview.html
+  - /docs/scos/user/features/202212.0/product-labels-feature-overview.html
   - /docs/product-label
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-labels-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202204.0/product-labels-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202212.0/product-labels-feature-walkthrough.html  
 ---
 
 The _Product Label_ feature lets product catalog managers highlight the needed products by adding a special type of information—product labels.
@@ -49,7 +49,7 @@ The following dynamic product labels are shipped by default:
 * *Discontinued*
 <br>The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. To learn more, see [Discontinuing a product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html).
 * *Alternatives available*
-<br>The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/pbc/all/product-information-management/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. To learn more, see [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html).
+<br>The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/alternative-products-feature-overview.html). The label is active until the product becomes inactive. To learn more, see [Adding product alternatives](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html).
 
 * *NEW*
 <br>The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. To learn more, see [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).

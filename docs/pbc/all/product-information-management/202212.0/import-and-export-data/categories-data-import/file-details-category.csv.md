@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
 ---
 
-This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html) in your Spryker shop.
+This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/category-management-feature-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 

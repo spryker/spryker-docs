@@ -40,7 +40,7 @@ class ExampleController extends AbstractController
 }
 ```
 
-**src/Pyz/Zed/ExampleMerchantPortalGui/Presentation/Test/index.twig**
+**src/Pyz/Zed/ExampleMerchantPortalGui/Presentation/Example/index.twig**
 
 {% raw %}
 
@@ -59,6 +59,12 @@ class ExampleController extends AbstractController
 ```
 
 {% endraw %}
+
+Clear the router cache
+
+```bash
+console router:cache:warm-up
+```
 
 ## 2) Set up ACL rules
 

@@ -5,9 +5,9 @@ last_updated: Apr 19, 2023
 template: concept-topic-template
 ---
 
-While the Oryx code base is [available on Github](https://github.com/spryker/oryx/), the code is published and distributed as so-called packages on npm. [npmjs.com](https://www.npmjs.com/) is a widely used registry that is used to packages. Package managers (e.g. npm, yarn, deno, bun, etc) are used to install dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
+The Oryx code base is [available on Github](https://github.com/spryker/oryx/), and the code is published and distributed as npm packages. [npmjs.com](https://www.npmjs.com/) is a widely used registry of packages. Package managers, like npm, yarn, deno or bun, are used to install dependencies in a project. The dependencies are typically configured in the [package.json](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) file of an application.
 
-Oryx [packages](./packages.md) are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see versioning.
+Oryx packages are distributed under the [spryker-oryx](https://www.npmjs.com/org/spryker-oryx) organization. Each time a new version is published, the version number is bumped. For more information on the versioning strategy, see Versioning.
 
 <!-- Add link to version.md (see https://spryker.atlassian.net/browse/HRZ-2147) -->
 
@@ -17,7 +17,7 @@ We recommend [installing](./set-up-oryx.md) the packages instead of cloning the 
 
 While packages are distributed as a flat list, there is an architectural hierarchy. The hierarchy protects from cyclic dependencies. Packages inside a layer can depend on sibling packages inside the layer without any issues. Packages can never depend on a layer above.
 
-While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows you four package layers. The top layer is the [boilerplate application](./boilerplate.md) that uses a preset to setup the a standard application.
+While the package layering might be irrelevant during your development, it might help you to better understand the package dependencies. The following diagram shows four package layers. The top layer is the [boilerplate application](./boilerplate.md), which is set up using a preset.
 
 <!-- Add link to presets.md (see https://spryker.atlassian.net/browse/HRZ-2153) -->
 

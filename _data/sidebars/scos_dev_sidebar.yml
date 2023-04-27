@@ -4517,6 +4517,9 @@ entries:
             - title: Billpay - Switching invoice payments to a preauthorize mode
               url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
         - title: Braintree
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree.html
+          include_versions:
+          - "202212.0"
           nested:
             - title: Installing and configuring Braintree
               url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html

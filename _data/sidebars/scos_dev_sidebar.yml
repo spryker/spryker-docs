@@ -4628,6 +4628,9 @@ entries:
           - title: Configuring Heidelpay
             url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/configuring-heidelpay.html
           - title: Integrating payment methods for Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-payment-methods-for-heidelpay.html
+            include_versions:
+            - "202212.0"
             nested:
             - title: Integrating the Sofort payment method
               url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html

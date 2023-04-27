@@ -4173,8 +4173,10 @@ entries:
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
       - title: Feature HowTos
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/feature-howtos.html
         nested:
         - title: Data Imports
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/data-imports.html
           nested:
           - title: "HowTo: Import warehouse data"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html

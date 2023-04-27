@@ -28,5 +28,6 @@ Example:
 git checkout 202212.0 && \
 docker/sdk bootstrap deploy.dev.yml && \
 docker/sdk up --build --assets --data --jobs
+```
 
 This switches and runs the Demo Shop of version 202212.0.

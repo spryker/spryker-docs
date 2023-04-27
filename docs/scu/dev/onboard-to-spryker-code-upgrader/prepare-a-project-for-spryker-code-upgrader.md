@@ -12,7 +12,7 @@ Before you can start managing the upgrades of your project with Spryker Code Upg
 
 The Upgrader provides automatic minor and patch updates for the current version of each module. Since most updates are released for the latest module versions, modules need to be of the latest major version to receive updates.
 
-## Make your code is compliant with Spryker Quality Gate
+## Make sure your code is compliant with Spryker Quality Gate
 
 Spryker Quality Gate contains code checkers that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
 

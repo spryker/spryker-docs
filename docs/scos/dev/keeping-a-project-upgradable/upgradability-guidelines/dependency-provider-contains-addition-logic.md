@@ -64,7 +64,7 @@ DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER
 
 ```
 
-### Resolving the error: Extending a private API form class
+### Resolving the error:
 
 To resolve the error provided in the example, try the following in the provided order:
 1. Try to avoid using conditions in dependency providers.

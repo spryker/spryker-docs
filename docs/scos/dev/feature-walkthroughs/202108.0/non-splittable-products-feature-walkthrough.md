@@ -11,7 +11,7 @@ The _Non-splittable Products_ feature allows controlling if items bought in quan
 To learn more about the feature and to find out how end users use it, see [Non-splittable Products feature overview](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 | DATA IMPORT |
 |---------|

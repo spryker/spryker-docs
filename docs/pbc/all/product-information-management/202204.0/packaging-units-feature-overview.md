@@ -193,7 +193,7 @@ You have a product in your shop—a pen. And there exists a packaging unit for a
 
 {% endinfo_block %}
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
 |---------|---------|---------|

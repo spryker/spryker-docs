@@ -130,7 +130,7 @@ For more details about navigation, check the video:
 
 {% wistia anlwttuexm 720 480 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -141,7 +141,7 @@ For more details about navigation, check the video:
 | [Edit navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/edit-navigation-nodes.html) |
 | [Delete navigation nodes](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/navigation/delete-navigation-nodes.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|

@@ -11,7 +11,7 @@ The _Reclamations_ feature allows Back Office users to handle order claims issue
 To learn more about the feature and to find out how end users use it, see [Reclamations feature overview](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |
 |---------|

@@ -30,7 +30,7 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 {% wistia aowgi1c6k1 960 720 %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

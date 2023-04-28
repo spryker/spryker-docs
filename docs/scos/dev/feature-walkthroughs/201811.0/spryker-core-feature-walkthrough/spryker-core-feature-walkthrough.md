@@ -11,7 +11,7 @@ The _Spryker Core_ feature is a set of basic modules representing the Spryker Co
 To learn more about the feature and to find out how end users use it, see [Spryker Core](/docs/scos/user/features/{{page.version}}//spryker-core-feature-overview/spryker-core-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | TUTORIALS AND HOWTOS | REFERENCES|
 |---------|---------|---------|

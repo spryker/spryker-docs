@@ -11,7 +11,7 @@ The _Product Groups_ feature allows product catalog managers to group products b
 To learn more about the feature and to find out how end users use it, see [Product Groups feature overview](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html) for business users.
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|

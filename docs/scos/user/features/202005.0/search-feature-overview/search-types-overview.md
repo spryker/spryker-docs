@@ -37,7 +37,7 @@ Currently, the feature has the following functional constraints:
 * Search preference attributes are shared across all the stores in a project.
 * You cannot define a search preference for a single store.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

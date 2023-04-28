@@ -4,7 +4,7 @@ description: Learn how to reorder category filters in the Back Office
 template: back-office-user-guide-template
 related:
   - title: Standard filters overview
-    link: docs/scos/user/features/page.version/search-feature-overview/standard-filters-overview.html
+    link: docs/pbc/all/search/page.version/search-feature-overview/standard-filters-overview.html
 ---
 
 The order of category filters defines how they are displayed on the Storefront.

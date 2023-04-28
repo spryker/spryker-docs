@@ -22,7 +22,7 @@ The feature supports [product groups](/docs/pbc/all/product-information-manageme
 
 In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by pointing to the cart icon.
 
-## Related Business User articles
+## Related Business User documents
 
 |OVERVIEWS|
 |---|
@@ -30,7 +30,7 @@ In a Spryker shop, the shopping cart widget is displayed in the header. With the
 | [Cart Widget](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/cart-feature-overview/cart-widget-overview.html)  |
 | [Quick Order from the Catalog Page](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)   |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---------| - | ---------|---------|---------|

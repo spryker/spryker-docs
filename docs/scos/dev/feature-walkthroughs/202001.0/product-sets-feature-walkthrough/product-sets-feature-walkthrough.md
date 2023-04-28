@@ -32,7 +32,7 @@ The products in product sets and their sorting positions are stored in the `spy_
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | 
 |---------|

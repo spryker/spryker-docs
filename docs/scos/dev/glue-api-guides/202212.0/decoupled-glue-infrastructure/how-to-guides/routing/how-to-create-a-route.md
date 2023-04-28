@@ -182,7 +182,7 @@ In Development mode, you do not need to refresh a cache.
 
 There is a special command to debug all existing routes.
 
-`glue route:bebug <applicationType> <options>`
+`glue route:debug <applicationType> <options>`
 
 The example below shows how to debug Backend routes.
 

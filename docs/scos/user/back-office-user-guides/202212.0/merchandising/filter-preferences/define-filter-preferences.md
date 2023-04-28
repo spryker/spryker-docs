@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-filter-preferences.html
 related:
   - title: Standard filters overview
-    link: docs/scos/user/features/page.version/search-feature-overview/standard-filters-overview.html
+    link: docs/pbc/all/search/page.version/search-feature-overview/standard-filters-overview.html
 ---
 
 This document describes how to create filters and define preferences for them in the Back Office.
@@ -44,7 +44,7 @@ Review the [reference information](#reference-information-create-a-category-filt
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
 | ATTRIBUTE KEY | A [product attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html) the values of which will be used to filter products. |
-| FILTER TYPE | Defines how customers select filter values. For more details, see [Filter types](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html#filter-types).  |
+| FILTER TYPE | Defines how customers select filter values. For more details, see [Filter types](/docs/pbc/all/search/{{page.version}}/search-feature-overview/standard-filters-overview.html#filter-types).  |
 | FILTER NAME | Name of the filter to be displayed on the Storefront. |
 
 

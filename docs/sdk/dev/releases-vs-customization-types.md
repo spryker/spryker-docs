@@ -59,30 +59,30 @@ This section explains how different project customizations affect upgradability 
     <tbody>
         <tr>
             <td>Module configuration customization</td>
-            <td>:heavy_plus_sign:</td>
-            <td>:heavy_plus_sign:</td>
-            <td>:heavy_minus_sign:</td>
+            <td>➕</td>
+            <td>➕</td>
+            <td>➖</td>
         </tr>
         <tr>
             <td>Plug and Play customization</td>
-            <td>:heavy_plus_sign:</td>
-            <td>:warning:</td>
-            <td>:heavy_minus_sign:</td>
+            <td>➕</td>
+            <td>⚠️</td>
+            <td>➖</td>
         </tr>
         <tr>
             <td>Module customization</td>
-            <td>:heavy_plus_sign:</td>
-            <td>:warning:</td>
-            <td>:heavy_minus_sign:</td>
+            <td>➕</td>
+            <td>⚠️</td>
+            <td>➖</td>
         </tr>
     </tbody>
 </table>
 
-:heavy_plus_sign: Customization doesn’t affect the upgradability process.
+➕ Customization doesn’t affect the upgradability process.
 
-:warning: Customization may affect the upgradability process, cause some issues, and sometimes requires review.
+⚠️ Customization may affect the upgradability process, cause some issues, and sometimes requires review.
 
-:heavy_minus_sign: Customization heavily affects upgradability and requires review and manual changes.
+➖ Customization heavily affects upgradability and requires review and manual changes.
 
 {% info_block warningBox "Note" %}
 

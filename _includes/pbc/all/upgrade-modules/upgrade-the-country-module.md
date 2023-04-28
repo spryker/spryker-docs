@@ -2,12 +2,12 @@ This document describes how to upgrade the Country module.
 
 ## Upgrading from version 3.* to version 4.0.0
 
-In this new 4.0.0 version of the `Country` module, we have added support configuration currency for each store in the database.
-With the new 4.0.0 version of the `Country` module, we have added the `spy_country_store` database table to persist stores-countries in Zed.
+In this new version of the `Country` module, we have added support configuration currency for each store in database.
+With the `Country` module version 4 we have added the `spy_country_store` database table to persist stores-countries in Zed.
 
 You can find more details about the changes on the [Country module](https://github.com/spryker/country/releases) release page.
 
-*Estimated migration time: 5 minutes*
+*Estimated migration time: 5 min*
 
 To upgrade to the new version of the module, do the following:
 

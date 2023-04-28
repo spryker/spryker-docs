@@ -12,7 +12,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{page.version}} |
 | Cart | {{page.version}} |
 
-### 1) Set up behavior
+### Set up behavior
 
 
 Register the following plugins:

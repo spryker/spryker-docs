@@ -12,9 +12,9 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{page.version}} | 
 | CMS | {{page.version}} |
 
-### 1) Set up behavior
+### Set up behavior
 
-If using twig function `renderCmsBlockAsTwig` in twig templates, make sure to provide `storeName` name as a parameter. Otherwise, the function will throw an exception.
+If you are using the twig function `renderCmsBlockAsTwig` in twig templates, make sure to provide `storeName` name as a parameter. Otherwise, the function will throw an exception.
 
 Example:
 ```twig

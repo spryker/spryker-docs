@@ -1,9 +1,9 @@
 
-This document describes how to ingrate the Dynamic Store + Customer Account Management feature into a Spryker project.
+This document describes how to integrate the Dynamic Store + Customer Account Management feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Customer Account Management feature + Dynamis Store feature.
+Follow the steps below to install the Customer Account Management feature + Dynamic Store feature.
 
 ### Prerequisites
 
@@ -15,7 +15,7 @@ To start feature integration, integrate the required features:
 | Customer Account Management | {{page.version}} |
 
 
-### 1) Set up configuration
+### Set up configuration
 
 Add the following configuration to your project:
 
@@ -53,10 +53,10 @@ Steps:
 
 1. Go to the Customers page in the Back Office.
 2. Click Add Customer in the top-right corner of the Customers page.
-3. On the Add a customer page, enter the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
-4. Send password token by email by selecting the Send password token through email checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account.
+3. On the Add a customer page, enter the customer's information. The customer's information must include a first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email), or for later use of the forgot password functionality.
+4. Send the password token by email by selecting the Send password token through email checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account.
 5. Click Save.
-6. Check the customer on the detail page view. Customer Reference should be generated with the prefix  wihch was set in the configuration.
+6. Check the customer on the detail page view. Customer Reference should be generated with the prefix that was set in the configuration.
 
 
 

@@ -1,5 +1,5 @@
 
-This document describes how to ingrate the Dynamic Store + Avalability Notification feature into a Spryker project.
+This document describes how to integrate the Dynamic Store + Availability Notification feature into a Spryker project.
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ To start feature integration, integrate the required features:
 | Availability Notification | {{page.version}} |
 
 
-### 1) Set up configuration
+### Set up configuration
 
 Add the following configuration to your project:
 
@@ -39,7 +39,7 @@ $config[AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING] = [
 
 {% info_block warningBox "Verification" %}  
 
-To verify mail links are correct, make sure that the following configuration is correct:
+To verify the email links are correct, make sure that the following configuration is correct:
 
 1. Add a new product and make it unavailable.
 2. As a customer, subscribe to its availability notifications on Yves.

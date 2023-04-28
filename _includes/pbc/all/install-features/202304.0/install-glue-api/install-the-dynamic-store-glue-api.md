@@ -9,7 +9,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{page.version}} |
 
 
-### 1) Set up behavior
+### Set up behavior
 
 
 Activate the following plugins:
@@ -96,7 +96,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 If everything is set up correctly, a request to `https://glue-backend.mysprykershop.com` with the header `[{"key":"Store","value":"DE"}]` should result in a response without any errors.
 
-Example for test: 
+An example for testing: 
 
 ```bash
 curl --location --request POST 'http://glue-backend.eu.mysprykershop.com/token' \
@@ -141,6 +141,6 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, a request to `https://glue-storefront.mysprykershop.com` with the header `[{"key":"accept-language","value":"de_DE"},{"key":"Store","value":"DE"}]` should result in a response whithout any errors and contains the `content-language` header set to **de_DE**.
+If everything is set up correctly, a request to `https://glue-storefront.mysprykershop.com` with the header `[{"key":"accept-language","value":"de_DE"},{"key":"Store","value":"DE"}]` should result in a response without any errors and will contain the `content-language` header set to **de_DE**.
 
 {% endinfo_block %}

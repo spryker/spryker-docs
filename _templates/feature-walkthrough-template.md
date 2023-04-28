@@ -56,7 +56,7 @@ The following schema illustrates the {Feature name} domain model:
 - [{Name of the page}]({link to the page})
 
 
-## Related Developer articles
+## Related Developer documents
 <!-- Usually filled by a technical writer. You can omit this part -->
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |

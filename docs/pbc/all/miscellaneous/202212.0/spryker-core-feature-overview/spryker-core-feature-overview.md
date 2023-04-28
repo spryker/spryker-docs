@@ -16,7 +16,7 @@ redirect_from:
 
 The Spryker Core feature is the very basis of all the functionality in Spryker.
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | TUTORIALS AND HOWTOS | REFERENCES|
 |---------|---------|---------|

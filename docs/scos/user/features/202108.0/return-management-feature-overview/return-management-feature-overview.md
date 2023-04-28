@@ -115,7 +115,7 @@ The feature has the following functional constraints which are going to be resol
 * There is no user interface for managing the return policy and the return reasons.
 * You can’t return individual items of a Product Bundle.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

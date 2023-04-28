@@ -138,7 +138,7 @@ Customers configure a product on the Storefront as follows:
 
 <iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/configurable-product-feature-overview/configurable-product-on-the-storefront.mp4" frameborder="0" allowfullscreen></iframe>
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | MIGRATION GUIDES | DATA IMPORT | REFERENCES |
 |---------|---------|---------|---------|

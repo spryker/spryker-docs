@@ -19,7 +19,7 @@ This section contains a collection of walkthroughs for the features found within
 
 ## Payments
 
-The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-feature-walkthrough.html) feature lets customers pay for orders with none, one, or multiple payment methods during the checkout process.
+The [Payments](/docs/pbc/all/payment-service-provider/{{page.version}}/payments-feature-overview.html) feature lets customers pay for orders with none, one, or multiple payment methods during the checkout process.
 
 ### Persistent Cart Sharing: module relations
 

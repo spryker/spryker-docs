@@ -22,7 +22,7 @@ The following diagram illustrates the dependencies between the modules for the *
 | --- | --- |
 | [ProductOfferMerchantPortalGui](https://github.com/spryker/product-offer-merchant-portal-gui) | Provides the UI for managing merchant product offers in the Merchant Portal. |
 
-## Related Developer articles
+## Related Developer documents
 
 | INTEGRATION GUIDES|
 | -------------- |

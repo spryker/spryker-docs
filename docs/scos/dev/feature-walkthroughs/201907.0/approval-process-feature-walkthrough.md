@@ -25,7 +25,7 @@ The following schema illustrates module relations in the Approval Process featur
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|

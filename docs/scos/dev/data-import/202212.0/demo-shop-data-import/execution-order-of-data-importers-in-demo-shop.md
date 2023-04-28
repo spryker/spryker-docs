@@ -24,8 +24,8 @@ This operation has some dependencies because data importers' execution follows c
 
 The following list illustrates the order followed to run the data importers and import the commerce shop configuration setup data, product catalog data, and other content.
 
-* Commerce
-  * store
+* Commerce:
+  * store: it's yet a data importer, it's hardcoded.
   * [currency](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-currency.csv.html)
   * [customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/file-details-customer.csv.html)
   * [glossary](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
@@ -38,7 +38,7 @@ The following list illustrates the order followed to run the data importers and 
   * [payment-method](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html)
   * [payment-method-store](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html)
 
-* [Catalog](https://docs.spryker.com/docs/pbc/all/product-information-management/202204.0/import-and-export-data/import-product-catalog-data.html)
+* [Catalog](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/import-product-catalog-data.html):
   * [category-template](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category-template.csv.html)
   * [category](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/categories-data-import/file-details-category.csv.html)
   * [product-attribute-key](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html)
@@ -51,24 +51,41 @@ The following list illustrates the order followed to run the data importers and 
   * [product-price-schedule](/docs/pbc/all/price-management/{{page.version}}/import-and-export-data/file-details-product-price-schedule.csv.html)
   * [product-stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-product-stock.csv.html)
 
-* Special Products
+* Special Products:
   * [product-option](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-options/file-details-product-option.csv.html)
   * [product-option-price](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/product-options/file-details-product-option-price.csv.html)
-
-* [Gift cards](https://docs.spryker.com/docs/pbc/all/gift-cards/202212.0/import-and-export-data/import-of-gift-cards.html)
+  * [Gift cards](https://docs.spryker.com/docs/pbc/all/gift-cards/202212.0/import-and-export-data/import-of-gift-cards.html)
   * [gift-card-abstract-configuration](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html)
   * [gift-card-concrete-configuration](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html)
   * product-packaging-unit-type
-  * product-packaging-unit
-  * product-measurement-unit
-  * product-measurement-base-unit
-  * product-measurement-sales-unit
+    * B2B shop: [product_packaging_unit_type.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/product_packaging_unit_type.csv)
+    * B2B Marketplace: [product_packaging_unit_type.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_packaging_unit_type.csv)
+  * product-packaging-unit:
+    * B2B shop: [product_packaging_unit.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/product_packaging_unit.csv)
+    * B2B Marketplace: [product_packaging_unit.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_packaging_unit.csv)
+  * product-measurement-unit:
+    * B2B shop: [product_measurement_unit.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/product_measurement_unit.csv)
+    * B2B Marketplace: [product_measurement_unit.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_measurement_unit.csv)
+  * [product-measurement-base-unit](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_measurement_base_unit.csv)
+  * [product-measurement-sales-unit](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_measurement_sales_unit.csv)
   * product-measurement-sales-unit-store
-  * configurable-bundle-template
-  * configurable-bundle-template-slot
-  * configurable-bundle-template-image
+  * configurable-bundle-template:
+    * B2C shop: [configurable_bundle_template.csv](https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/common/common/configurable_bundle_template.csv)
+    * B2B shop: [configurable_bundle_template.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/configurable_bundle_template.csv)
+    * B2C Marketplace: [configurable_bundle_template.csv](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/data/import/common/common/configurable_bundle_template.csv)
+    * B2B Marketplace: [configurable_bundle_template.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/configurable_bundle_template.csv)
+  * configurable-bundle-template-slot:
+    * B2C shop: [configurable_bundle_template_slot.csv](https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/common/common/configurable_bundle_template_slot.csv)
+    * B2B shop: [configurable_bundle_template_slot.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/configurable_bundle_template_slot.csv)
+    * B2C Marketplace: [configurable_bundle_template_slot.csv](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/data/import/common/common/configurable_bundle_template_slot.csv)
+    * B2B Marketplace: [configurable_bundle_template_slot.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/configurable_bundle_template_slot.csv)
+  * configurable-bundle-template-image:
+    * B2C shop: [configurable_bundle_template_image.csv](https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/common/common/configurable_bundle_template_image.csv)
+    * B2B shop: [configurable_bundle_template_image.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/configurable_bundle_template_image)
+    * B2C Marketplace: [configurable_bundle_template_image.csv](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/data/import/common/common/configurable_bundle_template_image.csv)
+    * B2B Marketplace: [configurable_bundle_template_image.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/configurable_bundle_template_image.csv)
 
-* [Merchandising](https://docs.spryker.com/docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/merchandising-setup.html)
+* Merchandising:
   * [discount](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount.csv.html)
   * [discount-store](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount-store.csv.html)
   * [discount-voucher](/docs/pbc/all/discount-management/{{page.version}}/import-and-export-data/file-details-discount-voucher.csv.html)
@@ -83,15 +100,25 @@ The following list illustrates the order followed to run the data importers and 
   * [product-discontinued](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-discontinued.csv.html)
   * [product-alternative](/docs/pbc/all/product-information-management/{{page.version}}/import-and-export-data/file-details-product-alternative.csv.html)
   * [product-quantity](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/import-and-export-data/file-details-product-quantity.csv.html)
-  * product-list
-  * product-list-category
-  * product-list-product-concrete
-
-* Navigation
+  * product-list:
+    * B2C shop: [prodict_list.csv](https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/common/common/product_list.csv)
+    * B2B shop: [prodict_list.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/product_list.csv)
+    * B2C Marketplace: [prodict_list.csv](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/data/import/common/common/product_list.csv)
+    * B2B Marketplace: [product_list_to_concrete_product.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_list_to_concrete_product.csv)
+  * product-list-category:
+    * B2C shop: [product_list_to_category.csv](https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/common/common/product_list_to_category.csv)
+    * B2B shop: [product_list_to_category.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/product_list_to_category.csv)
+    * B2C Marketplace: [product_list_to_category.csv](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/data/import/common/common/product_list_to_category.csv)
+    * B2B Marketplace: [product_list_to_category.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_list_to_category.csv)
+  * product-list-product-concrete:
+    * B2C shop: [product_list_to_concrete_product.csv](https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/common/common/product_list_to_concrete_product.csv)
+    * B2B shop: [product_list_to_concrete_product.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/product_list_to_concrete_product.csv)
+    * B2C Marketplace: [product_list_to_concrete_product.csv](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/data/import/common/common/product_list_to_concrete_product.csv)
+    * B2B Marketplace: [product_list_to_concrete_product.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_list_to_concrete_product.csv)
+* Navigation:
   * [navigation](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation.csv.html)
   * [navigation-node](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-navigation-node.csv.html)
-
-* Content Management
+* Content Management:
 * [cms-template](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-template.csv.html)
 * [cms-block](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-block.csv.html)
 * [cms-block-store](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-block-store.csv.html)
@@ -106,8 +133,10 @@ The following list illustrates the order followed to run the data importers and 
 * [cms-slot](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-slot.csv.html)
 * [cms-slot-block](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-slot-block.csv.html)
 
-* B2B Company
-  * company
+* B2B Company:
+  * company:
+    * B2B shop: [company.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/company.csv)
+    * B2B Marketplace: [company.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/company.csv)
   * company-business-unit
   * company-unit-address
   * company-unit-address-label
@@ -137,17 +166,31 @@ The following list illustrates the order followed to run the data importers and 
   * merchant-relationship-product-list
   * product-price-merchant-relationship
 
-* B2B Shopping List
-  * shopping-list
+* B2B Shopping List:
+  * shopping-list:
+    * B2B shop: [shopping_list.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/shopping_list.csv)
+    * B2B Marketplace: [shopping_list.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/shopping_list.csv)
   * shopping-list-item
+    * B2C shop: [shopping_list_item.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/shopping_list_item.csv)
+    * B2B Marketplace: [shopping_list_item.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/shopping_list_item.csv)
   * shopping-list-company-user
+    * B2C shop: [shopping_list_company_user.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/shopping_list_company_user.csv)
+    * B2B Marketplace: [shopping_list_company_user.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/shopping_list_company_user.csv)
   * shopping-list-company-business-unit
+    * B2C shop: [shopping_list_company_business_unit.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/shopping_list_company_business_unit.csv)
+    * B2B Marketplace: [shopping_list_company_business_unit.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/shopping_list_company_business_unit.csv)
 
 * B2B Miscellaneous
   * multi-cart
   * shared-cart
-  * quote-request
-  * quote-request-version
+  * quote-request:
+    * B2B shop: [quote_request.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/quote_request.csv)
+    * B2B Marketplace: [quote_request.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/quote_request.csv)
+  * quote-request-version:
+    * B2B shop: [quote_request_version.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/quote_request_version.csv)
+    * B2B Marketplace: [quote_request_version.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/quote_request_version.csv)
 
 
 
+
+  

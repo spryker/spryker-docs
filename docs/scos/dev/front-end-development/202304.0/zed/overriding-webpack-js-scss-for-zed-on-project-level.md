@@ -1,6 +1,6 @@
 ---
-title: Overriding Webpack, JS, SCSS, and TWIG for ZED on project level
-description: Learn how to override Webpack, JS, SCSS and TWIG for ZED on a project level
+title: Overriding Webpack, JS, SCSS for ZED on project level
+description: Learn how to override Webpack, JS, SCSS for ZED on a project level
 last_updated: Apr 28, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/overriding-webpack-js-scss-for-zed-on-project-level

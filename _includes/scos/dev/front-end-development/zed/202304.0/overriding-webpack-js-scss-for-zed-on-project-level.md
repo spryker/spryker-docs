@@ -1,6 +1,6 @@
 
 
-To override or expand core JS, SCSS, and TWIG files, you need to expand the `oryx-for-zed` building system with an additional config:
+To override or expand core JS, SCSS, you need to expand the `oryx-for-zed` building system with an additional config:
 
 * To adjust the Webpack config and create aliases for core modules, see [Webpack](#webpack). 
 * To create a new entry point and file naming and extend core JS files and path for entry points, see [JS](#js). 

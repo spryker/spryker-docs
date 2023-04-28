@@ -1027,8 +1027,6 @@ entries:
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-the-customer-account-management-glue-api.html
               - title: Install Microsoft Azure Active Directory
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/install-microsoft-azure-active-directory.html
-          - title: Log into the Back Office
-            url: /docs/pbc/all/identity-access-management/log-into-the-back-office.html
           - title: Manage using Glue API
             nested:
               - title: Create customers
@@ -2626,7 +2624,7 @@ entries:
               - title: Upgrade the Tax module
                 url: /docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html
           - title: Manage in the Back Office
-            url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+            url: /docs/pbc/all/tax-management/manage-in-the-back-office/log-into-the-back-office.html
             include_versions:
             - "202212.0"
             nested:

@@ -588,6 +588,8 @@ entries:
       - "202108.0"
     - title: Spryker Core
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
+      include_versions:
+      - "202212.0"
       nested:
       - title: How translations are managed
         url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/how-translations-are-managed.html

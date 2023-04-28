@@ -21,5 +21,5 @@ The Spryker Core feature is the very basis of all the functionality in Spryker.
 |INSTALLATION GUIDES | TUTORIALS AND HOWTOS | REFERENCES|
 |---------|---------|---------|
 | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  | [Tutorial: Managing glossary key](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html)  | [How translations are managed](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/how-translations-are-managed.html) |
-|   |   | [URL redirects overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-feature-walkthrough/url-redirects-overview.html)  |
-|   |   | [Vault for Tokens overview](/docs/scos/user/features/{{page.version}}/spryker-core-feature-overview/vault-for-tokens-overview.html)  |
+|   |   | [URL redirects overview](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/url-redirects-overview.html)  |
+|   |   | [Vault for Tokens overview](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/vault-for-tokens-overview.html)  |

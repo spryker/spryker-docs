@@ -221,4 +221,5 @@ Limitations:
 
 ## Next steps
 
-[Implement a new store for you multistore environment](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/mplement-a-new-store.html)
+- [Implement a new store for you multistore environment](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
+- [Check your and Spryker's tasks when setting up a new store](docs\cloud\dev\spryker-cloud-commerce-os\multi-store-setups\checklist-for-a-new-store-implementation.html)

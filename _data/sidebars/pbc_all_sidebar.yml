@@ -769,8 +769,8 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
               - title: Manage customer access to Glue API resources
                 url: /docs/pbc/all/customer-relationship-management/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
-        - title: Generate login tokens
-          url: /docs/pbc/all/customer-relationship-management/generate-login-tokens.html
+          - title: Generate login tokens
+            url: /docs/pbc/all/customer-relationship-management/generate-login-tokens.html
           - title: Domain model and relationships
             nested:
               - title: "Company account: module relations"
@@ -1991,7 +1991,7 @@ entries:
               - title: "Tutorial: Product challenge solution"
                 url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product-challenge-solution.html
               - title: "Tutorial: Product"
-                url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product.html                                                                                                
+                url: /docs/pbc/all/product-information-management/tutorials-and-howtos/tutorial-product.html
       - title: Product Relationship Management
         url: /docs/pbc/all/product-relationship-management/product-relationship-management.html
         include_versions:

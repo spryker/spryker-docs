@@ -107,7 +107,7 @@ var ModuleName = require('{% raw %}{%{% endraw %}AliasName{% raw %}%}{% endraw %
 
 ## SCSS
 
-Use the following path to add all files with style: `./src/Pyz/Zed/{% raw %}{%{% endraw %}ModuleName{% raw %}%}{% endraw %}/assets/Zed/sass/*.scs`. Webpack collects only those styles that were provided in the entry point (JS).
+Use the following path to add all files with style: `./src/Pyz/Zed/{% raw %}{%{% endraw %}ModuleName{% raw %}%}{% endraw %}/assets/Zed/sass/*.scss`. Webpack collects only those styles that were provided in the entry point (JS).
 
 Add style files by following the example:
 

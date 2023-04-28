@@ -57,7 +57,7 @@ The following list illustrates the order followed to run the data importers and 
   * [Gift cards](https://docs.spryker.com/docs/pbc/all/gift-cards/202212.0/import-and-export-data/import-of-gift-cards.html)
   * [gift-card-abstract-configuration](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html)
   * [gift-card-concrete-configuration](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html)
-  * product-packaging-unit-type
+  * product-packaging-unit-type:
     * B2B shop: [product_packaging_unit_type.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/product_packaging_unit_type.csv)
     * B2B Marketplace: [product_packaging_unit_type.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/product_packaging_unit_type.csv)
   * product-packaging-unit:
@@ -132,7 +132,6 @@ The following list illustrates the order followed to run the data importers and 
 * [cms-slot-template](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-slot-template.csv.html)
 * [cms-slot](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-slot.csv.html)
 * [cms-slot-block](/docs/pbc/all/content-management-system/{{page.version}}/import-and-export-data/file-details-cms-slot-block.csv.html)
-
 * B2B Company:
   * company:
     * B2B shop: [company.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/company.csv)
@@ -148,7 +147,6 @@ The following list illustrates the order followed to run the data importers and 
   * company-business-unit-user
   * company-business-unit-address
   * company-user-on-behalf
-
 * B2B Merchant
   * [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant.csv.html)
   * [merchant-profile](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-profile.csv.html)
@@ -179,7 +177,6 @@ The following list illustrates the order followed to run the data importers and 
   * shopping-list-company-business-unit
     * B2C shop: [shopping_list_company_business_unit.csv](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/shopping_list_company_business_unit.csv)
     * B2B Marketplace: [shopping_list_company_business_unit.csv](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/data/import/common/common/shopping_list_company_business_unit.csv)
-
 * B2B Miscellaneous
   * multi-cart
   * shared-cart

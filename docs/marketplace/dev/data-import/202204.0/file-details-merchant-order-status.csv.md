@@ -7,9 +7,6 @@ related:
   - title: Merchant order overview
     link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
-  - title: Merchant order overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
-
 
 This document describes the `merchant-order-status.csv` file to configure the update of the merchant order states in your Spryker Marketplace shop.
 

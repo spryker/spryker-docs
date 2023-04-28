@@ -9,8 +9,6 @@ related:
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
 ---
-  - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
 
 This document describes the `product_offer_validity.csv` file to configure product offer validity dates in your Spryker shop.
 

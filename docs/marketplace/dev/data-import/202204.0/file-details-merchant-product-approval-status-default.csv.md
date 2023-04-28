@@ -8,8 +8,6 @@ related:
   - title: Marketplace Product Approval Process feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
 ---
-  - title: Marketplace Product Approval Process feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
 
 This document describes the `merchant_product_approval_status_default.csv` file to configure default merchant products approval statuses in your Spryker shop.
 

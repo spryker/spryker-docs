@@ -9,8 +9,6 @@ related:
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
 ---
-  - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 

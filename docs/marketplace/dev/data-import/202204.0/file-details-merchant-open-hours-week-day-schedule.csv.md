@@ -9,8 +9,6 @@ related:
   - title: Merchant Opening Hours feature overview
     link: docs/marketplace/user/features/page.version/merchant-opening-hours-feature-overview.html
 ---
-  - title: Merchant Opening Hours feature overview
-    link: docs/marketplace/user/features/page.version/merchant-opening-hours-feature-overview.html
 
 This document describes the `merchant_open_hours_week_day_schedule.csv` file to configure [default merchant opening hours](/docs/marketplace/user/features/{{site.version}}/merchant-opening-hours-feature-overview.html) information in your Spryker shop.
 

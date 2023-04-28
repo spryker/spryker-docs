@@ -9,8 +9,6 @@ related:
   - title: Marketplace Product feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
-  - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 
 This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) information in your Spryker shop.
 

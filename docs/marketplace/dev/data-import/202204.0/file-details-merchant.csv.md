@@ -11,7 +11,6 @@ related:
 redirect_from:
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-merchants-and-merchant-relations.html
 ---
-  - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-merchants-and-merchant-relations.html
 
 This document describes the `merchant.csv` file to configure [merchant](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) information in your Spryker shop.
 

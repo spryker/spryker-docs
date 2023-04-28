@@ -7,8 +7,6 @@ related:
   - title: Marketplace Product Options feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-options-feature-overview.html
 ---
-  - title: Marketplace Product Options feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-options-feature-overview.html
 
 This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html).
 

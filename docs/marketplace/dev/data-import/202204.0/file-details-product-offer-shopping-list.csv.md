@@ -13,8 +13,6 @@ related:
   - title: Marketplace Shopping List feature overview
     link: docs/marketplace/user/features/page.version/marketplace-shopping-list-feature-overview.html
 ---
-  - title: Marketplace Shopping List feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-shopping-list-feature-overview.html
 
 This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html) in your Spryker shop.
 

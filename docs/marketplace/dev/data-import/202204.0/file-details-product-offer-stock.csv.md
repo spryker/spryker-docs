@@ -9,8 +9,6 @@ related:
   - title: Marketplace Product Offer feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
 ---
-  - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
 
 This document describes the `product_offer_stock.csv` file to configure [Merchant product offer stock](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-stock-management) information in your Spryker shop.
 

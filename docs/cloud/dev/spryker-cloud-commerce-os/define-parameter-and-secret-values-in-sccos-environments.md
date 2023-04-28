@@ -18,7 +18,8 @@ To define parameters and their values, do the following.
 3. Deploy the application with the updated configuration by following one of the following docs:
     * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
     * [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
-        This updates the parameters in the Parameter Store.
+
+          This updates the parameters in the Parameter Store.
 
 ## Define parameter and secret values         
 

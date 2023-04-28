@@ -59,30 +59,30 @@ This section explains how different project customizations affect upgradability 
     <tbody>
         <tr>
             <td>Module configuration customization</td>
-            <td>:plus:</td>
-            <td>:plus:</td>
-            <td>:minus:</td>
+            <td>:heavy_plus_sign:</td>
+            <td>:heavy_plus_sign:</td>
+            <td>:heavy_minus_sign:</td>
         </tr>
         <tr>
             <td>Plug and Play customization</td>
-            <td>:plus:</td>
+            <td>:heavy_plus_sign:</td>
             <td>:warning:</td>
-            <td>:minus:</td>
+            <td>:heavy_minus_sign:</td>
         </tr>
         <tr>
             <td>Module customization</td>
-            <td>:plus:</td>
+            <td>:heavy_plus_sign:</td>
             <td>:warning:</td>
-            <td>:minus:</td>
+            <td>:heavy_minus_sign:</td>
         </tr>
     </tbody>
 </table>
 
-:plus: Customization doesn’t affect the upgradability process.
+:heavy_plus_sign: Customization doesn’t affect the upgradability process.
 
 :warning: Customization may affect the upgradability process, cause some issues, and sometimes requires review.
 
-:minus: Customization heavily affects upgradability and requires review and manual changes.
+:heavy_minus_sign: Customization heavily affects upgradability and requires review and manual changes.
 
 {% info_block warningBox "Note" %}
 

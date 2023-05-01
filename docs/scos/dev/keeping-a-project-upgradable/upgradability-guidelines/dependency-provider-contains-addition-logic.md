@@ -1,6 +1,7 @@
 ---
 title: Dependency provider contains addition logic
 description: Reference information for evaluator tools.
+template: howto-guide-template
 ---
 
 Additional logic inside the dependency provider’s methods.
@@ -52,20 +53,21 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 ### Related error in the Evaluator output:
 
 ```bash
-============================================
-DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER
-============================================
+======================
+MULTIDIMENSIONAL ARRAY
+======================
 
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| # | Message                                                                                              | Target                                                                   |
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| 1 | The condition statement if (self::IS_DEV) {} is forbidden in the DependencyProvider                  | /spryker/b2c-demo-shop/src/Pyz/Yves/Form/FormDependencyProvider.php      |
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
++---+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+| # | Message                                                                                                                    | Target                                                                                      |
++---+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+| 1 | Reached max level of nesting for the plugin registration in the {FormDependencyProvider::getPlugins()}.                    | Pyz\Yves\Form\FormDependencyProvider\FormDependencyProvider        |
+|   | The maximum allowed nesting level is 2. Please, refactor code, otherwise it will cause upgradability issues in the future. |                                                                                             |
++---+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
 
 ```
 
 ### Resolving the error:
 
 To resolve the error provided in the example, try the following in the provided order:
-1. Try to avoid using conditions in dependency providers.
-2. Use only the supported expressions in IF construct.
+1. Try to have simple configuration arrays they shouldn't have more than 2 levels.
+2. Simplify the used structure to one or two nesting.

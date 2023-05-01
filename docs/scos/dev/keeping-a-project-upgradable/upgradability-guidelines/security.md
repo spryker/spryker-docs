@@ -1,6 +1,7 @@
 ---
 title: Check name
 description: Reference information for evaluator tools.
+template: howto-guide-template
 ---
 
 ## Problem description

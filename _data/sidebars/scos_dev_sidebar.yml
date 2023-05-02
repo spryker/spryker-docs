@@ -4237,8 +4237,11 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
-      - title: "HowTo: Allow Zed CSS/JS on a project"
+      - title: "HowTo: Allow Zed SCSS/JS on a project level"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
+        include version:
+        - "202212.0"
+        - "202304.0"
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     nested:

@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-measurement-units.html
 related:
   - title: Measurement Units feature overview
-    link: docs/pbc/all/product-information-management/page.version/feature-overview/measurement-units-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/measurement-units-feature-overview.html
 ---
 
 The Measurement Units API together with the [Measurement Units](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop.

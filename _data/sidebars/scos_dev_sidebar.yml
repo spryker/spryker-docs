@@ -3568,6 +3568,7 @@ entries:
       - title: Get the list of console commands and available options
         url: /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation
+      url: docs/scos/dev/back-end-development/data-manipulation/data-manipulation.html
       nested:
       - title: Run and revert a database migration
         url: /docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
@@ -3597,6 +3598,7 @@ entries:
       - title: Configuration management
         url: /docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
       - title: Data interaction
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/data-interaction.html
         nested:
         - title: Standard filters - backend and frontend technical details
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
@@ -3614,6 +3616,7 @@ entries:
         - title: Integrate RabbitMQ Headers in Queue Messages
           url: /docs/scos/dev/back-end-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
       - title: Payment methods
+        url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/payment-methods.html
         nested:
         - title: Direct Debit payment
           url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html

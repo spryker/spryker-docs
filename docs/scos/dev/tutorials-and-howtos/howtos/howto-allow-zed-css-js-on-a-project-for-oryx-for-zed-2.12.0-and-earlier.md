@@ -1,5 +1,5 @@
 ---
-title: HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version `<=2.12.0`
+title: HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier
 description: Learn how you can allow Zed SCSS/JS on a project level.
 last_updated: May 2, 2023
 template: howto-guide-template
@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/howto-allow-zed-cssjs-on-a-project
   - /v6/docs/howto-allow-zed-cssjs-on-a-project
   - /v6/docs/en/howto-allow-zed-cssjs-on-a-project
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
 ---
 
 {% include scos/dev/front-end-development/zed/202212.0/overriding-webpack-js-scss-for-zed-on-project-level.md %} <!-- To edit, see /_includes/scos/dev/front-end-development/zed/202212.0/overriding-webpack-js-scss-for-zed-on-project-level.md -->

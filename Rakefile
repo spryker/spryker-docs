@@ -50,7 +50,7 @@ commonOptions = {
     /gcc.gnu.org\/[\.\w\-\/\?]+/,
     /github.com\/[\.\w\-\/\?]+/,
     /www.collect.ai\/[\.\w\-\/\?]+/,
-    /www.optimise-it.de/\/[\.\w\-\/\?]+/
+    /www.optimise-it.de\/[\.\w\-\/\?]+/
 
   ],
   :file_ignore => [],

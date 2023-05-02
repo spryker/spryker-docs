@@ -45,6 +45,10 @@ Emergencies are reserved for problems that have significant business impact now 
 
 ### Platform change requests
 
+{% info_block warningBox "Plan your Change Requests and use the right Request Form" %}
+Due to verification processes and role based access control (RBAC) mechanisms Change Requests can take some time to process. While Spryker is working towards providing Self Service Options for many Change Request Types please make sure that you ask for changes by using the correct case types. Please try not to expedide a change request by asking for changes to be made using a Problem or even Emergency case as this will lead to them being routed incorrectly.
+{% endinfo_block %}
+
 These requests are automatically forwarded to our DevOps team. Therefore, make sure that you provide all the information that we ask for in the forms so that the team can get things done without having to ask for further information. If you do not find a Change Request type for your request, use a Request case type to contact us.
 
 {% info_block infoBox "Info" %}

@@ -11,7 +11,7 @@ related:
 
 This document outlines the various options available for a multistore setup and is essential to review when defining the architecture for your project and prior to implementing a new store. 
 
-Keep in in mind, that the definition of a store can vary depending on the business use case. For example, it can refer to region, market, country, and a physical store.
+Keep in mind that the definition of a store can vary depending on the business use case. For example, it can refer to a region, market, country, or physical store.
 
 ## Assess whether your shop is fit for Spryker Multistore
 
@@ -19,13 +19,13 @@ When planning for multiple stores, it is crucial to determine whether your proje
 
 The Spryker Multistore solution is designed to represent several business channels on a single platform. These channels include:
 
-- Localization: The support of different locales, currencies, and languages for each store to ensure customers see the correct information and pricing based on their location. The localization channel can include:
+- Localization: Involves supporting different locales, currencies, and languages for each store to ensure customers see the correct information and pricing based on their location. The localization channel can include:
 
     - Different regions: Americas, EU, MENA, APAC, etc.
     - Different countries: DE, FR, ES, NL, etc.
     - Combination of regions and countires.
 
-- Custom functionality per store: The ability to offer a customized shopping experience to customers by displaying relevant products, content, and promotions based on their location or interest. This can include different brands under a single franchise, such as Swatch, Omega, etc., or different business models like new cars, used cars, spare parts.
+- Custom functionality per store: Allows offering a customized shopping experience to customers by displaying relevant products, content, and promotions based on their location or interest. This can include different brands under a single franchise, such as Swatch, Omega, etc., or different business models like new cars, used cars, spare parts.
 - Sales and marketing: The ability to track sales and customer data for each store to monitor performance and make data-driven decisions about future expansion.
 - Order management: The ability to manage orders from multiple stores effectively and track the progress of each order from start to finish.
 - Reporting: The ability to generate reports for each store to see sales, customer data, and inventory levels, enabling informed business decisions.
@@ -35,18 +35,18 @@ The Spryker Multistore solution is designed to represent several business channe
 
 {% info_block warningBox "Warning" %}
 
-Do not use Spryker Multi-Store concept as a representation of a physical store.
+Do not use the Spryker Multistore concept as a representation of a physical store.
 
 {% endinfo_block %}
 
 
  ## Select the appropriate setup
 
-There are three types of setup that you can choose from.
+There are three types of setup available to choose from.
 
 {% info_block infoBox "Stores grouping" %}
 
-When you set up multiple stores, we recommend that you group stores to regional stores that share the same processes and data. For example, if your DE and AT stores share the same database, it is best not to separate them, but have one regional store instead.
+When setting up multiple stores, we recommended to group stores that share the same processes and data to regional stores. For instance, if your DE and AT stores share the same database, it is best not to separate them but have one regional store instead.
 
 {% endinfo_block %}
 
@@ -62,15 +62,15 @@ This setup has the following characteristics:
 - Shared codebase.
 - Use of code buckets for store customization (logic).
 - Use theme for a different visual look and feel.
-- Centralized third party integrations.
+- Centralized third-party integrations.
+	
+This is a standard Spryker setup, best suited for the following use cases:
+- Your multi-shop system mostly uses the same business logic, any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](https://docs.spryker.com/docs/scos/dev/architecture/code-buckets.html) to achieve store-specific business logic.
+- Products, customers, orders, etc. are stored in the same database, making collaborative management across all stores simpler.
 
-This is a standard Spryker setup. It is best suited for the following use cases:
-- Your multi-shop system is mostly using the same business logic, any differences are not significant and can be covered within the code. Any updates to the business logic are be applied to all stores. If a store-specific business logic is necessary, you can use [code buckets](https://docs.spryker.com/docs/scos/dev/architecture/code-buckets.html) to achieve it.
-- Products, customers, orders, etc. are stored in the same database, which simplifies its collaborative management across all the stores.
+On the infrastructure level, applications cannot be scaled or deployed independently since all cloud resources are shared. Here are some other infrastructure-related points to keep in mind:
 
-On the infrastructure level, applications may not be scaled or deployed independently since all cloud resources are shared. Here are some other infrastructure-related points that you should keep in mind:
-
-- By default, all stores can be hosted only in one AWS region.
+- By default, all stores can only be hosted in one AWS region.
 - Traffic distribution is shared for all stores using ALB+NLBs (ALB-->NLB-->Nginx-->PHP-FPM).
 - SSL certificates may be generated automatically or uploaded manually in AWS.
 - SSL termination process is handled by ALB. There is also a built-in functionality, which allows to set several different certificates (issued for different domains) to one ALB.
@@ -91,8 +91,8 @@ The following table provides details on infrastructure for this setup:
 This setup has the following characteristics:
 
 - Multiple stores. 
-- Each store has a dedicated index for Elasticsearch and its own key-value storage namespace (Redis).
-- Virtual separated database per store. See [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html) for details on how you can add virtual databases to your store.
+- Each store has a dedicated Elasticsearch index and its own Redis key-value storage namespace.
+- Virtual separated database per store. For details on how to add virtual databases to your store, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
 
 {% info_block infoBox "Info" %}
 
@@ -100,11 +100,11 @@ You can have cluster sharing the same database or use different database setups.
 
 {% endinfo_block %}
 
-- One region with multiple stores
-- Shared codebase
-- Use of code buckets for store customization (logic)
-- Use theme for a different visual look and feel
-- Centralized third party integrations
+- One region with multiple stores.
+- Shared codebase.
+- Use of code buckets for store customization (logic).
+- Use of a theme for a different visual look and feel.
+- Centralized third party integrations.
 
 This setup is recommend when you don’t have shared data.
 

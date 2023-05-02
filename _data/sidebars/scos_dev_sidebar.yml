@@ -3690,7 +3690,7 @@ entries:
         nested:
         - title: Project modules
           nested:
-          - title: Add a new module
+          - title: Creae modules
             url: /docs/scos/dev/back-end-development/extend-spryker/create-modules.html
         - title: Spryker OS module customization
           url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
@@ -3704,12 +3704,14 @@ entries:
           - title: Install module structure and configuration
             url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
     - title: Zed UI tables
+      url: /docs/scos/dev/back-end-development/zed-ui-tables/zed-ui-tables.html
       nested:
       - title: Create and configure Zed tables
         url: /docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
       - title: Add buttons to Zed tables
         url: /docs/scos/dev/back-end-development/zed-ui-tables/add-buttons-to-zed-tables.html
     - title: Messages and errors
+      url: /docs/scos/dev/back-end-development/messages-and-errors/messages-and-errors.html
       nested:
       - title: Showing messages in Zed
         url: /docs/scos/dev/back-end-development/messages-and-errors/showing-messages-in-zed.html
@@ -4041,6 +4043,7 @@ entries:
     url: /docs/scos/dev/technical-enhancement-integration-guides/technical-enhancement-integration-guides.html
     nested:
     - title: Integrate development tools
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-development-tools.html
       nested:
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
@@ -4382,6 +4385,7 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+
     - title: Payment partners
       url: /docs/scos/dev/technology-partner-guides/payment-partners/payment-partners.html
       include_versions:

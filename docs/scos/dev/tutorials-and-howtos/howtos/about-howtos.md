@@ -27,7 +27,7 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 *Feature HowTos* can be useful for shop owners, administrators and developers as they explain how to perform tasks related to Spryker features. Specifically, this section contains the following guides:
 
 
-* [HowTo: Make a product searchable and shown on the Storefront URL](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html)
+* [HowTo: Make a product searchable and shown on the Storefront URL](/docs/pbc/all/product-information-management/{{site.version}}/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html)
 * [HowTo: Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html)
 * [HowTo: Generate a token for login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html)
 * [HowTo: Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)

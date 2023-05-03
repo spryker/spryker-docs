@@ -46,10 +46,12 @@ console frontend:zed:build
 
 Make sure that the following changes have been applied in the database:
 
-| DATABASE ENTITY         | TYPE  | EVENT   |
-|-------------------------|-------|---------|
-| spy_service_point       | table | created |
-| spy_service_point_store | table | created |
+| DATABASE ENTITY           | TYPE   | EVENT   |
+|---------------------------|--------|---------|
+| spy_service_point         | table  | created |
+| spy_service_point_store   | table  | created |
+| spy_service_point_address | table  | created |
+| spy_region.uuid           | column | created |
 
 {% endinfo_block %}
 
@@ -57,12 +59,14 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
 
-| CLASS NAMESPACE                                             | EXTENDS                                                                        |
-|-------------------------------------------------------------|--------------------------------------------------------------------------------|
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint           |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery      |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore      |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery |
+| CLASS NAMESPACE                                               | EXTENDS                                                                          |
+|---------------------------------------------------------------|----------------------------------------------------------------------------------|
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint             |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery        |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress      |      
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore        |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery   | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery   |
 
 {% endinfo_block %}
 
@@ -70,29 +74,42 @@ Make sure that propel entities have been generated successfully by checking thei
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                       | TYPE  | EVENT   | PATH                                                         |
-|--------------------------------|-------|---------|--------------------------------------------------------------|
-| ServicePoint                   | class | created | src/Generated/Shared/Transfer/ServicePoint                   |
-| ServicePointCollection         | class | created | src/Generated/Shared/Transfer/ServicePointCollection         |
-| ServicePointCollectionRequest  | class | created | src/Generated/Shared/Transfer/ServicePointCollectionRequest  |
-| ServicePointCollectionResponse | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponse |
-| ServicePointCriteria           | class | created | src/Generated/Shared/Transfer/ServicePointCriteria           |
-| ServicePointConditions         | class | created | src/Generated/Shared/Transfer/ServicePointConditions         |
-| ApiServicePointsAttributes     | class | created | src/Generated/Shared/Transfer/ApiServicePointsAttributes     |
-| StoreRelation                  | class | created | src/Generated/Shared/Transfer/StoreRelation                  |
-| Store                          | class | created | Generated/Shared/Transfer/Store                              |
-| Error                          | class | created | Generated/Shared/Transfer/Error                              |
-| Sort                           | class | created | Generated/Shared/Transfer/Sort                               |
-| Pagination                     | class | created | Generated/Shared/Transfer/Pagination                         |
-| ErrorCollection                | class | created | Generated/Shared/Transfer/ErrorCollection                    |
-| DataImporterConfiguration      | class | created | Generated/Shared/Transfer/DataImporterConfiguration          |
-| DataImporterReport             | class | created | Generated/Shared/Transfer/DataImporterReport                 |
+| TRANSFER                              | TYPE  | EVENT   | PATH                                                             |
+|---------------------------------------|-------|---------|------------------------------------------------------------------|
+| ServicePoint                          | class | created | src/Generated/Shared/Transfer/ServicePoint                       |
+| ServicePointCollection                | class | created | src/Generated/Shared/Transfer/ServicePointCollection             |
+| ServicePointCollectionRequest         | class | created | src/Generated/Shared/Transfer/ServicePointCollectionRequest      |
+| ServicePointCollectionResponse        | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponse     |
+| ServicePointCriteria                  | class | created | src/Generated/Shared/Transfer/ServicePointCriteria               |
+| ServicePointConditions                | class | created | src/Generated/Shared/Transfer/ServicePointConditions             |
+| ApiServicePointsAttributes            | class | created | src/Generated/Shared/Transfer/ApiServicePointsAttributes         |
+| ApiServicePointAddressesAttributes    | class | created | src/Generated/Shared/Transfer/ApiServicePointAddressesAttributes |
+| StoreRelation                         | class | created | src/Generated/Shared/Transfer/StoreRelation                      |
+| Store                                 | class | created | Generated/Shared/Transfer/Store                                  |
+| Error                                 | class | created | Generated/Shared/Transfer/Error                                  |
+| Sort                                  | class | created | Generated/Shared/Transfer/Sort                                   |
+| Pagination                            | class | created | Generated/Shared/Transfer/Pagination                             |
+| ErrorCollection                       | class | created | Generated/Shared/Transfer/ErrorCollection                        |
+| DataImporterConfiguration             | class | created | Generated/Shared/Transfer/DataImporterConfiguration              |
+| DataImporterReport                    | class | created | Generated/Shared/Transfer/DataImporterReport                     |
+| CountryCriteria                       | class | created | Generated/Shared/Transfer/CountryCriteria                        |
+| CountryConditions                     | class | created | Generated/Shared/Transfer/CountryConditions                      |
+| Country                               | class | created | Generated/Shared/Transfer/Country                                |
+| CountryCollection                     | class | created | Generated/Shared/Transfer/CountryCollection                      |
+| Region                                | class | created | Generated/Shared/Transfer/Region                                 |
+| ServicePointAddressCollection         | class | created | Generated/Shared/Transfer/ServicePointAddressCollection          |
+| ServicePointAddressCollectionRequest  | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionRequest   |
+| ServicePointAddressCollectionResponse | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionResponse  |
+| ServicePointAddressCriteria           | class | created | Generated/Shared/Transfer/ServicePointAddressCriteria            |
+| ServicePointAddressConditions         | class | created | Generated/Shared/Transfer/ServicePointAddressConditions          |
+| ServicePointAddress                   | class | created | Generated/Shared/Transfer/ServicePointAddress                    |
+| GlueRelationship                      | class | created | Generated/Shared/Transfer/GlueRelationship                       |
 
 {% endinfo_block %}
 
 ### 3) Set up configuration
 
-1. To make the `service-points` resource protected, adjust the protected paths configuration:
+1. To make the `service-points` and `service-point-addresses` resources protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -112,7 +129,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
     {
         return [
             // ...
-            '/\/service-points(?:\/[^\/]+)?\/?$/' => [
+            '/\/service-points.*/' => [
                 'isRegularExpression' => true,
             ],
         ];
@@ -151,6 +168,25 @@ sp2,DE
 | service_point_key | mandatory | string    | sp1          | Unique key of the service point.        |
 | store_name        | mandatory | string    | DE           | Name of the store to make relation for. |
 
+**data/import/common/common/service_point_address.csv**
+
+```csv
+service_point_key,region_iso2_code,country_iso2_code,address1,address2,address3,city,zip_code
+sp1,,DE,Caroline-Michaelis-Straße,8,,Berlin,10115
+sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
+```
+
+| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE              | DATA EXPLANATION                 |
+|-------------------|-----------|-----------|---------------------------|----------------------------------|
+| service_point_key | mandatory | string    | sp1                       | Unique key of the service point. |
+| region_iso2_code  | optional  | string    | DE-BE                     | Region ISO2 code                 |
+| country_iso2_code | mandatory | string    | DE                        | Country ISO2 code                |
+| address1          | mandatory | string    | Caroline-Michaelis-Straße | First line of address            |
+| address2          | mandatory | string    | 8a                        | Second line of address           |
+| address3          | optional  | string    | 12/1                      | Third line of address            |
+| city              | mandatory | string    | Berlin                    | City                             |
+| zip_code          | mandatory | string    | 10115                     | Zip code                         |
+
 2. Enable data imports at your configuration file, e.g.:
 
 **data/import/local/full_EU.yml**
@@ -160,14 +196,17 @@ sp2,DE
       source: data/import/common/common/service_point.csv
     - data_entity: service-point-store
       source: data/import/common/{{store}}/service_point_store.csv
+    - data_entity: service-point-address
+      source: data/import/common/common/service_point_address.csv
 ```
 
 3. Register the following data import plugins:
 
-| PLUGIN                            | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
-|-----------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ServicePointDataImportPlugin      | Imports service points data into the database.                | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
-| ServicePointStoreDataImportPlugin | Imports service point store relations data into the database. | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
+| PLUGIN                              | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                                           |
+|-------------------------------------|---------------------------------------------------------------|---------------|---------------------------------------------------------------------|
+| ServicePointDataImportPlugin        | Imports service points data into the database.                | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
+| ServicePointStoreDataImportPlugin   | Imports service point store relations data into the database. | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
+| ServicePointAddressDataImportPlugin | Imports service point addresses into the database.            | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -178,7 +217,8 @@ namespace Pyz\Zed\DataImport;
 
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointDataImportPlugin;
-use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointDataImportPlugin;
+use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointStoreDataImportPlugin;
+use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointAddressDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
@@ -190,6 +230,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         return [
             new ServicePointDataImportPlugin(),
             new ServicePointStoreDataImportPlugin(),
+            new ServicePointAddressDataImportPlugin(),
         ];
     }
 }
@@ -222,6 +263,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             // ...
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_STORE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_ADDRESS),
         ];
 
         return $commands;
@@ -234,11 +276,12 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```bash
 console data:import service-point
 console data:import service-point-store
+console data:import service-point-address
 ```
 
 {% info_block warningBox “Verification” %}
 
-Make sure that entities were imported to `spy_service_point` and `spy_service_point_store` database tables respectively.
+Make sure that entities were imported to `spy_service_point`, `spy_service_point_store` and `spy_service_point_address` database tables respectively.
 
 {% endinfo_block %}
 
@@ -261,6 +304,26 @@ service_point.validation.service_point_entity_not_found,Service point entity was
 service_point.validation.service_point_entity_not_found,Servicestelle wurde nicht gefunden.,de_DE
 service_point.validation.wrong_request_body,Wrong request body.,en_US
 service_point.validation.wrong_request_body,Falscher Anforderungstext.,de_DE
+service_point.validation.country_entity_not_found,Country with iso2 code '%iso2Code%' does not exist.,en_US
+service_point.validation.country_entity_not_found,Das Land mit dem iso2-Code '%iso2Code%' existiert nicht.,de_DE
+service_point.validation.region_entity_not_found,Region with uuid '%uuid%' does not exist for country with iso2 code '%countryIso2Code%'.,en_US
+service_point.validation.region_entity_not_found,Region mit uuid '%uuid%' existiert nicht für Land mit iso2-Code '%countryIso2Code%',de_DE
+service_point.validation.service_point_address_address1_wrong_length,Service Point Address Input address1 must have a length of %min% to %max% characters.,en_US
+service_point.validation.service_point_address_address1_wrong_length,Service Point Adresse Input address1 muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+service_point.validation.service_point_address_address2_wrong_length,Service Point Address Input address2 must have a length of %min% to %max% characters.,en_US
+service_point.validation.service_point_address_address2_wrong_length,Service Point Adresse Input address2 muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+service_point.validation.service_point_address_address3_wrong_length,Service Point Address Input address3 must have a length of %min% to %max% characters.,en_US
+service_point.validation.service_point_address_address3_wrong_length,Service Point Adresse Input address3 muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+service_point.validation.service_point_address_city_wrong_length,A service point address city must have length from %min% to %max% characters.,en_US
+service_point.validation.service_point_address_city_wrong_length,Eine Service Point Adresse Stadt muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+service_point.validation.service_point_address_entity_not_found,Service point address entity was not found.,en_US
+service_point.validation.service_point_address_entity_not_found,Die Entität Service Point Adresse wurde nicht gefunden.,de_DE
+service_point.validation.service_point_address_zip_code_wrong_length,A service point address zip code must have length from %min% to %max% characters.,en_US
+service_point.validation.service_point_address_zip_code_wrong_length,Die Postleitzahl einer Service Point Adresse muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+service_point.validation.service_point_address_already_exists,A service point address for the service point already exists.,en_US
+service_point.validation.service_point_address_already_exists,Es existiert bereits eine Service Point Adresse für den Service Point.,de_DE
+service_point.validation.service_point_uuid_is_not_unique,A service point with the same uuid already exists in request.,en_US
+service_point.validation.service_point_uuid_is_not_unique,Ein Service Point mit der gleichen uuid existiert bereits in der Anfrage.,de_DE
 ```
 
 2. Import data:
@@ -271,11 +334,12 @@ console data:import glossary
 
 ### 6) Set up behavior
 
-1. To enable the Backend API, register the plugin:
+1. To enable the Backend API, register the plugins:
 
-| PLUGIN                             | SPECIFICATION                            | PREREQUISITES | NAMESPACE                                                                                            |
-|------------------------------------|------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
-| ServicePointsBackendResourcePlugin | Registers the `service-points` resource. |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| PLUGIN                                     | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                                                                                            |
+|--------------------------------------------|---------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| ServicePointsBackendResourcePlugin         | Registers the `service-points` resource.          |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| ServicePointAddressesBackendResourcePlugin | Registers the `service-point-addresses` resource. |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -286,6 +350,7 @@ namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
 use \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ServicePointsBackendResourcePlugin;
+use \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ServicePointAddressesBackendResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
@@ -296,7 +361,47 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     {
         return [
             new ServicePointsBackendResourcePlugin(),
+            new ServicePointAddressesBackendResourcePlugin(),
         ];
+    }
+}
+
+```
+
+2. To enable the Backend API relationships, register the plugin:
+
+| PLUGIN                                                                 | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                                                            |
+|------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| ServicePointAddressesByServicePointsBackendResourceRelationshipPlugin  | Adds `service-point-addresses` relationship to `service-points` resource. |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+
+**src/Pyz/Glue/GlueBackendApiApplicationGlueJsonApiConventionConnector/GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplicationGlueJsonApiConventionConnector\GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
+use Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector\ServicePointAddressesByServicePointsBackendResourceRelationshipPlugin;
+use Spryker\Glue\ServicePointsBackendApi\ServicePointsBackendApiConfig;
+
+class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider{
+    /**
+     * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection,
+    ): ResourceRelationshipCollectionInterface {
+        ...
+        
+        $resourceRelationshipCollection->addRelationship(
+            ServicePointsBackendApiConfig::RESOURCE_SERVICE_POINTS,
+            new ServicePointAddressesByServicePointsBackendResourceRelationshipPlugin(),
+        );
+        
+        ...
     }
 }
 
@@ -333,5 +438,38 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
        ```
     * `GET https://glue-backend.mysprykershop.com/service-points/`
     * `GET https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}`
+    * `POST https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
+         ```json
+            {
+                "data": {
+                    "type": "service-point-address",
+                    "attributes": {
+                        "address1": "address1",
+                        "address2": "address2",
+                        "address3": "address3",
+                        "city": "city",
+                        "zipCode": "10115",
+                        "countryIso2Code": "DE"
+                    }
+                }
+            }
+         ```
+   * `PATCH https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses/{{service-point-address-uuid}}`
+        ```json
+           {
+               "data": {
+                   "type": "service-point-address",
+                   "attributes": {
+                       "address1": "another address1",
+                       "address2": "another address2",
+                       "address3": "another address3",
+                       "city": "another city",
+                       "zipCode": "20115",
+                       "countryIso2Code": "AT"
+                   }
+               }
+           }
+        ```
+   * `GET https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
 
 {% endinfo_block %}

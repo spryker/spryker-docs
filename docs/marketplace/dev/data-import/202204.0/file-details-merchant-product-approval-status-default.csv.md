@@ -7,6 +7,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-approval-process-feature-walkthrough.html
   - title: Marketplace Product Approval Process feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_product_approval_status_default.csv` file to configure default merchant products approval statuses in your Spryker shop.

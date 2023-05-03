@@ -3,6 +3,9 @@ title: "File details: merchant.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant.csv file to configure merchant information in your Spryker shop.
 template: import-file-template
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant.csv` file to configure [merchant](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) information in your Spryker shop.

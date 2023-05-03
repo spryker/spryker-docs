@@ -32,11 +32,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-discountcalculatorconnector.html  
 related:
   - title: Upgrade the Discount
-    link: docs/pbc/all/discount-management/page.version/install-and-upgrade/upgrade-the-discount-module.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-the-discount-module.html
   - title: Creating Vouchers
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-vouchers.html
   - title: Upgrade the DiscountSalesAggregatorConnector
-    link: docs/pbc/all/discount-management/page.version/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-discountcalculatorconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-discountcalculatorconnector-module.md -->

@@ -18,11 +18,11 @@ related:
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
 ---
 
-The [Promotions](/docs/pbc/all/discount-management/{{site.version}}/discount-management.html) functionality lets sellers provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase must fulfill certain discount conditions—for example, the purchase amount exceeding a certain threshold.
+The [Promotions](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html) functionality lets sellers provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase must fulfill certain discount conditions—for example, the purchase amount exceeding a certain threshold.
 
 {% info_block infoBox "Info" %}
 
-For more details about how to create the discount conditions, see [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/manage-in-the-back-office/create-discounts.html).
+For more details about how to create the discount conditions, see [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 
 {% endinfo_block %}
 
@@ -52,9 +52,9 @@ For details about how to retrieve promotional items for a registered user’s ca
 
 Once you know what promotional items you can make use of, you can apply the discounts by adding the promotional items to cart. To retrieve details on cart rules of the promotional items you add, include the cart-rule resource relationship in your request.
 
-For details about how to retrieve promotional items for a registered user's cart, see [Retrieve discounts in carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html).
+For details about how to retrieve promotional items for a registered user's cart, see [Retrieve discounts in carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html).
 
-For details about how to retrieve promotional items for a guest user’s cart, see [Retrieve discounts in guest carts](/docs/pbc/all/discount-management/{{site.version}}/manage-via-glue-api/retrieve-discounts-in-guest-carts.html).
+For details about how to retrieve promotional items for a guest user’s cart, see [Retrieve discounts in guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/retrieve-discounts-in-guest-carts.html).
 
 ## Removing promotional items from cart
 

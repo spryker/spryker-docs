@@ -33,7 +33,7 @@ redirect_from:
 
 related:
   - title: Upgrade the Discount
-    link: docs/pbc/all/discount-management/page.version/install-and-upgrade/upgrade-the-discount-module.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-the-discount-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-discountsalesaggregatorconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-discountsalesaggregatorconnector-module.md -->

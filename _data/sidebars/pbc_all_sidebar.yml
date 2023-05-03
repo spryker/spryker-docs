@@ -50,7 +50,7 @@ entries:
                   - title: Retrieve shipments in orders
                     url: /docs/pbc/all/carrier-management/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
               - title: Import and export data
-                url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
+                url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/discount-import.html
                 nested:
                   - title: File details - shipment.csv
                     url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/file-details-shipment.csv.html
@@ -778,70 +778,82 @@ entries:
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
-          - title: What's changed
-            url: /docs/pbc/all/discount-management/whats-changed-in-discount-management.html
-          - title: Install and upgrade
+          - title: Base shop
             nested:
-              - title: Integrate the Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html
-              - title: Integrate the Promotions & Discounts Glue API
-                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
-              - title: Integrate the Product labels + Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
-              - title: Integrate the Category Management + Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
-              - title: Upgrade the Discount module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
-              - title: Upgrade the DiscountCalculatorConnector module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
-              - title: Upgrade the DiscountPromotion module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotion-module.html
-              - title: Upgrade the DiscountPromotionWidget module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html
-              - title: Upgrade the DiscountSalesAggregatorConnector module
-                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
-          - title: Manage in the Back Office
+              - title: What's changed
+                url: /docs/pbc/all/discount-management/base-shop/whats-changed-in-discount-management.html
+              - title: Promotions & Discounts feature overview
+                url: /docs/pbc/all/discount-management/base-shop/promotions-discounts-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Integrate the Promotions & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html
+                  - title: Integrate the Promotions & Discounts Glue API
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
+                  - title: Integrate the Product labels + Promotions & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
+                  - title: Integrate the Category Management + Promotions & Discounts feature
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
+                  - title: Upgrade the Discount module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discount-module.html
+                  - title: Upgrade the DiscountCalculatorConnector module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
+                  - title: Upgrade the DiscountPromotion module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountpromotion-module.html
+                  - title: Upgrade the DiscountPromotionWidget module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html
+                  - title: Upgrade the DiscountSalesAggregatorConnector module
+                    url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: "Best practices: Promote products with discounts"
+                    url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
+                  - title: Create discounts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/create-discounts.html
+                  - title: Edit discounts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/edit-discounts.html
+                  - title: Export voucher codes
+                    url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/export-voucher-codes.html
+              - title: Manage via Glue API
+                url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discounts-via-glue-api.html
+                nested:
+                  - title: Add items with discounts to carts of registered users
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
+                  - title: Manage discount vouchers in carts of registered users
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
+                  - title: Retrieve discounts in carts of registered users
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
+                  - title: Retrieve discounts in customer carts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
+                  - title: Add items with discounts to guest carts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
+                  - title: Manage discount vouchers in guest carts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
+                  - title: Retrieve discounts in guest carts
+                    url: /docs/pbc/all/discount-management/base-shop/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
+              - title: Import and export data
+                url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/discount-import.html
+                nested:
+                  - title: File details - discount.csv
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount.csv.html
+                  - title: File details - discount_store.csv
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-store.csv.html
+                  - title: File details - discount_amount.csv
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-amount.csv.html
+                  - title: File details - discount_voucher.csv
+                    url: /docs/pbc/all/discount-management/base-shop/import-and-export-data/file-details-discount-voucher.csv.html
+              - title: Tutorials and HowTos
+                nested:
+                  - title: "HowTo: Create discounts based on shipment"
+                    url: /docs/pbc/all/discount-management/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+          - title: Marketplace
             nested:
-              - title: "Best practices: Promote products with discounts"
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
-              - title: Create discounts
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html
-              - title: Edit discounts
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/edit-discounts.html
-              - title: Export voucher codes
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
-          - title: Manage via Glue API
-            url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discounts-via-glue-api.html
-            nested:
-              - title: Add items with discounts to carts of registered users
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
-              - title: Manage discount vouchers in carts of registered users
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
-              - title: Retrieve discounts in carts of registered users
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
-              - title: Retrieve discounts in customer carts
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
-              - title: Add items with discounts to guest carts
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
-              - title: Manage discount vouchers in guest carts
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
-              - title: Retrieve discounts in guest carts
-                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
-          - title: Import and export data
-            url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
-            nested:
-              - title: File details - discount.csv
-                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html
-              - title: File details - discount_store.csv
-                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-store.csv.html
-              - title: File details - discount_amount.csv
-                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-amount.csv.html
-              - title: File details - discount_voucher.csv
-                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-voucher.csv.html
-          - title: Tutorials and HowTos
-            nested:
-              - title: "HowTo: Create discounts based on shipment"
-                url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+              - title: Marketplace Promotions & Discounts feature overview
+                url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-overview.html
+              - title: Install the Marketplace Promotions & Discounts feature
+                url: /docs/pbc/all/discount-management/marketplace/install-the-marketplace-promotions-discounts-feature.html
+              - title: "Marketplace Promotions & Discounts feature: Domain model and relationships"
+                url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-domain-model-and-relationships.html
       - title: Emails
         url: /docs/pbc/all/emails/emails.html
         nested:

@@ -1,5 +1,5 @@
 ---
-title: "Marketplace Promotions and Discounts feature: Domain model and relationships walkthrough"
+title: "Marketplace Promotions & Discounts feature: Domain model and relationships"
 description: This document provides technical details about the Marketplace Promotions and Discounts feature.
 template: feature-walkthrough-template
 ---

@@ -23,7 +23,7 @@ The Spryker Multistore solution is designed to represent several business channe
 
     - Different regions: Americas, EU, MENA, APAC, etc.
     - Different countries: DE, FR, ES, NL, etc.
-    - Combination of regions and countires.
+    - Combination of regions and countries.
 
 - Custom functionality per store: Allows offering a customized shopping experience to customers by displaying relevant products, content, and promotions based on their location or interest. This can include different brands under a single franchise, such as Swatch, Omega, etc., or different business models like new cars, used cars, spare parts.
 - Sales and marketing: The ability to track sales and customer data for each store to monitor performance and make data-driven decisions about future expansion.
@@ -35,7 +35,7 @@ The Spryker Multistore solution is designed to represent several business channe
 
 {% info_block warningBox "Warning" %}
 
-Do not use the Spryker Multistore concept as a representation of a physical store.
+Don't use the Spryker Multistore concept as a representation of a physical store.
 
 {% endinfo_block %}
 
@@ -68,7 +68,7 @@ This is a standard Spryker setup, best suited for the following use cases:
 - Your multi-shop system mostly uses the same business logic, any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](https://docs.spryker.com/docs/scos/dev/architecture/code-buckets.html) to achieve store-specific business logic.
 - Products, customers, orders, etc. are stored in the same database, making collaborative management across all stores simpler.
 
-On the infrastructure level, applications cannot be scaled or deployed independently since all cloud resources are shared. Here are some other infrastructure-related points to keep in mind:
+On the infrastructure level, applications can't be scaled or deployed independently since all cloud resources are shared. Here are some other infrastructure-related points to keep in mind:
 
 - By default, all stores can only be hosted in one AWS region.
 - Traffic distribution is shared for all stores using ALB+NLBs (ALB-->NLB-->Nginx-->PHP-FPM).
@@ -153,7 +153,7 @@ In terms on infrastructure, this setup is the most flexible way of scaling and d
 
 In each AWS account you can have several stores.
 
-{% endinfo_block %}a physi
+{% endinfo_block %}
 
 - SSL certificates may be generated automatically or uploaded manually in AWS. 
 - SSL termination process is handled by ALB in all setup models. There is also a built-in functionality, which allows to set several different certificates (issued for different domains) to one ALB.
@@ -182,7 +182,7 @@ Infrastructure details:
 | Spryker Commerce OS                                                    | Shared  | Shared   | Separate |
 | Complexity of rollout                                                  | Low     | Medium   | High     |
 
-High-level characteristics:
+**High-level characteristics:**
 
 | What                                | Setup 1                                                                                 | Setup 2                                                                                                  | Setup 3                                                                                 |
 |-------------------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
@@ -192,13 +192,13 @@ High-level characteristics:
 | AWS regios                          | One region with multiple stores                                                         | One region with multiple stores                                                                          | Allows different regions                                                                |
 | Codebase                            | Shared codebase                                                                         | Shared codebase                                                                                          | Shared or separate codebases (up to a project development team)                         |
 | Code bucket/themes                  | Supported                                                                               | Supported                                                                                                | Supported (for shared codebase)                                                         |
-| Centralized 3rd party integrations  | Supported                                                                               | Supported                                                                                                | Supported (for shared codebase)                                                         |
+| Centralized third-party integrations  | Supported                                                                               | Supported                                                                                                | Supported (for shared codebase)                                                         |
 | Fully independent development teams | Not supported                                                                           | Not supported                                                                                            | Supported (for separate codebases)                                                      |
 
 
-Load criteria:
+**Load criteria:**
 
-|  | Page view load (Storefront Yves)  | Backend load (Spryker Commerce OS)  |Database Throughput   |Shared data customers, orders, etc)|
+|  | Page view load (Storefront Yves)  | Backend load (Spryker Commerce OS)  |Database Throughput   |Shared data (customers, orders, etc)|
 |------|---|---|---|---|
 | SETUP 1    |Normal   | Normal  |Normal  |Yes  |
 | SETUP 2    | Normal/High  | Normal/High   | Normal/High   | No |
@@ -211,7 +211,7 @@ If you anticipate a high load, it It is essential to consult and obtain guidance
 
 {% endinfo_block %}
 
-Limitations:
+**Limitations:**
 
 |  | Setup 1  | Setup 2  | Setup 3  |
 |------|---|---|---|

@@ -7,7 +7,7 @@ related:
     link: docs\cloud\dev\spryker-cloud-commerce-os\multi-store-setups\multistore-setup-options.html
 ---
 
-This document outlines the high-level tasks and responsibilities of Spryker and Customer when setting up a new store depending on the chosen setup for the multistore environment. For detailed description of setups refered to in this document, see [Multistore setup options](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html).
+This document outlines the high-level tasks and responsibilities of Spryker and Customer when setting up a new store depending on the chosen setup for the multistore environment. For description of setups referred to in this document, see [Multistore setup options](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html).
 
 For detailed steps about the new store implementation, see [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html).
 
@@ -31,21 +31,21 @@ For detailed steps about the new store implementation, see [HowTo: Set up multip
 
 {% info_block infoBox "Info" %}
 
-When handling multi Storefronts or Zeds through code buckets or namespaces, you might need to send a request to Spryker for multi-instance enablement depending on the specific instance (Storefront/Zed).
+When handling multi Storefronts or Zeds through code buckets or namespaces, you might need to send a request to Spryker for multi-instance enablement depending on the specific instance (Storefront or Zed).
 
 {% endinfo_block %}
 
 ## Setup 2
 
-For this setup, you should send a support request to Spryker and do the following:
+For this setup, send a support request to Spryker and do the following:
 
-- Ask Spryker to set up a multi-database
-- Provide the deploy file
-- Mention which countries you want to enable
+- Ask Spryker to set up a multi-database.
+- Provide the deploy file.
+- Mention which countries you want to enable.
 
 **Spryker**
 1. Adjust deployment structure / CI: define the environment variables in Spryker CI based on the deployment files.
-2. Make adjustments for stage and production: adjust configuration in the `config.php` file.
+2. Make adjustments for staging and production: adjust configuration in the `config.php` file.
 3. Add new endpoints for stores and regions (Spryker owns DNS in AWS).
 4. Update RDS configuration to activate multi-database feature
 
@@ -56,14 +56,14 @@ For this setup, you should send a support request to Spryker and do the followin
 3. Adjust the importer and define product, content, data, payment including OMS or stock store relations via importer. See [example for the B2C demo shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/data/import/common/common).  
 4. Change DNS (merchant owns DNS).
 5. Check third party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search). 
-6. Migration of the existing data into the shared instance. Spryker can support you in this on request.
-7. Full UAT, end2end tests.
-8. Check the provided launch list from Spryker, if you start a new project.
+6. Migrate the existing data into the shared instance. Spryker can support you in this on request.
+7. Conduct the full UAT, end2end tests.
+8. If you start a new project, check the provided launch list from Spryker.
 9. Adjust application performance monitoring.
 
 {% info_block infoBox "Info" %}
 
-When handling multi Storefronts or Zeds through code buckets or namespaces, you might need to send a request to Spryker for multi-instance enablement depending on the specific instance (Storefront/Zed).
+When handling multi Storefronts or Zeds through code buckets or namespaces, you might need to send a request to Spryker for multi-instance enablement depending on the specific instance (Storefront or Zed).
 
 {% endinfo_block %}
 
@@ -88,8 +88,8 @@ Provision of a new fully isolated environment per store.
 3. Adjust the importer and define product, content, data, payment including OMS or stock store relations via importer. See [example for the B2C demo shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/data/import/common/common).  
 4. Change DNS (merchant owns DNS).
 5. Check third party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search). 
-6. Migration of the existing data into the shared instance. Spryker can support you in this on request.
-7. Full UAT, end2end tests.
+6. Migrate the existing data into the shared instance. Spryker can support you in this on request.
+7. Conduct the full UAT, end2end tests.
 8. Check the provided launch list from Spryker, if you start a new project.
 9. Adjust application performance monitoring.
 10. Manage codebase for all the separate stores taking into account the increased complexity of deployment and store maintenance.
@@ -104,8 +104,8 @@ The touchpoints listed here may vary depending on the project. If view of that, 
 | config/Shared/default_store.php     | Specifies the default store.            | Set the desired store code.      |
 | config/Shared/stores.php     | Contains store-specific application configuration.            | Remove extra stores, configure formats, locales, available countries, currencies.      |
 | config/install/*.yml     | YAML files, describing application building steps for different environments used by docker/sdk.            | Some of the commands have a context of the store for which they are executed. Make sure the right store is used.      |
-| data/import/*.csv     | Demo data, a lot of store-specific content.            | Make sure to add/remove data for respective stores in all the files.      |
-| deploy.{environment-name}.yml     | Main docker/sdk configuration file, which is used to build all application images.            | Regions, stores, groups, and database(s), domains. You can create a dedicated environment file for each store.      |
+| data/import/*.csv     | Demo data, a lot of store-specific content.            | Make sure to add or remove data for respective stores in all the files.      |
+| deploy.{environment-name}.yml     | Main docker/sdk configuration file, which is used to build all application images.            | Regions, stores, groups, and databases, domains. You can create a dedicated environment file for each store.      |
 
 ### Data
 1. Generate product data files to add new localized attributes and entries.
@@ -123,11 +123,11 @@ Certificates are created for all domains
 
 ### Translations
 - Re-generate all CSV files consisting of a new locale.
-- Import the updated CSV files
+- Import the updated CSV files.
 
 ### CMS
 - Update the list of the [related CMS stores](https://docs.spryker.com/docs/scos/user/features/202009.0/cms-feature-overview/cms-pages-overview.html#cms-page-store-relation)
 - Update store-specific Terms & Conditions
 
 ### Addons
-Configure the project-specific addons. The addons vary and depend on the project implementation. For example, create country admin roles, configure the outgoing email addres, etc.
+Configure the project-specific addons. The addons vary and depend on the project implementation. For example, create country admin roles, configure the outgoing email address, etc.

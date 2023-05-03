@@ -1,5 +1,5 @@
 ---
-title: HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later
+title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later"
 description: Learn how you can allow Zed SCSS/JS on a project level.
 last_updated: May 2, 2023
 template: howto-guide-template

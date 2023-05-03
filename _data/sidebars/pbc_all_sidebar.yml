@@ -847,6 +847,8 @@ entries:
                   - title: "HowTo: Create discounts based on shipment"
                     url: /docs/pbc/all/discount-management/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
           - title: Marketplace
+            include_versions:
+            - "202212.0"
             nested:
               - title: Marketplace Promotions & Discounts feature overview
                 url: /docs/pbc/all/discount-management/marketplace/marketplace-promotions-discounts-feature-overview.html

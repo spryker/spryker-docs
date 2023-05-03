@@ -8,7 +8,7 @@ Multidimensional arrays inside the dependency provider’s methods.
 
 ## Problem description
 
-On the project level, developers use plugins stack, not all structures are needed and can be supported. Multidimensional arrays make configuration difficult.
+On the project level, developers use plugins stack, not all structures are needed and can be supported. Multidimensional arrays make configuration hardly upgradable.
 This check will verify that multidimensional arrays should have max 2 levels inside.
 
 ## Example of code that causes an upgradability error:
@@ -74,7 +74,7 @@ MULTIDIMENSIONAL ARRAY
 +---+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
 | # | Message                                                                                                                    | Target                                                                                      |
 +---+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
-| 1 | Reached max level of nesting for the plugin registration in the {FormDependencyProvider::getPlugins()}.                    | Pyz\Yves\Form\FormDependencyProvider\FormDependencyProvider        |
+| 1 | Reached max level of nesting for the plugin registration in the {FormDependencyProvider::getPlugins()}.                    | Pyz\Yves\Form\FormDependencyProvider\FormDependencyProvider                                 |
 |   | The maximum allowed nesting level is 2. Please, refactor code, otherwise it will cause upgradability issues in the future. |                                                                                             |
 +---+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
 

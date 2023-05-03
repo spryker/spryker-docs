@@ -15,15 +15,13 @@ import { appBuilder } from '@spryker-oryx/core';
 appBuilder().withEnvironment(import.meta.env); // or process.env in NodeJS style apps
 ```
 
-{% info_block warningBox "Verification" %}
+{% info_block warningBox "" %}
 
-When you are using all environment variables directly, like `import.meta.env`, they may end up in your application bundle, which may leak confidential information to public if your application is deployed to a public internet, so make sure you are filtering your environment variables in the build step (for ex. using `envPrefix` in vite build config).
+When you are using all environment variables directly, like `import.meta.env`, they may end up in your application bundle. This may leak confidential information to public if your application is deployed to a public internet, so make sure you are filtering your environment variables in the build step. For example, using `envPrefix` in Vite build config.
 
 {% endinfo_block %}
 
-**Security Note**:
-
-To declare a new environment variable use global interface `AppEnvironment` with your custom environment variable name and type:
+To declare a new environment variable, use the `AppEnvironment` global interface with your custom environment variable name and type:
 
 ```ts
 declare global {
@@ -33,9 +31,9 @@ declare global {
 }
 ```
 
-Make sure to mark it as optional as there are no guarantees by the Oryx framework that any environment variable will be present in the runtime. Also you should in most cases use `string` as a type for your environment variable as most of the enviromnents are exposed as strings and Oryx framework will not perform any typechecks or type conversions for you.
+Make sure to mark it as optional, as the Oryx framework does not guarantee that any environment variable will be present in the runtime. Also, in most cases, set `string` as a type for environment variables as most of the environments are exposed as strings and Oryx framework does not perform any typechecks or type conversions.
 
-Whenever you need to access environment variable use `injectEnv` API:
+To access an environment variable, use the `injectEnv` API:
 
 ```ts
 import { injectEnv } from '@spryker-oryx/core';

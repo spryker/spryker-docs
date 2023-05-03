@@ -4,11 +4,9 @@ description: Plugins of the Oryx Application
 template: concept-topic-template
 ---
 
-# Application plugins
-
 When you create an Oryx Application with the `appBuilder()` function, it creates an instance of `App`. The `App` is a a shell that can be enhanced with (custom) plugins (`AppPlugin`). Plugins allow you to extend Oryx core behaviour without modifying the core code of the framework.
 
-There are several built-in plugins provided by the Oryx framework:
+The following built-in plugins are provided by the Oryx framework:
 
 - [`ComponentsPlugin`](#components-plugin)
 - [`InjectionPlugin`](#injection-plugin)
@@ -21,13 +19,9 @@ For ordinary application development, there's no need to develop custom plugins.
 
 ### Components plugin
 
-The `ComponentsPlugin` is an important plugin that orchestrates the (lazy) loading of components. The plugin registers all the component definitions and loads the implementation whenever required in the DOM.
+The `ComponentsPlugin` plugin orchestrates the (lazy) loading of components. The plugin registers all the component definitions and loads the implementation whenever required in the DOM.
 
-The plugin exposes the following API:
-
-- `registerComponents()` – registers components
-
-For example, to register more component:
+The plugin exposes the `registerComponents()` API, which registers components. For example, to register more component:
 
 ```ts
 import { ComponentsPlugin } from '@spryker-oryx/core';
@@ -39,14 +33,14 @@ app.requirePlugin(ComponentsPlugin).registerComponents([
 
 ### Injection plugin
 
-The `InjectionPlugin` plugin manages the dependency injection system (DI). DI is an important concept in Oryx that allows to customise application logic which it nested deep inside the application logic.
+The `InjectionPlugin` plugin manages the dependency injection system (DI). DI lets you customize application logic, which is nested deep inside the application logic.
 
-The plugin exposes the following API:
+The plugin exposes the following APIs:
 
-- `getInjector()` – returns the injector that it has created
-- `createInjector()` – recreates the injector with the configured providers
+- `getInjector()`: returns the injector it has created.
+- `createInjector()`: recreates the injector with the configured providers.
 
-For example, to get injector and inject something from it:
+For example, get the injector and inject something from it:
 
 ```ts
 import { InjectionPlugin } from '@spryker-oryx/core';
@@ -54,7 +48,7 @@ import { InjectionPlugin } from '@spryker-oryx/core';
 app.requirePlugin(InjectionPlugin).inject(...)
 ```
 
-The plugin will expose the `App` instance as an `AppRef` token, so that the main application reference is available throughout the application:
+The plugin exposes the `App` instance as an `AppRef` token to make the main application reference available throughout the application:
 
 ```ts
 import { AppRef } from "@spryker-oryx/core";
@@ -69,16 +63,16 @@ class MyService {
 
 ### Resource plugin
 
-This plugin adds support for the application resources, such as images. The ResourcesPlugin lazy loads resources into the application whenever they're needed.
+`ResourcePlugin` adds support for application resources, like images. The plugin lazy loads resources into the application whenever they're needed.
 
-Whenever resources are added to the Oryx application this plugin will be automatically configured and used.
+When resources are added to the Oryx application this plugin is automatically configured and used.
 
-The plugin exposes the following API:
+The plugin exposes the following APIs:
 
-- `getResources()` – gets all registered resources
-- `getGraphicValue()` – Loads graphical resources
+- `getResources()`: gets all registered resources.
+- `getGraphicValue()`: loads graphical resources.
 
-For example, to get all resources:
+For example, get all resources:
 
 ```ts
 import { ResourcePlugin } from "@spryker-oryx/core";
@@ -88,18 +82,18 @@ app.requirePlugin(ResourcePlugin).getResources();
 
 ### Theme plugin
 
-This plugin adds support for the Application themes. Whenever a theme is added to the Oryx application this plugin will be automatically configured and used.
+`ThemePlugin` adds the support for application themes. When a theme is added to the Oryx application, this plugin is automatically configured and used.
 
-The plugin exposes the following API:
+The plugin exposes the following APIs:
 
-- Get configured icons (`getIcons`)
-- Get specific icon (`getIcon`)
-- Get configured breakpoints (`getBreakpoints`)
-- Resolve component theme (`resolve`)
-- Normalize styles (`normalizeStyles`)
-- Interpolate media queries (`generateMedia`)
+- `getIcons`: get configured icons.
+- `getIcon`: get a specific icon.
+- `getBreakpoints`: get configured breakpoints.
+- `resolve`: resolve component theme.
+- `normalizeStyles`: normalize styles.
+- `generateMedia`: interpolate media queries.
 
-For example, to get all icons:
+For example, get all icons:
 
 ```ts
 import { ThemePlugin } from "@spryker-oryx/core";
@@ -107,29 +101,35 @@ import { ThemePlugin } from "@spryker-oryx/core";
 app.requirePlugin(ThemePlugin).getIcons();
 ```
 
-## Plugin Development
+## Plugin development
 
-You can create custom plugins to influence the behaviour of an Oryx application. The `AppPlugin` is a simple interface that defines:
+You can create custom plugins to influence the behavior of an Oryx application. The `AppPlugin` is a simple interface that defines the following:
 
-- `getName()` – It's name string
-- `apply()` – Main life-cycle method
-- `destroy()` – Optional cleanup method
+- `getName()`: Its name string.
+- `apply()`: main life-cycle method.
+- `destroy()`: Optional cleanup method.
 
-When a plugin is registered on the Oryx application builder it will then be _applied_ by invoking the `AppPlugin.apply()` method with `App` instance as an argument and then it's up to a plugin to decide what it should do and how.
+When a plugin is registered on the Oryx application builder, it _applied_ by invoking the `AppPlugin.apply()` method with `App` instance as an argument. Then it's up to the plugin to decide what it should do and how.
 
-There are two additional plugin life-cycle methods available that are invoked around the main lifecycle of _all_ the plugins:
+The following additional plugin life-cycle methods are invoked around the main lifecycle of _all_ the plugins:
 
-- `AppPluginBeforeApply` is invoked before the main life-cycle of all the plugins
-- `AppPluginAfterApply` is invoked after the main life-cycle of all the plugins
+- `AppPluginBeforeApply` is invoked before the main life-cycle
+- `AppPluginAfterApply` is invoked after the main life-cycle
+
+{% info_block warningBox "Note" %}
+
+Instead of relying on the order of registration of the plugins to the Oryx application builder, always use extra plugin life-cycle methods to establish the order if necessary.
+
+{% endinfo_block %}
 
 > **Note** You should never rely on the order of the registration of the plugins to the Oryx application builder and instead use extra plugin lify-cycle methods to establish the order if necessary.
 
-See [interacting with plugins](./app.md#interacting-with-plugins) section for more information on how to access registered plugins.
+For more information on how to access registered plugins, see [interacting with plugins](./app.md#interacting-with-plugins).
 
-## Plugin use-cases
+## Plugin use cases
 
-A plugin may be usefull in a few cases:
+Plugins are useful in the following cases:
 
-- To execute some code when Oryx application starts up
-- To interact with already existing Oryx plugins
-- To extend functionality of Oryx application by building a new custom plugin or extending existing Oryx plugin
+- To execute code when Oryx application starts up
+- To interact with existing Oryx plugins
+- To extend functionality of an Oryx application by building a custom plugin or extending existing Oryx plugins

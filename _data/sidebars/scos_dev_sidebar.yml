@@ -29,7 +29,7 @@ entries:
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:
       - title: Installing Docker prerequisites
-        link: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites.html
+        url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites.html
         nested:
         - title: Installing Docker prerequisites on MacOS
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
@@ -637,6 +637,15 @@ entries:
       - "202204.0"
     - title: Managing customers
       url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Confirming customer registration
         url: /docs/scos/dev/glue-api-guides/managing-customers/confirming-customer-registration.html
@@ -684,13 +693,10 @@ entries:
         url: /docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-carts.html
         include_versions:
         - "202108.0"
-        - "202204.0"
     - title: Managing agent assists
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
-      - "202212.0"
       nested:
       - title: Authenticating as an agent assist
         url: /docs/scos/dev/glue-api-guides/managing-agent-assists/authenticating-as-an-agent-assist.html
@@ -721,6 +727,7 @@ entries:
       - "202009.0"
       - "202108.0"
     - title: Managing B2B account
+      url: /docs/scos/dev/glue-api-guidesmanaging-b2b-account/managing-b2b-account.html
       include_versions:
       - "201907.0"
       - "202001.0"
@@ -810,6 +817,9 @@ entries:
       - "202001.0"
       - "202005.0"
     - title: Managing products
+      include_versions:
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Abstract products
         include_versions:
@@ -1128,6 +1138,9 @@ entries:
         - "202204.0"
         - "202212.0"
     - title: Checking out
+      include_versions:
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Checkout workflow
         url: /docs/scos/dev/glue-api-guides/checking-out/checkout-workflow.html
@@ -1345,7 +1358,6 @@ entries:
         url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
         include_versions:
         - "202204.0"
-        - "202212.0"
       - title: Validate REST request format
         url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/validate-rest-request-format.html
         include_versions:
@@ -1440,7 +1452,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Configurable Bundle
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html
         include_versions:
@@ -1539,7 +1550,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-        - "202212.0"
       - title: Glue API - Product
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html
         include_versions:
@@ -1632,11 +1642,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-      - title: Glue API - Shared Carts
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shared-carts-feature-integration.html
-        include_versions:
-        - "202204.0"
-        - "202212.0"
       - title: Glue API - Shared Carts
         url: /docs/scos/dev/feature-integration-guides/glue-api/shared-carts-feature-integration.html
         include_versions:

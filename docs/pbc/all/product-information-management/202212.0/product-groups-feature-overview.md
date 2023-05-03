@@ -73,7 +73,7 @@ Check out this video tutorial on product groups:
 {% wistia r5l2kit2c1 720 480 %}
 
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|

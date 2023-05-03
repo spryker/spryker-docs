@@ -56,13 +56,13 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. A cust
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
 | [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES |DATA IMPORT |
 |---------|---------|

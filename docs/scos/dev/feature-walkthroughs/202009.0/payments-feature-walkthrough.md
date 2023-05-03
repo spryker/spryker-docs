@@ -27,7 +27,7 @@ The following schema illustrates relations between the _Payment_, _PaymentGui_, 
 </div>
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|

@@ -21,15 +21,14 @@ You can access the ACP catalog for now only if you are a SCOS customer and have 
 
 The process of installing ACP on SCOS is also called **ACP Enablement**. It is a multi-step process for now, which requires steps to be taken by you as well as Spryker. In the first step it requires your SCOS to be **ACP-Ready**, meaning that the required ACP modules are up-to-date and the SCOS Cloud environment is configured correctly. The second step is registering your SCOS with the Spryker's ACP, so that SCOS is **ACP-Enabled** and the ACP Catalog in the backoffice can interact with ACP. This enables you to browse, connect, configure all ACP applications for use with SCOS.
 
-![ACP_enablement_simple](/docs/_drafts/ACP_enablement_simple.png)
+![ACP_enablement_simple](/docs/_drafts/ACP_enablement_flow_simple_20230504.png)
 
-![ACP_enablement_simple](https://user-images.githubusercontent.com/61967601/233411653-ce3938d2-472d-42d8-8a4d-1bede662044d.png)
 
 The diagram above outlines the different steps and responsibilities for executing them.
 
 Depending on the update status of your SCOS module versions, the type of actions and associated effort to update it to be ACP-Ready may vary. The 2nd step to be ACP-Enabled will always be handled by Spryker.
 
-Once you completed the all steps, the ACP catalog will appear in the Back Office:
+Once you completed all the steps, the ACP catalog will appear in the Back Office:
 
 ![acp-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
 
@@ -42,189 +41,9 @@ As mentioned before, the first step to install ACP on SCOS is to get SCOS ACP-Re
 
 If you were onboarded with a version older than Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html), please [contact us](https://support.spryker.com/). 
 
+### 1. Module updates for ACP
 
-### 1. Update the SCOS deploy.yml file
-
-You need to define the environment variables in the `deploy.yml` file of **each** SCOS environment (i.e. testing, staging, production)
-
-The following environment variables must be configured to be used within your SCOS AWS environment.
-
-There will be multiple general environment variables that in turn will contain several configurations. 
-
-**NOTE**: Configuration keys used to be variable names.
-
-<details open>
-<summary>General Structure</summary>
-
-```json
-ENVIRONMENT_VARIABLE_NAME_A={
-  "CONFIGURATION_KEY_A":"SOME_VALUE_A",
-  "CONFIGURATION_KEY_B":"SOME_VALUE_B"
-}
-```
-</details>
-
-<details open>
-<summary>Data Structure Example for a Testing Environment</summary>
-
-```json
-SPRYKER_AOP_INFRASTRUCTURE='{
-  "SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG": {
-     "default": {
-         "endpoint":"https:\/\/sqs.eu-central-1.amazonaws.com",
-         "auto_setup":false,
-         "buffer_size":1
-     },
-     "DE": {
-          "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Testing-DE.fifo"
-     },
-     "AT": {
-          "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Testing-AT.fifo"
-     }
-  },
-  "SPRYKER_MESSAGE_BROKER_SNS_SENDER_CONFIG": {
-    "endpoint":"https:\/\/sns.eu-central-1.amazonaws.com",
-    "topic":"arn:aws:sns:eu-central-1:054004971898:tenant-sender-topic-testing.fifo"
-  },
-  "AWS_ACCESS_KEY_ID": "****",
-  "AWS_ACCOUNT_ID": "****"
-}'
-```
-</details>
-
-#### Message Broker configuration
-
-**Variable name**: `SPRYKER_AOP_INFRASTRUCTURE`
-
-**1. Configuration key**: `SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG`
-
-**Explanation**: Receiver configuration. The queues must be defined for each store (or default queue for all stores is used)
-
-<details open>
-<summary>Value: Staging Example</summary>
-
-```json
-{
-    "default": {
-        "endpoint":"https://sqs.eu-central-1.amazonaws.com",
-        "auto_setup":false, "buffer_size":1
-    },
-    "DE": {
-        "queue_name":"queue_name_for_store_reference_DE"
-    },
-    "<Store Reference>": {
-        "queue_name":"queue_name_for_store_reference_<Store>"
-    }
-}
-```
-</details>
-
-**2. Configuration key**: `SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG`
-
-<details open>
-<summary>Value: Staging</summary>
-
-```json
-{
-    "endpoint":"https://api.atrs-staging.demo-spryker.com/event-tenant"
-}
-```
-</details>
-
-**Variable name**: `AWS_DEFAULT_REGION`
-
-Variable does not have configuration keys, but only a single value.
-
-**Explanation**: The variable is used inside AWS SDK, and can’t be moved to a combined variable
-
-#### Auth0 configuration
-
-**Variable name**: `SPRYKER_AOP_AUTHENTICATION`
-
-**1. Configuration key**: `AUTH0_CUSTOM_DOMAIN`
-
-**Explanation**: URL for retrieving the Auth0 token.
-
-<details open>
-<summary>Value: Staging/Testing</summary>
-
-```json
-dev-163i904u.us.auth0.com
-```
-</details>
-
-<details open>
-<summary>Value: Production</summary>
-
-```json
-spryker-prod.eu.auth0.com
-```
-</details>
-
-**2. Configuration key**: `AUTH0_CLIENT_ID`
-
-**Explanation**: ClientId for auth service.
-
-<details open>
-<summary>Value Example: Auth0 Client ID</summary>
-
-```json
-clientId from https://auth0.com/
-```
-</details>
-
-**3. Configuration key**: `AUTH0_CLIENT_SECRET`
-
-**Explanation**: ClientSecret for auth service.
-
-<details open>
-<summary>Value Example: Auth0 Client Secret</summary>
-
-```json
-clientSecret from https://auth0.com/
-```
-</details>
-
-**Variable name**: `AWS_SECRETS_MANAGER_ACCESS_KEY_ID`
-
-Variable does not have configuration keys, but only a single value.
-
-**Explanation**: Defines AWS access key used for Secrets Manager
-
-<details open>
-<summary>Value: Access Key Example</summary>
-
-```json
-AKIAY6V.....Y6JSGUF
-```
-</details>
-
-**Variable name**: `AWS_SECRETS_MANAGER_SECRET_ACCESS_KEY`
-
-Variable does not have configuration keys, but only a single value.
-
-**Explanation**: Defines AWS secret used for Secrets Manager
-
-<details open>
-<summary>Value: Secret Example</summary>
-
-```json
-o+X..X+Xfalz...MZXlZQ+UG3SQ.....xrnFPPp6
-```
-</details>
-
-#### Roles and permissions
-
-**Service**: SCOS (Tenant's) store SQS
-
-**Permissions**:
- - `“sqs:SendMessage”`
- - `"sqs:ReceiveMessage"`
- - `"sqs:GetQueueUrl"`
- - `"sqs:DeleteMessage"`
- - `"sqs:ChangeMessageVisibility"`
-
-### 2. Module updates for ACP
+#### 1. ACP modules
 
 The ACP catalog is included by default to the Spryker Cloud product starting with the Spryker Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html). 
 
@@ -235,19 +54,26 @@ However, if your Spryker project is based on an earlier version you must install
 * `spryker/message-broker-aws:^1.3.2` or higher
 * `spryker/session:^4.15.1` or higher
 
+
+
+#### 2. App modules
+
 {% info_block warningBox "" %}
 
 Depending on the specific ACP Apps or PBCs you would like to use via ACP you will have to add or update the modules for each respective App or PBC as detailed in the guide for each app.
 
-**TODO**: Add Distinction between Latest Product release vs older versions
+{% endinfo_block %}
 
+The Spryker ACP Apps are continously extended and improved with new versions. Though you do not have to update the apps themselves, it might be at times necessary to perform minor updates of the app-related SCOS modules to take full advantage of the latest app feature updates.
+
+For each app you would like to use please ensure you have the latest app-related SCOS modules installed.
+
+- [Algolia](/docs/pbc/all/search/{{site.version}}/third-party-integrations/algolia.html), a Search Engine
 - [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html), a Payment Service Provider (PSP)
 - [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html), a Consent Management Platform (CMP)
 - [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/bazaarvoice.html), a platform for User-Generated Content (UGC)
 
-{% endinfo_block %}
-
-### 3. Configure SCOS to activate the ACP catalog in the Back Office 
+### 2. Configure SCOS to activate the ACP catalog in the Back Office 
 
 #### 1. Define the configuration and add plugins to the following files
 
@@ -458,6 +284,187 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 </details>
+
+### 3. Update the SCOS deploy.yml file
+
+You need to define the environment variables in the `deploy.yml` file of **each** SCOS environment (i.e. testing, staging, production)
+
+The following environment variables must be configured to be used within your SCOS AWS environment.
+
+There will be multiple general environment variables that in turn will contain several configurations. 
+
+**NOTE**: Configuration keys used to be variable names.
+
+<details open>
+<summary>General Structure</summary>
+
+```json
+ENVIRONMENT_VARIABLE_NAME_A={
+  "CONFIGURATION_KEY_A":"SOME_VALUE_A",
+  "CONFIGURATION_KEY_B":"SOME_VALUE_B"
+}
+```
+</details>
+
+<details open>
+<summary>Data Structure Example for a Testing Environment</summary>
+
+```json
+SPRYKER_AOP_INFRASTRUCTURE='{
+  "SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG": {
+     "default": {
+         "endpoint":"https:\/\/sqs.eu-central-1.amazonaws.com",
+         "auto_setup":false,
+         "buffer_size":1
+     },
+     "DE": {
+          "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Testing-DE.fifo"
+     },
+     "AT": {
+          "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Testing-AT.fifo"
+     }
+  },
+  "SPRYKER_MESSAGE_BROKER_SNS_SENDER_CONFIG": {
+    "endpoint":"https:\/\/sns.eu-central-1.amazonaws.com",
+    "topic":"arn:aws:sns:eu-central-1:054004971898:tenant-sender-topic-testing.fifo"
+  },
+  "AWS_ACCESS_KEY_ID": "****",
+  "AWS_ACCOUNT_ID": "****"
+}'
+```
+</details>
+
+#### Message Broker configuration
+
+**Variable name**: `SPRYKER_AOP_INFRASTRUCTURE`
+
+**1. Configuration key**: `SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG`
+
+**Explanation**: Receiver configuration. The queues must be defined for each store (or default queue for all stores is used)
+
+<details open>
+<summary>Value: Staging Example</summary>
+
+```json
+{
+    "default": {
+        "endpoint":"https://sqs.eu-central-1.amazonaws.com",
+        "auto_setup":false, "buffer_size":1
+    },
+    "DE": {
+        "queue_name":"queue_name_for_store_reference_DE"
+    },
+    "<Store Reference>": {
+        "queue_name":"queue_name_for_store_reference_<Store>"
+    }
+}
+```
+</details>
+
+**2. Configuration key**: `SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG`
+
+<details open>
+<summary>Value: Staging</summary>
+
+```json
+{
+    "endpoint":"https://api.atrs-staging.demo-spryker.com/event-tenant"
+}
+```
+</details>
+
+**Variable name**: `AWS_DEFAULT_REGION`
+
+Variable does not have configuration keys, but only a single value.
+
+**Explanation**: The variable is used inside AWS SDK, and can’t be moved to a combined variable
+
+#### Auth0 configuration
+
+**Variable name**: `SPRYKER_AOP_AUTHENTICATION`
+
+**1. Configuration key**: `AUTH0_CUSTOM_DOMAIN`
+
+**Explanation**: URL for retrieving the Auth0 token.
+
+<details open>
+<summary>Value: Staging/Testing</summary>
+
+```json
+dev-163i904u.us.auth0.com
+```
+</details>
+
+<details open>
+<summary>Value: Production</summary>
+
+```json
+spryker-prod.eu.auth0.com
+```
+</details>
+
+**2. Configuration key**: `AUTH0_CLIENT_ID`
+
+**Explanation**: ClientId for auth service.
+
+<details open>
+<summary>Value Example: Auth0 Client ID</summary>
+
+```json
+clientId from https://auth0.com/
+```
+</details>
+
+**3. Configuration key**: `AUTH0_CLIENT_SECRET`
+
+**Explanation**: ClientSecret for auth service.
+
+<details open>
+<summary>Value Example: Auth0 Client Secret</summary>
+
+```json
+clientSecret from https://auth0.com/
+```
+</details>
+
+**Variable name**: `AWS_SECRETS_MANAGER_ACCESS_KEY_ID`
+
+Variable does not have configuration keys, but only a single value.
+
+**Explanation**: Defines AWS access key used for Secrets Manager
+
+<details open>
+<summary>Value: Access Key Example</summary>
+
+```json
+AKIAY6V.....Y6JSGUF
+```
+</details>
+
+**Variable name**: `AWS_SECRETS_MANAGER_SECRET_ACCESS_KEY`
+
+Variable does not have configuration keys, but only a single value.
+
+**Explanation**: Defines AWS secret used for Secrets Manager
+
+<details open>
+<summary>Value: Secret Example</summary>
+
+```json
+o+X..X+Xfalz...MZXlZQ+UG3SQ.....xrnFPPp6
+```
+</details>
+
+#### Roles and permissions
+
+**Service**: SCOS (Tenant's) store SQS
+
+**Permissions**:
+ - `“sqs:SendMessage”`
+ - `"sqs:ReceiveMessage"`
+ - `"sqs:GetQueueUrl"`
+ - `"sqs:DeleteMessage"`
+ - `"sqs:ChangeMessageVisibility"`
 
 ## Next Steps After ACP-Readiness
 Now, the SCOS codebase is up-to-date and once re-deloyed your environment is **ACP-Ready**!

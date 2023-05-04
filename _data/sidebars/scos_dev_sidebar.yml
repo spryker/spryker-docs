@@ -4391,9 +4391,6 @@ entries:
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
     - title: Payment partners
-      url: /docs/scos/dev/technology-partner-guides/payment-partners/payment-partners.html
-      include_versions:
-      - "202212.0" 
       nested:
         - title: Adyen
           include_versions:
@@ -4405,7 +4402,6 @@ entries:
           - "202009.0"
           - "202108.0"
           - "202204.0"
-          - "202212.0"
           nested:
             - title: Installing and configuring Adyen
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
@@ -4787,9 +4783,15 @@ entries:
             - "202204.0"
             - "202212.0"
         - title: RatePay
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
             - title: Facade methods
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-facade-methods.html
@@ -4805,8 +4807,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machines.html
             - title: Integrating payment methods for RatePay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-payment-methods-for-ratepay.html
-              include_versions:
-              - "202212.0"
               nested:
                 - title: Integrating the Direct Debit payment method
                   url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html

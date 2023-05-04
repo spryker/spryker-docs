@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Create discounts based on shipment"
+title: Create discounts based on shipment
 description: Use the guide to activate a discount rule based on a shipment carrier and add a shipment precheck plugin to checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -17,6 +17,7 @@ redirect_from:
   - /v4/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /v4/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html  
+  - /docs/pbc/all/discount-management/202212.0/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
 related:
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html

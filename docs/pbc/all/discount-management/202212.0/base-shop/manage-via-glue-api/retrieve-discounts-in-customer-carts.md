@@ -3,6 +3,8 @@ title: Retrieve discounts in customer carts
 description: Learn how to retrieve cart rules, vouchers, and promotional items in customer carts via Glue API.
 last_updated: Jul 25, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/discount-management/202212.0/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
 ---
 
 This document describes how to retrieve cart rules, vouchers, and promotional items in customer carts. For full information on the endpoint, see [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/retrieve-customer-carts.html).

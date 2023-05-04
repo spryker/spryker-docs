@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/retrieving-promotional-items.html
   - /docs/scos/dev/glue-api-guides/201907.0/retrieving-promotional-items.html
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-promotional-items.html  
+  - /docs/pbc/all/discount-management/202212.0/manage-via-glue-api/manage-discounts-via-glue-api.html
 related:
   - title: Promotions and Discounts feature overview
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
@@ -20,7 +21,7 @@ related:
 
 The [Promotions](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html) functionality lets sellers provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase must fulfill certain discount conditions—for example, the purchase amount exceeding a certain threshold.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 For more details about how to create the discount conditions, see [Create discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
 

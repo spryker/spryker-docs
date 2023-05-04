@@ -3,6 +3,8 @@ title: Retrieve discounts in carts of registered users
 description: Learn how to retrieve cart rules, vouchers, and promotional items in carts of registered users
 last_updated: July 28, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/discount-management/202212.0/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
 ---
 
 This document describes how to retrieve cart rules, vouchers, and promotional items in carts of registered users. For full information on the endpoint, see [Managing carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).

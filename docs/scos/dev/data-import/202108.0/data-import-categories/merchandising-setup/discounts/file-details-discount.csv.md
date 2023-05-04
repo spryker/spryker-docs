@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-discountcsv
   - /docs/file-details-discountcsv
   - /docs/en/file-details-discountcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `discount.csv` file to configure [Discount](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) information in your Spryker Demo Shop.

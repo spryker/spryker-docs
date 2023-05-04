@@ -14,6 +14,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `shipment.csv` file to configure the [shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html) information in your Spryker Demo Shop.

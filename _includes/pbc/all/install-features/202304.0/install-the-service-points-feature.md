@@ -539,10 +539,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Register publisher plugins
 
-| PLUGIN                            | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                                                  |
-|-----------------------------------|-----------------------------------------------------|---------------|----------------------------------------------------------------------------|
-| ServicePointWritePublisherPlugin  | Listens for events and publishes respective data.   | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint |
-| ServicePointDeletePublisherPlugin | Listens for events and unpublishes respective data. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint |
+| PLUGIN                                  | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                                                         |
+|-----------------------------------------|-----------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
+| ServicePointWritePublisherPlugin        | Listens for events and publishes respective data.   | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointDeletePublisherPlugin       | Listens for events and unpublishes respective data. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointAddressWritePublisherPlugin | Listens for events and publishes respective data.   | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress |
+| ServicePointStoreWritePublisherPlugin   | Listens for events and publishes respective data.   | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointStore   |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -554,6 +556,8 @@ namespace Pyz\Zed\Publisher;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 use Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint\ServicePointDeletePublisherPlugin;
 use Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePoint\ServicePointWritePublisherPlugin;
+use Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointAddress\ServicePointAddressWritePublisherPlugin;
+use Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher\ServicePointStore\ServicePointStoreWritePublisherPlugin;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
@@ -565,6 +569,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return [
             new ServicePointWritePublisherPlugin(),
             new ServicePointDeletePublisherPlugin(),
+            new ServicePointAddressWritePublisherPlugin(),
+            new ServicePointStoreWritePublisherPlugin(),
         ];
     }
 }

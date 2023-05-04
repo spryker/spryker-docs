@@ -26,7 +26,7 @@ entries:
       - title: "Quickstart guide: Install Spryker on Windows"
         url: /docs/scos/dev/setup/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
     - title: Installing Spryker with Docker
-      url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
+      url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites.html
       nested:
       - title: Installing Docker prerequisites
         url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites.html

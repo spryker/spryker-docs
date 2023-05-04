@@ -4262,6 +4262,9 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
+    include_versions:
+    - "202204.0"
+    - "202212.0"
     nested:
     - title: Hosting providers
       nested:
@@ -4387,15 +4390,21 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
-
     - title: Payment partners
       url: /docs/scos/dev/technology-partner-guides/payment-partners/payment-partners.html
       include_versions:
-      - "202212.0"
+      - "202212.0" 
       nested:
         - title: Adyen
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/adyen.html
           include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           - "202212.0"
           nested:
             - title: Installing and configuring Adyen
@@ -4407,18 +4416,30 @@ entries:
             - title: Enabling filtering of payment methods
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
         - title: Afterpay
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/afterpay.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
             - title: Installing and configuring Afterpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/installing-and-configuring-afterpay.html
             - title: Integrating Afterpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
         - title: Amazon Pay
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
             - title: Configuring Amazon Pay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
@@ -4458,9 +4479,15 @@ entries:
                 - title: Handling orders with Amazon Pay API
                   url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
         - title: Arvato
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
             - title: Installing and configuring Arvato
               url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
@@ -4523,18 +4550,30 @@ entries:
                 - "201903.0"
                 - "201907.0"
         - title: Billpay
-          url: /https://github.com/spryker/spryker-docs/blob/add-landing-pages/docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
             - title: Integrating Billpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/integrating-billpay.html
             - title: Billpay - Switching invoice payments to a preauthorize mode
               url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
         - title: Braintree
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
             - title: Installing and configuring Braintree
               url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html
@@ -4577,9 +4616,15 @@ entries:
                   - "201907.0"
                   - "202001.0"
         - title: Computop
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
           - title: Installing and configuring Computop
             url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring-computop.html
@@ -4618,7 +4663,15 @@ entries:
             - "202204.0"
             - "202212.0"
         - title: CrefoPay
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
           - title: Installing and configuring CrefoPay
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/installing-and-configuring-crefopay.html
@@ -4635,9 +4688,15 @@ entries:
           - title: Payment methods
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
         - title: Heidelpay
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
           - title: Installing Heidelpay
             url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/installing-heidelpay.html
@@ -4680,9 +4739,15 @@ entries:
             - "201907.0"
             - "202001.0"
         - title: Payolution
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
           - title: Installing and configuring Payolution
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html
@@ -4702,9 +4767,15 @@ entries:
           - title: Payolution request flow
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-request-flow.html
         - title: Ratenkauf by easyCredit
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
           include_versions:
-          - "202212.0"
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
           nested:
           - title: Installing and configuring ratenkauf by easyCredit
             url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
@@ -4740,11 +4811,11 @@ entries:
                 - title: Integrating the Direct Debit payment method
                   url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
                 - title: Integrating the Prepayment payment method
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-prepayment-payment-method-for-ratepay.html
                 - title: Integrating the Installment payment method
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-installment-payment-method-for-ratepay.html
                 - title: Integrating the Invoice payment method
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-invoice-payment-method-for-ratepay.html
     - title: Product information (PIMERP)
       nested:
       - title: Akeneo

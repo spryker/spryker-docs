@@ -1977,7 +1977,7 @@ entries:
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Display product groups by color on the Storefront"
-                url: /docs/pbc/all/product-information-management/howto-display-product-groups-by-color-on-the-storefront.html
+                url: /docs/pbc/all/product-information-management/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
               - title: "HowTo: Import packaging units"
                 url: /docs/pbc/all/product-information-management/tutorials-and-howtos/howto-import-packaging-units.html
               - title: "HowTo: Integrate and use precise decimal numbers"

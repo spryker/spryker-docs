@@ -103,7 +103,7 @@ app.requirePlugin(ThemePlugin).getIcons();
 
 ## Plugin development
 
-You can create custom plugins to influence the behavior of an Oryx application. The `AppPlugin` is a simple interface that defines the following:
+You can create custom plugins to change the behavior of an Oryx application. The `AppPlugin` is a simple interface that defines the following:
 
 - `getName()`: Its name string.
 - `apply()`: main life-cycle method.

@@ -4,17 +4,15 @@ description: App of the Oryx Application
 template: concept-topic-template
 ---
 
-# Application instance
-
 `App` represents a running Oryx application instance.
 
-It allows you to:
+It lets you do the following:
 
-- Interact with registered plugins (`findPlugin`/`requirePlugin`)
-- Wait for application ready state when all plugins have been initialized (`whenReady`)
-- Destroy and cleanup application (`destroy`)
+- Interact with registered plugins: `findPlugin` and `requirePlugin`.
+- Wait for application ready state when all plugins have been initialized: `whenReady`.
+- Destroy and cleanup the application: `destroy`.
 
-`App` instance is also available in the DI under the `AppRef` token which you can inject:
+The `App` instance is available in the Dependency Injection<!--add link to di when available--> under the `AppRef` token, which you can inject:
 
 ```ts
 import { AppRef } from '@spryker-oryx/core';
@@ -27,7 +25,7 @@ class MyService {
 }
 ```
 
-Also `App` instance is available inside of the plugins to be able to easily interact with the application instance:
+To allow for easy interactions, the `App` instance is available inside plugins:
 
 ```ts
 class MyPlugin implements AppPlugin {
@@ -37,9 +35,9 @@ class MyPlugin implements AppPlugin {
 }
 ```
 
-## Interacting with plugins
+## Interact with plugins
 
-If you need to access some of the registered plugins you can use `findPlugin` or `requirePlugin` APIs depending on your requirement towards the plugins. If your code needs a plugin to work and you cannot provide feasible fallback without it - use `requirePlugin` API as it will throw an error if the plugin was not registered with the Oryx application. Otherwise you can use `findPlugin` which may return `undefined` in case the plugin is not available in which case you must design your code to handle the fallback logic.
+If you need to access some of the registered plugins, depending on your requirements towards the plugins, you can use the `findPlugin` or `requirePlugin` API. If your code needs a plugin to work, and you cannot provide feasible fallback without it, use the `requirePlugin` API. If the plugin is not registered with the Oryx application, it throws an error. Otherwise, you can use `findPlugin`.  which may return `undefined` in case the plugin is not available in which case you must design your code to handle the fallback logic.
 
 Both methods expect a plugin class reference or plugin name string to resolve the plugin.
 

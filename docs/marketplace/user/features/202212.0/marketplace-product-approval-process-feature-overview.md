@@ -55,7 +55,7 @@ If a [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/m
 
 A marketplace owner can set a default approval status for marketplace products owned by a certain merchant via the data import. See [File details: merchant_product_approval_status_default.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-approval-status-default.csv.html) to learn more how to do that.
 
-## Related Business User articles
+## Related Business User documents
 
 | BACK OFFICE USER GUIDES  | MERCHANT PORTAL USER GUIDES  |
 | -------------------- | ------------------ |

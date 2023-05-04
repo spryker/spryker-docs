@@ -49,7 +49,7 @@ The default filter functionality includes *standard filters* and *dynamic filter
 
 #### Standard filters
 
-On the Storefront, the standard filters let buyers narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, and brand. For more details about standard filters, see [Standard filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html).
+On the Storefront, the standard filters let buyers narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, and brand. For more details about standard filters, see [Standard filters](/docs/pbc/all/search/{{page.version}}/search-feature-overview/standard-filters-overview.html).
 
 #### Dynamic filters and facets
 
@@ -71,7 +71,7 @@ The Category Management feature has the following functional constraints, which 
 * Category URLs are available in all the stores that share the same locales.
 * Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), you can still filter the products using the price range filter.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -82,7 +82,7 @@ The Category Management feature has the following functional constraints, which 
 | [Delete categories](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/category/delete-categories.html) |
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|---------|

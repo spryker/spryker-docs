@@ -244,7 +244,7 @@ Currently, the feature has the following functional constraints which are going 
 * The *Slot* page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

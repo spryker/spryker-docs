@@ -29,7 +29,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <summary markdown='span'>B2B feature list</summary>
 
 - [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/configurable-product-feature-overview/configurable-product-feature-overview.html)
-- [Return Management](/docs/pbc/all/return-management/{{site.version}}/return-management.html)
+- [Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html)
 - [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html)
@@ -45,11 +45,11 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Refunds](/docs/pbc/all/order-management-system/{{site.version}}/refunds-feature-overview.html)
 - [Reclamations](/docs/pbc/all/order-management-system/{{site.version}}/reclamations-feature-overview.html)
 - [State Machine](/docs/pbc/all/order-management-system/{{site.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
-- [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
+- [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html)
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
-- [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
+- [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
 <!---- [Merchant]()-->
 - [Merchant Product restrictions](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html)
 - [Merchant B2B Contracts](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html)
@@ -65,7 +65,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 - [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html)
-- [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
+- [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/payments-feature-overview.html)
 <!---- [Invoice]()-->
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/pbc/all/emails/{{site.version}}/emails.html)

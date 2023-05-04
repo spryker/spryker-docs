@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_set.csv` file to configure [Product Set](/docs/pbc/all/content-management-system/{{page.version}}/product-sets-feature-overview.html) information in your Spryker Demo Shop.

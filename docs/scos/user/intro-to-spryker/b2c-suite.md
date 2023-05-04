@@ -27,7 +27,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 <summary markdown='span'>B2C feature list</summary>
 
 - [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/configurable-product-feature-overview/configurable-product-feature-overview.html)
-- [Return Management](/docs/pbc/all/return-management/{{site.version}}/return-management.html)
+- [Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html)
 - [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html)
@@ -39,19 +39,19 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Refunds](/docs/pbc/all/order-management-system/{{site.version}}/refunds-feature-overview.html)
 - [Reclamations](/docs/pbc/all/order-management-system/{{site.version}}/reclamations-feature-overview.html)
 - [State Machine](/docs/pbc/all/order-management-system/{{site.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
-- [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/inventory-management-feature-overview.html)
+- [Inventory Management](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/inventory-management-feature-overview.html)
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
 - [Prices](/docs/pbc/all/price-management/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
-- [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/wishlist-feature-overview.html)
+- [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/wishlist-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 - [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html)
-- [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
+- [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/payments-feature-overview.html)
 <!---- [Invoice]()-->
 - [Gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)

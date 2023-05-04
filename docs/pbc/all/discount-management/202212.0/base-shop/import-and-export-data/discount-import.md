@@ -10,6 +10,7 @@ redirect_from:
   - /docs/discounts
   - /docs/en/discounts
   - /docs/scos/dev/data-import/202212.0/data-import-categories/merchandising-setup/discounts/discounts.html
+  - /docs/pbc/all/discount-management/202212.0/import-and-export-data/discount-import.html
 ---
 
 The **Discounts** category contains all data you need to manage product discount information in the online store.

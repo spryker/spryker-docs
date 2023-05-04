@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discountpromotion.html
   - /module_migration_guides/mg-discount-promotion.htm
   - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-discountpromotion.html  
+  - /docs/pbc/all/discount-management/202212.0/install-and-upgrade/upgrade-the-discountpromotion-module.html  
 ---
 
 

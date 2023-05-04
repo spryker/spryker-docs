@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discountsalesaggregatorconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discountsalesaggregatorconnector.html
   - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-discountsalesaggregatorconnector.html  
-
+  - /docs/pbc/all/discount-management/202212.0/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
 related:
   - title: Upgrade the Discount
     link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-the-discount-module.html

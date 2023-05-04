@@ -8,6 +8,8 @@ related:
     link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
   - title: Marketplace Shopping List feature overview
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-shopping-lists-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/marketplace-shopping-lists-feature-overview.html) in your Spryker shop.

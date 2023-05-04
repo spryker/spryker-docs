@@ -2,6 +2,7 @@
 title: Module API
 description: Learn about Module APIs, performance and scalability, semantic versioning, and Composer constrains for customer modules.
 last_updated: Apr 25, 2023
+template: concept-topic-template
 ---
 
 In this section, you can find the following documents:

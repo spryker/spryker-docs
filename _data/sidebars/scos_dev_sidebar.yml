@@ -1660,8 +1660,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
-        - "202212.0"
       - title: Glue API - Spryker Core
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html
         include_versions:
@@ -1684,8 +1682,13 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
       - title: Glue Backend API
         include_versions:
-        - "202204.0"
-        - "202212.0"
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
           - title: Glue API - Glue Storefront and Backend API applications
             url: /docs/scos/dev/feature-integration-guides/glue-api/decoupled-glue-infrastructure/glue-api-glue-storefront-and-backend-api-applications-integration.html
@@ -2200,7 +2203,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "202212.0"
     - title: Permissions
       url: /docs/scos/dev/feature-integration-guides/permissions-feature-integration.html
     - title: Persistent Cart Sharing
@@ -2679,7 +2681,7 @@ entries:
     url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
     nested:
     - title: Migration Guide - API Module
-      url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
+      url: /docs/scos/dev/module-migration-guides/migration-guide-api.html
     - title: Migration guide - Auth module to SecurityGui module
       url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
     - title: Migration Guide - Business On Behalf Data Import
@@ -3566,7 +3568,7 @@ entries:
       - title: Get the list of console commands and available options
         url: /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation
-      url: docs/scos/dev/back-end-development/data-manipulation/data-manipulation.html
+      url: /docs/scos/dev/back-end-development/data-manipulation/data-manipulation.html
       nested:
       - title: Run and revert a database migration
         url: /docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html

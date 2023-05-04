@@ -4,8 +4,7 @@ description: Orchestration of the Oryx Application
 template: concept-topic-template
 ---
 
-Any Oryx application starts with the application orchestration.
-It allows you to bootstrap and configure your application from reusable bits and pieces such as:
+An Oryx application starts with the application orchestration. It lets you bootstrap and configure your application from reusable bits and pieces, such as the following:
 
 - [Features](./app-feature.md)
 <!-- TODO: Link to components -->
@@ -17,20 +16,15 @@ It allows you to bootstrap and configure your application from reusable bits and
 - [Resources](./resources.md)
 - [Environment](./app-environment.md)
 
-Application orchestration is used to configure and customize an Oryx application to your particular needs.
-As Oryx is a framework, it provides many different pieces of functionality for different use cases, like B2B, B2C, Back Office, or Fulfillment. And to be able to select specific features from Oryx, you can use orchestration.
+Application orchestration is used to configure and customize an Oryx application to fit your needs. As Oryx is a framework, it provides different pieces of functionality for different use cases, like B2B, B2C, Back Office, or Fulfillment. And orchestration lets you select specific functionality from Oryx to match your use case.
 
-Application orchestration is defining the functionality and how it is going to be loaded in an Oryx application. For example, when components are used on a page, they  are lazy-loaded, but services are loaded eagerly during application startup.
+Application orchestration defines the functionality and how it is loaded in an Oryx application. For example, when components are used on a page, they are lazy-loaded, but services are loaded eagerly during application startup.
 
 To start using orchestration, you need to import [`appBuilder`](./app-builder.md) from `@spryker-oryx/core`. Then, you can add functionality, like features and theme, to your application.
 
-`appBuilder` uses a chain pattern where each customization is added using a  respective `.with*` method. This is the minimum boilerplate code required for an  application to work.
+`appBuilder` uses a chain pattern where each customization is added using a respective `.with*` method. This is the minimum boilerplate code required for an application to work. Once you start building more complex use cases in your Oryx application, instead of using a preset, we recommend extending it or creating your own feature set.
 
-Once you start building more complex use cases in your Oryx application, instead of using a preset, we recommend extending it or creating your own feature set.
-
-Application builder lets you compose and customize different pieces of functionality in your Oryx application.
-
-It is a chainable and pluggable builder which supports the following built-ins:
+Application builder lets you compose and customize different pieces of functionality in your Oryx application. It is a chainable and pluggable builder which supports the following built-ins:
 
 - [Features](./app-feature.md) (`withFeature`)
 <!-- TODO: Link to components -->
@@ -45,11 +39,11 @@ It is a chainable and pluggable builder which supports the following built-ins:
 - [Resources](./resources.md) (`withResources`)
 - [Plugins](./app-plugins.md) (`with`)
 
-All of the above are built-in plugins but you can also add your custom plugins by using `with` API:
+All of the above are built-in plugins, but you can also add your custom plugins by using `with` API:
 
 ## Example
 
-This is an example of the simple B2C application setup:
+Here is an example of a simple B2C application setup:
 
 ```ts
 import { appBuilder } from '@spryker-oryx/core';
@@ -61,13 +55,13 @@ const app = appBuilder()
   .withEnvironment(import.meta.env);
 ```
 
-Once you are satisfied with your application configuration it's time to create it:
+Once you are satisfied with your application configuration, you can create it:
 
 ```ts
 app.create().catch(console.error);
 ```
 
-Now you have fully up and running Oryx [`App`](./app.md) instance tailored to your needs.
+Now you have a fully up and running Oryx [`App`](./app.md) instance tailored to your needs.
 
 ## Options
 

@@ -1070,6 +1070,19 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-feature-domain-model.html
                   - title: Merchant Opening Hours
                     url: /docs/pbc/all/merchant-management/marketplace/domain-model-and-relationships/merchant-opening-hours-feature-domain-model.html
+      - title: Miscallaneous
+        include_versions:
+        - "202212.0"
+        nested:
+          - title: Spryker Core feature overview
+            url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/spryker-core-feature-overview.html
+            nested:
+              - title: How translations are managed
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/how-translations-are-managed.html
+              - title: URL redirects overview
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/url-redirects-overview.html
+              - title: Vault for Tokens overview
+                url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/vault-for-tokens-overview.html
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
         include_versions:

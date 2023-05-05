@@ -33,8 +33,6 @@ use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;
 
 class FormDependencyProvider extends SprykerFormDependencyProvider
 {
-    public const IS_DEV = true;
-    
     ...
     
     protected function getFormPlugins(): array
@@ -45,7 +43,9 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
         
         $plugins[] = new CsrfFormPlugin();
         
-        if (static::IS_DEV) {
+        $alwaysAddPlugin = true;
+
+        if ($alwaysAddPlugin) {
             $plugins[] = new WebProfilerFormPlugin();
         }
         
@@ -61,11 +61,11 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 MULTIDIMENSIONAL ARRAY
 ======================
 
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| # | Message                                                                                              | Target                                                                   |
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| 1 | The condition statement if (self::IS_DEV) {} is forbidden in the DependencyProvider                  | /spryker/b2c-demo-shop/src/Pyz/Yves/Form/FormDependencyProvider.php      |
-+---+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
++---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| # | Message                                                                                              | Target                                                                     |
++---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| 1 | The condition statement if ($alwaysAddPlugin) {} is forbidden in the DependencyProvider              | /spryker/b2c-demo-shop/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php |
++---+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
 
 ```
 

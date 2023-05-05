@@ -4,13 +4,13 @@ description: Reference information for evaluator tools.
 template: howto-guide-template
 ---
 
-The shop project dependencies should be at least the supported release version.
+The shop project dependencies should be at least a supported release version.
 
 ## Problem description
 
-The shop can contain the old package dependencies that already are unsupported. It can cause the issues related to project the upgradability.
+The shop contains the old package dependencies that are already unsupported. It can cause the issues related to project the upgradability.
 
-## Example of code that causes an upgradability error:
+## Example of code that causes an upgradability error
 
 composer.lock contains unsupported package versions
 ```json
@@ -46,12 +46,12 @@ MINIMUM ALLOWED SHOP VERSION
 +---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
 | # | Message                                                                                                           | Target                                |
 +---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| 1 | Package "spryker-feature/agent-assist" version "202203.0" is not supported. Minimum allowed version is "202204.0" | spryker-feature/agent-assist:202203.0 |
+| 1 | The package "spryker-feature/agent-assist" version "202203.0" is not supported. The minimum allowed version is "202204.0" | spryker-feature/agent-assist:202203.0 |
 +---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
-| 2 | Package "spryker/availability-gui" version "6.5.9" is not supported. Minimum allowed version is "6.6.0"           | spryker/availability-gui:6.5.9        |
+| 2 | The package "spryker/availability-gui" version "6.5.9" is not supported. The minimum allowed version is "6.6.0"           | spryker/availability-gui:6.5.9        |
 +---+-------------------------------------------------------------------------------------------------------------------+---------------------------------------+
 ```
 
 ### Resolving the error:
 
-To resolve this issue need to update the outdated dependencies to the actual release or version.
+To resolve this issue, you need to update the outdated dependencies to the current release or version.

@@ -8,7 +8,7 @@ Single plugin arguments inside the dependency provider’s methods.
 
 ## Problem description
 
-Inside of dependency provider you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. 
+Inside of the dependency provider you can register the plugin directly in the method or through another wrap method, with and without constructor arguments. 
 But not all possible expressions and variable types can be used as constructor arguments.
 Supported argument types:
  - int
@@ -18,7 +18,7 @@ Supported argument types:
  - null
  - usage of new statement to instantiate a class (without further methods calls)
 
-## Example of code that causes an upgradability error:
+## Example of code that causes an upgradability error
 
 The dependency provider method returns the plugin with unwanted argument: 
 
@@ -41,7 +41,7 @@ class ConsoleDependencyProvider
     }
 }
 ```
-### Related error in the Evaluator output:
+### Related error in the Evaluator output
 
 ```bash
 ================
@@ -58,8 +58,8 @@ SINGLE PLUGIN ARGUMENT
 +---+---------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 ```
 
-### Resolving the error: 
+### Resolving the error
 To resolve the error provided in the example, try the following in the provided order:
 1. Try to use file name as argument and move reading inside of plugin.
-2. Try to avoid arguments that not mention in supported types.
+2. Try to avoid arguments that are not mentioned in the supported types.
 

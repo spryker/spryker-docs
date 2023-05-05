@@ -5,10 +5,10 @@ template: howto-guide-template
 ---
 
 ## Problem description
-If plugins must be registered in a specific order `after` and `before` annotations must be provided in the doc blocks. They must have specific syntax.
-Annotated class must be imported into the provider class.
+If plugins must be registered in a specific order, `after` and `before` annotations must be provided in the doc blocks. They must have specific syntax.
+The annotated class must be imported into the provider class.
 
-## Example of code that causes an upgradability error:
+## Example of code that causes an upgradability error
 
 ```php
 protected function getProductOfferReferenceStrategyPlugins(): array

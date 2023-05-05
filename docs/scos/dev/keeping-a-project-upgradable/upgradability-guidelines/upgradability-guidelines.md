@@ -4,7 +4,7 @@ description: Find solutions to Evaluator violations
 template: howto-guide-template
 ---
 
-The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with Spryker's and industry coding standards.
+The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with both Spryker's and industry coding standards.
 
 When you get an evaluation error, check the name of the triggered check in the Evaluation output logs. The name is at the beginning of each error log.
 

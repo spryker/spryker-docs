@@ -13,9 +13,12 @@ redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
   - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html) in your Spryker shop.
+This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/category-management-feature-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 

@@ -207,7 +207,6 @@ class MultiCartConfig extends SprykerMultiCartConfig
     }
 }
 ```
-* multidimensional arrays
 multidimensional arrays of up to two levels are also supported, but to use them, you must use the wrapped function.
 
 The following is an example of how to have the method return a multidimensional array (with constants, wrap methods call and array merging):

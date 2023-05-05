@@ -457,10 +457,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ## Special situations
 
-* If the target dependency provider class doesn’t exist in the project, it will be created and all required methods will be created automatically as well.
+* If the target dependency provider class doesn’t exist in the project, it is created and all required methods are created automatically as well.
 
-* If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method will be created and the changes will be applied.
+* If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method is created and the changes are applied.
 
-* If the target dependency provider class exists in the project without the target method, and such method also doesn’t exist in the parent class, the method WILL NOT be created and the changes WILL NOT be applied.
+* If the target dependency provider class exists in the project without the target method, and such method also doesn’t exist in the parent class, the method is NOT created and the changes is NOT applied.
 
-* If the target method inside of the dependency provider class was modified on the project level and e.g. array was extracted into the separated method, upgrader won’t find the array, the changes won’t be applied.
+* If the target method inside of the dependency provider class was modified on the project level and for example array was extracted into the separated method, the upgrader won’t find the array, and the changes won’t be applied.

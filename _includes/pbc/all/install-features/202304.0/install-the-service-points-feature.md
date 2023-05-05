@@ -28,10 +28,46 @@ Make sure that the following modules have been installed:
 | ServicePoint            | vendor/spryker/service-point              |
 | ServicePointDataImport  | vendor/spryker/service-point-data-import  |
 | ServicePointsBackendApi | vendor/spryker/service-points-backend-api |
+| ServicePointStorage     | vendor/spryker/service-point-storage      |
 
 {% endinfo_block %}
 
 ## 2) Set up database schema and transfer objects
+
+Adjust the schema definition so entity changes will trigger events.
+
+| AFFECTED ENTITY               | TRIGGERED EVENTS                                                                   |
+|-------------------------------|------------------------------------------------------------------------------------|
+| spy_service_point             | Entity.spy_service_point.create<br>Entity.spy_service_point.update                 |
+| spy_service_point_address     | Entity.spy_service_point_address.create<br>Entity.spy_service_point_address.update |
+| spy_service_point_store       | Entity.spy_service_point_store.create<br>Entity.spy_service_point_store.delete     |
+
+**src/Pyz/Zed/ServicePoint/Persistence/Propel/Schema/spy_service_point.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ServicePoint\Persistence" package="src.Orm.Zed.ServicePoint.Persistence">
+
+   <table name="spy_service_point">
+      <behavior name="event">
+         <parameter name="spy_service_point_all" column="*"/>
+      </behavior>
+   </table>
+
+   <table name="spy_service_point_address">
+      <behavior name="event">
+         <parameter name="spy_service_point_address_all" column="*"/>
+      </behavior>
+   </table>
+
+   <table name="spy_service_point_store">
+      <behavior name="event">
+         <parameter name="spy_service_point_store_all" column="*"/>
+      </behavior>
+   </table>
+
+</database>
+```
 
 Apply database changes and generate transfer changes:
 
@@ -51,6 +87,7 @@ Make sure that the following changes have been applied in the database:
 | spy_service_point         | table  | created |
 | spy_service_point_store   | table  | created |
 | spy_service_point_address | table  | created |
+| spy_service_point_storage | table  | created |
 | spy_region.uuid           | column | created |
 
 {% endinfo_block %}
@@ -59,14 +96,16 @@ Make sure that the following changes have been applied in the database:
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
 
-| CLASS NAMESPACE                                               | EXTENDS                                                                          |
-|---------------------------------------------------------------|----------------------------------------------------------------------------------|
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint             |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery        |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress      |      
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore        |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery   | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery   |
+| CLASS NAMESPACE                                                      | EXTENDS                                                                                 |
+|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                    | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                    |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery               |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress             |      
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery        |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore               | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore               |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery          | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery          |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorage      | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorage      |
+| \Orm\Zed\ServicePointStorage\Persistence\SpyServicePointStorageQuery | \Spryker\Zed\ServicePointStorage\Persistence\Propel\AbstractSpyServicePointStorageQuery |
 
 {% endinfo_block %}
 
@@ -104,6 +143,15 @@ Make sure that the following changes have been applied in transfer objects:
 | ServicePointAddressConditions         | class | created | Generated/Shared/Transfer/ServicePointAddressConditions          |
 | ServicePointAddress                   | class | created | Generated/Shared/Transfer/ServicePointAddress                    |
 | GlueRelationship                      | class | created | Generated/Shared/Transfer/GlueRelationship                       |
+| ServicePointStorage                   | class | created | Generated/Shared/Transfer/ServicePointStorage                    |
+| ServicePointAddressStorage            | class | created | Generated/Shared/Transfer/ServicePointAddressStorage             |
+| CountryStorage                        | class | created | Generated/Shared/Transfer/CountryStorage                         |
+| RegionStorage                         | class | created | Generated/Shared/Transfer/RegionStorage                          |
+| ServicePointStorageCollection         | class | created | Generated/Shared/Transfer/ServicePointStorageCollection          |
+| ServicePointStorageCriteria           | class | created | Generated/Shared/Transfer/ServicePointStorageCriteria            |
+| ServicePointStorageConditions         | class | created | Generated/Shared/Transfer/ServicePointStorageConditions          |
+| SynchronizationData                   | class | created | Generated/Shared/Transfer/SynchronizationData                    |
+| Filter                                | class | created | Generated/Shared/Transfer/Filter                                 |
 
 {% endinfo_block %}
 
@@ -332,7 +380,234 @@ service_point.validation.service_point_uuid_is_not_unique,Ein Service Point mit 
 console data:import glossary
 ```
 
-### 6) Set up behavior
+### 6) Configure export to Redis
+
+Configure tables to be published and synchronized to the Storage on create, edit, and delete changes.
+
+1. Adjust `RabbitMq` module configuration in `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
+
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Client\RabbitMq;
+
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
+use Spryker\Shared\ServicePointStorage\ServicePointStorageConfig;
+
+class RabbitMqConfig extends SprykerRabbitMqConfig
+{
+    /**
+     * @return array<mixed>
+     */
+    protected function getSynchronizationQueueConfiguration(): array
+    {
+        return [
+            ServicePointStorageConfig::SERVICE_POINT_SYNC_STORAGE_QUEUE,
+        ];
+    }
+}
+```
+
+2. Register new queue message processor:
+
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Queue;
+
+use Spryker\Shared\ServicePointStorage\ServicePointStorageConfig;
+use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
+
+class QueueDependencyProvider extends SprykerDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
+     */
+    protected function getProcessorMessagePlugins(Container $container): array
+    {
+        return [
+            ServicePointStorageConfig::SERVICE_POINT_SYNC_STORAGE_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
+        ];
+    }
+}
+```
+
+3. Configure synchronization pool and event queue name
+
+**src/Pyz/Zed/ServicePointStorage/ServicePointStorageConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ServicePointStorage;
+
+use Pyz\Zed\Synchronization\SynchronizationConfig;
+use Spryker\Shared\Publisher\PublisherConfig;
+use Spryker\Zed\ServicePointStorage\ServicePointStorageConfig as SprykerServicePointStorageConfig;
+
+class ServicePointStorageConfig extends SprykerServicePointStorageConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getServicePointStorageSynchronizationPoolName(): ?string
+    {
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getEventQueueName(): ?string
+    {
+        return PublisherConfig::PUBLISH_QUEUE;
+    }
+}
+```
+
+4. Set up publisher plugins:
+
+| PLUGIN                                  | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                          |
+|-----------------------------------------|-----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
+| ServicePointWritePublisherPlugin        | Publishes service point data by `SpyServicePoint` entity events.                              |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePoint        |
+| ServicePointAddressWritePublisherPlugin | Publishes service point data by `SpyServicePointAddress` entity events.                       |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointAddress |
+| ServicePointStoreWritePublisherPlugin   | Publishes service point data by service point store entity events.                            |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore   |
+| ServicePointPublisherTriggerPlugin      | Allows to populate service point storage table with data and trigger further export to Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher                     |
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePoint\ServicePointWritePublisherPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointAddress\ServicePointAddressWritePublisherPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointPublisherTriggerPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore\ServicePointStoreWritePublisherPlugin;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return array_merge(
+            $this->getServicePointStoragePlugins(),
+        );
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new ServicePointPublisherTriggerPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    protected function getServicePointStoragePlugins(): array
+    {
+        return [
+            new ServicePointWritePublisherPlugin(),
+            new ServicePointAddressWritePublisherPlugin(),
+            new ServicePointStoreWritePublisherPlugin(),
+        ];
+    }
+}
+```
+
+5. Set up synchronization plugins:
+
+| PLUGIN                                              | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
+|-----------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
+| ServicePointSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the service point storage table content into Redis. |               | Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization |
+
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Synchronization;
+
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization\ServicePointSynchronizationDataBulkRepositoryPlugin;
+use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
+
+class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
+     */
+    protected function getSynchronizationDataPlugins(): array
+    {
+        return [
+            new ServicePointSynchronizationDataBulkRepositoryPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the `service-point` trigger plugin works correctly:
+
+1. Fill the `spy_service_point`, `spy_service_point_store`, `spy_servoce_point_address` tables with data.
+2. Run the `console publish:trigger-events -r service_point` command.
+3. Make sure that the `spy_service_point_storage` table has been filled with respective data.
+4. Make sure that, in your system, storage entries are displayed with `kv:service_point:{store}:{service_point_id}` mask.
+
+Make sure that `service-point` synchronization plugin works correctly:
+
+1. Fill the `spy_service_point_storage` table with some data.
+2. Run the `console sync:data -r service_point` command.
+3. Make sure that, in your system, storage entries are displayed with `kv:service_point:{store}:{service_point_id}` mask.
+
+Make sure that when a service point is created or edited through BAPI, it is exported to Redis accordingly.
+
+Make sure you are able to see data in Redis in the following format:
+```yaml
+{
+   "id_service_point": 1,
+   "uuid": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
+   "name": "Spryker Main Store",
+   "key": "sp1",
+   "is_active": true,
+   "address": {
+      "id_service_point_address": 1,
+      "uuid": "74768ee9-e7dd-5e3c-bafd-b654e7946c54",
+      "address1": "Caroline-Michaelis-Stra\u00dfe",
+      "address2": "8",
+      "address3": null,
+      "zip_code": "10115",
+      "city": "Berlin",
+      "country": {
+         "iso2_code": "DE",
+         "id_country": 60
+      },
+      "region": {
+         "uuid": "2f02b327-0165-46ea-88df-0190d9a1c242",
+         "id_region": 1,
+         "name": "Berlin"
+      }
+   },
+   "_timestamp": 1683216744.8334839
+}
+```
+{% endinfo_block %}
+
+### 7) Set up behavior
 
 1. To enable the Backend API, register the plugins:
 

@@ -15,7 +15,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `product_attribute_key.csv` file to configure [Product Attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html) information on your Spryker Demo Shop.
+This document describes the `product_attribute_key.csv` file to configure [Product Attribute](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html) information on your Spryker Demo Shop.
 
 
 ## Import file parameters

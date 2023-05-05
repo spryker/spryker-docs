@@ -19,6 +19,8 @@ entries:
             nested:
               - title: What's changed
                 url: /docs/pbc/all/carrier-management/base-shop/whats-changed-in-carrier-management.html
+              - title: Shipment feature overview
+                url: /docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features

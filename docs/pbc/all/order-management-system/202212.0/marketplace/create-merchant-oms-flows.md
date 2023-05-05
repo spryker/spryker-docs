@@ -1,5 +1,5 @@
 ---
-title: "How-To: Creating of a new MerchantOms flow"
+title: Create MerchantOms flows
 description: This articles provides details how to create new MerchantOms flow
 template: howto-guide-template
 ---

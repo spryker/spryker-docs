@@ -1,5 +1,5 @@
 ---
-title: Retrieving Marketplace orders
+title: Retrieve Marketplace orders
 description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
 related:
@@ -19,7 +19,7 @@ The **Marketplace Order Management API** lets you retrieve all orders made by a 
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
+For detailed information about the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
 
 ## Retrieve all orders
 
@@ -542,7 +542,7 @@ To retrieve detailed information about an order, send the request:
 
 | PATH PARAMETER | DESCRIPTION     |
 | ------------------ | ------------------------------ |
-| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/pbc/all/order-management-system/{{page.version}}/glue-api-retrieve-orders.html) to get it. |
+| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/glue-api-retrieve-orders.html) to get it. |
 
 ### Request
 
@@ -1337,7 +1337,7 @@ To retrieve detailed information about an order, send the request:
 | ATTRIBUTE     | TYPE | DESCRIPTION     |
 | ------------------ | -------- | --------------------- |
 | merchantReferences | Array    | Unique identifier of the [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
-| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
+| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.   |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |

@@ -1,5 +1,5 @@
 ---
-title: Marketplace Order Management feature walkthrough
+title: "Marketplace Order Management feature: Domain model and relationships"
 description: The Marketplace Order Management feature lets Marketplace customers place orders.
 template: feature-walkthrough-template
 related:

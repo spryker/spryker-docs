@@ -16,10 +16,10 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-email-invoices-using-bcc.html
 related:
   - title: Invoice Generation overview
-    link: docs/pbc/all/order-management-system/page.version/order-management-feature-overview/invoice-generation-overview.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/invoice-generation-overview.html
 ---
 
-Every time you generate an [invoice for your customer’s orders](/docs/pbc/all/order-management-system/{{site.version}}/order-management-feature-overview/invoice-generation-overview.html), it is sent to the customer’s email address. If you also need a copy of the invoice, you can include yourself or your employees to BCC recipients of the emails with the invoices. Since the copy is hidden, when customers receive the email, they do not see other recipients' email addresses.
+Every time you generate an [invoice for your customer’s orders](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/invoice-generation-overview.html), it is sent to the customer’s email address. If you also need a copy of the invoice, you can include yourself or your employees to BCC recipients of the emails with the invoices. Since the copy is hidden, when customers receive the email, they do not see other recipients' email addresses.
 
 {% info_block infoBox "Info" %}
 

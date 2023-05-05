@@ -4,9 +4,9 @@ description: Learn how to change the state of order items in returns in the Back
 template: back-office-user-guide-template
 related:
   - title: Creating returns
-    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/orders/create-returns.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/orders/create-returns.html
   - title: Viewing returns of an order
-    link: docs/pbc/all/order-management-system/page.version/manage-in-the-back-office/orders/view-returns-of-an-order.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
   - title: Managing returns
     link: docs/pbc/all/return-management/page.version/base-shop/manage-in-the-back-office/manage-returns.html
   - title: Return Management feature overview

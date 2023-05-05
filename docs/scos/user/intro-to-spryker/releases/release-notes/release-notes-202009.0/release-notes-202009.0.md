@@ -285,4 +285,4 @@ The order management system (OMS) validates the state of order items in fixed ti
 To avoid the unnecessary checks and load on the OMS, we have added custom Timeout Processors for the OMS, which allow you to specify custom checks for orders within the OMS state machine. Due to the Timeout processors, the checks are executed according to defined parameters in the state machine, such as timeout and frequency of the check.
 
 #### Documentation
-[OMS Timeout Processor](/docs/pbc/all/order-management-system/{{site.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
+[OMS Timeout Processor](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)

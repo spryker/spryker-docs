@@ -6,9 +6,9 @@ redirect_from:
   - /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
 related:
   - title: State machine fundamentals
-    link: docs/pbc/all/order-management-system/page.version/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
   - title: Build a state machine
-    link: docs/pbc/all/order-management-system/page.version/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
 ---
 
 The Spryker State Machine allows you to easily implement complex processes and map out business workflows. Instead of writing code for every process or adapting standard functionality, Spryker State Machine lets you model the order process with states and transitions.

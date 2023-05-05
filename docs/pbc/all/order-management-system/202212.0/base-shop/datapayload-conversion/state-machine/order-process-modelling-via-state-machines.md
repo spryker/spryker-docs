@@ -26,11 +26,11 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html  
 related:
   - title: Order management system multi-thread
-    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/state-machine/order-management-system-multi-thread.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html
   - title: State machine console commands
-    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/state-machine/state-machine-console-commands.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
   - title: Common pitfalls in OMS design
-    link: docs/pbc/all/order-management-system/page.version/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
   - title: Create an Order Management System - Spryker Commerce OS
     link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---
@@ -56,7 +56,7 @@ The `StateMachine` module provides a generic implementation for state machines (
 
 {% info_block warningBox %}
 
-If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/pbc/all/order-management-system/{{site.version}}/order-management-feature-overview/oms-order-management-system-matrix.html).
+If you are looking for information on the OMS State Machine, see [OMS State Machine](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html).
 
 {% endinfo_block %}
 
@@ -170,7 +170,7 @@ Here is an example of a timeout processor in an event definition:
 
 In this example, `OmsTimeout/Initiation` is the name of the plugin which is executed to set the starting point of the timeout.
 
-In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/pbc/all/order-management-system/{{site.version}}/install-and-upgrade/install-features/install-the-order-management-feature.html) plugin starts the timeout immediately, from the current time:
+In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) plugin starts the timeout immediately, from the current time:
 
 <details>
 

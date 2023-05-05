@@ -21,7 +21,7 @@ You can send a hidden copy of the invoice to yourself or your employees. Keep in
 
 {% endinfo_block %}
 
-You can generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/change-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
+You can generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
 
 {% info_block infoBox "Info" %}
 
@@ -62,4 +62,4 @@ Keep in mind that bundled product always has a 0-tax rate. However, all of the b
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Trigger invoice generation in the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/change-the-state-of-order-items.html)  |
+| [Trigger invoice generation in the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)  |

@@ -39,7 +39,7 @@ Our exemplary Marketplace state machine provides the following states:
 * Delivered
 * Closed
 
-To learn more about states, see [State Machine Fundamentals](/docs/pbc/all/order-management-system/{{page.version}}/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html).
+To learn more about states, see [State Machine Fundamentals](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html).
 
 {% info_block warningBox "Note" %}
 

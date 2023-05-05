@@ -24,10 +24,10 @@ For the refunded items, you can use the default OMS states to be displayed on th
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [View refunds](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/view-refunds.html)  |
+| [View refunds](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/view-refunds.html)  |
 
 ## Related Developer documents
 
 | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Refund migration guide](/docs/pbc/all/order-management-system/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html) | [Refund process management](/docs/pbc/all/order-management-system/{{page.version}}/datapayload-conversion/refund-process-management.html) |
+| [Refund migration guide](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html) | [Refund process management](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/refund-process-management.html) |

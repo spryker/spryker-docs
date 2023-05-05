@@ -18,7 +18,7 @@ related:
   - title: Order Management feature overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
   - title: OMS (Order management system) matrix
-    link: docs/pbc/all/order-management-system/page.version/order-management-feature-overview/oms-order-management-system-matrix.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html
 ---
 
 The **Overview of Order Matrix** page displays the information about ordered items.

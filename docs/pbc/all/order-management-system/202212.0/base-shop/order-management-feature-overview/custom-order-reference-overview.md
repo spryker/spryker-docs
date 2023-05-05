@@ -65,4 +65,4 @@ If you added a custom order reference to the cart, submitted a request for quote
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Adding and removing custom order references](/docs/pbc/all/order-management-system/{{page.version}}/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html) |
+| [Adding and removing custom order references](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html) |

@@ -243,7 +243,7 @@ Let's assume you are trying to define the prepayment process, in which if, after
 ...
 </events>
 ```
-You can also set the date and time when the timeout is started. For details, see [OMS Timeout Processor](/docs/pbc/all/order-management-system/{{site.version}}/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
+You can also set the date and time when the timeout is started. For details, see [OMS Timeout Processor](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
 
 #### Invoking an event
 

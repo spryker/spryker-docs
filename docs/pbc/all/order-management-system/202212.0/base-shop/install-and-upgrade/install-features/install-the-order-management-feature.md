@@ -18,7 +18,7 @@ related:
   - title: Comments + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html
   - title: Glue API - Order Management feature integration
-    link: docs/pbc/all/order-management-system/page.version/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html
   - title: Company Account + Order Management feature integration
     link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
   - title: Product + Order Management feature integration

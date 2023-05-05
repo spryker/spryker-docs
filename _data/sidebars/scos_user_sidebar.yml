@@ -6,6 +6,8 @@ entries:
   - title: Intro to Spryker
     url: /docs/scos/user/intro-to-spryker/intro-to-spryker.html
     nested:
+    - title: About Spryker documentation
+      url: /docs/scos/user/intro-to-spryker/about-spryker-documentation.html
     - title: Releases
       url: /docs/scos/user/intro-to-spryker/releases/releases.html
       nested:
@@ -1200,6 +1202,11 @@ entries:
           - "202204.0"
         - title: Adding and removing custom order references
           url: /docs/scos/user/back-office-user-guides/sales/orders/adding-and-removing-custom-order-references.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
+        - title: Creating shipments
+          url: /docs/scos/user/back-office-user-guides/sales/orders/creating-shipments.html
           include_versions:
           - "202108.0"
           - "202204.0"

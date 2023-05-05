@@ -21,7 +21,7 @@ related:
   - title: Retrieving sales units
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
   - title: Product image management
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-images-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-images-overview.html
 ---
 
 This endpoint allows retrieving image sets of concrete products.

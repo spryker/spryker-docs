@@ -17,7 +17,7 @@ related:
   - title: Creating Categories
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/category/create-categories.html
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/category-management-feature-overview.html
 ---
 
 To assign and deassign products from categories in the Back Office, follow the steps:

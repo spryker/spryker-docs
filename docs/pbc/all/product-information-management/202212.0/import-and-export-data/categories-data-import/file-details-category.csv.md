@@ -18,7 +18,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html) in your Spryker shop.
+This document describes the `category.csv` file to configure [categories](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/category-management-feature-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 

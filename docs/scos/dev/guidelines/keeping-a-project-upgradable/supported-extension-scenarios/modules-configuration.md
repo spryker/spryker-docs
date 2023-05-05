@@ -101,6 +101,7 @@ class DevelopmentConfig extends SprykerDevelopmentConfig
     }
 }
 ```
+##  Array as a return
 
 There's a multitude of ways to view arrays as the return. Manifests support the following array types:
 

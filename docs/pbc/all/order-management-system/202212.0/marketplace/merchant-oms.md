@@ -1,5 +1,5 @@
 ---
-title: Merchant Oms
+title: Merchant OMS
 description: Merchant Oms provides a dedicated Oms flow for Merchant Orders and their Merchants.
 template: concept-topic-template
 ---

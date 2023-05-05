@@ -4,9 +4,9 @@ description: Learn how to assign product attributes to product variants in the B
 template: back-office-user-guide-template
 related:
   - title: Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-feature-overview.html
   - title: Product Attributes overview
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-attributes-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
 
 This document describes how to assign product attributes to product variants in the Back Office.
@@ -43,6 +43,6 @@ This section describes the attributes you see when creating a return.
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| ATTRIBUTE KEY | [Product attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html) to add to the product variant. |
+| ATTRIBUTE KEY | [Product attribute](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html) to add to the product variant. |
 | KEY | Product attribute key. |
 | DEFAULT | Default value of the product attribute. This value is displayed on the Storefront if locale specific value is not specified. |

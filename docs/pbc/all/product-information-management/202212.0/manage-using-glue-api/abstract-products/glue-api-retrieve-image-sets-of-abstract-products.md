@@ -19,7 +19,7 @@ related:
   - title: Retrieving abstract product prices
     link: docs/pbc/all/price-management/page.version/manage-using-glue-api/retrieve-abstract-product-prices.html
   - title: Product image management
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-images-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-images-overview.html
 ---
 
 This endpoint allows retrieving image sets of abstract products.

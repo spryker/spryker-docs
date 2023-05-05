@@ -22,11 +22,11 @@ For instructions about setting up multiple stores in Spryker Cloud Commerce OS, 
 
 {% endinfo_block %}
 
-With the Spryker Commerce OS, you can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable—for example, you can do the following:
+With the Spryker Commerce OS, you can create multiple stores per business requirements for different scenarios. The multi-store setup is very versatile and customizable. For example, you can do the following:
 
-* Build one store for multiple countries and languages or separate stores for each region.
-* Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
-* Define separate search preferences to create an entirely different set of rankings, rules, and settings per store—for example, a date format or a currency.
+* Build one store for multiple countries and languages, or separate stores for each region.
+* Make abstract products, discounts, and other logic and code shared between stores, or create a dedicated setup for each of them.
+* Define separate search preferences to create an entirely different set of rankings, rules, and settings per store, such as a date format or a currency.
 * Set up a default store.
 
 ## Multi-store setup infrastructure options
@@ -49,7 +49,7 @@ Multi-store setup 3: Each store has a dedicated database, search engine, and key
 
 This setup is most suitable for projects with the following requirements:
 
-* Completely different business requirements per store, like business logic and features.
+* Completely different business requirements per store, such as business logic and features.
 * Independent maintenance and development flow.
 * Separated data management for entities like products, customers, and orders.
 * On-demand setup of any type of environment per store, like test, staging, or production.
@@ -142,7 +142,7 @@ return $stores;
 </details>
 
 2. Optional: Define store-specific configuration:
-  1. For one or more stores you've defined in `config/Shared/stores.php`, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
+  1. For one or more stores you've defined in `config/Shared/stores.php`, define a separate, store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
   2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment` section.
 
   In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment):
@@ -190,7 +190,7 @@ stores:
 ...    
 ```
 
-For example, to add the `AT` and `DE` stores, adjust an installation recipe as follows:
+For example, to add the `AT` and `DE` stores, adjust the installation recipe as follows:
 
 ```yaml
 ...
@@ -297,6 +297,7 @@ Environment::initialize();
 ```
 
 To check if the workaround works, in the browser console, run the following:
+
 ```php
 fetch("http://{domain-name}/catalog-search", {
   "headers": {

@@ -1,5 +1,5 @@
 ---
-title: Retrieve Marketplace orders
+title: "Glue API: Retrieve Marketplace orders"
 description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
 related:

@@ -1253,6 +1253,7 @@ entries:
               - title: Import order statuses
                 url: /docs/pbc/all/order-management-system/base-shop/file-details-order-status.csv.html
               - title: Manage in the Back Office
+                url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: Orders
                     nested:
@@ -1355,6 +1356,23 @@ entries:
                   - title: Marketplace Order Management + Order Threshold
                     url: /docs/pbc/all/order-management-system/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html
               - title: Import data
+                nested:
+                  - title: "merchant_oms_process.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-oms-process.csv.html
+                  - title: "merchant-order-status.csv"
+                    url: /docs/pbc/all/order-management-system/marketplace/import-data/file-details-merchant-order-status.csv.html
+              - title: Manage main merchant orders in the Back Office
+                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+              - title: Manage merchant orders in the Merchant Portal
+                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-merchant-orders.html
+              - title: Manage main merchant orders in the Back Office
+                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+              - title: Manage main merchant orders in the Back Office
+                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+              - title: Manage main merchant orders in the Back Office
+                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+              - title: Manage main merchant orders in the Back Office
+                url: /docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         include_versions:

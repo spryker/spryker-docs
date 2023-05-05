@@ -5,7 +5,7 @@ description: This document describes how to manage marketplace orders in the Bac
 template: back-office-user-guide-template
 related:
   - title: Marketplace Order Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
 ---
 
 This document describes how to manage marketplace orders.

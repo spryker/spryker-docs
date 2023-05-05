@@ -366,7 +366,6 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
-            - "202212.0"
 
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html

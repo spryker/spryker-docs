@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace orde
 template: concept-topic-template
 related:
   - title: Marketplace Order Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
   - title: Merchant order overview
     link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
   - title: Marketplace and merchant state machines overview

@@ -596,6 +596,9 @@ entries:
         - "201903.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      - "202108.0"
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       include_versions:
@@ -2610,10 +2613,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core Back Office + Warehouse User Management
-      url: /docs/scos/dev/feature-integration-guides/install-spryker-core-back-office-warehouse-user-management-feature.html
-      include_versions:
-      - "202304.0"
+      - "202204.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Picker user login

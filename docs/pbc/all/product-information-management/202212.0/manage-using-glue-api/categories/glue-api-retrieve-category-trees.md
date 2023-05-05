@@ -16,7 +16,7 @@ related:
   - title: Retrieving category nodes
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/category-management-feature-overview.html
 ---
 
 By means of the category API, you are able to retrieve the exact structure of your category tree with its hierarchical characteristics.

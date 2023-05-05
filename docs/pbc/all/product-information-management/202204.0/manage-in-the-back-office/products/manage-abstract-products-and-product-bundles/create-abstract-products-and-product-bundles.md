@@ -29,11 +29,11 @@ related:
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
 ---
 
-This doc describes how to create [abstract products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/product-bundles-feature-overview.html).
+This doc describes how to create [abstract products](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-bundles-feature-overview.html).
 
 ## Prerequisites
 
-To be able to create [product variants](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) of the abstract product, [create at least one super attribute](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
+To be able to create [product variants](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) of the abstract product, [create at least one super attribute](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 
 Each section contains reference information. Make sure to look up the necessary information as you go through the process.
 
@@ -61,7 +61,7 @@ Each section contains reference information. Make sure to look up the necessary 
 | SKU PREFIX | Unique product identifier that will be used to track unique information related to the product. |
 | NAME | Name that will be displayed for the product on the Storefront. |
 | DESCRIPTION | Description that will be displayed for the product on the Storefront. |
-| NEW FROM <br>NEW TO  | Defines the period of time for which the following applies: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html)</li></ul>. |
+| NEW FROM <br>NEW TO  | Defines the period of time for which the following applies: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/category-management-feature-overview.html)</li></ul>. |
 
 ## Define prices
 
@@ -79,7 +79,7 @@ On the **Price & Tax** tab, do the following:
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
 | MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/{{site.version}}/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>. |
-| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
 | DEFAULT price | Default price is the price a customer pays for the product.
 | ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 | TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/create-tax-rates.html). |
@@ -119,7 +119,7 @@ The reference information in this section is relevant only for abstract products
 
 {% endinfo_block %}
 
-In the **Variants** tab, you can see all the existing [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). To create a super attribute, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
+In the **Variants** tab, you can see all the existing [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes). To create a super attribute, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/create-product-attributes.html).
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 

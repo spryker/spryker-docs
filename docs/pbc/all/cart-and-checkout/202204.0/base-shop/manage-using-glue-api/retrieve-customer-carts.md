@@ -20,7 +20,7 @@ related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
   - title: Confirming customer registration

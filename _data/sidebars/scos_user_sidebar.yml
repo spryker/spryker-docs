@@ -939,6 +939,10 @@ entries:
         - "202212.0"
     - title: Spryker Core Back Office
       url: /docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       nested:
       - title: Back Office Translations
         url: /docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html

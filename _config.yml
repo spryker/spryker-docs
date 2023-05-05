@@ -224,6 +224,7 @@ versioned_categories:
       - front-end-development
   pbc:
     all:
+      - back-office
       - cart-and-checkout
       - carrier-management
       - content-management-system

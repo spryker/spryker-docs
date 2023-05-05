@@ -54,7 +54,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-### Related error in the Evaluator output:
+### Related error in the Evaluator output
 
 ```bash
 ======================

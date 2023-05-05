@@ -36,7 +36,7 @@ composer.lock contains unsupported package versions
 }
 ```
 
-### Related error in the Evaluator output:
+### Related error in the Evaluator output
 
 ```shell
 ============================

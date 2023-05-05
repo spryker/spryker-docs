@@ -9,7 +9,7 @@ Multidimensional arrays inside the dependency provider’s methods.
 ## Problem description
 
 On the project level, developers use a plugins stack, and not all structures are needed and can be supported. Multidimensional arrays make configuration hard to upgrade.
-This check will verify that multidimensional arrays should have a maximum of 2 levels inside.
+This check will verify that multidimensional arrays should have a maximum of two levels inside.
 
 ## Example of code that causes an upgradability error
 
@@ -64,7 +64,7 @@ class ModuleDependencyProvider extends SprykerModuleDependencyProvider
 }
 ```
 
-### Related error in the Evaluator output:
+### Related error in the Evaluator output
 
 ```bash
 ======================

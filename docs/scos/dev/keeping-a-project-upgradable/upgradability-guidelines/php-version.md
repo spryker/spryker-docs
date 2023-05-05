@@ -44,7 +44,7 @@ image:
 ...
 ```
 
-### Related error in the Evaluator output:
+### Related error in the Evaluator output
 
 ```shell
 ===================
@@ -66,7 +66,7 @@ PHP VERSION CHECKER
 +---+-----------------------------------------------------------------------------+--------------------------------------------------------+
 ```
 
-### Resolving the error: 
+### Resolving the error
 
 To resolve the issue:
 1. Use an allowed PHP version in:

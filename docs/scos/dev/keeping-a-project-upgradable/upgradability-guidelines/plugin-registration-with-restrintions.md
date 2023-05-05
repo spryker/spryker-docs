@@ -30,7 +30,7 @@ protected function getProductOfferReferenceStrategyPlugins(): array
 }
 ```
 
-### Related error in the Evaluator output:
+### Related error in the Evaluator output
 
 ```shell
 ==============================================
@@ -48,7 +48,7 @@ PLUGINS REGISTRATION WITH RESTRICTIONS CHECKER
 +---+--------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
 ```
 
-### Resolving the error: 
+### Resolving the error
 
 - To solve this issue annotations must follow the syntax:
 ```

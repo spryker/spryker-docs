@@ -87,13 +87,13 @@ class FileSystemDependencyProvider extends AbstractBundleDependencyProvider
 
 Manifests fully support multiple plugins registration in an indexed array. Manifests also support additional conditions for plugin registration and restrictions on the order of the plugins.
 
-Restrictions on the order of the plugins can be done with special annotation keys ‘before' and ‘after’. 
+Restrictions on the order of the plugins can be done with special annotation keys `before` and `after`. 
 
-If the plugin doesn’t contain any of these keys, it will be added to the end of the plugin stack.
+If the plugin doesn’t contain any of these keys, it is added to the end of the plugin stack.
 
-If the plugin contains the ‘after' key and defined plugins in ‘after’ parameter don’t exist on the project side, the plugin will be added to the end of the plugin stack.
+If the plugin contains the `after` key and defined plugins in the `after` parameter don’t exist on the project side, the plugin is added to the end of the plugin stack.
 
-If the plugin contains the ‘before' key and defined plugins in ‘before’ parameter don’t exist on the project side, the plugin will be added as the first plugin in plugin stack.
+If the plugin contains the `before` key and defined plugins in the `before` parameter don’t exist on the project side, the plugin is added as the first plugin in plugin stack.
 
 The following is an example of how to have multiple plugins registration in an indexed array:
 
@@ -201,7 +201,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ### Plugins in an associative array
 
-Manifests fully support multiple plugins registration in associative array. As a key you can use:
+Manifests fully support multiple plugins registration in an associative array. As a key, you can use:
 
 * string
 * constant
@@ -261,7 +261,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ### Plugins in multidimensional array
 
-Manifests have limited support of multidimensional array. Only arrays that are added through the key are supported. only multidimensional arrays with up to 2 levels of depth are supported. It means that structures like the following *will not be supported*: 
+Manifests have limited support of a multidimensional array. Only arrays that are added through the key are supported. Also, only multidimensional arrays with up to 2 levels of depth are supported. It means that structures like the following are *not supported*: 
 
 ```php
 protected function getPlugins(): array
@@ -379,7 +379,7 @@ Inside of array merge function call you can use:
 * multidimensional arrays
 * variables
 
-Multidimensional associative arrays are supported inside of the array_merge() up to 2 levels, but for its usage the wrapped functions MUST be used.
+Multidimensional associative arrays are supported inside of the `array_merge()` up to two levels, but to use them, you must use the wrapped functions.
 
 The following is an example of how to have multiple plugins registration with the merging plugins method call:
 

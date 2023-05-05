@@ -13,13 +13,13 @@ related:
 ---
 
 
-This document explains how manifests support changes in the configuration files of modules. [Manifests](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#follow-the-upgradability-best-practices) support changes in a module's configuration files.
+This document explains how manifests support changes in the configuration files of modules.
 
 Manifests support all scalar types (bool, int, float, string), the compound type array, and the special type, null.
 
 Manifests do not support compound type objects, or callable, iterable and special type resources.
 
-Manifest only add values to configuration files. Manifests *will not remove* values from project configuration. 
+Manifest only add values to configuration files. Manifests *don't remove* values from project configuration. 
 
 ## Basic scalar values as the return
 
@@ -148,7 +148,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfigi
 
 ### Multidimensional array as the return
 
-Multidimensional associative arrays are supported up to 2 levels, but for its usage the wrapped functions *must* be used: 
+Multidimensional associative arrays are supported up to two levels, but for its usage the wrapped functions *must* be used: 
 
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
@@ -207,7 +207,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
 }
 ```
 * multidimensional arrays
-Multidimensional arrays (up to 2 levels) are also supported here, but to use them the wrapped function *must* be used.
+multidimensional arrays of up to two levels are also supported, but to use them, you must use the wrapped function.
 
 The following is an example of how to have the method return a multidimensional array (with constants, wrap methods call and array merging):
 

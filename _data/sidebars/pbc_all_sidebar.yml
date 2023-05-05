@@ -921,6 +921,7 @@ entries:
                   - title: Upgrade the DiscountSalesAggregatorConnector module
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
               - title: Manage in the Back Office
+                url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
                   - title: "Best practices: Promote products with discounts"
                     url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html

@@ -4,9 +4,9 @@ description: Learn how to assign product attributes to abstract products in the 
 template: back-office-user-guide-template
 related:
   - title: Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-feature-overview.html
   - title: Product Attributes overview
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-attributes-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
 
 This document describes how to assign product attributes to abstract products in the Back Office.
@@ -44,6 +44,6 @@ Review the [reference information](#reference-information-assign-product-attribu
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| ATTRIBUTE KEY | [Product attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html) to add to the abstract product. |
+| ATTRIBUTE KEY | [Product attribute](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html) to add to the abstract product. |
 | KEY | Product attribute key. |
 | **DEFAULT** locale | Default value of the product attribute. This value is displayed on the Storefront if a locale specific value is not specified. |     

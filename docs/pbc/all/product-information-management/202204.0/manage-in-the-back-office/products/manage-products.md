@@ -16,7 +16,7 @@ related:
   - title: Adding Product Alternatives
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
   - title: Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
 
 This article describes how to manage abstract and concrete products.

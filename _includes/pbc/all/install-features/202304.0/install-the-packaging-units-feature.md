@@ -1,7 +1,7 @@
 
 
 
-This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/packaging-units-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 

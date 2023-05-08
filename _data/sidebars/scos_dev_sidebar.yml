@@ -600,6 +600,9 @@ entries:
         - "201903.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      - "202108.0"
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       include_versions:
@@ -2604,10 +2607,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Spryker Core Back Office + Warehouse User Management
-      url: /docs/scos/dev/feature-integration-guides/install-spryker-core-back-office-warehouse-user-management-feature.html
-      include_versions:
-      - "202304.0"
+      - "202204.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Picker user login
@@ -4237,8 +4237,10 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
-      - title: "HowTo: Allow Zed CSS/JS on a project"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
+      - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html
+      - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     nested:

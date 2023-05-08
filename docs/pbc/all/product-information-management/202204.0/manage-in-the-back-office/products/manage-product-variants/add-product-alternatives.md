@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/adding-product-alternatives.html
 related:
   - title: Alternative Products feature overview
-    link: docs/pbc/all/product-information-management/page.version/alternative-products-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/alternative-products-feature-overview.html
 ---
 
 This article describes how to add product alternatives for a product.

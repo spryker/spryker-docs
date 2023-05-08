@@ -74,7 +74,7 @@ The *guest users* can not initiate returns of their orders, as the return manage
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
 The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
@@ -125,7 +125,7 @@ To install the return management capability, do the following:
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
 
-2. Follow the integration guides in [Related Developer articles](#related-developer-articles).
+2. Follow the integration guides in [Related Developer articles](#related-developer-documents).
 
 ## Related Business User articles
 

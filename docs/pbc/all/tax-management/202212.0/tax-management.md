@@ -36,7 +36,7 @@ Tax sets can be applied to an abstract product, product option, and shipment:
 | --- | --- | --- |
 | Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/products-data-import/file-details-product-abstract.csv.html) |
 | Product option | [Creating a product option](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/product-options/create-product-options.html) | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/import-and-export-data/product-options/file-details-product-option.csv.html) |
-| Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/manage-in-the-back-office/add-delivery-methods.html) | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
+| Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html) | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
 
 ## International tax rates and sets
 
@@ -104,7 +104,7 @@ The capability has the following functional constraints:
 * Many Avalara features are not supported yet. This will be resolved in the future.
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -113,7 +113,7 @@ The capability has the following functional constraints:
 | [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/create-tax-sets.html) |
 | [Edit tax sets](/docs/pbc/all/tax-management/{{site.version}}/manage-in-the-back-office/edit-tax-sets.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|

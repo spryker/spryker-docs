@@ -125,7 +125,7 @@ If the global minimum threshold is €400, and the minimum threshold per merchan
 
 {% endinfo_block %}
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

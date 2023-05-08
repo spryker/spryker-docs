@@ -190,7 +190,7 @@ Check out this video tutorial on how to use shopping lists.
 
 We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of which costs €15. The subtotal shows €45 for 3 items. But if you add a product option, for example, gift wrapping for €5 each to these three office chairs, the subtotal displays €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list displays just the product price—€45.
 
-## Related Business User articles
+## Related Business User documents
 
 | OVERVIEWS |
 |-|
@@ -199,7 +199,7 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 | [Shopping list widget](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
 
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES  |
 |---------|---------|-|

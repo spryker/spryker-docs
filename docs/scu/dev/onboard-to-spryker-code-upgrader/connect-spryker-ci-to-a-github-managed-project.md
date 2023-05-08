@@ -10,7 +10,7 @@ There are two options for connecting Spryker CI to your repository: using Spryke
 
 ## Connect using Spryker CI native integration
 
-1. In Spryker CI, go to **Projects**.
+1. In [Spryker CI](/docs/scu/dev/spryker-ci.html), go to **Projects**.
 2. On the **Projects** page, select the **Spryker Upgrade Service** project.
 
 ![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.md/spryker_ci_projects.png)

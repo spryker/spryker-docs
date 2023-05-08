@@ -25,7 +25,7 @@ A merchant has the following:
 
 To display merchant opening hours on the Storefront, you should import the open hours information. For information about how to do that, see [File details: merchant_open_hours_date_schedule.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-open-hours-date-schedule.csv.html) and [File details: merchant_open_hours_week_day_schedule.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-open-hours-week-day-schedule.csv.html).
 
-## Related Developer articles
+## Related Developer documents
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|

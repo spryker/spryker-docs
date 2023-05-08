@@ -31,7 +31,7 @@ To accommodate business requirements, there can be various price types. For exam
 
 ## Product types and price inheritance
 
-Back Office users can set prices for both [abstract products and product variants](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
+Back Office users can set prices for both [abstract products and product variants](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
 
 On the Storefront, when customers browse catalog and search pages, they see abstract product prices.
 
@@ -67,7 +67,7 @@ If a concrete product doesn’t have a price entity stored, it inherits the valu
 The following diagram summarizes the logic for retrieving the price for a product:
 ![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png)
 
-## Related Business User articles
+## Related Business User documents
 
 | OVERVIEWS | BACK OFFICE USER GUIDES |
 |---| - |
@@ -76,7 +76,7 @@ The following diagram summarizes the logic for retrieving the price for a produc
 | | [Define prices when creating a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html)  |
 | | [Edit prices of a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html)   |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|

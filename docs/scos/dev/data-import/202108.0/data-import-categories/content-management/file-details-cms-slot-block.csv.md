@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-slot-blockcsv
   - /docs/file-details-cms-slot-blockcsv
   - /docs/en/file-details-cms-slot-blockcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `cms_slot_block.csv` file to configure [CMS Slot Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) information in your Spryker Demo Shop.

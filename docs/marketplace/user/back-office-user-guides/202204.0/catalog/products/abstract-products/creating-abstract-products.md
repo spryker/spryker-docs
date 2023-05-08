@@ -61,7 +61,7 @@ The following table describes the attributes you enter and select when defining 
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | Name that will be displayed for the product on the Storefront. |
 | Description | Description that will be displayed for the product on the Storefront. |
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
 
 
 ## Defining prices
@@ -101,7 +101,7 @@ On the **Variants** tab, define product variants:
 
 ### Reference information: Defining product variants
 
-On the **Variants** tab, you can see all the existing [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [edit](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/edit-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
+On the **Variants** tab, you can see all the existing [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [edit](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/attributes/edit-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 

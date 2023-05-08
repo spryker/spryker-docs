@@ -6,14 +6,13 @@ redirect_from:
   - /docs/paas-plus/dev/spryker-code-upgrader-in-a-development-workflow.html
 ---
 
-Spryker Code Upgrader works best when it is strategically integrated into your development process. This document describes how to integrate the Upgrader Code Upgrader into your Scrum activities and Git flow to help streamline and optimize the development workflow.
+Spryker Code Upgrader works best when it is strategically integrated into your development process. This document describes how to integrate the Upgrader into your Scrum activities and Git flow to streamline and optimize the development workflow.
 
 ## Processing code upgrades with Scrum
 
 When the Upgrader tool is integrated into your development process, we recommend processing updates during the following scrum activities:
 
 * Sprint planning: review, prioritize, and select the upgrade suggestions to be installed in the upcoming sprint.
-
 * Sprint execution: review, validate, modify, and merge the upgrades using the [Git flow](#git-flow-for-code-upgrades).
 
 This approach lets you break up big upgrades into smaller pieces. Each smaller piece can be processed within a sprint ensuring the continuity of the process.
@@ -37,11 +36,13 @@ The Upgrader tool is not influencing your development process. Your development 
 
 * Prepare your project for the Spryker Code Upgrader. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
 
-* Connect the Upgrader tool of Spryker Code Upgrader with your code hosting service. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)
+* Connect Spryker Code Upgrader with your code hosting service. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)
 
 * Cover customizations with automated tests.
 
 * Regularly process pull requests that were created by Spryker Code Upgrader.
+
+* To continue receiving suggestions from Spryker Code Upgrader, apply major upgrades manually.
 
 ## Next steps
 

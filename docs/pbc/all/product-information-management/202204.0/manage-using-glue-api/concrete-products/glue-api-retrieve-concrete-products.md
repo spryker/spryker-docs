@@ -22,7 +22,7 @@ related:
   - title: Retrieving sales units
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
   - title: Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-options-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about concrete products.

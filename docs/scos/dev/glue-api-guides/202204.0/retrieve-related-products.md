@@ -20,7 +20,7 @@ related:
 
 Using the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).
+Only [abstract](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 * Retrieve related products of an abstract product.

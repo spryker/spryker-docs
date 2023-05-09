@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-sales-order-thresholdcsv
   - /docs/file-details-sales-order-thresholdcsv
   - /docs/en/file-details-sales-order-thresholdcsv
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `sales_order_threshold.csv` file to configure [Sales Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) information in your Spryker Demo Shop.

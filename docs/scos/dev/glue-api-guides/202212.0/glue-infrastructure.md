@@ -18,7 +18,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/glue-infrastructure.html
 related:
   - title: Authentication and authorization
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authentication-and-authorization.html
+    link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
 ---
 
 Spryker API infrastructure is implemented as a separate layer of Spryker Commerce OS, called Glue. It is responsible for providing API endpoints, processing requests, as well as for communication with other layers of the OS in order to retrieve the necessary information. The layer is implemented as a separate Spryker application, the same as Yves or Zed. It has its own bootstrapping and a separate virtual host on the Spryker web server (Nginx by default). In addition to that, Glue has a separate programming namespace within Spryker Commerce OS, also called Glue.

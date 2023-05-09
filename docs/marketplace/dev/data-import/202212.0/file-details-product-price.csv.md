@@ -12,6 +12,8 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
   - title: Marketplace Product feature overview
     link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document contains content of the **product_price.csv** file to configure [prices](/docs/pbc/all/price-management/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.

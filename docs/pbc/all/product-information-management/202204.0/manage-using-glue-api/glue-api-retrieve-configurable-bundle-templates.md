@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/retrieving-configurable-bundle-templates.html  
 related:
   - title: Configurable Bundle feature overview
-    link: docs/pbc/all/product-information-management/page.version/configurable-bundle-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/configurable-bundle-feature-overview.html
 ---
 
 This endpoint allows retrieving information about the configurable bundle templates and their slots.

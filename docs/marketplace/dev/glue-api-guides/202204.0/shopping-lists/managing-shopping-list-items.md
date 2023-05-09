@@ -121,7 +121,7 @@ To add items to a shopping list, send the request:
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | ✓ | Quantity of the product to add. |
-| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
+| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) are allowed. |
 | productOfferReference | String |   | Unique identifier of the product offer. |
 
 ### Response
@@ -369,7 +369,7 @@ To change the item quantity in a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- |--- |
-| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
+| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) are allowed. |
 | quantity | Integer | ✓ | New quantity of the product. |
 
 ### Response

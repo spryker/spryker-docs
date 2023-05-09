@@ -198,7 +198,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Product](/docs/pbc/all/product-information-management/{{site.version}}/product-feature-overview/product-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Product](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -228,7 +228,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/product-options-feature-overview.html) feature installed.
+Apply the following changes only if you have the [Product Options](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/product-options-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -256,7 +256,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/{{site.version}}/carrier-management.html) feature installed.
+Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/shipment-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 

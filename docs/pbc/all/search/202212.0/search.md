@@ -33,7 +33,7 @@ Spryker's search capability will enable you to pursue each of those steps to the
 
 
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|
@@ -41,7 +41,7 @@ Spryker's search capability will enable you to pursue each of those steps to the
 | [Define search preferences](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/define-search-preferences.html) |
 | [Edit search preferences](/docs/pbc/all/search/{{page.version}}/manage-in-the-back-office/edit-search-preferences.html) |
 
-## Related Developer articles
+## Related Developer documents
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | DATA IMPORT | GLUE API GUIDES  | TUTORIALS AND HOWTOS | BEST PRACTICES |
 |---------|---------|-|-|-|-|

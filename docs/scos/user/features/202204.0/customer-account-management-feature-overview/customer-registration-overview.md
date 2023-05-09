@@ -67,7 +67,7 @@ To learn how a developer confirms a customer's email address, see [Confirming cu
 
 A developer can register a customer by importing their customer account details. The verification email is sent to the email address specified in the import file. The customer activates the account by verifying their email address.
 
-## Related Business User articles
+## Related Business User documents
 
 |BACK OFFICE USER GUIDES|
 |---|

@@ -31,7 +31,7 @@ There are two options for connecting Spryker Code Upgrader to your repository: u
 
 ![Spryker CI GitLab](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_gitlab.png)
 
-7. For **GROUP**, select the GitLab group the has access to the repository you want to connect.
+7. For **GROUP**, select the GitLab group that has access to the repository you want to connect.
 
 8. For **REPOSITORY**, select the repository you want to connect.
     This displays a success message. The Upgrader is now connected to your repository.
@@ -44,7 +44,7 @@ To connect the Upgrader manually using a GitLab access token, follow the steps.
 
 ## Prerequisites
 
-[Create a GitHub access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token)
+[Create a GitLab access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token)
 
 GitLab access token should have the following repository permissions:
 
@@ -79,7 +79,7 @@ GitLab access token should have the following repository permissions:
 ![Spryker CI Integration GitLab Form](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.md/spryker_ci_integration_gitlab_form.png)
 
 11. Click **New integration**.
-    This connects the Upgrader to your GitHub organization.
+    This connects the Upgrader to your GitLab organization.
 
 
 12. To select the needed repository, go to **Code**.

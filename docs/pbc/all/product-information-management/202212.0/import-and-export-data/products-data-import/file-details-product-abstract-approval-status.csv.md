@@ -4,6 +4,9 @@ description: This document contains content of the product_approval_status_defau
 template: data-import-template
 redirect_from:
   - /docs/scos/dev/data-import/202212.0/data-import-categories/catalog-setup/products/file-details-product-abstract-approval-status.csv.html
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document contains content of the `product_approval_status_default.csv` file to configure products approval information on your Spryker Demo Shop.

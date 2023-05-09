@@ -11,6 +11,9 @@ redirect_from:
   - /docs/en/file-details-cms-blockcsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-block.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-cms-block.csv.html  
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `cms_block.csv` file to configure [CMS Block](/docs/pbc/all/content-management-system/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.

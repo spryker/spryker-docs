@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/catalog/attributes/create-product-attributes.html  
 related:
   - title: Product Attributes
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/product-attributes-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
 
 This doc describes how to create product attributes in the Back Office.
@@ -55,7 +55,7 @@ Review the [reference information](#reference-information-create-product-attribu
 | --- | --- |
 | ATTRIBUTE KEY | Name that you will use when [assigning the attribute to products](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html). For example, `color`. Accepts lower case letters, digits, numbers, underscores, hyphens, and colons. |
 | INPUT TYPE | Defines the data format of the attribute's values. |
-| SUPER ATTRIBUTE | Defines if the attribute is to be a [super attribute](/docs/pbc/all/product-information-management/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). Super attributes distinguish product variants of an abstract product.  |
+| SUPER ATTRIBUTE | Defines if the attribute is to be a [super attribute](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes). Super attributes distinguish product variants of an abstract product.  |
 | PREDEFINED VALUES | Values that you will be selecting from when assigning the attribute to products. For example, if the attribute is `color`, the values can be `red`, `green`, `black`, etc. |
 | ALLOW INPUT ANY VALUE OTHER THAN PREDEFINED ONES | Defines if, when creating or updating products, you can enter custom values that are not defined in **PREDEFINED VALUES**. |
 | TRANSLATION | Translations for attribute keys and values per locale. These translations will be displayed on the Storefront.  |

@@ -224,6 +224,7 @@ versioned_categories:
       - front-end-development
   pbc:
     all:
+      - back-office
       - cart-and-checkout
       - carrier-management
       - content-management-system
@@ -235,6 +236,7 @@ versioned_categories:
       - merchant-management
       - order-management-system
       - price-management
+      - payment-service-provider
       - product-information-management
       - product-relationship-management
       - punchout

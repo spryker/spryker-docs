@@ -10,6 +10,9 @@ redirect_from:
   - /docs/file-details-mime-typecsv
   - /docs/en/file-details-mime-typecsv
   - /docs/scos/dev/data-import/202204.0/data-import-categories/miscellaneous/file-details-mime-type.csv.html  
+related:
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `mime_type.csv` file used to configure MIME Type information in your Spryker Demo Shop. For more information about MIME types, see [Reference information: MIME TYPE](https://github.com/spryker/spryker-docs/blob/review-digital-asset-management/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/add-and-edit-mime-types.md#reference-information-mime-type).

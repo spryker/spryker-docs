@@ -26,7 +26,7 @@ $this->getConfig()->isDevelopmentConsoleCommandsEnabled() function calls
 
 ## Example of code that causes an upgradability error
 
-The method `getFormPlugins` in `FormDependencyProvider` contains unsupported expressions in the `if` construct `self::IS_DEV`.
+The method `getFormPlugins` in `FormDependencyProvider` contains unsupported expressions in the `if` construct `$alwaysAddPlugin`.
 
 ```php
 use Spryker\Yves\Form\FormDependencyProvider as SprykerFormDependencyProvider;

@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product + Category feature into a Spryker project.
+This document describes how to integrate the [Product](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview/product-feature-overview.html) + [Category](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/category-management-feature-overview.html#root-parent-and-child-categories) feature into a Spryker project.
 
 ## Install feature core
 
@@ -12,9 +12,9 @@ To start feature integration, integrate the required features:
 
 | NAME                | VERSION          | INTEGRATE GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)               |
-| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
-| Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
+| Spryker Core        | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)               |
+| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                         |
 
 ### 1) Install the required modules using Composer
 
@@ -447,16 +447,17 @@ When a category product assignment is changed through ORM, make sure it is expor
 
 Add the following plugins to your project:
 
-| PLUGIN                                                | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                                              |
-|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------|
-| ProductCategoryMapExpanderPlugin                      | Expands PageMapTransfer with category map data.                                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
-| ProductCategoryPageDataExpanderPlugin                 | Expands `ProductPageSearchTransfer` with category related data.                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
-| ProductCategoryPageDataLoaderPlugin                   | Expands `ProductPayloadTransfer.categories` with product category entities.                                   |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
-| ProductCategoryRelationReadPlugin                     | Gets localized products abstract names by category.                                                           |               | Spryker\Zed\ProductCategory\Communication\Plugin\CategoryGui                           |
-| RemoveProductCategoryRelationPlugin                   | Removes relations between category and products.                                                              |               | Spryker\Zed\ProductCategory\Communication\Plugin                                       |
-| ProductUpdateEventTriggerCategoryRelationUpdatePlugin | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
+| PLUGIN                                                                  | SPECIFICATION                                                                                                 | PREREQUISITES | NAMESPACE                                                                              |
+|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------|
+| ProductCategoryMapExpanderPlugin                                        | Expands `PageMapTransfer` with category map data.                                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch\Elasticsearch |
+| ProductCategoryPageDataExpanderPlugin                                   | Expands `ProductPageSearchTransfer` with category related data.                                               |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
+| ProductCategoryPageDataLoaderPlugin                                     | Expands `ProductPayloadTransfer.categories` with product category entities.                                   |               | Spryker\Zed\ProductCategorySearch\Communication\Plugin\ProductPageSearch               |
+| ProductCategoryRelationReadPlugin                                       | Gets localized products abstract names by category.                                                           |               | Spryker\Zed\ProductCategory\Communication\Plugin\CategoryGui                           |
+| RemoveProductCategoryRelationPlugin                                     | Removes relations between category and products.                                                              |               | Spryker\Zed\ProductCategory\Communication\Plugin                                       |
+| ProductUpdateEventTriggerCategoryRelationUpdatePlugin                   | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
+| ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin | Expands product categories with their parent category IDs.                                                    |               | Spryker\Client\CategoryStorage\Plugin\ProductCategoryStorage                           |
 
-<details>
+<details open>
 <summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
@@ -624,6 +625,35 @@ Make sure that, after updating or removing a category in the Back Office, the pr
 
 {% endinfo_block %}
 
+**src/Pyz/Client/ProductCategoryStorage/ProductCategoryStorageDependencyProvider.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Client\ProductCategoryStorage;
+
+use Spryker\Client\CategoryStorage\Plugin\ProductCategoryStorage\ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin;
+use Spryker\Client\ProductCategoryStorage\ProductCategoryStorageDependencyProvider as SprykerProductCategoryStorageDependencyProvider;
+
+class ProductCategoryStorageDependencyProvider extends SprykerProductCategoryStorageDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\ProductCategoryStorageExtension\Dependency\Plugin\ProductAbstractCategoryStorageCollectionExpanderPluginInterface>
+     */
+    protected function getProductAbstractCategoryStorageCollectionExpanderPlugins(): array
+    {
+        return [
+            new ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin(),
+        ];
+    }
+}
+```
+
 ## Install feature frontend
 
 Follow the steps below to install the Product + Category feature frontend.
@@ -674,15 +704,15 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 use SprykerShop\Yves\ProductBundleWidget\Widget\ProductBundleItemsMultiCartItemsListWidget;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{     
-	/**      
-	* @return string[]      
-	*/     
-	protected function getGlobalWidgets(): array     
-	{         
-		return [             
-			ProductBreadcrumbsWithCategoriesWidget::class,         
-		];     
+{
+	/**
+	* @return string[]
+	*/
+	protected function getGlobalWidgets(): array
+	{
+		return [
+			ProductBreadcrumbsWithCategoriesWidget::class,
+		];
 	}
 }
 ```

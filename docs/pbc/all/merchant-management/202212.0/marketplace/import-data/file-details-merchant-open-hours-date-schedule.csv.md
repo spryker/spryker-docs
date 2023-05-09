@@ -8,6 +8,8 @@ redirect_from:
 related:
   - title: Merchant Opening Hours feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/merchant-opening-hours-feature-overview.html
+  - title: Execution order of data importers in Demo Shop
+    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
 This document describes the `merchant_open_hours_date_schedule.csv` file to configure [special merchant opening hours](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html) in your Spryker shop.

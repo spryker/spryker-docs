@@ -6,7 +6,7 @@ redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
 ---
 
-There are two options for connecting Spryker CI to your repository: using Spryker CI native integration or an access token.
+There are two options for connecting Spryker CI to your repository: using Spryker CI's native integration or using an access token.
 
 ## Connect using Spryker CI native integration
 

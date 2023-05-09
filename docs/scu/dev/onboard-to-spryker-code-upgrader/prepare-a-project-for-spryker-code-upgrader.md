@@ -16,7 +16,7 @@ To ensure that your project is suitable for the requirement, update all `spryker
 
 ## Make sure your code is compliant with Upgradability Guidelines
 
-Spryker Upgradability Guidelines contains rules that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
+Spryker Upgradability Guidelines contain rules that ensure code compliance with Spryker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
 
 ## Implement E2E testing in development workflow
 

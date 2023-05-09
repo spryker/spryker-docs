@@ -28,7 +28,7 @@ The Upgrader tool doesn't change existing PRs and creates a new one only after a
 {% endinfo_block %}
 
 
-The Upgrader tool is not influencing your development process. Your development team deploys the updates to a staging environment. After passing all quality processes, the Development branch propagates into your release branch.
+The Upgrader tool does not influence your development process. Your development team deploys the updates to a staging environment. After passing all quality processes, the Development branch propagates into your release branch.
 
 ![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/spryker-code-upgrader-in-a-development-workflow.md/spryker-code-upgrader-integration-diagramm.png)
 

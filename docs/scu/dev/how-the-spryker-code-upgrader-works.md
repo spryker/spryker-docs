@@ -27,7 +27,7 @@ As modules depend on other modules, we tend to release them in groups. When the 
 
 Using `composer`, the Upgrader tool updates the modules in groups. After updating the modules, the Upgrader tool returns the list of updated modules and proceeds to the next step.
 
-If the Upgrader tool can’t update a module, it skips the module’s and the remaining groups. If all the groups failed to update, the Upgrader tool returns the errors and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
+If the Upgrader tool can’t update a module, it skips the module and the remaining groups. If all the groups failed to update, the Upgrader tool returns the errors causing this and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
 
 By default, the Upgrader tool updates only minor and patch versions. When the Upgrader tool finds a group with a [major release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release), it won't update it and informs you about that:
 
@@ -37,11 +37,11 @@ Please follow the link below to find all documentation needed to help you upgrad
 https://api.release.spryker.com/release-group/XXXX
 ```
 
-To continue the usage of the Upgrader tool, install the major version manually, and re-run the Upgrader tool.
+To continue running the Upgrader tool, install the major version manually, and re-run the Upgrader tool.
 
 ### 3. Creates a Git branch
 
-Upgrader tool creates a separate Git branch to commit the changes to. The branch name follows the pattern: `upgradebot/upgrade-for-{base-branch-name}-{last-commit-hash-in-the-base-branch}`.
+The Upgrader tool creates a separate Git branch to commit the changes to. The branch name follows the pattern: `upgradebot/upgrade-for-{base-branch-name}-{last-commit-hash-in-the-base-branch}`.
 
 ### 4. Commits the changes
 

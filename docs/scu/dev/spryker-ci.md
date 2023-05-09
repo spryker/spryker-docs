@@ -14,7 +14,7 @@ Spryker CI is powered by [Buddy](https://buddy.works/) and provides an intuitive
 
 ## CI pipeline
 
-Spryker CI is shipped with an Upgrader tool pipeline per project. During the pipeline, updates from Sprykes SCOS Release will be applied to your repository.
+Spryker CI ships with an Upgrader tool pipeline per project. During the pipeline, updates from Spryker's SCOS Release will be applied to your repository.
 
 {% info_block infoBox "Access" %}
 Access to Spryker CI will be provided to you during the onboarding process.

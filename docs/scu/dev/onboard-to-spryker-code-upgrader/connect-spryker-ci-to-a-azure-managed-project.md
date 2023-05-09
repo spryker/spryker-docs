@@ -8,7 +8,7 @@ redirect_from:
 
 ## Connect Spryker CI using Azure access token
 
-To connect the Spryker CI manually using a Azure access token, follow the steps.
+To connect the Spryker CI manually using a Azure access token, follow the steps below.
 
 ## Prerequisites
 

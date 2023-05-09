@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/catalog/product-options/managing-product-options.html  
 related:
   - title: Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-options-feature-overview.html
 ---
 
 To edit product options in the Back Office, follow the steps below.

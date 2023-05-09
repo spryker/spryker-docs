@@ -112,7 +112,7 @@ Marketplace Storefront lets buyers check what merchants are the owners of the of
 In the Spryker Marketplace, you can search for the products sold by a specific merchant by entering the merchant name in the search field. The search results contain the marketplace products and/or the abstract products the merchant product offers are related to. The search suggestions and the auto-completion functionality provide the marketplace products and offers by the merchant name.
 ![Search by merchant name](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/search-by-merchant-name.gif)
 
-In the catalog and search results pages, there is the merchant multi-select filter. This filter lets shoppers see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce O, see [Standard Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation.
+In the catalog and search results pages, there is the merchant multi-select filter. This filter lets shoppers see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce O, see [Standard Filters](/docs/pbc/all/search/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation.
 
 ![Merchant search filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-filter.gif)
 

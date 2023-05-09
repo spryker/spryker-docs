@@ -404,7 +404,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     protected function getSynchronizationQueueConfiguration(): array
     {
         return [
-            ServicePointStorageConfig::SERVICE_POINT_SYNC_STORAGE_QUEUE,
+            ServicePointStorageConfig::QUEUE_NAME_SYNC_STORAGE_SERVICE_POINT,
         ];
     }
 }
@@ -432,7 +432,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     protected function getProcessorMessagePlugins(Container $container): array
     {
         return [
-            ServicePointStorageConfig::SERVICE_POINT_SYNC_STORAGE_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
+            ServicePointStorageConfig::QUEUE_NAME_SYNC_STORAGE_SERVICE_POINT => new SynchronizationStorageQueueMessageProcessorPlugin(),
         ];
     }
 }
@@ -488,10 +488,10 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
-use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePoint\ServicePointWritePublisherPlugin;
-use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointAddress\ServicePointAddressWritePublisherPlugin;
-use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointPublisherTriggerPlugin;
-use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore\ServicePointStoreWritePublisherPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePoint\ServicePointWritePublisherPlugin as ServicePointStorageWritePublisherPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointAddress\ServicePointAddressWritePublisherPlugin as ServicePointStorageAddressWritePublisherPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointPublisherTriggerPlugin as ServicePointStoragePublisherTriggerPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore\ServicePointStoreWritePublisherPlugin as ServicePointStorageStoreWritePublisherPlugin;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
@@ -511,7 +511,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getPublisherTriggerPlugins(): array
     {
         return [
-            new ServicePointPublisherTriggerPlugin(),
+            new ServicePointStoragePublisherTriggerPlugin(),
         ];
     }
 
@@ -521,9 +521,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getServicePointStoragePlugins(): array
     {
         return [
-            new ServicePointWritePublisherPlugin(),
-            new ServicePointAddressWritePublisherPlugin(),
-            new ServicePointStoreWritePublisherPlugin(),
+            new ServicePointStorageWritePublisherPlugin(),
+            new ServicePointStorageAddressWritePublisherPlugin(),
+            new ServicePointStorageStoreWritePublisherPlugin(),
         ];
     }
 }
@@ -542,7 +542,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 namespace Pyz\Zed\Synchronization;
 
-use Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization\ServicePointSynchronizationDataBulkRepositoryPlugin;
+use Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization\ServicePointSynchronizationDataBulkRepositoryPlugin as ServicePointStorageSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
 
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
@@ -553,7 +553,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     protected function getSynchronizationDataPlugins(): array
     {
         return [
-            new ServicePointSynchronizationDataBulkRepositoryPlugin(),
+            new ServicePointStorageSynchronizationDataBulkRepositoryPlugin(),
         ];
     }
 }

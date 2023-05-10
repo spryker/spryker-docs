@@ -10,7 +10,7 @@ related:
   - title: Marketplace order overview
     link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-overview.html
   - title: Merchant order overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
 When viewed independently of each other, the Marketplace and Merchant State Machines workflows look like this:

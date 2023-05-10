@@ -19,7 +19,7 @@ related:
   - title: Retrieving category trees
     link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/page.version/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/category-management-feature-overview.html
 ---
 
 This endpoint allows retrieving category nodes.

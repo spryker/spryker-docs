@@ -1,3 +1,6 @@
+
+
+
 This document describes how to integrate the Service Points feature into a Spryker project.
 
 ## Install feature core
@@ -7,7 +10,7 @@ To start feature integration, integrate the required features:
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
 | NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,7 +37,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up database schema and transfer objects
 
-Adjust the schema definition so entity changes will trigger events.
+1. Adjust the schema definition so entity changes trigger events.
 
 | AFFECTED ENTITY               | TRIGGERED EVENTS                                                                                                              |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -69,7 +72,7 @@ Adjust the schema definition so entity changes will trigger events.
 </database>
 ```
 
-Apply database changes and generate transfer changes:
+2. Apply database changes and generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -90,10 +93,6 @@ Make sure that the following changes have been applied in the database:
 | spy_service_point_search  | table  | created |
 | spy_region.uuid           | column | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
 
 | CLASS NAMESPACE                                                    | EXTENDS                                                                               |
@@ -106,10 +105,6 @@ Make sure that propel entities have been generated successfully by checking thei
 | \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery        |
 | \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch      | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch      |
 | \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
@@ -151,7 +146,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Set up configuration
 
-1. To make the `service-points` and `service-point-addresses` resources protected, adjust the protected paths configuration:
+To make the `service-points` and `service-point-addresses` resources protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -229,7 +224,7 @@ sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
 | city              | mandatory | string    | Berlin                    | City                             |
 | zip_code          | mandatory | string    | 10115                     | Zip code                         |
 
-2. Enable data imports at your configuration file, e.g.:
+2. Enable data imports at your configuration file—for example:
 
 **data/import/local/full_EU.yml**
 
@@ -376,7 +371,7 @@ console data:import glossary
 
 ### 5) Configure export to Elasticsearch
 
-Adjust Elasicsearch config at SearchElasticsearchConfig:
+1. In `SearchElasticsearchConfig`, adjust Elasicsearch config:
 
 **src/Pyz/Shared/SearchElasticsearch/SearchElasticsearchConfig.php**
 
@@ -395,14 +390,14 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 }
 ```
 
-To set up a new source for Service Points, execute the following command:
+2. Set up a new source for Service Points:
 
 ```bash
 console search:setup:source-map
 ```
 
 
-Adjust `RabbitMq` module configuration in `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
+3. In `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`, adjust the `RabbitMq` module's configuration:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -428,7 +423,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-Register new queue message processor:
+4. Register the new queue message processor:
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -458,7 +453,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-Configure synchronization pool
+5. Configure the synchronization pool:
 
 **src/Pyz/Zed/ServicePointSearch/ServicePointSearchConfig.php**
 
@@ -482,12 +477,12 @@ class ServicePointSearchConfig extends SprykerServicePointSearchConfig
 }
 ```
 
-#### Set up re-generate and re-sync features
+#### Set up regenerate and resync features
 
 | PLUGIN                                              | SPECIFICATION                                                                                        | PREREQUISITES | NAMESPACE                                                           |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
 | ServicePointSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the service point search table content into Elasticsearch.                      | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Synchronization |
-| ServicePointPublisherTriggerPlugin                  | Allows to populate service point search table with data and trigger further export to Elasticsearch. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher       |
+| ServicePointPublisherTriggerPlugin                  | Allows populating service point search table with data and triggering further export to Elasticsearch. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher       |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -626,8 +621,9 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 
 {% info_block warningBox "Verification" %}
 
-1. Fill the `spy_service_point` table with some data and run `console publish:trigger-events -r service_point` command.
-   Make sure that the `spy_service_point_search` table is filled with respective data per store. Check Elasticsearch documents, make sure you are able to see data in the following format:
+1. Fill the `spy_service_point` table with some data and run `console publish:trigger-events -r service_point`.
+2. Make sure that the `spy_service_point_search` table is filled with respective data per store. 
+3. Check Elasticearch documents and make sure data is structured in the following format:
 
 ```yaml
 {
@@ -678,7 +674,8 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 }
 ```
 
-2. Change some record at the `spy_service_point_search` table and run `console sync:data service_point`. Make sure that your changes were synced to the respective Elasticsearch document.
+4. In the `spy_service_point_search` table, change some records and run `console sync:data service_point`. 
+5. Make sure that your changes have been synced to the respective Elasticsearch document.
 
 {% endinfo_block %}
 
@@ -759,67 +756,71 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that you can send the following requests:
+Make sure that you can send the following requests:
 
-    * `POST https://glue-backend.mysprykershop.com/service-points`
-         ```json
-            {
-                "data": {
-                    "type": "service-points",
-                    "attributes": {
-                        "name": "Some Service Point",
-                        "key": "ssp",
-                        "isActive": "true",
-                        "stores": ["DE", "AT"]
-                    }
-                }
-            }
-         ```
-    * `PATCH https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}`
-       ```json
-          {
-              "data": {
-                  "type": "service-points",
-                  "attributes": {
-                      "name": "Another Name"
-                  }
+* `POST https://glue-backend.mysprykershop.com/service-points`
+   ```json
+      {
+          "data": {
+              "type": "service-points",
+              "attributes": {
+                  "name": "Some Service Point",
+                  "key": "ssp",
+                  "isActive": "true",
+                  "stores": ["DE", "AT"]
               }
           }
-       ```
-    * `GET https://glue-backend.mysprykershop.com/service-points/`
-    * `GET https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}`
-    * `POST https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
-         ```json
-            {
-                "data": {
-                    "type": "service-point-address",
-                    "attributes": {
-                        "address1": "address1",
-                        "address2": "address2",
-                        "address3": "address3",
-                        "city": "city",
-                        "zipCode": "10115",
-                        "countryIso2Code": "DE"
-                    }
+      }
+   ```
+
+* `PATCH https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}`
+    ```json
+        {
+            "data": {
+                "type": "service-points",
+                "attributes": {
+                    "name": "Another Name"
                 }
             }
-         ```
-   * `PATCH https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses/{{service-point-address-uuid}}`
-        ```json
-           {
-               "data": {
-                   "type": "service-point-address",
-                   "attributes": {
-                       "address1": "another address1",
-                       "address2": "another address2",
-                       "address3": "another address3",
-                       "city": "another city",
-                       "zipCode": "20115",
-                       "countryIso2Code": "AT"
-                   }
-               }
-           }
-        ```
-   * `GET https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
+        }
+    ```
+
+* `GET https://glue-backend.mysprykershop.com/service-points/`
+* `GET https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}`
+* `POST https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
+   ```json
+      {
+          "data": {
+              "type": "service-point-address",
+              "attributes": {
+                  "address1": "address1",
+                  "address2": "address2",
+                  "address3": "address3",
+                  "city": "city",
+                  "zipCode": "10115",
+                  "countryIso2Code": "DE"
+              }
+          }
+      }
+   ```
+
+* `PATCH https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses/{{service-point-address-uuid}}`
+  ```json
+     {
+         "data": {
+             "type": "service-point-address",
+             "attributes": {
+                 "address1": "another address1",
+                 "address2": "another address2",
+                 "address3": "another address3",
+                 "city": "another city",
+                 "zipCode": "20115",
+                 "countryIso2Code": "AT"
+             }
+         }
+     }
+  ```
+
+* `GET https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
 
 {% endinfo_block %}

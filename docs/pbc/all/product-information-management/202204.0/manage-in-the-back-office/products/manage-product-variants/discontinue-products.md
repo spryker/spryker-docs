@@ -15,7 +15,7 @@ related:
   - title: Adding Product Alternatives
     link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
   - title: Discontinued products overview
-    link: docs/pbc/all/product-information-management/page.version/product-feature-overview/discontinued-products-overview.html
+    link: docs/pbc/all/product-information-management/page.version/feature-overviews/product-feature-overview/discontinued-products-overview.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

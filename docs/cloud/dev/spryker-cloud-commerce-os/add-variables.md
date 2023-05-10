@@ -78,13 +78,13 @@ The following sections describe how to add parameters and secrets for different 
 
 {% info_block warningBox "Propagation of variables" %}
 
-To make variables available in your Jenkins instance, we need to terraform your added or changed variables. To do this, create a [support case](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#plattform-change-requests).
+To make variables available in your Jenkins instance, we need to terraform your added or changed variables. To do this, create a [support case](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#plattform-change-requests).
 
 {% endinfo_block %}
 
 ### Add parameters to all resource types
 
-1. In the AWS Management Console, go to **Services > Parameter Store**.
+1. In the AWS Management Console, go to **Services&nbsp;<span aria-label="and then">></span> Parameter Store**.
 2. In the **My parameters** pane, click **Create parameter**.
     This opens the **Create parameter** page.
 3. For **Name**, enter `/{project}/{environment}/config/common/public/{variable_name}`.
@@ -95,7 +95,7 @@ To make variables available in your Jenkins instance, we need to terraform your 
 6. Enter a **Value**.
 7. Click **Create parameter**.
     This opens the **Parameter Store** page with a success message displayed.    
-8. Go to **Services** > **CodePipeline**.
+8. Go to **Services**&nbsp;<span aria-label="and then">></span> **CodePipeline**.
 9. On the **Pipelines** page, select the **NORMAL_Deploy_Spryker_{project}-{environemt}** pipeline.
 10. On the pipeline's page, click **Release change**.
 11. In the **Release change** window, click **Release**.

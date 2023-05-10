@@ -135,7 +135,7 @@ On the order list and order details pages on the Storefront, we have added state
 Besides using the default OMS states to be displayed on the Storefront, you can also **define custom display names** for order states or a group of states. By displaying the appropriate state names in the Customer Account, you can make the order states understandable for Customers and avoid showing pure technical states.
 
 #### Documentation
-[HowTo: Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html)
+[HowTo: Display Custom Names for Order Item States on the Storefront](/docs/pbc/all/order-management-system/{{site.version}}/display-custom-names-for-order-item-states-on-the-storefront.html)
 
 ### Order Cancelation
 Customer, Agent, and Back Office users can now **cancel orders** during the cancelation period. The cancellation period is 30 minutes by default, and you can customize it for your project. The Sales Order item states in which a product can be canceled are defined with a dedicated flag in the State Machine.

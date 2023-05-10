@@ -25,7 +25,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
 related:
   - title: How translations are managed
-    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-feature-walkthrough/how-translations-are-managed.html
+    link: docs/pbc/all/miscellaneous/page.version/spryker-core-feature-overview/how-translations-are-managed.html
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
   - title: CLI entry point for Yves
@@ -49,7 +49,7 @@ Textual translations are handled by the `Glossary` module. You can use the `Glos
 class GlossaryFacade extends AbstractFacade
 {
     public function createTranslation($keyName, LocaleTransfer $locale, $value, $isActive = true){ ... }
- 
+
     // there are several other methods in this facade
 }
 ```
@@ -59,14 +59,14 @@ In the glossary, an entry has a key and translations per locale, like this:
 ```php
 <?php
 ['say.hello' => [
-    'de_DE => 'Hallo', 
+    'de_DE => 'Hallo',
     'en_US' => 'Hello']
 ]
 ```
 
 Before it can be used in Yves, this data must be exported to the KV storage. You can use the [Redis Desktop Manager](http://redisdesktop.com/) to look inside and see the values.
 
-![Glossary KV and DB](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Frontend+Translations/glossary-kv-and-db.png) 
+![Glossary KV and DB](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Frontend+Translations/glossary-kv-and-db.png)
 
 ## Usage in Twig templates
 

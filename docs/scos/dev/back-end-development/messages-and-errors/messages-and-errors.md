@@ -15,7 +15,7 @@ related:
 ---
 
 This section contains the information you need to work with messages and errors in Spryker Commerce OS:
-* [Handling errors with ErrorHandler](docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html)
+* [Handling errors with ErrorHandler](/docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html)
 * [Handling Internal Server messages](/docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html)
 * [Messages and errors](/docs/scos/dev/back-end-development/messages-and-errors/messages-and-errors.html)
 * [Registering a new service](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html)

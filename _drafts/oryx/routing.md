@@ -46,7 +46,10 @@ Then you can provide routes for Lit applications using DI:
 import { appBuilder } from '@spryker-oryx/core';
 import { provideLitRoutes } from '@spryker-oryx/router/lit';
 
-const routes = [{ path: '/', render: () => html`<my-page></my-page>` }];
+const routes = [
+  { path: '/', render: () => html`<my-page></my-page>` },
+  { path: '/example/:id', render: ({ id }) => html`<my-example-page id=${id}></my-example-page>` },
+];
 
 appBuilder().withProviders(provideLitRoutes({ routes }));
 ```

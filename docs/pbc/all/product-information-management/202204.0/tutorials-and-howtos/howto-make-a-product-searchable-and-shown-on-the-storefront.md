@@ -25,14 +25,10 @@ redirect_from:
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
 related:
   - title: Creating Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
+    link: docs/pbc/all/product-information-management/page.version/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
 ---
 
-{% info_block infoBox %}
-
 The document describes the flow of making a product searchable and displayed on the Storefront.
-
-{% endinfo_block %}
 
 There are a number of conditions that must be fulfilled to make your product searchable and shown on Yves by URL. What is important is to make sure that your product meets the following conditions:
 

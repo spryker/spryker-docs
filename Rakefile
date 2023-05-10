@@ -50,6 +50,8 @@ commonOptions = {
     /gcc.gnu.org\/[\.\w\-\/\?]+/,
     /github.com\/[\.\w\-\/\?]+/,
     /www.collect.ai\/[\.\w\-\/\?]+/,
+    /twitter.com\/[\.\w\-\/\?]+/,
+    /www.blackfire.io\/[\.\w\-\/\?]+/,
     /www.optimise-it.de\/[\.\w\-\/\?]+/
 
   ],

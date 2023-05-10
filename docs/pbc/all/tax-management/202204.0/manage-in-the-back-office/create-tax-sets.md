@@ -42,15 +42,15 @@ This opens the **Edit Tax Set** page with a success message displayed.
 
 ## Next steps
 
-* Assign a tax set to an abstract product by [creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+* Assign a tax set to an abstract product by [creating abstract products and product bundles](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
-* Assign a tax set to an existing abstract product by [editing abstract products](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
+* Assign a tax set to an existing abstract product by [editing abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 
-* Assign a tax set to a product variant by [creating product variants](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
+* Assign a tax set to a product variant by [creating product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
 
-* Assign a tax set to an existing product variant by [editing product variants](/docs/pbc/all/product-information-management/{{site.version}}/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html).
+* Assign a tax set to an existing product variant by [editing product variants](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html).
 
-* Assign a tax set to a product option by [creating product options](/docs/pbc/all/product-information-management/{{page.version}}/manage-in-the-back-office/product-options/create-product-options.html).
+* Assign a tax set to a product option by [creating product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/product-options/create-product-options.html).
 
 * Assign a tax set to a threshold's fee by [managing threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/manage-threshold-settings.html).
 

@@ -5,12 +5,12 @@ last_updated: Aug 2, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve prices when retrieving abstract products. To retrieve full information about abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/{{site.version}}/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
+This document describes how to retrieve prices when retrieving abstract products. To retrieve full information about abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Prices Glue API](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-product-price-glue-api.html)
 
 

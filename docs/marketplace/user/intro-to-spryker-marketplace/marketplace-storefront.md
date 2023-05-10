@@ -87,7 +87,7 @@ On the page of the wishlist, a merchant relation is displayed for each product. 
 
 If, after a product was added to a wishlist, a merchant becomes inactive, the merchant reference is no longer displayed for the product and the customer can't add it to cart. If the merchant becomes active again, the relation is displayed, and the customer can add the product to cart.
 
-If a product in a wishlist is out of stock, an [alternative product](/docs/pbc/all/product-information-management/{{site.version}}/feature-overviews/alternative-products-feature-overview.html) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only marketplace products can be displayed there.
+If a product in a wishlist is out of stock, an [alternative product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only marketplace products can be displayed there.
 
 ## Marketplace shopping lists
 

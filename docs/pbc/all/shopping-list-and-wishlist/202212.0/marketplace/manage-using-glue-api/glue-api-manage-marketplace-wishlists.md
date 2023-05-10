@@ -428,7 +428,7 @@ For attributes of the included resources, see:
 
 - [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html#add-an-item-to-a-wishlist)
 - [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-- [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-product-labels.html)
+- [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 
 ## Retrieve a wishlist
 

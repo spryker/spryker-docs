@@ -258,7 +258,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -1592,7 +1592,7 @@ It is the responsibility of the API Client to track whether the selected items a
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 For the attributes of the included resources, see:
-* [Retrieving measurement units](/docs/pbc/all/product-information-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
+* [Retrieving measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 * [Create a cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)

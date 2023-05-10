@@ -34,21 +34,16 @@ To keep your catalog dynamic, you can include auto-generated pages based on cate
 
 The main benefits of working with the catalog are to pave the way for a smooth shopping journey with well-organized categories that organize and extend your catalog to match your business needs.
 
+To learn about the Product Information Management capability, see the following feature overviews:
 
-
-
-
-
-The Product Information Management capability To learn about the
-
-[Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/alternative-products-feature-overview.html)
-[Catalog](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/catalog-feature-overview.html)
-[Category Management](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/category-management-feature-overview.html)
-[Product Approval Process](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-approval-process-feature-overview.html)
-[Product Barcode](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-barcode-feature-overview.html)
-[Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-bundles-feature-overview.html)
-[Product](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-feature-overview.html)
-[Product Groups](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-groups-feature-overview.html)
-[Product Labels](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-labels-feature-overview.html)
-[Product Lists](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-lists-feature-overview.html)
-[Product Options](/docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/product-options-feature-overview.html)
+[Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html)
+[Catalog](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/catalog-feature-overview.html)
+[Category Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html)
+[Product Approval Process](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-approval-process-feature-overview.html)
+[Product Barcode](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-barcode-feature-overview.html)
+[Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html)
+[Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview.html)
+[Product Groups](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-groups-feature-overview.html)
+[Product Labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html)
+[Product Lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html)
+[Product Options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html)

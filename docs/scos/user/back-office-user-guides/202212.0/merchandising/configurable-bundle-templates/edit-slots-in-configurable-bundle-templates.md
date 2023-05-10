@@ -8,7 +8,7 @@ related:
   - title: Edit slots in configurable bundle templates
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
   - title: Configurable Bundle feature overview
-    link: docs/pbc/all/product-information-management/page.version/feature-overviews/configurable-bundle-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
 
 This document describes how to edit slots in configurable bundle templates in the Back Office.

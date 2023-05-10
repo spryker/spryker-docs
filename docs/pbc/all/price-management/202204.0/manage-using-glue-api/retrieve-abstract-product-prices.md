@@ -18,11 +18,11 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
 related:
   - title: Retrieving abstract products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving image sets of abstract products
-    link: docs/pbc/all/product-information-management/page.version/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
     link: docs/pbc/all/tax-management/page.version/manage-via-glue-api/retrieve-tax-sets.html
 ---
@@ -31,7 +31,7 @@ This endpoint allows retrieving detailed information about the prices of abstrac
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 
 ## Retrieve prices of an abstract product
 

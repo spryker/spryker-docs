@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Process incoming HTTP requests from external ERP services for order updates"
+title: Process incoming HTTP requests from external ERP services for order updates
 description: Learn how you can process incoming HTTP requests from external ERP services for order updates
 template: howto-guide-template
 ---

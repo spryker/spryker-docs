@@ -1,6 +1,3 @@
-
-
-
 This document describes how to integrate the Service Points feature into a Spryker project.
 
 ## Install feature core
@@ -88,59 +85,82 @@ Make sure that the following changes have been applied in the database:
 | DATABASE ENTITY           | TYPE   | EVENT   |
 |---------------------------|--------|---------|
 | spy_service_point         | table  | created |
-| spy_service_point_store   | table  | created |
 | spy_service_point_address | table  | created |
+| spy_service_point_service | table  | created |
+| spy_service_point_store   | table  | created |
 | spy_service_point_search  | table  | created |
+| spy_service_type          | table  | created |
 | spy_region.uuid           | column | created |
 
 Make sure that propel entities have been generated successfully by checking their existence. Also, make generated entity classes extending respective Spryker core classes.
 
-| CLASS NAMESPACE                                                    | EXTENDS                                                                               |
-|--------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                  | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                  |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery             |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress           |      
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery      |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore             |
-| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery        |
-| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch      | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch      |
-| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery |
+| CLASS NAMESPACE                                                    | EXTENDS                                                                                |
+|--------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePoint                  | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePoint                   |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddress           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddress            |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery       |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointQuery              |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointService           | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointService            |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointServiceQuery      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointServiceQuery       |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointAddressQuery      | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointAddressQuery       |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStore             | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStore              |
+| \Orm\Zed\ServicePoint\Persistence\SpyServicePointStoreQuery        | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServicePointStoreQuery         |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceType                   | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceType                    |
+| \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery              | \Spryker\Zed\ServicePoint\Persistence\Propel\AbstractSpyServiceTypeQuery               |
+| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearch      | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearch       |
+| \Orm\Zed\ServicePointSearch\Persistence\SpyServicePointSearchQuery | \Spryker\Zed\ServicePointSearch\Persistence\Propel\AbstractSpyServicePointSearchQuery  |
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                               | TYPE  | EVENT   | PATH                                                             |
-|----------------------------------------|-------|---------|------------------------------------------------------------------|
-| ServicePoint                           | class | created | src/Generated/Shared/Transfer/ServicePoint                       |
-| ServicePointCollection                 | class | created | src/Generated/Shared/Transfer/ServicePointCollection             |
-| ServicePointCollectionRequest          | class | created | src/Generated/Shared/Transfer/ServicePointCollectionRequest      |
-| ServicePointCollectionResponse         | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponse     |
-| ServicePointCriteria                   | class | created | src/Generated/Shared/Transfer/ServicePointCriteria               |
-| ServicePointConditions                 | class | created | src/Generated/Shared/Transfer/ServicePointConditions             |
-| ApiServicePointsAttributes             | class | created | src/Generated/Shared/Transfer/ApiServicePointsAttributes         |
-| ApiServicePointAddressesAttributes     | class | created | src/Generated/Shared/Transfer/ApiServicePointAddressesAttributes |
-| StoreRelation                          | class | created | src/Generated/Shared/Transfer/StoreRelation                      |
-| Store                                  | class | created | Generated/Shared/Transfer/Store                                  |
-| Error                                  | class | created | Generated/Shared/Transfer/Error                                  |
-| Sort                                   | class | created | Generated/Shared/Transfer/Sort                                   |
-| Pagination                             | class | created | Generated/Shared/Transfer/Pagination                             |
-| ErrorCollection                        | class | created | Generated/Shared/Transfer/ErrorCollection                        |
-| DataImporterConfiguration              | class | created | Generated/Shared/Transfer/DataImporterConfiguration              |
-| DataImporterReport                     | class | created | Generated/Shared/Transfer/DataImporterReport                     |
-| CountryCriteria                        | class | created | Generated/Shared/Transfer/CountryCriteria                        |
-| CountryConditions                      | class | created | Generated/Shared/Transfer/CountryConditions                      |
-| Country                                | class | created | Generated/Shared/Transfer/Country                                |
-| CountryCollection                      | class | created | Generated/Shared/Transfer/CountryCollection                      |
-| Region                                 | class | created | Generated/Shared/Transfer/Region                                 |
-| ServicePointAddressCollection          | class | created | Generated/Shared/Transfer/ServicePointAddressCollection          |
-| ServicePointAddressCollectionRequest   | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionRequest   |
-| ServicePointAddressCollectionResponse  | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionResponse  |
-| ServicePointAddressCriteria            | class | created | Generated/Shared/Transfer/ServicePointAddressCriteria            |
-| ServicePointAddressConditions          | class | created | Generated/Shared/Transfer/ServicePointAddressConditions          |
-| ServicePointAddress                    | class | created | Generated/Shared/Transfer/ServicePointAddress                    |
-| GlueRelationship                       | class | created | Generated/Shared/Transfer/GlueRelationship                       |
-| ServicePointSearchCollection           | class | created | Generated/Shared/Transfer/ServicePointSearchCollection           |
-| ServicePointSearch                     | class | created | Generated/Shared/Transfer/ServicePointSearch                     |
-| ServicePointSearchRequest              | class | created | Generated/Shared/Transfer/ServicePointSearchRequest              |
+| TRANSFER                                      | TYPE  | EVENT   | PATH                                                                     |
+|-----------------------------------------------|-------|---------|--------------------------------------------------------------------------|
+| ServicePoint                                  | class | created | src/Generated/Shared/Transfer/ServicePoint                               |
+| ServicePointCollection                        | class | created | src/Generated/Shared/Transfer/ServicePointCollection                     |
+| ServicePointCollectionRequest                 | class | created | src/Generated/Shared/Transfer/ServicePointCollectionRequest              |
+| ServicePointCollectionResponse                | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponse             |
+| ServicePointCriteria                          | class | created | src/Generated/Shared/Transfer/ServicePointCriteria                       |
+| ServicePointConditions                        | class | created | src/Generated/Shared/Transfer/ServicePointConditions                     |
+| ApiServicePointsAttributes                    | class | created | src/Generated/Shared/Transfer/ApiServicePointsAttributes                 |
+| ApiServicePointAddressesAttributes            | class | created | src/Generated/Shared/Transfer/ApiServicePointAddressesAttributes         |
+| StoreRelation                                 | class | created | src/Generated/Shared/Transfer/StoreRelation                              |
+| Store                                         | class | created | Generated/Shared/Transfer/Store                                          |
+| Error                                         | class | created | Generated/Shared/Transfer/Error                                          |
+| Sort                                          | class | created | Generated/Shared/Transfer/Sort                                           |
+| Pagination                                    | class | created | Generated/Shared/Transfer/Pagination                                     |
+| ErrorCollection                               | class | created | Generated/Shared/Transfer/ErrorCollection                                |
+| DataImporterConfiguration                     | class | created | Generated/Shared/Transfer/DataImporterConfiguration                      |
+| DataImporterReport                            | class | created | Generated/Shared/Transfer/DataImporterReport                             |
+| CountryCriteria                               | class | created | Generated/Shared/Transfer/CountryCriteria                                |
+| CountryConditions                             | class | created | Generated/Shared/Transfer/CountryConditions                              |
+| Country                                       | class | created | Generated/Shared/Transfer/Country                                        |
+| CountryCollection                             | class | created | Generated/Shared/Transfer/CountryCollection                              |
+| Region                                        | class | created | Generated/Shared/Transfer/Region                                         |
+| ServicePointAddressCollection                 | class | created | Generated/Shared/Transfer/ServicePointAddressCollection                  |
+| ServicePointAddressCollectionRequest          | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionRequest           |
+| ServicePointAddressCollectionResponse         | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionResponse          |
+| ServicePointAddressCriteria                   | class | created | Generated/Shared/Transfer/ServicePointAddressCriteria                    |
+| ServicePointAddressConditions                 | class | created | Generated/Shared/Transfer/ServicePointAddressConditions                  |
+| ServicePointAddress                           | class | created | Generated/Shared/Transfer/ServicePointAddress                            |
+| GlueRelationship                              | class | created | Generated/Shared/Transfer/GlueRelationship                               |
+| ServicePointSearchCollection                  | class | created | Generated/Shared/Transfer/ServicePointSearchCollection                   |
+| ServicePointSearch                            | class | created | Generated/Shared/Transfer/ServicePointSearch                             |
+| ServicePointSearchRequest                     | class | created | Generated/Shared/Transfer/ServicePointSearchRequest                      |
+| ServicePointServiceCollectionRequestTransfer  | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionRequestTransfer   |
+| ServicePointServiceCollectionResponseTransfer | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionResponseTransfer  |
+| ServicePointServiceCollectionTransfer         | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionTransfer          |
+| ServicePointServiceConditionsTransfer         | class | created | Generated/Shared/Transfer/ServicePointServiceConditionsTransfer          |
+| ServicePointServiceCriteriaTransfer           | class | created | Generated/Shared/Transfer/ServicePointServiceCriteriaTransfer            |
+| ServicePointServiceTransfer                   | class | created | Generated/Shared/Transfer/ServicePointServiceTransfer                    |
+| ServiceTypeCollectionRequestTransfer          | class | created | Generated/Shared/Transfer/ServiceTypeCollectionRequestTransfer           |
+| ServiceTypeCollectionResponseTransfer         | class | created | Generated/Shared/Transfer/ServiceTypeCollectionResponseTransfer          |
+| ServiceTypeCollectionTransfer                 | class | created | Generated/Shared/Transfer/ServiceTypeCollectionTransfer                  |
+| ServiceTypeConditionsTransfer                 | class | created | Generated/Shared/Transfer/ServiceTypeConditionsTransfer                  |
+| ServiceTypeCriteriaTransfer                   | class | created | Generated/Shared/Transfer/ServiceTypeCriteriaTransfer                    |
+| ServiceTypeTransfer                           | class | created | Generated/Shared/Transfer/ServiceTypeTransfer                            |
 
 {% endinfo_block %}
 
@@ -224,6 +244,34 @@ sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
 | city              | mandatory | string    | Berlin                    | City                             |
 | zip_code          | mandatory | string    | 10115                     | Zip code                         |
 
+
+**data/import/common/common/service_type.csv**
+
+```csv
+name,key
+Pickup,pickup
+```
+
+| COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                  |
+|--------|-----------|-----------|--------------|-----------------------------------|
+| name   | mandatory | string    | Pickup       | Unique key of the service type.   |
+| key    | mandatory | string    | pickup       | Unique name of the service type.  |
+
+**data/import/common/common/service_point_service.csv**
+
+```csv
+key,service_point_key,service_type_key,is_active
+sps1,sp1,pickup,1
+sps2,sp2,pickup,1
+```
+
+| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE      | DATA EXPLANATION                                |
+|-------------------|-----------|-----------|-------------------|-------------------------------------------------|
+| key               | mandatory | string    | sps1              | Unique key of the service point service.        |
+| service_point_key | mandatory | string    | sp1               | Unique key of the service point.                |
+| service_type_key  | mandatory | string    | pickup            | Unique key of the service type.                 |
+| is_active         | mandatory | bool      | 0                 | Defines if the service point service is active. |
+
 2. Enable data imports at your configuration file—for example:
 
 **data/import/local/full_EU.yml**
@@ -235,6 +283,10 @@ sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
       source: data/import/common/{{store}}/service_point_store.csv
     - data_entity: service-point-address
       source: data/import/common/common/service_point_address.csv
+    - data_entity: service-type
+      source: data/import/common/common/service_type.csv
+    - data_entity: service-point-service
+      source: data/import/common/common/service_point_service.csv
 ```
 
 3. Register the following data import plugins:
@@ -244,6 +296,8 @@ sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
 | ServicePointDataImportPlugin        | Imports service points data into the database.                | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
 | ServicePointStoreDataImportPlugin   | Imports service point store relations data into the database. | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
 | ServicePointAddressDataImportPlugin | Imports service point addresses into the database.            | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
+| ServiceTypeDataImportPlugin         | Imports service types into the database.                      | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
+| ServicePointServiceDataImportPlugin | Imports service point services into the database.             | None          | \Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -268,6 +322,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
             new ServicePointDataImportPlugin(),
             new ServicePointStoreDataImportPlugin(),
             new ServicePointAddressDataImportPlugin(),
+            new ServiceTypeDataImportPlugin(),
+            new ServicePointServiceDataImportPlugin(),
         ];
     }
 }
@@ -301,6 +357,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_STORE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_ADDRESS),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_TYPE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE_POINT_SERVICE),
         ];
 
         return $commands;
@@ -312,13 +370,21 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```bash
 console data:import service-point
-console data:import service-point-store
 console data:import service-point-address
+console data:import:service-point-service
+console data:import service-point-store
+console data:import:service-type
 ```
 
 {% info_block warningBox “Verification” %}
 
-Make sure that entities were imported to `spy_service_point`, `spy_service_point_store` and `spy_service_point_address` database tables respectively.
+Make sure that entities were imported to the following database tables respectively:
+
+ - `spy_service_point`
+ - `spy_service_point_store`
+ - `spy_service_point_address`
+ - `spy_service_type`
+ - `spy_service_point_service`
 
 {% endinfo_block %}
 
@@ -361,6 +427,38 @@ service_point.validation.service_point_address_already_exists,A service point ad
 service_point.validation.service_point_address_already_exists,Es existiert bereits eine Service Point Adresse für den Service Point.,de_DE
 service_point.validation.service_point_uuid_is_not_unique,A service point with the same uuid already exists in request.,en_US
 service_point.validation.service_point_uuid_is_not_unique,Ein Service Point mit der gleichen uuid existiert bereits in der Anfrage.,de_DE
+service_point.validation.service_type_key_exists,A service type with the same key already exists.,en_US
+service_point.validation.service_type_key_exists,Ein Service-Typ mit demselben Schlüssel existiert bereits.,de_DE
+service_point.validation.service_type_key_wrong_length,A service type key must have length from %min% to %max% characters.,en_US
+service_point.validation.service_type_key_wrong_length,Ein Service-Typ-Schlüssel muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+service_point.validation.service_type_key_is_not_unique,A service type with the same key already exists in request.,en_US
+service_point.validation.service_type_key_is_not_unique,Ein Service-Typ mit demselben Schlüssel existiert bereits in der Anfrage.,de_DE
+service_point.validation.service_type_name_exists,A service type with the same name already exists.,en_US
+service_point.validation.service_type_name_exists,Ein Service-Typ mit demselben Namen existiert bereits.,de_DE
+service_point.validation.service_type_name_wrong_length,A service type name must have length from %min% to %max% characters.,en_US
+service_point.validation.service_type_name_wrong_length,Ein Service-Typ-Name muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+service_point.validation.service_type_name_is_not_unique,A service type with the same name already exists in request.,en_US
+service_point.validation.service_type_name_is_not_unique,Ein Service-Typ mit demselben Namen existiert bereits in der Anfrage.,de_DE
+service_point.validation.service_type_entity_not_found,The service type entity was not found.,en_US
+service_point.validation.service_type_entity_not_found,Die Service-Typ-Entität wurde nicht gefunden.,de_DE
+service_point.validation.service_poinst_service_key_exists,A service point service with the same key already exists.,en_US
+service_point.validation.service_poinst_service_key_exists,Ein Servicepunkt-Service mit demselben Schlüssel existiert bereits.,de_DE
+service_point.validation.service_point_service_key_wrong_length,A service point service key must have length from %min% to %max% characters.,en_US
+service_point.validation.service_point_service_key_wrong_length,Ein Servicepunkt-Service-Schlüssel muss eine Länge von %min% bis %max% Zeichen haben.,de_DE
+service_point.validation.service_point_service_key_is_not_unique,A service point service with the same key already exists in request.,en_US
+service_point.validation.service_point_service_key_is_not_unique,Ein Servicepunkt-Service mit demselben Schlüssel existiert bereits in der Anfrage.,de_DE
+service_point.validation.service_point_service_type_relation_already_exists,A service point service with defined relation of service point and service type already exists.,en_US
+service_point.validation.service_point_service_type_relation_already_exists,Ein Servicepunkt-Service mit einer definierten Beziehung von Servicepunkt und Service-Typ existiert bereits.,de_DE
+service_point.validation.service_point_service_type_relation_is_not_unique,A service point service with defined relation of service pint and service type already exists in request.,en_US
+service_point.validation.service_point_service_type_relation_is_not_unique,Ein Servicepunkt-Service mit definierter Beziehung von Servicepunkt und Service-Typ existiert bereits in der Anfrage.,de_DE
+service_point.validation.service_point_service_entity_not_found,The service point service entity was not found.,en_US
+service_point.validation.service_point_service_entity_not_found,Die Servicepunkt-Service-Entität wurde nicht gefunden.,de_DE
+service_point.validation.service_point_service_key_immutability,The service point service key is immutable.,en_US
+service_point.validation.service_point_service_key_immutability,Der Servicepunkt-Service-Schlüssel ist unveränderlich.,de_DE
+service_point.validation.service_type_key_immutability,The service type key is immutable.,en_US
+service_point.validation.service_type_key_immutability,Der Service-Typ-Schlüssel ist unveränderlich.,de_DE
+service_point.validation.service_point_service_key_exists,A service point service with the same key already exists.,en_US
+service_point.validation.service_point_service_key_exists,Ein Servicepunkt-Service mit demselben Schlüssel existiert bereits.,de_DE
 ```
 
 2. Import data:
@@ -479,9 +577,9 @@ class ServicePointSearchConfig extends SprykerServicePointSearchConfig
 
 #### Set up regenerate and resync features
 
-| PLUGIN                                              | SPECIFICATION                                                                                        | PREREQUISITES | NAMESPACE                                                           |
-|-----------------------------------------------------|------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| ServicePointSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the service point search table content into Elasticsearch.                      | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Synchronization |
+| PLUGIN                                              | SPECIFICATION                                                                                          | PREREQUISITES | NAMESPACE                                                           |
+|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
+| ServicePointSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the service point search table content into Elasticsearch.                        | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Synchronization |
 | ServicePointPublisherTriggerPlugin                  | Allows populating service point search table with data and triggering further export to Elasticsearch. | None          | Spryker\Zed\ServicePointSearch\Communication\Plugin\Publisher       |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**

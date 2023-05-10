@@ -36,24 +36,23 @@ Once you completed all the steps, the ACP catalog will appear in the Back Office
 
 As mentioned before, the first step to install ACP on SCOS is to get SCOS ACP-Ready. This itself requires different update steps depending on the template version on which your project was started.
 
-- **SCOS Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html)**: All changes are included for out-of-the-box ACP-Readiness, but need be verified on the project level
+- **SCOS Product Release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html)**: All changes are included for out-of-the-box ACP-Readiness, but need be verified on the project level
 - **Older versions**: All steps required are for ACP-Readiness
 
-If you were onboarded with a version older than Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html), please [contact us](https://support.spryker.com/). 
+If you were onboarded with a version older than Product Release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), please [contact us](https://support.spryker.com/). 
 
 ### 1. Module updates for ACP
 
 #### 1. ACP modules
 
-The ACP catalog is included by default to the Spryker Cloud product starting with the Spryker Product Release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html). 
+The ACP catalog is included by default to the Spryker Cloud product starting with the Spryker Product Release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html). 
 
-However, if your Spryker project is based on an earlier version you must install or update the following modules into your Spryker project:
+However, in any case youe should make sure that your Spryker project is using the latest versions of the following modules in your Spryker project:
 
 * `spryker/app-catalog-gui: ^1.2.0` or higher
 * `spryker/message-broker:^1.4.0` or higher
 * `spryker/message-broker-aws:^1.3.2` or higher
 * `spryker/session:^4.15.1` or higher
-
 
 
 #### 2. App modules

@@ -3952,8 +3952,6 @@ entries:
       - "202108.0"
       - "202204.0"
       - "202212.0"
-    - title: Define parameters and secrets
-      url: /docs/scos/dev/the-docker-sdk/define-parameters-and-secrets.html
   - title: Legacy Demoshop
     include_versions:
     - "201811.0"

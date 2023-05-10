@@ -800,9 +800,12 @@ Configure tables to be published and synchronized to the Storage on create, edit
 
 ```php
 <?php
+
 namespace Pyz\Client\RabbitMq;
+
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\ServicePointStorage\ServicePointStorageConfig;
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
     /**
@@ -823,9 +826,12 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```php
 <?php
+
 namespace Pyz\Zed\Queue;
+
 use Spryker\Shared\ServicePointStorage\ServicePointStorageConfig;
 use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
     /**
@@ -848,10 +854,13 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ```php
 <?php
+
 namespace Pyz\Zed\ServicePointStorage;
+
 use Pyz\Zed\Synchronization\SynchronizationConfig;
 use Spryker\Shared\Publisher\PublisherConfig;
 use Spryker\Zed\ServicePointStorage\ServicePointStorageConfig as SprykerServicePointStorageConfig;
+
 class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 {
     /**
@@ -861,6 +870,7 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
     {
         return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
     }
+
     /**
      * @return string|null
      */
@@ -884,12 +894,16 @@ class ServicePointStorageConfig extends SprykerServicePointStorageConfig
 
 ```php
 <?php
+
 namespace Pyz\Zed\Publisher;
+
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePoint\ServicePointWritePublisherPlugin as ServicePointStorageWritePublisherPlugin;
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointAddress\ServicePointAddressWritePublisherPlugin as ServicePointStorageAddressWritePublisherPlugin;
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointPublisherTriggerPlugin as ServicePointStoragePublisherTriggerPlugin;
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Publisher\ServicePointStore\ServicePointStoreWritePublisherPlugin as ServicePointStorageStoreWritePublisherPlugin;
+
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
     /**
@@ -935,9 +949,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ```php
 <?php
+
 namespace Pyz\Zed\Synchronization;
+
 use Spryker\Zed\ServicePointStorage\Communication\Plugin\Synchronization\ServicePointSynchronizationDataBulkRepositoryPlugin as ServicePointStorageSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
+
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**

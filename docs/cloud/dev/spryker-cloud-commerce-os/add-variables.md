@@ -78,7 +78,7 @@ The following sections describe how to add parameters and secrets for different 
 
 {% info_block warningBox "Propagation of variables" %}
 
-To make variables available in your Jenkins instance, we need to terraform your added or changed variables. To do this, create a [support case](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#plattform-change-requests).
+To make variables available in your Jenkins instance, we need to terraform your added or changed variables. To do this, create a [support case](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests).
 
 {% endinfo_block %}
 

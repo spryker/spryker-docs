@@ -4,7 +4,7 @@ description: Plugins of the Oryx Application
 template: concept-topic-template
 ---
 
-When you create an Oryx Application with the `appBuilder()` function, it creates an instance of `App`. The `App` is a a shell that can be enhanced with custom plugins: `AppPlugin`. Plugins let you extend Oryx core behaviour without modifying the core code of the framework.
+When you create an Oryx Application with the `appBuilder()` function, it creates an instance of `App`. `App` is a a shell that can be enhanced with custom plugins: `AppPlugin`. Plugins let you extend Oryx core behavior without modifying the core code of the framework.
 
 The following built-in plugins are provided by the Oryx framework:
 
@@ -19,7 +19,7 @@ For ordinary application development, there's no need to develop custom plugins.
 
 ### Components plugin
 
-The `ComponentsPlugin` plugin orchestrates the (lazy) loading of components. The plugin registers all the component definitions and loads the implementation whenever required in the DOM.
+`ComponentsPlugin` orchestrates the (lazy) loading of components. The plugin registers all the component definitions and loads the implementation whenever required in the DOM.
 
 The plugin exposes the `registerComponents()` API, which registers components. For example, to register more component:
 
@@ -33,7 +33,7 @@ app.requirePlugin(ComponentsPlugin).registerComponents([
 
 ### Injection plugin
 
-The `InjectionPlugin` plugin manages the dependency injection system (DI). DI lets you customize application logic, which is nested deep inside the application logic.
+The `InjectionPlugin` plugin manages the dependency injection system (DI). DI lets you customize the application logic nested deep inside the application logic.
 
 The plugin exposes the following APIs:
 
@@ -86,7 +86,7 @@ app.requirePlugin(ResourcePlugin).getResources();
 
 The plugin exposes the following APIs:
 
-- `getIcons`: get configured icons.
+- `getIcons`: get all configured icons.
 - `getIcon`: get a specific icon.
 - `getBreakpoints`: get configured breakpoints.
 - `resolve`: resolve component theme.

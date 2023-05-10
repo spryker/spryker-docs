@@ -49,7 +49,8 @@ commonOptions = {
     /www.acunetix.com\/[\.\w\-\/\?]+/,
     /gcc.gnu.org\/[\.\w\-\/\?]+/,
     /github.com\/[\.\w\-\/\?]+/,
-    /www.collect.ai\/[\.\w\-\/\?]+/
+    /www.collect.ai\/[\.\w\-\/\?]+/,
+    /twitter.com\/[\.\w\-\/\?]+/
 
   ],
   :file_ignore => [],

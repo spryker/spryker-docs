@@ -116,51 +116,51 @@ Make sure that propel entities have been generated successfully by checking thei
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                                      | TYPE  | EVENT   | PATH                                                                    |
-|-----------------------------------------------|-------|---------|-------------------------------------------------------------------------|
-| ServicePoint                                  | class | created | src/Generated/Shared/Transfer/ServicePoint                              |
-| ServicePointCollection                        | class | created | src/Generated/Shared/Transfer/ServicePointCollection                    |
-| ServicePointCollectionRequest                 | class | created | src/Generated/Shared/Transfer/ServicePointCollectionRequest             |
-| ServicePointCollectionResponse                | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponse            |
-| ServicePointCriteria                          | class | created | src/Generated/Shared/Transfer/ServicePointCriteria                      |
-| ServicePointConditions                        | class | created | src/Generated/Shared/Transfer/ServicePointConditions                    |
-| ApiServicePointsAttributes                    | class | created | src/Generated/Shared/Transfer/ApiServicePointsAttributes                |
-| ApiServicePointAddressesAttributes            | class | created | src/Generated/Shared/Transfer/ApiServicePointAddressesAttributes        |
-| StoreRelation                                 | class | created | src/Generated/Shared/Transfer/StoreRelation                             |
-| Store                                         | class | created | Generated/Shared/Transfer/Store                                         |
-| Error                                         | class | created | Generated/Shared/Transfer/Error                                         |
-| Sort                                          | class | created | Generated/Shared/Transfer/Sort                                          |
-| Pagination                                    | class | created | Generated/Shared/Transfer/Pagination                                    |
-| ErrorCollection                               | class | created | Generated/Shared/Transfer/ErrorCollection                               |
-| DataImporterConfiguration                     | class | created | Generated/Shared/Transfer/DataImporterConfiguration                     |
-| DataImporterReport                            | class | created | Generated/Shared/Transfer/DataImporterReport                            |
-| CountryCriteria                               | class | created | Generated/Shared/Transfer/CountryCriteria                               |
-| CountryConditions                             | class | created | Generated/Shared/Transfer/CountryConditions                             |
-| Country                                       | class | created | Generated/Shared/Transfer/Country                                       |
-| CountryCollection                             | class | created | Generated/Shared/Transfer/CountryCollection                             |
-| Region                                        | class | created | Generated/Shared/Transfer/Region                                        |
-| ServicePointAddressCollection                 | class | created | Generated/Shared/Transfer/ServicePointAddressCollection                 |
-| ServicePointAddressCollectionRequest          | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionRequest          |
-| ServicePointAddressCollectionResponse         | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionResponse         |
-| ServicePointAddressCriteria                   | class | created | Generated/Shared/Transfer/ServicePointAddressCriteria                   |
-| ServicePointAddressConditions                 | class | created | Generated/Shared/Transfer/ServicePointAddressConditions                 |
-| ServicePointAddress                           | class | created | Generated/Shared/Transfer/ServicePointAddress                           |
-| GlueRelationship                              | class | created | Generated/Shared/Transfer/GlueRelationship                              |
-| ServicePointSearchCollection                  | class | created | Generated/Shared/Transfer/ServicePointSearchCollection                  |
-| ServicePointSearch                            | class | created | Generated/Shared/Transfer/ServicePointSearch                            |
-| ServicePointSearchRequest                     | class | created | Generated/Shared/Transfer/ServicePointSearchRequest                     |
-| ServicePointServiceCollectionRequestTransfer  | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionRequestTransfer  |
-| ServicePointServiceCollectionResponseTransfer | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionResponseTransfer |
-| ServicePointServiceCollectionTransfer         | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionTransfer         |
-| ServicePointServiceConditionsTransfer         | class | created | Generated/Shared/Transfer/ServicePointServiceConditionsTransfer         |
-| ServicePointServiceCriteriaTransfer           | class | created | Generated/Shared/Transfer/ServicePointServiceCriteriaTransfer           |
-| ServicePointServiceTransfer                   | class | created | Generated/Shared/Transfer/ServicePointServiceTransfer                   |
-| ServiceTypeCollectionRequestTransfer          | class | created | Generated/Shared/Transfer/ServiceTypeCollectionRequestTransfer          |
-| ServiceTypeCollectionResponseTransfer         | class | created | Generated/Shared/Transfer/ServiceTypeCollectionResponseTransfer         |
-| ServiceTypeCollectionTransfer                 | class | created | Generated/Shared/Transfer/ServiceTypeCollectionTransfer                 |
-| ServiceTypeConditionsTransfer                 | class | created | Generated/Shared/Transfer/ServiceTypeConditionsTransfer                 |
-| ServiceTypeCriteriaTransfer                   | class | created | Generated/Shared/Transfer/ServiceTypeCriteriaTransfer                   |
-| ServiceTypeTransfer                           | class | created | Generated/Shared/Transfer/ServiceTypeTransfer                           |
+| TRANSFER                                      | TYPE  | EVENT   | PATH                                                                     |
+|-----------------------------------------------|-------|---------|--------------------------------------------------------------------------|
+| ServicePoint                                  | class | created | src/Generated/Shared/Transfer/ServicePoint                               |
+| ServicePointCollection                        | class | created | src/Generated/Shared/Transfer/ServicePointCollection                     |
+| ServicePointCollectionRequest                 | class | created | src/Generated/Shared/Transfer/ServicePointCollectionRequest              |
+| ServicePointCollectionResponse                | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponse             |
+| ServicePointCriteria                          | class | created | src/Generated/Shared/Transfer/ServicePointCriteria                       |
+| ServicePointConditions                        | class | created | src/Generated/Shared/Transfer/ServicePointConditions                     |
+| ApiServicePointsAttributes                    | class | created | src/Generated/Shared/Transfer/ApiServicePointsAttributes                 |
+| ApiServicePointAddressesAttributes            | class | created | src/Generated/Shared/Transfer/ApiServicePointAddressesAttributes         |
+| StoreRelation                                 | class | created | src/Generated/Shared/Transfer/StoreRelation                              |
+| Store                                         | class | created | Generated/Shared/Transfer/Store                                          |
+| Error                                         | class | created | Generated/Shared/Transfer/Error                                          |
+| Sort                                          | class | created | Generated/Shared/Transfer/Sort                                           |
+| Pagination                                    | class | created | Generated/Shared/Transfer/Pagination                                     |
+| ErrorCollection                               | class | created | Generated/Shared/Transfer/ErrorCollection                                |
+| DataImporterConfiguration                     | class | created | Generated/Shared/Transfer/DataImporterConfiguration                      |
+| DataImporterReport                            | class | created | Generated/Shared/Transfer/DataImporterReport                             |
+| CountryCriteria                               | class | created | Generated/Shared/Transfer/CountryCriteria                                |
+| CountryConditions                             | class | created | Generated/Shared/Transfer/CountryConditions                              |
+| Country                                       | class | created | Generated/Shared/Transfer/Country                                        |
+| CountryCollection                             | class | created | Generated/Shared/Transfer/CountryCollection                              |
+| Region                                        | class | created | Generated/Shared/Transfer/Region                                         |
+| ServicePointAddressCollection                 | class | created | Generated/Shared/Transfer/ServicePointAddressCollection                  |
+| ServicePointAddressCollectionRequest          | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionRequest           |
+| ServicePointAddressCollectionResponse         | class | created | Generated/Shared/Transfer/ServicePointAddressCollectionResponse          |
+| ServicePointAddressCriteria                   | class | created | Generated/Shared/Transfer/ServicePointAddressCriteria                    |
+| ServicePointAddressConditions                 | class | created | Generated/Shared/Transfer/ServicePointAddressConditions                  |
+| ServicePointAddress                           | class | created | Generated/Shared/Transfer/ServicePointAddress                            |
+| GlueRelationship                              | class | created | Generated/Shared/Transfer/GlueRelationship                               |
+| ServicePointSearchCollection                  | class | created | Generated/Shared/Transfer/ServicePointSearchCollection                   |
+| ServicePointSearch                            | class | created | Generated/Shared/Transfer/ServicePointSearch                             |
+| ServicePointSearchRequest                     | class | created | Generated/Shared/Transfer/ServicePointSearchRequest                      |
+| ServicePointServiceCollectionRequestTransfer  | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionRequestTransfer   |
+| ServicePointServiceCollectionResponseTransfer | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionResponseTransfer  |
+| ServicePointServiceCollectionTransfer         | class | created | Generated/Shared/Transfer/ServicePointServiceCollectionTransfer          |
+| ServicePointServiceConditionsTransfer         | class | created | Generated/Shared/Transfer/ServicePointServiceConditionsTransfer          |
+| ServicePointServiceCriteriaTransfer           | class | created | Generated/Shared/Transfer/ServicePointServiceCriteriaTransfer            |
+| ServicePointServiceTransfer                   | class | created | Generated/Shared/Transfer/ServicePointServiceTransfer                    |
+| ServiceTypeCollectionRequestTransfer          | class | created | Generated/Shared/Transfer/ServiceTypeCollectionRequestTransfer           |
+| ServiceTypeCollectionResponseTransfer         | class | created | Generated/Shared/Transfer/ServiceTypeCollectionResponseTransfer          |
+| ServiceTypeCollectionTransfer                 | class | created | Generated/Shared/Transfer/ServiceTypeCollectionTransfer                  |
+| ServiceTypeConditionsTransfer                 | class | created | Generated/Shared/Transfer/ServiceTypeConditionsTransfer                  |
+| ServiceTypeCriteriaTransfer                   | class | created | Generated/Shared/Transfer/ServiceTypeCriteriaTransfer                    |
+| ServiceTypeTransfer                           | class | created | Generated/Shared/Transfer/ServiceTypeTransfer                            |
 
 {% endinfo_block %}
 
